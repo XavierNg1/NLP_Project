@@ -1,0 +1,192 @@
+ In the default Blender interface, you should be able to switch from the default "Blender Internal" rendering engine to the "Cycles" engine through a drop-down menu on the top right.;
+,, Select the cube by right clicking it, and press "X" to delete it., This will put a sphere in the middle of your screen.,, To do this:
+
+
+
+
+
+
+
+Go to Object Mode >> Edit Mode. This will turn the sphere orange.
+
+
+
+
+
+
+Choose the 3D view that you want. It is the icon directly beside the Object Mode button.
+Change the perspective to orthographic. Go to View >> Persp/Ortho. This will change it to orthographic and make it easier to work with.
+
+Pressing the 5 on your number pad will change the perspective as well.
+
+
+
+
+
+
+
+
+Change the way you see it by pressing the 1 on your number keypad. You can change your view by pressing any of the keys shown here.
+Deselect the sphere by pressing A.
+Press the B key. This will bring up the selection pointer.
+
+
+
+
+
+
+Select the top few gridlines at the top of the sphere. From your perspective, it will appear to be three gridlines. In actuality, there is a 4th one at the very top that you can't see.
+Delete the vertices. Do this by selecting X and then Vertices. If something happens and you don't get all of the vertices, just repeat until the top of your sphere is leveled off.
+
+
+Press B and select the bottom few gridlines. Then select Scale in your Mesh Tools.
+Press Z. This will make it so that it can only be changed on the Z axis.
+
+
+
+
+
+
+Press 0 and then press Enter.
+
+B > Make selection > Scale > Z > 0 > Enter (It's that quick! A repeat of the prior two lines.)
+
+
+
+,,,,
+
+Add a Modifier.
+Select Solidify.
+, This will give it a much smoother appearance.
+
+Add a Modifier.
+Select Subdivision Surface.
+
+
+
+
+
+
+Go to the Subdivision Surface (SubSurf) window. Change View and Render to 2.
+
+
+
+
+
+
+In your Object Tools, select Shading >> Smooth.
+ This is what it should look like now.
+ Click on the Material Modifier icon., This will open up the Material Modifier dialog box.
+
+
+
+
+
+
+
+If the dialog box doesn't look like this, go to the Render button and change it to Cycles Render. Then it will look like this.
+,, Then press 1. This will enlarge the surface and give you a front view so that you can move it to the right place on the cup. Move your image around to see if there are any gaps.,,
+
+Be sure the Material Modifier is selected, then press New. You can make any changes that you want. For the purposes of this tutorial, the default Diffused BSDF and the color white are selected.
+,, This will enlarge the napkin but not as large as the table., This will turn it diagonally to the bowl.,,,,, Since the napkin will be draped over the bowl, this will make it so that that corner falls inside of it.
+
+
+Click on the Material Modifier >> Add. Then change Diffused BSDF to Glossy BSDF.
+Set the Roughness to 1.
+
+
+
+
+
+
+Choose the color. It can be whatever color you want.
+
+If you want to change your current view of the napkin, instead of waiting for the render, go to Settings >> Viewport color and change its color. Otherwise, just wait for the render.
+
+
+Go from Object Mode to Edit mode.
+Be sure that your napkin is selected by pressing A. You will know it is selected if it is orange.
+Select Subdivide. Go to the Cuts option then 50 >> Enter.
+Go back to Object Mode.
+Add Modifiers. The order is very important.
+
+Click on the Wrench again >> Add Modifier >> Cloth.
+Add Modifier >> Solidify. Be sure the thickness is set to 0.01.
+Add Modifier >> Subdivision Surface. Set both of the View and Render values to 2.
+Go to Mesh Tools (on the left) >> Shading >> Smooth.
+
+
+Start making the adjustments for the cloth modifier.
+ If you don't see it, then make the modifier panel wider.,
+
+Select the Cotton Preset.
+Change the Steps to 10.
+
+
+
+
+
+
+Be sure that Cloth Collision is checked. This allows the cloth to interact with the bowl.
+Open up the Cloth Collision section and make sure that Self Collision is also marked. This allows the cloth to interact with itself.
+
+
+Look at the panel on the right (you should still be in the Physics Modifier panel). Select Collision.
+, It will take a little while.,,
+
+
+
+
+
+
+
+Zoom away until you can see the lamp. Right click on it to select it.
+Select View >> 1 (Keypad). This will give you a front view.
+
+
+
+
+
+
+Using the RED arrow, move the lamp so that it is centered over the bowl.
+Using the blue arrow, lower the lamp so that it is closer to the bowl.
+Change to a side view.
+Using the green arrow, move it so that it is just a little in front of the bowl.
+ Click on the Object Data button.
+
+Select Point. It should be the default.
+Change the Size to 5.
+Change the Strength to 2000. (This can be altered, depending on your desired look).
+ To do that, click on the World button.
+
+
+
+
+
+
+
+Change the background color by changing this color. You will notice that your options are darker than your normal color options. For the purposes of this tutorial, black will be used.
+ You want to be able to see into the bowl., You want it to fade to black in the final image. Increasing the size will do this.
+
+Be sure the surface is selected, then select Scale >> 20 >> Enter.
+ Go to View >> Camera. As you can see here, the view is not what it should be.
+ This will allow you to change what you see through that particular view.
+
+
+
+
+
+
+
+Go to View >> Properties.
+
+
+
+
+
+
+In the panel that comes up, select Lock Camera to View.
+Click on View >> Properties again, to hide the panel.
+From this viewpoint, move the bowl and napkin around until the surface that the bowl is on first appears on the horizon. From there, move the bowl and napkin the way you want it.
+ It's always a good idea to save your work before rendering, in case something goes wrong., Render with the default settings for now. This will take a while, so start it, and maybe take a break.,, The number was changed to 2000 in this instance. The higher the number, the better the result. However, it will also take longer.
+ This particular one took about 45 minutes on a laptop computer.

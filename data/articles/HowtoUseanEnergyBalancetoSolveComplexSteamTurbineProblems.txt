@@ -1,0 +1,75 @@
+
+
+
+Engineering problems often contain the bare minimum of information needed to solve the problem. Carefully reading the problem allows you to dissect it and pull out the necessary information. For any information still needed, you will have to extract it from other sources such as steam tables (see Part 2).
+Turbine problems typically ask you to find entering stream conditions (temperature and/or pressure), leaving stream conditions, actual work, reversible work, and/or turbine efficiency.;
+,
+
+
+Solving engineering problems becomes much easier if you draw a diagram. For turbine problems, steam always enters one side of the turbine at one temperature and pressure and leaves on the other side at a lower temperature and pressure. Shaft work always leaves the turbine.
+
+
+
+For the sake of denoting variables, you should number the streams containing the flowing material (steam). Label the starting stream as "1" and, following the flow of the diagram, label subsequent streams in numeric order.
+
+
+
+The values stated in the problem all correlate to particular variables. Sometimes, problems tell you directly what variable each value equates to, other times you must figure this out based on the unit attached to the value. Variables pertaining to a specific stream should be denoted with the numeric subscript of that stream.
+
+
+
+To set up an energy balance for solving the problem, you must define the boundaries of the system. For turbine problems, it's best to define the boundaries of the system as the boundaries of the turbine itself. The steam entering the turbine, therefore, also enters the system. Steam leaving the turbine leaves the system. Shaft work leaves the system.
+
+
+
+To set up the energy balance, you have to know if the system is open or closed. Because steam moves over the system boundaries, the system is considered to be open. The energy balance for open systems is H2-H1=Q+Ws. Since Q=0, this simplifies to H2-H1=Ws.
+H2 - H1 = Ws
+H2 = enthalpy (kJ/kg) of Stream 2
+H1 = enthalpy (kJ/kg) of Stream 1
+Ws = shaft work (kJ/kg) leaving the system
+
+,
+
+
+Engineering problems often force students to make conceptual assumptions in order to simplify them. Steam turbines are assumed to be adiabatic, meaning there is no transfer of heat energy, so Q=0.
+
+,
+
+
+Steam tables contain tabulated values for enthalpies, entropies, and saturation conditions. The conditions (temperature and pressure) of the stream dictate its corresponding tabulated values. You must reference them periodically from this point onward, when necessary, to solve for crucial variables.
+
+
+
+In reality, no turbine process is completely reversible, but to solve problems involving efficiency, you must assume 100% reversibility. This means there is no change in entropy (isentropic process), so s1=s2 and corresponding steam table values at the streams' temperatures and pressures are assumed to be at the same entropy. If the entropy for the stream leaving the turbine is less than the lowest entropy listed on the superheated steam table at the given pressure, the steam in that stream is not completely vapor; it is a liquid-vapor mixture. When this occurs, you must compute steam quality to determine enthalpy for that stream.
+Reversible quantities are denoted with an apostrophe.
+
+
+
+Steam quality is the mass fraction of the stream that is vapor.
+Its equation is q=(M-ML)/(MV-ML).
+q = quality of the stream
+M = property of the stream
+MV = vapor property of the stream
+ML = liquid property of the stream
+
+,
+
+
+Steam tables are tabulated in increments of either temperature or pressure. When stream conditions are not equal to an exact tabulated value, you must use linear interpolation to calculate the desired value.
+Linear interpolation is given by: y = y1 + (x-x1)(y2-y1)/(x2-x1)
+y = the value you are looking for
+x = the known value you are relating to the value you are looking for
+x1 = the closest value less than x on the steam table; variables must match
+x2 = the closest value greater than x on the steam table; variables must match
+y1 = the corresponding value of y in the same row as x1
+y2 = the corresponding value of y in the same row as x2
+
+,
+
+
+Turbine efficiency is the ratio of actual work to reversible work, given as a percentage.
+Eta = (Ws / Ws') x 100
+Eta = turbine efficiency
+Ws = actual shaft work removed from system
+Ws' = shaft work removed from system at constant entropy
+

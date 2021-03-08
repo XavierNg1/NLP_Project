@@ -1,0 +1,24 @@
+ On its own, this cmdlet will display all other cmdlets. You can narrow your search using modifiers.
+
+
+For example: “Get-Command Name *Disable*” will display only cmdlets with ‘disable’ in the name.
+All cmdlets are entered by typing them into the Powershell window and hitting ↵ Enter.
+ This cmdlet will give you all the information regarding another cmdlet, most importantly syntax for how the target cmdlet is used.
+
+
+For example: “Get-Help Get-Process” will display all the usable information for the ‘Get-Process’ cmdlet.
+ Alone this will display a full list of processes running on your computer. With a modifier, you can single out processes coming from a specific application.
+
+
+For example: “Get-Process winword” will display all processes being run by Microsoft Word.
+Similarly, “Start-Process” can be used to launch an instance of an application/process.
+ This cmdlet needs an object ‘piped’ to it in order to be useful. This is done by adding a “|” between an object and the “Get-Member” cmdlet.
+
+
+For example: “Get-Process | Get-Member” will pipe the Get-Process cmdlet to Get-Member, and Get-Member will list all of the properties and methods you can utilize when scripting with Get-Process.
+ The criteria in Where-Object is set by using the following formatting: “{$_}”. Where-Object also needs an object piped to it.
+
+
+For example: “Get-Process | Where-Object { $_.name -eq “notepad” }” will run Get-Process with the limitation where the object’s name is equal to “notepad”.
+Other operators include: “-lt” (less than), “-gt” (greater than), “-le” (less than or equal to), “-ge” (greater than or equal to), “-ne” (not equal to), or “-like” (pattern matching).Parameters using strings (words) must be enclosed in quotations marks. This is not necessary for integers (numbers).
+

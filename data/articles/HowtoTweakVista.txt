@@ -1,0 +1,368 @@
+ Windows Vista search indexing is constantly reviewing files on your system to make their contents available for quick searching. This is handy, but can severely impact system performance. To disable this constant indexing:
+
+Start MyComputer
+
+
+
+ 
+
+
+Right Click the C: Drive and select properties
+
+
+
+
+
+
+On The General Tab, Uncheck: Index This Drive for Faster Searching, On the subsequent Dialog Box, Select Include Subfolders and Files
+
+
+
+
+
+;
+, Remote Differential Compression measures the changes in files over a network to transfer them with minimal bandwidth rather than transferring an entire file that has previously been moved. By constantly checking for file changes, this service can hinder system performance. To disable this service:
+
+Open Control Panel
+
+
+
+
+
+
+Switch to Classic View
+
+
+
+
+
+
+Select Programs and Features
+
+
+
+
+
+
+Choose Turn Windows Features On and Off
+
+
+
+
+
+
+Scroll down and Uncheck Remote Differential Compression
+
+
+
+
+
+
+
+, Windows Defender real-time protection against malware continues to run despite having Automatic operation disabled.
+
+To disable this feature, open Control Panel
+
+
+
+
+
+
+Select Windows Defender
+
+
+
+
+
+
+Choose Tools from the top menu
+
+
+
+
+
+
+Select Options
+
+
+
+
+
+
+Uncheck Auto Start at the bottom of the window
+
+
+
+
+
+
+
+, Windows Vista's always-on defragmentation feature isn't really that necessary, and can cause system slow down. Just remember to run a defrag manually every week or so, or make it one of your system's Scheduled Tasks.
+
+To disable this, Click Start then Computer
+
+
+
+
+
+
+Right Click the C: Drive and select properties.
+
+
+
+
+
+
+Select the Tools Tab
+
+
+
+
+
+
+Uncheck Run on a schedule.
+Important: Keeping your hard drive defragmented is key to great system performance.
+ Ready Boost is Microsoft's name for using a USB thumb/flash drive to provide some quick access memory the operating system can use as extra RAM. The Ready Boost system can significantly improve system performance.
+
+To set this up, Insert a USB Flash Drive (preferably 2GB or more)
+
+
+
+
+
+
+Click Start then Computer
+
+
+
+
+
+
+Right Click the USB Drive in My Computer and select properties.
+
+
+
+
+
+
+Select the Ready Boost Tab
+
+
+
+
+
+
+Choose Use this device
+
+
+
+
+
+
+Select as much space as you can free up for RAM usage vs. Storage
+
+
+
+
+
+
+
+, Windows hibernation background services can use a large amount of system resources. If you don't use the Hibernate feature on a regular basis you may want to disable it to give Vista a performance boost.
+
+To disable Hibernation, Select the Control Panel then Power Options
+
+
+
+
+
+
+Click Change Plan Settings
+
+
+
+
+
+
+Click on Change Advanced Power Settings
+
+
+
+
+
+
+Expand the Sleep selection
+
+
+
+
+
+
+Expand the Hibernate After selection
+
+
+
+
+
+
+Crank the selector down to zero
+
+
+
+
+
+
+Click Apply
+
+
+
+
+
+
+
+, Analysis and restore point creation by Windows Vista can eat a fair amount of system resources. Disabling this service will obviously mean the system restore feature in Vista will not be available in the event of a system crash. Change this at your own risk.
+
+To turn off system restore, Control Panel>System
+
+
+
+
+
+
+Click System Protection on the left panel
+
+
+
+
+
+
+Uncheck the main system drive
+
+
+
+
+
+
+Agree to the confirmation
+
+
+
+
+
+
+
+, This much-loathed new Vista feature attempts to protect your system from malware infection by making you manually confirm a whole host of everyday user operations. While it doesn't directly impact performance, it can be annoying and might be more hassle than good.
+
+To disable User Access Control, Click Start then Control Panel
+
+
+
+
+
+
+Select User Accounts
+
+
+
+
+
+
+Select Turn User Account Control on or off
+
+
+
+
+
+
+Uncheck User Account Control Box
+
+
+
+
+
+
+Restart as recommended
+
+
+
+
+
+
+
+, Just like Windows XP, Vista ships with all kinds of services enabled that load at startup and may never be used by most users.
+
+To see what loads at startup and disable the ones you likely won't be needing (they can always be started manually later), Click Start then Control Panel
+
+
+
+
+
+
+Select Administrative Tools
+
+
+
+
+
+
+Choose System Configuration
+
+
+
+
+
+
+Click the Services Tab
+
+
+
+
+
+
+You can safely deselect, Fax (unless you're using a fax modem)
+Offline Files (unless you're using Offline File Sync
+Tablet PC Input Service (unless you have a tablet PC)
+Terminal Services
+Windows Search (If you have already disabled indexing)
+
+
+
+
+
+
+
+, Windows ships with other features that are listed separately in the Vista operating system from the startup services.
+
+You can view and disable these features by clicking Start then Control Panel
+
+
+
+
+
+
+Select Programs and Features
+
+
+
+
+
+
+On the left panel, select Turn Windows Features on or off
+
+
+
+
+
+
+You can safely deselect, Indexing Service
+Remote Differential Compression
+Tablet PC Optional Components
+Windows DFS Replication Service
+Windows Fax & Scan (unless you use a modem for faxing)
+Windows Meeting Space (unless you use the Live Meeting Service)
+
+
+
+
+
+
+

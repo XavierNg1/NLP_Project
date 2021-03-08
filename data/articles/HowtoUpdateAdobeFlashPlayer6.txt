@@ -1,0 +1,34 @@
+ If you are not sure about the status of your plug-in, check it online. Check whether or not this plug-in needs an update by going to: https://www.mozilla.org/en-US/plugincheck/
+
+
+Even if you plan on updating your version of the Adobe plug-in via your terminal, you can still check on the status from this webpage. Note that it might be a little redundant, however, to go through the effort of visiting this website without using the download method available through the site. As such, this method generally skips this plug-in status check.
+This plug-in was originally created for use with Mozilla Firefox, but Google Chrome and other Internet browsers use this plug-in, as well. If you do not use Firefox as your browser, you can still check on the status of this plug-in using the same URL.
+Scroll down to the plug-in labeled as "Shockwave Flash." If you need to update this plug-in, the status will be listed as "Outdated Version" and a yellow "Update" button will appear beside it.
+ Close out of your Internet browser, if it is currently open, and open a terminal window.
+
+
+Note that you must be connected to the Internet, even though your browser does not need to be opened.
+Open a terminal window by selecting Applications.
+
+From the Applications menu, select Accessories.
+Finally, select Terminal to open the terminal window.
+ This can be done by typing in "su -" and hitting the "Enter" key on your keyboard.
+
+
+The exact line should look like: $ su -
+
+This command allows you to enter root passwords and update your plug-ins and other applications.
+
+
+
+The exact line should look like: # update-flashplugin-nonfree --install
+
+Alternatively you can skip over the "su" prompt and type the following command in the terminal window to run the install automatically: $ sudo /sbin/update-flashplugin-nonfree --install
+
+After running this command, the process should remove the installed plug-in and replace it with an updated version that gets downloaded from the Adobe website.
+ You should get a message stating that your Flash player has updated. Open your browser after this for the update to complete itself.
+
+
+The update may not take effect if you do not close out of your browser. If you did not close your browser at the beginning of the process, you need to restart it now by closing out of it and opening it back up again.
+To verify that the update worked correctly, revisit the plug-in check page. The button that previously read “Update” should be grayed out and the status should indicate that no further updates are needed.
+

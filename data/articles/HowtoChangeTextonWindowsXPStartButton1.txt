@@ -1,0 +1,34 @@
+ Scroll down the page and download the Setup file. This program will allow you to make the necessary changes to your Windows files.;
+, The program will put an icon in your Start menu. Navigate to it after you install and run the program.
+
+
+
+Go to "File" then "Open".
+Typically Windows is installed on the C: drive. Go to the C: Drive, then open the Windows folder.
+Double-click the file named "explorer".
+
+
+
+In the left frame, click the folder named "String Table".
+Click on the sub-folder named "37".
+Click the gear icon named "1033".
+
+
+
+In the right frame, change the word "start" to whatever you wish. You must keep the apostrophes or the changes will not work.
+
+
+
+Click the "Compile Script" button.
+When asked, select "Save As" and save the file as "explorer1".
+Make sure not to overwrite the original copy of explorer.
+ Keep Resource Hacker running.
+
+
+Open the Start menu and click "Run..."
+Type "regedit" (without apostrophes) into the field and press enter. This will open Registry Editor.
+In the left frame, navigate through the following folders: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Winlogon
+Once you're in the Winlogon folder, in the right frame select "Shell" and double-click it.
+Change "explorer.exe" to "explorer1.exe", the changed copy you made above.
+ Your Start menu text will now be your own customized message! If you wish to revert to the original, change back to "explorer.exe" in Registry Editor following the steps above.
+

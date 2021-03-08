@@ -1,0 +1,17 @@
+ The dividend is the number being divided. The divisor is the number the dividend is being divided by. The quotient is the answer to the division problem. The remainder is the amount left over after a number is divided by another.For example, in the equation 15÷6=2remainder3{\displaystyle 15\div 6=2\;{\text{remainder}}\;3}:15 is the dividend6 is the divisor2 is the quotient3 is the remainder.
+ The formula is dividend=divisor×quotient+remainder{\displaystyle {\text{dividend}}={\text{divisor}}\times {\text{quotient}}+{\text{remainder}}}.You will use this form to set up Euclid’s algorithm to find the greatest common divisor of two numbers.
+
+For example, 15=6×2+3{\displaystyle 15=6\times 2+3}.
+
+The greatest common divisor is the largest divisor, or factor, that two numbers share.In this method, you first find the greatest common divisor, and then use it to find the least common multiple.
+ Use the smaller of the two numbers as the divisor. Set up an equation in quotient-remainder form for these two numbers.
+
+For example, if you are trying to find the least common multiple of 210 and 45, you would calculate 210=45×4+30{\displaystyle 210=45\times 4+30}.
+ Use the remainder as the new divisor. Set up an equation in quotient-remainder form for these two numbers.
+
+For example, 45=30×2+15{\displaystyle 45=30\times 2+15}.
+ For each new equation, use the previous equation’s divisor as the new dividend, and the previous remainder as the new divisor.For example, 30=15×2+0{\displaystyle 30=15\times 2+0}. Since the remainder is 0, you need not divide any further.
+ This is the greatest common divisor for the two numbers.For example, since the last equation was 30=15×2+0{\displaystyle 30=15\times 2+0}, the last divisor was 15, and so 15 is the greatest common divisor of 210 and 45.
+ Divide the product by the greatest common divisor. This will give you the least common multiple of the two numbers.For example, 210×45=9450{\displaystyle 210\times 45=9450}. Dividing by the greatest common divisor, you get 945015=630{\displaystyle {\frac {9450}{15}}=630}. So, 630 is the least common multiple of 210 and 45.
+
+

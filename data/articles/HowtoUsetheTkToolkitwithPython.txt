@@ -1,0 +1,13 @@
+ If you have Python 3.x, type "import Tkinter", and with 2.x "import Tkinter". If the difference is annoying, type for example "import Tkinter as tkinter", if using 2.x, to only have to type tkinter, or "from Tkinter import *" to avoid even typing Tkinter later on. From now on you can use the last option.
+
+
+
+ ;
+, This will enable you to call functions with buttons etc.
+ First add "window=Tk()". This defines the window you're working in.
+ This will tell the program that the Tk part is over. Everything you do in Tkinter will be between the above 2 lines.
+ The three basics are label, button and entry.
+
+Label is just a "box" and you can change the background, text etc., in it. It is easy to add, e.g. "lbl = Label(window, text="Hello, World")". The "lbl" is it's name. Window is it's "master", the widget in which it is placed.
+Buttons is the same, except that you use Button instead of Label. You can use "command=a_def" to execute a function if someone clicks the button.
+Entry is a bit different, for you do not define the text, rather read it with "X = .get()". This will set X to whatever is entered into the entry. You have to, after you created the widgets, pack them with ".pack()" Below is a small program that you can examine and learn from.

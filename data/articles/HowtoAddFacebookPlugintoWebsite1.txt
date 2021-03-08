@@ -1,0 +1,42 @@
+ The Facebook Like button allows users to share any page from your website with their Facebook friends.When a visitor to your website hits the Like button, a story will appear on the news feeds of that user's friends. The story will link back to your website.
+You can add the Like button to any page of your website. Place the button on any product, article, post, or similar page you want to promote to directly increase traffic to that portion of the website.;
+, Facebook makes it easy to add the Like button to your website and has a special page dedicated to setting up the feature.
+
+
+You can find the Like button configuration page here: https://developers.facebook.com/docs/plugins/like-button
+
+
+, In the box labeled "URL to Like," type the URL of the exact page you want the Like button to link to.
+
+
+You should be able to use any valid URL.
+If you plan to use the button to link to multiple pages of your website, you'll need to create a separate code for each page you want to link to.
+ Aside from the URL, you can also specify the width, layout, and action type of the button.
+
+
+You don't technically need to alter these settings when creating the Like button code. Facebook will use its default settings if you don't change them.
+Additionally, you can also check or uncheck the "Show Friends' Faces" and "Include Share Button" option boxes. The former option will show the faces of friends who have previously liked the page. The latter option will also display a "Share" button beside the Like button. Users can hit the Share button if they want to add a personal message or customize who they share the link with.
+
+Note that if you want to create a Share button for your page without also creating a Like button, you can do so by accessing the separate Share button configuration page. The procedure for creating a Share button is essentially the same as it is for creating a Like button, and the configuration page can be found here: https://developers.facebook.com/docs/plugins/share-button
+
+
+
+
+, After filling out the information, click the "Get Code" button beneath the form. Doing so will open a pop-up window with your customized plugin code.
+
+
+Note that there are two sections of code. You'll need both to make the plugin work on your website.
+ Highlight the code in the first box and copy it to your clipboard. Paste the code into your page once, placing it immediately after the opening <body> tag.
+
+
+This is the JavaScript SDK (software development kit) code. It allows creates the necessary software framework for the actual Like button code. Without it, your Like button won't work.
+ Highlight and copy the code located in the second box, then paste it directly into your website HTML.
+
+
+This second code is the code specifically customized to work with your page.
+The positioning will vary based on where you want the code. Paste it directly into the HTML in whichever spot you want the Like button to appear.
+ After adding the code to your website, save your changes and check the page. The Like button should automatically appear.
+
+
+If the Like button doesn't appear or doesn't work, you can troubleshoot the problem by reading the tips and details provided on the original Like button configuration page.
+

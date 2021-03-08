@@ -1,0 +1,30 @@
+ Batch files are exclusive to Windows—the Mac counterpart is a bash file. Batch files contain a one or more commands that are executed in sequence by a command line interpreter. These files are used to simplify basic and/or repetitive jobs such as opening multiple programs, deleting files, and backing up files.You may incorporate batch files into your C++ programs., Batch files are simple text files. You may create your batch files with Window’s text editor, Notepad.exe. Click Start and type “notepad” into the search bar, and select “Notepad” from the results., Click File > Save. Rename your file “HelloWorld.cmd.” Change the “Save as type” to “All Files (*,*).”
+
+
+If you are using a modern version of Windows, use the extension .cmd. If you are using an older system, use the extension .bat., In the text editor, enter in the following lines of code:
+
+
+
+
+
+@echo Hello world.
+@pause
+
+
+
+
+, When a program runs, you will see the command and its output. Preceding this command with an "@" turns off echoing for a specific line. When the program runs, you will only see "Hello world."You can turn of all echoing with the command “@echo OFF.” If you use this command, you can rewrite the program as:
+
+
+
+
+@echo Off
+echo Hello world.
+pause
+
+
+
+
+
+
+,, The fastest way to run your batch file is to simply double-click on the file. When you double-click on the file, the batch file is sent to the DOS command line processor. A new window will open and your batch file will close. Once the user presses a key to continue, the program will end and the window will close.

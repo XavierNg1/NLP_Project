@@ -1,0 +1,13 @@
+,,, Make sure you select the ‘Ralink Configuration Tool’ when it appears as a selection. Reboot the computer. With the computer turned on, plug in one USB adapter (hardware) into an open USB port and follow
+
+,, Right click on the ‘R’ icon displayed on the taskbar at the bottom of your screen and select ‘Launch Config Utility’ (If you don’t have the ‘R’ icon on your system tray for some reason, you can launch this utility by clicking the Start button, All Programs, then look for ‘Ralink Wireless’ on the list and then double click Ralink
+
+, First, give your new wireless network a name under ‘Profile Name’ (C) and then give it a SSID name (D). Next, click on the down arrow under ‘Network Type’ (E) and select ‘Ad hoc’. Finally, click on the ‘Channel’ menu (F) and select channel 8 (or 2 – just make sure both computers have the same channel number).
+ Now, click on the ‘Network’ button (I). NOTE: At this point in time you will NOT see your new wireless network listed here until you have configured both computers with the instructions above. What you may or may not see is a list of wireless connections coming from people in your neighborhood who also have some form of wireless connection up and running - including your own home wireless DSL Internet connection. Don’t touch or select any of these connections. This Ralink utility allows you to view other wireless connections that are running in your home and in the neighborhood.
+,, Under ‘Name’ find the following list of “services” and make sure each one is ‘Started’ and set to Automatic or Manual (to change settings double click on the Name): Network Connections (Started, Manual) DSN Client (Started, Automatic) Server (Start, Automatic) COM+ Event System (Started, Automatic) TCP/IP NetBIOS Helper (Started, Automatic) *Computer Browser (Started, Automatic)
+
+
+Workstation (Started, Automatic) SSDP Discovery (Started, Automatic)
+NOTE: Activate (Started, Automatic) ‘Workstation’ service BEFORE activating ‘Computer Browser) Remember, if you change any setting in ‘services.msc’ you have to reboot your computer.;
+, Go to the ‘Network’ heading (I). You should see your new network listed on both computers. If you don’t see it, go back to ‘Profile’ (A), highlight your network and click ‘Activate’ (on each computer). Return to the ‘Network’ screen (I) and highlight your network name and click ‘Connect’ (again, do this on both computers). You should now see your network and its signal strength displayed as a colored bar graph.
+

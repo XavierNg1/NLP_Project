@@ -1,0 +1,134 @@
+ Most text editing programs, including Notepad or Notepad++ for Windows, TextEdit for Mac, and gedit for GNU/Linux can be used to write HTML documents. Open a new document and use File → Save As in the top menu to save it as a "Web Page," or to change the file extension to ".html" instead of ".doc," ".rtf," or any other extension.
+
+
+You may see a warning that your document will be changed to "plain text" instead of "rich text," or that special formatting and images won't be saved properly. This is fine; HTML documents do not use those options.
+ Save your blank document, then find the document icon in your computer and double click to open it. It should open as a blank web page in your browser. If it doesn't, drag the file icon to the URL (address) bar of your browser. As you edit your HTML document in this tutorial, you can keep checking back and seeing how your web page changes.
+
+
+Note that this does not actually create a website online. It will not be accessible by other people, and you do not need an internet connection to test out. This just uses a browser to "read" your HTML document as though it were a website.
+ Markup tags do not show up on a web page like normal text. Instead, they tell your web browser how to display the page and its content. The "start tag" contains instructions. For example, it might tell the browser to display text as bold. You also need an "end tag" to let the browser know where the instructions apply: in this example, all text between the start tag and the end tag will be bold. Write end tags inside angle brackets as well, but start with a slash after the first bracket.
+
+
+Write start tags in between angle brackets: <start tag goes here>
+
+Write end tags in between angle brackets, but put a slash after the first bracket: </end tag goes here>)
+Keep reading to learn how to write functional markup tags. For this step, all you need to remember is the basic format they are written in: < > and </ >
+If you are using other HTML tutorials as well, you might see them refer to the tags as "elements" and the text in between start and end tags as "element content."
+
+, Every html document starts with a <html> tag and ends with a </html> tag. This tells the browser that everything between these tags is in HTML. Add these tags to your document:
+
+
+Often, HTML files are started with a <!DOCTYPE html> line that indicates that the file as a whole should be read as a HTML file by browsers. It isn't needed, but may help resolve compatibility issues.
+Write <html> at the top of your document.
+Hit enter or return several times to give yourself some space, then write </html>
+
+Remember to write everything else in this tutorial in between these two tags.
+ In between the <html> and </html> tags, write a <head> start tag and a </head> end tag. Give yourself space to write between them. Everything in between these head tags won't actually be displayed on the page itself. Try the following and see where it shows up instead:
+
+
+In between the <head> and </head> tags, write <title> and </title>
+
+In between the <title> and </title> tags, write How to Learn HTML - wikiHow.
+Save the document and open it in a browser (or save the document, then refresh the browser page if it's already open.) Do you see what you wrote at the top of the browser, above the address bar?
+
+, Everything else in this beginner document will go in a body section, which actually gets displayed on the web page. After the </head> end tag, but before the </html> tag, write <body> and </body>. For the rest of this tutorial, everything you write will go in between these body tags. You should now have a document that looks like this (ignoring the bullet points):
+
+
+<html>
+<head>
+<title>How to Learn HTML - wikiHow</title>
+</head>
+<body>
+</body>
+</html>
+
+, Now it's time to write something you can actually see in your browser! Anything you write within the body tags will show up in your browser after you save the HTML document and refresh the browser page. Don't write anything with the < or > symbols, however, since your browser will try to interpret it as an HTML instruction instead of normal text. Try writing Hello world! (or anything else you like), then add these new tags around it and see what happens each time:
+
+
+
+<em>Hello world!</em> will show up as "emphasized text:" Hello world!
+
+
+<strong>Hello world!</strong> will show up as "strong text:" Hello world!
+
+
+<s>Hello world!</s> will show up with a strikethrough: Hello world!
+
+
+<sup>Hello world!</sup> will show up as superscript: Hello world!
+
+
+<sub>Hello world!</sub> will show up as subscript: Hello world!
+
+Try combinations of these: What does <em><strong>Hello world!</strong></em> look like?
+
+, If you try to write several lines of text in your HTML document, you might notice that the line breaks don't show up in your browser. You have to code these in yourself:
+
+
+<p>This is a separate paragraph.</p>
+
+This sentence is followed by a line break.<br>before this sentence begins.
+This is the first tag you've seen that doesn't need an end tag! These are called "empty tags."
+
+Make headings to display the names of sections:<h1>header text</h1>: the largest header<h2>header text</h2> (the 2nd level header)<h3>header text</h3> (the 3rd level header)<h4>header text</h4> (the 4th level header)<h5>header text</h5> (the smallest header)
+
+, There are several different ways to write lists on your webpage. Try out the following types of code and see which one you like. Note that one pair of tags goes around the whole list (such as the <ul> and </ul> tags for "unordered list"), while individual items on the list are surrounded by another pair of tags, such as <li>and</li>.
+
+
+Use this code to make bulleted lists:<ul><li>One item</li><li>Another item</li><li>Another item</li></ul>
+
+Or this code to make numbered lists:<ol><li>Item 1</li><li>Item 2</li><li>Item 3</li></ol>
+
+Or this code to make a list defining terms:<dl><dt>Coffee</dt><dd>- Hot Beverage</dd><dt>Leite</dt><dd>- Cold Beverage</dd></dl>
+
+
+, Now it's time to try adding things besides text to your page. Try out the following tags, or click the links for more information. You'll need to use an online image hosting service so you have a URL to link to in the image tag:
+
+
+
+Insert a Line in HTML: <br> or <hr>
+
+
+Add images: <img src="your_image_url">
+
+
+, You can also use this code to link to other pages and websites, but for now, since you may not have a web site yet, we'll focus on "anchors," or specific places on the page that you can link to:
+
+
+First make an anchor with the <a> tag at the point on the page that you want to link to. Name it something descriptive and easy to remember.:<a name="Tips">This is the text you put the anchor around.</a>
+
+Use the <href> to link to those anchors or to another webpage:<a href="url of webpage, or name of anchor within this page">Write the text or image that will be displayed as a link here.</a>
+
+To link to an anchor on a different web page, add the # sign after the URL, followed by the name of the anchor. For instance, https://www.wikihow.com/Learn-HTML#Tips links to the Tips section of this page.
+ Attributes are placed within the tag itself, making additional alterations to the "element content" between the start and end tag. They never stand alone. They are written in the format name="value", where name is the name of the attribute (for instance "color"), and value describes this specific instance (for instance "red").
+
+
+You've actually seen attributes before, if you followed the tutorial in the basic HTML section. <img> tags use the src attribute, anchors use the name attribute, and links use the href attribute. See how those all follow the ___="___" format?
+
+, Making a table, or chart, requires several different tags. Play with these tags, or learn about HTML tables in more detail.
+
+
+Start with table tags around the entire table:<table></table>
+
+Row tags around the contents of each row: <tr>
+
+Column headers in the first row: <th>
+
+Cells in subsequent rows: <td>
+
+Here's an example of how it all fits together:<table><tr><th>Column 1: Month</th><th>Column 2: Money Saved</th></tr><tr><td>January</td><td>$100</td></tr></table>
+
+
+, You've already learned the <head> tag, which shows up at the start of each document. Besides the <title> tag, it can include the following types of tags:
+
+
+
+Meta tags, which are used to provide metadata about a web page. This data can be used by search engines when the robot scours the internet to locate and list websites. To make your website more visible on search engines, use one or more <meta> start tags (no end tags necessary), each with exactly one name attribute and one content attribute, for example: <meta name="description" content="write a description here">; or <meta name="keywords" content="write a list of keywords, each separated by a comma">
+<link> tags are used to associate other files with the page. This is mainly used to link to CSS stylesheets, which are made using a different type of coding to alter your HTML page by adding color, aligning your text, and many other things.
+<script> tags are used to link the page to JavaScript files, which can cause the page to change as the user interacts with it.
+ A great way to expand your knowledge is by looking into the HTML source of webpages. You can do this by right clicking the page and selecting "View Source," "View Page Source," or a similar option, or by going to the View section in the top menu of your browser. Try to figure out what each unfamiliar HTML tag does, or look it up online for the answer.
+
+
+While you cannot edit other people's web sites, you can copy the HTML you find into your own document, then play with it to see what different options do. Note that, without the CSS stylesheet that website links to, you may not be able to see all of the colors or formatting.
+ There are various resources on the internet that you can use to learn about many more HTML tags, such as W3Schools or Codecademy. You may also find books with tutorials about HTML, but make sure you use one that was published within the last couple years, since there are occasional updates and changes. Better yet, learn CSS to have much more control over your web page's layout and appearance. Once you have CSS down, the next step for web designers is typically Javascript.
+

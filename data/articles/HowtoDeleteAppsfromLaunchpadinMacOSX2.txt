@@ -1,0 +1,4 @@
+ You can do this by going to your Finder and selecting "Go" and then "Utilities." A window will appear where you can choose the black icon entitled "Terminal." You can also do this by clicking on the magnifying glass in the upper right-hand corner of your screen and typing "terminal."
+
+, For example, if you are trying to delete an app called "LEMON," you would enter the following command: sqlite3 ~/Library/Application\ Support/Dock/*.db "DELETE from apps WHERE title='LEMON';" && killall Dock. You can find the exact name of the App by going to the Applications folder and searching for it. After you have entered the above command, hit "Enter.", After you enter the delete command, Launchpad will automatically refresh and the app should be gone.
+

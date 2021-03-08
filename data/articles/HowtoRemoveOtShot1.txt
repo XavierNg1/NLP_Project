@@ -1,0 +1,28 @@
+ Before you can uninstall OtShot, you will need to close the program. OtShot is most likely running in the background, and you should be able to see its icon (a heart) in the system tray at the bottom-right corner of your desktop, next to the clock. You may need to click the arrow to show hidden icon.
+
+
+Right-click on the icon and select Exit.
+If the icon is not present, press Ctrl+Alt+Del to open your Task Manager. Click the Processes tab and look for “otshot.exe”. Once you find the program, click on it and select End Process.;
+, Once the program has finished running, open your file explorer and navigate to the OtShot folder. OtShot should be located in your “Program Files” or “Program Files (x86)” folder in your hard drive.
+
+
+Right-click on the OtShot folder and select Delete. If you receive a message that the files are in use, make sure that OtShot has been completely disabled first.
+Also check to see if there is an OtShot folder in the “Programs” folder on your hard drive. If there is, delete it as well.
+If you are having difficult deleting the files, try starting your computer in Safe Mode and then deleting them.
+ Once the files are deleted, you will need to remove the entries in your Windows registry to keep it from reinstalling itself. To open the registry, press the Windows key + R to open the Run dialog box, and then enter “regedit” and press Enter.
+
+
+The registry is organized into several folders that you can navigate in the left frame. Click the “+” icons next to the folder name to expand them.
+Navigate to and delete the following entries. Right-click on the entry and select Delete:
+
+HKEY_CURRENT_USER\Software\
+Microsoft\Windows\CurrentVersion\Run\OtShot
+HKEY_CURRENT_USER\Software\OtShot
+HKEY_LOCAL_MACHINE\SOFTWARE\
+ZalmanInstaller_otshot, Once you’ve removed all traces of OtShot from your computer, you can remove its entry from your startup list. While OtShot shouldn’t load because all of its files are gone, it is still good to make sure it isn’t trying to load when your computer restarts.
+
+
+Open the Run dialog box (Windows key + R) and enter “msconfig” This will open the MSCONFIG tool, which will allow you to modify your startup programs.
+Click the Startup tab and browse the list for OtShot. Uncheck the box to keep OtShot from starting with your computer.
+ After rebooting, you should not see any trace of OtShot remaining on your computer. If you are still having difficulties removing it, refer to the next section.
+

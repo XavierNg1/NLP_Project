@@ -1,0 +1,26 @@
+
+
+
+PGP recognizes two digital formats: X.509 certificates and PGP certificates.
+Share your public PGP keys with those recipients with whom you wish to share information. Ensuring that your network of senders and recipients of sensitive data all operate using similar PGP public keys will make PGP verification easier.;
+,
+
+
+There are several software options from freeware to military grade applications used to secure data across large corporate networks.
+Test a few applicable software options to make the best choice for your organization. Before implementing a software solution company-wide, you may benefit from participating in testing programs to ensure usability and to develop best practices based on your needs.
+
+
+
+You can establish one PGP certificate for your organization that includes the entire list of users that will share information.
+Once you have established your list of public keys and data sharing protocol, you can begin developing methods to verify PGP.
+
+
+
+There are manual as well as automated processes that CAs can use to verify PGP signatures. You will need to establish the best method for your company based on the information shared.
+All senders and recipients of secure information will verify a PGP signature by using the primary public key (which must be accessible to all recipients) and adding it to their files.
+Once information is sent and the applicable public keys have been exchanged, the software used will verify the PGP signature for received messages.
+ PGP public keys can be used to verify digital signatures as well as to decrypt messages.
+
+
+PGP Certificates are valid for an allotted time; in many corporate environments, users (employees, management) have to reset usernames and passwords after 30, 60 or 90 days to ensure that if identifiers or information has been compromised, precautions are in place to establish security.
+

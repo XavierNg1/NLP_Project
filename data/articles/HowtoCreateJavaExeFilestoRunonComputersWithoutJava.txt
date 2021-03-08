@@ -1,0 +1,102 @@
+, Debian-based systems can use apt.
+
+C compiler (such as gcc, or mingw32 to cross compile for Windows)
+Java Runtime Environment (such as openjre)
+Java Development Kit (such as openjdk)
+
+
+
+
+
+sudo apt-get install gcc
+sudo apt-get install default-jre
+sudo apt-get install default-jdk
+
+
+
+
+The bash code shown above uses the terminal-based apt-get to select and install the packages needed for this project. The gcc is a C compiler, default-jre is the system default Java Runtime Environment which is openjre, and default-jdk is the system default Java Development Kit which is openjdk. These commands should work on any Debian-based system, including Ubuntu, Kali, Raspian, and XUbuntu.
+
+
+Type the following source code into a file called exec.c
+
+
+
+
+#include <stdlib.h>
+ 
+int  main(){
+        system("java -jar javaExe.jar");
+        return 0;
+}
+
+
+
+
+The first line tells the compiler which library to include. This 'stdlib' is built into the system by default, so it knows where to find it. The main function tells the program where to start, and the system function outputs a command to the default shell; however, in this instance, the syntax is the same for all Debian-based default shells. The return 0 tells the program that it executed correctly with no errors.
+
+
+
+
+Compile the program using your compiler
+
+
+
+
+gcc exec.c -o exec.exe
+
+
+
+
+The gcc compiler is invoked to compile the exec.c file and to output an executable called exec.exe.
+
+
+Type the following manifest file configuration into a file called manifest.txt
+
+
+
+
+Main-Class: javaExe
+
+
+
+
+The manifest file is like the configuration file for Java programs. Specifically in this case, it tells the program where to start. The program should start in the javaExe class that will be presented in the next file.
+
+
+
+
+Type the following source code into a file called javaExe.java
+
+
+
+
+public class javaExe
+{
+   public static void main(String[] args)
+   {  
+      System.out.println("Hello world");
+   }
+}
+
+
+
+
+This is a very basic Java program. The first line creates the residing place of the program. The main function has a string array for an argument which represents the input of the command line, which will not be used here. The System.out.println function outputs basic text to the console.
+
+
+
+
+Compile the Java program using the Java Development Environment.
+
+
+
+
+javac javaExec.java
+jar cfvm javaExe.jar manifest.txt javaExe.class
+
+
+
+
+This shows how the Java byte-code compiler javac is compiling the Java class into a class to be used in different programs. The jar command combines the manifest file, which is like the configuration, with the class file, which is the compiled code. The result is a jar file, which is the program itself that will be run in the C program.
+ The 'Hello world' text is the output of the Java program, which was called upon by the executable.

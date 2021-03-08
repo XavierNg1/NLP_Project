@@ -1,0 +1,53 @@
+ Below, we let z=f(x,y).{\displaystyle z=f(x,y).}
+
+
+r=xi+yj+f(x,y)k{\displaystyle {\mathbf {r} }=x{\mathbf {i} }+y{\mathbf {j} }+f(x,y){\mathbf {k} }}
+;
+, For drx,y{\displaystyle {\mathrm {d} }{\mathbf {r} }_{x},\,y} is being held constant, and vice versa. We use the notation fx=∂f(x,y)∂x.{\displaystyle f_{x}={\frac {\partial f(x,y)}{\partial x}}.}
+
+
+drx=dxi+fxdxk{\displaystyle {\mathrm {d} }{\mathbf {r} }_{x}={\mathrm {d} }x{\mathbf {i} }+f_{x}{\mathrm {d} }x{\mathbf {k} }}
+
+
+dry=dyj+fydyk{\displaystyle {\mathrm {d} }{\mathbf {r} }_{y}={\mathrm {d} }y{\mathbf {j} }+f_{y}{\mathrm {d} }y{\mathbf {k} }}
+
+
+, 
+
+
+dS=drx×dry=|ijkdx0fxdx0dyfydy|=−fxdxdyi−fydxdyj+dxdyk{\displaystyle {\begin{aligned}{\mathrm {d} }{\mathbf {S} }&={\mathrm {d} }{\mathbf {r} }_{x}\times {\mathrm {d} }{\mathbf {r} }_{y}\\&={\begin{vmatrix}{\mathbf {i} }&{\mathbf {j} }&{\mathbf {k} }\\{\mathrm {d} }x&0&f_{x}{\mathrm {d} }x\\0&{\mathrm {d} }y&f_{y}{\mathrm {d} }y\end{vmatrix}}\\&=-f_{x}{\mathrm {d} }x{\mathrm {d} }y{\mathbf {i} }-f_{y}{\mathrm {d} }x{\mathrm {d} }y{\mathbf {j} }+{\mathrm {d} }x{\mathrm {d} }y{\mathbf {k} }\end{aligned}}}
+
+
+dS=(−fxi−fyj+k)dxdy{\displaystyle {\mathrm {d} }{\mathbf {S} }=(-f_{x}{\mathbf {i} }-f_{y}{\mathbf {j} }+{\mathbf {k} }){\mathrm {d} }x{\mathrm {d} }y}
+
+The formula above is the surface element for general surfaces defined by z=f(x,y).{\displaystyle z=f(x,y).} It is important to note that the nature of surfaces (more accurately, the cross product) still allows one ambiguity - the way the normal vector is pointing. The result that we have derived applies to outward normals, as recognized by the positive k{\displaystyle {\mathbf {k} }} component, and for most applications, this will always be the case.
+
+The derivation works in any coordinate system. See the tips for the derivation in cylindrical coordinates.
+ The surface consists of infinitesimal patches that are approximately flat. As you can see, the way we integrate over a domain works the same way, and the fact that a surface element denotes orientation as well reflects that surface integrals are a powerful generalization of area integrals.
+ Finding the surface area involves finding the integral below. We only care about the area of the surface, not its orientation, so we find its magnitude. 
+
+
+∫S|dS|=∫A1+(∂z∂x)2+(∂z∂y)2dA{\displaystyle \int _{S}|{\mathrm {d} }{\mathbf {S} }|=\int _{A}{\sqrt {1+\left({\frac {\partial z}{\partial x}}\right)^{2}+\left({\frac {\partial z}{\partial y}}\right)^{2}}}\,{\mathrm {d} }A}
+
+
+, Recall from part 1 that dS=(−fxi−fyj+k)dA,{\displaystyle {\mathrm {d} }{\mathbf {S} }=(-f_{x}{\mathbf {i} }-f_{y}{\mathbf {j} }+{\mathbf {k} }){\mathrm {d} }A,} where z=f(x,y).{\displaystyle z=f(x,y).}
+
+
+dS=2xi+2yj+k{\displaystyle {\mathrm {d} }{\mathbf {S} }=2x{\mathbf {i} }+2y{\mathbf {j} }+{\mathbf {k} }}
+
+
+|dS|=4x2+4y2+1dA{\displaystyle |{\mathrm {d} }{\mathbf {S} }|={\sqrt {4x^{2}+4y^{2}+1}}{\mathrm {d} }A}
+
+
+, The boundary on the xy-plane is a circle of radius 2. This means that we should evaluate in polar coordinates too. 
+
+
+∫S|dS|=∫02rdr∫02πdθ4r2+1{\displaystyle \int _{S}|{\mathrm {d} }{\mathbf {S} }|=\int _{0}^{2}r{\mathrm {d} }r\int _{0}^{2\pi }{\mathrm {d} }\theta {\sqrt {4r^{2}+1}}}
+
+
+, U-substitution is the way to go.
+
+
+∫S|dS|=2π∫02r4r2+1dr,   u=1+4r2=π4∫117u1/2du=π6(173/2−1){\displaystyle {\begin{aligned}\int _{S}|{\mathrm {d} }{\mathbf {S} }|&=2\pi \int _{0}^{2}r{\sqrt {4r^{2}+1}}{\mathrm {d} }r,\ \ \ u=1+4r^{2}\\&={\frac {\pi }{4}}\int _{1}^{17}u^{1/2}{\mathrm {d} }u\\&={\frac {\pi }{6}}(17^{3/2}-1)\end{aligned}}}
+
+

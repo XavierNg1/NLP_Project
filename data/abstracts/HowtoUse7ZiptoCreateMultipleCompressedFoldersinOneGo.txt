@@ -1,0 +1,28 @@
+
+Install 7zip.
+Fire up Notepad.
+In Notepad, insert this single line of code: for /d %%X in (*) do "c:\Program Files\7-Zip\7z.exe" a "%%X.7z" "%%X\"
+
+,
+Note: If you'd like to output to .ZIP files, change the "%%X.7z" to "%%X.zip"
+
+
+
+
+
+,
+Click 'File' then 'Save As'.
+
+
+
+
+
+,
+Browse to the location of the folders you want to compress.
+Create your very own batch file by setting 'Save as type' to 'All files' and naming it something like 'foldertomultiple7z.bat'.
+Click Save.
+
+,
+Close Notepad and navigate to your 'My Music' folder.
+Run the batch file by double-clicking on your bat file within your 'My Music' folder.
+Verify the validity of your compressed folders.

@@ -1,0 +1,47 @@
+ See the great article `Start Making a Website´ to learn about planning a new website.;
+, Drupal is amazing software, but it's not always the right choice. Using the 'right' software (for your specific project) is always better than using the 'best' software - if that existed., It's worth considering other popular CMSs like WordPress and Joomla, or 'cloud-hosted' CMSs like WordPress.com and Drupal Gardens.
+
+You could also use website-building software to help you build the website from scratch (using a drag-and-drop interface), or you could learn to code the website from scratch, if you have enough time. How to Start Making a Website explains these options well.
+If you'd like to test it, you can use simplytest.me. Type 'Drupal' in the search box, choose 'Drupal core', then select the latest (highest) version from the selection box. Then launch it, and have fun!
+
+,,, When you've logged into your site, you'll see the website covering most of the screen, with a black bar covering the top, with a few buttons. The 'Menu' button makes the main administration menu show up just below it. 'Shortcuts' provides a little menu that's all yours (you choose what's in the menu).
+
+You can add or remove a link to any administration page in this menu. Just click on the little star next to the page's title. The button with your name allows you to log out, among other things. The pencil button makes all the 'editable' areas on the current webpage visible with pencil icons in their upper-right corners.
+
+When you have one of the menus open, you'll see an 'arrow and line' icon on the right, which toggles (switches) the menu between appearing at the top, or on the left of the screen.
+ This screen shows all the webpages of your website, as well as other kinds of content. You can filter (narrow down) which content is shown on this page. Do this by selecting from or typing into the fields below the 'Add content' button, and clicking the 'Update' button.,
+On the 'Create Basic page' screen, you'll see a typical CMS-style webpage-editing screen (it looks very similar to other CMSs like WordPress, and has buttons similar to Microsoft Office Word), so it should look familiar!, You can format the text, insert images, and so on. On the right are expandable sections with more options, like the option to create a link in a menu, and decide whether you want to publish your article or keep it as a draft., The preview option at the bottom lets you see your new webpage the way it'll look when you've saved it (but it doesn't save it yet), and lets you edit it more before it's finished. When you are finished editing, click the 'Save and publish' button, or click the right side of the button with the little triangle for other options., That way, you can understand what they mean when professionals write or speak about them. In Drupal, 'Basic pages' and 'Articles' are called content types, or more generically, bundles of content.
+
+Each one of these (each page, for instance) is called a node. Also, these content nodes, as well as users, comments, files, and a few other things are all called entities. Entities are powerful and useful concepts, because they are all fieldable (meaning, for example, users can have a 'profile picture' field).
+ Articles look and act just like the basic webpages, but they should be used in a different way. While the content on a webpage is 'static' (it doesn't change much, and it isn't particularly time-sensitive), articles are similar to posts in a journal or on a blog; they're relevant when they're new and fresh. They're useful for blog posts or news stories.
+
+
+Articles usually have comments turned on (to encourage visitor interaction), and have a field at the bottom called 'Tags'. Tags allow you to categorise articles so that they're easier to find for visitors. You can add as many tags as you want to each article. Tags are called taxonomy terms in Drupal; they can be edited at 'Structure' > 'Taxonomy'. There, you can add other taxonomies as well (like 'categories'), and arrange them hierarchically (one within another).
+, Blocks are often pieces of content that you can place into special areas on any Drupal page; these areas are called regions. For example, a block could be a snippet or except of an article, or a little gallery of thumbnail images. Blocks can also be interactive elements with specific functions, such as a search box, or a contact form.
+
+
+When you go to the 'Structure' > 'Block layout' page, you'll see a table on the left, and a gray area with links on the right. The table has bold headings; these are the regions, such as Header, Sidebar first, Footer, etc. Under each region name are the blocks, such as 'Main page content' and 'Search'; these blocks have been created automatically by modules (such as the Views module).
+
+You can rearrange these blocks using the arrow icons or the selection boxes. You can also create new copies of existing blocks using the links in the right area.
+
+
+You can create new 'custom' blocks by clicking on the 'Add custom block' button; you can add any content you like to a block (text, images, etc.), just like a basic page. These blocks you create are stored in the 'Custom block library' tab.
+On the 'Block layout' page, click on the 'Demonstrate block regions' link to see all the regions that your theme provides, and where they are on the page; regions are specific to the theme that is currently active, which is Bartik by default.
+ Menus are simply collections of links to webpages (either on your website, or somewhere else on the internet). In Drupal, you can create as many menus as you like, with as many links as you like, and you can place these menus in any region on any webpage as a block (even in the footer).
+
+
+To create or edit a menu, go to 'Structure' > 'Menus'. Here you'll see 5 menus that have been created by Drupal already; you can click on the 'Edit menu' button beside each to see the links it has.
+You can create a new menu using the 'Add menu' button. You can then start adding links directly to the menu, however it's usually far easier to add specific pages (or other types of content) to a menu by using the 'Provide a menu link' option in the 'Menu settings' section on the editing page of that webpage.
+ Themes are what defines what a website looks like, and in some ways, how it functions. For instance, a Drupal theme can set the colours, fonts, and icons of your website, as well as each page's layout, and some appearance-related functionality (like changing the way the menu works depending on the device the visitor is using).
+
+Drupal themes are usually either made for the website as it's seen by visitors (called the front-end), or for the administrators when they log in (called the back-end); often called 'admin themes'. While most themes you'll find for Drupal are free, you can find professionally-designed themes that cost money.
+To find themes, you can search on Drupal.org (over 1200, all free), ThemeForest (over 200, all paid), TemplateMonster (over 450, all paid), Billion Themes (over 800, paid and free), as well as individual Drupal design studios. Remember to filter the themes to show only those for Drupal 8.
+To change to a different theme, see the article How to Change Themes in Drupal.
+
+
+Drupal is made up of modules, and they provide the functions of the website. Almost anything you want your website to do can be provided by a module.
+
+While most CMSs can be extended using modules/plugins/extensions (or whatever they're called by that CMS), Drupal is a little different because its basic setup (when you first install the standard Drupal download, called Drupal core) is made up of 'core' modules. All new modules you find and install on your website are called contributed (or 'contrib' for short) modules. Note that many modules require other modules to work - this is always explained on the module page.
+Deciding which modules to install is a difficult task for every Drupaler, especially if you're new to Drupal. Firstly, you can only install modules that are made for Drupal 8. Also, unless you understand and accept all the risks, you should only install versions of the module that are in the 'Recommended releases' (green) downloads table; not 'dev', 'alpha' or 'beta' versions. There are many factors that determine the quality of the module, so firstly try to choose modules that have a well-written description and instructions (always read this).
+Finding and installing modules is very similar to finding and installing themes in Drupal. You can either copy the link to the module and install it using the link, or you can download it and place it in the sites > all > modules folder, then turn it on on the 'Extend' page, and finally configure its settings.
+,,,,,,,,

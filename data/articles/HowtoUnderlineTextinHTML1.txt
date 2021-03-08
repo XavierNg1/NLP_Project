@@ -1,0 +1,80 @@
+ Using the <u> tag is no longer the proper way to underline text. Instead, use the "text-decoration" CSS property.
+
+
+This helps make your code future-proof so that you don't have to go back and change things once the old code becomes unusable.;
+, Place the opening tag along with the "text-decoration" property where you want to start underlining. Place the closing </span> where you want it to stop.<span style="text-decoration: underline;">This will be underlined.</span>
+
+
+
+
+, You can also do this on the CSS style sheet. You can make the underlining process much easier by declaring HTML elements to style. For example, to make all of your level 3 headers underlined, add the following to your CSS style section:
+
+
+
+
+
+<html>
+<head>
+<style>
+h3 {
+        text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<h3>This header will be underlined</h3>
+</body>
+</html>
+
+
+
+
+, In your style sheet or <style> section, you can create classes to call later. The class can have any name you'd like.
+
+
+
+
+
+<html>
+<head>
+<style>
+.underline {
+        text-decoration: underline;
+}
+</style>
+</head>
+<body>
+You can use this class to 
+<div class="underline">quickly underline</div> different parts 
+<div class="underline">of your content</div>
+</body>
+</html>
+
+
+
+
+, Underlining should be avoided to keep from confusing your reader. One popular method is to use the <em> tag, which italicizes text. You can use CSS to further define this tag for unique emphasis.
+
+
+
+
+
+<html>
+<head>
+<style>
+em {
+        color: red;
+}
+</style>
+</head>
+<body>
+Anything that uses the em element will be 
+<em>italicized (because of the default settings), 
+as well as red</em> because of the additional 
+style settings added above.
+</body>
+</html>
+
+
+
+

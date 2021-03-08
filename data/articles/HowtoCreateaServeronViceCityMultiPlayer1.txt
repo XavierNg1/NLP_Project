@@ -1,0 +1,75 @@
+ The server will probably not be visible to anyone outside your local network if you do not port forward.;
+,,, Open server.cfg with Notepad or your favorite editor, and edit the settings as you please.
+
+
+
+hostname - Sets the name of the server.
+
+
+
+
+
+
+
+password - Does not work properly on the server!
+
+
+rcon_password - Sets the password to use RCON and become an admin
+
+
+
+
+
+
+
+rcon_port - Must be added, changes the RCON port and allows the RCON server to run.
+
+
+
+
+
+
+
+rcon_max_players - Must be added, sets the maximum number of people that can be on RCON at once.
+
+
+
+
+
+
+
+maxplayers - Changes the maximum amount of players that can be on at once.
+
+
+
+
+
+
+
+lanmode - Decides whether or not to accept connections outside of your network.
+
+
+
+
+
+
+
+friendlyfire - If set to 1, allows players on the same team to hit each other.
+
+
+
+
+
+
+
+port - Sets the server port.
+
+
+
+
+
+
+
+gamemode - Changes the gamemode (found in the gamemodes folder) to be loaded.
+ Run vcmp-svr.exe. If done properly, you should be able to test your server at 127.0.0.1
+

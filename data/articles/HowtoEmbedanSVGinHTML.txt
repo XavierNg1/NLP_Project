@@ -1,0 +1,54 @@
+;
+,
+
+
+Within your graphic editor, it is very useful to keep your image well organized. Doing so will make future steps far easier.
+In Adobe Illustrator, group paths together by holding shift and selecting multiple paths. Then, right click and choose "group." You will see your new groups in the layers window.
+
+
+
+Any vector based graphics editor will should allow you to save your graphic as an SVG.
+In illustrator, select "Save As" from the file tab. In the dialog box, select SVG from the dropdown list, then click save.
+You may encounter an "SVG Options" dialog box. There are several versions of the SVG file format, generally, version 1.1 is fine. Select OK and continue.
+
+
+
+In the file explorer, right click your new SVG file and select "Open with" from the list.
+From the available programs, select any text editor. You may need to select "More Apps" or "Choose another app" if your desired text editor is not in the list.
+Notepad is fine, however, you may choose to open your SVG in an IDE such as Visual Studio.
+
+
+
+Once opened, use your cursor to select only the contents of the <svg> tag.
+There will be a line at the top of the file that begins with "<?xml ..." Ignore this line and any additional comment lines at the top of the document.
+Everything within the <svg> tags is valid HTML markup and may be placed in an HTML page.
+
+
+
+Open your HTML page in a text editor and paste the block of code you copied from the last step into your web page.
+The SVG tag may be place anywhere in the body of your HTML markup.
+
+If your graphic is already sized properly and appears as you desire it, you may stop after this step.
+ If this is the case, simply add classes to the existing attribute.
+e.g <svg class="SVGclass" .
+
+One of the benifits of the SVG format is that it may be scaled to any size without quality loss.
+Within the angle brackets of the SVG, you may create two new atributes for width and height if they do not already exist. e.g width="150" height="200". The value within the quotation marks indicates the pixel dimensions of the graphic
+Alternativley, you may set the dimensions using CSS by targeting the class that you assigned to your SVG. e.g .SVGclass{ width: 200px }
+
+, This step will make any further styling using CSS much easier.
+
+
+Each <g> tag within the markup of the SVG represents a group that you created in your graphics software.
+Comment, or add custom classes to the tags withing your SVG so that they may be targeted with CSS
+
+, They can be given style and class attributes for styling.
+Paths and shapes within your svg can have their fill, stroke, stroke-width, and many other styles edited with CSS.
+For example: .IceCream{ fill: blue; }
+
+,
+
+
+All of your new styling should be visible within a web browser.
+Repeat steps 10 and 11 until you graphic has all of the desired styling.
+

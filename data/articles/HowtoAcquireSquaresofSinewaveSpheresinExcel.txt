@@ -1,0 +1,88 @@
+ Otherwise, simply follow these steps: Create a New Workbook with three worksheets; Data, Chart (unless you are using Chart Wizard) and Saves.
+
+
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects. Check Show gridlines and set all boxes below that to auto or checked.
+In Chart, allow show chart names and set data markers on hover and leave the rest unchecked for now.
+In Calculation, Make sure Automatically and calculate before save are checked. Set max change to .000,000,000,000,01 without commas as goal-seeking may be done. Check save external link values and use 1904 system
+
+In Error checking, check all the options.
+In Save, select save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ Edit Go To cell range A1:I17286 and Format Cells Number Number Decimal Places 4, Font Size 9 or 10, Fill (from the color wheel) a fuchsia.
+
+Make the Border Dark Blue bold Outline. For rows 1:3, set the font size to 14 and the decimal places to 5.
+
+In cell E1, enter Magical
+In cell E2, enter SW Spheres
+Select cell range E1:F2 and Insert Names Create in Left Column and do Border blue bold Outline plus Center Horizontal Divider Line
+In cell F1, enter "=17280/SW_Spheres"
+In cell F2, enter 24 and do Format Fill yellow for input.
+In cell G1, enter Stretch_x
+In cell H1, enter Stretch_y.
+Select cell range G1:H2 and Insert Names Create in Top Row and do Border blue bold Outline plus Center Vertical Divider Line
+In cell G2, enter "=SW_Spheres/(2*SW_Spheres/6)*VLOOKUP(SW_Spheres,LikelyStory,2)"
+In cell H2, enter "=Stretch_x"
+Command+Select cells C1:E2, F1, G2:H2, H3 and Format Fill white..
+In cell H3, enter 8.5
+
+,
+E5: Side
+F4: Indicates, and F5: SphereNumber
+G5: Adj_X
+H5: Adj_y  and into H4 a note about the distance to the bottom hole of the first sphere "2.9473"
+I5: Indicative
+Edit Go To cell range B6:B17286 and Insert Name Define name z to range $B$6:$B$17286
+Edit Go To cell range E6:E17286 and Insert Name Define name Side to range $E$6:$E$17286
+Edit Go To cell range F6:F17286 and Insert Name Define name Indicates to range $F$6:$F$17286
+Edit Go To cell range G6:G17286 and Insert Name Define name Adj_X to range $G$6:$G$17286
+Edit Go To cell range H6:H17286 and Insert Name Define name Adj_y to range $H$6:$H$17286
+Edit Go To cell range I6:I17286 and Insert Name Define name Indicative to range $I$6:$I$17286
+
+, Edit Go To cell range A7:A17286 and input "=IF(Indicates<>0,2*PI(),IF(A6=2*PI(), 0,2*PI()/Magical+A6))" and Edit Fill Down.
+z: Edit Go To cell range B6:B5765 and enter into B6 w/o quotes the formula, "=c_*COS(a*A6)" and Edit Fill Down.
+x: No z: Edit Go To cell range C6:C17286 and enter into C6 w/o quotes the formula, "=(Stretch_x*(((b^2-c_^2*COS(a*A6)*COS(a*A6))^0.5*COS(A6)))+Adj_x)" and Edit Fill Down. Format Fill Light Blue.
+y: With z: Edit Go To cell range D6:D17286 and enter into D6 w/o quotes the formula, "=(Stretch_y*(((b^2-c_^2*COS(a*A6)*COS(a*A6))^0.5*SIN(A6))+z)+Adj_y)" and Edit Fill Down. Format Fill Light Blue. Select cell C17286 and enter "=C6" and copy and paste to cell D17286 and format fill yellow.
+Side: Edit Go To cell range E6:E17285 and enter into cell E6 w/o quotes the formula, "=IF(Indicative<=SW_Spheres,VLOOKUP(Indicative, LOOKY,1+SW_Spheres/4),E5)"
+Indicates: Select cell F6 and do Format Font Red, Fill light blue.
+Indicates: To cell F6 enter "=INT(((ROW()-6)/Magical))".
+Indicates: Edit Go To cell range E7:E17286 and enter w/o external quotes the formula, "=IF(((ROW()-6)/Magical)=INT((ROW()-6)/Magical),1+MAX($F$6:F6),0)" and Edit Fill Down and Format Fill light blue. INT gives the INTeger value of a quantity/result. It is supposedly no longer offered by Excel, but they still allow for its usage from old worksheets, so you can use it if you know about it. It's indispensable at times.
+Adj_X: Edit Go To cell range E6:E17286 and enter into cell E6 w/o external quotes the formula, "=IF(OR(Side="A",Side="E"),0,IF(AND(Side="B",Indicates<>0),(G5+Change_x),IF(Side<>"D",(G5),0)))+IF(Side="C",0,IF(G5=18,0,0))+IF(AND(Side="D",Indicates<>0),G5-Change_x,IF(OR(Side="B",Side="C"),0,G5))+IF(Side="E",-Change_x,0)" and Edit Fill Down #* To cell E6 Insert New Comment and edit in by pasting from the formula bar "Original Formula =IF(OR(Side="A",Side="E"),0,IF(AND(Side="B",Indicates<>0),(G5+Change_x),IF(Side<>"D",(G5),0)))+IF(Side="C",0,IF(G5=18,0,0))+IF(AND(Side="D",Indicates<>0),G5-Change_x,IF(OR(Side="B",Side="C"),0,G5))+IF(Side="E",-Change_x,0)". It is a good idea to Insert New Comment for all original formulas so you have them close to hand should they be overwritten completely and this article is hard to find and you have no backup file.
+Adj_Y: Edit Go To cell range F6:F17286 and enter into cell F6 w/o external quotes the formula, "=IF(OR(Side="D",Side="E"),0,IF(AND(Side="A",Indicates<>0),Change_y+H5,H5)) +IF(AND(Side="C",Indicates<>0),-Change_y,0)" and Edit Fill Down.
+To cell F6 Insert New Comment and edit in by pasting from the formula bar "Original Formula =IF(OR(Side="D",Side="E"),0,IF(AND(Side="A",Indicates<>0),Change_y+H5,H5))+ IF(AND(Side="C",Indicates<>0),-Change_y,0)". Format fill Medium Blue.
+Indicative: Edit Go To cell range I6:I17286 and enter into cell I6 w/o external quotes the formula, "=MAX($I5:I$5)+IF(((ROW()-6)/Magical)=INT((ROW()-6)/Magical),1,0)".
+ You want to save up top right of the main data set you just entered.
+Go to cell K17153 and type LikelyStory, font bold red. Select cell range K17154:K17169 and enter 4, then do Edit Fill Series Column Linear Step Value 4, OK. Enter the following values into cells L17154:L17169, proceeding down from the top: 4, 3, 2, 1.5, 1.25, 1, 1, .75, .7, .65, .65, .5, .5, .5, .4, .4 Select cell range K17154:L17169 and Insert Name Define Name LikelyStory Do Format Font Red Bold, Fill Yellow. and Border Black Outline.
+Edit Go To cell range K17086:K17150 and enter 0 into cell K17086 and do Edit Fill Series Column Linear Step Value 1, OK.
+Into cell K17085 type LOOKY and do Font Red bold.
+Edit Go To cell range L17086:AA:17086 and input 4 into cell L17086 and do Edit Fill Series Rows Linear Step Value 4, OK.
+Select AA17985:K17169 and do Format Column Autofit Selection.
+Into cell range L17087:L17090 from top to bottom, enter A, B, C, D. What you're doing is setting the Side Letter of 4 sides to each sphere number down the left column of the number of sides in the top row, 4 in this case. The next case is 8 sides as indicated by the value 8 in cell M17086. From the top down, enter A, A, A, B, B, C, C, D -- a total of 8 letters. Now to add another letter of each type in subsequent series. So go to N17088 and enter "=N17087" into that cell and copy that cell and paste it to cell range N17087:AA17150. Thus are made copies of whatever entry is made to the cell above. Now, it's just a matter of changing the cell letter at the right time. So if, for example, there is to be one more A under 12 than under 8, you type a B after adding one more A in the column, and add a C after adding one more B in the column, and enter a D after adding one more C in the column, and after there is one more D, you hit delete, and the rest of the column entries go to zero. The zeros were cleaned up by deleting them all -- your preference. Here are pictures of both the LikelyStory and LOOKY vlookup tables necessary for completing this article:
+
+
+ LikelyStory
+
+
+
+
+
+
+
+
+
+
+,
+Copy or Cut and Paste the chart which landed atop the data or to the side and paste in the Chart worksheet, where it should be pulled open to an approximate square at the lower left by hovering the cursor until it changes to the double-headed arrow and then grabbing the chart frame and pulling down and right.
+Select Chart Layout and get rid of Axes, Grid lines, and the Legend.
+Click in the Chart Area outside the Plot Area near the outer border and choose no line and no Fill. Do the same for the Plot Area. To do one of the 24 spheres, select the cell range per Indicates. In that case, the chart area may need to be squeezed perhaps until the sphere appears round (may be a little pumpkinish).
+Select Chart Layout on the Ribbon after tapping in the chart and at left select Chart Area Format Selection. Glow is a wine brown, size 48 pt, transparency 255, 0 pt soft edges. Line is No Line, and 3-D and Depth is None. Fill Transparency is 0% Gradient is Radial Centered Far Left White, Far Right Navy Blue or Dark Blue.
+Select Chart Layout on the Ribbon after tapping in the chart and at left select Plot Area Format Selection. No Line, Glow, Shadow or 3-D. Fill Gradient is Rectangular Centered and Transparency 0%. At far left is black at 0%, then Blue-Purple at 24% and Light Blue at 74%.
+Select Chart Layout on the Ribbon after tapping in the chart and at left select Series 1 Format Selection. Line is Navy Blue, Smoothed Line, Transparency 0%, Weight 1 pt.
+Do Chart Format Effects Reflection [choose the 3rd one down on the right probably -- it's not letting me access it right now because I'm dealing with the Chart vs. a Copied Picture of the chart, done with the shift key for both Copy and Paste.
+Copy and Paste both data and pasted values of the data and a picture of your charts to the Saves worksheet. Copy the Lookup Tables to the Saves worksheet as well.
+Try setting a,b and c_ to 100, .5 and .5 respectively and set the line weight is set to 1 or less for charts with few spheres. The more spheres, the less is preferred a to equal, as the number of lines per sphere.
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

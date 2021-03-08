@@ -1,0 +1,59 @@
+
+
+
+This is the folder that contains all of the files for your server.;
+,
+
+
+Make copies of the following files into another location so that you can restore them after updating the server:
+banned-ips.txt
+banned-players.txt
+ops.txt
+server.properties
+
+,
+
+
+Place this copy with your backed up configuration files so that you can restore it after the update and access your saved world.
+
+
+
+If you use a script to start Minecraft, make a copy of it to another location. You can restore it later to easily start your server.
+
+
+
+Once you've backed up your important files to another location, delete everything in your Minecraft Server folder. This will keep old files from causing problems with your new installation.
+
+
+
+Visit minecraft.net/download and download the server file for your operating system.
+If you are using Windows, download the EXE file.
+If you are using OS X or Linux, download the JAR file.
+,
+
+
+If you use a script or batch file to start your server, you'll want to rename the new server file so that the old script still works. Remove the version number from the end of the new server file to make your old scripts compatible.
+For example, minecraft_server.1.8.exe would be renamed to minecraft_server.exe
+
+
+,
+
+
+Double-click the new EXE or JAR file to run the new server for the first time. It will create all of the files it needs to run.
+
+
+
+As soon as the files are finished being created, close the server.
+
+
+
+Move your files, script, and "world" folder back into the Minecraft Server folder.
+
+
+
+Find the eula=false line and change it to eula=true. Save the file and exit the text editor.
+
+
+
+The update process is complete.
+

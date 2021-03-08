@@ -1,0 +1,35 @@
+ Click on the “New” button in the top left corner of NX9.;
+, In the new window, make sure that the units are set to millimeters and that you are using the model template. Click OK.
+
+
+NOTE: The first thing we need to do is insert a cylinder with a diameter of 20mm and a height of 50mm. Then we will create another smaller cylinder to place above it with a diameter of 30mm and a height of 10mm.
+ In the left corner of the screen, click on menu and then follow this path: Menu > Insert > Design Feature > Cylinder.
+ In the new window, we set the dimensions of the cylinder according to the drawing. This particular one (the longer of the two) will have a diameter of 20mm and a height of 50mm.
+ In the left corner of the screen, click on menu and then follow this path: Menu > Insert > Design Feature > Cylinder.
+ Before setting the dimensions for this new cylinder, first, we have to set the location of it; so in the new window, click on the button highlighted in the picture above.
+ In the new window, set the "ZC" value to 50. This will move the origin of the new cylinder to the top of the first cylinder we created. Click Ok.
+ You should now be back to the cylinder creation window, and now we will set the dimensions according to the drawing. This new cylinder has a diameter of 30mm and a height of 10mm. Click Ok.
+
+
+NOTE:The next two steps are the finishing touches to the bolt model. First we have to create the threads of the bolt, and then finally we will round out the edge of the top cylinder and cut out the hex hole.
+ To add the threads to the model, follow this path: Menu > Insert > Design Feature > Thread
+
+, In the new window, select the "detailed" thread type.
+ Now we have to select which cylinder we want to thread; so hover the mouse over to the longer cylinder (cylinder should be highlighted in pink) and press the left mouse button. The selected cylinder should now be highlighted in yellow as shown above. Click Ok.
+ To round out the edge of the top cylinder, select the "edge blend" feature in the top menu bar.
+ Hover the mouse over to the top cylinder as shown above and click on it.
+ Finally, set the radius to 2mm and click ok.
+ In the upper left corner of the screen, click on the sketch button.
+ The sketch tool will ask to specify a plane to sketch on. For our purposes, we will sketch on the top plane of the top cylinder we created. In order to select it, simply hover the mouse over to it and click on it. After that, click Ok.
+ In the upper left corner of the screen, expand the tool box of the direct sketch section and select the polygon tool, as shown above.
+ The new window will ask to specify the center point. Simply hover the mouse over to the center of the circle and click the left mouse button.
+ After clicking on the center of the circle, move the mouse outwards to being drawing the polygon. Do this until the radius is at 9mm as shown above.
+ After closing the polygon tool, click on finish sketch in the top left corner of the screen.
+ In the top menu bar, click on the extrude feature.
+ The software will ask for a curve to extrude, so simply hover the mouse over to the polygon sketch we just made and click on it.
+ Under the direction tab, click on the reverse direction button as shown above.
+ Under the limits tab, set the end distance to 7mm as shown above.
+ Under the boolean tab, change the type from inferred to subtract. Click Ok.
+ Click on Select Body and then hover the mouse over to the top cylinder of the bolt (it should turn pink) and click on it (it should turn orange). Now click ok as shown above.
+ Press the home key to center the model, which is now complete.
+

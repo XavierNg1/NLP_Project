@@ -1,0 +1,15 @@
+ This is done by simply adding an image tag within the link tags. You will need the address of the hosted image, however (such as its location on your server or another server). Here is what an example image link might look like:
+
+
+<a href="the_intended_link_url.html"><img src="the_picture_in_question.jpg" /></a>
+
+, To create a link which will begin composing an email message to a particular address, use the "mailto:" modifier just before the person's email address.
+
+
+For example, an email link might look like this: Click here to ask a question or voice a concern.
+ If you need to link to a specific portion of a web page, you need to use an anchor. Anchors are useful in large pages with a table of contents; each section of the text can be assigned an anchor to which the table of contents can link. Anchors are created using the "name" attribute.
+
+
+To create an anchor, insert the following tag at the appropriate location on the page: Chapter 3 - Using Anchors in HTML
+To link to the anchor you created, use the # sign as follows: Skip to Chapter 3
+

@@ -1,0 +1,17 @@
+ There are several types of remailers.
+
+
+A pseudonymous remailer, also known as a nym (short for "pseudonym") server, replaces the real email address with a fake, untraceable one and then sends it on to the recipient. The recipient can then respond to the remailer. A cypherpunk remailer allows you to encrypt a message, send it to the remailer, who will then decrypt it and send it on to the recipient. This method protects your message from any monitoring of your outbox.
+A Mixmaster remailer encrypts your messages before sending them and protects them from traffic analysis.
+A Mixminion remailer also encrypts your messages and allows replies from recipients, unlike Mixmaster, which is one-way.
+ There are benefits and downsides to both options.
+
+
+Traceable remailers keep an internal log of its clients and their real email addresses so that they can forward on responses from message recipients.
+Untraceable remailers do not keep a list of actual users, so message replies are not possible.
+ The service you choose will include instructions, which will generally include the following steps. Address your email to the remailer and write a subject.
+On the first line of the body of your email, type two colons ("::").
+On the second line, type “Anon-To:" followed by the recipient's email address.
+Leave one blank line and then type your message.
+Send the email to the remailer.
+

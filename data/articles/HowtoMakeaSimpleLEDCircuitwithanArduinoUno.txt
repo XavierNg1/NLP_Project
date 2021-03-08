@@ -1,0 +1,55 @@
+ If you haven't done this already, an excellent walk through on how to set it up for the first time can be found in How to Write Arduino Software in C.;
+,
+Start with a 2.2k resistor or higher and work your way down in resistance to desired brightness once you are able to successfully run the program.
+
+
+
+This will be the lead with the longer stem.
+ Connect a jumper from the negative leads of each LED to the ground. This will be the lead with the shorter stem.
+
+
+The ground runs the entire length of the board, and is sometimes called the "power rail".
+
+
+A sample program to use pins 2 through 9 can be found here: https://pastebin.com/TSdTXA7e
+
+
+
+
+
+
+int time = 500;
+int inittime = 50;
+ 
+void setup()                        // initial setup
+{
+  for(int i=9; i>=2; i--)           // Loops from i=9 down to and including i=2
+  {
+  pinMode(i, OUTPUT);               // sets pin i the digital pin as output
+  delay(inittime);                  // waits for inittime
+  }
+}
+ 
+void loop()
+{
+ 
+  for(int i=2; i<10; i++)           // Loops from i=2 up to but not including i=10
+  {
+  digitalWrite(i, LOW);             // sets the LED on
+  delay(time);                      // waits for time
+  digitalWrite(i, HIGH);            // sets the LED off
+  delay(time);                      // waits for time
+  }
+}
+
+
+
+
+
+
+, Select the "Upload" button to download the program from your computer to your Arduino.
+ Make edits to your code as needed.
+
+Consult forums or adruino.cc for help with coding.
+Change timing values to experiment with different lighting patterns.
+

@@ -1,0 +1,58 @@
+ The exponential function is one of the first functions introduced in complex analysis for many reasons, most notably being that it is its own derivative, and highlights the very important relationship between rotations and exponentials. 
+
+, Use the exponent relation ea+b=eaeb.{\displaystyle e^{a+b}=e^{a}e^{b}.}
+
+
+w=ex+iy=exeiy{\displaystyle w=e^{x+iy}=e^{x}e^{iy}}
+
+
+,
+
+
+w=ex(cos⁡y+isin⁡y){\displaystyle w=e^{x}(\cos y+i\sin y)}
+
+The function is now in u+iv{\displaystyle u+iv} form. Here, we have u(x,y)=excos⁡y{\displaystyle u(x,y)=e^{x}\cos y} and v(x,y)=exsin⁡y.{\displaystyle v(x,y)=e^{x}\sin y.}
+
+
+, Substitute z=x+iy{\displaystyle z=x+iy} into the function.
+
+
+w=1x+iy{\displaystyle w={\frac {1}{x+iy}}}
+
+
+,
+
+
+1x+iyx−iyx−iy=x−iyx2+y2{\displaystyle {\frac {1}{x+iy}}{\frac {x-iy}{x-iy}}={\frac {x-iy}{x^{2}+y^{2}}}}
+
+
+,
+
+
+w=xx2+y2−iyx2+y2{\displaystyle w={\frac {x}{x^{2}+y^{2}}}-i{\frac {y}{x^{2}+y^{2}}}}
+
+
+, Substitute z=x+iy{\displaystyle z=x+iy} into the function.
+
+
+w=ex+iy+e−x−iy{\displaystyle w=e^{x+iy}+e^{-x-iy}}
+
+
+, The expression e−iy{\displaystyle e^{-iy}} is the conjugate of eiy.{\displaystyle e^{iy}.}
+
+
+w=ex(cos⁡y+isin⁡y)+e−x(cos⁡y−isin⁡y){\displaystyle w=e^{x}(\cos y+i\sin y)+e^{-x}(\cos y-i\sin y)}
+
+
+,
+
+
+w=cos⁡y(ex+e−x)+isin⁡y(ex−e−x){\displaystyle w=\cos y(e^{x}+e^{-x})+i\sin y(e^{x}-e^{-x})}
+
+
+, Recall that the hyperbolic functions are defined as cosh⁡x=ex+e−x2{\displaystyle \cosh x={\frac {e^{x}+e^{-x}}{2}}} and sinh⁡x=ex−e−x2.{\displaystyle \sinh x={\frac {e^{x}-e^{-x}}{2}}.}
+
+
+w=2cos⁡ycosh⁡x+i2sin⁡ysinh⁡x{\displaystyle w=2\cos y\cosh x+i2\sin y\sinh x}
+
+

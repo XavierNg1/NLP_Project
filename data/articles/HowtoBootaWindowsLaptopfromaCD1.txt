@@ -1,0 +1,21 @@
+ If your computer came preinstalled with Windows 8, 8.1, or 10, use this method to boot from the CD. If you upgraded your current computer from Windows 7 or earlier to Windows 8 or later, use the method in the next section.
+
+
+The reason for this is that newer computers use UEFI (Unified Extensible Firmware Interface) instead of the traditional BIOS (Basic Input/Output System) to control power-on sequence for the computer. This helps Windows 8 computers boot quickly and securely into Windows, but makes changing the boot order more complicated. UEFI requires UEFI-compliant hardware and special configuration if you are building your own computer.;
+, The CD will need to be programmed to be bootable in order to boot from it. Windows and Linux installation discs, as well as many computer utilities, are configured to be bootable. This means that they contain the necessary files to start the boot process.
+
+
+If you're burning an ISO to a disc in attempt to make a bootable CD, you can use PowerISO to check if the disc image is bootable or not. When you load the ISO file into PowerISO, it will display whether or not it is bootable in the lower-left corner.
+One of the easiest and quickest ways to check if a disc is bootable is to just try booting from it.
+ You can open the Charms bar by moving your mouse to the upper-right corner of the screen or by pressing ⊞ Win+I
+
+, This will reboot your computer load the "Choose an option" screen.
+ Make sure that the CD or DVD you want to boot from has been inserted into your computer. Your computer will reboot and load from the inserted CD or DVD. If the disc is not a bootable disc, you will be taken back to Windows.If you don't have the "Use a device" menu, or aren't able to select your CD/DVD drive, read on.
+ Select this if you couldn't select your CD/DVD drive in the previous step.
+ This will load your motherboard's UEFI interface.
+ This menu will allow you to change the order of devices that your computer attempts to boot from. UEFI menu layouts vary from one machine to another.
+ This will make your computer attempt to boot from the CD or DVD drive before it boots from the hard drive.
+
+
+You may have to disable "Secure Boot" to change the boot order. You'll usually find this option in the BOOT menu as well.
+ After changing the boot order, save your changes and exit the UEFI menu. Your computer will restart and attempt to boot from your CD or DVD.

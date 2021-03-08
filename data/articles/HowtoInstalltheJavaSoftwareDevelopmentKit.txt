@@ -1,0 +1,80 @@
+ You can download a simple Java Software Development Kit (JDK) installer for Windows, macOS, or Linux directly from Oracle.;
+,, You should always use the latest stable version of the toolkit. There may be more than one version listed, so look closely at the release number.For example, if you are presented with JDK 8u101 and 8u102, choose 8u102.
+ The option is just beneath the JDK version number.
+ Once you click the link, follow the prompts to select a save location on your computer and start the download.
+ See Installing on macOS, Installing on Windows, Installing from an Archive on Linux or Solaris, or Installing from a Package on Linux for help installing the kit.
+ After downloading the Java Software Development Kit installer, double-click the downloaded file in the Downloads window of your web browser or in Finder., This icon looks like an open box. The JDK installer will launch.
+ Now you’ll see the Installation Type window.
+
+
+If you see a window that says “Destination Select” after clicking continue, click “Install for all users of this computer.” Not all users will see this window., Type your password to allow this.”
+
+, Type your administrator username and password into the provided blanks .
+ When the confirmation window appears, you can close it.
+ Now you’ll run a quick test from a terminal window to make sure the installation was successful. You can get to this folder by clicking “Go” and selecting “Applications.”
+
+, Here you’ll see a list of system utilities.
+ Now you’ll see the command prompt.
+ Just beneath the command you ran, you should see the JDK version number you installed (e.g. “1.8.0.1”). This means the installation was successful and you can get to your coding.
+
+
+Once you’ve made sure the installation is successful, you can delete the DMG installer file you downloaded to conserve hard drive space.
+ Once you’ve downloaded the Java Software Development Kit installer, navigate to the download location you chose earlier to launch the installer.
+ Depending on your version of Windows, you may be prompted to give permission for JDK to install. Click “Yes” or “OK” when prompted, and the installer’s Welcome screen will appear., Now you’ll move through a series of screens that will guide you through the JDK installation.
+ This will begin the installation, which may take a few minutes depending on your computer. The green progress bar will show the progress of the installation., This button will not appear until the installer has finished.
+ Now that the JDK is installed, you’ll need to tell Windows how to load it.A menu will appear at the bottom left area of the screen.
+, Now you’ll see the System Properties panel.
+ You’ll see a few different areas where you can adjust various system settings.
+ This new dialog box displays two separate areas—one for User Variables (settings specific to your user account) and another for system-wide settings (System Variables)., Follow these instructions exactly, as there is no “undo” option., This step only applies to Windows 10:
+
+
+Type c:\Program Files\Java\jdk1.8.0_xx\bin (but replace the “8.0_xx” part with the version number you installed).
+Click the “Move Up” button until the path you typed appears as the top of the list.
+Click “OK.”
+
+, Skip this step if you’re using Windows 10. You should see the “Edit System Variable” window. Make the following changes to the “Variable value” field only (don’t delete what’s there though):
+
+
+Type C:\Program Files\Java\jdk1.8.0_xx\bin (but replace the “8.0_xx” with the correct version number) in FRONT of the other directories.
+Add a semicolon (;) to the very end of what you just typed, just like this: C:\Program Files\Java\jdk1.8.0_xx\bin;
+
+There should be no space before or after the semicolon, so the entire line should look something like this: C:\Program Files\Java\jdk1.8.0_2\bin;C:\Program Files\Intel\xxx
+
+Click “OK.”
+
+, The installation is complete.
+ Now you’ll check to make sure the JDK path is correct., Now you’ll see a terminal window containing the command prompt.
+ You should see the full path to the JDK that you entered earlier.
+ The version of JDK you installed will now appear on the screen.
+
+
+If either part of this command-prompt test does not produce results, you may need to load the new environment variables by rebooting the computer.
+ If you downloaded an archived tarball of the JDK (it ends with *.tar.gz), use this method to complete the installation.
+
+
+This method assumes you know how to use basic Unix shell commands.
+If you downloaded a .rpm package file instead of a tarball, see Installing the JDK from a Package on Linux.
+ You can install the JDK in any directory for which you have “write” permissions. Note that only the root user can install the JDK to a system directory., Use the mv command to get the archive file into the correct directory.
+ The command is different depending on your operating system (and in the case of Solaris, the processor type). Once installed, a new directory called "jdk<version>” will be created in the current directory. In these examples, replace the name of the *.tar.gz file with the name of the one you downloaded.Linux: tar zxvf jdk-7u<version>-linux-i586.tar.gz
+
+Solaris (SPARC): tar xf -
+
+Solaris (x64/EM64T): tar xf -
+
+
+, Use the rm command to delete the archive file if you want to conserve disk space.
+ If you're using an RPM-based Linux system (such as SuSE or RedHat), you can install the Java Development Kit from an RPM package. Make sure you've downloaded the You'll need to su to root (su root) so that you have the correct permission to install the package.The file you downloaded should end with ".rpm"
+This method assumes you know how to use basic Unix shell commands.
+
+
+
+rpm -e <package_name>
+
+, You'll be using the "rpm" command again, but this time with different flags:
+
+
+
+rpm -ivh jdk-7u<version>-linux-x64.rpm (replace "jdk-7u<version>-linux-x64.rpm" with the actual package name)
+
+, When the package is finished installing, you'll be returned to the command line. If you want to conserve disk space, you can delete the downloaded package file with the rm command.
+

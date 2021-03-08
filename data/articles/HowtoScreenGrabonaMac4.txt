@@ -1,0 +1,11 @@
+ You can find the Terminal in your Utilities folder, which is in the Applications folder.Using the Terminal gives you some extra features, such as a timer or disabling the shutter sound. Use can also use SSH to capture remote screenshots of difficult screens, such as the login window.
+ Type screencapture fileName.jpg and press ⏎ Return. This will save the screenshot to your home directory. You can add a path to the front of the file name to specify a different location for the screenshot file.
+
+
+You can change formats by typing screencapture -t png fileName.png. You can also use pdf, gif, or tiff.
+ If you'd rather copy the image instead of creating a file, type screencapture -c and press ⏎ Return.
+ Using the basic screenshot command, the screenshot will be taken immediately, which means your Terminal window will appear. You can use a timer to give yourself time to hide the window and open anything that you want displayed.
+
+
+Type screencapture -T 10 fileName.jpg and press ⏎ Return. This will give you 10 seconds until the screenshot is taken. You can change 10 to whatever delay you'd like.
+

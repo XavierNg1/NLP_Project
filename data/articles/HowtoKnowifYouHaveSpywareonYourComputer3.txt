@@ -1,0 +1,21 @@
+ Netstat is a built-in Windows utility that can help detect the presence of spyware or other malicious files. Press ⊞ Win + R to manually run a program and enter “cmd”. The command line allows you to interact with the operating system using text commands.
+
+
+This approach is good for those who want to avoid using third party software or take a more manual approach to the malicious software removal.
+ This will display a list of programs utilizing a connection or listening port (i.e. processes connecting to the internet).
+
+
+In this context, ‘b’ stands for binary. The command displays the running “binaries” (or executables) and their connections.
+ Look for unfamiliar process names or port usage. If you are unsure about a process or its port, research its name online. You'll find others who have encountered the process and they can help identify it as malicious (or harmless). When you have confirmed a process as malicious, it is time to remove the file running it.
+
+
+If you are unsure whether the process is malicious or not after researching, then it is best to leave it alone. Tampering with the wrong files may cause other software to not work properly.
+ This will open the Windows Task Manager, which lists all of the processes running on your computer. Scroll to locate the name of the bad process you found in the command line.
+ This will take you to the directory location of the bad file.
+ This will move the bad file to the Recycling Bin. Processes cannot run from this location.
+
+
+If you receive an alert that the file cannot be deleted because it is in use, return to the Task Manager, select the process and press “End Task”. This will end the process immediately so that it can be moved to recycling.
+If you deleted the wrong file, you can double-click the recycling to open it and then click and drag to move the file back out.
+ This will permanently delete the file.
+

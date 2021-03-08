@@ -1,0 +1,5 @@
+
+Login to sqlplus through a user which has permissions to change the given table structure.
+Optional step: desc "table-name".
+Run command: alter table "table-name" rename column "column-old-name" to "column-new-name".
+If the new column name is not already present in the table, oracle or PL/SQL shall alter the table structure by changing column name.

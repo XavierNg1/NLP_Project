@@ -1,0 +1,14 @@
+ For example, if your event is to notify developers when a value changes, you might want to tell them the old value and the new one. If you have nothing to communicate to subscribers, use the System.EventArgs class and skip this step.
+Create a public class named EventNameEventArgs where EventName is the name of your event
+Inherit the EventNameEventArgs class from System.EventArgs
+
+Create a protected field for each piece of data you want to communicate with your subscribers. For example, in an event that will notify developers of a change in a string value, you might want to tell them the old and the new strings so the fields will look like: protected string oldVal, newVal;
+Create a public property for each field you created in 1.4 that has only a get{ return fieldName;} method (where fieldName is the name of the field you created in 1.4
+Create a private empty constructor for the class with no implementation. The constructor should look like: private EventNameEventArgs(){}
+Create a public constructor for the class that takes as many arguments as there is fields/data. For example, in a string value change event, the constructor will look like: public EventNameEventArgs(string oldValue, string newValue){oldVal = oldValue; newVal = newValue;};
+, If you did not create an event arguments class because there is no data to communicate with subscribers, use the System.EventHandler delegate and skip this step. The delegate declaration should look like: public delegate void EventNameHandler(object sender, EventNameEventArgs e);
+
+, The declaration should look like: public event EventNameHandler EventName;
+
+,, This is the hardest part. You should know when the event you are creating will fire (what areas in your code causes the event to occur) and call the method with the appropriate event arguments class instance. For example, in the string value change event, you must see what code can cause this value to change, save its old value before the change, allow the code to change the value, create an event arguments object with the old and new values passed to the constructor and pass the object to the event-firing method.
+

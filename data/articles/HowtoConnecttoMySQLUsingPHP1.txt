@@ -1,0 +1,9 @@
+;
+,,
+
+
+This line of code creates the foundation for the communication with the MySQL server. The function "mysql_connect" takes a minimum of 3 string arguments. The first is the IP address or domain name of your server; you should change this from localhost to the address of your MySQL server. The second argument is the MySQL user that we will authenticate, and the third argument is the password for our MySQL user (in this case I left the password blank).
+
+
+The output of "mysql_connect" is a resource datatype, and in the code above we assigned it to a variable ($con) so we could use it later. For more information on mysql_connect(), visit the PHP documentation.
+

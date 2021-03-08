@@ -1,0 +1,89 @@
+ The hosts file allows you to block websites from being accessed on the computer you are using. It works for all accounts on the computer. Editing a host file will block a website, but does not offer any additional features such as tracking or time limits. Tech-savvy users may be able to change the host file and circumvent blocks.
+
+Navigate to C:\Windows\System32\drivers\etc and double-click it. Use Notepad to open the file when prompted to choose a program.
+
+
+
+
+
+
+Place your cursor at the bottom of the document. Put a blank line between your starting point and the end of the existing text.
+
+
+
+
+
+
+Enter 127.0.0.1 <website> and press Enter. Replace <website> with the website that you want to block (facebook.com, youtube.com, etc.).
+
+
+
+
+
+
+Enter another line with the same information except add the “www.” before the website. In essence you should have two entries per website that you want to block: 127.0.0.1 facebook.com AND 127.0.0.1 www.facebook.com.
+
+
+
+
+
+
+Repeat this for each website that you want to block.
+
+
+
+
+
+
+Save the file. Do not change the name, file type, or location of the file. Simply save the changes you’ve made. You may have to restart your browser for the changes to take effect.
+ The hosts file allows you to block websites from being accessed on the computer you are using. It works for all accounts on the computer.Launch the Terminal, which can be found in the Utilities folder.
+
+
+
+
+
+
+Create a backup of the hosts file. You can create a backup of the hosts file by entering the following command and pressing Enter: sudo /bin/cp /etc/hosts /etc/hosts-original. You may have to enter your administrator password.
+
+
+
+
+
+
+Edit the hosts file. To edit the hosts file, you need to open it in nano with the following command: sudo nano /etc/hosts/. This will open the nano window and you will see the hosts file text.
+
+
+
+
+
+
+Start a new line at the bottom of the file. Enter 127.0.0.1 <website> and press Enter. Replace <website> with the website that you want to block (facebook.com, youtube.com, etc.).
+
+
+
+
+
+
+Enter another line with the same information except add the “www.” before the website. In essence you should have two entries per website that you want to block: 127.0.0.1 facebook.com AND 127.0.0.1 www.facebook.com.
+
+
+
+
+
+
+Repeat this for each website that you want to block.
+
+
+
+
+
+
+Save your changes by pressing Ctrl + O. Once the changes are saved, press Ctrl + X to exit nano.
+
+
+
+
+
+
+Flush your DNS. Use the DNS flush command sudo dscacheutil –flush cache to reset your DNS and load the new settings. Your browser should now block the sites you listed in the hosts file.
+ The drawback of the hosts file method is that the hosts file needs to be changed on every computer that you want to protect. If your network has a lot of computers on it, this may prove unfeasible.

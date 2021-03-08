@@ -1,0 +1,10 @@
+ If you don't know how to get a command block, all you need to do is type: "/give (Player) minecraft:command_block". You cannot find this block in the creative inventory.;
+, It gives you the syntax of the command. But as explained, it is meant to be used in a command block. If this is in a Adventure Map, you don't know who you will be testing for. So where you type player, you can use some fillers. These include: @p(Targets the nearest player), @a(Targets all players), @r(Targets random player), or @e(This targets all entities. This was added in the 1.8 update.)
+
+
+The last part of the syntax is a data tag. This will be covered later.
+ This is to see if a player is online. However, it is easier to just press your tab button on your keyboard (in Multiplayer). However, you can have a comparator take an output from a command block, just like it can take from a chest. To do this, place a comparator with the input against the command block. It the command succeeds (finds the player), it will give a redstone signal.
+ One of the easiest is /tell, having it tell you something. You can you use /tellraw for a more aesthetic look, but this requires a JSON text, and that is a completely different subject, one that requires it's own tutorial. The first command block tests for a player, and the second one tells you that this player is online.
+ We will cover and explain two types, but the rest you will have to do some research to learn. In the command syntax, you would type: "/testfor (Player) (Data Tag)". Data tags are written in brackets({}). One Data Tag is the Selected Slot tag. To use this, type: "/testfor (Player) {SelectedSlot:(Slot #)}" The slots are listed starting at 0, so your first hotbar slot is actually slot 0. Your second hotbar slot is slot 1, and so on.
+ The syntax for this one is tricky. Type "/testfor (Player) {Inventory:}" This only works for hotbar slots.
+ For example, type: "/testfor (Player) {SelectedItemSlot:0,Inventory:}".

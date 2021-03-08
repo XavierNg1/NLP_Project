@@ -1,0 +1,78 @@
+ These programs will help find and eliminate pesky advertising programs. The following programs are all free, or have fully-functional trial versions.Adwcleaner - general-changelog-team.fr/en/tools/15-adwcleaner
+
+Malwarebytes Antimalware - malwarebytes.org
+
+HitmanPro - surfright.nl/en/hitmanpro
+;
+, This is a simple program that will run as soon as it installs. Click the "Scan" button to scan for infections. After the scan is complete, click the "Clean" button to remove any infection that was found.
+ After starting it for the first time, click the "Update now" button to ensure that you have the latest definitions installed. After it has finished updating, click the "Scan Now" button and wait for the scan to finish. Once the scan is complete, click "Quarantine All" and then "Apply Actions".
+ Make sure to uncheck the option that tells HitmanPro to run every time at startup when you are installing it. HitmanPro will immediately begin scanning when it is started. Click the "Activate free license" button after the scan to fix any problems it found.
+ You can access this from the Start menu.
+
+
+Windows 8 users can press ⊞ Win+X and select "Control Panel".
+ If you're using Windows XP, select "Add or Remove Programs".
+ Follow any prompts to uninstall it.
+
+
+Take this time to look through the list and remove any other suspicious or unknown programs. If you aren't sure what a program is, look up the title using Google. Everything that you don't remember installing and that isn't an essential program should be removed.
+ Even if you don't regularly use Internet Explorer, you'll still want to reset it as a lot of its functionality is used by Windows.Open Internet Explorer.
+Click "Tools" → "Internet options". If you don't see the "Tools" menu, press Alt.
+Click the Advanced tab and then click Reset....
+Check the "Delete personal settings" box and then click Reset.
+ If you use Google Chrome, you'll want to reset it to delete any traces of Chikita. If you log into Chrome with your Google account, you won't lose any of your saved bookmarks.
+
+
+Open Chrome and click the Menu (☰) button.
+Select "Settings".
+Click the "Show advanced settings" link and then scroll to the bottom of the page.
+Click the Reset settings button and then click Reset to confirm.
+ If you use Firefox, you'll want to reset it to delete any traces of Chikita.
+
+
+Open Firefox and click the Menu (☰) button.
+Click the "?" button and select "Troubleshooting Information".
+Click the Refresh Firefox... and then Refresh Firefox to confirm.
+ If you use any other browsers, such as Opera or Chromium, you'll want to reset them as well. Most browsers have similar reset processes, but you can check their support pages for specific instructions.
+ After resetting all of the web browsers on your computer, restart it to finish the reset process.
+ This file controls how your computer connects to the internet, and Chitika will often alter it so that your browser redirects to the Chikita page every time it starts. You can manually edit your hosts file to remove the Chikita entries.
+ This file is tucked away in the Windows directory, so you'll need to use some special commands to access it.
+
+
+Press ⊞ Win+R, type %WinDir%\System32\Drivers\Etc, and press ↵ Enter.
+Right-click on the hosts file and select "Open with". From the list of programs select "Notepad".
+ The bottom of your hosts file should look like the following. Remove anything else that has been added to the bottom of the file.Windows 7, 8, and 8.1
+
+
+# For example:
+
+#
+#     102.54.94.97     rhino.acme.com     # source server
+#      38.25.63.10     x.acme.com         # x client host
+# localhost name resolution is handle within DNS itself.
+#      127.0.0.1      localhost
+#      ::1            localhost
+
+
+Windows Vista
+
+# For example:
+
+#
+#     102.54.94.97     rhino.acme.com     # source server
+#      38.25.63.10     x.acme.com         # x client host
+127.0.0.1      localhost
+::1            localhost
+
+Windows XP
+
+# For example:
+
+#
+#     102.54.94.97     rhino.acme.com     # source server
+#      38.25.63.10     x.acme.com         # x client host
+127.0.0.1      localhost
+
+
+, This will load the newly-changed hosts file so that your browsers function properly.
+

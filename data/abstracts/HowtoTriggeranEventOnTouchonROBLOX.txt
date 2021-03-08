@@ -1,0 +1,20 @@
+
+
+
+
+
+
+ 
+
+
+Open up ROBLOX Studio.
+Script the function.
+What this means in this function is that whenever this object is touched, the computer will do something.
+Specifically describe, in a script, a step to the computer.
+If you want the baseplate to disappear, you simply create a directory to the baseplate: game.Workspace.Baseplate:Destroy().
+Game is the overall ROBLOX Studio, and without it, the computer will print out an error because, if you start with Workspace, the computer will argue that, and state that Workspace isn't the first directory.The Destroy() command states that the part being affected by the command will be removed, or will no longer be visible/working.
+Wrap up the command.
+Please note, this piece of code should be placed under your previous line of code and above the command, end, so that the script works before it gets destroyed.
+Call your function.
+After the end command, start off with the script, followed by its Parent.
+Test out your code.

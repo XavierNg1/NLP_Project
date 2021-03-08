@@ -1,0 +1,53 @@
+
+
+Insert your USB in the USB port.
+Open Disk Utility (Launchpad > Other > Disk Utility).
+Click on your USB on the left list.
+Select "Erase" at the top of the page and in the window it will open, select "MS-DOS FAT" then "Ok".;
+,
+
+Open Boot Camp Assistant (Launchpad > Other > Boot Camp Assistant).
+Click continue on the introduction page.
+Check the 3 boxes and hit continue like you would if Bootcamp actually worked.
+Select the .iso Windows file on your computer. If it doesn't work or says "Windows 7 or later" drag it in your application folder and do it again.
+Click continue.
+ It should take from a few minutes to an hour. Once it stops and springs the "network error" on you, you are done with Boot Camp. It's apparently a problem with Apple servers, so Boot Camp can't download the drivers it needs but it has normally succeeded the "copying windows files". Basically it just creates a bootable Windows key.,
+
+Double tap and click "Get info".
+It should be around 4 GB (Windows 8.1) and thus complete.
+
+
+Google "Boot Camp Windows support" for the version of your Mac. For example, for the late 2013 Retina Macbook Pro, the driver is "BootCamp 5.1.5640".
+Google that name (here "BootCamp 5.1.5640")
+First link should be support.apple.com; go there.
+Check if your Mac is in the list and download it.
+
+
+Unzip your Boot Camp file.
+Open Finder and drag your Boot Camp file into your USB key where your Windows files also are.
+
+
+Go to Disk Utility ( Launchpad > Other > Disk Utility ).
+Select your base hard drive, the one completely on top named something like "Apple SSD."
+Click on "Partition" at the top.
+Drag the partition to the desired capacity (or write it) (at least 20 Gb for Windows; more is recommended) and click on it.
+Rename it the way you want.
+Select MS-DOS (FAT).
+Apply and wait until it's done.
+Close Disk Utility.
+
+
+Restart your computer and when you hear the mac opening song. Press "alt" until you reach a window with your Mac hard drive and now Windows partition (if you named it Windows).
+Select the Windows one and press Enter.
+Windows should automatically boot from your key.
+Follow the instructions.
+When the Mac restarts during the process, keep pressing "alt" and selecting the Windows partition so you don't accidentally go back on OS X.
+You should be left on a functional Windows.
+ If your Windows randomly restarts at this point, it's ok. Just remember to press "alt" to go back to Windows.
+
+Look for your USB key file and open it.
+Click on the Boot Camp file (e.g. "BootCamp 5.1.5640").
+You should be left with two folders and one .xml file; enter the Boot Camp file.
+You should find a "setup.exe." Double click on it and let Boot Camp take over.
+Boot Camp should install every driver you need; let it be, click "Ok" everywhere and once it's done, you're done. Enjoy your Windows partition!
+

@@ -1,0 +1,14 @@
+
+Plug in your phone to your computer via USB.
+Ensure that the USB drivers install correctly.Download the latest version of ioroot and extract the zip to a folder.
+Unplug your phone from your computer and ensure that Developer Mode is enabled.Go to Settings > Developer Options and check USB Debugging (you won't be able to change the setting if your phone is plugged in to your computer).
+Reconnect the phone to your computer.
+Confirm that you have gained root access on your phone.
+Do not use TeamWin Recovery Project (TWRP) as a custom recovery.Download the ClockworkMod ROM.
+In ClockworkMod Recovery, use the physical volume buttons to move up and down.
+Download the stable version of CyanogenMod for the D800.Boot into Recovery Mode and connect the phone to your computer.
+With the device powered down, hold Volume Down & Power.
+If you skip this or any of the next three steps, CyanogenMod will likely get stuck in a boot loop, and you may have to re-flash CyanogenMod or even restore from stock and start from the beginning.Scroll down to "wipe cache partition" and select "Yes - Wipe Cache".
+Scroll down to "advanced" and select "wipe dalvik cache".Select "install zip",
+Use ADB to push the CyanogenMod ROM file to your /sdcard directory (yes, this directory exists even if you don't have an SD card).
+Select the zip file from /sdcard/0.Reboot and enjoy!

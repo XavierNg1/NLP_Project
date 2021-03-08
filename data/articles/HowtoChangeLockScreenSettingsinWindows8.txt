@@ -1,0 +1,87 @@
+ This will open the Start menu, from which you can look up apps via the search bar.
+
+
+If you don't have a ⊞ Win key, you can hold Ctrl and tap Esc instead.;
+, This should bring up a an option entitled "Lock Screen Settings" in the search results; you'll find these results on the left side of your screen.
+
+
+Exclude the quotation marks here.
+ This will open the Lock Screen settings menu.
+ From here, you can alter a couple of options:
+
+
+Lock Screen background - Change the background picture for your Lock Screen.
+Lock Screen apps - Change the displayed apps on your Lock Screen.
+ You are now ready to change your Lock Screen settings!
+
+, This is below the series of stock Lock Screen backgrounds.
+
+
+Alternatively, you can click one of the stock backgrounds to apply it immediately.
+ You can pick a photo from any of the following sources:Your hard drive
+Bing
+OneDrive
+Your camera (only applies to computers with webcams)
+
+,
+
+
+If you chose the "Camera" option, take your picture.
+ You have successfully changed your Lock Screen background!
+
+, This is below the series of stock Lock Screen backgrounds.
+
+
+Alternatively, you can click one of the stock backgrounds to apply it immediately.
+ You can pick a photo from any of the following sources:Your hard drive
+Bing
+OneDrive
+Your camera (only applies to computers with webcams)
+
+,
+
+
+If you chose the "Camera" option, take your picture.
+ You have successfully changed your Lock Screen background!
+
+, This should be below the Lock Screen background images.
+ You should see several slots beneath the "Lock Screen Apps" text; a few of them should be occupied with apps (e.g., "Mail"), while the rest have "+" signs in them.
+ To change an existing app:Click on an occupied app slot.
+Click "Don't show quick status here" to disable it.
+Click a new app on the "Choose an App" menu to replace it.
+ Do this by clicking one of the "+" tiles, then selecting an app from the "Choose an App" menu.
+ This tile is below the "Choose an app to display detailed status"; any app displayed here will provide advanced information (e.g., your entire schedule or the day's full weather forecast).
+ You can do this by clicking a new app in the "Choose an App" menu.
+
+
+You can also disable this app by clicking "Don't show...status here".
+ You'll need to edit the Lock Screen's pertinent value in your computer's registry. Doing so can be dangerous, so consider backing up your computer before proceeding.
+
+
+You can open the Start menu by clicking the Start option in the bottom left corner of your screen, or by tapping the ⊞ Win key.
+ You can do this by typing "Run" into your Start menu's search bar, then clicking the "Run" app when it appears.
+
+
+You can also hold ⊞ Win and tap X to bring up the quick-access menu; Run is available from here.
+ The Registry Editor is an app that allows you to make changes to the Windows system properties. To open the Registry Editor, type "regedit" into Run and clicking "OK".
+ In order to disable your Lock Screen, you'll need to change the value in its registry folder. Note that, when navigating through Registry files, you'll need to click the arrow to the left of the folder to expand it rather than clicking the folder itself. To access the "Personalization" folder:
+
+
+Expand the "HKEY_LOCAL_MACHINE" option in the far left toolbar
+Expand the "SOFTWARE" option.
+Expand the "Policies" option.
+Expand the "Microsoft" option.
+Expand the "Windows" option.
+Click on the "Personalization" folder.
+ The Personalization folder's contents should display in the right-hand window--there should only be a file marked "(Default)"--and this is where you'll create the new file. To create the file:
+
+
+Right-click below the "(Default)" file.
+Hover over "New".
+Click "DWORD (32-Bit) Value".
+Type "NoLockScreen" into the name field.
+Tap ↵ Enter.
+ This will bring up a window with its attributes.
+ You can do this by typing "1" without the quotes into the "Value data" field, then clicking "OK".
+ You have successfully disabled your Lock Screen! To re-enable the Lock Screen, re-visit the Personalization folder at any time and delete the NoLockScreen value.
+

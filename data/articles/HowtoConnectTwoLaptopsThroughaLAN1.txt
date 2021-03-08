@@ -1,0 +1,47 @@
+ This is a type of Ethernet cable used for connecting two computers to one another. If you have an older computer, you must use a crossover cable. A regular ethernet cable will not work on older computers. There is no aesthetic difference between the two cables. Ask your store representative to find you a cross over cable just to be safe.;
+, The network port is what you connect your Ethernet cable to usually. The cable will click when successfully connected to the network port.
+
+
+Note that some newer laptops do not have a network port. Some laptop manufacturers have decided not to include a network port so that the laptop is thinner or lighter. If this is the case for your laptop, please move on to the method dealing with wireless connections.
+ Depending on your version of Windows, this will be found in different areas.
+
+
+Windows 8: Press the Windows button (Start button) to the left of the Alt key. Then, type "Control Panel." Press the icon when it appears below the text field.
+Windows 7, Vista, and XP: Press the Windows button (Start button) to the left of the Alt key. Then, type "Control Panel." Press the icon when it appears above the text field. You can also open up the Start menu by pressing the icon in the bottom left of your screen.
+ In the Control Panel of both computers, search for "System" in the search box in the upper right of the window. Click on the System header. You should see information about your computer such as Manufacturer, Model, etc.
+
+
+Scroll down to the "Computer name, domain, and workgroup settings." Click on the "change settings" link within that category. A new window should pop up titled "System Properties." Within this window, click the Change button at the bottom of the window.
+Enter in the same name for the workgroup on both PCs. It does not matter what the name is, as long as both computers use the same workgroup name.
+ This category houses all options for modifying your network connection.
+
+
+This may be easiest to find if you simply type it in to the search box in the upper right of the Control Panel window.
+In the "Network and Sharing Center," click on "Change Adapter Settings" in the left side of the window.
+ Search for it in the search box in the upper right corner of the window.
+
+
+, Then, click on "Properties."
+
+, This will allow you to manually enter in an address. Enter in these values for each PC:
+
+
+
+PC 1
+
+IP Address: 192.168.0.1
+Subnet Mask: 255.255.255.0
+Default Gateway: Do not enter in a value
+
+
+
+PC 2
+
+IP Address: 192.168.0.2
+Subnet Mask: 255.255.255.0
+Default Gateway: Do not enter in a value
+
+
+
+, You should now be able to share files across two computers over your connected LAN cable. You might need to restart each computer for the changes to take effect.
+

@@ -1,0 +1,102 @@
+ A Root Locus is symmetrical with respect to the real axis of the complex plane.
+ Number of branches of Root Locus is the same as the number of roots of D(s); that is, number of poles of F(s).
+
+
+Simple Integrator has one pole. It has one branch.
+Motor Control System has two poles one at s = 0 and the other at s = – 1. It has two branches.
+ When K varies from zero to infinity branches of Root Locus could asymptotically approach to infinity.
+
+
+All these asymptotes intersect at a point on the real line.
+Point of intersection is called the σ-point.
+Calculate the σ-point from,
+
+
+
+
+
+
+Add all the poles then subtract from it the result of addition of all the zeros. Now divide the result by the difference of the number of poles and number of zeros.
+
+Sigma point for the Simple Integrator is σ = 0
+
+Sigma point for the Motor Control is σ = (0 – 1) / 2 = – 1 / 2
+
+
+
+Do not confuse asymptotes with the branches. Asymptotes take branches to the infinity.
+Remember that straight line branches are their own asymptotes if they move to infinity.
+ In all cases that m < n a value of s →∞ makes F(s) → 0. This is called a zero at infinity.
+ But you know that F(s) becomes infinity at its own poles. Therefore, branches of root Locus always begin from poles, where at the same time K is zero.
+
+Simply get the conclusion that there are always n branches rising (originating) from the n poles of F(s).
+ m branches end to the m zeros. Remaining n – m branches goes to infinity which is considered as zeros at infinity., Third rule determines angles of asymptotes that lead branches of the Root Locus. It is equal to 180° / (n – m).
+
+Use symmetry to draw all asymptotes.
+ This is called the angle of departure of the branch from the pole. Use this relation. Let's study what is each factor,
+
+
+
+J : is the index of the pole under investigation. You like to calculate departure angle of that specific pole.
+
+φJ : is the angle of departure from pole J.
+
+pJ : is the complex value of the pole under investigation.
+
+i : roams among the number of zeros from first zero ( i = 1) to m-th zero (i = m).
+
+pJ – zi : is the evaluation of pJ at zi.
+
+k : roams among the number of poles from first pole ( k = 1) to n-th pole (k = n).
+
+
+k = J apparently has been forbidden to participate. But, even not, has no meaning; it results pJ – pJ = 0; with nought participation.
+
+
+
+pJ – pk : is the evaluation of pJ at pk.
+
+arg : shows that you are calculating smallest angle of the vector insides the brackets with respect to the real axis.
+
+q : is an odd integer. Most of the time just q = 1 is enough.
+ You like to know the angle of departure from a certain pole, then,
+
+
+determine angle of each zero evaluated by that pole; add them together.
+Determine angle of each pole evaluated by that pole; add them together.
+Subtract the two from each other.
+Add 180° to the result (sometimes you have to add – 180° or even 540° or – 540°).
+ This is called angle of arrival of branch into a zero. Use this relation to calculate it. Let's study what is each factor,
+
+
+
+J : is the index of the zero under investigation. You like to calculate arrival angle of that specific zero.
+
+ɸJ : is the angle of arrival into the zero J.
+
+zJ : is the complex value of the zero under investigation.
+
+k : roams among the number of poles from first pole ( k = 1) to n-th pole (k = n).
+
+zJ – pk : is the evaluation of zJ at pk.
+
+i : roams among the number of zeros from first zero ( i = 1) to m-th zero (i = m).
+
+
+i = J apparently has been forbidden to participate. But, even not, has no meaning; it results zJ – zJ = 0; with nought participation.
+
+
+
+zJ – zi : is the evaluation of zJ at zi.
+
+arg : shows that you are calculating smallest angle of the vector insides the brackets with respect to the real axis.
+
+q : is an odd integer. Most of the time just q = 180° is enough.
+ You like to know the angle of arrival at a certain zero, then,
+
+
+determine angle of each pole evaluated by that zero; add them together.
+Determine angle of each zero evaluated by that zero; add them together.
+Subtract the two from each other.
+Add 180° to the result (sometimes you have to add – 180° or even 540° or – 540°).
+ Branches leaving poles without having a zero to arrive at, will approach infinity at the sides of asymptote guardians., Remains few speculated points to make the sketch more realistic. These are done by evaluation of test point or using basic calculator (gone are the days when you had to use the painful slide rules). The best points to find and the most worrying points, too, are points of "cross-over" of the Locus on the imaginary axes. These are the points that make the system oscillatory and then into the right half of complex plane the system becomes non-damping and unstable.

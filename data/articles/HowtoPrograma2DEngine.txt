@@ -1,0 +1,27 @@
+ This is the most basic step of what you select. You can use C/C++ along with some functions rewritten with assembly. This will make your engine faster and reveal the innermost of the libraries you use.
+
+C is a good and fast choice.
+C++ is much better in design, but suffers on performance a bit.
+Java can be good. It's OS independent, speed and structured.
+Assembly is a hard one, but controlling it is the best bet.;
+, You could start with an API like OpenGL or DirectX, but it depends on your adventure. If you want a reliable engine and do not want to spend time, use an API. But if you have plenty of time and want to learn the innermost of the engine, then the recommendation is simple: go solo., You have to search the web for reliable content on things like raster graphics, vector graphics, lightning and shadows, collisions, physics (for a fighting simulation, of course), and much much more.
+
+Wikipedia is your best friend. Search its portals and you will find amazing knowledge on every aspect.
+Buying the books on programming games might come in handy.
+ You will be frustrated by the difficulty of the job, but do not turn back. Always be motivated. Learn. Create. Don't look back., Prepare an idea of what you will make and what you won't. Clearing your mind at this step will help in the long run., Draw your required graphics, like the screen, players etc., As you may know, parallel programming is faster. So divide it. Some portions include:-
+
+Rendering pipeline
+Gravity
+AI
+Next screen
+Controlling the above elements (the most important!)
+
+, Just think what will happen, how and why and who will make that happen. It will help in coding.
+
+Donald Knuth said that pre-optimizations are root of the evil. Throw away the faster and the slower parts, and focus on the engine. But remember to sort them out after the engine is completed.
+ Rastering is the displaying of every pixel on the screen.
+
+Use the "ignore the color" format to erase the previous image. In BitBlt of Windows, this has raster code BLACKNESS and WHITENESS. Note that, you have to draw the background of the screen if you have it.
+Use the "AND" format to draw the Sprite of the image. In BitBlt of Windows, this is the raster code: SRCAND.
+Use the above format to draw texture on the sprite.
+ You'll need to understand and provide for the dynamics of your environment., Strictly speaking, lighting is not required in 2D engines, but you can add it if you'd like., You can use the shadow volume technique for shadows. However, it's not needed since you don't need lighting., Depending on the type of engine and game, you can think of yourself that "What would I do in this situation" and create its algorithm. For example, in a fighting simulation, if the AI is at 4th floor, and there are 2 opponents at the first floor and a rocket launcher spawned at the 3rd floor, then instead of going straight to the first floor, the AI should head to the 3rd floor. If you are using OOP, then in your AI class, this will be a decide function., This involves drawing everything to an bitmap in the memory, and then drawing the bitmap to the screen.This will be a bit slow and memory inefficient, but it will remove flicker and make the engine more smooth., For example, in a simple animation, a simple algorithm will state that "erase:decide:draw". However, if the decide is more complex, there will be a significant difference in the erase and draw, producing flicker. You must use "decide:erase:draw"., When the engine starts, occupy a useful amount of RAM and divide it in your engine using programming. The OS is busy and will show latency in fulfilling your demand, so have RAM in advance., Use some of the most important elements often so that they are stored in L1 cache. Doing this would speed things. Cache of L2 uses 7ns, whereas reading 1MB from RAM takes 250 us., Use SIMD special instructions to work in parallel. Moreover, take full advantages of so many cores of processor by creating parallel units. The CreateThread function in Windows and Fork in Linux are beneficial., The latest integrated GPUs have 10 execution cores with 1200 MHz. Too slow to compete with GTX 8800, but is an overkill for your engine.

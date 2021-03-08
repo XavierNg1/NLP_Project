@@ -1,0 +1,97 @@
+ Inform 7 is a popular and powerful tool for creating text games, more often called interactive fiction. Its programming language is designed to look like simple English sentences, while still allowing full functionality. Inform 7 is free and available for Windows, Mac, and Linux.;
+, Adrift is another popular, easy to use interactive fiction language and compiler. Because it relies on a graphical interface instead of coding, it may be the easiest tool for a non-programmer to use. Adrift is free and available for Windows only, although games created with it can be played on any operating system or in a browser.
+ If you'd rather approach text game creation as a coding project, TADS 3 may be the most comprehensive software of this type. It will be especially easy to pick up if you are familiar with C++ and/or Javascript.TADS 3 is free and available for Windows, Mac, and Linux.
+
+
+The Windows version (only) of TADS 3 comes with a "Workbench" addition that makes it much more accessible to non-programmers, and more convenient to use in general.Programmers may be interested in this in-depth comparison between Inform 7 and TADS 3.
+ The tools above are by far the most popular, but there are several others that have strong followings in the interactive fiction community.If none of the tools above interest you or you want to explore more options, try these next:
+
+
+Hugo
+ALAN
+
+, You can jump in and get started without any downloads using one of the following tools:
+
+
+
+Quest (more similar to the IF tools above)
+
+Twine (easy to use visual editor)
+StoryNexus (the player clicks options instead of guessing what to type; StoryNexus hosts your game online)
+
+, Most text-based games are played by typing in commands. People who have played interactive fiction games before will expect you to include certain commands in your game, such as "examine (object)" and "take (object)".
+
+
+The documentation or tutorial for your software should introduce you to these commands, and how to include them in your game.
+Often, a game has additional unique commands, which can be anything from "twirl baton" to "mow lawn." These options should always be made clear to the player, unless you are putting them in as jokes or Easter eggs that are not required to complete the game.
+ The most common form of interactive fiction involves exploring different locations, usually called "rooms" even if they are outdoors. A good project to start with could include one or two rooms to explore at the start, another couple rooms the player can get to with some simple searching or problem-solving, and a larger puzzle the player needs to solve with some thinking or thorough searching.
+
+
+Alternatively, you can make a project that's focused more on the decisions the player makes, instead of the puzzles he solves. This could be an emotional story focused on the player's relationship with other characters, or a plot-based story where the player has many decisions to make, then witnesses the consequences in later scenes. This may still use a geographic map, or it could use "rooms" that are more like scenes, with the player progressing through several vignettes that explore these themes.
+ If your first room doesn't work the way you want it to, or you're just not sure how to achieve what you want with your software, look for a "documentation" or "help" menu, or a "Read Me" in the same folder as the main tool. If that's not enough, ask your question on a forum at the website where you got the software, or at a general-purpose interactive fiction forum.
+ Once you have a basic plan for your game, write a short introduction to describe the game, explain any unusual commands, and warn about adult content if any.Next, write the first room description. Try to make the first setting interesting, as many players will walk away if they see an empty apartment. Here's an example of the first thing a player might see when they start up the game (labeled for convenience):
+
+
+
+Introduction: You redeemed your entire collection of pudding coupons for this yacht, and now it's adrift at sea. Typical luck. Better see whether Lucy weathered the storm. You think she was in the engine room when it hit.
+
+Logistics and content warning: Welcome to The Frugal Man's Yacht Trip. Type check coupons to see your current collection. Use the command redeem followed by the name of the coupon to use these mysteriously helpful items. Warning: game depicts mild violence and cannibalism.
+
+Room description: You are standing in an oak-panelled bunk room. The metal bunk frame fell over during the storm, and the only mattress lies torn and soggy under the liquor cabinet. There is a closed door to the north.
+ Come up with ways for the player to interact with each object you mentioned. At the very least, they should be able to "examine" or "x" each one. Here are a few examples of commands the player can use and the text they see as a result:
+
+
+
+examine mattress – Stuffed with finest quality goose feathers, most of which are now floating around the room. Soggy and smells of booze.
+
+x me – You are exhausted, and wearing only the ragged pink bathrobe you put on just before the storm hit. The bathrobe has a pocket and a cotton sash.
+
+open door – The doorknob turns, but won't open. It feels like there's something heavy on the other side.
+ A classic beginning requires the player to find a way out of the room. This doesn't have to be a complicated puzzle, just a taste for what your game will be like. It also teaches the player to read carefully and look for hints. For instance, the player might be supposed to do this, after typing the commands above:
+
+
+
+pick up mattress – As soon as you lift it, a reek of tequila assaults your nose. That explains why this mattress is soggy... you toss it to the side and wipe your hands on your bathrobe.
+
+x room – You are standing in an oak-panelled bunk room. The metal bunk frame fell over during the storm, and the only mattress lies torn and soggy in the corner. A liquor cabinet is in the corner. There is a closed door to the north. A broken bottle is on the floor.
+
+pick up bottle – You pick up the broken bottle of tequila. Waste not, want not.
+
+x pocket – Your wallet is still there. Phew.
+
+x wallet – You may have given up the pudding coupons, but you still have your emergency coupon wallet. Right now you have a a crowbar coupon and a whistle coupon.
+
+redeem crowbar – You hold up the crowbar coupon and clear your throat. The coupon drifts away, and a moment later a hefty crowbar falls into your hand.
+
+open door with crowbar – You insert the crowbar into the gap of the doorframe and push hard. A growl on the other side startles you. One more attempt should open the door, but you'd better have a weapon ready.
+
+open door with crowbar – This time there isn't even a weight on the door. It swings open easily, to reveal a large grey wolf staring at you! Better think fast – you can only choose one option.
+
+hit wolf with bottle – You wallop the wolf right on the nose with the broken bottle. It whimpers and runs off. The way north is now clear.
+ As the creator, you'll become so familiar with the terms that they seem second nature. Other people only have a few sentences of instruction to work with. Whenever you add a new command or object, especially one that's vital to move forward in the game, make sure you keep it obvious and simple to use.
+
+
+Always use valid object names in the room description. For example, if a player walks into the room and sees a description of "a painting," make sure "painting" is the term for that object in your game. If you carelessly use the term "picture" instead, players will have to guess at how to interact with it.Allow synonyms for verbs. Take some time to think about how a player might try to use objects.A button should respond to both "push button" and "press button." An enemy should give the option to "attack," "punch," and "hit," plus "use (any item that could be treated as a weapon) on (enemy)."
+
+, Don't let your carefully devised puzzle break the reader's immersion in the setting. You might feel terribly clever for creating a puzzle that involves a Viking helmet, a stick of dynamite, and a bee hive, but it's unreasonable to discover these items in a spaceship or a high school classroom. Your setting will feel less cohesive, and the items may as well have a neon sign flashing "use me for a puzzle."Giving puzzles more than one solution makes them feel much more realistic, as does allowing a single item to be used in multiple puzzles or in multiple ways.
+Make the puzzles feel relevant. There should be a reason your character needs to solve the puzzle.Avoid artificial puzzles such as towers of Hanoi, mazes, and logic puzzles., Old-school adventure games are famous for cruel results such as "You pick up the rock, starting an avalanche that buries you. Game over." Nowadays, players want their skill to be rewarded. Besides avoiding arbitrary player deaths, here are a few other design goals to keep in mind:Don't make important events hinge on a die roll. For the most part, if a player has figured out what to do, he should succeed 100% of the time.
+Provide hints for difficult puzzles, and don't put in more than two or three red herrings.
+Don't make a puzzle that can't be solved on the first playthrough, such as one that requires knowledge of the next area or a trial-and-error puzzle that kills you if you don't guess correctly.
+It's fine to permanently close off an area partway through the game, but the player should be given fair warning before this happens. If a choice makes the game unwinnable, this should be obvious in advance, and it should end the game instead of letting the player keep trying with no hope of winning.
+ Spend some time to make every ending interesting. If the player loses, he should still get to read a sizable chunk of text that describes specifically what happened, and encourages him to try again. If a player wins, give her a long, triumphant ending, and consider allowing her to spend a couple additional actions savoring the victory in a special end-game room., There are dozens if not hundreds of articles available at Brass Lantern, Interactive Fiction Database, and IFWiki, where you can home in on specialized topics like how to write convincing characters, or how to program objects with complex interactions. Perhaps even more important is the large collection of text-based games at IF Archive, where you can discover what you enjoy firsthand, by playing the games yourself. Here are a few excellent resources to start with:
+
+
+The IF Gems collection of quotes.
+IF Theory Book
+Craft of Adventure
+
+, Once your game seems complete, play through it yourself several times. Try to cover all the possible paths through the game, including doing things in a "weird" sequence that you didn't intend. Once you've corrected any errors that come up, rope in a few friends, family members, or online interactive fiction players to beta test your game the same way. Encourage them to give feedback on what parts were frustrating or not fun, and consider their suggestions for changes or additional options.
+
+
+Save often or use the "undo" command, if available, so you can try different paths without starting from the beginning each time.
+ Some text-based game creation software also comes with an online platform where you can upload the game. More commonly, the creator will upload the game to IF Archive, and post a description at IFDB.
+
+
+Share links to your game on social media and on interactive fiction forums for more exposure.
+The vast majority of text-based games are offered for free. You can charge money for it, but if this is your first project and you don't have an existing fan base, don't expect many buyers.
+

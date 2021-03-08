@@ -1,0 +1,19 @@
+ Visit https://www.mozilla.org/en-US/plugincheck/ to check the status of your plugins. If you see any Update Now buttons, click them and wait for them to update. Restart Firefox once finished. Plugins can increase CPU usage when you view videos, PDFs, or other media.
+ Once all of your plugins are up to date, testing them is pretty easy:
+
+
+Visit the Plugins tab of the Add-Ons manager.
+Click each drop-down menu that says "Always Activate" and set it to "Ask to Activate" instead.
+Browse as usual. You will see a small popup every time a plugin asks to be activated. If you say "Yes" and your CPU usage rises, that plugin is the problem.
+When the problem is identified, look for alternative plugins for the same format. If there are none, leave that plugin in "Ask to Activate" mode.
+ One solution is to block media you don't want to see in the first place. Try these extensions:
+
+
+If Flash causes the problem, install Flashblock.
+If JavaScript causes issues, install NoScript. This will take some hands-on effort at first to disable problematic scripts one by one.
+For a generally lower CPU load, install Adblock Plus or another ad blocker.
+ If all else fails, return your Firefox to default state. This will permanently delete your add-ons, but most preferences and bookmarks should remain unchanged. To do this, return to about:support and click Refresh Firefox.
+
+
+You may want to try the other issues below before you resort to this. If Safe Mode fixed your issue, however, add-ons are almost certainly the problem.
+

@@ -1,0 +1,78 @@
+
+Take the familiar equation y = Kx^2 and rotate it about the origin.
+Do this by making a substitution of two new variables (X and Y) using equations like this:
+
+x = cos(t)*X + sin(t)*Y
+y = -sin(t)*X + cos(t)*Y
+where sin and cos are the sine and cosine functions from trigonometry, and t is the angle by which you are rotating the parabola, and where you'll let X and Y vary between -5 and 5, being sure that 0 is one of the values as well.
+
+,
+Start by opening a new workbook in Excel from the desktop, from the dock, or from within your Applications folder inside the Microsoft folder.In Preferences, set R1C1 to unchecked or Off, set Ribbon to checked or On and set Show Formula Bar to checked or On.
+Click in the far upper left top corner above the 1 of row 1 and to the left of column A.
+Enter the Row 1 Column Headers:
+
+Enter to cell A1 the label, Factor1.
+Enter the Row 3 Column Headers:
+
+Enter to cell A3 the label, Chart x;
+Enter to cell B3 the label, Chart y;
+Enter to cell C3 the label, angle t;
+Enter to cell D3 the label, cos(t);
+Enter to cell E3 the label, sin(t);
+Enter to cell F3 the label, X and Y Series and Format Column Autofit Selection;
+Enter to cell G3 the label, K. Select cell range G3:G4 and do Insert Name Create in Top Row.
+Enter the formulas and series for the short data section to be charted:
+
+Enter to cell A4 the formula, =ParaVertex_X+Factor1*K*((D4*F4)+(E4*F4))^2; do Format Cells Fill Yellow and copy it and paste it to cell A5;
+Enter to cell B4 the formula, =ParaVertex_Y+Factor2*((-E4*A4)+D4*F4); do Format Cells Fill Yellow and copy it and paste it to cell B5; the minus sign is important -- please don't miss it;
+
+Enter to cell C4 the value 40 and enter to cell C5 the formula, =C4;
+Enter to cell D4 the formula, =COS(C4*PI()/180);
+Enter to cell E4 the formula, =SIN(C4*PI()/180);
+Copy cell range D4:E4 and paste it to cell range D5:E5;
+Enter to cell F4 the value -5;
+Do Edit Fill Series, accept the default Step Value of 1, for cell range F4:F14 -- you should have the value 0.00 in cell F9 and the value 5.00 in cell F14;
+Copy cell range A5:E5 and Paste it to cell range A6:E14.
+
+,
+Select cell range A4:B14 and do either Insert Chart or from the Ribbon, select Chart, or do Chart Wizard.
+Try the following changes to angle t, by manually inputting them:
+
+
+
+ Angle t Manually Changed to adjust Curve Smoothness.jpg
+
+
+Here's an image of the data chit of the worksheet just completed (and including the Tips below):
+
+
+
+
+
+
+Here's an image of the chart where we just ended up, after adjusting Curve Smoothness:
+
+
+
+
+
+
+Here's a data chit with another series added, for making two parabolas on the chart (it uses the Angle t to vary the curve):
+
+
+
+
+
+
+Here's a chart of the two parabolas, one more curvy, the other more slanted (the red is the lower data, the blue is the upper data):
+
+
+
+
+
+
+
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

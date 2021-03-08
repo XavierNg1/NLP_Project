@@ -1,0 +1,62 @@
+ For the purpose of this guide, we’ll call the router that’s connected to the Internet “Router 1” and the new router “Router 2.”;
+, To configure routers, you’ll need a computer that can connect to them via an Ethernet cable or Wi-Fi. The operating system of the computer doesn’t matter.
+
+
+If you’ll be using Wi-Fi to connect to the routers, take note of the SSID and passkey for each router. You’ll need this information to connect to each router via Wi-Fi.
+ If you plan to connect computers and other devices to the network without Wi-Fi, you’ll need an Ethernet cable for each device.
+
+
+For example, you’ll need one Ethernet cable to connect Router 2 to Router 1.
+If you wanted to connect two additional computers to the network, have additional Ethernet cables available for each device (unless you plan to connect them via Wi-Fi).
+, You’ll want to start wiring the network with the equipment turned off.
+
+
+
+The WAN port may be labeled “Internet.”
+
+,
+
+
+If you’d prefer to connect the computer to the router wirelessly, use your router’s instructions to do so.
+ Wait a few moments for them both to come back up.
+ You’ll need a web browser to connect to the admin interface of Router 1.
+ This address is printed somewhere on Router 1.
+
+
+Here are some default IP addresses for common router brands:
+
+2Wire: 192.168.1.1, 192.168.0.1, 192.168.1.254, 10.0.0.138
+Apple: 10.0.0.1
+Belkin: 192.168.1.1, 192.168.2.1, 10.0.0.2, 10.1.1.1
+Dlink: 192.168.1.1, 192.168.0.1, 192.168.0.101, 192.168.0.30, 192.168.0.50, 192.168.15.1, 192.168.254.254, 192.168.1.254, 192.168.0.10, 192.168.15.1, 10.0.0.1, 10.0.0.2, 10.1.1.1, 10.90.90.90,
+Netgear: 192.168.0.1, 192.168.0.227, These credentials, like the IP address, can be found printed on Router 1.
+
+
+If there is no username and password combination printed on your router, search the internet for “default router password for ”.
+If you’re using the right password but still can’t connect, reset the router to its default settings by inserting the end of a paperclip into its “reset” port.,
+
+
+The DHCP settings are located in different places across different types of routers, but you’ll usually find them under “Network settings,” or “LAN settings.”
+In most cases, the DHCP server is turned on by default.
+ Visit any website (like https://www.wikihow.com) to verify that you can connect to the Internet. Make sure that the physical configuration of your network leaves room for one LAN port to be open on Router 1.
+ Everything else can remain on and plugged in.
+ Now you’ll configure Router 2 as a second router on the same subnet. This means all devices on the network will be able to access each other.
+, Just as when you logged into Router 1 as an administrator, you’ll need to do this to Router 2. Log in to the router’s admin interface using your credentials. Check and see what the IP is; most routers default to 192.168.0.1, 192.168.1.1, or 10.0.0.1.
+ Locate the DHCP settings (as you did earlier for Router 1) and switch the DHCP server to “Off.”
+
+, That needs to change.
+
+
+Find the area in the router admin website called “LAN” or “Local Network.” There should be a blank that contains the current IP address (the one you connected to in your web browser).
+Type a new IP address in place of the existing one. The new address must be on the same subnet as Router 1, meaning the first three sets of numbers (out of four) in the IP address must be the same as Router 1. It also can’t be an IP currently assigned to another device.
+If Router 1’s IP address is 192.168.0.1, for example, Router 2 can be 192.168.0.100. Since the computer is the only other device on the network, there’s little risk for an IP address conflict.
+ If it is, assign it the same SSID (the name of the Wi-Fi access point) and passkey as Router 1.
+
+
+You should find these settings under a menu called something like “Wireless” or “Wi-Fi setup.”
+If you’re unsure of Router 1’s SSID and passkey, it should be printed on the device.
+ Now that Router 2’s all set up, it’s a good idea to give it a restart—though, for now, leave the power unplugged instead of turning it right back on.
+ Make sure you’re not plugging it into the WAN port (they look similar).
+ When the router comes back up, it will have the IP address you configured. As long as Router 1 has Internet access, Router 2 will now also be online.
+, Router 1’s DHCP server will automatically assign each device its own IP address in the same subnet. Enjoy your expanded network!
+

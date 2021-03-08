@@ -1,0 +1,64 @@
+
+Check if your manufacturer allows unlocking the bootloader.
+Check if your carrier allows unlocking the bootloader.
+Understand the risks and limitations.
+Download the Android SDK tools you'll need.
+Extract the ZIP file.
+Run Android SDK Manager.
+Uncheck everything except Android SDK Platform-tools.Click Install.
+Download and install the USB drivers for device.Connect your Android to your computer via USB.
+Open the platform-tools folder in the folder your SDK tools are in.
+Hold ⇧ Shift and right-click in the folder.
+Click Open command window here.
+Type adb devices and press ↵ Enter.Open your Android's Settings.Scroll to the bottom and tap About phone.
+Tap the Build Number entry seven times.Return to Settings and tap Developer Options.
+Enable OEM unlocking (if present).
+Enable USB debugging.
+Open your device manufacturer's unlock code procedure instructions.
+Reboot your device into the fastboot menu.
+Type the unlock key retrieval command in ADB.
+Copy the device ID code.
+Submit your device ID code to the manufacturer.
+Run the command specified by your manufacturer.
+Confirm that you want to unlock.
+Type fastboot reboot on your computer.
+Look for the Bootloader Unlocked message.
+Find and follow a device-specific guide if you can't unlock the bootloader.
+Visit the TWRP website.Click the Devices tab.
+Verify that your device is supported.
+Click the link for your device.
+Click the Download link.
+Copy the IMG file to your ADB folder.
+Rename the file to twrp.img.
+Type adb reboot bootloader in the Command Prompt.
+Type fastboot flash recovery twrp.img and press ↵ Enter.Type fastboot reboot and press ↵ Enter.
+Press and hold the Volume Up and Power buttons as the device reboots.
+Enter your PIN if prompted.
+Tap Backup.
+Select Boot, System, and Data.
+Swipe the bar to begin the backup.Return to the Backup menu and clear all of the options.
+Scroll to the bottom and select your special partition after Recovery.
+Start another backup with your special partition selected.
+Visit the XDA forums.
+Open the subforum for your device.
+Scroll down to the ROMS, KERNELS, RECOVERIES, & OTHER DEVELOPMENT section.
+Find a ROM that looks interesting.
+Look for features and limitations.
+Carefully read the entire post for the ROM.
+Click the Download link for the ROM file.
+Visit the GApps download site.
+Select your device's configuration on the GApps site.
+Click the Download button.
+Connect your Android to your computer.
+Open your Android's storage on your computer.
+Copy the ROM and GApps ZIP files onto your Android.Disconnect your phone after transferring.
+Power off your Android device.
+Boot your Android into recovery mode.
+Tap Wipe.
+Swipe the bar to perform a factory reset.Tap Install on the TWRP main menu.
+Scroll down and tap the ZIP file for your ROM.
+Swipe the bar to start flashing.
+Return to the main menu after flashing and tap Install again.Scroll down and tap the GApps ZIP file.
+Swipe the bar to begin the installation.
+Tap Wipe cache/dalvik and then swipe to confirm.
+Tap Reboot System.

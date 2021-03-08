@@ -1,0 +1,46 @@
+ As a reminder, integers are whole numbers, so N cannot be a decimal or fraction. N also cannot be negative.
+
+
+As an example, let's say we want to sum up all the integers from 1 to 100. In this case, we'll use 100 as our value for N because it's the final number in our series, or, in other words, the biggest number to be summed.
+ When you've defined the integer value of N, plug it into the equation (N(N + 1))/2. This equation finds the sum of all the integers between 1 and N.
+
+
+In our example, we would plug 100, our value for N, into the equation. (N(N + 1))/2 becomes (100(100 + 1))/2.
+ The final value you obtain from this equation represents the sum of all the numbers between 1 and your value for N.
+
+
+Let's solve our example problem.
+
+(100(100 + 1))/2 =
+(100(101))/2 =
+(10100)/2 =
+5,050. The sum of all integers from 1 to 100 is 5,050.
+ Let's look at our example problem one more time. Mentally split the series 1 + 2 + 3 + 4 ... + 99 + 100 into two groups - one from 1 to 50 and one from 51 to 100. If you add the first number in the first group (1) to the last number in the second group (100), you get 101. You also get 101 if you add 2 to 99, 3 to 98, 4 to 97, and so on. If we assign each number in the first group to the corresponding number in the second group in this way, we end up with 50 pairs of numbers that all add to the same thing - 101. So, 50 × 101 = 5,050, our sum for the integers from 1 - 100. Notice that 50 is half of 100 and that 101 is 100 + 1. In fact, this observation holds true for the sum of any positive integer - its component addition operations can be broken into two groups, then, the numbers in these groups can be assigned to each other in such a way that each pair adds to the same value. Note that odd integers will have one number left over - this doesn't affect the final answer.
+
+
+In general terms, we can say that for any number N, the sum of the numbers from 1 to N is equal to (N/2)(N + 1). The simplified form of this equation is (N(N + 1))/2, our integer sum equation.
+ Often, rather than being asked to find the sum of a range of integers from 1 to a given number, you'll be asked to find the sum of a range of integers between two integers N1 and N2, where N1 > N2 and both are > 1. The process that finds this sum is relatively simple, but, before undertaking it, you must determine whether the sum is to be inclusive or exclusive - in other words, whether it includes N1 and N2 or just the integers between them, as the process changes slightly based on this distinction.;
+, Generally, all you need to do is subtract the sum of the smaller N value from the sum of the larger N value to find your answer. However, as noted above, it's important to know whether you're summing inclusively or exclusively. Inclusive summing requires you to subtract 1 from your value of N2 before plugging it into its equation, while summing exclusively requires you to subtract 1 from your value of N.1
+
+Let's say that we're asked to inclusively find the sum of the integers between N1 = 100 and N2 = 75. In other words, we need to find 75 + 76 + 77 ... + 99 + 100. To do this, we would find the sum of the integers from 1 to N1, then subtract the sum of the integers from 1 to N2 - 1 (remember, when summing inclusively, we subtract 1 from N2), solving as follows:
+
+(N1(N1 + 1))/2 - ((N2-1)((N2-1) + 1))/2 =
+(100(100 + 1))/2 - (74(74 + 1))/2 =
+5,050 - (74(75))/2 =
+5,050 - 5,550/2 =
+5,050 - 2,775 = 2,275. The inclusive sum of the integers between 75 and 100 is 2,275.
+
+
+Now, let's try summing exclusively. Our equation is the same, except in this case we subtract 1 from N1 rather than N2:
+
+((N1-1)((N1-1) + 1))/2 - (N2(N2 + 1))/2 =
+(99(99 +1))/2 - (75(75 + 1))/2 =
+(99(100))/2 - (75(76))/2 =
+9,900/2 - 5,700/2 =
+4,950 - 2,850 = 2,100. The exclusive sum of the integers between 75 and 100 is 2,100.
+ Think of the sum of the integers from 1 to 100 as 1 + 2 + 3 ... + 98 + 99 + 100 and the sum of the integers from 1 to 75 as 1 + 2 + 3 ... + 73 + 74 + 75. Finding the sum of the integers between 75 and 100 inclusively means finding 75 + 76 + 77 ... + 99 + 100. The sums from 1 - 75 and 1 - 100 are the same up to 75 - at that point, the sum from 1 - 75 "stops" and the sum from 1 - 100 "keeps on going", with ... 75 + 76 + 77 ... + 99 + 100. Because of this, subtracting the sum of the integers from 1 - 75 from the sum of the integers from 1 - 100 allows us to "isolate" the sum of the integers from 75 - 100.
+
+
+However, if we're summing inclusively, we must use the sum of 1 - 74, rather than the sum of 1 - 75, to ensure we include the number 75 itself in our final sum.
+Similarly, if we're summing exclusively, we have to use the sum of 1 - 99, rather than the sum of 1 - 100, to ensure that the number 100 isn't included in the sum. We can use the sum of 1 - 75, because subtracting this from the sum of 1 - 99 excludes the number 75 from our final sum.
+

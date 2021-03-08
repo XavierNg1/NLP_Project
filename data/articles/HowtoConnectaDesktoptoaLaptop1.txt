@@ -1,0 +1,27 @@
+ If either computer has the wireless network adapter, turn it off when connecting the computers. This will help prevent network conflicts.
+
+
+Click the Start menu, type ncpa.cpl, and press Enter.
+Right-click on your wireless connection and select "Disable".;
+, Newer computers can use a standard Ethernet cable, as the network adapter will automatically detect that you are connecting two computers. Older computers may need to use a crossover cable, which is a standard Ethernet cable with the connection reversed on one end.
+ While you will be able to share files back and forth between both computers, it is usually easiest to set up sharing on your most modern computer.
+ Select "Open Network and Sharing Center".
+ This will open the details of the new connection between the two computers.
+ Select "Internet Protocol Version 4" and click Properties.
+ This will allow you to manually enter an IP address.
+ Since you aren't using the internet, the IP address can actually be anything. For ease of explanation, set the IP address to 192.168.1.10.
+ Click OK.
+ Open the Network and Sharing Center like you did on the first PC.
+ This will open the details of the new connection between the two computers.
+ Select "Internet Protocol Version 4" and click Properties.
+ This will allow you to manually enter an IP address for the second computer.
+ Since we used 192.168.1.10 for the first computer, enter 192.168.1.11 for the second one.
+ Click OK. The two computers are now on a private network between the two of them.
+ Locate the drive, file, or folder that you want to share with the second computer.
+ Click the Sharing tab.
+, This allows the second computer to read and write to the shared folder. Click Apply.
+ Ensure that "Everyone" is listed in the list of users. If not, click the Add... button and follow the prompts to add "Everyone".
+ In our example this is the second computer.
+ Using the IP addresses we entered above, you would type \\192.168.1.10.
+ You will now see all of the folders that you have shared on the first computer. If your permissions were set correctly, you can copy, delete, and add files to these shared folders.
+

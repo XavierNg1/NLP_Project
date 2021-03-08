@@ -1,0 +1,80 @@
+ We'll start with a 3 x 3 matrix A, and try to find its determinant |A|. Here's the general matrix notation we'll be using, and our example matrix:
+
+
+M=(a11a12a13a21a22a23a31a32a33)=(153247462){\displaystyle M={\begin{pmatrix}a_{11}&a_{12}&a_{13}\\a_{21}&a_{22}&a_{23}\\a_{31}&a_{32}&a_{33}\end{pmatrix}}={\begin{pmatrix}1&5&3\\2&4&7\\4&6&2\end{pmatrix}}}
+;
+, This will be your reference row or column. You'll get the same answer no matter which one you choose. For now, just pick the first row. Later, we'll give some advice on how to choose the easiest option to calculate.
+
+Let's choose the first row of our example matrix A. Circle the 1 5 3. In general terms, circle a11 a12 a13.
+ Look at the row or column you circled and select the first element. Draw a line through its row and column. You should be left with four numbers. We'll treat these as a 2 x 2 matrix.
+
+In our example, our reference row is 1 5 3. The first element is in row 1 and column 1. Cross out all of row 1 and column 1. Write the remaining elements as a 2 x 2 matrix:
+
+
+ 1  5 3 2  4 7 4  6 2
+
+
+, Remember, the matrix (abcd){\displaystyle {\begin{pmatrix}a&b\\c&d\end{pmatrix}}} has a determinant of ad - bc.You may have learned this by drawing an X across the 2 x 2 matrix. Multiply the two numbers connected by the \ of the X. Then subtract the product of the two numbers connected by the /. Use this formula to calculate the determinate of the matrix you just found.
+
+In our example, the determinant of the matrix (4762){\displaystyle {\begin{pmatrix}4&7\\6&2\end{pmatrix}}} = 4 * 2 - 7 * 6 = -34.
+
+This determinant is called the minor of the element we chose in our original matrix.In this case, we just found the minor of a11.
+ Remember, you selected an element from your reference row (or column) when you decided which row and column to cross out. Multiply this element by the determinant you just calculated for the 2x2 matrix.
+
+In our example, we selected a11, which had a value of 1. Multiply this by -34 (the determinant of the 2x2) to get 1*-34 = -34.
+ Next, you'll multiply your answer either by 1 or by -1 to get the cofactor of your chosen element. Which you use depends on where the element was placed in the 3x3 matrix. Memorize this simple sign chart to track which element causes which:
+
+
++ - +- + -+ - +
+
+Since we chose a11, marked with a +, we multiply the number by +1. (In other words, leave it alone.) The answer is still -34.
+
+Alternatively, you can find the sign with the formula (-1)i+j, where i and j are the element's row and column., Return to the original 3x3 matrix, with the row or column you circled earlier. Repeat the same process with this element:
+
+
+Cross out the row and column of that element. In our case, select element a12 (with a value of 5). Cross out row one (1 5 3) and column two (546){\displaystyle {\begin{pmatrix}5\\4\\6\end{pmatrix}}}.
+
+
+Treat the remaining elements as a 2x2 matrix. In our example, the matrix is (2742){\displaystyle {\begin{pmatrix}2&7\\4&2\end{pmatrix}}}
+
+
+Find the determinant of this 2x2 matrix. Use the ad - bc formula. (2*2 - 7*4 = -24)
+
+
+Multiply by the chosen element of the 3x3 matrix. -24 * 5 = -120
+
+
+Determine whether to multiply by -1. Use the sign chart or the (-1)ij formula. We chose element a12, which is - on the sign chart. We must change the sign of our answer: (-1)*(-120) = 120.
+ You have one more cofactor to find. Calculate i for the third term in your reference row or column. Here's a quick rundown of how you'd calculate the cofactor of a13 in our example:
+
+Cross out row 1 and column 3 to get  (2446){\displaystyle {\begin{pmatrix}2&4\\4&6\end{pmatrix}}}
+
+Its determinant is 2*6 - 4*4 = -4.
+
+Multiply by element a13: -4 * 3 = -12.
+
+Element a13 is + on the sign chart, so the answer is -12.
+ This is the final step. You've calculated three cofactors, one for each element in a single row or column. Add these together and you've found the determinant of the 3x3 matrix.
+
+In our example the determinant is -34 + 120 + -12 = 74.
+ Remember, you can pick any row or column as your reference. You'll get the same answer no matter which you pick. If you pick a row or column with zeros, you only need to calculate the cofactor for the nonzero elements. Here's why:
+
+Let's say you pick row 2, with elements a21, a22, and a23. To solve this problem, we'll be looking at three different 2x2 matrices. Let's call them A21, A22, and A23.
+
+The determinant of the 3x3 matrix is a21|A21| - a22|A22| + a23|A23|.
+
+If terms a22 and a23 are both 0, our formula becomes a21|A21| - 0*|A22| + 0*|A23| = a21|A21| - 0 + 0 = a21|A21|. Now we only have to calculate the cofactor of a single element.
+ If you take the values of one row and add them to a different row, the determinant of the matrix does not change. The same is true of columns. You can do this repeatedly — or multiply the values by a constant before adding — to get as many zeroes in the matrix as possible. This can save you a lot of time.
+
+For example, say you have a 3 x 3 matrix: (9−1231075−2){\displaystyle {\begin{pmatrix}9&-1&2\\3&1&0\\7&5&-2\end{pmatrix}}}
+
+In order to cancel out the 9 in position a11, we can multiply the second row by -3 and add the result to the first. The new first row is + = .
+
+The new matrix is (0−4231075−2){\displaystyle {\begin{pmatrix}0&-4&2\\3&1&0\\7&5&-2\end{pmatrix}}} Try to use the same trick with columns to turn a12 into a 0 as well.
+ In these special cases, the determinant is simply the product of the elements along the main diagonal, from a11 in the top left to a33 in the lower right. We're still talking about 3x3 matrices, but "triangular" ones have special patterns of nonzero values:Upper triangular matrix: All the non-zero elements are on or above the main diagonal. Everything below is a zero.
+
+Lower triangular matrix: All the non-zero elements are on or below the main diagonal.
+
+Diagonal matrix: All the non-zero elements are on the main diagonal. (A subset of the above.)
+
+

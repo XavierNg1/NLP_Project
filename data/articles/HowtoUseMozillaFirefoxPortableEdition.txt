@@ -1,0 +1,18 @@
+;
+, It needs to be recognized by Windows as a drive. Note the drive letter.
+
+
+
+Portable Firefox is designed to work with PortableApps.com's menu platform, but this is for convenience. The menu is not required for any of their apps to run.
+ Open the folder which starts with a series of random characters and ends in Default, or your profile's name if you have more than one.
+Run Portable Firefox once and answer the setup questions. (Always run FirefoxPortable.exe from the installation directory; NEVER run firefox.exe from the subfolders. This launcher ensures that Firefox runs correctly in a portable environment, and cleans up after itself when it is finished to ensure no personal information is left behind.) Now close Portable Firefox.
+Open your USB device, and browse to the installation folder, then Data, then Profile.
+Delete everything from the Profile folder on your USB device. Take care that you are clearing the right Profile folder.
+Copy everything from the local profile folder to the Profile folder on your USB device.
+Start FirefoxPortable.exe again to ensure that Firefox Portable is using your local profile.
+ You must have the regular version of Firefox installed to do this, but you only need to do it once.
+Browse to Adobe's Shockwave homepage and download and install Shockwave. You must have the regular version of Firefox installed to do this, but you only need to do it once.
+Browse to your local profile directory as outlined above. You're looking for a folder called plugins. If that search isn't fruitful, consult this MozillaZine article. If that isn't helpful either, search your Windows drive for NPSWF32.DLL. Open the folder it's stored in.
+Open your Firefox Portable plugins folder, located in the Data folder.
+Copy every file from the local plugins folder to the plugins folder on your USB device.
+

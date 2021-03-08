@@ -1,0 +1,30 @@
+ This will be a door (iron or wood), a button to submit the combination, and two signs. The button is to send a circuit that checks if the door is able to be unlocked. The door is the main source of protection. And lastly, the signs are to tell you and your guests what to do.
+
+
+Be aware that when an activating device (whether it be a button or lever) is beside a door, it will open it. So be sure to keep the entry button at least one block away from the door. If you don't, when your guests push the entry button, the door will open just by the button itself. Now you definitely don't want that!;
+, Place the levers in one block intervals as you have done with the button.
+ This will create the code. Do not place redstone torches on all of them as this will mess-up the circuit. Levers with redstone torches on them are required to be in the "Down" position and surrounding levers must be in the "Up" position for the door to be able to be unlocked. As an example, assume you have chosen levers "2" and "3" as the "Down" levers.
+ The "Authenticator" should have every lever connected to it in any way possible. Remember, don't connect the entry button to it! The "Authenticator" should have a redstone torch on one side. This is how this works:
+
+
+When all levers are switched in a position so that all the redstone wires connected to the "Authenticator" are off or not glowing, it will allow the redstone torch connected to the side of the "Authenticator" to send an active signal to something called an "AND-gate" which will be explained in the next step. At this step, you have to remove the signs on the inner part of the circuit that, at this point, are superfluous to the combination lock. You needn't worry about this.
+ Basically, what an "AND-gate" does is it allows two signals connected to it to shut off two redstone torches. This will turn on the third torch which sends the signal to open the door. To create an "AND-gate":
+
+
+Place three blocks vertically facing the main line of the levers
+Place two redstone torches on each side, kind of like an ant's antennae.
+Place one redstone wire in the middle of these torches.
+place another redstone torch on the other side, on the middle block. This one will send the unlocking signal to the door.
+ There will be three wires that should be connected to the "AND-gate". The following three steps are very important and mandatory for proper function of your combination lock. If you have any troubles with this part, check the image to the right.
+
+
+The wire from the "Authenticator" should be connected to a part of the "AND-gate".
+The wire connecting the entry button should be connected to a part of the "AND-gate".
+Don't forget to use the third redstone torch on the "AND-gate" (the one on the middle block's side) to connect to the door, allowing it to open.
+
+
+You've completed this part. Awesome! You'll be pleased to know that the hardest work, is now over. This is a great time to enhance your "Entry line" (the one that will open your door) by adding some diodes/redstone repeaters that will slow down the circuit, thus, allowing you to enter faster.
+ Remember that the levers which have redstone torches on the back of them are to be "Down" whereas the others need to be "Up". When you're done, press the entry button and the door will open!
+
+, You've done it. Now see what more you can do.
+

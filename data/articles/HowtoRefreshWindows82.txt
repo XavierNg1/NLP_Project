@@ -1,0 +1,29 @@
+ While this process should not affect any of your personal folders, it's always a good idea to have your important data backed up in case something goes wrong. Click here for some tips on quickly backing up your important files.;
+, Windows will reinstall of the its operating system files, as well as any apps that you downloaded from the Windows Store. Any programs installed from online sources or from a DVD/CD will be uninstalled, meaning you will need to reinstall them afterwards. Your personal files (Documents, Pictures, Downloads, any folder that you created, etc.) will be preserved. All of your computer's settings will be preserved as well.
+
+
+If you upgraded from Windows 8 to Windows 8.1, refreshing will revert you back to Windows 8. You will need to download the Windows 8.1 update again after the refresh is complete.
+ Windows allows you to create a custom refresh image that it can use instead of the default one. This image will keep all of your installed programs, including any you've downloaded or installed from a disc. This is an optional step, though some users that have upgraded from Windows 8 to Windows 8.1 may need to do this to create a valid refresh image. This is a useful step to perform every time you install a new program, or after reinstalling Windows.Press ⊞ Win+X and select "Command Prompt (Admin)".
+Type mkdir C:\recoveryimage and press ↵ Enter. You can change the name and location of the folder to whatever you'd like. Make sure the location has at least 5 GB of free space, as refresh image files can vary wildly in size depending on what you have installed. You may want to create the folder an external drive or USB drive.
+Type recimg -CreateImage C:\recoveryimage and press ↵ Enter. Change the location if you changed it above.
+Wait while Windows creates the image. This could take a while.
+When the process is complete, the new image will be your default refresh image.
+ If you're using a mouse, move your cursor to the upper-right corner of the screen.
+,, Confirm that you want to proceed with the refresh.
+ This will likely take about half an hour to complete. When the refresh is complete, the computer will reboot and Windows will boot as normal. You can then reinstall any programs that were removed or update to Windows 8.1 if necessary.You will find a list of all the programs that were uninstalled during the refresh in a document on your desktop.
+ If you're still having the same problems after refreshing, you may need to perform a factory reset. Click here for detailed instructions.
+ A corrupt registry could be causing problems with the Refresh tool. This fix will let you access the recovery tools, but you'll only be able to perform a full factory reset after doing so; the Refresh tool will not start at all.
+
+
+Open the Charms menu, click the Power button, hold the ⇧ Shift key, and then click Restart.
+Once the Advanced Startup menu appears, click "Troubleshoot" and then "Advanced options".
+Select the Command Prompt. Type the following commands in order, pressing ↵ Enter after each one:
+
+cd %windir%\system32\config
+ren system system.001
+ren software software.001
+exit
+
+
+After rebooting again, return to the "Troubleshoot" menu and select "Reset Your PC". Follow the rest of the reset instructions here.
+

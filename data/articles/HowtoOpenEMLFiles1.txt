@@ -1,0 +1,33 @@
+ EML files are essentially emails in file form. The easiest way to open them is to use an email client such as Outlook, Outlook Express, Windows Live Mail, or Thunderbird. For most newer versions of these programs, EML files should be automatically registered so that double-clicking the file opens it.
+
+
+When you open the EML file in an email client, you will be able to download any attachments that are included in the file, as well as view the proper formatting and pictures.
+If you don't have an email client, or can't open the files in your email client, read on.;
+, EML files are very similar to MHTML, and changing the file extension to *.mht will quickly convert it into a format that can be opened in Internet Explorer. While other web browsers can open MHT files, Internet Explorer is the only one which will format them correctly. This method won't allow you to download any attachments.
+
+
+Enable file extensions if you have them hidden. In Windows 8, you can check the "File name extensions" box in the View tab of any Explorer window. In older versions of Windows, open the Control Panel and select Folder Options. Click the View tab and uncheck "Hide extensions for known file types".
+Right-click on the EML file and select "Rename".
+Delete the .eml extension and replace it with .mht. Windows will warn you that this could cause problems with the file. Confirm that you want to change the extension.
+Open the file in Internet Explorer. This will usually be the default program for MHT files. You can right-click the file, select "Open with", and then choose Internet Explorer from the list. Internet Explorer will display the MHT file in virtually the same format as the EML file would appear in a mail client.
+ Available for free from the developer site. http://www.freeviewer.org/eml/
+
+
+Now browse to the folder where your EML files are located.
+Double Click on that folder. Now all EML Files will get populated in order. At this point you can click on any EML message to view them.
+You can also view any associated attachments of that email.
+ If you can't open the file in an email client and can't convert it to open in Internet Explorer, you can view the file as a plain-text file. There will be a lot of nonsense characters, but you'll still be able to see the body of the message, as well as any links. You won't be able to see any images or attachments.
+
+
+Right-click on the EML file and select "Open with".
+Select Notepad from the list of programs.
+Find the <html> and <body> tags. These signify the start of the email message. You can find the content of the email message in this section, though you may have sift through some HTML code.
+Find the <a href= tags to find links. You can copy and paste the URL displayed here into a web browser to visit the links included in the EML file.
+ This is usually caused because another program has hijacked the EML extension. You'll need to reset the file associations for Outlook Express.
+
+
+Close Outlook Express if it is open.Press ⊞ Win+R.
+Type msimn /reg and press ↵ Enter. This will reset the file associations for Outlook Express. EML files should now open in Express automatically when double-clicked.
+ Some users have reported that backups created with Windows Live Mail have corrupted EML extensions (*._eml instead of *.eml). If the EML file isn't opening, check that the extension is not messed up.See Step 2 in the section above to enable file extensions if you have them hidden.
+Rename any EML file that has the *._eml extension to remove the _.
+

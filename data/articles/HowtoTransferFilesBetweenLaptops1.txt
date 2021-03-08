@@ -1,0 +1,17 @@
+ A Server Message Block (SMB) is a protocol (set of rules) for transferring files between computers over the internet. The laptops can be either PCs or Macs (or a combination) for this method to work. This is the easiest and fastest method for large scale file transfer between laptops.
+
+
+Use only a secure connection - don't try this over a public network.
+Make sure to password-protect your user profiles on both computers for extra security.
+Your server laptop is the one with the files, the client laptop is the one you want to transfer the files to.;
+, The server computer is the one currently holding the files you want to transfer. You'll need to change the network settings by designating a workgroup name. This workgroup will act like a conference room where your two computers will meet. The name for the workgroup can be anything you decide.
+
+
+In Windows OS, choose a workgroup name through "computer domain and workgroup settings". Applying this change will trigger a restart for your PC.
+On a Mac, choose a workgroup name through System Preferences->Network->Advanced->WINS. Choose your workgroup name and apply the changes.In either case, make a mental note of the "name" of the the server computer.
+ Go through the same network workgroup setup process on your client computer. Make sure to use the exact same workgroup name as you did with your server computer., Now it's time to begin moving your files. Look for the "name" of the server laptop and click into it to access all shared folders from that laptop.
+
+
+In Windows, open your "Network" application. All computers in the shared network workgroup should appear within a few seconds, including the server laptop you just set up.
+On a Mac, all computers in the shared network workgroup will appear in your Finder window.
+

@@ -1,0 +1,20 @@
+ This method of testing diodes is less accurate than the diode check function.Follow these instructions if you have an analog multimeter, or if using a digital multimeter without a diode check function.
+ Turn the dial to resistance mode, usually marked with the ohm symbol Ω. On some older models, this may be labeled R. Choose a low range, such as 2KΩ or 20KΩ.Some digital multimeters are auto-ranging, and will only have one Ω setting.
+ Plug the negative lead into the COM port. Plug the positive lead into the port labeled Ω or R.
+
+
+On almost all digital multimeters, the red lead is positive and the black lead is negative.
+An analog multimeter may use the red or the black lead as the positive lead. Check your manual to find out which setup your multimeter uses in resistance mode., A resistance test can give faulty results if the diode is connected to a circuit.Desolder the diode from the circuit for independent testing.
+ Touch the negative lead to the cathode (the negative end of the diode, marked with a stripe). Touch the positive lead to the anode. A working diode should have a low resistance value in this direction (usually below 1KΩ).
+
+
+If the result is 0, try lowering the resistance range on your multimeter dial. If the result is still 0, your diode may have broken down. The remaining tests can confirm this or rule it out.
+The exact quantity displayed has no useful meaning for circuit design, as it is influenced by multiple factors.You may get a different result on a second multimeter, but it should still be in the same low range.
+ Set your multimeter to a high resistance range, 200KΩ or higher. Reverse the position of the leads, so the negative lead touches the anode. Since diodes are designed to block current in this direction, the resistance should be very high. Most working silicon diodes should display a resistance in the hundreds of KΩ, or an overload reading (OL) meaning it is too high to measure.A result of 0 means the diode needs to be replaced.
+
+
+No matter what the results are, the diode is broken if you get similar results in the forward and reverse direction.
+ For best results, test a new silicon diode or a silicon diode you know is working correctly. If you get similar results, the diode is most likely functional. If you still encounter issues with your circuit, consider buying a multimeter with a diode check function for a more accurate test.
+
+
+If your forward-bias result is 0 for both diodes, then your digital multimeter most likely isn't producing enough current for an accurate test. Try again with an analog multimeter.

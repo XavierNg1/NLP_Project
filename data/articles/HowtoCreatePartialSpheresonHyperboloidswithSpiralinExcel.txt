@@ -1,0 +1,73 @@
+ Otherwise, create three worksheets in a new workbook: Data, Chart (unless working with Chart Wizard) and Saves.
+
+
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show gridlines and set all boxes below that to auto or checked.
+In Chart, allow Show chart names and set data markers on hover and leave the rest unchecked for now.
+In Calculation, Make sure Manually and Calculate before save are checked. Set max change to .000,000,000,000,01 without commas as goal-seeking is done a lot. Check Save external link values and use 1904 system
+
+In Error checking, check all the options.
+In Save, select Save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ Edit Go To cell range A1:N17288 and Format Cells Number Number Decimal Places 4, Font Size 9 or 10, Fill (from the color wheel) a nice fuchsia and make the Border Dark Blue bold Outline.
+
+I3: SPHERES
+J3: 1 (later to be 12)
+I1: ROWS
+I2: MAGIC
+Select cell range I1:J3 and Insert Name Create Names in Left Column, OK.
+J1: Enter "=17285-5"
+J2: Enter "=ROWS/SPHERES"
+G2: Enter "=(8.5*(SHRINKER*10))"
+H2: Enter "=(8.5*(SHRINKER*10))"
+Select cell range G1:H2 and Insert Name Create Names in Top Rows, OK.
+
+D5: Randy (for RandBetween)
+E5: t: 0 to nπ
+F5: z1_
+G5: Adj_x1
+H5: Adj_y1
+I4 and J4: Charting
+I5: x: No z
+J5: y: With z
+K5: Adj_x2 (not used but conceivably could be in future; if so the formula would be "=IF(C6=1,D6,K5)"
+L5: Adj_y2 (not currently being used)
+M4 and N4: Charting
+M5: x2: No Z
+N5: y2: With z
+Command+Select cells F1:F3 and I3 and Format Fill yellow.
+Select cell J3 and Format Fill sky blue from the color wheel.
+Select cell range I4:J5 and Format Font italic.
+Select cell range M4:N5 and Format Font italic.
+MODIFIED: Command+Select cells A1:D3, G1:N2, G3:H3, K3:N3 and Format Fill White.
+
+
+
+Adj Cos: Edit Go To cell range A6:A17285 and enter into A6 w/o quotes the following formula, "=17*COS((ROW()-6)*0.25/12*PI()/180)" and Edit Fill Down.
+Adj Sin: Edit Go To cell range B6:B17285 and enter into B6 w/o quotes the following formula,"=17*SIN((ROW()-6)*0.25/12*PI()/180)+17"and Edit Fill Down.
+Indicator: Select cell C6 and enter 1. Edit Go To cell range C7:C17286 and enter w/o quote the formula, "=IF((ROW()-7)/MAGIC=INT((ROW()-7)/MAGIC),1,IF((ROW()-7)=0,1,0))" and Edit Fill Down.
+MODIFIED: Randy: Edit Go To cell range D6:D17286 and enter into D6 .35. Select cell D17285 and enter 0. Do Edit Fill Series Column Linear Trend, OK. This is the source of the spiral.
+t: 0 to nπ: Select cell E6 and enter 0. Select cell E7 and enter the formula "=(2*PI()/MAGIC)". Edit Go To cell range E8:E17285 and enter w/o quotes into E8 the formula "=IF(C8=1,2*PI(),2*PI()/MAGIC+E7)" and Edit Fill Down.
+z1_: Edit Go To cell range F6:F17285 and enter w/o quotes into F6 the formula "=CEE*COS(AYE*E6)" and Edit Fill Down. Edit Go To cell range F6:F17285 and Insert Name Define Name z1_ to cell range $F$6:$F$17285.
+Adj_x1: Edit Go To cell range G6:G17285 and enter w/o quotes into G6 the formula "=IF(C6=1,A6,G5)" and Edit Fill Down. Edit Go To cell range G6:G17285 and Insert Name Define Name Adj_x1 to cell range $G$6:$G$17285.
+Adj_y1: Edit Go To cell range H6:H17285 and enter w/o quotes into H6 the formula "=IF(C6=1,B6,H5)" and Edit Fill Down. Edit Go To cell range H6:H17285 and Insert Name Define Name Adj_y1 to cell range $H$6:$H$17285.
+MODIFIED: x: No z: Edit Go To cell range I6:I17285 and enter w/o quotes into I6 the formula "=SHRINKER^2*(Stretch_x1*(((BEE^2+CEE^2*COS(AYE*E6)*COS(AYE*E6))^0.5 *COS(E6)))+Adj_x1)" and Edit Fill Down. This is the x part of the heart of the sine wave sphere on a single sheet hyperboloid formula from the text, without the z dimension added or multiplied in, which is why it took me so long to discover how to make it work.
+y: With z: Edit Go To cell range J6:J17285 and enter w/o quotes into J6 the formula "=SHRINKER^2*(Stretch_y1*(((BEE^2+CEE^2*COS(AYE*E6)*COS(AYE*E6))^0.5* SIN(E6))+z1_)+Adj_y1)" and Edit Fill Down.
+Select cell I17286 and enter the formula w/o quotes "=I6" and select cell J17286 and enter the formula w/o quotes "=J6". This makes the top connecting line from the last sphere to the first.
+Edit Go To cell range I6:J17288 and do Format Fill sky blue. Edit Go To cell range M6:N17288 and Format Fill sky blue.
+Select cell D5 and Format Fill light sea green, font red, Border navy blue outline bold. Copy this cell to H17287. Then do Edit Paste Special Format of this cell to cell C6, E6, E7, I17286, J17286, M17286 and N17286 to make distinct the format of those cell's formulas/values.
+NEW: Save the workbook.
+NEW: Adj_x2: Leave blank for now.
+MODIFIED: Adj_y2:  Leave blank for now.
+NEW: x2: No z: Edit Go To cell range M6:M17285 and enter w/o quotes into M6 the formula "=I6*D6" and Edit Fill Down.
+MODIFIED: y2: With z: Edit Go To cell range N6:N17285 and enter w/o quotes into N6 the formula "=(J6*D6)+0.125" and Edit Fill Down.
+Select cell M17286 and enter "=M6", w/o quote and then copy this to N17286.
+NEW: Save the workbook. If it takes an inordinate amount of time to save the file, consider doing a COPY and  PASTE SPECIAL VALUES of cell range A11:J17285, and I recommend changing the format to something unique for the pasted value cells and leaving a note about it in plain sight. Remember to copy back the formulas and Randy series when you alter the number of spheres or Randy.
+
+
+These sub-steps are left in your capable hands, as a better result may be achieved than was originally achieved, sticking with the original chart formatting. See previous worksheet, the article and its workbook How to Create a Chaos Ring of Sinewave Spheres for help.
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

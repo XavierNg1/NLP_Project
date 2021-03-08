@@ -1,0 +1,80 @@
+ FTP stands for File Transfer Protocol, and allows users to connect directly to the FTP server and select which files they want to download from it. By turning your computer into an FTP server, you will be able to securely share your entire music collection with your friends and allow them to pick and choose what they want to download.
+
+
+You can turn any computer into an FTP server. It will need to be turned on, connected to the internet, and have the server software running in order for your friends to connect to it.
+ You'll need this later on when you're setting up the server.
+
+
+Open the Command Prompt. You can find this in the Start menu, or you can start it by pressing ⊞ Win+R and typing cmd.
+
+
+
+
+
+
+Type ipconfig and press↵ Enter.
+
+
+
+
+
+
+Note the IPv4 Address entry for your network adapter.
+ There are lots of options for doing this. One of the most popular options is FileZilla, which is a free, open-source FTP program. The FileZilla server software is Windows-only.
+
+
+You can download the FileZilla server software from filezilla-project.org.
+ In order for someone to connect to your FTP, they'll need to log in using a user account. You can create one user account and distribute the information to all of your friends. Multiple people can be connected at the same time using one account.
+
+
+Click the Edit menu and select "Users".
+
+
+
+
+
+
+Click Add underneath the Users list and give the user a name. Remember that you can have multiple people use the same user, so you could just name it something like "guest".
+ Click the Add button underneath the "Shared folders" list. This will allow you to select what folders the user has access to. Set it to the folder containing all of your music, and they will gain access to all of the subfolders as well.
+ Enter in a password that you want to use for the user you just created. This will help ensure that only the users you want are able to access your files.
+ Chances are that you're connecting to the internet from behind a router. If FileZilla displays the message "You appear to be behind a NAT router. Please configure the passive mode settings and forward a range of ports in your router", you'll need to set up port forwarding by following these steps. If you don't see this message, skip down to Step 16.
+ This will open the FileZilla Options menu, where you'll be configuring your port settings.
+ This menu will allow you to set your port forwarding settings for FileZilla.
+ Enter a range of ports in the 50000-port range. Make sure the ports you enter are less than 65535. The range should be about 50 ports (e.g. 55700-55750).
+ This will automatically determine your server's external IP address.
+ Most routers can be accessed by entering their address into a web browser's address bar. The most common browser addresses are 192.168.1.1, 192.168.0.1, and 192.168.2.1. You'll need to enter your administrator username and password.
+ This may be located in different areas depending on the model of router you are using. Check the "Advanced" section if you can't find it.
+ You'll need to create a new port forwarding rule to open the ports for your FTP server. Enter in the range of ports that you set earlier. In the "IP address" field, enter in the IP address for your computer that you found in Step 2. Click here for more information on forwarding ports., If you use Windows Firewall, you'll need to open the same ports in it as well.
+
+
+Press ⊞ Win and type firewall. Select "Windows Firewall" from the list of results.
+
+
+
+
+
+
+Click the "Advanced settings" link in the left menu.
+
+
+
+
+
+
+Select "Inbound Rules" in the left menu, and then click "New Rule" in the right frame.
+
+
+
+
+
+
+Select "Port" and then click Next >.
+Enter the ports you opened in your router into the "Specific local ports" field. Follow the rest of the prompts to save the new rule.
+ Your server will need to be running in order for your friends to connect to it. By default, FileZilla will start automatically when you log into Windows.
+ Your friends will need this address to connect to the server. You can find your public IP address by opening Google and searching for "my ip". Your public IP address will be displayed at the top of the list of results.
+ Your friends will need the username and password to connect to the FTP server. Make sure to let them know not to share the login information with anyone you don't want connecting. Unless you know your friends' IP addresses, you won't be able to tell who's connecting.
+
+
+You will also need to give your friends the IP address and port that the FTP is using. If you didn't change the FTP port, it will be "21".
+ FTP is a fairly complex protocol, and it can be powerful if you know how to use it to your advantage. Click here for detailed information on getting the most out of FTP.
+

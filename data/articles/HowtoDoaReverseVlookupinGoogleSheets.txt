@@ -1,0 +1,6 @@
+ In this example, we will lookup a value from column A, and output the corresponding value in column B. So our lookup "table" is A:B.
+ We will lookup a value in cell C1 for this example., The filter function helps you find a set of values inside of a column. In this case, the filter will return to us the set of rows that contain our value in C1. The filter part of the formula is: filter(ROW(A:A), A:A=C1)., The MAX part of the final formula is MAX(filter(ROW(A:A), A:A=C1)).,
+
+The final formula is =INDEX(A:B, MAX(filter(ROW(A:A), A:A=C1)),2).
+The index function is looking up the row we found using filter inside of the specified table, and returning the corresponding value in column B, the second column, which is why the 2 is used.
+

@@ -1,0 +1,57 @@
+ Start the MATLAB software, and check that the software is functioning correctly. If the software is ready to be used, it will display a "Ready" message in the bottom left-hand corner of the screen (highlighted in red).
+
+
+If the message displays "busy", then MATLAB is still running a function from a previous instance. To safely stop any MATLAB function, press Ctrl+C at the same time. This will cancel any currently running calculations, allowing MATLAB to be used again.;
+, If there are any variables in the Workspace, type clear and press ↵ Enter. This will clear any past data from the Workspace, the toolbox on the left of the screen. If the Workspace is empty, you may skip this step.
+
+
+This command only clears variable data, so any past files that you saved will remain stored in MATLAB.
+ To create a new function file, select "Function" under the "New" tab in the top left hand corner. Function files are user-created lines of code that perform specific actions. Function files allow users to run multiple complex calculations with a single line of code.
+ Replace the text Untitled with a name for your function file that you can choose. You can choose any name that is not already in use by MATLAB, but there are some restrictions.
+
+
+The name must start with a letter
+No foreign or special characters
+Underscores must be used in place of spaces
+
+, Delete the green text to clear up space for your code. The spacing between the header line and the end does not matter.
+ Delete the input_args and in the brackets put a variable n. Variables in Matlab are letters or words that represent a numeric value and are used to simplify calculations. This variable will be the dimensions of the multiplication table. When the function file is run, the user will input a value for the variable to be used in the function file.
+
+
+Function files can have more than one input, or they can have none at all.
+ Delete the output_args and in the parentheses put a variable named Table. This variable will be the completed multiplication table that will be displayed at the end of the function file.
+ On the next line, type the same variable as the output variable from the previous step and set it equal to zeros(n);. This will create an n x n table of zeros that will serve as a template when the function is executed.
+
+
+The semi-colon prevents MATLAB from displaying every calculation from this line, which would clutter the screen with irrelevant data.
+ The first line of the "for" loop will be for Column = 1:1:n. This outer loop will serve as column header for the multiplication table.
+
+
+The "for" tells MATLAB that this is a for loop and will be highlighted in blue. "Column" is the variable that will tell MATLAB how many times it will run and the value the variable will have when it is run. In this example, the for loop will run from "1" to "n", with the middle "1" adding 1 to the variable each time. With normal "for" loops, you would have to write a code that would tell the loop what to do each time it runs beneath the "for" line. However, with certain nested loops such as this one, the code that will run will only be in the inner loop.
+ This line will be for Row = 1:1:n, which is the same as the previous step but for the rows of the table.
+ Underneath the previous step, type Entry = Row*Column;.
+
+
+This will multiply each row with each column to produce the entries of the multiplication table. Alignment of the lines will not mess up the code, but MATLAB will automatically format the lines in a loop together anyways. Once again the semi-colon is used to prevent MATLAB from displaying every single calculation, as only the completed table is important.
+ For the final line of the inner "for" loop, type Table(Column, Row) = Entry;.
+
+
+This will take each value multiplied by the row and column, and replace the zeros from the empty table in step 8. "(Column, Row)" acts as a coordinate point for the multiplication table which tells MATLAB where the location of the value is.
+ Every loop needs an "end" statement when the code is finished. To complete the nested loop or function file, add an end under the previous step. Then press ↵ Enter and add another end on a separate line. There should be nothing else on the a line that has an "end" statement.
+
+
+There should be a third end statement at the very end that was automatically added by MATLAB to complete the function. The amount of space between a loop and its "end" statement does not matter.
+As a general rule, there should be an "end" statement somewhere underneath for every blue highlighted word.
+To check if there are enough "end" statements, click on a blue highlighted word. It will highlight the other blue word that is connected to it.
+ Check the right bar of the function file to see if MATLAB has found any errors in your code. The color of the box will indicate whether there are any problems with the code. If there are any problems, MATLAB will place a colored line next to where the error is.
+
+
+Green - There are no problems with the code. You may proceed to the next step.
+Orange/Yellow - Missing a semi-colon. This means the function will still work, but it will be slower and show unnecessary information.
+Red - There is a serious problem that will prevent the function from running. Hovering the mouse over a red line under the box will tell you what kind of error is found on that line. Clicking on Details will give you an explanation and suggest possible ways of fixing the error.
+ To save your function file, press the Save as option under the "Save" tab. When naming a function file, always use the same name as the name you chose for your function file, to avoid any confusion.
+
+
+By default, MATLAB files are saved to C:\Users\\Documents\MATLAB.
+ To test your function file, run it by typing the name of the function file and add input arguments in parentheses. To make a 6x6 multiplication table for example, type MultiplicationTable(6) into the command window at the bottom of the screen, replacing "MultiplicationTable" with the name that you saved the function file under. You have now completed a function file to produce a multiplication table.
+

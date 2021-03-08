@@ -1,0 +1,31 @@
+ Installing Android onto a virtual machine is a little more advanced than your standard installation, but you can have it up and running in about 20 minutes. Using a virtual machine will allow you to get the full Android experience with the greatest app compatibility.
+
+If you just want to run a game or two, check out BlueStacks in the next section. This emulator can run many popular Android apps without much installation.;
+, This is a free virtualization program that will allow you to create virtual machines on your computer. Virtual machines emulate a physical computer which allows you to install other operating systems without having to reboot your computer. You can download VirtualBox for free from virtualbox.org.
+
+If you try to run the installer and Windows won't let you open it, click the "More info" link in the SmartScreen window and then click "Run anyway."
+You can leave the installation settings as they are. The installer will disconnect you from the internet when it configures the virtual machine's network connection.
+Make sure to install the additional packages that are prompted during installation. These are essential for VirtualBox to run.
+ Android-x86 is an unofficial build of Android designed to boot from PC hardware. It is regularly maintained and updated, and can be downloaded for free from android-x86.org.
+
+While you can find a build of Android 4.3 here, it is recommended to download either the latest 4.4 release or the latest 5.1 release. The 4.3 version is outdated and no longer being maintained.
+The ISO file is several hundred megabytes, and may take a while to download.
+ This will start the process for creating a new virtual machine., Android is based on the Linux operating system, so select "Linux" from the "Type" menu., This will allow you to install most Linux-based operating systems, including Android-x86., This is the amount of your system's RAM that will be dedicated to the virtual machine while it's running. This RAM will not be available to other programs while your Android-x86 virtual machine is running., This will start the process of creating a virtual storage drive for your Android operating system using the free space on your computer., A fixed size drive will lead to better performance. You'll be setting aside the full amount of space from your computer's free space from the outset., You'll need 3 GB to install the Android operating system and essential files. If you plan on installing a lot of apps, you may want to increase this. Remember, the space you select here will not be available for use by your computer until you delete the virtual machine.
+
+To store lots of apps, select 8 GB or more.
+ This may take a few minutes to complete, depending on how large you set the drive to be., This screen will let you select the Android-x86 ISO file that you downloaded., This is your virtual disc drive., This will let you browse for the ISO file., This will load the ISO file into the virtual drive, acting as a virtual disc. Click "OK" to close the Settings menu., Your virtual machine's display will open in a new window, and after a moment the Android Installation menu should appear., Press ↵ Enter to begin the installation process.
+ This will let you create a new partition to install Android on.
+ This will open the cfdisk utility., Press ↵ Enter to select it.
+ This will create a primary partition from all of the available space on the virtual hard disk.
+ Confirm that you want to create the partition by typing "yes" and pressing ↵ Enter.
+ This will return you to the Android installation menu.
+ This is your newly-created partition.
+ Confirm that you want to proceed with the format.
+ This will allow you to boot to Android. You can skip "EFI GRUB2."
+
+, This will allow you to read and write to the /system folder, which you'll need for some apps., This may take a minute or two to finish.
+ Once installation is complete, you can remove the ISO file so that the virtual machine boots to your new Android installation.
+
+Click the Devices menu in VirtualBox and select "Optical Drives."
+Select the "Remove disk from virtual drive" option. This will unmount the ISO.
+ Click the Machine menu and select "Reset." After the computer boots up, Android will load and the Welcome screen will appear., This should make your cursor appear in the virtual machine window. Your mouse will be stuck in the virtual machine until you press the right Ctrl key., Android will use your virtual machine's network connection to directly access the internet., You'll be prompted to sign in with a Google account or create a new one. Android-x86 is secure, and you can safely sign in with your regular Google account., After proceeding through the initial setup screens, you'll be taken to the Android home screen. You can use your mouse cursor to click on things, and your keyboard to type. You won't be able to perform any actions that require multi-touch., You can install apps on your virtual Android just like you would on a regular device. Open the Play Store and find the apps you want to download. Remember, since you're using a mouse, your multi-touch input options are limited.

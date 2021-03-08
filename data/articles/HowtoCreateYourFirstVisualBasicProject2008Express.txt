@@ -1,0 +1,34 @@
+ Follow all on-screen installation instructions.
+
+
+From the Windows Start menu, find and click Visual Basic 2008 Express Edition. This will launch the Visual Basic programming environment.
+
+
+
+
+
+
+On the File menu, click New Project. Click on Windows Forms Application icon and click OK. A new form will be displayed and this is where you will add buttons, text boxes, and so forth.
+
+
+
+
+
+;
+, Press the Esc button to hide the Toolbox and in the form area, draw a text box by clicking and holding the left mouse button and dragging the cursor down and to the right about half the width of the form.
+
+
+From here, you can hover the mouse over the Textbox control, grab it, and move it anywhere on the form. You can also resize the Textbox by clicking it once and grabbing and dragging the left or right anchor (the little white boxes on either side).
+ This box shows all the properties of the Textbox you just created, everything from color of the box to the text it holds.
+
+
+
+Once again, press the Esc key and construct a button by pressing and holding the left mouse key and dragging it down and to the right. A button will appear and it will have 'Button 1' as its text.
+In the Properties window, just to the right, find the Text property and change it from 'Button 1' to 'Wish Me a Happy Birthday'.
+, From where the cursor sits, type: MsgBox("Happy Birthday " + TextBox1.Text + "!")
+
+,
+
+
+In the Textbox you created, type your name and then press the 'Wish Me a Happy Birthday' button.
+

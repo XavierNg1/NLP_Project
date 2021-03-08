@@ -1,0 +1,48 @@
+,,
+
+The current position knob can be dragged to jump to any position in the video.
+When you mouse-over the slide-bar, the current time indicator will be displayed at your mouse cursor.
+ Layers/Tracks are where you will be adding your "Events" or objects such as text and hyperlinks.
+
+Layers are like transparent placeholders for your events/objects. They have a stack-like structure where the topmost layer will have the most priority in displaying. That is to say, events in the top most layer will hide any events from layers that are "below" it and that overlap with the event (occupy the same space on the screen).
+Each layer is displayed as a box in the Pane.
+Each layer has a handle from which you can drag and drop the layer to change its position relative to other layers.
+When you mouse-over a layer's name, the "Delete Layer" button appears. You can use that to delete a layer/track.
+You can use the "Add a new track for your events" button to add extra layers/tracks.
+ This is where you'll drop your events and decide when they will be displayed when they will fade away.
+
+Drop an event into one of the tracks/layers to add an event to that track.
+Use the re-size handles that appear on the sides of an event to stretch it or shrink it.
+
+Stretching/shrinking to the left makes the event start earlier/later. It changes the time the event starts.
+Stretching/shrinking to the right makes the event end later. It changes the time the event ends.
+
+
+The timeline zoom slide-bar is used to zoom in and out of the timeline. This affects how much of the real timeline is displayed in the timeline selector bar. When zoomed out to the maximum level, the selector bar represents the whole timeline of the video. All events are minimized/zoomed out to fit in the selector bar. When zoomed in, the selector will only represent a portion of the actual timeline. You'll have to scroll left or right to see the rest of the timeline.
+The timeline selector represents a portion of or the whole timeline. It is used to select which portion of the represented timeline is displayed in the tracks timeline pane.
+You can adjust the "window" that selects the portion of the timeline to be displayed by resizing it using the handles to its right and left.
+ Events are objects you can add to the video. You can then modify or customize the object's properties using both the editor pane and, sometimes, using visual elements such as dragging and dropping, resizing handles .. etc.
+Manage the base media used in the project. You can change the base video that you want to edit and add "fallbacks".
+Obtain a link to your finished video to share with everyone.
+
+
+
+You can change the base media by changing the link in the text-box for the media source. You can add links to videos from Youtube, Vimeo, Soundcloud, or an HTML5 video.
+If you choose to add an HTML5 video, you'll have to provide 3 versions of your video: mp4, ogv, and webm. The first will be the media source and the other two will be the fall-backs. This is to support all major browsers.
+
+
+
+If you haven't saved your project, when you switch to the share tab, you will be asked to name your project. After that, the save button will be enabled.
+After saving your project, you'll be able to obtain an HTML snippet to embed your video in other websites (and most HTML-enabled emails).
+
+
+
+You add events to your project by dragging the type of event you want and dropping it in the track you desire. You can then modify the duration of the vent either using the event's properties page or visually through dragging it to the appropriate location in the timeline and modifying its duration using the size handles at the sides of the event.
+All events have a properties page that will be displayed in the events tab when you select the event in the tracks' timeline.
+The properties of each event differ from the other type of events. However, they are all designed to provide ways to customize the event. Almost all events have a start and end time properties that define when, within the video, will that event be displayed and when it will end.
+
+
+
+The "My Projects" menu item will take you to your dashboard, where you'll find your saved projects. There, you can manage any projects you saved in the past.
+The "Logout" menu item will log you out of Popcorn and exit the application.
+

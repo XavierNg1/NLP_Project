@@ -1,0 +1,25 @@
+ Mortgage interest can be easily found using your chosen spreadsheet program. This function, in all major spreadsheet programs (Microsoft Excel, Google Spreadsheet, and Apple Numbers), is known as CUMIPMT, or the cumulative interest payment function.It combines information like your interest rate, number of payments, and principal to arrive at an amount for total interest paid over the life of the loan. You can then divide this information to find the amount of interest paid each month or annually.
+
+For simplicity, we will be focusing on Microsoft Excel's CUMIPMT function here. The process and inputs will likely be identical or very similar for any other program you are using. Consult the help tab or customer service if you have any problems using these functions. 
+
+
+, You can use the cumulative interest payment function to determine your interest paid. Start by entering =CUMIPMT( into your spreadsheet. The program will prompt you for the following information: (rate, nper, pv, start_period, end_period, type).
+
+
+rate here means your monthly interest rate. Again, this will be your annual interest divided by 12 and expressed as a decimal. For example, a six percent annual rate would be expressed as 0.005 here (6%/12=0.5%=0.005).
+
+
+nper stands for "number of periods" and is asking for your total number of payments. Like before, this will be the term of your loan in year multiplied by 12 for monthly payments. 
+
+
+pv means "present value." Input your principal (amount borrowed) here. 
+
+
+start_period and end_period represent your timeframe for calculating interest. To calculate interest over the life of the loan, enter 1 for start_period and your value for nper into end_period. 
+
+
+type refers to when in each period your payments are made; 0 for the end of the month and 1 for the beginning of the month. In most cases, you should use 0. 
+
+Input the information, close the function with a ")" at the end, and press enter to receive your answer., The CUMIPMT function will return an amount that represents the total interest you will pay on your loan. To find the interest paid each month or year, simply divide this amount by either the number of payments or the number of years on your loan, respectively.
+
+This number will also be expressed as a negative number. This doesn't mean you entered your information incorrectly, but simply that the program represents interest as an expense and therefore, a negative number. Multiply by -1 if this helps you understand and use the figure.

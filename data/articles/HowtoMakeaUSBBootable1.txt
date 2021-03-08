@@ -1,0 +1,18 @@
+ You will need to run Command Prompt as an Administrator. Right-click on it and select Run as Administrator. You may need to enter the Administrator password.
+
+
+This method will create a USB drive that is bootable. You can then copy the contents of an operating installation disc onto the drive to create a portable installation drive.
+This method only works in Windows Vista, 7, and 8.;
+, This can be opened by entering the command "diskpart" (without the quotes).
+ Type the command list disk to show a list of all the drives connected to your computer. Your USB drive should be listed here as well. Make note of the number next to your USB drive.
+ Enter the command select disk #, replace “#” with the number from the previous step.
+ Enter the command clean to have the disk management utility verify the integrity of the USB drive, and erase all data.
+ Once the USB drive is clean, type in create partition primary. You will see a message saying that the operation was successful.
+ Enter the command select partition 1 and press Enter. Once you receive a confirmation message, type active and press Enter. This will activate the partition.
+ Input the command format fs=fat32 or format fs=ntfs quick . When you press Enter, the program will work for a few minutes (if it is a small USB, e.g. 4Gb could take hours to slow format), and the progress will be displayed as a percentage.
+ Enter the command assign to give the thumb drive a letter designation. Type exit to end the disk management program.
+ Once the USB drive has been made bootable, you can copy over the installation files for the operating system you want to install. You can do this by dragging and dropping using your preferred file manager/explorer.
+
+
+Copy over any drivers you might need during the operating system installation to make the process much smoother.
+

@@ -1,0 +1,14 @@
+
+
+
+d = R * arccos(R/(R + h)), where
+• d = distance to horizon
+• R = radius of the Earth
+• h = height of eye
+
+, The geometric horizon calculated using the method in this article may not be the same as the optical horizon, which is what your eye actually sees. Why is this?
+
+
+The atmosphere bends (refracts) light that is traveling horizontally. What this usually means is that a ray of light is able to slightly follow the curvature of the earth, so that the optical horizon is a bit further away than the geometric horizon.
+Unfortunately the refraction due to the atmosphere is neither constant nor predictable, as it depends on the change of temperature with height. There is therefore no simple way to add a correction to the formula for the geometric horizon, though one may achieve an "average" correction by assuming a radius for the earth that is a bit greater than the true radius.
+ This will calculate the length of the curved line that follows from your feet to the true horizon (shown in green in this image). Now, the arccos(R/(R+h)) portion refers to the angle that is made at the center of the Earth by the line going from the true horizon to the center and the line going from you to the center. With this angle, we multiply it by R to get the "arc length," which, in this case, is the distance that you are looking for.

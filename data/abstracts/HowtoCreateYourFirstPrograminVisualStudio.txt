@@ -1,0 +1,76 @@
+
+Set up Visual Studio.
+
+Fire up Visual Studio from your start menu and create a new Visual Basic Project.
+
+On the right-hand side, go to the properties screen and change the following settings:
+
+
+FormBorderStyle : None
+
+
+StartPosition : CenterScreen
+
+
+Text : Desktop2
+
+
+,
+
+Go to the Toolbox on the left-hand side.
+
+Click the little black arrow at the top of the newly added Listview and choose Dock in parent container.
+
+Double click on the window in front of you and it will switch over to the code editor.
+
+Enter the first part of the code.
+Add the loading code.
+Follow it up with the following code:
+
+
+
+
+
+
+For each dr in My.Computer.FileSystem.GetDirectories("desktop2")
+ListView1.Items.Add(My.Computer.FileSystem.GetDirectoryInfo(dr).Name)
+Next
+For Each fl in My.Computer.FileSystem.GetFiles("desktop2")
+ListView1.Items.Add(My.Computer.FileSystem.GetFileInfo(fl).Name) 
+Next
+
+
+
+
+
+This code serves the following purposes:
+
+
+My.Computer.FileSystem.GetDirectories("desktop2")
+
+This gets all the folders in our desktop
+
+
+
+ListView1.Items.Add(My.Computer.FileSystem.GetDirectoryInfo(dr).Name)
+
+This adds the folder into our desktop by getting it's name from the system.
+Go back to the Form1_Load section and add the following line:
+
+
+
+
+
+
+LoadData()
+
+
+
+
+
+This calls the function we just created to load all the files and folders in our desktop.
+
+,
+Test the current software.
+
+Click the Start button at the top of the screen.

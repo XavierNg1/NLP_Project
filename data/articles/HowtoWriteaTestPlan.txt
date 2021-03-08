@@ -1,0 +1,45 @@
+ What you put in your test plan depends largely on the complexity of the software you’re planning to test. However, there are three basic sections that should always be included in a test plan: Test Coverage, Test Methods, and Test Responsibilities.
+
+
+Test coverage defines what you will be testing and what you will not.
+Test methods define how you will be testing each part defined in the “coverage” section.
+Test responsibilities assign tasks and responsibilities to different parties. This section should also include what data each party will record and how it will be stored and reported.;
+, The Institute of Electrical and Electronics Engineers (IEEE) publishes international standards for testing and documenting software and system development.To hold your test plan to the highest standard, consult with the IEEE publications below:
+
+
+29119-1-2013, Software and Systems Engineering - Software Testing - Part 1: Concepts and Definitions29119-2-2013, Software and Systems Engineering - Software Testing - Part 2: Test Processes29119-3-2013, Software and Systems Engineering - Software Testing - Part 3: Test Documentation829-2008, IEEE Standard for Software and System Test Documentation1008-1987 - IEEE Standard for Software Unit Testing, You can find templates for test plans online. The best source for templates is the IEEE library, but access does cost a fee.
+
+
+The North Carolina Office of Information Technology Services offers an annotated test plan template, based on IEEE 829 standards, here.
+Dublin City University also offers a free test plan template, based on IEEE 829 standards.
+ Your introduction functions as the “executive summary” of the test plan: its goals, its scope, and its schedule. This should be kept brief, as you will go into further detail in subsequent sections of the test plan.
+
+
+Your goals and scope statements should define, in general terms, the methods that will be used in the testing process and the projected results. The scope statement should also include the most critical performance measures, as well as a list of what the test plan will not address, and why.A schedule details the increments of time in which each phase of the test will be completed.
+Related documents include any peripheral material that is relevant to the current project, such as lists of specifications.
+ Your test plan should clearly define what you will test and why you will test it. These should always be based on industry standards.Determine what the scope of the test is. What scenarios will be tested?
+Determine what is out of scope for the test. What scenarios will not be tested?
+Common scenarios include Module Testing, Integration Testing, Systems/Acceptance Testing, and Beta Testing.
+ This section describes all of the resources needed to complete the testing, including hardware, software, testing tools, and staff.When accounting for your staff, make sure to detail the responsibilities required of each member and the training needed to execute those responsibilities.
+Make sure to document the exact specifications of hardware and software.
+ Detail all the factors that your project depends on and the risks involved in each step. The level of acceptable risk in your project will help determine what you will and will not test.
+
+
+Consider the likelihood of various risks.You will need to prioritize the critical areas.
+Be aware of any vague or unclear requirements. Users often lack the expertise to understand technical language or procedures, so user misunderstanding could pose a risk.
+Use your past “bug” history to help you identify areas for concern and extra testing.
+ List what new aspects you will be testing and what old aspects you will be re-testing. Make sure to detail the purpose for each test.You can use software application inventories, IEEE guidelines, and other sources to help you determine this list.
+This section also represents your “deliverables,” or what data you will deliver to the client once the testing is complete.
+ List any features that will not be tested during the current project.Reasons not to test features include:
+
+
+The feature will not be included in this version of the software
+The feature is low-risk or has been used before without issue
+
+, This section outlines the overall test strategy for your test plan. It will specify the rules and processes that will apply to the tests outlined above.
+
+
+Include information on tools to be used, what metrics will be collected and at what level, how many configurations will be tested, and whether there are any special requirements or procedures for testing.
+ These criteria will guide your testing staff so that they know whether testing objectives have been achieved. This section can also include “exit criteria,” so that your staff know when it is acceptable to stop testing a certain feature.You should also include a list of suspension criteria and resumption requirements. This information tells testers when to pause tests and what the acceptable level of defect is to resume them.
+ Also known as “deliverables,” these documents are the data, reports, scripts, and results that will be produced by testing.It’s a good idea to assign these deliverables to “owners” who are responsible for their delivery. Assign deadlines by which they are due., Outline all the goals that you hope to achieve during the testing process. Detail who is in charge of final approvals.
+

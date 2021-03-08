@@ -1,0 +1,197 @@
+ In an Excel formula, a "cell reference" is the address a cell. You can type these in manually, or click on the cell you wish to use while you are entering a formula. For example, the following spreadsheet has a formula that references cell A2:
+
+
+
+Relative References
+
+
+Column A
+Column B
+Column C
+
+
+row 2
+50
+7
+=A2*2
+
+
+row 3
+100
+
+
+
+
+row 4
+200
+
+
+
+
+row 5
+400
+
+
+
+
+, In an Excel formula, a relative reference uses the relative position of a cell address. For example: cell C2 has the formula “=A2”, which is a relative reference to the value two cells to the left. If you copy the formula into cell C4, then it will still refer to two cells to the left, now showing “=A4”.
+
+
+
+Relative References
+
+
+Column A
+Column B
+Column C
+
+
+row 2
+50
+7
+=A2*2
+
+
+row 3
+100
+
+
+
+
+row 4
+200
+
+=A4*2
+
+
+row 5
+400
+
+
+
+
+
+This works for cells outside of the same row and column as well. If you copied the same formula from cell C1 into cell D6 (not shown), Excel would change the reference "A2" to a cell one row to the right (C→D) and 5 rows below (2→7), or "B7".
+ Let's say you don't want Excel to automatically change your formula. Instead of using a relative cell reference, you can make it absolute by adding a $ symbol in front of the column or row that you want to keep the same, no matter where you copy the formula too.Here are a few example spreadsheets, showing the original formula in larger, bold text, and the result when you copy-paste it to other cells:
+
+
+
+Relative Column, Absolute Row (B$1):
+The formula has an absolute reference to row 1, so it always refers to row 1.
+
+
+Column A
+Column B
+Column C
+
+
+row 1
+50
+7
+=B$3
+
+
+
+row 2
+100
+=A$3
+
+=B$3
+
+
+
+row 3
+200
+=A$3
+
+=B$3
+
+
+
+row 4
+400
+=A$3
+
+=B$3
+
+
+
+
+
+Absolute Column, Relative Row ($B1):
+The formula has an absolute reference to column B, so it always refers to column B.
+
+
+Column A
+Column B
+Column C
+
+
+row 1
+50
+7
+=$B1
+
+
+
+row 2
+100
+=$B2
+
+=$B2
+
+
+
+row 3
+200
+=$B3
+
+=$B3
+
+
+
+row 4
+400
+=$B4
+
+=$B4
+
+
+
+
+
+Absolute Column & Row ($B$1):
+The formula has an absolute reference to column B of row 1, so it always refers to column B of row 1.
+
+
+Column A
+Column B
+Column C
+
+
+row 1
+50
+7
+=$B$1
+
+
+
+row 2
+100
+$B$1
+$B$1
+
+
+row 3
+200
+$B$1
+$B$1
+
+
+row 4
+400
+$B$1
+$B$1
+
+
+, Highlight a cell reference in a formula by clicking it. Press F4 on your keyboard, and $ symbols will automatically be added or removed. Keep pressing F4 until the absolute or relative references you'd like are selected, then hit enter.

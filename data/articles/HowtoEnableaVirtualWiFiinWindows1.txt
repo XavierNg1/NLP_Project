@@ -1,0 +1,38 @@
+ If you want to turn your Windows 10 computer into a wireless hotspot, you'll need to be connected to your network using an Ethernet cable. If you're connected to your network via Wi-Fi, you won't be able to create a wireless hotspot and stay connected to the network with the same adapter.
+
+
+If you have two wireless adapters installed, you can connect to the network with one and create the hotspot with the other. You cannot use one to do both.;
+, All laptop computers running Windows 10 will have a wireless adapter installed already. If you're using a desktop, you can check by pressing ⊞ Win+X and selecting "Network Connections."
+
+
+Look for a connection labeled "Wi-Fi." This indicates that you have a wireless adapter installed. If you don't have one, you'll need to install one before you can create a wireless hotspot with your computer. You can use a USB adapter, or install a network card.
+ Confirm when Windows asks if you want to continue. This will load the Command Prompt with you logged in as an administrator.
+ Enter the following command to check if your card is compatible:
+
+
+netsh wlan show drivers
+After running this command, scroll back up and look for the Hosted network supported line. If it says "Yes," your wireless card supports creating a wireless hotspot. If it says "No", see the Any Version of Windows section below.
+ Enter the following command to create your new hotspot, replacing NetworkName with the name you want your network to appear as, and Password with the password you want to use to protect it:netsh wlan set hostednetwork mode=allow ssid=NetworkName key=Password
+
+, Once you've created the hotspot, you'll need to enter another command to actually enable it:
+
+
+netsh wlan start hostednetwork
+
+, This will display the network connections installed on your computer.
+ If you are connected to your network via Ethernet, it will be the Ethernet adapter. If you have two wireless adapters, select the one that is connected to the network providing internet access.
+ This will open the sharing settings for your internet connection.
+ This is the first box in the window, labeled "Allow other network users to connect through this computer's Internet connection.", It will be labeled "Local Area Connection *'"X" with X being replaced by a random number.
+
+
+Click "OK" to save your changes.
+ Your mobile devices will now be able to find the new network in their list of available wireless networks, and will be able to access the internet once they're connected.
+
+
+Android - Open the Settings app and tap "Wi-Fi." Select your new network from the list and enter the password you created.
+iOS - Open the Settings app on your Home screen. It may be in a folder labeled "Utilities." Tap the "Wi-Fi" option, then select your new network. Enter the password when prompted.
+ When you're finished broadcasting, open the Command Prompt (Admin) again and enter the following command:
+
+
+netsh wlan stop hostednetwork
+

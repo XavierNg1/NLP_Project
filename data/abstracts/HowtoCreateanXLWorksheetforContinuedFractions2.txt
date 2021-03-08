@@ -1,0 +1,42 @@
+
+From the Desktop, select the green X for XL on the Dock to open Excel, and select File, Open a New Workbook from the menu.
+Open Preferences from the "Excel" menuitem.
+Open the "Continued Fractions" worksheet saved from the previous article, "How to Start Working with Continued Fractions", or whatever filename you saved it under.
+Enter a 1 into cell A4 and label the number of computations to be done via also doing
+
+Format Number Custom "00) " for the 1 in cell A4; and
+Select cell range A4:A21 and do Edit Fill Series (and leave the settings at Columns, Linear, Step Value 1), OK.
+
+,
+Enter the Column Heading into Rows 2 and 3:
+
+Enter the label Fraction to cell B3 (just enter the word "Fraction", w/o quotes);
+Enter the label Find "/" to cell C3 (please include the quote marks;
+Enter the label Length to cell D3;
+Enter the label Numerator to cell E3;
+Enter the label Denominator to cell F3;
+Enter the label String to cell G2 and the label Formula to cell G3;
+Enter the label Decimal to cell H2 and the label Number to cell H3;
+Enter the label Integer to cell I2 and the label Part to cell I3;
+Enter the label Decimal to cell J2 and the label Part to cell J3;
+Enter the label Rounded to cell K2 and the label Remainder to cell K3;
+Enter the label Fraction to cell L2 and the label String to cell L3;
+Enter the label Inverted to cell M2 and copy and paste it to N2;
+Enter the label Numerator to cell M3 and the label Denominator to N3;
+Enter the label A to cell O3 -- it stands for Answer;
+Enter the label f to cell P3 -- it stands for formula;
+Select rows R1:R3 and format Align Center and format Bold using the tool buttons;
+Select columns B:P and format Align Center and Format Number 0 decimal places, use comma; and
+Select columns H and J using the Command key and Format Cells Number 15 decimal places.
+
+,
+Enter the cell formulas into row 4:
+
+Without a preceding = sign, enter the label 415/93 into cell B4 -- it is from the Wikipedia article on Continued Fractions, so that you may check the results;
+Enter, without semi-quotes, the formula '=FIND("/",B4)' into cell C4 -- the returned value should be 4;
+Enter, without quotes, the formula "=LEN(B4)" into cell D4 -- the returned value should be 6;
+Enter, without quotes, the formula "=VALUE(MID(B4,1,C4-1))" into cell E4 -- the returned value should be 415 (that is, the MID function starts with the 1st character, 4, and finds the string equal to the occurrence of "/", less 1 -- that is 3 characters, the numerator 415);
+Enter, without quotes, the formula "=VALUE(MID(B4,C4+1,D4-C4))" into cell F4 -- the returned value should be 93, the denominator;
+Enter, without surrounding semi-quotes but keeping the quotes internal to the formula, the formula '="="&E4&"/"&F4' into cell G4 -- the returned value should be the string =415/93, the fraction;
+
+Warning: Tricky Part!

@@ -1,0 +1,134 @@
+ The most important thing to check before doing the integral is to check that the integral actually converges. This integral certainly converges because the exponential decay term dominates for large x.{\displaystyle x.} This integral is one example of a more general integral which always converges, which we will evaluate next.
+
+
+∫0∞x1/3e−3xdx{\displaystyle \int _{0}^{\infty }x^{1/3}e^{-3x}{\mathrm {d} }x}
+
+Notice that no amount of integration by parts will solve this integral. 
+;
+, This allows the integral to be written with a e−u{\displaystyle e^{-u}} term, which is what the Gamma function demands. It doesn't matter what the exponent on the power term is. Each time we u-sub, we also have to back-sub in order to rewrite the power term in terms of u.{\displaystyle u.}
+
+
+∫0∞x1/3e−3xdx=134/3∫0∞u1/3e−udu{\displaystyle \int _{0}^{\infty }x^{1/3}e^{-3x}{\mathrm {d} }x={\frac {1}{3^{4/3}}}\int _{0}^{\infty }u^{1/3}e^{-u}{\mathrm {d} }u} 
+
+
+, Instead of directly evaluating, we use the Gamma function to write our answer in terms of that function. Since the argument is shifted by 1, the integral will equal Γ(4/3).{\displaystyle \Gamma (4/3).}
+
+
+134/3∫0∞u1/3e−udu=Γ(4/3)34/3{\displaystyle {\frac {1}{3^{4/3}}}\int _{0}^{\infty }u^{1/3}e^{-u}{\mathrm {d} }u={\frac {\Gamma (4/3)}{3^{4/3}}}}
+
+
+, It may seem pointless to write our answer in terms of this function, when we do not have a way of determining the actual value. However, there are methods to do so via other definitions. It is for this reason that we simplify our answer this way, so that we can allow computers to determine these specific values to extreme accuracy. The specific value Γ(1/3){\displaystyle \Gamma (1/3)} has been proven to be transcendental, so there is no way to write this number algebraically.
+
+
+Γ(43)=13Γ(13){\displaystyle \Gamma \left({\frac {4}{3}}\right)={\frac {1}{3}}\Gamma \left({\frac {1}{3}}\right)}
+
+
+Γ(4/3)34/3=Γ(1/3)37/3{\displaystyle {\frac {\Gamma (4/3)}{3^{4/3}}}={\frac {\Gamma (1/3)}{3^{7/3}}}}
+
+
+, We assume that a,{\displaystyle a,} m,{\displaystyle m,} and n{\displaystyle n} are real numbers. Because this is a generalization, we have to be careful for which values that the integral fails to converge.
+
+
+∫0∞xme−axndx{\displaystyle \int _{0}^{\infty }x^{m}e^{-ax^{n}}{\mathrm {d} }x}
+
+
+, We can use the same technique used to evaluate the previous integral.
+
+
+∫0∞xme−axndx=1an∫0∞(u1/na1/n)m−n+1e−udu{\displaystyle \int _{0}^{\infty }x^{m}e^{-ax^{n}}{\mathrm {d} }x={\frac {1}{an}}\int _{0}^{\infty }\left({\frac {u^{1/n}}{a^{1/n}}}\right)^{m-n+1}e^{-u}{\mathrm {d} }u}
+
+
+, Of course, we pull out constants. For our answer to be consistent with where the Gamma function converges, we must put the qualifier that m+1n>0.{\displaystyle {\frac {m+1}{n}}>0.}
+
+
+∫0∞xme−axndx=1na1+mn−1+1nΓ(mn+1n)=Γ(m+1n)nam+1n{\displaystyle \int _{0}^{\infty }x^{m}e^{-ax^{n}}{\mathrm {d} }x={\frac {1}{na^{1+{\frac {m}{n}}-1+{\frac {1}{n}}}}}\Gamma \left({\frac {m}{n}}+{\frac {1}{n}}\right)={\frac {\Gamma \left({\frac {m+1}{n}}\right)}{na^{\frac {m+1}{n}}}}}
+
+
+, The integral is a product of three functions which also converges because the exponential decay term still dominates. The way we integrate this is to use Euler's formula and then to take the real part of our result.
+
+
+∫0∞x2xe−xcos⁡xdx{\displaystyle \int _{0}^{\infty }x^{2}{\sqrt {x}}e^{-x}\cos x{\mathrm {d} }x}
+
+
+, Our u-sub will be u=(1−i)x{\displaystyle u=(1-i)x} from the way we have set up our integral. Every complex number should be rewritten in polar form in order to simplify the algebra.
+
+
+∫0∞x2xe−(1−i)xdx=1(1−i)7/2∫0∞u5/2e−udu{\displaystyle \int _{0}^{\infty }x^{2}{\sqrt {x}}e^{-(1-i)x}{\mathrm {d} }x={\frac {1}{(1-i)^{7/2}}}\int _{0}^{\infty }u^{5/2}e^{-u}{\mathrm {d} }u}
+
+
+, We then use the recursion relation to get the argument between 0 and 1. After simplifying further, we multiply by (−1)eiπ,{\displaystyle (-1)e^{i\pi },} or 1, in order to get the angle in the exponent to something more manageable.
+
+
+1(1−i)7/2∫0∞u5/2e−udu=Γ(7/2)(2e−iπ/4)7/2=−15π8⋅27/4e−iπ/8{\displaystyle {\frac {1}{(1-i)^{7/2}}}\int _{0}^{\infty }u^{5/2}e^{-u}{\mathrm {d} }u={\frac {\Gamma (7/2)}{({\sqrt {2}}e^{-i\pi /4})^{7/2}}}=-{\frac {15{\sqrt {\pi }}}{8\cdot 2^{7/4}}}e^{-i\pi /8}}
+
+
+, We can evaluate cosπ8{\displaystyle \cos {\frac {\pi }{8}}} using the half-angle identity.
+
+
+∫0∞x2xe−xcos⁡xdx=−15π8⋅27/4cosπ8=−152π642+1{\displaystyle \int _{0}^{\infty }x^{2}{\sqrt {x}}e^{-x}\cos x{\mathrm {d} }x=-{\frac {15{\sqrt {\pi }}}{8\cdot 2^{7/4}}}\cos {\frac {\pi }{8}}=-{\frac {15{\sqrt {2\pi }}}{64}}{\sqrt {{\sqrt {2}}+1}}}
+
+We can take the imaginary part as well to obtain the sine integral for free. This is the benefit to working with trigonometric functions.
+
+
+∫0∞x2xe−xsin⁡xdx=152π642−1{\displaystyle \int _{0}^{\infty }x^{2}{\sqrt {x}}e^{-x}\sin x{\mathrm {d} }x={\frac {15{\sqrt {2\pi }}}{64}}{\sqrt {{\sqrt {2}}-1}}}
+
+
+, We cannot directly use the Gamma function because our bounds are from 0 to 1 and there exists a logarithm inside a square root.
+
+
+∫01x3xln1xdx{\displaystyle \int _{0}^{1}x^{3}{\sqrt {x\ln {\frac {1}{x}}}}{\mathrm {d} }x}
+
+
+, This has the effect of changing the bounds, which are then negated because of the differential du=−1xdx.{\displaystyle {\mathrm {d} }u=-{\frac {1}{x}}{\mathrm {d} }x.} It works out nicely that the back-sub puts the exponential function into the integrand, allowing the Gamma function to do its work.
+
+
+∫01x3xln1xdx=∫0∞u1/2e−9u/2du{\displaystyle \int _{0}^{1}x^{3}{\sqrt {x\ln {\frac {1}{x}}}}{\mathrm {d} }x=\int _{0}^{\infty }u^{1/2}e^{-9u/2}{\mathrm {d} }u}
+
+
+, Another u-sub should be used. The value Γ(32)=π2{\displaystyle \Gamma \left({\frac {3}{2}}\right)={\frac {\sqrt {\pi }}{2}}} occurs often enough that you may as well memorize it. Otherwise, going back to the recursion relation is a good way to check your work. As standard, if you can write the value in terms of constants, do so. Otherwise, just leave it in terms of the Gamma function.
+
+
+∫0∞u1/2e−9u/2du=(29)3/2Γ(32)=2π27{\displaystyle \int _{0}^{\infty }u^{1/2}e^{-9u/2}{\mathrm {d} }u=\left({\frac {2}{9}}\right)^{3/2}\Gamma \left({\frac {3}{2}}\right)={\frac {\sqrt {2\pi }}{27}}}
+
+
+, The integral below is divergent. You can verify this by using the u-sub u=x.{\displaystyle u={\sqrt {x}}.} However, there is a method by which we can assign a value to this integral in a way that makes sense. This is called regularization. The standard method is by introducing a term e−ϵf(x),{\displaystyle e^{-\epsilon f(x)},} where f(x){\displaystyle f(x)} is a positive function on the interval [0,∞).{\displaystyle [0,\infty ).}
+
+
+∫0∞cosxdx{\displaystyle \int _{0}^{\infty }\cos {\sqrt {x}}{\mathrm {d} }x}
+
+
+, The integral changes to taking the limit as ϵ→0+.{\displaystyle \epsilon \to 0^{+}.} Because this is an exponential term, it does not matter what function we choose in the exponent, as long as it is a positive function. We simply chose x{\displaystyle {\sqrt {x}}} for convenience.
+
+
+∫0∞cosxdx=limϵ→0+∫0∞e−ϵxcosxdx{\displaystyle \int _{0}^{\infty }\cos {\sqrt {x}}{\mathrm {d} }x=\lim _{\epsilon \to 0^{+}}\int _{0}^{\infty }e^{-\epsilon {\sqrt {x}}}\cos {\sqrt {x}}{\mathrm {d} }x}
+
+
+, This allows us to rewrite the integral in terms of the Gamma function.
+
+
+limϵ→0+∫0∞e−ϵxcosxdx=2limϵ→0+∫0∞ue−ϵucos⁡udu{\displaystyle \lim _{\epsilon \to 0^{+}}\int _{0}^{\infty }e^{-\epsilon {\sqrt {x}}}\cos {\sqrt {x}}{\mathrm {d} }x=2\lim _{\epsilon \to 0^{+}}\int _{0}^{\infty }ue^{-\epsilon u}\cos u{\mathrm {d} }u}
+
+
+∫0∞ue−(ϵ−i)udu{\displaystyle \int _{0}^{\infty }ue^{-(\epsilon -i)u}{\mathrm {d} }u}
+
+
+, Remember to set ϵ=0{\displaystyle \epsilon =0} at the earliest convenient time.
+
+
+2limϵ→0+∫0∞ue−(ϵ−i)udu=2limϵ→0+1(ϵ−i)2=−2{\displaystyle 2\lim _{\epsilon \to 0^{+}}\int _{0}^{\infty }ue^{-(\epsilon -i)u}{\mathrm {d} }u=2\lim _{\epsilon \to 0^{+}}{\frac {1}{(\epsilon -i)^{2}}}=-2}
+
+Finally, we take the real part of our answer. The handling of these integrals must be done very carefully because of the divergence. 
+
+
+limϵ→0+∫0∞e−ϵxcosxdx=−2{\displaystyle \lim _{\epsilon \to 0^{+}}\int _{0}^{\infty }e^{-\epsilon {\sqrt {x}}}\cos {\sqrt {x}}{\mathrm {d} }x=-2}
+
+
+
+We can also figure out the corresponding sine integral simply by taking the imaginary part of our result.
+
+
+limϵ→0+∫0∞e−ϵxsinxdx=0{\displaystyle \lim _{\epsilon \to 0^{+}}\int _{0}^{\infty }e^{-\epsilon {\sqrt {x}}}\sin {\sqrt {x}}{\mathrm {d} }x=0}
+
+
+
+

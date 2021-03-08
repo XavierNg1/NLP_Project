@@ -1,0 +1,25 @@
+
+
+
+From your computer, click on the Start menu, hover over Programs, click on "Microsoft ISA Server," and select "ISA Management" to display the ISA Management options window.
+Next to Servers and Arrays, click on the plus symbol to expand the field and locate your server name. Next to your server name, click on the plus symbol to expand the field.
+Click on the plus symbol to expand Policy Elements.
+Under Policy Elements, right-click on the Destination Sets folder to display a sub-menu. Point over New and select "Set." The New Destination Set window will appear.
+Next to the Name field, give a name to your list of blocked websites, such as "Blocked Websites" and add an optional description that may include time and date details or a further description of the websites being blocked.
+Under the section for "Include these destinations," click on the "Add" button. As an administrator, you will have the option to manually add websites one by one, or enter a range of IP addresses, depending on your preference. You also have the option to enter a specific directory by typing the path for it under the "Path" field. Click "Ok" to finish.
+After clicking "Ok," you will return to the New Destination Set window and see the name of the websites or IP addresses you entered. Click "Ok" again to close the New Destination Set window.;
+,
+
+
+Click on the plus symbol to expand Access Policy.
+Under Access Policy, right-click on the Site and Content Rules folder to display a sub-menu. Point over New and select "Rule." The New Site and Content Rule Wizard window will appear.
+Under the "Site and content rule name" field, create a name such as "Blocked Websites" and click "Next."
+On the Rule Action screen under the section "Response to client requests for access," select the "Deny" radio button and click "Next" to proceed.
+On the Rule Configuration screen, click "Deny Access Based on Destination," and click "Next."
+On the Destination Sets screen under "Apply this rule to," select "Specified Destination Set" from the drop-down menu. In the "Name" list, you will see the name of the list you created for the blocked websites. Make sure the correct name is chosen and click "Next."
+A summary screen will appear listing the configuration details of the rule you just created. Click "Finish" to close the Wizard and return to the ISA Management window. In the window pane on the right, you will see the new rule you just created.
+
+
+
+To make sure the websites you designated have been properly blocked, use any browser that points to the ISA server and try to access one of the unauthorized websites. You should be prevented from accessing the website and will receive an error message from the ISA server.
+

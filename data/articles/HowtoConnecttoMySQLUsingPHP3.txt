@@ -1,0 +1,27 @@
+
+
+
+The function mysql_query works in two ways. "For SELECT, SHOW, DESCRIBE, EXPLAIN and other statements returning result set, mysql_query() returns a resource on success, or FALSE on error.
+For other type of SQL statements, INSERT, UPDATE, DELETE, DROP, etc, mysql_query() returns TRUE on success or FALSE on error." (PHP documentation).
+
+
+These lines of code do two things. First they call "mysql_query," which will return true or false based on the success of the query. If the output of mysql_query is false the script will die and run the "mysql_error" function (which simply returns the previous MySQL error).
+
+
+The mysql_query function only requires one argument, but like the mysql_select_db function, it is good practice to include a second.
+
+The first argument is a string: a single MySQL query (multiple queries not allowed). The query above creates a new table called "php tutorial".
+The second argument is the connection resource we are using (in our case $con).
+
+
+
+The first line of code is similar to the last step's code. It is in there to give of some data to select. Below, see we are setting the output of mysql_query to a variable called $result.
+
+Also notice how the code does not use "or die(" instead it uses the if control statement. This can save you grief when you start getting into error handling beyond simply killing the script. You don't have to worry about it too much now, and you can use "or die" on MySQL queries that return a result set if you want
+
+
+After the else statement we have a while statement. This part of the code can be confusing so bear with me. mysql_fetch_array will return an array of data containing a single row of the result, labeled by column; however, the next time mysql_fetch_array is run it will return an array of the next row in the result set.
+
+The while statement will keep iterating through all the rows (assigning them as arrays to $row), until mysql_fetch_array reaches the end of the result set, then it will return false and the while statement will close. Confusing yes. But this method works well.
+ These functions allow you to do so much more with PHP. I would suggest taking a look at this wikiHow page: How to Create a Basic Login Script in PHP. I would also suggest making your own project like a simple browser turn based rpg to get the hang of working with a database.
+

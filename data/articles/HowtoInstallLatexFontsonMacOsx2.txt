@@ -1,0 +1,10 @@
+ You can do this by finding "TeX" under "Applications." Double-click on "Tex" and then select "TeXShop.app."
+
+, In order to begin working on your document, you will need to specify a few things in order for LaTeX to understand and format the document. The first of these specifications is the document class. This should look something like this \documentclass{article}. This specifies a document with 12 point font and an article format, which is the most basic setup.
+ LaTeX will also need you to specify the beginning and end or your document and you can do this by entering a simple line of code. At the beginning of your document and under the document class, enter \begin{document}. At the end of your document, enter \end{document}.
+ In order to input commands, like a paragraph break, you can enter the "%" sign followed by your command. For instance, enter "% New Paragraph" as the first line of your new paragraph. This spacing will appear when you go to create your document.
+ In order to create perfect margins you can use things called "packages." These act similarly to the commands we used earlier to specify beginning and ends of documents. To input a package, enter the following command: \usepackage{example package}. For example, if you wish to have 1-inch margins on your document, you would enter \usepackage{fullpage}. You would enter this command in the line following your document class specifications.
+ In order to specify your line spacing, enter the following command: \examplespacing on the line above where you wish the spacing to being. For example, if you would like your document to be double spaced, you would enter the command \doublespacing above the section you wish to be double spaced. The document will continue to be formatted with that spacing until you override it with another spacing command.
+ To type in bold, enter the command \textbf{example text} and to type in italics, enter the command \emph{example text}. For example, if you would like to write "Lemon" in bold, you would enter \textbf{Lemon}.
+ Within the perimeters you specified, create your document!
+

@@ -1,0 +1,25 @@
+ You can do this by using the 2-stick method for finding local noon during the day. This will give you a north-south line (meridian) as a reference point., This stick should be reasonably tall, but no taller than you can comfortably work with. It should be aligned with one of the posts of your local meridian.
+
+The stick is called an occulting stick because it blocks (occults) the light of stars that appear to pass behind it.
+The stick should be tall enough that you can observe a star at least 10 degrees (1 fist-breadth) above the north or south horizon but no more than 30 degrees (3 fist-breadths) above the horizon. Suggested stars to observe for this experiment include Altair (the brightest star in Aquila), Antares (the brightest star in Scorpio), Fomalhaut (the brightest star in Piscis Austrinus), Procyon (the brightest star in Canis Minor), Rigel (the second-brightest star in Orion), Sirius (the brightest star in Canis Major), and Spica (the brightest star in Virgo).
+The stick should be set up perpendicular to the ground (vertical). You may need to use a plumb line to verify the stick’s position.
+ A tube 1 foot (30 cm) long and no more than 2.5 inches (1 cm) in diameter aligned with your meridian will let you focus on a single, bright star passing behind the stick. Mount the tube on a tripod to steady it., Record this time in Universal Time to the nearest second., Record this time also in Universal Time to the nearest second. These two times will help you figure your longitude., To do this, subtract the time of your first observation (when the star went behind the stick) from your second observation (when it reappeared, divide by 2, and then add this to the time of your first observation., To do this, divide the transit time by 24 (24 hours in a day) and multiply by 360 (the number of degrees in a circle).
+
+We’ll represent the transit time with a lower-case ‘’t’’.
+ You’ll want the complete date: month, day, and year., You’ll want to find first the number of days in the years from 2000 to the year just before your observation year, then the number of days from January 1 of your observation year to the month and day of your observation.
+
+To find the number of days in the intervening years: Each year not divisible by 4 has 365 days; each year divisible by 4 (a leap year) has 366 days. You may find it easier to count the number of years prior to the year of your observation, multiply by 365, and add 1 for each leap year.
+Once you have this figure, simply count the days from January 1 to the month and day. (Some calendars identify each day’s ordinal position within the year; you can also find this information online.)
+
+, This will give the number of days elapsed from January 1, 2000 to when you observed the star pass behind the stick., Divide the number of days elapsed by 36,525, the number of days in a century. The result will be less than 1 until January 1, 2100.
+
+We’ll represent this elapsed time with an uppercase ‘’T’’.
+ Sidereal time is expressed as the difference between a given point in the sky relative to the point in the sky representing the vernal (March) equinox.It is normally expressed in hours and minutes, but for the purpose of finding longitude, we need to express it in degrees.
+
+To calculate sidereal time for midnight Universal Time (represented as ϴ0), the formula is ϴ0 = 100.4606 + (36,000.7701 * T).
+If the result is larger than 360, subtract 360 to find the sidereal time in degrees.
+ To find your longitude (represented by ‘’λ’’), in addition to the sidereal time you just found, you need to know the right ascension of the star (‘’a’’) and its transit time (‘’t’’) you found earlier.
+
+The formula for longitude is λ = ϴ0 - a + (1.0027 * t).
+Results will be expressed in degrees west of the Prime Meridian, or West longitude. If you get a result greater than 180, subtract it from 360 to get your longitude in degrees of East longitude.
+This longitude will not be completely accurate, as it does not take the precession of Earth’s axes into account, but it will be accurate enough for casual use.

@@ -1,0 +1,39 @@
+ Two-card SLI is supported on Windows Vista, 7, 8, and Linux. Three- and four-card SLI is supported in Windows Vista, 7, and 8, but not Linux.;
+, SLI requires a motherboard with multiple PCI-Express slots, as well as a power supply with enough connectors for multiple graphics cards. You will want a power supply that outputs at least 800 watts.
+
+
+Certain cards allow up to four simultaneous cards running in SLI. Most cards are made for two-card setups.
+More cards means more power required.
+ Almost all recent NVIDIA cards are capable of being installed in an SLI configuration. You will need at least two cards of the same model and memory to be installed as SLI.
+
+
+The cards do not need to be the same manufacturer, just the same model and memory amount.
+The cards do not need to be the same clock speed, though you may see a decrease in performance output if the speeds are not the same.
+For best results, use two identical cards.
+ Install the two cards in the PCI-E slots on your motherboard. The graphics cards are inserted into the slots as normal. Take care not to break any tabs, or insert the cards at odd angles. Once the cards are inserted, secure them to the case with screws.
+ All SLI-capable boards should come packaged with an SLI bridge. This connector attaches to the top of the cards, and connects the cards to each other. This allows the cards to talk directly to each other.
+
+
+The bridge is not required for SLI to be enabled. If there is no bridge present, the SLI connecting will be made through the PCI slots of the motherboard. This will result in reduced-performance.
+ Once you have your graphics cards installed, close up your case and reboot your computer. You shouldn’t need to make any settings changes until after Windows or Linux loads.
+ Your operating system should automatically detect your graphics cards and attempt to install drivers for them. This process can take longer than a single graphics card installation because the drivers need to be installed for each card separately.
+
+
+If the installation doesn’t start automatically, download the latest drivers from the NVIDIA website, and run the installation file once the download is complete
+
+, Once your drivers have finished installing, right-click on your desktop and select NVIDIA Control Panel. This will open a new window which will allow you to tweak your graphic’s settings. Find the menu option labeled “Configure SLI, Surround, Physx”.
+
+
+Select “Maximize 3D performance” and click Apply.
+The screen will flash several times as the SLI configuration is enabled. You will be asked if you want to keep these settings.
+If the option is not there, your system is most likely not recognizing one or more of your cards. Open the Device Manager in the Control Panel and check that all of your drives are visible under the Display Adapters section. If your cards are not showing up, check that they are connected properly, and that the drivers have been installed for all of them.
+ Click the Manage 3D Settings link in the left menu. Under Global Settings, scroll down until you find the “SLI performance mode” entry. Change the settings from “Single GPU” to “Alternate Frame Rendering 2”. This will turn on SLI mode for all of your programs.
+
+
+You can make adjustments to individual games by clicking the Program Settings tab and then selecting “SLI performance mode”.
+ This will vary depending on the game you are running, so you will need to look up the specific instructions for the game you want to test. Frames per second is a baseline test for computing power, and can show you have well everything is being rendered. Most gaming enthusiasts shoot for a solid 60 frames per second with high settings.
+ In the NVIDIA Control Panel, open the “3D Settings” menu. Enable the “Show SLI Visual Indicators” option. This will create a bar on the left side of your screen.
+
+
+Run your game. Once you have a game running, you will see the bar change. A taller bar means that SLI scaling is increasing, meaning that your SLI cards are working well and improving your visuals. If the bar is not very tall, then the SLI configuration is not affecting the display as much.
+

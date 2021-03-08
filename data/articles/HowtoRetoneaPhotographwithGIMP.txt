@@ -1,0 +1,11 @@
+ Sites like the Wikimedia Commons have countless thousands of old photographs which are in the public domain; browse it and find something you like. Save it. Hereafter, we will refer to this as "your old photo".
+,, The lazy way of doing this is by going to Colors -> Desaturate, but does not look very convincing (but, if this gives a result that you feel is acceptable, then by all means do that). Instead, go to Colors -> Components -> Channel mixer. Check the "Monochrome" box. Move the red, green, and blue sliders until you are happy with it. Hit "OK".
+ Set "Width" to 256, and "Height" to some arbitrary workable value (50 or 100 is fine). Hit "OK". Hereafter, we will refer to the image you just created as your gradient image.
+ To do this, bring up the color picker tool (from the toolbox, Tools -> Color Picker, or just hit your O key). Click on the brightest part of your old photo. Then find the darkest part of your photo, and hold down Control while clicking that. Check your main GIMP window to verify that the colors have been picked successfully.
+, You have now, hopefully, created a nice smooth gradient, with everything from the darkest to the lightest tone in your old photo. Save this gradient image; you might want to use it again later.
+, Go to Colors -> Map -> Sample Colorize. From the drop-down box in the top right, marked "Sample", make sure that your gradient image is selected. Hit "Get Sample Colors". Play with the sliders until the image on the left (your photo) looks good to you. Hit "Apply", and wait a few seconds. Then hit "Close". You have now restored your image.
+ You may find that the effect of this is either too subtle or not subtle enough for your tastes. So.
+ Go to Colors -> Hue/Saturation. Adjust the "Saturation" slider up and down until you think it looks right.
+ Or don't, and try experimenting with tones from as many old photos as you can find.
+
+

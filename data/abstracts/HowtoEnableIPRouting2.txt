@@ -1,0 +1,11 @@
+
+Start the registry editor.
+Find the sub key that reads: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters.
+Set the registry values into the corresponding section to enable IP routing in Windows XP:
+
+
+Value Name: IpEnableRouter
+Value Type: REG_DWORD
+Value Data: 1.
+Exit the registry editor to complete IP routing in Windows XP and other Windows operating systems.
+

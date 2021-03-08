@@ -1,0 +1,62 @@
+ The Pythagorean Theorem can easily be used to calculate the straight-line distance between two points in the X-Y plane. All you need to know are the x and y coordinates of any two points. Usually, these coordinates are written as ordered pairs in the form (x, y).
+
+
+
+
+
+
+
+
+
+To find the distance between these two points, we will treat each point as one of the non-right angle corners of a right triangle. By doing this, it's easy to find the length of the a and b sides, then calculate c, the hypotenuse, which is the distance between the two points.
+ In a typical X-Y plane, for each point (x,y), x gives a coordinate on the horizontal axis and y gives a coordinate on the vertical axis. You can find the distance between the two points without plotting them on a graph, but doing so gives you a visual reference that you can use to ensure your answer makes sense.
+ Using your two points as the corners of the triangle adjacent to the hypotenuse, find the lengths of the a and b sides of the triangle. You can do this visually on the graph, or by using the formulas |x1 - x2| for the horizontal side and |y1 - y2| for the vertical side, where (x1,y1) is your first point and (x2,y2) is your second.
+
+
+
+
+
+
+
+
+
+Let's say our two points are (6,1) and (3,5). The side length of the horizontal side of our triangle is:
+
+|x1 - x2|
+|3 - 6|
+| -3 | = 3
+
+
+
+The length of the vertical side is:
+
+|y1 - y2|
+|1 - 5|
+| -4 | = 4
+
+
+
+So, we can say that in our right triangle, side a = 3 and side b = 4.
+ The distance between your two points is the hypotenuse of the triangle whose two sides you've just defined. Use the Pythagorean Theorem as you normally would to find the hypotenuse, setting a as the length of your first side and b as the length of the second.
+
+
+
+
+
+
+
+
+
+In our example using points (3,5) and (6,1), our side lengths are 3 and 4, so we would find the hypotenuse as follows:
+
+
+
+(3)²+(4)²= c²
+c= sqrt(9+16)
+c= sqrt(25)
+c= 5. The distance between (3,5) and (6,1) is 5.
+
+
+
+
+

@@ -1,0 +1,86 @@
+ In this section, we will show how to divide two complex numbers and show why it works. 
+
+
+2+3i3+6i{\displaystyle {\frac {2+3i}{3+6i}}}
+;
+, The complex conjugate z¯,{\displaystyle {\bar {z}},} pronounced "z-bar," is simply the complex number with the sign of the imaginary part reversed. For example, the conjugate of the number 3+6i{\displaystyle 3+6i} is 3−6i.{\displaystyle 3-6i.}
+, The reason why this works is that for any complex number z,{\displaystyle z,} multiplying it by its conjugate yields a real number zz¯=(a+bi)(a−bi)=a2+b2,{\displaystyle z{\bar {z}}=(a+bi)(a-bi)=a^{2}+b^{2},} because a{\displaystyle a} and b{\displaystyle b} are both real. The i's are then removed from the denominator. Remember that we are really multiplying by 1, so both the top and bottom must be multiplied by the same number. The process and reasoning is similar to that of rationalizing the denominator.
+
+
+2+3i3+6i⋅3−6i3−6i=6+9i−12i+189+36=24−3i45{\displaystyle {\frac {2+3i}{3+6i}}\cdot {\frac {3-6i}{3-6i}}={\frac {6+9i-12i+18}{9+36}}={\frac {24-3i}{45}}}
+
+Remember that i2=−1.{\displaystyle i^{2}=-1.} This means that you need to pay close attention to the signs.
+ We now have a fraction with a real number in the denominator, so all that's left is to put it in the form a+bi.{\displaystyle a+bi.}
+
+
+24−3i45=8−i15=815−115i{\displaystyle {\frac {24-3i}{45}}={\frac {8-i}{15}}={\frac {8}{15}}-{\frac {1}{15}}i}
+
+
+, You may have already learned how to graph a complex number on the complex plane. The horizontal axis denotes the real axis, while the vertical axis is the imaginary axis. Above is a graph of an arbitrary complex number on the complex plane. It is important to understand what these graphs mean, because the nature of complex numbers means that we can draw tight connections between their algebraic properties (as shown in part 1) and their geometrical properties.
+ In polar coordinates, we denote points with two variables r{\displaystyle r} and θ,{\displaystyle \theta ,} where r{\displaystyle r} is the distance from the pole and θ{\displaystyle \theta } is the angle from the polar axis. In the context of complex numbers, the magnitude of the number is called the modulus, while its angle from the polar axis is called its argument.
+
+Recall the coordinate conversions from Cartesian to polar.
+
+
+x=rcos⁡θ{\displaystyle x=r\cos \theta }
+
+
+y=rsin⁡θ{\displaystyle y=r\sin \theta }
+
+
+
+We can therefore write any complex number on the complex plane as z=r(cos⁡θ+isin⁡θ).{\displaystyle z=r(\cos \theta +i\sin \theta ).} Using Euler's formula, we can compact this to z=reiθ.{\displaystyle z=re^{i\theta }.}
+
+In this section, we will show that dealing with complex numbers in polar form is vastly simpler than dealing with them in Cartesian form.
+ Let's do a different example.
+
+
+3+3i2+23i{\displaystyle {\frac {3+3i}{2+2{\sqrt {3}}i}}}
+
+
+, If your numbers are already in polar form, skip this step. Otherwise, use the relations below.
+
+
+r=a2+b2{\displaystyle r={\sqrt {a^{2}+b^{2}}}}
+
+
+θ=tan−1(ba){\displaystyle \theta =\tan ^{-1}\left({\frac {b}{a}}\right)}
+
+In our example, we have two complex numbers to convert to polar. Let's label them as z1z2{\displaystyle {\frac {z_{1}}{z_{2}}}} and use the notation z=reiθ.{\displaystyle z=re^{i\theta }.}
+
+
+z1=3+3i=32eiπ/4{\displaystyle z_{1}=3+3i=3{\sqrt {2}}e^{i\pi /4}}
+
+
+z2=2+23i=4eiπ/3{\displaystyle z_{2}=2+2{\sqrt {3}}i=4e^{i\pi /3}}
+
+
+
+
+, When we write out the numbers in polar form, we find that all we need to do is to divide the magnitudes and subtract the angles. Likewise, when we multiply two complex numbers in polar form, we multiply the magnitudes and add the angles. 
+
+
+z1z2=32eiπ/44eiπ/3=324ei(π4−π3)=324e−iπ/12{\displaystyle {\begin{aligned}{\frac {z_{1}}{z_{2}}}={\frac {3{\sqrt {2}}e^{i\pi /4}}{4e^{i\pi /3}}}&={\frac {3{\sqrt {2}}}{4}}e^{i\left({\frac {\pi }{4}}-{\frac {\pi }{3}}\right)}\\&={\frac {3{\sqrt {2}}}{4}}e^{-i\pi /12}\end{aligned}}}
+
+
+, Use the following relations. Our angle is θ=−π12,{\displaystyle \theta =-{\frac {\pi }{12}},} which is not typically shown on the unit circle. You can either use a calculator or find the exact values of cos(−π12){\displaystyle \cos \left(-{\frac {\pi }{12}}\right)} and sin(−π12){\displaystyle \sin \left(-{\frac {\pi }{12}}\right)} using trigonometric summation identities. Below, we use the identities to write the components in exact form. Such identities are available online or in textbooks.
+
+
+a=rcosθ{\displaystyle a=r\cos {\theta }}
+
+
+b=rsinθ{\displaystyle b=r\sin {\theta }}
+
+
+a=324cos(−π12)=324cos(π4−π3)=324(cosπ4cosπ3+sinπ4sinπ3)=324(22⋅12+22⋅32)=324⋅2+64=3+338{\displaystyle {\begin{aligned}a&={\frac {3{\sqrt {2}}}{4}}\cos \left(-{\frac {\pi }{12}}\right)\\&={\frac {3{\sqrt {2}}}{4}}\cos \left({\frac {\pi }{4}}-{\frac {\pi }{3}}\right)\\&={\frac {3{\sqrt {2}}}{4}}\left(\cos {\frac {\pi }{4}}\cos {\frac {\pi }{3}}+\sin {\frac {\pi }{4}}\sin {\frac {\pi }{3}}\right)\\&={\frac {3{\sqrt {2}}}{4}}\left({\frac {\sqrt {2}}{2}}\cdot {\frac {1}{2}}+{\frac {\sqrt {2}}{2}}\cdot {\frac {\sqrt {3}}{2}}\right)\\&={\frac {3{\sqrt {2}}}{4}}\cdot {\frac {{\sqrt {2}}+{\sqrt {6}}}{4}}\\&={\frac {3+3{\sqrt {3}}}{8}}\end{aligned}}}
+
+
+b=324sin(−π12)=324⋅2−64=3−338{\displaystyle {\begin{aligned}b&={\frac {3{\sqrt {2}}}{4}}\sin \left(-{\frac {\pi }{12}}\right)\\&={\frac {3{\sqrt {2}}}{4}}\cdot {\frac {{\sqrt {2}}-{\sqrt {6}}}{4}}\\&={\frac {3-3{\sqrt {3}}}{8}}\end{aligned}}}
+
+
+, While the above conversions took quite a few steps, it is important to recognize that the act of converting from one coordinate system to another is where the "difficult" part is. When dealing with complex numbers purely in polar, the operations of multiplication, division, and even exponentiation (cf. De Moivres' formula) are very easy to do.
+
+
+3+338+3−338i{\displaystyle {\frac {3+3{\sqrt {3}}}{8}}+{\frac {3-3{\sqrt {3}}}{8}}i}
+
+

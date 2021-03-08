@@ -1,0 +1,15 @@
+ Software specification documents serve as reference manuals for designers of the user interface, programmers who write the code, and testers who verify that the software works as intended. The exact information depends on the program in question but may include any of the following:
+
+Key files within the application. This may include files created by the development team, databases accessed during the program's operation, and third-party utility programs.
+Functions and subroutines. This includes an explanation of what each function or subroutine does, including its range of input values and output values.
+Program variables and constants, and how they're used in the application.
+The overall program structure. For a disc-based application, this may mean describing the program's individual modules and libraries, while for a Web application, this may mean describing which pages use which files.;
+, The more technical documentation is developed within the program's source code to begin with, the easier it will be to update and maintain along with the code, as well as to document various versions of the original application. At a minimum, documentation within the source code needs to explain the purpose of functions, subroutines, variables, and constants.
+
+If the source code is particularly lengthy, it can be documented in the form of a help file, which can be indexed or searched with keywords. This is a particular advantage for applications where the program logic is fragmented over many pages and includes a number of supplemental files, as with certain Web applications.
+Some programming languages, such as Java and the .NET Framework (Visual Basic.NET, C #), have their own standards for documenting code. In these cases, follow the standards as to how much of the documentation should be included with the source code.
+ To some extent, this is determined by the language the code is written in, be it C++, C#, Visual Basic, Java, or PHP, as specific tools exist for these and other languages. In other cases, the tool to use is determined by the type of documentation required.
+
+Word-processing programs for Microsoft Word are adequate for creating separate text files of documentation, as long as the documentation is fairly short and simple. For long, complex text files, many technical writers prefer a documentation tool such as Adobe FrameMaker.
+Help files for documenting source code can be produced with any help authoring tool, such as RoboHelp, Help and Manual, Doc-To-Help, MadCap Flare, or HelpLogix.
+

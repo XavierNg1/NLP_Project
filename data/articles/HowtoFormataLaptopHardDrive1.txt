@@ -1,0 +1,50 @@
+ Most laptops only support a single hard drive. Formatting a hard drive will delete all of the data off of it. Before formatting your laptop, back up all of the documents, pictures, and other files that you want to save.
+
+
+You can burn your important data to a blank DVD, copy it to an external hard drive or USB flash drive, or upload it to a cloud storage service. See How to Back Up Data for information on creating a secure backup of your data.
+If you want to securely format your laptop before disposing of it or selling it, click here for instructions.;
+, Drivers are the software that controls your laptop's hardware. Having all of your drivers downloaded and ready to install will make the format process much smoother. If you have a recovery disc for your laptop, it will already include the drivers.
+
+
+You can download your laptop's drivers from the manufacturer's Support site. Enter your laptop's model number into the search field and download everything in the "Drivers" section. You can usually find your laptop's model number by looking at the sticker affixed to the bottom.
+Copy the downloaded driver files to a USB drive or burn them to a blank disc.
+ You'll need your product key in order to activate your copy of Windows after reinstalling. For most laptop's the product key sticker is affixed to the bottom of the laptop. It may also be with your laptop's documentation. The Windows product key is 25 characters long.
+
+
+If you can't find the key, download and run ProduKey from NirSoft. This is a free program that will display your Windows product key as soon as you run it. You can download it for free here. Extract the file and run the program to see your Windows product key.
+ In order to format the laptop's hard drive, you'll need to boot from a Windows installation disc or recovery disc provided by your laptop manufacturer. Windows cannot format the drive it is installed on from within Windows. If you don't have or can't find a Windows installation disc or recovery disc, you can create one yourself completely legally.
+
+
+Windows 7 - Download the ISO file from Microsoft here. After downloading the ISO file, download and install the Windows USB/DVD Download Tool from here. This tool will guide you through the process of creating a Windows 7 installation DVD or USB drive using the ISO file that you downloaded.
+Windows 8 - Download the Windows 8 Media Creation tool here. Run the tool and enter your product key to download and create a Windows 8 installation DVD or USB drive.
+Windows 10 - Download the Windows 10 Media Creation tool here. Run the tool and enter your product key to download and create a Windows 10 installation DVD or USB drive.
+ Make sure the installation media is inserted in your computer. The process for booting your computer varies depending on what operating system originally came installed on it:
+
+
+Windows 7 and older - Reboot your computer and press the BIOS, SETUP, or BOOT key that is displayed when the computer first starts. The most common keys are F2, F11, F12, and Del. In the BOOT menu, set your installation drive as the primary boot device.
+Windows 8 and newer - Click the Power button in the Start screen or menu. Hold ⇧ Shift and click Restart. This will restart your computer and load the "Advanced startup" menu. Select the "Troubleshoot" option and then "Advanced options." Click "UEFI Firmware Settings" and then open the BOOT menu. Set your installation drive as the primary boot device.
+ Click the "Install now" button and then select your language and input method. You'll also need to accept the license agreement.
+ This will open the hard drive tool, which will display all of the partitions on your laptop's hard drive.
+ "Partitions" are segments of the hard drive, and allow you to use your single hard drives as multiple drives. Laptops typically have two or three partitions: a "Reserved" partition (usually around 100 MB), a "Recovery" partition (usually a few GB), and your main "Primary" partition. The "System" partition contains Windows and all of your programs and files. You may have additional partitions as well. Formatting your "System" partition will delete Windows and all of your files.
+ You will be prompted to confirm that you want to format the partition. This will delete all of the data on it. Once you confirm, the partition will be formatted. This may take a few moments to complete.
+ If you don't want to keep your recovery partition, or want to remove your media partition, you can select it and click "Delete." This will delete all of the data on the partition and turn it into "Unallocated space." Deleting two neighboring partitions will combine them into a single block of unallocated space.
+
+
+To combine the unallocated space with your main partition, select the main partition that you just formatted and click "Delete." This will combine all of the unallocated space into a single block.
+ This will begin the Windows installation process on the formatted partition. You'll need to reinstall Windows in order to use the computer.
+
+
+If you plan on installing another operating system, such as Linux, you can end the process here before installing Windows. Insert your Linux installation disc and boot from it to begin the Linux installation process.
+ After Window installs the system files, you'll be taken through a few prompts to complete the installation. This includes creating a user account, setting your Windows Update preferences, and your network settings. You'll also be prompted to enter your Windows product key. You'll need to reinstall Windows in order to use the computer again after formatting.
+
+
+The default settings are usually fine when setting up Windows. If you're working on your home computer, select "Home" or "Private" when asked about your network type. If you're doing the installation while on a public network, such as at a coffee shop or at school, select "Public."
+
+, Now that Windows is installed, you'll want to get your laptop's drivers installed again. These could include drivers for your touchpad, sound, graphics, card reader, and more. Run each of the setup programs that you downloaded from the laptop's manufacturer., If you're disposing of your laptop or donating it, you'll want to perform a secure format to prevent your data from falling into the wrong hands. A standard format (described above) will not fully delete all of the data on the drive. Instead, data is marked to be overwritten, and can be recovered by someone with the time and tools. Securely formatting your drive will help prevent your data from being accessed without your authorization.
+ DBAN is a free utility that will securely format your drive. You can download DBAN for free from dban.org. You'll need a blank DVD to burn it to.
+ If you're using Windows 7 or later, right-click on the ISO file and select "Burn to Disc" with a blank CD or DVD inserted. If you're using Windows Vista or earlier, download a burning program such as ImgBurn to burn the ISO file to a disc.
+ Use the boot instructions from the method above to boot from the DBAN disc. You'll need to set your computer to boot from the disc drive so that DBAN loads.
+ This will launch DBAN, and it may take a few moments to load all of the necessary files.
+ A list of all of your drives and partitions will be listed. Use the arrow keys to highlight the drive that you want to erase, and press Space to select it. Be very careful when selecting a drive or partition, as the data will be completely irretrievable.
+ The default settings are will result in a very secure wipe, allowing you to dispose of the laptop without worry. A wipe with the default settings will take several hours to complete.If you're really worried about security, you can press R to open the Rounds menu first and increase the number of rounds. This will result in an even more secure wipe, but will take longer.
+

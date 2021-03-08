@@ -1,0 +1,8 @@
+;
+, From here a box will open.
+,
+You will see each transfer though other computers on a network, or HOPs the IP packet takes along the path to the site/server. On each line there will be three durations (in milliseconds) to each hop along with the domain name of that device and its IP address.
+The more HOPs there are, the more routers the packet traveled through. You will see something like:
+28 ms 41 ms 33 ms www.firstdevicedomain.com 2 48 ms 41 ms 49 ms www.seconddevicedomain.com ]
+3 92 ms 99 ms 98 ms www.thirddevicedomain.com 4 122 ms 141 ms 137 ms www.domain.com Typically, a router configuration problem or bad IP address will read something like this on the first HOP line: "157.54.48.1 reports: Destination net unreachable."
+

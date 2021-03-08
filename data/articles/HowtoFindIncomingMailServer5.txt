@@ -1,0 +1,13 @@
+ Once you’ve input the incoming mail server address and port, send a test message to your own email address. If your mail client has a “Test Account Settings” button (like Outlook), pressing that button will accomplish the same thing as this method.
+ Wait a few moments after you send yourself the email and then check your messages.
+
+
+If you are using Gmail to receive POP or IMAP mail from another service, the message will take longer to arrive because Gmail only checks external mail about once per hour. To speed up the process, open your Gmail settings and click on “Accounts and Import.” Scroll down to the POP3 or IMAP settings and click “Check mail now.”
+If you receive an error when trying to send a message, there may be an issue with your outgoing mail server (SMTP) settings. Verify the SMTP address and port by returning to the location you found the incoming mail server address, and checking it against what you’ve entered in your email app.
+
+Gmail’s SMTP address is smtp.gmail.com, port 587 (port 465 for a secure connection).
+Hotmail/Outlook’s SMTP address is smtp.live.com, port 25. No separate secure port is provided.
+Yahoo’s SMTP address is smtp.mail.yahoo.com, port 465 or 587 (both are secure).
+iCloud’s SMTP address is smtp.mail.me.com, port 587. No separate secure port is provided.
+ If you get an error message when trying to send or receive email, it can be helpful to search for that error on the web. There are many reasons why you may encounter an error, such as a misconfigured domain name or authentication problems. If you’re running into issues with your ISP or personal domain name, call their tech support departments or search their websites for any error messages you receive.
+

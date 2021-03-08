@@ -1,0 +1,16 @@
+ If not, then go to http://www.blender.org to download it.;
+, Click on it, then choose "Blender Game". This is the Blender Game Engine. You can only use physics when you are in the BGE.
+ Mouse over it and scroll with the scroll wheel all the way to the right of the bar. Click on the Bouncing Ball icon. This will open up the Physics options.
+ An orange outline will appear around it.
+ Choose Rigid Body. This will change the cube into a rigid object that is affected by physics.
+ This will disallow it from deactivating when it has stopped moving., Then set the Margin to 0.000.
+
+
+You do not have to change the drop-down menu (which has "Box" currently selected) for the cube you are adding physics to is a box. If you are adding physics to a sphere, change it to "Sphere", and if a cylinder, then change it to "Cylinder" and so on.
+ The cube should begin falling, but will never stop. We want it to stop at some point. Press ESC to end the simulation. We are going to create a ramp below the cube so that it will hit it and slide down.
+ Then with the cube selected, press G on your keyboard to be able to move it. Then press Z to lock the movement to the Z axis (going up or down)., Press the left-mouse button when you are done.
+ Many options and submenus will appear below it.
+ Click on Plane. A plane is a flat surface with four vertices. For this mesh, you do not have to set the Physics options to Rigid Body, because if you do, it will move downwards like the cube, and the cube will never come in contact with it. Instead, leave it as Static, meaning it will stay in place.
+ When you are happy, press the left-mouse button.
+ We want the ramp to be at only a slight angle, so now type 15 on your keyboard to rotate it by 15°.
+ The cube should fall and collide with the plane, then slowly slide down and begin falling again. Press ESC to end the simulation.

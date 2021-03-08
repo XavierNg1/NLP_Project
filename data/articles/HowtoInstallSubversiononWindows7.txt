@@ -1,0 +1,25 @@
+
+
+
+Pentium 4 3.0 GHz or higher
+1.5GB of RAM(2GB+ recommended) RAM should be split: 256MB to Apache and 1GB to Tomcat
+If running additional apps, such as Jenkins, 2GB of system memory should be considered a minimum, with Tomcat given no less than 1GB.
+200MB of disk space for uberSVN (not including space for your Subversion repository data)
+TCP/IP networking must be configured and working
+
+Subversion itself isn't particularly demanding, although uberSVN lets you quickly add additional applications and services, which can quickly gobble up a basic system's resources.
+
+Your computer looks up to the task? Good stuff, then it's time to Download uberAPPS.
+
+;
+,,, Just click Next>.
+ The default location works for most people.
+ Click Next >.
+ There's a start option; do you want uberSVN to automatically start up whenever your computer boots up? It's a good idea to leave this ticked if you want Subversion to be available to users without you needing to start it up every time the system restarts. However, you can easily change your mind either way, later. To move on, click on the big link to go through uberSVN's settings.
+ This screen shows you where uberSVN has been installed (Installation Directory), where uberSVN will store your repository data (Repository Storage Location) and the uberSVN key. If you don't have a key, follow the link to get one (don't worry, it's free). Click the Next button to continue.
+ Enter your full name, your email address and a username by which you'll use to login to uberSVN. provide a password, then re-enter it. To continue, click the Next button.
+ You can come back later to change these values, especially the BASE URL. See the Tips section about how and why you should change 'localhost' for your computer's actually IP number. Click the Next button to continue.
+ You can set uberSVN up to send out emails to users. You need an email server that will accept mail using SMTP (Simple Mail Transfer Protocol). Again, you can select 'No' and come back to these settings later after uberSVN is setup. Click the Next button.
+ This will take a minute or two. Time enough for a coffee, maybe? When the setup is complete you'll be able to click on the Start using uberSVN button.
+ Enter the Admin username and password that you provided in step 10, the click Login.
+ You are now running Subversion.

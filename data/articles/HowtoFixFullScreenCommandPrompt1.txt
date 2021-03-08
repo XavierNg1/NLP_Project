@@ -1,0 +1,12 @@
+ Windows Vista introduced new graphics drivers that enable effects such as the Aero desktop and better hardware acceleration. One of the downsides of these new drivers is that full-screen is no longer supported for console (Command Prompt) applications. This means that you can no longer make the Command Prompt full-screen in Windows Vista, 7, 8, or 8.1. You can use the following workaround to make the window take up the whole screen, but it won't be true full-screen.
+
+
+Windows 10 allows you switch the Command Prompt to full-screen by pressing Alt+↵ Enter.
+You can disable your video card drivers, but you'll lose the Aero theme in Windows and your screen resolution will max out at 800 x 600. See the next section for details.
+If you run a lot of DOS programs and want to use them in full-screen mode, you may want to try the DOSBox emulator. This program emulates the DOS environment and allows you to run programs full-screen. See the last section for details.;
+, You'll need to start the Command Prompt as an administrator, which you can do from the Start menu.
+ If you aren't logged in with an administrator account, you'll need to enter the administrator password.
+ This will load the Windows Management Instrumentation Command-line (WMIC). Don't worry about using this tool, you'll only be using it to trick the Command Prompt into maximizing the window. You'll notice that the prompt will change.
+ Click the Maximize button in the corner of the Command Prompt window. It should now take up the whole screen, but will still have borders and the title bar.
+ You will be taken back to the regular Command Prompt. The window will stay maximized. You can now start using the Command Prompt in a window that takes up the whole screen.
+ Your changes will stay in effect even after you close the Command Prompt. The changes will even take effect in the regular version of Command Prompt.

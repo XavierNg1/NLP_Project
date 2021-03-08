@@ -1,0 +1,31 @@
+ In order to access your router's page, you must know your router's IP address:
+
+
+Windows - Open Start, click the Settings gear, click Network & Internet, click View your network properties, and view the address next to "Default gateway".
+
+Mac - Open the Apple menu, click System Preferences, click Network, click Advanced, click the TCP/IP tab, and look for the number to the right of "Router:".
+
+Linux - Open the terminal and enter route.
+Common router addresses include 192.168.0.1, 192.168.1.1, and 192.168.2.1, as well as 10.0.0.1 for Apple routers.;
+, Open your preferred browser and enter your router's IP address into the browser's address bar., If you've already configured the security settings for your router, enter the username and password you chose then. If not, common default login credentials include the following:Linksys routers - Type admin for both the username and the password.
+
+Netgear routers - Type admin for the username and password for the password.
+Check your router's manual to confirm the default password and username.
+If you've forgotten your login information, you may have to reset the router.
+ Each router will be slightly different. Common menu labels for the section of settings that contains Port Forwarding are "Port Forwarding", "Applications", "Gaming", "Virtual Servers", "Firewall", and "Protected Setup". If you don't see one of these or something similar, try "Advanced Settings" and look for a Port Forwarding subsection.
+ Many routers will have a drop-down menu with pre-configured options for well-known applications. If you need to open ports for one of these applications, select it from the list., If the program you want to add is not listed, you will need to create a custom port forwarding entry. Each router will have a slightly different way of doing this, although the required information is the same for any router:
+
+
+
+Name or Description - Enter a name for the service (e.g., "Minecraft").
+
+Type or Service Type - This can be TCP, UDP, or both. If you aren't sure of which one to select, click Both or TCP/UDP.
+
+Inbound or Start - The first port number goes here. You should research your selected port number to make sure it isn't already taken by a specific application.
+
+Private or End - The second port number goes here. If you only want to open one port, enter the same port number here; if you wish to open a range of ports (say 5), you might type 3784 in Start and 3788 in End.
+ This goes in the "Private IP" or "Device IP" field. You can find your private IP address on PC or on Mac., Click the Save or Apply button. If prompted, you'll also need to restart your router for the changes to take effect.
+
+
+You may also have to check an "Enabled" or "On" box next to the forwarded port row.
+

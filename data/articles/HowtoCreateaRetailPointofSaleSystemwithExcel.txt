@@ -1,0 +1,98 @@
+ Learn about Excel macros.
+
+Create Excel workbook with 6 worksheets for followings steps like this:
+
+
+
+ 
+
+
+Bills
+Pur
+Purchase
+Sales
+Stock balance
+Setup;
+, This must be a unique ID number for each items. Use this to create the barcodes.
+
+
+
+
+
+
+According to this, take all the inventory items & create a code and update the sheet with opening stock, pur, price, and sales price. You have to give the correct purchase price and sales prices because when you issue a bill, price will be selected from this sheet. The opening balance will be linked with the stock balance sheet. If you don’t have a barcode printer, just print the receipt to A4 Sheet and paste it to your sales items.
+Create a Stock balance sheet:
+Create this sheet with below headings:
+
+
+
+
+
+
+Copy this formula to each row and copy paste to down:
+Code: =IF(setup!$B$3:$B$323<>"",setup!$B$3:$B$323,"")
+Description: =IF(setup!$C$3:$C$323<>"",setup!$C$3:$C$323,"")
+Opening Balance: =SUM(IF(B3=setup!$B$3:$B$1021,setup!$D$3:$D$1021))
+Purchase: =SUM(IF(B3=purchase!$B$2:$B$2005,purchase!$D$2:$D$2005))
+Sales: =SUM(IF(B3=sales!$H$2:$H$2551,sales!$J$2:$J$2551))
+Stock: =+D3+E3-F3
+
+,
+Line: =IF(C5="","",B4+1)
+Code: Create a list box link with setup page item code and name. when you connect a bar code reader with bar code sticker details will auto pick.
+Description: =I4
+Qty : this column you have to enter manually according to customer purchase qty.
+Price: =IF(E4="","",VLOOKUP(C4,al,5,0)*E4)
+
+macro for Save bill
+
+
+Create a button called Save bill and copy this code: You can download this file form file
+Sub Dayendsales()'
+'Dayendsales Macro
+Sheets("Tsales").Select
+Columns("G:G").Select
+Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+Range("E2:E255").Select
+Selection.copy
+Range("G2").Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+
+=False, Transpose:=False
+
+
+Sheets("sales").Select
+Range("B3:D1572").Select
+Application.CutCopyMode = False
+Selection.ClearContents
+Range("D3").Select
+End Sub
+Sub DayendPurchases()'
+' DayendPurchases Macro'
+Sheets("Tpurchase").Select
+Columns("F:F").Select
+Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+Range("D2:D643").Select
+Selection.copy
+Range("F2").Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+
+=False, Transpose:=False
+
+
+Application.CutCopyMode = False
+Sheets("purchase").Select
+Range("C3:D625").Select
+Selection.ClearContents
+Range("E3").Select
+End Sub
+Sub SaveBill()'
+' SaveBill Macro'
+Application.Run "'shop sales control.xls'!copy"
+Application.Run "'shop sales control.xls'!SaleReplace"
+End Sub
+Sub DayEnd()'
+' DayEnd Macro
+End Sub
+
+,

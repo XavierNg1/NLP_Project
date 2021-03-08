@@ -1,0 +1,36 @@
+
+If you have completed the article and workbook Acquire a Ring of Sinewave Spheres in Excel, you may do a SAVE AS of that file under a new appropriate title for this project and save quite  a bit of time, though there are a number of modifications and some new additions.
+Set Your Preferences: Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+It helps placing the cursor at cell A16 and doing Freeze Panes.
+Enter the upper Defined Name Variables Section (here's a picture):
+
+A1: Aligned left, enter Sinewave on Cylinders in a Ring and Format Font Apple Chancery or something fancy and nice?,
+Enter the column headings of rows 4 and 5:
+
+NEW: A4: Enter w/o quotes "=Degrees/IF(SPHERES>=18,SPHERES,6)*SPHERES/12"
+NEW: B4: Enter w/o quotes "=Adj_Cos"
+A5: Adj Cos (for Adjusted Cosine)
+B5: Adj Sin and select cell range A4:B5 and Insert Name Create Names in Bottom Row, OK.
+C5: Indicator
+D5: Randy (for RandBetween)
+E5: t: 0 to nπ
+F5: z1_
+NEW: G4 and H4: Randomized with Strikethrough Font
+G5: Adj_x1
+H5: Adj_y1
+I4 and J4: Charting
+MODIFIED: I5: x: Mostly w/ z
+MODIFIED: J5: y: Mostly w/ z
+Command+Select cells F1:F3 and I3 and Format Fill yellow.
+NEW: Enter the D_Lookup table for looking up degree relations around the axes where cosine or sine go to zero.
+Enter the column formulas:
+
+MODIFIED: Adj Cos: Edit Go To cell range A6:A17285 and enter into A6 w/o quotes the following formula, "=Adj_Cos*COS((ROW()-6)*0.25/12*PI()/180)" and Edit Fill Down.
+Create the Chart:
+
+Edit Go To cell range I6:J17286 and from the Ribbon or Chart Wizard select Charts All/Other Scatter Smoothed Line Scatter and Copy or Cut the chart that is atop the data worksheet and paste it to the top left of the Chart worksheet.
+Finished!
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

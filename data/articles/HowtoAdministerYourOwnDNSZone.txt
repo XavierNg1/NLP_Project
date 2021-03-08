@@ -1,0 +1,7 @@
+ This should not be difficult to obtain from your current DNS host. The file is a standard text file that can be edited in your favorite editor. If you cannot obtain this file for some reason, you can use a domain querying tool (e.g. dig).;
+, The first line of the file may contain a comment, which starts with a semi-colon. Near the top, you should see a line that contains your domain name and the term SOA. This indicates the Start Of Authority line. Lines proceeding this line will define the rest the domain.
+ Since you will be administering your own domain, you will want to recreate this exactly.
+ Unless you are running BIND on your own server, you will most likely be editing your zone file using your DNS provider's editor. While most of these editors are designed to make managing zones easy, you will still want to be aware of the proper formatting.
+ Pay close attention to any trailing dots in a domain. Depending on where you are on the DNS branch, these may be mandatory.
+ Once your changes are saved, use a domain querying tool such as dig to verify that your settings took. Be sure to query the nameserver that you just edited. Your changes may take hours to propagate the Internet, depending on your TTL. However, changes to your nameserver are immediate.
+ Most users have the ability to do this themselves. Changes will not take effect until your current zone file expires (usually 24 hours).

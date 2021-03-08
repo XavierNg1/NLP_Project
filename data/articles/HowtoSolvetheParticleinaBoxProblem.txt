@@ -1,0 +1,112 @@
+ The Schrödinger equation is one of the fundamental equations in quantum mechanics that describes how quantum states evolve in time. The time-independent equation is an eigenvalue equation, and thus, only certain eigenvalues of energy exist as solutions.
+
+
+H^|ψ(x)⟩=E|ψ(x)⟩{\displaystyle {\hat {H}}|\psi (x)\rangle =E|\psi (x)\rangle }
+;
+,
+
+In the one-dimensional particle in a box scenario, the Hamiltonian is given by the following expression. This is familiar from classical mechanics as the sum of the kinetic and potential energies, but in quantum mechanics, we assume that position and momentum are operators.
+
+
+H^=p^22m+V(x){\displaystyle {\hat {H}}={\frac {{\hat {p}}^{2}}{2m}}+V(x)} 
+
+
+
+In position space, the momentum operator is given by p^=−iℏddx.{\displaystyle {\hat {p}}=-i\hbar {\frac {\mathrm {d} }{{\mathrm {d} }x}}.} 
+
+
+H^=−ℏ22md2dx2+V(x){\displaystyle {\hat {H}}=-{\frac {\hbar ^{2}}{2m}}{\frac {{\mathrm {d} }^{2}}{{\mathrm {d} }x^{2}}}+V(x)} 
+
+
+
+Meanwhile, we let V(x)=0{\displaystyle V(x)=0} inside the box and V(x)=∞{\displaystyle V(x)=\infty } everywhere else. Because V(x)=0{\displaystyle V(x)=0} in the region that we are interested in, we may now write this equation as a linear differential equation with constant coefficients.
+
+
+−ℏ22md2ψdx2=Eψ{\displaystyle -{\frac {\hbar ^{2}}{2m}}{\frac {{\mathrm {d} }^{2}\psi }{{\mathrm {d} }x^{2}}}=E\psi }
+
+
+
+Rearranging terms and defining a constant k2=2mEℏ2,{\displaystyle k^{2}={\frac {2mE}{\hbar ^{2}}},} we arrive at the following equation.
+
+
+d2ψdx2+k2ψ=0{\displaystyle {\frac {{\mathrm {d} }^{2}\psi }{{\mathrm {d} }x^{2}}}+k^{2}\psi =0}
+
+
+
+
+, This equation is familiar from classical mechanics as the equation describing simple harmonic motion. 
+
+The theory of differential equations tells us that the general solution to the above equation is of the following form, where A{\displaystyle A} and B{\displaystyle B} are arbitrary complex constants and L{\displaystyle L} is the width of the box. We are choosing coordinates such that one end of the box lies at x=0{\displaystyle x=0} for simplicity of calculations. 
+
+
+ψ(x)=Asin⁡kx+Bcos⁡kx,0<x<L{\displaystyle \psi (x)=A\sin kx+B\cos kx,\quad 0<x<L} 
+
+
+
+Of course, the solution is valid only up to an overall phase, which does change with time, but phase changes do not affect any of our observables, including energy. Therefore, for our purposes, we will write the wavefunction as only varying with position ψ(x),{\displaystyle \psi (x),} hence the usage of the time-independent Schrödinger equation.
+ Remember that V(x)=∞{\displaystyle V(x)=\infty } everywhere outside the box, so the wavefunction must vanish at the ends.
+
+
+ψ(0)=Asin⁡(k⋅0)+Bcos⁡(k⋅0)=0{\displaystyle \psi (0)=A\sin(k\cdot 0)+B\cos(k\cdot 0)=0}
+
+
+ψ(L)=Asin⁡(kL)+Bcos⁡(kL)=0{\displaystyle \psi (L)=A\sin(kL)+B\cos(kL)=0}
+
+This is a system of linear equations, so we may write this system in matrix form.
+
+
+(01sin⁡kLcos⁡kL)(AB)=0{\displaystyle {\begin{pmatrix}0&1\\\sin kL&\cos kL\end{pmatrix}}{\begin{pmatrix}A\\B\end{pmatrix}}=0}
+
+
+
+
+, In order for the above homogeneous equation to have nontrivial solutions, the determinant must vanish. This is a standard result from linear algebra. If you are not familiar with this background, you may treat this as a theorem.
+
+The sine function is 0 only when its argument is an integer multiple of π.{\displaystyle \pi .}
+
+
+−sin⁡kL=0kL=nπ, n∈Z{\displaystyle {\begin{aligned}-\sin kL&=0\\kL&=n\pi ,\ n\in {\mathbb {Z} }\end{aligned}}}
+
+
+
+Recall that k=2mEℏ2.{\displaystyle k={\sqrt {\frac {2mE}{\hbar ^{2}}}}.} We may then solve for E.{\displaystyle E.}  
+
+
+kL=2mEnℏ2L=nπ{\displaystyle kL={\sqrt {\frac {2mE_{n}}{\hbar ^{2}}}}L=n\pi }
+
+
+En=ℏ2π22mL2n2{\displaystyle E_{n}={\frac {\hbar ^{2}\pi ^{2}}{2mL^{2}}}n^{2}}
+
+
+
+These are the energy eigenvalues of the particle in a box. Because n{\displaystyle n} is an integer, the energy of this system can only take on discrete values. This is a chiefly quantum mechanical phenomenon, quite unlike classical mechanics, where a particle can take on continuous values for its energy.
+
+The energy of the particle can only take on positive values, even at rest. The ground-state energy E1{\displaystyle E_{1}} is called the zero-point energy of the particle. The energy corresponding to n=0{\displaystyle n=0} is not allowed because this physically represents that no particle is in the box. Because the energies increase quadratically, higher energy levels are spread out more than lower energy levels.
+
+We will now proceed to derive the energy eigenfunctions. 
+
+
+, We know from the constraint of the wavefunction at x=0{\displaystyle x=0} that B=0{\displaystyle B=0} (see the first equation in step 4). Therefore, the wavefunction will only contain one term from the general solution of the differential equation. Below, we substitute k=nπL.{\displaystyle k={\frac {n\pi }{L}}.}
+
+
+ψn(x)=Asin⁡nπxL, n∈Z{\displaystyle \psi _{n}(x)=A\sin {\frac {n\pi x}{L}},\ n\in {\mathbb {Z} }}
+
+
+, Normalizing will determine the constant A{\displaystyle A} and will ensure that the probability of finding the particle in the box is 1. Since n{\displaystyle n} can only be an integer, it is convenient to set n=1{\displaystyle n=1} here, as the only purpose of substituting a value is to obtain an expression for A.{\displaystyle A.} It is helpful to know the integral ∫0πsin2⁡xdx=π2{\displaystyle \int _{0}^{\pi }\sin ^{2}x{\mathrm {d} }x={\frac {\pi }{2}}} when normalizing.
+
+
+1=∫ψ∗(x)ψ(x)dx=∫0LA∗Asin2⁡nπxL, n∈Z{\displaystyle 1=\int \psi ^{*}(x)\psi (x){\mathrm {d} }x=\int _{0}^{L}A^{*}A\sin ^{2}{\frac {n\pi x}{L}},\ n\in {\mathbb {Z} }}
+
+
+1|A|2=∫0Lsin2⁡πxLdx, u=πxL=∫0πLπsin2⁡udu=Lππ2{\displaystyle {\begin{aligned}{\frac {1}{|A|^{2}}}&=\int _{0}^{L}\sin ^{2}{\frac {\pi x}{L}}{\mathrm {d} }x,\ u={\frac {\pi x}{L}}\\&=\int _{0}^{\pi }{\frac {L}{\pi }}\sin ^{2}u{\mathrm {d} }u\\&={\frac {L}{\pi }}{\frac {\pi }{2}}\end{aligned}}}
+
+
+A=2L{\displaystyle A={\sqrt {\frac {2}{L}}}}
+
+
+, This is the description of a particle inside a box, surrounded by infinite potential energy walls. While n{\displaystyle n} can take on a negative value, the result would simply negate the wavefunction and result in a phase change, not an entirely different state. We can clearly see why only discrete energies are allowed here, because the box only allows those wavefunctions with nodes at x=0{\displaystyle x=0} and x=L.{\displaystyle x=L.} 
+
+
+ψn(x)=2Lsin⁡nπxL, 0<x<L{\displaystyle \psi _{n}(x)={\sqrt {\frac {2}{L}}}\sin {\frac {n\pi x}{L}},\ 0<x<L}
+
+

@@ -1,0 +1,5 @@
+ If you don’t have a graphical interface, you can find your video card information through the Terminal. Type the following command and press Enter:lspci -v -s `lspci | awk '/VGA/{print $1}'`
+
+, In the text that displays, your video card model will be listed at the top, usually in brackets. Specific hardware information is listed underneath the card.
+ Click the System menu, then select Preferences. Click Hardware Information from the menu that opens. In the hardware Information menu, find your video card listed in the left frame. Detailed information on it will appear in the right frame when you select it.
+

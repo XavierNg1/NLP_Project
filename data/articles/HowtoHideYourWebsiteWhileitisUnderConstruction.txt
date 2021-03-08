@@ -1,0 +1,13 @@
+ While getting a web hosting services from a renowned web hosting company, you get a control panel where you have different tools which will help you to publish your website. Here let's take example of Host Gator.;
+,, If you have more than one domain that you have hosted, then you have to select the particular domain from the drop down menu. This domain will be the one that you will be working on, so you don't want it to be live on the Internet.
+ What you have to do here is to delete the A record of the domain which will be visible on the first line itself, or if you have edited it before, then on the last line.
+ If you had already installed Wordpress for that domain and have done content editing for your site before you wanted to remove your site from the internet, then there are few more steps that you need to follow. These steps are required so that the admin can have access to the site from both the front end and back end.
+
+
+Go to Cpanel again.
+Go under the tab Databases.
+Click on the icon "phpMyAdmin".
+Click on the related Wordpress file. If you have a add-on domain existing with your primary domain and that is the domain where you have to made the changes than you can select _wrdp2 which is present under your Cpanel username.
+Wp_option table : Go to wp_options table where you have to modify the home and SiteURL.
+Modify the home and site url from your normal domain name to the name including the server ip address. For eg : http://xyz.com will be replaced by http://serverip/~yourcpanelusername/xyz.com.
+

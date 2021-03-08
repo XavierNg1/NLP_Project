@@ -1,0 +1,11 @@
+ Assume you take the genetic distance (r) as 0.1.
+ The probability of non-recombinations will be 1-r = 1-0.1 = 0.9, The probability of recombinants will be r/2 = 0.1/2 = 0.05
+
+The probability of Data if the two genes are linked is ((r/2)^R)*(((1-r)/2)^NR) where R= # of recombinants and NR = # of non-recombinants. So the probability of Data if the two genes are linked is ((0.05)^11)*((.45)^2)
+The probability of Data if the two genes are non-linked is (0.25)^(R+NR) = (0.25)^13
+Now log of odds = (probability of Data if the two genes are linked)/(probability of Data if the two genes are non-linked). So, Log of odds = (((.05)^2)*((0.45)^11)) / ((0.25)^13) = 25.7
+The LOD score will be log10(25.7) = 1.41.
+
+
+The highest value of LOD score you get is your correct answer. The genetic distance you've assumed is probably close to the actual distance between the two genes of interest.
+

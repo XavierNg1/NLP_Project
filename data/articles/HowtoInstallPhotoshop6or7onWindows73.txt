@@ -1,0 +1,13 @@
+ You will be changing the setup file from a 16-bit installer to a 32-bit installer. In order to do this, you will need a packaging software such as WinInstall LE (freeware). In order to create the setup file, you will need to install Photoshop and WinInstall LE on a machine that is compatible.
+
+
+You MUST perform these steps on a compatible machine. You can either use a Virtual PC (as outlined above), or another computer that has a 32-bit version of Windows. Running on a clean install on a virtual machine is preferred because there are no conflicting programs.
+ Start Discover mode, which has a magnifying glass icon in the toolbar. This will open the Discover Wizard. WinInstall will take a before and after snapshot of your system files when you perform an installation. It will take this information and create a new 32-bit installer that can work on 64-bit systems.
+
+
+You will need to create a name for the new installer, as well as a path for the new installer. WinInstall will ask which drives you want to have scanned. You should indicate the hard drive that you are installing Photoshop on.
+After configuring the Discovery mode, WinInstall will analyze your system. This may take a few moments.
+ Once Discovery mode is running, start the installation of Photoshop. Install it as you would on your 64-bit machine, including all of the options you would pick. Wait for the installation to complete.
+ Once the installation is complete, run Discovery mode in WinInstall again. You will be given the option to run the After mode or start a new Discovery. Select After to create a new snapshot of your system. WinInstall will look at the Before and After, and build a new installation package.
+ Move the new installer onto your 64-bit machine. Run the installer and install Photoshop as normal.
+

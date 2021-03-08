@@ -1,0 +1,22 @@
+ You can fix the problem either by restoring the registry key from another computer, or by manually replacing it on your own computer. To manually edit your registry, do the following:
+
+
+Note that Windows 8 does not support the Start Menu feature. Here are tips on restoring the Start button in your Windows 8 PC.
+ This will bring up a list of files in the search menu.
+ This will open the file. Alternatively, right-click the program and then click “Open”.
+ Click Yes to start working with the registry editor.
+ Find the root file first. The .lnk folder will be listed under it.
+ Go to the Edit Menu.
+
+
+To edit your registry via a different computer, click on the Edit menu.
+Locate the .lnk file. Then click Delete. This will remove it.
+Save your changes. Click the Registry menu. Hit the Save key to save your changes.
+Copy the file onto a disk. Once you are done saving the changes, copy this entire file onto a disk or pen drive.
+On your computer, recreate the registry key. Go to HKEY_CLASSES_ROOT, following the above-mentioned steps on your computer.
+, Now type “.lnk” (without quotation marks) as the key name. Make sure to leave the Class box blank.
+ On the Edit menu, click Add Value. Leave the Value Name box blank.
+,,,, On the Edit menu, click Add Key. Then type “ShellNew”.
+
+Make sure to leave the Class box empty.
+,, Select the new key. Click Restore from the Registry. Then select the file that you saved on your disk or pen drive., Press the “X” button on your Registry Editor. You will quit the program. Then reboot your computer to put your changes into effect., Test a program menu or shortcut. If it works properly, your changes have been made successfully.

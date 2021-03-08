@@ -1,0 +1,26 @@
+
+Read the cf/README file thoroughly.
+A typical cf/domain/yourdomain.com.m4 file that looks something like:
+
+divert(-1)dnl
+#
+# This file contains the global definitions for yourdomain.com
+#
+divert(0)dnl
+VERSIONID(`@(#)yourdomain.com.m4 1.0 (yourdomain.com) 5/1/97')
+FEATURE(`use_cw_file')dnl
+
+,
+It may have some other feature()'s and define()'s as well.
+Generate your /etc/mail/sendmail.cf file from your mailserver.mc file, so type:
+
+cd sendmail-VERSION/cf/cf
+/Build mailserver.cf
+cp mailserver.cf /etc/mail/sendmail.cf
+
+,
+Create the virtual user table.
+If you have a local user, say sam, and there is no key for sam@yourdomain.com and no catch-all key for @yourdomain.com, then Sendmail will fall back to the local user sam when resolving sam@yourdomain.com.
+If you want a virtual address to resolve to more than one real address, you need to do it indirectly.
+The %3 is the preservation of the optional +detail part of the original address.
+For people administering multiple domains, it may be easier to keep each domain's list in a separate file, then write a short script to concatenate all such files together into a master virtual user table.

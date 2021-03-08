@@ -1,0 +1,38 @@
+
+Create a new Excel workbook with 3 worksheets: Data, Saves and Chart (unless you are working with Chart Wizard).
+Set Your Preferences.
+Go to cell A16 and do Freeze Panes.
+Enter the upper Defined Name Variables Section (see the picture of the data chit):
+
+
+In cell A1, enter AdjRows and in cell A2 enter 1439 and format fill it dark green with white font, decimal places 2.
+Enter the column heading of row 4:
+
+
+A4: Base t; B4: c; C4: cos; D4: sin; E4: MAIN X and format font red; F4: MAIN Y and format font red; G4: x of p; H4: y of p; I4: BISHOP
+
+,
+Enter the Column Formulas:
+
+
+Enter into A5 "=-Top" w/o quotes and format fill light rose.
+Edit Go To cell range C5:C364 and enter into C5 the formula "=COS((ROW()-5)*PI()/180*FACTOR)" w/o quotes and Edit Fill Down, or you may leave this blank and unused as it is for putting spheres into a ring.
+
+,
+Edit Go To cell range C5:C364 and enter into C5 the formula "=SIN((ROW()-5)*PI()/180*FACTOR)" w/o quotes and Edit Fill Down, or you may leave this blank and unused as it is for putting spheres into a ring.
+
+,
+Originally, this is a stack of 6 spheres descending from {1,0) to (0,0} over 360 rows, so 360.6 = 60 rows/sphere.
+Edit Go To cell range G5:G364, enter 0 in G5 and Edit Fill Down.
+
+,
+Select H5 and input 1.
+BISHOP (from head to toe): Originally, this was to be a queen with a spiked crown but every attempt to achieve that failed so a bishop was settled upon.
+Create the Chart:
+
+
+Edit Go To E5:F364 and select either the Chart Wizard or Chart on the Ribbon, All/Other.
+Copy the formulas and paste them to the Saves worksheet down to row 15 and then do it again beneath them, only this time, do Paste Special Values atop the proper formatting.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

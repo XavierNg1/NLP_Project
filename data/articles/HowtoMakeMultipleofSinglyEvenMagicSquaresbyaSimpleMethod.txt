@@ -1,0 +1,30 @@
+;
+, 6x6 square will have numbers from 1 to 36, while 4x4 square had numbers from 1 to 16. 36-16=20/2=10. Let us add 10 to all numbers of any 4x4 square to get a 4x4 square with a total of 74. This 4x4 square we will place as 2x2 squares in the 4 corners in the left hand side 6x6 square. We now have numbers fro 1to 10 and 27 to 36 to fill the empty places.
+
+
+11 16 xx xx 21 26 'xx' is about places yet to be filled.
+25 22 xx xx 15 12
+xx xx xx xx xx xx
+xx xx xx xx xx xx
+18 13 xx xx 24 19
+20 23 xx xx 14 17
+
+, The rest of the numbers are so filled that we have total of 37 in the rest of the 2 places in rows and columns with total of 111 in each of the 3rd and 4th columns and rows.
+,, This is because we have 4 choices for placing the first number, 3 choices for placing the next number and 2 choices for the next number. Similarly for placing 5,7,8, & 9 we have 24 choices, so we easily get 880x24x24 all different squares. Further for the diagonals we have option of choosing the numbers. Instead of 1 and 2 we could have chosen 9 and 10. One combination available would be 1,9,10, for one column and 5,7,8 for the other, and 3,4,10 for one row and 2,6,9 for the other row. Work out other combinations and each one will give rise to 880x24x24 new 6x6 squares?
+
+,, We could have placed the 4x4 square with total of 74, as a center square and filled up the numbers from 1 to 10 and 27 to 36 in the empty places in the squares in the 1st 2nd, 5th and 6th columns and 1st 2nd, 5th and 6th rows. There are other methods also, try putting the 4x4 square with total of 74 in the 1st to 4th rows and columns and filling up the 5th and 6th columns and rows with the available numbers? Try other ways also.
+ 6x6 order square had numbers from 1 to 36. 100-36 = 64, 64/2 is 32. So we add 32 to all numbers in the 6x6 order square to get one with a total of 303. This will be placed in the center and empty spaces will be filled first by three 4x4 squares, one square will have numbers from 9 to 16 and 85 to 92, 2nd from 17 to 24 and 77 to 84 and the 3rd from 25 to 32 and 69 to 76. Now there will be 16 spaces to be filled, 8 in columns 5, 6, and rows 1, 2, 9 & 10, and 8 in rows 5, 6 and columns 1, 2, 9 & 10. We have to ensure that the set of numbers are such that in the 1st case rows total 101 and in the 2nd case columns total 101, along with ensuring that column total is 202 in 1st and row total is 202 in the 2nd case. If we select the smaller numbers with equal totals in the columns and rows respectively, we will get the right totals. It is for this reason that 1 & 4, 2 & 3, 5 & 8 and 6 & 7 have been selected.
+
+
+92 82 77 01 100 24 19 09 11
+10 20 18 04 097 81 83 89 91
+75 43 48 66 035 53 58 28 73
+30 57 54 42 059 47 44 71 25
+08 39 40 65 067 64 60 95 94
+93 62 61 34 068 37 41 06 07
+27 50 45 33 036 56 51 74 32
+70 52 55 63 038 46 49 29 72
+15 21 23 99 002 80 78 88 86
+85 79 84 98 003 17 22 16 14
+
+, So the number of 6x6 squares can be multiplied by 8x6x4x2 to get the number of squares for the 10x10 square. Of course there are other ways to construct the 10x10 squares so the number of possible squares can only be imagined., Total required is 14(1+196)/2= 1379. We will have to insert seven 4x4 squares with a total of 394 and fill up the remaining 16 spaces with numbers from 1 to 8 and 189 to 196. We can place the numbers from 1 to 8 as we did in the 10x10 square. Similarly we can go from 14x14 square to the 18x18 square and so on.

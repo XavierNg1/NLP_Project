@@ -1,0 +1,51 @@
+ Finding the SSE for a data set is generally a building block to finding other, more useful, values. The first of these is variance. The variance is a measurement that indicates how much the measured data varies from the mean. It is actually the average of the squared differences from the mean.Because the SSE is the sum of the squared errors, you can find the average (which is the variance), just by dividing by the number of values. However, if you are calculating the variance of a sample set, rather than a full population, you will divide by (n-1) instead of n. Thus:
+
+Variance = SSE/n, if you are calculating the variance of a full population.
+
+Variance = SSE/(n-1), if you are calculating the variance of a sample set of data.
+
+
+
+For the sample problem of the patients’ temperatures, we can assume that 10 patients represent only a sample set. Therefore, the variance would be calculated as:
+
+
+Variance=SSE(n−1){\displaystyle {\text{Variance}}={\frac {\text{SSE}}{(n-1)}}}
+
+
+Variance=6.9219{\displaystyle {\text{Variance}}={\frac {6.921}{9}}}
+
+
+Variance=0.769{\displaystyle {\text{Variance}}=0.769}
+
+
+
+
+, The standard deviation is a commonly used value that indicates how much the values of any data set deviate from the mean. The standard deviation is the square root of the variance. Recall that the variance is the average of the square error measurements.Therefore, after you calculate the SSE, you can find the standard deviation as follows:
+
+
+Standard Deviation=SSEn−1{\displaystyle {\text{Standard Deviation}}={\sqrt {\frac {\text{SSE}}{n-1}}}}
+
+
+
+For the data sample of the temperature measurements, you can find the standard deviation as follows:
+
+
+Standard Deviation=SSEn−1{\displaystyle {\text{Standard Deviation}}={\sqrt {\frac {\text{SSE}}{n-1}}}}
+
+
+Standard Deviation=6.9219{\displaystyle {\text{Standard Deviation}}={\sqrt {\frac {\text{6.921}}{9}}}}
+
+
+Standard Deviation=.769{\displaystyle {\text{Standard Deviation}}={\sqrt {.769}}}
+
+
+Standard Deviation=0.877{\displaystyle {\text{Standard Deviation}}=0.877}
+
+
+
+
+, This article has focused on data sets that measure only a single value at a time. However, in many studies, you may be comparing two separate values. You would want to know how those two values relate to each other, not only to the mean of the data set. This value is the covariance.The calculations for covariance are too involved to detail here, other than to note that you will use the SSE for each data type and then compare them. For a more detailed description of covariance and the calculations involved, see Calculate Covariance.
+
+As an example of the use of covariance, you might want to compare the ages of the patients in a medical study to the effectiveness of a drug in lowering fever temperatures. Then you would have one data set of ages and a second data set of temperatures. You would find the SSE for each data set, and then from there find the variance, standard deviations and covariance.
+
+

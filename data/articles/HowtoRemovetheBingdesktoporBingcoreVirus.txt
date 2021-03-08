@@ -1,0 +1,8 @@
+ To do, that follow these instructions: How to Start Windows in Safe Mode, using the method for your operating system, and choosing Safe Mode without networking. When starting in Safe Mode, Windows will only load the essential processes for the computer workings, and will avoid potentially malicious processes from getting in your way in the following steps.
+ Open the start menu, and type "cmd" (without quotes) in the search bar, right click on "cmd.exe" and choose "Run as administrator". A black window will open. Leave it there, and don't do anything with it for now., Right click on the clock, and choose "Start Task Manager", click on the "Processes" tab, there you will see a list of processes including "explorer.exe". Right click on "explorer.exe" and choose "End Process". Your taskbar will disappear, which is why you opened cmd before. The "explorer.exe" process had to be terminated because the virus runs inside it, and you wouldn't be able to delete it otherwise., As you had to terminate the "explorer.exe" process, you'll have to delete the files through the command prompt. Type the following commands in the command prompt (pressing enter after each one), they will delete the virus and restart your computer:
+
+cd\
+cd ProgramData\Microsoft
+rd BingDesktop /s /q
+shutdown /r
+

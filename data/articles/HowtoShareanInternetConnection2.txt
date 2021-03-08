@@ -1,0 +1,14 @@
+ This method will allow you to use an unused wireless adapter on your Windows host computer to broadcast a wireless network that any other device can connect to, just like a wireless router. First, you'll need to enable internet connection sharing on the host computer by following Steps 1-5 of the first section.
+
+
+The host computer will need to have a wireless adapter that isn't being used in order to broadcast a signal for other computers and devices to connect to. If the host computer doesn't have a wireless card installed, you can use a USB wireless adapter.
+Make sure you only enable internet connection sharing on the adapter that's connected to the internet. Don't enable internet sharing on the wireless adapter that you'll be using to create the wireless network.
+ This will open a new window with your active network connections.
+ This link can be found towards the bottom of the Network and Sharing Center window.
+ If you are using Windows 8, you will need to download a free program like Virtual Router (virtualrouter.codeplex.com, which accomplishes the same thing., Give the network a name and select "WPA2-Personal" as the Security Type. Make sure that the Security Key cannot be easily guessed.
+
+
+Make sure to check the "Save this network" box, or you'll need to reconfigure it every time you reboot the computer.
+ With the wireless network created and internet connection sharing enabled, you should now be able to connect any of your other computers or mobile devices to the wireless network just like any other wireless network. Enter in the Security Key you created in the previous step to connect.
+ Some older devices cannot properly connect to an ad-hoc network, and the problem can get even worse if they don't support WPA-2. If you absolutely have to have that device on the network, try lowering the ad-hoc network's security to WEP.
+

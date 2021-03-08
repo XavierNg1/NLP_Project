@@ -1,0 +1,16 @@
+ The resistor should be precise to within 1 percent or less. Wiring in series forces the current to pass through the resistor as well as the inductor being tested; the resistor and inductor should have 1 terminal touching.
+ This is done with a function generator, which simulates currents the inductor and resistor would receive in actual use.
+ Adjust the frequency until the junction voltage where the inductor and resistor meet is half of the input voltage.
+ This is measured in kilohertz.
+ Unlike calculating inductance from voltage and current, setting up the test is easier, but the math is more complicated. It breaks down as follows:
+
+
+Multiply the resistance of the resistor by the square root of 3. If the resistor has a resistance of 100 ohms, multiplying by 1.73 (the square root of 3 to 2 decimal places), this value is 173.
+Divide the result by the product of 2 times pi times the frequency. For a frequency of 20 kilohertz, 2 times 3.14 (pi to 2 decimal places) times 20 is 125.6; 173 divided by 125.6 equals, to 2 decimal places, 1.38 millihenries.
+mH = (R x 1.73) / (6.28 x (Hz / 1000))
+Example: given R = 100 and Hz = 20,000
+mH = (100 X 1.73) / (6.28 x (20,000 / 1000)
+mH = 173 / (6.28 x 20)
+mH = 173 / 125.6
+mH = 1.38
+

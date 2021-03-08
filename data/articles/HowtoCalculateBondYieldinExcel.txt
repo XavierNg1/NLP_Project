@@ -1,0 +1,28 @@
+ Starting in cell A1, type the following text into cells A1 through A8: Bond Yield Data, Face Value, Annual Coupon Rate, Annual Required Return, Years to Maturity, Years to Call, Call Premium and Payment Frequency. Skipping cell A9, type "Value of Bond" in cell A10. Skip cell A11, and type "Bond Yield Calculations" in cell A12, "Current Yield" in cell A13, "Yield to Maturity" in cell A14 and "Yield to Call" in cell A15.;
+, Move the mouse pointer over the line separating columns A and B, just above the Bond Yield Data column heading. Click and drag the line to widen column A enough to fit the text in the column.
+ Click and drag to select cells A2 and B2. Hold down the control key on your keyboard and select cells A12 and B12. Confirm that all 4 cells are selected, click the "Merge cells" button, and then click the "Center Text" button. With cells A2, B2, A12 and B12 still selected, click the "Borders" button and select "All Borders."
+
+, Hold down the control key on your keyboard and select cells B2 and B10. With both cells selected, click the "Currency" button ($) on the "Quick format" tool bar.
+
+
+Hold down the control key again and select cells A3, A4, A7, A13, A14 and A15. With all 6 cells selected, click the "Percent" button (%) on the "Quick format" tool bar. The formatted cell values will display as a dollar amount or a percentage.
+
+
+
+Click in cell B13 and type the following formula: =(B3*B2)/B10.
+Click in cell B14 and enter the next formula: =RATE(B5*B8,B3/B8*B2,-B10,B2)*B8.
+Click in cell B15 and type: =RATE(B6*B8,B3/B8*B2,-B10,B2*(1+B7))*B8.
+
+
+
+Type 10,000 in cell B2 (Face Value).
+Type .06 in cell B3 (Annual Coupon Rate).
+Type .06 in cell B3 (Annual Coupon Rate).
+Type .09 into cell B4 (Annual Required Return).
+Type 3 in cell B5 (Years to Maturity).
+Type 1 in cell B6 (Years to Call).
+Type .04 in cell B7 ( Call Premium).
+Type 2 in cell B8 (Payment Frequency).
+Type 9999.99 into cell B10 (Value of Bond).
+ If the formulas have been entered correctly, the following results will appear in column B, under the Bond Yield Calculations heading. The Current Yield should be 6.0%. The Yield to Maturity should read 6.0%, and the Yield to Call should read 9.90%. If the values in the bond yield calculator match the figures listed above, the formulas have been entered correctly. If the values do not match, double check that the formulas have been entered correctly.
+

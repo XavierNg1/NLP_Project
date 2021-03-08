@@ -1,0 +1,14 @@
+  Go to your Google Analytics account and open up the account you want to manage. Choose the link "all web site data". This will make sure that you're getting an unfiltered report.;
+, You will now see a new menu expand.  From here choose, "All Traffic", then "Referrals". This will bring up a new graph with your referrers information listed.
+ The amount will depend on how many referrers you wish to see. You will now see all the websites that have referred traffic to your site. You may not know which ones are spam and which ones are not––the easiest way is to just start visiting the sites listed.
+
+
+Note: Clean your cache and cookies after checking these sites. These companies put a tracking cookie on your computer for their affiliate links so that the next time you go to Amazon, Ebay, or a host of other sites, they will get credit for the purchase. You do not want to give them any incentive to keep doing this, so clear your cache before buying anything after completing this process.
+ Block them too. The best way is with .htaccess.  
+
+
+Go to your cpanel or just ftp in to your html directory where your website is stored. With Linux, a dot (.) in front of a file means that it is hidden, so make sure that your view is set to see hidden files and folders. The .htaccess will be in the top level of the web directory, usually public_html.  
+
+, The image shows an example of a WordPress .htaccess file that has been edited to block out these spam bots. The only thing you will need to change is the:SetEnvIfNoCase Referer darodar.com spambot=yes.
+ Now those referral sites will be denied access to your site so their analytics interference will be a thing of the past.
+

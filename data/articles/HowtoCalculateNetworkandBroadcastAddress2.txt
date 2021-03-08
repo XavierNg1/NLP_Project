@@ -1,0 +1,127 @@
+ Now you have to convert bit-length prefix to quad-dotted decimal representation. To do this follow below steps.
+
+Write the the bit-prefix in below format.
+
+
+
+
+
+
+If it's 27, then write it as 8 + 8 + 8 + 3 .
+If it's 12, then write it as 8 + 4 + 0 + 0 .
+Default is 32, which is 8 + 8 + 8 + 8.
+
+
+Convert the corresponding bit according to the below table and represent in quad-dotted decimal format.
+
+
+
+
+
+
+Let an IP address be 170.1.0.0/26 . Using above table, you can write:
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+26
+=
+8
++
+8
++
+8
++
+2
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+255
+.
+255
+.
+255
+.
+192
+
+
+Now the IP address is 170.1.0.0 and subnet mask in quad-dotted decimal format is 255.255.255.192 .
+
+
+Sub-net mask can be 0, 128, 192, 224, 240, 248, 252, 254 and 255.
+Below table gives you the "Number of bits used for subnetting"(n) to their corresponding subnet mask.
+
+
+
+
+
+
+
+For subnet mask 255 is default, so it'll not consider for subnet masking.
+From the previous step, you got IP address = 170.1.0.0 and Sub-net mask = 255.255.255.192
+Total bits = Tb = 8
+Number of bits used for subnetting = n = 2
+(as subnet mask = 192 and its corresponding "No. of bits used for Subnetting" is 2 from above table)
+
+
+
+
+
+
+
+, Tb = m+n.
+
+
+Number of bits left for host = m = Tb - n = 8 - 2 = 6
+
+, Number of host per subnet = 2m - 2.
+
+
+Number of subnets = 2n = 22 = 4
+Value of last bit used for subnet masking = Δ = 2m = 26 = 64
+
+
+
+
+
+
+
+,
+
+The 4 subnets (as calculated in previous step) are
+
+
+
+
+
+
+Each of them has 64 addresses.
+
+
+
+Here the taken IP address is 170.1.0.0 . 170.1.0.0 comes in 170.1.0.0 - 170.1.0.63 subnet (see the previous step table). So 170.1.0.0 is network address and 170.1.0.63 is broadcast address for the taken IP address i.e. 170.1.0.0 .
+
+
+
+
+
+
+

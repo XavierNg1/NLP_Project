@@ -1,0 +1,30 @@
+ In some cases, you may be provided with a function or formula that predicts or assigns the position of an object with respect to time. In other cases, you may derive the function from repeated experiments or observations. For this article, we assume that the function has been provided or previously calculated.For the example illustrated above, studies have led to the function θ(t)=2t3{\displaystyle \theta (t)=2t^{3}}, where θ(t){\displaystyle \theta (t)} is the angular measure of the position of the rotation at a given time, and t{\displaystyle t} represents the time.
+;
+, Velocity is the measure of how fast an object changes its position. In layman’s terms, we think of this as its speed. In mathematical terms, the change of position over time can be found by finding the derivative of the position function. The symbol for angular velocity is ω{\displaystyle \omega }. Angular velocity is generally measured in units of radians divided by time (radians per minute, radians per second, etc.).In this example, find the first derivative of the position function θ(t)=2t3{\displaystyle \theta (t)=2t^{3}}:
+
+
+ω(t)=dθdt=6t2{\displaystyle \omega (t)={\frac {d\theta }{dt}}=6t^{2}}
+
+
+
+If desired, this function could be used to calculate the angular velocity of the spinning object at any desired time t{\displaystyle t}. For this particular calculation, the angular velocity function is just an intermediate step toward finding angular acceleration.
+ Acceleration is the measure of how fast an object’s velocity is changing over time. You can mathematically calculate the angular acceleration by finding the derivative of the function for angular velocity. Angular acceleration is generally symbolized with α{\displaystyle \alpha }, the Greek letter alpha. Angular acceleration is reported in units of velocity per time, or generally radians divided by time squared (radians per second squared, radians per minute squared, etc.).In the previous step, you used the function for position to find the angular velocity ω(t)=6t2{\displaystyle \omega (t)=6t^{2}}. Now find the acceleration function as the derivative of ω{\displaystyle \omega }:
+
+
+α=dωdt=12t{\displaystyle \alpha ={\frac {d\omega }{dt}}=12t}.
+ Once you have derived the function for instantaneous acceleration as the derivative of velocity, which in turn is the derivative of position, you are ready to calculate the instantaneous angular acceleration of the object at any chosen time.For the sample problem in the illustration, suppose you know that the function for the position of the spinning object is θ(t)=2t3{\displaystyle \theta (t)=2t^{3}}, and you are asked for the object’s angular acceleration after it has been spinning for 6.5 seconds. Use the derived formula for α{\displaystyle \alpha } and insert the information as follows:
+
+
+α=dωdt=12t{\displaystyle \alpha ={\frac {d\omega }{dt}}=12t}
+
+
+α=(12)(6.5){\displaystyle \alpha =(12)(6.5)}
+
+
+α=78.0{\displaystyle \alpha =78.0}
+
+
+
+Your result should be reported in units of radians per second squared. Thus, the angular acceleration for this spinning object when it has been spinning for 6.5 seconds is 78.0 radians per second squared.
+
+

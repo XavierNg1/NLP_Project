@@ -1,0 +1,10 @@
+, For example, some other class might have code that accesses this member or uses it and because of the current level of accessibility chosen, it won't be able to access it anymore.
+Is your member designed to be used by other developers, and if so, will they be able to access it in its current accessibility level?
+In your future code, will changing the accessibility of this member be near impossible?
+Is your class intended to be inherited, and if so, will the inheriting class face troubles accessing this member (if it is allowed to)?
+
+
+Check if the answers to all the previous questions were "no" or not.
+If the answers were all "no", leave the accessibility level as it is and start deciding the accessibility of another member
+If one or more of the answers was "yes", increase the level of accessibility one degree and repeat the steps for the same member, from step 2
+

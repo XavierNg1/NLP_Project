@@ -1,0 +1,98 @@
+ To begin, open the Processing program. A “sketch,” or new file, will automatically be open and ready for typing. It will originally be labeled “sketch_xxxxxa,” with the current month and day in the x positions in the file name. You may rename the file to whatever you choose, by selecting File → Save As…, and typing a new name in the resulting window.;
+, To do this, we type the following code:
+
+
+size(200, 200);
+This is the window size function, and we are passing two numbers that represent how many pixels high and wide we want the program to draw the window. Here, we ask the program to draw the window 200 pixels high and 200 pixels wide.
+ Below are two functions we will type to do this:
+
+
+smooth();
+background(0);
+The smooth function ensures that all geometric shapes drawn in this window will show with anti-aliased edges. This provides a higher quality image.
+The background function takes a number argument, here a zero, that represents a color. Because zero is the color for black, the window’s background will now be returned as black.
+ It is good programming practice to use variables to store data that will be used repeatedly throughout a program. In our case, we know that there are a few colors we may want to use more than once in our drawing. We also want to make the programming easier to read. This is why we define the RGB colors before we use them. Here are the colors you will need to draw your mean cat:
+
+
+color cat body  = color(226);
+color earsnose = color(237, 159, 176);
+color black = color(0, 0, 0);
+color facial = color(202, 200, 193);
+color fang = color(249, 16, 85);
+
+, The color “catbody” above has been assigned to color 226, which is a medium gray. The other colors use the RGB scale to define more specific hues. To learn more about RGB, grayscale, and other color-related information, please refer to Processing’s color tutorial at http://processing.org/tutorials/color/.
+ Now that we know what colors we’ll be using, we will begin to draw the cat. The order in which we draw its features is important for the final display, because the program will draw each shape in the order it’s called. Let’s begin with the ears:
+
+,
+
+
+fill the cat's body.
+,,, The fill function takes a color as an argument and returns that color inside the triangles that follow the call. We now have ears!
+
+, To draw the head, type the following:
+
+
+fill(catbody);
+noStroke();
+ellipse(100, 100, 100, 100);
+
+, The noStroke function specifies that we do not wish to have an outline around the shape following it. In this case, that shape is of course the cat’s head, which is drawn using the ellipse function. The ellipse function accepts four numbers: an x and y coordinate for the placement of the circle, and pixel width and height of the ellipse at that position.
+ The following code does this for us:
+
+
+fill(fang);
+triangle(85, 130, 95, 130, 90, 146);
+triangle(95, 120, 105, 120, 100, 146);
+triangle(105, 130, 115, 130, 110, 146);
+
+, We specify our fangs’ fill color, and then create the triangles using the triangle functions again.
+ The code for this is as follows:
+
+
+//draw muzzle
+fill(facial);
+ellipse(115, 120, 30, 30);
+ellipse(85, 120, 30, 30);
+
+,
+
+
+//draw nose
+fill(earsnose);
+stroke(1);
+triangle(100, 100, 90, 115, 110, 115);
+
+, The stroke function brings back the outlining feature that we previously turned off, passing the number 1 to it to denote the grayscale level desired for the nose’s outline color.
+ This is done by drawing gray circles containing smaller black circles within them. The code for this is as follows:
+
+
+For the larger, gray circles:
+
+fill(facial);
+ellipse(80, 90, 20, 20);
+ellipse(120, 90, 20, 20);
+
+
+For the smaller, black circles:
+
+fill(black);
+ellipse(80, 95, 10, 10);
+ellipse(120, 95, 10, 10);
+
+
+Remember that the stroke function is still “on,” therefore the eyes will be outlined. This adds contrast and looks nice.
+, To do this, we call the strokeWeight function, passing the number of pixels wide we would like the line to be drawn. Then we simply call two line functions, which accept two sets of x/y coordinates, drawing lines between those points in the window.
+ To draw whiskers, we again use the line function. The code for the whiskers is as follows:
+
+
+strokeWeight(1);
+line(115, 115, 135, 105);
+line(117, 119, 135, 120);
+line(115, 123, 135, 130);
+line(85, 115, 65, 105);
+line(83, 119, 65, 120);
+line(85, 123, 65, 130);
+
+, One pixel is enough width for a delicate whisker.
+ First, save the file. Then to run the program and see the resulting window we’ve drawn, press the “play” button at the top of the window or press Ctrl + R. The cat will appear in its own 200 x 200 window.
+,

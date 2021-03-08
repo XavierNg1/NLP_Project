@@ -1,0 +1,30 @@
+ Their sum must be -(b/a) and their product must be (c/a).;
+, This is needed to reduce the number of test cases.
+
+
+If a and c have opposite signs, the 2 roots have opposite signs. Example:
+
+
+
+
+
+
+6x2 - 11x - 35 = 0 has 2 roots that have opposite signs since a is positive 6 while c is negative 35.
+
+
+If a and c have the same sign, the 2 real roots have same sign and it is further possible to determine if both are positive or both are negative.
+
+
+
+
+
+
+If a and b have opposite signs, the 2 roots are both positive. The equation 21x2 - 23x + 6 = 0 has 2 real roots, both positive. Actually, we can't yet rule out that it might have no real roots (like 21x2 - x + 6 = 0), but can say that if the roots are real, then both are positive.
+If a and b have same sign, the 2 roots are both negative. Example: The equation 15x2 + 22x + 8 = 0 has 2 real roots, both negative. Again, as above, complex roots are still possible, though in this example, both roots are real and negative.
+ If the roots are r/s and t/u, then the diagonal sum, ru + ts = -b. This ru + ts is the "diagonal sum" this method is named after. Note, this formula assumes that a is positive. If a is negative then, ru + ts = b.
+
+
+If the 2 real roots are -1/3 and 3/5, the diagonal sum is (-1)*(5) + (3)*(3) = -5 + 9 = 4. The quadratic equation they satisfy is 15x2 - 4x - 3 = 0. Note that b is the opposite of the diagonal sum as expected.
+ If the information form the rule of signs shows that both roots must be positive or negative, use the correct sign. Otherwise, if the roots have opposite sign, it is not necessary to check both {1/3, -3/5} and {-1/3, 3/5}. If the diagonal sum of one of those root pairs gives the right absolute value, but the wrong sign, then the other one is the solution. Therefore it's only necessary to check one.
+ If any diagonal sum equals -b, then that is the solution. If any diagonal sum equals +b, then that is the negative of the solution. If none of the diagonal sums are b or -b, then the roots of the quadratic are either irrational or complex and will probably need to be found with the quadratic formula.
+

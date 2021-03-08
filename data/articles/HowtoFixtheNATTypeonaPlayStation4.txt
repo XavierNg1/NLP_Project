@@ -1,0 +1,13 @@
+ Make sure that your modem is powered on and connected to your router (which should also be powered on). Check if your computers as well as the PS4 is able to get online.;
+, If a computer isn’t plugged in to your router yet, then make sure that you have one connected via an ethernet (RJ-45) cable. This is going to be the computer that we’ll use for configuring the router.
+ Once your computer (laptop/desktop) is connected, open up your browser and type in http://192.168.1.1 on its address field. Press on the Enter key and it should now ask your for a username and password. The default for most routers is admin for both the username and password.
+
+
+You can technically use any device that supports modern browsers like Firefox, Chrome, or even Internet Explorer/Edge (the latest versions) for this step.
+The default username and password for some routers can be found on the routers themselves. This information is usually found together with the router’s serial number.
+192.168.1.1 is the default IP address of most routers. There are routers though that have completely different default IP addresses. Before accessing the router’s setup page, make sure to refer to your router’s documentation.
+ For this step, you’ll need to refer to your router manufacturer’s manual to look for your router’s network settings (or something similar) option. You’ll then need to make sure that UPnP (universal plug and play) is enabled from there.
+ After enabling your router’s UPnP option, go ahead and look for a tab/option called port forwarding (usually found under the Network Settings or Applications and Gaming tab on your router’s setup page)., Once in this port forwarding tab, you’ll then need to indicate the TCP and UDP ports that have to be forwarded/opened. For the PS4, the TCP and UDP port ranges you’ll want to be opened are 80, 443, 465, 983, 3478-3480, 3658, 5223, 6000-7000, 9293, 10070-10080., Once you’ve forwarded the necessary ports, don’t forget to save the changes and close out your browser., To refresh the network settings on your PS4, turn it off and then back on. This will force the PS4 to reconnect to the router’s reconfigured network.
+ After restarting the PS4, go to its dashboard and go to Settings. Scroll down and look for the Network Settings option. You should now see your PS4 IP address settings as well as its NAT Type set to 2 or Moderate.
+ Now go ahead and test your connection by accessing the PSN Store or by playing a multiplayer game online while using Voice Chat.
+

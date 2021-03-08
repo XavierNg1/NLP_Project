@@ -1,0 +1,10 @@
+;
+,,
+
+
+If you didn't see that option, go to your Start Menu and search for "cmd" and open "cmd.exe" - If you're using XP, click Run and type in "cmd". Once you've successfully opened it, type cd C:\ and navigate to the directory with the text files in it. For example, I have a folder called ' files ' on my Desktop, I'd type cd C:\Users\User\Desktop\files and you should replace 'User' with the account name you're logged in to.
+ for %f in (*.txt) do type "%f" >> output.txt This command will select all the text (.txt) files in the directory and output them all merged together into the new text file called output.txt which you can rename to whatever you like.
+
+
+Echo each new line after reading each file, as every new file written to the merged file will start at the end of the last current line.
+

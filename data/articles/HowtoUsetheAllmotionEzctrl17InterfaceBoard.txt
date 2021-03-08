@@ -1,0 +1,16 @@
+  You can find the hardware and software reference materials on the AllMotion website.;
+,, This is a bit tricky, but if you are competent with a soldering iron and have some good solder wick, you can do it. You can also buy the controller with the fuse already moved. Once the fuse is moved, gently lay it down against the controller board. Remove all of the connectors from the top side of the board, so that just the pins are sticking up. Line up the pins on the controller with the sockets on the bottom of the Breakout board.
+ This DIP switch will pull-up the STEP and DIR signals for each axis individually. The outputs from the controller are open collector, so if you need pull-ups to get a 5V signal, put the switch in the ON position. If you just want the open collector that will pull to ground when active, then put the switch in the OFF position. Here are the individual switch connections.
+
+
+1 - STEP Axis 1
+2 - DIR Axis 1
+3 - STEP Axis 2
+4 - DIR Axis 2
+5 - STEP Axis 3
+6 - DIR Axis 3
+7 - STEP Axis 4
+8 - DIR Axis 4
+
+, There is NOT and Enable output on the controller, so if your drives need an enable, you can jumper it on your drive somehow, or you can take 5V or Ground from the breakout to make the correct signal. Then just connect your step and direction signals to the correct place on your drives.
+

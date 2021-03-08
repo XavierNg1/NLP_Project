@@ -1,0 +1,17 @@
+
+Issue the following commands.
+Issue the following commands.
+Note: Sometimes when you issue the above command you may receive a message which states:
+
+
+ln: creating symbolic link `./libnpjp2.so': File exists
+To correct this issue simply remove the previous symbolic link using the following command:
+
+Type/Copy/Paste: cd /usr/lib/mozilla/plugins
+
+Type/Copy/Paste: sudo rm -rf libnpjp2.so
+Make sure you are in the /usr/lib/mozilla/plugins directory before you issue the command
+
+,
+Restart your web browser and go to Java Tester to test if Java is functioning in your web browser.
+

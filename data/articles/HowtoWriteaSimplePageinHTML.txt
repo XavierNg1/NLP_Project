@@ -1,0 +1,66 @@
+, The data in between <head> and </head> does not appear on the page. It contains metadata and titles that help search engines fine your page. The data in between the <body> and </body> tags appears on the page.
+ Tags are what tells the web browser how to display the code. Tags consist on and opening bracket and a closing bracket: <____>. Many tags come in pairs meaning that there is an opening tag followed by a closing tag:<____>Tag Data</____>. Note that the closing tag has a slash after the opening bracket. Examples of tags include:
+<a href="">Link Text</a> - This tag creates a link.
+
+The href attribute determines the URL for the link to go. For example: <a href="https:Wikihow</a> creates a link that says Wikihow and links to wikiHow.com like this: Wikihow.
+
+
+<h1>Your Header Here</h1> - This tag creates a header or an introduction to the following paragraph. HTML supports 5 different levels of headers, h1, h2, h3, h4, and h5. h1 is the biggest and boldest, h5 is the least. Headers are used to break up a page into "concept blocks". Examples may beMy first level header
+My second level header
+
+<p>Text Here</p> - This tag creates a paragraph. It's always a good idea to divide a webpage into multiple paragraphs for readability.
+<img src="" /> - Adds an image to a webpage.
+
+The src attribute tells the location of the image. This is one of the tags without a closing tag.
+
+
+<strong>Text Here</strong> - Puts emphasis on the text like this.
+
+There are two types of lists; an ordered (numbered) and an un-ordered list (bullet points). The tags for an unordered list start by declaring it is an unordered list <ul> and then have an entry for each list item <li>. Repeat this tag as needed for each item in the list. The list ends with a closing tag </ul>
+
+, There are a lot more. A good resource on all things HTML(as well as CSS, JavaScript, etc.) is W3schools.com.
+ A common DOCTYPE is:<!DOCTYPE HTML PUBLIC "-
+.
+
+
+
+Differences in versions of HTML over the years has led to some tags being put out of use. A DOCTYPE will tell the browser whether or not it can use said tags.
+
+The commonly used <b> and <i> tags have been put out of use as of XHTML version 2.0 and HTML versions past 3. They are replaced by the <strong> and <em> tags. The W3C is deprecating(putting tags targeted towards text formatting out of use).
+ Below is a valid XHTML document.<!DOCTYPE html PUBLIC "-"http:
+<html xmlns="http:
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Hello World!</title>
+</head>
+<body>
+<h1>Hello World!</h1>
+</body>
+</html>
+
+This is an example of the Hello World test. Every programming language has a version of it.
+ Information in the <head> can be made up of many tags:
+
+META - used to specify information for search engines such as keywords or descriptions.
+LINK - used to link to other documents like CSS stylesheets of JavaScript files.
+STYLE - an internal CSS stylesheet coded in between these tags.
+TITLE - the title that appears on the top of a browser.
+
+
+Example:<head>
+<title>...</title>
+<meta name="keywords" content="..." />
+<script type="text/javascript">...</script>
+<style type="text/css">...</style>
+</head>
+
+
+, The computer ignores text between the two tags. It is recommended that you include comments in your code in case you come back to change something and not know what it means.
+ The computer running your HTML does not understand the informational structure of your document. For example, say you were writing a webpage on zoo animals. You want to highlight all text in the section about lions. The computer does not know what section that is. You have to tell it. You tell it by using <div> tags. Basically these tags define sections of the text. Most websites out there are styled using these tags. You can name these tags using the id attribute.
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+ This is the most popular program used by networking professionals around the world. You can even be certified as an Official Wireshark Certified Network Analyst.;
+, WinPcap is used to help capture network packets.
+ Click the "Capture" menu, then click "Interfaces." A small window with all of your networking interfaces will appear. If you use any network traffic, you will start to see packets coming in.
+, Go to the "Capture" menu again and then click "Stop." Stopping the traffic will allow you to analyze it better. However, you can let the program continue monitoring traffic while you go through the packets.
+ Each line represents a packet, and there are 6 columns that provide information about it.
+
+
+The number column shows the order of the packet when you start recording network traffic. This is to provide you with number reference so you that you can easily identify particular packet.
+The time is the time in seconds, up to 6 decimals, when the packet was received after you started to record network traffic.
+The source includes the Internet Protocol (IP) address of the packet's origin.
+The destination IP records where a particular packet is going.
+The protocol the packet uses. The most common are TCP, UDP and HTTP.
+Info includes what's going on with the packet, whether it's a continuation of traffic or an acknowledgment that a packet was received.
+ You can monitor many different things with WireShark.
+
+
+Check to see if there are any unwanted packets being sent or received from your computer. These could include someone you don't want on the network or even a program that shouldn't be using network traffic.
+Monitor how often a program uses your network. For example, how often does a Windows Update check for updates?
+Find out what program is taking up all of your network traffic and bogging down the network.
+

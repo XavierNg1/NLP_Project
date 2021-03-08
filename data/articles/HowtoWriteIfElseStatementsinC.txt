@@ -1,0 +1,12 @@
+ Click New Project, and open a Visual C++ Console Application.;
+, You can check this option off before opening the project.
+ Go to Project, Add New Item, and make sure to select a .cpp source file.
+ This will allow you to declare integers and Boolean types without receiving syntax errors.
+ This will be the integer you base your if...else loop on.
+ You may use a cout statement to let users know which number to input, but it is essential to declare a cin statement, so they can input a value for x.
+ This is the first part of the if...else loop. By writing if(x==1), and then having a cout statement "True" in the body of the if statement, you can ensure that an input of 1 will return the cout statement you have written.
+ Since "else" is used for all remaining possibilities, it does not require an expression. Output the statement "False" in the else body.
+ To do this, select debug, and click "Start Without Debugging". If it asks you to build the program, press Yes.
+ To do this, enter 1 in the program and press enter. You should receive the output "True".
+ Enter any number other than 1. You should receive the output "False".
+

@@ -1,0 +1,26 @@
+ Find and open the Terminal using the Spotlight search bar, or find it manually in Applications → Utilities → Terminal.
+ The Terminal screen should look like a simple white screen with plain text written on it. Type the following into the Terminal window to make a backup of the file you will be altering:sudo /bin/cp /etc/hosts /etc/hosts-original
+Press enter or return on your keyboard to submit your command.
+ You will be prompted to enter an administrator password for your computer. Type this in, then press enter.
+
+
+Your password will not appear while you type. If you typed it in successfully, you will not see any error messages or other notifications.
+ Type in sudo nano /etc/hosts and press enter. The Terminal window should now have a black bar at the top, that says something similar to "File: /etc/hosts". A list of numbers with the word "localhost" next to it should show up.
+ Use the down arrow on your keyboard to move your cursor (the grey square) to the last line of the document. Type in 127.0.0.1 followed by a space, then the name of the website you wish to block. Include the "www." in the website name, but not the "http://".Add as many websites as you like, each on their separate line beginning with 127.0.0.1 and a space.
+
+
+Be careful not to alter anything else in the document. If you accidentally delete or change something, press control X to quit without saving your changes, then start this method again.
+ Press control O, then enter to save your changes. Press control X to close the file, returning to the ordinary Terminal window.
+ You may find that the sites you listed are already blocked. If you can still access them, make one of the following changes to force the block list to take effect:
+
+
+In the ordinary Terminal window, type sudo dscacheutil -flushcache and press enter.Or restart your computer.
+ If you cannot connect to any websites, or you encounter other strange problems after this change, restore the original hosts file using the "hosts-original" copy you made. Open Terminal and follow these commands, typing in your administrator password again if prompted:
+
+
+Type sudo nano /etc/hosts-original and press enter to open the backup file.
+Press control O to save the file.
+Delete the -original at the end of the file name, so the file name now ends in hosts. Press enter to save the file.
+Press Y to confirm that you will replace the hosts file you altered.
+Press Ctrl X to close the file. If you don't notice any changes, type sudo dscacheutil -flushcache and press enter.
+

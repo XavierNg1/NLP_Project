@@ -1,0 +1,41 @@
+
+Boot into the operating system you want to keep.
+Download EasyBCD.
+Click the Start menu and select "Run".
+Enter "diskmgmt.msc" and press Enter.
+Find the volume that has the "System" status.
+Start EasyBCD.
+
+,
+Click "BCD Backup/Repair".
+
+,
+Select the "Change boot drive" option and click "Perform Action".
+
+,
+Ensure that the drop-down menu says "C:\" and click "OK".
+
+,
+Return to the Disk Management screen.
+Right-click on the volume that contains Windows 7 and select "Delete Volume".
+Right-click on the newly-deleted volume and select "Delete Partition".
+
+,
+Right-click on the volume to the left of the new Free Space.
+Open EasyBCD if it isn't already.
+Click the "Edit Boot Menu" button.
+
+,
+Select Windows 7 from the list and click "Delete".
+
+,
+Click "BCD Backup/Repair".
+
+,
+Select the "Reset BCD Configuration" and click "Perform Action".
+
+,
+Click "Add New Entry" and select your current operating system from the Type menu.
+
+,
+Ensure that the Drive drop-down menu is set to C:\ and then click "Add Entry".

@@ -1,0 +1,8 @@
+ Example: "sqlplus user1/user1".;
+, This is an optional step to check the column names current present in given table. This is to ensure that the column name being changed is indeed present in the table.
+ As the name suggests, alter table command is used to make any changes to table structure. Changing column name is also considered as an operation which alters table structure. 'rename column' is the sub-command to alter table. It is required to pass old column name and new column name.
+ Upon successful execution, the output shall look like this: Table altered.
+
+
+Optional step: desc "table-name". Run this command again to confirm the change in column name.
+

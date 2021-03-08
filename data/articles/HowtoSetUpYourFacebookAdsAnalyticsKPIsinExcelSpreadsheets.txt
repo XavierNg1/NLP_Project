@@ -1,0 +1,108 @@
+
+ClientDashboard - shared with the client and aggregates campaign KPIs.
+IndividualCampaign - an individual campaign tab that looks at KPIs and helps you focus on the campaign's impact and ROI. We will use this when we AB test as well.;
+, Obviously, the more often you can build these reports, the better you will understand your data, and the higher your ROI will be in the end. Start by creating the following rows:
+
+
+Impressions
+Leads (site clicks)
+Conv (CTA clicks)
+CTR
+Cost
+Cost/Conv.
+Conv. Rate
+Avg. CPC (if CPC campaigns...if CPM or CPP, replace CPC)
+Avg. CPA
+Avg. Relevance Score
+Avg. Frequency
+Revenue
+ROI
+
+, These can measure :
+
+
+1) Leads/Conv./Impressions on a bi-weekly basis for the year
+2) Revenue and ROI for the MoM or WoW period; and/or
+3) Facebook Ad KPIs (leads, conv., CTR, cost).
+ This is an important part of the report and should not be taken for granted. This is where you can tell your data story (or analysis) so you need to give it some thought.
+ You need to run ads differently, depending on your goals. As a result, your KPIs will also be different. The Campaign objectives could include:
+
+
+Objective - Build brand awareness and community growth. KPIs include: The number of website visits from ad, the number of followers or page likes from ad, engagement rate from post (if promoting content), conversation rate (if promoting content), amplification rate (if promoting content), the number of website visits from ad, and the number of followers or page likes from the ad.
+Objective - Increase purchases (drive revenue). KPIs can include: The number of website clicks or leads from ad, the number of CTA clicks or conversations from ads, the number of purchases from ad, the number of return visitors from ad, the number of purchases per person from ad, ad CTR, ad Fatigue Rate, and ROI.
+Objective - increase visits to a piece of content. KPIs can include: The number of visits to the content from ad, the number of content downloads/signups, etc., from ad and the number of shares of pieces of content from the ad.
+Objective - increase Facebook page likes. KPIs can include: The number of new followers or likes from ad, engagement rate, applause rate, amplification rate on posts, and the number of shares from ad (referrals).
+Objective - drive attendance to an event or webinar. KPIs can include the number of visits from ad, the number of signups from ad, and the number of shares from an ad.
+Objective - download the mobile app. KPIs can include: The number of app downloads from ad and the number of app engagements from ad.
+ The KPIs listed above are, by no means, an exhaustive list. Thus, if you're building an individual campaign report with a revenue objective, your KPIs could include the following:
+
+
+Leads (website clicks) from ad
+Conversions (CTA clicks) from ad
+Google Analytics conv. data to match with the CTA clicks
+Purchase data (if available)
+Budget
+Amount Spent
+Avg Frequency
+Avg CTR
+Avg Relevance Score
+Cost metricsCPCCost per total actionCPP CPM
+CPC
+Cost per total action
+CPP
+CPM
+Engagement metrics, newsfeed impressions, impressions total, actions, click search
+newsfeed impressions
+impressions
+total actions
+clicks
+reach
+Revenue
+ROI.
+ A good foundation for which graphs to add include: Cost metrics, investment metrics, campaign results, campaign effectiveness, and engagement metrics. Some data-centric marketing organizations do not like to add internal ad ratios to these reports, since they could confuse clients.
+, The Campaign WoW (week-over-week) tab is an internal organization tab that helps you track all of your Facebook ad activities across clients. The tab includes five different areas: Active Campaigns WoW Summary, Ad Efficiency, Facebook Ads Aggregate Campaign data (by campaign), Facebook Ads last 7 days data and Ad Activity last seven days.
+ For the Active campaigns WoW summary, add the following rows or KPIs (and make sure you specify a time period for the report):
+
+
+Ad Spend
+Avg CPC
+Avg CTR
+Website Clicks
+CTA Conversions
+Cost/Conversions
+Avg Frequency
+Avg Relevance Scores.
+ For the Ad Efficiency section, you focus on the effectiveness of the ads, while paying particularly close attention to the ad fatigue rate ratio. To get the ad fatigue ratio, calculate the frequency rate change and the ctr change. Thus, your KPIs will include:
+
+
+All Ads Fatigue Rate
+Avg. CTR
+Avg. Frequency Rate Delta
+Avg. CTR delta.
+ For Aggregate Campaign Data, you'll want to look at all KPIs per campaign name. In it, we put campaign names in the Y axis and KPIs on the X axis. As a result, your KPIs could include the following columns:
+
+
+Budget
+Amt Spent
+Balance
+Avg. Relevance Score
+Impressions
+Clicks
+Avg CTR
+Avg CPC
+Avg Frequency Rate
+CTA clicks.
+ For Facebook Ads Last 7 Days simply compare your top KPIs per strategy. KPIs can include monitoring only Website Clicks and CTA conversions on a daily basis. This can vary greatly, depending on your objectives.
+
+
+For Ad Activity Last 7 Days you can compare your spending per channels. Some spend KPIs for ad Activities could include spending for Facebook Ads, Google Adwords, and even Instagram Ads.
+ This is time-consuming but worth the effort. There are ways to speed this up. You could write an ODBC connector (expensive) or pay for a query or other service to do this. It requires a certain skill to write the queries, so most people resort to the manual import of data from different sources. Note that about 88 percent of spreadsheets have errors associated with these processes,so be careful that you do this correctly. There are a few tools that can make it easier to set up and can automatically download data into your spreadsheet. Check them out on the tips section.
+
+
+In the spreadsheet described in this tutorial, you will need to import information from Facebook Ads, Google Adwords, and Google Analytics. Be sure to devote at least two hours every time you want to import from these sources into Excel, since you will need to format the imports and verify that there are no human errors.
+ Whether you do it by campaign, or on an aggregate basis, be sure to pay close attention that the KPIs are growing towards your campaign goal on a daily basis. Not doing so can severely affect your campaign's performance.
+ You don't need to be a data scientist to build your first paid social media analytics portal with Facebook Ads. With a little effort and a basic understanding of spreadsheets, you can work out for yourself which ads perform best.
+
+
+Be sure to use your spreadsheet, not to report vanity metrics, but to understand your data story. More importantly, be sure to keep your data updated continuously.
+

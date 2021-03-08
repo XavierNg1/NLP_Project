@@ -1,0 +1,78 @@
+ Before you get down and dirty with your hardware and computer settings, check to see what kind of speeds you are getting and compare that to the advertised speeds for your service. There are a variety of speed test sites on the net, just search for "speed test" in Google and pick the top few results.
+
+
+Different tests will give you different results. Even the same test may give you different results between tests. This is due to the location of test servers and the number of people sharing your connection.
+Take multiple tests and find the average speed you are getting.
+You may need to have Flash installed to run the test.
+If given the option, pick the test server closest to your physical location. This will help get you the most accurate results (on speedtest.net, this is chosen automatically based on ping);
+, Check with your service provider to see what speeds you should be getting. Keep in mind that speeds advertised by your provider are "best case" speeds, and you may not be able to actually get that number on a regular basis, especially if using WiFi.
+
+
+If you haven't upgraded your internet in a long time, you may be able to get better speeds for less money. Companies aren't usually keen to inform you of better deals, so check to see if new services are available that weren't when you signed up. Check with all the providers in your area.
+Be aware of the megabyte/megabit difference. Internet Service Providers (ISPs) advertise in megabits, not megabytes. There are 8 megabits (Mb) in a megabyte (MB), so if you are paying for 25 megabits per second (Mbps), then that's just over 3 megabytes per second (MBps) of actual maximum transfer speed. If your test result was measured in Kbps, then you divide that number by 1000 to attain your measurement in Mbps.
+ Restarting your modem and router can help alleviate some network issues by cleaning up old data and re-provisioning your modem configuration from your internet service provider. If necessary, your modem will automatically download firmware updates from the ISP. See this guide for details on resetting your network.
+ If you are using a wireless router, some devices can affect your connection due to interference. Wireless routers come in multiple varieties; 802.11 b, g, and n (2.4 GHz) or 802.11 a (5.8 GHz). Common devices that can interfere with your wireless connection are microwaves and cell phones, many of which operate in the 2.4 GHz range. In order to minimize interference, turn off data on your phone and move your microwave oven away from wireless devices and your router when you're using the connection.
+ Some internet providers enforce a data cap on their customers' internet usage. A data cap limits the amount of information you can download and upload over the internet in the course of a month. Occasionally, they may call this a "data usage plan". Log in to your account page, or contact the customer service department to see if you have gone over your monthly allowance. Often, the penalty for going over the cap is decreased speed for the rest of the billing period or extra charges on your bill.
+ Sometimes you just have bad service that can only be fixed on your provider's end. They can usually tell if your connection is substandard without having a technician come to your home by reading signal levels off of your modem. If necessary, they will send a line technician out to your house or neighborhood to check their infrastructure. If the problem is on your end, you might be charged a fee for the visit, so it's important to try troubleshooting over the phone or internet first.
+ If someone else on your network is downloading a lot of media from the internet, such as watching streaming videos or downloading large files, it is probably using a significant percentage of your bandwidth. If you're familiar with your router's web interface, you may be able to find QoS (Quality of Service) settings to prioritize traffic from certain IPs or service and limit the throughput for others. Otherwise, ask them to keep their downloading habits to a minimum.
+ If you are connected to the internet via a Wi-Fi router, poor signal can lead to lower speeds and dropped connections. Move your router closer to your computer if possible, or move the computer so that it is closer to the router or keep the router on top of a cupboard to transmit better signal.Clean out the dust from your router and modem once in a while using a can of compressed air. This will help keep the unit from overheating and consequently, improve its stability.
+Maintain proper ventilation around all electrical components to avoid overheating.
+ When you activated DSL, you hooked the line from your phone jack into one side of a rectangular box filter. On the other side, you have 2 lines coming out, 1 for your phone and 1 for your modem. If you are using a DSL connection over your land-line, make sure that you have high-quality filters in place to get optimum signal speed.
+ If you are using satellite internet, your internet connection might be altered because of wind, heavy snow, rain, lightning, static, or other electrical interference.
+ Viruses can eat up your computer's resources and reduce your connection speed in addition to putting your information and identity at risk. Keeping your computer virus-free will go a long way towards speeding up your connection.You should always have an antivirus program installed and active, especially if you are using the internet. Antivirus programs can be installed for free. You should only have one antivirus installed at at time (otherwise they would conflict with each other).
+ Most antivirus programs will not scan for adware and spyware. These are potentially dangerous programs and can greatly reduce the speed of your connection as they constantly connect to other servers. Removing these can be difficult, but there are a variety of programs that are specifically deigned to target and remove invasive programs. Unlike antivirus programs, you can and should have multiple different anti-malware programs installed:
+
+
+Malwarebytes Antimalware
+Spybot Search & Destroy
+Adw Cleaner
+HitMan Pro
+
+, If you've installed a lot of toolbars for your browser, these can significantly slow down your connection. Removing these toolbars can help speed up your browser, and can also help protect your private information.
+
+
+Some toolbars can be difficult to remove, and you may need to use one of the antimalware programs listed in the previous step.
+ If your old browser is infested with hard-to-remove toolbars and everything just seems to be running really slow, you may want to consider switching to a new browser. Microsoft Edge, Chrome, and Opera are all considered significantly faster than Internet Explorer and Firefox., A poorly-optimized hard disk can drag down your computer's speed, affecting everything you do, including browsing the web. Keeping your hard drive optimized only takes a few minutes and can significantly improve your browsing experience.
+
+
+Make sure that your disk is regularly defragmented. Most modern versions of Windows automate this for you.
+Run Disk Cleanup to flush out temporary files which could be slowing down your browser.
+Try to keep at least 15% of your hard disk free. If your hard drive gets too full, programs will take longer to load and make changes, which can drastically slow down your browser.
+ Web browsers store data from websites that you visit to make visiting them again quicker in the future. If your cache gets too large though, it can actually negatively affect your performance.
+
+
+See this guide for instructions on clearing your cache depending on the browser you use.
+ Often your connection speed is slow because other programs are using it. To test if other programs, such as anti-virus and other updates, are accessing the Internet without your knowing, you'll need to open the Command Prompt. Press the Windows key + R to open the Run box. Type cmd and press Enter. (Win 7, Start>All programs>Accessories> right click on Command prompt, choose 'run as Administrator')
+
+
+Type netstat -b 5 > activity.txt and press Enter. You will start to see a list of programs that are accessing the internet. After a minute or so, press Ctrl + C to end the scan. This has created a file with a list of all programs using your Internet connection.
+Type activity.txt and press Enter to open the file and view the program list.
+ Press Ctrl + Alt + Delete simultaneously and open up the Task Manager. Go to the process menu and close those processes that may be hogging your valuable bandwidth. (NOTE: Closing processes with unknown filenames may cause known programs to not function properly).
+
+
+Look for the "User" column in the Processes tab. If the process is under the "System" User, then closing it may cause other programs to fail, requiring a restart of the computer. If the User is your name, closing the program will likely not cause any issues except with that program. Often the system will not allow closing of, or will reopen, needed system programs.
+ If you've found programs that are taking up bandwidth that you no longer need or don't remember installing, uninstalling them can help improve the bandwidth that your browser can access.
+
+
+See this guide to uninstall programs in Windows.
+See this guide to uninstall programs in OS X.
+ If many people in your building are using the same channel, then you could notice a major slowdown in your Internet speed. Use a program such as inSSIDer for PC and KisMAC or Wi-Fi Scanner for Mac to scan for channels that aren't as populated. Switching to one of these channels will reduce interference and possibly increase your speed.
+
+
+If you see a more open channel, then switch channels to increase Internet speed. You'll need to consult your router's documentation or look up the support site for your individual router to find out how to do access the router and change the wireless channel.
+ Check the manufacturer's web site for firmware downloads for your router. Compare this with your version, and upgrade if necessary. Most routers will automatically check for firmware updates when you open their configuration pages.
+ If your computer is slow, it doesn't matter how fast your Internet connection is, the whole thing will just seem slow. You can only access the Internet as fast as your PC will allow you to.
+
+
+One of the quickest and easiest computer upgrades you can perform to increase the performance of your web browser is to install more or better RAM on your computer.
+ If your router is old, chances are it can barely keep up with modern web traffic. Old wireless routers will also have weak antennae, which can leave your devices without a solid connection to the network. All of this combined can lead to sub-optimal speeds when browsing the web.
+
+
+Look for routers from trusted companies such as Netgear, D-Link, Cisco, and Belkin. Make sure that the included antennae are strong enough to reach everywhere that you need.
+If you are covering a large area with your wireless network, you may need to install a repeater. This will rebroadcast your wireless signal in another area of your home or office, and greatly increases the range of your wireless network.
+ Any solid-state electronics will degrade over time due to accumulated heat damage. Your broadband modem will have a harder and harder time 'concentrating' on maintaining a good connection as it gets older (signal to noise ratios will go down, and the number of resend requests for the same packet will go up). An after-market cable modem as opposed to a cable-company modem will frequently offer a better connection.
+
+
+Make sure that any third-party cable modem you purchase will work with your current service provider.
+ If you can, try to hardwire as many of your connected devices as possible. This will lead to higher speeds for those devices, as well as less interference for your remaining wireless devices, such as tablets and phones.
+

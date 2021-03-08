@@ -1,0 +1,40 @@
+
+
+Click on Start.
+
+
+
+ 
+
+
+Click on Settings
+
+
+
+
+
+
+Choose "Control Panel".
+
+
+
+
+
+
+Choose "Performance and Maintenance".
+
+
+
+
+
+;
+,,, You should see a window that resembles the following:
+
+,,,,, You should no longer receive any Security Center notifications.
+
+
+
+Another way to disable the Security Center for domain users is by using gpedit. You can access this by clicking Start > Run > gpedit.msc Under Computer Configuration, click Administrative Templates > Windows Components > Security Center Right click Turn on Security Center and select Properties Set the option to Disabled and click Apply. Close the Group Policy editor and your all done.
+
+
+

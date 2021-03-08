@@ -1,0 +1,58 @@
+ The calendar class also has compareTo, equals, after and before methods that work in the same way as described above for the date class. So if the date information is being held in a calendar, there is no need to extract the date just to perform a comparison. , To use the Calendar methods, you will need a few Calendar instances. Luckily, you can just grab the times from the already created Date instances.
+
+
+
+
+
+
+Calendar cal1 = Calendar.getInstance(); //declares cal1
+Calendar cal2 = Calendar.getInstance(); //declares cal2
+Calendar cal3 = Calendar.getInstance(); //declares cal3
+cal1.setTime(date1); //applies date to cal1
+cal2.setTime(date2);
+cal3.setTime(date3);
+
+
+
+
+
+, The code below should print true since cal1 is before cal2.
+
+
+
+
+
+
+System.out.print(cal1.before(cal2)); //will print true
+
+
+
+
+
+, The below code should print false since cal1 is before cal2.
+
+
+
+
+
+
+System.out.print(cal1.after(cal2)); //prints false
+
+
+
+
+
+, The below code will show an example of both a true and false case. The condition depends on the calendar instances being compared. The code should print "true," then "false" on the next line.
+
+
+
+
+
+
+System.out.println(cal1.equals(cal3)); //prints true: cal1 == cal3
+System.out.print(cal1.equals(cal2)); //prints false: cal1 != cal2
+
+
+
+
+

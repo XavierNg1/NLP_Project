@@ -1,0 +1,13 @@
+ You can download the Windows boot sector legally and for free from various places online. Be sure that you are downloading from a trusted source, and that you are downloading a Windows XP boot sector in the correct language.
+
+
+Place the boot image in the root of your C: drive. It is typically called w2ksect.bin. This will be required during the burning process.
+ There are a variety of free programs available that can create bootable discs. This guide will assume you are using ImgBurn. You will need to make adjustments to the program’s settings before you begin burning.
+ Open ImgBurn and switch to Build mode. In the output menu, choose whether you are burning to a blank disc or creating an image on your hard drive.
+
+
+Drag and drop your WINXP folder into ImgBurn.
+Select the Options tab. Change File System to ISO9660. Make sure that Recurse Subdirectories is checked.
+Select the Advanced Tab and then select the Bootable Disc tab. Check the box for Make Image bootable. Select None (Custom) from the Emulation Type dropdown menu. Click the Folder icon and select the w2ksect.bin file that you downloaded earlier. Change the Sectors To Load value from 1 to 4.
+ Confirm the changes you’ve made to the settings above. Enter any label you’d like for the disc. The burn process will commence. The time this takes will vary depending on the speed of your CD burner. Once the process is complete, your CD will work just like a typical Windows XP bootable installation CD.
+

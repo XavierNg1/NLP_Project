@@ -1,0 +1,5 @@
+ Re-running the defragmentation tool a second time on the same volume can be helpful as the first run should have resulted in unused space being left in larger chunks than prior to defragging. Running again permits file fragments that were unable to be collected and placed contiguously during the first run to be optimized in the next run.
+ After the tool completes, display the report. The important thing to check are files with many (more than 20) fragments that you use. It doesn't help to defragment files that you never access!
+
+, If the report shows a file with many fragments (that you use), there is a free tool to make a single file (or files that match a pattern) contiguous, available at http://technet.microsoft.com/en-us/sysinternals/bb897428.aspx. This is a command line utility started from the "Run" or "Command Line" button of the "Start" menu.
+

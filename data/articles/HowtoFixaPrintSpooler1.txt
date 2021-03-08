@@ -1,0 +1,27 @@
+ You can't solve all print spooler issues just by changing the options, but this is a quick and safe place to start. These methods should work on any version of Windows from XP onward (and may work on an earlier OS):
+
+
+Press the Windows key + R to open the Run dialogue. Type services.msc and press ↵ Enter. Double-click Print Spooler.
+Alternatively, click Start → Control Panel → Administrative Tools → Services → Print Spooler
+;
+, The Stop and Start buttons are located in the Print Spooler Properties window you just opened, on the General tab. Some errors are fixed by stopping, then starting the print spooler again. Leave the window open, as we have a couple other changes to make.
+ Select the drop-down menu following "Startup type." Select Automatic to ensure the spooler starts up each time your computer does, so it doesn't miss any incoming print jobs. Press Apply in the lower right to save your changes., Next, click on the Recovery tab. This controls how the spooler responds to its own errors. A few adjustments will maximize the chance of the spooler solving its own issues, and minimize the chance of it causing a crash. Change the settings to match the following:First failure: Restart the Service
+
+Second failure: Restart the Service
+
+Subsequent failures: Take No Action
+
+Reset fail count after: 1 days
+Restart service after: 1 minutes
+When you're finished, click Apply.
+ Click the Log On tab. If the box next to "Allow interaction with desktop" is checked, uncheck it.Keeping this box checked can cause issues, and should not be necessary for any reasonably modern setup.As always, click Apply.
+ At this point, you can try printing again. You may need to close the Properties window and/or restart your computer before the changes take effect. If you still get an error message, continue on to the next step.
+ Return to the Print Spooler Properties window as described above, if you closed it. Click the Dependencies tab and look at the top box, labeled "This service depends on the following system components."Look up the status of each service listed in this panel:
+
+
+Return to the Services window. If you closed it, open it again as described in the first step of this method.
+Find the name of one of the services you saw in the upper Dependencies pane, listed under the Name column.
+Confirm that the word "Started" is in the Status column for that file.
+Confirm that the word "Automatic" is in the Startup Type column for that file.
+If one of the services you looked up does not have these values, Stop and Start that service. You can do this with the icons in the Services window, or by double-clicking the service name and using the buttons in its Properties window.
+If the Stop and Start icons are greyed out, or if stopping and starting does not change the values to "Started" and "Automatic," try reinstalling the drivers as described below.If this doesn't work, you may need a specific troubleshooting guide for that service, which may involve high-risk registry editing.

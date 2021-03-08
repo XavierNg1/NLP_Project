@@ -1,0 +1,42 @@
+ Windows XP does not include a "Shrink Partition" function so you'll be using a third-party tool. This means that there's an increased chance that your data could be lost or corrupted. Backup all of your important data to another location before shrinking in case something goes wrong.
+
+
+
+Click here for detailed instructions on quickly backing up your important files.;
+, The free version can perform most basic partition tasks. There are a variety of free partition managers available that do the same thing. The benefit of MiniTool Partition Wizard is that you can use it in Windows.
+
+
+You can download MiniTool Partition Wizard for free from partitionwizard.com/free-partition-manager.html.
+ You will see a list of your installed hard disks and each of the partitions they contain. At the top of the list you will see the layout of your partitions on the disk. The layout determines how you can shrink the partition.
+ You can shrink any partition that has been formatted, even your Windows boot partition. You won't be able to shrink unallocated space or unformatted space until it has been formatted with a file system.
+ This will open a new window with a bar representing the partition's storage. Any data currently on the partition will be represented by a slightly darker color.
+ You can shrink the partition from either side. Unallocated space will be created on each side of the partition depending on how much you shrink. You can't shrink the partition more than the amount of free space.
+
+
+Choosing the correct side is important if you want to add that space to an existing partition. For example, you have a C: drive with your Windows installation and a D: drive with your data. To add space to the Windows partition (C:), you'll need to shrink the D: drive on its left side. This will create unallocated space between the C: and D: drives. You can then add it to the C: drive.
+ Partition Wizard allows you to queue up multiple changes to be applied at once. You can use this function to perform several tasks at once.
+
+
+The first shrink procedure in our example left unallocated space between the C: and D: drives. Select the C: drive, click "Move/Resize", and then use the slider to add the additional space on the right side of the C: partition. You now have two tasks queued up.
+ Partition Wizard will warn you to close any open programs and to backup your data.
+
+
+Partition Wizard will be able to perform the action immediately if the partition being adjusted in not in use. The shrink process shouldn't take more than a few seconds, but older computers or large partitions may take longer.
+If a partition that you are adjusting is in use, such as your Windows partition, you will be given a couple of different options. Select "Restart Now" to restart your computer and perform the task. Partition Wizard will boot into a special interface and automatically finish the task. Windows will then continue to boot normally.
+ Now that you've shrunk a partition, you can convert your new unallocated space into a partition, or add it to an existing one.Click here for instructions on creating a new partition.
+
+Click here for instructions on extending a partition.
+ You will encounter this error if you have four primary partitions. Each partition in the list will say "Primary" or "Logical" in the "Type" column. You won't be able to create any new ones until you set one of the primaries as a logical.
+
+
+Select a partition that doesn't need to be primary. This is usually a data or program partition. Any partition that you boot from, such as your operating system or recovery partition, must be set as a primary one.
+Click the "Set partition as logical" button in the left menu.
+Try creating a partition from the unallocated space. You should now be able to create a partition.
+ This could be caused by errors in the hard disk. Running the "chkdsk" command will attempt to repair your disk so that you can shrink the partition.
+
+
+Click Start and select "Command Prompt".
+Type Template:Chkdsk c: /r and press ↵ Enter. Replace c: with the drive letter that you need to scan.
+Wait for chkdsk to complete. You may be prompted to reboot so that chkdsk can perform fixes.
+ Your master boot record likely got damaged and needs to be repaired. Click here for detailed instructions on repairing Windows XP.
+

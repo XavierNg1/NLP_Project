@@ -1,0 +1,6 @@
+ The more data you gather, the better., For example, suppose alleles A1 and B1 one locus 1 came from one parent, and A2 and B2 on locus 2 came from the other. Progeny inheriting A1B1 or A2B2 is non - recombinant, while those inheriting A1B2 or A2B1 are recombinant., This is given by ((R/(R+NR))^R)*((1-(R/(R+NR)))^NR), where R = number of recombinants, NR = number of nonrecombinants.
+
+For example, in the MNS blood group system, M and S are linked, and N and s are linked. Suppose that in 100 random individuals, 25 have MS haplotype, 30 have Ms haplotype, 6 have NS haplotype, and 39 have Ns haplotype. Since M and S are linked, and N and s are linked, MS and Ns are non - recombinants, and Ms and NS are recombinants.
+Thus, the number of recombinants = R = 30+ 6 = 36, while the number of nonrecombinants = NR = 25 + 39 = 64. The recombinant frequency is R/(R+NR) = 36/(36+64) = 0.36.
+The probability of obtaining the results assuming the two loci are linked is therefore ((0.36)^36)*((1-(0.36))^64) = 4.19187538*10^-29.
+ This is given by 0.5^(NR+R). In the example above, this is 0.5^(64+36) = 0.5^100 = 7.88860905×10^-31., For our example, this equals 4.19187538*10^-29/7.88860905×10^-31 = 53.14., For the example, this equals log 53.14 = 1.73.

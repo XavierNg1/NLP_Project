@@ -1,0 +1,22 @@
+ The process for converting videos will vary slightly depending on your Linux distribution. The following commands will be for Ubuntu Linux, but should be easily adaptable to your distribution.
+
+
+In many distributions, you can open the Terminal by pressing Ctrl+Alt+T.
+ Use your package manager commands to install FFmpeg on your Linux computer. The following commands are for Ubuntu and other Debian distributions:
+
+
+sudo apt-get update
+sudo apt-get install ffmpeg
+
+, Use the Terminal to open the directory containing the WMV file that you want to convert to AVI.
+
+
+cd path/to/directory
+
+, Use the ls command to view all of the files in the current directory. Find the WMV file that you want to convert and make note of its exact file name.
+ Once you know the file name, enter the following command to convert the file from WMV to AVI:
+
+
+ffmpeg -i OriginalFile.wmv ConvertedFile.avi
+
+, Your new AVI file will be located in the same directory as the original WMV. Open it to test the conversion.

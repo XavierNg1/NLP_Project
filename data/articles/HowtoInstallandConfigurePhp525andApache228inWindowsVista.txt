@@ -1,0 +1,144 @@
+
+
+To download apache 2.2.8, go the website http://httpd.apache.org/download.cgi and then find and click on apache_2.2.8-win32-x86-no_ssl.msi in the page and then click on save. Choose the path where do you want to download and save the file.
+
+
+
+ 
+
+
+To download php 5.2.5, go to the website http://de.php.net/downloads.php. In particular, download the zip package from the "Windows Binaries" section that is click on PHP 5.2.5 zip package. (Warning: Do not get the installer.) You should be directed to a page where you have mirror options to download. You can choose any option from the recommended mirrors which will be automatically detected. Click on that mirror and then download and save it to your hard drive.
+
+
+
+
+
+;
+,
+
+
+
+
+
+
+Click on next.
+
+
+
+
+
+
+Select “I accept the terms in the license agreement” and then click next. Click next again.
+
+
+
+
+
+
+Write “localhost” on server domain.
+
+
+
+
+
+
+Write “localhost” in server Name box.
+
+
+
+
+
+
+Write your own email address at Administrator’s Email Address.
+
+
+
+
+
+
+Select “for all users, on Port 80, as a Service – Recommended” and then click on next.
+
+
+
+
+
+
+Select custom setup type and then click next.
+
+
+
+
+
+
+Change the destination folder to “C:\Program Files\apache” and then click on ok. Then click on next. Finally click on install.
+
+
+
+
+
+
+Apache web-server should install in few minutes. Click on finish.
+
+
+
+
+
+
+
+To check if Apache has been successfully installed in your Windows PC you need to open a web browser and then on the address bar type “//localhost” and then hit enter. You should see a page that says “It Works!” on the top left hand corner.
+ On the Destination folder type “C:\Program Files\php” then click on Extract.
+
+Go to your apache installation path, and then open httpd.conf which is located under the conf directory “C:\Program Files\apache\conf” double click on httpd.conf file. Find (ctrl+F) 'loadmodule'. After the last line of the loadmodule section type: LoadModule php5_module C:/Program Files/php/php5apache2_2.dll
+
+
+
+
+
+
+After you have done look for <IfModule mime_module> and then add the following lines
+
+
+
+
+
+
+AddType application/x-httpd-php .php
+AddType application/x-httpd-php-source .phps
+
+
+Before the closing statement </IfModule> for mime_module
+
+
+
+
+
+
+After that on the same page find <IfModule dir_module> and then add DirectoryIndex index.html and index.php before </IfModule> if it already does not exists.
+
+
+
+
+
+
+Add the following line “PHPIniDir “C:/Program Files/php” to the bottom of the file.
+
+
+
+
+
+
+After you have done that save the file and close it.
+ Open that file and then inside the file find the following and replace it as follows:
+
+
+
+
+
+
+doc_root = C:\Users\\Documents\extension_dir = “C:\Program Files\php\ext”
+Save it. After that go to Start menu->> All Programs ->> Apache HTTP Server 2.2 ->> Control Apache Server ->> Restart. This should restart the apache server.
+
+
+To check if apache and php are configured successfully, create a new text document (in Notepad for example) in the doc_root folder you defined a few lines above; in that text document type “ <?php phpinfo(); ?>” and then Save As (File Name) "phpinfo.php", type “All Files”. Now you have done that go to new web browser and then type “//localhost/phpinfo.php”.
+If you get the following page then you have successfully downloaded, installed and configured php 5.2.5 and apache 2.2.8.
+

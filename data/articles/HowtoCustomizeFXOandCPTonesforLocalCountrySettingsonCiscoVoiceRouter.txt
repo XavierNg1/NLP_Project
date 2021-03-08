@@ -1,0 +1,35 @@
+;
+,, See below example.
+
+
+voice class custom-cptone cpt
+dualtone busy
+frequency 325 325
+cadence 400 400
+dualtone ringback
+frequency 325 325
+cadence 100 400
+dualtone reorder
+frequency 325 325
+cadence 150 150
+dualtone out-of-service
+frequency 325 325
+cadence 220 220
+
+,
+
+
+voice-port 1/1/1
+supervisory disconnect dualtone mid-call
+supervisory custom-cptone cpt
+
+,
+
+
+no comfort-noise
+timeouts call-disconnect 1
+timeouts wait-release 1
+timing hookflash-out 50
+Connection Plar OPX ......(Extension of operator or Voicemail system)
+caller-id enable
+

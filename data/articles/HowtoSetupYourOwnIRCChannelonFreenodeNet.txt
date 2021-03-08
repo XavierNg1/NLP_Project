@@ -1,0 +1,17 @@
+ IRC channel names start with a #, and Freenode's policy dictates that "off topic" channels should start with ##; e.g. ##mychannel.;
+,
+
+
+Use the /join ##mychannel command.
+If the channel was empty, it will be created and you will automatically become a "channel operator" (sometimes "chanop" or "op"). Ops are allowed to manage the channel – for example, to ban abusers.
+If the network doesn't give you op rights, it means the channel is already registered by somebody else.
+ This makes sure nobody else can take over the channel.
+
+
+/msg ChanServ register ##mychannel
+
+,,
+
+
+/msg ChanServ op ##mychannel
+

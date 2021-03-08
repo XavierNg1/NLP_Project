@@ -1,0 +1,15 @@
+ So the first step is to get send framework and install it in the directory on your site where the pages will be located. So go to Zend link below and download the framework: Zend Framework DownLoad. Once you have downloaded this package upload it to the directory where you will be creating the web pages that you will use to access Google calendar.;
+, In these examples, a public calendar created on Google will be used. It is also possible to use a private calendar as you will be authenticating via your PHP interface. Once you have created a Google calendar you can go to the calendar's individual setting page and you will find an entry showing the calendar address;It looks like - Calendar ID: 44k16aib9grq8c4d8pri055u5s@group.calendar.google.com
+
+,
+
+
+This code shows the classes you need and loads them.
+Next you need some basic functions that will you need to access events and search for events and then update those events. First here is the code for updating events.
+You also need a function updating events.
+Last is the function that is the backbone and allows you to pass parameters to it then are you changes to the calendar and the original calendar events.
+
+The function 'update_google()' contains four parameters that are passed. The first three identify the entry title of the old and new entry and the fourth term identifies the date.
+Since it's using a title that changes 'prefix' (in this case the old being the second term and the new one being the third term) but keeps the same main term (the third term), send three parameters to the function to define them.
+The fourth term is the date to be searched for. Since it's searching for items that are entire day (i.e. not time specific), it's set to first calculate the next day to use in the min and max settings of the query.
+

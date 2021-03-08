@@ -1,0 +1,47 @@
+ A simple system of notation is used when describing Rubik's cube algorithms. You'll need to understand how this system works before beginning.
+
+There is a letter to indicate each face of the cube.
+
+F = front (the side facing you)
+L = left (the vertical face on your left-hand side)
+R = right (vertical face on your right-hand side)
+B = back (the side that faces directly away from you)
+U = top (the side that faces upward)
+D = down (the side that faces downward)
+
+
+Any of the letters, by itself, means to turn that side clockwise 90°.
+A 2 before any letter means to turn that side 180°.
+A ' before any letter means to turn that side counterclockwise 90°.
+FC means "favorite color."
+
+
+
+
+
+
+,, This will be your U face.,, Then use one of the following sequences to move it to the top.,,,,, It will be the color that is on all of the disoriented remaining cubes., You have to get those into the correct position).,,, Looking at the bottom face, identify it from one of the following patterns:,,,,,, Note: This is much easier if you can solve a 3x3x3 cube.
+
+
+
+
+
+
+;
+, This will be your Favorite Colour (FC).
+,,, Then twist the side that does not have these two down to the bottom (180 degrees), and position the correct block under the correct place.
+ Repeat with the other block.
+ Halfway. Next, turn the whole cube upside down, so the top = bottom.
+ For example, the only color not used so far is on the current top.
+ Repeat: repeat down up left right until that block is orientated the right way up.
+ Then make the top layer sides match the bottom layer sides.
+ You've done it.
+ Use the R' D' R D algorithm to place the corners into the chosen face., This can get get a bit complicated! If you have a singe yellow dot place on the bottom left, if you have a horizontal line place it at the top and if you have a diagonal line place it so that it is pointing to the top right., This is exactly like how you place the corners on the 3X3X3 rubik's cube. Use the R' F R' B2 R F' R' B2 R2 U'., This should be easy to do, but if you get stuck, use the algorithms below. Find a white piece on the top face and put it above the space on the bottom face you need it to move to. This step is finished if the white face is complete and the layer above it is also complete.
+
+
+If a white piece is on the top face, use the following algorithm: F, U', F', 2U. Once this part is complete, use one of the algorithms below based on the location of a white face.
+If a white piece is on the right side of one of the "cubelets" on the top face, use the following algorithm: R, U, R'. You might need to turn the whole cube so that the white piece is on the right side.
+If a white piece is on the left side of one of the "cubelets" on the top face, use the following algorithm: L',U', L. You might need to turn the whole cube so that the white piece is on the left side.
+If a white piece is near the bottom, you will need to move it up, then do one of the algorithms.
+ It doesn't need to look exactly like the pieces at the top., Find a yellow piece on the top with another yellow piece next to it on the layer below, as shown in the picture. Then do the algorithm: R, U, R', U, R, 2U, R'. This is by far the longest part of the process. If you cannot find the pattern shown in the picture, do the algorithm again. If after repeated attempts you still can't get the pattern, it would be best to scramble the cube and start over.
+ By now you should have solved the yellow and white faces. Do a "U-turn," turning the top layer until there is another face solved (any color is fine)., Then do the following algorithm: R', F, R', 2B, R, F', R', 2B, 2R.,

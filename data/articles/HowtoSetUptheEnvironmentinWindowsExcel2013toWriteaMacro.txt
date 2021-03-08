@@ -1,0 +1,32 @@
+ The first step to setting up the environment is to open up Excel to a blank workbook. Once the blank workbook is open, click on the “FILE” tab in the menu bar on the upper left hand side of the workbook. (The “FILE” tab will be the only tab highlighted dark green.);
+, On the left hand side of the page, there are different options like “Info”, “New”, “Open”, etc. Since we are interested in customizing the workbook format, click on the last button, “Options”.
+ A new window will open with a header that says “Excel Options”. On the left hand side of the window there is a menu, find and click the option that says “Customize Ribbon”.
+ The window will have two columns, one on the left with a header that reads “Choose commands from:” and the other on the right that says “Customize the Ribbon:”.
+
+
+Since you are interested in adding the developer tab (which includes all of the tools necessary for coding in VBA) to the ribbon of the workbook, go to the “Customize the Ribbon” column.
+Select the option “Developer” and ensure that the box to the left of the word “Developer” has a checkmark. After you have checked the box, press “OK” on the “Excel Options” window so that the changes are implemented.
+ The workbook will look almost exactly the same as it did before, but now the “DEVELOPER” tab has been added. Since we need to access different buttons in the developer tab to continue setting up the coding environment, go to the “DEVELOPER” tab and select it.
+ Directly under the menu bar, there will be three important buttons to use when writing and running your first macro. The first is the “Visual Basic” button, which is the left most button.
+
+
+This is the environment that you need in order to write your code. The second is the “Macros” button, which is the button to the right of the “Visual Basic” button. This button opens up a new window that lists all the different macros associated with this workbook and allows you to run any of the macros that you select. The smaller button next to the “Macros” button that says “Record Macro” can be utilized if you do not want or know how to write VBA code but still want to develop a macro. Since you are interested in setting up the environment, select the “Visual Basic” button.
+ A new window will open up; this is the Visual Basic environment. In order to write, format and troubleshoot a macro, you must enable a few toolbars. To do so go to the menu bar and select “View”. From there a drop down menu will show, and since we want to add toolbars select the “Toolbars” option.
+
+
+From here a smaller menu will open to the side and there will be three different options. At this point the “Standard” toolbar will be the only option selected. Since we want the other two toolbars to appear, select both the “Debug” and “Edit” options. Each toolbar will show up on the window as two separate smaller windows.
+ Since the toolbars will pop up as little separate windows, it is useful to pin these toolbars near the top of the window so that they stay out of the way. To do this click and hold down on the top portion of one of the toolbar windows where the title of the window is located.
+
+
+While still holding down on this part of the window, drag the toolbar up towards the top of the page so that it locks onto the top portion of the window. Repeat this process for the other toolbar, keeping in mind that it does not matter exactly where you decide to pin the toolbar. The location of the different toolbars is just a personal preference and you can always move the toolbar once it’s locked by pressing and holding down on the little three vertical dots on the left of the toolbar.
+Note: The toolbar windows may disappear when moving between this tutorial and the Excel window. To get the toolbar windows to appear again, select the last button of the standard toolbar that has a line and down pointing arrow.* From here click on the option, “Add or Remove Buttons” and the toolbar windows will appear again.
+To find out what each of the buttons do in these new toolbars, you can hover over each button and a small descriptive title for each button will appear.
+ An important requirement to enable when writing a macro is to require variable declaration. By enabling this feature, the header of every module will read “Option Explicit”. This requires that all of the variables used in the program are declared and helps avoid errors due to typos. To enable this, go to “Tools” in the menu bar and select “Options…”
+
+
+By requiring variable declaration, you ensure that if a typo is made when typing a variable name in your VBA code, that the code will not set this typo as a new variable. Otherwise, if a new variable is unintentionally created, then when you run the code you may get either an incorrect output or an error.
+ When the “Options” window opens, select and check mark “Require Variable Declaration”. Make sure to press “OK” to save your changes. (20)
+
+, In a VBA programming environment, the area where you physically type in your code is called a Module. Whenever you wish to write a new macro in a workbook, you will need to create a new module. To create a new module, go to the Standard Toolbar and go to the second icon from the left. When hovering over this icon, a small message should appear that says “Insert UserForm”. However, instead of clicking on the icon, click on the small down pointing arrow to the right of this icon. A small drop down menu will appear and select the option that says “Module”.
+ A new blank window will appear and this is where your code goes. Your Excel environment is now set up so that you can begin to code in VBA! A good place to start to learn how to code is on Microsoft’s Developer Network.
+

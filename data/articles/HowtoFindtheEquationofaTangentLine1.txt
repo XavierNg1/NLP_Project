@@ -1,0 +1,31 @@
+ A graph makes it easier to follow the problem and check whether the answer makes sense. Sketch the function on a piece of graph paper, using a graphing calculator as a reference if necessary. Sketch the tangent line going through the given point. (Remember, the tangent line runs through that point and has the same slope as the graph at that point.)
+
+
+Example 1: Sketch the graph of the parabola f(x)=0.5x2+3x−1{\displaystyle f(x)=0.5x^{2}+3x-1}. Draw the tangent going through point (-6, -1).You don't know the tangent's equation yet, but you can already tell that its slope is negative, and that its y-intercept is negative (well below the parabola vertex with y value -5.5). If your final answer doesn't match these details, you'll know to check your work for mistakes.
+;
+, For function f(x), the first derivative f'(x) represents the equation for the slope of the tangent line at any point on f(x). There are many ways to take derivatives. Here's a simple example using the power rule:Example 1 (cont.): The graph is described by the function f(x)=0.5x2+3x−1{\displaystyle f(x)=0.5x^{2}+3x-1}.Recall the power rule when taking derivatives: ddxxn=nxn−1{\displaystyle {\frac {d}{dx}}x^{n}=nx^{n-1}}.The function's first derivative = f'(x) = (2)(0.5)x + 3 - 0.f'(x) = x + 3. Plug any value a for x into this equation, and the result will be the slope of the line tangent to f(x) at the point were x = a.
+ Read the problem to discover the coordinates of the point for which you're finding the tangent line. Enter the x-coordinate of this point into f'(x). The output is the slope of the tangent line at this point.
+
+
+Example 1 (cont.): The point mentioned in the problem is (-6, -1). Use the x-coordinate -6 as the input for f'(x):f'(-6) = -6 + 3 = -3The slope of the tangent line is -3.
+ The point-slope form of a linear equation is y−y1=m(x−x1){\displaystyle y-y_{1}=m(x-x_{1})}, where m is the slope and (x1,y1){\displaystyle (x_{1},y_{1})} is a point on the line.You now have all the information you need to write the tangent line's equation in this form.
+
+
+Example 1 (cont.): y−y1=m(x−x1){\displaystyle y-y_{1}=m(x-x_{1})}The slope of the line is -3, so y−y1=−3(x−x1){\displaystyle y-y_{1}=-3(x-x_{1})}The tangent line passes through (-6, -1), so the final equation is y−(−1)=−3(x−(−6)){\displaystyle y-(-1)=-3(x-(-6))}Simplify to y+1=−3x−18{\displaystyle y+1=-3x-18}y=−3x−19{\displaystyle y=-3x-19}
+
+
+, If you have a graphing calculator, graph the original function and the tangent line to check that you have the correct answer. If working on paper, refer to your earlier graph to make sure there are no glaring mistakes in your answer.
+
+
+Example 1 (cont.): The initial sketch showed that the slope of the tangent line was negative, and the y-intercept was well below -5.5. The tangent line equation we found is y = -3x - 19 in slope-intercept form, meaning -3 is the slope and -19 is the y-intercept. Both of these attributes match the initial predictions.
+ Here's a run-through of the whole process again. This time, the goal is to find the line tangent to f(x)=x3+2x2+5x+1{\displaystyle f(x)=x^{3}+2x^{2}+5x+1} at x = 2:
+
+Using the power rule, the first derivative f′(x)=3x2+4x+5{\displaystyle f'(x)=3x^{2}+4x+5}. This function will tell us the slope of the tangent.
+
+Since x = 2, find f′(2)=3(2)2+4(2)+5=25{\displaystyle f'(2)=3(2)^{2}+4(2)+5=25}. This is the slope at x = 2.
+
+Notice we do not have a point this time, only an x-coordinate. To find the y-coordinate, plug x = 2 into the initial function: f(2)=23+2(2)2+5(2)+1=27{\displaystyle f(2)=2^{3}+2(2)^{2}+5(2)+1=27}. The point is (2,27).
+
+Write the tangent line equation in point-slope form: y−y1=m(x−x1){\displaystyle y-y_{1}=m(x-x_{1})}y−27=25(x−2){\displaystyle y-27=25(x-2)}If required, simplify to y = 25x - 23.
+
+

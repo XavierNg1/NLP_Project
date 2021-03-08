@@ -1,0 +1,217 @@
+ Recall that the definition of the derivative involves a limit, and in order for limits to be rigorous, we need to incorporate (ϵ,δ).{\displaystyle (\epsilon ,\delta ).} We will review in two dimensions. 
+
+The function f(x,y){\displaystyle f(x,y)} is differentiable at the point (x0,y0){\displaystyle (x_{0},y_{0})} if and only if it can be written in the form below, where a{\displaystyle a} and b{\displaystyle b} are constants, and ξ{\displaystyle \xi } is an error term.
+
+
+f(x,y)=f(x0,y0)+a(x−x0)+b(y−y0)⏟tangent plane+ξ(x,y)⏟error term{\displaystyle f(x,y)=\underbrace {f(x_{0},y_{0})+a(x-x_{0})+b(y-y_{0})} _{\text{tangent plane}}+\underbrace {\xi (x,y)} _{\text{error term}}}
+
+Given any ϵ>0,{\displaystyle \epsilon >0,} there exists a δ>0{\displaystyle \delta >0} such that |ξ(x,y)|<ϵ(x−x0)2+(y−y0)2{\displaystyle |\xi (x,y)|<\epsilon {\sqrt {(x-x_{0})^{2}+(y-y_{0})^{2}}}} whenever 0<(x−x0)2+(y−y0)2<δ.{\displaystyle 0<{\sqrt {(x-x_{0})^{2}+(y-y_{0})^{2}}}<\delta .}
+
+
+
+What does all this mean? Essentially, a function differentiable at a point can be written as a tangent plane with a correcting term. That means the function must be locally linear near the point. – If you zoom in on the function at that point, equivalent to choosing a smaller and smaller ϵ,{\displaystyle \epsilon ,} the function begins to look more and more like a plane.
+
+So in order for this function to be differentiable, this error term must get smaller faster than a linear approach. If you approached the point linearly (or worse) from some distance (the reason why you see the distance square root), then you get something similar to the shape of an absolute value, or a cusp, and we know that the function at such a point is not differentiable. That is why we have the inequality involving |ξ(x,y)|.{\displaystyle |\xi (x,y)|.}
+;
+, If the function z=f(x,y){\displaystyle z=f(x,y)} is differentiable at the point (x0,y0):{\displaystyle (x_{0},y_{0}):}
+
+Then the partial derivative with respect to x{\displaystyle x} is intuitively the slope of the tangent line at (x0,y0){\displaystyle (x_{0},y_{0})} parallel to the xz-axis, where x{\displaystyle x} approaches x0{\displaystyle x_{0}} (see the visual above, where the tangent line is on x=1{\displaystyle x=1}). In other words, it is the limit of difference quotients. Mathematically, we can write it as follows.
+
+
+a=∂f∂x|(x0,y0)=limx→x0f(x,y0)−f(x0,y0)x−x0{\displaystyle a={\frac {\partial f}{\partial x}}{\Bigg |}_{(x_{0},y_{0})}=\lim _{x\to x_{0}}{\frac {f(x,y_{0})-f(x_{0},y_{0})}{x-x_{0}}}}
+
+
+
+The partial derivative with respect to y{\displaystyle y} works in a similar manner. The slope of the tangent line is now parallel to the yz-axis. 
+
+
+b=∂f∂y|(x0,y0)=limy→y0f(x0,y)−f(x0,y0)y−y0{\displaystyle b={\frac {\partial f}{\partial y}}{\Bigg |}_{(x_{0},y_{0})}=\lim _{y\to y_{0}}{\frac {f(x_{0},y)-f(x_{0},y_{0})}{y-y_{0}}}}
+
+
+
+As with the ordinary derivative, using the definition is almost never the practical way to evaluate derivatives. Rather, several techniques are used to bypass the definition. It is important, though, that you understand the definition and how partials generalize ordinary derivatives to whatever the number of dimensions might be, not just two. 
+
+
+, All of the properties of ordinary derivatives listed below carry over to partials as well. These properties are all theorems, but we will not prove them here. All properties assume that the derivative exists at a particular point.
+
+The derivative of a constant times a function equals the constant times the derivative of the function, i.e. you can factor scalars out. When dealing with partial derivatives, not only are scalars factored out, but variables that we are not taking the derivative with respect to are as well.
+
+
+ddxcf(x)=cddxf(x){\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }x}}cf(x)=c{\frac {\mathrm {d} }{{\mathrm {d} }x}}f(x)}
+
+
+
+The derivative of a sum is the sum of the derivatives. This and the previous property both stem from the fact that the derivative is a linear operator, which by definition must satisfy exactly these two types of conditions. 
+
+
+ddx(f(x)+g(x))=ddxf(x)+ddxg(x){\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }x}}(f(x)+g(x))={\frac {\mathrm {d} }{{\mathrm {d} }x}}f(x)+{\frac {\mathrm {d} }{{\mathrm {d} }x}}g(x)}
+
+
+
+If a function is differentiable at a point, then it is continuous at that point. The converse is obviously not true: If you completely understood step 1 you would realize that a function containing a cusp is continuous at, but is not differentiable at the cusp.
+
+
+
+f(x,y)=2x2y3−3x4y2{\displaystyle f(x,y)=2x^{2}y^{3}-3x^{4}y^{2}}
+
+
+, Use the power rule ddxxn=nxn−1{\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }x}}x^{n}=nx^{n-1}} for x{\displaystyle x} only.
+
+
+∂f∂x=2⋅2x2−1y3−4⋅3x4−1y2=4xy3−12x3y2{\displaystyle {\begin{aligned}{\frac {\partial f}{\partial x}}&=2\cdot 2x^{2-1}y^{3}-4\cdot 3x^{4-1}y^{2}\\&=4xy^{3}-12x^{3}y^{2}\end{aligned}}}
+
+
+, Second order partial derivatives can either be "pure" or mixed. 
+
+The notation for pure second derivatives is straightforward. 
+
+
+fxx(x0,y0)=∂2f∂x2=limx→x0fx(x,y0)−fx(x0,y0)x−x0{\displaystyle f_{xx}(x_{0},y_{0})={\frac {\partial ^{2}f}{\partial x^{2}}}=\lim _{x\to x_{0}}{\frac {f_{x}(x,y_{0})-f_{x}(x_{0},y_{0})}{x-x_{0}}}}
+
+
+fyy(x0,y0)=∂2f∂y2=limy→y0fy(x0,y)−fy(x0,y0)y−y0{\displaystyle f_{yy}(x_{0},y_{0})={\frac {\partial ^{2}f}{\partial y^{2}}}=\lim _{y\to y_{0}}{\frac {f_{y}(x_{0},y)-f_{y}(x_{0},y_{0})}{y-y_{0}}}}
+
+
+
+Mixed derivatives are when the second (or higher) derivative is being taken with respect to a variable other than the first. The subscript notation consists of higher derivatives written to the right, while Leibniz's notation has the higher derivatives written to the left. Be careful of the order.
+
+
+fxy(x0,y0)=∂2f∂y∂x=limy→y0fx(x0,y)−fx(x0,y0)y−y0{\displaystyle f_{xy}(x_{0},y_{0})={\frac {\partial ^{2}f}{\partial y\partial x}}=\lim _{y\to y_{0}}{\frac {f_{x}(x_{0},y)-f_{x}(x_{0},y_{0})}{y-y_{0}}}}
+
+
+fyx(x0,y0)=∂2f∂x∂y=limx→x0fy(x,y0)−fy(x0,y0)x−x0{\displaystyle f_{yx}(x_{0},y_{0})={\frac {\partial ^{2}f}{\partial x\partial y}}=\lim _{x\to x_{0}}{\frac {f_{y}(x,y_{0})-f_{y}(x_{0},y_{0})}{x-x_{0}}}}
+
+
+
+
+, Pay attention to what variables you are taking the partial with respect to, and in what order you are taking them in. 
+
+Let's find the derivative of the result we got in the previous section with respect to y.{\displaystyle y.} In other words, we are finding fxy.{\displaystyle f_{xy}.}
+
+
+∂f∂x=4xy3−12x3y2{\displaystyle {\frac {\partial f}{\partial x}}=4xy^{3}-12x^{3}y^{2}}
+
+
+∂2f∂y∂x=12xy2−24x3y{\displaystyle {\frac {\partial ^{2}f}{\partial y\partial x}}=12xy^{2}-24x^{3}y}
+
+
+
+Now let's find the other mixed derivative, or fyx.{\displaystyle f_{yx}.}
+
+
+∂f∂y=6x2y2−6x4y{\displaystyle {\frac {\partial f}{\partial y}}=6x^{2}y^{2}-6x^{4}y}
+
+
+∂2f∂x∂y=12xy2−24x3y{\displaystyle {\frac {\partial ^{2}f}{\partial x\partial y}}=12xy^{2}-24x^{3}y}
+
+
+
+Notice that the mixed derivatives are the same! This is sometimes known as Clairaut's theorem: if fxy{\displaystyle f_{xy}} and fyx{\displaystyle f_{yx}} are continuous at (x0,y0),{\displaystyle (x_{0},y_{0}),} then they are equal. The requirement that the derivatives be continuous means that this theorem only applies for smooth, well-behaved functions.
+ The single-variable product rule carries over naturally to multivariable calculus; each function "gets its turn" to differentiate.
+
+
+∂∂xf(x,y)g(x,y)=∂f∂xg+f∂g∂x{\displaystyle {\frac {\partial }{\partial x}}f(x,y)g(x,y)={\frac {\partial f}{\partial x}}g+f{\frac {\partial g}{\partial x}}}
+
+
+,
+
+
+z=xexy2{\displaystyle z=xe^{x}y^{2}}
+
+
+, Let f(x,y)=x{\displaystyle f(x,y)=x} and g(x,y)=exy2.{\displaystyle g(x,y)=e^{x}y^{2}.}
+
+
+∂z∂x=exy2+xexy2{\displaystyle {\frac {\partial z}{\partial x}}=e^{x}y^{2}+xe^{x}y^{2}}
+
+
+, The single-variable quotient rule carries over naturally as well. However, it is generally easier to convert a function so that you can use the product rule instead.
+
+
+∂∂xf(x,y)g(x,y)=g∂f∂x−f∂g∂xg2{\displaystyle {\frac {\partial }{\partial x}}{\frac {f(x,y)}{g(x,y)}}={\frac {g{\frac {\partial f}{\partial x}}-f{\frac {\partial g}{\partial x}}}{g^{2}}}}
+
+
+,
+
+
+z=2x2yxy2+1{\displaystyle z={\frac {2x^{2}y}{xy^{2}+1}}}
+
+
+,
+
+
+∂z∂y=(xy2+1)(2x2)−(2x2y)(2xy)(xy2+1)2=2x2(1−xy2)(xy2+1)2{\displaystyle {\begin{aligned}{\frac {\partial z}{\partial y}}&={\frac {(xy^{2}+1)(2x^{2})-(2x^{2}y)(2xy)}{(xy^{2}+1)^{2}}}\\&={\frac {2x^{2}(1-xy^{2})}{(xy^{2}+1)^{2}}}\end{aligned}}}
+
+
+, Here, f(x,y){\displaystyle f(x,y)} is a function of x{\displaystyle x} and y,{\displaystyle y,} which are in turn written in terms of two other variables s{\displaystyle s} and t.{\displaystyle t.} In other words, we are dealing with a composition of functions f(x(s,t),y(s,t)).{\displaystyle f(x(s,t),y(s,t)).}
+
+
+f(x,y)=3x2y−4xy3{\displaystyle f(x,y)=3x^{2}y-4xy^{3}}
+
+
+x(s,t)=st−3s2{\displaystyle x(s,t)=st-3s^{2}}
+
+
+y(s,t)=s+t{\displaystyle y(s,t)=s+t}
+
+
+, Because f{\displaystyle f} is not defined directly in terms of (s,t),{\displaystyle (s,t),} we need to use the chain rule. The multivariable analog of the chain rule involves taking partial derivatives with each of the variables that f{\displaystyle f} is written in terms of. Because we are dealing with several variables here, it is important to keep track of what is being held constant.
+
+
+(∂f∂t)s=(∂f∂x)y(∂x∂t)s+(∂f∂y)x(∂y∂t)s{\displaystyle \left({\frac {\partial f}{\partial t}}\right)_{s}=\left({\frac {\partial f}{\partial x}}\right)_{y}\left({\frac {\partial x}{\partial t}}\right)_{s}+\left({\frac {\partial f}{\partial y}}\right)_{x}\left({\frac {\partial y}{\partial t}}\right)_{s}}
+
+
+,
+
+
+(∂f∂x)y=6xy−4y3{\displaystyle \left({\frac {\partial f}{\partial x}}\right)_{y}=6xy-4y^{3}}
+
+
+(∂x∂t)s=s{\displaystyle \left({\frac {\partial x}{\partial t}}\right)_{s}=s}
+
+
+(∂f∂y)x=3x2−12xy2{\displaystyle \left({\frac {\partial f}{\partial y}}\right)_{x}=3x^{2}-12xy^{2}}
+
+
+(∂y∂t)s=1{\displaystyle \left({\frac {\partial y}{\partial t}}\right)_{s}=1}
+
+
+(∂f∂t)s=(6xy−4y3)s+3x2−12xy2{\displaystyle \left({\frac {\partial f}{\partial t}}\right)_{s}=(6xy-4y^{3})s+3x^{2}-12xy^{2}}
+
+
+, We use the function defined in the previous section (the chain rule). We are now holding the expression xy2{\displaystyle xy^{2}} constant. Few of the previous techniques will be of any use to us in solving this problem because of what is being held constant.
+
+
+(∂f∂y)xy2{\displaystyle \left({\frac {\partial f}{\partial y}}\right)_{xy^{2}}}
+
+
+f(x,y)=3x2y−4xy3{\displaystyle f(x,y)=3x^{2}y-4xy^{3}}
+
+
+, The goal here is to replace dx.{\displaystyle {\mathrm {d} }x.}
+
+
+df=(6xy−4y3)dx+(3x2−12xy2)dy{\displaystyle {\mathrm {d} }f=(6xy-4y^{3}){\mathrm {d} }x+(3x^{2}-12xy^{2}){\mathrm {d} }y}
+
+
+d(xy2)=y2dx+2xydy{\displaystyle {\mathrm {d} }(xy^{2})=y^{2}{\mathrm {d} }x+2xy{\mathrm {d} }y}
+
+
+, It is being held constant. Then evaluate for ∂x.{\displaystyle \partial x.}
+
+
+y2∂x+2xy∂y=0{\displaystyle y^{2}\partial x+2xy\partial y=0}
+
+
+∂x=−2xy∂y{\displaystyle \partial x=-{\frac {2x}{y}}\partial y}
+
+
+,
+
+
+∂f=(6xy−4y3)(−2xy∂y)+2xy∂y=(−12x2+8xy2)∂y+2xy∂y{\displaystyle {\begin{aligned}\partial f&=(6xy-4y^{3})\left(-{\frac {2x}{y}}\partial y\right)+2xy\partial y\\&=(-12x^{2}+8xy^{2})\partial y+2xy\partial y\end{aligned}}}
+
+
+(∂f∂y)xy2=2xy−12x2+8xy2{\displaystyle \left({\frac {\partial f}{\partial y}}\right)_{xy^{2}}=2xy-12x^{2}+8xy^{2}}
+
+

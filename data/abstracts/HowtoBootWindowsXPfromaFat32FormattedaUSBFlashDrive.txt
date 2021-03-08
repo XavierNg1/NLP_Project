@@ -1,0 +1,37 @@
+
+Get the following things:
+
+HP USB Disk Storage Format Utility
+
+
+
+ 
+
+
+
+PEbuilder
+
+
+
+
+
+
+Windows XP(SP2 or SP3) setup/installation CD or XP setup files located on local drive.
+Insert your USB key and your Windows 98SE Bootable Floppy.
+Run the "HP USB Disk Storage Format Tool"
+Select your USB key
+Set the file system to FAT32
+Check "Create a DOS startup disk"
+Select win98 Floppy (or Virtual-Floppy) drive location A: or B:
+Click "Start"
+
+,
+Install PE Builder
+If you like to have same look and feel as XP then you have to replace two files: (otherwise skip to Step4)
+1- Take your favourite wallpaper file, convert it to bmp and save it as "bartpe.bmp" in your PE Builder installation directory.
+Extract srsp1.zip to PE Builder installation directory.
+Start PE Builder (pebuilder.exe).
+Extract pe2usb-f32.cmd out of pe2usb-f32.zip to PE Builder installation directory.
+Rename the "ntldr" file to "usbntldr" in root of USB.
+Step-8:
+Select all the files for GRUB4DOS and copy them to the root of the USB key.

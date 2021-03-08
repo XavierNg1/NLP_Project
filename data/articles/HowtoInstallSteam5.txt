@@ -1,0 +1,19 @@
+ SteamOS is a Linux-based operating system designed for living room TV sets. Installing SteamOS will delete everything that is on the target computer, and SteamOS does not allow for dual-booting or multiple partitions. Make sure you don't need any of the data on the computer you intend to install it on.
+ You can download it from here. The installer file is 1 GB, so it may take a while to download.
+ Make sure that you don't have any important files on it, as everything will be erased.
+ You will need to format the USB drive so that you can load the recovery image from it. Select "FAT32" as the file system. Click Start and wait for the USB drive to be formatted., Drag all of the contents inside onto the USB drive.
+ You'll need to hit the BIOS key when you see the manufacturer's logo. Typical BIOS keys include F2, F10, F11, or Del.
+ Set the UEFI option as the primary boot device. This will allow you to boot from the SteamOS recovery image on the USB drive.
+
+
+If you don't have a UEFI option, you may need to enable UEFI for the motherboard. If you can't enable UEFI, you'll need to download the ISO file and burn it to a disc. You can then boot from this disc to start the installation. You can download the ISO file from repo.steampowered.com/download/., You'll see the SteamOS boot menu if you've set your Boot settings properly.
+ the rest of the installation process is hands-off. You can watch the screen to monitor the progress of the install. The computer will reboot after the installation is complete, and after a moment the SteamOS desktop will appear.
+ After the computer boots to the desktop, the Steam client will automatically begin downloading updates so that Steam can be installed.
+
+
+During the Steam setup process, you'll see a wall of Terminal information flash by as files are installed and configured.
+ A program called Partclone will run automatically at the end of the installation to create a backup of the system. When it's finished, you'll be prompted to select an option from the menu. Select "reboot" to reboot the computer.
+ After rebooting, SteamOS will load your hardware drivers, which may take a minute. this will only happen the first time you boot up. Once it's finished, you'll be taken through the SteamOS setup process, where you can select your language, adjust your display, set the timezone and review the license agreement.
+ Once the setup is complete, you can log in with your Steam account or create a new one. If you don't have an account, follow the prompts to get one made in a few minutes. If you already have an account, you'll likely be asked for the SteamGuard verification code, which will be sent to your Steam email address.
+ SteamOS has built-in controller support, and the interface is designed to be used with one. The tabs at the top allow you to switch between your library and the Store page. SteamOS is a Linux operating system, and only Linux games will work with it.
+

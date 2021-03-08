@@ -1,0 +1,14 @@
+;
+, All robots.txt files start with this line:
+User-Agent: *
+
+,
+
+
+If you want all parts of your site to be indexed, add this line:
+Disallow:
+Add lines for every area that you do want to be indexed. For example, if you do not want images and a private folder indexed:
+Disallow: /images/
+Disallow: /private/
+
+, Use the name "robots.txt".

@@ -1,0 +1,31 @@
+
+When you set up an IMAP account in Mail, you are actually setting up the ability to synchronize your email between the server (at gmail.com) and on your computer - in fact, on as many computers as you care to set up in this manner. This means that while logged on to the server if you delete a message in a Mailbox that same message will be deleted from the same Mailbox in Mail on your computer in seconds (if your Mail application is open on your computer at the time, or it will be deleted when you next open your Mail application). Or, if you are logged in to a computer and delete a message in a Mailbox in Mail then the same message is deleted in the same Mailbox on the server in seconds. This works no matter which Mailbox in Gmail you are working in.
+Any Mailbox that you create in Gmail on the server automatically gets created in Mail on your computer, and vice versa. But keep in mind that on your computer you can create a Mailbox in two different places in Mail. One place is as a child of the account and the other place is as a child of the Local account in Thunderbird or of ON MY MAC in Mac Mail. Mailboxes created in those latter two places are completely independent of your account. If you move a message from a Mailbox to any of your local Mailboxes, it is deleted from the Mailbox in but will still be found in ALL MAIL in .
+
+
+
+
+
+
+
+
+Figure 1 shows the default organization of Mailboxes in Mac Mail for a Gmail IMAP account. The arrows to the left of the Inbox, Sent, Trash, and Junk Mailboxes indicates that more than one email account is associated with those Mailboxes. Ignore them for this purpose. The Sent, Trash, and Junk Mailboxes are actually local to the Mac. The one that really matters for synchronization purposes is the Inbox. Notice that the Gmail section doesn't show an Inbox.
+
+
+
+
+
+
+Figure 2 shows the default Mailbox organization in Thunderbird. The Drafts, Templates, Sent, and Trash Mailboxes in Thunderbird are also local to the computer, the Inbox being the only one here that is synchronized with Gmail. Keep in mind that if you start a new message on the computer and save it to the Drafts Mailbox, it is not synchronized to the Gmail server or to other computers. But if you start a new message on the Gmail server and save it to Drafts, it will show up in the Drafts Mailbox under on any computer, but not in the local Drafts Mailbox.
+
+
+
+
+
+
+Figure 3 shows the default Mailbox organization in Gmail on the server. What you don't see here is All Mail. That's because it is at the very end of all the Mailboxes I've created, and it's tucked in a Label called "4 more" (yours might be different) along with Trash.
+Figure 4 shows the rest of the Gmail Mailboxes.
+Any Mailbox created for the purpose of organizing your messages will come after these.
+
+The All Mail Mailbox in could throw you for a loop. When you delete a message in any Mailbox of Mail, it moves to the Trash Mailbox in Mail, not to the Trash Mailbox in . However, if you delete a message in any of the Gmail Mailboxes, they go to the Trash Mailbox in Gmail. Then, back in Mail, you find that the Trash in has the deleted message because it is one of the synchronized Mailboxes. When you delete the contents of the Trash Mailbox in , it goes to the Trash Mailbox in Mail, and you then have to empty the trash again. So it goes. Now let's say that you deleted a message in All Mail that you hadn't read yet. Look again. It's back in All Mail. To understand what just happened you have to go to the Gmail server and look in All Mail there. You might notice that the message is tagged as still being in the Inbox but also tagged as being in the /Trash. See Figure 5. The deleted message found it's way back in All Mail because it is an archived message.
+Not to be too surprising here, but there will be lots of times that you think you removed messages in Mailboxes on the computer and then discover that a lot of the same messages are still in All Mail. Remember, I said that All Mail is an archive of messages. So please don't go ranting that something is dreadfully wrong. If you don't want the archived message in All Mail, delete it, but do so while logged into the Gmail server - not in the computer. Just make sure that you are deleting something that you don't ever want to see again. And remember, after deleting messages from All Mail, you then need to empty the Trash.

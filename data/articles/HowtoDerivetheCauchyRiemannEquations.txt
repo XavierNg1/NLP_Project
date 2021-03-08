@@ -1,0 +1,47 @@
+ Because the complex derivative is defined to be a limit, we need to understand what a complex limit means. The definition is analogous to a real limit as defined in multivariable calculus, because we can approach a point from infinitely many curves in the complex plane.
+
+Let f(z){\displaystyle f(z)} be a complex-valued function defined in some neighborhood of z0,{\displaystyle z_{0},} though z0{\displaystyle z_{0}} need not be defined itself. We say that the limit of f(z){\displaystyle f(z)} as z→z0{\displaystyle z\to z_{0}} is w0{\displaystyle w_{0}} if and only if for any positive number ϵ,{\displaystyle \epsilon ,} a positive number δ{\displaystyle \delta } can be found such that |f(z)−w0|<ϵ{\displaystyle |f(z)-w_{0}|<\epsilon } whenever 0<|z−z0|<δ.{\displaystyle 0<|z-z_{0}|<\delta .} If such a limit exists, we communicate this by the following statement.
+
+
+limz→z0f(z)=w0{\displaystyle \lim _{z\to z_{0}}f(z)=w_{0}}
+
+
+
+This is the (ϵ,δ){\displaystyle (\epsilon ,\delta )} definition of the limit that makes limits rigorous. While we could get away with an intuitive understanding in single-variable calculus, that was only possible because the limit could only be approached from two directions. 
+
+Essentially, what the definition states is that no matter how close we get to w0,{\displaystyle w_{0},} we can find a neighborhood of z0{\displaystyle z_{0}} that maps entirely into a neighborhood of w0{\displaystyle w_{0}} by f(z).{\displaystyle f(z).} If the limit exists, then δ{\displaystyle \delta } can be found no matter how small we make ϵ.{\displaystyle \epsilon .}
+;
+, With the complex limit rigorously defined, we can now move onto the complex derivative. The complex derivative looks very similar to the real derivative, but further study into complex analysis reveals that the existence of a complex derivative is a much stronger statement about a function than is the case when we restrict ourselves to the reals. 
+
+A function f(z){\displaystyle f(z)} is said to be differentiable at z=z0{\displaystyle z=z_{0}} if and only if the following limit exists.
+
+
+limΔz→0f(z0+Δz)−f(z0)Δz{\displaystyle \lim _{\Delta z\to 0}{\frac {f(z_{0}+\Delta z)-f(z_{0})}{\Delta z}}}
+
+
+
+If the function is differentiable at the point z=z0,{\displaystyle z=z_{0},} then the value of the aforementioned limit is called the derivative of f(z){\displaystyle f(z)} at z=z0{\displaystyle z=z_{0}} and is denoted by dfdz(z0){\displaystyle {\frac {{\mathrm {d} }f}{{\mathrm {d} }z}}(z_{0})} or f′(z0).{\displaystyle f^{\prime }(z_{0}).}
+
+It seems as if we are simply replacing all the x's with z's, but the implications are far more profound than that.
+ The existence of the complex derivative at some point z=z0{\displaystyle z=z_{0}} means that we should be able to approach the point from any direction we want to. When we set Δz=Δx,{\displaystyle \Delta z=\Delta x,} we are approaching the limit horizontally.,
+dfdz(z0)=limΔz→0f(z0+Δz)−f(z0)Δz=limΔx→0u(x0+Δx,y0)+iv(x0+Δx,y0)−(u(x0,y0)+iv(x0,y0))Δx=limΔx→0u(x0+Δx,y0)−u(x0,y0)Δx+ilimΔx→0v(x0+Δx,y0)−v(x0,y0)Δx{\displaystyle {\begin{aligned}{\frac {{\mathrm {d} }f}{{\mathrm {d} }z}}(z_{0})&=\lim _{\Delta z\to 0}{\frac {f(z_{0}+\Delta z)-f(z_{0})}{\Delta z}}\\&=\lim _{\Delta x\to 0}{\frac {u(x_{0}+\Delta x,y_{0})+iv(x_{0}+\Delta x,y_{0})-(u(x_{0},y_{0})+iv(x_{0},y_{0}))}{\Delta x}}\\&=\lim _{\Delta x\to 0}{\frac {u(x_{0}+\Delta x,y_{0})-u(x_{0},y_{0})}{\Delta x}}+i\lim _{\Delta x\to 0}{\frac {v(x_{0}+\Delta x,y_{0})-v(x_{0},y_{0})}{\Delta x}}\end{aligned}}}
+
+We immediately see that the limits above are just the definitions of the partial derivatives of u{\displaystyle u} and v,{\displaystyle v,} so we can simplify in the following manner.
+
+dfdz(z0)=∂u∂x(x0,y0)+i∂v∂x(x0,y0){\displaystyle {\frac {{\mathrm {d} }f}{{\mathrm {d} }z}}(z_{0})={\frac {\partial u}{\partial x}}(x_{0},y_{0})+i{\frac {\partial v}{\partial x}}(x_{0},y_{0})}
+
+
+
+, Now we are approaching from the vertical direction., For consistency, the arguments of the functions are real, so we denote a change with Δy{\displaystyle \Delta y} instead.
+dfdz(z0)=limΔz→0f(z0+Δz)−f(z0)Δz=limiΔy→0u(x0,y0+Δy)+iv(x0,y0+Δy)−(u(x0,y0)+iv(x0,y0))iΔy=limiΔy→0u(x0,y0+Δy)−u(x0,y0)iΔy+ilimiΔy→0v(x0,y0+Δy)−v(x0,y0)iΔy{\displaystyle {\begin{aligned}{\frac {{\mathrm {d} }f}{{\mathrm {d} }z}}(z_{0})&=\lim _{\Delta z\to 0}{\frac {f(z_{0}+\Delta z)-f(z_{0})}{\Delta z}}\\&=\lim _{i\Delta y\to 0}{\frac {u(x_{0},y_{0}+\Delta y)+iv(x_{0},y_{0}+\Delta y)-(u(x_{0},y_{0})+iv(x_{0},y_{0}))}{i\Delta y}}\\&=\lim _{i\Delta y\to 0}{\frac {u(x_{0},y_{0}+\Delta y)-u(x_{0},y_{0})}{i\Delta y}}+i\lim _{i\Delta y\to 0}{\frac {v(x_{0},y_{0}+\Delta y)-v(x_{0},y_{0})}{i\Delta y}}\end{aligned}}}
+
+As with step 4, we see that the limits above are just the definitions of the partial derivatives, so we can simplify in the following manner, taking care to recognize that 1i=−i.{\displaystyle {\frac {1}{i}}=-i.}
+
+dfdz(z0)=−i∂u∂y(x0,y0)+∂v∂y(x0,y0){\displaystyle {\frac {{\mathrm {d} }f}{{\mathrm {d} }z}}(z_{0})=-i{\frac {\partial u}{\partial y}}(x_{0},y_{0})+{\frac {\partial v}{\partial y}}(x_{0},y_{0})}
+
+
+
+, The result is the famed Cauchy-Riemann equations, which establish a necessary condition for complex differentiability. When coupled with the assumption that the partial derivatives of u{\displaystyle u} and v{\displaystyle v} are continuous, then the function is said to be holomorphic.
+
+∂u∂x=∂v∂y,  ∂u∂y=−∂v∂x{\displaystyle {\frac {\partial u}{\partial x}}={\frac {\partial v}{\partial y}},\ \ {\frac {\partial u}{\partial y}}=-{\frac {\partial v}{\partial x}}}
+

@@ -1,0 +1,63 @@
+ We are evaluating over the entire real line, so the limits will be positive and negative infinity. Above is a visualization of the function with both definitions - unnormalized (in red) and normalized (in blue). We will be evaluating the unnormalized sinc function.
+
+
+∫−∞∞sin⁡xxdx{\displaystyle \int _{-\infty }^{\infty }{\frac {\sin x}{x}}{\mathrm {d} }x}
+
+We see from the graph that sin⁡xx{\displaystyle {\frac {\sin x}{x}}} is an even function, which can be confirmed by looking at the function above. Then, we can factor out a 2.
+
+
+2∫0∞sin⁡xxdx{\displaystyle 2\int _{0}^{\infty }{\frac {\sin x}{x}}{\mathrm {d} }x}
+
+
+
+The integral above with bounds of 0 to infinity is also known as the Dirichlet integral.
+;
+, The purpose of defining such a function with an argument t{\displaystyle t} is so that we can work with an integral that is easier to evaluate, whilst meeting the conditions of the sinc integral for appropriate values of t.{\displaystyle t.} In other words, putting the e−tx{\displaystyle e^{-tx}} term inside the integral is valid, since the integral converges for all t≥0,{\displaystyle t\geq 0,} while setting t=0{\displaystyle t=0} recovers the original integral. This reformulation means that we are ultimately evaluating G(0).{\displaystyle G(0).}
+
+
+G(t)=∫0∞sin⁡xxe−txdx{\displaystyle G(t)=\int _{0}^{\infty }{\frac {\sin x}{x}}e^{-tx}{\mathrm {d} }x}
+
+
+, We can move the derivative under the integration sign because the integral is being taken with respect to a different variable. While we do not justify this operation here, it is widely applicable for a great many functions. Keep in mind that t{\displaystyle t} is to be treated as a variable throughout the evaluation, not a constant.
+
+
+dGdt=ddt∫0∞sin⁡xxe−txdx=∫0∞∂∂te−txsin⁡xxdx=−∫0∞e−txsin⁡xdx{\displaystyle {\begin{aligned}{\frac {{\mathrm {d} }G}{{\mathrm {d} }t}}&={\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{0}^{\infty }{\frac {\sin x}{x}}e^{-tx}{\mathrm {d} }x\\&=\int _{0}^{\infty }{\frac {\partial }{\partial t}}e^{-tx}{\frac {\sin x}{x}}{\mathrm {d} }x\\&=-\int _{0}^{\infty }e^{-tx}\sin x{\mathrm {d} }x\end{aligned}}}
+
+
+, This is, in fact, the evaluation for the Laplace transform of sin⁡x.{\displaystyle \sin x.} The most basic way to evaluate this integral is by using integration by parts, which we work out below. See the tips for a more powerful way to integrate this. Pay attention to the signs.
+
+
+dGdt=e−txcos⁡x|0∞+∫0∞te−txcos⁡xdx=e−txcos⁡x|0∞+=e−txcos⁡x|0∞+te−txsin⁡x|0∞−t2dGdt{\displaystyle {\begin{aligned}{\frac {{\mathrm {d} }G}{{\mathrm {d} }t}}&=e^{-tx}\cos x{\Big |}_{0}^{\infty }+\int _{0}^{\infty }te^{-tx}\cos x{\mathrm {d} }x\\&=e^{-tx}\cos x{\Big |}_{0}^{\infty }+\left\\&=e^{-tx}\cos x{\Big |}_{0}^{\infty }+te^{-tx}\sin x{\Big |}_{0}^{\infty }-t^{2}{\frac {{\mathrm {d} }G}{{\mathrm {d} }t}}\end{aligned}}}
+
+
+dGdt(1+t2)=(0−1)+(0−0){\displaystyle {\frac {{\mathrm {d} }G}{{\mathrm {d} }t}}(1+t^{2})=(0-1)+(0-0)}
+
+
+dGdt=−11+t2{\displaystyle {\frac {{\mathrm {d} }G}{{\mathrm {d} }t}}=-{\frac {1}{1+t^{2}}}}
+
+
+, This recovers G(t){\displaystyle G(t)} under a different variable. Since the integrand is the differential of a well-known function, this evaluation is trivial.
+
+
+−∫11+t2dt=−tan−1⁡t+C{\displaystyle -\int {\frac {1}{1+t^{2}}}{\mathrm {d} }t=-\tan ^{-1}t+C}
+
+Here, we recognize that G(t)=0{\displaystyle G(t)=0} as t→∞{\displaystyle t\to \infty } for both this integral and the one defined in step 2. However, limt→∞tan−1⁡t=π2,{\displaystyle \lim _{t\to \infty }\tan ^{-1}t={\frac {\pi }{2}},} so C=π2{\displaystyle C={\frac {\pi }{2}}} as well.
+
+Therefore, G(t)=−tan−1⁡t+π2.{\displaystyle G(t)=-\tan ^{-1}t+{\frac {\pi }{2}}.}
+
+
+, Now that we have G(t),{\displaystyle G(t),} where t≥0,{\displaystyle t\geq 0,} we can substitute 0 for t{\displaystyle t} and find that G(0)=π2.{\displaystyle G(0)={\frac {\pi }{2}}.}
+
+
+G(0)=∫0∞sin⁡xxdx=π2{\displaystyle G(0)=\int _{0}^{\infty }{\frac {\sin x}{x}}{\mathrm {d} }x={\frac {\pi }{2}}}
+
+Finally, we recall that to integrate over all the reals, we simply multiply by 2, as sinc⁡x{\displaystyle \operatorname {sinc} x} is an even function.
+
+
+∫−∞∞sin⁡xxdx=π{\displaystyle \int _{-\infty }^{\infty }{\frac {\sin x}{x}}{\mathrm {d} }x=\pi }
+
+
+
+It is worth memorizing this answer, as it can pop up in multiple contexts.
+
+

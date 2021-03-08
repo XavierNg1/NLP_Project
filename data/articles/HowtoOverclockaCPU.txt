@@ -1,0 +1,66 @@
+ Overclocking is the process of increasing the clock speeds and voltage of your CPU to improve performance. It is a great way to get the most power out of a powerful machine, or unlock a little more power out of a budget or old computer.
+
+
+Overclocking can damage your components, especially if the hardware is not designed for it or you push the voltages too high. You should only overclock if you are OK with the possibility of destroying your hardware.
+No two systems will overclock the same, even if they have the exact same hardware. This is because overclocking is greatly affected by small variances in the manufacturing process. Don't base your expectations solely on the results you read online for the hardware you have.
+If you are primarily looking to increase video game performance, you may want to consider overclocking your graphics card instead, as you will likely see better results.
+Laptops are not very good candidates for overclocking, as their cooling capabilities are limited. You will get much larger performance increases on a desktop computer where you can control temperatures better.;
+, You will need a few benchmarking and stress test tools in order to properly test your overclocking results. These programs test the performance of your processor as well as its ability to maintain that performance over time.
+
+
+CPU-Z - This is a simple monitor program that will allow you to quickly see your clock speed and voltage in Windows. It doesn't perform any actions, but its an easy-to-use monitor to help ensure everything is working correctly.
+Prime95 - This is a free benchmarking program that is widely used for stress testing. This is designed to be run for long periods.
+LinX - Another stress testing program. This one is lighter than Prime95, and is good for testing in between each change.
+ Different motherboards and processors will have different capabilities when it comes to overclocking. There are also slight differences when it comes to overclocking AMD versus Intel, but the general process is the same. The biggest thing you will be looking for is whether or not your multiplier is unlocked. If the multiplier is locked, you will only be able to adjust the clock speed, which usually yields less results.
+
+
+Many motherboards are designed for overclocking, and thus should give you full access to the overclocking controls. Check your computer's documentation to determine your motherboard's capabilities.
+Some processors are more inclined to successful overclocking than others. For example, the "K" line of Intel i7s are designed specifically to be overclocked (e.g. Intel i7-2700K). You can find your processor model by pressing ⊞ Win+Pause and looking in the System section.
+ Before you begin overclocking, you'll want to run a stress test using your base settings. This will give you a baseline to compare against as you start overclocking, and will also show if there are any problems with the base in the settings that need to be addressed before overclocking makes them worse.
+
+
+Be sure to check your temperature levels during the stress test. If your temperatures are above 70 °C (158 °F), you will likely not be able to get much out of overclocking before your temperatures become unsafe. You may need to apply new thermal paste or install a new heatsink.
+If your system is crashing during the baseline stress test, then there is likely an issue with the hardware that needs to be sorted out before you begin overclocking. Check your memory to see if there are any errors.
+ You will be making the majority of your changes in your computer's BIOS, which is the configuration menu that can be accessed before your operating system is loaded. You can access most BIOS by holding the Del key while the computer is booting up. Other possible setup keys include F10, F2, and F12.
+
+
+Every BIOS is different, so menu labels and locations may vary from system to system. Don't be afraid to dig through the menu system to find what you need., This menu may be labeled differently, such as "Overclocking". This is the menu that you will be spending most of your time in, as it will allow you to adjust the CPU speed as well as the voltage it receives.
+ In order to help prevent the memory from causing errors, you'll want to lower the memory bus before continuing. This may be referred to as the "Memory Multiplier", "DDR Memory Frequency" or "Memory Ratio". Lower it to the lowest possible setting.If you cannot find the memory frequency options, try pressing Ctrl+Alt+F1 on the BIOS main menu.
+ The base clock, also referred to as front side bus or bus speed, is the base speed of your processor. It is typically a lower speed that is multiplied to reach the total core speed. Most processors can handle a quick 10% jump at the start of the process. For example, if the base clock is 100 MHz, and the multiplier is 16, the clock speed is 1.6 GHz. Bumping it up 10% would change the base clock to 110 MHz, and the clock speed to 1.76 GHz.
+ Once you've performed your initial 10% raise, restart your computer and boot into your operating system. Start up your LinX and run it through a few cycles. If there are no problems, you're ready to move on. If your system is unstable, you may not be able to get much performance out of the overclock, and you should reset your settings to default.
+ Instead of increasing 10% each time, you'll want to reduce your increments to about 5-10 MHz per pass. This will allow you to find a sweet spot much easier. Run a benchmark every time you make an adjustment until you reach an unstable state. The instability is most likely caused by the processor not receiving enough power from the power supply.
+
+
+If your motherboard does not allow you to adjust the multiplier, then you can skip down to Part 4. If you can adjust your multiplier, then move on to the next section to try to get more gains. Make sure to record the settings you are currently at, in case you want to return to them later.
+ Before you start increasing your multiplier, you're going to want to lower your base clock a little. This will help make your multiplier increases more precise. Using a lower base clock and a higher multiplier will lead to a more stable system, but a higher base clock with a lower multiplier will lead to more performance. Finding the perfect balance is the goal.
+ Once you've dropped your base clock a bit, start raising your multiplier in 0.5 increments. The multiplier may be called "CPU Ratio" or something similar. It may be set to "Auto" instead of a number when you first encounter it., Reboot your computer and run your benchmarking program. If your computer doesn't encounter any errors after a few runs through the benchmark, you're good to raise the multiplier again. Repeat this process each time you increase the multiplier another increment.
+ Make sure you pay close attention to your temperature levels during this process. You may hit a temperature limit before your system becomes unstable. If this is the case, you may have reached the limits of your overclocking ability. At this point, you should find the best balance between increasing the base clock and increasing the multiplier.
+
+
+While every CPU has a different safe temperature range, the general rule of thumb is to not allow your CPU to reach the 85 °C (185 °F) level.
+ You should now have settings that just barely cause your computer to become unstable. As long as your temperatures are still within safe limits, you can start adjusting the voltage levels to allow further increases.
+ This may be referred to as "Vcore Voltage". Raising your voltage beyond safe limits can quickly damage your equipment, so this is the most finicky and potentially dangerous part of the overclocking process. Every CPU and motherboard can handle different voltage increases, so pay extra close attention to your temperature.
+
+
+When raising your core voltage, increase it in 0.025 increments. Any more and you run the risk of jumping too high and damaging your components.
+ After your first increase, run a stress test. Since you left your system in an unstable state in the previous section, you are hoping for a stable stress test run. If your system is stable, make sure that temperatures are still at an acceptable level. If the system is still unstable, try lowering either the multiplier or the base clock speed.
+ Once you have managed to make your unstable system stable through increasing the voltage, you can go back to increasing either the base clock or the multiplier, depending on which you are trying to overclock. Increase them in the same small increments, running stress tests until your system becomes unstable again.
+
+
+Since the voltage settings increase temperature the most, your goal should be to maximize the base clock and multiplier settings to get the most performance out of the lowest voltage possible. This will require a lot of trial and error and experimentation as you try different combinations.
+ Eventually you will hit a point where you can't get any more increases, or your temperature is nearing unsafe levels. This is the limit of your motherboard and processor, and it is likely that you will not be able to progress past this point.In general, you shouldn't raise your voltage more than 0.4 above its original level, 0.2 if you're using a basic cooling system.
+If you reach your temperature limit before you hit a voltage limit, you may be able to eke more increases out by improving the cooling system in your computer. You can install a more powerful heatsink/fan combo or opt for a more expensive but much more effective liquid cooling solution.
+ Lower your base clock or multiplier down to the last working settings. This is your new processor speed, and if you're lucky it will be noticeably larger than it was before. As long as everything boots OK, you're ready to start your final test.
+ Raise your memory speeds back up towards their initial levels. Do this slowly, stress testing as you go. You may not be able to raise them all the way back to their original levels.
+
+
+Use Memtest86 to perform memory tests as your raise the frequency back up.
+ Open Prime95 and run the test for 12 hours. This may seem like a long time, but your goal is to ensure rock-solid stability at long periods. This will lead to better and more reliable performance. If your system becomes unstable during this test, or your temperatures reach unacceptable levels, you'll need to go back and readjust your clock speed, multiplier, and voltage.
+
+
+When you open Prime95, select "Just Stress Testing". Click Options → Torture Test and set it to "Small FFT".
+Borderline temperatures are usually OK, since Prime95 pushes your computer more than most programs ever will. You may still want to back your overclock down a notch to be safe. Your idle temperature shouldn't go above 60 °C (140 °F).
+ While stress test programs are great for making sure your system is stable, you'll want to make sure that it can handle the randomness of real-life situations. If you're a gamer, start up the most intensive game you have. If you encode video, try encoding a Bluray. Make sure that everything works as it should. It may work even better now!
+
+, This guide only scratches the surfaces of what can be done when it comes to overclocking. If you want to learn more, it really comes down to research and experimentation. There are several communities dedicated to overclocking and its various related fields, such as cooling. Some of the most popular communities include Overclockers.com, Overclock.net, and Tom's Hardware, and all are great places to start searching for more detailed information.
+

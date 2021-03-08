@@ -1,0 +1,19 @@
+
+Click Start.
+Type “Regedt32.exe” into the search box.
+Click on executable file.
+Start the Registry Editor.
+Go to the subkey, HKEY_CLASSES_ROOT\.lnk.
+Edit the existing file.
+Click Add Key.
+
+,
+Name the new key.
+Edit the Add Value box.
+Type “command” (without quotation marks).
+
+,In the Data Type list, click REG_SZ.In the String Editor box, type “lnkfile” (without quotation marks).Click OK.
+Type “ShellNew” (without quotation marks).Click REG_SZ in the Data name box.Type “RunDLL32 AppWiz.Cpl,NewLinkHere %1” (without quotation marks) as the string value.
+Restore the registry.
+Restart your computer.
+Test your changes.

@@ -1,0 +1,13 @@
+ In North America and parts of Central and South America, the AC voltage at most sockets is 110 to 120 volts at 60 hertz. In Europe, Asia, Australia and most of the Middle East and Africa, it's 230 to 240 volts at 50 hertz. The standard in other areas may differ.;
+, Check the manufacturer's instructions, if necessary. Too much of either amperage or voltage will destroy the components, while too little will not allow the device to work correctly. Most have a safe range; aim for the center so your input power can vary somewhat.
+ Electrical current enters the primary coil of the transformer and induces a current in the secondary coil, which has fewer coils, resulting in a lower voltage. Little power is lost in this process because the amperage increases in relation to the decrease in voltage.
+ A rectifier usually consists of 4 diodes arranged in a diamond shape -- a type called a bridge rectifier. A diode only allows current to pass in 1 direction; the diamond configuration allow 2 diodes to pass the positive half of the current and the other 2 diodes to pass the negative half. The output of both sets is a current that climbs from 0 volts to the maximum positive voltage.
+ A capacitor stores an electrical charge for a short time and then releases it slowly. The input from the rectifier resembles a string of humps; the output of the "smoothing capacitor" is a somewhat steady voltage with ripples.
+
+
+For devices that only need a low current, you can create a regulator with a resistor and a zener diode, which is designed to break down when a certain voltage is reached, allowing current to pass through it. The resistor limits the current.
+ This smooths out the ripples and creates a very steady current that will operate your electronic device without damaging it. Regulators are integrated circuits and can either have fixed or variable output voltages.
+
+
+Although regulators include protection against excessive current and heat, yours may still require that you attach a heat sink to keep it from becoming too hot.
+

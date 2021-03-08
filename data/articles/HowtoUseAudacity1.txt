@@ -1,0 +1,53 @@
+ In your instrument preferences, set the output destination of your instrument. Set the input of Audacity to match the output from your instrument. In this example, the signal is routed through the Soundflower interface from a software synth‘s output to Audacity’s audio input.
+
+
+While sound cards and interfaces vary, it’s a good practice to monitor your actual instrument to prevent latency issues. Because latency is always a factor when monitoring the recorded signal, it’s very difficult to find your groove when playing. In Audacity, set your preferences as shown:
+
+
+
+
+
+;
+, Check to make sure your outputs and inputs are properly routed by first selecting Start Monitoring from the popup menu below the input meters (by the microphone icon), then playing your instrument.
+
+
+The LR input meters should respond.
+
+
+
+
+
+
+If the meters are hitting 0dB, use the Input Volume Slider to lower the input level so that the meters only approach 0 during the loudest sections.
+ When everything is connected properly, and your levels are set, you’re ready to record. You have two options:
+
+Press Record and start playing. There will generally be some silence at the beginning of your track. This can be trimmed away when you’re done recording.
+
+
+
+
+
+
+Alternately, you can enable Sound Activated Recording in your Recording preferences. Check the Sound Activated Recording checkbox, then set the Sound Activation Level (DB)—the lower the number, the quieter the sound that will trigger recording. This is useful if, for example, you are recording in another room and don’t want to have a long silence at the beginning of your track as you walk back and prepare to play.
+ Whichever method you choose, it’s now the moment of truth! Press the red Record button (or press “R”, and when you’re ready, start playing. You’ll see the wave forms written to your track as you play.
+
+
+Note: While this should not generally be the case, if everything is set as described above, if you are flat-lining (i.e., the waveform displays as a straight line) when you record, that means that signal is not getting from your instrument to your track. Confirm your connections and try again.
+ When you are finished, press the square yellow Stop button. You should see something similar to the image above.
+
+
+If you chose Sound Activated recording, Audacity will automatically stop recording when the sound drops below the threshold level.
+To add additional tracks while listening to previously recorded tracks, make sure “Overdub: Play other tracks while recording new one” is checked in Preferences: Recording.
+ There’s an alternate recording option that most software sound recorders do not have, and that is Timer Record.
+
+
+From the Transport menu, select Timer Record..., or press Shift-T. In the resulting window, you can set the Start Date and Time, and either the End Date and Time, or the Duration. This lets you set your recorder to turn on when you are not around. Why would you do this? Because you can!
+
+
+
+
+
+
+
+, If you want to add additional material to your existing recording, press Shift-Record, or type Shift-R, and new material will be appended at the end of the existing recording on the current track.
+

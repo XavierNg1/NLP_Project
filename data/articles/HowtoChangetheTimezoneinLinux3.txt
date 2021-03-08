@@ -1,0 +1,26 @@
+ Select the Terminal program from your Linux programs, or press Ctrl+Alt+T on your keyboard., Type date into Terminal and press ↵ Enter. The terminal will display the date in the following format: Mon Aug 12 12:15:08 PST 2013.
+
+
+PST refers to the current timezone (Pacific Standard Time).
+ Type in /usr/share/zoneinfo and press ↵ Enter to display a list of timezone regions.
+
+
+The /usr/share/zoneinfo directory may vary depending on your Linux distribution.
+ Use the following command, replacing region and city with your preferred region and city: ln -sf /usr/share/zoneinfo/region/city/ etc/localtime
+
+
+If your city is not listed in the timezone list, pick a different city from your same timezone.
+ Run the date command again and check that the timezone corresponds to the one you just changed to. If you see you new timezone listed, you have successfully changed your computer's timezone.
+ Most modern distributions have NTP already installed. If your Linux distribution does not, you will need to install the NTP server package. Use the following commands to install it, depending on your Linux distribution:
+
+
+Ubuntu/Debian: sudo aptitude install ntp
+
+CentOS: sudo yum install ntpsudo /sbin/chkconfig ntpd on
+
+Fedora/RedHat: sudo yum install ntpsudo chkconfig ntpd on
+
+Enter ntpdate && hwclock –w after the installation command.
+
+
+

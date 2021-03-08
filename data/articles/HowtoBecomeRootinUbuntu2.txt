@@ -1,0 +1,9 @@
+ For security purposes (and to avoid damage), the root user account is locked by default. To safely run commands as root, you should use sudo or gksudo instead. If you absolutely must have a separate root user (if it’s required by a program used by your business, or this workstation will only be used by a single user), you can enable the root user with some simple commands.
+
+
+Enabling the root user can put your system at risk and is not recommended by Ubuntu., You will be prompted to set a new password for the root user.Don’t lose this password.
+, The root user should now have a password.
+ Enter the root password when prompted to arrive at the root prompt.
+
+
+To disable the root account, type sudo passwd -dl root.

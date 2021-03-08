@@ -1,0 +1,5 @@
+;
+, This will will place the cursor on the last row of the window and present a colon as a prompt.
+ Replace "string" with for what you are searching and replace "replacement" with what to replace it. For example "%s/&/and". The preceding "%" character tells vi to search the whole document. Without it vi will only search and replace on the current line.
+ The string will be replaced with the replacement in the whole file. And the prompt will go away to allow you go into insertion mode immediately. The cursor will be at the beginning of the last line that was changed.
+

@@ -1,0 +1,13 @@
+ It's a purple-and-green globe icon that you'll either find on your desktop or in the Start menu.
+
+If you haven't done so yet, first run Tor so that the appropriate folder is established. Otherwise, you won't be able to set a specific country.;
+, You'll see this option near the top of the drop-down menu., Doing so will open it.,,, This will open the "Open with" window., Doing so will open the "torrc" file as a text document, allowing you to edit it., It should be near the bottom of the text on this page. You'll see something like "{us}" to the right of the "ExitNodes" phrase.
+
+If you don't see this line of text, copy ExitNodes {} StrictNodes 1 into the file.
+ You can view a comprehensive list of supported countries beneath the "List of country codes for Tor" heading here: http://www.b3rn3d.com/blog/2014/03/05/tor-country-codes/
+
+For example, you would change "{us}" to "{ug}" to transfer your preferred country from the United States to Uganda.
+ It's in the top-left corner of the Notepad window., You'll see this option near the top of the drop-down menu. Since Notepad saves documents as text files automatically, you must use the Save As option to save your updated country file as a Tor file., By default, the box here will say "Text Documents (*.txt)". Clicking it will invoke a drop-down menu., It's in the drop-down menu. After doing so, you'll see a list of the "Tor" folder's contents appear in the Save As window., You'll find it in the Save As window. This will select "torrc" as the file to replace with your updated file., It's at the bottom of the Save As window., This will replace the "torrc" file with your new one, thereby saving your country settings., Doing so will take a minute, since Tor will need to connect with your new country's servers. After it connects, your country settings will be active.
+
+You can double-check this by going to Google, clicking the onion icon in the top-left corner of the browser, and looking at the country name above the "Internet" value here.
+

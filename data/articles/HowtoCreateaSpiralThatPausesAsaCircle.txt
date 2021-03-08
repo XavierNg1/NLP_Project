@@ -1,0 +1,21 @@
+ Save the workbook into a logical file folder.;
+, Open Preferences in the Excel menu. Recommended Settings: Set General to R1C1 Off and Show the 10 Most Recent Documents; Edit - set all the Top options to checked except Automatically Convert Date System. Display number of decimal places = blank (for integers preferred), Preserve display of dates and set 30 for 21st century cutoff; View - show Formula Bar and Status Bar, hover for comments and all of Objects, Show gridlines and all boxes below that auto or checked; Chart - show chart names and data markers on hover. Leave rest unchecked for now; Calculation -- Automatically and calculate before save, Limit iteration checked, max iterations 100, max change .000,000,000,000,01 w/o commas as this problem involves precise goal seeking and save external link values and use 1904 date system; Error checking - check all; Save - save preview picture with new files and Save Autorecover after 5 minutes; Ribbon -- all checked except Hide group titles and Developer.,,, Select B1: F2 and Insert Names Create names in Top Row, OK., A3: a, aA; B3: t, tT; C3: I, iI, D3: cC; E3: zZ; F3: cos; G3: sin; H3: x; I3: y,, Format CELLS B2, C2, E2 and F2 Fill Yellow and Border Black bold Outline + Center., Insert Name Define Name a to cell $A$4 and Insert Name Define Name aA to cell range $A$4:$A$725.
+Select cell B4 and enter 0. Insert Name Define name t to cell $B$4.
+Select cell range B5:B725 and enter w/o quotes the formula into the active cell B5, "=(B4+(PI()*(PiTop-t)/720))". Select cell range B4:B725 and Insert Name Define name tT to cell range $B$4:$B$725.
+Select cell C4 and enter 1. Insert Name Define name I to cell $C$4.
+Select cell range C5:C725 and enter w/o quotes the formula into the active cell C5, "=(C4+((N-I)/720))". Select cell range C4:C725 and Insert Name Define name iI to cell range $C$4:$C$725.
+Select cell D4 and enter 3. Insert Name Define name cC to cell range $D$4:$D$725. Edit Go To cell range D5:D725 and with D5 active, enter the formula w/o quotes "=D4" and Edit Fill Down.
+Select cell range A4:D4 and Format Cells Fill Yellow to designate them as input cells.
+Edit Go To cell range E4:E725 and Insert Define Name zZ to cell range $E$4:$E$725, then enter into E4 the active cell the formula w/o quotes "=tT/(p*cC)" and Edit Fill Down.
+Edit Go To cell range F4:F725 and with F4 active, enter w/o quotes the formula "=COS((ROW()-4)*Factor)" and Edit Fill Down.
+Edit Go To cell range G4:G725 and with G4 active, enter w/o quotes the formula "=SIN((ROW()-4)*Factor)" and Edit Fill Down.
+Edit Go To range H4:H725 and with H4 active, enter w/o quotes the formula "=(aA*COS(-tT-(2*PI()*iI)/N)*zZ)+F4" and Edit Fill Down.
+Edit Go To range I4:I725 and with I4 active, enter w/o quotes the formula "=(aA*SIN(-tT-(2*PI()*iI)/N)*zZ)+G4" and Edit Fill Down.
+
+
+Edit Go To cell range H4:I725 and, using either the Chart Wizard or the Ribbon, select Charts, All/Other, scroll down to Scatter, Smoothed Line Scattered and select it. A small chart will either appear in a new window (Chart Wizard) or near your data (Ribbon users). For the latter, Copy or Cut the chart and activate the Chart worksheet and paste it into cell A16. Using the cursor to hover over the lower left hand corner of the chart until it becomes a double-headed arrow, pull the chart down and to the right to form a larger square at about K66. Double-click on the series plot line and change line Weight to 1. Activate the Data sheet and copy cell range A1:I14 and activate the Chart worksheet and paste the formulas atop the chart. In cell A1 note "To row 725". Do a Copy Picture and Paste Picture to the Saves worksheet with the shift key held down throughout. Save the workbook.
+ Here is the chart resulting from those two changes:
+
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

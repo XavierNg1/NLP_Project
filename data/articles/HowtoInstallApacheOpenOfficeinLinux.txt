@@ -1,0 +1,15 @@
+ OpenOffice offers a DEB package or an RPM package. Normally, the DEB package is designed for Debian/Ubuntu, and the RPM package for Fedora, OpenSuse or Mandriva.;
+, Since it is an archive, you need to extract it. You can do that using your package program, or you can do it using this terminal command: tar -xzvf Apache_OpenOffice_3.4.1_Linux_x86-64_install-deb_ar.tar.gz. You may need to change the name in the text above to fit your package.
+ In Debian/Ubuntu and other related distros, type the following command into the terminal: sudo dpkg -i *.deb. You will be required to provide an administrative password to run this command. If you are using a different distro, check below to see the command you should use:
+
+
+
+OpenSuse: sudo zypper install *.rpm.
+
+Fedora: sudo yum localinstall *.rpm.
+
+Mandriva: sudo urpmi *.rpm
+
+
+, The executable file is located here: /opt/openoffice.org3/program/soffice.
+

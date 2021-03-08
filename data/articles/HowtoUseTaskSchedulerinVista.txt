@@ -1,0 +1,85 @@
+ Alternatively, you can click Start and type “Task” into the search bar. Task Scheduler should be an option under the “Programs” heading in the search results.;
+, On the right hand side of the Task Scheduler window, there is a panel labeled “Actions”, click Create a Basic Task….
+ A new window will pop up, allowing you to edit the details of your task. In the title bar, type a concise, specific name for your task, e.g. “Payday Banking”.
+
+
+When typing the description, be sure to state exactly what the task is designed to do. This enables you to come back to the task at any time and easily determine if it needs to be modified.
+, Pick the desired amount of time. Further specification is available on the next page, so pick the closest option to your desired schedule. For a biweekly schedule, select the circle beside weekly.
+, Beside “Start:” the current date and time should be displayed. For most scenarios this can be left as is. However, if a payday does not fall on the current week, change the date to a weekday of the next week (before Friday). You can click on the calendar icon to see and select a date more conveniently.
+
+
+
+
+Daily: only allows you to select how often the cycle should repeat in days. Cycle begins on the “Start” date and repeats every x days after that. This is only useful for daily routines and actions that are required often, but when date is not important. This option cannot distinguish weekdays and weekends.
+
+
+
+
+
+
+
+Weekly: Allows for a much broader range of specification than the daily comparison. This is excellent when a task needs to be performed on specific days, or even every weekday. It can also specify once every x weeks, up to 99 weeks apart. For our example, we will choose once every two weeks. We will also select the checkbox beside Friday. Notice that multiple days can be selected.
+
+
+
+
+
+
+
+Monthly: Allows you to specify the months that you want to include and either the specific days of each month that you want the task to occur, or a specific time of the month for a task to occur, such as the first Sunday of a month, without actually knowing what day it will fall on each time. This is especially useful for paying bills.
+
+
+
+
+
+
+
+Once: Allows you to pick one date and time for the task to occur. This is useful if you know you will need to perform a task some time in the future, but only need it to run once.
+
+
+
+
+
+
+
+When the computer starts: The task will run every time that the computer boots up. This is very useful if the computer is consistently used for the same purpose.
+
+
+
+
+
+
+
+When I log on: This is virtually the same as when the computer starts, but it will only occur for your user account, not any other accounts. Useful for shared computers.
+
+
+
+
+
+
+
+When a specific event is logged: This setting is for more advanced users. It can be used to alert the user when a specific error occurs, but it requires a deeper understanding of the behind the scenes activity on your computer.
+, For our example, we will select this option and use the Firefox web browser. Click Browse…, select (C:), Program Files, then Mozilla Firefox, and finally select the application firefox.exe. The file path should be “C:\Program Files\Mozilla Firefox\firefox.exe” or “C:\Program Files(x86)\Mozilla Firefox\firefox.exe” for 64-bit Vista. You can use any browser of your choice instead of Firefox; it will work the same. In the “Add arguments:” bar, paste the URL of your desired banking page, e.g. http://www4.bmo.com/. The “Start In:” bar is only used for the path that the command line would use for the program or script; it is not necessary here.
+
+
+
+
+
+
+
+Send an email: This option will send a generic email as often as specified. You can specify who it is from, to, the subject, the message, and any files you wish to include. You will, however, need to include a SMTP server. The site http://www.e-eeasy.com/SMTPServerList.aspx provides a list of free servers; select the one that corresponds with your email provider.
+
+
+
+
+
+
+
+Display a message: This option allows you to write a message that will pop up in a window at the specified times. This is useful for reminders at a basic level and reporting problems for more advanced users.
+ Fill out the information as described above and click Next again.
+ The final page should display the details of the task you have created. Reread the details to make sure they are correct. Clicking the “Show Properties” box will allow you to provide instructions for what should be done if the computer is not on at the time of the task, if it should be performed on battery power or AC, and if the task should only be performed with an Internet connection (you can even choose to run the task only if you are on a secure connection). Click Finish.
+
+
+If you selected the “Show Properties” box, read through the options to select the pertinent specifications. Under the “Conditions” tab, select the box beside “Start only if the following network connection is available”. Choose your secure home connection if privacy is important (as in the case of online banking) or “any connection” if only Internet is required.
+ Your new task should be added to the Task Scheduler Library, waiting for its time to run.
+

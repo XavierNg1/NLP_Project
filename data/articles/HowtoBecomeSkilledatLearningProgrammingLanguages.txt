@@ -1,0 +1,55 @@
+ All the programming languages in the world won't do you much good if you don't know about algorithms and data structures. These are tools that transcend the language, platform, and development tools you will learn. It's useful to know about sorting, for example, even if you will likely have library routines to do the actual sorting for you in most languages.
+
+
+Knowing some basic logic, mathematics and linguistics is good too, but not essential.;
+,
+
+
+Know the difference between a scripting language and a systems language. This used to be more significant than it is now: many people are using scripting languages like Python, Ruby, and JavaScript (ECMAScript) for larger and more complex systems, while platform APIs are becoming available in a variety of languages.
+Know the difference between type systems. What To Know Before Debating Type Systems explains this well.
+Know the difference between stack and heap programming.
+Know the difference between pass by value and pass by reference.
+Know the difference between structured, object-oriented, functional, and procedural programming. A given language will usually focus on one of these, but some mix them.
+Know the difference between running compiled code, interpreted code, just-in-time compiled code and code on a virtual machine. They have different performance characteristics and allow or require different styles of programming. Knowing when to use a virtual machine and when to run code natively on the machine's architecture can mean the difference between success and failure for a project.
+
+
+
+You'll often find that for a particular style of programming, there will be a very pure but somewhat impractical language that can be used to learn that style of programming, and then a much more practical language that you can use in everyday life. To become better at learning programming languages, it is worth learning some of these pure (research) languages as they will help when learning the practical languages more quickly.
+As an example for object-oriented programming, try learning Smalltalk. You won't be able to build much in it, but it was one of the early object-oriented programming languages. Ruby keeps some of the Smalltalk heritage while being a more practical language that you can use for a wide variety of programming tasks. Java, C#, and C++ are high-level languages with object-oriented programming support.
+For languages that use interfaces, try Java, C#, or C++. Python, C++, and many other languages allow multiple inheritance, while Scala uses 'traits', an interesting combination of interfaces, multiple inheritance, and abstracts.
+For prototype-based object-oriented programming, learn JavaScript (ECMAScript). JavaScript doesn't have classes: instead it has prototypes. Self is the original language that started prototype-based programming, and ActionScript, Lua, and REBOL can be used for this kind of programming.
+For functional programming, consider learning OCaml or Haskell. These are statically-typed functional programming languages. For slightly more practical functional languages, consider Scala (on the Java Virtual Machine) or F# (on .NET).
+If you want to try a very dynamic programming language, try Ruby, Python, Perl, or Lisp. The type systems in these languages are very different from a language like Java or C. It is worth trying these kinds of languages to see the sort of things you need to do to code around not having this kind of type system – unit testing, metaprogramming techniques, duck typing, and so on.
+Try domain specific languages, these are languages built for very specific purposes, or language abstraction built on top of an existing language to express some specific set of functionality. Some of these are SQL, XSLT, FreeMarker, ASP.net, C# LINQ, Shell Scripts, YACC, AWK, SED, and hundreds more. Ruby and Scala can both be used to create domain specific languages. Note that many domain specific languages are not Turing Complete.
+
+
+
+Concurrency is a difficult problem in computing, and many new languages are providing new ways of writing concurrent routines. Some of these approaches cannot easily be built with libraries and instead requires support from the language itself.
+Threading is the most widely supported way of supporting concurrency, but can be very difficult to build. Java, C++ and many other languages support threading, while some languages like Python and Ruby only support 'green threads' rather than true system-level threading. Threading becomes complicated because all the threads need access to the same set of global data, which can lead to race conditions and other similar problems. So, other approaches have been introduced...
+Software transactional memory (STM) is one solution. Erlang and Clojure are two very different languages that implement this.
+Message-passing actors is another solution: Scala and Erlang are worth looking at for this.
+In Python and Ruby, take a look at Twisted and EventMachine which provide event loops. Alternatively, look at Node.js, a (server-side) JavaScript framework for building event loops.
+Co-routines are another way of resolving concurrency issues: the Go language from Google is a new statically-typed, type-inferred systems language intended to be like C in performance but like Python in syntax and simplicity. It uses "goroutines", an implementation of co-routines. Another language built around co-routines is Icon.
+Dispatch queues are another solution to this: on Mac OS X 10.6 and higher, "Grand Central Dispatch" is a queueing system Apple have created for use in C, C++ and Objective-C. The open source implementation of GCD is available as "libdispatch". A Java and Scala implementation called HawtDispatch is also available.
+ One of the best ways of learning a new language and becoming skilled at learning languages is to read code. There is plenty of open source code available, and once you've read through the code of a few applications, you start to see good and bad code and develop a taste for what you like and don't like, as well as understanding why certain programming styles and paradigms are good for different tasks.
+ Learning a new language by writing "Hello World" is much more difficult and will not exercise the true abilities of the language.
+ There can also be confusion between "code generators" and the "language". When learning a new language that is similar to one already learned it is often the case that learning the library and its idiosyncrasies is the larger task.
+ Some programming languages are designed to work well with particular tools. Many languages can be written with just a text editor like Vim or Notepad2 or TextMate, but working in the Lisp language can be made easier by using Emacs because of the built-in support for REPL environments. When working in C# or any .net language, Visual Studio or MonoDevelop are ideal. When working in Java, there's Eclipse, NetBeans, IntelliJ IDEA, and many others to choose from. Even the chosen operating system and version control system can change how code is written.
+
+
+Don't let the tools define the programming, and don't let tool switching become an obsession. Learning can come from trying new tools out of pure curiosity. Often the tool being used can slow down the process and this doesn't become obvious until compared with a new tool. However, changing tools just for the sake of "progress" can actually slow things down because of the learning curve, bugs, or simple incompatibility with existing processes. Sometimes old, understood tools are better than shiny new tools chosen because they are in fashion.
+ Coding dojos, conferences, Bar Camps, hack days, user groups, and code camps are great ways to learn. These groups can be helpful, even if attended infrequently, to introduce new ideas and identify new methods of doing things. There is a benefit to being challenged in a new environment.
+ Professional programmers may find opportunities to use new programming language knowledge at work. Try not to become a crazy evangelist, but spot opportunities where other languages may solve the problem better. However, shoehorning a language into a project where it doesn't fit just for the sake of using a new language is a recipe for failure. Having more tools in the toolbox always offers more opportunity and flexibility.
+
+
+For example, while working on a Java project at work, being able to use Ruby means build scripts can be written in Buildr, and existing test libraries can be used to write test code (test/ruby, shoulda, RSpec etc.) and have it run with the Java application using JRuby.
+Scripting languages can always be embedded into existing applications to allow scripting for dynamic, generated, or late-bound code. Ruby, Python, JavaScript, XSLT, and Lua are all good candidates.
+Editor plugins, version control hooks and so on can often be written more quickly in a lightweight, often loosely typed, language like JavaScript, Perl, or Ruby than it can in Java or C.
+If you have to write a front-end for a simple application, try using a scripting language like IronPython or MacRuby.
+If you need to write a complex back-end for a high performance application, pull out one of the languages that gives you better concurrency support: Erlang, Scala, Clojure and so on.
+Beware: not all companies will appreciate you sneaking in unapproved programming languages. And if it all goes wrong, you are going to be the one who gets blamed!
+
+, If you can't sneak your new programming languages into work, you can always work on open source projects. There are many fun applications to be built for any platform (Linux, Windows, Mac, etc.) as well as command line tools, libraries, language features, or even a brand new language. An open source project can be a great substitute if a custom project can't be found when trying to learn a new language.
+ Learn a new database every year, or a new API. Or even better, learn some non-programming skills. Cooking, musical instruments and photography are always popular in geek circles. A sport or activity gives you time to think and let ideas about programming percolate. This is just as important.
+ The Pragmatic Programmers book suggests that you should learn a new programming language every year. Every year might be too often, but try to commit to learning new languages periodically and keeping up with the latest developments. Even if you don't end up using the languages for work or open source or personal projects, knowing them still makes you both more valuable for employment, and should also give you some personal satisfaction.
+

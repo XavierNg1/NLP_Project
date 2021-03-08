@@ -1,0 +1,13 @@
+ You can use the Disk Utility program to create image files from any of your CDs or DVDs. You can find this in the Utilities folder in your Applications folder. You can also press ⌘ Command+Space and type "disk utility" to search for it., Insert the CD or DVD that you want to create a disc image from.
+ This will open a submenu.
+ "<Device>" will be the drive that contains the CD or DVD.
+ Saving it to your Desktop will make it easy to find later.
+ This will create a correct copy of the disc.
+ The time this takes will depend on the size of the disc and the speed of your drive.
+ Your Mac will create the image file in CDR format. This is fine if you only plan on using it on a Mac, but you can convert it to an ISO file if you'd like.
+ You can convert the CDR file to an ISO file using a simple Terminal command. You can find the Terminal in your Utilities folder.
+ Enter the following command to convert the file, replacing the path with your own file's path:
+
+
+hdiutil convert ~/Desktop/original.cdr -format UDTO -o ~/Desktop/converted.iso
+

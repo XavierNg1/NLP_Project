@@ -1,0 +1,31 @@
+
+Begin by installing all of the packages required for compilation.
+Accept the yes/no prompt.
+Navigate to your home folder, cd /home/yourusername.
+Now you must download the source code for the Trinity server.
+Go to the new directory named "trinitycore" with cd trinitycore and create a new folder named "build" with mkdir build.
+Configure the build process with the cmake command.
+Begin the build process with the make command.
+When the process is done, it should look like the image on the right.
+
+,
+Type the command make install.
+Now that you have built the server program, you must retrieve the game data from World of Warcraft itself.
+Go to the "extractor" directory and find "ad.exe".
+Go to the "vmap_extract_assembler_bin" directory and copy all the present files to the WoW root directory.
+Now that you have the server and the data, you need a database to store the players and creatures.
+Go to the /home/yourusername/db/trunk directory.
+Create three new databases, "world", "characters" and "realmd".Extract the "full_database/TDB0.0.2.rar(TC1) or TDB0.0.3(TC2)" and execute the "TDBlatestversion.sql" to the world database.
+Go to the /home/yourusername/src/trinitycore/sql/updates directory.
+Add a new row to the table "realmlist" in the realmd database.
+Go to the /home/yourusername/bin/etc directory.
+Scroll down a bit until you find the "RealmID" option.
+Find the "DatabaseInfo" options, a few rows down.
+Find, under "Performance Settings" the "vmap.enableLOS" and "vmap.enableHeight" options.
+Open the "trinityrealm.conf" file.Explore the different options in the files, and set them to your liking.
+When you are done, open a terminal window to /home/yourusername/bin/bin and type the command ./trinity-core.
+You now have a working Trinity server!,Now that your server is up and running, you will want to learn how to properly update it.Shut down the server by pressing CTRL+C in the terminal windows.
+Open a terminal, and go to the /home/yourusername/src/trinitycore directory.Repeat steps 5-9.
+Go to the /home/yourusername/src/trinitycore/sql/updates directory, and apply all new sql files to their corresponding databases.
+Go to the /home/yourusername/db/trunk/updates directory.
+Now your server and database are updated.

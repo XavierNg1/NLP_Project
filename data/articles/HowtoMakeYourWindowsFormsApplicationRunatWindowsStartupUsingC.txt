@@ -1,0 +1,41 @@
+,,,,
+We create a new instance of the RegistryKey class named run Registry Key that will point to the following registry key path HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+We check that these registry keys already exist in the registry and check if the StartupCheckBox is checked.
+If it is checked we add a value to the Run key this value is a key value pain with the key is the name of the application that will be started at startup and the value is the application Executable Path on the hard drive.
+If the checkbox is not checked we remove the key from the run and this will disable running the application at Windows Startup.
+At this point you can compile and run the application.
+
+
+Check the StartupCheckBox and close the application.
+Log off windows and log in again.
+You will notice that the application will run when you login. But the StartupCheckBox is not checked and you does not know if the application should run at startup or not.;
+, To do so follow these steps:
+
+,
+
+
+RegistryKey currentUserRegistry = Registry.CurrentUser;
+RegistryKey runRegistryKey = currentUserRegistry.OpenSubKey
+(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
+if (runRegistryKey != null)
+{
+if (runRegistryKey.GetValue("MyAppName") == null)
+{
+StartupToolStripButton.Checked = false;
+}
+else
+{
+StartupToolStripButton.Checked = true;
+}
+}
+
+In the above code, as in the previous code snippet we create two registry keys one that is mapped to Current User and the second that opens the Run registry key.
+
+We check that these keys exist.
+Then we get the startup key of our application using the runRegistryKey.GetValue passing application name key used in the first code snippet.
+If we find that the registry key value is null meaning that the application registry key is not found and so the application will not run at startup.
+If we found that the registry key value is not null meaning that the application registry key is found and so the application will run at startup.
+
+The Application name should be the same for all method calls.
+ You will notice that if the application has a key in the run registry key the Startup Checkbox is checked and vice versa.
+

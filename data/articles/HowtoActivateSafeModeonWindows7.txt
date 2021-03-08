@@ -1,0 +1,19 @@
+ Safe Mode works by only allowing the most essential files and drivers to load. Anything which is not required to boot the operating system (like start-up software) is not loaded. If you are having trouble booting your computer or something is acting fishy shortly after starting up your machine, reboot in Safe Mode to start troubleshooting.;
+, This includes CDs, DVDs, floppy disks and USB drives. This will prevent any of them from attempting to boot when you restart your computer.
+ You have two different options when it comes to booting into Safe Mode. You can reboot your computer and rapidly strike the F8 key to load the Advanced Startup menu, or you can set Windows to boot directly into Safe Mode. The first option is useful when you can’t load Windows, while the second is useful if you can access Windows normally already.
+
+
+For the first option, rapidly press the "F8" key while your computer restarts. Make sure you do this before the Windows splash screen appears (this is the black screen with the Windows logo). If the splash screen appears, you will need to restart the computer again and try again.For the second option, set your computer to boot into Safe Mode from Windows. To do this, open the Run dialog (Windows key + R) and type “msconfig”. This will open the System Configuration box. Click the Boot tab, and then check the “Safe boot” box. This will allow you to select what kind of Safe Mode you would like to use. The most common choices will be Minimal and Networking (see next step)., After hitting F8, you will be taken to the "Advanced Boot Options" screen. At the top of the list will be three different ways to load Safe Mode. If you set Windows to boot directly to Safe Mode, you won’t see this menu.
+
+
+Safe Mode - This is the best option if you aren't sure what you should choose. This option will load the fewest drivers necessary to boot Windows 7. You will not be able to connect to the internet. This is the “Minimal” option when setting Windows to boot to Safe Mode.
+Safe Mode with Networking - This option loads all the drivers and files that the first option does, but also loads any processes that are needed to allow networking. Choose this option if you think you'll need to get on the internet or your local network while troubleshooting.
+Safe Mode with Command Prompt - This mode loads the same processes as the first option but gives you immediate access to the command prompt. This option is suited for advanced users who need to do troubleshooting from the command line. The Windows graphical environment will not be loaded.
+ The next screen will show every file that is being loaded. You don't need to do anything while this is happening unless the files do not all load correctly. If the screen freezes at this point, make a note of the last file that successfully loaded and then search the internet for troubleshooting tips based on that information.
+ When the login screen appears, log in to an account with administrator privileges. If you only have 1 user account on your computer, it is likely that it has administrator privileges. If you only have one account and no password, you will most likely be logged in automatically.
+ You will know if your computer is in Safe Mode because "Safe Mode" will be written in all four corners of the screen. Safe Mode is a great place to run virus and malware scans, uninstall troublesome programs, and edit the registry.
+
+
+When you are finished in Safe Mode, reboot your computer to return to a normal Windows 7 session.
+If you set your computer to boot into Safe Mode through the System Configuration box, you will need to open it again while you are in Safe Mode and uncheck the “Safe boot” option in the Boot tab. If you don’t, your computer will continue booting into Safe Mode when it restarts.
+

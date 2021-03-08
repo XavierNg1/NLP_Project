@@ -1,0 +1,36 @@
+;
+,, Several types are made (SCSI, IDE, etc.). This article will discuss two of the most common types: parallel (PATA) and serial (SATA) IDE types.
+ Download the latest version of this software from the hard drive manufacturer’s website if the software was not included with the drive. Create media for use on a drive supported by the PC if downloaded from a website. A diskette image will not work if there is no diskette drive installed in the PC.
+, If a CD-ROM disk (or CD image download) version of the manufacturer’s hard drive setup program has been loaded in the PC drive, the information is likely included on the disk. Diskette versions will not likely have this information due to space limitations. Print the drive information along with this wiki for referral later, when the PC is off. This information may be needed to correctly set jumpers if not printed on the hard drive label. Indicate the make and model of the existing and new drive on the print out.
+, Choose from the types described below:
+
+
+
+
+
+
+Master / Slave (M/S): Set the jumper on the drive to MASTER if it is to be the boot drive and set the jumper on the drive to SLAVE for the non-boot drive. Be sure to check BOTH drives’ documentation for correct jumper positions. All IDE drives offer M/S selection. One drive must be set to master and the other drive must be set to slave when connected with a single IDE cable to the motherboard (or IDE controller board), or:
+
+
+
+
+
+
+Cable Select (CS): Set the jumper on BOTH drives to Cable Select (CS) and plug the connector at the end of the cable into the boot drive and the connector in the middle of the cable to the non-boot drive. Not every IDE drive offers a CS choice. If two drives are on an IDE cable, both must be set using the same method (M/S or CS). Do not connect a drive identified with an M/S jumper with another drive identified with a jumper set to CS on the same IDE cable. Regardless of Master/Slave or Cable Select identification method, the remaining end of the cable must be connected to the lowest numbered IDE connection on the motherboard (or IDE controller board). Consult the motherboard (or IDE controller board) manual if the designation is not printed on the board itself. Typically, the ports are labeled IDE0 and IDE1. IDE0 is the lowest port number and should be used.
+
+
+
+
+
+
+
+SATA drives do not have jumpers to indicate master or slave. Drive identification is done by connecting the boot drive to the lowest numbered SATA connection on the motherboard (or SATA controller board). Since the SATA interface cable has only one connector on each end, drive identification jumpers are not needed, but determined by the number assigned to the SATA port to which it is connected. One end of the SATA cable connects to the drive and the other to the motherboard (or SATA controller board). The boot drive should be connected to the connection point labeled SATA0 (or the lowest numbered SATA port on your motherboard), and the non-boot drive connected to the next higher available SATA number point.
+ A drive without both connections will not be identified or available for use.
+ The drive installation will be finalized later, when the process is complete.
+ Verify that the PC has successfully recognized all drives. Take corrective action should the PC have issues recognizing any drive. The drive documentation will assist solving these problems. It is very important to note the sizes of the drives, as later, in the installation and copy process, the drives will not have the familiar names like C or D. Knowing the drive that has data and the drive that is empty will be crucial to copy data correctly.
+, The PC will begin the boot process from the new “set up” or “install” media.
+ The screen should show the information about all the drives connected. Compare the data on the screen to what was written on the print out earlier. Make sure the information matches. This is when knowing how to identify the source (the drive with data to be copied from) and destination (the drive to receive the data) will be required. If unsure about source and destination drives, STOP. If the wrong choices are made, the wrong data will overwrite the “good data”, rendering the information lost. If satisfied with the identification of the drives, continue the setup of the new drive.
+ Copy the source drive to the destination drive. The time needed to complete the copy process depends on the amount of data stored on the source drive. The destination drive must be larger than the source drive.
+ Upon completion, remove the media from the drive (if not already done), and reboot as normal. Interrupt the boot process to access the BIOS setting page as before. Return settings (boot device order in particular) to original settings, then save and exit. The PC should boot (from the new drive if set as the first boot device). Check the contents of both drives after booting into Windows (or other OS). Once satisfied, the original disk may be erased, formatted or even removed (after shutting down the PC). If removing, the drive can be saved with contents intact for disaster recovery or erased and installed in a portable case for use as an external drive.
+ Route cables so that they will disrupt air flow the least, and replace covers on the PC case.
+

@@ -1,0 +1,18 @@
+
+Below is how you would start a new session; you would need to include this on every page you want to access the sessions, use it instead of session_start();Starting a session:
+
+
+
+
+require('session.class.php');
+$session = new session();
+// Set to true if using https
+$session->start_session('_s', false);
+ 
+$_SESSION= 'A value.';
+echo $_SESSION;
+
+
+
+
+

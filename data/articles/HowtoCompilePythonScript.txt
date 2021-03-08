@@ -1,0 +1,22 @@
+ It's a tool for packaging Python scripts into standalone executables.
+ For example, if you want to create a Windows executable file, run cx_Freeze on Windows. Same goes for Mac and Linux.,, (As always in Python, correct indentation is important, and unfortunately is not shown here due to formatting difficulties.):
+
+import sys
+from cx_Freeze import setup, Executable
+base = None
+if sys.platform == 'win32':
+base = 'Win32GUI'
+executables = [
+Executable(Python program name, base=base)
+]
+setup(name=executable_name,
+version='version',
+description='desc',
+executables=executables
+)
+
+,, It should have been created during the previous step. Open that folder and the folder inside it.
+
+There's your executable! The other files in that directory are required to run your executable, so be sure to always keep them with the executable.
+The build can be customized in many ways. See cx-freeze.readthedocs.org for a description of all possible options.
+

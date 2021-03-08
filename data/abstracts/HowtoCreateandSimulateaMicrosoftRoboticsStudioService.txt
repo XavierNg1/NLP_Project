@@ -1,0 +1,31 @@
+
+Install the Microsoft Robotic Studio.
+Create a new blank service
+
+
+Create a blank service from Start, Programs, Microsoft Robotics Studio (1.5)
+Run MSRS Command Prompt
+Type ‘md My’ to create a new directory for your projects
+Type ‘cd My’ to move into that directory
+Type ‘dssnewservice /service:Simplest’
+
+,
+Add some basic handling to your project so we will reference a drive partner
+
+
+Type ‘cd Simplest’ to move into your new services’ directory
+Type ‘Simplest.sln’ to open your service in Visual Studio C#
+Open the Solution Explorer (ctrl-w, s)
+Add a reference to RoboticsCommon.proxy
+Open the file Simplest.cs from the Solution Explorer
+Add a new using statement at the top ‘using drive = Microsoft.Robotics.Services.Drive.Proxy;’
+Add a partner reference below _mainPort declaration ‘’
+Add a port for this partner just below the line you just added ‘private drive.DriveOperations _drivePort = new drive.DriveOperations();’
+Add another port just below that one ‘private drive.DriveOperations _driveNotify = new drive.DriveOperations();’
+This port will be what we use to actually handle notifications that are sent to us.
+Now let’s listen to this partners notification messages
+
+
+We want the _driveNotify port to get messages sent to the _drivePort.
+Now that we’re wired up with the partner so it will listen for the update message we want to connect to the simulation environment.
+Push F5.

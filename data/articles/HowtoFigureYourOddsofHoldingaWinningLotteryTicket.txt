@@ -1,0 +1,56 @@
+, For the moment, don't simplify the fraction by reducing it to lowest terms.
+
+
+For example, suppose the lottery will sell 23,000,000 tickets, there will be 1,000 winning tickets, and you are planning to buy 6 tickets. Then T = 23000000, W = 1000, and P = 6. The first fraction will be (23000000-1000)/23000000 = 22999000/23000000.
+ If you bought more than one ticket, skip this step.
+ If you bought 6 tickets in the above example, these are the fractions you should come up with:
+
+
+22999000/23000000
+
+This is your first fraction, from an earlier step.
+
+
+22998999/22999999
+
+This is the result of subtracting one from each of the numbers in your first fraction; the following fractions continue this pattern.
+
+
+22998998/22999998
+22998997/22999997
+22998996/22999996
+22998995/22999995
+
+, There are two ways to do this. You can multiply all of the numerators, then multiply all the denominators, and then divide the numerator product by the denominator product. Or, if you have a calculator that can generate long decimals (such as the standard calculator in your computer), simplify all of the fractions (numerator divided by denominator to generate a decimal) and then multiply all of the decimals together. The resulting number is the probability of having NO winners among the tickets you purchased.
+
+
+The 5 fractions in this example generate these decimals, respectively:
+
+0.99995652173913043478260869565217
+0.99995652173724007553217719705118
+0.99995652173534971611736661890145
+0.99995652173345935653817693976221
+0.99995652173156899679460813819272
+0.99995652172967863688666019275222
+
+
+Since you have 5 fractions, you must multiply the resulting decimals together, which in this case results in 0.99973915876017716698091198324496
+
+,
+
+
+1 - 0.99973915876017716698091198324496 = 0.000260841239822833019088016756
+For ease of calculation, let's cut it down to .0002608412
+
+, Press the "1/x" or "x -1" button on your calculator to invert the fraction you calculated in the previous step. 1 / .0002608412 ~= 3834, meaning that you have about a 1 in 3834 chance of holding at least one winning ticket. If your calculator doesn't have this function, skip this step and move on to the next.
+ Count the number of characters after the decimal point, as that will be the number of zeros following 1 in your denominator; to get the numerator, take the decimal point and any preceding zeros away.
+
+
+.0002608412 has 10 characters after the decimal point, so your denominator is 10,000,000,000 (1 followed by 10 zeros)
+Without the decimal and the preceding zeros, .0002608412 = 2608412
+Your fraction is 2,608,412/10,000,000,000
+
+, Divide the denominator by the numerator. In this case, 10,000,000,000 divided by 2,608,412 equals 3,834 (when rounded). This corresponds to about 1 chance in 3,834 of holding at least one winning ticket.
+ The resulting number is your percentage of winning. Using the numbers from the example above, this equation tells us that we have a 0.026084% (less than three one-hundredths of a percent) chance of winning.;
+, Before multiplying by 100 to obtain the percentage, you will have calculated ~0.00026084. Create a fraction as from this as in the last steps of the first method above, so that you have 26084/100,000,000 (8 zeros after the one in this case because there are only 8 digits after the decimal point). Divide the denominator by the numerator, and your answer, when rounded, is 3,834--the same number you would have arrived at by use of the longer method.
+

@@ -1,0 +1,13 @@
+;
+,,, In this case i chose to call the function "my_function," in your scripts you should give your functions better names.
+You may have noticed the "$input" variable in between the parenthesis. This is called an argument. It is the input that the function will return as an output. PHP functions can have multiple arguments, as long as they are separated by commas. Observe the example above.
+
+The command "return" does exactly what is says, it returns the output. In this case the output is $input minus two, times 10. Take note that once the output has been returned the function is exited, and no code after it will be executed.
+
+This line of code is making a call to "my_function." In this case we will give my_function an input of 8, and PHP will echo the returned output value. Test the script, you will get a value of 60.
+
+The magic of coding with functions is the ability to reuse and recycle the same code over and over. We are now calling my_function two more times and reusing its code. Also notice how the in the code above the call to my_function is treated like a number. Always treat calls to functions as the datatype you expect to get back (whether it is a number, string, boolean, or resource). Test the script, you will get a value of 60 followed by a value of 260.
+,,,, For example if i tried to echo $input outside of the function, PHP would throw an error because i have not created that variable outside of the function. So note that variables created in a function (including the arguments) can only be used inside that function. Variables declared outside of a function can only be used outside of functions (unless you use them as an argument of course).
+That said, there is a command that allows you, in a function, to use a variable created outside a function. That command is "global", in the code above we use global with the variable $num so we could change it or access its value in our function. If you test the code, you will get the values 50 and 240.
+ Build your own function that is really useful. Use them in your future PHP projects. Using functions can improve code modularity and the size of the overall project.
+

@@ -1,0 +1,18 @@
+ When you type in a command, the shell searches itself for built-in commands, then it searches the directories listed in your PATH variable.
+
+
+To check PATH, type "echo $PATH".
+
+
+
+
+
+
+$ echo $PATH
+
+/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin:/usr/local/sbin:/usr/local/bin
+
+
+
+;
+, This shows the directories checked, separated by colons.

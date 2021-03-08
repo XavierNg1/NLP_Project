@@ -1,0 +1,11 @@
+
+Click the "Start" button, click "Run," and then type "regedit" into the text box if you are using Windows XP.
+Choose to allow access to the Registry Editor if the screen flashes and a message pops up asking your permission to make changes.
+Search the folders on the left sidebar and find the folder "Toolbar" under "HKEY_LOCAL_MACHINE," then "SOTFWARE," then "Microsoft," and then "Internet Explorer.",
+Open the folder called "WebBrowser" under the "Toolbar" folder.
+Find and delete two keys in the "CLSID" folder under "HKEY_LOCAL_MACHINE," then "SOFTWARE," and then "Classes.",
+Look under the "HKEY_LOCAL_MACHINE" folder for "SOFTWARE," then "Microsoft," then "Windows," then "CurrentVersion," then "Explorer," and then "Browser Help Objects.",
+Reboot your computer by clicking the "Start" button and choosing "Shut down" and then "Restart" if you are using Windows XP.
+Wait as your computer reboots.
+Access the System32 folder by typing "cd c:\windows\system32" and hitting the "Enter" key.
+Open the Control Panel by clicking the "Start" button and choosing "Control Panel."

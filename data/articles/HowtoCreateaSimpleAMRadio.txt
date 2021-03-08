@@ -1,0 +1,64 @@
+ The antenna is one of the simplest parts of a homemade radio: all you need is a long piece of wire and a small cylinder. Ideally, the wire should be 50 feet long, but if you don’t have that much, you can use 15 or 20 feet. Use any small diameter insulated wire, like a 20 or 22 gauge., In this radio circuit, you'll need to make a simple inductor. Inductors store energy in the form of a magnetic field, though the specifics and behaviors of inductors is a little complicated. You can make your own by wrapping wire around a small cylinder. Find a small cylinder. You can use a glass bottle, a cardboard tube, or any other cylinder you can find from around the house. Just make sure it’s not metal, because metal will conduct electricity and throw off your signal. Look for any object with a 2-3 inch diameter.
+Gather five inches of slack, then tape the wire to the cylinder at the five-inch point. You can use electrical tape, or any other tape you have on hand. Begin wrapping the wire around the cylinder slowly, pushing the coils together to avoid gaps.
+Continue wrapping until the whole cylinder is coiled with wire. Tape off the end, then measure another five inches of slack. Cut the wire off at the five-inch point. You should now have a cylinder completely coiled over with five inches of slack on either side.
+ Tuning capacitors set a resonance frequency for the radio, meaning that they allow you to tune in to certain resonances of the medium wave radio bands.Variable tuning capacitors aren’t too expensive, costing around 10-15 dollars if you buy online at sites like Amazon. You may also be able to find one at a local electronics or hobby store like Radio Shack.
+ Capacitors and resistors are small electronic components that affect the flow of electricity in different ways. Capacitance is measured in farads (F), while resistance is measured in ohms (Ω). These measurements help you to know which type of capacitors and resistors to buy.Buy one 33pF (pico-farad) capacitor, one 10nF (nano-farad) capacitor and one 22uF (micro-farad) electrolytic capacitor. Capacitors can be bought from a variety of online shops and electronics hobby stores very cheaply, with most vendors selling these specific parts from between two cents and 25 cents.Buy one 1 megohm resistor. Keep in mind that “one megohm” may be abbreviated as “1.0M Ohm” As with the capacitor, shop online or look at electronics shop, and expect prices to range from 10 cents to 25 cents.
+Always buy extras of your components. These pieces are very small, and are made inexpensively, so it’s not uncommon to get a faulty piece every once in a while.
+ Amplifiers help us take the small signals that we pick up from the radio waves and make them bigger so that we can hear them. For this radio, we’ll use something called an operational amplifier, or op-amp. Op-amps are small integrated circuits with 8 prongs, and they look a bit like small spiders.Look online for a “general purpose” op amp. Search on Amazon or in Mouser Electronics’ catalog, and look for amps in the four to seven dollar price range., Speakers receive voltage amplified by the op amp and turn them into sound waves that we can hear. The voltage moves a magnet, which in turn moves a cone that produces the sound waves.If you have a speaker around the house, feel free to use it. Otherwise, look online for any kind of small speaker with two speaker-wire leads (not the kind that plugs in with a headphone jack).
+ Breadboards allow you to create a mockup of a circuit without requiring any soldering. They have many rows and columns of holes, and electrical connections can be made by simply placing component wires into adjacent holes.Breadboards are an inexpensive investment for anyone with an interest in electronics, as they’re easy to use and can be changed over and over again to create new circuits. Look online or in a hobby store, where they’re sold for five to ten dollars.
+ You’ll need a bit of wire in two different colors to make into jumpers. You’ll also use it to attach to the ends of your power source. Make sure you have around 10 or 15 inches of each color.
+ This particular circuit requires 9 volts of electricity to function. Any variety of 9 volt battery will work. Tape one five inch wire to the negative (flat) end and one five inch wire to the positive (raised) end with electrical tape to get it ready for attachment.
+
+
+Cut two five-inch pieces of shielded wire. One will attach to each pole of the battery, and then to the circuit board.
+Using wire strippers or a sharp knife, cut 1-2mm of shielding off of each end of the wires.
+Tape one exposed-metal end of one wire to the positive (raised) end of the battery, using electrical tape. Tape the other wire to the negative (flat) end of the battery, again using electrical tape.
+ Lay your breadboard on the table in front of you “long-wise” so that the long edge is facing towards you and the short edges are on the outside. It doesn’t matter which side is on top, because both halves of the breadboard work the same way. Connectivity is achieved by placing components adjacently into the short columns, not the long rows.The only exceptions are the long, connected rows at the top and bottoms of the breadboard. These connect left-to right, not up and down.
+ Most breadboards have a long trough running across the middle, separating the board into two equal halves. You’ll want to place your op-amp so that four legs are on one side of the trough and four legs are on the other; four legs on the top half and four legs on the bottom half. This will allow you to build the input (the antenna) on one side of the breadboard and the output (the speaker and tuning capacitor) on the other side.
+
+
+
+
+
+
+
+
+Be aware that the amplifier has a “front” and a “back”. The “front” of the op-amp has a small circular divot and the “back” does not. Make sure that the “front” is facing towards the left of the breadboard.
+ Current flows both ways over a resistor, so you don’t have to worry about it being “backwards” or “forwards”.Place one lead into the hole directly above the op-amp’s second leg on the top side of the amp. Place the other leg in the hole directly below the op-amp’s second leg on the bottom side of the amp. To clarify, “second leg” means second from the left, or “front” of the op-amp.
+ Place the short lead of your 10nF capacitor in the hole directly below the lead of your 1.0M Ohm resistor, on the bottom side of the breadboard. Next, place the long lead of your 10nF capacitor in a hole four columns over, to the left.
+ Most resistors and ceramic capacitors, like your 10nF and 33pF capacitors, let voltage travel over them in both directions. However, electrolytic capacitors do not: they are “polarized”. This means that they can only accept voltage going in one direction, and it needs to come in on the shorter, or positive leg. Do not apply voltage to the negative, or shorter leg: this can cause the capacitor to fail in a puff of smoke.On the top side of your breadboard, place the long lead of the 22uF capacitor in the hole directly above the top lead of your 1.0M resistor. Again, keep in mind that capacitors only allow voltage to flow in one direction, so the long lead needs to be the one connected to the resistor.
+Place the short lead in a hole four rows away from the long lead, to the right.
+ Get your black and red insulated wire. Cut one black jumper wire and one red jumper wire. Make sure they’re long enough to reach holes several rows away. Strip the insulation from one both ends of the jumpers. Using a pair of wire strippers, scissors, or a knife, cut off about 2cm of insulation from each end of the wire. This will allow the wire to form connectivity when placed into a hole on the breadboard.
+
+
+
+
+
+
+
+
+Put one end of the red wire into the hole right above the first leg of the op amp, on the top side. Stick the other end into the long row at the top of the breadboard. Unlike the rest of the grid of the breadboard, which makes connections going up and down, this long row creates connections going left to right across the whole row.
+Place one end of the black jumper wire into the hole beneath the fourth, or furthest right leg of the op-amp, on the bottom side of the breadboard. Connect the remaining lead to the bottommost row of the breadboard.
+ This capacitor, like the first one you placed, isn’t polarized. There’s no backwards and forwards for this one, as it allows current to pass over it in both directions. It won’t matter which lead goes in which spot.
+
+
+Look at your 10nF capacitor. One of the leads is attached to a bottom leg of the op-amp. The other isn’t connected to anything yet. Place one lead of your 22pF capacitor into the hole directly above this unconnected 10nF lead.
+Put the other lead of your 22pF capacitor into a hole four rows away, to the left. Make sure the row you place it in is empty.
+ Your antenna has remained unused up until this point, so let’s go ahead and attach it. Place one end of the antenna into the hole directly above the empty lead of the 22pF capacitor; the lead that you just placed four rows away to the left. Spool the rest of your wire out across the room, as far as the walls will allow you.
+ Place the variable capacitor on the table, on the top side of the breadboard. Connect one lead in the hole above the rightmost lead of your 22pF capacitor. Place the other lead in any hole on the bottommost row of the breadboard, where it will make connectivity with your black jumper wire.
+ Place the coil on the table below your breadboard. You saved five inches of slack on either side of the coil, so place the left-hand lead into a hole on the bottommost row, where it will connect to your variable capacitor and your black jumper wire. Place the right-hand lead in a hole in the row where your 22pF capacitor and your 10nF capacitor make connection with the variable capacitor’s lead.
+ Place your speaker on the table to the right of the variable capacitor. Your speaker will have one black lead and one red lead, so untwist them and get ready to plug them in. Put the red lead into any hole on the topmost row of the breadboard, where it will make connectivity with the red jumper wire. Place the black lead into the hole directly above the short lead of your 22uF electrolytic capacitor.
+ Now that your circuit is finished, give it some power. If you haven’t already used electrical tape to attach wires to the positive and negative sides of the battery, do that now. Remember, the flat end of the battery is negative, and the raised side of the battery is positive.
+
+
+
+
+
+
+
+
+Place the positive wire into any hole on the bottommost row of the breadboard. It will now create connectivity with the black jumper wire and the variable capacitor.
+Place the negative wire into any hole on the topmost row of the breadboard, where it will make connectivity with the speaker and the red jumper wire.
+ Once the circuit has power, the electricity will begin to flow to the amp and the speaker. The speaker should now be making sound, whether it’s a faint radio signal or just static. This is a good indication that all of your components are correctly connected.
+ Turn the variable tuner slowly, listening for audible radio stations. The further away from AM radio stations you live, the weaker the signals will be. However, be patient and turn the knob slowly. You’ll easily find a station with a little patience.
+ All circuits are touchy, and many require troubleshooting, especially if this is the first circuit you’ve ever built. Make sure that all leads are firmly pressed into their holes, and that they are all in the correct spots. Continue to check connections until you hear audio. If it fails to work, it may be necessary to rebuild the circuit and repeat the steps again.

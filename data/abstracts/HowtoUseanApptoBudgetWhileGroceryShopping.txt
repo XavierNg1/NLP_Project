@@ -1,0 +1,23 @@
+
+Open a new workbook in Excel from the desktop, from the dock, or from within your Applications folder inside the Microsoft folder.
+Take your receipt from your first shopping of the month and enter the type of food into column A, starting in cell A2, then in column B, enter the quantity you bought and in column C, enter the price you paid for that quantity if it was typical.
+Enter to B1 the Variable Name, Quantity, and enter to C1 the variable name, Price.
+You are now ready to enter the formulas for the first and or second week of shopping.
+Create a blank row at the bottom of the Grocery Item list, then a row for Coupons, a row for Tax and a row for total.
+For each column total, enter =sum(D1:Dnn), where nn is the number of the row where the Tax (or last item to be included in the Total) is to be entered.
+
+,
+Enter the coupons and tax from your first period's shopping and balance your entries to the first period's receipt.
+Insert new rows with other items which you will purchase during the month but did not happen to purchase during period 1.
+Select columns A:B and do Insert Columns.
+
+,
+In the new column A, in cell A1, enter Sort:Rcpt, and in cell B1 enter Sort:Shop.
+
+,
+Select cell range A2:(to the last item) and enter a 1 and then do Edit Series Fill and accept the default Step Value of 1.
+Go down column B and enter the Store Aisles the Grocery Items come from (or just approximate your store route from memory from the first item you shop for to the last).
+When a month is done, save the file to an appropriate sub-folder, e.g.
+You may find it desirable to enter a row for non-taxable items like Prescription Drugs if your store has a pharmacy you use.
+When you're done, your Excel worksheet should resemble something like this one pictured; this one has two columns for Quantity and two columns for Price because sometimes one changes the quantity one buys for more than several items.
+You may wish to compare your Period Totals to Budgeted Period Totals.

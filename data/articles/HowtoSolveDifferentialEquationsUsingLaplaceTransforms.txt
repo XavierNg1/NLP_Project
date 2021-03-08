@@ -1,0 +1,179 @@
+ y{\displaystyle y} and its derivatives only depend on t.{\displaystyle t.}
+
+
+y′′+5y′+6y=cos⁡t;  y(0)=1, y′(0)=0{\displaystyle y^{\prime \prime }+5y^{\prime }+6y=\cos t;\ \ y(0)=1,\ y^{\prime }(0)=0}
+;
+, Using the properties of the Laplace transform, we can transform this constant coefficient differential equation into an algebraic equation.
+
+
+s2Y−sy(0)−y′(0)+5(sY−y(0))+6Y=ss2+1s2Y−s+5sY−5+6Y=ss2+1{\displaystyle {\begin{aligned}s^{2}Y-sy(0)-y^{\prime }(0)+5(sY-y(0))+6Y&={\frac {s}{s^{2}+1}}\\s^{2}Y-s+5sY-5+6Y&={\frac {s}{s^{2}+1}}\end{aligned}}}
+
+
+, Simplify and factor the denominator to prepare for partial fraction decomposition.
+
+
+Y=ss2+1+s+5s2+5s+6=s(s2+1)(s+3)(s+2)+s+5(s+3)(s+2){\displaystyle {\begin{aligned}Y&={\frac {{\frac {s}{s^{2}+1}}+s+5}{s^{2}+5s+6}}\\&={\frac {s}{(s^{2}+1)(s+3)(s+2)}}+{\frac {s+5}{(s+3)(s+2)}}\end{aligned}}}
+
+
+, This process can be long-winded, but there are ways to streamline this process. Because partial fractions are inevitably going to show up while working in Laplace space, we will detail the entire process into solving for each coefficient.
+
+First, let's work with the first fraction, the harder one. This fraction can be written in terms of four coefficients.
+
+
+s(s2+1)(s+3)(s+2)=As+Bs2+1+Cs+3+Ds+2{\displaystyle {\frac {s}{(s^{2}+1)(s+3)(s+2)}}={\frac {As+B}{s^{2}+1}}+{\frac {C}{s+3}}+{\frac {D}{s+2}}}
+
+
+
+
+C{\displaystyle C} and D{\displaystyle D} can easily be solved for. To solve for C,{\displaystyle C,} we multiply both sides by (s+3){\displaystyle (s+3)} and substitute s=−3.{\displaystyle s=-3.} By doing so, we will be evaluating the "reduced fraction" on the left, while C{\displaystyle C} on the right side becomes isolated as the other terms vanish. D{\displaystyle D} can be found in a similar manner. In general, such coefficients can be found by multiplying by the factor in the denominator and substituting that root. This is an excellent way to avoid solving a system of equations.
+
+
+C=s(s2+1)(s+2)|s=−3=310{\displaystyle C={\frac {s}{(s^{2}+1)(s+2)}}{\Bigg |}_{s=-3}={\frac {3}{10}}}
+
+
+D=s(s2+1)(s+3)|s=−2=−25{\displaystyle D={\frac {s}{(s^{2}+1)(s+3)}}{\Bigg |}_{s=-2}=-{\frac {2}{5}}}
+
+
+
+
+B{\displaystyle B} can be found by multiplying both sides by (s2+1){\displaystyle (s^{2}+1)} and choosing s=0.{\displaystyle s=0.}
+
+
+0=B+C3+D2{\displaystyle 0=B+{\frac {C}{3}}+{\frac {D}{2}}}
+
+
+B=110{\displaystyle B={\frac {1}{10}}}
+
+
+
+
+A{\displaystyle A} is a bit trickier to find. We first get rid of the denominators to both sides. Then, we recognize that A{\displaystyle A} is a coefficient of s3.{\displaystyle s^{3}.} The other s3{\displaystyle s^{3}} terms will have C{\displaystyle C} and D{\displaystyle D} in them. Now, notice that the left side has no cubic term. Therefore, we can say that A+C+D=0.{\displaystyle A+C+D=0.}
+
+
+s=As(s+3)(s+2)+B(s+3)(s+2)+C(s+2)(s2+1)+D(s+3)(s2+1){\displaystyle {\begin{aligned}s=As(s+3)(s+2)&+B(s+3)(s+2)\\&+C(s+2)(s^{2}+1)\\&+D(s+3)(s^{2}+1)\end{aligned}}}
+
+
+A=−C−D=110{\displaystyle A=-C-D={\frac {1}{10}}}
+
+
+
+The same process in finding C{\displaystyle C} and D{\displaystyle D} can be used to find the coefficients of the partial fractions for the second fraction. In general, this idea of substituting, differentiating (for fractions with repeated roots), or equating coefficients can be used to efficiently find partial fraction decompositions. Of course, such efficiency takes practice, and if you need to double-check your work, going back to the system of equations is another option.
+
+
+s+5(s+3)(s+2)=Es+3+Fs+2{\displaystyle {\frac {s+5}{(s+3)(s+2)}}={\frac {E}{s+3}}+{\frac {F}{s+2}}}
+
+
+E=−2, F=3{\displaystyle E=-2,\ F=3}
+
+
+
+
+, We now have the coefficients, so we can now simplify the solution.
+
+
+Y=110s+1s2+1+3/10s+3+−2/5s+2+−2s+3+3s+2=110s+1s2+1+−17/10s+3+26/10s+2{\displaystyle {\begin{aligned}Y&={\frac {1}{10}}{\frac {s+1}{s^{2}+1}}+{\frac {3/10}{s+3}}+{\frac {-2/5}{s+2}}+{\frac {-2}{s+3}}+{\frac {3}{s+2}}\\&={\frac {1}{10}}{\frac {s+1}{s^{2}+1}}+{\frac {-17/10}{s+3}}+{\frac {26/10}{s+2}}\end{aligned}}}
+
+
+, Now, we can finally transform back from Laplace space. We are lucky because our terms are all written such that we can find the functions in physical space by looking at a table of Laplace transforms. In general, taking inverse Laplace transforms is no joke, and requires a fair bit of knowledge of complex analysis (the Bromwich integral is a contour integral typically done using residue theory).
+
+
+y(t)=110cos⁡t+110sin⁡t−1710e−3t+135e−2t{\displaystyle y(t)={\frac {1}{10}}\cos t+{\frac {1}{10}}\sin t-{\frac {17}{10}}e^{-3t}+{\frac {13}{5}}e^{-2t}}
+
+
+, In physics, the equation of an object undergoing simple harmonic motion with no resistance is given by mx¨+mω2x=0,{\displaystyle m{\ddot {x}}+m\omega ^{2}x=0,} where ω{\displaystyle \omega } is the angular frequency of oscillation, and the number of dots specifies the number of derivatives (Newton's notation for derivatives). Of course, in real life, there will always be some form of resistance. In this example, the resistive force is assumed to be proportional to velocity F=−mβx˙,{\displaystyle F=-m\beta {\dot {x}},} where β{\displaystyle \beta } is a constant. Our initial conditions are a displacement of 1 from equilibrium at rest. By using Newton's second law, we can write the differential equation in the following manner. Notice that the presence of mass m{\displaystyle m} in each of the terms means that our solution must eventually be independent of m.{\displaystyle m.}
+
+
+mx¨+2mβx˙+mω2x=0,  x(0)=1, x˙(0)=0{\displaystyle m{\ddot {x}}+2m\beta {\dot {x}}+m\omega ^{2}x=0,\ \ x(0)=1,\ {\dot {x}}(0)=0}
+
+
+x¨+2βx˙+ω2x=0{\displaystyle {\ddot {x}}+2\beta {\dot {x}}+\omega ^{2}x=0}
+
+
+,
+
+
+s2X−s+2βsX−2β+ω2X=0{\displaystyle s^{2}X-s+2\beta sX-2\beta +\omega ^{2}X=0}
+
+
+X(s)=s+2βs2+2βs+ω2{\displaystyle X(s)={\frac {s+2\beta }{s^{2}+2\beta s+\omega ^{2}}}}
+
+
+, The purpose of this is to obtain a result from which we can look at a table of Laplace transforms and find the function in physical space by inspection. Of course, to compensate for the added β2{\displaystyle \beta ^{2}} term, we need to subtract that so that we are "adding 0."
+
+
+X=s+2β(s+β)2+ω2−β2{\displaystyle X={\frac {s+2\beta }{(s+\beta )^{2}+\omega ^{2}-\beta ^{2}}}}
+
+
+, From the numerator, it is obvious that this is going to be a sum of a cosine and sine term. From the (s+β)2{\displaystyle (s+\beta )^{2}} in the denominator, it is obvious that both of these terms will be multiplied by an exponential term (in fact, an exponential decay term e−βt{\displaystyle e^{-\beta t}}). In order to see the two contributions more clearly, we can rewrite the numerator as (s+β)+β.{\displaystyle (s+\beta )+\beta .}
+
+
+x(t)=e−βtcos(ω2−β2t)+βω2−β2e−βtsin(ω2−β2t){\displaystyle x(t)=e^{-\beta t}\cos \left({\sqrt {\omega ^{2}-\beta ^{2}}}\,t\right)+{\frac {\beta }{\sqrt {\omega ^{2}-\beta ^{2}}}}e^{-\beta t}\sin \left({\sqrt {\omega ^{2}-\beta ^{2}}}\,t\right)}
+
+This example has shown us that the method of Laplace transforms can be used to solve homogeneous differential equations with initial conditions without taking derivatives to solve the system of equations that results. However, it is a good idea to check your answer by solving the differential equation using the standard ansatz method.
+ The previous example serves as a prelude for this more complicated problem. Now, we add a driving force F=Asin⁡ωt,{\displaystyle F=A\sin \omega t,} where A{\displaystyle A} is the amplitude and ω{\displaystyle \omega } is the frequency of the driving force. Our differential equation is now modified to be inhomogeneous with more general initial conditions. We denote ω0{\displaystyle \omega _{0}} to be the frequency of the oscillator free of the driving force.
+
+
+x¨+2βx˙+ω02x=Asin⁡ωt,  x(0)=x0, x˙(0)=v0{\displaystyle {\ddot {x}}+2\beta {\dot {x}}+\omega _{0}^{2}x=A\sin \omega t,\ \ x(0)=x_{0},\ {\dot {x}}(0)=v_{0}}
+
+
+, We split the answer into two pieces. The first fraction is easy, and we will transform that back into physical space at the end of this problem. The second fraction is a bit more complicated (to say the least).
+
+
+s2X−sx0−v0+2βsX−2βx0+ω02X=Aωs2+ω2{\displaystyle s^{2}X-sx_{0}-v_{0}+2\beta sX-2\beta x_{0}+\omega _{0}^{2}X={\frac {A\omega }{s^{2}+\omega ^{2}}}}
+
+
+X(s)=sx0+2βx0+v0(s+β)2+ω02−β2+Aω((s+β)2+ω02−β2)(s2+ω2){\displaystyle X(s)={\frac {sx_{0}+2\beta x_{0}+v_{0}}{(s+\beta )^{2}+\omega _{0}^{2}-\beta ^{2}}}+{\frac {A\omega }{((s+\beta )^{2}+\omega _{0}^{2}-\beta ^{2})(s^{2}+\omega ^{2})}}}
+
+
+, Aω{\displaystyle A\omega } can be treated as a constant. Notice that B{\displaystyle B} is being multiplied by (s+β),{\displaystyle (s+\beta ),} which should be the case because the denominator contains a (s+β){\displaystyle (s+\beta )} term important for getting the e−βt{\displaystyle e^{-\beta t}} out when we transform back.
+
+
+1((s+β)2+ω02−β2)(s2+ω2)=B(s+β)+C(s+β)2+ω02−β2+Ds+Es2+ω2{\displaystyle {\frac {1}{((s+\beta )^{2}+\omega _{0}^{2}-\beta ^{2})(s^{2}+\omega ^{2})}}={\frac {B(s+\beta )+C}{(s+\beta )^{2}+\omega _{0}^{2}-\beta ^{2}}}+{\frac {Ds+E}{s^{2}+\omega ^{2}}}}
+
+
+, Equate the coefficients first.
+
+
+1=B(s+β)(s2+ω2)+C(s2+ω2)+Ds((s+β)2+ω02−β2)+E((s+β)2+ω02−β2){\displaystyle {\begin{aligned}1&=B(s+\beta )(s^{2}+\omega ^{2})+C(s^{2}+\omega ^{2})\\&+Ds((s+\beta )^{2}+\omega _{0}^{2}-\beta ^{2})+E((s+\beta )^{2}+\omega _{0}^{2}-\beta ^{2})\end{aligned}}}
+
+From this result, we clearly see by equating the cubic terms s3,{\displaystyle s^{3},} we obtain B+D=0.{\displaystyle B+D=0.}
+
+
+, Remember that s{\displaystyle s} is, in general, a complex number. Since s{\displaystyle s} is involved in a sum of squares, we recognize that if s{\displaystyle s} is purely imaginary, such a term will vanish. This causes both B{\displaystyle B} and C{\displaystyle C} to vanish. Then we obtain a system of equations because we can equate the real and imaginary components. This gets us D{\displaystyle D} and E{\displaystyle E} simultaneously. This also gets us B{\displaystyle B} because B=−D.{\displaystyle B=-D.}
+
+
+1=Diω(ω02−ω2+2iωβ)+E(ω02−ω2+2iωβ){\displaystyle 1=Di\omega (\omega _{0}^{2}-\omega ^{2}+2i\omega \beta )+E(\omega _{0}^{2}-\omega ^{2}+2i\omega \beta )}
+
+
+{0=Dω(ω02−ω2)+2Eωβ1=E(ω02−ω2)−2Dω2β{\displaystyle {\begin{cases}0=D\omega (\omega _{0}^{2}-\omega ^{2})+2E\omega \beta \\1=E(\omega _{0}^{2}-\omega ^{2})-2D\omega ^{2}\beta \end{cases}}}
+
+
+E=ω02−ω2(ω02−ω2)2+4β2ω2{\displaystyle E={\frac {\omega _{0}^{2}-\omega ^{2}}{(\omega _{0}^{2}-\omega ^{2})^{2}+4\beta ^{2}\omega ^{2}}}}
+
+
+D=−2β(ω02−ω2)2+4β2ω2{\displaystyle D={\frac {-2\beta }{(\omega _{0}^{2}-\omega ^{2})^{2}+4\beta ^{2}\omega ^{2}}}}
+
+
+B=2β(ω02−ω2)2+4β2ω2{\displaystyle B={\frac {2\beta }{(\omega _{0}^{2}-\omega ^{2})^{2}+4\beta ^{2}\omega ^{2}}}}
+
+
+, The reason for this is simple - B{\displaystyle B} vanishes, and the other terms simplify. Then substitute the results for D{\displaystyle D} and E.{\displaystyle E.} This coefficient is the most laborious to obtain, but the goal here is to write all terms on the right side in terms of (ω2+β2).{\displaystyle (\omega ^{2}+\beta ^{2}).}
+
+
+1=C(β2+ω2)+(ω02−β2)(E−βD){\displaystyle 1=C(\beta ^{2}+\omega ^{2})+(\omega _{0}^{2}-\beta ^{2})(E-\beta D)}
+
+
+C(β2+ω2)=1−(ω02−ω2+2β2)(ω02−β2)(ω02−ω2)2+4β2ω2=ω4+3ω2β2−ω2ω02−ω02β2+2β4(ω02−ω2)2+4β2ω2=(ω2+β2−β2)2+3(ω2+β2−β2)β2+2β4−ω02(ω2+β2)(ω02−ω2)2+4β2ω2=(ω2+β2)2+β2(ω2+β2)−ω02(ω2+β2)(ω02−ω2)2+4β2ω2{\displaystyle {\begin{aligned}C(\beta ^{2}+\omega ^{2})&=1-{\frac {(\omega _{0}^{2}-\omega ^{2}+2\beta ^{2})(\omega _{0}^{2}-\beta ^{2})}{(\omega _{0}^{2}-\omega ^{2})^{2}+4\beta ^{2}\omega ^{2}}}\\&={\frac {\omega ^{4}+3\omega ^{2}\beta ^{2}-\omega ^{2}\omega _{0}^{2}-\omega _{0}^{2}\beta ^{2}+2\beta ^{4}}{(\omega _{0}^{2}-\omega ^{2})^{2}+4\beta ^{2}\omega ^{2}}}\\&={\frac {(\omega ^{2}+\beta ^{2}-\beta ^{2})^{2}+3(\omega ^{2}+\beta ^{2}-\beta ^{2})\beta ^{2}+2\beta ^{4}-\omega _{0}^{2}(\omega ^{2}+\beta ^{2})}{(\omega _{0}^{2}-\omega ^{2})^{2}+4\beta ^{2}\omega ^{2}}}\\&={\frac {(\omega ^{2}+\beta ^{2})^{2}+\beta ^{2}(\omega ^{2}+\beta ^{2})-\omega _{0}^{2}(\omega ^{2}+\beta ^{2})}{(\omega _{0}^{2}-\omega ^{2})^{2}+4\beta ^{2}\omega ^{2}}}\end{aligned}}}
+
+
+C=ω2−ω02+2β2(ω02−ω2)2+4β2ω2{\displaystyle C={\frac {\omega ^{2}-\omega _{0}^{2}+2\beta ^{2}}{(\omega _{0}^{2}-\omega ^{2})^{2}+4\beta ^{2}\omega ^{2}}}}
+
+
+, (Of course, transform back using the coefficients, not their explicit forms! Remember to multiply by Aω,{\displaystyle A\omega ,} since we omitted that when finding the coefficients.) This solution is fairly complicated, and it seems unusual that the simple addition of a sinusoidal driving force would end up complicating the motion to this degree. Unfortunately, this is what the math tells us. What we have found in this section is that, while the process of obtaining this solution took a lot of algebra, our only steps that involved some resemblance of calculus were the Laplace transforms both to and from Laplace space. The rest was simply finding the coefficients of the partial fractions. 
+
+
+x(t)=x0e−βtcos(ω02−β2t)+βx0+v0ω02−β2e−βtsin(ω02−β2t)+2Aωβ(ω02−ω2)2+4ω2β2e−βtcos(ω02−β2t)+Aωω02−β2ω2−ω02+2β2(ω02−ω2)2+4ω2β2e−βtsin(ω02−β2t)+−2Aωβ(ω02−ω2)2+4ω2β2cos⁡ωt+A(ω02−ω2)(ω02−ω2)2+4ω2β2sin⁡ωt{\displaystyle {\begin{aligned}x(t)&=x_{0}e^{-\beta t}\cos \left({\sqrt {\omega _{0}^{2}-\beta ^{2}}}\,t\right)+{\frac {\beta x_{0}+v_{0}}{\sqrt {\omega _{0}^{2}-\beta ^{2}}}}e^{-\beta t}\sin \left({\sqrt {\omega _{0}^{2}-\beta ^{2}}}\,t\right)\\&+{\frac {2A\omega \beta }{(\omega _{0}^{2}-\omega ^{2})^{2}+4\omega ^{2}\beta ^{2}}}e^{-\beta t}\cos \left({\sqrt {\omega _{0}^{2}-\beta ^{2}}}\,t\right)\\&+{\frac {A\omega }{\sqrt {\omega _{0}^{2}-\beta ^{2}}}}{\frac {\omega ^{2}-\omega _{0}^{2}+2\beta ^{2}}{(\omega _{0}^{2}-\omega ^{2})^{2}+4\omega ^{2}\beta ^{2}}}e^{-\beta t}\sin \left({\sqrt {\omega _{0}^{2}-\beta ^{2}}}\,t\right)\\&+{\frac {-2A\omega \beta }{(\omega _{0}^{2}-\omega ^{2})^{2}+4\omega ^{2}\beta ^{2}}}\cos \omega t+{\frac {A(\omega _{0}^{2}-\omega ^{2})}{(\omega _{0}^{2}-\omega ^{2})^{2}+4\omega ^{2}\beta ^{2}}}\sin \omega t\end{aligned}}}
+
+Luckily, this solution is very general. There are many interesting properties of this physical system that we can gleam by analyzing this solution. However, since such analysis is not relevant to Laplace transforms anymore, we will not go into it here.
+
+

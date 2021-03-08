@@ -1,0 +1,16 @@
+;
+,, Note that if you are using a Trial Copy CD, there will be a screen explaining that the copy is a trial, BEFORE the main Setup screen.
+,, If you don't have one, or don't know what it is, see the related wikiHows.
+ Just like in DOS or the Command Line in Windows, you can use commands to modify, delete, move, etc. files and folders. Back up what you want to save into a folder with a unique name in the root directory, for simplicity, this article calls that folder "save". Enter the "save" directory (chdir C:\save) and copy the files you want to save. If you wish to save everything in the "Documents and settings", enter the save directory and type (without the dashes) -copy C:\Documents and Settings- or -copy C:\Docume~1-. Don't worry about unnecessary hidden folders like Local Settings and Application Data, when you copy the files back into the documents and settings after reinstall, they stay right where they are. Delete this folder after re-installation.
+ To delete, type -del "path"-, without the dashes. BE ABSOLUTELY SURE you have saved the files you want to save out of Documents and Settings!
+
+
+\WINDOWS
+\Program Files
+\Documents and Settings\username\Application Data
+\Documents and Settings\username\Local Settings
+\Documents and Settings\username\NTUSER.DAT
+\Documents and Settings\username\ntuser.ini
+\Documents and Settings\username\ntuser.dat.LOG
+
+,

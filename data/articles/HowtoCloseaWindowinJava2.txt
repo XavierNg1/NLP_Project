@@ -1,0 +1,47 @@
+, Call addWindowListener method on the instance. The required argument is WindowListener. You can either implement every method of the WindowListener interface or override only the methods you need from WindowAdapter class., Implement windowClosing method from WindowListener interface or override it from WindowAdapter class. There are two ways of closing a window:
+
+Dispose the window after the close button is clicked:
+
+Call dispose method inside windowClosing method.
+
+
+
+
+
+frame.addWindowListener(new WindowAdapter() {
+        @Override
+        public void windowClosing(WindowEvent e) {
+                // Dispose the window after the close button is clicked.
+                dispose();
+        }
+});
+
+
+
+
+
+
+
+Terminate the program after the close button is clicked:
+
+Call System.exit method inside windowClosing method.
+
+
+
+
+
+frame.addWindowListener(new WindowAdapter() {
+        @Override
+        public void windowClosing(WindowEvent e) {
+                // Terminate the program after the close button is clicked.
+                System.exit(0);
+        }
+});
+
+
+
+
+
+
+
+

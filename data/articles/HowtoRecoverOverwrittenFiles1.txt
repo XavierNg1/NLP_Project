@@ -1,0 +1,46 @@
+ When you notice that you've accidentally delete or overwritten a file, do not save anything else on that hard drive. Avoid running programs as well. Whenever new data is written to the drive, there's a chance that it could be set to override the data from the old file. Not saving anything increases the chances that you'll be able to recover the file.
+ This is a powerful free file recovery program. It isn't pretty, but it can do a lot of the same things that expensive file recovery programs do. You can download PhotoRec for free from www.cgsecurity.org as part of the TestDisk utility.
+
+
+PhotoRec is available for Windows, OS X, and Linux.
+Make sure to do this on another computer to avoid overwriting the file you are trying to recover. You can also download PhotoRec to another drive on your computer, but it's safest to get it on another computer.
+ Ideally, you'll want to use a USB drive that is big enough to hold both PhotoRec and any files that you want to recover. This is because recovering the file to its original drive increases the chances that the recovery will write over the original, corrupting it in the process.
+
+
+PhotoRec is only about 5 MB in size, so any size USB drive will be able to hold it.
+ TestDisk comes packaged in a ZIP (Windows) or BZ2 (Mac) file. Extract the TestDisk folder.
+ This will allow you to run PhotoRec from the USB drive.
+ Open the TestDisk folder on the USB drive.
+ This will launch your Command Prompt or Terminal.
+
+
+You will use the arrow keys up, down, left, and right to navigate and Enter or Return to confirm selections.
+ The disks are just numbered, so you will need to go off the size of the disk.
+
+
+If your disk has multiple partitions, such as a C: and D: drive on one physical disk, they won't be listed until you select the disk they are on.
+ By default PhotoRec will try to recover any file that it supports. You can speed up the search by specifying which file types you want to focus on.
+
+
+You can change the file types options in the File Opt menu.
+While in the File Opt menu, you deselect everything on the list by pressing S. You can then go through the list and enable each filetype you want to search for.
+ You will need to judge which one is correct based on the size of the partitions. Some partitions may be labeled.
+ If you are using Linux, select ext2/ext3. If you are using Windows or OS X, select Other.
+ Your choice here depends on how the file was lost:
+
+
+
+Free - Select this option if you manually deleted or copied over your old file.
+
+Whole - Select this option if disk failure caused you to lose access to the file.
+ Make sure that this isn't on the same partition as the files you are trying to recover.
+
+
+Use the .. at the top of the directory list to navigate back to your installed disks. This will allow you to find a location on another partition or USBN drive to save the files to.
+Press C when you've located the directory you want to save the files into.
+ PhotoRec will begin trying to recover deleted files from the partition you chose. The remaining time will be displayed on the screen, and the number of files recovered will be shown.
+
+
+File recovery can take a really long time, especially if the partition is large and you are searching for a wide variety of file types.
+ Once the scan is finished, you can check your recovery directory to see the files that were recovered. The filenames will likely be destroyed, so you will need to go through each one to see if the file you need was successfully recovered.
+

@@ -1,0 +1,14 @@
+ On a new browser tab, visit the Twitter website. Enter your registered email address and password into the fields, and click “Sign in” to proceed.
+ To get your conversation rate, you must get the “Number of Replies per Tweet.” To do this, divide the “Total number of Replies” by the “Total number of tweets.”
+
+
+The total number of tweets is the number below the “Tweets” option in the header.
+You can check the number of replies by counting and adding them manually, or by creating a MySQL table. After creating the table, enter the specific details like content, time, and date of each tweet, and it will give you the total number of replies.
+This method is relatively tricky when compared with others and will need patience to achieve precision. For instance, Total number of tweets in your account = 3,000. Total number of replies = 1,000. Therefore, your number of replies per tweet = 1000/3000 = 0.33.
+ You need to check the your reach among your follower’s followers. To check this, you will need the “Number of retweets per tweet.” To get the “Number of retweets per tweet,” divide the “Total number of RTs” with your “Total number of tweets.” Again, the number of retweets is also achieved with a MySQL table.
+ This rate gives you a keen idea of what the audience likes most on your profile. To check this, get the “Number of favourites per tweet”: divide the “Total number of favourites” with the “Total number of tweets.”
+
+
+For instance: Total number of tweets = 3,000. Total number of favourites = 1,500. Therefore, the number of favourites per tweet = 1500/3000 = 0.5.
+ Calculate the engagement rate by taking a geometric rate of above three rates. If “a” is the conversion rate, “b” is the amplification rate, “c” is the applause rate: (abc)^⅓ is the the geometric mean; that is the engagement rate. Example: cube root of (0.5*0.2*0.33) = 0.31.
+

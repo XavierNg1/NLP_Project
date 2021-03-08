@@ -1,0 +1,12 @@
+ XML files are encoded in plaintext, so you can open them in any text editor and be able to clearly read it., This will display a list of programs to open the file in.
+ These are the pre-installed text editors for each operating system, and should already be on the list.
+
+
+If they aren't on the list, you'll need to browse for them. Notepad is located at %SystemRoot%\system32\notepad.exe, and TextEdit can be found in your Applications folder.
+You can use more advanced code editors like Notepad++ or TextMate as well, which can be useful for syntax highlighting and advanced editing. You can still see all of the information using a simple text editor., Your XML file will open in your text editor. The complexity of the file is dependent on what it was created for. Use the tag labels to find the information you are looking for. Generally the labels will be fairly self-explanatory, allowing you to browse through the data and find the information you need.
+
+
+You'll likely see <?xml version="1.0" encoding="UTF-8"?> at the top. This indicates that the following content is in XML format.
+XML uses custom tags to house pieces of data. Each of these tags are created for whatever program is using it, so there is no common syntax to the markup labels. For example, one XML file may have a <body></body> section, and other might have <message_body></message_body>, but both may function similarly.
+Tags can be nested inside other tags, creating a tree. For example, Each <note></note> tag may have several tags inside, such as <title></title> and <date></date>.
+

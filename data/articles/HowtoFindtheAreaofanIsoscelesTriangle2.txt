@@ -1,0 +1,38 @@
+ If you know some trigonometry, you can find the area of an isosceles triangle even if you don't know the length of one of its side. Here's an example problem where you only know the following:The length s of the two equal sides is 10 cm.
+
+The angle θ between the two equal sides is 120 degrees.
+ Draw a line down from the vertex between the two equal sides, that hits the base at a right angle. You now have two equal right triangles.
+
+This line divides θ perfectly in half. Each right triangle has an angle of ½θ, or in this case (½)(120) = 60 degrees.
+ In the example problem, you know the hypotenuse, and you want to find the value of h, the side adjacent to the known angle. Use the fact that cosine = adjacent / hypotenuse to solve for h:
+
+cos(θ/2) = h / s
+
+cos(60º) = h / 10
+
+h = 10cos(60º)
+
+
+, There is one remaining unknown side of the right triangle, which you can call x. Solve for this using the definition sine = opposite / hypotenuse:
+
+sin(θ/2) = x / s
+
+sin(60º) = x / 10
+
+x = 10sin(60º)
+
+
+, You can now "zoom out" to the main isosceles triangle. Its total base b is equal to 2x, since it was divided into two segments each with a length of x.
+ Now that you know the base and height, you can rely on the standard formula A = ½bh:
+
+
+A=12bh{\displaystyle A={\frac {1}{2}}bh}=12(2x)(10cos60){\displaystyle ={\frac {1}{2}}(2x)(10cos60)}=(10sin60)(10cos60){\displaystyle =(10sin60)(10cos60)}=100sin(60)cos(60){\displaystyle =100sin(60)cos(60)}
+
+You can enter this into a calculator (set to degrees), which gives you an answer of about 43.3 square centimeters. Alternatively, use properties of trigonometry to simplify it to A = 50sin(120º).
+ Now that you know how this is solved, you can rely on the general formula without going through the full process every time. Here's what you end up with if you repeat this process without using any specific values (and simplifying using properties of trigonometry):A=12s2sinθ{\displaystyle A={\frac {1}{2}}s^{2}sin\theta }
+
+s is the length of one of the two equal sides.
+
+θ is the angle between the two equal sides.
+
+

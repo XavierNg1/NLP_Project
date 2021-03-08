@@ -1,0 +1,9 @@
+ This particular file is used for commands which runs when the normal user logs in. The steps to set JAVA_HOME are:
+
+
+Login to your account and open .bash_profile file
+$ vi ~/.bash_profile
+If your path is set to /usr/java/jdk1.6.0_06/, set JAVA_HOME as follows:
+export JAVA_HOME=/usr/java/jdk1.6.0_06/
+Save and close the file. Logout and login back to see new changes, or type source ~/.bashrc
+

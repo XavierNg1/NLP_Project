@@ -1,0 +1,14 @@
+ If there’s still no set schedule, the LinkStation may always stay on or may be turned off. Unplug and plug it to its power source to boot up.;
+, Log in under the admin user to the LinkStation’s configuration page.
+ Click on “Shared Folders” in the menu to enter the Folder Setup page., In the Folder Setup page, you’ll see all the folders currently in the LinkStation.
+ Click “Create Folder” to enter Folder Setup.
+ One easy way to create a folder is to copy the settings from an existing folder. Choose one of the folders from the drop-down list. The system will load its settings into the corresponding fields.
+ Under the Name text box, define the new folder’s name.
+ Use the Description text box to write something about this new folder.
+ If the NAS has multiple volumes or drives, select the one where you want the new folder to be located. This step is not necessary for NAS with only one disk drive.
+ Choose whether to make this folder as Read Only or as Read & Write.
+ If you want to prevent accidental deletions for this folder, you can opt to Enable a Recycle Bin in it. All the files deleted from this folder will just be put in the Recycle Bin, making it very easy to recover them. If you don’t want to waste time on this, choose "Disable."
+
+, Tick which system types will be supported by the folder. It can be Windows, Apple, Ftp, and Disk Backup.
+ If you plan to share this folder with a lot of people with different levels of authorization, it may be a good idea to set "Access Restrictions." From here you can define the user types or groups available, and what permissions are granted to them for this folder. Admin users normally should have Read & Write access, while common users and guests can have Read Only.
+ Click “Save” to commit to creating the shared folder with your defined properties.

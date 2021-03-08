@@ -1,0 +1,25 @@
+ For this example, we'll use the date "11/7/2012." In A1, enter that date.;
+, In cell B1, enter =TEXT((A1), "ddd") into the cell or formula field.
+
+
+The "ddd" setting tells Excel to use the first three letters of the weekday name. In this example, "ddd" becomes "Wed".
+ In cell C1, enter =TEXT((A1), "dddd").
+
+
+This will calculate the full weekday name.
+To add additional date info, use the following conventions, in any order:
+
+
+Time: hh:mm:ss will give you the full time. You can also enter any part of that for more abbreviated time displays.
+
+Day of week: as described above, ddd gives you the abbreviated day name, and dddd gives you the full day name.
+
+Date: dd will give you the date with a leading zero for the 1st through the 9th. A single d will drop the leading zero.
+
+Month: mmm will give you the abbreviated month, and mmmm will give you the month spelled out.
+
+Year: For just the decade, use yy. For the complete year, use yyyy.
+
+
+For example, to have field A1 (as above) read as "Wed, 7 Nov., 2012" you would enter "=TEXT((A1), "ddd, d mmm., yyyy"). Make sure you include the quotes, and that your parentheses are balanced (as many open ones as closed ones).
+

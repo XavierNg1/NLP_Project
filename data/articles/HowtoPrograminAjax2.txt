@@ -1,0 +1,76 @@
+ The body of HTML has the “div” section and one button. This section will be used to display the information returned from the server. The button calls a function named “loadXMLDoc(),” if it is clicked.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Ajax Program by Me</title>
+</head>
+ 
+<body style="text-align: center;">
+ 
+<!--An image goes here to test the Ajax program.-->
+<div id="myImage">
+<h2>Click the button below to make the flower disappear.</h2>
+<img src="MyPicture.png" width="500px" height="300px" title="Yellow Flower" alt="an image of a yellow flower"/>
+</div>
+ 
+<br/>
+ 
+<!--A button goes here-->
+<button type="button" onclick="loadXMLDoc()">Click here to make the picture disappear!</button>
+ 
+</body>
+</html>
+
+
+
+
+, The head section of the HTML file has a script tag which contains the “loadXMLDoc()” function.
+
+
+
+
+
+<head>
+<title>My First Ajax Program by Me</title>
+ 
+<!--Put the Ajax code below.-->
+<script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp = new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange = function()
+  {
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+    {
+    document.getElementById("myImage").innerHTML = xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","ajax-data.txt",true);
+xmlhttp.send();
+}
+</script><!--End of the script-->
+ 
+</head>
+
+
+
+
+, The most important thing of Ajax is the XMLHttpRequest object. It is used to exchange data with the server and all modern browsers support the object.
+
+The syntax to create an XMLHttpRequest() object is variable=new XMLHttpRequest(); but at the same time the syntax to create old versions of Internet Explorer (IE5 and IE6) that uses an ActiveX object is variable=new ActiveXObject("Microsoft.XMLHTTP");.
+In order to handle all the modern browsers, it needs to check if the browsers support the XMLHttpRequest object. If it does, it creates an XMLHttpRequest object. If one does not, it will create an ActiveX object for it.
+Then it will send a request to the server. The method of the XMLHttpRequest object called “open()” and “send()” will be used. xmlhttp.open("GET","ajax_info.txt",true); xmlhttp.send();.
+

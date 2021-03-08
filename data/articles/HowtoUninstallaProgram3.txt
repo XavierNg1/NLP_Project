@@ -1,0 +1,21 @@
+ You can uninstall programs through the Package Manager, but once you get used to the terminal you'll find it faster.
+
+
+You can usually open the terminal by pressing Ctrl+Alt+T.
+ Type dpkg --list and press ↵ Enter. A long list of installed software will be displayed. You can use the terminal's scrollbar to look through the list.The fourth column of the list will show a description of the program. This can help you identify the program you want to uninstall.
+ Type sudo apt-get --purge remove programname and press ↵ Enter. Make sure that you enter the program name exactly as it appeared in the list.
+
+
+The above command will remove the program and all of its configuration files. If you want to keep the configuration files, omit the --purge part of the command (sudo apt-get remove programname).
+You can uninstall multiple programs at once by listing each package you want to remove in the command. For example, to uninstall Skype and Opera, you would type sudo apt-get --purge remove skype opera.
+ You will be prompted for you password and then asked to confirm that you want to remove the program. The terminal readout will display all of the packages that will be removed. Any programs that rely on the original package will be removed as well.
+
+
+After the program is removed, you'll be returned to the terminal prompt.
+ Linux keeps old package installers in case you need to reinstall a program. These packages could be taking up a large amount of space on your hard drive. You can check how much space these files are taking by typing du -sh /var/cache/apt/archives.
+
+
+Type sudo apt-get autoclean and press ↵ Enter. This will remove all of the packages for apps that have been uninstalled.
+You can remove every package installer by typing sudo apt-get clean
+
+

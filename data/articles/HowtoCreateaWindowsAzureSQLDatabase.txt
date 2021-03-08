@@ -1,0 +1,94 @@
+,
+Then, it will show you a wizard.,,
+
+It will show a dialog, to enter name, select server and data center’s region for your database.
+, Enter a strong password to meet the following requirements.
+
+The password must meet the following requirements:
+
+More than eight characters in length
+Does not contain all of the login name
+Contains characters from at least three of the following categories:
+-English uppercase characters (A through Z)
+-English lowercase characters (a through z)
+-Base 10 digits (0 through 9)
+-Non-alphanumeric characters (example: !, $,  %)
+
+
+
+, Then you will see the following process.
+When the process is completed, you will see your database name in "'all items"' list in management portal. Now your database is created successfully!, To allow your client app to connect to your database, you need to add client pc’s IP address to allowed list. To do so -
+
+Click on SQL Databases in management portal. You will see a list of current databases in your Management Portal.
+,,,,
+Now you are done managing your database connectivity settings. You can now connect your database to your client app.
+ To do so -
+
+Click on Databases.
+Click on Cars database
+Click on “Design your SQL database” link in Cars database management window.
+
+A new Window will open.
+Put your username and password you entered for your database in this window.
+Click on "Log On" button. Now you will see the SQL DATABASE Management Portal.
+Click on Design in the bottom left corner.
+Click on New Table to create a new table in database.
+
+
+Click on "Identity?" against column ID
+Make columns as shown in the image below.
+Click on Save.
+
+
+
+
+
+
+Click on Data.
+Add some rows of data
+Click on Save.
+ To do so -
+
+Go to Dashboard and click Show Connection Strings in Quick Glance.
+Copy the ADO.NET Connection String
+and replace the "default password" with the password your entered in credentials of database.
+
+Make a simple console application in Visual Studio and enter this code in the Main() function.
+Collapse | Copy Code | try
+{
+Console.WriteLine("Creating Connection");
+var conn = new SqlConnection(/* CONNECTION STRING HERE */ );
+var cmd = new SqlCommand("Select * From Manufacturers", conn);
+Console.WriteLine("Opening Connection!");
+conn.Open();
+Console.WriteLine("Connection Opened");
+Console.WriteLine("Executing Query");
+var result = cmd.ExecuteReader();
+Console.WriteLine("Query Executed!");
+Console.WriteLine("Manufacturers found in database:");
+while
+(result.Read())
+{
+object;
+result.GetValues(rowArr);
+Console.WriteLine("\t"+rowArr);
+}
+Console.WriteLine("Closing Connection!");
+conn.Close();
+}
+catch (Exception ex)
+{
+Console.WriteLine("Error Occured\n"+ ex.Message);
+}
+Console.Read();
+
+
+,
+
+It gives the following output, which means that everything is running OK and the SQL query is run against the server successfully, returning the rows of data.
+
+
+
+
+
+

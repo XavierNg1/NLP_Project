@@ -1,0 +1,29 @@
+ It is currently available for Windows, Mac, and Linux.
+
+
+Consider installing a user friendly intermediary program like TeXShop (for Macs) or TeXworks (for all users).;
+, If you installed TeXShop or TeXworks, launch these directly from your applications. Otherwise launch LaTeXIT directly.
+ For instance, a command is always proceeded by a backslash. Commands tell LaTeX how you want to format the document, from document style to text color, and also helps you add in special notations, pictures, etc. Commands are typically followed by a set of braces, in which you specify what you would like to happen.
+ This is done using the command \documentclass{}. In the braces you should place what type of document you are creating, which is usually an article. So, if writing an article simply type \documentclass{article} on the first line, and then hit enter to move to the next line. Other document classes include book, slides, and report.
+ This is done using the command \title{}. For instance, for this document one would type \title{How to Get Started Using LaTeX}. This typically is on the second line of the page.
+ Use the command \author{}. For instance, \author{Your Name}.
+ This is optional. LaTeX will automatically update the date to be current unless you set it using \date{}.
+ This can include font size, font style, margins and other styling and formatting for the entire document. For an introduction you can skip this step, but the commands are easy to find online.
+ LaTeX packages can be extremely helpful in improving the flexibility and usefulness of the program.To use a specific package use the command \usepackage{} or \RequirePackage{} with the package name in the braces.
+More than one package may be used. For instance might write \usepackage{graphicx} to tell LaTeX to use the graphicx package, which is useful for inserting pictures and graphs. Another helpful package for use in math mode (see later steps) is amsmath and amssymb.
+ Using the command \begin{document} tells the program that you are done with the document formatting and ready to start writing!
+
+, If what you are writing does not require a title, you can skip this step. To make a title using the title, author, and date that you set, enter the command \maketitle on a new line.
+ You can now type anything that you desire in plain text. Note that a line of blank space or the command \newline is required to start text in a new paragraph or new line.
+ Explore some formatting options such as putting text inside \textbf{} command to make it bold or inside \textcolor{red}{} to make it red (or another color as specified).
+ Math mode is really why you want to use LaTeX. There are many ways to access math mode.
+
+
+If you wish to put an equation or math symbol in line with text, simply surround it with dollar signs. For instance, one may write $8 - 9 = -1$. If you want the equation on a new line, centered, surround it with backslash and bracket. For example, \. Using packages can further enhance the uses of math mode. For instance, with the package amsmath, you can align a set of equations using the \begin{align} and \end{align} commands. There are also many built in commands specifically for math mode. Most mathematical symbols are represented by some command, such as using \pi to write everyone's favorite irrational number.
+Additionally, there are math formatting functions, such as using the \frac command to write the fraction for one third by typing \frac{1}{3}. If you use math commands outside of math mode, you will receive an error when you try to compile.
+ You must end the document using the command \end{document}, placed on the last line.
+ Hit the Typeset button or use a keyboard shortcut (e.g. ⌘ Cmd+⇧ Shift+T for Mac) to typeset your document. This will output a beautiful PDF with all your formatting. This PDF, along with 3 other helper files, will be saved in the same place as your LaTeX document.
+
+
+If you get an error, read the error message in the console and see if you've made a typo or other small mistake. If it is not compiling, make sure you have "LaTeX" selected from the dropdown button next to the Typeset button.
+

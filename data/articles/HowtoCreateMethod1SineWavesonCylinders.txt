@@ -1,0 +1,105 @@
+ Otherwise, create a new Excel workbook with three worksheets: Data, Chart (unless using Data Wizard) and Saves, and follow the steps below as usual.
+
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show grid lines and set all boxes below that to auto or checked.
+In Chart, allow show chart names and set data markers on hover and leave the rest unchecked for now.
+In Calculation, Make sure Automatically and Calculate before save are checked. Set max change to .000,000,000,000,01 without commas as goal-seeking is done a lot. Check Save external link values and Use 1904 system
+
+In Error checking, check all the options.
+In Save, select Save preview picture with new files and Save AutoRecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ Select the entire worksheet by selecting between the A of column A and the 1 in Row 1 in the top left corner and Format Cells Number Number Decimal Places 4, Font Size 9 or 10,,
+
+Cell A1: Enter CONSTANTs and VARIABLEs
+A2: t
+A3: c_
+A4: AdjRows
+B2: Enter 1000 and Insert New Comment "Currently trying 1,000.00 with good results except Spheres have rougher edges than if I use 968,152 ...Try =(2*3*5*7*11*13*17)= 510510 but spheres too thin at higher Sphere-Count? NEW DEFAULT= 968152 (with var c at about 17150.39 brings t_rng/c to 9π!!!). OLD Default = 968115". Format Cell Fill Yellow (for input).
+Modified B3: Enter "=VLOOKUP(Spheres,Spheres_Lookup,3)" w/o quotes and Insert New Comment, "Formula is: =VLOOKUP(Spheres,Spheres_Lookup,3).INPUT of 5 into Spheres variable in cell C5 below brings this to 127.32. Default was = 17120. Value of =17120.6863050705 brings t_rng/2c to 9π!! You might say, "What a strange value!" and the same about variable "t" above .. "WHY 968,152.00?" The answer is that these graphs exist only in very narrow ranges of value settings!! It took years to find sets of them!"
+B4: Enter 1439 and Insert New Comment, "Default = 1439. 1441 (actual rows of data) is OK but Spheres are thinner."
+Select cell range A2:B4 and Insert Names Create Names in Left Column, OK.
+C2: Enter Converter
+C3: Enter Chgr (for Changer)
+C4: Enter Factor
+Modified: D1: Leave blank.
+D2: Enter "=PI()/180" w/o quotes
+D3: Enter "=VLOOKUP(Spheres,Spheres_Lookup,2)" and Insert New Comment, "Formula is =VLOOKUP(Spheres,Spheres_Lookup,2)Default for Golden Mean Long Leg is =0.618033988749895; for more info, see note in cell Q1"
+D4: Enter .25 and Insert New Comment, "Default = .25 This is because there are 1440 rows approx, so 1440*.25 = 360 for sin and cos functions to calculate naturally over. When variable "Factor" > .250, then the circles OVERLAP, eg. When Factor = .50, and Spheres=36, 18 spheroids overlap base 18; when Factor has input of "=1/3", then the first 27 spheres form a circle but the last 9 spheres (27+9=36) OVERLAP. When Factor
+Select cell range C2:D4 and Insert Names Create Names in Left Column, OK.
+B5: Enter INPUT RANGE :, aligned right.
+MODIFIED: C5: Input 5 and Format Cells Number Number Custom "Spheres: "0 with quotes and Format Cells Fill Yellow Font Red Bold, Size 14. Insert New Comment and edit in "Original or Default INPUT = +36. Accepts POS #'s only. Input Range is from 1 to 80. However, I've allowed a few other possibilities in the Lookup Tables, i.e. Spheres= 360 (tiny points)."
+NEW: E2: AYE
+NEW: E3: BEE
+NEW: E4: CEE
+NEW: F2: 10
+NEW: F3: 40
+NEW: F4: .25
+NEW: Select cell range E2:F4 and Insert Name Create Names in Left Column, OK.
+H5: POWER
+H6: Spirallate_Circle
+H7: Circle
+I5: Enter 1 and Insert  New Comment, "Default is 1. Try 2, 3, .5, .001, etc. Then try w/ Spheres=1 or 2 or low #."
+I6: Enter N and Insert  New Comment, "Default is "N" for NO. Try inputting "Y" for YES (w/o quote marks). Get MORE SPIRAL TURNS by increasing Variable "Factor" say to .5 or .8 in cell D4!! Try "Y" here and Spheres=2 to see 1 sphere 'inside' another one."
+I7: Enter 1 and Format Cell Number Number Custom "Radius="#,##0.000000 w/ quotes. Select cell range I5:I7 and Format Fill yellow w/ Font Red bold. This variable however is no longer used.
+Select cell range H5:I7 and Insert Names Create Names in Left Column, OK.
+J1 and K1: [sin(t range/2c)
+J2: * cos(t range)  and K2: * sin(t range). Format Fill J2:K2 light blue.
+J3 and K3: * cos(t range/2c)
+J4 and K4:  * Chgr^3 ]
+J5:  + Cos(Row*Factor  and K5:  + Sin(Row*Factor. Format Fill J5:K5 light blue.
+J6 and K6: *Converter)*Circle
+J7: Lt Blue above denotes J,K formula differences.
+M7: "=0.618033988749895" and Format Cells Number Number Custom "GMLL: "0.000000000 with quotes. Insert Name Define Name GMLL to cell $M$7. Insert New Comment, "This stands for "Golden Mean Long Leg". The Golden Mean exists when distances a and b are related such that a:b as b:(a+b).  1-GMLL gives the GMSL or Short Leg."
+Otherwise, Columns M and N have been omitted from this article for the sake of brevity; they calculated Total Spirallic Distance and Actual Radius. Columns O-Q are part of the Spheres_Lookup table and will be covered next.  Columns R-U are part of a fancy Goal Seeking scheme. Columns Vand W have to do with a Curve Components Chart I'm not including within this article for the sake of brevity. Columns X and Y have to do with Random Beads and will be covered later. Column Z is a former Lookup3 for variable c = Q table series, unnecessary to the current work. Column AA is a new addition.
+ Insert Name Define Name MagicNumber to cell $Q$1. Insert New Comment, "This is THE MagicNumber!!!!! Do NOT change, spindle or mutilate, PLEASE! I'm still trying to figure it out! The MagicNumber is 2/π !!!!! Or, think of it this way: π*.63662=2.0"
+O2: Enter Spheres
+P2: Enter V: Changer 'Chgr'
+Q2: Enter Variable 'c' = Q
+Edit Go To cell range O3:O82 and enter 1 and do Edit Fill Series Column Linear Step Value 1 OK. Select cell O83 and input 101.321183642338 and select cell O84 and input 202.642367284676 and select cell O85 and input 360.
+Here are the table input pictures for column P; where you see .618034, that means to input "=GMLL". Column Q is formulaic - do not enter Column Q. The bottom number in Column P to the right of 360 is 0.0281510429528001 (achieved via a Goal Seeking method).
+
+
+ 
+
+
+
+
+
+
+
+
+
+Q3: Enter "=t*MagicNumber"
+Edit Go To cell range Q4:Q85 and enter into Q4 w/o quotes "=$Q$3/O4" and Edit Fill Down.
+Edit Go To cell range O3:Q85 and Insert Name Define Name Spheres_Lookup to cell range $O$3:$Q$85.
+
+L7: Enter SPIRALLATE: and L8: Enter PERCENTAGE and L9: Enter METHOD
+X7 and Y7: Enter OR
+X8 and Y8: Enter REDEFINE
+X9 and Y9: Enter Chgr (either column X or Y may be used by Insert Name Define Name Chgr to the Column's values)(otherwise, Chgr is defined as $D$3, as it is right now).
+NEW: AA9: Enter ±2π or +/- 2pi
+
+,, Format bold.
+A11:A1450 Enter "=A10-((2*t)/AdjRows)" w/o quotes to cell A11 and Edit Fill Down.
+B10: "=2*c_" w/o quotes and enter to B11 of B11:B1450 "=B10" and Edit Fill Down.
+Edit Go To cell range C10:C1450 : Enter to C10 "=A10/B10" and Edit Fill Down.
+Edit Go To cell range D10:D1450 : Enter to D10 "=SIN(C10)" and Edit Fill Down.
+Edit Go To cell range E10:E1450 : Enter to E10 "=COS(A10)" and Edit Fill Down.
+Edit Go To cell range F10:F1450 : Enter to F10 "=SIN(A10)" and Edit Fill Down.
+Edit Go To cell range G10:G1450 : Enter to G10 "=COS(C10)" and Edit Fill Down.
+MODIFIED: Edit Go To cell range H10:H1450 : Enter to H10                                                   "=BEE*(COS(AA10))*CEE+(COS(AYE*AA10))" and Edit Fill Down.
+MODIFIED: Edit Go To cell range I10:I1450 : Enter to I10                                                        "=BEE*(SIN(AA10))*CEE+(COS(AYE*AA10))" and Edit Fill Down.
+Edit Go To cell range J10:J1450 : Enter to J10             "=((((D10*E10*G10*Chgr^3)+H10)/IF(Spheres=1,28.860828*n, IF(Spheres=2,28.860828*n,1)))*IF(Spirallate_Circle="Y",L10,1))^POWER"                                 and Edit Fill Down.
+Edit Go To cell range K10:K1450 : Enter to K10             "=((((D10*F10*G10*Chgr^3)+I10)/IF(Spheres=1,28.860828*n, IF(Spheres=2,28.860828*n,1)))*IF(Spirallate_Circle="Y",L10,1))^POWER"                                 and Edit Fill Down.
+Edit Go To cell range L10:L1450 and enter to L10 .01 and enter to L1450 1 and do Edit Fill Series Columns Linear Step Value Trend, OK. Format Cells Number Number Percentage, Decimal Places 6.
+]
+[If you're interested, the formula for the AVERAGE (gives average) ACTUAL RADIUS in cell N10 of N10: N1450 is =((J10-0)^2+(K10-0)^2)^0.5
+Edit Go To cell range X10:X1450 : Enter to X10 w/o quotes             "=IF(((ROW()-10)/(Spheres*2))=ROUND((ROW()-10)/(Spheres*2),0), ROUND(RAND()*10,0)/10,X9)" and Edit Fill Down.
+Edit Go To cell range Y10:Y1450 : Enter to Y10 w/o quotes "=SQRT(X10/PI())" and Edit Fill Down.
+NEW: Edit Go To cell range AA10:AA1450 and enter "=2*PI()" into A10 and "-2*PI()" into A1450 and do Edit Fill Series Column Linear Step Value Trend, OK.
+ Let's leave the charting up to your aesthetics. There were three areas of interest: H5:I1450, J5:K1450 and M11:M1450.
+
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

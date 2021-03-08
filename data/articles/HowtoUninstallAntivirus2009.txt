@@ -1,0 +1,28 @@
+ Reset your computer and repeatedly hit the F8 key until the Advanced Startup menu appears. From here, select Safe Mode with Networking. Safe Mode will allow you to delete the files and registry entries without the program trying to interfere.;
+, Press Ctrl+Alt+Del to open the Task Manager. Click on the Processes tab. Look for the following entries, highlight them, and then click the “End task” button:
+
+
+av2009.exe
+av2009.exe
+AV2009Install.exe
+Antivirus2009.exe
+
+, Open the Control Panel and select Add/Remove Programs (Windows XP) or Programs and Features (Windows Vista and later). You can access the control panel from the Start menu or if you are a Windows 8 user, by pressing the Windows key + X.
+
+
+Browse for the Antivirus 2009 program in the list of installed programs. Highlight it and click the Uninstall/Remove button.
+ There are several powerful free anti-spyware programs that may detect and remove Antivirus 2009. Try free programs such as SpyBot to find extraneous Antivirus 2009 files.
+
+
+Run a full scan once you have installed the spyware removal program. This scan can take a significant amount of time, depending on the size of your computer.
+ If the spyware removal program fails to remove Antivirus 2009, you’ll need to open Windows Registry and remove the entries one by one. To access the registry, enter “regedit” into the Run field. Always be careful when removing registry entries, as removing the wrong items can render your computer inoperable. Remove the following entries:
+
+
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\ 15358943642955870504508370025739
+HKEY_LOCAL_MACHINE\SOFTWARE\Antivirus
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\”Antivirus” = “%ProgramFiles%\Antivirus 2009\Antvrs.exe”
+HKEY_CURRENT_USER\Software\Antivirus, There are two DLL files that will need to be unregistered so that they no longer affect your system. First, use the Search function to find the following two files: shlwapi.ddl and wininet.dll. Make note of the locations. Open the Command Prompt and navigate to the first file.Enter the following command: regsvr32 /u <DLL name>
+
+A window will appear confirming that the command was successful.
+ Allow your computer to reboot normally, and ensure that the Antivirus 2009 program was completely removed. If you are still having issues, check the registry again, and run another anti-spyware program.
+

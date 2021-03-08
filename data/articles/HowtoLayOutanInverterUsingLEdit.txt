@@ -1,0 +1,62 @@
+ Before opening L-edit, make sure to run it in 256 colors. This is done by right-clicking ledit.exe -> Properties, and then ledit Properties window will appear.
+
+
+From the window, go to Compatibility tab and under the Settings check “Run in 256 colors” then click ok.;
+,,,, Create new cell from the Cell tab then click New or just press N. To create a layout for an inverter, contact and via is needed.
+
+
+Contact: Metal > Active (either N-type/P-Type)
+
+Press N, change “New cell name:” into metal1toActive then click ok.
+From the Layer Selection choose metal1 and from toolbar select Box Tool, then draw a 5” x5” square box.
+Again, from Layer Selection, select Active Contact and create a 2”x2” box then place it at the center of Metal1.
+Use an Active layer to overlap in a 5”x5” Metal1.
+Save your work.
+
+
+Contact: Metal > Poly(Gate)
+
+Press N, change “New cell name:” into metal1toPoly then click ok.
+From the Layer Selection choose metal1 and from toolbar select Box Tool, then draw a 5” x5” square box.
+Again, from Layer Selection, select Poly Contact and create a 2”x2” box then place it at the center of Metal1.
+Use a Poly layer to overlap in a 5”x5” Metal1.
+Save your work.
+
+
+Via: Metal > Metal
+
+Name new cell as via12. (this refers to metal1 > metal2)
+Draw a 5”x5” metal1 box.
+Create a 2”x2” via box then place it at the center of metal1.
+Draw a 5”x5” metal2 and overlap it to the metal1.
+Save your cell.
+ Since the contacts and via needed for the layout have been created, now proceed to making an inverter. As you go along, you will encounter different design rules. Remember that the transistor width is equal to the height of the active layer and transistor length is the width of the poly-layer. From the given schematic, the PMOS length and width is equal to 2u and 5u respectively. And NMOS length and width is equal to 2u and 5u respectively. Now, press N and name the cell as the inverter.
+
+
+Create a 14”x5” Active layer.
+Cell click instance or just press “i”. From the cells you created, select the cell you need to use.This time select metal1toActive.
+Place the metal1toActive contact as shown in the Figure 1.6.
+
+Rules for poly
+
+Overlap active layer by at least 2u at the top and bottom.
+At least 1u distance from metal1 to active contact.
+
+
+
+
+Since an additional 2u at the top and bottom is needed to create a poly and a distance of 1u from the metal1 to active contact is required, a 2”x9” poly is needed. Place it at the center of our active layer.
+Copy the transistor then paste. You can also use Ctrl+A, Ctrl+C, Ctrl+V. From here, you will be creating PMOS and NMOS by overlapping the active layer with at least 2u on all sides, using PSelect and NSelect respectively. The Figure accompanying this sub-section shows what it looks like after putting the Nselect and Pselect layers.
+ Just copy the top transistor and place it at the bottom of the NMOS. Then copy the bottom transistor and put it at the top of the PMOS. Remove the poly layer to the copied transistors.
+
+
+Overlap the Vdd and PMOS with N-well as shown in the figure accompanying this sub-step.
+Lastly, connect the Vdd, gnd, Vin and Vout of the inverter as shown in the Figure below.
+
+Note that the drain and the source of the transistor are interchangeable. It is the designer’s choice which will be the drain and source to produce an optimized layout.
+
+
+From the toolbar, select Port Tool and click on the layout where Vdd, gnd, Vin and Vout belongs as shown in the figure accompanying this step.
+
+In order to have a proper connection of the ports, see to it that it is placed at the metal1 layer. To check, highlight port name, edit, edit object or just press Ctrl+e. (Figure 1.10).
+ To make sure that no rules are violated, use the DRC (Design Rule Check). Tools > DRC.

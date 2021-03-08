@@ -1,0 +1,95 @@
+ This is an integral that involves the logarithmic function. No amount of integration by parts, u-substitution, or any other technique learned in introductory calculus class will solve this integral, because this integrand does not have an antiderivative that can be written in terms of elementary functions.
+
+
+∫0∞ln⁡te−stdt{\displaystyle \int _{0}^{\infty }\ln te^{-st}{\mathrm {d} }t}
+;
+, By the properties of the log, the integral is split into two. The latter is easy to evaluate using the fundamental theorem because s{\displaystyle s} is independent of u.{\displaystyle u.}
+
+
+1s∫0∞ln(us)e−udu=1s∫0∞ln⁡ue−udu−ln⁡ss{\displaystyle {\frac {1}{s}}\int _{0}^{\infty }\ln \left({\frac {u}{s}}\right)e^{-u}{\mathrm {d} }u={\frac {1}{s}}\int _{0}^{\infty }\ln ue^{-u}{\mathrm {d} }u-{\frac {\ln s}{s}}}
+
+
+, There are two important formulas to consider here.
+
+The first is given below. It is a formula that expresses the logarithm of the Gamma function as an infinite series. This formula is derived from the infinite product definition (see the tips), where ϵ{\displaystyle \epsilon } is a small number, γ≈0.577...{\displaystyle \gamma \approx 0.577...} is the Euler-Mascheroni constant, and ζ(j){\displaystyle \zeta (j)} is the Riemann zeta function. (Don't worry about the summation part - it turns out that it won't be important for what we're about to do.)
+
+
+ln⁡Γ(1+ϵ)=−γϵ+∑j=2∞(−1)jζ(j)jϵj{\displaystyle \ln \Gamma (1+\epsilon )=-\gamma \epsilon +\sum _{j=2}^{\infty }{\frac {(-1)^{j}\zeta (j)}{j}}\epsilon ^{j}}
+
+
+
+The second comes straight from the integral definition of the Gamma function, Legendre's expression. We rewrite the integral so as to write the exponent with e{\displaystyle e} in the base, and rewrite that in terms of its Taylor series.
+
+
+Γ(1+ϵ)=∫0∞xϵe−xdx=∑n=0∞ϵnn!∫0∞lnn⁡xe−xdx{\displaystyle \Gamma (1+\epsilon )=\int _{0}^{\infty }x^{\epsilon }e^{-x}{\mathrm {d} }x=\sum _{n=0}^{\infty }{\frac {\epsilon ^{n}}{n!}}\int _{0}^{\infty }\ln ^{n}xe^{-x}{\mathrm {d} }x}
+
+
+
+Again, if you are not familiar with integrals involving the Gamma function, it is highly recommended that you go through them.
+ Specifically, ϵ{\displaystyle \epsilon } to the first power. The reason why is because the integral we want to compute is in the coefficient of the Taylor series of the Gamma function. The specific integral we want sets n=1,{\displaystyle n=1,} so to evaluate the integral, we need to equate the two expressions. We first look at the first formula and take the exponent of both sides.
+
+
+Γ(1+ϵ)=exp(−γϵ+∑j=2∞(−1)jζ(j)jϵj){\displaystyle \Gamma (1+\epsilon )=\exp \left(-\gamma \epsilon +\sum _{j=2}^{\infty }{\frac {(-1)^{j}\zeta (j)}{j}}\epsilon ^{j}\right)} 
+
+Since ϵ{\displaystyle \epsilon } is a small number, we can safely neglect any higher-order terms, because they will fall off faster. This is why we don't need to worry about the summation part, which begins at the second-order.
+
+
+Γ(1+ϵ)≈e−γϵ≈1−γϵ{\displaystyle \Gamma (1+\epsilon )\approx e^{-\gamma \epsilon }\approx 1-\gamma \epsilon }
+
+
+
+
+, Combining our previous results, we have arrived at the Laplace transform of the natural logarithm.
+
+
+∫0∞ln⁡ue−udu=−γ{\displaystyle \int _{0}^{\infty }\ln ue^{-u}{\mathrm {d} }u=-\gamma }
+
+
+L{ln⁡t}=−γ+ln⁡ss{\displaystyle {\mathcal {L}}\{\ln t\}=-{\frac {\gamma +\ln s}{s}}}
+
+Obviously, the method outlined in this article can be used to solve a great many integrals of these kinds. Specifically, the kinds outlined below, where a{\displaystyle a} and b{\displaystyle b} are whole numbers and a,b,{\displaystyle a,\,b,} and c{\displaystyle c} are constants such that the integral converges.
+
+
+∫0∞xalnb⁡xe−cxdx{\displaystyle \int _{0}^{\infty }x^{a}\ln ^{b}xe^{-cx}{\mathrm {d} }x}
+
+
+
+Even though the final result is a bit unusual, owing to the presence of the Euler-Mascheroni constant, the properties of the Laplace transform, such as the shift and derivative properties, still work. For example, we can immediately derive results like the one below once we know the original result.
+
+
+L{e2tln⁡t}=−γ+ln⁡(s−2)s−2{\displaystyle {\mathcal {L}}\{e^{2t}\ln t\}=-{\frac {\gamma +\ln(s-2)}{s-2}}}
+
+
+
+
+, The second power on the log means that we have to find the coefficient of ϵ2{\displaystyle \epsilon ^{2}} in our expansion. Conceptually, this is very easy - we simply keep terms up to second order. The algebra, however, is a bit more involved. Furthermore, the properties of the log only are convenient for us when the power on the log is 1. We will thus have to approach this integral more directly.
+
+∫0∞ln2⁡te−stdt{\displaystyle \int _{0}^{\infty }\ln ^{2}te^{-st}{\mathrm {d} }t}
+
+, We keep the exponent in the exponential function and then perform a u-sub u=st{\displaystyle u=st} when we don't have the log inside the integral.
+
+
+∫0∞tϵe−stdt=∑n=0∞ϵnn!∫0∞lnn⁡te−stdt{\displaystyle \int _{0}^{\infty }t^{\epsilon }e^{-st}{\mathrm {d} }t=\sum _{n=0}^{\infty }{\frac {\epsilon ^{n}}{n!}}\int _{0}^{\infty }\ln ^{n}te^{-st}{\mathrm {d} }t}
+
+∫0∞tϵe−stdt=1s1+ϵ∫0∞uϵe−udu=1s1+ϵΓ(1+ϵ){\displaystyle \int _{0}^{\infty }t^{\epsilon }e^{-st}{\mathrm {d} }t={\frac {1}{s^{1+\epsilon }}}\int _{0}^{\infty }u^{\epsilon }e^{-u}{\mathrm {d} }u={\frac {1}{s^{1+\epsilon }}}\Gamma (1+\epsilon )}
+
+, We rewrite 1s1+ϵ{\displaystyle {\frac {1}{s^{1+\epsilon }}}} with e{\displaystyle e} in the base. 
+
+Γ(1+ϵ)s1+ϵ≈1seϵln⁡s(e−γϵ+ζ(2)2ϵ2)≈1s(1−ϵln⁡s+ln2⁡s2ϵ2)(1−γϵ+ζ(2)2ϵ2+γ22ϵ2)≈1s(⋯+(ζ(2)2+γ22+γln⁡s+ln2⁡s2)ϵ2){\displaystyle {\begin{aligned}{\frac {\Gamma (1+\epsilon )}{s^{1+\epsilon }}}&\approx {\frac {1}{se^{\epsilon \ln s}}}\left(e^{-\gamma \epsilon +{\frac {\zeta (2)}{2}}\epsilon ^{2}}\right)\\&\approx {\frac {1}{s}}\left(1-\epsilon \ln s+{\frac {\ln ^{2}s}{2}}\epsilon ^{2}\right)\left(1-\gamma \epsilon +{\frac {\zeta (2)}{2}}\epsilon ^{2}+{\frac {\gamma ^{2}}{2}}\epsilon ^{2}\right)\\&\approx {\frac {1}{s}}\left(\cdots +\left({\frac {\zeta (2)}{2}}+{\frac {\gamma ^{2}}{2}}+\gamma \ln s+{\frac {\ln ^{2}s}{2}}\right)\epsilon ^{2}\right)\end{aligned}}}
+
+, The second-order coefficient has a 2!{\displaystyle 2!} term in it next to the integral, so we multiply the coefficient we just found by 2 to evaluate. In principle, it is possible to find the Laplace transforms of any integer power of the natural log. We would just have to keep more terms. 
+
+
+L{ln2⁡t}=ζ(2)+γ2+2γln⁡s+ln2⁡ss{\displaystyle {\mathcal {L}}\{\ln ^{2}t\}={\frac {\zeta (2)+\gamma ^{2}+2\gamma \ln s+\ln ^{2}s}{s}}}
+
+As usual with this technique, the integrals with decreasing powers of the log come out naturally as a result of our work.
+
+
+∫0∞ln⁡te−stdt=−γ+ln⁡ss{\displaystyle \int _{0}^{\infty }\ln te^{-st}{\mathrm {d} }t=-{\frac {\gamma +\ln s}{s}}}
+
+∫0∞e−stdt=1s{\displaystyle \int _{0}^{\infty }e^{-st}{\mathrm {d} }t={\frac {1}{s}}}
+
+
+
+, The first one uses the same technique as the one that we have been using. The second one takes advantage of the properties of the Laplace transform. 
+L{ln3⁡t}=−2ζ(3)+3γζ(2)+γ3+3ζ(2)ln⁡s+3γ2ln⁡s+3γln2⁡s+ln3⁡ss{\displaystyle {\mathcal {L}}\{\ln ^{3}t\}=-{\frac {2\zeta (3)+3\gamma \zeta (2)+\gamma ^{3}+3\zeta (2)\ln s+3\gamma ^{2}\ln s+3\gamma \ln ^{2}s+\ln ^{3}s}{s}}}L{te−6tln2⁡t}=ζ(2)+γ2+2γln⁡(s+6)+ln2⁡(s+6)−2γ−2ln⁡(s+6)(s+6)2{\displaystyle {\mathcal {L}}\{te^{-6t}\ln ^{2}t\}={\frac {\zeta (2)+\gamma ^{2}+2\gamma \ln(s+6)+\ln ^{2}(s+6)-2\gamma -2\ln(s+6)}{(s+6)^{2}}}}

@@ -1,0 +1,29 @@
+ Windows 8 includes a new boot manager, which is the software your computer uses to determine which operating system to load. This means that if you want to dual-boot Windows 7 and Windows 8, Windows 8 needs to be installed last, or Windows 8 won't be able to boot.;
+, Before installing your two operating systems, you'll want to make sure that any important data has been safely backed up to a secure storage location. Installing operating systems will wipe anything that's currently on the disc. Click here for detailed instructions on backing up your data.
+ Insert the Windows 7 DVD into your computer and boot from it to begin the Windows 7 installation process. Select "Custom (advanced)" as your installation type and follow the prompts until you get to the "Where do you want to install Windows?" screen.
+
+
+
+Click here for details on starting the installation process.
+ The "Where do you want to install Windows?" screen allows you to create and format partitions on your hard drive. A partition is a segment of your drive that is formatted separately and given its own drive letter. Each partition acts like a separate hard drive. Note: If you have two separate physical drives, you don't have to worry about partitioning, as you can install each operating system to its own drive.
+
+
+Click the "Drive options (advanced)" option.
+Delete all of your existing partitions. All of the space on your drive will be combined into one chunk of "Unallocated space".
+Select the unallocated space and click "New". Set how large you want the Windows 7 drive to be. Repeat this to create the partition for Windows 8 (you'll use it later but creating it now makes things easier down the road). Make sure each partition is at least 25 GB, more if you plan on installing a lot of programs.
+ Follow the guide linked above to finish the installation as normal.
+ Once Windows 7 has been successfully installed on the first partition, you can go ahead and install Windows 8 on the second partition.
+
+
+
+Click here for detailed instructions on installing Windows 8.
+Select "Custom: Install Windows only (advanced)" for the installation type.
+Make sure you select the correct partition in the "Where do you want to install Windows?" screen. The one with Windows 7 installed on it will be marked "System" in the "Type" column.
+ After installing Windows 8, it will be set as your primary operating system. It will start automatically if you don't select an operating system from the boot manager.
+ If you'd prefer to automatically boot into Windows 7, or want to adjust the time that you have to select your option when the computer starts up, you can make changes to your computers boot settings from within Windows 8.Press ⊞ Win+R, type msconfig, and press ↵ Enter
+
+Click the Boot tab.
+Select the operating system you want to automatically boot to and click Set as default.
+Change the time you have to select your operating system when the computer starts by changing the "Timeout" value.
+Click Apply when you are satisfied with your changes.
+

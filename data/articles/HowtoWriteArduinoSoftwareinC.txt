@@ -1,0 +1,28 @@
+ This includes:
+
+
+The Arduino source code, available from . Optionally you can also download the software package for your platform (Windows/Linux/OSX) which includes all the pre-made C++ files that make arduino run, as well as the simple Java GUI aimed at non-programmers.
+AVR-GCC, which is the compiler for the AVR-series of microcontrollers (heart of an Arduino). For Windows users, get WinAVR The Java Runtime Environment 32- and 64-bit are both available from Oracle.
+The Eclipse IDE for C/C++ , where you will be doing your coding and uploading the code to your Arduino. Download the same version (32-bit or 64-bit) as your version of Java;
+, First, install WinAVR or AVR-GCC. Then, extract the Eclipse IDE into its own dedicated folder.
+
+
+Start-up Eclipse, and choose your default workspace
+Go to Help --> Install New Software
+Enter "http://avr-eclipse.sourceforge.net/updatesite" (no quotes) in the 'Work With' field , and click Add
+Select the AVR Eclipse Plugin, select Next, and install
+When successfully installed, you'll have to re-start Eclipse
+
+,, Copy the entire '\hardware\arduino\cores\arduino' folder into your project folder. Now that Eclipse is installed and the plugin is configured, from now on this is the only folder needed to start new Arduino projects from scratch!
+
+, void setup, void loop and int main. For example( In main.cpp(The main Arduino Code)). Include "WProgram.h" (with quotes) in this header as well; this links it to all the arduino code.
+NOTE: As of Arduino 1.0, include "Arduino.h" instead of "WProgram.h".
+Also, include the appropriate "pins_arduino.h" file from arduino-1.0.1\hardware\arduino\variants. Arduino Uno uses the "standard" variant.
+These changes were made in the 2011.11.30 release of Arduino 1.0, according to the revisions.txt file that installs with the IDE.
+ Compiler errors are going to be different for everyone depending on what your error was, which they you have to find out on your own or in the comments, because it's case dependent. As of arduino v0018, this may include the following changes;
+
+
+main.cpp; delete "#include <WProgram.h>" at the top, and ensure your "main.h" is included instead
+Tone.cpp; change the last two includes, <wiring.h> & <pins_arduino.h>, to have quotes instead of brackets ("wiring.h" & "pins_arduino.h")
+Print.h; the function declaration "void function(int inputs) = 0;" must be changed to "void function(int inputs);", or in other words delete the "= 0" so its not a pure-virtual function
+

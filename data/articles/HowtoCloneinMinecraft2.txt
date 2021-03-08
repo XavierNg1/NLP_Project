@@ -1,0 +1,52 @@
+ To do this, open the Minecraft launcher, and select “New Profile” in the bottom-left corner to open the Profile Editor menu.
+
+
+In the Profile Name box at the top, enter “snapshot,” and in the Version Selection section, check the first box labeled “Enable experimental development versions (‘snapshots’).”
+In the Use Version drop-down menu, select “Snapshot 14w28b,” and then click “Save profile” in the bottom-right corner.
+ Just left-click the drop-down menu in the bottom-left corner of the launcher, and select the snapshot.
+, This should include coordinates for your character's current location as well as coordinates for the block they are looking at.
+
+
+
+
+<x1> <y1> <z1> This is the starting block that you wish to clone.
+
+<x2> <y2> <z2> This is the ending block in an area that you want to clone. The area connects the first coordinate and the second coordinate in a 3D block .
+
+<x> <y> <z> This is the place where the cloned land will appear.
+, Type it in to fill in each set of coordinates based on the ones you determined earlier.
+
+
+Do not include the angle brackets in your command, and make sure that they are separated by a space.
+
+
+
+The remaining blocks will fill in from that position filling the area specified.
+The maximum number of blocks that can be copied is 32768, and it will return an error if you exceed it.
+There is currently no ability to rotate a cloned segment; the orientation will remain the same.
+ This specifies what blocks are cloned.
+
+
+
+Replace. If you do not specify a mode1, this is the default. This mode copies every block in the selected area.
+
+Filtered. Removes everything but the type of block specified. For example, “/clone 0 0 0 1 1 1 1 2 1 filtered normal minecraft:stone” will only clone stone from the area.
+
+Masked. Copies every block except air.
+ Use this to change how the clone interacts with the world.
+
+
+
+Normal. This is the default setting for mode2. It puts the clone in the specified area, but it will display an error message if there is any overlapping.
+
+Move. The blocks that are cloned are replaced with air, causing the area to appear as if it was moved.
+
+Force. If the area where the new clone appears will cause blocks to overlap, this mode will force the blocks overlapping to be replaced.
+ Now that you know what mode1 and mode2 does, choose which mode you will add to your clone command.
+ Once you’ve chosen a mode, insert it after the coordinates you typed in the chat box.
+
+
+For example: “/clone <x1> <y1> <z1> <x2> <y2> <z2> <x> <y> <z> mode1 mode2”.
+Modes are an optional part of cloning that give the user more control over what is cloned. If a mode is not specified, the default modes are “Replace” for mode1 and “Normal” for mode2.
+If one mode 1 is specified and mode 2 is not, it will default to Normal and vice versa.
+ The area will then appear at the <x> <y> <z> coordinate and with the modes you added.

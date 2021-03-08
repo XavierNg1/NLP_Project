@@ -1,0 +1,9 @@
+, Yes to it!"
+if the text returned of (display dialog "Hello, welcome to DeskSet-Math! Thank you, for visiting. Please look at the code a decide that you 'prove' that you are not a spy, and that you will always follow the rules. If you don't agree, type-in the code I don't agree Thank You!______________________________________________________" & return & "" default answer "I prove that I'm not a spy, and I will always follow the all of rules in Application app I prove-it completely. Yes to it!" buttons {"Cancel", " I Prove-it and Continue... "} with icon stop with title "Application (Locked)" default button 2) is passAns then
+display dialog "Loged-in! Thank You!"
+else
+display dialog "Sorry if you don't aggre, you are not allowed to open this app. Please click Okay I Cancel to close, or if you still want to enter, just re-open this app.______________________________________________" buttons {"Okay I Cancel"} with icon stop with title "Application (Can't Open)" default button 1
+end if
+end tell
+
+,

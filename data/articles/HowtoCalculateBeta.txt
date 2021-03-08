@@ -1,0 +1,57 @@
+ This is the rate of return an investor could expect on an investment in which his or her money is not at risk, such as U.S. Treasury Bills for investments in U.S. dollars and German Government Bills for investments that trade in euros. This figure is normally expressed as a percentage.
+ These figures are also expressed as percentages. Usually the rates of return are figured over several months.
+
+
+Either or both of these values may be negative, meaning that investing in the stock or the market (index) as a whole would mean a loss during the period. If only one of the two rates is negative, the beta will be negative.
+ If the stock's rate of return is 7% and the risk-free rate is 2%, the difference would be 5%.
+ If the market or index rate of return is 8% and the risk-free rate is again 2%, the difference would be 6%.
+ This fraction is the beta figure, typically expressed as a decimal value. In the example above, the beta would be 5 divided by 6, or 0.833.
+
+
+The beta of the market itself (or the appropriate index) is by definition 1.0, as the market is being compared to itself, and any number (except zero) divided by itself equals 1. A beta of less than 1 means that the stock is less volatile than the market as a whole, while a beta greater than 1 means the stock is more volatile than the market as a whole. The beta value can be less than zero, meaning either that the stock is losing money while the market as a whole is gaining (more likely) or that the stock is gaining while the market as a whole is losing money (less likely).
+When figuring beta, it is common, though not required, to use an index representative of the market in which the stock trades. For U.S. stocks, the S&P 500 is the index usually used, although analysis of an industrial stock may be better served by comparing it against the Dow Jones Industrial Average. There are several other indexes that could be used appropriately. For stocks that trade internationally, the MSCI EAFE (representing Europe, Australasia, and the Far East) is a suitable representative index.
+ This is the same value as described above under "Calculating Beta for a Stock." For this section, we'll use the same example value of 2 percent, as used above.
+ In this example, we'll use the same 8 percent figure, as used above.
+ For this example, we'll use a beta value of 1.5. Using 2 percent for the risk-free rate and 8 percent for the market rate of return, this works out to 8 - 2, or 6 percent. Multiplied by a beta of 1.5, this yields 9 percent.
+ This produces a sum of 11 percent, which is the stock's expected rate of return.
+
+
+The higher the beta value for a stock, the higher its expected rate of return will be. However, this higher rate of return is coupled with an increased risk, making it necessary to look at the stock's other fundamentals before considering whether it should be part of an investor's portfolio.
+ The first column will be your date column. In the second column, put down index prices; this is the "overall market" you'll be comparing your beta against. In the third column, put down the prices of the stock for which you are trying to calculate beta.
+ Try starting with one-month intervals. Pick a date — for example, at the beginning or end of the month — and input the corresponding value for the stock market index (try using the S&P 500) and then the stock price for that day. Try picking 15 or 30 recent dates, perhaps extending a year or two into the past. Note the index price and the stock price for each date.
+
+
+The longer time frame you choose, the more accurate your beta calculation will become. Historical beta changes as you monitor both the stock and the index for a longer time.
+ One column will be for the returns of the index; the second column will be the returns of the stock. You'll be using an Excel formula to determine the returns, which you'll learn in the following step.
+ In the second cell of your index-return column, type an "=" (equals sign). With your cursor, click the second cell in your index column, type a "-" (minus sign), and then click on the first cell in your index column. Next, type a "/" ("divide by" sign), and then click on the first cell in your index column again. Hit "Return" or "Enter."
+
+
+Since return is a calculation over time, you won't put anything in your first cell; leave it blank. You need at least two data points to calculate returns, which is why you'll start on the second cell of your index-returns column.
+What you're doing is subtracting the more recent value from the older value and then dividing the result by the older value. This just gives you the percent of loss or gain for that period.
+Your equation for the returns column might look something like this: =(B3-B2)/B2
+
+, Do this by clicking on the small square at the bottom right of your index-return cell and dragging it down to the bottom-most data point. What you're doing is asking Excel to replicate the same formula (above) for each data point.
+ After finishing, you should have two columns, formatted as percentages, which list the returns for both the stock index and the individual stock.
+ Highlight all the data in the two return columns and hit the Chart icon in Excel. Select a scatter chart from the list of options. Label the X-axis with the name of the index you're using (e.g. S&P 500) and the Y-axis with the name of the stock you're using.
+ You can do this either by selecting the trendline layout in newer versions of Excel or by finding it manually by clicking in Chart → Add Trendline. Make sure to display the equation on the chart, as well as the R2 value.
+
+
+Choose a linear trendline, not a polynomial or moving average.
+Displaying the equation on the chart, as well as the R2 value, will depend on what version of Excel you have. Newer versions will let you graph the equation and the R2 value by clicking on the Chart Quick Layouts and finding the equation R2 value layout.
+In older versions of Excel, navigate to Chart → Add Trendline → Options. Then check both boxes next to "Display equation on chart" and "Display R2 value on chart," respectively.
+ Your trendline equation will be written in the form of y = βx + a. The coefficient of the x value is your beta.
+
+
+The R2 value is the relationship of variance of the stock returns to the variance of the overall market returns. A large number, .869 for example, indicates a highly related variance between the two. A low number, .253 for example, indicates a less- related variance between the two. , Beta is the risk, relative to the stock market as a whole, an investor assumes by owning a particular stock. That's why you need to compare the returns of a single stock against the returns of an index. The index is the benchmark against which the stock is judged. The risk of an index is fixed at 1. A beta of lower than 1 means that the stock is less risky than the index to which it's being compared. A beta of higher than 1 means the stock is more risky than the index to which it's being compared.
+
+
+Take this example: Say that the beta of Gino's Germ Exterminator is calculated at .5. Compared to the S&P 500, the benchmark to which Gino's is being compared, it's half as risky. If the S&P moves down 10%, Gino's stock price will tend to fall only 5%.
+As another example, imagine that Frank's Funeral Service has a beta of 1.5 when compared to the S&P. If the S&P falls 10%, expect Frank's stock price to fall more than the S&P, or about 15%.
+ High risk, high reward; low risk, low reward. A stock with a low beta won't lose as much as the S&P when it falls, but it won't gain as much as the S&P when it posts gains. On the other hand, a stock with a beta over 1 will lose more than the S&P when it falls but will also gain more than the S&P when it posts a gain.
+
+
+For example, pretend Vermeer's Venom Extraction has a beta of .5. When the stock market jumps 30%, Vermeer's only gains 15%. But when the stock market sheds 30%, Vermeer's drops only 15%.
+ If you make your beta calculations and find out the stock you're analyzing has a beta of 1, it won't be any more or less risky than the index you used as a benchmark. The market goes up 2%, your stock goes up 2%; the market goes down 8%, your stock goes down 8%.
+ A good mix of high- and low-beta stocks will help you weather any dramatic downturns that the market happens to take. Of course, because low-beta stocks generally underperform the stock market as a whole during a bull market, a good mix of betas will also mean you won't experience the highest of the highs when times are good.
+ Beta merely measures the past volatility of a stock. We may want to project that volatility into the future, but that won't always work. A stock's beta can change drastically from one year to the next. That's why it's not a terribly reliable predictive tool.
+

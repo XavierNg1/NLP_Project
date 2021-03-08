@@ -1,0 +1,29 @@
+
+
+
+
+  Diagram of Rotation about the Origin.;
+,, Double click on Excel (either the green X on the dock or the app title in the folder) and select File New Workbook.,, Doing so will select the entire worksheet. Format Cells Number Number to decimal places 2, show comma. Format Cells Alignment Center., The cell beneath it will become the Defined Named Variable Factor1, which will be used to factor the parabola's size of the x coordinate, eg. if you want to cut all the x values in half, you would enter .5 into cell A2;
+Enter to cell B1 the label, Factor2. This will be used to factor the y coordinates.
+Enter to cell C1 the label, ParaVertex X. Used to control the vertex.
+Enter to cell D1 the label, ParaVertex Y. Also used to control the vertex.
+Select cell range A1:D2 and Insert Name Create Names in Top Row. This will assign the labels as Defined Variable Names to the cells A2 to D2.
+Enter to cell A2 the value, 1;
+Enter to cell B2 the value, 1;
+Enter to cell C2 the value, 5;
+Enter to cell D2 the formula, =5+5-1.79; (w/o the ending semi-colon)
+
+, This will create the defined variable name K for cell G4, which can now be used in a formula. Select cell G4 and enter the value 5 into it.
+, Do Charts, All, Scatter, Smooth Lined Scatter. A chart will appear atop your worksheet. Drag it off to the right just past the data, out of the way, then hover over the bottom right corner until the cursor turns into a double-headed arrow, then pull the chart down and to the right to expand it.
+
+Your chart should show a very thin parabola, like the fiber of an iris muscle of the eye somewhat, extending from about {5,5} down to {253.10, -158.31} on the left branch and to {253.10, -158.65} on the right branch. It's good that it's so thin, but it's much too long in the x direction to use within our eye & iris chart; we need to factor the x coordinate by 253.1*n = 6 or so, so n = 6/253.1 -- perform that computation by entering it below the data as =6/253.1, and then copy it and paste it to cell A2;
+Now the parabola is still slanted, which is what you want, and which is dependent on both the size and plus or minus status of angle t and value K ... but it is now too wide open, and the vertex has shifted from where it's being reported at {5, 5} slightly;
+By taking the total difference of the max and min of the y values in column B, i.e. 5.93- -2.61, you arrive at a total height of the curve of 8.55; you want it to be more like .55, so you create another little formula algebraically to adjust Factor2, which is .55 = n*8.55, so you enter =.55/8.55 into cell B2;
+The curve still displays as wide, but that's because Excel shortened the y scale range of the chart dramatically. Click on the vertical axis and set the maximum to 10 and the minimum to 0.0 -- there now, that's better. And the iris fiber extends out to the right about 5 units. But its vertex has moved up to {5, 8} and you want it more like {5, 5} (we can be more exacting later), so you need to subtract 3 from ParaVertex_Y in cell D2 -- do so now.
+OK! Success! That's beginning to look like where you want to begin your iris fibers!
+Try doubling the angle t to 80 -- see how thin it gets? You would think that, since 80 degrees is twice the angle that 40 degrees is, the opposite effect would have occurred, but now try half of 40, 20 for angle t in cell C4. It widens the parabola instead of thinning it. The reason for that is all the constraints we've put on the curve in this author's opinion. Nor is the curve any longer at much of a slant, but falls pretty much along the x axis. Clearly, this is going to take some tinkering with to be useful but there it is, in the rough, the slant parabola.
+Change K to .09 and watch the X scale become a great deal shorter in fact. This means you are now capable of creating "cascading parabolas", though not yet in a fractal, multiple way. That will come with the next article, hopefully! Enjoy!
+
+,,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

@@ -1,0 +1,31 @@
+
+
+Use at least version 1.3.10 of Audacity. Don't get the stable version 1.2; it doesn't have all the features you'll need.
+
+
+
+ 
+
+
+Get LAME. If you're using a PC, click the link under "For Audacity on Windows." If you're using a Mac, click the link under "For Audacity 1.3.3 or later on Mac OS X."
+
+
+
+
+
+;
+,, Go to Generate &; Tone and set frequency to 575 Hz and amplitude to 0.11.. The duration should be 6 seconds if you're in the US or Canada, or 3 seconds if you're in the UK or Australia. You will see a new track appear on screen.
+, If not, undo your changes (Undo) and deselect all audio before trying again., Then mix the three tracks together into one (Tracks → Mix and Render).
+ The frequency, which you must type into the text box, should be 20 Hz if you're in the US or Canada, or 25 Hz if you're in the UK or Australia.Click OK. Make sure the track appears as a series of right-pointing triangles. If not, undo your changes and check your tremolo settings.
+, At the bottom of the window, click the drop-down arrow below Selection Start and choose hh:mm:ss + hundredths. Then check Snap To. Look at the time scale directly above the track of audio.
+
+
+If you're in the US, click and drag across the triangles from 2.0 to 6.0 to select them, and then choose Edit → Silence Audio.If you're in the UK or Australia, this step is slightly more complex. You need to first drag from 0.4 to 0.6 and silence the audio, and then drag from 1.0 to 3.0 and silence the audio., You may want to check your work so far by testing the ringtone (see below).
+ Select the last triangle in the series shown on screen (including any vertical line directly after it) and fade it out (Effect → Fade Out). If you're in the UK or Australia, you need to do this for both series of triangles., To prevent a sound that is distorted and too loud, select all audio (Edit → Select → All) and normalize it (Effect → Normalize), using 3 as the peak level. This reduces the loudness of the ringtone,avoiding distortion.
+ This gives you an opportunity to listen to the ringtone before you encode it and upload it to your phone. Press the Stop button or choose Transport → Stop when you're finished or you want to make any changes.
+ To adjust the pitch of the ringtone, first select all audio (Edit → Select → All). Then change the pitch (Effect → Change Pitch), dragging the slider to the right to increase pitch or to the left to decrease pitch. If you prefer a tinny sound to the ringtone, a good setting to start with is a percent change of 100. You can check this setting by clicking the Preview button, which will play your ringtone once. If you like the pitch adjustment, click OK. Otherwise, click Cancel.
+, From the Project Rate drop-down (at bottom), choose 44100, unless you need to export at another sample rate. Choose File → Export. From the "Save as type" or "File format" drop-down, choose WAV (Microsoft) signed 16-bit PCM. Click OK if the "Edit Metadata" window appears.
+ From the Project Rate drop-down (at bottom), choose 22050. Then choose File → Export. Choose a short and simple name for your ringtone. This name will appear on the screen of your phone. From the "Save as type" or "File format" drop-down, choose MP3 Files. Note that if you are using a Mac, you might need to provide the path of the LAME encoder; that path is /usr/local/lib/audacity. Now click the Options button. Bit rate mode should be Constant. Quality should be 32 kbps. Now click OK, and then click Save. You'll likely not need to "Edit Metadata", so when this window appears and you are unsure that you need to enter any of the information requested, simply click OK. Your ringtone is ready for upload.
+ If your phone is an iPhone, you need to convert your ringtone to iPhone format. (For best quality, you should use the WAV file, and you do not need to specify a start time or stop time when using iTunes for this conversion.) Otherwise, upload the MP3 file to your phone.
+ If not, run Effect → Normalize again and use another number in the textbox. A number greater than 3 (e.g. 6) will result in a quieter ringtone. A number less than 3 (e.g. 2 or 1) will result in a slightly louder ringtone.
+

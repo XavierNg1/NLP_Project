@@ -1,0 +1,52 @@
+ Open a new place. This can be done by pressing Ctrl+N or going to File>New.;
+, First you need to start making your 'model' of your gun. Make sure it's large and big, not as the size of your avatar, but about as big as a Robloxian House.
+ The "Handle" is the part that when a player touches it, the player is able to use the gun. The "Barrel" is the part where the bullets come out.
+ The Tool goes directly to Workspace(in the Explorer). It is one of the most important things and cannot be missed, because the Tool is the one responsible for making your gun/weapon usable.
+ A Minimap Script is responsible for making high quality weapons look even better. It also acts as a minimizer, meaning it will make everything in your baseplate, the large bricks, into tiny ones, all except for your avatar.
+ After doing so, you will know that the script works when a message on top of your screen appears. After that, you will see the big model of your gun turned into a tiny one. Find the minimap model in your baseplate or workspace.
+ Open the Minimap Script which you inserted into the Workspace. After opening it, at the very first line of the script, you will see something like this;
+
+
+scale = 2/10
+
+
+
+
+
+
+That line is the only line that you are allowed to make changes to. For Example, if the original was:
+
+
+scale = 2/10
+
+then, change it to
+
+
+scale 2/20
+
+
+
+
+
+
+as you can see the /20 makes everything different from /10. You can make everything to even the most tiniest things. But it is recommended to use the /20.
+
+
+If 1/20, 2/20 or 3/20 does not satisfy the size you want, you can use decimals.
+5/20, 0.6/20 or even 0.2/20
+It's up to you.
+ Then Delete the script and then Paste. Again, a message will appear at the top of your screen.
+ Open it and then you might see these names of the parts:
+
+
+Workspace->Part
+
+,,,,, Remember the Tool thing? Drag the Minimap Model into Tool. And once its inside the Tool, Ungroup it.
+ And paste it into the Tool where you dragged in your Minimap Model.
+
+
+
+If it worked, the gun of yours might be in a weird position when you equipped it. To fix it, don't equip it.
+ Then Equip it.
+ This acts as the Grip Position for your model. Mess with it so that you can get the right Grip Position.
+

@@ -1,0 +1,36 @@
+
+On your browser, go to My Projects.
+Enter the name of our app in the Project name box.
+Now drag a Vertical Arrangement component on Screen1 window where we will display our images later.
+All the components you drag to Screen1 can be seen under Components pane.
+Drag an Image component and place it inside VerticalArrangement1 component that we placed earlier on Screen1.
+Get a Label component and place it below VerticalArrangement1.
+We need to change some properties of the Label component.
+Now we need a Horizontal/Arrangement component where we will place our three buttons.
+Inside the HorizontalArrangement1, place three Buttons one after another.
+
+,
+Now change the properties of the buttons as follows:
+
+
+Select Button1 and change its Text property to Elephant, Width to Fill parent, Text/Alignment to Center, and have Font/Bold property checked.
+We also need to play sound.
+One more tiny thing we should do is change the Title of Screen1 to Wild LifeShow.
+Let's get our picture and sound files added.
+Under Media pane, click Add and upload the image and sound files one by one.
+
+,
+You should see now the following under your Media pane.
+
+,
+Now that we are done with the design portion of our app, we need to implement the interactions among the components we have.
+On the Blocks Editor window, click on My Blocks which will display all the components we placed on our app through Designer/Viewer window.
+Now under My Blocks, locate and click Image1.
+We need to set the source of the picture to our image Elephant.png.
+The text block indicates which picture to display.
+Now locate the Player1 and place the Player1.Source block below Image1.Picture block.
+Grab and place Player1.Start block below Player1.Source block.
+
+,
+Do the same thing for Button2 and Button3.
+You are done!

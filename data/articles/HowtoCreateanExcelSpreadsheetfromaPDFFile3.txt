@@ -1,0 +1,18 @@
+ Depending on the type of data being imported, it may be possible to import the data contained in the PDF into an Excel workbook as text using the Text to Columns feature.
+
+
+Open the PDF file in Adobe Reader and click the File menu. Select “Save As Other” and then click “Text”. You can also use the “Save As” menu and select “Text file” as the file format.Give the file a name you will recognize and then click Save. It will be saved as a text file.
+ Once the file has been converted, open it and select all of the text. You can press Ctrl + A to select everything, or click and drag the cursor to highlight the whole document.
+
+
+Copy the highlighted text to the clipboard. You can use Ctrl + C to copy, or click Edit and select Copy.
+ Highlight the first cell in the spreadsheet (A1) and then paste the copied text. You can press Ctrl + V or right-click in the cell and select Paste.
+ If your data is not still selected after pasting, select the data to be converted.
+
+
+Click the Data tab and then click the Text to Columns button located in the Data Tools group. The Text to Columns Wizard will open.
+Select "Delimited" under "Original data type". Click Next to move on to Step 2 of the Text to Columns Wizard.
+Check the box labeled "Space" and clear all other checkboxes under the Delimiters heading. Click Next to continue.
+Click to select any column in the Data preview display and then select the Text option located under the Column data format heading.
+Repeat the previous step for all columns visible in the Data preview display.
+Click Finish to complete the process and exit the wizard. The data from the original PDF file will be separated into columns and organized into a table.

@@ -1,0 +1,54 @@
+ Private browsing will allow you to browse the Internet without allowing Firefox to remember or keep track of your browsing history, which can use up memory and slow down Firefox.
+
+
+Click on “Firefox” and select “Preferences.”
+Click on the “Privacy” tab and select “Never remember history” from the History dropdown menu.;
+, Firefox may run slow as a result of having to keep track of your browsing history.
+
+
+Click on “Firefox” and select “Preferences.”
+Click on the “Privacy” tab and click on “Clear all current history.”
+
+, Enabling the HTTP cache can help reduce user interface glitches and the occurrence of browser crashes.
+
+
+Open a new tab in Firefox and type “about:config” into the address bar.
+Type “browser.cache.use” into the search bar.
+Double-click on “0” in the value column next to “browser.cache.use_new_backend.”
+Change the value to “1,” then close the “about:config” tab and continue browsing.
+ Refreshing Firefox will delete extensions and themes, website permissions, added search engines, security settings, toolbar customizations, and more.
+
+
+Open a new tab in Firefox and type “about:support” into the address bar.
+Click on “Refresh Firefox.”
+
+, This can help immediately free up memory being used by one or more open Firefox tabs.
+
+
+Open a new tab in Firefox and type “about:memory” into the address bar.
+Click on “Minimize memory usage” under “Free memory.”
+
+, By default, Firefox caches the contents of the sites you visit to improve loading time, which can slow down browser performance when the cache becomes too large.Click on “Firefox” and select “Preferences.”
+Click on the “Advanced” tab, then click on the “Network” tab.
+Click on “Clear Now” next to Cached Web Content.
+Click on “Clear Now” next to Offline Web Content and User Data.
+ Pipelining allows your browser to send multiple requests to a server before any responses are received, which can help reduce page download times.Open a new tab in Firefox and type “about:config” into the address bar.
+Double-click on “network.http.pipelining” and set the value to “True.”
+Double-click on “network.http.proxy.pipelining” and set the value to “True.”
+Double-click on “network.http.pipelining.maxrequests” and set the value to “8.”
+
+, Flash animations commonly exist in one or more places on various sites in the form of advertisements and animations, and can slow down browsing.
+
+
+Click on “Tools” in Firefox and select “Add-ons.”
+Type “Flashblock” into the search bar of the Add-ons tab.
+Select the option to install the Flashblock add-on to Firefox. The add-on will replace Flash objects with a button you can click on to view the Flash content, instead of automatically playing Flash content upon visiting the site.
+ Certain websites and extensions may have scripts that run too long and either stop or slow down Firefox.Open a new tab in Firefox and type “about:config” into the address bar.
+Type “dom.max_script_run_time” into the search bar.
+Double-click on the entry, and type “20” into the integer value prompt that displays on-screen.
+Click on “OK.”
+
+, This can help reduce the amount of RAM being used by Firefox at any given time if the browser is using up too much memory.Open a new tab in Firefox and type “about:config” into the address bar.
+Type “browser.cache” into the search bar, and click on “browser.cache.disk.capacity.”
+Change the value from 50000 to 15000 if you have between 512 MB and 1 GB of RAM, or to another value depending on your available memory.
+

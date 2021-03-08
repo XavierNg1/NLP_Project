@@ -1,0 +1,23 @@
+ OpenDNS is a DNS service that will reroute websites that contain adult or restricted content. This allows you to block websites for everyone on your network, regardless of what device or browser they're using. OpenDNS web filtering is a free service.
+
+
+Visit opendns.com in your browser to get started.
+ This will display the different personal use packages.
+ This is a preconfigured filter that will block adult sites and other questionable content on your home network.
+ This will list many popular routers with specific setup instructions.
+ If you don't know your router, or can't find it on the list, select "FamilyShield Router Configuration Instructions."
+
+, The process for this will vary depending on your router and home network setup. See Access a Router for detailed instructions.
+
+
+Generally, you'll be entering the router's IP address into your web browser, logging in with the router admin username and password, and then accessing the settings pages.
+ This section contains the DNS settings for your router.
+ Many routers will have automatic DNS enabled. You'll likely need to disable this before you can enter your own DNS servers.
+ Enter the following addresses into the first and second DNS server fields:
+
+
+208.67.222.123
+208.67.220.123
+
+, This will apply your new settings, which will restart your router. It may take a minute or so for it to come back online.
+ The new DNS servers will automatically reroute traffic to blocked websites. Enter in an adult website to ensure that the blocking is working correctly.

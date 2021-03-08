@@ -1,0 +1,60 @@
+ When setting up a LAN, you'll need to know how many computers will be connecting to the network via Ethernet. This will determine the number of ports you'll need.
+
+
+If you have four or less computers that you need to hardwire, you'll just need a router. If you have more than four, you'll likely need to get a switch to extend the number of ports available on your router.;
+, If you want to allow devices to connect wirelessly, you'll need a router that can broadcast a wireless network. Most routers you'll find at the store or online have wireless capabilities.
+
+
+Network switches do not allow wireless devices to connect, and can only be used for hardwired LANs or to extend the number of ports available to the router.
+ If you want all of the connected devices to have access to the internet, you'll need a router to handle the connections. If you don't need the devices to have a network connection, you can just use a network switch.
+ This isn't much of an issue in most homes, but network cables cannot run longer than 100m (328 ft). If you have to run cable farther than this, you'll need switches in between.
+ If you're filling all of the ports on your hardware, consider future-proofing to allow for more devices in the future.
+ To create a LAN, you'll need a router or switch, which will act as the hub of your network. These devices route information to the correct computers.
+
+
+A router will automatically handle assigning IP addresses to each device on the network, and is necessary if you intend to share your internet connection with all the connected devices. It is highly recommended that you build your network with a router, even if you're not sharing an internet connection.
+A network switch is like a simpler version of a router. It will allow connected devices to talk to each other, but will not automatically assign IP addresses and will not share an internet connection. Switches are best used to expand the number of LAN ports available on the network, as they can be connected to the router.
+ You don't need to do much to set up a router for a basic LAN. Just plug it into a power source, preferably close to your modem if you plan on sharing the internet connection through it.
+ If you're sharing the internet connection from your modem, connect the modem to the WAN/INTERNET port on the router. This is usually a different color from the other ports.
+ If you're using a switch to expand the number of ports available on the router, plug an Ethernet cable into any LAN port on the router and any LAN port on the switch. This will expand the network to the rest of the LAN ports on the switch.
+ Use Ethernet cables to connect each computer to an open LAN port on your router or switch. It doesn't matter what order the ports are connected in.
+
+
+Ethernet cables cannot reliably transfer data at lengths larger than 100m (328 ft).
+ If you're only using a switch as your network hub, setting up one computer as a DHCP (Dynamic Host Configuration Protocol) server will allow all of the connected computers to easily obtain IP addresses.
+
+
+You can quickly create a DHCP server on one of your computers by installing a third-party utility.
+The rest of the computers on the network will obtain IP addresses automatically once the server is running, as long as they are set to do so.
+ After each computer obtains an IP address, they'll be able to talk to each other on the network. If you're using a router to share your internet connection, each computer will be able to access the internet.
+ Once your network is up, you won't see anything on other computers unless that computer has shared files. You can designate files, folders, drives, printers, and other devices as shared so that anyone on the network, or just specific users, can access them.
+ When you're setting up a wireless router, you'll need to keep a few things in mind:
+
+
+For easy troubleshooting, the router should usually be placed close to your modem.
+It should be located centrally to allow for maximum wireless coverage.
+You'll need to connect a computer to the router via Ethernet during the setup process.
+ You'll be using your computer's web browser to configure the router's wireless network.
+ You can use any web browser.
+ You can typically find this printed on the bottom of the router, or in your router's documentation. If you can't find it, there are a couple things you can try:
+
+
+Windows - Right-click the Network button in the System Tray → click Open Network and Sharing Center → click the Ethernet link → click Details → find the Default Gateway entry for your router's IP address.
+Mac - Click the Apple menu and select System Preferences → click Network → click your Ethernet connection → find the Router entry for your router's IP address.
+ You'll be prompted for the login information for your router. The default login information varies depending on your router model, but the username is often "admin" and the password is often "admin," "password," or blank.
+
+
+You can look up your router model at https://portforward.com/router-password/ to find the default login information.
+ The exact location and wording of this section varies from router to router.
+ This may also be called "Network name." This is the name that appears in the list of available wireless networks.
+ This is the most secure option currently available on most routers. Avoid WPA and WEP except when explicitly required by older, incompatible devices.
+ This password will be required in order to connect to the network. The field may be labeled "Pre-Shared Key."
+
+, Depending on the router, you may have to check a box or click a button at the top of the Wireless menu to enable the wireless network.
+ This will save the changes to your router.
+ It may take a minute for the router and network to come back online.
+ Once the network is back up, it will appear on the available network list on any wireless devices in range. When connecting to the network, users will be prompted to enter the password you created.
+
+
+Computers connected to the router via Ethernet will not require a password.
+

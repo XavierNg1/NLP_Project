@@ -1,0 +1,12 @@
+ Your chances of recovering the file are much higher if you don’t save anything new. This is because when a file is deleted, it is actually just set to be overwritten. If no new data has overwritten the original file, then it has a much higher chance of being recovered.
+ The most popular program on Linux for recovering specific files is PhotRec. It is open-source and available to download for free from the developer.
+
+
+You may need to download TestDisk in order to use PhotoRec.
+ Run PhotoRec as root from the command line. Use the “sudo” command to gain root access when running the program.
+ Once PhotRec has started, you will be asked to select the disk and partition that you want to scan. Use the arrow keys to select the location that the file originally existed in. Select Search and press Enter to continue.
+ PhotRec will need to know what format the target drive is. Choose the correct format from the list. Linux-specific drives will be EXT2/EXT3, while all others will be in the Other category.
+ PhotRec will need a location to store recovered files. Make sure that it is not on the same disk as the target disk, otherwise you may overwrite files that could have been recovered.
+ A large list of file types will be displayed, and you can check each one that you want to try to recover. Highlight Next and press Enter to switch to the next page of file types.
+ Depending on the size of your drive and the speed of your computer, the recovery process could take several hours. Once the recovery process is complete, you can access the recovered files in the location that you specified.Many files will not be recoverable, or may only be partially recovered, because parts of the file have been overwritten.
+

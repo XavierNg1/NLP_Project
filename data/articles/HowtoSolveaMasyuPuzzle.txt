@@ -1,0 +1,18 @@
+
+Two adjacent black circles must move away from each other.
+A white circle on the outer border must go parallel to the border. If two white circles on the border are adjacent or have only one space between them, both must turn inward after they connect.
+Three or more consecutive white circles force the path to pass through them separately as shown. The path cannot pass straight through all of them without violating the turn constraint of the middle one.
+A black circle diagonally adjacent to two white circles in the same row or column must move away from them. More generally, the path through a black circle cannot make a corner around any white circle.;
+, Each additional segment of the path that is known adds more boundary to the unsolved portion. The new segments created an edge near a white circle and a black circle restricting the way the path must pass through those cells.
+ Consider which direction it could take next, straight, left turn, or right turn. If only one continuation exists, take it. Avoid all of the following situations:
+
+
+Intersecting another part of the path. Do not create any 3 or 4-way junctions.
+Forming a closed loop that is smaller than the complete solution. There must be only one loop.
+Creating a closed off region that contains an odd number of endpoints. This will create a string, but there will be no way to connect the loose ends to close the loop.
+Violating a turn constraint.
+ If this is not possible, then the path from the black circle must extend in the opposite direction.
+ Any isolated region must contain an even number of endpoints.
+ For example, if any part of the loop passes parallel to and adjacent a white circle, then you must pass through the white circle in the same direction to avoid creating a 3-way junction.
+ Getting a good start requires local observations like those described in step one. Finishing the puzzle requires focus on avoiding small loops and dead ends.
+

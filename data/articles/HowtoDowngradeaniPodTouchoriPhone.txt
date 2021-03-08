@@ -1,0 +1,34 @@
+ Having a backup will help minimize any downtime if the downgrade process doesn't go well. See this guide for instructions on how to backup your iPhone.;
+, An IPSW file is the firmware file that contains the iOS system software. You will need to download the signed IPSW file for 7.1.2 that is specific to your device. There are different files for different phones and different carriers.
+
+
+You can find the IPSW files at places like iDownloadBlog.com
+
+
+, Open iTunes if it doesn't open automatically.
+, Hold down ⌥ Opt (Mac) or ⇧ Shift (Windows) and click Update. Browse for the IPSW file that you downloaded.
+ Click Update again. The downgrade process will begin.
+
+
+If this fails, you may have downloaded the wrong file, or Apple may have stopped signing the files digitally. If Apple is no longer signing the files, then downgrading will no longer be possible. Apple signs files digitally for a short time after the update is released, but they do not announce when they will stop signing them.
+ After downgrading, your iDevice will show the Setup screen. Follow the prompts to setup the device.
+ You may need a program which is capable of capturing and saving SHSH Blobs and APTickets. These are files which your phone uses to communicate with Apple and allows it to install a firmware lower than the current version. The two best programs for this are iFaith and TinyUmbrella.
+
+
+There is currently no way to downgrade without having these files.
+You can only downgrade to the level that you have these files for. So, capture your version 6 files and you can use them when version 7 comes along, etc. iFaith has an option to use someone else’s files, however, so if you don’t have the files saved you can use that program.
+In iFaith, save blobs by clicking ‘Dump SHSH Blobs’ or find someone else’s by clicking ‘Show Available...’. Your phone will need to be plugged in to your computer. The tickets should be saved automatically at the same time for most devices.
+The following can be downgraded: an iPhone 2G, iPhone 3G, or iPhone 3GS, or iPhone 4; an iPad 1G; an iPod Touch 1G, iPod Touch 2G, iPod Touch 3G, and the iPod Touch 4G.
+ This is the most common program used for downgrading iOS devices.
+ There are a number of places to find this online., If using Windows, you will need to run RedSn0w as an administrator (done by right-clicking on the icon).
+ Use the included, standard USB cable. Once it is plugged in, put the phone into DFU mode.
+,,, This will allow you to choose the firmware you want to restore.
+
+
+If you have an unlocked phone, click yes to prevent baseband updates.
+ Click OK and Next to allow this.
+ RedSn0w should attempt to find them automatically but if they can’t be located, you can bring them up manually on your computer. Just remember where you saved them!
+
+, Once the Blobs are located the program should begin downgrading your device automatically.
+ You may want to consider and Untethered Jailbreak, so you don’t need to repeat this process.
+

@@ -1,0 +1,18 @@
+ Assembly language is essential; another supplementary high level language such as C is strongly recommended.;
+, It can be a CD drive, DVD drive, flash drive, a hard disk, a floppy disk, or another PC.
+ In Windows, for instance, an easy-to-use GUI and plenty of security is the core idea.
+ IA-32, ARM, and x86_64 are the most common for personal computers so they're your best bet.
+ Linux from scratch is a project for those that would like to build their own Linux distro, for example.
+ Since coding your own bootloader will require extensive knowledge of the hardware and the BIOS, it may push back the schedule for programming of the actual kernel.
+ While it is possible to create an operating system in a language such as Pascal or BASIC, you will be better off using C or Assembly. Assembly is absolutely necessary, as some vital parts of an operating system require it. C++, on the other hand, contains keywords that need another fully-built OS to run.
+
+
+In order to compile an operating system from C or C++ code, you will, of course, be using one compiler or another. You should, therefore, read the user guide/manuals/documentation for your chosen C/C++ compiler, whether it comes packaged with the software or is available on the distributor's website. You will need to know many intricate things about your compiler and, for C++ development, you should know about the compiler's mangling scheme and its ABI. You are expected to understand the various executable formats (ELF, PE, COFF, plain binary, etc.), and understand that the Windows proprietary format, PE (.exe), has been copyrighted.
+ One good API to choose is POSIX, since it is well documented. All Unix systems have at least partial support for POSIX, so it would be trivial to port Unix programs to your OS.
+ There are monolithic kernels and micro kernels. Monolithic kernels implement all the services in the kernel, while microkernels have a small kernel combined with user daemons implementing services. In general, monolithic kernels are faster, but microkernels have better fault isolation and reliability.
+ That way, less time is required to solve more problems, which may produce a better OS more quickly.
+ Remember, wiping your drive will irreversibly clear out all your data! Use GRUB or another boot manager to dual-boot your system with another OS until yours is fully functional.
+ Begin with small things such as displaying text and interrupts before moving on to things such as memory management and multitasking. Also make sure you make a 32 bit and 64 bit version.
+ This provides a measure of protection in case something goes terribly wrong with the current version of your OS or your development. If your computer crashes and is unable to boot, it is an excellent idea to have a second copy to work with so you can troubleshoot.
+ Rather than rebooting your computer each time you make changes or having to transfer the files from your development computer to your test machine, you can use a virtual machine application to run your OS while your current OS is still running. VM applications include VMWare (which also has a freely available server product), the open-source alternative, Bochs, Microsoft Virtual PC (not compatible with Linux), and Oracle VirtualBox.
+ This will allow users to tell you about potential problems with your operating system.

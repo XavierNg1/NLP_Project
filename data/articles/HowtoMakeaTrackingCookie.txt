@@ -1,0 +1,19 @@
+ Before you make a tracking cookie, you should determine what type of information you want to track from visitor's to your Web site. For instance, you may find it important to know the zip code of a person visiting your Web site if your Web site sells products that require shipping costs and certain sales taxes.;
+, If you have created your Web site using HTML code and are somewhat familiar with programming, you can make a tracking cookie from scratch.
+
+
+Use the “Response” command to write a cookie on a visitor's computer. “Response.Cookies(“CookieName”)=value” is the most basic form of this code. The code: “Response.Cookies("VisitorName")=Request.Form("UserName")” would allow you to keep track of a visitor's user name.
+Use the “Request” command to retrieve the cookie. “Request.Cookies("CookieName")” would allow you to retrieve the information from the visitor's computer when the visitor returned to your Web site.
+ "Response" and "Request" are part of Microsoft's ASP (active server pages). See http://www.w3schools.com/asp/coll_cookies_response.asp If your web server does not support ASP, you'll have to investigate other methods of generating cookies, such as CGI scripts or PHP.
+ There are software programs out there that will do the heavy coding for you.
+
+
+Software will allow you to make certain kinds of cookies; sometimes a single type of software will only allow you to make a specific cookie. Some of this software is considered “freeware,” and thus won't cost you anything. Tracking cookie software can help with restricting how many times a visitor can download software from your Web site by remembering that the software was already downloaded.
+ Internet security is a key concern of most Internet users. It’s important to provide security so that visitors' information is protected.
+
+
+A domain property will restrict the cookie from being read by another Web site. A sample of the code for this is: Response.Cookies("CookieName").Domain = "www.mydomain.com"
+A path property restricts the cookie to being read by a specific path. A sample of the code for this is: Response.Cookies("CookieName").Path = "/maindir/subdir/path"
+
+, A cookie will expire once the Web browser the visitor uses to view your Web site is closed. An expiration date must be set if you want to store the cookie so that when the user comes back the information is saved. An example of this code is: Response.Cookies("CookieName").Expires=#January 01, 2010# (assuming a January 01, 2010 expiration date).
+

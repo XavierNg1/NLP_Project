@@ -1,0 +1,134 @@
+ The best way to change the color of your text is by using CSS. The old HTML attribute is no longer supported in HTML5. The preferred method is to use CSS to define the style of your elements.
+
+
+This method will also work with external stylesheets (separate CSS files). The examples below are for an HTML file using an internal stylesheet.;
+, You'll be defining your styles inside this tag if you're using an internal stylesheet.
+ When the <style> tag is in the <head> tag, the CSS inside the <style> tag will be applied to any applicable elements on that page. When you're finished, the beginning of your HTML file should look something like this:<!DOCTYPE html>
+<html>
+<head>
+<style>
+ 
+</style>
+</head>
+
+
+
+
+, You'll be using the <style> section to define the look of the different elements on your page. So for example, to change the style of all the body text on your page, type the following:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+ 
+}
+</style>
+</head>
+
+
+
+
+, The color: attribute will tell the page what text color to use for that element. In this example, it will change the text color of all body text, which is the default element for all text on your page:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+        color:
+}
+</style>
+</head>
+
+
+
+
+, There are three ways you can enter a color: the name, the hex value, or the RGB value. For example, for the color blue you could type blue, rgb(0, 0, 255), or #0000FF.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+        color: red;
+}
+</style>
+</head>
+
+
+
+
+, You can use the different selectors to change the color of your text for different parts of the page:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+        color: red;
+}
+h1 {
+        color: #00FF00;
+}
+p {
+        color: rgb(0,0,255)
+}
+</style>
+</head>
+<body>
+ 
+<h1>This header will be green.</h1>
+ 
+<p>This paragraph will be blue.</p>
+ 
+This body text will be red.
+</body>
+</html>
+
+
+
+
+, You can define a class and then apply it to any element you'd like throughout the page to instantly add the class style. For example, in the following file the ".redtext" class will make any element it's applied to use red text:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.redtext {
+        color: red;
+}
+</style>
+</head>
+<body>
+ 
+<h1 class="redtext">This heading will be red</h1>
+<p>This paragraph will be normal.</p>
+<p class="redtext">This paragraph will be red</p>
+ 
+</body>
+</html>
+
+
+
+

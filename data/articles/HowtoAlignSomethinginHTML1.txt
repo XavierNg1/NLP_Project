@@ -1,0 +1,11 @@
+ That means, you need to add "div" inside the "less than" and "greater than" symbols (<>) before the first HTML tag that will have its alignment changed, and add "/div" inside these symbols after the last HTML tag that will have its alignment changed.;
+,,
+
+
+If you need to right-align the text, change the "div" tag to "div style='text-align:right'" within the "<>" symbols.
+If you need center-align the text, change the "div" tag to "div style='text-align:center'" within the "<>" symbols.
+If you need to justify the text, change the "div" tag to "div style='text-align:justify'" within the "<>" symbols.
+,
+
+
+If it didn't work, then the website has specific coding in its style sheet that overrides your "div". Override the site style-sheet by adding the appropriate version of "style='text-align:right'" inside the opening tag of each element to have its alignment changed. For example, a "p" tag would become "p style='text-align:right'" within the "<>" symbols.

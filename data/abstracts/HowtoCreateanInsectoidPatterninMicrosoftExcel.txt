@@ -1,0 +1,41 @@
+=== Previous Lessons Learned ===,
+This article relies on the previous accomplishment of 2 articles preceding it:
+
+
+
+How to Create Artistic Patterns in Microsoft Excel and
+
+How to Create a Uniform Spiral Pattern in Microsoft Excel.
+
+,
+Please complete those first before attempting this one.
+
+,
+Start a new workbook by saving the old workbook under a new name.
+Complete all changes in the upper Defined Variables section.
+Complete all changes in the lower Data columns section:
+
+
+A7:A1447: No change
+B7 amd B8:B1447: No change
+C7 and C8:C1447: No change
+D7:D1447: "=IF(COS((ROW()-7)*PI()/180*Factor)
+E7:E1447: "=IF(SIN((ROW()-7)*PI()/180*Factor)
+F7:F1447: Probably no change -- "=IF(A7=0,F6,((PI())*((SIN(B7/(C7*2))*GMLL*COS(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+D7)))"
+G7:G1447: Probably no change -- "=IF(A7=0,G6,((PI())*((SIN(B7/(C7*2))*GMLL*SIN(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+E7)))"
+H7:H1447: No change  -- "=F7*GMLL*Sync1"
+I7:I1447: No change -- "=G7*GMLL*Sync1"
+J7:J1447 and K7:K1447 No change.
+
+,
+Create the chart.
+Activate the Data worksheet and copy A1:J6 -- the "live" formulas -- and then activate the Saves worksheet and paste the live formulas in.
+
+
+,
+
+
+,
+Make use of helper articles when proceeding through this tutorial
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

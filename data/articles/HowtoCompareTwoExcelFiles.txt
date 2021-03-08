@@ -1,0 +1,26 @@
+
+
+
+In this case, we use three example workbooks located and named as follows:
+
+C:\Compare\Book1.xls (containing a sheet named “Sales 1999”)
+C:\Compare\Book2.xls (containing a sheet named “Sales 2000”)
+
+
+Both workbooks have the first column “A” with the name of the product, and the second column “B” with the amount sold each year. The first row is the name of the column.;
+, We will work on Book3.xls to do a comparison and create one column containing the products, and one with the difference of these products between both years.
+
+
+C:\Compare\Book3.xls (containing a sheet named “Comparison”)
+
+, Only with “Book3.xls” opened, go to cell “A1” and type:
+
+
+='C:\Compare\Sales 1999'!A1
+If you are using a different location replace “C:\Compare\” with that location. If you are using a different filename remove “Book1.xls” and add your filename instead. If you are using a different sheet name replace “Sales 1999” with the name of your sheet. Beware not to have the file you are referring (“Book1.xls”) opened: Excel may change the reference you are adding if you have it open. You’ll end up with a cell that has the same content as the cell you referred to.# Drag down cell “A1” to list all products. Grab it from the bottom right square and drag it, copying all names.
+ In this case we call it “Difference” in "B1".
+ In this case, by typing in cell “B2”:
+
+
+='C:\Compare\Sales 2000'!B2-'C:\Compare\Sales 1999'!B2
+You can do any normal Excel operation with the referred cell from the referred file.

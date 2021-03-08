@@ -1,0 +1,24 @@
+
+To open command prompt, click "Start", "Run", type "cmd" (without the quotes) and press OK.;
+,
+Right-click on the top (the title bar) of the command prompt window and select "Properties".
+When you open the "Options" tab, check "Quick Edit Mode".
+Click on the "Layout" Tab.
+Set a proper buffer size according to how much space you will need to keep at any given time.
+Choose the color of your text, background screen, and pop-up windows by selecting the "Colors" tab.
+Open the "Font" tab.
+To add new fonts, click "Start", "Run" and type "regedit" (without the quotes).
+Go to this key: "\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont\".
+
+,
+Before you proceed please take a look at the "Warnings" section below.
+Enter "00" (without the quotes) as the name of the new value you just created.
+Now, double-click on the value you created and write the font name in the "value data" bar (for example, "courier new").
+
+,
+Close "Registry Editor" and reboot your computer.
+To save changes, after you press "OK" in the properties window, choose one of the following options:
+
+
+"Apply properties to current window only".
+Right-click on the top of the command prompt window (the title bar) and click "Defaults", which will give you have access to a window like the properties window.

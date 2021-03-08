@@ -1,0 +1,30 @@
+ You can access the Downloads folder from your Dock, as well as in the sidebar of any Finder window. This is the default location that most apps will download files to. If you've changed the download location in any of your app's Preferences menu, you'll want to check the location you specified.
+
+
+You can also click your desktop, and then click "Go" → "Downloads".
+ Browse through your Downloads folder until you find the file that you want to remove.
+ Mac programs are downloaded as DMG files, which are disk image files that contain the program. When you install a program, the DMG file remains in your Downloads folder, taking up space.
+
+
+In the search bar in the upper-right corner, type disk image and select "Disk Image" from the "Kinds" section. This will limit the display to just DMG files, allowing you to quickly clear a lot of space.
+ If you downloaded the file recently, it may still be listed in your web browser's download manager. This will allow you to open a window directly to the file you want to remove.
+
+
+Chrome - Press Command + J. Click the "Show in folder" link for the file you want to delete.
+Firefox - Press Command + J to open the Downloads section of the Library. Click the Folder button to open the folder that the download is located in.
+Safari - Click the "Window" menu and select "Downloads". Click the Magnifying Glass button next to the file you want to delete.
+ Alternatively, you can select the file and press Delete, or right-click on the file and select "Delete".
+
+
+If your file cannot be deleted, it is because it is in use by another program. This is most common with file-sharing programs, as someone may be trying to download the file from you. Close any programs that may be using the file and try again.
+ OS X keeps a log of all of your downloaded files. If you're concerned about the security of your system and prying eyes, you can manually clear this log file using the terminal.
+
+
+Open the Terminal in your Utilities folder.
+Type sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* ‘delete from LSQuarantineEvent’ and press Return.
+ If OS X will not let you delete the file, it is likely because it is in use by another program. This is typically the case if you downloaded the file through BitTorrent and are still seeding it, or you have already opened it in another program. Close any programs that may be using the file and try again.
+
+
+
+Click here if you're still having trouble deleting the file.
+

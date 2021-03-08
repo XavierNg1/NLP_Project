@@ -1,0 +1,29 @@
+ See list at the bottom of this article.;
+, Leave the power cord unplugged until you are ready to run BerryBoot from your SD Card., While you’re at it, format your USB Flash Drive (or extra SD Card) too.,, Do not put it in a folder. Put it directly in the root.,,, For "Disk Selection" make sure to choose the SD Card. It should look something like "mmcblk0: SDC".
+ Once it has finished downloading and installing, click "Add OS" to add another Operating System. Add OpenElec and then RetroPie. If you can’t find RetroPie, it may be on another tab named “Other”. Raspbian is pretty much ready to go, but you will need to configure OpenElec and RetroPie.
+,
+
+Select "SYSTEM > File Manager"
+Select "Add Source"
+Enter this URL as the path "http://fusion.tvaddons.ag" and name it "Fusion".
+Go back to the home screen and select "SYSTEM"
+Select "Add-Ons"
+Select "Install from zip file"
+Select "Fusion"
+Select "xmbc-repos"
+Select "english"
+Select "repository.xbmchub-x.x.x.zip"
+Select "Install from repository"
+Select "TVADDONS.ag Addon Repository"
+Select "Video Add-Ons"
+Select "Phoenix"
+Select "Install"
+Once it's done installing go to the home screen and go to "VIDEOS > Add-Ons". You should see "Phoenix" there. Just click on it to start searching for content to stream!
+
+,, Hold down the middle “PS” button once you reach the dashboard.,, Wait a couple minutes then shut down the Raspberry Pi (go to “Menu” > “Quit” > “Shutdown”).,,, If you want to play PSX games you should also copy the PSX BIO into the folder too., The roms will automatically start to transfer. Depending on how much there is to transfer depends on how long it will take. Play a game that is already pre-loaded while you wait. Once it’s done, reboot and relaunch RetroPie. You should now see all you games within each emulator., This will bring up the Command Line. You will need to execute some commands to move the BIO for the PSX into the correct folder.
+, One should be named “SCPH1001.BIN”. If you see it, you are good to continue. Now type the following:
+
+mv SCPH1001.BIN /home/pi/RetroPie/BIOS (press enter)
+If you did not receive an error message that says something like “not found”, it worked! If you are getting errors, it probably has to do with the letters not matching the file exactly. Make sure all upper and lower-case letters match exactly. Type “exit” and press enter to finish.
+ Use these “hotkeys” to control saves.
+

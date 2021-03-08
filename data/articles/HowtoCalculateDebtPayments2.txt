@@ -1,0 +1,15 @@
+ Your spreadsheet software will almost certainly have a "Payment" function. You'll use that function to calculate the loan payments based on the particulars about the loan.
+ The principal of the loan is the amount that you're borrowing.For example, if you're borrowing $7,500, then the principal is $7,500.
+ The interest rate is basically the expense you'll pay the lender in exchange for borrowing the money.You'll be given the interest rate when you take out the loan. It's usually expressed in terms of a percentage, such as 3.5%.
+ Most loans are over a period of years. That's the amount of time that you have to pay back the loan.
+ The number of months in the loan is easy to calculate because it's the number of years in the loan times 12. For example, if the loan is 3 years long, then the number of months in the loan is 36 or 3 x 12.
+ You need the monthly interest rate because your payments are on a monthly basis but the interest rate is on an annual basis. The monthly interest rate is calculated by simply dividing the annual interest rate divided by 12. For example, if the annual interest rate is 3.5 percent, then the monthly interest rate is .2917 percent.
+
+Your interest rate will have to be entered in decimal form. To get this, divide the percent form (0.2917) by 100. This gives 0.002917. 
+
+
+, You'll plug in the principal, rate, and number of months into the payment function. Consult the documentation for your spreadsheet software to determine exactly how to plug in those numbers.
+
+Once you've plugged in the numbers, the resulting value will be the payment. If you use the numbers mentioned above, the payment value should be $219.77.
+
+Using Microsoft Excel, you'll use the PMT function. The first value in the function is the rate, the second value is the number of months, and the third value is the principal of the loan. For this example, the PMT function in this case looks like this: =PMT(0.002917,36,7500).

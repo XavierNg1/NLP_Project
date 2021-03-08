@@ -1,0 +1,7 @@
+Set up your home web server on a port other than port 80.
+In your router's configuration, forward the port your server is running on to the IP of the machine it is running on.
+Find your network's external IP address: http://www.whatismyip.com/
+
+,Verify that your server is reachable outside the network by accessing the external IP address with the port you chose.
+Setup a reverse proxy server outside your network that sends traffic to the port you forwarded on your external IP.
+Test your reverse proxy.

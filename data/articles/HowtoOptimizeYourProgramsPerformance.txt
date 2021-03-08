@@ -1,0 +1,9 @@
+ If it is a kind of program that normally runs very fast, but you want it to go faster, you can add a temporary outer loop of say, 1000 times, to give you enough time to halt it.;
+, Do this by striking a break or pause key that makes the program stop wherever it happens to be. Do not do this by setting a breakpoint in the code, because then you will not be able to see what it was doing when you struck the key.
+ What you need to record is the file and line number of each statement on the call stack. Hopefully there is an easy way to copy-paste this information into a text editor, but if not, do it the hard way, with paper and pencil.
+ You can either continue execution from where you were, or completely restart the program. Either way is OK. You can do this several times, up to about 20.
+ You may find it helpful to group the call stack samples into an indented tree structure, so you can see the commonality between samples. It is important to remember that you are capturing statements, not functions. The line numbers are really important.
+ These are your candidates for optimization. For example, if there is some statement at file Foo.cpp, line 127, that happens to show up on 8 out of 20 samples, then you should take a good look at that statement and see if what it is doing is really necessary, because if you could get rid of it, you would save about 40% of the execution time.
+ And enjoy the speedup.
+ Until you can't find anything else to optimize. Chances are your program is now many times faster than it was to begin with.
+

@@ -1,0 +1,27 @@
+ The UPC system encodes only the manufacturer's identity and an identification number for the specific product, except in certain cases described in the following steps. More typically, no additional information is included in the UPC system, so there is nothing to gain by attempting to read the barcode yourself. Instead, look it up online using free services such as GTIN's, the official U.S. bar code assignment company, or upcdatabase.org, which is a database created by users. Enter the full 12-digit barcode in the "GTIN" or "Search for a product" fields, respectively.
+
+
+There are a couple exceptions described immediately below this step, in which you can find partial information.
+GTIN refers to the data system UPC is a part of, short for Global Trade Item Number.12 digit UPC numbers can be referred to as GTIN-12, UPC-A, or UPC-E.;
+, While the 12 digit barcode doesn't contain much human-readable information, you can still learn about how it functions. The first 6–10 digits of a 12-digit barcode identify the company that manufactures or sells the product (either company may choose to add a barcode). This code is assigned and sold by a non-profit organization, GS1, upon request.The remaining digits, except for the very last one, are invented by that company to describe each of its products.
+
+
+For example, a company might be assigned the code 123456. It can then print any 12-digit barcode that begins 123456, creating one for each product. Compare two barcodes from the same company to see whether you can figure out what the company code is.
+The purpose of the final digit is explained later on in this section.
+ Drugs, pharmaceutical products, and occasionally beauty products usually have bar codes beginning with 3. The next 10 digits are typically the U.S. National Drug Code number. The process of turning a drug code into a barcode can result in ambiguity, so you may not always be able to check against a drug code listing. Instead, look up the drug code on an online NDC lookup.
+
+
+This type of 12-digit number is sometimes referred to as a UPN, or Universal Product Number.Although drug codes are always 10 digits long, they may also include hyphens (or spaces), which are not shown in the barcode. For example, 12345—678—90 and 1234—567—890 are different drug codes, but only one of them can use the same sequence of numbers as a barcode.
+ These barcodes are for items sold by weight. Typically, the first six digits, including the 2, identify the product's manufacturer, and the next five after that are used locally by the store or warehouse to identify the weight of the product, or the price of a particular weight. If you have several products from the same location but in different weights, you may try to figure out the codes for specific weights. Unfortunately, the system is up to each warehouse or store, so there is no universal code to interpret.
+
+
+Type the entire barcode into GSI's company lookup, in the "GTIN" field, to find the manufacturer. This will also show you which part of the barcode is the company prefix (typically the first six digits, but not always). The remaining digits (except for the very last one) should be the code used to denote weight or price.
+ The final digit is called the "check digit," and is automatically determined by putting the previous 11 digits through a mathematical formula. The purpose of this is to catch printing errors. While fake UPC barcodes do exist, usually created by companies who don't understand that they need to apply for one, it would be easy to include the correct check digit, so this is likely not a reliable method of finding fakes. (For that purpose, look it up in the official database instead.) If you're curious or enjoy doing math for fun, you can enter your barcode into a GTIN-12 check digit calculator, or follow the checking formula yourself:
+
+
+Add all the odd-numbered digits together (the 1st, 3rd, 5th, 7th, 9th, and 11th digits)
+Multiply the result by 3
+Add the new result to all the even digits (the 2nd, 4th, 6th, 8th, 10th, and 12th) - this includes the check digit itself
+"Chop off" everything except the final digit of your answer, the number in the ones place.
+Subtract the new result from 10 to find your answer. For example, if the previous step resulted in an answer of 8, you would calculate 10-8=2. This answer should be the same as the final 12th digit of the barcode.
+

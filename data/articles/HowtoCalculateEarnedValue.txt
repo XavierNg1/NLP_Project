@@ -1,0 +1,65 @@
+ To take advantage of the power of Earned Value Analysis, your schedule must define when each project task should be done and how much each task should cost. Begin by creating a space to fill out a project schedule, either on paper or in a spreadsheet program like Microsoft Excel.
+
+
+List the tasks required to complete the project. All tasks should be included.
+Identify the resources required to perform each task. Include labor and materials.
+For example, imagine that a security company is bidding on a government contract. This requires two separate tasks: compiling and writing the bid document, and checking it for compliance with government standards. These two tasks would be listed separately, along with the employees (resources) and any other equipment needed to complete them.;
+, Generally, this will be an amount of hours needed to complete the task, separated by resource (by employee in the example).
+
+
+For our example, the first task requires 20 hours of Employee A's time, and the second requires 30 hours of Employee B's time. Each employee only works on one task in this case.
+ This can be hourly wages for employees or the cost of running necessary machinery or equipment for a given amount of time.
+
+
+For our example, Employee A earn $25 per hour but Employee B earns $50 per hour.
+ You'll need to perform some basic math for this step.
+
+
+Multiply the hourly rate for each required labor resource by the number of hours required.
+Total this product for all required labor resources.
+Calculate the total cost of materials required to complete the task.
+Add any additional costs for such items as equipment rental, insurance, transportation, government fees, etc.
+The total is the budgeted cost for the task.
+For example, imagine that the expected cost of completing the security contract bid is the cost of the employees' wages and materials used plus a government submission fee. Multiply and add the wage rates of each employee by the number of hours each one works. In this case, this is $500 for employee A ($25/hr * 20 hours) and $1500 for employee B ($50/hr * 30 hours). In addition, you estimate that the employees will use $200 worth of materials over the course of the project and there is a one time, $300 government submission fee paid at the end.
+When split into separate tasks, this means that the cost for the first task, completed by employee A, will be $750 ($500 wage to employee A and half of both the cost of supplies and the government fee). The cost of second task will be the cost of employee B's wages plus the other half of the projected materials cost and the government fee, so $1750 ($1500+$100+$150).
+ This is the elapsed time to complete the task, not the amount of labor (applied time) needed to complete the task.
+
+
+In the example, employees A and B are working on other tasks at the same time as this project is being completed. You estimate that the total length of time required will be two weeks (10 business days).
+ The prerequisites are the tasks that must be completed before the given task can be started.
+
+
+For example, one task that will have to be done before employee A can begin compiling a bid document is to analyze the government contract offer and come up with a list of what is required in the company's submission.
+ Use project scheduling software or manually determine start and finish dates for each task. Spreadsheet software is often used for small projects.
+
+
+For example, the security company would create a start and end date for the government contract project that allows for the expected two week timeframe. This allows, for simplicity, one week for the first task and one for the second.
+ The total is referred to as the Actual Cost (AC) or Actual Cost of Work Performed (ACWP).This figure will be useful later when calculating earned value measurements.
+
+
+Imagine that, at this point, the security company is a week and one day into their government contract project. At this point, the company has recorded $1600 in expenses for this project (including the half of the government fee recorded as an expense for the first task, even though it hasn't been paid yet). This is the actual cost.
+ Planned value is essentially the budgeted cost of the project to the project status date (the date at which you are calculating earned value). It is also known as total Budgeted Cost of Work Scheduled (BCWS).In the example, the planned value of the project is the budgeted cost of the two tasks at this point, so $750 for the completed task 1 (completed in the first week) and one-fifth of task 2 (as we are one day into the five day duration of task 2). This means that task 2 has a planned value of $350 (1/5 * $1750) and the total planned value is $750 + $350, or $1,100.
+ Identify tasks that have been started, but not yet completed. Estimate the percent completed for each of these tasks. Tasks that have already been completed will be recorded as 100% complete.
+
+
+Imagine that task one was completed ahead of schedule in four days and task 2 was started at the end of of week 1 instead of the scheduled week 2 start. You estimate that task 2 is 40% complete.
+ Multiply the planned value of each task by the percentage completed.The total is the Earned Value (EV) or Budgeted Cost of Work Performed (BCWP).Multiply task 1's completion percentage of 100% by its planned value of $750 to get an earned value of $750. Then, multiply task 2's completion percentage of 40% by it's planned value of $1750 to get an earned value of $700. Total these to get an earned value of $750 + $700, or $1,450.
+ Subtract the Budgeted Cost of Work Scheduled (planned value) from the Budgeted Cost of Work Performed (earned value).SV = BCWP - BCWS or SV = EV - PV
+A positive Schedule Variance indicates that the project is ahead of schedule. Negative means it is behind.
+In the example, this would be the earned value of $1,450 minus the planned value of $1,100. This gives $350, a positive result which indicates that the project is ahead of schedule.
+ Divide the Budgeted Cost of Work Performed by the Budgeted Cost of Work Scheduled.SPI = BCWP / BCWS or SPI = EV/PV
+If the SPI is greater than 1, the project is ahead of schedule. If it is less than 1, the project is behind schedule.
+In the example, this would be the earned value of $1,450 divided by the planned value of $1,100, which gives an SPI of 1.32. This result is greater than 1, indicating that the project is ahead of schedule.
+ Subtract the Actual Cost of Work Performed from the Budgeted Cost of Work Performed.CV = BCWP - ACWP or CV = EV - AC
+A positive Cost Variance indicates that the project is under budget.
+In the example, this would be the earned value of $1,450 minus the actual cost of $1,600. This gives -$150. The negative result means that the project is running over budget and the company may be overspending in some area.
+ Divide the Budgeted Cost of Work Performed by the Actual Cost of Work Performed.CPI = BCWP / ACWP or CPI = EV/AC
+If the CPI is greater than 1, the project is under budget. If it is less than 1, the project is over budget.
+For the security company, their earned value of $1,450 divided by the actual cost of $1,600 yields a CPI of 0.91, meaning that the project is over budget.
+ The resulting total is known as the "Budget at Completion" (BAC).This is simply the combined budgeted costs of the two tasks which is $750 (task one) plus $1,750 (task two) for a total of $2,500.
+ There are two different ways to calculate this measurement. You should use the method more appropriate for the specific circumstances of your project.
+
+
+If the current cost variance is the result of something that occurred that is not likely to continue, then the BCWS for the remainder of the project is likely still valid. Subtract the Cost Variance from the Budget at Completion to get the estimated actual cost: EAC = BAC - CV. In the example, this would be $2,500 - (-$150), which with the negative sign canceling out the subtraction sign, gives $2,500 + $150, or $2,650.
+If the current cost variance is the result of circumstances that are likely to continue (such as a higher than expected cost of labor), then divide the Budget at Completion by the Cost Performance Index to estimate the total project cost: EAC = BAC / CPI. In the example this would be $2,500/0.91, which gives about $2,750.
+

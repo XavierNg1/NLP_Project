@@ -1,0 +1,144 @@
+ Below, we let z=f(x,y).{\displaystyle z=f(x,y).}
+
+
+r=xi+yj+f(x,y)k{\displaystyle {\mathbf {r} }=x{\mathbf {i} }+y{\mathbf {j} }+f(x,y){\mathbf {k} }}
+;
+, For drx,y{\displaystyle {\mathrm {d} }{\mathbf {r} }_{x},\,y} is being held constant, and vice versa. We use the notation fx=∂f(x,y)∂x.{\displaystyle f_{x}={\frac {\partial f(x,y)}{\partial x}}.}
+
+
+drx=dxi+fxdxk{\displaystyle {\mathrm {d} }{\mathbf {r} }_{x}={\mathrm {d} }x{\mathbf {i} }+f_{x}{\mathrm {d} }x{\mathbf {k} }}
+
+
+dry=dyj+fydyk{\displaystyle {\mathrm {d} }{\mathbf {r} }_{y}={\mathrm {d} }y{\mathbf {j} }+f_{y}{\mathrm {d} }y{\mathbf {k} }}
+
+
+, Surface integrals are a generalization of line integrals. A surface element therefore contains information about both its area and orientation. Thus, the goal is to compute a cross product.
+
+
+dS=drx×dry=|ijkdx0fxdx0dyfydy|=−fxdxdyi−fydxdyj+dxdyk{\displaystyle {\begin{aligned}{\mathrm {d} }{\mathbf {S} }&={\mathrm {d} }{\mathbf {r} }_{x}\times {\mathrm {d} }{\mathbf {r} }_{y}\\&={\begin{vmatrix}{\mathbf {i} }&{\mathbf {j} }&{\mathbf {k} }\\{\mathrm {d} }x&0&f_{x}{\mathrm {d} }x\\0&{\mathrm {d} }y&f_{y}{\mathrm {d} }y\end{vmatrix}}\\&=-f_{x}{\mathrm {d} }x{\mathrm {d} }y{\mathbf {i} }-f_{y}{\mathrm {d} }x{\mathrm {d} }y{\mathbf {j} }+{\mathrm {d} }x{\mathrm {d} }y{\mathbf {k} }\end{aligned}}}
+
+
+dS=(−fxi−fyj+k)dxdy{\displaystyle {\mathrm {d} }{\mathbf {S} }=(-f_{x}{\mathbf {i} }-f_{y}{\mathbf {j} }+{\mathbf {k} }){\mathrm {d} }x{\mathrm {d} }y}
+
+The formula above is the surface element for general surfaces defined by z=f(x,y).{\displaystyle z=f(x,y).} It is important to note that the nature of surfaces (more accurately, the cross product) still allows one ambiguity - the way the normal vector is pointing. The result that we have derived applies to outward normals, as recognized by the positive k{\displaystyle {\mathbf {k} }} component, and for most applications, this will always be the case. 
+
+
+, The surface below has a boundary of an ellipse, not a circle. If we choose to do the surface integral, then we will need to use Jacobian change of variables in order to properly convert into polar coordinates. Therefore, we will choose to parameterize the boundary directly.
+
+
+G=(2x2y−4xz)i+yj+x3zk{\displaystyle {\mathbf {G} }=(2x^{2}y-4xz){\mathbf {i} }+y{\mathbf {j} }+x^{3}z{\mathbf {k} }}
+
+
+, As always, verify that the chosen parameters work before proceeding.
+
+
+x=3cos⁡t{\displaystyle x={\sqrt {3}}\cos t}
+
+
+y=2sin⁡t{\displaystyle y=2\sin t}
+
+
+,
+
+
+dx=−3sin⁡t{\displaystyle {\mathrm {d} }x=-{\sqrt {3}}\sin t}
+
+
+dy=2cos⁡t{\displaystyle {\mathrm {d} }y=2\cos t}
+
+
+, Since our boundary is on the xy-plane, z=0,{\displaystyle z=0,} so cross out all terms that contain z.{\displaystyle z.} Additionally, we are performing a closed loop integral, so our interval is .{\displaystyle .}
+
+
+∮G⋅dr=∫02π(2⋅3cos2⁡t⋅2sin⁡t⋅−3sin⁡t+4sin⁡tcos⁡t)dt=∫02π(−123cos2⁡tsin2⁡t+4sin⁡tcos⁡t)dt{\displaystyle {\begin{aligned}\oint {\mathbf {G} }\cdot {\mathrm {d} }{\mathbf {r} }&=\int _{0}^{2\pi }(2\cdot 3\cos ^{2}t\cdot 2\sin t\cdot -{\sqrt {3}}\sin t+4\sin t\cos t){\mathrm {d} }t\\&=\int _{0}^{2\pi }(-12{\sqrt {3}}\cos ^{2}t\sin ^{2}t+4\sin t\cos t){\mathrm {d} }t\end{aligned}}}
+
+
+, The second term is 0 if we perform a u-substitution.
+
+
+∫02π(−123cos2⁡tsin2⁡t+4sin⁡tcos⁡t)dt{\displaystyle \int _{0}^{2\pi }(-12{\sqrt {3}}\cos ^{2}t\sin ^{2}t+{\cancel {4\sin t\cos t}}){\mathrm {d} }t}
+
+
+, It is useful to memorize ∫02πcos2⁡tsin2⁡tdt=π4.{\displaystyle \int _{0}^{2\pi }\cos ^{2}t\sin ^{2}t{\mathrm {d} }t={\frac {\pi }{4}}.}
+
+
+−123∫02πcos2⁡tsin2⁡tdt=−33π{\displaystyle -12{\sqrt {3}}\int _{0}^{2\pi }\cos ^{2}t\sin ^{2}t{\mathrm {d} }t=-3{\sqrt {3}}\pi }
+
+To check that this answer is correct, simply do the surface integral. The process will be longer, since you have to take the curl of a vector field and do Jacobians when you convert to the area integral.
+ Use the surface z=6−x2−y2{\displaystyle z=6-x^{2}-y^{2}} above the xy-plane with the given vector field below.
+
+
+F=(x2−2y)i+(3x−2xz)j+(x2y2−4yz)k{\displaystyle {\mathbf {F} }=(x^{2}-2y){\mathbf {i} }+(3x-2xz){\mathbf {j} }+(x^{2}y^{2}-4yz){\mathbf {k} }}
+
+The goal of verification is to evaluate both integrals and check that their answers are the same. First, we will parameterize the boundary and compute the line integral. Then, we'll evaluate the surface integral. With enough practice using Stokes' theorem, you will be able to rewrite a problem into something that is easier to solve.
+ When we set z=0,{\displaystyle z=0,} we find that the boundary is a circle of radius 6{\displaystyle {\sqrt {6}}} on the xy-plane. Therefore, the following parameters are appropriate. These are the components of r.{\displaystyle {\mathbf {r} }.}
+
+
+x=6cos⁡t{\displaystyle x={\sqrt {6}}\cos t}
+
+
+y=6sin⁡t{\displaystyle y={\sqrt {6}}\sin t}
+
+
+,
+
+
+dx=−6sin⁡tdt{\displaystyle {\mathrm {d} }x=-{\sqrt {6}}\sin t{\mathrm {d} }t}
+
+
+dy=6cos⁡tdt{\displaystyle {\mathrm {d} }y={\sqrt {6}}\cos t{\mathrm {d} }t}
+
+
+, The vector field contains terms with z{\displaystyle z} in them, but since on the xy-plane, z=0,{\displaystyle z=0,} neglect those terms.
+
+
+F⋅dr=(6cos2⁡t−26sin⁡t)(−6sin⁡tdt)+(36cos⁡t)(6cos⁡tdt)=(−66cos2⁡tsin⁡t+12sin2⁡t+18cos2⁡t)dt{\displaystyle {\begin{aligned}{\mathbf {F} }\cdot {\mathrm {d} }{\mathbf {r} }&=(6\cos ^{2}t-2{\sqrt {6}}\sin t)(-{\sqrt {6}}\sin t{\mathrm {d} }t)+(3{\sqrt {6}}\cos t)({\sqrt {6}}\cos t{\mathrm {d} }t)\\&=(-6{\sqrt {6}}\cos ^{2}t\sin t+12\sin ^{2}t+18\cos ^{2}t){\mathrm {d} }t\end{aligned}}}
+
+
+, Stokes' theorem tells us that t{\displaystyle t} is being integrated on the interval .{\displaystyle .} It is useful to recognize that ∫02πsin⁡tdt=0,{\displaystyle \int _{0}^{2\pi }\sin t{\mathrm {d} }t=0,} which allows us to annihilate that term. Even though it is being multiplied by cos2⁡t,{\displaystyle \cos ^{2}t,} that does not affect sin⁡t{\displaystyle \sin t} being odd over the interval {\displaystyle } because cos2⁡t{\displaystyle \cos ^{2}t} is even.
+
+
+∫∂SF⋅dr=∫02π(12sin2⁡t+18cos2⁡t)dt{\displaystyle \int _{\partial S}{\mathbf {F} }\cdot {\mathrm {d} }{\mathbf {r} }=\int _{0}^{2\pi }(12\sin ^{2}t+18\cos ^{2}t){\mathrm {d} }t}
+
+
+, Here, we recognize that ∫02πsin2⁡tdt=∫02πcos2⁡tdt=π,{\displaystyle \int _{0}^{2\pi }\sin ^{2}t{\mathrm {d} }t=\int _{0}^{2\pi }\cos ^{2}t{\mathrm {d} }t=\pi ,} which, while they can be found using trig identities, are worth memorizing regardless.
+
+
+∫02π(12sin2⁡t+18cos2⁡t)dt=30π{\displaystyle \int _{0}^{2\pi }(12\sin ^{2}t+18\cos ^{2}t){\mathrm {d} }t=30\pi }
+
+
+, We recall the formula converting the surface integral into an easier-to-manage area integral as dS=(−fxi−fyj+k)dA.{\displaystyle {\mathrm {d} }{\mathbf {S} }=(-f_{x}{\mathbf {i} }-f_{y}{\mathbf {j} }+{\mathbf {k} }){\mathrm {d} }A.} In this case, f{\displaystyle f} refers to the surface z=f(x,y)=6−x2−y2.{\displaystyle z=f(x,y)=6-x^{2}-y^{2}.}
+
+
+dS=(2xi+2yj+k)dA{\displaystyle {\mathrm {d} }{\mathbf {S} }=(2x{\mathbf {i} }+2y{\mathbf {j} }+{\mathbf {k} }){\mathrm {d} }A}
+
+
+, During the dot product, we find that we have three variables, yet we are integrating over just two dimensions. Simply substitute z=6−x2−y2{\displaystyle z=6-x^{2}-y^{2}} to solve this.
+
+
+∇×F=|ijk∂/∂x∂/∂y∂/∂zx2−2y3x−2xzx2y2−4yz|=(2x2y−4z+2x)i−(2xy2)j+(5−2z)k{\displaystyle {\begin{aligned}\nabla \times {\mathbf {F} }&={\begin{vmatrix}{\mathbf {i} }&{\mathbf {j} }&{\mathbf {k} }\\\partial /\partial x&\partial /\partial y&\partial /\partial z\\x^{2}-2y&3x-2xz&x^{2}y^{2}-4yz\end{vmatrix}}\\&=(2x^{2}y-4z+2x){\mathbf {i} }-(2xy^{2}){\mathbf {j} }+(5-2z){\mathbf {k} }\end{aligned}}}
+
+
+∫S(∇×F)⋅dS=∫D(4x3y−8xz+4x2−4xy3+5−2z)dA{\displaystyle \int _{S}(\nabla \times {\mathbf {F} })\cdot {\mathrm {d} }{\mathbf {S} }=\int _{D}(4x^{3}y-8xz+4x^{2}-4xy^{3}+5-2z){\mathrm {d} }A}
+
+
+, The function f(x,y)=6−x2−y2{\displaystyle f(x,y)=6-x^{2}-y^{2}} is symmetric over both the x{\displaystyle x} and y{\displaystyle y} axes. Therefore, any terms with an odd function of either variable will cancel out. In this problem, notice that f(x,y){\displaystyle f(x,y)} is an even function. Therefore, we don't even need to do the multiplication for the 8xz{\displaystyle 8xz} term, because 8x{\displaystyle 8x} is odd, so the entire term cancels out. This step greatly simplifies the integral to be evaluated.
+
+
+∫D(4x3y−8xz+4x2−4xy3+5−12+2x2+2y2)dA{\displaystyle \int _{D}({\cancel {4x^{3}y}}-{\cancel {8xz}}+4x^{2}-{\cancel {4xy^{3}}}+5-12+2x^{2}+2y^{2}){\mathrm {d} }A}
+
+
+, Our problem has now been reduced to an area integral on the xy-plane, for we have taken advantage of Stokes' theorem and recognized that this "surface" - the disk on the plane - will yield the same result as our elliptic paraboloid.
+
+
+∫D(6x2+2y2−7)dA=∫06rdr∫02πdθ(6r2cos2⁡θ+2r2sin2⁡θ−7){\displaystyle \int _{D}(6x^{2}+2y^{2}-7){\mathrm {d} }A=\int _{0}^{\sqrt {6}}r{\mathrm {d} }r\int _{0}^{2\pi }{\mathrm {d} }\theta (6r^{2}\cos ^{2}\theta +2r^{2}\sin ^{2}\theta -7)}
+
+
+,
+
+
+∫06rdr(8r2π−14π)=π∫06(8r3−14r)dr=π(2⋅36−7⋅6)=30π{\displaystyle {\begin{aligned}\int _{0}^{\sqrt {6}}r{\mathrm {d} }r(8r^{2}\pi -14\pi )&=\pi \int _{0}^{\sqrt {6}}(8r^{3}-14r){\mathrm {d} }r\\&=\pi (2\cdot 36-7\cdot 6)\\&=30\pi \end{aligned}}}
+
+Our answer agrees with our answer obtained in step 6, so Stokes' theorem has been verified. 
+
+

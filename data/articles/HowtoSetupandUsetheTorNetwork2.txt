@@ -1,0 +1,14 @@
+ Run the following command in a terminal emulator to install all the necessary dependencies: sudo apt-get install proxychains privoxy tor vidalia libboost-system1.49.0
+
+, Next, we need to edit some files to make Tor work. Type in: nano /etc/proxychains.conf and scroll down to where it says #dynamic_chain and delete the pound sign. Then scroll to static_chain and put a pound sign in front of it.
+ Scroll down to socks4 127.0.0.1 9050 and replace the '4' with a '5'. This is just to make sure that all of the applications are speaking the same language. Hit ctrl+x, followed by y, then the enter key to save the document.
+ Next, type nano /etc/privoxy/config and find the line containing "forward-socks5" and change the whole line to forward-socks5 / 127.0.0.1:9050 . (Note the spaces) Then save and close the file.
+ Now that the various applications can talk to each other, we need to get Tor configured to work with your entire computer! Type in nano /etc/tor/torrc, and remove the leading pound sign where it says SocksPort 9050 and ControlPort 9051.
+ We must restart the Tor service for our changes to take effect. Type /etc/init.d/tor restart, and, if you want to be paranoid and you know what this means, type init 6.
+ Launch vidalia either by typing vidalia, or from the start menu. It will pop up and show an error message, ignore it.
+, Click the radio button "Use TCP connection (ControlPort)", and make sure that it is set to 127.0.0.1:9051 and that Configure ControlPort automatically is unchecked and Authentication is set to none.
+
+
+Change the Tor Configuration File to /etc/tor/torrc and click OK.
+ Restart your computer and launch Vidalia, it will take a good couple of minutes after it starts to actually connect, but when it does, your free to go out online and play!
+

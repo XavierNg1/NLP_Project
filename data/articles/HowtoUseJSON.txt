@@ -1,0 +1,11 @@
+ JSON is used to store data, similar to XML. It is based on the JavaScript object notation syntax. There are four basic syntax rules for JSON. If you can memorize these rules, then you should be able to write JSON objects from scratch with ease:Data is in name/value pairs
+Commas are used to separate data
+Objects are contained by curly braces
+Arrays are contained by square brackets;
+, JSON is based around the pair structure for data. Each entry will need to have a name with a value attached. This value can be a number, a string, a Boolean (true/false), an array, an object, or null. See above for an example of a simple data pair:
+
+, You can combine multiple data pairs into a single object for easy reference later on. Surround the object with curly braces and separate data pairs with a comma. See the example above:
+
+, You can create basic databases by placing multiple objects into one array. This will let you pull up any part of the array later on in the program. See the example above for an object called "Cities Visited" containing an array of the cities:
+
+, Once you've created the JSON object, you can use JavaScript to pull that data back and display it. You simply need to call the database and point to which entry in the array you want. See the example above to return the second City from the array above.

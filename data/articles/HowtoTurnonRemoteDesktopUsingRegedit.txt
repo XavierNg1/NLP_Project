@@ -1,0 +1,20 @@
+ As always, be aware that editing the registry risks causing major problems. Make a backup before you begin, and do not make any unnecessary changes.
+
+
+Only follow this guide if you do not have physical access to the computer. If you do, use the standard user tools to enable remote desktop without editing the registry.;
+, Run services.msc from the Start menu search box.You can also find the Services MMC through Control Panel → Administrative Tools → Services.
+
+
+You only need the MMC to start Remote Registry. If the remote computer is running Windows XP, this is probably already running.Skip down to "connect to the remote registry."
+
+, In the Services MMC, right-click "Services (Local)" and select "Connect to another computer." Enter the name of your remote machine. Once connected, find the Remote Registry service in the MMC and start it, if it isn't already running., Open regedit. Select File → Connect Network Registry.... Type the remote computer name under "Select Computer" and click Check Names., Navigate to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server.
+ Look for the REG_WORD value named fDenyTSConnections in the Terminal Server details pane. Double click this to open the EDIT DWORD Value box. In this box, set the Value Data field to 0., Some systems give you immediate access, and some require you to restart the remote computer first. Attempt to connect to Remote Desktop to check. (If you left the MMC open, you can quickly start Remote Desktop from there.)
+
+, There are several ways to do this. The simplest is to open Command Prompt and enter shutdown /i. In the dialog box that opens, select "Restart" from the drop down menu, and enter the name of the remote computer.Try accessing Remote Desktop again once the computer is done restarting.
+ You must have administrator privileges on the remote computer.
+ If you are trying to access the remote computer from a different network, the firewall may be blocking you. There are two routes around this:
+
+
+If the firewall is blocking Remote Registry but not Remote Desktop, connect to a computer on the same network as the target computer, then use it to access the target computer.
+If the firewall is blocking Remote Desktop, download PSExec from Sysinternals. Use it to gain remote access to the remote computer's command line and make a Remote Desktop exception for the firewall.(Enter netsh advfirewall firewall add rule ? for instructions.)
+

@@ -1,0 +1,57 @@
+;
+,, You can create the user defined function in the Worksheet itself without adding a new module, but that will make you unable to use the function in other worksheets of the same workbook.
+ It has to have the following structure:public function "The Name Of Your Function" (param1 As type1, param2 As type2 ) As return Type
+It can have as many parameters as you want, and their type can be any of Excel's basic data types or object types as Range. You may think of parameters as the "operands" your function will act upon. For example, when you say SIN(45) to calculate the Sine of 45 degree, 45 will be taken as a parameter. Then the code of your function will use that value to calculate something else and present the result.
+
+Learning to program in VBA or in any other language can take some time and a detailed tutorial. However, functions usually have small code blocks and use very few features of a language. The more useful elements of the VBA language are:
+
+
+The If block, which allows you to execute a part of the code only if a condition is met. For example:
+Public Function Course Result(grade As Integer) As String
+  If grade >= 5 Then
+    CourseResult = "Approved"
+  Else
+    CourseResult = "Rejected"
+  End If
+End Function
+Notice the elements in an If code block: IF condition THEN code ELSE code END IF. The Else keyword along with the second part of the code are optional.
+The Do block, which executes a part of the code While or Until a condition is met. For example:Public Function IsPrime(value As Integer) As Boolean
+  Dim i As Integer
+  i = 2
+  IsPrime = True
+  Do
+    If value / i = Int(value / i) Then
+      IsPrime = False
+    End If
+    i = i + 1
+  Loop While i < value And IsPrime = True
+End Function
+Notice the elements again: DO code LOOP WHILE/UNTIL condition. Notice also the second line in which a variable is "declared". You can add variables to your code so you can use them later. Variables act as temporary values inside the code. Finally, notice the declaration of the function as BOOLEAN, which is a datatype that allows only the TRUE and FALSE values. This method of determining if a number is prime is by far not the optimal, but I've left it that way to make the code easier to read.
+
+The For block, which executes a part of the code a specified number of times. For example:Public Function Factorial(value As Integer) As Long
+  Dim result As Long
+  Dim i As Integer
+  If value = 0 Then
+    result = 1
+  ElseIf value = 1 Then
+    result = 1
+  Else
+    result = 1
+    For i = 1 To value
+      result = result * i
+    Next
+  End If
+  Factorial = result
+End Function
+Notice the elements again:FOR variable = lower limit TO upper limit code NEXT. Also notice the added ElseIf element in the If statement, which allows you to add more options to the code that is to be executed. Finally, notice the declaration of the function and the variable "result" as Long. The Long datatype allows values much larger than Integer.
+Shown below is the code for a function that converts small numbers into words.
+ Append to the name of the function an opening parenthesis, the parameters separated by commas and a final closing parenthesis. For example:=NumberToLetters(A4)
+You can also use your user defined formula by looking for it in the User Defined category in the Insert Formula wizard. Just click in the Fx button located to the left of the formula bar.
+The parameters can be of three types:
+
+
+Constant values typed directly in the cell formula. Strings have to be quoted in this case.
+Cell references like B6 or range references like A1:C3 (the parameter has to be of the Range datatype)
+Other functions nested inside your function (your function can also be nested inside other functions). I.e.: =Factorial(MAX(D6:D8))
+
+,

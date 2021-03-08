@@ -1,0 +1,1158 @@
+ Besides this, you want to display the actual month and year as well. To do this you'll need 3 special day inputs:
+
+
+The actual day
+The first day of the actual month
+The last day of the actual month;
+,, Without parameters, this function returns the actual day information in an array as follows:<tbody></tbody>
+
+01
+Array
+
+<tbody></tbody>
+
+02
+(
+
+<tbody></tbody>
+
+03
+
+   => 40
+
+
+<tbody></tbody>
+
+04
+
+   => 58
+
+
+<tbody></tbody>
+
+05
+
+   => 21
+
+
+<tbody></tbody>
+
+06
+
+   => 17
+
+
+<tbody></tbody>
+
+07
+
+   => 2
+
+
+<tbody></tbody>
+
+08
+
+   => 6
+
+
+<tbody></tbody>
+
+09
+
+   => 2003
+
+
+<tbody></tbody>
+
+10
+
+   => 167
+
+
+<tbody></tbody>
+
+11
+
+   => Tuesday
+
+
+<tbody></tbody>
+
+12
+
+   => June
+
+
+<tbody></tbody>
+
+13
+
+   => 1055901520
+
+
+<tbody></tbody>
+
+14
+)
+
+To get the last day of the month with get date we need to try to get the 0. day of the next month. So the code to get the information looks like this:<tbody></tbody>
+
+1
+<?php
+
+<tbody></tbody>
+
+2
+
+    $today    = getdate();
+
+
+<tbody></tbody>
+
+3
+
+    $firstDay= getdate(mktime(0,0,0,$today,1,$today));
+
+
+<tbody></tbody>
+
+4
+
+    $lastDay  = getdate(mktime(0,0,0,$today+1,0,$today));
+
+
+<tbody></tbody>
+
+5
+?>
+
+Step 3.To display a calendar we need a table with 7 columns for the days of the week. The number of lines depending on the number of days and the first day of the month. However we need a header line with month and year information, a subheader line with the name of the days.<tbody></tbody>
+
+1
+<?php
+
+<tbody></tbody>
+
+2
+
+    // Create a table with the necessary header informations
+
+
+<tbody>Now that you have the header of the table, fill the first row. It is not so easy as you cannot just write 1 in the first cell, 2 in the second and so on. It only works if the first day of the month was Monday, but what if not? To decide this we need the day item from the firstDay array. With this information we can fill the cells with a space if needed. The code to do this is the follows:<tbody></tbody>
+
+
+3
+
+    echo'';</tbody><tbody>";</tbody>
+
+
+4
+
+    echo' 
+
+
+
+'.$today." - ".$today."
+
+
+
+<tbody>';</tbody>
+
+
+5
+
+    echo'
+
+
+
+
+
+
+<tbody>';</tbody>
+
+6
+
+    echo' 
+
+Mo
+Tu
+We
+Th
+
+<tbody>';</tbody>
+
+7
+
+    echo' 
+
+Fr
+Sa
+Su
+
+<tbody></tbody>
+
+8
+?>
+
+
+
+
+
+
+
+
+
+01
+<?php
+
+
+<tbody>';</tbody>
+
+
+02
+
+    echo'
+
+
+
+
+
+
+<tbody></tbody>
+
+03
+
+    for($i=1;$i<$firstDay;$i++){
+
+
+<tbody>';</tbody>
+
+04
+
+        echo'
+
+ 
+
+<tbody></tbody>
+
+05
+
+    }
+
+
+<tbody></tbody>
+
+06
+
+    $actday= 0;
+
+
+<tbody></tbody>
+
+07
+
+    for($i=$firstDay;$i<=7;$i++){
+
+
+<tbody></tbody>
+
+08
+
+        $actday++;
+
+
+<tbody>";</tbody>
+
+09
+
+        echo"
+
+$actday
+
+<tbody></tbody>
+
+10
+
+    }
+
+
+<tbody>';</tbody>
+
+11
+
+    echo'
+
+
+<tbody></tbody>
+
+12
+?>
+
+, It is a bit easier, we only need to know how many full week we have and fill some table rows as follows: <tbody></tbody>
+
+01
+<?php
+
+<tbody></tbody>
+
+02
+
+    $fullWeeks= floor(($lastDay-$actday)/7);
+
+
+<tbody></tbody>
+
+03
+
+    
+
+<tbody></tbody>
+
+04
+
+    for($i=0;$i<$fullWeeks;$i++){
+
+
+<tbody>';</tbody>
+
+
+05
+
+        echo'
+
+
+
+
+
+
+<tbody></tbody>
+
+06
+
+        for($j=0;$j<7;$j++){
+
+
+<tbody></tbody>
+
+07
+
+            $actday++;
+
+
+<tbody>";</tbody>
+
+08
+
+            echo"
+
+$actday
+
+<tbody></tbody>
+
+09
+
+        }
+
+
+<tbody>';</tbody>
+
+10
+
+        echo'
+
+
+<tbody></tbody>
+
+11
+
+    }
+
+
+<tbody></tbody>
+
+12
+ 
+
+<tbody></tbody>
+
+13
+?>
+
+, In this case it is quite easy: <tbody></tbody>
+
+01
+<?php
+
+<tbody></tbody>
+
+02
+
+    if($actday< $lastDay){
+
+
+<tbody>';      </tbody>
+
+
+03
+
+        echo'
+
+
+
+
+
+
+<tbody></tbody>
+
+04
+
+        for($i=0; $i<7;$i++){
+
+
+<tbody></tbody>
+
+05
+
+            $actday++;
+
+
+<tbody></tbody>
+
+06
+
+            if($actday<= $lastDay){
+
+
+<tbody>";</tbody>
+
+07
+
+                echo"
+
+$actday
+
+<tbody></tbody>
+
+08
+
+            }
+
+
+<tbody></tbody>
+
+09
+
+            else{
+
+
+<tbody>';</tbody>
+
+10
+
+                echo'
+
+ 
+
+<tbody></tbody>
+
+11
+
+            }
+
+
+<tbody></tbody>
+
+12
+
+        }
+
+
+<tbody>';</tbody>
+
+13
+
+        echo'
+
+
+<tbody></tbody>
+
+14
+
+    }
+
+
+<tbody></tbody>
+
+15
+?>
+
+Step 7.To make the calendar little bit nicer we will introduce some CSS design. The CSS file is very simple:<tbody></tbody>
+
+01
+table {
+
+<tbody></tbody>
+
+02
+
+    width:210px;
+
+
+<tbody></tbody>
+
+03
+
+    border:0pxsolid#888;  
+
+
+<tbody></tbody>
+
+04
+
+    border-collapse:collapse;
+
+
+<tbody></tbody>
+
+05
+}
+
+<tbody></tbody>
+
+06
+td {
+
+<tbody></tbody>
+
+07
+
+    width:30px;
+
+
+<tbody></tbody>
+
+08
+
+    border-collpase:collpase;
+
+
+<tbody></tbody>
+
+09
+
+    border:1pxsolid#888;
+
+
+<tbody></tbody>
+
+10
+
+    text-align:right;
+
+
+<tbody></tbody>
+
+11
+
+    padding-right:5px;
+
+
+<tbody></tbody>
+
+12
+}
+
+<tbody></tbody>
+
+13
+.days{
+
+<tbody></tbody>
+
+14
+
+    background-color: #F1F3F5;
+
+
+<tbody></tbody>
+
+15
+}
+
+<tbody></tbody>
+
+16
+th {
+
+<tbody></tbody>
+
+17
+
+    border-collpase:collpase;
+
+
+<tbody></tbody>
+
+18
+
+    border:1pxsolid#888;
+
+
+<tbody></tbody>
+
+19
+
+    background-color: #E9ECEF;
+
+
+<tbody></tbody>
+
+20
+}
+
+<tbody></tbody>
+
+21
+.actday{
+
+<tbody></tbody>
+
+22
+
+    background-color: #c22;
+
+
+<tbody></tbody>
+
+23
+
+    font-weight:bold;
+
+
+<tbody></tbody>
+
+24
+}
+
+,
+
+
+<tbody></tbody>
+
+10
+
+    // We need the first and last day of the month and the actual day
+
+
+<tbody></tbody>
+
+11
+
+    $today    = getdate();
+
+
+<tbody></tbody>
+
+12
+
+    $firstDay= getdate(mktime(0,0,0,$today,1,$today));
+
+
+<tbody></tbody>
+
+13
+
+    $lastDay  = getdate(mktime(0,0,0,$today+1,0,$today));
+
+
+<tbody></tbody>
+
+14
+ 
+
+<tbody></tbody>
+
+15
+
+    // Create a table with the necessary header informations
+
+
+<tbody></tbody>
+
+16
+
+    echo'';</tbody><tbody>";</tbody>
+
+
+17
+
+    echo' 
+
+
+
+'.$today." - ".$today."
+
+
+
+<tbody>';</tbody>
+
+
+18
+
+    echo'
+
+
+
+
+
+
+<tbody>';</tbody>
+
+19
+
+    echo' 
+
+Mo
+Tu
+We
+Th
+
+<tbody>';</tbody>
+
+20
+
+    echo' 
+
+Fr
+Sa
+Su
+
+<tbody></tbody>
+
+21
+ 
+
+<tbody></tbody>
+
+22
+
+    // Display the first calendar row with correct positioning
+
+
+<tbody>';</tbody>
+
+
+23
+
+    echo'
+
+
+
+
+
+
+<tbody></tbody>
+
+24
+
+    for($i=1;$i<$firstDay;$i++){
+
+
+<tbody>';</tbody>
+
+25
+
+        echo'
+
+ 
+
+<tbody></tbody>
+
+26
+
+    }
+
+
+<tbody></tbody>
+
+27
+
+    $actday= 0;
+
+
+<tbody></tbody>
+
+28
+
+    for($i=$firstDay;$i<=7;$i++){
+
+
+<tbody></tbody>
+
+29
+
+        $actday++;
+
+
+<tbody></tbody>
+
+30
+
+        if($actday== $today) {
+
+
+<tbody></tbody>
+
+31
+
+            $class= ' class="actday"';
+
+
+<tbody></tbody>
+
+32
+
+        } else{
+
+
+<tbody></tbody>
+
+33
+
+            $class= ;
+
+
+<tbody></tbody>
+
+34
+
+        }
+
+
+<tbody>";</tbody>
+
+35
+
+        echo"
+
+$actday
+
+<tbody></tbody>
+
+36
+
+    }
+
+
+<tbody>';</tbody>
+
+37
+
+    echo'
+
+
+<tbody></tbody>
+
+38
+
+    
+
+<tbody></tbody>
+
+39
+
+    //Get how many complete weeks are in the actual month
+
+
+<tbody></tbody>
+
+40
+
+    $fullWeeks= floor(($lastDay-$actday)/7);  
+
+
+<tbody></tbody>
+
+41
+
+    for($i=0;$i<$fullWeeks;$i++){
+
+
+<tbody>';</tbody>
+
+
+42
+
+        echo'
+
+
+
+
+
+
+<tbody></tbody>
+
+43
+
+        for($j=0;$j<7;$j++){
+
+
+<tbody></tbody>
+
+44
+
+            $actday++;
+
+
+<tbody></tbody>
+
+45
+
+            if($actday== $today) {
+
+
+<tbody></tbody>
+
+46
+
+                $class= ' class="actday"';
+
+
+<tbody></tbody>
+
+47
+
+            } else{
+
+
+<tbody></tbody>
+
+48
+
+                $class= ;
+
+
+<tbody></tbody>
+
+49
+
+            }
+
+
+<tbody>";</tbody>
+
+50
+
+            echo"
+
+$actday
+
+<tbody></tbody>
+
+51
+
+        }
+
+
+<tbody>';</tbody>
+
+52
+
+        echo'
+
+
+<tbody></tbody>
+
+53
+
+    }
+
+
+<tbody></tbody>
+
+54
+
+    
+
+<tbody></tbody>
+
+55
+
+    //Now display the rest of the month
+
+
+<tbody></tbody>
+
+56
+
+    if($actday< $lastDay){
+
+
+<tbody>';      </tbody>
+
+
+57
+
+        echo'
+
+
+
+
+
+
+<tbody></tbody>
+
+58
+
+        for($i=0; $i<7;$i++){
+
+
+<tbody></tbody>
+
+59
+
+            $actday++;
+
+
+<tbody></tbody>
+
+60
+
+            if($actday== $today) {
+
+
+<tbody></tbody>
+
+61
+
+                $class= ' class="actday"';
+
+
+<tbody></tbody>
+
+62
+
+            } else{
+
+
+<tbody></tbody>
+
+63
+
+                $class= ;
+
+
+<tbody></tbody>
+
+64
+
+            }
+
+
+<tbody></tbody>
+
+65
+
+            
+
+<tbody></tbody>
+
+66
+
+            if($actday<= $lastDay){
+
+
+<tbody>";</tbody>
+
+67
+
+                echo"
+
+$actday
+
+<tbody></tbody>
+
+68
+
+            }
+
+
+<tbody></tbody>
+
+69
+
+            else{
+
+
+<tbody>';</tbody>
+
+70
+
+                echo'
+
+ 
+
+<tbody></tbody>
+
+71
+
+            }
+
+
+<tbody></tbody>
+
+72
+
+        }     
+
+
+<tbody>';</tbody>
+
+73
+
+        echo'
+
+
+<tbody></tbody>
+
+74
+
+    } 
+
+
+<tbody>
+
+75
+
+    echo'
+
+
+';
+
+
+<tbody></tbody>
+
+76
+}
+
+<tbody></tbody>
+
+77
+showCalendar();
+
+<tbody></tbody>
+
+78
+?>
+
+<tbody></tbody>
+
+79
+</body>
+
+<tbody></tbody>
+
+80
+</html>
+

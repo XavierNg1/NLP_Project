@@ -1,0 +1,45 @@
+ Expand the right side and move the first order term to the left side. We can clearly see that this equation is nonlinear from the P2{\displaystyle P^{2}} term. In general, nonlinear differential equations do not have solutions which can be written in terms of elementary functions, but the Bernoulli equation is an important exception. 
+
+
+dPdt−kP=−kLP2{\displaystyle {\frac {{\mathrm {d} }P}{{\mathrm {d} }t}}-kP=-{\frac {k}{L}}P^{2}}
+
+
+, When solving Bernoulli equations in general, we would multiply by (1−n)P−n,{\displaystyle (1-n)P^{-n},} where n{\displaystyle n} denotes the degree of the nonlinear term. In our case, it is 2. 
+
+
+−P−2dPdt+kP−1=kL{\displaystyle -P^{-2}{\frac {{\mathrm {d} }P}{{\mathrm {d} }t}}+kP^{-1}={\frac {k}{L}}}
+
+
+, We can apply the chain rule backwards to see that −P−2dPdt=dP−1dt.{\displaystyle -P^{-2}{\frac {{\mathrm {d} }P}{{\mathrm {d} }t}}={\frac {{\mathrm {d} }P^{-1}}{{\mathrm {d} }t}}.} The equation is now linear in P−1.{\displaystyle P^{-1}.}
+
+
+dP−1dt+kP−1=kL{\displaystyle {\frac {{\mathrm {d} }P^{-1}}{{\mathrm {d} }t}}+kP^{-1}={\frac {k}{L}}}
+
+
+, As standard for linear first order differential equations, we use the integrating factor e∫g(x)dx,{\displaystyle e^{\int g(x){\mathrm {d} }x},} where g(x){\displaystyle g(x)} is the coefficient of P−1,{\displaystyle P^{-1},} to convert into an exact equation. Therefore, our integrating factor is ekt.{\displaystyle e^{kt}.}
+
+
+ektdP−1+(kP−1−kL)ektdt=0{\displaystyle e^{kt}{\mathrm {d} }P^{-1}+\left(kP^{-1}-{\frac {k}{L}}\right)e^{kt}{\mathrm {d} }t=0}
+
+
+∫ektdP−1=P−1ekt+R(t){\displaystyle \int e^{kt}{\mathrm {d} }P^{-1}=P^{-1}e^{kt}+R(t)}
+
+
+R(t)=∫−kLektdt=−1Lekt{\displaystyle {\begin{aligned}R(t)&=\int -{\frac {k}{L}}e^{kt}{\mathrm {d} }t\\&=-{\frac {1}{L}}e^{kt}\end{aligned}}}
+
+
+1Pekt−1Lekt=C{\displaystyle {\frac {1}{P}}e^{kt}-{\frac {1}{L}}e^{kt}=C}
+
+
+, We solved the differential equation, but it was linear in P−1,{\displaystyle P^{-1},} so we have to take the reciprocal of our answer.
+
+
+1P−1L=Ce−ktL−PPL=Ce−ktL−P=PLCe−ktL=P(1+LCe−kt){\displaystyle {\begin{aligned}{\frac {1}{P}}-{\frac {1}{L}}&=Ce^{-kt}\\{\frac {L-P}{PL}}&=Ce^{-kt}\\L-P&=PLCe^{-kt}\\L&=P(1+LCe^{-kt})\end{aligned}}}
+
+
+, Rewrite LC{\displaystyle LC} as a new constant A.{\displaystyle A.}
+
+
+P=L1+Ae−kt{\displaystyle P={\frac {L}{1+Ae^{-kt}}}}
+
+

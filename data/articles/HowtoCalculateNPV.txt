@@ -1,0 +1,59 @@
+ This is “C” in the above formula. In the world of business, purchases and investments are often made with the goal of earning money in the long run. These sorts of investments usually have a single initial cost — typically the cost of the asset being purchased.
+
+
+For example, let's imagine that you operate a small lemonade stand. You are considering buying an electric juicer for your business which will save you time and effort compared to juicing the lemons by hand. If the juicer costs $100, then that $100 is your initial investment.
+ This is “t” in the above formula. As noted above, businesses and individuals make investments with the goal of making money in the long run. To determine the NPV for your investment, you'll need to specify a time period during which you're trying to determine whether the investment will pay for itself. This time period may be measured in any unit of time, but for most financial calculations the unit of measure is years.
+
+
+In our lemonade stand example, let's say that we've researched the juicer we intend to buy online. According to most reviews, the juicer works great, but usually breaks after about 3 years. In this case, we'll use 3 year' as the time period in our NPV calculation to determine whether the juicer will pay for itself before it's likely to break.
+ This is “P” in the above formula. You'll need to estimate how much money your investment will make you during each time period for which it's earning you money. These amounts (or "cash inflows") can be specific, known values, or they can be estimates.In the latter case, companies and financial firms sometimes devote a great deal of time and effort to getting an accurate estimate, hiring industry experts, analysts, and so on.
+
+
+Let's continue with our lemonade stand example. Based on your past performance and your best future estimates, you assume that implementing the $100 juicer will bring in an extra $50 the first year, $40 the second year, and $30 the third year by reducing the time your employees need to spend juicing (and thus saving you money on wages) In this case, your expected cash inflows are: $50 in year 1, $40 in year 2, and $30 in year 3.
+ This is “i” in the above formula. In general, a given amount of money is worth more now than it is in the future. This is because the money you have today can be invested in an interest-earning account and gain value over time. In other words, it's better to have $10 today than $10 one year in the future because you can invest your $10 today and have more than $10 in a year. For NPV calculations, you need to know the interest rate of an investment account or opportunity with a similar level of risk to the investment you're analyzing. This is called your "discount rate" and is expressed as a decimal, rather than a percent.In corporate finance, a firm's weighted-average cost of capital is often used to determine the discount rate. In simpler situations, you can usually just use the return rate on a savings account, stock investment, etc. that you might put your money in instead of making the investment you're analyzing.
+In our lemonade stand example, let's say that if you don't purchase the juicer, you'll invest the money in the stock market, where you feel confident that you can earn 4% annually on your money. In this case, 0.04' (4% expressed as a decimal) is the discount rate we'll use in our calculation.
+ Next, we'll weight the value of our cash inflows for each time period we're analyzing against the amount of money we'll make from our alternate investment in the same period. This is called "discounting" the cash flows and is done using the simple formula P / (1 + i)t, where P is the amount of the cash flow, i is the discount rate, and t represents time. We don't need to worry about our initial investment yet — we'll use this in the next step.
+
+
+In our lemonade example, we're analyzing three years, so we'll need to use our formula three times. Calculate your yearly discounted cash flows as follows:
+
+Year One: 50 / (1 + 0.04)1 = 50 / (1 .04) = $48.08
+
+Year Two: 40 / (1 +0.04)2 = 40 / 1.082 = $36.98
+
+Year Three: 30 / (1 +0.04)3 = 30 / 1.125 = $26.67
+
+
+
+
+, Finally, to get the total NPV for the project, purchase, or investment you're analyzing, you'll need to add up all of your discounted cash flows and subtract your initial investment. The answer you get for this calculation represents your NPV — the net amount of money that your investment will make compared to the alternative investment that gave you the discount rate. In other words, if this number is positive, you'll make more money than if you had spent it on an alternative investment, such as the hypothetical 4% you would have earned in the stock market above. If it's negative, you'll make less money.
+
+
+For our lemonade stand example, the final projected NPV value of the juicer would be:
+
+48.08 + 36.98 + 26.67 - 100 = $11.73
+
+
+
+
+, In general, if the NPV for your investment is a positive number, then your investment will be more profitable than putting the money in your alternate investment and you should accept it. If the NPV is negative, your money is better invested elsewhere, and your proposed investment should be rejected. Note that these are generalities — in the real world, much more usually goes into the process of determining whether a certain investment is a wise idea.
+
+
+In the lemonade stand example, the NPV is $11.73. Since this is positive, we'll probably decide to buy the juicer.
+Note that this doesn't mean that the electric juicer only made you $11.73. In fact, this means that the juicer made you the required return rate of 4% annually, plus an additional $11.73 on top of that. In other words, it's $11.73 more profitable than your alternative investment.
+ Finding the NPVs for multiple investment opportunities allows you to easily compare your investments to determine which are more valuable than others. In general, the investment with the highest NPV is the most valuable because its eventual payout is worth the most in present dollars. Because of this, you'll usually want to pursue the investments with the highest NPVs first (assuming you don't have enough resources to pursue every investment with a positive NPV).
+
+
+For instance, let's say that we have three investment opportunities. One has an NPV of $150, one has an NPV of $45, and one has an NPV of -$10. In this situation, we'd pursue the $150 investment first because it has the greatest NPV. If we have enough resources, we'd pursue the $45 investment second because it's less valuable. We wouldn't pursue the -$10 investment at all because, with a negative NPV, it will make you less money than investing in an alternative with a similar level of risk.
+ Using a slightly modified form of the standard NPV formula, it's possible to quickly determine how much a present sum of money will be worth in the future (or how much a future sum of money is worth in the present). Simply use the formula PV = FV / (1+i)t, where i is your discount rate, t the number of time periods being analyzed, FV is the future money value, and PV is the present value. If you know i, t, and either FV or PV, it's relatively simple to solve for the final variable.
+
+
+For instance, let's say we want to know how much $1,000 will be worth in five years. If we know that, at bare minimum, we can get a return rate of 2% on this money, we'll use 0.02 for i, 5 for t, and 1,000 for PV and solve for FV as follows:
+
+1,000 = FV / (1+0.02)5
+
+1,000 = FV / (1.02)5
+
+1,000 = FV / 1.104
+1,000 × 1.104 = FV = $1,104.
+ The accuracy of any NPV calculation basically depends on the accuracy of the values you use for your discount rate and your future cash inflows. If your discount rate is close to the actual return rate you can get on your money for an alternative investment of similar risk and your future cash inflows are close to the amounts of money you'll actually make from your investment, your NPV calculation will be right on the money.

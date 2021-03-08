@@ -1,0 +1,15 @@
+ The requirements are listed under Things You'll Need below.;
+, For example: x86 (32-bit), x64 (64-bit). Make sure your computer that you will target matches the CPU type you will specify later. Write down what processor architecture, you need to remember that.
+
+
+
+Note: If you choose a CD or DVD, your image file of your system must be smaller than 1G. We will talk about the image file later.
+, This allows us to do anything to the system files stored in the image file we are going to change.
+, The image file is 120MB. If you install it on a CD as a live filesystem, then you are not able to save anything. Type the following command in the Deployment Tools Command Prompt: copype _Your_Chosen_Processor_Architecture_ C:\PathWhereYouWantToStoreTheImageFile. Example: copype x64 X:\Data\MyWindowsOS
+
+, So you have created our image (if it has been done right) and now you need to mount it so that you can change its contents. Type the following: imagex /mountrw PathOfImage 1 PathOfImageFolder/mount. Example: imagex /mountrw X:\MWOS\winpe.wim 1 X:\MWOS\mount.
+ When you are done with modifying its contents, type imagex /unmount MountPointPath /commit. Example: imagex /unmount X:\MWOS\mount /commit
+
+,, Type: oscdimg -n -bPathOfImageFolder\etfsboot.com PathOfImageFolder\ISO PathIfImageFolder\winpe_x86.iso
+
+,

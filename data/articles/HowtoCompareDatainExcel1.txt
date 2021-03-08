@@ -1,0 +1,11 @@
+ When comparing two columns in a worksheet, you'll be outputting your results onto a blank column. Make sure you are starting on the same row as the two columns you're comparing.
+
+
+For example, if the two columns you want to compare start on A2 and B2, highlight C2.;
+, Type the following formula, which will compare A2 and B2. Change the cell values if your columns start on different cells:
+
+
+=IF(A2=B2,"Match","No match")
+
+, This will apply the formula to the rest of the cells in the column, automatically adjusting the values to match.
+ These will indicate whether the contents of the two cells had matching data. This will work for strings, dates, numbers, and times. Note that case is not taken into consideration ("RED" and "red" will match).

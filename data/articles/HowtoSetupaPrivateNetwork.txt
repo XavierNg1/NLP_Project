@@ -1,0 +1,84 @@
+ This is probably the hardest part of setting up a network.
+Draw any routers you may be using to separate major portions of your network first. Smaller private networks do not require routers, but may still use them for administrative reasons. Routers are only required if you are planning to a) Divide your network into multiple smaller networks, or b) Allow indirect internet access using NAT. Next, add any switches and hubs. For small networks, only one switch or hub may be necessary.
+Draw boxes to represent the computers and lines connecting the devices together. This drawing will serve as your network diagram.
+Although diagrams intended only for your own use may use any symbols you desire, use of industry standard symbols make this task simpler and eliminates confusion for others. Typical industry standard symbols are:
+
+
+Routers: Circle with four arrows arranged in a cross. Or just a cross if drawing a quick draft.
+Switches: Square or rectangle, with four staggered arrows, two in each direction. Represents the concept of signals being "switched" - relayed only out the port which leads to the intended user based on address.
+Hubs: Same as switch, with a single double-headed arrow. Represents the concept of all signals being blindly repeated out all ports without concern for which port leads to the intended recipient.
+Lines and squares can be used to represent connections leading to computers.;
+, 4) addresses are written like this: xxx.xxx.xxx.xxx (four numbers separated by three dots), in all RFC-1166 compliant countries. Each number ranges from 0 to 255. This is known as "Dotted Decimal Notation" or "Dot Notation" for short. The address is divided into two portions: the network portion and the host portion.
+For "Classful" networks, the network and host portions are as follows:
+("n" represents the network portion, "x" represents the host portion)
+When the first number is 0 to 126 - nnn.xxx.xxx.xxx (ex. 10.xxx.xxx.xxx)
+These are known as "Class A" networks.
+When the first number is 128 to 191 - nnn.nnn.xxx.xxx (ex. 172.16.xxx.xxx)
+These are known as "Class B" networks.
+When the first number is 192 to 223 - nnn.nnn.nnn.xxx (ex. 192.168.1.xxx)
+These are known as "Class C" networks.
+When the first number is 224 to 239 - The address is used for multi-casting.
+When the first number is 240 to 255 - The address is "experimental".
+Multicast & Experimental addresses are beyond the scope of this article. However, do note that because IPv4 does not treat them the same way as other addresses they should not be used.
+For simplicity "non-classful networks", sub-netting, and CIDR will not be discussed in this article.
+The network portion specifies a network; the host portion specifies an individual device on a network.
+For any given network:
+
+The range of all possible host portion numbers gives the Address Range.
+(ex. 172.16.xxx.xxx the range is 172.16.0.0 to 172.16.255.255)
+The lowest possible address is the Network Address.
+(ex. 172.16.xxx.xxx the network address is 172.16.0.0)
+This address is used by devices to specify the network itself, and cannot be assigned to any device.
+
+The highest possible address is the Broadcast Address.
+(ex. 172.16.xxx.xxx the broadcast address is 172.16.255.255)
+This address is used when a packet is meant for all devices on a specific network, and cannot be assigned to any device.
+
+The remaining numbers in the range are the Host Range.
+(ex. 172.16.xxx.xxx the host range is 172.16.0.1 to 172.16.255.254)
+These are the numbers you can assign to computers, printers, and other devices.Host Addresses are individual addresses within this range.
+
+
+Assign network(s). A network, for this purpose, is any group of connections separated by a router.
+Your network may not have routers or, if accessing the Internet with NAT, have only one router between your private network and the public internet. If this is your only router, or if you have no routers, your entire private network is considered one network.
+Choose a network with a host range large enough to provide an address to each device. Class C networks (ex. 192.168.0.x) allow for 254 host addresses (192.168.0.1 to 192.168.0.254), which is fine if you have no more than 254 devices. But if you have 255 or more devices, you will either need to use a Class B network (ex. 172.16.x.x) or divide your private network into smaller networks with routers.
+If additional routers are used, they become "internal routers", the private network becomes a "private intranet", and each group of connections is a separate network requiring its own network address and range. This includes connections between routers, and connections directly from a router to a single device.
+For simplicity, the remainder of these steps will assume you have only one network, of 254 or less devices, and uses 192.168.2.x as an example. We will also assume you are not using DHCP (Dynamic Host Control Protocol) to assign host addresses automatically.
+ If you have more than one network it's best to write each address near the network it belongs to.
+ Write the host addresses next to the devices they belong to on the diagram. At first you may wish to write the entire address (ex. 192.168.2.5) next to each device. However, as you become more proficient simply writing the host portion (ex. .5) may help save time.
+Switches will not require addresses for the purpose discussed here. Routers will require addresses as described in the "Important Notes" section.
+ For 192.168.2.x, which is a Class C, the mask is: 255.255.255.0 The computer needs it to tell which part of the IP address is the network and which is the host.
+IPv4 originally used the first number (ex. 192) to determine this based on the address class, as described above. However, the advent of subnetting and non-classful networking made it necessary to provide a mask because other ways of dividing the address into network and host portions are now possible. For Class A addresses the mask is 255.0.0.0, for Class B it's 255.255.0.0 (More information in the Important Notes section.)
+
+, Gather all needed materials including cables, computers, ethernet switches, and (if used) routers. Locate the Ethernet ports on the computers and other devices. Look for the 8-pin modular connector. (RJ-45 style) It looks like a standard telephone jack except it's a bit larger because it has more conductors.
+Connect the cables between each device, just as in your map. If an unforeseen circumstance causes you to vary from the diagram, make notes to show any changes.
+ Power on all other connected devices. (Some devices have no "power switch" and will power up simply by plugging them in.)
+
+, Go to internet options (this varies depending on the Operating System), and go to the dialog box that lets you change the TCP/IP protocol. Change the radio buttons from "Obtain from DHCP server automatically" to "Use the following IP address:". Type in your IP address for that computer, and the appropriate subnet mask (255.255.255.0).
+If you have no routers, leave the "Default Gateway" and "DNS server" fields blank.
+If connecting to the internet using NAT, use the Host Address assigned to the router between your private network and the internet as both the DNS server and the Default Gateway. Do not use the Network Address (192.168.2.0)
+If using more than one router see the Important Notes section.
+If configuring a home network with a relatively new router, This section can be ignored as long as the network is connected correctly, The router will assign network addresses to everything on the network going into your network, until it hits another router.
+ The simplest way to do this is with Ping. Bring up MS-DOS or the equivalent on other OS's, (In Windows open the command prompt which is located in the Start Menu - Accessories - Command Prompt) and type in: ping 192.168.2.. Do this on one host and ping to all other hosts. Remember, your router is considered a host. If you cannot reach one, read over the steps again or contact a professional.
+
+
+NAT allows private networks to connect to public networks, by converting IP addresses on the private network to ones allowed on the public network. All devices will appear from the Internet's perspective to be connected to one of its public networks according to the public addressing plan (as defined by IANA - Internet Assignment Numbering Authority). "Dynamic NAT" allows multiple private IPs to "take turns" using a public IP.
+A related technology, PNAT (Port Network Address Translation) - also known as PAT (Port Address Translation) or NAT "Overloading", allows multiple private IPs to "share" one public IP at the same time. It manipulates both OSI Layer 3 and OSI Layer 4 information so connections from multiple private IPs appear to come from one computer with one public IP.
+Many computer, electronics, and even department store sell small routers designed to allow multiple users to share a single internet connection. Almost all of these use PAT, to eliminate the need for more than one public IP (extra public IPs may be expensive, or not allowed, depending on your provider).
+If you use one, you will need to assign one of your private network's Host Addresses to the router.
+If using a more complex commercial router, you will need to assign a private Host Addresses to the interface connecting to your private network, your public IP to the interface connecting to the Internet, and configure NAT/PAT manually.
+If using only one router, the interface used to connect the router to your private network will become both the "DNS Server Interface" and the "Default Gateway". You will need to add its address to these fields when configuring your other devices.
+
+If your network is divided using one or more internal routers, each router will require an address for each network connected to it. (IP Unnumbered is beyond the scope of this article) This address will need to be a host address (just like a computer's) from the host range of the network. Typically, the first available host address (that's the second address in the address range ex. 192.168.1.1) will be used; however any address in the host range is fine as long as you know what it is. Do not use the network address (ex. 192.168.1.0), or the broadcast address (ex 192.168.1.255).
+For networks containing one or more user devices (ex. printers, computers, storage devices) the address the router uses for that network will become "Default Gateway" for the other devices. The DNS server, if present, should remain the address used by the router between your networks and the internet. For networks interconnecting routers, no default gateway is needed. For networks containing both user devices and routers, any router on that network will do.
+A network is a network, no matter how big or small. When two routers are connected by one cable, even though a Class C (the smallest network) contains 256 addresses, all will belong to the cable. The network address will be .0, the broadcast will be .255, two of the hosts will be used (one for each interface the cable connects), and the other 252 will simply go to waste because they cannot be used anywhere else.
+Generally, the small home routers described above are not used for this purpose. When they are, understand the ethernet interfaces on the "private network" side usually belong to a "switch" which is built into the router. The router itself connects to this internally using only one interface. When this is the case, only one host IP will be used by all of them, and they will all be on the same network.
+When a router has multiple interfaces with multiple IP's, each interface and IP will create a different network.
+
+The concept of a subnet mask. The general concept will help in understanding why this number matters.
+Dotted decimal notation is a human way of writing IP Addresses to make them easier to work with. What the computer "sees" is 32 ones and zeros in a row like this: 11000000101010000000001000000000. IPv4 originally broke this into 4 groups of 8, hence the "dots" - 11000000.10101000.00000010.00000000, each group is an "octet" of 8 bits. Dotted decimal writes the value of the octet in decimal to make it easier for people to read - 192.168.2.0
+A complex set of rules concerning the order of the ones and zeros in the first octet was used to create the "Classful Addressing Scheme"; however, no subnet mask was needed. For all Class A's the first octet was network, for Class B's the first and second were network, for Class C's the first three.
+In 1987, intra-nets started becoming larger and the Internet was on its way. Wasting whole Class C ranges of 254 host addresses on small networks became a problem. Class A and B networks often wasted addresses because physical limitations forced networks to be divided by routers before they could get large enough to use so many addresses. (Class B's host range (256 X 256) - 2 = 65534 addresses; Class A's (256^3) - 2 = 16777214.)
+Subnetting divides a large Classful network into many smaller "sub-nets" by increasing the number of ones and zeros used to address networks(leaving fewer for the hosts in each network). A small subnet can then be assigned to a small network without using a large number of extra addresses. To say which bits are the network address we use a 1. The "mask" (ex. 255.255.255.192) when converted to binary (ex. 11111111.11111111.11111111.11000000) defines exactly how many more bits are added to the network portion (ex. two host bit). In this example, one Class C with 254 hosts becomes four sub-nets with 62 hosts each. Of these sub-nets only two may be assigned to networks; the first and last cannot be used according to RFC-950.
+Further discussion of the rules of subnetting is beyond the scope of this article. What matters here is that even though we are using Classful addresses, Windows (and other software) doesn't know this. And hence, will still need a mask to tell it how many bits we want to use for the network portion. By saying 255.255.255.0, we're saying that
+

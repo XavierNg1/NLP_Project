@@ -1,0 +1,7 @@
+ List file in /etc/apt. Open a terminal and run vi /etc/apt/sources.list. (Here, vi is the text editor. You can replace it with gedit, nano or a text editor of your choice).;
+, Now, change every 'warty' to 'hoary'. There should be 6 of them. Don't edit anything at the first line: deb cdrom. Save your changes and let's go to the next step.
+ You will be prompted for your root password (enter it).
+ Again, enter your password and wait 2-3 seconds. You will see a list of packages which should be installed to upgrade from Ubuntu 4.10 to Ubuntu 5.04.
+ If you don't want to upgrade then type 'n' and press enter to abort.
+ Bear in mind that this is a very large download, and will take a considerable time.
+

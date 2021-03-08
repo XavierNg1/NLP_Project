@@ -1,0 +1,106 @@
+;
+,,, You can select Creative, Adventure, or Survival.
+,, You will see the message Local game hosted on XXX.XXX.XXX.XXX:XXXXX". Copy down the address to give to others.
+ These computers must be connected to the same network as the first computer.
+,,, Click "Add server", and then enter the address that was displayed earlier.
+ Go to java.com/en/download/. Download and install the latest version.
+ The location will vary depending on your operating system and if you made changes during installation. The default directories are:
+
+
+32-bit Windows: C:\Program Files\Java\jre7\bin\
+32-bit Java on 64-bit Windows: C:\Program Files (x86)\Java\jre7\bin\
+64-bit Java on 64-bit Windows: C:\Program Files\Java\jre7\bin\
+
+, You can find this in your Start menu, on the desktop, or by pressing.
+
+
+Select Properties.
+Click "Advanced system settings".
+Click Environment Variables....
+Find and select the "Path" variable in the "System variables" section. Do not select the "PATH" variable in the "User variables" section.
+Click Edit....
+Add a ; to the end of the "Variable value"
+Add your Java directory after the ;. E.g. ;C:\Program Files (x86)\Java\jre7\bin\
+
+
+, Go to minecraft.net/download.
+, Place this folder somewhere that is easy to access, like the root of the C: drive or on your desktop.
+, Double-click the .exe file and a window will open that shows the progress of the server's construction. The process is automatic, and the program will close immediately after it has finished. Server configuration files will be automatically created and added to the folder.
+
+
+If the server fails to load and you get a screen of garbled text, you will need to run the server as an administrator. Right-click on the program and select "Run as administrator". You will need the administrator password.
+, Change this to eula=true
+
+,, You can adjust this as you see fit.
+,, You will need this when configuring your ports to allow other people to connect.
+
+
+Press the Windows key + R, type cmd, and press Enter
+Type ipconfig and press Enter
+Scroll up until you find your active connection
+Write down the IPv4 address
+Write down the "Default Gateway" address as well
+
+, Go to minecraft.net/download.
+, Place this folder somewhere that is easy to access, such as your Desktop or Applications folder.
+,, Click Format → Make Plain Text. Copy the following lines into the file.
+
+
+
+
+
+#!/bin/bash
+cd "$(dirname "$0")"
+exec java -Xmx1G -Xms1G -jar minecraft_server.jar
+
+
+
+
+
+If you wish to assign more RAM to the server, change 1G to 2G or higher, depending on your system.
+ Make sure it's saved in the Minecraft server folder.
+ You will need to grant execute permissions to the start.command file that you just created.
+ This will provide the correct path to the file.
+, You may receive several error messages the first time you run the server, which is normal.
+, Change this to eula=true
+
+, You will need this when configuring your ports to allow other people to connect.
+
+
+Click the Apple menu and select System Preferences.
+Click Network.
+Select your active network adapter
+Write down the IP address displayed
+Write down the "Router" address as well.
+ You found this address when looking up your computer's IP address. In Windows, this was the "Default Gateway" address, and in OS X, this was the "Router" address in the Network window.
+ You will need to enter your username and password to be able to access your router's settings.
+
+
+If you don't know your username and password, you can try the default information, as many people don't change this. You can look up the default login information by searching for your router model online or referring to its documentation.
+If you cannot figure out the login information, you can manually reset the router by pressing and holding the "Reset" button on the back for at least 30 seconds. You will then be able to log in with the default login information, but all of your settings will be gone.
+ The location of this section varies from router to router, but it can typically be found in the "Advanced" section.
+ Again, the actual terminology will vary depending on the type of router you are using.
+,,
+
+
+The internal ports should mimic the external ports.
+, Your router may take a minute to apply the changes.
+ Once the server has ran for the first time, exit out.
+
+
+Open the ops.txt file in the Minecraft Server directory.
+Add your username to this file to give yourself administrator privileges. This will let you kick and ban players from in the game, as well as adjust other settings.
+ If you want to play with just your friends, add their usernames to the white-list.txt file in the Minecraft Server directory. Only the usernames listed in this text file will be able to connect to your server. This will keep random people from griefing your game.
+ Type "my ip address" into Google and your external (public) IP address will be displayed as the first result. This is the IP address that you will be giving to your friends to connect.
+ Give your server’s IP or host name to those that you want play on your server. They will need to enter the IP address or host name of your server in the Multiplayer menu of Minecraft.
+
+
+Players connecting on a local network need to enter the local IP of your server computer; those connecting from the internet need to enter your external IP or host name.
+ With your server running, you can start Minecraft on your server computer and join the game.
+
+
+Click "Multiplayer"
+Click "Add Server"
+Type localhost into the "Server Address" field.
+Join the game.
+

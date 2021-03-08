@@ -1,0 +1,48 @@
+ A proper fraction has a larger power in the denominator than in the numerator. If the power of the numerator is larger than or equal to the power of the denominator, it is improper and must be divided using long division.
+
+
+∫x3−4x−10x2−x−6dx{\displaystyle \int {\frac {x^{3}-4x-10}{x^{2}-x-6}}{\mathrm {d} }x}
+
+In this example, the fraction is indeed improper because the power of the numerator, 3, is larger than the power of the denominator, 2. Therefore, long division must be used.
+
+
+x3−4x−10x2−x−6=(x+1)+3x−4x2−x−6{\displaystyle {\frac {x^{3}-4x-10}{x^{2}-x-6}}=(x+1)+{\frac {3x-4}{x^{2}-x-6}}}
+
+
+
+The fraction is now proper. We can now split the integral into two parts. One of them containing the x+1{\displaystyle x+1} is easily evaluated, but we will evaluate at the end.
+
+
+∫(x+1)dx+∫3x−4x2−x−6dx{\displaystyle \int (x+1){\mathrm {d} }x+\int {\frac {3x-4}{x^{2}-x-6}}{\mathrm {d} }x}
+
+
+
+
+,
+
+
+3x−4x2−x−6=3x−4(x−3)(x+2){\displaystyle {\frac {3x-4}{x^{2}-x-6}}={\frac {3x-4}{(x-3)(x+2)}}}
+
+
+, The number of fractions in decomposition should equal the number of factors of x.{\displaystyle x.} The numerators of these decomposed fractions should be represented with coefficients.
+
+
+3x−4(x−3)(x+2)=Ax−3+Bx+2{\displaystyle {\frac {3x-4}{(x-3)(x+2)}}={\frac {A}{x-3}}+{\frac {B}{x+2}}}
+
+If a factor of x{\displaystyle x} in the denominator has a power higher than 1, then the coefficients in the numerator should reflect this higher power. For example, a term in the denominator like x2+1{\displaystyle x^{2}+1} that cannot be factored further can be represented with the term Ax+B{\displaystyle Ax+B} in the numerator.
+
+
+Ax+Bx2+1+Cx−3{\displaystyle {\frac {Ax+B}{x^{2}+1}}+{\frac {C}{x-3}}}
+
+
+
+Roots of multiplicity more than 1 should be represented where both the root and its decreasing powers are written out, like so. An example of this below concerns a root of multiplicity 3. Notice that three fractions are written, where (x+2)3, (x+2)2,{\displaystyle (x+2)^{3},\ (x+2)^{2},} and (x+2){\displaystyle (x+2)} are all written out.
+
+
+x−1(x+2)3=A(x+2)3+B(x+2)2+Cx+2{\displaystyle {\frac {x-1}{(x+2)^{3}}}={\frac {A}{(x+2)^{3}}}+{\frac {B}{(x+2)^{2}}}+{\frac {C}{x+2}}}
+
+
+
+Let's return to the original example. We have now split up the fraction into its constituent parts. We can proceed in two different directions here. One method is to multiply everything out and solve a system of equations. Another, more efficient method is to recognize which terms go to zero and directly solve for the coefficients. This method will be outlined in the Substitution section.
+
+

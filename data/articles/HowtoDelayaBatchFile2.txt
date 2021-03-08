@@ -1,0 +1,11 @@
+ The user can skip this waiting period, or you can apply a parameter that keeps the user from skipping.
+
+
+
+TIMEOUT may not work with older systems. Try the deprecated SLEEP command if the TIMEOUT command isn't working.
+ Add the flag /t followed by the number of seconds.
+ Add the flag /nobreak to keep any input from skipping the delay.
+
+
+The user can still end the program by pressing Ctrl + C (keyboard interrupt).
+

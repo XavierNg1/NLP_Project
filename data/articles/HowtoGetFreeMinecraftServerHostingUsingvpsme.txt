@@ -1,0 +1,60 @@
+ Visit the vps.me homepage. Use the slider on the main page to select the far-left option, Package 1. This is the free package. Click the "Order" button.;
+, Click the "OS Template" drop-down menu and select "Debian 6 32Bit With Minecraft Game Server". This template has the Minecraft server software preinstalled, which drastically cuts down setup time.
+ If you already own a domain name, enter it here. If not, you can leave it blank and have a domain assigned automatically. The assigned domains will be messier than a purchased one, but they're free.
+ When you check out, you will need to register for an account. This includes entering your name, email address, country, address, and phone number for verification.
+
+
+You will need a valid phone number in order to verify your identity and receive the server.
+ After entering your information, click the “Confirm Phone Number” button. Click the button to send an activation code to your phone number. When you receive a text containing the code, type it into the field and click “Validate”.
+ After setting up your free server, you will need to wait 24 hours in order to continue setting up the server. After 24 hours, log back into the vps.me website and click the "My Servers" tab.
+ You can either choose a FTP client like Filezilla or a SSH client PuTTY.In this section we will be using PuTTY.
+ This will allow you to connect to the server via command line and perform any configuration.
+ Click the "SSH" option in the "My Servers" tab. This will open a pop-up with the SSH connection information. Copy the IP address displayed, and then open PuTTY.
+
+
+In the Session section, enter the IP address you copied into the "Host Name" field. In the "Port" field, enter the number after "-p" from the SSH pop-up.
+ With the server's address and port entered, click the Open button in PuTTY. You will be warned that the host key is not cached in your registry. Click Yes to proceed.
+ You will be prompted for login information after you connect. Enter root as your username, and then the password you created when you signed up for your account. If you can't remember the password, click the "Root" button in the "My Servers" tab to enter a new password.
+ You can use the command line to edit your Minecraft server settings. Once you are connected to the server, type nano minecraft-server/server.properties to open the server properties file. You can then edit the properties so that the server is to your liking.
+
+
+Find the -Xmx entry in the server settings and change it to -Xmx384M.
+ After making the changes to your server configuration, you will need to restart the server. Return to your vps.me dashboard and click the "Reboot" button at the top of the "My Servers" tab. After the server reboots, you and your friends can connect to it!
+
+, In this time, the VPS is built.
+ FileZilla is a popular FTP client, quite easy to use.
+ Click on the SSH button and copy the IP address that appears there. You will also need the port.
+ In the upper part of the program there will be some fields, "Host", "Username", "Password" and "Port". In the "Host" field put in the copied IP address from the SSH tab in Vps.me, but in front of it type sftp://; in the "Username" fill in "root" (without quotes); in the "Password" fill in the password that you received in the e-mail from vps.me after registering (the one you've chosen) and finally in the "Port" field fill in the port you copied from the SSH tab.
+, The tab is by default /home/minecraft/minecraft-server.
+ Right-click and choose view/open to open it with Notepad.
+
+
+Find the -Xmx entry in the server settings and change it to -Xmx384M
+
+In the server.properties file you can change a lot of other stuff. Note: if you want to have a cracked server, change the online-mode line from true to false.
+ Also, in the minecraft-server file you can edit the world, ops, whitelist, etc... You can also try to install Bukkit!
+
+, After making the changes to your server configuration, you will need to restart the server. Return to your vps.me dashboard and click the "Reboot" button at the top of the "My Servers" tab. After the server reboots, you and your friends can connect to it!
+
+, You can add the server's IP address to your Minecraft server list. This way you won't have to enter it every time you want to connect.
+ This will open a new page for you to enter the server connection information.
+ The IP address is the same one that you entered to connect via SSH or FTP. The port is 25565. You can enter any name that you want.
+ Once you enter in the connection information, the server will be added to your list. You can now connect to it like you would any other Minecraft server.
+ There are some reports of vps.me being unreliable, and there's no denying that their free servers are on the slow side. If you want to get a free Minecraft server, there are several sites that offer free hosting, though the server options are usually fairly limited. Some of the more popular sites include:
+
+
+GratisServer.nu
+Aternos.org
+Zipp-Hosting.com
+
+, If you have a spare computer in your house, you can turn it into a dedicated Minecraft server for you and your friends. This can be significantly cheaper than renting one, as you only have to pay the power and internet costs from your home. See this guide for detailed instructions for creating your own server.
+
+
+Creating a Minecraft server is free; you don't even need to own Minecraft to set up a server.
+ If you are currently renting a server or want to set up a server, you can look into getting it sponsored. Usually you would apply for sponsorship from server hosts or from companies that would want to advertise. A sponsored server is paid for completely by the host, while still allowing you to run the server itself.
+
+
+In order to get a sponsorship, you will need to prove that your server can draw in a sustainable population.
+Sponsors usually want to be able to monetize the server, so be prepared to pitch servers that have donation plans.
+If your server offers unique features that help it stand out from all the other Minecraft servers, this looks very good to sponsors.
+When contacting a hosting company for sponsorship, be sure to use professional language and spell out in detail all the benefits your server would bring to their company.

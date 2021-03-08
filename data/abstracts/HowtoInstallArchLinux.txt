@@ -1,0 +1,33 @@
+
+Download the Arch installation image.
+Burn the downloaded ISO to a blank disc.
+Backup any data on the computer or drive you are installing Arch Linux on.
+Insert the installation disc or USB drive in the computer you are installing Arch Linux on.
+Press the key that allows you to change the boot order.
+Select your installation drive as the primary boot drive.
+Select .Boot Arch Linux and press ↵ Enter.
+Test the internet connection.
+Erase existing partitions.
+Check if you are using a UEFI motherboard.
+Create GPT partitions if you have a UEFI motherboard, or create MBR partitions if you use legacy BIOS.
+Use .cgdisk to create GPT partitions.
+Use .fdisk to create MBR partitions.
+Format your partitions.
+Mount your partitions.
+Type .nano /etc/pacman.d/mirrorlist to edit your mirror list.
+Find a good mirror.
+Change the first .Server = line to your new primary mirror.
+Install the Arch Linux base system.
+Create an fstab file.
+Use the .chroot command to access your newly-installed operating system.
+Edit your Locale file.
+Set your time zone.
+Set your hardware clock.
+Set your hostname.
+Configure your network (wired).
+Configure your network (wireless).
+Set your root password.
+Configure the bootloader.
+Reboot the computer.
+Sign in after Arch Linux boots up.
+Install a GUI.

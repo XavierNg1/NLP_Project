@@ -1,0 +1,31 @@
+
+Open the IDE.
+Copy and paste the following code:
+
+
+
+
+
+class Convert {
+public static void main(String[] args)
+{
+try
+{
+String str = "124863";
+long num = (Long.parseLong(str))+36;
+System.out.println(num);
+}
+catch(NumberFormatException e)
+{
+System.out.println("Invalid String for conversion to long");
+}
+}
+}
+
+
+
+
+
+,
+Run the program.
+Understand what the program does.

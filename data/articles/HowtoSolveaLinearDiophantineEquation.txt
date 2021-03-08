@@ -1,0 +1,256 @@
+ A linear equation is one that has no exponents greater than 1 on any variables. To solve a linear equation in this style, you need to begin by writing it in what is called “standard form.” The standard form of a linear equation looks like Ax+By=C{\displaystyle Ax+By=C}, where A,B{\displaystyle A,B} and C{\displaystyle C} are integers.
+
+If the equation is not already in standard form, you need to use the basic rules of algebra to rearrange or combine the terms to create the standard form. For example, if you begin with 23x+4y−7x=−3y+15{\displaystyle 23x+4y-7x=-3y+15}, you can combine similar terms to reduce the equation to 16x+7y=15{\displaystyle 16x+7y=15}.
+;
+, When the equation is in standard form, check all three terms A,B{\displaystyle A,B} and C{\displaystyle C}. If there is a common factor in all three terms, then reduce the equation by dividing all terms by that factor. If you reduce evenly across all three terms, then any solution you find for the reduced equation will also be a solution for the original equation.
+
+For example, if all three terms are even, you can at least divide by 2, as follows:
+
+
+42x+36y=48{\displaystyle 42x+36y=48}  (all terms are divisible by 2)
+
+
+21x+18y=24{\displaystyle 21x+18y=24}  (all terms now are divisible by 3)
+
+
+7x+6y=8{\displaystyle 7x+6y=8}  (this equation is as reduced as possible)
+
+
+
+
+, In some cases, you may be able to tell immediately if there is no solution to your problem. If you see a common factor on the left side of the equation that is not shared on the right side, then there can be no solution to the problem.
+
+For example, if both A{\displaystyle A} and B{\displaystyle B} are even, then the sum of the left side of the equation would have to be even. But if C{\displaystyle C} is odd, then there will be no integer solution to the problem.
+
+
+2x+4y=21{\displaystyle 2x+4y=21} will have no integer solution.
+
+
+5x+10y=17{\displaystyle 5x+10y=17} can have no integer solution, because the left side of the equation is divisible by 5, but the right side is not.
+ The Euclidean algorithm is a system of repeated divisions, using the remainder each time as the divisor of a new division. The last divisor that divides evenly is the greatest common factor (GCF) of the two numbers.For example, the following steps illustrate the Euclidean algorithm being used to find the GCF of 272 and 36:
+
+
+272=7∗36+20{\displaystyle 272=7*36+20}....divide the larger number (272) by the smaller (36) and note the remainder (20)
+
+
+36=1∗20+16{\displaystyle 36=1*20+16}....divide the previous divisor (36) by the previous remainder (20). Note the new remainder (16).
+
+
+20=1∗16+4{\displaystyle 20=1*16+4}....Repeat. Divide the previous divisor (20) by the previous remainder (16). Note the new remainder (4).
+
+
+16=4∗4+0{\displaystyle 16=4*4+0}....Repeat. Divide the previous divisor (16) by the previous remainder (4). Since the remainder is now 0, conclude that 4 is the GCF of the original two numbers 272 and 36.
+ With your linear equation in standard form, identify the coefficients A and B. Apply the Euclidean algorithm to find their GCF. Suppose you need to find integral solutions for the linear equation 87x−64y=3{\displaystyle 87x-64y=3}.The steps of the Euclidean algorithm for the coefficients 87 and 64 are as follows:
+
+
+87=1∗64+23{\displaystyle 87=1*64+23}
+
+
+64=2∗23+18{\displaystyle 64=2*23+18}
+
+
+23=1∗18+5{\displaystyle 23=1*18+5}
+
+
+18=3∗5+3{\displaystyle 18=3*5+3}
+
+
+5=1∗3+2{\displaystyle 5=1*3+2}
+
+
+3=1∗2+1{\displaystyle 3=1*2+1}
+
+
+2=2∗1+0{\displaystyle 2=2*1+0}
+
+
+
+
+, Because the Euclidean algorithm for this pair continues all the way down to dividing by 1, the GCF between 87 and 64 is 1. This is another way of saying that 87 and 64 are relatively prime., When you complete the Euclidean algorithm to find the GCF of A{\displaystyle A} and B{\displaystyle B}, you need to compare that result with the number C{\displaystyle C} of the original equation. If the greatest common factor of A{\displaystyle A} and B{\displaystyle B} is a number that can divide into C{\displaystyle C}, then your linear equation will have an integral solution. If not, then there will be no solution.For example, the sample problem 87x−64y=3{\displaystyle 87x-64y=3} will have an integral solution, since the GCF of 1 can be evenly divided into 3.
+
+Suppose, for example, that the GCF had worked out to be 5. The divisor 5 cannot go evenly into 3. In that case, the equation would have no integral solutions.
+
+As you will see below, if an equation has one integral solution, then it also has infinitely many integral solutions.
+ To find the solution of the linear equation, you will use your work on the Euclidean algorithm as the basis for a repeated process of renaming and simplifying values.Begin by numbering the steps of the Euclidean algorithm reduction, as reference points. Thus, you have the following steps:
+
+
+Step 1:87=(1∗64)+23{\displaystyle {\text{Step 1}}:87=(1*64)+23}
+
+
+Step 2:64=(2∗23)+18{\displaystyle {\text{Step 2}}:64=(2*23)+18}
+
+
+Step 3:23=(1∗18)+5{\displaystyle {\text{Step 3}}:23=(1*18)+5}
+
+
+Step 4:18=(3∗5)+3{\displaystyle {\text{Step 4}}:18=(3*5)+3}
+
+
+Step 5:5=(1∗3)+2{\displaystyle {\text{Step 5}}:5=(1*3)+2}
+
+
+Step 6:3=(1∗2)+1{\displaystyle {\text{Step 6}}:3=(1*2)+1}
+
+
+Step 7:2=(2∗1)+0{\displaystyle {\text{Step 7}}:2=(2*1)+0}
+
+
+
+
+, Rewrite that equation so the remainder stands alone, as equal to the rest of the information in the equation.For this problem, Step 6 is the last one that showed a remainder. That remainder was 1. Rewrite the equation in Step 6 as follows:
+
+
+1=3−(1∗2){\displaystyle 1=3-(1*2)}
+
+
+
+
+, This procedure is a step-by-step process of moving “up” the steps. Each time, you will be revising the right side of the equation in terms of the numbers in the higher step.You can revise Step 5 to isolate its remainder as:
+
+
+2=5−(1∗3){\displaystyle 2=5-(1*3)} or 2=5−3{\displaystyle 2=5-3}
+
+
+
+
+, You should notice that your revision of Step 6 contains the number 2, and your revision of Step 5 is equal to 2. Substitute the equality in Step 5 into the place of the 2 in your Step 6 revision:1=3−(1∗2){\displaystyle 1=3-(1*2)}….. (This is the Step 6 revision.)
+
+
+1=3−(5−3){\displaystyle 1=3-(5-3)}….. (Substitute in place of the value 2.)
+
+
+1=3−5+3{\displaystyle 1=3-5+3}….. (Distribution of the negative sign)
+
+
+1=2(3)−5{\displaystyle 1=2(3)-5}…..(Simplify)
+
+
+, Moving through the Euclidean algorithm steps in reverse, repeat the process. Each time, you will revise the previous step, and substitute its value into your latest result.The last step was Step 5. Now revise Step 4 to isolate its remainder as:
+
+
+3=18−(3∗5){\displaystyle 3=18-(3*5)}
+
+
+
+Substitute that value in place of the 3 in your latest simplification step and then simplify:
+
+
+1=2(18−3∗5)−5{\displaystyle 1=2(18-3*5)-5}
+
+
+1=2(18)−6(5)−5{\displaystyle 1=2(18)-6(5)-5}
+
+
+1=2(18)−7(5){\displaystyle 1=2(18)-7(5)}
+
+
+
+
+, This process will repeat, step by step, until you reach the original step of the Euclidean algorithm. The purpose of this procedure is to wind up with an equation that will be written in terms of 87 and 64, which are the original coefficients of the problem you are trying to solve. Continuing in this manner, the remaining steps are as follows:1=2(18)−7(5){\displaystyle 1=2(18)-7(5)}
+
+
+1=2(18)−7(23−18){\displaystyle 1=2(18)-7(23-18)}…..(Substitution from Step 3)
+
+
+1=2(18)−7(23)+7(18){\displaystyle 1=2(18)-7(23)+7(18)}
+
+
+1=9(18)−7(23){\displaystyle 1=9(18)-7(23)}
+
+
+
+
+1=9(64−2∗23)−7(23){\displaystyle 1=9(64-2*23)-7(23)}…..(Substitution from Step 2)
+
+
+1=9(64)−18(23)−7(23){\displaystyle 1=9(64)-18(23)-7(23)}
+
+
+1=9(64)−25(23){\displaystyle 1=9(64)-25(23)}
+
+
+
+
+1=9(64)−25(87−64){\displaystyle 1=9(64)-25(87-64)}…..(Substitution from Step 1)
+
+
+1=9(64)−25(87)+25(64){\displaystyle 1=9(64)-25(87)+25(64)}
+
+
+1=34(64)−25(87){\displaystyle 1=34(64)-25(87)}
+
+
+
+
+, When you return to the first step of the Euclidean algorithm, you should notice that the resulting equation contains the two coefficients of the original problem. Rearrange the numbers so they align with the original equation.In this case, the original problem you are trying to solve is 87x−64y=3{\displaystyle 87x-64y=3}. Thus, you can rearrange your last step to put the terms in that standard order. Pay particular attention to the 64 term. In the original problem, that term is subtracted, but the Euclidean algorithm treats it as a positive term. To account for the subtraction, you need to change the multiplier 34 to a negative. The final equation looks like this:
+
+
+87(−25)−64(−34)=1{\displaystyle 87(-25)-64(-34)=1}
+
+
+
+
+, Notice that the greatest common divisor for this problem was 1, so the solution that you reached is equal to 1. However, that is not the solution to the problem, since the original problem sets 87x-64y equal to 3. You need to multiply the terms of your last equation by 3 to get a solution:87(−25∗3)−64(−34∗3)=1∗3{\displaystyle 87(-25*3)-64(-34*3)=1*3}
+
+
+87(−75)−64(−102)=3{\displaystyle 87(-75)-64(-102)=3}
+
+
+, The values that must be multiplied by the coefficients are the x and y solutions to the equation.
+
+In this case, you can identify the solution as the coordinate pair (x,y)=(−75,−102){\displaystyle (x,y)=(-75,-102)}.
+ If a linear equation has one integral solution, then it must have infinitely many integral solutions. Here is a brief algebraic statement of the proof:Ax+By=C{\displaystyle Ax+By=C}
+
+
+A(x+B)+B(y−A)=C{\displaystyle A(x+B)+B(y-A)=C} ….. (Adding a B to x while subtracting A from y results in the same solution.)
+
+
+, The pattern of infinite solutions begins with the single solution that you identified.In this case, your solution is the coordinate pair (x,y)=(−75,−102){\displaystyle (x,y)=(-75,-102)}.
+ To find a new solution for x, add the value of the coefficient of y.In this problem, beginning with the solution x=-75, add the y coefficient of -64, as follows:
+
+
+x=−75+(−64)=−139{\displaystyle x=-75+(-64)=-139}
+
+
+
+Thus, a new solution for the original equation will have the x value of -139.
+ To make the equation remain balanced, when you add to the x term, you must then subtract from the y term.
+
+For this problem, beginning with the solution y=-102, subtract the x coefficient of 87, as follows:
+
+
+y=−102−87=−189{\displaystyle y=-102-87=-189}
+
+
+
+Thus, a new solution for the original equation will have the y coordinate of -189.
+
+The new ordered pair should be (x,y)=(−139,−189){\displaystyle (x,y)=(-139,-189)}.
+ To verify that your new ordered pair is a solution to the equation, insert the values into the equation and see if it works.87x−64y=3{\displaystyle 87x-64y=3} 
+
+
+87(−139)−64(−189)=3{\displaystyle 87(-139)-64(-189)=3}
+
+
+3=3{\displaystyle 3=3}
+
+Because the statement is true, the solution works.
+ The values for x will fit a pattern of the original solution, plus any multiple of the B coefficient. You can write this algebraically as follows:x(k)=x+k(B), where x(k) represents the series of all x solutions, and x is the original x value that you solved.
+
+For this problem, you can say:
+
+
+x(k)=−75−64k{\displaystyle x(k)=-75-64k}
+
+
+
+y(k)=y-k(A), where y(k) represents the series of all y solutions, and y is the original y value that you solved.
+
+For this problem, you can say:
+
+
+y(k)=−102−87k{\displaystyle y(k)=-102-87k}
+
+
+
+

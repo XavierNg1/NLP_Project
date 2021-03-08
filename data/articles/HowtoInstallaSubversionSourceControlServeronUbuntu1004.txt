@@ -1,0 +1,245 @@
+ Visit http://www.ubuntu.com and download Ubuntu 10.04 LTS server. Burn the downloaded ISO to CD and install on your spare PC. During the install select LAMP and OpenSSH.
+
+
+sudo apt-get install subversion libapache2-svn
+
+,
+
+sudo svnadmin create /svn
+
+Alternately, if you want to store the subversion repository on another drive, you could enter something like /media/disk2/svn instead of /svn
+,
+
+sudo vim /etc/apache2/mods-enabled/dav_svn.conf
+
+Then paste the following and carefully replace all the elements starting YOUR_ with appropriate properties for your active directory.
+
+
+
+
+<location svn>
+  DAV svn
+  SVNPath /svn
+ 
+  # Use LDAP auth against an active directory
+  AuthName "Enter your domain username and password"
+  AuthType Basic
+  AuthBasicProvider ldap
+  AuthLDAPBindDN "CN=YOUR_USER,OU=-- System Accounts,OU=YOUR_OU,DC=YOUR_DC,DC=YOUR_DC"
+  AuthLDAPBindPassword "YOUR_PASSWORD"
+  AuthLDAPURL "ldap://YOUR_DOMAIN_CONTROLLER:389/ou=YOUR_OU,dc=YOUR_DC,dc=YOUR_DC?samAccountName?"
+  #require valid-user
+  AuthLDAPGroupAttributeIsDN on
+  require ldap-group CN=Software Development,OU=YOUR_OU,DC=YOUR_DC,DC=YOUR_DC
+</location>
+
+
+
+
+,
+
+sudo a2enmod authnz_ldap
+
+,
+
+sudo addgroup svnusers
+sudo adduser administrator svnusers
+sudo adduser www-data svnusers
+sudo chgrp -R svnusers /svn
+sudo chmod -R g+w /svn
+
+,
+
+sudo /etc/init.d/apache2 restart
+
+, Browse to http://YOUR_SERVER/svn A successful install should prompt for your domain credentials and then show:- svn - Revision 0: / Powered by Subversion version 1.6.6 (r40053).,
+
+sudo apt-get install trac libapache2-mod-python libapache2-mod-python-doc
+
+
+cd /
+sudo trac-admin trac initenv
+
+Answer the following questions:
+
+Project Name > YOUR_PROJECT
+
+Database connection string > <return></return>
+
+Repository type > <return></return>
+
+Path to repository > /svn
+,
+  #require valid-user
+  AuthLDAPGroupAttributeIsDN on
+  require ldap-group CN=Software Development,OU=YOUR_OU,DC=YOUR_DC,DC=YOUR_DC
+</location>
+
+
+
+
+,
+
+sudo chgrp -R svnusers /trac/
+sudo chmod -R g+w /trac/
+
+,
+
+trac-admin /trac permission add administrator TRAC_ADMIN
+
+,, Browse to http://YOUR_SERVER/trac, enter your your domain username and password., See the related article at the bottom for how to mount a windows share on an Ubuntu server., This script will dump the entire repository to the backup location as a single dump file.
+
+
+sudo su (switch to root)
+
+
+mkdir /root/scripts && cd /root/scripts (make a directory for scripts and change to it)
+
+
+vi svn-full-backup.sh (edit the backup script and append the following)
+
+
+
+
+
+
+
+#! /bin/sh
+# Dump the entire svn repository to /tmp
+svnadmin dump /svn > /tmp/svn-full-backup.dump
+# Remove the previous backup
+rm -f /mnt/backup/svn-full-backup.dump
+# Copy the new backup file to the backup location
+cp /tmp/svn-full-backup.dump /mnt/backup/svn-full-backup.dump
+
+
+
+
+
+"Write and quit" (use :wq as described earlier)
+
+chmod +x svn-full-backup.sh (Make the script executable)
+
+
+./svn-full-backup.sh (Initiate the backup operation)
+
+
+, This script will dump all revisions since the last incremental backup to another file. All files created specify the range of revisions that have been saved.
+
+
+vi svn-full-backup.sh (edit the incremental backup script and append the following)
+
+
+
+
+
+
+
+#!/usr/bin/perl
+ 
+use strict;
+use warnings;
+ 
+my $repo = '/svn';
+my $local_dir = '/tmp';
+my $savedir = '/mnt/backup/Incremental';
+ 
+my $last_saved_file = $savedir.'/last_saved.txt';
+ 
+# read the last saved revision from the file
+open(LAST_SAVED, '<', $last_saved_file);
+my $last_saved = <LAST_SAVED>;
+chomp $last_saved;
+close(LAST_SAVED);
+ 
+# get informed of the current last revision (head)
+my $head = `svnlook youngest $repo`;
+chomp $head;
+ 
+# of course, if the head is not younger than the last saved revision
+# it's useless to go on backuping
+if ($last_saved == $head) {
+    exit();
+}
+ 
+# if the last saved is 1000 and the head is 1023, we want the backup
+# from 1001 to 1023
+my $from = $last_saved + 1;
+my $to = $head;
+ 
+# the backup filename looks like svn-01001_01023.svndump
+my $dumpfile = sprintf(
+    '/svn-%05u_%05u.svndump',
+    $from,
+    $to
+);
+ 
+my $local_dump_file = $local_dir.$dumpfile;
+ 
+my $command = sprintf(
+    'svnadmin dump -q -r%u:%u --incremental %s > %s',
+    $from,
+    $to,
+    $repo,
+    $local_dump_file
+);
+ 
+system($command);
+ 
+if (grep /^Revision-number: $to/, `grep --text ^Revision-number: $local_dump_file`) {
+    open(LAST_SAVED, '>', $last_saved_file);
+    print LAST_SAVED $to, "\n";
+    close(LAST_SAVED);
+ 
+    # here we compress the dump file
+    system('gzip '.$local_dump_file);
+ 
+    # let's add the md5sum of the file to MD5SUMS file storing md5sums of
+    # all Subversion backups
+    chdir($local_dir);
+    use File::Basename;
+    system('md5sum '.basename($local_dump_file).'.gz >> '.$savedir.'/MD5SUMS');
+}
+ 
+my $mv_command = sprintf(
+    'mv %s %s',
+    $local_dump_file.'.gz',
+    $savedir.$dumpfile.'.gz'
+);
+ 
+system($mv_command);
+
+
+
+
+
+"Write and quit" (:wq as above)
+
+chmod +x svn-inc-backup.sh (Make the script executable)
+
+
+./svn-inc-backup.sh (Initiate the incremental backup operation)
+
+
+, Edit the cron table to schedule the two scripts to run. The incremental backup is run every night at 1 AM. The full backup is run on the 1st day of the month at 2 AM.
+
+crontab -e
+
+
+
+
+
+
+0 1 * * * /root/scripts/svn-inc-backup.sh
+0 2 1 * * /root/scripts/svn-full-backup.sh
+
+
+
+
+
+Exit the editor using CTRL-X
+
+, On another machine, perform the same subversion setup. Run the following command to import the dump file back into your empty repository.
+
+svnadmin load /svn < /mnt/backup/svn-full-backup.dump
+

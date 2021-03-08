@@ -1,0 +1,135 @@
+ Integrals done in two or three dimensions are sometimes denoted by two or three integration symbols. However, it is important to recognize that the extra symbols may not always be written out. In those cases, you must understand what is being integrated over. 
+
+In this article, we write the extra integration symbols in order to emphasize that these are double and triple integrals that are being evaluated.
+
+
+∬f(x,y)dA{\displaystyle \iint f(x,y){\mathrm {d} }A}
+
+
+∭f(x,y,z)dV{\displaystyle \iiint f(x,y,z){\mathrm {d} }V}
+
+
+
+The way in which the integrals are written can be slightly different. The first is the mathematician's notation, which writes the differential elements at the end. The innermost integral is the one that is integrated over first. The second is the physicist's notation, which separates the integrals and makes it look more like an operator is acting on a function. Integrals are evaluated from right to left. In this article, for ease of calculation and to avoid confusion with which integrals are being evaluated, we will choose the latter.
+
+
+∫02∫−11(4x3+x2y+5)dydx{\displaystyle \int _{0}^{2}\int _{-1}^{1}(4x^{3}+x^{2}y+5){\mathrm {d} }y{\mathrm {d} }x}
+
+
+∫02dx∫−11dy(4x3+x2y+5){\displaystyle \int _{0}^{2}{\mathrm {d} }x\int _{-1}^{1}{\mathrm {d} }y(4x^{3}+x^{2}y+5)}
+
+
+;
+, In two dimensions, the double integral is defined as the limit of sums that send the number of rectangles to infinity, provided both limits exist. This definition should be familiar from the single-variable integral.
+
+
+∬Df(x,y)dA=limm→∞limn→∞∑j=1m∑k=1nf(xj,yk)ΔxΔy{\displaystyle \iint _{D}f(x,y){\mathrm {d} }A=\lim _{m\to \infty }\lim _{n\to \infty }\sum _{j=1}^{m}\sum _{k=1}^{n}f(x_{j},y_{k})\Delta x\Delta y}
+
+Here, D{\displaystyle D} is a domain of integration. In two dimensions, D{\displaystyle D} is a subset of the two-dimensional plane. 
+
+
+, At first sight, this is a formidable integral. As we will see, recognizing symmetry is crucial to simplifying the algebra involved.
+
+
+∬D(6+2xy2+3x2y+2y3sin⁡(πxy2)−3xy)dA{\displaystyle \iint _{D}(6+2xy^{2}+3x^{2}y+2y^{3}\sin(\pi xy^{2})-3xy){\mathrm {d} }A}
+
+
+, Before we write the problem in terms of definite integrals, we need to see if we can simplify the problem. The domain of integration is shaped like a bowl. This domain is symmetric about the y-axis, meaning that any term that is odd in x{\displaystyle x} will vanish. Because the domain is not symmetric in y,{\displaystyle y,} we do not eliminate terms that are only odd in y.{\displaystyle y.} This means that 2xy2,{\displaystyle 2xy^{2},} 2y3sin⁡(πxy2),{\displaystyle 2y^{3}\sin(\pi xy^{2}),} and −3xy{\displaystyle -3xy} all vanish. 
+
+
+∬D(6+2xy2+3x2y+2y3sin⁡(πxy2)−3xy)dA=∬D(6+3x2y)dA{\displaystyle \iint _{D}(6+2xy^{2}+3x^{2}y+2y^{3}\sin(\pi xy^{2})-3xy){\mathrm {d} }A=\iint _{D}(6+3x^{2}y){\mathrm {d} }A}
+
+Similar to taking partial derivatives, we treat the other variables in a term as constants when we are doing this.
+ We first integrate over x.{\displaystyle x.} This is simple - the domain goes from x=−2{\displaystyle x=-2} to x=2.{\displaystyle x=2.} Then we integrate over y.{\displaystyle y.} The lower boundary is the curve y=x2{\displaystyle y=x^{2}} and the upper boundary is the line y=4.{\displaystyle y=4.} Notice that the y{\displaystyle y} integral has an x{\displaystyle x} dependence. This can be done because the y{\displaystyle y} integral is being evaluated first. It is not possible for the x{\displaystyle x} integral to have a y{\displaystyle y} dependence if the x{\displaystyle x} integral is being evaluated after the y{\displaystyle y} integral.
+
+
+∬D(6+3x2y)dA=∫−22dx∫x24dy(6+3x2y){\displaystyle \iint _{D}(6+3x^{2}y){\mathrm {d} }A=\int _{-2}^{2}{\mathrm {d} }x\int _{x^{2}}^{4}{\mathrm {d} }y(6+3x^{2}y)}
+
+
+, In this case, we look for even functions of x.{\displaystyle x.} The symmetry that applies here is that the integral of an even function is equal to twice the integral over half the domain. In other words, we pull a 2 out of the integral and change the lower boundary to 0. We see that 6+3x2y{\displaystyle 6+3x^{2}y} is indeed even.
+
+
+∫−22dx∫x24dy(6+3x2y)=2∫02dx∫x24dy(6+3x2y){\displaystyle \int _{-2}^{2}{\mathrm {d} }x\int _{x^{2}}^{4}{\mathrm {d} }y(6+3x^{2}y)=2\int _{0}^{2}{\mathrm {d} }x\int _{x^{2}}^{4}{\mathrm {d} }y(6+3x^{2}y)}
+
+It is important to note that this simplification cannot be done before exploiting the symmetry of odd functions. If we did, then the domain would no longer be symmetric, and the odd terms would not vanish.
+ We do the y{\displaystyle y} integral first and then do the x{\displaystyle x} integral.
+
+
+∬f(x,y)dA=2∫02dx∫x24dy(6+3x2y)=2∫02dx(6(4−x2)+32x2(42−x4))=2(48−2⋅23+24⋅233−32277)=2(96−1927)=9607{\displaystyle {\begin{aligned}\iint f(x,y){\mathrm {d} }A&=2\int _{0}^{2}{\mathrm {d} }x\int _{x^{2}}^{4}{\mathrm {d} }y(6+3x^{2}y)\\&=2\int _{0}^{2}{\mathrm {d} }x(6(4-x^{2})+{\frac {3}{2}}x^{2}(4^{2}-x^{4}))\\&=2\left(48-2\cdot 2^{3}+24\cdot {\frac {2^{3}}{3}}-{\frac {3}{2}}{\frac {2^{7}}{7}}\right)\\&=2\left(96-{\frac {192}{7}}\right)\\&={\frac {960}{7}}\end{aligned}}}
+
+
+, Let D{\displaystyle D} be bounded by y=0{\displaystyle y=0} and y=1−x2.{\displaystyle y=1-x^{2}.} This integral uses the same technique as before - eliminate terms and simplify calculations by exploiting odd and even symmetry.
+
+
+∬D(4−2x2y+xy2+3x3y+x2+4xy)dA=572105{\displaystyle \iint _{D}(4-2x^{2}y+xy^{2}+3x^{3}y+x^{2}+4xy){\mathrm {d} }A={\frac {572}{105}}}
+
+We can also choose to send out y{\displaystyle y} first instead. The bounds would then be y=0{\displaystyle y=0} and y=1,{\displaystyle y=1,} and after solving y=1−x2{\displaystyle y=1-x^{2}} for x,{\displaystyle x,} the x{\displaystyle x} bounds would go from x=−1−y{\displaystyle x=-{\sqrt {1-y}}} to x=1−y.{\displaystyle x={\sqrt {1-y}}.} After simplifying, the integrand is still even in x.{\displaystyle x.}
+
+
+∬Df(x,y)dA=∫01dy∫−1−y1−ydx(4−2x2y+x2)=2∫01dy∫01−ydx(4−2x2y+x2){\displaystyle {\begin{aligned}\iint _{D}f(x,y){\mathrm {d} }A&=\int _{0}^{1}{\mathrm {d} }y\int _{-{\sqrt {1-y}}}^{\sqrt {1-y}}{\mathrm {d} }x(4-2x^{2}y+x^{2})\\&=2\int _{0}^{1}{\mathrm {d} }y\int _{0}^{\sqrt {1-y}}{\mathrm {d} }x(4-2x^{2}y+x^{2})\end{aligned}}}
+
+
+, The average value as encountered in single-variable calculus extends naturally to multivariable calculus. 
+
+There are two basic types of averages - unweighted and weighted. Weighted averages depend on a weight σ{\displaystyle \sigma } present in the integral. Below, we will work an example of an unweighted average problem - one where we can pull the σ{\displaystyle \sigma } out of the integrals. In general, σ{\displaystyle \sigma } may be defined as σ(x,y),{\displaystyle \sigma (x,y),} so that we cannot bring it out of the integrals.
+
+
+⟨f(x,y)⟩=∬Df(x,y)dA∬DdA{\displaystyle \langle f(x,y)\rangle ={\frac {\iint _{D}f(x,y){\mathrm {d} }A}{\iint _{D}{\mathrm {d} }A}}}
+
+
+⟨f(x,y)⟩σ=∬Df(x,y)σdA∬DσdA{\displaystyle \langle f(x,y)\rangle _{\sigma }={\frac {\iint _{D}f(x,y)\sigma {\mathrm {d} }A}{\iint _{D}\sigma {\mathrm {d} }A}}}
+
+
+
+
+, D{\displaystyle D} is the region bounded by y=x2{\displaystyle y=x^{2}} and y=2−x2.{\displaystyle y=2-x^{2}.} The bounds will be from x=−1{\displaystyle x=-1} to x=1,{\displaystyle x=1,} and from y=x2{\displaystyle y=x^{2}} to y=2−x2.{\displaystyle y=2-x^{2}.}
+
+
+⟨x2y⟩=∬Dx2ydA∬DdA{\displaystyle \langle x^{2}y\rangle ={\frac {\iint _{D}x^{2}y{\mathrm {d} }A}{\iint _{D}{\mathrm {d} }A}}}
+
+
+, There exist no terms odd in x,{\displaystyle x,} but there do exist terms even in x.{\displaystyle x.}
+
+
+∬Dx2ydA=∫−11dx∫x22−x2dyx2y=2∫01dx12x2((2−x2)2−x4)=∫01dx(x2(4−4x2))=4(13−15)=815{\displaystyle {\begin{aligned}\iint _{D}x^{2}y{\mathrm {d} }A&=\int _{-1}^{1}{\mathrm {d} }x\int _{x^{2}}^{2-x^{2}}{\mathrm {d} }yx^{2}y\\&=2\int _{0}^{1}{\mathrm {d} }x{\frac {1}{2}}x^{2}((2-x^{2})^{2}-x^{4})\\&=\int _{0}^{1}{\mathrm {d} }x(x^{2}(4-4x^{2}))\\&=4\left({\frac {1}{3}}-{\frac {1}{5}}\right)\\&={\frac {8}{15}}\end{aligned}}}
+
+
+, The bottom integral is easier to evaluate because we are simply finding the area of the domain.
+
+
+∬DdA=∫−11dx∫x22−x2dy=2∫01dx2(1−x2)=4(1−13)=83{\displaystyle {\begin{aligned}\iint _{D}{\mathrm {d} }A&=\int _{-1}^{1}{\mathrm {d} }x\int _{x^{2}}^{2-x^{2}}{\mathrm {d} }y=2\int _{0}^{1}{\mathrm {d} }x\,2(1-x^{2})\\&=4\left(1-{\frac {1}{3}}\right)={\frac {8}{3}}\end{aligned}}}
+
+
+, Simply substitute our results to obtain ⟨x2y⟩.{\displaystyle \langle x^{2}y\rangle .}
+
+
+⟨x2y⟩=815⋅38=15{\displaystyle \langle x^{2}y\rangle ={\frac {8}{15}}\cdot {\frac {3}{8}}={\frac {1}{5}}}
+
+
+, The centroid is the center of mass of a region. If you were to balance the region on the tip of a pin, then the only point that would balance is at the centroid. Once again, we give an example of a region with uniform density, so that σ{\displaystyle \sigma } can be pulled out of the integrals.
+
+
+center of mass=(∬DxσdA∬DσdA,∬DyσdA∬DσdA){\displaystyle {\text{center of mass}}=\left({\frac {\iint _{D}x\sigma {\mathrm {d} }A}{\iint _{D}\sigma {\mathrm {d} }A}},{\frac {\iint _{D}y\sigma {\mathrm {d} }A}{\iint _{D}\sigma {\mathrm {d} }A}}\right)}
+
+
+, It is helpful to draw a diagram. In our case, the boundaries go from x=0{\displaystyle x=0} to x=1.{\displaystyle x=1.} As you may have noticed, the regions are defined in a manner such that the boundaries can easily be figured out. In general, you will have to find the points of intersection by equating the two bounds and going from there. Finding the centroid involves taking three integrals.
+
+
+∬DdA=∫01dx∫x2x3dy=∫01dx(x1/3−x2)=512{\displaystyle \iint _{D}{\mathrm {d} }A=\int _{0}^{1}{\mathrm {d} }x\int _{x^{2}}^{\sqrt{x}}{\mathrm {d} }y=\int _{0}^{1}{\mathrm {d} }x(x^{1/3}-x^{2})={\frac {5}{12}}}
+
+
+∬DxdA=∫01dx∫x2x3dyx=∫01dxx(x1/3−x2)=528{\displaystyle \iint _{D}x{\mathrm {d} }A=\int _{0}^{1}{\mathrm {d} }x\int _{x^{2}}^{\sqrt{x}}{\mathrm {d} }y\,x=\int _{0}^{1}{\mathrm {d} }x\,x(x^{1/3}-x^{2})={\frac {5}{28}}}
+
+We could proceed in the same manner to find ∬DydA,{\displaystyle \iint _{D}y{\mathrm {d} }A,} but it would be simpler to rewrite the integral so that we evaluate the x{\displaystyle x} integral first. Notice how the bounds change. This comes from solving the bounds for x.{\displaystyle x.}
+
+
+∬DydA=∫01dy∫y3y1/2dxy=∫01dyy(y1/2−y3)=15{\displaystyle \iint _{D}y{\mathrm {d} }A=\int _{0}^{1}{\mathrm {d} }y\int _{y^{3}}^{y^{1/2}}{\mathrm {d} }x\,y=\int _{0}^{1}{\mathrm {d} }y\,y(y^{1/2}-y^{3})={\frac {1}{5}}}
+
+From these results, the centroid of this region follows.
+
+
+center of mass=(37,1225){\displaystyle {\text{center of mass}}=\left({\frac {3}{7}},{\frac {12}{25}}\right)}
+
+
+
+

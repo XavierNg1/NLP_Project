@@ -1,0 +1,16 @@
+ If you have PHP installed locally, you can use the Command Prompt or Terminal to check the version. This also works if you use SSH to create a remote connection to your server via the command line.
+
+
+Windows - Press ⊞ Win+R and type cmd.
+Mac - Open Terminal from the Utilities folder.
+Linux - Open Terminal from the dash, or by pressing Ctrl+Alt+T.
+ When you run the command, the installed version of PHP will be displayed.
+
+
+Windows, Mac, Linux - php -v
+
+
+, A common problem for Windows users is PHP not being included in the system path, resulting in the message ‘php.exe’ is not recognized as an internal or external command, operable program or batch file.Find the location of your php.exe file. This is usually C:\php\php.exe, but you may have changed this during installation.
+Type set PATH=%PATH%;C:\php\php.exe and press ↵ Enter. Change the actual location if yours is different.
+Run php -v again. You should now be able to see the version number.
+

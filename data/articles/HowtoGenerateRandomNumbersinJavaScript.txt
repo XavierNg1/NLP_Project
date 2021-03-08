@@ -1,0 +1,17 @@
+ Open a <script> tag in the body and simply try alert() on the value of Math.random(). Basically, alert(Math.random()) and then save the page as an .html file for ease of use.;
+, Then enjoy the mass of pseudo-random digits you have created! Useful, right? Maybe not so what's next?
+
+, At this point you need to choose a value for the highest point in your range. The number generated will not go above this point. Let's go with 7 for the purpose of this article. All you do now is multiply your generated random number by your desired high point. So; Math.random() * 7 essentially. alert() the output and take a look.
+ If only life were that simple. Fortunately, JavaScript provides another useful method of the Math object called floor(). This method rounds the number down to the nearest whole number. Notice the emphasis on down. Even if the value is above .5, floor() will still lower it. The line in your script should now look something like Math.floor(Math.random() * 6). Once again, check your output using alert() or similar. Try it a few times. You will get a range of 0-6; but what if we wanted 1-7?
+
+
+
+
+
+, Now it's time to set a lower limit to our range. You do this simply by adding onto zero to bring you to your desired lowest point. To show this clearly, we can change our old 0-6 script into the 1-7 script we've always dreamt of; Math.floor(Math.random() * 6 + 1). You don't need any extra brackets because multiplication is always performed before addition. As we've done before, check how it went. The full line, if you've been following the example, should look like this: alert(Math.floor(Math.random() * 6 + 1));. It looks confusing but hopefully it isn't so much now.
+ As a final example, if you were looking to create a range of 3-9 for a script, you would multiply the result of Math.random() by 7. Once you've given it the old Math.floor() treatment you can add 3 on (remember, count up from zero) and voila!
+
+
+
+
+

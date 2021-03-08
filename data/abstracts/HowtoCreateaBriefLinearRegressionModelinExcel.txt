@@ -1,0 +1,23 @@
+
+Open a new workbook in Excel and make 3 worksheets: Data, Chart, and Saves.
+Set Preferences: Open Preferences in the Excel menu.Select between the 1 and the A in the top left worksheet corner to select the entire sheet and do Format Cells Alignment Horizontal Center and Font Size 9 or 10, or whatever you're comfortable with viewing.
+Enter the column headers in row 1: B1: X; C1: Y; D1: X. E1: Y F1: Y.
+Edit Go To cell range A3: A22, enter 1, and do Edit Fill Series Columns Linear Step Value 1 OK, There are 20 students who want to know the Trend of their Dependent GPAs given the Independent Variable of the SAT Exam score when entering a new college, i.e.
+Enter the data to answer this question.
+Select cell A23 and enter MEAN.
+Edit Go To cell range D3:D22 and with cell D3 the active and high-lighted cell, enter w/o quotes the formula "=(B3-X_BAR)^2" and Edit Fill Down.
+Select cell D23 and enter w/o quotes the formula "=SUM(D3:D22)/(20-1)" and copy it and paste it to cell E23.
+Select cell A25 and enter STD DEV.
+Select cell A27 and enter FORECAST and select cell B27 and enter w/o quotes the formula "=STDEVPA(B3:B22)" which is an array formula so you must press CONTROL+ SHIFT+ENTER to properly enter the array formula with brackets.Edit Go To cell range F3:F22 and input the formula w/o quotes "=TREND(C3:C22,B3:B22,,TRUE)" which is an array formula so you must press CONTROL+ SHIFT+ENTER to properly enter the array formula with brackets.That is the projection of the Student Population's GPA's given their prior performance.
+Edit Go To cell range G3:G22 and with G3 the active high-lighted cell, enter the formula w/o quotes "=F3-C3" and Edit Fill Down.
+Create the chart (dependent on the tutorial data above).
+Locate the data marker for the Mean at {1143.75,2.755} which will read "Series 1 Point 1143.75" (1143.75, 2.8) when you're hovering over it or have clicked on it.
+Return to the Data worksheet to figure out the Regression Line of Y' = mX + b, where m = the slope and b = the y-intercept.
+Select cell G1 and enter Y.Select cell H23 and enter the formula w/o quotes "=SUM(H3:H22)" and Format Cells Border Black bold Outline and copy it to I23.
+Select cell H24 and enter m and do Format Cells Font Color Red.
+Copy cell H25 and paste it to cell I26 and enter into I26 Y' - mX + b.
+Edit copy cell I26 to cell range H29:I29.
+Activate the Chart worksheet and click in the chart and in the menu, do Chart Add Data and in response to the range query, go back to the Data worksheet and select cell range H30:I31.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

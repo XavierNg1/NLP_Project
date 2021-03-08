@@ -1,0 +1,15 @@
+ To do that, you need to use the same procedure as in the Windows 7.
+
+
+Press the Windows key to get into the Metro interface if you are not already there.
+Enter CMD and right-click on the Command Prompt result that should appear. This opens a list of options at the bottom.
+Select Run as administrator there.
+Accept the UAC prompt.
+Enter the following command to enable the hidden administrator account:
+
+net user administrator /active:yes
+
+
+
+, Note that the account has not assigned a password to it, and that you should consider setting one to improve account security.
+

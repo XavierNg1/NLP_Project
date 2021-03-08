@@ -1,0 +1,13 @@
+, Three miles is five kilometers, five miles is eight kilometers, eight miles is 13 kilometers. It's not perfect, eight miles is actually 12.875 kilometers, but it's close enough in a pinch for an approximate equivalent.
+ Okay, it's a number that's not seen in the Fibonacci sequence, but you can just break up your miles as a sum of Fibonacci numbers, then convert each of those to kilometers, and add those kilometer answers -- odd but true. It works.
+
+
+Break 100, for example, into a sum: 89 + 8 + 3, each must be a number of our Fibonacci list as was stated.
+Add their conversion as the next numbers for each which are the 144, 13, and 5, which add up to 162. Ah ha: 100 miles or mph (miles per hour) is actually more nearly equal to 160.9344km or kmph (kilometer per hour). Again, that's close enough for personal use, driving and traveling.
+ Write that conversion factor down and keep it -- or forget it (maybe look it up each time).
+ Break 60 miles, for example, into 55 + 5, each is a number in our Fibonacci list as was stated.
+
+
+Add their conversion as the next numbers for each which are the 89 and 8, which add up to 97. 60 miles (or miles per hour) is actually equal to approximately 96.56km or kmph, close enough; as you see, it works.
+ Start as explained next, and look at adjacent pairs (side-by-side). Add each adjacent pair in 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233,… (Those "overlapping," growing pairings consecutively are created by using 0,1; 1,1; 1,2; 2,3; 3,5; 5,8; ... See, that is the "overlapping," growing pattern can be stated as a,b; b,c; c,d; d,e; e,f...). Now you begin by adding 0 and 1; so that, in the list, you get the next member 0+1=1, then get 1+1=2, and 1+2=3, next 2+3=5, also 3+5=8 and 5+8=13, and so on. The number after 144 is 233 from the pair 89, 144; 89+144=233, and next is 144+233=___?, then that number that you get is used 233+___?= the next member, etc.
+

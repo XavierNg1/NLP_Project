@@ -1,0 +1,51 @@
+ Open Notepad to create a fresh web page and write the following code:;
+, The file is blank at the moment, but you can see that its title is Questionnaire.
+ HTML form tags are used to send the data to server. All our questions will be enclosed inside the <form> tags.
+
+
+
+There are 3 main attributes we will use for the form tag:
+
+
+Action - allows you to tell the form where to go once submitted (usually the file name of a script which will read and process the form data which has been submitted).
+
+Name - it's usually a good idea to give your forms a name, this is used to uniquely identify your form on a given page.
+
+Method - the value of this should be POST This tells the form how to send the data once submitted.
+ In this example it will be First Name Last Name box. Add the following code:
+
+
+We have used an <input> element here. It is used to collect user information. There are few types of <input> elements - text field, check box, password, radio button, submit button, which will be used further down in this example.
+'br' tag creates a line break on your webpage, since HTML by itself doesn't recognize white space
+This code will produce:
+
+, They allow the user to choose only one option.
+
+
+This code will produce:
+
+, Unlike the radio buttons, they allow to select more than one option.
+
+
+This code will produce:
+
+, This type allows visitors to pick option from the list.
+
+
+We have done use by adding <select> tag and <option> tags for every position in our drop down list.
+This code will produce:
+
+,
+
+
+We have done use by adding <Textarea> tag, which is a multiple-line text box suitable to take larger blocks of text.
+This code will produce:
+
+,
+
+
+The value attribute of your submit button contains the button text that will be displayed.
+This code will produce:
+
+, Your simple questionnaire should be displayed in the following form:
+

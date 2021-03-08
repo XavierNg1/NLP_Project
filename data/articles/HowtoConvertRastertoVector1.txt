@@ -1,0 +1,25 @@
+ If you don't want to download software and just need to quickly convert simple raster images into vector, you can use an auto-tracing website that will create a vector image automatically. You will be able to adjust settings and even perform edits before saving the new vector image.
+
+
+One of the most popular sites is VectorMagic, but you only get two free conversions when you create an account. Further conversions will require a subscription.
+There are free sites available, but you may not have enough options to create a suitable vector image. If you have a lot of conversions to do, see the next section for instructions on using free open-source software.;
+, Vector images work best for simple designs and logos with a few colors. You will not get good results if you try to convert a photograph to a vector image. Sites like VectorMagic support JPG, BMP, PNG, and GIF files.
+
+
+For the best result, the image should have some blending and anti-aliasing. You'll be able to tell when you zoom into the image, as the edges will have pixels of softer colors to give it a more rounded look. Blended edges help the tracing program get better results. Most digital images will have blending, but you may run into issues when vectorizing pixel art, as this will result in a very jagged final product.
+ When you first upload the image to VectorMagic, it will perform an initial trace of the picture. This process may take a few minutes to complete.
+ When it's finished, the original image will be displayed on the left, and the vectorized image will be displayed on the right. You can click and hold the "Bitmap" button to see the original overlaid the vectored image. If you're lucky, the first pass could come out perfect!
+
+, VectorMagic will automatically identify the type of image and apply what it feels is the best vector tracing process. You can override these settings by clicking the "Hand-pick settings" option.
+
+
+You can select the type of image, which will affect how VectorMagic processes the trace. You'll be asked to select the quality level of the original image, as well as the color range. Select a custom color palette to reduce errors caused by small changes in color of the original image.
+When selecting a custom palette, choose as few colors as possible to get the cleanest result.
+ If you're using VectorMagic, you can switch to editing mode, which allows you to make manual edits to the segmentation so that the vector comes out clearer. "Segmentation" is the process of breaking the image into distinct parts which are then smoothed and turned into vectors. Click the "Edit Result" button to open the editor.
+ Click the "Finder" button to identify areas of the image that the tracer had difficulties with. You can then manually edit these areas so that they processed better during the trace., Look for two different segments of an image that are connected by a pixel. These connections will result in a pinching effect when the bitmap is traced. Use the Pixel tool to erase the connecting pixel.
+
+
+The Color tool will allow you to select specific colors to use with the Pixel and Fill tools.
+ Anti-aliasing is fine in the original bitmap, but it shouldn't be present in the segmentation. The Zap tool will split the aliased part into a separate segment and then merge it with the other segments to create a solid piece.
+ Click the "Next" button to process your edits. If you are happy with the output, you can click the "Download Result" button to download the image as an SVG file. With VectorMagic, you can download your first two images for free when you create an account.
+

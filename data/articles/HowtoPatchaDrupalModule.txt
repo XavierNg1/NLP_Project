@@ -1,0 +1,8 @@
+ Most patches are posted in issue queues of contributed modules. So to find a patch, go to the module's page on Drupal.org, and click "Open issues". Then on that page, find an issue that matches the issue you're having, and click on it to go to it. Then in that issue queue, look for a patch that someone else has submitted that he / she says fixes the issue.;
+, The developers creating patches should generally run Drupal's code tests to make sure that their patch doesn't break any part of the Drupal code. You should see something like "PHP 7 & MySQL 5.5, D8.2 39 pass", indicating that the module still passed its tests with the new patch.
+ The patch is basically a text file. You should download the file, and place it in the "root directory" of the module that the patch is for. For example, if its a patch for the Context module, you would place the patch file in "sites/all/modules/context".
+ Open your terminal, and navigate to the module's root directory (as described in the previous step). If you have Git installed, you can use git's apply command: type in: "git apply -v path/file.patch". If you don't want to use Git, you can use the patch command: type in "patch -p1 < path/file.patch"
+
+, If you didn't see any error message when applying the patch, the bug should now be fixed. You should check that the issue no longer happens in your website.
+ In the module's issue queue where you found the patch, you should help the community by adding a message to say that you had the issue and the patch fixed it.
+

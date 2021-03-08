@@ -1,0 +1,19 @@
+ You can get the language files you need from the WordPress in Your Language web page. The file will have a name such as in the following example: fr_FR.mo.
+
+
+The first two small characters (‘fr’ for French) refer to the the ISO-639 language code. This is followed by the ISO-3166 country code (_FR for France in the example). So, the French .mo file would be called fr_FR.mo.
+ Once you have downloaded the correct /mo file to your computer, copy it to your server in the directory ‘wp-content/languages’. You will probably need to create the ‘languages’ directory if you installed WordPress in English.
+ In the root directory of your WordPress installation is a file named ‘wp-config.php’. This file includes all of the setting to allow you to connect to the database and manage a few other items. Download the file and open it up in your Text Editor application.
+ Inside the ‘wp-config.php’ file, you will see the following lines:
+
+
+
+define ('WPLANG', );
+
+You will need to change this to use the file you just copied to your server. If using the example for French above, you would edit the like to look like the following:
+
+
+define ('WPLANG', 'fr_FR');
+
+, Your blog should now be displayed in the language you desired.
+

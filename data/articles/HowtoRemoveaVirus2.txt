@@ -1,0 +1,38 @@
+ Autoruns is a program from Microsoft TechNet that allows you to see exactly what is starting up each time your computer boots. This will give you the clearest possible picture about what is currently operating on your computer.
+
+
+After downloading, extract the program to an easy to access spot, such as C:\Autoruns.
+Run the program before continuing to get a feel for how it is laid out, and to see how it displays the services and programs that are starting up with Windows. It's a pretty daunting display at first, but you will only need to focus on a few areas later on.
+ In order to make it easier to find infected entries, you will want to disable reporting of certain signed Microsoft services, and include locations that might not normally be checked. Click the Options menu and then select Filter Options. Check the following boxes:
+
+
+Include empty locations
+Verify code signatures
+Hide signed Microsoft entries
+
+, Since most viruses attach themselves to startup services, deleting the service while the virus is running will allow it to recreate the entry in your registry. Safe Mode will only load essential startup services, allowing you to safely disable infected ones.
+
+
+Rebooting into "Safe Mode with Networking" as opposed to "Safe Mode" will allow you to use the internet to look up the programs that are starting with your computer.
+ Once you have entered Safe Mode, start the Autoruns program. Double-check that your Filter Options are set correctly. Wait for the scan to finish, which may take a few moments.
+ This will be the most tedious part of the process, as you'll want to look up any suspicious entry online to see if the process is legitimate or not. You will need to pay attention to both the entry's name and the file location.
+
+
+There are a variety of process identifiers online that can tell you exactly what the process is and if it's a potential threat. Some popular databases include Process Library, Bleeping Computer, and File.net.
+Focus on the Logon and Services tabs. There are a variety of tabs that help filter information for you, but most of the time you'll find what you're looking for in the Logon and Services tabs. You shouldn't ignore the others, though, as some viruses will be reported in other areas.
+Take your time when investigating processes. Disabling real processes can keep Windows from loading properly, so triple-check each process before you mark it for removal.
+Record the file location of each offending entry before you remove it. You will need to locate these files later to delete them.
+ Once you've identified entries that are infected, you can delete the first one by right-clicking on it and selecting Delete. This will remove the entry from your startup process, but doesn't delete any of the infected files.
+
+
+Delete entries one at a time, delete the associated files, and then repeat for the next entry. This will help to ensure that you don't forget to remove files from your computer.
+ Open Windows Explorer and navigate to the location that was associated with the startup entry. If you can't see the files, you may need to reveal hidden files.
+
+
+Repeat the entry and file removal steps for each entry you need to get rid of.
+ Once you have finished removing each of the entries and all of the infected files, you can reboot your computer normally, allowing all the remaining processes to start. This should eliminate the majority of common virus infections. If you are still infected, see the next step.
+ If you can't seem to get rid of the infection, reinstalling Windows may be your best bet. Although it seems like an extreme step, it is actually usually faster to reinstall than to continue trying to troubleshoot a stubborn infection, and much cheaper than taking your computer to a professional. Chances are you use fewer programs than you might think, making your reinstallation time even quicker.
+
+
+Reinstalling will wipe your hard drive clean, removing virtually any virus infection.
+Before reinstalling, make sure that you have all of your important data backed up and your Windows key handy. You may also want to put the installers of all your essential programs such as browser and antivirus onto a USB drive for easy access after the Windows reinstallation is complete.

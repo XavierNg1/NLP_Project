@@ -1,0 +1,14 @@
+
+Open Internet Time Synchronization.
+Open the Registry Editor.
+Navigate to HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\services\W32Time\TimeProviders\NtpClient.
+Right click on the SpecialPollInterval key, then click Modify.
+
+,
+Convert your desired time to seconds.
+Click Decimal.
+Close the Registry Editor.
+
+,
+Open Date and Time Settings.
+Confirm your new synchronization interval works.

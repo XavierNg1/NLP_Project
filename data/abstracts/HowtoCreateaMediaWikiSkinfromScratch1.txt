@@ -1,0 +1,5 @@
+
+Create the basic file structure for your new skin.
+Add the initialization code as listed below in the "Initialization Code" sub-section of this article.Add the "Category List Fix" code as listed in the corresponding subsection below.Define the execute() function, which will be called to output the pages' contents to client browsers.
+Declare the global variable $wgUser in the execute() function and use its getSkin() method to obtain a $skin variable/object.
+Start adding code (both PHP and XHTML) to render pages in your wiki.

@@ -1,0 +1,122 @@
+
+
+
+∮SE⋅dS=Qϵ0{\displaystyle \oint _{S}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {S} }={\frac {Q}{\epsilon _{0}}}}
+;
+,
+
+
+∮SE⋅dS=∫Vρϵ0dV{\displaystyle \oint _{S}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {S} }=\int _{V}{\frac {\rho }{\epsilon _{0}}}{\mathrm {d} }V}
+
+
+, The divergence theorem says that the flux penetrating a closed surface S{\displaystyle S} that bounds a volume V{\displaystyle V} is equal to the divergence of the field F{\displaystyle {\mathbf {F} }} inside the volume.
+
+
+∮SF⋅dS=∫V(∇⋅F)dV{\displaystyle \oint _{S}{\mathbf {F} }\cdot {\mathrm {d} }{\mathbf {S} }=\int _{V}(\nabla \cdot {\mathbf {F} }){\mathrm {d} }V}
+
+
+,
+
+
+∫V(∇⋅E)dV=∫Vρϵ0dV{\displaystyle \int _{V}(\nabla \cdot {\mathbf {E} }){\mathrm {d} }V=\int _{V}{\frac {\rho }{\epsilon _{0}}}{\mathrm {d} }V}
+
+
+,
+
+
+∫V(∇⋅E)dV−∫Vρϵ0dV=0∫V(∇⋅E−ρϵ0)dV=0{\displaystyle {\begin{aligned}\int _{V}(\nabla \cdot {\mathbf {E} }){\mathrm {d} }V-\int _{V}{\frac {\rho }{\epsilon _{0}}}{\mathrm {d} }V&=0\\\int _{V}\left(\nabla \cdot {\mathbf {E} }-{\frac {\rho }{\epsilon _{0}}}\right){\mathrm {d} }V&=0\end{aligned}}}
+
+
+,
+
+The above equation says that the integral of a quantity is 0. Because the only quantity for which the integral is 0, is 0 itself, the expression in the integrand can be set to 0.
+
+
+∇⋅E−ρϵ0=0{\displaystyle \nabla \cdot {\mathbf {E} }-{\frac {\rho }{\epsilon _{0}}}=0}
+
+
+
+This leads to Gauss' law in differential form.
+
+
+∇⋅E=ρϵ0{\displaystyle \nabla \cdot {\mathbf {E} }={\frac {\rho }{\epsilon _{0}}}}
+
+
+
+
+,
+
+
+∮SB⋅dS=0{\displaystyle \oint _{S}{\mathbf {B} }\cdot {\mathrm {d} }{\mathbf {S} }=0}
+
+
+,
+
+
+∫V(∇⋅B)dV=0{\displaystyle \int _{V}(\nabla \cdot {\mathbf {B} }){\mathrm {d} }V=0}
+
+
+,
+
+As with Gauss' Law, the same argument used above yields our answer.
+
+
+∇⋅B=0{\displaystyle \nabla \cdot {\mathbf {B} }=0}
+
+
+
+
+, 
+
+
+∮CE⋅dl=−ddt∫SB⋅dS{\displaystyle \oint _{C}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {l} }=-{\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{S}{\mathbf {B} }\cdot {\mathrm {d} }{\mathbf {S} }}
+
+
+, Stokes' theorem says that the circulation of a field F{\displaystyle {\mathbf {F} }} around the loop C{\displaystyle C} that bounds a surface S{\displaystyle S} is equal to the flux of curlF{\displaystyle \operatorname {curl} {\mathbf {F} }} over S.{\displaystyle S.}
+
+
+∮CF⋅dl=∫S(∇×F)⋅dS{\displaystyle \oint _{C}{\mathbf {F} }\cdot {\mathrm {d} }{\mathbf {l} }=\int _{S}(\nabla \times {\mathbf {F} })\cdot {\mathrm {d} }{\mathbf {S} }}
+
+
+,
+
+
+∫S(∇×E)⋅dS=−ddt∫SB⋅dS{\displaystyle \int _{S}(\nabla \times {\mathbf {E} })\cdot {\mathrm {d} }{\mathbf {S} }=-{\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{S}{\mathbf {B} }\cdot {\mathrm {d} }{\mathbf {S} }}
+
+
+,
+
+
+∫S(∇×E)⋅dS+ddt∫SB⋅dS=0∫S(∇×E+∂B∂t)⋅dS=0{\displaystyle {\begin{aligned}\int _{S}(\nabla \times {\mathbf {E} })\cdot {\mathrm {d} }{\mathbf {S} }+{\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{S}{\mathbf {B} }\cdot {\mathrm {d} }{\mathbf {S} }&=0\\\int _{S}\left(\nabla \times {\mathbf {E} }+{\frac {\partial {\mathbf {B} }}{\partial t}}\right)\cdot {\mathrm {d} }{\mathbf {S} }&=0\end{aligned}}}
+
+
+,
+
+
+∇×E+∂B∂t=0∇×E=−∂B∂t{\displaystyle {\begin{aligned}\nabla &\times {\mathbf {E} }+{\frac {\partial {\mathbf {B} }}{\partial t}}=0\\\nabla &\times {\mathbf {E} }=-{\frac {\partial {\mathbf {B} }}{\partial t}}\end{aligned}}}
+
+
+,
+
+
+∮CB⋅dl=μ0∫SJ⋅dS+μ0ϵ0ddt∫SE⋅dS{\displaystyle \oint _{C}{\mathbf {B} }\cdot {\mathrm {d} }{\mathbf {l} }=\mu _{0}\int _{S}{\mathbf {J} }\cdot {\mathrm {d} }{\mathbf {S} }+\mu _{0}\epsilon _{0}{\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{S}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {S} }}
+
+
+,
+
+
+∫S(∇×B)⋅dS=μ0∫SJ⋅dS+μ0ϵ0ddt∫SE⋅dS{\displaystyle \int _{S}(\nabla \times {\mathbf {B} })\cdot {\mathrm {d} }{\mathbf {S} }=\mu _{0}\int _{S}{\mathbf {J} }\cdot {\mathrm {d} }{\mathbf {S} }+\mu _{0}\epsilon _{0}{\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{S}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {S} }}
+
+
+,
+
+
+∫S(∇×B)⋅dS−μ0∫SJ⋅dS−μ0ϵ0ddt∫SE⋅dS=0∫S(∇×B−μ0J−μ0ϵ0∂E∂t)⋅dS=0{\displaystyle {\begin{aligned}\int _{S}(\nabla \times {\mathbf {B} })\cdot {\mathrm {d} }{\mathbf {S} }-\mu _{0}\int _{S}{\mathbf {J} }\cdot {\mathrm {d} }{\mathbf {S} }-\mu _{0}\epsilon _{0}{\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{S}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {S} }&=0\\\int _{S}\left(\nabla \times {\mathbf {B} }-\mu _{0}{\mathbf {J} }-\mu _{0}\epsilon _{0}{\frac {\partial {\mathbf {E} }}{\partial t}}\right)\cdot {\mathrm {d} }{\mathbf {S} }&=0\end{aligned}}}
+
+
+,
+
+
+∇×B−μ0J−μ0ϵ0∂E∂t=0∇×B=μ0J+μ0ϵ0∂E∂t{\displaystyle {\begin{aligned}\nabla &\times {\mathbf {B} }-\mu _{0}{\mathbf {J} }-\mu _{0}\epsilon _{0}{\frac {\partial {\mathbf {E} }}{\partial t}}=0\\\nabla &\times {\mathbf {B} }=\mu _{0}{\mathbf {J} }+\mu _{0}\epsilon _{0}{\frac {\partial {\mathbf {E} }}{\partial t}}\end{aligned}}}
+
+

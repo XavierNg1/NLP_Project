@@ -1,0 +1,30 @@
+ The files are downloaded as a single archive file. You can find the mod files on a variety of Minecraft mod databases, including MinecraftDL, Minecraft Forum, and MinecraftMods.
+
+
+Be sure to download the Non-Forge version when downloading the mod.
+ The quickest way to get the mod installed on the Mac is through a little Terminal work. Don't worry, it's not too complicated and will only take a moment. You can find the Terminal in the Utilities subfolder in the Applications folder. Enter in the following commands in the order listed, leaving the Terminal open when you're finished:
+
+
+cd ~
+mkdir mctmp
+cd mctmp
+jar xf ~/Library/Application\ Support/minecraft/bin/minecraft.jar
+
+, Using the Finder navigate to the "mctmp" folder you created in the Terminal. This should be located in your Users folder.
+ Open the Too Many Items archive file that you download. Select all of the files inside and copy them to the mctmp folder. You can do this by highlighting them all and dragging them to the new folder.
+ Go back to the Terminal window and enter in the following commands to complete the installation:
+
+
+rm META-INF/MOJANG_C.*
+jar uf ~/Library/Application\ Support/minecraft/bin/minecraft.jar ./
+cd ..
+rm -rf mctmp
+
+, Too many items has now been installed, and should load as soon as you start your game of Minecraft. You can use the mod to your heart's content now!, The Too Many Items mod changing Minecraft in a lot of significant ways, from creative building benefits to survival help. Learning how to use the different tools available can give Minecraft an entirely different feel.
+
+
+Toggle the Too Many Items toolbar. As you are playing, you can toggle the toolbar on and off by pressing O. The toolbar is located in the upper-right corner, and normally appears when you open your inventory.
+Add items to your inventory. When you open your inventory, the Too Many Items menu will appear, which will allow you to select every item in the game. You can add a stack of any of these items to your inventory by clicking on them. If you hold the ⇧ Shift key while clicking an item, an infinite stack of that item will be added to your inventory. Right-clicking an item in the menu will add a single one to your inventory.
+Switch between Survival and Creative mode. You can use Too Many Items to quickly switch between the two main modes of Minecraft instantly. Simply press the C key to switch any time.
+Adjust the environment around you. The Too Many Items toolbar allows you to instantly change the world around you, including time of day, weather, and even enemy difficulty. You can also restore your Health and Hunger with the click of a button.
+Craft faster. Too Many Items allows you to speed up the crafting process by instantly creating the maximum number of items dictated by the number of items you put in to the recipe. Right-click on the crafting output square to perform instant crafting.

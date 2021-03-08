@@ -1,0 +1,31 @@
+ Open a new browser tab or window and enter “Apache Tomcat 7 download” in the address bar. Hit the Enter key to view the search results. Select the first link in the results from the official Apache Tomcat page.
+
+
+Tomcat 7 is the latest version, though you can select earlier versions from the left menu panel on the download page.;
+, Go down the page to find the “Binary distribution” folder under the “7.0.62” heading. In the folder, locate “Binary Distribution/Core” heading and click the “Zip” link to download the installer. #* The unitary file size of the zip package is around 8MB.
+ Go to the “Download” folder of your computer and unzip the file with WinZip or WinRAR, or whatever unzipping program you have. Avoid unzipping the folder to the desktop, as you will find the path of the software files hard to locate later. The best option will be to unzip to “E:\myserver.” The unzipped directory will be “E:\myserver\tomcat-.0.62.”
+
+, Check the installed directory to ensure it contains all the sub folders (bin, logs, webapps, work, temp, conf, and lib). These are the required subfolders for installing the server. If any of the folder is missing, download the zip file again.
+ After checking the directory, you should create an environment variable called “JAVA_HOME.” To do this, go to Start >> Control Panel >> System >> Advanced System Settings. After reaching it, click the “Advanced” tab, then click Environment Variables >> System Variables.
+
+
+Select the “New” button in the System Variables menu. In the “Variable name” field, enter “JAVA_HOME.” Enter “c:\Program Files\Java\jdk1.7.0_{xx}” in the “Variable value” field. (Variable value is nothing but the JDK directory, you can always find this in program files.)
+
+, To make sure that it’s working correctly, start a command shell and issue: set JAVA_HOME. To open the command shell, click the “Start” button and then “All Programs”. Type the following in the command prompt, “set JAVA_HOME = C:\Program Files\Java\jdk1.6.0_06” and press enter. The JAVA_HOME is set. Type the following in the command prompt, “set JAVA_HOME = C:\Program Files\Java\jdk1.6.0_06” and press enter. The JAVA_HOME is set.
+ At times, you may need to set JRE_HOME instead of JAVA_HOME, like errors when using Java. If this is the case, JRE should be used. Create JRE_HOME the same way you created Java, but remember that the JRE installed directory will be different (C:\Program Files\Java\jre7).
+ Locate the four configuration XML files of Tomcat in the “conf” sub-directory of the Tomcat directory (E:\myserver\tomcat7.0.40\conf). The four files should be context.xml, tomcat-users.xml, server.xml, and web.xml file.
+ Before proceeding, make a backup of the configuration files. Because of file permissions with your backup/restore, you don’t want to restore the server with different file permissions than what was there originally.
+
+
+To do this, go to Internet router >> Prompt, issue the Enable command by entering “Enable,” and provide the required password when prompted. A page will be displayed with your router settings. Entering “Enable” will change the prompt to Router#, which indicates that the router is now in privileged mode. Copy the running configuration file to the TFTP server.
+Afterwards, open the configuration file with a text editor, like Textpad or Notepad. Search for and remove any line that starts with “AAA.” Copy the configuration file from the TFTP server to a new router in privileged (enable) mode, which has a basic configuration.
+ Open the configuration file “web.xml” in a text editor, and change the directory listing by changing “listings” from “false” to “true” for the “default” servlet.
+ Open the configuration file “server.xml” in a text editor. The default port number of Tomcat is 8080. Now you need to change this, since the same port number can be used by other servers like SQL Server. You may choose any number between 1024 and 65535.
+ Open the configuration file “context.xml” in a text editor. Here, set reloadable=“true” to the <Context> element to enable automatic reload after the code changes.
+ Launch the command prompt in Windows 7. Once launched, set the current directory to “<TOMCAT_HOME>\bin”. For example, E:\myserver\tomcat7.0.40\bin, and run “startup.bat”.
+
+
+When you first start the command prompt, you will be located in your personal directory. This is typically C:\Users\username\. With the basic navigation commands, you can set the directory as specified in the above step.
+ This will direct you to a new console window of the server. Read the messages that appear on the console. Look out for the Tomcat’s port number and double-check.
+ Open any web browser on your Windows and then enter the URL “http://localhost:9999”. This will direct you to the Tomcat server’s welcome page. Once you are directed to the server page, you are almost done. Now try the URL “http://localhost:9999/examples” to view JSP and servlet examples.
+ To do this, press Ctrl + C in the Tomcat console.

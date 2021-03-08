@@ -1,0 +1,14 @@
+,,
+
+
+The -k flag keeps the command prompt window open after the command is run. You can remove the flag if you prefer the window closes right away.
+, Whatever command you type after %comspec% /k is the one that will run when you double-click this shortcut. For example:%comspec% /k ping www.google.com will ping www.google.com when you double-click the shortcut.
+
+%comspec% /k sfc scannow will scan all protected system files when you double-click the shortcut.
+, This is the text that will appear under the icon.
+
+
+For example, if the shortcut pings Google, you could type ping google.
+ The shortcut is now on your desktop.
+ The command prompt window will appear, and you’ll see your command running.
+

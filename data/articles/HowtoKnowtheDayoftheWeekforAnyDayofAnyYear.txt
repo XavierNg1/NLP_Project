@@ -1,0 +1,36 @@
+ Take 22nd October 2010, for example. For date 22 base number is 1, for October also it is 1, for year 10 it is 4. For the century it is 21 divided by 4 and the remainder is 1, and the basic number for that is 6. These all add up to 12.
+
+
+Basic number 0 for -- Dates -- 07, 14, 21, 28; -- Months-- April, July; -- Years --01, 07, 18, 24, 29, 35, 46, 52, 57, 63, 74, 80, 85, 91; -- Remainder -- 0.
+Basic number 1 for - Dates -- 01, 08, 15, 22, 29; -- Months --January, October; -- Years -- 02, 08, 13, 19, 30, 36, 41, 47, 58, 64, 69, 75, 86, 92, 97.
+Basic Number 2 for -- Dates -- 02, 09, 16, 23, 30; -- Month -- May; -- Years -- 03, 14, 20, 25, 31, 42, 48, 53, 59, 70, 76, 81, 87, 98; --Remainder -- 3.
+Basic number 3 for - Dates -- 03, 10, 17, 24, 31; -- Month -- August; -- Years --04, 09, 15, 26, 32, 37, 43, 54, 60, 65, 71, 82, 88, 93, 99.
+Basic number 4 for -- Dates -- 04, 11, 18, 25; -- Months -- February, March, November; -- Years --10, 16, 21, 27, 38, 44, 49, 55, 66, 72, 77, 83, 94, 00; -- Remainder -- 2.
+Basic number 5 for -- Dates -- 05, 12, 19, 26; -- Month -- June; -- Years -- 05, 11, 22, 28, 33, 39, 50, 56, 61, 67, 78, 84, 89, 95. . -
+Basic number 6 for -- Dates -- 06, 13, 20, 27; -- Months -- September, December; -- Years -- 06, 12, 17, 23, 34, 40, 45, 51, 62, 68, 73, 79, 90, 96; -- Remainder -- 1.
+In leap years add ‘1’ in months March to December.
+For years ‘00’ leap year only if the century divides exactly by 4, i.e. remainder is 0.
+ If remainder is 0 – Sunday; 1 – Monday; 2 – Tuesday; 3 – Wednesday; 4 -Thursday; 5 – Friday; 6 – Saturday. Examples:
+
+
+1.1.2007 ---- 1 + 1 + 0 + 6 + 0 = 8, remainder after dividing by 7 is 1 so it is Monday.
+9.3.2008 ---- 2 + 4 + 1 + 6 + 1 = 14, remainder after dividing by 7 is 0 so it is Sunday.
+31.12.2000 ----- 3 + 6 + 4 + 0 + 1 = 14, remainder after dividing by 7 is 0 so it is Sunday.
+1.1.2001 ----1 + 1 + 0 + 6 + 0 = 8, remainder after dividing by 7 is 1 so it is Monday.
+21.11.1763 ---- 0 + 4 + 0 + 4 + 0 = 8, remainder after dividing by 7 is 1 so it is Monday.
+1.3.1848 ---- 1+ 4 + 2 + 2 + 1 = 10, remainder after dividing by 7 is 3 so it is Wednesday.
+2.1.1976 ---- 2 + 1 + 2 + 0 + 0 = 5, remainder after dividing by 7 is 5 so it is Friday.
+25.6.2492 ---- 4 + 5 + 1 + 6 + 1 = 17, remainder after dividing by 7 is 3 so it is Wednesday.
+13.11.4567 ---- 4 + 4 + 5 + 4 + 0 = 17 remainder after dividing by 7 is 3 so it is Wednesday.
+ Our ancestors, as such relied on the Sun and moon for their measurement of TIME.;
+, The coming of the full Moon periodically was a second measure of time. The changing seasons and their recurrence was a third measure of time. Different Nations had their own notions of measurement of time, but the most prevalent one today is the Gregorian Calendar, which has taken its definition of a year from the time taken by the Earth to revolve once round the Sun and each minute consisting of 60 seconds.
+ The number of months had their origin from the number of Gods in ancient Greek mythology. These months were further sub-divided into days, the day itself being measured by the time taken by the Earth to rotate once around its axis. The days were further sub-divided, in this conception of time, into 24 hours, each hour consisting of 60 minutes. For convenience, the days were grouped into what we call Weeks. Perhaps people wanted to take time off from their hard work and also wanted to keep aside some time for their spiritual well-being. The week thus came to be divided into seven days, Sunday being, generally, considered a day of rest and set aside amongst Christians for Mass Prayers. Other religions too have, in general, one day set aside for prayers.
+ A normal year consists of 365 days, with leap year having 366 days. This adjustment was, however, not enough and a further adjustment required that there should be no leap year every 100th year, but again every 400th year has to be a leap year to keep the timing in tune with the rotation of Earth.
+ From this arises the need for a perpetual calendar, which will meet the needs of people for all times to come.
+ If we start from 1st January of a particular year, we find that the day on 1st February will differ from the day in January by three. The day on 1st March, other than in Leap year, will be the same as on 1st February. The day on 1st April will be three more than that on March and so on. From this, we get the first clue for our calculations.
+ Therefore, 1st January of the next year will be different from the previous year by one, except in the leap year when it will differ by 2. This gives us the second clue for our calculations.
+ This, along with the fact that the year ‘00’ will be a leap year only once in four times, gives us our third and practically the final clue for our calculations.
+ Here is the final results. Let us assign one number to each day of the week for convenience, we will start with Sunday as number Zero, Monday as One and so on.
+,,, 1. 1901 to 31. 12. 2000 etc.------
+
+,

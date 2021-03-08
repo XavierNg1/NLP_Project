@@ -1,0 +1,22 @@
+
+Install Hyperic HQ.
+Run the installer: ./hyperic-hq-installer/setup.sh,
+Select the software you wish to install.Hit enter to choose the default installation path for the HQ Server.
+Enter the name of the name or ip of the smtp-server that HQ will use to send email messages.
+Install the HQ Agent.Open a second terminal and login as root and wait to be prompted to execute a script.Execute the following script sudo /tmp/hyperic-hq-installer/installer-3.1.0/data/hqdb/tune-os.sh,Close the second terminal when finished and return to the first terminal with paused installation.Hit enter to complete the installation process.
+Check that the install-log has been saved to /tmp/hyperic-hq-installer/installer-3.1.0/hq-install.log Note: Keep in mind that /tmp/ will be deleted if you shut down or reboot the system.Start The HQ Server with the following command /home/hyperic/server-3.1.0/bin/hq-server.sh start,
+The initial startup should look like this:
+
+Starting HQ server...
+Initializing HQ server configuration...Login to HQ at: http://127.0.0.1:7080/ Note: The first start will take more time as usual.
+Start The HQ Agent with the following command / home/hyperic/agent-3.1.0/hq-agent.sh start The initial startup should look like this:
+
+Starting agent
+- Unable to load agent token file.
+Enter the IP address for the HQ server.
+Determine if you want encrypted communication between the HQ Agent and the HQ server using SSL.
+Review the HQ Server Port.
+Enter the proper username and password that the HQ agent will need to communicate with the HQ server.
+Enter the IP address that the HQ server has to use to communicate with the HQ agent.
+Enter the port that the HQ server has to use to communicate with the HQ agent.
+Confirm the agent registered itself with the host.Access the HQ Server with a browser of your choice at http://127.0.0.1:7080 on the host-system, or using another computer, at http://%hostip%:7080.

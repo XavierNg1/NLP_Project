@@ -1,0 +1,32 @@
+ This can be found in the app drawer.;
+, This is located near the bottom of the menu and will take you to detailed device info.
+ Upon completion, you will see a popup message notifying you that developer options are now enabled.
+ You will now see “Developer Options” listed in the settings menu.
+ You will be taken to a list of developer and testing-specific tools.
+ This will allow ADB to communicate with your device properly.
+
+
+On some devices you may also see an option labeled “OEM Unlocking”. If you have this enable it as well., Go to https://developer.android.com/studio/index.html#downloads and scroll down to “Command Line Tools”. Select the installer for the platform you are using.
+
+
+If you want, you can download the entire Android Studio suite. It contains the tools you need but also includes a lot of extraneous features not necessary for this process.The Android Debug Bridge (ADB) is a shell that will allow you to communicate with your device via the command line to perform actions not normally accessible through the device interface.
+ Sometimes this can be acquired from the device manufacturer’s website. If you cannot access it you should try to use the universal ADB driver.
+ Make sure that your device is powered on or it will not be recognized by the computer.
+ Hit ⊞ Win+R and enter CMD (Windows) or open the Launchpad and search for “Terminal” (Mac). These programs allow you to access and run files using text commands.
+ Enter “cd” followed by a space, then the entire filepath leading to the “platform-tools” folder in your Android SDK folder.
+
+
+As a shortcut, you can open the location of the folder from your desktop, then drag and drop the “platform-tools” folder into the command line after typing “cd “. The filepath will automatically be copied into the command line window.
+The final result in the command line might look something like the following on windows: “cd C:\Users\\AppData\Local\Android\platform-tools”. Note that this path will vary depending on the location you chose when installing the Android SDK.
+ Hit ↵ Enter to activate the command. This will verify that ADB recognizes the connected device.
+
+
+If your device is having trouble being recognized, try uninstalling the USB driver, restarting the computer, and installing it again.
+ Hit ↵ Enter to activate the command. This command will force your device to reboot into fastboot. You will see a black screen with some text including the word “fastboot mode” when it is finished.
+ Hit ↵ Enter to activate the command. You will be prompted to verify your decision to unlock on your device.
+
+
+Remember, unlocking your bootloader will wipe your phone of any data stored on it. Make sure you have any files or information you want to save backed up.
+ This will confirm your choice to unlock the bootloader. After a moment you will see a message on the screen verifying a successful unlock.
+ Hit ↵ Enter to activate the command. This will boot your device back into the normal system mode. With your device unlocked, you can proceed to flash a custom ROM or root your device.
+

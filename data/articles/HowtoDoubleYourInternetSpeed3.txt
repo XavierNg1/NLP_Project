@@ -1,0 +1,4 @@
+ Go to run from the start menu, then type "Regedit". Windows Registry Editor is a tool you can use to modify the system registry, which is where where operational information for your computer is stored., You will have to dig through the "HKEY_LOCAL_MACHINE" registry hive to find the NameSpace folder.From the Registry Editor, select "HKEY_LOCAL_MACHINE", which contains information pertaining to your hardware.Within that hive, navigate through the following folders: Software → Microsoft → Windows → CurrentVersion → Explorer → Remote Computer → Namespace.
+ The NameSpace subfolder contains information that searches networked computers for scheduled tasks, which translates to longer load times spent browsing.You will find the value {D6277990-4C6A-11CF-8D87-00AA0060F5BF}.
+ Be sure you understand the ramifications when adjusting this value, but simply right clicking and deleting it from your NameSpace folder should increase your browser speed.
+

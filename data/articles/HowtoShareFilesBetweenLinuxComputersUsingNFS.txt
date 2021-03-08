@@ -1,0 +1,23 @@
+ If you need to share files with Windows or Mac computers, you will be much more successful using Samba.;
+, When sharing files with NFS, there are two side: the server and the clients. The server is the computer that is actually storing the files, while the clients are the computers that are accessing the shared folder by mounting the shared folder as a virtual drive. NFS will need to be configured on both the server and any client that wants to connect.
+ This is the computer that will be hosting the shared files. The server computer will need to be turned on and logged in in order for clients to mount the shared folder. NFS requires using the terminal to install and configure both the server and client.
+ This will begin downloading and installing the NFS files on your computer.
+ Select "No" from the menu that appears. This will enable other computers on the network to connect to your shared folder.
+ This will ensure that your changes take effect.
+ This is an empty directory that will direct the clients to the actual shared directory. This will allow you to change the shared directory on your server later without having to make any changes to the clients.
+
+
+Type .mkdir -p /export/dummyname and press ↵ Enter. This will create a directory named dummyname that the clients will see.
+ This will open the /etc/fstab file and allow you to automatically mount the shared drive whenever the server boots up.
+ Replace sharedpath with the location of the shared drive, and replace dummypath with the location of the dummy directory you created earlier.
+
+
+For example, to share the /dev/sdb drive with the clients using the dummy directory created earlier, you would type /dev/sdb /export/Shared none bind 0 0. Save the changes to the file.
+ You will need to add your dummy directory as well as the IPs that are allowed to access it to this file. Use the following format to share with all the IP addresses on your local network: /export/dummyname 192.168.1.1/24(rw,no_root_squash,async).,,,, You can name this whatever you'd like. For example, you can type mkdir /sharedFiles to create a folder called "sharedFiles".
+, Replace serverIP with the IP address of the NFS server computer. Replace sharedDirectory with the dummy directory you created on the NFS server and the local directory you just created. Leave the rest of the values as they are for now.
+
+
+Using the above examples, the line might look like: 192.168.1.5:/export/Shared /sharedFiles nfs rsize=8192,wsize=8192,timeo=14,intr.
+ The drive will automatically mount each time the computer reboots.
+ Type mount -a and then ls /sharedFiles to see if the shared files are displayed.
+ You should be able to enter the same settings and successfully connect.

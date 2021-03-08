@@ -1,0 +1,26 @@
+ Excel spreadsheets are highly recommended for writing basic test cases and for manually testing them.When you plan to automate test cases, then get the licensing for tools like Test Director. There are also a number of tools that can be downloaded freely on the Internet., This will allow you to keep track of the case and its related data.A good template includes:
+
+
+Serial Numbers: This is the test case count.
+Test Suite ID: This is the ID of the test suite to which this test case belongs.
+Test Case ID: The ID of the test case.
+Test Case Summary: The summary or goal of the test case.
+Related Requirement: The ID of the requirement this test case relates/traces to.
+Prerequisites: These are any prerequisites or preconditions that must be fulfilled before executing the test.
+Test Procedure/Steps: This is the step-by-step procedure to execute the test. Be very detailed and specific here as this is the most important component. Each step can be written very directly using key words such as "enter," "verify," "click", "login", etc.
+Expected Result: The anticipated result of the test. While writing test cases, note what page/screen you expect to appear after the test.You could also attach screenshots or specification documents to the relevant step and note that the system should work as outlined to help simplify the step and anticipated result and to make the process easier to follow for the tester.
+Actual Result: This is the result of the test after it is performed.
+Status: This is the status that will occur in the test, e.g. "Pass" or "fail". Other status can also be used, such a "Not Executed" if testing is not performed and "Blocked" if testing is blocked.
+Remarks: Here you can add any comments on the test case or the execution of the test case.
+Created By: This is the name of the creator of the test.
+Date of Creation: This is the date when you execute the test.
+Executed By: This is the name of the person who actually carried out the test.
+Date of Execution: The date you performed the test.
+Test Environment: The systems in which the text was executed. Here you'd note, for example, the operating system and the web browser you used.
+
+
+Using Instead of "using", you can also use "entering" or "selecting", depending on the situation of your particular test case.
+
+With .
+
+To , Your job isn't quite over once you've written the test case; you still need to review everything that has been written and evaluate that all of the steps are clear and comprehensible and that the expected results match those steps.You can review the case yourself and assess any gaps or missing areas by putting yourself in the role of Tester. But you can also have your test case reviewed by peer testers (known as ‘Peer Review’), developers, product owners or any relevant stakeholders.

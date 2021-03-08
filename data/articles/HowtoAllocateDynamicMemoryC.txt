@@ -1,0 +1,37 @@
+ Your start-up screen should look similar to this.;
+, Click "File" and then "New Project".
+,, Then click "Add" followed by "New Item". (You can also accomplish this by hitting Ctrl+⇧ Shift+A on your keyboard).
+ Name the file "DynamicMemory".
+,,
+
+
+Declare a variable called "size" of type int.
+Use cout to prompt the user to input how many numbers they would like to store.
+Use cin to store the value they entered into the variable "size".
+
+
+
+Dynamic memory is allocated by using the operator "new"
+"new" allocates memory as a variable (in this case of type int) and returns a pointer to it that we have stored in "p"
+The "size" variable is then used to dynamically create an array of the exact size that the user has input.
+
+
+
+Use cout and the "size" variable to prompt the user to input the requested number of numbers.
+Use cin and a for loop to store the user input into the dynamic array.
+
+
+
+Use a cout statement and a for loop to output the contents of your dynamic array.
+
+
+
+Enter Ctrl+F5 on your keyboard to run your program.
+Test your program to verify proper execution.
+ If you attempt to run your program and you receive a build error, check the bottom of your screen and Visual Studio can generally advise you to the nature of your error.
+
+
+The most common issue if a program will not compile is a syntax error. Be sure to check all your statements end with the proper semicolon ";".
+Visual Studio will highlight most syntax errors in red to help you locate them
+In the event your program will not compile and no syntax errors are found, try Cleaning your solution by clicking "Build" and then "Clean solution". This removes build artifacts from your previous build.
+

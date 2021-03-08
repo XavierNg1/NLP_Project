@@ -1,0 +1,12 @@
+ You will then need to make some modifications to the source code to stop 51Degrees.mobi implementing multi-threading. This is because by default 51Degrees.mobi implements multi-threading to speed up the device detection. This is achieved by each Provider Object creating a thread pool and using it during the matching section of our solution. However, Google App Engine does not allow a program to create thread pools or additional threads without using their specific API (more information can be found here under the “Threads” Section.);
+,,
+
+
+The modifications that need to be made to the existing guest book application are in the “SignGuestbookServlet.java” and “Guestbook.jsp”. In “SignGuestbookServlet.java” you need to override the “init()” and “destroy()” methods of the Servlet Interface to include the creation and destruction of a 51Degrees.mobi Provider Object. This is because the Provider Object only needs to be created and destroyed once in the lifetime of the servlet, and the creation and destruction are controlled by these methods respectively:
+
+, This method takes the User Agent string as a parameter and will return a 51Degrees.mobi BaseDeviceInfo Object which holds the device properties. Then, the “IsMobile” property is examined to determine whether the device is mobile or not and the result is added as a greeting property.
+
+
+“Guestbook.jsp” then needs a very simple modification so that it retrieves the guestbook attribute and output’s the value:
+The steps above can be followed with the open source data set which is included inside the jar file. The open source Lite solution allows the end user to access values including IsMobile, LayoutEngine, ScreenPixelsWidth/Height and all Ringmark data. However, A premium data solution can be purchased which will give you access to more properties including: The name of the device, whether it is a tablet, HasVirtualQwerty and HasQwertyPad, BrowserName and many more! A full list can be found on the 51Degrees.mobi website under property dictionary.
+

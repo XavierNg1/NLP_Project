@@ -1,0 +1,334 @@
+ This will be the class where we will write the game. You may choose to name it something else such as Game or Main. Write in method declarations for the constructor and the main method.
+
+
+
+
+
+public class RockPaperScissors {
+    public RockPaperScissors() {
+ 
+    }
+ 
+    public static void main(String[] args) {
+ 
+    }
+}
+
+
+;
+, We could use strings to represent rock, paper, or scissors, but an enumeration allows us to predefine our constants which means that using the enumeration is a better design. We will call our enum type Move with the values ROCK, PAPER, and SCISSORS.
+
+
+
+
+
+private enum Move {
+    ROCK, PAPER, SCISSORS
+}
+
+
+
+
+, These classes will represent our players in the game. You may choose to make these classes public. The User class will be the class that prompts the user for either rock, paper, or scissors, so we will need to write a getMove() method. The Computer class will also need to have a getMove() method so that the computer can also make a move. We will put placeholders in these methods and implement them later. The User class will require a constructor that sets up the Scanner object to take in the user input. We will put the Scanner as a private field for the user and then initiate it in the constructor. Since we are using the Scanner class, we need to write an import statement for it at the top of our code. The Computer class does not require a constructor, so we do not need to write one; when we initiate the Computer object, we will just be calling the default constructor. Here is what our RockPaperScissors class looks like now:
+
+
+
+
+
+import java.util.Scanner;
+ 
+public class RockPaperScissors {
+    private enum Move {
+        ROCK, PAPER, SCISSORS
+    }
+ 
+    private class User {
+        private Scanner inputScanner;
+ 
+        public User() {
+            inputScanner = new Scanner(System.in);
+        }
+ 
+        public Move getMove() {
+         // TODO: Implement this method
+            return null;
+        }
+    }
+ 
+    private class Computer {
+        public Move getMove() {
+            // TODO: Implement this method
+            return null;
+        }
+    }
+ 
+    public RockPaperScissors() {
+ 
+    }
+ 
+    public static void main(String[] args) {
+ 
+    }
+}
+
+
+
+
+, This method will return a random Move. We can get an array of Move enumerations by calling the values() method: Move.values(). To choose a random Move enumeration in this values array, we need to generate a random index that is an integer between 0 and the length of our values array. To do this, we can use the nextInt() method of the Random class which we need to import from java.util. After we have gotten the random index, we can return the Move of that index from our values array.
+
+
+
+
+
+public Move getMove() {
+    Move[] moves = Move.values();
+    Random random = new Random();
+    int index = random.nextInt(moves.length);
+    return moves;
+}
+
+
+
+
+, This method will return a Move corresponding to what the user has input. We will expect the user to write either "rock", "paper", or "scissors". First, we need to prompt the user for an input: System.out.print("Rock, paper, or scissors? "). Then use the nextLine() method of the Scanner object to get the user input as a string. We need now need to check if the user has submitted a valid move, but we can be lenient if the user has misspelled a word. So we will only check if the first letter of the user input is either "R" (for rock), "P" (for paper), or "S" (for scissors), and we won't care about the case because we will first use the toUpperCase() method of the String class to make the user input string all uppercase. If the user has not entered a remotely correct input, we will prompt the user again. Then, depending on what the user has put in, we will return a corresponding move.
+
+
+
+
+
+public Move getMove() {
+    // Prompt the user
+    System.out.print("Rock, paper, or scissors? ");
+ 
+    // Get the user input
+    String userInput = inputScanner.nextLine();
+    userInput = userInput.toUpperCase();
+    char firstLetter = userInput.charAt(0);
+    if (firstLetter == 'R' || firstLetter == 'P' || firstLetter == 'S') {
+        // User has entered a valid input
+        switch (firstLetter) {
+        case 'R':
+            return Move.ROCK;
+        case 'P':
+            return Move.PAPER;
+        case 'S':
+            return Move.SCISSORS;
+        }
+    }
+ 
+    // User has not entered a valid input. Prompt again.
+    return getMove();
+}
+
+
+
+
+, The user should be able to play the game over and over again. In order to determine whether the user wants to play again, we need to write a playAgain() method that returns a boolean telling the game whether the user has determined to play again or not. In this method, we are using the Scanner that we had previously initiated in the constructor to get a "Yes" or a "No" from the user. We will only check if the first letter is 'Y' to determine whether the user wants to play again. Any other input will mean that the user does not want to play again.
+
+
+
+
+
+public boolean playAgain() {
+    System.out.print("Do you want to play again? ");
+    String userInput = inputScanner.nextLine();
+    userInput = userInput.toUpperCase();
+    return userInput.charAt(0) == 'Y';
+}
+
+
+
+
+, Now that we have finished writing the User and Computer classes, we can focus on working on our actual game. Create private fields for the User and Computer classes in the RockPaperScissors class. We will need to access these fields to access the getMove() methods when we're playing the game. In the constructor for the RockPaperScissors class, initiate these fields. We will also need to keep track of the score in userScore and computerScore fields, which we need to initiate as 0 in the constructor. We need to keep track of the number of games as well, which will also be a field initiated as 0.
+
+
+
+
+
+private User user;
+private Computer computer;
+private int userScore;
+private int computerScore;
+private int numberOfGames;
+ 
+public RockPaperScissors() {
+    user = new User();
+    computer = new Computer();
+    userScore = 0;
+    computerScore = 0;
+    numberOfGames = 0;
+}
+
+
+
+
+, We need to write a compareMoves() method that returns 0 if the moves are the same, 1 if the current move beats the other move, and -1 if the current move loses to the other move. This will be useful for determining the winner in the game. To implement this method, we will first return 0 if the moves are the same and therefore we have a tie. Then write a switch statement for returning 1 or -1.
+
+
+
+
+
+private enum Move {
+    ROCK, PAPER, SCISSORS;
+ 
+    /**
+     * Compares this move with another move to determining a tie, a win, or
+     * a loss.
+     * 
+     * @param otherMove
+     *            move to compare to
+     * @return 1 if this move beats the other move, -1 if this move loses to
+     *         the other move, 0 if these moves tie
+     */
+    public int compareMoves(Move otherMove) {
+        // Tie
+        if (this == otherMove)
+            return 0;
+ 
+        switch (this) {
+        case ROCK:
+            return (otherMove == SCISSORS ? 1 : -1);
+        case PAPER:
+            return (otherMove == ROCK ? 1 : -1);
+        case SCISSORS:
+            return (otherMove == PAPER ? 1 : -1);
+        }
+ 
+        // Should never reach here
+        return 0;
+    }
+}
+
+
+
+
+, This method will be the playing of the game. Start out by putting a simple System.out.println in the method.
+
+
+
+
+
+public void startGame() {
+        System.out.println("ROCK, PAPER, SCISSORS!");
+}
+
+
+
+
+, In the startGame() method, use the getMove() methods from the User class and the Computer class to get the user and the computer's moves.
+
+
+
+
+
+Move userMove = user.getMove();
+Move computerMove = computer.getMove();
+System.out.println("\nYou played " + userMove + ".");
+System.out.println("Computer played " + computerMove + ".\n");
+
+
+
+
+, Use the compareMoves() method from the Move enum to to determine whether the user won or not. If the user won, increment the user score by 1. If the user lost, increment the computer score by 1. If there was a tie, do not increment any of the scores. Then increment the number of games played by one.
+
+
+
+
+
+int compareMoves = userMove.compareMoves(computerMove);
+switch (compareMoves) {
+case 0: // Tie
+    System.out.println("Tie!");
+    break;
+case 1: // User wins
+    System.out.println(userMove + " beats " + computerMove + ". You won!");
+    userScore++;
+    break;
+case -1: // Computer wins
+    System.out.println(computerMove + " beats " + userMove + ". You lost.");
+    computerScore++;
+    break;
+}
+numberOfGames++;
+
+
+
+
+, If the user wants to play again, call startGame() again. Otherwise, call printGameStats() which will print out the statistics of the game. We will write this method in the next step.
+
+
+
+
+
+if (user.playAgain()) {
+    System.out.println();
+    startGame();
+} else {
+    printGameStats();
+}
+
+
+
+
+, This method will display the statistics of the game: number of wins, number of losses, number of ties, number of games played, and percentage of games won by the user. The percentage of games won is calculated by the (# wins + (# ties/2))/(# games played). This method uses System.out.printf to print out formatted text.
+
+
+
+
+
+private void printGameStats() {
+    int wins = userScore;
+    int losses = computerScore;
+    int ties = numberOfGames - userScore - computerScore;
+    double percentageWon = (wins + ((double) ties) / 2) / numberOfGames;
+ 
+    // Line
+    System.out.print("+");
+    printDashes(68);
+    System.out.println("+");
+ 
+    // Print titles
+    System.out.printf("|  %6s  |  %6s  |  %6s  |  %12s  |  %14s  |\n",
+            "WINS", "LOSSES", "TIES", "GAMES PLAYED", "PERCENTAGE WON");
+ 
+    // Line
+    System.out.print("|");
+    printDashes(10);
+    System.out.print("+");
+    printDashes(10);
+    System.out.print("+");
+    printDashes(10);
+    System.out.print("+");
+    printDashes(16);
+    System.out.print("+");
+    printDashes(18);
+    System.out.println("|");
+ 
+    // Print values
+    System.out.printf("|  %6d  |  %6d  |  %6d  |  %12d  |  %13.2f%%  |\n",
+            wins, losses, ties, numberOfGames, percentageWon * 100);
+ 
+    // Line
+    System.out.print("+");
+    printDashes(68);
+    System.out.println("+");
+}
+
+
+
+
+, In the main class, initialize an instance of the RockPaperScissors class and call the startGame() method.
+
+
+
+
+
+public static void main(String[] args) {
+    RockPaperScissors game = new RockPaperScissors();
+    game.startGame();
+}
+
+
+
+
+, Now that we have gone through all the effort of writing the Rock, Paper, Scissors game, it's time to compile and test everything out!

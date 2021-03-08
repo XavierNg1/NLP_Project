@@ -1,0 +1,21 @@
+ Ubuntu recommends installing Skype using the Canonical (Ubuntu developer) repository instead of the packages from the Skype website. This will ensure that you get the proper version for your system. The Terminal may be intimidating, but you'll just need to enter a couple different commands.
+
+
+You can quickly open the Terminal by pressing Ctrl+Alt+T or by opening "Applications" → "Accessories" → "Terminal".;
+, You'll need to know this before proceeding so that you can install the correct software.
+
+
+Type sudo uname --m and press ↵ Enter. Type in your administrator password.
+If the Terminal returns i686, you are running the 32-bit version.
+If the Terminal returns x86_64, you are running the 64-bit version.
+ This allows for better compatibility with programs compiled for other computers.
+
+
+Type sudo dpkg --add-architecture i386 and press ↵ Enter. Type in your administrator password to download the package.
+ This will give you the ability to install any of the programs hosted on this repository, which includes the latest versions of Skype.
+
+
+Type or paste sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner" and press ↵ Enter.
+ Now that you have the proper dependencies and the Canonical partner repository, you can download and install the Skype software.Type sudo apt-get update && sudo apt-get install skype and press ↵ Enter to install Skype. The installation process may take a few minutes to complete.
+You can also install Skype using the Software Center since you've added the Canonical partner repository. Open the Software Center, search for "Skype", and then click the "Install" button to download and install it.
+

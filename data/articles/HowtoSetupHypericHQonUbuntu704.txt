@@ -1,0 +1,23 @@
+ You are not allowed to install Hyperic HQ as root, and the installer does not auto-create the install drive. So you have to create it yourself and change the owner to your username: sudo mkdir /home/hyperic followed by sudo chown %yourusername%:%yourusername% /home/hyperic Note: The installdir can be any directory you want, however be sure that you are permitted to write to it.
+, Select server and agent: 1,3 Note: If you have a running HQ Server and want to monitor other machines, you only need to install the HQ Agent on them. It is available for all kinds of operating systems. Have a look at http://sourceforge.net/projects/hyperic-hq.,, If you don't know your server, choose your local machine: localhost, When asked for an installation path, to choose the default, hit enter. Note: HQ server and HQ agent will be installed isolated from each other in different subdirectories.,,,,, So if you want to cast a glance on it later you have to copy it to another directory.,,
+Checking jboss jndi port...
+Checking jboss mbean port...
+Starting HQ built-in database...
+HQ built-in database started.
+Booting the HQ server...
+HQ server booted.
+, Generating a new one ... Done
+- Invoking agent
+- Starting agent process
+Agent successfully started
+
+, In this case, where the HQ server and the HQ agent are installed on the same machine, it's localhost: 127.0.0.1, In this case it's not needed, but remember to enable the SSL communication if you set up an HQ agent that will communicate to the HQ server across the internet. Hit enter to choose default=no., If you haven't changed it, it is the default port 7080 (tcp). Hit enter to choose default=7080. Be sure that the firewall on the HQ server host, or a special device that is connected to the host, is not blocking port 7080 (tcp) or 7443 (tcp). Otherwise you'll have to open them., We use the default values for this setup. Hit enter to choose the default username (hqadmin) and next enter the default password (hqadmin). Be sure that you change these settings if you use this system in a production environment and have HQ agents communicating across the internet., In this case it's localhost: 127.0.0.1. Hit enter to choose the default., If you haven't changed it, it is the default port 2144 (tcp). Hit enter to choose default=2144. Be sure that the firewall on the HQ agent host, or a special device that is connected to the host, is not blocking port 2144 (tcp) for incoming traffic. Otherwise you'll have to open it., It should look like this:
+
+- Received temporary authority token from agent
+- Registering agent with HQ
+- HQ gave us the following agent token 1187275261550-13485140805726178-3666098505737167114
+- Informing agent of new HQ server
+- Validating
+- Successfully setup agent
+
+,

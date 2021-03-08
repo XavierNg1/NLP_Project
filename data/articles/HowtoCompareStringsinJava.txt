@@ -1,0 +1,72 @@
+ The simplest way to declare two strings in Java is to use the following code. "String" is the declaration of the object type. string1 and string2 are the names of each string. The words, "hello" and "father," are essentially the values of the string objects. Whenever your compiler encounters the quotations, it will automatically create a String.
+
+
+
+
+
+
+String string1 = "hello";
+String string2 = "father";
+
+
+
+;
+, This String class method compares the start of a string with whatever you enter into the method. Since it is a boolean method, it will return either "true" or "false." Use the following code and one of your previously created strings. The following code will show you an example of a true case and a false case. It will also print out a message with the result. The output should be "true" and then "false."
+
+
+
+
+
+
+System.out.println(string1.startsWith("he")); //returns true and prints true
+System.out.println(string1.startsWith("mo"));  //returns false and prints false
+
+
+
+
+
+, This String class method will compare a string with whatever you enter in as the prefix at the point in the string specified by the value in offset. This method will ignore letters in the string that are before the value in offset. The following code will show you an example of a true case and a false case. Note that while counting letters in the string, start at 0. For example, in the word "hello," 'h' is space 0 and 'e' is space 1.
+
+
+
+
+
+
+System.out.println(string1.startsWith("lo", 3)); //returns true and prints true
+System.out.println(string1.startsWith("lo", 1)); //returns false and prints false
+
+
+
+
+
+, This will compare the end of the string with whatever you enter into the method. Based on the value of the length of the string prefix, the method will count backward that value in the string to be compared. Look at the following code for an example of a true case and a false case. The code will also print out the result of the comparison.
+
+
+
+
+
+
+System.out.print(string2.endsWith("her")); //returns true and prints true
+System.out.print(string1.endsWith("he")); //returns false and prints false
+
+
+
+
+
+, Perform a comparison of the two strings by using string1.compareTo(string2) or string2.compareTo(string1). Since the method is of type integer, the method will return a number. If the strings are not equal to each other, the number returned will not be 0. It they are equal, the number returned will be 0. The following code will show you an example of an equal and non-equal case. The code will also print out the result to the system.
+
+
+
+
+
+
+String string1 = "hello";
+String string2 = "hello";
+String string3 = "father";
+System.out.println(string1.compareTo(string2)); //prints '0' because both are equal
+System.out.println(string1.compareTo(string3); //prints an integer other than 0
+
+
+
+
+

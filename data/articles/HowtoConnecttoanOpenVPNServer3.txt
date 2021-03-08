@@ -1,0 +1,15 @@
+ You'll need a client in order to connect to OpenVPN servers. Most distributions have an OpenVPN client available from the repository. The following instructions are for Ubuntu and other Debian distributions. The process is similar for others.
+
+
+Open the Terminal and type sudo apt-get install openvpn. Enter your administrator password to start installing.
+ Most VPN services will provide configuration files for OpenVPN. These files are necessary for OpenVPN to connect to the VPN service. You can find these files on the service's Support page.
+
+
+The files will typically come in a ZIP archive. Extract the files to an easy-to-access folder.
+ Return to the Terminal. If you extracted the files to your Home directory, you shouldn't need to change locations. If you extracted the files to a different directory, navigate to it in the Terminal. Enter the following command to start OpenVPN:
+
+
+openvpn --config configFile.ovpn
+
+, You'll be prompted for your VPN username and password. You got these credentials when you signed up for the VPN service. Your password will not appear as you type it.
+ You'll see the Terminal update the status of the connection. When you see the message "Initialization Sequence Completed", you are connected.

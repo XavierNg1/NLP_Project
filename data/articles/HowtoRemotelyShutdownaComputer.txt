@@ -1,0 +1,68 @@
+ Before you can remotely shut down a Windows computer on your network, you'll need to enable Remote Services on it. This requires administrator access to the computer.
+
+
+If you're trying to shut down a Mac remotely, click here.;
+, This start the Microsoft Management Console with the "Services" section open.
+ The list is sorted alphabetically by default.
+ This will open the Properties window for the service.
+ Click "OK" or "Apply" to save changes.
+ This will launch Windows Firewall.
+ You'll find this on the left side of the window.
+ This will allow you to make changes to the list below it.
+ Check the box in the "Private" column., You can use the Shutdown program to manage the shutdown process for multiple computers on your network. The quickest way to open the program is to use the Command Prompt.
+
+
+Windows 10 and 8.1 - Right-click the Windows button and select "Command Prompt."
+Windows 7 and earlier - Select "Command Prompt" from the Start menu.
+ This will start the Remote Shutdown utility in a separate window.
+ This will let you add a computer on your network that you want to manage the shutdown process for.
+
+
+You can add multiple computers as long as they are all configured for remote shutdown.
+ Enter the computer's name and then click "OK" to add it to the list.
+
+
+You can find a computer's name in its "System" window (⊞ Win+Pause).
+ There are several options you can set before you send the shutdown signal:
+
+
+You can choose to shutdown the remote computer or restart it.
+You can warn the users that their computers will be shut down. This is highly recommended if you know people are using the computers. You can adjust the length of the warning that is displayed.
+You can add a reason and comment at the bottom of the Window. These will be added to the logs, which is important if you have multiple administrators or need to be able to review your actions later.
+ If you set a warning time, the computers will shut down when it expires, otherwise they will shut down immediately., Follow the steps in the first section of this article to prepare the Windows computer for remote shutdown.
+ You'll need to know the remote computer's IP address in order to shut it down from Linux. There are several ways you can determine this:
+
+
+Open the Command Prompt on the remote computer and type ipconfig. Look for the IPv4 address.
+Open your router's configuration page and look for the DHCP client table. This will display all of the devices connected to your network.
+ The Linux computer will need to be connected to the same network as the Windows computer you are shutting down.
+ This protocol is required to connect to the Windows computer. The following command will install Samba in Ubuntu:
+
+
+sudo apt-get install samba-common
+You'll be required to enter your Linux root password in order to proceed with the installation.
+ Once the Samba protocol has been installed, you can perform the shut down command:
+
+
+net rpc shutdown -I IP address -U user%password
+Replace IP address with the remote computer's IP address (e.g. 192.168.1.25)
+Replace user with the Windows user's username.
+Replace password with the Windows user's password.
+ You can use the Terminal to shut down any Mac on your network that you have administrator access to.
+
+
+You can find the Terminal in the Utilities folder in your Applications directory.
+You can do this from Windows by using an SSH program such as PuTTY to connect to the Mac via the command line. See Use SSH on Windows for details on using PuTTY. Once you're connected via SSH, you can use the same following commands., Replace username with your username for the remote computer. Replace ipaddress with the remote computer's IP address.
+
+
+See Find Your IP Address on a Mac for details on finding a Mac's IP address.
+ After entering the command on the previous step, you'll be prompted to enter the password for that user account.
+ This will immediately shut down the Mac computer remotely, and your SSH connection with the computer will be severed.
+
+
+If you'd rather restart the computer, add -r after shutdown.
+ If the desktop is not activated, you'll close the active program instead of opening the shut down menu. Make sure the desktop is active and all other programs are closed or minimized.
+ If you use Windows 10 Remote Desktop, you may have noticed that there is no Shut Down option in the Power menu. If you need to shut the computer down, you can do so from the new Shut Down Windows menu.
+ You can also choose from the other options, including "Restart," "Sleep," and "Sign out."
+
+, Since you are using Remote Desktop, you will lose your connection to the remote computer.

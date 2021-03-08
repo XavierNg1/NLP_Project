@@ -1,0 +1,6 @@
+ If you don’t want to purchase software, there is another way. You can insert a script in your website’s root htsaccess file. It’s best to copy and paste the code, rather than type it. That way, you can be sure that you won’t make any errors. After you’ve inserted the code, upload it to your server. This method is effective. Insert the following code:
+# block proxy servers from site access
+# http://perishablepress.com/press/2008/04/20/how-to-block-proxy-servers-via-htaccess/
+RewriteEngine on
+RewriteCond %{HTTP:VIA}  !^$ RewriteCond %{HTTP:FORWARDED}  !^$ RewriteCond %{HTTP:USERAGENT_VIA}  !^$ RewriteCond %{HTTP:X_FORWARDED_FOR}  !^$ RewriteCond %{HTTP:PROXY_CONNECTION}  !^$ RewriteCond %{HTTP:XPROXY_CONNECTION}  !^$ RewriteCond %{HTTP:HTTP_PC_REMOTE_ADDR} !^$ RewriteCond %{HTTP:HTTP_CLIENT_IP}  !^$
+RewriteRule ^(.*)$ - 

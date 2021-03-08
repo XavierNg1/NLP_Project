@@ -1,0 +1,37 @@
+ A singly even square has a number of boxes per side that’s divisible by 2. A doubly even square has a number of boxes per side divisible by double that — 4.The smallest doubly-even box that can be made is a 4x4 square.
+ Use the same method as you would with odd-numbered or singly-even magic squares: the magic constant = / 2, where n = the number of boxes per side. So, in the example of a 4x4 square:
+
+
+sum = / 2
+sum = / 2
+sum = (4 * 17) / 2
+sum = 68 / 2
+The magic constant for a 4x4 square is 68/2, or 34.
+All rows, columns, and diagonals must add up to this number.
+ In each corner of the magic square, mark a mini-square with sides a length of n/4, where n = the length of a side of the whole magic square.Label them Highlights A, B, C, and D in a counter-clockwise manner.
+
+
+In a 4x4 square, you would simply mark the four corner boxes.
+In an 8x8 square, each Highlight would be a 2x2 area in the corners.
+In a 12x12 square, each Highlight would be a 3x3 area in the corners, and so on.
+ Mark all the boxes in the center of the magic square in a square area of length n/2, where n = the length of a side of the whole magic square. The Central Highlight should not overlap with Highlights A-D at all, but touch each of them at the corners.
+
+
+In a 4x4 square, the Central Highlight would be a 2x2 area in the center.
+In an 8x8 square, the Central Highlight would be a 4x4 area in the center, and so on.
+ Begin filling in the numbers of your magic square from left to right, but only write in the number if the box falls into a Highlight. So, in a 4x4 box, you would fill in the following boxes:
+
+
+1 in the top-left box and 4 in the top-right box
+6 and 7 in the center boxes in Row 2
+10 and 11 in the center boxes in Row 3
+13 in the bottom-left box and 16 in the bottom-right box.
+ The is essentially the inverse of the previous step. Begin again with the top left box, but this time, skip all boxes that fall in Highlighted area, and fill in non-higlighted boxes by counting backwards. Begin with the largest number in your number range. So, in a 4x4 magic square, you would fill in the following:
+
+
+15 and 14 in the center boxes in Row 1
+12 in the left-most box and 9 in the right-most box in Row 2
+8 in the left-most box and 5 in the right-most box in Row 3
+3 and 2 in the center boxes in Row 4
+At this point, all your columns, rows, and diagonals should up to your magic constant you calculated.
+

@@ -1,0 +1,41 @@
+ Spotlight's icon is a magnifying glass located in the top right corner of your screen.
+ Terminal lets you access system information--such as your DNS cache--through typed commands.
+ Don't include the quotation marks. Press ⏎ Return when you're done.
+
+
+The "sudo" part of the command sets up the rest of the command for "root privilege", which allows you to view sensitive system information.
+The "discoveryutil" part of the command request the DNS information from your system.
+The "udnscachestats" part of the command displays one of two sections of your DNS cache.
+ This should be the password you use to log in. Press ⏎ Return when you finish typing. Terminal should display your Unicast DNS cache.The Unicast DNS (UDNS) cache translates website addresses (such as Facebook) into IP addresses for your computer to use during future searches.
+With Unicast, your address sends out one IP address request to one server per site, regardless of how many servers exist. If that server becomes unresponsive, you will encounter a DNS error., You can use the results of your search to view the IP addresses of frequently-visited sites. If you encountered a DNS error, the UDNS cache is the most likely location of the problem.
+
+
+You can also use the UDNS cache to check your recent site history. You will need to check the Multicast DNS cache as well for a complete report.
+ This will help you avoid command errors when checking the next section of your DNS cache.
+ Don't include the quotation marks. Press ⏎ Return when you're done.
+
+
+The "sudo" part of the command sets up the rest of the command for "root privilege", which allows you to view sensitive system information.
+The "discoveryutil" part of the command request the DNS information from your system.
+The "mdnscachestats" part of the command displays your Multicast DNS cache.
+ This should be the password you use to log in. Press ⏎ Return when you finish typing. Terminal should display your Multicast DNS cache.
+
+
+The Multicast DNS (MDNS) cache also translates website addresses (such as Facebook) into IP addresses for your computer to use during future searches.
+With Multicast, your address sends out multiple IP address requests to multiple servers per site. If one server becomes unresponsive, you still have multiple connections to other servers, meaning you're much less likely to encounter a DNS error on a Multicast network than on a Unicast network.
+ You can use the results of your search to view the IP addresses of frequently-visited sites.
+
+
+You can also use the MDNS cache to check your recent site history. Checking the MDNS cache in conjunction with the UDNS cache will give you a full history report.
+ Type "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; say cache flushed" into Terminal. Hit ⏎ Return to finalize the flush. This will reset your saved website data and clear any DNS errors you may encounter. This command is appropriate for the the latest version of OS X (10.11).This command flushes both cache sections (UDNS and MDNS). Flushing both sections resolves any current errors and prevents future errors from occurring, so you should always flush both for consistency. Flushing the cache will not harm your computer.
+The Terminal commands to flush the DNS cache vary between OS X versions. Find out what version you are running by going to the Apple menu and selecting "About This Mac".
+For OS X 10.10.4 and up type "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; say cache flushed".
+For OS X 10.10 to 10.10.3 users should type "sudo discoveryutil mdnsflushcache; sudo discoveryutil udnsflushcaches; say flushed".
+For OS X 10.7 to 10.9 type "sudo killall -HUP mDNSResponder".
+For OS X 10.5 to 10.6 type "sudo dscacheutil -flushcache"
+For OS X 10.3 to 10.4 type "lookupd -flushcache".
+ Use your browser of choice to visit a site on which you encountered a DNS error. You should now be able to access the site!
+
+
+Loading your frequently-used sites for the first time after a DNS flush will take longer than usual, since your DNS cache is being updated.
+

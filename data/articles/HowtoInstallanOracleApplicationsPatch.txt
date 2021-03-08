@@ -1,0 +1,33 @@
+ Download the patch be aware that patches can be as big as 4 GB!;
+,, The main steps include:
+
+
+Stopping all Oracle processes which belong to current $ORACLE_HOME.
+
+
+
+
+
+
+Backing up the database, Oracle Inventory and the $ORACLE_HOME tree.
+
+
+
+
+
+
+Checking the patch file size and unzipping if it is correct.
+
+
+
+
+
+
+Running opatch/runInstaller to finalize the patching process.
+
+
+
+
+
+
+

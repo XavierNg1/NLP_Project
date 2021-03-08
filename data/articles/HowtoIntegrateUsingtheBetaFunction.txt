@@ -1,0 +1,312 @@
+ This product is the first step into deriving the standard integral representation of the Beta function.
+
+
+Γ(α)Γ(β)=∫0∞xα−1e−xdx∫0∞yβ−1e−ydy=∫0∞dx∫0∞dyxα−1yβ−1e−x−y{\displaystyle {\begin{aligned}\Gamma (\alpha )\Gamma (\beta )&=\int _{0}^{\infty }x^{\alpha -1}e^{-x}{\mathrm {d} }x\int _{0}^{\infty }y^{\beta -1}e^{-y}{\mathrm {d} }y\\&=\int _{0}^{\infty }{\mathrm {d} }x\int _{0}^{\infty }{\mathrm {d} }y\,x^{\alpha -1}y^{\beta -1}e^{-x-y}\end{aligned}}}
+;
+, We rewrite the double integral in terms of u{\displaystyle u} and x.{\displaystyle x.}Γ(α)Γ(β)=∫0∞dx∫0∞dyxα−1yβ−1e−x−y=∫0∞du∫0udxxα−1(u−x)β−1e−u=∫0∞du∫0udxxα−1uβ−1(1−xu)e−u{\displaystyle {\begin{aligned}\Gamma (\alpha )\Gamma (\beta )&=\int _{0}^{\infty }{\mathrm {d} }x\int _{0}^{\infty }{\mathrm {d} }y\,x^{\alpha -1}y^{\beta -1}e^{-x-y}\\&=\int _{0}^{\infty }{\mathrm {d} }u\int _{0}^{u}{\mathrm {d} }x\,x^{\alpha -1}(u-x)^{\beta -1}e^{-u}\\&=\int _{0}^{\infty }{\mathrm {d} }u\int _{0}^{u}{\mathrm {d} }x\,x^{\alpha -1}u^{\beta -1}\left(1-{\frac {x}{u}}\right)e^{-u}\end{aligned}}}
+
+
+, Rewrite the double integral in terms of u{\displaystyle u} and t.{\displaystyle t.} Now we see that the first integral is simply Γ(α+β).{\displaystyle \Gamma (\alpha +\beta ).}
+
+
+Γ(α)Γ(β)=∫0∞du∫0udxxα−1uβ−1(1−xu)e−u=∫0∞duuα+β−1e−u∫01dttα−1(1−t)β−1=Γ(α+β)∫01tα−1(1−t)β−1dt{\displaystyle {\begin{aligned}\Gamma (\alpha )\Gamma (\beta )&=\int _{0}^{\infty }{\mathrm {d} }u\int _{0}^{u}{\mathrm {d} }x\,x^{\alpha -1}u^{\beta -1}\left(1-{\frac {x}{u}}\right)e^{-u}\\&=\int _{0}^{\infty }{\mathrm {d} }u\,u^{\alpha +\beta -1}e^{-u}\int _{0}^{1}{\mathrm {d} }t\,t^{\alpha -1}(1-t)^{\beta -1}\\&=\Gamma (\alpha +\beta )\int _{0}^{1}t^{\alpha -1}(1-t)^{\beta -1}{\mathrm {d} }t\end{aligned}}}
+
+
+Γ(α)Γ(β)Γ(α+β)=∫01tα−1(1−t)β−1dt{\displaystyle {\frac {\Gamma (\alpha )\Gamma (\beta )}{\Gamma (\alpha +\beta )}}=\int _{0}^{1}t^{\alpha -1}(1-t)^{\beta -1}{\mathrm {d} }t}
+
+Below, we go through three examples that make direct use of the Beta function.
+
+
+
+∫01x3x(1−x)dx{\displaystyle \int _{0}^{1}x^{3}{\sqrt {x(1-x)}}{\mathrm {d} }x}
+
+
+, We see that α=9/2{\displaystyle \alpha =9/2} and β=3/2{\displaystyle \beta =3/2} just from inspection.
+
+
+∫01x3x(1−x)dx=Γ(9/2)Γ(3/2)Γ(6){\displaystyle \int _{0}^{1}x^{3}{\sqrt {x(1-x)}}{\mathrm {d} }x={\frac {\Gamma (9/2)\Gamma (3/2)}{\Gamma (6)}}}
+
+
+, Use the recursion relation to write the numerator in terms of π.{\displaystyle \pi .}
+
+
+Γ(9/2)Γ(3/2)Γ(6)=1120725232π4=7π256{\displaystyle {\frac {\Gamma (9/2)\Gamma (3/2)}{\Gamma (6)}}={\frac {1}{120}}{\frac {7}{2}}{\frac {5}{2}}{\frac {3}{2}}{\frac {\pi }{4}}={\frac {7\pi }{256}}}
+
+
+, We see that our integrand is not quite in the form that we want it to, but we can take advantage of the fact that α{\displaystyle \alpha } and β{\displaystyle \beta } are arbitrary parameters.
+
+
+∫01x2(1−x4)3dx{\displaystyle \int _{0}^{1}{\sqrt{x^{2}(1-x^{4})}}{\mathrm {d} }x}
+
+
+, This gets the quantity inside the parentheses into the form that we want. We changed the exponent on the power term, but since α{\displaystyle \alpha } is arbitrary, we don't have to worry.
+
+
+∫01x2(1−x4)3dx=14∫01u−7/12(1−u)1/3du{\displaystyle \int _{0}^{1}{\sqrt{x^{2}(1-x^{4})}}{\mathrm {d} }x={\frac {1}{4}}\int _{0}^{1}u^{-7/12}(1-u)^{1/3}{\mathrm {d} }u}
+
+
+, Simplify using the recursion relation to get the arguments of the Gamma functions between 0 and 1. Make sure your arithmetic skills are up to par.
+
+
+14∫01u−7/12(1−u)1/3du=Γ(5/12)Γ(4/3)4Γ(7/4)=Γ(5/12)Γ(1/3)9Γ(3/4){\displaystyle {\frac {1}{4}}\int _{0}^{1}u^{-7/12}(1-u)^{1/3}{\mathrm {d} }u={\frac {\Gamma (5/12)\Gamma (4/3)}{4\,\Gamma (7/4)}}={\frac {\Gamma (5/12)\Gamma (1/3)}{9\,\Gamma (3/4)}}}
+
+
+, Of course, the Beta function can also directly be used to evaluate these types of integrals with logs attached to them.
+
+
+∫01x(1−x)2ln⁡xdx{\displaystyle \int _{0}^{1}x(1-x)^{2}\ln x{\mathrm {d} }x}
+
+
+, This is standard procedure for an integral like this. We rewrite the power term so that e{\displaystyle e} is in the base and expand that into its Taylor series. Then we find the appropriate coefficient, neglecting higher-order terms because ϵ{\displaystyle \epsilon } is small (and therefore they go to 0 faster).
+
+
+∫01x1+ϵ(1−x)2dx=∑n=0∞ϵnn!∫01x(1−x)2lnn⁡xdx{\displaystyle \int _{0}^{1}x^{1+\epsilon }(1-x)^{2}{\mathrm {d} }x=\sum _{n=0}^{\infty }{\frac {\epsilon ^{n}}{n!}}\int _{0}^{1}x(1-x)^{2}\ln ^{n}x{\mathrm {d} }x}
+
+
+∫01x1+ϵ(1−x)2dx=Γ(2+ϵ)Γ(3)Γ(5+ϵ){\displaystyle \int _{0}^{1}x^{1+\epsilon }(1-x)^{2}{\mathrm {d} }x={\frac {\Gamma (2+\epsilon )\Gamma (3)}{\Gamma (5+\epsilon )}}}
+
+As seen above, we want to find the coefficient of ϵ.{\displaystyle \epsilon .}
+
+
+, Since we are only finding the integral with the log to the first order, we can rewrite the terms in parentheses as exponential functions.
+
+
+Γ(2+ϵ)Γ(3)Γ(5+ϵ)=2Γ(2+ϵ)(4+ϵ)(3+ϵ)(2+ϵ)Γ(2+ϵ)=24⋅3⋅21(1+ϵ/4)(1+ϵ/3)(1+ϵ/2)≈112e−(14+13+12)ϵ≈112(1−1312ϵ){\displaystyle {\begin{aligned}{\frac {\Gamma (2+\epsilon )\Gamma (3)}{\Gamma (5+\epsilon )}}&={\frac {2\,\Gamma (2+\epsilon )}{(4+\epsilon )(3+\epsilon )(2+\epsilon )\Gamma (2+\epsilon )}}\\&={\frac {2}{4\cdot 3\cdot 2}}{\frac {1}{(1+\epsilon /4)(1+\epsilon /3)(1+\epsilon /2)}}\\&\approx {\frac {1}{12}}e^{-\left({\frac {1}{4}}+{\frac {1}{3}}+{\frac {1}{2}}\right)\epsilon }\\&\approx {\frac {1}{12}}\left(1-{\frac {13}{12}}\epsilon \right)\end{aligned}}}
+
+
+, Our answer comes right out of our work. 
+
+
+∫01x(1−x)2ln⁡xdx=−13144{\displaystyle \int _{0}^{1}x(1-x)^{2}\ln x{\mathrm {d} }x=-{\frac {13}{144}}}
+
+As usual, we get this integral for free, which can be evaluated the standard way.
+
+
+∫01x(1−x)2dx=112{\displaystyle \int _{0}^{1}x(1-x)^{2}{\mathrm {d} }x={\frac {1}{12}}}
+
+
+
+
+, We set z=α=β.{\displaystyle z=\alpha =\beta .}
+
+
+∫01tz−1(1−t)z−1dt=Γ2(z)Γ(2z){\displaystyle \int _{0}^{1}t^{z-1}(1-t)^{z-1}{\mathrm {d} }t={\frac {\Gamma ^{2}(z)}{\Gamma (2z)}}}
+
+
+, 
+
+
+Γ2(z)Γ(2z)=∫01tz−1(1−t)z−1dt=122z−1∫−11(1−u2)z−1du=122z−2∫01(1−u2)z−1du{\displaystyle {\begin{aligned}{\frac {\Gamma ^{2}(z)}{\Gamma (2z)}}&=\int _{0}^{1}t^{z-1}(1-t)^{z-1}{\mathrm {d} }t\\&={\frac {1}{2^{2z-1}}}\int _{-1}^{1}(1-u^{2})^{z-1}{\mathrm {d} }u\\&={\frac {1}{2^{2z-2}}}\int _{0}^{1}(1-u^{2})^{z-1}{\mathrm {d} }u\end{aligned}}}
+
+
+, Then we can get the integral into the form where we can directly use the Beta function.
+
+
+Γ2(z)Γ(2z)=122z−2∫01(1−u2)z−1du=122z−1∫01s−1/2(1−s)z−1ds=π22z−1Γ(z)Γ(z+1/2){\displaystyle {\begin{aligned}{\frac {\Gamma ^{2}(z)}{\Gamma (2z)}}&={\frac {1}{2^{2z-2}}}\int _{0}^{1}(1-u^{2})^{z-1}{\mathrm {d} }u\\&={\frac {1}{2^{2z-1}}}\int _{0}^{1}s^{-1/2}(1-s)^{z-1}{\mathrm {d} }s\\&={\frac {\sqrt {\pi }}{2^{2z-1}}}{\frac {\Gamma (z)}{\Gamma (z+1/2)}}\end{aligned}}}
+
+This is Legendre's duplication formula. It allows us to evaluate certain integrals that give us a Γ(1/2+ϵ){\displaystyle \Gamma (1/2+\epsilon )} during our work.
+ We can also use the Beta function to determine integrals like these.
+
+
+∫01ln2⁡xln⁡(1−x)dx{\displaystyle \int _{0}^{1}\ln ^{2}x\ln(1-x){\mathrm {d} }x}
+
+
+, Since we have two logs, we need to introduce two parameters. 
+
+
+∫01xϵ(1−x)δdx=∑m=0∞∑n=0∞ϵmm!δnn!∫01lnm⁡xlnn⁡(1−x)dx{\displaystyle \int _{0}^{1}x^{\epsilon }(1-x)^{\delta }{\mathrm {d} }x=\sum _{m=0}^{\infty }\sum _{n=0}^{\infty }{\frac {\epsilon ^{m}}{m!}}{\frac {\delta ^{n}}{n!}}\int _{0}^{1}\ln ^{m}x\ln ^{n}(1-x){\mathrm {d} }x}
+
+
+∫01xϵ(1−x)δdx=Γ(1+ϵ)Γ(1+δ)Γ(2+ϵ+δ)=Γ(1+ϵ)Γ(1+δ)(1+ϵ+δ)Γ(1+ϵ+δ){\displaystyle \int _{0}^{1}x^{\epsilon }(1-x)^{\delta }{\mathrm {d} }x={\frac {\Gamma (1+\epsilon )\Gamma (1+\delta )}{\Gamma (2+\epsilon +\delta )}}={\frac {\Gamma (1+\epsilon )\Gamma (1+\delta )}{(1+\epsilon +\delta )\Gamma (1+\epsilon +\delta )}}}
+
+Our integral implies that we need to find the coefficient of ϵ2δ{\displaystyle \epsilon ^{2}\delta } in the expansion, setting m=2{\displaystyle m=2} and n=1.{\displaystyle n=1.} Furthermore, we must multiply the eventual result we obtain by the factorial of the power. In this case, 2!1!=2.{\displaystyle 2!1!=2.}
+
+
+, We see that the terms including the Euler-Mascheroni constant vanish. Furthermore, the terms in the sum cancel in a way such that only the cross terms are left intact. (We break up the exponential function into two to save space.) The fraction is expanded into its power series. 
+
+
+Γ(1+ϵ)Γ(1+δ)Γ(1+ϵ+δ)=exp∗exp=exp{\displaystyle {\begin{aligned}{\frac {\Gamma (1+\epsilon )\Gamma (1+\delta )}{\Gamma (1+\epsilon +\delta )}}&=\exp \left\\&\ *\,\exp \left\\&=\exp \left\end{aligned}}}
+
+
+11+ϵ+δ=1−(ϵ+δ)+(ϵ+δ)2−(ϵ+δ)3+⋯{\displaystyle {\frac {1}{1+\epsilon +\delta }}=1-(\epsilon +\delta )+(\epsilon +\delta )^{2}-(\epsilon +\delta )^{3}+\cdots }
+
+
+, We need only terms up to k=3,{\displaystyle k=3,} and the Taylor series of that exponential function only goes up to first-order. We will also need terms of the power series up to third order. Remember that we do not need to multiply everything out. We are only interested in the coefficients of ϵ2δ.{\displaystyle \epsilon ^{2}\delta .} Be sure to keep track of the signs.
+
+
+ϵ2δ:ζ(3)+ζ(2)−3{\displaystyle \epsilon ^{2}\delta :\zeta (3)+\zeta (2)-3}
+
+Remembering to multiply by 2 to account for the factorial on ϵ2,{\displaystyle \epsilon ^{2},} this immediately gets us the desired result.
+
+
+∫01ln2⁡xln⁡(1−x)dx=2(ζ(3)+ζ(2)−3){\displaystyle \int _{0}^{1}\ln ^{2}x\ln(1-x){\mathrm {d} }x=2(\zeta (3)+\zeta (2)-3)}
+
+
+, We can also show similar integrals using this technique. For the first one, we find coefficients of ϵδ.{\displaystyle \epsilon \delta .} For the second one, we find coefficients of ϵ2δ2.{\displaystyle \epsilon ^{2}\delta ^{2}.} In principle, it is possible to evaluate integrals like these with any integer power on the logs. We would just have to keep more terms in our evaluation.
+
+
+∫01ln⁡xln⁡(1−x)dx=2−ζ(2){\displaystyle \int _{0}^{1}\ln x\ln(1-x){\mathrm {d} }x=2-\zeta (2)}
+
+
+∫01ln2⁡xln2⁡(1−x)dx=24−8ζ(2)−8ζ(3)+2ζ2(2)−6ζ(4){\displaystyle \int _{0}^{1}\ln ^{2}x\ln ^{2}(1-x){\mathrm {d} }x=24-8\zeta (2)-8\zeta (3)+2\zeta ^{2}(2)-6\zeta (4)}
+
+
+, In this section, we will show a u-sub that converts the Beta function into an integral from 0 to infinity, which will produce some very interesting results.
+
+
+∫01tα−1(1−t)β−1dt{\displaystyle \int _{0}^{1}t^{\alpha -1}(1-t)^{\beta -1}{\mathrm {d} }t}
+
+
+, This does two things. First, it allows us to directly evaluate integrals with 1+u{\displaystyle 1+u} in the denominator, which was previously not allowed. Second, it changes the boundaries. The way we now evaluate is to find β{\displaystyle \beta } first, and then find α,{\displaystyle \alpha ,} because of this substitution.
+
+
+Γ(α)Γ(β)Γ(α+β)=∫01tα−1(1−t)β−1dt=∫0∞1(1+u)α+1(1−11+u)β−1du=∫0∞uβ−1(1+u)α+βdu{\displaystyle {\begin{aligned}{\frac {\Gamma (\alpha )\Gamma (\beta )}{\Gamma (\alpha +\beta )}}&=\int _{0}^{1}t^{\alpha -1}(1-t)^{\beta -1}{\mathrm {d} }t\\&=\int _{0}^{\infty }{\frac {1}{(1+u)^{\alpha +1}}}\left(1-{\frac {1}{1+u}}\right)^{\beta -1}{\mathrm {d} }u\\&=\int _{0}^{\infty }{\frac {u^{\beta -1}}{(1+u)^{\alpha +\beta }}}{\mathrm {d} }u\end{aligned}}}
+
+
+, This form of the Beta function allows direct access to another class of integrals otherwise only accessible via residues. We can use Euler's reflection formula to simplify integrals, particularly the second one listed.
+
+
+∫0∞1x(1+x)3dx=2{\displaystyle \int _{0}^{\infty }{\frac {1}{\sqrt {x(1+x)^{3}}}}{\mathrm {d} }x=2}
+
+
+∫0∞x2x4(x+1)4dx=152π128{\displaystyle \int _{0}^{\infty }{\frac {x^{2}{\sqrt{x}}}{(x+1)^{4}}}{\mathrm {d} }x={\frac {15{\sqrt {2}}\pi }{128}}}
+
+
+, We replace the term in the denominator with xn+1,{\displaystyle x^{n}+1,} which after a u-sub, leads to more general results, since we can differentiate under the integral with respect to any of the three parameters. In particular, when we set α=1,{\displaystyle \alpha =1,} we arrive at a very attractive answer involving the cosecant function (which we use the reflection formula to derive).
+
+
+∫0∞xm−1(xn+1)αdx=Γ(m/n)Γ(α−m/n)nΓ(α){\displaystyle \int _{0}^{\infty }{\frac {x^{m-1}}{(x^{n}+1)^{\alpha }}}{\mathrm {d} }x={\frac {\Gamma (m/n)\Gamma (\alpha -m/n)}{n\Gamma (\alpha )}}}
+
+
+∫0∞xm−1xn+1dx=πncscmπn{\displaystyle \int _{0}^{\infty }{\frac {x^{m-1}}{x^{n}+1}}{\mathrm {d} }x={\frac {\pi }{n}}\csc {\frac {m\pi }{n}}}
+
+These results can directly be used to evaluate more integrals. Verify these.
+
+
+∫0∞x2x(x3+1)2dx=π9{\displaystyle \int _{0}^{\infty }{\frac {x^{2}{\sqrt {x}}}{(x^{3}+1)^{2}}}{\mathrm {d} }x={\frac {\pi }{9}}}
+
+
+∫0∞1x4+1dx=π22{\displaystyle \int _{0}^{\infty }{\frac {1}{x^{4}+1}}{\mathrm {d} }x={\frac {\pi }{2{\sqrt {2}}}}}
+
+
+
+
+, The above result with the cosecant is a very potent integral because we can also differentiate once and twice to obtain some more results involving logs.(We use a trig identity to simplify the result after differentiating twice.)
+
+
+∫0∞xm−1ln⁡xxn+1dx=−π2n2cscmπncotmπn{\displaystyle \int _{0}^{\infty }{\frac {x^{m-1}\ln x}{x^{n}+1}}{\mathrm {d} }x=-{\frac {\pi ^{2}}{n^{2}}}\csc {\frac {m\pi }{n}}\cot {\frac {m\pi }{n}}}
+
+
+∫0∞xm−1ln2⁡xxn+1dx=π3n3cscmπn(2csc2mπn−1){\displaystyle \int _{0}^{\infty }{\frac {x^{m-1}\ln ^{2}x}{x^{n}+1}}{\mathrm {d} }x={\frac {\pi ^{3}}{n^{3}}}\csc {\frac {m\pi }{n}}\left(2\csc ^{2}{\frac {m\pi }{n}}-1\right)}
+
+Use these results to verify the integrals below. These integrals have extremely complicated antiderivatives, and there is virtually no hope of approaching them from the perspective of the fundamental theorem. However, these extremely simple answers only showcases the power of the Beta function - it makes the process of obtaining a simple answer, simple.
+
+
+∫0∞x2ln⁡xx4+1dx=π2216{\displaystyle \int _{0}^{\infty }{\frac {x^{2}\ln x}{x^{4}+1}}{\mathrm {d} }x={\frac {\pi ^{2}{\sqrt {2}}}{16}}}
+
+
+∫0∞ln2⁡xx3+1dx=10π3813{\displaystyle \int _{0}^{\infty }{\frac {\ln ^{2}x}{x^{3}+1}}{\mathrm {d} }x={\frac {10\pi ^{3}}{81{\sqrt {3}}}}}
+
+
+∫0∞x3ln2⁡x(x4+1)2dx=π2192{\displaystyle \int _{0}^{\infty }{\frac {x^{3}\ln ^{2}x}{(x^{4}+1)^{2}}}{\mathrm {d} }x={\frac {\pi ^{2}}{192}}}
+
+
+
+
+, If you are familiar with the derivation of the Beta function, we start from the same place. However, we switch to polar and make a substitution to get a trigonometric integral.
+
+
+Γ(α)Γ(β)=∫0∞uα−1e−udu∫0∞vβ−1e−vdv{\displaystyle \Gamma (\alpha )\Gamma (\beta )=\int _{0}^{\infty }u^{\alpha -1}e^{-u}{\mathrm {d} }u\int _{0}^{\infty }v^{\beta -1}e^{-v}{\mathrm {d} }v}
+
+
+, Recall that the area element dxdy=rdrdθ{\displaystyle {\mathrm {d} }x{\mathrm {d} }y=r{\mathrm {d} }r{\mathrm {d} }\theta } and the bounds for θ{\displaystyle \theta } are from 0{\displaystyle 0} to π/2{\displaystyle \pi /2} because we are integrating over only quadrant I. 
+
+
+Γ(α)Γ(β)=4∫0∞x2α−1e−x2dx∫0∞y2β−1e−y2dy=4∫0∞rdrr2α+2β−2e−r2∫0π/2cos2α−1⁡θsin2β−1⁡θdθ{\displaystyle {\begin{aligned}\Gamma (\alpha )\Gamma (\beta )&=4\int _{0}^{\infty }x^{2\alpha -1}e^{-x^{2}}{\mathrm {d} }x\int _{0}^{\infty }y^{2\beta -1}e^{-y^{2}}{\mathrm {d} }y\\&=4\int _{0}^{\infty }r{\mathrm {d} }r\,r^{2\alpha +2\beta -2}e^{-r^{2}}\int _{0}^{\pi /2}\cos ^{2\alpha -1}\theta \sin ^{2\beta -1}\theta {\mathrm {d} }\theta \end{aligned}}}
+
+
+, After substituting and simplifying, we obtain our desired result. Be careful of the extra 1/2.{\displaystyle 1/2.}
+
+
+Γ(α)Γ(β)=2∫0∞uα+β−1e−udu∫0π/2cos2α−1⁡θsin2β−1⁡θdθ=2Γ(α+β)∫0π/2cos2α−1⁡θsin2β−1⁡θdθ{\displaystyle {\begin{aligned}\Gamma (\alpha )\Gamma (\beta )&=2\int _{0}^{\infty }u^{\alpha +\beta -1}e^{-u}{\mathrm {d} }u\int _{0}^{\pi /2}\cos ^{2\alpha -1}\theta \sin ^{2\beta -1}\theta {\mathrm {d} }\theta \\&=2\,\Gamma (\alpha +\beta )\int _{0}^{\pi /2}\cos ^{2\alpha -1}\theta \sin ^{2\beta -1}\theta {\mathrm {d} }\theta \end{aligned}}}
+
+
+Γ(α)Γ(β)2Γ(α+β)=∫0π/2cos2α−1⁡θsin2β−1⁡θdθ{\displaystyle {\frac {\Gamma (\alpha )\Gamma (\beta )}{2\,\Gamma (\alpha +\beta )}}=\int _{0}^{\pi /2}\cos ^{2\alpha -1}\theta \sin ^{2\beta -1}\theta {\mathrm {d} }\theta }
+
+This is a very important result, and one that is very often used with integer powers, which provide very "nice" answers.
+ These are daunting with reduction of power formulae and other techniques, but trivial from the perspective of the Beta function.
+
+
+∫0π/2cos4⁡xsin5⁡xdx=8315{\displaystyle \int _{0}^{\pi /2}\cos ^{4}x\sin ^{5}x{\mathrm {d} }x={\frac {8}{315}}} 
+
+
+∫0π/2sin⁡xdx=2πΓ2(3/4){\displaystyle \int _{0}^{\pi /2}{\sqrt {\sin x}}{\mathrm {d} }x={\sqrt {\frac {2}{\pi }}}\,\Gamma ^{2}(3/4)}
+
+
+∫0π/2sin4⁡xcos2⁡xsin⁡xdx=28Γ2(3/4)1952π{\displaystyle \int _{0}^{\pi /2}\sin ^{4}x\cos ^{2}x{\sqrt {\sin x}}{\mathrm {d} }x={\frac {28\,\Gamma ^{2}(3/4)}{195{\sqrt {2\pi }}}}}
+
+
+, The integral contains a composition of functions whose antiderivative cannot be written in terms of elementary functions. Nevertheless, the integral contains an exact solution.
+
+
+∫0π/2lnsin⁡xdx{\displaystyle \int _{0}^{\pi /2}\ln \sin x{\mathrm {d} }x}
+
+
+, As usual, we begin with the more general case of expanding into a series, neglecting higher-order terms, and finding the appropriate coefficient. These integrals will require the use of the duplication formula.
+
+
+∫0π/2sinϵ⁡xdx=∑n=0∞ϵnn!∫0π/2lnnsin⁡xdx{\displaystyle \int _{0}^{\pi /2}\sin ^{\epsilon }x{\mathrm {d} }x=\sum _{n=0}^{\infty }{\frac {\epsilon ^{n}}{n!}}\int _{0}^{\pi /2}\ln ^{n}\sin x{\mathrm {d} }x}
+
+
+∫0π/2sinϵ⁡xdx=Γ(1/2)Γ(1/2+ϵ/2)2Γ(1+ϵ/2){\displaystyle \int _{0}^{\pi /2}\sin ^{\epsilon }x{\mathrm {d} }x={\frac {\Gamma (1/2)\Gamma (1/2+\epsilon /2)}{2\,\Gamma (1+\epsilon /2)}}}
+
+
+, After using the duplication formula, we see that the ratio Γ(1+ϵ)Γ2(1+ϵ/2){\displaystyle {\frac {\Gamma (1+\epsilon )}{\Gamma ^{2}(1+\epsilon /2)}}} cancels up to the first order, leaving us with a very simple expansion.
+
+
+Γ(1/2)Γ(1/2+ϵ/2)2Γ(1+ϵ/2)=π2⋅2ϵΓ(1+ϵ)Γ2(1+ϵ/2)≈π2e−ϵln⁡2≈π2(1−ϵln⁡2){\displaystyle {\begin{aligned}{\frac {\Gamma (1/2)\Gamma (1/2+\epsilon /2)}{2\,\Gamma (1+\epsilon /2)}}&={\frac {\pi }{2\cdot 2^{\epsilon }}}{\frac {\Gamma (1+\epsilon )}{\Gamma ^{2}(1+\epsilon /2)}}\\&\approx {\frac {\pi }{2}}e^{-\epsilon \ln 2}\\&\approx {\frac {\pi }{2}}(1-\epsilon \ln 2)\end{aligned}}}
+
+
+, 
+
+
+∫0π/2lnsin⁡xdx=−π2ln⁡2{\displaystyle \int _{0}^{\pi /2}\ln \sin x{\mathrm {d} }x=-{\frac {\pi }{2}}\ln 2}
+
+
+, This technique can once again be used to evaluate the entire class of integrals.
+
+
+∫0π/2sin⁡xlnsin⁡xdx=ln⁡2−1{\displaystyle \int _{0}^{\pi /2}\sin x\ln \sin x{\mathrm {d} }x=\ln 2-1}
+
+
+∫0π/2sin2⁡xcos2⁡xlnsin⁡xdx=π64(1−4ln⁡2){\displaystyle \int _{0}^{\pi /2}\sin ^{2}x\cos ^{2}x\ln \sin x{\mathrm {d} }x={\frac {\pi }{64}}(1-4\ln 2)}
+
+
+, This is an example of an integral that converges, but we cannot directly apply our techniques to evaluate because the integral that we would've considered does not converge.
+
+∫0π/2lnsin⁡xcos⁡xdx{\displaystyle \int _{0}^{\pi /2}{\frac {\ln \sin x}{\cos x}}{\mathrm {d} }x}
+
+, We need to add a term δ{\displaystyle \delta } that "tames" the integral so that it converges. Otherwise, we would get a Γ(0){\displaystyle \Gamma (0)} term that is undefined. Here, δ{\displaystyle \delta } is a small number that is taken to be 0 at a convenient time.
+
+∫0π/2sinϵ⁡xcos−1+δ⁡xdx=Γ(1+ϵ2)Γ(δ2)2Γ(12+ϵ+δ2){\displaystyle \int _{0}^{\pi /2}\sin ^{\epsilon }x\cos ^{-1+\delta }x{\mathrm {d} }x={\frac {\Gamma \left({\frac {1+\epsilon }{2}}\right)\Gamma \left({\frac {\delta }{2}}\right)}{2\,\Gamma \left({\frac {1}{2}}+{\frac {\epsilon +\delta }{2}}\right)}}}
+
+, This gets our result into a form so that we can use a series expansion around Γ(1).{\displaystyle \Gamma (1).} Then we use the duplication formula.
+
+Γ(1+ϵ2)Γ(δ2)2Γ(12+ϵ+δ2)=1δΓ(1+ϵ2)Γ(1+δ2)Γ(12+ϵ+δ2)=Γ(1+δ/2)δπΓ(1+ϵ)2ϵΓ(1+ϵ/2)πΓ(1+ϵ+δ)2ϵ+δΓ(1+ϵ+δ2)=2δδΓ(1+δ/2)Γ(1+ϵ)Γ(1+ϵ+δ2)Γ(1+ϵ/2)Γ(1+ϵ+δ){\displaystyle {\begin{aligned}{\frac {\Gamma \left({\frac {1+\epsilon }{2}}\right)\Gamma \left({\frac {\delta }{2}}\right)}{2\,\Gamma \left({\frac {1}{2}}+{\frac {\epsilon +\delta }{2}}\right)}}&={\frac {1}{\delta }}{\frac {\Gamma \left({\frac {1+\epsilon }{2}}\right)\Gamma \left(1+{\frac {\delta }{2}}\right)}{\Gamma \left({\frac {1}{2}}+{\frac {\epsilon +\delta }{2}}\right)}}\\&={\frac {\Gamma (1+\delta /2)}{\delta }}{\frac {\frac {{\sqrt {\pi }}\,\Gamma (1+\epsilon )}{2^{\epsilon }\Gamma (1+\epsilon /2)}}{\frac {{\sqrt {\pi }}\,\Gamma (1+\epsilon +\delta )}{2^{\epsilon +\delta }\Gamma \left(1+{\frac {\epsilon +\delta }{2}}\right)}}}\\&={\frac {2^{\delta }}{\delta }}{\frac {\Gamma (1+\delta /2)\Gamma (1+\epsilon )\Gamma \left(1+{\frac {\epsilon +\delta }{2}}\right)}{\Gamma (1+\epsilon /2)\Gamma (1+\epsilon +\delta )}}\end{aligned}}}
+
+, We are interested in the coefficient of ϵ,{\displaystyle \epsilon ,} but we need to find the coefficient of ϵδ{\displaystyle \epsilon \delta } here in order to cancel the δ{\displaystyle \delta } in front. Notice that any higher-order δ{\displaystyle \delta } terms will vanish.
+⋯=eδln⁡2δexp≈1δ(1+δln⁡2)(1+ζ(2)2(ϵ2+(ϵ+δ2)2+(δ2)2−(ϵ2)2−(ϵ+δ)2)){\displaystyle {\begin{aligned}\cdots &={\frac {e^{\delta \ln 2}}{\delta }}\exp \left\\&\approx {\frac {1}{\delta }}(1+\delta \ln 2)\left(1+{\frac {\zeta (2)}{2}}\left(\epsilon ^{2}+\left({\frac {\epsilon +\delta }{2}}\right)^{2}+\left({\frac {\delta }{2}}\right)^{2}-\left({\frac {\epsilon }{2}}\right)^{2}-(\epsilon +\delta )^{2}\right)\right)\end{aligned}}}
+Notice that the δln⁡2{\displaystyle \delta \ln 2} term cannot contribute to the coefficient because there is no ϵ{\displaystyle \epsilon } term on the right. Therefore, the only terms that contribute are the cross terms.
+
+ζ(2)2(12−2)ϵδ=−34ζ(2)ϵδ{\displaystyle {\frac {\zeta (2)}{2}}\left({\frac {1}{2}}-2\right)\epsilon \delta =-{\frac {3}{4}}\zeta (2)\epsilon \delta }
+
+
+
+, We can write our answer in terms of π{\displaystyle \pi } by making use of ζ(2)=π26.{\displaystyle \zeta (2)={\frac {\pi ^{2}}{6}}.}
+
+∫0π/2lnsin⁡xcos⁡xdx=−π28{\displaystyle \int _{0}^{\pi /2}{\frac {\ln \sin x}{\cos x}}{\mathrm {d} }x=-{\frac {\pi ^{2}}{8}}}
+
+, The work that was done to evaluate the first integral can be recycled to evaluate this similar integral.
+
+∫0π/2ln2sin⁡xcos⁡xdx=74ζ(3){\displaystyle \int _{0}^{\pi /2}{\frac {\ln ^{2}\sin x}{\cos x}}{\mathrm {d} }x={\frac {7}{4}}\zeta (3)}
+

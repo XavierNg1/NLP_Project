@@ -1,0 +1,85 @@
+ Go to File > New.
+
+Note: Although lighting is important when making an image, setting up the lights is beyond the scope of this tutorial. I recommend looking at the websites listed below for light sets or lighting techniques.
+Note 2: The camera settings (angle, placement, and distance from the subject) are important to your final image as well, but for this tutorial, the default camera settings should be fine.
+Note 3: Most of the controls in Poser can be moved around the screen- your controls may be in a different location than what's shown in the screen shots.;
+, For this tutorial, we'll use the "Lycantar" (a robot dog), which is included, for free, with the installation of Poser 7.
+
+Open the Library Palette by clicking on the "handle" on the right of the screen or go to Window > Libraries.
+Click on the word "Figures" to open the Figures Library.
+Scroll down and double-click on the "CP Partners" Folder to open it.
+Scroll down and double-click on the "VanishingPoint" Folder to open it.
+
+
+
+
+
+
+Scroll down slightly and click on the thumbnail for the "Lycantar".
+Click the double-check mark at the bottom of the Library Palette ("Create New Figure") to add it to the scene.
+
+
+
+
+
+
+The Lycantar will be added to the scene.
+<br.
+
+<br.
+
+You can either click on the camera "trackball" to move and rotate the camera... or you can use the values shown in the screen shot.
+
+Make sure the Parameter Dials Palette is open- it's the "window" with all the "dials" and values.
+Select the Main Camera : you should see the words "Main Camera" at the top of the Parameter Dials Palette.
+Change a value, click on the number. Poser will display a text box so you can type in a new number.
+
+
+Here are some suggested values:
+
+DollyZ (move front/ back): 0.470
+DollyY (move up/ down): 0.285
+DollyX (move left/ right): -0.028
+xOrbit (rotate up/ down): -7
+yOrbit (rotate around): 35
+
+
+
+
+,
+Any object can be made into a "mirror" by simply changing its reflective properties. But, for this tutorial, we'll use the "One-Sided Square".
+Go back to the Library Palette and click on the word "Figures" to show all the libraries.
+
+
+
+
+
+
+Click on the word "Props" to open the Props Library.
+
+You should see a series of blue folders. If you don't, double-click the "up" icon (the blue folder with the arrow) to move "up" a folder.
+
+
+Double-click on the "Primitives" folder to open it.
+
+
+Click on the check mark at the bottom of the Library Palette ("Apply Library Preset") to add it to the scene.
+, To do this, we'll have to change the surface material settings., Then, make sure you are on the "Advanced" Tab., In the main window, you should see a box with the word "PoserSurface".
+
+In order for an object to be reflective, change the following settings:
+
+,
+
+The Diffuse_Color is the color of the mirrored surface: in this case, we want it to look like a mirror, without any color at all. But, you could change it to blue or green to make the mirror look more like a metallic surface, such as car metal.
+ In the pop-up menu, select: New node > Lighting > Ray Trace > reflect.,,,,,, (By default, they will probably already be checked.),,,
+
+Note: the Poser 4 render engine does not support reflections or ray-tracing.
+,
+
+Note: Ray-tracing and at least 3 ray-traced "bounces" are necessary to create reflective surfaces.
+Note 2: On the right are a number of additional render options (such as "Use displacement maps"). Enabling these options are not necessary for this tutorial, but you may want to investigate these options to increase the quality of your images.
+,
+
+Sit back and watch the scene render. Depending on the speed of your computer, rendering could be finished in a few minutes!
+Note: many factors can influence how long (or how fast) a scene renders, such as: the size of the image, the number of lights, the complexity of the shadows, the complexity of the models in the scene, the complexity of the textures, and the complexity of the calculations for effects such as reflections, transparency, and so on. And the most important factor is the speed of your computer's processor and whether there are any other programs running in the background. Optimizing your computer (and Poser itself) to render faster could be a tutorial all to itself!
+

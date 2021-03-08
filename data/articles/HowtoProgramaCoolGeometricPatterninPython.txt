@@ -1,0 +1,19 @@
+ Be sure to download version 2.7.;
+, Go under the Python 2.7 folder and click on “IDLE (python GUI). It should pop up with a python shell like this.
+ In the upper left hand corner click file and on the drop down click on “New File”. This will open an untitled file where you will write your program.
+ To be able to use turtle graphics you need to import them to your program. You this in the first line of your code. You simply type “from turtle import *” like so. To give your program randomly generated colors, on the next line you need to type “import random”.
+ To have graphics in your program you have to create a screen for them to be displayed in. You do this by creating a variable (it is best to name the variable screen) and setting it equal to the function “Screen()”. The screen size also needs to be set. On the next line you take the variable name you made for your screen and use the screensize function. For example: screen.screensize(400,400,”black”). Inside the parentheses is setting the height, width, and background color of the screen.
+ Much like the previous step with the screen you set a variable (best named pen to save confusion) equal to the function “Pen()”. On the next line you set the speed of the pen using the speed function in the same fashion as the last step, however instead of using “.screensize” you use “.speed”. Inside the parentheses you set the speed (to create the pattern quickly, try setting the speed to 75).
+ The cool geometric pattern that you get in this program is made from many squares being drawn in the screen. You need to create a variable named “size” and equal it to 20 which will be used to set the size of these squares
+
+, To get the desired geometric pattern you need to keep the pen creating squares, you do this through repetition which is what a for loop is for. This is done by writing on the next line of code “for i in range(150): “. What this does is setup the program to run something 150 times, for this case it will be used for drawing squares 150 times which will result in a cool geometric pattern. (All steps after creating the for loop will need to be inside the for loop. This is done simply by hitting the tab key and indenting. However it should automatically do this for you after creating the loop.)
+
+, To give the pattern randomly generated colors you need to do the following. On the next line create a variable named “r” and set it equal to “random.randint(0,225). Repeat this step two more times using the variable names “g” and “b”.
+ Now that there are three variables generating random numbers you need to store them in a variable. In the next line of code make a variable named “randcol” and set it equal to “(r,g,b)” .
+ To give your program access to colors you have run the color function. To run the color function all you need to do is type on the next line of code “colormode(255)” and move on to the next line.
+ Using the pen you created earlier you will set its color. You do this by writing “pen.color(randcol)”. This will now give your pen a random color when it draws out the pattern.
+ To get the desired effect you will need to type “pen.circle(size,steps = 4)”. In step 7 you created a variable “size” which is used here. Then the “steps = 4” part is what creates the square.
+ The cool pattern comes from turning the pen in every iteration of the loop. You turn the pen by writing on the next line of code “pen.right(55)”. This makes the pen turn right at 55 degrees every time through the loop.
+ Part of the cool pattern is that the square keeps getting bigger. You do this by writing the last line of code “size = size +3”. So every time through the loop it increases the size of the square by 3.
+ Your program should like it does here.To see the cool geometric pattern all you have to do is hit “f5” on your keyboard.
+

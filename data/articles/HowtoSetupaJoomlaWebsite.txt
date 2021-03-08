@@ -1,0 +1,15 @@
+;
+, Unzip and open an FTP client. Upload all your files to the desired directory of your host. If you're doing it online, upload the contents of the joomla directory to the public directory.
+,, This lets you know whether or not your computer meets the minimum requirements for installation.
+
+
+A common issue to crop up during installation is that the configuration.php file is not writable. To resolve this, you can either create a completely empty text file, save it as configuration.php, and save it to your joomla_root/ directory before beginning the installation or, if installation has already begun, continue with the installation, wait for a display of necessary settings to appear at the end, copy and paste them into a new text document, and save it as configuration.php.
+, Don't enter the .db extension. Contact your webhost if you do not know your username and password.
+ The FTP layer is used to handle file manipulation and enable Joomla! installers on Linux and Unix systems or when there are PHP Safe Mode restrictions. If you have a Windows OS, FTP is not required.
+ Don't worry; this can be easily changed later, so it is not that important.
+
+
+The username for the Super Administrator is admin. You may change the randomly generated password if you desire. Just make sure to write it down or take a mental note of it. For the file permissions, it is best to leave them as they are by leaving Don't CHMOD Files checked.
+Finish the configuration by clicking on Install Sample Data then next.
+ If it’s on your local hard disk, look in the joomla directory.
+,

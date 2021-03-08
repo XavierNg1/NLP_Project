@@ -1,0 +1,12 @@
+ Since a protractor is semi-circle, you need to start with it against one line, marking the middle and each end with dots. Then trace the protractor's edge to make a semi-circle, before turning it around (matching the center and edge dots on the other side) and re-tracing it again.
+, The total degrees contained in a circle is 360, so you just need to divide 360 by the number of sides which is the same as the number of vertices. This value will be the measurement of the angle between any lines drawn from the center of the circle to each corner of the polygon.
+
+
+For example, if you're drawing a hexagon, this value will be 60 degrees.
+ In other words, you'll want to pick a point to start, and then work your way around the circle, drawing a dot at each successive degree measurement.
+
+
+For example, if you're trying to draw a hexagon, you'll pick a point to draw you first dot; then you'll draw your next dot 60 degrees over from that point, and so on, until you've drawn all six points.
+ You'll want to use a ruler for this, and make sure your lines don't overlap. It's a good idea to draw the lines lightly so that you can erase any mistakes or overlaps.
+ And you've done it! If you want to be sure that your polygon is definitely regular, double-check that all your line segments are the same length as each other.
+

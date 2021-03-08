@@ -1,0 +1,37 @@
+
+listen_ipv6, whether to run as standalone with IPv6.
+anonymous_enable, whether to allow anonymous FTP.
+local_enable, whether local logins are permitted.
+write_enable, whether to allow any FTP commands which change the file system such as stor, dele, rnfr, rnto, mkd, rmd, appe and site
+
+Allowed values: Boolean
+Default value: NO
+
+,
+anon_upload_enable, whether to allow the anonymous FTP user to upload files.
+anon_mkdir_write_enable, whether you want the anonymous FTP user to be able to create new directories.
+dirmessage_enable, whether to activate directory messages - messages given to remote users when they go into a certain directory.
+xferlog_enable, whether to activate logging of uploads/downloads.
+xferlog_std_format, whether to have your log file in standard ftpd xferlog format.
+connect_from_port_20, whether to make sure PORT transfer connections originate from port 20 (ftp-data).
+async_abor_enable, whether the server will recognize asynchronous ABOR requests.
+ascii_upload_enable and ascii_download_enable.
+chown_uploads and chown_username.
+xferlog_file.
+idle_session_timeout, which will enable you to change the default value for timing out an idle session.
+data_connection_timeout, which enable you to change the default value for timing out a data connection.
+nopriv_user.
+ftpd_banner, which allows you to fully customize the login banner string.
+deny_email_enable and banned_email_file enable you to specify a file of disallowed anonymous e-mail addresses.
+chroot_local_user, which allows you to restrict local users to their home directories.
+chroot_list_enable and chroot_list_file.
+ls_recurse_enable, which enable you to activate the "-R" option to the builtin ls.
+secure_chroot_dir.
+pam_service_name, is the name of the PAM service vsftpd will use.
+rsa_cert_file, specifies the location of the RSA certificate to use for SSL encrypted connections
+
+Allowed values: File path string
+Default value: /usr/share/ssl/certs/vsftpd.pem
+
+,
+local_umask.

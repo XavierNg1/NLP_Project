@@ -1,0 +1,11 @@
+
+Know what the "hosts" file does.
+Open the Terminal.
+Type .sudo nano /etc/hosts and press ⏎ Return.
+Start a new line at the bottom of the file.
+Type .127.0.0.1 and press Space.
+Enter the website that you want blocked after .127.0.0.1.
+Add additional sites.
+Press .Ctrl+O and then ⏎ Return to save the file.
+Type .sudo dscacheutil -flushcache and press ⏎ Return.
+Make sure that your administrator account is secure.

@@ -1,0 +1,112 @@
+
+Go with the latest version, unless you have a specific reason not to.
+Look at the starter kit options.
+Prepare to set up your operating system.
+Know when to use this option.
+Look for a "NOOBS" kit.
+Purchase a mircoSD card preloaded with NOOBS.
+Know why this is preferable.
+
+Navigate to https://www.raspberrypi.org/downloads/noobs// in your web browser.
+
+Click “Download Zip”.
+Make sure our microSD card is ready.
+
+Go to http://www.sdcard.org in a web browser.
+
+Click "Downloads".
+,
+
+Click "SD Formatter for (Windows or Mac) Download".
+
+Scroll to the bottom of the page and click "Accept".
+Install the SD Formatter.
+
+Plug your microSD card into your card reader on your computer.
+
+Open SD Formatter.
+
+Click "Format.",
+
+Open the zip file by double clicking on it.
+
+Drag and drop the files directly to the microSD card to copy them to the microSD card.
+,
+Once the files have been copied, safely eject the microSD card.
+Remove the SD card from the reader.
+Know when to use this option.
+
+Go to https://www.raspberrypi.org/downloads/raspbian/ in your web browser.
+
+Click "Download Zip" and select a folder to save it to.
+
+Go to https://www.etcher.io/ in a web browser.
+,
+
+Select 'Download For (Windows or Mac)' on the green button.
+Install Etcher.
+
+Insert your microSD card into the card reader on your computer.
+
+Open the Rasbian zip file once it downloads.
+
+Open Etcher.
+
+Click "Select Drive".
+
+Click "Flash".
+Safely eject the microSD card.
+
+Plug the microSD card into the Raspberry Pi.
+
+Plug in the rest of the components, leaving the power adapter for last.
+
+Plug in the Power Adapter.
+
+In the top right corner, click the internet connection icon with the two red x’s and select “Turn on WiFi.",
+
+Review the resulting options.
+
+Select your network.
+
+Once connected, find the blue icon on the top bar showing your network’s signal strength in blue.
+,
+
+
+
+
+
+Open the Terminal by clicking on the Terminal Icon on the top bar.
+,
+
+Wait for the command prompt to open.
+,
+Type “sudo raspi-config” and the press "Enter.",
+
+Review the Software Configuration Tool.
+
+Using your arrow keys, select “1: Expand File System” then press “Enter.”,
+
+Wait for it to display a message that says “Root partition has been resized.
+With the arrow keys, select “3: Boot Options” and press “Enter”,
+
+Select “B4: Desktop Autologin Desktop GUI, automatically logged in as ‘pi’ user” and press “Enter.” This will ensure that every time the Raspberry Pi starts up, it will boot up into the desktop environment, logged in as the user “pi” which is the default user.
+Use the arrow keys to select “5: Internationalization Options” and press “Enter”,
+
+Select “T2 Change Timezone” and press Enter.
+,Select the correct Timezone for your area, then press Enter.
+
+While back in the “Internationalization Options” menu, select “Change WiFi Country” and press “Enter”.
+,
+
+Select the country you are in, then press “Enter.”,
+
+Go back to the main menu, use the side arrow keys to select “Finish” and then press “Enter”.
+,
+
+Reboot.Prepare to check for updates after your Raspberry Pi reboots.
+
+Open the Terminal again by pressing the Terminal icon on the top bar.
+,
+Type “sudo apt-get update” then press “Enter.” This will update your system’s package list.
+Once that has finished, type "sudo apt-get dist-upgrade" and press “Enter.” This will upgrade all your installed packages with their newest versions.

@@ -1,0 +1,54 @@
+ Some of the more popular BitTorrent clients have become bloated with extra features and ads. Installing a lightweight client that just focuses on downloading torrents may help speed up your transfers.
+
+
+One of the most popular free torrent clients is qBittorrent. This is a very light torrent client that is not ad-supported, and can be downloaded from qbittorrent.org.;
+, This will enable the torrent client to automatically open the ports necessary to make connections to other users. Most modern routers support UPnP.
+
+
+Open the Options or Preferences menu in your torrent client.
+Select the "Connection" options.
+Check the "Use UPnP" box and click Apply.
+You may need to enable UPnP for your router if it has been disabled. Open your router's configuration page and open the Advanced section. You should be able to check a box to toggle UPnP on.
+ Torrents survive on users uploading, so you don't want to turn uploading off completely, but you don't want to max out your connection. Capping your upload rate will keep your upload connection from maxing out, which can drag down all of your other internet traffic. Set your maximum upload speed to 80% of your upload rate to prevent it from choking your connection.
+
+
+Open the Options or Preferences menu for your torrent client.
+Click the "Speed" or "Bandwidth" option.
+Set your upload rate limit to about 80% of your maximum upload rate. For example, if you have a 1Mb/s (125kB/s) upload speed, set your upload speed to 100kB/s.
+While you're in this section, make sure that your Download rate is set to "0" (unlimited) or that the download rate limit is disabled.
+ Windows XP includes security patches designed to reduce the spread of viruses. Unfortunately, this patch also limits the number of connection you can have at once, which can have a massive impact on your torrent download speed. Download and install a TCP patch to fix the problem. Note that this problem is no longer present in newer versions of Windows.Download the patch from here. Note that some antivirus programs will report this as a virus, but this is a false-positive since it employs some of the same techniques a virus would to modify your network settings.
+Double-click the downloaded folder and drag the other .zip file to your desktop.
+Double-click the new .zip file and enter abc as the password. Drag the files inside to your desktop.
+Run the EvID4226Patch program and type Y at the command prompt. This will increase the number of open connections from 10 to 50.
+Open the Advanced section of your torrent client's Settings or Preferences menu. Set the "Maximum number of half-open connections" or "net.max_halfopen" to "50".
+ You can set how many users can be connected to you. Limiting the number of users that can connect to you will help prevent your connection from being overloaded. You may have to experiment with these settings, as they will have different effects for different users.
+
+
+Open the "Connections" or "Bandwidth" section of the Options or Preferences menu.
+
+
+
+Set your "Global maximum connections" to 150.
+Set the "Maximum connections per torrent" to 100.
+Set the "Upload slots per torrent" to 3-5. This will limit the number of people that can connect to you, but still keep you in good sharing standing.
+ Windows Firewall may be blocking your torrent client, which can prevent you from connecting to other users.
+
+
+Open the Start menu and type windows firewall. Select "Windows Firewall" from the list of results.
+Click the "Allow an app or feature through Windows Firewall" link. This can be found on the left side of the window. If you're using Windows XP, click the "Exceptions" tab.
+Click the Change settings button at the top of the list, then scroll down to find your torrent client.
+Check the boxes for Private and Public, then click OK.
+ Many internet service providers (ISPs) will throttle BitTorrent traffic, because they view it as a strain on their network and potentially illegal. Most BitTorrent clients allow you enable protocol encryption, which masks the traffic to your ISP. This can help prevent them from throttling your connections.You can find the encryption settings in the "BitTorrent" section of the BitTorrent client's Options or Preferences menu.
+When you force encrypted connections, you'll only be able to connect with other encrypted users. If the torrent doesn't have many seeds, this could actually slow you transfers down.
+Encryption will not protect you from the potential legal repercussions of downloading illegal content. In order to download anonymously, you'll need to use a VPN. This may slow down your transfers.
+ Seeders are users who are sharing part or all of the torrent. The more seeders a torrent has, the more users that you can connect to to download the file. The download speed you get is dependent on the combined upload speed of all the users you are connected to.
+
+
+All torrent tracker sites list the number of Seeders and Leechers/Peers that each torrent has. Leechers/peers are users that are downloading without sharing the entire file. If the number of leechers or peers is way higher than the number of seeders, you'll likely experience slower speeds since there aren't enough connections to go around.
+
+
+
+Right-click the torrent you are downloading.
+Hover your mouse over Bandwidth Allocation.
+Click High.
+

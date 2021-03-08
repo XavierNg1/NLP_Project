@@ -1,0 +1,30 @@
+ Use the following DNS addresses to do this:
+
+
+On dial-up or bridge mode broadband connections: Enter the following DNS address at local area connection or wireless network connection: Primary DNS -- 192.168.1.1 (filling this IP will automatically takes first DNS server from BSNL)
+Alternate DNS -- 156.154.70.1 or 156.154.71.1 or 4.2.2.2 or 208.67.222.222 or 208.67.220.220 or 8.8.4.4 or 8.8.8.8 (use any of these).;
+, The SNR (Signal to Noise Ratio) value at downstream must be greater than 13 dB. See the "DSL Line Parameters in Modem Interface Page" under the heading Overview or Device Info or Status or Statistics in the modem interface/configuration page, (the names differ as different modems have different styles of interfaces). If the SNR value is lower than 13 dB, then insist on a change of line (drop wire), jumper, vertical, DP or line pair.
+ The attenuation value at downstream must be less than 45 dB. See the "DSL Line Parameters in Modem Interface Page" under headings such as Overview or Device Info or Status or Statistics for your modem. If the value is greater than 43 dB, then insist for a change of phone line (drop wire), jumper, vertical, DP or line pair.
+
+
+Broadband may work on a value higher than 45 dB but this would be likely at a slow speed, with frequent disconnections and time-outs.
+Practically, it’s not possible to provide a line with exact value of attenuation.
+ Almost all MTU sizes (like 1500, 1492 or 1480) give good speed performance for website browsing and downloading. However, preferably use 1492 as MTU in all modem/router connections until and unless you face any significant problems with MTU.
+
+
+The value is defined inside the modem or router configuration page.
+ Modems from different companies or different models of modem have different internal circuitry and they read line parameters differently. So, if the line parameters are not at the recommended levels, then try to change the modem to see whether this makes any difference. The modems like Netgear, Teracom, Huawei, UT-Star, TP-link, D-link, and Link Sys perform exceptionally well, even in poor signal-to-noise ratio conditions. That means if your house is at considerable distance from your BSNL exchange, naturally the line attenuation will be more and the cheap quality modems used at your home would fail to perform reliably or read line profile accurately.
+ Always enable NAT, firewall and default route check-boxes (features) in the modem configuration/interface page.
+ The ADSL splitter must be used on a telephone line at the subscriber's premises if the user has broadband connection. It actually divides the main (frequency) telephone line coming from exchange into the phone (low frequency) and broadband (high frequency) connection. So, a modem must be fed with a pure ADSL signal.
+ The physical layout of line must be in accordance with the technical norms followed for a broadband connection. Namely, the phone line coming from the DP (Distribution Point) must be first terminated at an ADSL splitter in a subscriber's home
+
+,,,, Use browsers like Mozilla Firefox or Google Chrome for web surfing. These browsers are much faster, safer and more reliable than the conventional Internet Explorer, which has been embedded in many of the former versions of Windows.
+ Never let your wireless modem or router be unsecured. Use WEP-128 bits or WPA security key settings. Choose a strong key but an easy-to-remember Wi-Fi password containing both letters and digits. You may also use MAC based security, which is the strongest security that enables only systems which are present in the MAC list to have internet access.
+ Use the right broadband plan for right kind of activity. Suppose that you want to use only audio chat. Then you should have a connection with more than 128kbps of speed. If you want to use video chat, then use a connection with a speed of 512 kbps or more.
+
+
+The speed of 256 kbps is fine for email checking and browsing different websites.
+For multitasking, prefer high speed broadband plans.
+ Use ad-blocker softwares/extensions/add-ons for web browsers to block unnecessary Ads in your web page. This will increase the total web browsing experience.
+ Wires and connections installed in pillars and DP boxes should be free from dust and rust, to ensure good line parameters.
+

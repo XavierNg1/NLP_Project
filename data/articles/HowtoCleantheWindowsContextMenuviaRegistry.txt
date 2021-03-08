@@ -1,0 +1,40 @@
+ It is accessible through the Start menu.
+
+
+A shorter way to call it is by pressing the Windows key + R on your keyboard.;
+, In the Run box, type “regedit” (without the quotation marks) to call the Registry Editor.
+
+
+Take extra precaution when opening and modifying contents in the registry as it can damage your computer’s system. If you’re unfamiliar with it, don’t proceed and seek proper expertise for guidance.
+, From the header menu, choose “File” then “Export.” The whole registry will be exported into a text file. Navigate to the folder where you want to save your backup then type in the name of your registry file. When you’re done, click on the “Save” button.
+
+
+Your registry will be backed up in that file with a .reg extension. If anything goes wrong with your modifications, you can always revert to this stable version.
+ Take note where you keep the registry file you’ve just exported in case you want to undo your changes later.
+
+It is always advisable to backup your registry before doing anything to it.
+ Click through the registry until you find the following entries:
+
+
+HKEY_CLASSES_ROOT\*\shell
+HKEY_CLASSES_ROOT\Directory\shell
+
+, For each of the entries above, review the menu items under them. Be careful on which entry you identify.
+ If you’d like to disable a particular menu item, click on it from the left panel then right-click on the right panel. Create this new string value: “LegacyDisable”.
+
+
+You can also opt to just delete the menu item from the registry, but leave this as the last option.
+ Repeat navigating to the other keys, identifying the menu items, and disabling the menu items as needed for all the menu items you’d like to remove from the context menu., Click through the registry until you find the following entries:
+
+
+HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
+HKEY_CLASSES_ROOT\AllFileSystemObjects\ShellEx
+HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers
+
+, For each of the entries above, review the menu items under them. Be careful on which entry you identify.
+ If you’d like to disable a particular menu item, click on it from the left panel, and then modify the (Default) value on the right panel by putting a few dashes.
+
+
+Double-click the (Default) entry to bring out the actual contents.
+Add a few dashes in front of the Value Data and click “OK.” This essentially disables the item without the need to delete it. This is useful in case you want to bring it back later.
+ Repeat navigating to the other keys, identifying the menu items, and disabling the menu items for all the menu items you’d like to remove from the context menu.

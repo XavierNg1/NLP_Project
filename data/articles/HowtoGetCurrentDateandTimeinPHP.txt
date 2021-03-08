@@ -1,0 +1,7 @@
+;
+, The file name should end with ".php" or ".php3". The two text editors recommended are either Adobe Dreamweaver or Notepad++.
+,, First understand how to get the date and year of your current timezone: echo date ( 'm/d/Y g:ia' ); This will output as: "11/20/2014 8:32am".
+ Look at the above example. Inside the date() function, there is a string with the following text: 'm/d/Y g:ia'. The m stands for the month, d for day, and Y for year. The g for hour, i for minute, and a for am/pm. To learn more about what options exist, check out PHP's date() function manual: http://php.net/manual/en/function.date.php
+
+, To change the timezone in PHP, use this function: date_default_timezone_set ( 'America/Los_Angeles' ); where 'America/Los_Angeles' refers to the timezone you wish to switch to. Anytime you call a function (after calling date_default_timezone_set) that interacts with the date/time, you will be using the new selected timezone.
+

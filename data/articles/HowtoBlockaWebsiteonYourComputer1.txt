@@ -1,0 +1,23 @@
+ To block any website, on every browser, you need to access and edit your "HOST" file. This file helps convert URL's, like www.google.com, to a numerical DNS address. However, you can use this conversion point to block your computer from ever accessing certain websites with a little modification.
+
+
+If you don't see the folder "Windows" in C:, then look for it in another lettered drive. C is by far the most common drive for Windows, but it could be in any drive if you installed Windows yourself.;
+, To get there, click on Windows –>System32–>drivers–>etc. In the etc folder, look for the file "Hosts."
+
+
+The final location you're heading for is C:\WINDOWS\system32\drivers\etc. You can type this into the top bar of My Computer if you're having trouble.
+You can also find this by typing "notepad C:/Windows/System32/ drivers/etc/hosts" into a Command Prompt window. To use Command Prompt, find and open the program from the Start menu., Double-click on Hosts and choose Notepad when asked which program to use. This allows you to edit the file and block certain sites.
+
+
+If you do not get the option to use Notepad, open the application separately. Then click "File" → "Open" in Notepad and find Hosts like you did before. Click on it to open the file.
+ There will be a lot of code and text, but you don't have to touch any of it. Instead, scroll all the way down to the bottom, where the last line should be something resembling "127.0.0.1 localhost."
+
+
+Do not edit or change anything as you're working. This file is essential to internet connections, and all you need to do add a few lines at the bottom to block websites.
+ Start your new line right underneath the last "localhost" line.
+ At the beginning of the line, write 127.0.0.1, hit the space bar, then write out the URL of the website. For example, to block Google, you'd write "127.0.0.1 www.google.com."
+
+
+
+Do not add the "http://" to the website URL, or it will fail to block., If you want to block multiple sites, simply hit "enter" again to get on a new line. Add the 127.0.0.1 and then the website. There is no limit to the number of sites you can block.
+ Once you're done blocking sites, click on "File" → "Save." Close out any browsers you have open, then reopen them. Your sites should be blocked on all internet browsers.

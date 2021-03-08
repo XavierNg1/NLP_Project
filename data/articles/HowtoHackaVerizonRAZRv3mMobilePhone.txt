@@ -1,0 +1,54 @@
+ Motorola's v3m drivers for Microsoft Windows are required to connect your RAZR to a PC via a mini-USB cable. One approach is to download a "USB Driver Tool" and the "USB Device Drivers" from Hack the RAZR's site. For the latest version, download Motorola's EU Driver Installation from their developer's site. You will need to create a free account to get to this download page if you don't directly follow the link above.;
+, For Motorola's official driver release, the extracted file is "Motorola_EU_Driver_Installation_v?.?.?.msi" (question marks represent digits of the version number), and for third party distributions, the extracted files should include eight .inf files and one .sys file.
+ None of the v3m drivers are Microsoft-certified, so be sure you've obtained them from a reliable source before you continue.
+
+
+
+Recommended install. This requires the official Motorola drivers from their developer site:
+
+Launch the installer by double-clicking on the "Motorola_EU_Driver_Installation_v?.?.?.msi" file (question marks represent version number placeholders).
+
+1st window: click the "Next" button.
+
+2nd window: select the "I Agree" radio button if you agree to the license shown in the window, then click the "Next" button.
+
+3rd window: click the "Close" button.
+
+Connect your RAZR. Find a "Type A" USB to "Type B" Mini-USB cable. Connect the USB end to your PC, and the Mini-USB end to your RAZR. The Windows hardware wizard will show a series of notification balloons from the system tray as it detects and automatically installs drivers.
+
+Alternative install. For drivers distributed by a third-party that have no installer:
+
+Connect your RAZR. Find a "Type A" USB to "Type B" Mini-USB cable. Connect the USB end to your PC, and the Mini-USB end to your RAZR. This should prompt a hardware wizard to appear in Windows.
+
+1st window: select "No, not this time" radio-button, then click on the "Next >" button.
+
+2nd window: select "Install from a list or specific location (Advanced)" radio-button, then click on the "Next >" button.
+
+3rd window: click on the "Include this location in the search:" check-mark box, enter the path to the downloaded p2k drivers, then click on the "Next >" button.
+
+4th window: click on the "Continue Anyway" button. This only appears when Driver Signing is set to "Warn" in the "System Properties" > "Hardware" > "Driver Signing" options of Windows XP.
+ Motorola's Product Support Tool version 7.2.5 is the latest as of this writing, but version 7.2.3 will also work with current p2k software. The PST software is intellectual property of Motorola, so no additional help or screen shots may be provided for obtaining the software.
+ The p2k Seem Editor is a tool that provides a direct means of manually changing bits of a mobile device's settings. The program only needs be extracted from its archive to function, as it has no installer to run.
+Originally found on HowardForums.com years ago, the original author and/or distributors have left no information to track the application's version or contributor history. Fortunately, the application is quite stable and reliable in its currently distributed form. Distributions of the application contain a Functions.csv file that assigns comments to specific seem bits, a hexedit.dll file, usually a readme.txt or .nfo file, and the p2kseem.exe program file.
+ The Seem Editor is sectioned into three main interface groupings: the seem location, hexadecimal grid, and bit switches. To use the seem editor, values are manually entered into the seem location area in the bottom right corner of the window. This will provide search criteria when the "Load from phone" button is clicked. Upon a successful read, hexadecimal data will appear in the top left corner of the window. Clicking on any byte will show the appropriate data in the bit switching area at the bottom left corner of the window.
+
+
+Load the p2k Seem Editor.
+Enter 2742 into the "Seem" text box of the "Load" group.
+Leave the "Record" text box of the "Load" group at the default value of 1 or 0001.
+Enter 0000 into the "Bytes (h)" text box.
+Click on the "Load from phone" button.
+Rows of hexadecimal values should appear in the upper left corner. If you received a connection error, close the Seem Editor and reset the connection with PST by creating a new phone book, then load phone's data into the new phone book.
+Locate the row designed by the number 000060.
+Click on the 11th column of dual digit hexadecimal values on this row. The "Offset" will read 006a in the "Selected byte details" group. Alternatively, click on the first column of row 000060 and use your keyboard's arrow keys to navigate right until "Offset" reads 006a.
+"Bit 0" in the "Selected byte details" group should have a comment next to it: "Bluetooth Or USB file transfer...". Put a check next to "Bit 0" (comment's suffix will change to "on"), and a check next to "Bit 1".
+Double-check your bit changes and an offset value still showing 006a. Verify that the "Save" group and "Load" group check boxes' values match. Ignore the text alignment of the text box contents.
+Click on the "Save to phone" button.
+Click on the "Yes" button.
+Change is complete. Unplug your phone from the USB connection and power cycle it for the changes to take effect.
+Search for other seem edits online to change settings that would otherwise be unavailable in Verizon's modified RAZR operating system.
+ Popular file transfer utilities include Mobile Phone Tools, BitPim, and P2k Commander. Find one that works best for your tastes. None of these applications are perfect, but each offers a different twist of functionality. P2k Commander is often touted as the easiest and most straight-forward of p2k-based file transfer utilities, even though it is full of bugs and coded with poor error handling.
+P2k Commander is authored by an individual from Hungary, with contributors from all over the world. As of this writing, the current version is 4.9.E.
+Once you're comfortable with one, you should be able to browse, copy, and delete files, as well as view individual file and storage information.
+ Now you'll be empowered to use all of your RAZR's features. Insert a 1GB flash card in your v3m and treat your phone as a camera, thumb drive, and MP3 player, all in one device. Enable Java and download Java apps to your RAZR (Brew-based Java apps only). Enjoy the new-found freedom of a completely unlocked mobile device.
+

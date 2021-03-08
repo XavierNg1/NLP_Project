@@ -1,0 +1,34 @@
+;
+,,,,
+
+
+The dollar signs in the formula are absolute references to make sure the formula will always look to those specific cells, even if it is copied elsewhere into the worksheet.
+The loan interest rate must be divided by 12, since it is an annual rate that is calculated monthly.
+For example, if your loan is for $150,000 at 6 percent interest for 30 years (360 months), your loan payment will calculate out to $899.33.
+,
+
+
+Enter the month and year of the first loan payment in cell A8. You may need to format the column to show the month and year correctly.
+Select the cell, click and drag down to fill the column to cell A367. Make sure the Auto Fill Option is set to "Fill Months."
+
+,
+
+
+Key the beginning balance of your loan into cell B8.
+In cell C8, type "=$B$4" and press "Enter."
+In cell E8, create a formula to calculate the loan interest amount on the beginning balance for that period. The formula will look like "=ROUND($B8*($B$2/12), 2)". The single dollar sign creates a relative reference. The formula will look for the appropriate cell in the B column.
+In cell D8, subtract the loan interest amount in cell E8 from the total payment in C8. Use relative references so this cell will copy correctly. The formula will look like " =$C8-$E8."
+In cell H8, create a formula to subtract the principal portion of the payment from the beginning balance for that period. The formula will look like " =$B8-$D8."
+
+,
+
+
+Cell B9 should include a relative reference to the ending balance of the prior period. Type "=$H8" in the cell and press the Enter key. Copy cells C8, D8 and E8 and paste them into C9, D9 and E9. Copy cell H8 and paste it into H9. This is where the relative reference becomes helpful.
+In cell F9, create a formula to tabulate cumulative principal paid. The formula will look like this: " =$D9+$F8." Do the same for the cumulative interest cell in G9 which will look like this: " =$E9+$G8."
+
+,
+
+
+Highlight cells B9 through H9, mouse over the bottom right corner of the selection to receive a crosshair cursor and then click and drag the selection down to row 367. Release the mouse button.
+Make sure the Auto Fill Option is set to "Copy Cells" and that the final ending balance is $0.00.
+

@@ -1,0 +1,17 @@
+
+
+You have to provide administrator permissions in order to make any changes to the registry.;
+, These keys are:
+
+HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
+HKLM\Software\Microsoft\Windows\CurrentVersion\RunServices
+HKLM\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce
+HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce
+HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnceEx
+Don't worry if the keys ending with RunOnceEx, RunServices and RunServicesOnce don't exist - this just means that no programs have created startup entries that would cause programs to run once and then close themselves automatically and trigger system services.
+ They should be named after the corresponding programs.
+
+Make sure not to delete any important values out of any other keys if you don't know what you're doing.
+ Close the registry editor and restart your computer/log off and back on.

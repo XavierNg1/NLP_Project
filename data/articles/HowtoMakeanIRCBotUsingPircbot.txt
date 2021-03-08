@@ -1,0 +1,37 @@
+;
+,, This can be what you want your bot's name to be.
+ The first one should be named "YourBot", and the second should be named "YourBotMain". Go to the folder of the PircBot framework, and copy the pircbot.jar file and paste it into your bot's folder.
+ Go to back to your browser and to the PircBot page again, and scroll down until you find "MyBot.java (version 2)" and "MyBotMain.java" on the page. Copy each of the code and paste them in the text documents.
+
+
+MyBot.java (version 2) should be in your "YourBot" text document, and MyBotMain.java should be in "YourBotMain" text document.
+ Click the drop-down menu Text Document (.txt) and select All Files and save YourBot as "YourBot.java", YourBotMain as "YourBotMain.java". Do the same for the drop-down menu as you did for YourBot text document.
+ Don't delete the ones with the file type "JAVA File" that you just saved.
+
+
+
+Wait for the installation wizard to be complete, and when it's done, you're ready to move on to the next step.
+
+
+
+In Windows 8.1: Press Windows key + C and click Search, and search for "System variables". NOTE: Linux/UNIX users do not need to do this.
+In Windows 7: Click the Start button, and search for "System variables".
+In Windows Vista: Click the Start button, and search for "System variables".
+In Windows XP: Click the Start button and search for "System variables".
+ When the window is open, click Environment Variables.
+,, Put a semicolon and type in: "C:/Program Files (x86)/Java/jdk1.7.0_45/bin"
+
+
+Remove x86 if you're using Windows XP, put Program Files instead.
+,
+
+
+Then, (for Windows 8.1 and 7 and Vista only) type in cd Documents, then type in cd YourBot.
+In Windows XP: Open Run and type in cmd, then type cd YourBot.
+ *.java. Only two errors should appear; we will correct them next.
+ Open YourBot, and YourBotMain. Change the names that are saying "MyBot" to your bot's nickname, and you must rename the .java files to your bot's nick, and the "YourBotMain" to your bot's nickname Main.
+, No errors should appear.
+ Type java -classpath pircbot.jar;. YourBotMain. Now IRC messages should be appearing. That means, you've successfully completed your bot!
+
+, Read the PircBot Javadocs Documentation to get more cool stuff you can do for your bot.
+

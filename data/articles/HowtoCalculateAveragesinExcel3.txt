@@ -1,0 +1,18 @@
+ We’ll use the same range of numbers (2, 3, 5, 5, 7, 7, 7, 9, 16, and 19) again, entered in cells from A1 through A10.
+ Excel has different mode functions available, depending on which version of Excel you have.
+
+
+For Excel 2007 and earlier, there is a single MODE function. This function will find a single mode in a sample range of numbers.
+For Excel 2010 and later, you can use either the MODE function, which works the same as in earlier versions of Excel, or the MODE.SNGL function, which uses a supposedly more accurate algorithm to find the mode.(Another mode function, MODE.MULT returns multiple values if it finds multiple modes in a sample, but it is intended for use with arrays of numbers instead of a single list of values.)
+
+, As with the AVERAGE and MEDIAN functions, there are three ways to do this:
+
+
+Click on an empty cell, such as A14 then type “=MODE(A1:10)” (again, without the quotation marks) directly in the cell. (If you wish to use the MODE.SNGL function, type “MODE.SNGL” in place of “MODE” in the equation.)
+Click on an empty cell, then click on the “fx” symbol in the function bar above the worksheet. Select “MODE” or “MODE.SNGL,” from the “Select a function:” list in the Insert Function dialog and click OK. Enter the range “A1:A10” in the Number 1 field of the Function Arguments dialog and click OK.
+Enter an equals sign (=) in the function bar to the right of the function symbol. Select the MODE or MODE.SNGL function from the Name box dropdown list to the left of the function symbol. Enter the range “A1:A10” in the Number 1 field of the Function Arguments dialog and click OK.
+ The mode is the value that occurs most often in the sample range. In the case of our sample range, the mode is 7, as 7 occurs three times in the list.
+
+
+If two numbers appear in the list the same number of times, the MODE or MODE.SNGL function will report the value that it encounters first. If you change the “3” in the sample list to a “5,” the mode will change from 7 to 5, because the 5 is encountered first. If, however, you change the list to have three 7s before three 5s, the mode will again be 7.
+

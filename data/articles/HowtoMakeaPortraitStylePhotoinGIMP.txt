@@ -1,0 +1,15 @@
+, This doesn't have to be exact., Feather by about 5 or 10 pixels, depending on your mood., Now you have everything but the eyes selected., The default settings are usually okay, though it's very easy to overdo "Radius" (in this example, we probably did). You will now notice that the photo has been brightened and soft-focused., Merge down the layer called "Original" (right click, "Merge down"), then do the same for the "intensity" layer. You will be left with one layer, called "blur"., You'll have a new window with the photo in black and white., You'll notice that you have three layers: red, green, and blue. Try turning the visibility of certain layers on and off (by clicking the eye icon to the left of it), playing with the "Opacity" slider until it looks right to you. In this example, the blue layer was deleted altogether, and the opacity of the green layer was set to 45. Merge the layers until you're left with one layer.
+,, Paste the black and white image into the image, then bring up the Layers dialog again. You'll notice that there is a new layer called "Floating Selection (Pasted Layer)". Double click this to give it a new name; BW1 will do for now. Hit enter after typing the new name. The BW1 layer is now a normal layer.
+ Give the "Copy of BW1" layer a new name, the same way we renamed the pasted layer in the last step. Here it's called BW2. Next, you're going to tone these layers.,
+
+
+ Save this as BW1Tone.png...
+
+
+
+
+ ...and this as BW2Tone.png. Open them both in the GIMP.
+ Turn off the visibility of all the other layers for now, then go back to to the picture's window. Go to Filters -> Colors -> Map -> Sample Colorize., Hit "Get sample colors". Play with the levels to see what effect they have. You're aiming to have the dark parts of the black and white photo toned blue. Hit "Apply", then "Close". You'll now notice that the BW1 layer has now been toned to a subtle blue colour.
+ Again, Filters -> Map -> Sample Colorise; this time, use the BW2Tone.png gradient as the sample. Now, the BW2 layer is subtly toned as well., Make the BW2 layer invisible for now. Right click on the layer in the "Layers" dialog, select "Add layer mask". Select "Grayscale copy of layer" and check the "Invert Mask" option. Hit "OK". You'll notice that only the darker parts of the image are toned blue.
+ Make it visible and turn off the visibility of all other layers., The sliders "Brightness" and "Saturation" should be all the way up. Don't worry if it looks a little strange.
+ You'll notice that the image doesn't look quite so strange anymore., Turn down the opacity until it looks right. An opacity of about 40 was right for the example photo.,, You'll be left with one layer. You're almost done; finally, you're going to blur the background layer., Feather the selection (Select -> Feather). 15-20 pixels is often about right. Invert the selection (Select -> Invert)., Use a large radius; about 10-20 pixels depending on the level of detail in the background.,

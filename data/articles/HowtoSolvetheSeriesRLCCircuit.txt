@@ -1,0 +1,274 @@
+ Kirchhoff's voltage law for a series RLC circuit says that VR+VL+VC=V(t),{\displaystyle V_{R}+V_{L}+V_{C}=V(t),} where V(t){\displaystyle V(t)} is the time-dependent voltage source. In this section, we investigate the case without this source to obtain the solution to a homogeneous equation. We then tackle the slightly more complicated task of finding the steady-state solution. The diagram above shows an example of an RLC circuit.
+
+Electric current I{\displaystyle I} is related to charge by the relation I=Q˙,{\displaystyle I={\dot {Q}},} where Q{\displaystyle Q} is electric charge and the dot signifies a time derivative.
+
+Ohm's law says that the voltage across a resistor is linearly proportional to the current: VR=IR.{\displaystyle V_{R}=IR.} This can be written as VR=RQ˙.{\displaystyle V_{R}=R{\dot {Q}}.}
+
+The voltage across an inductor is given by VI=LI˙,{\displaystyle V_{I}=L{\dot {I}},} where L{\displaystyle L} is the inductance. As before, we can write this as VI=LQ¨.{\displaystyle V_{I}=L{\ddot {Q}}.}
+
+The voltage across a capacitor is given by the relation VC=1CQ.{\displaystyle V_{C}={\frac {1}{C}}Q.}
+
+The governing differential equation is then given below.
+
+
+LQ¨+RQ˙+1CQ=0{\displaystyle L{\ddot {Q}}+R{\dot {Q}}+{\frac {1}{C}}Q=0}
+
+
+;
+,
+
+This more applicable form of the equation is given below. We can see from inspection that ω02=1LC{\displaystyle \omega _{0}^{2}={\frac {1}{LC}}} and β=R2L.{\displaystyle \beta ={\frac {R}{2L}}.} ω0{\displaystyle \omega _{0}} refers to the frequency of the system, while β{\displaystyle \beta } is a parameter, also in units of angular frequency, that simplifies calculations. This parameter is called the attenuation and measures how quickly the transient response of the circuit dies away. We can apply this equation to the classical harmonic oscillator as well, or any system whose behavior is predominantly oscillatory in nature. 
+
+
+Q¨+2βQ˙+ω02Q=0{\displaystyle {\ddot {Q}}+2\beta {\dot {Q}}+\omega _{0}^{2}Q=0}
+
+
+
+
+,
+
+The solutions to the characteristic equation are very simple, and we can see why we deal with this equation instead.
+
+
+r2+2βr+ω02=0{\displaystyle r^{2}+2\beta r+\omega _{0}^{2}=0}
+
+
+r=−β±β2−ω02{\displaystyle r=-\beta \pm {\sqrt {\beta ^{2}-\omega _{0}^{2}}}}
+
+
+
+We know that physically, the capacitance is usually a very small quantity. Capacitors are usually measured in nanofarads or microfarads, whereas resistors can be on the order of ohms to megaohms. It is therefore not unreasonable to suggest that ω02>β2{\displaystyle \omega _{0}^{2}>\beta ^{2}} so that the square root is negative and the solutions are oscillatory rather than exponential in nature. From the theory of differential equations, we obtain the complementary solution, where we write ωd=ω02−β2{\displaystyle \omega _{d}={\sqrt {\omega _{0}^{2}-\beta ^{2}}}} as the damped frequency.
+
+
+Qc(t)=e−βt(c1cos⁡ωdt+c2sin⁡ωdt){\displaystyle Q_{c}(t)=e^{-\beta t}\left(c_{1}\cos \omega _{d}t+c_{2}\sin \omega _{d}t\right)}
+
+
+
+
+, We can convert this solution into a slightly more familiar form by performing the following manipulation.
+
+Multiply the solution by c12+c22c12+c22.{\displaystyle {\frac {\sqrt {c_{1}^{2}+c_{2}^{2}}}{\sqrt {c_{1}^{2}+c_{2}^{2}}}}.}
+
+
+e−βtc12+c22(c1c12+c22cos⁡ωdt+c2c12+c22sin⁡ωdt){\displaystyle e^{-\beta t}{\sqrt {c_{1}^{2}+c_{2}^{2}}}\left({\frac {c_{1}}{\sqrt {c_{1}^{2}+c_{2}^{2}}}}\cos \omega _{d}t+{\frac {c_{2}}{\sqrt {c_{1}^{2}+c_{2}^{2}}}}\sin \omega _{d}t\right)}
+
+
+
+Draw a right triangle with angle ϕ,{\displaystyle \phi ,} hypotenuse length c12+c22,{\displaystyle {\sqrt {c_{1}^{2}+c_{2}^{2}}},} opposite side length c1,{\displaystyle c_{1},} and adjacent side length c2.{\displaystyle c_{2}.} Replace the constant c12+c22{\displaystyle {\sqrt {c_{1}^{2}+c_{2}^{2}}}} with a new constant A,{\displaystyle A,} denoting amplitude. Now we can simplify the quantities in parentheses. The result is that the second arbitrary constant has been replaced with an angle. 
+
+
+Qc(t)=Ae−βt(sin⁡ϕcos⁡ωdt+cos⁡ϕsin⁡ωdt)=Ae−βtsin⁡(ωdt+ϕ){\displaystyle {\begin{aligned}Q_{c}(t)&=Ae^{-\beta t}(\sin \phi \cos \omega _{d}t+\cos \phi \sin \omega _{d}t)\\&=Ae^{-\beta t}\sin(\omega _{d}t+\phi )\end{aligned}}}
+
+
+
+Because ϕ{\displaystyle \phi } is arbitrary, we can also use the cosine function as well. (Mathematically, the two phase factors are different, but in terms of finding the equation of motion given initial conditions, only the form of the solution matters.)
+
+
+Qc(t)=Ae−βtcos⁡(ωdt+ϕ){\displaystyle Q_{c}(t)=Ae^{-\beta t}\cos(\omega _{d}t+\phi )}
+
+
+
+
+, Current is just one derivative away, which is why we solved the problem in terms of charge. In practice, however, it is much easier to measure current than it is to measure charge.
+
+
+Ic(t)=Aβe−βtcos⁡(ωdt+ϕ)−Aωde−βtsin⁡(ωdt+ϕ){\displaystyle I_{c}(t)=A\beta e^{-\beta t}\cos(\omega _{d}t+\phi )-A\omega _{d}e^{-\beta t}\sin(\omega _{d}t+\phi )}
+
+It turns out that in practice, the attenuation β{\displaystyle \beta } is very small, so ωd≈ω0.{\displaystyle \omega _{d}\approx \omega _{0}.} This approximation gets better the smaller β{\displaystyle \beta } is.
+
+This form of the solution, a linear combination of sine and cosine, suggests that we can again rewrite the solution in terms of just one term. Note that the amplitude and phase factor are mathematically different from the previous term, but as we are not given initial conditions, there is no physical difference.
+
+
+Ic(t)=Ae−βtcos⁡(ωdt+ϕ){\displaystyle I_{c}(t)=Ae^{-\beta t}\cos(\omega _{d}t+\phi )}
+
+
+
+
+, This voltage source is in the form V(t)=V0cos⁡ωt,{\displaystyle V(t)=V_{0}\cos \omega t,} where V0{\displaystyle V_{0}} is the amplitude of the voltage and ω{\displaystyle \omega } is the frequency of the signal. The differential equation is now inhomogeneous. By linearity, any solution to the inhomogeneous equation added to the complementary solution gives the general solution.
+
+
+Q¨+2βQ˙+ω02Q=V0Lcos⁡ωt{\displaystyle {\ddot {Q}}+2\beta {\dot {Q}}+\omega _{0}^{2}Q={\frac {V_{0}}{L}}\cos \omega t}
+
+
+, From the theory of differential equations, we compare the source term to Qc{\displaystyle Q_{c}} and find if the source contains a term that is tn{\displaystyle t^{n}} times a term in Qc{\displaystyle Q_{c}} or not, where n{\displaystyle n} is 0 or a positive integer. Because there aren't any, the particular solution will take on the following form.
+
+
+Qp=acos⁡ωt+bsin⁡ωt{\displaystyle Q_{p}=a\cos \omega t+b\sin \omega t}
+
+
+, 
+
+After some algebra and comparing the coefficients of cos⁡ωt{\displaystyle \cos \omega t} and sin⁡ωt,{\displaystyle \sin \omega t,} we arrive at a system of algebraic equations.
+
+
+−ω2a+2βωb+ω02a=V0L{\displaystyle -\omega ^{2}a+2\beta \omega b+\omega _{0}^{2}a={\frac {V_{0}}{L}}}
+
+
+−ω2b−2βωa+ω02b=0{\displaystyle -\omega ^{2}b-2\beta \omega a+\omega _{0}^{2}b=0}
+
+
+
+These two equations can be written in a more suggestive form. 
+
+
+(ω02−ω2)a+(2βω)b=V0L{\displaystyle (\omega _{0}^{2}-\omega ^{2})a+(2\beta \omega )b={\frac {V_{0}}{L}}}
+
+
+(−2βω)a+(ω02−ω2)b=0{\displaystyle (-2\beta \omega )a+(\omega _{0}^{2}-\omega ^{2})b=0}
+
+
+
+
+, We solve for b{\displaystyle b} in terms of a,{\displaystyle a,} find a,{\displaystyle a,} then find b{\displaystyle b} as a result.
+
+Use the second equation to solve for b{\displaystyle b} in terms of a.{\displaystyle a.}
+
+
+b=(2βω)aω02−ω2{\displaystyle b={\frac {(2\beta \omega )a}{\omega _{0}^{2}-\omega ^{2}}}}
+
+
+
+Substitute back into the first equation to find a.{\displaystyle a.}
+
+
+(ω02−ω2)a+4β2ω2ω02−ω2a=V0L{\displaystyle (\omega _{0}^{2}-\omega ^{2})a+{\frac {4\beta ^{2}\omega ^{2}}{\omega _{0}^{2}-\omega ^{2}}}a={\frac {V_{0}}{L}}}
+
+
+a=V0L(ω02−ω2)(ω02−ω2)2+4β2ω2{\displaystyle a={\frac {{\frac {V_{0}}{L}}(\omega _{0}^{2}-\omega ^{2})}{(\omega _{0}^{2}-\omega ^{2})^{2}+4\beta ^{2}\omega ^{2}}}}
+
+
+
+From here, we immediately find b.{\displaystyle b.}
+
+
+b=2βωV0/L(ω02−ω2)2+4β2ω2{\displaystyle b={\frac {2\beta \omega V_{0}/L}{(\omega _{0}^{2}-\omega ^{2})^{2}+4\beta ^{2}\omega ^{2}}}}
+
+
+
+
+, The coefficients give us the terms that we need in the steady-state solution. The general solution is now simply the sum of the transient and steady-state solutions.
+
+
+Q(t)=Ae−βtcos⁡(ωdt+ϕ)+acos⁡ωt+bsin⁡ωt{\displaystyle Q(t)=Ae^{-\beta t}\cos(\omega _{d}t+\phi )+a\cos \omega t+b\sin \omega t}
+
+
+, We have already found the steady-state solution in terms of parameters that we know. Our form of the steady-state solution, a linear combination of sine and cosine, suggests that we can also write it in terms of amplitude and phase factor, just as we did with the transient term. As we will shortly see, this provides a more useful formulation with which to analyze resonance. 
+, Now, we solve for the amplitude Q(ω){\displaystyle Q(\omega )} and phase δ(ω),{\displaystyle \delta (\omega ),} both functions of the driving frequency ω.{\displaystyle \omega .} 
+
+We must make use of the following trigonometric identities in our work.
+
+
+cos⁡(ωt+δ(ω))=cos⁡ωtcos⁡δ(ω)−sin⁡ωtsin⁡δ(ω){\displaystyle \cos(\omega t+\delta (\omega ))=\cos \omega t\cos \delta (\omega )-\sin \omega t\sin \delta (\omega )}
+
+
+sin⁡(ωt+δ(ω))=sin⁡ωtcos⁡δ(ω)+cos⁡ωtsin⁡δ(ω){\displaystyle \sin(\omega t+\delta (\omega ))=\sin \omega t\cos \delta (\omega )+\cos \omega t\sin \delta (\omega )}
+
+
+
+After substituting and making use of the summation identities, we arrive at the following system of equations.
+
+
+−ω2Q(ω)cos⁡ωtcos⁡δ(ω)−2βωQ(ω)sin⁡δ(ω)+ω02Q(ω)cos⁡δ(ω)=V0L{\displaystyle -\omega ^{2}Q(\omega )\cos \omega t\cos \delta (\omega )-2\beta \omega Q(\omega )\sin \delta (\omega )+\omega _{0}^{2}Q(\omega )\cos \delta (\omega )={\frac {V_{0}}{L}}}
+
+
+ω2Q(ω)sin⁡δ(ω)−2βωQ(ω)cos⁡δ(ω)−ω02Q(ω)sin⁡δ(ω)=0{\displaystyle \omega ^{2}Q(\omega )\sin \delta (\omega )-2\beta \omega Q(\omega )\cos \delta (\omega )-\omega _{0}^{2}Q(\omega )\sin \delta (\omega )=0}
+
+
+, We can use the second equation to do this.
+
+
+(ω2−ω02)sin⁡δ(ω)=2βωcos⁡δ(ω){\displaystyle (\omega ^{2}-\omega _{0}^{2})\sin \delta (\omega )=2\beta \omega \cos \delta (\omega )}
+
+
+tan⁡δ(ω)=2βωω2−ω02{\displaystyle \tan \delta (\omega )={\frac {2\beta \omega }{\omega ^{2}-\omega _{0}^{2}}}}
+
+Our previous results suggest that we write out the denominator as ω02−ω2.{\displaystyle \omega _{0}^{2}-\omega ^{2}.} The difference is primarily one of bookkeeping. 
+
+
+δ(ω)=tan−1−2βωω02−ω2{\displaystyle \delta (\omega )=\tan ^{-1}{\frac {-2\beta \omega }{\omega _{0}^{2}-\omega ^{2}}}}
+
+
+
+
+, We use the first equation to do this. 
+
+To find sin⁡δ(ω){\displaystyle \sin \delta (\omega )} and cos⁡δ(ω),{\displaystyle \cos \delta (\omega ),} draw a right triangle with angle δ,{\displaystyle \delta ,} adjacent side length ω02−ω2,{\displaystyle \omega _{0}^{2}-\omega ^{2},} opposite side length 2βω,{\displaystyle 2\beta \omega ,} and hypotenuse. Make sure to draw the triangle so that sin⁡δ(ω){\displaystyle \sin \delta (\omega )} is negative.
+
+
+cos⁡δ(ω)=ω02−ω24β2ω2+(ω02−ω2)2{\displaystyle \cos \delta (\omega )={\frac {\omega _{0}^{2}-\omega ^{2}}{\sqrt {4\beta ^{2}\omega ^{2}+(\omega _{0}^{2}-\omega ^{2})^{2}}}}}
+
+
+sin⁡δ(ω)=−2βω4β2ω2+(ω02−ω2)2{\displaystyle \sin \delta (\omega )={\frac {-2\beta \omega }{\sqrt {4\beta ^{2}\omega ^{2}+(\omega _{0}^{2}-\omega ^{2})^{2}}}}}
+
+
+
+We now have all the information needed to find Q(ω).{\displaystyle Q(\omega ).}
+
+
+Q(ω)=V0/L(ω02−ω2)cos⁡δ(ω)−2βωsin⁡δ(ω){\displaystyle Q(\omega )={\frac {V_{0}/L}{(\omega _{0}^{2}-\omega ^{2})\cos \delta (\omega )-2\beta \omega \sin \delta (\omega )}}}
+
+
+
+After some simplification, we arrive at the following result.
+
+
+Q(ω)=V0/L4β2ω2+(ω02−ω2)2{\displaystyle Q(\omega )={\frac {V_{0}/L}{\sqrt {4\beta ^{2}\omega ^{2}+(\omega _{0}^{2}-\omega ^{2})^{2}}}}}
+
+
+
+
+, Current is once again a derivative away. Note that tan−1⁡x{\displaystyle \tan ^{-1}x} is an odd function.
+
+
+I(t,ω)=−ωV0/L4β2ω2+(ω02−ω2)2sin(ωt−tan−12βωω02−ω2){\displaystyle I(t,\omega )=-{\frac {\omega V_{0}/L}{\sqrt {4\beta ^{2}\omega ^{2}+(\omega _{0}^{2}-\omega ^{2})^{2}}}}\sin \left(\omega t-\tan ^{-1}{\frac {2\beta \omega }{\omega _{0}^{2}-\omega ^{2}}}\right)}
+
+
+,
+
+Assume that the attenuation is set to 0, or β=0.{\displaystyle \beta =0.} Then the magnitude of the amplitude of the steady-state term is given as the following.
+
+
+I(ω)=ωV0/Lω02−ω2{\displaystyle I(\omega )={\frac {\omega V_{0}/L}{\omega _{0}^{2}-\omega ^{2}}}}
+
+
+
+We see that as ω→ω0,{\displaystyle \omega \to \omega _{0},} the amplitude increases without bound. This condition is called resonance. An RLC circuit satisfies resonance under the following condition.
+
+
+ω=ω0=1LC{\displaystyle \omega =\omega _{0}={\frac {1}{\sqrt {LC}}}}
+
+
+
+The driving force will also have a phase shift of π/2{\displaystyle \pi /2} relative to the steady-state response when resonance is met.
+
+
+limω→ω0tan−1−2βωω02−ω2=π2{\displaystyle \lim _{\omega \to \omega _{0}}\tan ^{-1}{\frac {-2\beta \omega }{\omega _{0}^{2}-\omega ^{2}}}={\frac {\pi }{2}}}
+
+
+
+
+, One only take the derivative, set it to 0, and solve for ω.{\displaystyle \omega .} Notice that the β{\displaystyle \beta } term means that the maximum amplitude occurs at a frequency slightly lower than the resonant frequency. But also note that as β{\displaystyle \beta } gets smaller, ωmax{\displaystyle \omega _{max}} gets closer to ω0.{\displaystyle \omega _{0}.}
+
+
+Q˙(ω)=−V02L(4β2ω2+(ω02−ω2)2)−3/2(8β2ω+2(ω02−ω2)(−2ω)){\displaystyle {\dot {Q}}(\omega )=-{\frac {V_{0}}{2L}}(4\beta ^{2}\omega ^{2}+(\omega _{0}^{2}-\omega ^{2})^{2})^{-3/2}(8\beta ^{2}\omega +2(\omega _{0}^{2}-\omega ^{2})(-2\omega ))}
+
+
+8β2ω−4ω(ω02−ω2)=0{\displaystyle 8\beta ^{2}\omega -4\omega (\omega _{0}^{2}-\omega ^{2})=0}
+
+
+ωmax=ω02−2β2{\displaystyle \omega _{max}={\sqrt {\omega _{0}^{2}-2\beta ^{2}}}}
+
+
+, Simply substitute our result, and simplify.
+
+
+Qmax=V0/L4β2(ω02−2β2)+(ω02−ω02+2β2)2=V0/L4β2ω02−4β4=V0/L2βω02−β2=V0/L2βωd=V0Rωd{\displaystyle {\begin{aligned}Q_{max}&={\frac {V_{0}/L}{\sqrt {4\beta ^{2}(\omega _{0}^{2}-2\beta ^{2})+(\omega _{0}^{2}-\omega _{0}^{2}+2\beta ^{2})^{2}}}}\\&={\frac {V_{0}/L}{\sqrt {4\beta ^{2}\omega _{0}^{2}-4\beta ^{4}}}}\\&={\frac {V_{0}/L}{2\beta {\sqrt {\omega _{0}^{2}-\beta ^{2}}}}}\\&={\frac {V_{0}/L}{2\beta \omega _{d}}}\\&={\frac {V_{0}}{R\omega _{d}}}\end{aligned}}}
+
+We may also write our solution in terms of the amplitude at resonance.
+
+
+Qmax=Qresω0ω02−β2{\displaystyle Q_{max}=Q_{res}{\frac {\omega _{0}}{\sqrt {\omega _{0}^{2}-\beta ^{2}}}}}
+
+
+
+

@@ -1,0 +1,196 @@
+ Create source file to start writing C++ program.;
+, Begin writing in source file, using #include declare headers iostream and iomanip and using the identifier, using namespace declare std;.
+
+
+
+
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+
+
+
+, Create the main statement you are going to write the code in. Add the return statement at end of code in the main function.
+
+
+
+
+
+int main()
+{
+return 0;
+}
+
+
+
+
+, Begin code between brackets of the main statement before the return statement. Declare int variables num1 and num2, and char variable opr.
+
+
+
+
+
+int num1, num2;
+char opr;
+
+
+
+
+, Use the cout command to prompt the user to enter two numbers. Using cin Assign the input to variables num1 and num2.
+
+
+
+
+
+cout << "Enter two integers: ";
+cin >> num1 >> num2;
+
+
+
+
+, Use the cout command to prompt user to enter an operator for the equation. Using cin assign the input to the char variable, opr.
+
+
+
+
+
+cout << "Enter operator: + (addition), - (subtraction)," << "
+ * (multiplication), / (division): ";
+cin >> opr;
+cout << endl;
+
+
+
+
+, Use cout to output results of what was entered then begin switch statement to find the result.
+
+
+
+
+
+cout << num1 << " " << opr << " " << num2 << " = ";
+switch (opr){
+}
+
+
+
+
+, Make case statement for when the user wants to do addition using case, use cout to output the product of num1 + num2, end the case with break.
+
+
+
+
+
+case '+':
+     cout << num1 + num2 << endl;
+         break;
+
+
+
+
+, Make case statement for when the user wants to do subtraction using case. Use cout to output the product of num1 - num2, and end the case with break.
+
+
+
+
+
+case'-':
+    cout << num1 - num2 << endl;
+        break;
+
+
+
+
+, Make case statement for when the user wants to do multiplication using case. Use cout to output the product of num1 * num2, and end the case with break.
+
+
+
+
+
+case'*':
+    cout << num1 * num2 << endl;
+        break;
+
+
+
+
+, Make case statement for when the user wants to do division. For this case though you have to use an if and else statement in case the user tries to divide by zero, if the number is not zero use cout to output the product of num1 / num2, else if it is zero use cout to output a statement letting the use know the problem.
+
+
+
+
+
+case'/':
+if (num2 != 0)
+    cout << num1 / num2 << endl;
+else
+    cout << "ERROR \nCannot divide by zero" << endl;
+        break;
+
+
+
+
+, Include the default statement within the switch structure. Default statement lets the user know when variables enter are not the correct operators. End the switch after the default statement.
+
+
+
+
+
+default:
+cout << "Illegal operation" << endl;
+}
+
+
+
+
+, Go to the build menu on the top of the screen and click build program, then press ctrl 5 on the keyboard to run it. If there are errors the compiler will show their location.
+
+
+Here is the final code:
+
+
+
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+int num1, num2;
+char opr;
+cout << "Enter two integers: ";
+cin >> num1 >> num2;
+cout << endl;
+cout << "Enter operator: + (addition), - (subtraction)," << " * (multiplication), / (division): ";
+cin >> opr;
+cout << endl;
+cout << num1 << " " << opr << " " << num2 << " = ";
+switch (opr){
+case '+':
+cout << num1 + num2 << endl;
+break;
+case'-':
+cout << num1 - num2 << endl;
+break;
+case'*':
+cout << num1 * num2 << endl;
+break;
+case'/':
+if (num2 != 0)
+cout << num1 / num2 << endl;
+else
+cout << "ERROR \nCannot divide by zero" << endl;
+break;
+default:
+cout << "Illegal operation" << endl;
+}
+return 0;
+}
+
+
+
+
+
+

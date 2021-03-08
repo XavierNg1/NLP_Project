@@ -1,0 +1,87 @@
+ Like any mathematical principle, you will remember it better if you practice on paper at the same time.;
+, This will make your check faster since one only needs to try to divide the possible prime by the prime numbers less than the square root of that number. A quick reference might help: The square root of 100 is 10, of 225 is 15, of 400 is 20, of 625 is 25, and of 900 is 30.
+ Since the square root of 1000 is about 33, you will never need to test any number higher than 31. By narrowing the number of tests down to 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, and 31, you've already won half the battle.
+
+
+Here are the divisibility rules for those prime numbers:
+
+
+Divisible by 2 - If the number ends in 2, 4, 6, or 8
+
+Divisible by 3 - If the digits added together are divisible by 3
+
+Divisible by 5 - If the number ends in 0 or 5
+
+Divisible by 7 - Take the last digit and multiply it by two. Subtract that number from the rest of the digits. The original number is divisible by 7 if that new number is divisible by 7.
+
+Divisible by 11 - Take the last digit. Subtract that number from the rest of the digits. The original number is divisible by 11 if that new number is divisible by 11.
+
+Divisible by 13 - Take the last digit and multiply it by four. Add that number to the rest of the digits. The original number is divisible by 13 if that new number is divisible by 13.
+
+Divisible by 17 - Take the last digit and multiply it by five. Subtract that number from the rest of the digits. The original number is divisible by 17 if that new number is divisible by 17. (This sounds harder than it looks. An example below will illustrate.)
+
+Divisible by 19 - Take the last digit and multiply it by two. Add that number to the rest of the digits. The original number is divisible by 19 if that new number is divisible by 19.
+
+Divisible by 23 - Take the last digit and multiply it by seven. Add that number to the rest of the digits. The original number is divisible by 23 if that new number is divisible by 23.
+
+Divisible by 29 - Take the last digit and multiply it by three. Add that number to the rest of the digits. The original number is divisible by 29 if that new number is divisible by 29.
+
+Divisible by 31 - Take the last digit and multiply it by three. Subtract that number from the rest of the digits. The original number is divisible by 31 if that new number is divisible by 31.
+,
+
+
+
+Example Let's do 781.
+
+
+Pencil and paper. Check.
+
+Estimate the square root. 787 is between 625 and 900, so from the chart above, I know that 787's square root will be between 25 and 30, probably about 27. So, the primes I'll need to test for are 2, 3, 5, 7, 11, 13, 17, 19, and 23. The next prime is 29, and my mental math tells me that the square root of 787 probably isn't 29 since it's not super-close to 900.
+
+Check for divisibility by 2, 3, 5, 7, 11, 13, 17, 19, and 23.
+
+
+By two: 781 doesn't end in 2, 4, 6, or 8. So far so good.
+
+By three: Add the digits; 7 + 8 + 1 = 16. 16 isn't divisible by 3, so neither is 781.
+
+By five: 781 doesn't end in 0 or 5. Still prime.
+
+By seven: Multiply the last digit by two; 1 * 2 = 2. Subtract it from the remaining digits; 78 - 2 = 76. 76 isn't divisible by 7 (remember that 70 is and 77 is), so neither is 781.
+
+By eleven: Subtract the last digit from the remaining digits; 78 - 1 = 77. 77 is divisible by 11, so 781 is also.
+So, 781 isn't prime. It is at least divisible by 11.
+
+
+
+
+
+Example #2. Let's do 527.
+
+
+Pencil and paper. Check.
+
+Estimate the square root. 527 is between 400 and 625. So, looking at my chart, the square root of 527 is probably about 23. So, the primes I'll need to test are 2 through 23, again.
+
+Check for divisibility by 2, 3, 5, 7, 11, 13, 17, 19, and 23.
+
+
+By two: 527 doesn't end in 2, 4, 6, or 8. So far so good.
+
+By three: Add the digits; 5 + 2 + 7 = 14. 14 isn't divisible by 3, so neither is 527.
+
+By five: 527 doesn't end in 0 or 5. Moving on.
+
+By seven: Multiply the last digit by two; 2 * 7 = 14. Subtract it from the remaining digits; 52 - 14 = 38. 38 isn't divisible by 7, so neither is 527.
+
+By eleven: Subtract the last digit from the remaining digits; 52 - 7 = 45. 45 isn't divisible by 11, so neither is 527.
+
+By thirteen: Multiply the last digit by four; 7 * 4 = 28. Add it too the remaining digits; 52 + 28 = 80. 80 isn't divisible by 13, so neither is 527.
+
+By seventeen: Multiply the last digit by five; 7 * 5 = 35. Subtract it from the remaining digits; 52 - 35 = 17. 17 is divisible by 17, so 527 is too.
+So, 527 isn't prime. It is at least divisible by 17.
+
+
+
+
+

@@ -1,0 +1,41 @@
+ You can use SWF elements from any website that you find on the web.
+
+If you are confused about this part then make sure you read the Capture a Macromedia Flash Object from a Web Site guide. Note that your URL must ends with .swf;
+, Edit the X,Y and Z parameters in the code bellow:
+
+X - the width of the embedded player.
+Y - the height of the embedded player.
+Z - the URL of the swf element(game) that you got while completing the first step.
+
+
+
+
+
+<object width="X" height="Y">
+<param name="movie" value="Z">
+<embed src="Z" width="X" height="Y">
+</embed>
+</object>
+
+
+
+
+
+
+, Once you are done your code should look like the following:
+
+
+
+
+
+<object width="600" height="400">
+<param name="movie" value="http:
+<embed src="http:
+</embed>
+</object>
+
+
+
+
+
+, Connect to your server using the file manager or any ftp software like FILEZILLA or FETCH SOFTWORKS and place the code at the page where you want the embedded player to appear. The Flash player should appear at your website on the place where you pasted the code.

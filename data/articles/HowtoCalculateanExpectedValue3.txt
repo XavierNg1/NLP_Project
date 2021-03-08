@@ -1,0 +1,44 @@
+ Before thinking about all the possible outcomes and probabilities involved, make sure to understand the problem. For example, consider a die-rolling game that costs $10 per play. A 6-sided die is rolled once, and your cash winnings depend on the number rolled. Rolling a 6 wins you $30. Rolling a 5 wins you $20. Rolling any other number results in no payout.
+ This is a relatively simple gambling game. Because you are rolling one die, there are only six possible outcomes on any one roll. They are 1, 2, 3, 4, 5 and 6.
+ This gambling game has asymmetric values assigned to the various rolls, according to the rules of the game. For each possible roll of the die, assign the value to be the amount of money that you will either earn or lose. Recognize that a “no payout” means you lose your $10 bet. The values for all six possible outcomes are as follows:
+
+1 = -$10
+
+2 = -$10
+
+3 = -$10
+
+4 = -$10
+
+5 = $20 win - $10 bet = +$10 net value
+
+6 = $30 win - $10 bet = +$20 net value
+
+
+, In this game, you are presumably rolling  a fair, six-sided die. Therefore, the probability of each outcome is 1/6. You may leave this probability as the fraction of 1/6 or convert it to a decimal by dividing on a calculator. The equivalent decimal is 1/6 = 0.167.
+ Use the table of values you calculated for all six die rolls, and multiply each value times the probability of 0.167:
+
+1 = -$10 * 0.167 = -1.67
+
+2 = -$10 * 0.167 = -1.67
+
+3 = -$10 * 0.167 = -1.67
+
+4 = -$10 * 0.167 = -1.67
+
+5 = $20 win - $10 bet = +$10 net value * 0.167 = +1.67
+
+6 = $30 win - $10 bet = +$20 net value * 0.167 = +3.34
+
+
+, Add together the six probability-value calculations to find the EV for the overall game. This calculation is:
+
+
+EV=−1.67−1.67−1.67−1.67+1.67+3.34=−1.67{\displaystyle {\text{EV}}=-1.67-1.67-1.67-1.67+1.67+3.34=-1.67}
+
+
+, The EV for this gambling game is -1.67. In real world terms, this means that you can expect to lose $1.67 each time you play the game. Notice that, according to the rules of the game, it is impossible to lose $1.67. Your only options for each $10 bet are to win $30, win $20, or win nothing. However, on average, if you play this game many times, you can expect the outcome to equal an overall loss of $1.67 per play.
+
+If you play the game once, you might win $30 (net +$20). If you play a second time, you could even win again, for a total of $60 (net +$40). However, that luck is not going to continue if you keep playing. If you play 100 times, in the end you are likely to be down approximately $167.
+
+

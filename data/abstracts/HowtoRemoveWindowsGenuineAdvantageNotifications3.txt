@@ -1,0 +1,25 @@
+
+Run as an administrator with no other user accounts running.
+
+,
+Launch Windows Task Manager (Processes).
+Navigate to to C:\Windows\System32, and find WgaTray.exe.
+
+,
+Right-click on WgaTray.exe, and select Delete.
+Go back to Windows Task Manager and click Wgatray.exe.
+
+,
+Click End Process.
+Click Yes in both boxes, quickly.
+Launch the Registry Editor.
+Browse to the following location: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify
+
+,
+Delete the folder WgaLogon and all its contents.
+
+,
+Reboot Windows 7.
+
+,
+Check your work.

@@ -1,0 +1,26 @@
+
+
+
+There are some general guidelines for naming the entities. The name of the entity should be a singular noun, concise (for ease); if abbreviations are used then it should be specific
+Spaces should be avoided. If more than one word is used then it should be separated by underscore ( _ ).;
+,, The relationships mirror business rules of the organization
+
+
+The relationship should be a verb phrase
+It should clearly explain the action being taken
+Cardinality - The relation can have one-to-one (1:1), one-to-many (1: m) or many-to-many (m: n) characteristics.
+ To open MySQL Workbench go to start, click all programs, MySQL and then select MySQL Workbench.
+ From the menu bar click on file and then new model. Again use the menu bar to click on model and choose add diagram.
+ The tables represent Business entities on the ERD. Select the table icon or press T from the vertical menu bar.
+, Double click on the table to open a window (table editor) at the bottom. This window provides options to enter the table name (entity).
+, Select the data type for each attribute from the drop down list as per the requirement. Select an attribute or group of attributes that uniquely identifies that table. That becomes the primary key for the table. Also select which attributes are non-null.
+,
+
+
+Select the characteristic /type of relation (1:1, 1: m, m: n) from the vertical menu bar.
+Then click on the two tables (one after other) to add the selected relation between the tables.
+, From the menu bar click on file, select save model as and give a proper file name to save the ERD.
+
+
+You can also save the ERD as a PDF file. To do this go to file, click on export and then select export as single page PDF. Give the file name and save it.
+

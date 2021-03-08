@@ -1,0 +1,20 @@
+
+If you're trying to enable thumbnail generation on MediaWiki and you encounter an error like Fatal error: Call to undefined function: imagecreatefromjpeg() .
+Download and install the JPEG library from here.
+This will install the library in your /usr/local directory.Only do this if you want to compile GD yourself.
+Download and install the LIBPNG library.
+Now that these 2 libraries are installed, it's time to compile PHP.
+After this, it's time to restart Apache:
+
+httpd -k restart
+
+
+
+
+
+
+
+,
+If you get a warning about the PHP module already being loaded, remove either the LoadModule in httpd.conf or remove the php.conf file in /etc/httpd/conf.d.
+
+,Now you should have images support for PHP!

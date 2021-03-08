@@ -1,0 +1,150 @@
+ As with any formula, start with an = sign, then use whichever functions or arithmetic you'd like. We'll use a simple example spreadsheet, and add column A and column B together:
+
+
+
+Example Spreadsheet
+
+
+Column A
+Column B
+Column C
+
+
+row 1
+10
+9
+=A1+B1
+
+
+
+row 2
+20
+8
+
+
+
+row 3
+30
+7
+
+
+
+row 4
+40
+6
+
+;
+, Once you hit enter on your keyboard, the formula will be entered and calculated. Only the result (19) will be displayed, but the spreadsheet will still have the formula stored.
+
+
+
+Example Spreadsheet
+
+
+Column A
+Column B
+Column C
+
+
+row 1
+10
+9
+19
+
+
+row 2
+20
+8
+
+
+
+row 3
+30
+7
+
+
+
+row 4
+40
+6
+
+
+
+, Move your cursor to the lower right corner of the cell you just edited. The cursor will become a bold + sign., Keep your mouse button held down, and drag your cursor down the column, or across the row to be edited (highlight). The formula you entered will automatically be entered into the cells you've highlighted. Relative cell references will automatically update to refer to the cell in the same relative position. Here's our example spreadsheet, showing the formulas used and the results displayed:
+
+
+
+Example Spreadsheet
+
+
+Column A
+Column B
+Column C
+
+
+row 1
+10
+9
+=A1+B1
+
+
+
+row 2
+20
+8
+=A2+B2
+
+
+
+row 3
+30
+7
+=A3+B3
+
+
+
+row 4
+40
+6
+=A4+B4
+
+
+
+
+
+Example Spreadsheet
+
+
+Column A
+Column B
+Column C
+
+
+row 1
+10
+9
+19
+
+
+row 2
+20
+8
+28
+
+
+row 3
+30
+7
+37
+
+
+row 4
+40
+6
+46
+
+
+, Instead of click-and-dragging, move your mouse to the lower right corner, and double click when the cursor turns into a + sign. This will automatically copy the formula to the entire column.
+
+Excel will stop filling out the column if it sees an empty cell. If the reference data contains a gap, you will have to repeat this step to fill out the column below the gap.
+

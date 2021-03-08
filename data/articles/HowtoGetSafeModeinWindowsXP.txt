@@ -1,0 +1,24 @@
+ In practice this can be tricky to time correctly and all too often you can end up in the regular boot mode. The technique is to repeatedly tap the F8 key until the startup menu appears.
+
+
+Sometimes you will fill up the buffer memory with all the key taps and get an error message or the computer will complain by beeping. Also, the F8 key may not work with a USB keyboard because USB drivers have not yet been loaded. However, newer computers have USB support in the BIOS so this problem should be limited to older machines.
+
+
+
+Safe Mode
+Safe Mode with Networking
+Safe Mode with Command Prompt
+Enable Boot Logging
+Enable VGA mode
+Last Known Good Configuration (your most recent settings that worked)
+Directory Services Restore Mode (Windows domain controllers only)
+Debugging Mode
+Disable automatic restart on system failure
+Start Windows Normally
+Reboot
+
+, After you have highlighted the mode you want, press the "Enter" key.
+ When the Start Menu appears, click the "Run" menu option. (As a shortcut, you can simply press WinKey+R on the keyboard.);
+, The System Configuration Utility executes.
+ One will say "BOOT.INI". Click on that tab.
+ Check the box next to the text "/SAFEBOOT".

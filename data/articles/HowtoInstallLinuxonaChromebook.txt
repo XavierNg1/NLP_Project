@@ -1,0 +1,17 @@
+ Installing Linux on your Chromebook will erase and wipe all local data.;
+, Your Chromebook will reboot and enter into Recovery Mode.
+ A dialog box will display on-screen and ask you to confirm that you want to enter Developer Mode.
+ Your Chromebook will spend about 15 minutes wiping all local data and entering Developer Mode.
+ The screen will display a warning as it reboots that informs you that Chrome OS is missing or damaged, but this is normal when entering Developer Mode.
+ Crouton is the name of the tool you’ll need to install Linux on your Chromebook.
+
+
+Alternately, you can visit Crouton’s official site at https://github.com/dnschneid/crouton and click on the link to the right of “Chromium OS Universal Chroot Environment.”
+
+, This command will bring up the terminal on your Chromebook.
+, WARNING! You may want to enter "-r trusty" for acer chromebooks.” This command will install the Crouton application.
+
+
+Type “sudo sh -e ~/Downloads/crouton -t touch,xfce” if you are installing Linux on a Chromebook Pixel.
+ The installation process may take up to several minutes, and will prompt you to enter a Linux username and password when complete.
+, You will be required to type this command into the terminal any time you wish to use Linux when booting into Chrome OS.

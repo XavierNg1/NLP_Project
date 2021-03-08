@@ -1,0 +1,27 @@
+ The terminal program on your computer allows you to remotely access your server. If you're using a Linux or Mac computer, you'll be using the built-in Terminal program. If you're using Windows, you'll need to install a program like Cygwin or GitBash.
+
+Linux - Press Ctrl+Alt+T or search for "terminal."
+Mac - You can find the Terminal program in the Utilities folder.
+Windows - You can download Cygwin from cygwin.com, or GitBash from git-scm.com/downloads.;
+, You'll be generating the deploy key on your server so that it can access your GitHub repository. To do this, you'll need to log into your server, either remotely through your terminal or locally on the server.
+
+In your terminal program, type ssh username@hostname to log in. Enter your password if prompted., The following command will create a new key with your GitHub email address as the label:
+
+ssh-keygen -t rsa -b 4096 -C "email@example.com"
+An SSH key is a encrypted key pair that authenticates your identity. In this case, you'll be assigning the key to your GitHub repository, allowing it to identify your server.
+ This will save the key to the default location, which is the .ssh directory in your User directory., This adds an additional layer of security to your key, as unknown users will need to enter the passphrase before the key will work.
+
+You'll be prompted to confirm the passphrase when creating it.
+ Once the key has been created, you'll need to add it to your repository. To do so, you'll need to copy the contents of the key. The following command will copy the contents of the key to your clipboard:Linux - xclip -sel clip < ~/.ssh/id_rsa.pub. You may need to run sudo apt-get xclip first.
+Windows - clip < ~/.ssh/id_rsa.pub
+
+Mac - pbcopy < ~/.ssh/id_rsa.pub
+
+
+, Make sure you log in with an account that can access the repository., This will open your GitHub profile page., This will display all of your repositories., This will grant your server access to the repository to automatically deploy builds., This will open your repository settings., This will display the deploy keys that are currently assigned to the repository., A text field for the key will appear., Click the field and press ⌘ Command/Ctrl+V to paste the copied deploy key into the field.
+
+If you want the server to have write access to the repository, check the "Allow write access" box.
+ This will allow your server to access the repository and deploy builds from it., A "machine user" is an automated user that can access multiple repositories. This is useful if your server needs access to multiple repositories, since deploy keys only grant access to a single repository.
+
+You can create a new user by clicking the "Sign up" button on the GitHub homepage and following the prompts.
+ Follow the steps in the first section to generate a key on your server and copy it to your clipboard., You'll be assigning the newly-created key to this user., This will open the account settings for the machine user., This will display the keys currently assigned to the user., This will allow you to enter the SSH key., This will add the SSH key to the machine user's profile, allowing it to access your server., You can find your repositories in the "Repositories" tab on your Profile page., This will display the repository settings., This will allow you to add collaborators to the repository. By adding your machine user as a collaborator, it will be able to push builds from your repository to your server., The machine user will be given read/write access to the repository.

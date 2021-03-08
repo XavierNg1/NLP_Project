@@ -1,0 +1,26 @@
+ Often, shipping weight is calculated as a percent added to the actual weight, to account for items that are shipped with the item but not modeled.;
+,,
+
+
+Go to the "Evaluate" tab and choose "Mass Properties".
+Find the mass in this dialog and notice all the information about this model in this dialog. Say that the actual mass is 196.66 pounds.
+ In this example, we will add ten percent to the actual mass, or simply, Shipping Weight= "The mass" x 1.10
+
+
+Open the "Equations" dialog in SolidWorks.
+Add a new Equation by clicking Tools, Equations, Add.
+Using the equations dialog, create a variable called "Shipping Weight", by typing Shipping Weight in quotations and then put an equals sig.
+Expand the inputs box by clicking the chevron at the bottom of the equations dialog box. This area calls any SolidWorks properties and any custom properties.
+Click SW-Mass, which is the SolidWorks property for mass. This will add the proper callout to the right side of the equal sign.
+Finish the "Shipping Weight" variable by adding the text * 1.10.
+Double check the variable. It should read: "Shipping Weight"= "SW-MASS" * 1.10
+
+Click OK to create the variable
+Click OK to dismiss the equations dialog.
+ To create a custom property we will need to click File, Properties.
+
+
+Add a new configuration-specific custom property called "Shipping Weight".
+Use the drop-down arrow to select the variable you just created.
+ You could also put this property in a BOM at the assembly level. The custom property will automatically update to any design changes to the model.
+

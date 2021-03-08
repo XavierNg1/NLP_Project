@@ -1,0 +1,12 @@
+
+Download all the necessary software and files.
+Setup the Eclipse IDE.
+Create a C++ Project in Eclipse, and use the following settings;
+
+
+Make the project type a "AVR Cross Target Application"
+Ensure "Debug" is UN-CHECKED when selecting Build Configurations (and ensure "Release" IS CHECKED)
+When asked for hardware details, make sure you select the correct frequency (typically 16000000 Hz) and the correct microcontroller, according to your arduino type ,
+Extract the latest version of the arduino software from their website.
+Create main.cpp where you write your code for the Arduino in which you will declare as usual the main elements i.e.
+Optional: Fix any compiler-errors in arduino software.

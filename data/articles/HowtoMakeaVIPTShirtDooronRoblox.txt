@@ -1,0 +1,93 @@
+ DO NOT make a front yet. Make sure that you anchor them before resizing.;
+,, The brick in the list should be fully highlighted in blue, this means that you have selected it.
+ Click on the "Insert" tab, click on "Object", click on "Script". In Explorer Workspace double-click on the newly-added script--- it should already be highlighted in blue.
+
+permission = { "YourNameHere" } -- This is how many people can still get through, so you don't have to change shirts. You can also have another friend here.
+-- Texture of the VIP shirt.
+texture = "http://www.roblox.com/asset/?version=1&id=1194117" -- Go to the wiki below this script to find out how to change the shirt. And paste the link in between the "" marks.
+function checkOkToLetIn(name)
+for i = 1,#permission do
+-- convert strings to all uppercase, otherwise we will let in
+-- "Username" but not "username" or "uSERNAME"
+if (string.upper(name) == string.upper(permission)) then return true end
+end
+return false
+end
+local Door = script.Parent
+function onTouched(hit)
+print("Door Hit")
+local human = hit.Parent:findFirstChild("Humanoid")
+if (human ~= nil ) then
+if human.Parent.Torso.roblox.Texture == texture then --the shirt
+Door.Transparency = 0.7
+Door.CanCollide = false
+wait(4) -- this is how long the door is open
+Door.CanCollide = true
+Door.Transparency = 0
+-- a human has touched this door!
+print("Human touched door")
+-- test the human's name against the permission list
+elseif (checkOkToLetIn(human.Parent.Name)) then
+print("Human passed test")
+Door.Transparency = 0.7
+Door.CanCollide = false
+wait(4) -- this is how long the door is open
+Door.CanCollide = true
+Door.Transparency = 0
+else human.Health = 0 -- delete this line of you want a non-killing VIP door
+end
+end
+end
+script.Parent.Touched:connect(onTouched)
+
+, Then you must visit your place in Build Solo mode. Then:
+
+Go to View > Explorer, then the Explorer will pop up on the side of your screen.
+
+
+
+
+
+
+Click on the plus sign next to Workspace.
+
+
+
+
+
+
+Click on the plus sign next to your character's name.
+
+
+
+
+
+
+Scroll down to "Torso".
+
+
+
+
+
+
+Click on the plus sign next to "Torso".
+
+
+
+
+
+
+You should see the shirt graphic. Highlight the shirt graphic (not the plus sign).
+
+
+
+
+
+
+Go to View again, then to Properties, which will pop up under the explorer. The shirt graphic should still be highlighted.
+
+
+
+Open the script, and paste that address where the script tells you to. (In between the "" marks, in place of the address that's there.) You can now sell your shirt, if you are in Builders Club, that is. I would test the door online to make sure the door works before you advertise the shirt.
+, Test the door out in Play mode. If it still doesn't work, you can get real official help from:
+

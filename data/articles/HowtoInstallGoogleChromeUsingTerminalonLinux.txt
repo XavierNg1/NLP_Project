@@ -1,0 +1,17 @@
+ Open your Terminal by pressing Ctrl+Alt+T. Then copy the following line and paste it into the terminal: sudo apt-get install libxssl libappindicator1 libindicator7. Then press ↵ Enter. Your terminal will most likely prompt you for your password.;
+, The terminal will ask you whether you wish to continue, just press Y, and the ↵ Enter.
+ Copy the following line and paste it into the terminal:
+
+
+Chrome 64-bit:wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+Chrome 32-bit: wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+
+
+, The terminal shows you the progress of the download. Depending on your Internet speed, this might take a while.
+ After the download is complete, copy this line and paste it into the terminal: sudo dpkg -i google-chrome*.deb
+
+, Copy this line and paste it into the terminal: sudo apt-get install -f
+
+, Launch it by typing the following into the terminal: google-chrome
+

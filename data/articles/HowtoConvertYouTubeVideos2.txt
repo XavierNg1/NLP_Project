@@ -1,0 +1,38 @@
+ If you're not afraid of using your computer's command line, you can use an open-source program called youtube-dl to download YouTube videos in audio or video format at the highest possible quality without any ads.
+, If you use Windows, follow these steps to install youtube-dl:
+
+
+Click the Download button on the youtube-dl website.
+Click the Windows exe link.
+After downloading, copy the youtube-dl.exe file into the C:\Users\yourUsername\ folder.
+ If you use a Mac, follow these steps to install youtube-dl:
+
+
+Click the Go menu from the desktop and select Utilities.
+Double-click Terminal.
+Type /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" and press ⏎ Return.
+Type brew install youtube-dl and press ⏎ Return.
+Type brew install ffmpeg and press ⏎ Return.
+ You'll need this encoding software for youtube-dl to work. Mac users have already installed it. Windows users will need to install it separately:
+
+
+Visit ffmpeg.org/download.html and click the Windows button.
+Click the Download FFmpeg button.
+Double-click the downloaded ZIP file and select Extract.
+Open the newly extracted folder, then open the bin folder.
+Copy the three EXE files to the C:\Users\yourUsername\ folder that youtube-dl is located in.
+,, You'll be using youtube-dl from the command line on your computer.
+
+
+Mac - Terminal may still be open, but if it isn't, click the Go menu from the desktop, select Utilities, then double-click Terminal.
+Windows - Click the Start button, type cmd, then press ↵ Enter.
+, If you want to download the video as an audio MP3 file instead of a video, add the following to the youtube-dl command:
+
+
+Type --extract-audio --audio-format mp3 and press Space
+
+
+, This will paste the copied video URL to the end of the command.
+ The video will automatically begin downloading and will convert into MP4 for video or MP3 for audio.
+ You'll find your new video or audio file in your User folder.
+

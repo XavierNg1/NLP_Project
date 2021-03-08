@@ -1,0 +1,13 @@
+ Making the wrong change to the registry can cause your Windows system to become inoperable. Backing it up beforehand is a good idea; an easy way to do this is by using System Restore, a utility built-in to Windows, to create a system restore point.;
+, Click on the "Start" button, and then click on "Run." In the dialog box that appears, type "regedit" into the text box, and then click the "OK" button.
+ When the program launches, you will see a window divided into 2 panels. The right panel will be empty, and the left panel will show a list of 5 folders all beginning with the letters "HKEY." These are the 5 "hive keys," or main registry keys. Clicking on the plus sign next to each folder will allow you to navigate deeper into each key.
+ If you aren't sure which key you're interested in, it is best to use the Regedit help file or an online support site to determine what it is you want to do. The Windows registry is massive, and contains crucial system files that can cause serious problems if altered.
+ Once you've navigated to the right key in the left-hand panel, right click on it. A context menu will appear with several options.
+
+
+Click on "New" to add a new key underneath the key you have selected.
+Click on "Delete" to delete the key. If the selected key is associated with a program that you have uninstalled, you can safely delete the key.
+Click on "Export" to save all the information contained in the selected key on your hard drive. This is a good way to back up an individual key before making any changes to it.
+ Registry keys are saved using the .reg extension, which is really just a plain text file. This is helpful if you are trying to add information to the registry from an online source that is presented as text. Copy the text into a text editor (like Notepad), and save the file with the .reg extension. Once you've saved the file, simply double-click on it to add it to the registry.
+ If you are using Regedit to attempt to fix a major problem with your operating system, remember that System Restore automatically creates restore points at regular intervals. You can easily choose to restore your system's configuration to a date before the problem arose, and that will restore the registry in the process.
+

@@ -1,0 +1,14 @@
+ You can check the internal IP address of your Linux computer through the Terminal command line. You can access the Terminal by selecting it from your distribution's Utilities folder, or by pressing Ctrl+Alt+T in most distributions.
+ There are a couple of different commands that can display your IP address. The first one is the new standard for checking IP addresses, while the second command has been deprecated, but should still work in virtually all distributions.
+
+
+
+sudo ip addr show - You will need to enter your administrator password after performing this command.
+
+/sbin/ifconfig - You may be told that you don't have administrative privileges for this command. If so, type sudo /sbin/ifconfig and then enter your password.
+ Each of these commands will display the connection details for all of your installed connections. Find the connection that you are using. If your computer is connected via Ethernet, the connection will most likely be eth0. If you are connected via wireless, it will most likely be wlan0
+
+
+Your internal IP address will be four groups of up to three numbers, separated by periods. For example, it might look like 192.168.1.4
+
+

@@ -1,0 +1,36 @@
+ Open Outlook, then open Outlook Express (download it for free if necessary). In Outlook Express, select File > Import and select Messages.
+
+
+In open dialogue box choose Microsoft Outlook and then select Next to import messages in Outlook Express.;
+, Download and install Mozilla Thunderbird (a free, open-source replacement for Outlook from the people who make Firefox). When prompted during the installation process, be sure to have Thunderbird import your mail and click Next.
+
+
+Choose Outlook Express and click next to import messages in Thunderbird.Installing Thunderbird allows extraction of your old mail from Microsoft's proprietary – and difficult – PST file format into a more open mBox file. While Thunderbird offers the option to import mail directly from Microsoft Outlook, the data is less likely to get corrupted if you add the intermediate step of importing to Outlook Express)
+
+, This is a free, open-source program by Mark Lyon.
+.
+ First, locate your Profile folder using the instructions below. Then, look inside to find your Mail folder.
+ForWindows Vista and 7 Click the Start button.
+Type %APPDATA%.
+Click the Roaming folder that appears in the search results.
+Go to Thunderbird > Profiles.
+For Windows 2000 and XP
+Click the Start button and go to Run.
+Type %APPDATA% and press OK.
+Go to Thunderbird > Profiles.
+For Linux and Unix
+Show hidden files and folders. How you do this will depend on your system. In Nautilus, for example, go to View > Show Hidden Files.
+Find ~/.thunderbird/<Profile name>/; if you’re using a third-party build (ex. Ubuntu or Debian), find ~/.mozilla-thunderbird<Profile name>.
+
+
+
+Each mail folder appears twice - once with extension .msf and once without an extension. Select the item without an extension.
+ All the archived mail you import will go straight into your Inbox. Once it does, you will want to select it and archive it as necessary, which will be much simpler to do without having to sort through other messages in the Inbox at the same time. (Alternatively, you can tag all current emails with a tag so they can be easily located in the archives and returned to the Inbox later.)
+
+, There are two options for mBox files. If you try with the More Strict option and GML finds 0 messages in your file, change to the Less Strict mBox option on and try again.
+ Messages imported from your Sent Items folder can be sent to the Sent Items folder in GMail. However, they will also appear in your Inbox, where you will then want to delete them. (All other messages will be sent to the Inbox, and from there you can select them and archive them.)
+
+,, The program defaults with a Google SMTP server, but it may not work for everyone. If it doesn’t work for you, see instructions on the Google Gmail Loader site.
+,, As your messages are being imported, they can be archived from the Inbox (or deleted from the Inbox if they are already present in Sent Items).
+ Click Archive. This will archive all the selected messages. Repeat until all desired messages have been archived.
+

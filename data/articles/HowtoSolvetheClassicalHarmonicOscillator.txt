@@ -1,0 +1,133 @@
+ This object is resting on a frictionless floor, and the spring follows Hooke's law F=−kx.{\displaystyle F=-kx.}
+
+Newton's second law says that the magnitude of a force is proportional to the object's acceleration F=ma.{\displaystyle F=ma.} When the spring is being pulled to an excited state, i.e. out of equilibrium, the object experiences a restoring force that tends to bring it back to equilibrium. At the instant the spring reaches its equilibrium point, however, the object is traveling at its greatest speed. The spring therefore undergoes an oscillatory motion, and because we assume the floor is frictionless (no damping), it exhibits simple harmonic motion.
+
+Newton's law only indirectly relates the position of an object to the force acting on it through a second derivative, because a=d2xdt2.{\displaystyle a={\frac {{\mathrm {d} }^{2}x}{{\mathrm {d} }t^{2}}}.}
+
+When dealing with time derivatives, physicists often use Newton's notation for derivatives, where the number of dots corresponds to the number of time derivatives. For example, a=x¨.{\displaystyle a={\ddot {x}}.}
+;
+, The equation is a second order linear differential equation with constant coefficients. In our system, the forces acting perpendicular to the direction of motion of the object (the weight of the object and the corresponding normal force) cancel out. Therefore, the only force acting on the object when the spring is excited is the restoring force. This means that we equate the two together to obtain F=ma=−kx.{\displaystyle F=ma=-kx.} 
+,,
+
+Set up the characteristic equation.
+
+
+mr2+k=0{\displaystyle mr^{2}+k=0}
+
+
+
+Find the roots of the characteristic equation.
+
+
+r=±kmi{\displaystyle r=\pm {\sqrt {\frac {k}{m}}}i}
+
+
+
+Then, the solution to the differential equation is as follows.
+
+
+x(t)=c1cos(kmt)+c2sin(kmt){\displaystyle x(t)=c_{1}\cos \left({\sqrt {\frac {k}{m}}}\,t\right)+c_{2}\sin \left({\sqrt {\frac {k}{m}}}\,t\right)}
+
+
+
+
+, While the above expression is true, it is a bit bulky when the solution is written in terms of two trigonometric functions. 
+
+First, we recognize that the square root is the angular frequency of the system, so we can label ω0{\displaystyle \omega _{0}} like so.
+
+
+ω0=km{\displaystyle \omega _{0}={\sqrt {\frac {k}{m}}}}
+
+
+
+This means that the differential equation can be rewritten in terms of the angular frequency.
+
+
+x¨+ω02x=0{\displaystyle {\ddot {x}}+\omega _{0}^{2}x=0}
+
+
+
+Below, A{\displaystyle A} is the amplitude of oscillation, and ϕ{\displaystyle \phi } is the phase factor, both dependent on initial conditions. See this article for details on how to rewrite the solution in terms of a phase factor. 
+
+
+x(t)=Acos⁡(ω0t+ϕ){\displaystyle x(t)=A\cos(\omega _{0}t+\phi )}
+
+
+
+
+, In a system describing a damped harmonic oscillator, there exists an additional velocity-dependent force whose direction is opposite that of motion. This force can be written as F=−bv,{\displaystyle F=-bv,} where b{\displaystyle b} is an experimentally determined constant. With this additional force, force analysis gives ma=−kx−bv.{\displaystyle ma=-kx-bv.} 
+,,
+
+Set up the characteristic equation.
+
+
+mr2+br+k=0{\displaystyle mr^{2}+br+k=0}
+
+
+
+Solve the characteristic equation. Use the quadratic formula.
+
+
+r=−b±b2−4mk2m{\displaystyle r={\frac {-b\pm {\sqrt {b^{2}-4mk}}}{2m}}}
+
+
+
+Therefore, the general solution to the differential equation of damped harmonic oscillation is as follows, where we factor out a e−b/2m.{\displaystyle e^{-b/2m}.}
+
+
+x(t)=e−b/2m(c1eb2−4mk2mt+c2e−b2−4mk2mt){\displaystyle x(t)=e^{-b/2m}\left(c_{1}e^{{\frac {\sqrt {b^{2}-4mk}}{2m}}t}+c_{2}e^{{\frac {-{\sqrt {b^{2}-4mk}}}{2m}}t}\right)} 
+
+
+
+
+, The three cases depend on the value of the value in the exponent, which in turn depends on the discriminant b2−4mk.{\displaystyle b^{2}-4mk.}
+
+
+b2−4mk>0{\displaystyle b^{2}-4mk>0}
+
+When the discriminant is positive, then the solution is simply a sum of two decreasing exponential functions. This is called an overdamped system. Because this does not describe a harmonic oscillator, we are not interested in this case.
+
+
+
+
+b2−4mk=0{\displaystyle b^{2}-4mk=0}
+
+When the discriminant is 0, then the solution is a decreasing exponential function (c1+c2)e−b/2m.{\displaystyle (c_{1}+c_{2})e^{-b/2m}.} This is called a critically damped system. A mass on a spring in a critically damped system returns to equilibrium as quickly as possible and does not oscillate, so we are also not interested in this case.
+
+
+
+
+b2−4mk<0{\displaystyle b^{2}-4mk<0}
+
+When the discriminant is negative, then the solution involves imaginary exponents. This is called an underdamped system, and the mass oscillates. 
+
+
+
+
+, Since in the underdamped case, the roots are complex numbers, we can use Euler's formula to write the solution in terms of sines and cosines. Note the sign change in the square root. 
+
+
+x(t)=e−b/2m(c1cos(4mk−b22mt)+c2sin(4mk−b22mt)){\displaystyle x(t)=e^{-b/2m}\left(c_{1}\cos \left({\frac {\sqrt {4mk-b^{2}}}{2m}}\,t\right)+c_{2}\sin \left({\frac {\sqrt {4mk-b^{2}}}{2m}}\,t\right)\right)}
+
+
+,
+
+The decay time τ=2m/b{\displaystyle \tau =2m/b} is the amount of time it takes for the amplitude of the system to decay to 1/e{\displaystyle 1/e} of the initial amplitude. 
+
+The damped angular frequency relates to both the angular frequency (of a corresponding undamped oscillator) and decay time in the following manner, where we bring the 2m{\displaystyle 2m} inside the square root.
+
+
+ωd=4mk−b24m2=ω02−1τ2{\displaystyle {\begin{aligned}\omega _{d}&={\sqrt {\frac {4mk-b^{2}}{4m^{2}}}}\\&={\sqrt {\omega _{0}^{2}-{\frac {1}{\tau ^{2}}}}}\end{aligned}}}
+
+
+
+From previous results, we can therefore write the equation of motion of a damped harmonic oscillator as the following, where A{\displaystyle A} is the initial amplitude and ϕ{\displaystyle \phi } is the phase factor, both dependent on initial conditions.
+
+
+x(t)=Ae−t/τcos⁡(ωdt+ϕ){\displaystyle x(t)=Ae^{-t/\tau }\cos(\omega _{d}t+\phi )}
+
+
+
+We can see here that the equation of motion describes an oscillating system, whose envelope is a decreasing exponential function. The rate at which the function decreases and the frequency at which it oscillates are all dependent on the parameters of the system and must be experimentally determined.
+
+

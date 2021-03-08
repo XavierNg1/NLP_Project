@@ -1,0 +1,47 @@
+ Open the Apple menu and select “About this Mac.” You should see something like “MacBook Pro (13-inch, Early 2015) just beneath the operating version number. The following Mac systems are compatible with Sierra:iMac (Late 2009 and newer)
+MacBook Air (2010 and newer)
+MacBook (Late 2009 and newer)
+Mac Mini (2010 and newer)
+MacBook Pro (2010 and newer)
+Mac Pro (2010 and newer);
+, Doing a clean install requires creating a bootable installation drive, so you’ll need to have one ready. The drive can be any sort of hard drive (including a flash drive), and should have a minimum of 16GB of disk space.The drive will be erased and reformatted by the installer, so be sure to back up your data.
+It’s okay if the drive is not formatted for macOS.
+ Doing a clean installation of macOS Sierra will wipe your hard drive. Use the backup method of your choice to preserve your personal files, such as photos and documents.
+ The App Store will open, displaying a variety of apps available for download., Here’s how:Type mac os sierra into the search field at the top right corner of the App Store.
+Click “macOS Sierra” in the search results.
+Click “Download.”
+
+, Since you’ll be doing a clean install, you won’t need it just yet., You’ll see a hard drive icon appear on the desktop when the drive mounts.
+ To make the drive easier to work with, name it “bootdrive.”
+
+
+Right-click or Ctrl+click the drive icon.
+Select “Rename.”
+Type bootdrive
+
+Press ⏎ Return
+
+
+, A black window with white text prompt will appear.
+ Use your mouse to highlight the following (lengthy) command, then press ⌘ Cmd+C to copy.
+
+
+sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/bootdrive --applicationpath /Applications/Install\ macOS\ Sierra.app
+
+, The long code you copied will appear after the prompt.
+ Now you should see “Password” on the next line in the terminal.
+ When the password is accepted, you’ll see a message asking you to confirm that you want to erase the disk.
+ The bootable version of the Sierra installer will start copying to your USB drive.The process will take several minutes and you’ll know it’s complete when you see “Copy Complete” and “Done” in the terminal.
+If you see a pop-up message about Time Machine during the installation, click the “Don’t Use” button.
+, The computer will power down and restart. Don’t walk away from the computer, though! You’ll need to take action as soon as it turns back on.
+ After a few seconds you’ll see a list of bootable drives connected to your Mac., The macOS Utilities window will appear, containing a list of options., Now you’ll see a screen that looks similar to Finder. The left side contains a list of drives connected to the computer.
+ You may have to expand the Internal section to find it. When you click the drive, its properties will appear in the center pane.
+ It’s located on the top toolbar. After clicking, you’ll see a pop-up asking you to set some parameters.
+
+
+Remember, erasing the hard drive is permanent. Make sure you have backups.
+ This is the only parameter you’ll need to change., The utility will now format your hard drive, which may take several minutes. You’ll see a confirmation message once the drive has finished formatting., This will bring you back to the macOS Utilities screen.
+ Now you’ll be prompted to select a drive on which you’ll install Sierra.
+ For most people, it’s the only drive in the computer (and in most cases, it’s called “Macintosh HD”).
+ The icon is at the bottom of the window. Once clicked, macOS Sierra will install on your Mac. When the process is complete, your computer will boot to your brand new macOS Sierra desktop.
+

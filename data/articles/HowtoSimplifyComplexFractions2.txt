@@ -1,0 +1,48 @@
+ To be clear, virtually any complex fraction can be simplified by reducing its numerator and denominator to single fractions and multiplying the numerator by the inverse of the denominator. Complex fractions containing variables are no exception, though, the more complicated the variable expressions in the complex fraction are, the more difficult and time-consuming it is to use inverse multiplication. For "easy" complex fractions containing variables, inverse multiplication is a good choice, but complex fractions with multiple variable terms in the numerator and denominator may be easier to simplify with the alternate method described below.
+
+
+For example, (1/x)/(x/6) is easy to simplify with inverse multiplication. 1/x × 6/x = 6/x2. Here, there is no need to use an alternate method.
+However, (((1)/(x+3)) + x - 10)/(x +4 +((1)/(x - 5))) is more difficult to simplify with inverse multiplication. Reducing the numerator and denominator of this complex fraction to single fractions, inverse multiplying, and reducing the result to simplest terms is likely to be a complicated process. In this case, the alternate method below may be easier.
+ The first step in this alternate method of simplification is to find the LCD of all the fractional terms in the complex fraction - both in its numerator and in its denominator. Usually, if one or more of the fractional terms have variables in their denominators, their LCD is just the product of their denominators.
+
+
+This is easier to understand with an example. Let's try to simplify the complex fraction we mentioned above, (((1)/(x+3)) + x - 10)/(x +4 +((1)/(x - 5))). The fractional terms in this complex fraction are (1)/(x+3) and (1)/(x-5). The common denominator of these two fractions is the product of their denominators: (x+3)(x-5).
+ Next, we'll need to multiply the terms in our complex fraction by the LCD of its fractional terms. In other words, we'll multiply the entire complex fraction by (LCD)/(LCD). We can do this freely because (LCD)/(LCD) is equal to 1. First, multiply the numerator on its own.
+
+
+In our example, we would multiply our complex fraction, (((1)/(x+3)) + x - 10)/(x +4 +((1)/(x - 5))), by ((x+3)(x-5))/((x+3)(x-5)). We'll have to multiply through the numerator and denominator of the complex fraction, multiplying each term by (x+3)(x-5).
+
+First, let's multiply the numerator: (((1)/(x+3)) + x - 10) × (x+3)(x-5)
+
+= (((x+3)(x-5)/(x+3)) + x((x+3)(x-5)) - 10((x+3)(x-5))
+= (x-5) + (x(x2 - 2x - 15)) - (10(x2 - 2x - 15))
+= (x-5) + (x3 - 2x2 - 15x) - (10x2 - 20x - 150)
+= (x-5) + x3 - 12x2 + 5x + 150
+= x3 - 12x2 + 6x + 145
+
+
+
+
+
+
+, Continue multiplying the complex fraction by the LCD you found by proceeding to the denominator. Multiply through, multiplying every term by the LCD.
+
+
+The denominator of our complex fraction, (((1)/(x+3)) + x - 10)/(x +4 +((1)/(x - 5))), is x +4 +((1)/(x-5)). We'll multiply this by the LCD we found, (x+3)(x-5).
+
+(x +4 +((1)/(x - 5))) × (x+3)(x-5)
+= x((x+3)(x-5)) + 4((x+3)(x-5)) + (1/(x-5))(x+3)(x-5).
+= x(x2 - 2x - 15) + 4(x2 - 2x - 15) + ((x+3)(x-5))/(x-5)
+= x3 - 2x2 - 15x + 4x2 - 8x - 60 + (x+3)
+= x3 + 2x2 - 23x - 60 + (x+3)
+= x3 + 2x2 - 22x - 57
+
+
+
+
+, After multiplying your fraction by your (LCD)/(LCD) expression and simplifying by combining like terms, you should be left with a simple fraction containing no fractional terms. As you may have noticed, by multiplying through by the LCD of the fractional terms in the original complex fraction, the denominators of these fractions cancel out, leaving variable terms and whole numbers in the numerator and denominator of your answer, but no fractions.
+
+
+Using the numerator and denominator we found above, we can construct a fraction that's equal to our initial complex fraction but which contains no fractional terms. The numerator we obtained was x3 - 12x2 + 6x + 145 and the denominator was x3 + 2x2 - 22x - 57, so our new fraction is (x3 - 12x2 + 6x + 145)/(x3 + 2x2 - 22x - 57)
+
+

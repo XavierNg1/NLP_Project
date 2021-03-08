@@ -1,0 +1,75 @@
+ Synthetic division is a useful way to factor high-order polynomials, but it only works if you know one of the roots (or "zeroes") already. You may be able to find this by factoring as described above, or the problem may provide one. If so, skip down to the synthetic division instructions. If you do not know a root, continue to the next step to try to find one.
+
+The root of a polynomial is the value of x for which y = 0. Knowing a root c also gives you a factor of the polynomial, (x - c).
+ The "rational roots" test is a way to guess at possible root values. To begin, list all the factors of the constant (the term with no variable).Example: The polynomial 2x3+x2−12x+9{\displaystyle 2x^{3}+x^{2}-12x+9} has the constant term 9. Its factors are 1, 3, and 9.
+ This is the coefficient in the first term of the polynomial, when it is arranged from the highest-degree term to the lowest. List all of that number's factors on a separate line.
+
+
+Example (cont.): 2x3+x2−12x+9{\displaystyle 2x^{3}+x^{2}-12x+9} has a leading coefficient of 2. Its factors are 1 and 2.
+ If the polynomial has a rational root (which it may not), it must be equal to ± (a factor of the constant)/(a factor of the leading coefficient). Only a number c in this form can appear in the factor (x-c) of the original polynomial.
+
+
+Example (cont.): Any rational roots of this polynomial are in the form (1, 3, or 9) divided by (1 or 2). Possibilities include ±1/1, ±1/2, ±3/1, ±3/2, ±9/1, or ±9/2. Don't forget the "±": each of these possibilities could be positive or negative.
+ None of these are guaranteed to be roots, so you'll need to test them with the original polynomial.
+
+
+Example: (1/1=1) is a possible root. If it turns out to be an actual root, plugging it into the polynomial should result in zero.2(1)3+(1)2−12(1)+9=2+1−12+9=0{\displaystyle 2(1)^{3}+(1)^{2}-12(1)+9=2+1-12+9=0}, so 1 is confirmed to be a root.This means the polynomial has the factor (x-1).
+
+If none of the possibilities work out, the polynomial has no rational roots and cannot be factored.
+ Synthetic division is a way to find all the factors of a polynomial, if you already know one of them. To set it up, write a root of the polynomial. Draw a vertical line to its right, then write the coefficients of your polynomial arranged from highest degree exponent to lowest. (You do not need to write the terms themselves, just the coefficients.)
+
+
+Note: You may need to insert terms with a coefficient of zero. For example, rewrite the polynomial x3+2x{\displaystyle x^{3}+2x} as x3+0x2+2x+0{\displaystyle x^{3}+0x^{2}+2x+0}.
+
+
+Example (cont.): The rational roots test above told us that the polynomial 2x3+x2−12x+9{\displaystyle 2x^{3}+x^{2}-12x+9} has the root 1.Write the root 1, followed by a vertical line, followed by the coefficients of the polynomial:(1|21−129){\displaystyle {\begin{pmatrix}1|&2&1&-12&9\end{pmatrix}}}
+
+
+, Copy the first coefficient onto the answer line. Leave a blank line in between the two numbers for later calculations.
+
+
+Example (cont.): Carry the 2 down to the answer line:(1|21−1292){\displaystyle {\begin{pmatrix}1|&2&1&-12&9\\\\&2\end{pmatrix}}}
+
+
+, Write the answer directly below the next term, but not on the answer line.
+
+
+Example (cont.): Multiply the 2 by the root, 1, to get 2 again. Write this 2 in the following column, but on the second row instead of the answer line:(1|21−12922){\displaystyle {\begin{pmatrix}1|&2&1&-12&9\\&&2\\&2\end{pmatrix}}}
+
+
+, The second coefficient column now contains two numbers. Sum them together and write the result on the answer line directly below them.
+
+
+Example (cont.): 1 + 2 = 3(1|21−129223){\displaystyle {\begin{pmatrix}1|&2&1&-12&9\\&&2\\&2&3\end{pmatrix}}}
+
+
+, Just as you did before, multiply the latest number on the answer line by the root. Write your answer underneath the next coefficient.
+
+
+Example (cont.): 1 x 3 = 3:(1|21−1292323){\displaystyle {\begin{pmatrix}1|&2&1&-12&9\\&&2&3\\&2&3\end{pmatrix}}}
+
+
+, As before, add up the two numbers in the column and write the result on the answer line.
+
+
+Example (cont.): -12 + 3 = -9:(1|21−1292323−9){\displaystyle {\begin{pmatrix}1|&2&1&-12&9\\&&2&3\\&2&3&-9\end{pmatrix}}}
+
+
+, The last number on your answer line will always be zero. If you get any other result, check your work for mistakes.
+
+
+Example (cont.): Multiply -9 by the root 1, write the answer under the final column, then confirm that the sum of the final column is zero:(1|21−12923−923−90){\displaystyle {\begin{pmatrix}1|&2&1&-12&9\\&&2&3&-9\\&2&3&-9&0\end{pmatrix}}}
+
+
+, You have now divided the polynomial by the term (x - c), where c is your factor. The answer line tells you the coefficient of each term in your answer. The x portion of each term has an exponent one lower than the original term directly above it.
+
+
+Example (cont.): The answer line is 2 3 -9 0, but you can ignore the final zero.Since the first term of the original polynomial included an x3{\displaystyle x^{3}}, the first term of your answer is one degree lower: x2{\displaystyle x^{2}}. Therefore, the first term is 2x2{\displaystyle 2x^{2}}Repeat this process to get the answer 2x2+3x−9{\displaystyle 2x^{2}+3x-9}.You have now factored 2x3+x2−12x+9{\displaystyle 2x^{3}+x^{2}-12x+9} into (x−1)(2x2+3x−9){\displaystyle (x-1)(2x^{2}+3x-9)}.
+ You may be able to factor your answer into smaller parts using the same synthetic division method. However, you may be able to use a faster method to finish the problem. For example, once you have a quadratic expression, you can factor it using the quadratic formula.
+
+Remember, to start the synthetic division method, you'll need to know one root already. Use the rational roots test again to get this. If none of the rational root possibilities check out, the expression cannot be factored.
+
+
+Example (cont.) You've found the factors (x−1)(2x2+3x−9){\displaystyle (x-1)(2x^{2}+3x-9)}, but the second factor can be broken down further. Try the quadratic equation, traditional factoring, or synthetic division.The final answer is (x−1)(x+3)(2x−3){\displaystyle (x-1)(x+3)(2x-3)}, so the roots of the polynomial are x = 1, x = -3, and x = 3/2.
+
+

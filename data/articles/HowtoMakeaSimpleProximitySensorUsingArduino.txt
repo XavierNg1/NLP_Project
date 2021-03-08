@@ -1,0 +1,37 @@
+,,
+
+
+Connect the resistor from 5v to the positive( big pin) on the IR receiver.
+Connect all the IR LEDs to the 3.3v pin on the Arduino.
+Connect a jumper from A0 on the Arduino to the positive leg on the IR receiver.
+Connect all of the negatives of both the receiver and the LEDs to the GND on Arduino.
+Make sure none of the wires or LEDs are shorting as LEDs are very sensitive and can burn.
+ This is a simple code that will print out the IR data on your computer screen, these variables can then be used to control almost anything. This code will allow for a simple analog read of the IR sensor.
+
+
+int IRreceiver = A0; // initialize
+
+
+
+
+
+
+int IRval;
+
+
+
+
+
+
+void setup()
+{
+pinMode(IRreceiver, INPUT); // declare its an input
+Serial.begin(9600); // speed at which the communication will happen
+}
+void loop()
+{
+int IRval= analogRead(IRreceiver); // declare data
+Serial.println(IRval); // print the data
+delay(10); } // add a delay to smoothen things out
+
+, After it's uploaded bring up the serial communication., The data should vary as the distance between the sensor and the object varies.

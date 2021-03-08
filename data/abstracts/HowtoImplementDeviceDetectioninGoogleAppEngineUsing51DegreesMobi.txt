@@ -1,0 +1,7 @@
+
+Download the latest version of 51degrees.mobi’s Java API from SourceForge and unzip the file in a location of your choosing.
+Change the "FORCE_SINGLE_PROCESSOR" value to "true" in src/fiftyone/mobile/detection/Constants.java and recompile the jar file (more detailed instructions can be found here).
+
+,
+Add the newly packaged jar file to the war lib folder, which can be found under “war/Web-INF/lib”, and the build path of the project.
+Add code inside the “doPost” method to use the Provider Object’s “getDeviceInfo()” method to get the connecting devices information.

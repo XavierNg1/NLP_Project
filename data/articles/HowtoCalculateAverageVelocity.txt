@@ -1,0 +1,63 @@
+ Velocity describes the rate at which an object changes position. This has to do with how fast the object is traveling, but also in which direction. "100 meters per second south" is a different velocity than "100 meters per second east."
+
+
+Quantities that include a direction are called vector quantities'.They can be distinguished from directionless or scalar quantities by writing an arrow over the variable. For example, v represents speed, while v→ represents velocity, or speed + direction.If a v is used in this article, it refers to velocity.
+For scientific problems, you should use meters or another metric unit of distance, but for everyday life you can use whichever unit you're comfortable with.;
+, The displacement is the object's change in position, or the distance and direction between its starting point and end point. It doesn't matter where the object moved in before reaching its final position; only the distance between the start point and end point matters. For our first example, we'll use an object moving at a constant speed in one direction:
+
+
+Let's say a rocket traveled north for 5 minutes at a constant rate of 120 meters per minute. To calculate its final position, use the formula s = vt, or use common sense to realize the rocket must be at (5 minutes)(120 meters/minute) = 600 meters north of its starting point.
+For problems involving constant acceleration, you could solve for s = vt + ½at2, or refer to the other section for a shorter method of finding the answer.
+ In our example problem, the rocket moved forward for 5 minutes. You can express average velocity in any units of time, but seconds are the international scientific standard. We'll convert to seconds in this example: (5 minutes) x (60 seconds/minute) = 300 seconds.
+
+
+Even in a scientific problem, if the problem uses units of hours or longer periods of time, it may be easier to calculate the velocity, then convert the final answer to meters/second.
+ If you know how far the object traveled, and how long it took to get there, you know how fast it was going. So for our example, the rocket's average velocity was (600 meters north) / (300 seconds) = 2 meters/second north.
+
+
+Remember to include the direction (such as "forward" or "north").
+In formula form, vav = Δs/Δt. The delta symbol Δ just means "change in," so Δs/Δt means "change in position over change in time."
+Average velocity can be written vav, or as a v with a horizontal line over it.
+ If an object turns or changes speed, don't get confused. Average velocity is still calculated only from the total displacement, and the total time. It doesn't matter what happens in between the start point. Here are a few examples of journeys with the exact same displacement and time, and therefore the same average velocity:
+
+
+Anna walks west at 1 m/s for 2 seconds, then instantly accelerates to 3 m/s and keeps walking west for 2 seconds. Her total displacement is (1 m/s west)(2 s) + (3 m/s west)(2 s) = 8 meters west. Her total time is 2s + 2s = 4s. Her average velocity is 8m west / 4s = 2 m/s west.
+
+Bart walks west at 5 m/s for 3 seconds, then turns around and walks east at 7 m/s for 1 second. We can treat the eastward movement as "negative movement west," so total displacement = (5 m/s west)(3 s) + (-7 m/s west)(1 s) = 8 meters. Total time = 4s. Average velocity = 8 m west / 4s = 2 m/s west.
+
+Charlotte walks north 1 meter, then walks west 8 meters, then south 1 meter. It takes her 4 seconds total to walk this distance. Draw a diagram on a piece of paper, and you'll see that she ends up 8 meters west of her starting point, so this is her displacement. Total time is 4 seconds again, so the average velocity is still 8 m west / 4s = 2 m/s west.
+ Let's say your problem is "The bike begins traveling to the right at 5 m/s, constantly accelerating at 2 m/s2. If it travels for 5 seconds, what is its average velocity?"
+
+
+If the unit "m/s2" makes no sense to you, write it as "m/s/s" or "meters per second per second."An acceleration of 2 m/s/s means the velocity increases by 2 meters per second, each second.
+ Acceleration, written a, is the rate of change in velocity (or speed). The velocity is rising at a constant rate of increase. You can draw a table using the acceleration to find out the velocity at different moments during this journey. We'll need to do this for the final moment in the problem (at t = 5 seconds), but we'll write a longer table to help you grasp this concept:
+
+
+At the beginning (time t = 0 seconds ), the bike is traveling right at 5 m/s.
+After 1 second (t = 1), the bike moves at 5 m/s + at = 5 m/s + (2 m/s2)(1 s) = 7 m/s.
+At t = 2, the bike is moving right at 5+(2)(2) = 9 m/s.
+At t = 3, the bike is moving right at 5+(2)(3) = 11 m/s.
+At t = 4, the bike is moving right at 5+(2)(4) = 13 m/s.
+At t = 5, the bike is moving right at 5+(2)(5) = 15 m/s.
+ If and only if the acceleration is constant, the average velocity is the same as the average of the final velocity and the initial velocity: (vf + vi)/2. For our example, the bike's initial velocity vi is 5 m/s. As we worked out above, it ends up traveling at a final velocity vf of 15 m/s. Plugging these numbers in, we get (15 m/s + 5 m/s) / 2 = (20 m/s) / 2 = 10 m/s right.
+
+
+Remember to include the direction, in this case "right."
+These terms can instead be written as v0 (velocity at time 0, or initial velocity), and simply v (final velocity).
+ To find the average velocity, we could take the velocity at every single moment and find the average of the entire list. (This is the definition of average.) Since that would require calculus or infinite time, let's build off of this for a more intuitive explanation instead. Instead of every moment in time, let's take the average of the velocity at just two points in time and see what we get. One point in time will be near the beginning of the journey, when the bike is traveling slow, and the other will be equally close to the end of the journey, when the bike is traveling fast.
+ Use the table above for the velocities at different points in time. Some of the pairs that fit out criteria are at (t=0, t=5), (t=1, t=4), or (t=2, t=3). You can test this with non-integer values of t as well, if you like.
+
+
+No matter which pair of points we choose, the average of the two velocities at those times will always be the same. For example, ((5+15)/2), ((7+13)/2), or ((9+11)/2) all equal 10 m/s right.
+ If we used this method with a list of every moment in time (somehow), we would keep averaging one velocity from the first half with one velocity from the second half of the journey. There's an equal amount of time in each half, so no velocities would be unaccounted for after we were finished.
+
+
+Since any one of these pairs average to the same amount, the average of all these velocities will be equal to this amount. In our example, the average of all of those "10 m/s right" will still be 10 m/s right.
+We can find this amount by averaging any one of these pairs, for instance the initial and final velocities. In our example, those are at t=0 and t=5, and can be calculated using the formula above: (5+15)/2 = 10 m/s right.
+ If you're more comfortable with a proof written as formulas, you can start with the formula for distance traveled assuming constant acceleration, and derive this formula from there:s = vit + ½at2. (Technically Δs and Δt, or change in position and change in time, but you'll be understood if you use s and t.)
+Average velocity vav is defined as s/t, so let's put the formula in terms of s/t.
+vav = s/t = vi + ½at
+Acceleration x time equals the total change in velocity, or vf - vi. So we can replace "at" in the formula and get:
+vav = vi + ½(vf - vi).
+Simplify: vav = vi + ½vf - ½vi = ½vi + ½vf = (vf + vi)/2.
+

@@ -1,0 +1,20 @@
+ You need to calculate the determinant of the matrix as an initial step. If the determinant is 0, then your work is finished, because the matrix has no inverse. The determinant of matrix M can be represented symbolically as det(M).For a 3x3 matrix, find the determinant by first 
+
+To review finding the determinant of a matrix, see Find the Determinant of a 3X3 Matrix.
+;
+, Transposing means reflecting the matrix about the main diagonal, or equivalently, swapping the (i,j)th element and the (j,i)th. When you transpose the terms of the matrix, you should see that the main diagonal (from upper left to lower right) is unchanged.Another way to think of transposing is that you rewrite the first row as the first column, the middle row becomes the middle column, and the third row becomes the third column. Notice the colored elements in the diagram above and see where the numbers have changed position.
+ Every item of the newly transposed 3x3 matrix is associated with a corresponding 2x2 “minor” matrix. To find the right minor matrix for each term, first highlight the row and column of the term you begin with. This should include five terms of the matrix. The remaining four terms make up the minor matrix.In the example shown above, if you want the minor matrix of the term in the second row, first column, you highlight the five terms that are in the second row and the first column. The remaining four terms are the corresponding minor matrix.
+
+Find the determinant of each minor matrix by cross-multiplying the diagonals and subtracting, as shown.
+
+For more on minor matrices and their uses, see Understand the Basics of Matrices.
+ Place the results of the previous step into a new matrix of cofactors by aligning each minor matrix determinant with the corresponding position in the original matrix. Thus, the determinant that you calculated from item (1,1) of the original matrix goes in position (1,1). You must then reverse the sign of alternating terms of this new matrix, following the “checkerboard” pattern shown.When assigning signs, the first element of the first row keeps its original sign. The second element is reversed. The third element keeps its original sign. Continue on with the rest of the matrix in this fashion. Note that the (+) or (-) signs in the checkerboard diagram do not suggest that the final term should be positive or negative. They are indicators of keeping (+) or reversing (-) whatever sign the number originally had.
+
+For a review of cofactors, see Understand the Basics of Matrices.
+
+The final result of this step is called the adjugate matrix of the original. This is sometimes referred to as the adjoint matrix. The adjugate matrix is noted as Adj(M).
+ Recall the determinant of M that you calculated in the first step (to check that the inverse was possible). You now divide every term of the matrix by that value. Place the result of each calculation into the spot of the original term. The result is the inverse of the original matrix.For the sample matrix shown in the diagram, the determinant is 1. Therefore, dividing every term of the adjugate matrix results in the adjugate matrix itself. (You won’t always be so lucky.)
+
+Instead of dividing, some sources represent this step as multiplying each term of M by 1/det(M). Mathematically, these are equivalent.
+
+

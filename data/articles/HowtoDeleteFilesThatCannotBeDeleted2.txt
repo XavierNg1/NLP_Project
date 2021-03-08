@@ -1,0 +1,10 @@
+ The most common reason you can't delete a file in OS X is because a program is currently using the file. This process will determine which program is holding the file hostage.Open "Terminal" in the Utilities folder.
+Type lsof and then drag the file that you're trying to delete into the terminal window. Press Return to see the program that is currently using the file.
+Make note of the COMMAND and PID columns. The COMMAND is the name of the program that is locking the file, and the PID can help you force it to close.
+ If the program is open and visible, close it using it's normal closing procedure. If the program refuses to close, you can try force-quitting it.
+
+
+You can open the "Activity Monitor" in the Utilities folder to list all of your active processes. You can use the PID column in Activity Monitor to match the PID of the process you uncovered using the Terminal. Select the process you want to close and click "Quit Process"
+
+, This attempts to unlock locked files that have been placed in the Trash before they are deleted. Use this if you are receiving messages about locked files when attempting to empty the trash.Hold the Option key when you right-click the Trash to perform a Secure Empty Trash command. This will delete most files that are locked.
+

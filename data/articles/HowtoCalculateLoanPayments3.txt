@@ -1,0 +1,32 @@
+ The formula to use when calculating loan payments is M = P * ( J / (1 - (1 + J)-N)).Follow the steps below for a detailed guide to using this formula, or refer to this quick explanation of each variable:
+
+
+M = payment amount
+P = principal, meaning the amount of money borrowed
+J = effective interest rate. Note that this is usually not the annual interest rate; see below for an explanation.
+N = total number of payments
+
+, Ideally, use a graphing calculator or calculator software to calculate the entire formula in one line. If you are using a calculator that can only handle one step at a time, or if you want to follow the steps in detail below, round to no fewer than four significant digits before moving on to the next step. Rounding to a shorter decimal could result in significant rounding errors in your final answer.
+
+
+Even simple calculators usually have an "Ans" button. This enters the previous answer into the next calculation, which is more accurate than calculating it below.
+The examples below are rounded after each step, but the final step includes the answer you would get if you finished the calculation on one line, so you can check your work.
+ Most loan terms mention the "nominal annual interest rate," but you probable aren't paying your loan off in annual installments. Divide the annual interest rate by 100 to put it in decimal form, then divide it by the number of payments you make each year to get the effective interest rate.
+
+
+For example, if the annual interest rate is 5%, and you pay in monthly installments (12 times per year), calculate 5/100 to get 0.05, then calculate J= 0.05 / 12 = 0.004167.
+In unusual cases, interest rates are calculated at a different interval than payment schedule. Most notably, Canadian mortgages are calculated twice a year, despite the borrower making payments twelve times a year. In this case, you would divide the annual interest by two.
+ For example, if the loan term is 5 years and you'll be paying in twelve monthly installments each year, your total number of payments will be N = 5 * 12 = 60.
+, On a simple calculator, first calculate 1 - the number your calculated in the previous step. Next, calculate J divided by the result, using the effective interest rate you calculated above for "J."
+
+
+In our example, J/(1-(answer)) = 0.004167/(1-0.7792) = 0.01887
+
+
+, To do this, multiply your last result by the loan amount P. The result will be the exact amount of money you need to pay each month in order to pay off your loan on time.
+
+
+For example, if you borrowed $30,000, you would multiply your answer from the last step by 30,000. Continuing our example above, 0.01887 * 30000 = 566.1 dollars per month, or $566 and 10 cents.
+This works for any currency, not just dollars.
+If you calculated our example all on one line of a fancy calculator, you would get a more accurate monthly payment, very close to $566.137, or about $566 and 14 cents each month. If we instead paid $566 and 10 cents each month like we calculated with the less accurate calculator above, we would be slightly off by the end of the loan term, and would need to pay a few dollars extra to make up for it (less than 5 in this case).
+

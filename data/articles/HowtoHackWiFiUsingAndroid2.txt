@@ -1,0 +1,27 @@
+ Not every Android phone or tablet will be able to crack a WPS PIN. The device must have a Broadcom bcm4329 or bcm4330 wireless chipset and must be rooted. The Cyanogen ROM will provide the best chance of success. Some of the known supported devices include:
+
+
+Nexus 7
+Galaxy Ace/S1/S2/S3
+Nexus One
+Desire HD
+
+, This tool enables Monitor Mode on your Broadcom chipset, which is essential for being able to crack the PIN. The bcmon APK file is available for free from the bcmon page on the Google Code website.
+
+
+To install an APK file, you will need to allow installation from unknown sources in your Security menu. Step 2 of this article goes into more detail.
+ After installing the APK file, run the app. If prompted, install the firmware and tools. Tap the "Enable Monitor Mode" option. If the app crashes, open it and try again. If it fails for the third time, your device is most likely not supported.
+
+
+Your device must be rooted in order to run bcmon.
+ Reaver is a program developed to crack the WPS PIN in order to retrieve the WPA2 passphrase. The Reaver APK can be downloaded from the developers' thread on the XDA-developers forums.
+ Tap the Reaver for Android icon in your App drawer. After confirming that you are not using it for illegal purposes, Reaver will scan for available access points. Tap the access point you want to crack to continue.
+
+
+You may need to verify Monitor Mode before proceeding. If this is the case, bcmon will open again.
+The access point you select must accept WPS authentication. Not all routers support this.
+ In most cases you can leave the settings that appear at their default. Make sure that the "Automatic advanced settings" box is checked.
+ Tap the "Start attack" button at the bottom of the Reaver Settings menu. The monitor will open and you will see the results of the ongoing crack displayed.
+
+
+Cracking WPS can take anywhere from 2-10+ hours to complete, and it is not always successful.

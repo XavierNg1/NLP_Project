@@ -1,0 +1,28 @@
+;
+, Some useful codes are:
+
+
+Player.additem (X) (#) - replace the (X) with the desired item code and the (#) with the quantity, and the item(s) will appear in your inventory. Complete lists of item codes can be found on the internet. For example, the code for gold is 0000000F, so entering "player.additem 0000000F 100" would add 100 more gold to your inventory; this is a cheat which can potentially be used to obtain unlimited gold. "Player.removeitem" can be used to reverse this.
+
+
+
+
+
+
+Player.addspell (X) - this is a similar code but with adding spells to your spellbook.
+Movetoqt - an essential for the impatient gamer, it instantly transports the character to the quest marker - making the game go a lot faster.
+Kill - when an object is selected (by clicking on it in the console), it will die instantly.
+Unlock - this will unlock any locked, selected object, no matter the lock rating.
+Lock (X) - this will in turn lock any object. The number corresponds to the strength of the lock, i.e. 100 being the strongest lock.
+TLC - a slightly strange command, this toggles all collisions for the selected object (or yourself, if none is selected). This means that you can literally walk through walls, NPC's and even beneath the floor and up into the sky of the game world. Although using this too much can crash the game, it is good for reaching hard-to-reach places, or help if you get stuck in a wall etc. (which can sometimes happen using 'movetoqt').
+Setscale - This will resize the object you have selected, so e.g. "setscale 2" will double the size of the object. Sizes can go from 0.5 to 2.1, 1 being the original size. This can be very useful when roleplaying and can also be used on your character for some comedic effect.
+SetPCFame (X) - This will set the player's fame to the specified amount. This can be quite advantageous when you need a certain fame level for a particular quest, etc.
+SetPCInfamy (X) - As above, this will set the player's infamy to the specified amount. These two are useful in meeting the requirements for quests, doomstones or for using altars.
+Player.setcrimegold (X)- This will change your bounty to the amount entered. However, if you did previously have a bounty a guard will still chase you, but when he reaches you he will only initiate a standard conversation and then leave, instead of the "Pay Gold", "Go to Jail" or "Resist Arrest" options.
+Modpcs skill (X) - This will add X points to the desired skill, e.g. "modpcs blade 10" will add 10 more points to your Blade skill. This can be used to increase your skills in the game beyond what is normally possible.
+Modpca attribute (X) - In a similar way, this adds X points to the desired attribute.
+Player.setlevel (X) - This sets the level of the player to the specified number. (It will not give you any of the perks that come with leveling up, however). This is useful when you are doing a quest with a leveled reward (If you have a higher level you get a better reward) and when encountering leveled monsters (Lower levels mean easier kills).
+Advlevel - This forces the normal level up screen, so you will be able to pick some of the perks that come with leveling up and also gain a level.
+Showclassmenu - This allows you to change your class without being in character creation or about to exit the tutorial. This can have some weird impacts on your skill set however, as you'll get the skill bonuses from the class you originally picked and your new class.
+Showbirthsignmenu - This works in the same way, opening up the birthsign menu.
+

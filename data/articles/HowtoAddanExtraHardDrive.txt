@@ -1,0 +1,22 @@
+ While older computers support IDE (Parallel ATA), new ones may only support Serial ATA. If you are not sure, open the computer case and try to determine the type of the used drives from the view. It is safer to use the same type that is already installed, even if the sockets for another type also appear to be present.
+
+
+IDE drives use a wide, flat ribbon cable and may have jumpers that need to be set.
+SATA drives have a thinner cable and no jumpers to worry about.;
+,
+Go to the "Standard CMOS Settings Or IDE Config."
+In this menu, you will find four settings labeled as follows: PRIMARY MASTER:, AUTO/PRIMARY SLAVE:, SECONDARY MASTER:, SECONDARY SLAVE:. Change all fields to auto detection.
+Reboot your computer
+
+, (fig. 3) Find the cable that corresponds to the free drive that was detected in step 1-6, either primary or secondary., Go to your local computer store or buy online from Newegg or another retailer. Make sure that the type (SATA or IDE (PATA)) matches. If you plan on replacing your existing hard drive (see warning on replacing drives), be sure to get one with enough space to compensate for what you're losing.
+,, If you have a Dell, you only need to push down on the release latch(es) on the back or sides. If you're having difficulty, it's a good idea to consult your manual on how your particular case is removed. Put the screws in a safe place so you don't lose them. Remove the side panel and place it out of the way.
+ 3) Find the cable that corresponds to the free drive that was detected in step 1-6, either primary or secondary.
+ The jumpers are the set of pins on the back of the hard drive. They'll have a couple of rubber or plastic blocks covering some pins. Find the diagram or instructions for your new drive on to set the jumper for the master/slave. Note that if both the master and the slave are available on the slot you are using (primary or secondary), set the hard drive to master. (fig. 4)
+Note that if you are using a SATA drive, the jumpers do not need to be changed, because each SATA device uses its own cable, and multiple IDE devices can share a cable.
+ Using the screws that came with the drive or computer case, mount the drive. (fig. 5)
+
+, If it won't go in, make sure that the safety bump is aligned with the hole.(fig. 6)
+
+, 7) A SATA drive will have a different type of power cable on the power supply.
+,, Go into your BIOS at startup (most likely by pressing F10 or DEL as the computer starts). Check the BIOS auto detect to ensure the second drive is detected. On the screen that shows that primary master/slave, secondary master/slave, you should see the name of your new hard drive.
+

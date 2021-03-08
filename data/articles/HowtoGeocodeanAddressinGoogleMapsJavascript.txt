@@ -1,0 +1,43 @@
+;
+,
+Address: <input type="text" id="inputTextAddress" style=" width:200px" title="Address to Geocode">
+
+,
+<input type="button" onclick="codeAddress()" id="inputButtonGeocode" style="width:150px" title="Click to Geocode" value="Click to Geocode">
+
+,
+var geocoder;
+
+,
+geocoder = new google.maps.Geocoder();
+
+, It will not have any values passed to it.
+function codeAddress() { }
+
+,
+var sAddress = document.getElementById(" inputTextAddress").value;
+
+, The first is the GeocoderRequest, this says what kind of request is being made and what the request value is. The second is the callback function that will be used to process the results.
+geocoder.geocode( { 'address': sAddress}, function(results, status) { });
+
+, Use an IF statement to test the result, check to see if the status equal google.maps.GeocoderStatus.OK. Also add an ELSE clause to the IF statement as well.
+if (status == google.maps.GeocoderStatus.OK) {
+}
+else{
+}
+
+, You will pass this method to get the result's first geometry location.
+map.setCenter(results.geometry.location);
+
+, Create a new variable – we'll call it oMarker – it will be created as a new google.maps.Marker. The new method takes two parameters, the first is the map object that you're adding the marker to, and the second is the position to place the marker, which is again the first results geometry location.
+var marker = new google.maps.Marker({
+ map: map,
+ position: results.geometry.location
+});
+
+, You can use the status to give a bit more information rather than just saying that it didn't work.
+alert("Geocode was not successful for the following reason: " + status);
+
+, Type in an address, or simply a city and state, or even something as simple as a state name! You'll see the map move to the new location and add a marker to the map!
+The live page for this example can be viewed and used through a link from the sources and citations area if you scroll down!
+

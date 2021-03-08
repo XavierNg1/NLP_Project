@@ -1,0 +1,41 @@
+ This section helps you solve problems that include expressions in the form loga⁡(xy){\displaystyle \log _{a}({\frac {x}{y}})}.
+
+For example, start with this problem:"Solve for n if log3⁡(276n)=−6−log3⁡(6){\displaystyle \log _{3}({\frac {27}{6n}})=-6-\log _{3}(6)}."
+
+
+, The logarithm of a negative number is undefined. If x or y are a negative numbers, confirm that the problem has a solution before you continue:
+
+If either x or y is negative, there is no solution to the problem.
+
+If both x and y are negative, remove the negative signs using the property −x−y=xy{\displaystyle {\frac {-x}{-y}}={\frac {x}{y}}}
+
+There are no logarithms of negative numbers in the example problem, so you can continue to the next step.
+ One useful property of logarithms is described by the formula loga⁡(xy)=loga⁡(x)−loga⁡(y){\displaystyle \log _{a}({\frac {x}{y}})=\log _{a}(x)-\log _{a}(y)}. In other words, the log of a quotient is always equal to the log of the numerator minus the log of the denominator.Use this to expand the left side of the example problem:log3⁡(276n)=log3⁡(27)−log3⁡(6n){\displaystyle \log _{3}({\frac {27}{6n}})=\log _{3}(27)-\log _{3}(6n)}
+
+Substitute this back into the original equation:log3⁡(276n)=−6−log3⁡(6){\displaystyle \log _{3}({\frac {27}{6n}})=-6-\log _{3}(6)}→log3⁡(27)−log3⁡(6n)=−6−log3⁡(6){\displaystyle \log _{3}(27)-\log _{3}(6n)=-6-\log _{3}(6)}
+
+
+, If any of the new logarithms in the expression have an integer answer, simplify them now.
+
+The example problem has a new term: log3⁡(27){\displaystyle \log _{3}(27)}. Since 33 = 27, simplify log3⁡(27){\displaystyle \log _{3}(27)} to 3.
+
+The full equation is now:3−log3⁡(6n)=−6−log3⁡(6){\displaystyle 3-\log _{3}(6n)=-6-\log _{3}(6)}
+
+
+, Just like any algebra problem, it helps to isolate the term with the variable on one side of the equation. Combine like terms whenever possible to simplify the equation.
+
+
+3−log3⁡(6n)=−6−log3⁡(6){\displaystyle 3-\log _{3}(6n)=-6-\log _{3}(6)}9−log3⁡(6n)=−log3⁡(6){\displaystyle 9-\log _{3}(6n)=-\log _{3}(6)}log3⁡(6n)=9+log3⁡(6){\displaystyle \log _{3}(6n)=9+\log _{3}(6)}.
+ To isolate the variable from other terms inside the same logarithm, rewrite the term using other logarithm properties.
+
+In the example problem, the n is still trapped inside the term log3⁡(6n){\displaystyle \log _{3}(6n)}.In order to isolate the n, use the product property of logarithms: loga⁡(bc)=loga⁡(b)+loga(c){\displaystyle \log _{a}(bc)=\log _{a}(b)+\log {a}(c)}log3⁡(6n)=log3⁡(6)+log3⁡(n){\displaystyle \log _{3}(6n)=\log _{3}(6)+\log _{3}(n)}
+
+Substitute this back into the full equation:log3⁡(6n)=9+log3⁡(6){\displaystyle \log _{3}(6n)=9+\log _{3}(6)}log3⁡(6)+log3⁡(n)=9+log3⁡(6){\displaystyle \log _{3}(6)+\log _{3}(n)=9+\log _{3}(6)}
+
+
+, Repeat the same algebra and logarithmic techniques to solve the problem. If there is no integer solution, use a calculator and round to the nearest significant figure.
+
+
+log3⁡(6)+log3⁡(n)=9+log3⁡(6){\displaystyle \log _{3}(6)+\log _{3}(n)=9+\log _{3}(6)}log3⁡(n)=9{\displaystyle \log _{3}(n)=9}Since 39 = 19683, n =19683 
+
+

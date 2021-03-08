@@ -1,0 +1,46 @@
+ Before we get started, please read Install-and-Setup-Visual-Studio-Express-2013 to get Visual Studio installed for free, since you will need it for this project.
+ Please note, your Visual Studio version may vary. Name your project SecondaryDesktop and click create.,, Select All Windows Forms, scroll down until you see Listview. Do not confuse it with the Listbox. Click on the Listview control and drag it onto your form., This will cause the control to fill the entire window it was placed in. Now, prepare to add some code., You should see something similar to the image above. From the combobox that says Listview1 choose (Form1 Events). On the one on the right, choose Load. Here we will enter the code that needs to be executed when our program is launched., Under the Form1_load section, enter the following code:
+
+
+
+
+
+
+If Not My.Computer.FileSystem.DirectoryExists("desktop2") Then
+My.Computer.FileSystem.CreateDirectory("desktop2")
+End If
+
+
+
+
+
+This part (If Not My.Computer.FileSystem.DirectoryExists("desktop2") Then) checks if a folder with the name "desktop2" exists in the directory where our application is.
+Else, it creates that folder using (My.Computer.FileSystem.CreateDirectory("desktop2")).
+ Now that you have somewhere to store your files, you need a way of loading them into our application.
+
+Just under the "End Sub" part of Form1_Load, enter the following:
+
+
+
+
+Sub LoadData()
+
+
+
+
+
+Press ↵ Enter. The editor will automatically add the "End Sub" part.
+
+
+
+
+For Each fl in My.Computer.FileSystem.GetFiles("desktop2")
+
+This gets all the files in our desktop
+
+
+
+ListView1.Items.Add(My.Computer.FileSystem.GetFileInfo(fl).Name)
+
+This adds the file into our desktop by getting it's name from the system.
+, Go to the following folder : Your Documents > Visual Studio 2013 Express > Projects > SecondaryDesktop > Bin > Debug and create a folder named desktop2. Next, enter your new folder and create a new folder inside., If all went well, you should see something like the screen above.

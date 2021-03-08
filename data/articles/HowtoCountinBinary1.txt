@@ -1,0 +1,46 @@
+ Our normal counting system is called decimal, or "base ten." We have ten different symbols for writing numbers, ranging from 0 to 9. Binary is a "base two" system, using only the symbols 0 and 1.;
+, If a binary number ends in 0, you can count one higher by changing this to a 1. We can use this to count the first two numbers just as you would expect:
+
+
+0 = zero
+1 = one
+For higher numbers, you can ignore the earlier digits of the number. 1010 + 1 = 1011.
+ Now we have "1" for one, but we've already run out of symbols! In order to count to two, we need to write another digit. Add a "1" to the front of the number, and "reset" all the other digits to 0.
+
+
+0 = zero
+1 = one
+10 = two
+This is the same rule we use in decimal when we run out of symbols (9 + 1 = 10). It just happens a lot more often in binary because we run out of symbols sooner.
+ These rules will get you as far as the number five. See if you can do it yourself, then check your work:
+
+
+0 = zero
+1 = one
+10 = two
+11 = three
+100 = four
+101 = five
+
+, Now we need to solve five + one in decimal, or 101 + 1. The key here is to ignore the first digit. Just add the 1 + 1 at the end to get 10. (Remember, this is how you write "two".) Now restore the first digit and you get:
+
+
+110 = six
+
+, There are no new rules you need to learn. Try it yourself, then check your work with this list:
+
+
+110 = six
+111 = seven
+1000 = eight
+1001 = nine
+1010 = ten
+
+, Do you see that ten (1010) doesn't look like a "special" number in binary? Eight (1000) is much more important now, because it equals 2 x 2 x 2. Keep multiplying by two to find other important numbers like sixteen (10000) and thirty-two (100000).
+ Now you know everything you need to count in binary. If you're ever confused about what comes next, just work out what happens to the last digits. Here are a few examples to help you out:
+
+
+twelve plus one = 1100 + 1 = 1101 (0 + 1 = 1, and the other digits stay the same.)
+fifteen plus one = 1111 + 1 = 10000 = sixteen (We've run out of symbols, so we reset to 0 and write a 1 at the start.)
+forty-five plus one = 101101 + 1 = 101110 = forty-six (We know 01 + 1 = 10, and the other digits stay the same.)
+

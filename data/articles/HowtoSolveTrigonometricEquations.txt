@@ -1,0 +1,87 @@
+
+
+
+To solve a trig equation, transform it into one or many basic trig equations. Solving trig equations finally results in solving 4 types of basic trig equations.;
+,
+
+
+There are 4 types of basic trig equations:
+sin x = a  ; cos x = a
+tan x = a  ; cot x = a
+Solving basic trig equations proceeds by studying the various positions of the arc x on the trig circle, and by using trig conversion table (or calculator). To fully know how to solve these basic trig equations, and similar, see book titled :"Trigonometry: Solving trig equations and inequalities" (Amazon E-book 2010).
+Example 1. Solve sin x = 0.866. The conversion table (or calculator) gives the answer: x = Pi/3. The trig circle gives another arc (2Pi/3) that has the same sin value (0.866). The trig circle also gives an infinity of answers that are called extended answers.
+x1 = Pi/3 + 2k.Pi, and x2 = 2Pi/3. (Answers within period (0, 2Pi))
+x1 = Pi/3 + 2k Pi, and x2 = 2Pi/3 + 2k Pi. (Extended answers).
+Example 2. Solve: cos x = -1/2. Calculators give x = 2 Pi/3. The trig circle gives another x = -2Pi/3.
+x1 = 2Pi/3 + 2k.Pi, and x2 = - 2Pi/3. (Answers within period (0, 2Pi))
+x1 = 2Pi/3 + 2k Pi, and x2 = -2Pi/3 + 2k.Pi. (Extended answers)
+Example 3. Solve: tan (x - Pi/4) = 0.
+x = Pi/4 ; (Answer)
+x = Pi/4 + k Pi; ( Extended answer)
+Example 4. Solve cot 2x = 1.732. Calculators and the trig circle give
+x = Pi/12 ; (Answer)
+x = Pi/12 + k Pi ; (Extended answers)
+
+,
+
+
+To transform a given trig equation into basic trig ones, use common algebraic transformations (factoring, common factor, polynomial identities...), definitions and properties of trig functions, and trig identities. There are about 31, among them the last 14 trig identities, from 19 to 31, are called Transformation Identities, since they are used in the transformation of trig equations. See book mentioned above.
+Example 5: The trig equation: sin x + sin 2x + sin 3x = 0 can be transformed, using trig identities, into a product of basic trig equations: 4cos x*sin (3x/2)*cos (x/2) = 0. The basic trig equations to be solved are: cos x = 0 ; sin (3x/2) = 0 ; and cos (x/2) = 0.
+
+
+
+Before learning solving trig equations, you must know how to quickly find the arcs whose trig functions are known. Conversion values of arcs (or angles) are given by trig tables or calculators.
+Example: After solving, get cos x = 0.732. Calculators give the solution arc x = 42.95 degree. The trig unit circle will give other solution arcs that have the same cos value.
+
+
+
+You can graph to illustrate the solution arcs on the trig unit circle. The terminal points of these solution arcs constitute regular polygons on the trig circle. For examples:
+The terminal points of the solution arcs x = Pi/3 + k.Pi/2 constitute a square on the trig unit circle.
+The solution arcs x = Pi/4 + k.Pi/3 are represented by the vertexes of a regular hexagon on the trig unit circle.
+
+
+
+If the given trig equation contains only one trig function, solve it as a basic trig equation. If the given equation contains two or more trig functions there are 2 approaches in solving, depending on transformation possibility.
+
+A. Approach 1.
+
+
+Transform the given trig equation into a product in the form: f(x).g(x) = 0 or f(x).g(x).h(x) = 0, in which f(x), g(x) and h(x) are basic trig equations.
+Example 6. Solve: 2cos x + sin 2x = 0. (0 < x < 2Pi)
+Solution. Replace in the equation sin 2x by using the identity: sin 2x = 2*sin x*cos x.
+cos x + 2*sin x*cos x = 2cos x*( sin x + 1) = 0. Next, solve the 2 basic trig functions: cos x = 0, and (sin x + 1) = 0.
+Example 7. Solve: cos x + cos 2x + cos 3x = 0. (0 < x < 2Pi)
+Solution: Transform it to a product, using trig identities: cos 2x(2cos x + 1 ) = 0. Next, solve the 2 basic trig equations: cos 2x = 0, and (2cos x + 1) = 0.
+Example 8. Solve: sin x - sin 3x = cos 2x. (0 < x < 2Pi)
+Solution: Transform it into a product, using trig identities: -cos 2x*(2sin x + 1) = 0. Then solve the 2 basic trig equations: cos 2x = 0, and (2sin x + 1) = 0.
+
+B. Approach 2.
+
+
+Transform the given trig equation into a trig equation having only one unique trig function as variable. There are a few tips on how to select the appropriate variable. The common variables to select are: sin x = t; cos x = t; cos 2x = t, tan x = t and tan (x/2) = t.
+Example 9. Solve: 3sin^2 x - 2cos^2 x = 4sin x + 7 (0 < x < 2Pi).
+Solution. Replace in the equation (cos^2 x) by (1 - sin^2 x), then simplify the equation:
+3sin^2 x - 2 + 2sin^2 x - 4sin x - 7 = 0. Call sin x = t. The equation becomes: 5t^2 - 4t - 9 = 0. This is a quadratic equation that has 2 real roots: t1 = -1 and t2 = 9/5. The second t2 is rejected since > 1. Next, solve: t = sin = -1 --> x = 3Pi/2.
+Example 10. Solve: tan x + 2 tan^2 x = cot x + 2.
+Solution. Call tan x = t. Transform the given equation into an equation with t as variable: (2t + 1)(t^2 - 1) = 0. Solve for t from this product, then solve the basic trig equation tan x = t for x.
+
+
+
+There are a few special types of trig equations that require some specific transformations. Examples:
+a*sin x+ b*cos x = c ; a(sin x + cos x) + b*cos x*sin x = c ;
+a*sin^2 x + b*sin x*cos x + c*cos^2 x = 0
+
+,
+
+
+All trig functions are periodic meaning they come back to the same value after a rotation for one period. Examples:
+
+The function f(x) = sin x has 2Pi as period.
+The function f(x) = tan x has Pi as period.
+The function f(x) = sin 2x has Pi as period.
+The function f(x) = cos (x/2) has 4Pi as period.
+
+
+If the period is specified in the problem/test, you have to only find the solution arc(s) x within this period.
+NOTE: Solving trig equation is a tricky work that often leads to errors and mistakes. Therefore, answers should be carefully checked. After solving, you can check the answers by using a graphing calculator to directly graph the given trig equation R(x) = 0. The answers (real roots) will be given in decimals. For example, Pi is given by the value 3.14
+

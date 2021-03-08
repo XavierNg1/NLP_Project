@@ -1,0 +1,14 @@
+ The routing number is located in the bottom left hand corner of a check. It is a nine-digit number that uniquely identifies you bank and the location where your check was printed.The first four digits are the Federal Reserve routing symbol. This identifies where your check was printed. There are 12 Federal reserve districts and different cities in each district.The next four digits are assigned by the American Bankers Association (ABA). It identifies the financial institution where you opened your account.The ninth digit is the check digit. It is calculated using an algorithm. The check digit is used to validate the 8-digit bank routing number. You can verify the authenticity of a check digit by running the algorithm yourself and comparing the check digit you calculate with the one that is printed on the check.;
+, This is the algorithm that is used to validate the authenticity of the routing number. It is a series of multiplication and addition operations performed on the digits in the routing number. With a valid routing number, the sum of the algorithm should be evenly divisible by 10.It is also known as the “Modules 10, Straight Summation” method.Write down the nine digits of the routing number without any non-numeric characters, such as dashes or spaces.
+Multiply the first digit by 3, the second digit by 7 and the third digit by 1.
+Then, multiply the fourth digit by 3, the fifth digit by 7 and the sixth digit by 1.
+Then, multiply the seventh digit by 3, the eighth digit by 7 and the ninth digit by 1.
+Add up all of the products, and your answer should be evenly divisible by 10 with no remainders.
+For example, using the routing number 789456124, do the following calculation, (7 x 3) + (8 x 7) + (9 x 1) + (4 x 3) + (5 x 7 ) + (6 x 1) + (1 x 3) + (2 x 7) + (4 x 1).
+This equals 21 + 56 + 9 + 12 + 35 + 6 + 3 + 14 + 4 = 160. The answer is evenly divisible by 10, so the routing number is valid.
+ If the check digit is missing or illegible, you can use the first eight digits to calculate the ninth digit. Knowing that the final result must be evenly divided by 10 allows you to back track and figure out the missing or illegible digit.For example, suppose you only had these first eight digits for the routing number: 02100002. Use the checksum algorithm on the first eight digits, (0 x 3) + (2 x 7) + (1 x 1) + (0 x 3) + (0 x 7 ) + (0 x 1) + (0 x 3) + (2 x 7) = 29.
+Find the next highest number that is divisible by 10. In this case the next highest number divisible by 10 after 29 is 30.
+Subtract 29 from 30 to get the check digit.
+30 – 29 = 1. The check digit is 1.
+If the you do the algorithm with the first eight digits and you get a number that is already divisible by 10, then you know that the check digit must be 0.
+

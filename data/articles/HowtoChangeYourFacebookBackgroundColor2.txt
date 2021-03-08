@@ -1,0 +1,11 @@
+ Right click anywhere and choose Inspect Elements. Then switch to Console tab.
+
+Inspect Elements allows you to see the HTML and styles on the page, and it can be used to make temporary edits to a webpage.
+ In this case, you can use a backgroundColor property like this:
+
+document.body.style.backgroundColor = "your color here";
+
+Document is one of DOM objects and it represents the page.
+
+Document object has main role in accessing HTML elements.
+, Enjoy the color! Just remember that when you reload the page, it'll go back to white.

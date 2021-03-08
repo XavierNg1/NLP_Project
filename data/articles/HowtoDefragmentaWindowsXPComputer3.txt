@@ -1,0 +1,11 @@
+ Click the Start menu and Select Run. In the new window, type “cmd” into the field and press Enter. This will open the command line interface.
+ To see if a drive needs to be defragmented, enter the following command into the command line. Replace the “C” for whichever drive you would like to analyze:defrag C: /a
+
+, To start the defragmentation process, enter the following command into the command line. Replace the “C”: for whichever drive you would like to defragment:defrag C:
+
+
+You can force the defragmentation by adding the parameter /f to the end of the defrag command.
+
+As the defrag process is working, the system will display a blinking cursor. After the process is complete, a report will be displayed. You can write the report to a text file by starting the defrag process with the following command:defrag C: /v >filename.txt..
+You can interrupt the defrag process by hitting Ctrl+C.
+

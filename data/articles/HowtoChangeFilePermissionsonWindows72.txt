@@ -1,0 +1,17 @@
+ Only accounts with administrator privileges are able to change the ownership of files and folders.
+ This will open the object's Properties window.
+ This will display the list of users that have permissions set for the object.
+
+
+If you don't see the Security tab, you're likely trying to change the properties of an object on a FAT32 USB drive. Security options are only available on drives with the NTFS format. Most USB drives are FAT32 format.
+ This will open the Advanced Security Settings window.
+ This will display the path to the selected object, the current owner, and a list of possible owners.
+ This will allow you to select a different owner from the list.
+ If the user or group that you want to give ownership to isn't listed, click the "Other users or groups" button to find and add them:
+
+
+Click "Advanced" and then "Find Now" to find all of the users and groups on that computer.
+Select the user you want to add to the permissions list and click "OK." They'll be added to the "Change owner to" list.
+ This will give the new user ownership of any subfolders for the object you have selected.
+ Click "OK" to save your ownership changes. If you re-open the Properties window and switch to the Security tab, you'll be able to see that the ownership has been changed in the Advanced Security Settings window.
+ You may still need to set your permissions for the file at "Full control," even after taking ownership of it. Follow the instructions in the first section of this article to do so.

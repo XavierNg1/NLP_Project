@@ -1,0 +1,53 @@
+
+Press Enter
+
+To copy the formula to the entire Total column, Click and drag the fill handle until you reach cell I15. (this will copy the function to each row, calculating the total grades for each student)
+
+
+, (in this example, we will assume the maximum total possible of the grades is 500)
+
+
+Select cell J6 (the cell directly below the "average" cell)
+Click on the Formula bar to type
+Type =16/500
+
+Press Enter
+
+From cell J6, click and drag the fill handle to the entire average column, until cell J15
+To format the average in a percentage form, select the column J6 to J15
+Right click on the selected column
+Choose Format Cells, a dialog box will appear
+
+From the Number tab, click on the Percentage category
+
+
+Change the number of decimal places as you prefer
+Click Ok.
+ To perform this function we will need a key, which is simply table of letter grades and corresponding numbers. We will use a sample table from Excel.
+
+
+Create The Key Table
+Select cell M7, we will start typing the table here
+
+Type "Average", this will be the first column
+Press the tab key
+Type "Grades"
+Under "Average" type your grading scale scores
+Under the "Grades" column, type the corresponding letter grade to each score
+
+
+
+
+, The function required to return a letter grade is the VLOOKUP function, and is called a nested function. It follows the formula:VLOOKUPlookup_value,table_array,column_index_number,)
+
+
+Select cell K6
+Start typing the formula =VLOOKUP(J6,$M$18:$N$22,2,TRUE)
+
+Explanation: after the brackets, type the cell that contains the final score of the student which is in this example cell J6. The second part of the formula is automatically included by selecting the key table; press F4 from the keyboard to insert the dollar signs that will lock the range selected. The third part is the column number from the table that contains the letter grades. True stands for approximate match with the values of the column, false will result in exact matches.
+
+
+Press Enter
+Copy the formula down to the entire column until cell K15 by clicking and dragging the fill handle from cell K6.
+Repeating this process will allow you to calculate grades for other classes in the future.
+

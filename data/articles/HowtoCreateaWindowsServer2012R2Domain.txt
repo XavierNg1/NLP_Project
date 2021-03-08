@@ -1,0 +1,141 @@
+
+
+
+Boot w12r2a10, if it is not running.
+Log on to the server when it completes booting.
+Notice that Server Manager is displayed upon a successful login using the Administrator account at the console logon prompt.
+Click Add Roles and features to display Add Roles and Features Wizard, Before you begin; it is this wizard that helps you manage roles, role services, and features.
+Verify you have completed the requirements for the role to be installed.
+Click Next to display Select Installation Type.;
+,
+
+
+Note that this is a role-based and feature-based installation.
+Click Next to display Select destination server.
+
+
+
+Note that this selection lets you select the server on which you want to do the installation. However in this example, there is only one server so there is only one option.
+Click Next to display Server Role and Feature Wizard so you can make a server role selection.
+
+
+
+Note that you can highlight a name in the center pane, so you can read the description in the right pane.
+Click the checkbox next to Active Directory Domain Service.
+Click Next to display Add Roles and Features.
+
+
+
+Observe this popup is informing you that for Active Directory Domain Service to be installed, additional features, not already on the machine, needs to be installed.
+Click Add Features, the popup disappears, and you are shown the Active Directory Domain Service checkbox checked.
+Click Next to display a list of features from which you can select.
+Note that in this step no additional selection is needed.
+Click Next to display a screen that gives an overview of Active Directory Domain. Service.
+Click Next to display the Confirmation installation selections.
+
+
+
+Observe the confirmation step, gives you a chance to make changes to the items previously configured, or continue to accept the selection.
+Click install.
+Keep all windows open.
+Move on to creating your domain, and keep learning.
+
+
+
+Take note of the blue progress bar, and beneath it, you are reminded that Additional steps are required to make this machine a domain controller.
+Move your mouse and hover the blue progress bar to see when installation is 100% complete.
+
+
+
+Observe that at this point, only the Active Directory Domain Service is installed. In other words, the server is not yet a domain controller.
+Note the link, in blue, Promote this server to a domain controller.
+Click Promote this server to a domain controller to display Active Directory Domain Services Configuration Wizard.
+Notice under Select the deployment operation are three radio buttons; please review them, because they are very different.
+Click Add a new forest.
+type kim.com under Specify the domain information for this operation, and to the right of Root domain name.
+Click Next to display Active Directory Domain Services Wizard.
+
+
+
+Notice that these are options, which means you are not required to install any.
+Notice that even though DNS is selected, you can uncheck it, since it is optional, but that is possible only if you had another DNS server for the domain, but for kim.com, it must be left checked, because a DNS does not exist for this domain.
+Click the box under Type the Directory Service Restore Mode (DSRM) password.
+Type the restore password, Passworda10.
+Click Next to display DNS options.
+
+
+
+Notice that the message in the yellow box is informing you that a domain could not be found with which to associate kim.com; the reason is because kim.com is the first domain in the forest.
+Click Next to display additional name options.
+Notice that the wizard lets you select more options.
+Click Next to display Active Directory configuration settings.
+
+
+
+Notice the default location for saving active directory files, which you can accept or modify where Active Directory configuration will be stored.
+Click Next to accept the default location and display the options you have selected.
+
+
+
+Review the selected options.
+Click Next to begin the installation prerequisite check.
+
+
+
+Observe the green circle and the white check mark.
+Click Install to begin installing the options you have selected.
+Note that at this point the installation process goes through several displays, including reboot followed by the sign in prompt.
+Keep all windows open.
+Continue to Part 3, and keep learning.
+
+Issue Ctrl+Alt+Delete to display kim\Administrator, which is requesting the Administrator password.
+
+
+
+Notice that you are about to logon to the domain, and not the server, and that only the account Administrator can logon using the domain controller console logon prompt.
+Observe that this prompt means you are logging on to domain kim.com using the user account Administrator and its password.
+Type the password for Administrator and click the arrow to display Server Manager, if logon is successful.
+Continue to Part 4, Create domain memberships, and keep learning.
+
+
+
+Take note that in this example you will configure membership using Windows 7, but you can use any other Windows machine.
+Boot w7a15, if it is not up.
+Logon.
+Verify that w7a15 and w12r2a10 can ping each other by address.
+Verify that w7a15 can ping the domain, kim.com.
+
+
+
+Go to Control Panel, on w7a15.
+Click System to display Basic information about your computer.
+Click Advanced system settings to display System Properties.
+Click Computer Name.
+Click Change to display Computer Name/Domain Changes.
+Click the radio button next to Domain, Under Member of.
+Type kim.com.
+Click OK to display User name and Password prompt; note that this is the administrator account on the domain controller.
+Note that Administrator is the only account that has authorization to add a computer to the domain.
+Type Administrator and Passworda10.
+Click OK.
+Note shortly after you will see the Welcome to the kim.com domain
+Click OK and you are prompted to restart the client.
+
+
+
+Click OK to return to System Properties.
+Click Close and you are prompted to Restart Now or Restart Later
+Click Restart Now to restart the client.
+Issue Ctrl+Alt+Delete, after the restart, to display the logon prompt.
+Notice that you can logon to the local computer, w7a15, with user andi; however, if andi tries to logon to the domain, it will fail, for two reasons:
+
+1. because so far only one domain user, Administrator, has been configured.
+2. andi is not a member of kim.com.
+
+
+Click Switch User to display Select a user for logon, so you can logon as Administrator.
+Click Other User to display the domain logon prompt.
+Notice that under Password, Logon to: kim displays; informing you, you are about to logon to domain kim.
+type Administrator and Passworda10 for administrator.
+You are now logged on to the domain, not w7a15.
+

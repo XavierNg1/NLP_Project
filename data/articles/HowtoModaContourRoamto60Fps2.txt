@@ -1,0 +1,18 @@
+
+
+
+Download this file [http://slickdeals.net/forums/attachment.php?attachmentid=955612&d=1326604634
+
+After downloading extract to your desktop
+Copy the ContourROAM.bin to the root of your contour
+You need to change it to look like this:
+UPDATE:Y
+UPDATE_FW:Y
+Disconnect your contour and press the status button
+when the update is successful check by opening the FW_RTC.txt and check if it says 1.01_Japan
+Open the file FW_RTC.txt located on your microSD Storage Card. The file may be hidden. Open the file with a Text Editor application.
+change ‘UPDATE:N’ to ‘UPDATE:Y’
+change ‘1RES:C’ to ‘1RES:D’
+Then save the FW_RTC.txt file.
+Properly dismount the camera from your computer. Once dismounted, unplug the camera from your computer.
+Press the Status Button, the 720@60 video setting will be applied. When you next record, your video resolution will be 720@60;

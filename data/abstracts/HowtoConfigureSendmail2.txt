@@ -1,0 +1,8 @@
+Understand that Sendmail uses information from the Domain Name System (DNS) to figure out which IP addresses go with which mailboxes.
+Choose an available domain name.
+Configure your DNS on the server.
+Configure MX records for your domain (Note: CNAME records can not be used; see § 5.2.2 of RFC 1123 for details.),
+Determine your connection method:
+
+If the mail server which will serve your new domain has a full-time connection to the Internet, it should be the primary MX host for your domain.
+Now the name servers are setup, register your domain using one of the registries.

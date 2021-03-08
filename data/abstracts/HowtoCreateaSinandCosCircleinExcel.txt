@@ -1,0 +1,49 @@
+
+Open a new XL workbook from the desktop.
+Set the Preferences under the Excel menu:
+
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+Go to cell A2 and do Freeze Panes under the Window menu.
+Input column title labels, defined variable names and variable values in Row 1, and columns E and F:
+
+
+Enter the label Cos into cell A1;
+Enter the label Sin into cell B1;
+Enter the label Radius x into cell C1;
+Enter the label Radius y into cell D1;
+Enter the defined variable name ShrinkExpand into cell E1 and adjust column size to fit;
+Enter the defined variable name X Offset into cell E2;
+Enter the defined variable name Y Offset into cell E3;
+Select range E1:F3 and do Insert Names Create in Right Column;
+Enter 2 into cell F1 and enter 2 into cell F2 and enter 2 into cell F3.
+Enter the formulas for the "3 o'clock" Radius line to appear in the Chart:
+
+
+Enter to cell C2 the formula, without quotes, "=X_Offset"
+Enter to cell D2 the formula, without quotes, "=Y_Offset"
+Enter to cell C3 the formula, without quotes, "=C2+ShrinkExpand"
+Enter to cell D3 the formula, without quotes, "=D2"
+
+,
+Enter the Cosine (x) and Sine (y) formulas and fill down:
+
+
+Enter to cell A2 the formula, w/o quotes, "=X_Offset+COS((ROW()-2)*PI()/180)*ShrinkExpand"
+Enter to cell B2 the formula, w.o quotes, "=Y_Offset+SIN((ROW()-2)*PI()/180)*ShrinkExpand"
+Edit Go To cell range A2:B362
+Do Edit Fill Down
+
+,
+Create the Chart:
+
+
+With cell range A2:B362 still selected, do either Insert Chart or Select Charts from the Ribbon;
+Select chart type Scatter, Smooth Line Scatter; a chart should appear on your worksheet.
+Further formatting of the chart (optional):
+
+
+By double-clicking on the Circumference or the Radius, you'll bring up the Format Data Series dialog box, which gives you many options as to the appearance of your final image -- try out different options -- have fun with it!!,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

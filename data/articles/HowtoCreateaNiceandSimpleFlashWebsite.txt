@@ -1,0 +1,115 @@
+, If the Properties windows is not open, Press Ctrl + F3 or go to window\Properties\Properties and check it.
+,
+Press Ctrl + R to insert your image or go to Files \ Import \ Import to library and the drag it to your stage.
+Remember that your background image must be in 800 X 600.
+Put your image's location on x=0 , y=0 to fit it on the stage.
+As we have nothing to do with this layer from now... lock it. (Click on the dot which is under the lock image in the Timeline window.)
+
+
+
+
+
+ 
+
+Note that to change your image size, open it with Photoshop, Press Ctrl + Alt + I then disable the Constrain Proportions and change your image size to 800 X 600 Pixels.(more in Tips and warnings sections)
+
+
+
+
+,,
+Press click on Eraser, then Right click on it and choose "Background Eraser tool"
+Erase the whole stage.
+Choose the shape tool then right click on it and choose "Rounded Rectangle Tool".
+Create a shape on your stage and change the color to black. (The color is Optimal).
+
+Press "M" and make a rectangle which take the half of our button.
+Click on Gradient tool. If it's on Paint Bucket tool, right click on it and change it to Gradient tool.
+Change the Opacity to 17%.
+Choose the white color.( some color which is antonym with Black or color you have chosen)
+Now color the rectangle with the Gradient tool for once or twice.
+press "M" and click on stage to dis select the rectangle.
+Press Ctrl + Shift + S and Save your file in .PNG format.
+,
+I have inserted 5 buttons
+Set the location of buttons as : Y=18(for All buttons) and x= 137.0 - 244,0 - 351,0 - 458,0 -565,0
+
+,
+Choose your Font Face.(like Arial)
+Choose your Font size as 20.
+The Choices are optimal.Chosen by me (Home, Downloads, Wallpapers, About us, Contact us)
+Set the location of each text as : y= 64 (for all) , x= 280 - 170,0 - 385,0 - 489,0 - 600
+
+,,
+
+First we need to create another button as pressed in Photoshop.
+Open your button.
+Press "M."
+Select all your button.
+choose the normal brush and change the Opacity to 80%.
+Change the color of your brush to Black and color the whole button for twice.
+Press Ctrl + Shift + S and save it as Pressed in .PNG format.
+
+Insert the Pressed buttons to your stage and give them the same location as buttons which you have inserted.
+add the texts and give them the same locations as the texts which you have created. you can also cope & paste them too(only for text)
+
+,
+Right click on it.
+Choose "convert to Symbol"
+Choose button and the name of symbol is up to you!
+Press OK.
+Double click on your symbol.
+Drag the Keyframe from "UP" to "Over".
+Double click on stage to get back.
+Do this for all buttons.
+
+
+Open the "Behavior window" by pressing "Shift + F3"
+Now click on your button ( pressed button which is in some kinda blue color).
+As you have selected the button , click on the Blue Plus button in the Behavior window.
+Choose "Web" from list and write your link.
+You can also choose the window open in which window.(_blank, _same, ...)
+Open the scripting windows and change release to press.
+Do this for all the buttons.
+
+
+Go to your Photoshop.
+Create a new image in 548 X 320.
+Erase the background.
+Choose the paint bucket tool and set the Opacity as 44% and change the color to black.
+Fill the background for twice or once.
+Save it as .PNG
+Create a new layer on the top of the all layers.
+Now add it to your Work in this location: x=137 , y=138 px
+Write your content on it.
+,
+
+Create a new Layer on the top of all layers. Whether if you want to add a new layer must be under the layer.
+As you know you have to add a keyframe for each website page.
+Add nothing to this layer and keep it empty.
+on this layer add empty keyframe on the keyframes which contains your pages.
+Add this script to your empty keyframes: stop(); ( click on the keyframe , on the properties windows , clock on the arrow which is on the question mark)
+
+,
+Choose rectangle tool.
+Delete the border.( Click on the pencil then click on no color)
+Set fill color as Black.
+Make your rectangle.
+Change w to 800 and h to 100.
+set the position as ,,
+
+Press "V" and click on the grey stage.
+Choose "Publish settings".
+On the window which appear choose "Formats" on the top of the window.
+Check the ".HTML."
+Click on "Publish."
+
+, We have to make this website to fit to any screen.
+
+Open the Html Code with Notepad or Wordpad.
+Find this code:
+
+<object codeBase="http:<embed class="misspell" type="application/x-shockwave-flash" src="flashmovie.swf" pluginspage="http:<="" object="">
+
+
+
+,,

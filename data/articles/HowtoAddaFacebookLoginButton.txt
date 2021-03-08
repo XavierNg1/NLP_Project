@@ -1,0 +1,17 @@
+ An app ID is required to implement login using Facebook. You can create a Facebook app by going to the Facebook Developers site. 
+
+
+For any code you copy, you’ll need to remember to replace this placeholder with your own Facebook app ID once you have created your Facebook app.;
+, All you need to do is copy and paste the code provided by Facebook to create the Facebook social login and replace the placeholder with your own Facebook app ID.
+ You’ll want to place this code in the body section of your HTML code.
+ This code snippet loads the Facebook SDK JavaScript asynchronously. It also provides the JavaScript library which is used to render your Facebook login interface.
+ You’ll find the placeholder in this line appId : ‘{your-app-id}’. This function is just above loading JavaScript asynchronously.
+ In this example, this function is located at the very top of the scripts section.
+
+
+As you can see, the above function receives a response variable and checks its status. If it is connected it fetches the logged in users info and outputs this information in the console of your browser, that area is where you could build more onto this script to handle the data. You’ll also notice the not_authorized status. When the login is not authorized, this function changed the html on your page to ask you to log in. But how does this function get used? In this next function this is handled when someone clicked on the Facebook button on the page. Notice the onlogin=”checkLoginState (); in your body html code for the Facebook button.
+ Open it in a browser you should see the Facebook login button. You can use the code provided by Facebook at the link listed above.
+
+
+Log in and look at the console output. You’ll now see some basic info including id, email, first_name, gender, last_name, link, locale, name, timezone, updated_time, verified. That is all there is to it. Of course, there are many more scopes you can use which allow you to collect more data currently this script has a scope of public_profile and email, features and API calls you can play with to create your desired app. Just explore the Facebook documentation to discover all these features.
+

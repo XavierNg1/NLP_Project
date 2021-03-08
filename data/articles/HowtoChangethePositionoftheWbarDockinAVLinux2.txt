@@ -1,0 +1,2 @@
+ Be sure that your terminal is root. Then type in gedit /usr/share/applications/wbar.desktop. You may need to enter an Administrative password after giving the command.
+ Scan the document and find the Exec=/usr/bin/wbar -vbar -pos right -bpress -above-desk -isize 40 -zoomf 1.3 line. Delete the -vbar, and directly after that line, change the -pos top to any location you like. e.g. bottom, right, left.

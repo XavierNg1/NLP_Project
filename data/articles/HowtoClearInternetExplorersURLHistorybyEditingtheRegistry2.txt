@@ -1,0 +1,25 @@
+ Press the Windows key, type "run," then press ↵ Enter. The Windows' run tool lets you quickly open up programs that aren't as easy to find on your computer, such as regedit.
+ Type "regedit" into the run tool's input box. Then, press ↵ Enter. You will be asked whether or not you want to allow the following program to make changes to your computer. Click "yes."
+
+, On the left side of the Registry Editor window, you should see a list of folders all starting with "HKEY." Double-clicking the HKEY_CURRENT_USER folder will open up its contents, known in the Registry as its tree.
+ Within the HKEY_CURRENT_USER folder, you should see a folder titled "Software." Double-click on this folder to reveal its tree.
+
+
+If you have trouble finding this folder, try clicking the 's' key to go through all items in the folder starting with the letter 's'. Keep on clicking until you see the Software folder.
+ Within the Software folder, you should see a folder titled "Microsoft." Double-click this folder to reveal its tree.
+ Within the Microsoft folder, you should see a folder titled "Internet Explorer." Double-click on this folder to reveal its tree.
+
+
+Again, if you have trouble finding this folder, try clicking the 'i' key to go through all items in the folder starting with the letter 'i'. Keep on clicking until you see the Internet Explorer folder.
+ Within the Internet Explorer folder, you should see a folder titled TypedURLs. Click on this folder to show a list of URLs you most frequently visit. This is the list that Internet Explorer draws on to make auto-complete suggestions whenever you start typing a URL in the address bar.
+
+
+If you see some websites that you have never visited, your registry may have been edited by malware. Malware will edit this list in order to direct you to websites that you would not normally visit. If you are concerned that your computer may be affected by malware, read our article about how to get rid of malware.
+ You can delete either individual URLs or groups of URLs. After deleting a URL, Internet Explorer will no longer show this URL in your history and will no longer suggest the website. You can delete every entry except for the topmost entry. This is the placeholder entry and does not hold any actual URL.
+
+
+
+Individual entries: Right-click on the URL entry under the "Name" header, click "Delete" from the dropdown menu. In the pop-up dialog box that warns you about deleting anything from the registry, click "Yes."
+
+Multiple Entries: Click and drag over multiple entries in the "Name" column. Right-click on any of the selected entries, click "Delete" from the dropdown menu, then click "yes" in the dialog box.
+

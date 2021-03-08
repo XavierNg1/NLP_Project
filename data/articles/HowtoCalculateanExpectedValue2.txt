@@ -1,0 +1,53 @@
+ Calculating EV is a very useful tool in investments and stock market predictions. As with any EV problem, you must begin by defining all possible outcomes. Generally, real world situations are not as easily definable as something like rolling dice or drawing cards. For that reason, analysts will create models that approximate stock market situations and use those models for their predictions.Suppose, for this example, that you can define 4 distinct results for your investment. These results are:
+
+1. Earn an amount equal to your investment
+
+2. Earn back half your investment
+
+3. Neither gain nor lose
+
+4. Lose your entire investment
+
+
+
+
+, In some cases, you may be able to assign a specific dollar value to the possible outcomes. Other times, in the case of a model, you may need to assign a value or score that represents monetary amounts.In the investment model, for simplicity, assume you invest $1. The assigned value of each outcome will be positive if you expect to earn money and negative if you expect to lose. In this problem, the four possible outcomes therefore have the following values, relative to the $1 investment:
+
+1. Earn an amount equal to your investment = +1
+
+2. Earn back half your investment = +0.5
+
+3. Neither gain nor lose = 0
+
+4. Lose your entire investment = -1
+
+
+
+
+, In a situation like the stock market, professional analysts spend their entire careers trying to determine the likelihood that any given stock will go up or down on any given day. The probability of the outcomes usually depends on many external factors. Statisticians will work together with market analysts to assign reasonable probabilities to prediction models.For this example, assume that the probability of each of the four outcomes is equal, at 25%.
+ Use your list of all possible outcomes, and multiply each value times the probability of that value occurring.For the model investment situation, these calculations would look like this:
+
+1. Earn an amount equal to your investment = +1 * 25% = 0.25
+
+2. Earn back half your investment = +0.5 * 25% = 0.125
+
+3. Neither gain nor lose = 0 * 25% = 0
+
+4. Lose your entire investment = -1 * 25% = -0.25
+
+
+
+
+, Find the EV for the given situation by adding together the products of value times probability, for all possible outcomes.The EV, for the stock investment model, is as follows:
+
+
+EV=0.25+0.125+0−0.25=0.125{\displaystyle {\text{EV}}=0.25+0.125+0-0.25=0.125}
+
+
+
+
+, You need to read the statistical calculation of the EV and make sense of it in real world terms, according to the problem.For the investment model, a positive EV suggests that over time, you will earn money on your investments. Specifically, based on an investment of $1, you can expect to earn 12.5 cents, or 12.5% of your investment. 
+
+Earning 12.5 cents does not sound impressive. However, applying the calculation to large numbers suggests, for example, that an investment of $1,000,000 would earn $125,000. 
+
+

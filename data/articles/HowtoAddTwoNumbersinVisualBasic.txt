@@ -1,0 +1,10 @@
+ In order to add 2 numbers in Visual Basic, you need to first set up the program to recognize them as values. Programmers can do this either by defining the numbers as constants or variables. Variables are much desired over constants for many reasons, mainly because they can be changed throughout the program's implementation. For example, a variable can be changed by a user entering a number in a visual text box, where a constant cannot.
+
+
+Dimension constants or variables. To define items in Visual Basic requires a "dimension" command, abbreviated as "dim." To define your 2 numbers as integers, write the following code "above the fold," in the initial load sequence before functions are described: dim A as integer, dim B as integer. Here, A and B will be your 2 numbers.;
+, After dimensioning the 2 numbers, you'll need to either enter values for them in code, or provide instructions for users to populate them during the program. A simple command like A = 5 is sufficient.
+ You'll need to create another variable for the sum. Write this code into the same pre-functional prefix code: dim C as integer.
+ With the above example, your code is this: C = A + B.
+ You can include a visual text box on the program to display the sum and create a command like: textbox1.text = val<C>.
+ Add the variable C back into other equations for more functionality within the program.
+

@@ -1,0 +1,60 @@
+ First, install the Firestarter application by opening up a terminal and issuing the following commands.
+
+
+
+Type/Copy/Paste: sudo -s apt-get update. This will update your Linux Mint repositories
+
+
+
+
+
+
+
+Type/Copy/Paste: sudo -s apt-get install firestarter. This will install the firestarter firewall application to your Linux Mint system.
+
+
+
+
+
+
+You will also have to edit the visudo file and include all the users who you want be able to use Firestarter on your system. For that Type/Copy/Paste: sudo -s visudo
+
+
+
+
+
+;
+,,
+
+
+
+
+
+
+
+Type: Control-X, to exit the visudo program.
+
+
+
+
+
+
+
+Use a text editor to edit the following file, open a terminal and enter the following command:
+
+
+
+
+
+Type/Copy/Paste: sudo gedit /etc/rsyslog.d/50-default.conf OR Type/Copy/Paste: sudo nano /etc/rsyslog.d/50-default.conf
+
+
+
+
+
+
+
+Comment out (delete the hash sign #) in front of the following lines so they look like as below
+
+
+,

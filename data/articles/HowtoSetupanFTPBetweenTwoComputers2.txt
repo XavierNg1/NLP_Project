@@ -1,0 +1,16 @@
+ This procedure should be done on the Windows 7 computer that contains the files you want to share with other users.
+
+
+Open the "Control Panel" from your desktop or from the "Start" menu, then select "Programs."
+Click on "Turn Windows features on or off" from within the category entitled "Programs and Features." A pop-up window will then display with additional Windows options.
+Click on the plus symbol next to "Internet Information Services" (IIS), then place a check mark next to "FTP Server."
+Click on the "Ok" button to allow Windows to enable and activate the FTP server.
+
+
+
+Return to your Control Panel, then select "System and Security."
+Click on "Administrative Tools," then select "IIS Manager." A window will then open and display options in two different window panes.
+Right-click on "Sites" from within the left window pane, then select "New FTP Site" from the floating menu.
+Enter your settings for the FTP server; including a name for the directory, the IP address, and the users you want given access to the FTP server. Throughout the settings procedure, you will be prompted to click on the "Next" button to proceed to each screen with the settings wizard.
+Click on the "Finish" button to complete the setup procedure for the FTP server.
+

@@ -1,0 +1,45 @@
+ If you're interested in making an isometric shooter, for example, the tutorials and examples you'll read will be vastly different than your average puzzle-based tutorial.
+
+
+Any community forum, whether in the Steam community or the YoYo Games community, will help you come up with ideas for games and ways to further improve your game-making career.;
+, Every component of your game is a resource; resources include everything from sounds and character images to collision effects and a compilation of all of your code. You can view a lump sum of your resources at any time from the Resource Tree in the left side of your screen. The GameMaker resources are as follows:Sprites, which are images used to animate objects.
+Sounds, which make up the sound effects and musical score of the game.
+Backgrounds, which are images used to define rooms.
+Paths, which are scripted movement patterns for objects in the game.
+Scripts, which are pieces of code that you name and call into action during certain instances (for example, an object-to-object collision).
+Shaders, which are used to create graphical effects (e.g., shadows).
+Fonts, which dictate the appearance of text.
+Time lines, which dictate the point at which specific instances occur in the game (e.g., a door opening or an enemy appearing).
+Objects, which are essentially anything appearing on-screen (excluding the background).
+Rooms, which hold objects.
+Included files, which are files from your computer that the game will use in the final cut.
+Extensions, which are additions to the game outside of the traditional GameMaker resource pool.
+Constants, which include all of the constant variables defined by you for your game.
+When naming resources, be sure to preface them differently by category; for example, you might preface your sounds with "sfx", your sprites with "spr", and so on. Using the same prefix for different categories can improperly associate a resource with a category, which will lead to an error.
+ The GUI is the set of tools and options that help you create and fine-tune your game. To view the GUI, click the "New" tab at the top of the GameMaker startup menu.
+
+
+The main menus are in the top right corner of the GameMaker GUI. These include File, Edit, Resources, Scripts, Run, Window, and Help. Each of these options has its own drop-down menu complete with options specific to their function, so be sure to click on each of these to learn more about their contents.
+The main toolbar is beneath the main menus; it contains buttons to add objects, sprites, and any other GameMaker resources you'll need. You can also export your project, save your project, and open an old project from here.
+Your workspace is the top window on the right side of your screen. This is where you create and edit resources.
+The code compiling area is beneath your workspace; this is where the code related to your game assembles and compiles.
+The resource tree is in the left side of your GUI; it displays every resource you have assigned to your game in a list form, complete with search bar below.
+ Objects comprise most of the on-screen data in any given room. For an object to be functional in your game, it must be defined with an event; for example, an event triggered by pressing a button on the keyboard might cause an object to move a certain direction. When you choose to create an object from the resources menu, it will take you to the "Object Properties" menu.
+
+
+You can define your objects by adding an event in Object Properties, then adding a result in the "Actions" window.
+Sprites are images--often several sequential ones, in practice--used to animate objects. Every object you create will have at least one sprite assigned to it. GameMaker comes equipped with many sprite templates, and YoYo Games has even more available for download; you can also create your own.
+"Collision events" are typical events which are used to dictate what happens when an object touches another object. This could be a character bumping into a wall, an enemy touching the character, or something similar.
+ Just as each house is separated by individual rooms, your game will have different screens representing different points in the game--also known as "rooms". Rooms hold a set of objects, scripts, pathways, shaders, timelines, and a background to define them as separate instances.
+
+
+Every room will have its own background to set it aside as a specific room. You create a background by clicking the "Resources" tab and selecting "Create Background", then uploading an image or selecting one from GameMaker's library.
+Rooms can comprise levels, loading screens, informative screens, or options-related screens--even the home screen menu of a game is technically a room.
+GameMaker: Studio will not run your game without room components.
+To create boundaries in your room, define an object as a wall and place it throughout the room. You can keep the same object for subsequent rooms if you choose., GameMaker: Studio contains a small native audio-customizing suite from which you can choose compression options, file types, and so on. GameMaker only supports .WAV and .MP3 filetypes, so make sure that your selected sounds are in the pertinent file formats before attempting to upload them to GameMaker.
+
+
+To bring up the Sound menu, hold down ⇧ Shift and Control, then tap U. You can also click "Create Sound" in the drop-down resources bar.GameMaker can only implement one .MP3 track at a time, whereas it can use several .WAV files simultaneously. This makes .WAV files better for sound effects and .MP3s better for a soundtrack.
+You can change the default volume of the track, the quality of the track, and the name of the sound from within the Sound menu.
+Sounds are often used as actions in response to events.
+

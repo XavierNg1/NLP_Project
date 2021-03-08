@@ -1,0 +1,36 @@
+ It is not possible to directly add a Mac computer to your Windows HomeGroup. Instead, you'll be sharing specific folders with the Mac. To do this, you'll need to ensure that file sharing is enabled in Windows:
+
+
+Open the Start menu or screen and type "network and sharing center" to open the Network and Sharing Center window.
+Click the "Change advanced sharing settings" link.
+Make sure "Turn on file and printer sharing" is selected.;
+, Sharing is done by folder, so you'll need to find a folder that you want to share with the Mac computer. Any folders inside of the folder will be shared as well.
+ This will open the Properties window for that folder.
+ This will display the sharing options for that folder.
+ This will open a new window with the users that are allowed to access it.
+ This will allow anyone on your network to access the shared folder.
+ By default, other computers that access your shared folder will only be able to open and copy files from it. If you want to be able to add files to the folder, or make changes to the files in the folder, select "Read/Write" from the Permission Level menu.
+ Your sharing settings will be applied to all of the subfolders, which may take a few moments for larger folders.
+ If your computer is connected to the same network as your Windows computer, you'll see your Windows computer appear in the "Shared" section of the left sidebar.
+ You'll be prompted to log in when you select the Windows computer in your Mac's Finder window. You have two options: "Guest" and "Registered User."
+
+
+Select Guest if you just need read access (copying a file from the folder, opening a file).
+Select Registered User if you need write access as well (copying files to the folder, modifying and deleting files). You'll be prompted to log in with your Windows user account.
+ Once you're logged in, you can view all of the files and folders in the shared folder. You can open, copy, and manipulate the files just like you would any other folder on your computer.
+ You can repeat this process for sharing other folders from your Windows computer to your Mac. To share the other direction (sharing Mac folders to Windows), see the next section.
+ Now that you can access your Windows folders on your Mac, you can set your Mac folders to appear in Windows. Start by opening your System Preferences menu.
+ This will open your system sharing settings.
+ You'll need this later when setting up the connection.
+ When you select it, you'll see new options appear to the right.
+ This will display the file sharing options.
+ This is the file sharing protocol that allows you to connect to Windows computers.
+ This will allow you to access all of your Mac's files from the Windows computer.
+ You can quickly open this by pressing ⊞ Win+E, or by opening "Computer"/"This PC."
+
+, You may have to scroll a bit to find it.
+ It will have the name you noted in Step 3 of this section.
+
+
+If you don't see it listed here, click the address bar at the top of the window and type \\MacName, replacing MacName with the name from Step 3.
+ When you select your Mac, you'll be prompted to enter your username and password for your Mac user account. Once you enter this, you'll be able to view your Mac's folders and files.

@@ -1,0 +1,38 @@
+ The most secure and foolproof way to bypass any web restriction is to install a proxy on your own web server. You can actually install a web server on your home computer, and then connect to that from anywhere as long as the computer is on. Installing your own web server is actually quite straightforward. WAMPServer is the easiest solution for Windows users, while Mac users can use MAMP.
+
+
+Once you install WAMPServer, you will see its icon in your System Tray.
+Right-click on the icon and select "Put Online". This will turn your server on.
+Right-click the icon again and select "Localhost". If the WAMPServer configuration page appears, then the server was installed correctly.
+ This is an open-source proxy server program that is free to download and use. You can download PHProxy from SourceForge. Ensure that you download from SourceForge, otherwise you may get a modified version.
+
+
+
+Extract the folder from the .ZIP file that you download.
+Copy the folder to the WAMP (or MAMP) root directory. The default locations of this directory are:
+
+Windows - C:\wamp\www\
+
+OS X - Applications/MAMP/htdocs/
+
+
+
+
+, PHProxy is installed simply by copying the folder to the right location. Open a web browser on your computer and navigate to http://localhost/phproxy/ to test the proxy. If the PHProxy page appears, then everything was installed correctly.
+ In order to access the server from anywhere in the world, you are going to have to direct incoming traffic to the server on your home network. To do this, you will first need to find the private IP address of the computer running the server software.
+
+
+Open the Command Prompt and type ipconfig. Your private IP address will be listed in the section for your current connection. See this guide for more details on finding your private IP address.
+Note the IP address, you will need it on the next step.
+ When you connect to your server from another location, you will be attempting to connect through port 80 on your home network's router. Ports control the flow of data into and out of your network. In order to connect to your server, you'll need to open port 80 to allow incoming connections.
+
+
+Open your router's configuration page. You can do this using a web browser on your local network. Enter the router's address in the browser's address bar. See this guide for detailed instructions on accessing your router.
+Open the Port Forwarding section. This may be labeled a little differently depending on your router manufacturer. Create a new rule for your server's private IP address. Make sure the range of ports is set to just port 80, and that both TCP and UDP traffic are enabled. See this guide for more detailed instructions on forwarding ports.
+ Now that port forwarding is all set up, your web server is complete and ready to use. All you'll need to connect to it from anywhere is your network's public IP address. THis is the address that designates your network on the greater internet.
+
+
+You can quickly find your public IP address by opening Google on the web server computer and typing my ip. Your public IP address will be displayed at the top of the results list.
+ Now that you know the address, you can connect to your proxy server from anywhere. Your home proxy server will load the page that you request, and then transfer the data to you.To connect to PHProxy and use the web interface, simply enter Public IP/phproxy/. For example, if your network's public IP is 10.10.10.15, you can access PHProxy from anywhere by entering 10.10.10.15/phproxy/ into a browser's address bar.
+To connect to your proxy server using a portable browser, configure the browser's connection settings to use your proxy's public IP address and port 80.
+

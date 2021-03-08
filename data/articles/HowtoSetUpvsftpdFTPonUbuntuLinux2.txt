@@ -1,0 +1,120 @@
+ Unlike the listen parameter, vsftpd will listen on an IPv6 socket instead of an IPv4 one. This parameter and the listen parameter are mutually exclusive.
+
+Allowed values: Boolean (YES/NO)
+Default value: NO
+
+, Beware - this option is turned on by default which might cause some security trouble.
+
+Allowed values: Boolean
+Default value: YES
+
+, If enabled, normal user accounts in /etc/passwd may be used to log in.
+
+Allowed values: Boolean
+Default value: NO
+
+,, For this to work, the option write_enable must be enabled, and the anonymous ftp user must be given write permission on any desired upload location.
+
+Allowed values: Boolean
+Default value: NO
+
+, Like above, write_enable must be enabled.
+
+Allowed values: Boolean
+Default value: NO
+
+,
+
+Allowed values: Boolean
+Default value: NO (in the sample configuration file, it is enabled)
+
+, By default, the log file will be placed at /var/log/vsftpd.log, but this location may be overridden using the configuration setting vsftpd_log_file
+
+Allowed values: Boolean
+Default value: NO (in the sample configuration file, it is enabled)
+
+,
+
+Allowed values: Boolean
+Default value: NO
+
+,
+
+Allowed values: Boolean
+Default value: NO (in the sample configuration file, it is enabled)
+
+, Not recommended for security (the code is non-trivial). Not enabling it, however, may confuse older FTP clients.
+
+Allowed values: Boolean
+Default value: NO
+
+, By default the server will pretend to allow ASCII mode but in fact ignore the request. Turn on the below options to have the server actually do ASCII mangling on files when in ASCII mode. Beware that on some FTP servers, ASCII support allows a denial of service attack (DoS) via the command "SIZE /big/file" in ASCII mode. vsftpd predicted this attack and has always been safe, reporting the size of the raw file. ASCII mangling is a horrible feature of the protocol.
+
+Allowed values: Boolean
+Default value: NO
+
+, If you want, you can arrange for uploaded anonymous files to be owned by a different user. Note! Using "root" for uploaded files is not recommended!
+
+Allowed values: chown_uploads is Boolean, chown_username is a username string
+Default value: chown_uploads defaults to NO and chown_username defaults to "root"
+
+, You may override where the log file goes if you like. The default is shown below.
+
+Allowed values: path string
+Default value: {{green}/var/log/vsftpd.log}}
+
+,
+
+Allowed values: Numeric
+Default value: 300
+
+,
+
+Allowed values: Numeric
+Default value: 300
+
+, It is recommended that you define on your system a unique user which the ftp server can use as a totally isolated and unprivileged user.
+
+Allowed values: Username string
+Default value: nobody
+
+,
+
+Allowed values: String
+Default value: none - default vsftpd banner is displayed
+
+, Apparently useful for combating certain DOS attacks.
+
+Allowed values: File path string for banned_email_file and Boolean for deny_email_enable
+Default value: NO for deny_email_enable and /etc/vsftpd.banned_emails for banned_email_file
+
+,
+
+Allowed values: Boolean
+Default value: NO
+
+, You may specify an explicit list of local users to chroot() to their home directory. If chroot_local_user is YES, then this list becomes a list of users to NOT chroot().
+
+Allowed values: File path string for chroot_list_file and Boolean for chroot_list_enable
+Default value: NO for chroot_list_enable and /etc/vsftpd.chroot_list for chroot_list_file
+
+, This is disabled by default to avoid remote users being able to cause excessive I/O on large sites. However, some broken FTP clients such as "ncftp" and "mirror" assume the presence of the "-R" option, so there is a strong case for enabling it.
+
+Allowed values: Boolean
+Default value: NO
+
+, Some of vsftpd's settings don't fit the Debian filesystem layout by default. These settings are more Debian-friendly. This option should be the name of a directory which is empty. Also, the directory should not be writable by the ftp user. This directory is used as a secure chroot() jail at times vsftpd does not require file system access.
+
+Allowed values: File path string
+Default value: /usr/share/empty
+
+,
+
+Allowed values: string
+Default value: ftp
+
+,, Default umask for local users is 077. You may wish to change this to 022, If your users expect that (022 is used by most other ftpd's)
+
+Allowed values: Numeral
+Default value: 077
+

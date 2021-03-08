@@ -1,0 +1,31 @@
+ What if, rather than finding the distance that a moving object has traveled, you need to find the distance between two stationary objects? In cases like this, the speed-based distance formula described above won't be of any use. Luckily, a separate distance formula can be used to easily find the straight-line distance between two points. However, to use this formula, you'll need to know the coordinates of your two points. If you're dealing with one-dimensional distance (such as on a number line), your coordinates will be two numbers, x1 and x2. If you're dealing with distance in two dimensions, you'll need values for two (x,y) points, (x1,y1) and (x2,y2). Finally, for three dimensions, you'll need values for (x1,y1,z1) and (x2,y2,z2).
+ Calculating one-dimensional distance between two points when you know the value for each is a cinch. Simply use the formula d = |x2 - x1|. In this formula, you subtract x1 from x2, then take the absolute value of your answer to find the distance between x1 and x2. Typically, you'll want to use the one-dimensional distance formula when your two points lie on a number line or axis.
+
+
+Note that this formula uses absolute values (the "| |" symbols). Absolute values simply mean that the terms contained within the symbols become positive if they are negative.
+For example, let's say that we're stopped by the side of the road on a perfectly straight stretch of highway. If there is a small town 5 miles ahead of us and a town 1 mile behind us, how far apart are the two towns? If we set town 1 as x1 = 5 and town 2 as x1 = -1, we can find d, the distance between the two towns, as follows:
+
+d = |x2 - x1|
+= |-1 - 5|
+= |-6| = 6 miles.
+ Finding distance between two points in two-dimensional space is more complicated than in one dimension, but is not difficult. Simply use the formula d = √((x2 - x1)2 + (y2 - y1)2). In this formula, you subtract the two x coordinates, square the result, subtract the y coordinates, square the result, then add the two intermediate results together and take the square root to find the distance between your two points. This formula works in the two-dimensional plane — for example, on basic x/y graphs.
+
+
+The 2-D distance formula takes advantage of the Pythagorean theorem, which dictates that the hypotenuse of a right triangle is equal to the square root of the squares of the other two sides.
+For example, let's say that we have two points in the x-y plane: (3, -10) and (11, 7) that represent the center of a circle and a point on the circle, respectively. To find the straight-line distance between these two points, we can solve as follows:
+d = √((x2 - x1)2 + (y2 - y1)2)
+d = √((11 - 3)2 + (7 - -10)2)
+d = √(64 + 289)
+d = √(353) = 18.79
+
+
+, In three dimensions, points have a z coordinate in addition to their x and y coordinates. To find the distance between two points in three-dimensional space, use d = √((x2 - x1)2 + (y2 - y1)2 + (z2 - z1)2). This is a modified form of the two-dimensional distance formula described above that takes the z coordinates into account. Subtracting the two z coordinates, squaring them, and proceeding through the rest of the formula as above will ensure your final answer represents the three-dimensional distance between your two points.
+
+
+For example, let's say that we're an astronaut floating in space near two asteroids. One is about 8 kilometers in front of us, 2 km to the right of us, and 5 miles below us, while the other is 3 km behind us, 3 km to the left of us, and 4 km above us. If we represent the positions of these asteroids with the coordinates (8,2,-5) and (-3,-3,4), we can find the distance between the two as follows:
+d = √((-3 - 8)2 + (-3 - 2)2 + (4 - -5)2)
+d = √((-11)2 + (-5)2 + (9)2)
+d = √(121 + 25 + 81)
+d = √(227) = 15.07 km
+
+

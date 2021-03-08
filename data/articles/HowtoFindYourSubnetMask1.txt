@@ -1,0 +1,13 @@
+ Press the Windows key and R at the same time to open the Command Prompt window.
+
+
+If this doesn't work, click the Start button or Windows logo in the lower left corner of the screen. Type "command prompt" in the search bar and double-click the icon that appears. You may need to press Search first to access the search bar.
+If there is no icon in the lower left, move your mouse to the lower right and swipe upward, or swipe from the right on a touch screen.;
+, Type the words ipconfig /all exactly as they appear, with a space in between them. Hit the ↵ Enter key. Windows ipconfig is the program that keeps track of all of your network connections. This command will bring up a list with all of your network information.
+ This is located in the section titled "Ethernet adapter Local Area Connection." Find the line beginning "Subnet Mask" and look across to find your subnet mask.Most subnet mask numbers begin with a string of 255s, such as 255.255.255.0.
+ Here's another way to find this information:
+
+
+Navigate to Control Panel → Network & Internet → Network and Sharing Center.
+On most modern Windows systems, click "Change adapter settings" on the left. On Windows Vista, click "Manage Network Connections" instead.Right-click "Local Area Connection" and select "Status." Click "Details" in the window that opens.Look for your subnet mask.
+

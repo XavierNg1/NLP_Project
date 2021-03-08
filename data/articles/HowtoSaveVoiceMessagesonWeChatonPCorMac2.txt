@@ -1,0 +1,14 @@
+ Only advanced users (people skilled at running Python scripts, compiling, and using the command line) should try this method. Here’s a list of things you’ll need to access WeChat voice messages on your iPhone:Python 2.7 or later.
+A C compiler, such as Xcode for macOS or Visual Studio for Windows.
+ffmpeg to convert the WeChat audio format to one that’s playable on your computer. See Use FFmpeg to learn how to get it.
+The SILKCodec from GitHub, which you’ll find here: https://github.com/Kronopath/SILKCodec.
+The WeChat audio conversation script from Github. You’ll find it at https://gist.github.com/Kronopath/c94c93d8279e3bac19f2.
+ Use the cable that came with your phone or tablet (or one that’s compatible). iTunes should automatically appear.,, It’s on the left side of the screen.,, The contents of your iPhone or iPad will now back up to your computer., You can use the free trial version of this app to access files on your iPhone or iPad from your computer. Navigate to https://macroplant.com/iexplorer, click Download iExplorer, then run the downloaded file to install the app., You’ll find it in the Windows menu (PC) or the Applications folder (Mac)., It’s at the bottom-center part of the screen., More options will expand beneath it., It’s right beneath the name of your device. A list of folders will appear., You may have to scroll down to find the folder., This opens the contents of the folder in the file explorer (PC) or Finder (Mac)., More folders will appear., The name may begin with a bunch of zeros. You’ll know you’re in the right place if you see a folder called “Audio.”http://kronopath.net/blog/extracting-audio-messages-from-wechat/</ref>, Each folder you see here contains the data for each of your WeChat messages. The files that end with “.aud” are the voice messages., You can do this by dragging them to a folder or by copying and pasting. It’s a good idea to create a new folder for this task to make the files easy to find., Now that you have everything you need, the only thing that’s left is to convert the files. This must be done from the command prompt.
+
+If you’re using the Windows command prompt app, make sure you run it as an administrator. To do this, right-click it in the Windows menu and select Run as Administrator.
+ Type the following and then press ↵ Enter or ⏎ Return: python converter.py --silk-decoder path/to/decoder path/to/your/audio/folder/
+
+This process may take a long time if you’re processing a lot of files. Once the files are converted, they’ll appear in the folder as .wav files.
+Double-click a .wav file to open it in your default music player.
+You can convert .wav files to any other file type if you desire.
+

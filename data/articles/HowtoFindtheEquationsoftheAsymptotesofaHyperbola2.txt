@@ -1,0 +1,33 @@
+ This method is useful if you have an equation that's in general quadratic form. Even if it's in standard form for hyperbolas, this approach can give you some insight into the nature of asymptotes. Rearrange the equation so the y2 or (y - k)2 term is on one side to get started.
+
+
+
+Example 3: (y + 2)2/16 - (x + 3)2/4 = 1
+
+Add the x term to both sides, then multiply each side by 16:
+(y + 2)2 = 16(1 + (x + 3)2/4)
+Simplify:
+(y + 2)2 = 16 + 4(x + 3)2
+
+, Take the square root, but don't try to simplify the right hand side yet. Remember, when you take the square root, there are two possible solutions: a positive and a negative. (For example, -2 * -2 = 4, so √4 can be equal to -2 as well as 2.) Use the "+ or -" sign ± to keep track of both solutions.
+
+
+√((y + 2)2) = √(16 + 4(x + 3)2)
+(y+2) = ± √(16 + 4(x + 3)2)
+
+, It's important that you understand this before you continue to the next step. The asymptote of a hyperbola is a line that the hyperbola gets closer and closer to as x increases. X can never actually reach the asymptote, but if we follow the hyperbola for larger and larger values of x, we'll get closer and closer to the asymptote.
+ Since we're trying to find the asymptote equation now, we only care about x for very large values ("approaching infinity"). This lets us ignore certain constants in the equation, because they contribute such a small part relative to the x term. Once x is at 99 billion (for example), adding three is so small we can ignore it.
+
+
+In the equation (y+2) = ± √(16 + 4(x + 3)2), as x approaches infinity, the 16 becomes irrelevant.
+
+(y+2) = approximately ± √(4(x + 3)2) for large values of x
+
+, Now that we've got rid of the constant, we can simplify the square root. Solve in terms of y to get the answer. Remember to split the ± symbol into two separate equations, one with + and one with -.
+
+
+y + 2 = ±√(4(x+3)^2)
+y + 2 = ±2(x+3)
+y + 2 = 2x + 6 and y + 2 = -2x - 6
+y = 2x + 4 and y = -2x - 8
+

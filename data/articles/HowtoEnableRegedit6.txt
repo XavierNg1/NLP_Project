@@ -1,0 +1,17 @@
+ See "Enabling Regedit with CMD" for how to access this. Try that method first, since it is faster. If the CMD line responds with an error message, follow the instructions below.
+
+
+This process should work for Windows 7, 8, and Vista.
+ Type net user administrator /active:yes and hit enter. We'll use this account to gain access to HKEY_USERS without having to use the registry editor.
+ Type wmic useraccount where name='%username%' get sid and hit enter. (You may replace %username% with your account name, but it shouldn't be necessary).You should see a long "Secure ID" number, beginning with something similar to S-1-5-. Write down the entire ID, or at least enough numbers to uniquely identify it (for instance, the first character after each – mark).
+ Go to "Switch users" in the Start menu. Leave your ordinary account logged in.
+ This should be located in your Computer folder.
+ Open the folder whose name is the SID you wrote down. This will contain the settings for your normal account.
+ Go to \Software\Microsoft\Windows\CurrentVersion\Policies\System inside your SID folder.
+ Double click on DisableRegistryTools. In the "Value Data" field, change the text to a "0" instead of a "1."This should enable registry editing.
+ Switch back to your ordinary account and try to access Regedit again. Restart your computer and try again if necessary.
+ Return to cmd.exe on your ordinary account and enter net user administrator /active:no. This will disable the administrator account. In general, that "hidden" administrator account should be disabled whenever it isn't being actively used, as a mistake in the files it has access to could cause catastrophic damage.
+
+
+If you decide to leave the account enabled, change its settings to add a password.
+

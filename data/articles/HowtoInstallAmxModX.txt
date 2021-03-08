@@ -1,0 +1,31 @@
+;
+, Alternatively, you can just download the Full Installer.
+ Overwrite any files from the Base Package. If you downloaded the Full Installer, install it.
+ Or run the Full Installer to select your mod folder (local or remote) and have the files automatically placed.
+
+
+If you have installed Metamod, directory <mod>/addons should already exist.
+
+<mod> is your mod directory name, like C-Strike for Counter-Strike.
+ It should be like this:
+
+
+
+<mod>
+
+
+addons
+
+amxmodx
+metamod
+
+
+
+
+
+,
+
+
+For Windows, this line is: win32 addons/amxmodx/dlls/amxmodx_mm.dll
+For Linux, this line is: linux addons/amxmodx/dlls/amxmodx_mm_i386.so
+If your server is remote, upload file plugins.ini after you save it (unless you're editing it remotely).

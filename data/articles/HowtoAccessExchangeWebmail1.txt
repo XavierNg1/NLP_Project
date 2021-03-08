@@ -1,0 +1,6 @@
+ Instructions for configuration vary between different versions. For best results, read Microsoft knowledge base articles and instructions for setting up and troubleshooting webmail.;
+, Right click the user account in Active Directory. Click properties, than click the Exchange Features tab. Click on Outlook Web Access, and disable it.
+, The policy should deny access to clients outside your network. In Active Directory, apply the recipient policy to accounts who are granted access.
+ Ensure that it specifies the domain name given in the recipient policy.
+ This will allow you to create a login page for users to access email. Make sure the default domains match on the front-end and back-end servers, including any backslashes. Open Exchange System Manager and expand administrative groups, servers, protocols and HTTP. Right click "Exchange Virtual Server" and click "Properties." On the settings table, enable forms based authentication and choose a level of compression.
+

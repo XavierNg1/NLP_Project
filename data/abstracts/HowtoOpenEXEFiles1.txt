@@ -1,0 +1,13 @@
+
+Double-click an EXE file to run it.
+Open the Registry Editor if you can't run EXE files.
+Navigate to .HKEY_CLASSES_ROOT\.exe.
+Right-click on the "(Default)" entry and select "Modify".
+Type .exefile into the "Value data" field.
+Navigate to .HKEY_CLASSES_ROOT\exefile.
+Right-click on the "(Default)" entry and select "Modify".
+Enter .
+Navigate to .KEY_CLASSES_ROOT\exefile\shell\open.
+Right-click on the "(Default)" entry and select "Modify".
+Enter .
+Reboot your computer.

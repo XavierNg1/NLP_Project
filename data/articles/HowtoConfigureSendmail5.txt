@@ -1,0 +1,10 @@
+ Likewise, if you are using the genericstable, you should add any domains you wish to reverse-map to /etc/mail/generics-domains.,,
+
+An extra step is required for hosts not connected full-time. As noted in the MX configuration section, if you use another host to queue your mail until you connect, you will have to force delivery of mail queued on the secondary mail server. To accomplish this, when your primary server connects, you should run the script etrn.pl which comes in the contrib directory of the sendmail distribution:
+
+etrn.pl secondary-mx-host yourdomain.com
+It may be advisable to put this at the end of the Sendmail start-up script on any primary MX. It would be especially useful as a follow-up to whatever script initiates the connection on primary MXs without full-time connections.
+At this point, you should be set, and people should be able to send e-mail to addresses @yourdomain.com.
+
+
+

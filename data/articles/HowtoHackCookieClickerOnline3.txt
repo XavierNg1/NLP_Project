@@ -1,0 +1,107 @@
+ Another way to cheat is to modify the game's code directly with the console feature that is included with most internet browsers. To begin, start a game of Cookie Clicker, then open your browser's console. Note that, for this method, knowledge of javascript is a plus. Below are shortcuts for opening the console in several common browsers:
+
+
+
+Chrome: Ctrl+Shift+J for Windows, ⌘+Alt+J for Macs.
+
+
+
+Firefox: Ctrl+Shift+K for Windows, ⌘+Option+K for Macs.
+
+
+
+Internet Explorer: F12 for Windows.
+
+
+
+Safari: ⌘+Option+C for Macs.
+ Once you have access to the browser console, you have the ability to cheat to your heart's content. Do this by running commands in javascript to produce the desired effect — simply copy the commands into the console and modify any portion in "<>" brackets as you wish. There are literally hundreds of commands you can run in this way (and even more if you're willing to write your own). Below is a selection of scripts to get you started.Be sure to copy and paste the entirety of each script, including the final semicolon.
+
+
+Change the amount of cookies you have:
+
+
+
+
+Game.cookies = <amount>;
+
+
+
+
+
+
+
+Gain infinite cookies:
+
+
+
+
+Game.cookies = Infinity;<amount>;
+
+
+
+
+
+
+
+Change the cookies per second gained:
+
+
+
+
+Game.cookiesPs = <Cookies per Second>;<amount>;
+
+
+
+
+
+
+
+Automatically click the cookie — note that this can tax the CPU if set too high:
+
+
+
+
+var autoClicker = setInterval(Game.ClickCookie, <milliseconds interval>);<amount>;
+
+
+
+
+
+
+
+Set buildings as free:
+
+
+
+
+Game.ObjectsById.forEach(function (e) {
+    e.basePrice = 0;
+    e.refresh();
+});
+Game.storeToRebuild = 1;<amount>;
+
+
+
+
+
+
+
+Spawn a golden cookie:
+
+
+
+
+/*Game.goldenCookie.wrath = 0;*/
+Game.goldenCookie.spawn();<amount>;
+
+
+
+
+
+
+, After you paste your script into the console, click enter to run the script. If you've pasted the script correctly, your changes should immediately take effect in the game. Congratulations! Have fun.
+
+
+For more console hacks, visit the Cheating page on the Cookie Clicker wiki's "Cheating" page.
+

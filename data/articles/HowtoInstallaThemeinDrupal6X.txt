@@ -1,0 +1,15 @@
+
+There are many Drupal theme sites which display themes to select from:
+
+
+Drupal.org
+Theme Garden
+All Drupal Themes.com
+and many more...;
+,
+If your Drupal install is on a linux server and you have the necessary permissions, upload the archive to the server, then run this command in a shell - tar -zxvf /path/to/theme_archive_file /path/to/Drupal/themes/
+If you do not have such access to the server, you'll need to download and uncompress the theme onto your local computer and then upload the folder to the themes/ folder on the server. You can use any FTP client (File Transfer Protocol) to upload files to the server, such as Filezilla or Core FTP
+
+, Log into Drupal using your administrator account and go to the Appearance page, or navigate your browser to http://your.domain.tld/?q=admin/build/themes (tld stands for Top Level Domain, such as .com or .org). Find your new theme in the table, and select the enabled box to allow your site's users to use this theme. Select the default radio button to make this theme your site's default theme.
+ Most Drupal themes allow further refinement and customization, and a configure link will show up next to your current default theme. Unselect all other enabled themes to require users to use this theme.
+

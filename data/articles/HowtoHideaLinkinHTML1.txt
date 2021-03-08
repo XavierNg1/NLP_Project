@@ -1,0 +1,31 @@
+ By going into the code you have written for your webpage, you can find the link you've written into the code and change all its color values to match your background. In doing this, you'll effectively render your link invisible against your background color.;
+, HTML, CSS, and other coding languages use six digit, three-byte hexadecimal code to represent color.You'll need to find the hex code for the color that matches your background, but a few common hex codes are as follows:
+
+
+White: FFFFFF
+Black: 000000
+Gray: 808080
+Light Gray: D3D3D3
+Blue: 0000FF
+Beige: F5F5DC
+
+, Once you have found the link you want to hide in your webpage code and know your hex color code, you can begin changing the color of your link. To do so, use the following code, inserting the link you want hidden and your hex color code where appropriate:<style>
+a:link.com {
+color: #(insert hex color code here);
+}
+a:active {
+color: #(insert hex color code here);
+}
+a:visited {
+color: #(insert hex color code here);
+}
+a:hover {
+color: #(insert hex color code here);
+}
+</style>
+
+, Though your link is now effectively hidden, you and other users will still be able to locate the link using the "find" feature in your browser. Whether your link is normal, visited, active, or being hovered over by a cursor, your link should now be invisible.
+
+
+The "find" function can be activated in most browsers by pressing Ctrl+F.
+

@@ -1,0 +1,26 @@
+ Before downloading, you must select “Accept License Agreement”.;
+, After the installation is done, You need to create two environment variables (JAVA_HOME and CLASSPATH) in your operating system，so go to Start -> Settings -> Control Panel -> System -> Advanced -> Environment Variables -> System variables -> New.
+
+
+The System variable JAVA_HOME, points to JDK installation path, which specifies the location of the java run time environment. Populate the JAVA_HOME Variable Value with the location path of your JDK installation. CLASSPATH points to a list of file paths of directories or jar files, which would be used by applications for searching Java programs and libraries:
+
+ %JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar
+Then, add the following path to the PATH environment variable in your operating system:
+
+%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin.
+, The value is the installation path of Tomcat you just installed.
+Add the following path to the CLASSPATH environment variable:;%CATALINA_HOME%\common\lib.
+Add the following path to PATH environment variable:;%CATALINA_HOME%\bin.
+ Now open web browser and type URL http://127.0.0.1:8080/ in the navigation bar to test the server. If your browser displays a page just like the following image, it means your installation of Tomcat is successful. To stop the Tomcat server, you can double clicking the “shutdown.bat” file or just press the “Ctrl + c” keys.
+ Once you have downloaded the Eclipse archive you will need to decompress the zip file, which will create the unzipped Eclipse folder. You may want to extract the archive to the root of C:\ drive, thus creating the folder “C:\eclipse”, or just moved the extracted eclipse folder to the root of C:\ drive if you extracted it already. Since Eclipse does not have any installer, there will be a file inside the Eclipse folder named eclipse.exe. You can double click on the file to run Eclipse.
+ This can be downloaded from http://www.eclipsetotale.com/tomcatPlugin.html. Unzip this plug-in in your eclipse “plugins” directory. When you restart Eclipse, Tomcat options (start, stop, restart) will appear in the Menu.
+ The selected JRE must be a JDK, because Tomcat requires JDK to compile files instead of JRE.Configure Tomcat for Eclipse also in its preference window: Windows -> Preferences -> Tomcat.
+ Run Eclipse. Select File -> New -> Project and select “Tomcat Project” under “Java”, then press “Next”
+Give a project name:
+Select the “context” and finish it. Now create a new file for this project by selecting File -> New -> File and give it a name like “Test.jsp” for example. Edit this file and save it.
+Then, start tomcat from menu Tomcat -> Start. You will see the starting information in Eclipse console.
+Open a web browser and input the URL (http://127.0.0.1:8080/ProjectName/JSPfileName) in the navigation bar.
+, Decompress the zip file and move the “*.jar” file (eg. mysql-connector-java-5.1.18-bin.jar) to the “\common\lib” subfolder under Tomcat installation directory (eg. C:\old\d\Tomcat 5.0\common\lib).
+ At first, you need to create a test table in your MySQL database, and insert several rows of data. Then, write a simple JSP program to retrieve the data from the test table and display.
+If you can see the data of test table from a web browser, all done. Congratulations! Now you can start your Servlet or JSP programming.
+

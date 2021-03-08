@@ -1,0 +1,55 @@
+ This formula was developed in 1997 as part of the Uniform Building Code (UBC) for calculation of wind load. The formula is F = A x P, were A is the projected area and P is the wind pressure; however, this formula has an alternate calculation for wind pressure.
+
+Wind pressure (PSF) is calculated as P= Ce x Cq x Qs x Iw, where Ce is the combined height, exposure and gust response factor, Cq is a pressure coefficient (it is equivalent to the drag coefficient in the previous two equations), Qs is wind stagnation pressure, and Iw is importance factor. All of these values can be calculated or obtained from the appropriate tables.
+ The projected area of your object is dependent upon its shape and size. If the wind is hitting a flat wall, the projected area is easier to calculate than if the object is rounded. Projected area will be an approximation of the area that the wind comes in contact with. There is no one formula for calculating projected area, but you can estimate it with some basic calculations. Units for area are ft2.
+
+ For a flat wall, use the formula Area = length x width, measuring the length and width of the wall where the wind is hitting it.
+
+ For a tube or column, you can also approximate the area using length and width. In this case, the width will be the diameter of the tube or column.
+ This value is chosen based on table 16-G of UBC and takes into account three terrain exposures with various heights and Ce values for each.
+
+ “Exposure B is terrain with buildings, trees or other surface irregularities covering at least 20 percent of the surrounding area and extending 1.6 kilometers or more from the site.”
+
+ “Exposure C has terrain that is flat and generally open, extending 0.8 km or more from the site.”
+
+ “Exposure D is the most severe, with basic wind speeds of 129 km/hr or greater and terrain that is flat and unobstructed facing large bodies of water.”
+
+
+, The pressure coefficient, Cq, is the same as the drag coefficient (Cd). Drag is the net force in the direction of flow due to pressure on the surface of an object.The drag coefficient represents the drag of an object through a fluid and is dependent upon the shape, size, and roughness of an object.
+
+ The standard drag coefficient for a long cylinder tube is 1.2 and for a short cylinder is .8 These apply to antenna tubes found on many buildings.
+
+ The standard coefficient for a flat plate such as the face of a building is 2.0 for a long flat plate or 1.4 for a shorter flat plate.
+
+ The difference between drag coefficients for flat and cylinder items is approximately 0.6.
+
+ The drag coefficient has no units.
+ Qs is the wind stagnation pressure and is equivalent to the wind pressure calculation from the previous equations: Qs = 0.00256 x V2, where V is the speed of the wind in miles per hour (mph).
+
+ For example, if the wind speed is 70 mph, the wind stagnation pressure is 0.00256 x 702 = 12.5 psf.
+
+ An alternative to this calculation is to use the standards set for various wind zones. For example, according to the Electronic Industries Association (EIA) most of the U.S. is in Zone A with 86.6 mph wind, but coastal areas might lie in Zone B (100 mph) or Zone C (111.8 mph).
+ Iw is the importance factor and can be determined using table 16-K of the UBC. It is a multiplier used in calculating loads that takes into account the use of the building. If a building contains hazardous materials, its importance factor will be higher than that of a traditional building.
+
+ Calculations for buildings with standard use have an importance factor of one.  
+
+
+, Using the values determined above, you can now calculate wind load with the equation F = A x P = A x Ce x Cq x Qs x Iw . Plug in all of your variables and do the math.
+
+ For example, let’s say you want to determine the wind load on an antenna that is 3 feet long with a diameter of 0.5 inches in a gust of 70mph winds. It is placed on top of a 48 ft high standard building in an area with an exposure B terrain.
+
+ Start by calculating the projected area. In this case, A = l x w = 3 ft x (0.5in x (1 ft/12 in)) = 0.125 ft2.
+
+ Determine Ce. Based on table 16-G, using the height of 48 ft and exposure B terrain, Ce is 0.84.
+
+ For a short cylinder the coefficient of drag or Cq is 0.8.
+
+ Calculate Qs: Qs = 0.00256 x V2 = 0.00256 x 702 = 12.5 psf.
+
+ Determine importance factor. This is a standard building therefore, Iw is 1.
+
+ Plugging into the equation: F = A x P = A x Ce x Cq x Qs x Iw = 0.125 x 0.84 x 0.8 x 12.5 x 1= 1.05 lbs. 
+
+ 1.05 lbs is the amount of wind load on the antenna.
+
+

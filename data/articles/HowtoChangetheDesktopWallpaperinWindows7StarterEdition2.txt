@@ -1,0 +1,18 @@
+ This program will let you edit entries in the Windows Registry. Click the Start menu and type “regedit” into the search bar. Select regedit from the list of programs that appear.
+
+
+Be very careful when working in regedit, as changing the wrong values can render your computer inoperable.
+Navigate to the correct folder. In the left frame, select the HKEY_CURRENT_USER tree. From the list of directories, select Control Panel. In the Control Panel tree, select Desktop.
+ After selecting Desktop, find the entry labeled Wallpaper and double-click it. In the field, enter the path for the new wallpaper image.
+
+
+Example: “C:\Users\John\Pictures\new_wallpaper.jpg”
+
+, Right-click on the Desktop folder. Click the Permissions option. Select Advanced and then the Owner tab. In the “Change owner to” box, highlight your name (there should only be your name and the administrator) and press OK.
+
+
+Click on Advanced again. Uncheck the box labeled “Include inheritable permissions from the object’s parent…” When you are prompted, click Remove.
+Click Add. Type “Everyone” into the field and press OK. Allow Read Control, and then click OK. Click OK in the next window.
+Highlight the new Everyone entry and check Allow for Read. Click OK.
+ Once your computer has restarted, you should see your new desktop wallpaper.
+

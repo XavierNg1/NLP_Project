@@ -1,0 +1,31 @@
+ This is a recursive void function. It requires three parameters:
+
+The array (an int array)
+The left bound (an int variable)
+The right bound (an int variable; the size of the array subtracted by 1);
+, These variables will be used to go through the list and to swap the values. Four variables are needed:
+
+An int i (the left bound)
+An int j (the right bound)
+An int temp (a temporary variable used for swapping without losing any data)
+An int pivot (the value of the middle point that splits the list to make it easier to sort)
+
+, A loop while i ≤ j is used to go through the indexes of the list. These values will be changed as the sublists that are being sorted change., Another while loop checking if the element is less than pivot iterates through the list. If it is less than pivot value, increase i by 1. This checks if the left side of the sublist needs to be sorted., Another while loop checking if the element is greater than pivot iterates through the list. If it is greater than pivot, decrease j by 1. This checks if the right side of the sublist needs to be sorted., Assigning one value to another without a temporary variable will result in a loss of data. To avoid this, this procedure is used:
+
+Assign the value of the list at index i to temp.
+Assign the value of the list at index jto the list at index i.
+Assign temp to the list at index j.
+Add 1 to i.
+Subtract 1 from j.
+ This is done by two recursive calls. The first function call sorts the left sublist created by changing the bounds. When the left side is completely sorted, the next recursive call sorts the right sublist by changing its bounds.
+
+If left < j, call the function with left and i as the bounds.
+If right < i, call the function with i and right as the bounds.
+ The array can be any size and can be initialized both explicitly and through other methods., The bounds of the loop go from 0 to the sizeof(list)/4. This piece of code gives the number of elements in list., The three needed parameters are:
+
+The list
+
+The left bound (0)
+The right bound (the size of the array subtracted by 1)
+
+, Again, the bounds of the loop go from 0 to the sizeof(list)/4. This is because the sorted list contains the same amount of elements as the unsorted list (no data was lost)., The number of items in list should be the same in both lists.

@@ -1,0 +1,15 @@
+ This is a different method that involves you changing the webpage's code directly so you'll first need to download the files associated with the URL(s) you'd like to redirect away from.
+
+
+Note that in most cases using a Meta command is not ideal for your redirect. Webpages with Meta code redirects are often filtered by search engines since it’s a known spam technique.
+ Use “Notepad” or a similar text editor to open the webpage's code file. Save a backup or duplicate copy before making your edits to the code as a safety measure.
+ The Meta code goes after the "head" tag (<head>) in the page's code. Type in :.<META http-equiv="refresh" content="0;URL=http://www.newsite.com/newurl.html">
+
+
+There is exactly one blank space between "refresh" and "content"
+"0" here stands for number of seconds before the redirect happens.
+"www.newsite.com/newurl.html" is the specific URL that the page is to be redirected to.
+
+It's also possible to create a custom error message or an announcement that your sites has moved, but this may draw unwanted attention to your redirect!, If you are redirecting traffic from an old URL, it's likely that other changes have also taken place to your URL's code (e.g. the removal of your site content). What's important is that the URL code now contains the meta redirect code.
+ Type the URL into your browser directly or use a search engine to find it. The page should now redirect immediately to the new URL you specified in the code without any messages or landing points in between.
+

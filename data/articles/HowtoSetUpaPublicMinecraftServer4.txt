@@ -1,0 +1,8 @@
+ If you are on a mac put the JAVA (the one that ends with .jar) file into a separate folder and open the file. Then open textedit and copy this code in:
+#!/bin/bash
+cd "$(dirname "$0")"
+exec java -Xmx1G -Xms1G -jar minecraft_server.jar.
+Then save as start.command. When the dialogue box pops up, say Keep RTF.
+ Rename it to start.command and click Use.command. Open the start.command file and your server will be running.
+ Wait until it is done. Then scroll to where it says Network server hosted on (or something like that) and type that address into your direct connect in your minecraft application. You should then be connected.
+

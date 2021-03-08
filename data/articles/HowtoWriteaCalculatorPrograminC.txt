@@ -1,0 +1,47 @@
+ To download the Xcode application navigate to the App Store by clicking the App Store icon in the dock. Use the search bar located in the top right corner of the screen to search for the Xcode application by typing in 'Xcode'. Click 'Install App' to begin the installation process.;
+, If not, locate the Xcode icon on your desktop and double click to open the application. Once open, the Xcode application will provide 3 options. The second option is perfect for creating simple applications such as a calculator.
+
+
+Get started with a playground
+Create a new Xcode project
+Check out an existing project
+
+, The command line interface will allow communication with the program. Developing a calculator requires a response to questions asked by the program and the command line interface allows visual prompts to be answered by commands.
+ The name of the application should reflect the function of the program. Choose a simple yet descriptive name to be able to easily identify the program later on. Include the company name or class under 'Organization Name' to classify what or for whom this application is for. The language used in this article will be C++ so make sure the language setting is set to C++.
+ To make things easier, create a folder with the name of the application and place it on the desktop for easy access. 
+
+, This file was automatically created by the application and is a fully functional C++ program. The code in this file will not perform the functions of a calculator so it must be removed. To remove the information highlight the text and click the delete button.
+ Using comments is essential in coding because it helps keep the program organized. To write a one-lined comment use 2 forward slashes followed by the comment.
+
+
+//This is a comment.
+Comments will appear in green and will not be taken into account when the program is compiled.
+Use comments to title the program or clear up any confusing steps
+
+,
+
+
+include <iostream>  //This is a C++ standard library for input and output streams. This allows communication between the user and the program. With this library, you will be able to ask the user which numbers they would like calculated and what functions they want performed.
+using namespace std; //This ensures the use of the standard libraries. This way you would not have to refer to the standard library (std) each time you wanted to call a function from that library.
+ In this case, you would anticipate that the user will be inputting numbers to be calculated. Think about the simplicity or complexity of the program.
+
+
+Would you like to limit the calculations to only 2 numbers?
+Would you like the user to input how many numbers they would like to calculate?
+In this case, using the first option to create a simple calculator will suffice.
+ The program has a main function where all the code will be placed. These variables should go in the beginning of the main(); function in order to be used in later code. This calculator will only be receiving to numbers to calculate so there are already 2 variable to account for. Variables come in different types.
+
+
+int //This is an integer variable such as the number 2. The number 2.5 would not be considered an int and the program would ignore the .5 after the 2 if this number was written as an int.
+double //This is a decimal number such as 2.55
+char // This is a single character such as 'A' or 'a'. **Note: these are 2 different characters
+boolean //This returns 1 or 0 , Since this is a simple calculator, provide the 4 basic functions (addition, subtraction, multiplication, division). Have the user enter a number or character to indicate which function they would like. **This would be another one of the variables to declare.
+
+
+Output information using the line cout<<"info here";
+Input information using the line cin>>variable name here;
+cout<<"Insert 1 for Addition";
+
+, To figure out which function should be performed, use an IF statement to filter through the options. IF statements will only run if the condition that follows it is fulfilled. So if the user is given 4 options (to input 1,2,3,or 4) there should be 4 IF statements to handle each option.
+, As you become more advanced there are different ways to create a more complex calculator.
+

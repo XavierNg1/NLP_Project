@@ -1,0 +1,10 @@
+ There are several different ways to copy files using the Windows Command Prompt. All the commands can copy files from one place to another, but there are several cases where you may want to choose one command over the others.
+
+
+
+COPY - This is the basic copy function. It will allow you to quickly copy files from one location to another. You can also use this command to concatenate files.
+
+XCOPY - The xcopy command allows you to copy files and directory trees. This makes it much more suitable for copying folders. xcopy also has many modifiers which gives advanced users more control over the copying process. xcopy has been deprecated in favor of robocopy, but still works.
+
+ROBOCOPY - This is the newest copy command available in the Windows Command Prompt. It requires Windows Vista or later. Windows XP users can install the Windows 2003 Server Resource Kit Tools pack to use it. robocopy is designed to mirror files and directories while maintaining permissions and other attributes. It also allows for better logging and more reliable copying of large amounts of data.
+

@@ -1,0 +1,148 @@
+ Select your image you want to make art from trigonometry by -- here, for example, the objective is a bowl of cherries. Decide on the basic curve to employ. Here, for example, the curve selected was the sine wave curve on a sphere because it can come to inner endpoints like a cherry does, also because of shading considerations it's better than the spherical helix and finally because of the way spheres are joined, the stems are not spirallic as in the spherical helix. The basic plan is to make random arrangements of cherries in a bowl that may fluctuate at the user's discretion, so that the user may choose the arrangement they find most pleasing. The selection here represented had stems that were too long, and there has been a significant Revision from the chart data via inspection of where the 1's occur in column D, especially concerning "twinned cherries" -- look for MODIFIED or NEW if you are revising your work to date please. This workbook is very time-intensive and a lot of effort is being made to obtain the best results possible.
+ Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+In Edit, set all the first options to checked except Automatically Convert Date System. Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show gridlines and set all boxes below that to auto or checked.
+In Chart, allow Show chart names and set Data markers on hover and leave the rest unchecked for now.
+In Calculation, Make sure Manually is checked and Calculate before save is not checked. Set max change to .001 without commas as goal-seeking is not done a lot. Check Save external link values and Use 1904 system
+
+In Error checking, check all the options.
+In Save, select Save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ Edit Go To cell range A1:R17292 and Format Cells Number Number Decimal Places 4, Font Size 9 to 12. Fill (from the color wheel) range A1:R17288 a nice fuchsia and make the Border Dark Blue bold Outline., Enter to cell A1, aligned left, Sinewave Spheres as Cherries in a Bowl and make Font red and Fancy, such as Apple Chancery, perhaps, size 14.
+G1: Enter AYE; G2: Enter BEE; G3: Enter CEE. Format Font size 14 bold.
+H1: Enter 20; H2: Enter .50; H3: Enter .50 and Format Fill yellow (to indicate these are input cells). Select cell range G1:H3 and Insert Name Create Names in Left Column, OK. Format G1:H3 Border Navy Blue bold Outline with Tops and Bottoms of cells bordered, but not the center divider. Copy cell range G1:H3 to I1, K1, M1, O1 and Q1. Select G1:R3 and Format Alignment Horizontal Center and Format Cell Number Number Decimal Places 2.
+I1: Enter Stretch_x1; I2: Enter Stretch_y1; I3: Enter SHRINKER.
+J1: Enter w/o quotes "=(8.5*(SHRINKER*10))"; J2: Enter w/o quotes "=(8.5*(SHRINKER*10))"; J3: Enter w/o quotes "=0.1*12/SPHERES". Select Cell Range J1:J3 and Format Fill white (to indicate these are non-input formulaic variables). Select cell range I1:J3 and Insert Name Create Names in Left Column, OK.
+K1: Enter ROWS; K2: Enter MAGIC; K3: Enter SPHERES and Format Cell font 16 bold format fill sky blue.
+L1: Enter"=17285-5"; L2: Enter "=ROUND(ROWS/SPHERES,0)"; L3: Enter 18 for now and format fill L3 yellow. Although the number of "cherries" can go higher, they shrink and their stems grow way too long as their numeric volume increases, so 20 is about the upper limit. Format Fill L1:L2 white. Select cell range K1:L3 and Insert Name Create Names in Left Column, OK. 
+M1: Enter AYE2_ and bold the font; M2: Enter Magic2; M3: Enter SWS2_ (for SineWave Spheres 2) and make the font bold size 16, and format fill sky blue.
+MODIFIED: N1: Enter 20 and format fill yellow; N2: Enter w/o quotes "=ROUND(ROWS/SWS2_,0)" and format fill white; N3: enter 15 for now and Format Fill yellow. Select cell range M1:N3 and Insert Names Create Names in Left Column, OK.
+O1: Enter Stretch_x2; O2: Enter Stretch_y2; O3: Enter Shrinker2.
+P1: Enter w/o quotes "=Stretch_y2"; P2: Enter w/o quotes "=(8.5*(Shrinker2*10))"; P3: Enter w/o quotes "=0.1*12/SWS2_". Select cell range P1:P3 and Format Fill white. Select cell range O1:P3 and Insert Name Create Names in Left Column, OK.
+Q1: Enter Factor and make bold; Q2: Enter FactorUpY; Q3: Enter FactorUpX
+R1: Enter w/o quotes "=3/15*SWS2_"; R2: Enter w/o quotes "=SWS2_/15*0.9"; R3: Enter w/o quotes "=IF(SWS2_/15>=1.5,SWS2_/15*2/3,SWS2_/15)". Select cell range R1:R3 and Format Fill white. Select cell range Q1:R3 and Insert Name Create Names in Left Column, OK.
+ D, indicate where new sphere or cherry starts and old ones end, so they indicate where the connecting lines (stems) are over in the charting columns. These connecting lines may be verified by hovering over them on the chart with the cursor until the datapoint data appears. It's a good opportunity for a macro to be written to handle deleting the connector cells).
+E5: t2: 0 to nπ; F5: z2_
+G5: t: 0 to nπ; H5: z1_
+I5: Adj_x1; J5: Adj_y1
+K4 and L4: Charting; K5: x: No z; L5: y: With z and select K4:L5 and do Format Font bold italic.
+M5: Randy_x; N5: Randy_y
+O5: Adj_x2; P5: Adj_y2
+Q4 and R4: Charting; Q5: x2: No z; LR5: y2: With z and select Q4:R5 and do Format Font bold italic.
+NEW: S5 and T5: IF D8, IF D7
+NEW: U5: AvgNNx and V5: AvgNNy
+NEW: W5: MAX. Align S5:W5 horizontally centered.
+
+Edit Go To B6:B17285 and enter to B6 "=17*SIN((ROW()-6)*0.25/12*PI()/180)+17" w/o quotes and Edit Fill Down.
+Select cell C6 and enter 1. Edit Go To C7:C17285 and enter to C7 "=IF((ROW()-7)/MAGIC=INT((ROW()-7)/MAGIC),1,IF((ROW()-7)=0,1,0))" w/o quotes and Edit Fill Down.
+Select cell D6 and enter 1. Edit Go To D7:D17285 and enter to D7 "=IF((ROW()-7)/Magic2=INT((ROW()-7)/Magic2),1,IF((ROW()-7)=0,1,0))" w/o quotes and Edit Fill Down.
+Go to E6 and enter 0. Go to E7 and enter w/o quotes "=(2*PI()/Magic2)". Edit Go To E8:E17285 and enter to E8 "=IF(D8=1,2*PI(),2*PI()/Magic2+E7)" w/o quotes and Edit Fill Down.
+Edit Go To F6:F17285 and enter to F6 "=CEE*COS(AYE2_*E6)" w/o quotes and Edit Fill Down. Insert Name Define Name z2_ to cell range $F$6:$F$17285.
+Go to G6 and enter 0. Go to G7 and enter w/o quotes "=(2*PI()/MAGIC)". Edit Go To G8:G17285 and enter to G8 "=IF(C8=1,2*PI(),2*PI()/MAGIC+G7)" w/o quotes and Edit Fill Down.
+Edit Go To H6:H17285 and enter to H6 "=CEE*COS(AYE*G6)" w/o quotes and Edit Fill Down. Insert Name Define Name z1_ to cell range $H$6:$H$17285.
+Edit Go To I6:I17285 and enter to I6 "=IF(C6=1,A6,I5)" w/o quotes and Edit Fill Down. Insert Name Define Name Adj_x1 to cell range $I$6:$I$17285.
+Edit Go To J6:J17285 and enter to J6 "=IF(C6=1,B6,J5)" w/o quotes and Edit Fill Down. Insert Name Define Name Adj_y1 to cell range $J$6:$J$17285.
+Edit Go To K6:K17285 and enter to K6 "=SHRINKER^2*(Stretch_x1*(((BEE^2-CEE^2*COS(AYE*G6)*COS(AYE*G6))^0.5*COS(G6)))+Adj_x1)" w/o quotes and Edit Fill Down.
+Edit Go To L6:L17285 and enter to L6 "=SHRINKER^2*(Stretch_y1*(((BEE^2-CEE^2*COS(AYE*G6)*COS(AYE*G6))^0.5 *SIN(G6))+z1_)+Adj_y1)" w/o quotes and Edit Fill Down.
+Edit Go To M6:M17285 and enter to M6 "=RANDBETWEEN(-4,4)/1" w/o quotes and Edit Fill Down. Insert Name Define Name Randy_x to cell range $M$6:$M$17285.
+Edit Go To N6:N17285 and enter to N6 "=RANDBETWEEN(0,25)/10" w/o quotes and Edit Fill Down. Insert Name Define Name Randy_y to cell range $N$6:$N$17285.
+Edit Go To O6:O17285 and enter to O6 "=IF(D6=1,A6*Randy_x/10*Factor,O5)" w/o quotes and Edit Fill Down. Insert Name Define Name Adj_x2 to cell range $O$6:$O$17285.
+Edit Go To P6:P17285 and enter to P6 "=IF(D6=1,B6*Randy_y/10*Factor*2,P5)" w/o quotes and Edit Fill Down. Insert Name Define Name Adj_y2 to cell range $P$6:$P$17285.
+MODIFIED: Delete entries in cell range Q6:R7. Edit Go To Q8:Q17285 and enter to Q8 "=IF(D8=1,VLOOKUP(W8,D_Looker,2),IF(S8="B",Q7,(Shrinker2^2*(Stretch_x2*(((BEE^2-CEE^2*COS(AYE2_*E8)*COS(AYE2_*E8))^0.5 *COS(E8)))+Adj_x2)*FactorUpX)))" w/o quotes and Edit Fill Down.
+MODIFIED: Edit Go To R8:R17285 and enter to R8 "=IF(D8=1,VLOOKUP(W8,D_Looker,3),IF(T8="B",R7,(Shrinker2^2*(Stretch_y2*(((BEE^2-CEE^2*COS(AYE2_*E8)*COS(AYE2_*E8))^0.5 *SIN(E8))+z2_)+Adj_y2)*FactorUpY)))" w/o quotes and Edit Fill Down.
+NEW: Edit Go To S8:S17285 and enter to S8 w/o external quotes the formula "=IF(D8=1,(Shrinker2^2*(Stretch_x2*(((BEE^2-CEE^2*COS(AYE2_*E8)*COS(AYE2_*E8))^0.5*COS(E8)))+Adj_x2) *FactorUpX),IF(D7=1,"B",""))"
+NEW: Edit Go To T8:T17285 and enter to T8 w/o external quotes the formula "=IF(D8=1,(Shrinker2^2*(Stretch_y2*(((BEE^2-CEE^2*COS(AYE2_*E8)*COS(AYE2_*E8))^0.5*SIN(E8))+z2_)+Adj_y2)* FactorUpY),IF(D7=1,"B",""))"
+NEW: Edit Go To U2886 and enter and center Avg01x and go to V2886 and enter and center Avg01y. Go to U2887 and enter w/o quotes "=AVERAGE(S8:S2887)" and go to V2887 and enter w/o quotes "=AVERAGE(T8:T2887)". Select cell range U2886:V2887 and Insert Name Create Names in Top Row, OK.
+NEW: Edit Go To U5766 and enter and center Avg02x and go to V5766 and enter and center Avg02y. Go to U5767 and enter w/o quotes "=AVERAGE(S2888:S5767)" and go to V5767 and enter w/o quotes "=AVERAGE(T2888:T5767)". Select cell range U5766:V5767 and Insert Name Create Names in Top Row, OK.
+NEW: Edit Go To U8646 and enter and center Avg03x and go to V8646 and enter and center Avg03y. Go to U8647 and enter w/o quotes "=AVERAGE(S5768:S8647)" and go to V8647 and enter w/o quotes "=AVERAGE(T5768:T8647)". Select cell range U8646:V8647 and Insert Name Create Names in Top Row, OK.
+NEW: Edit Go To U11526 and enter and center Avg04x and go to V11526 and enter and center Avg04y. Go to U11527 and enter w/o quotes "=AVERAGE(S8648:S11527)" and go to V11527 and enter w/o quotes "=AVERAGE(T8648:T11527)". Select cell range U11526:V11527 and Insert Name Create Names in Top Row, OK.
+NEW: Edit Go To U14406 and enter and center Avg05x and go to V14406 and enter and center Avg05y. Go to U14407 and enter w/o quotes "=AVERAGE(S11528:S14407)" and go to V14407 and enter w/o quotes "=AVERAGE(T11528:T14407)". Select cell range U14406:V14407 and Insert Name Create Names in Top Row, OK.
+NEW: Edit Go To U16326 and enter and center Avg06x and go to V16326 and enter and center Avg06y. Go to U16327 and enter w/o quotes "=AVERAGE(S14408:S16327)" and go to V16327 and enter w/o quotes "=AVERAGE(T14408:T16327)". Select cell range U16326:V16327 and Insert Name Create Names in Top Row, OK.
+NEW: Edit Go To U17284 and enter and center Avg07x and go to V17284 and enter and center Avg07y. Go to U17285 and enter w/o quotes "=AVERAGE(S16328:S17285)" and go to V17285 and enter w/o quotes "=AVERAGE(T16328:T17285)". Select cell range U17284:V17285 and Insert Name Create Names in Top Row, OK.
+NEW: Go to cell D17285 and directly overwrite the formula with a 1 and format fill yellow with font red and bold, size 14.
+NEW: Unfreeze panes and refreeze at A20.
+NEW: Go to W7 and enter w/o quotes the formula "=IF(D7=1,1,0)". Edit Go To W7:W17285 and enter to W7 w/o quotes the formula "=IF(D8=1,MAX($W$6:W7)+1,W7)" and Edit Fill Down.
+NEW: Edit Go To cell range X1 to X19 and enter to X1 the formula w/o quotes "=(Magic2*ROW())+7" and Edit Fill Down.
+ Edit the formulas in Z4 and AA4 to read "=Avg02x" and "=Avg02y" and copy these to Z5:Z7. Edit the formulas in Z7 and AA7 to read "=Avg03x" and "=Avg03y" respectively and copy these to Z8:AA10. Edit the formulas in Z10 and AA10 to read "=Avg04x" and "=Avg04y" and copy these and paste them to Z11:AA13. Edit the formulas in Z13 and AA13 to read "=Avg05x" and "=Avg05y" respectively and copy these and paste them to Z14:AA16. Edit the formulas in Z16 and AA16 to read "=Avg06x" and "Avg06y" and copy these and paste them to Z17:AA19. Edit the formulas in Z19 and AA19 to read "=Avg07x" and =Avg07y", respectively.
+Select Y1:AA19 and Insert Name Define Name D_Looker to cell range $Y$1:$AA$19.
+
+
+Command+Shift Select K6:L17288 and Q6:R17288 and Format Fill sky blue for the charting columns.
+Select K17286 and enter w/o quotes "=K6" to make the complete connecting line. Format fill sea foam green with font red, bold black border outline, aligned center. Copy this and paste to L17286 and then also to Q17286:R17286.  Do Paste Special Format of the current cell to cells M5:N5, G6:G7, E6:E7, and C6:D6.
+Separate each two adjacent columns of data from the next two by a bold border right outline. Separate all column Headings into their own bold outline boxes. Select cell range A17285:R17285, copy it and paste it to A17287 as backup formulas. There will be temporary errors -- those are acceptable. They may have to do with column definitions.
+Select cell K17291 and enter "=MIN(K6:K17285)"; select cell K17292 and enter "=MAX(K6:K17285)". Copy K17291:K17292 to L17291 and Q17291:R17291 as an aid to charting.
+ Under Chart Wizard, a new Chart sheet will be created but per the Ribbon, a graph will land atop the data of the Data01 worksheet. Copy (or Cut) this graph and paste it to the top left corner of the Chart worksheet. Hover over the lower right corner until the cursor becomes a double-headed arrow and then select the corner and pull the graph into an approximate square. These steps may take some minutes, depending upon your processor. Wait times of 4 minutes were common for such job as a recalculation of new random arrangement, copy picture, etc. Again, it is much faster to have a mini-chart of columns Q and R with red line, weight 1, on the DATA01 worksheet than to wait the 5 minutes for the actual chart to generate.
+Click in the Plot Area to add series 2. Do menu item Chart Add Data and in response to the range query, activate the Data01 worksheet and Edit Go To cell range Q6:R17285, then click OK. This often comes out wrong and has to be corrected in the formula bar. The two series you want are =SERIES(,'DATA 01'!$K$6:$K$17286,'DATA 01'!$L$6:$L$17286,1) and =SERIES(,'DATA 01'!$Q$6:$Q$17286,'DATA 01'!$R$6:$R$17286,2), in that order (per the last number in the last chart parameter of the foregoing chart function statements). The standard preference is for no grid lines or axes or legend, all of which can be set to none via Chart Layout.
+Under Chart Layout, per clicking in the Plot Area, one reaches at the far left Current Selection -- Plot Area -- and Format Selection. Under this, the Fill has been set to the Texture Oak, Line has been set to None and no other effects were added.
+Next, the Current Selection is set to Series 1, the bowl, and Format Selection shows that Shadow has been set to Outer, 270 degrees, black, size 100%, blur 4 pt, distance 21 pt and transparency 2%. No glow or soft edges were used. Line = 180 pt weight, style solid dashed,  and the gradient picture is presented here (with the final right hand white coming in at 68% and the maroon at 66%):
+
+
+
+
+
+
+
+
+
+
+Next, the Current Selection is set to Series 2, the cherries, and Format Selection shows that Shadow was set but never turned out, even though none of the cherry's colors are transparent, so for whatever reason. Here is the picture of the Line Gradient for the Cherries, plus some of the colors:
+
+
+
+
+
+Starting at 4% White, we then go to Pink/Fuchsia, and so on:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Opening graphic - 15 cherries, paired
+
+
+Save the Data chit section from A1:R15 as Formulas, then below that as Paste Special Values to the Saves Worksheet, and under these two sets of data, save a copied picture of the chart by using the shift key + copy and the shift key + paste.
+Save the workbook.
+
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

@@ -1,0 +1,171 @@
+ Before you start coding, it will help to have a rough idea of what you want your game to do. Flash is best suited for simple games, so focus on creating a game that has only a few mechanics for the player to worry about. Try to have a basic genre and some mechanics in mind before you start prototyping. See this guide for more details on the planning phases of video game development. Common Flash games include:
+
+
+Endless runners: These games automatically move the character, and the player is responsible for jumping over obstacles or otherwise interacting with the game. The player typically only has one or two options when it comes to controls.
+Brawlers: These are typically sidescrolling and task the player with defeating enemies to progress. The player character often has several moves that they can perform to defeat enemies.
+Puzzles: These games ask the player to solve puzzles to beat each level. These can range from Match-3 style such as Bejeweled to more complex puzzle solving typically found in Adventure games.
+RPGs: These games focus on character development and progression, and have the player moving through multiple environments with a variety of enemy types. Combat mechanics vary wildly from RPG to RPG, but many are turn-based. RPGs can be significantly more difficult to code than a simple action game.;
+, Flash is best-suited for 2D games. It is possible to create 3D games in Flash, but it is very advanced and requires significant knowledge of the language. Almost every successful Flash game has been 2D.
+
+
+Flash games are also best suited for quick sessions. This is because most Flash game players play when they have a little free time, such as on breaks, meaning gaming sessions are typically 15 minutes or less.
+ Flash games are programmed in AS3, and you will need to have some basic understanding of how it works in order to successfully create a game. You can create a simple game with a rudimentary understanding of how to code in AS3.
+
+
+There are several books about ActionScript available on Amazon and other stores, along with a large number of tutorials and examples online.
+ This program costs money, but is the best way to create Flash programs quickly. There are other options available, including open-source options, but they often lack compatibility or take longer to accomplish the same tasks.
+
+
+Flash Professional is the only program you will need to start creating games.
+ When you are creating a basic game, there are several different code structures that you will be using. There are three main parts of any AS3 code:
+
+
+Variables - This is how your data is stored. Data can be numbers, words (strings), objects, and more. Variables are defined by the code var and must be one word.
+
+
+
+
+var playerHealth:Number = 100;
+ 
+// "var" designates that you are defining a variable.
+// "playerHealth" is the variable name.
+// "Number" is the type of data.
+// "100" is the value assigned to the variable.
+// All actionscript lines end with ";"
+
+
+
+
+
+Event Handlers - Event handlers look for specific things to occur, and then tells the rest of the program. This is essential for player input and repeating code. Event handlers typically call upon functions.
+
+
+
+
+addEventListener(MouseEvent.CLICK, swingSword);
+ 
+// "addEventListener()" defines the event handler.
+// "MouseEvent" is the category of input that is being listened for.
+// ".CLICK" is the specific event in the MouseEvent category.
+// "swingSword" is the function that is called when the event occurs.
+
+
+
+
+
+Function - Sections of code assigned to a keyword that can be called upon later. Functions handle the bulk of your game's programming, and complex games can have hundreds of functions while simpler games may only have a few. They can be in any order since they only work when they are called upon.
+
+
+
+
+function swingSword (e:MouseEvent):void;
+{
+        //Your code goes here
+}
+ 
+// "function" is the keyword that appears at the start of every function.
+// "swingSword" is the name of the function.
+// "e:MouseEvent" is an added parameter, showing that the function 
+// is called from the event listener.
+// ":void" is the value that is returned by the function. If no value
+// is returned, use :void.
+ ActionScript is used to affect objects in Flash. In order to make a game, you will need to create objects that the player will interact with. Depending on the guides you are reading, objects may be referred to as sprites, actors, or movie clips. For this simple game, you will be creating a rectangle.
+
+
+Open Flash Professional if you haven't already. Create a new ActionScript 3 project.
+Click the Rectangle drawing tool from the Tools panel. This panel may be in different locations depending on the configuration of Flash Professional. Draw a rectangle in your Scene window.
+Select the rectangle using the Selection tool.
+ With your newly-created rectangle selected, open the Modify menu and select "Convert to Symbol". You can also press F8 as a shortcut. In the "Convert to Symbol" window, give the object an easily recognizable name, such as "enemy".
+
+
+Find the Properties window. At the top of the window, there will be a blank text field labeled "Instance name" when you hover over it. Name it the same as you did when you converted it to a symbol ("enemy"). This creates a unique name that can be interacted with through AS3 code.
+Each "instance" is a separate object that can be affected by code. You can copy the already created instance multiple times by clicking the Library tab and dragging the instance onto the scene. Each time you add one, the name will be changed to designate that it's a separate object ("enemy", "enemy1", "enemy2", etc.).
+When you refer to the objects in the code, you simply need to use the instance name, in this case "enemy".
+ Once you have an instance made, you can adjust the properties through AS3. This can let you move the object around the screen, resize it, and so on. You can adjust properties by typing the instance, followed by a period ".", followed by the property, followed by the value:
+
+
+
+enemy.x = 150; This affects the position of the enemy object on the X-axis.
+
+enemy.y = 150; This affects the position of the enemy object on the Y-axis. The Y-axis is calculated from the top of the scene.
+
+enemy.rotation = 45; Rotates the enemy object 45° clockwise.
+
+enemy.scaleX = 3; Stretches the width of the enemy object by a factor of 3. A (-) number will flip the object.
+
+enemy.scaleY = 0.5; Squishes the object to half its height.
+ This command will return the current values for specific objects, and is useful for determining if everything is running as it should. You may not want to include the Trace command in your final code, but it is useful for debugging.
+ Now that you have a basic understanding of the core functions, you can create a game where the enemy changes size every time you click on it, until it runs out of health.var enemyHP:Number = 100; 
+// sets the enemy's HP (health) to 100 at the start.
+var playerAttack:Number = 10; 
+// sets the players attack power when they click.
+ 
+enemy.addEventListener(MouseEvent.CLICK, attackEnemy); 
+// By adding this function directly to the enemy object, 
+// the function only happens when the object itself is 
+// clicked, as opposed to clicking anywhere on the screen.
+ 
+setEnemyLocation(); 
+// This calls the following function to place the enemy
+// on the screen. This occurs when the game starts.
+ 
+function setEnemyLocation ():void
+{
+ enemy.x = 200; 
+ // moves the enemy to 200 pixels from the left of the screen
+ enemy.y = 150; 
+ // moves the enemy down 150 pixels from the top of the screen
+ enemy.rotation = 45; 
+ // rotates the enemy 45 degrees clockwise
+ trace("enemy's x-value is", enemy.x, "and enemy's y-value is", enemy.y); 
+ // Displays the current position of the enemy for debugging
+}
+ 
+function attackEnemy (e:MouseEvent):void 
+// This creates the attack function for when the enemy is clicked
+{
+ enemyHP = enemyHP - playerAttack; 
+ // Subtracts the attack value from the HP value, 
+ // resulting in the new HP value.
+ enemy.scaleX = enemyHP / 100; 
+ // Changes the width based on the new HP value.
+ // It is divided by 100 to turn it into a decimal.
+ enemy.scaleY = enemyHP / 100; 
+ // Changes the height based on the new HP value
+ 
+ trace("The enemy has", enemyHP, "HP left"); 
+ //Output how much HP the enemy has left
+}
+
+
+
+
+, Once you've created the code, you can test your new game. Click the Control menu and select Test Movie. Your game will begin, and you can click the enemy object to change its size. Your Trace outputs will be displayed in the Output window.
+ ActionScript is based off Java, and uses a very similar package system. Packages allow you to store variables, constants, functions, and other information in separate files, and then import these files into your program. These are especially useful if you want to use a package that someone else has developed that will make your game easier to create.
+
+
+See this guide for more details on how packages work in Java.
+ If you're creating a game with multiple images and sound clips, you'll want to create a folder structure for your game. This will allow you to easily store your different elements, as well as store different packages to call on.
+
+
+Create a base folder for your project. In the base folder, you should have an "img" folder for all of your art assets, a "snd" folder for all of your sound assets, and a "src" folder for all of your game packages and code.
+Create a "Game" folder in the "src" folder to store your Constants file.
+This particular structure isn't necessary, but is an easy way to organize your work and materials, especially for larger projects. For the simple game explained above, you will not need to create any directories.
+ A game without sound or music will quickly become boring to the player. You can add sound to objects to Flash using the Layers tool. See this guide for more details.
+ If your game has a lot of values that will remain the same throughout the game, you can create a Constants file to store all of them in one place so that you can easily call on them. Constants can include values such as gravity, player speed, and any other value that you may need to call on repeatedly.If you create a Constants file, it will need to be placed in a folder in your project and then imported as a package. For example, let's say you create a Constants.as file and place it in your Game directory. To import it, you would use the following code:
+
+
+
+
+package
+{
+        import Game.*;
+}
+
+
+
+
+
+
+, While many developers won't reveal the code for their games, there are a variety of project tutorials and other open projects that will allow you to see the code and how it interacts with game objects. This is a great way to learn some advanced techniques that can help your game stand out.
+

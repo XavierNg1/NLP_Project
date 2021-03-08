@@ -1,0 +1,8 @@
+ “Go to Applications > Utilities > Terminal” to open. The terminal allows you to execute commands to the operating system with code. The “sudo” tag is used to grant root access. After entering a command with it, you may be prompted for your account’s administrator password to proceed with the command.
+ Enter “sudo chflags nouchg ”. This should force toggle the files locked status.
+
+
+For example: “sudo chflags nouchg ~/Applications/Microsoft Word/test.doc”.
+You can also drag and drop the target file in the terminal window to automatically enter the file path.
+ If all else fails, another terminal command can force file deletion. Enter “sudo rm -r ”. In most cases, this command will delete the file once granted administrator permission with the password.
+

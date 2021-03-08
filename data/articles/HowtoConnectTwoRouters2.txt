@@ -1,0 +1,20 @@
+ In order to wirelessly bridge two routers, your secondary router must have "bridge" or "repeater" mode capabilities. This is not common for most retail routers. If your router does not support bridge mode, you may be able to flash DD-WRT onto it, a custom open-source firmware that enables bridge mode.Your router's documentation will let you know if it has bridge mode. You can also look your router's model up online.
+Not all routers support DD-WRT. Check the DD-WRT website to see a list of compatible routers.
+ During the setup process, it will be easier if you have quick access to both routers, as well as the modem. You can place the routers in their permanent locations when you are done configuring them.
+ Plug the primary router into the modem and then connect your computer to it via Ethernet. Your primary router will be configured as you normally would for a wireless network. Make note of the router's IP address, DHCP range, and subnet mask.
+
+
+Your primary router should be the router with the strongest antennas. This will allow you to set up the secondary router further away.
+Disconnect your router after you have finished configuring it for a wireless network.
+ Connect the secondary router to your computer with an Ethernet cable and open the configuration page. You do not need to connect it to the modem. Find the "Internet" or "Wireless" setup page once you have logged in.
+ Select "Bridge Mode" or "Repeater Mode" from the "Network Mode", "Wireless Mode" or "Connection Type" menu on the Wireless page. If you are using DD-WRT, select "Repeater Bridge".If there is no menu to select these options, then your router likely does not support bridging.
+ Enter in an IP address within the primary router's range. For example, if the primary router's IP address is 192.168.1.1, enter 192.168.1.50 or something else inside the DHCP range of the primary router.
+
+
+Ensure that the subnet mask is identical to the primary router.
+ This will help you know which router on the network you are connecting to. For example, you might have the primary labeled "Den" and the secondary labeled "LivingRoom".
+
+
+Ensure that the security is the same type (WEP, WPA, WPA2) and the same password.
+ Once you have the secondary router configured, you can place it where you want it to repeat the signal. In order to maintain a good connection, it should be placed in a location where it gets at least 50% signal strength from the primary router.
+

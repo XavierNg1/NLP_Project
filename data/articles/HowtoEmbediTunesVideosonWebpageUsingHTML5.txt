@@ -1,0 +1,8 @@
+ Only the latest versions of most browsers support native video playback using HTML5′s tag.;
+, HTML5 does not, and evidently never will, include Digital Rights Management (DRM). This means content protected by copyright will never be delivered through HTML5., The video content will need to be encoded in the video formats which can work with the HTML5 spec. iTunes M4V videos cannot directly use HTML to embed on webpage. You have to use third party software to remove DRM and convert M4V to MP4 which can work with HTML5.
+
+Click to know the detail on how to remove DRM protection from iTunes videos and convert M4V to MP4.
+ Find the local file of the webpage on which you want to embed the well converted videos with the text editor, such as Notepad., Use the <video> tag to specify the dimensions of our video, and to denote that we want to use the browser’s default controls. Then, within the video tag, we’ve added two "source" elements which link to our video files.
+
+The “type” attribute of the "source" tag helps the browser understand which file it should load. It’s a bit of an ugly chunk of code that needs to specify the container format, the video codec and the audio codec.
+ Click to save the file, and upload the file to the internet. Now your iTunes videos are embedded on your webpage.

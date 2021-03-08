@@ -1,0 +1,33 @@
+ Popular compilers for C++ include x-code for Mac’s and Visual Studios for Windows.  Code can also be writing one in text editors like notepad, Text Wrangler, etc.;
+, Add any header file to call the function in a main function or in other functions.
+
+
+<iostream> is a standard library for you cin and cout.
+"using namespace std" is a standard namespace
+
+, Determine what the problem is asking for. Think about what are the best methods. What steps are necessary to solve the problem? These are questions that should be asked and answered before coding. Having a plan will help guide you with your algorithmic design. These steps are the starting points for how to build functions.
+ There is return type that will return some value and void which will not.#*Some of the basic return type functions include int, double, char, and bool.
+
+
+Say your problem needs you to print out some data, then a void function would be the best choice, but if you need to return the sum of two number a int or double function would fit better.
+ Naming the function is important for you and for anyone else that may be looking at the code. Name in a way that tells people what this function does.
+
+
+Again, say the functions prints out data, an appropriate name would be print or even more specific PrintsToDisplay, which would let someone know that this data is being printed to a display.
+ The formal parameter(s) is define in the function header as oppose to the actual parameter which is used to call the function. The formal parameter will list the data type and the variable name. Decide if the function takes any parameters; if they’re not needed don’t add them. Decided what data types should be used in the parameters and how many parameters is needed.
+ Keep in mind that they’re two types of formal parameter: value parameters and reference. Value parameters get a copy of the value and can do anything it wants within the functions without affecting the original value passed from the actual parameter. Reference parameters are opposite, it gets access to the actual parameter memory address. With a reference parameters, any changes to the original value while in the function will be reflected outside of the function. In order to pass by reference, add a '&' at the end of the data type in the formal parameter. By default, functions are passed by value.
+ The function heading is the combination of the function type, name, and parameter, all together in a specific format for C++.
+ The function body will come after the function header and will be between two brackets '{}'. This is where the algorithm, the methods needs to solve the problem.
+
+
+The biggest thing for a return value functions is it has to return value, without that the function will not compile. At the end there needs to be a returned express. A return can only return one value.
+ The void as previous noted does not return anything; in the function body between the two brackets '{}', all that needs to be included is the algorithmic steps needed to solve the problem.
+ In order to call the functions within the main functions either the functions must be defined and place before the main function or created a functions prototype. This is very similar to the function heading. The key difference is it ends with a semicolon. Functions Prototype includes:
+
+
+Function return type or void
+Function Name
+Function Parameters
+
+, A function call is how the function is accessed through the main or other functions. The function call consists of the function name and actual parameters.
+

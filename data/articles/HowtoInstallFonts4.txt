@@ -1,0 +1,7 @@
+ The usual file extensions you will see be more or less the same for Windows if you're installing TrueType (.ttf) or OpenType (.otf) fonts. Extract the fonts if they're zipped in an archive file.
+ Use your file manager (typically Nautilus) with elevated privileges to do so, otherwise you won't be able to copy them there because of file/directory permissions.
+
+
+Alternatively, if you're handy with the Terminal, you can use sudo cp <path to fonts> /usr/share/fonts/truetype (where <path to fonts> is the full path of the font), or if you're copying all the fonts in a directory cd to that directory, then sudo cp * /usr/share/fonts/truetype
+
+

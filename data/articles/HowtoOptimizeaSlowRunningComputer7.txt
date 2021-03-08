@@ -1,0 +1,16 @@
+ In the Start Menu, click "All Programs," then "Accessories," and then go to "System Tools." Locate "Disk Defragmenter." When files are deleted from your disk, they can become fragmented. This can lead to slower performance on your device. By collecting and organizing these fragments you can improve your performance speed.
+
+
+, If you have Windows 8, proceed to the next step.
+
+
+
+If you have an SSD, or solid-state disk, do not defrag your computer. Instead, proceed to the next step.
+ This will initiate the TRIM command.
+ You can do this by opening the command prompt and inputting a simple command.
+ Type "cmd" without the quotation marks into the search bar and then select "cmd."
+
+,
+
+,, If TRIM is supported, the response will be “= 0.” If you do not receive this response, enter the command fsutil behavior set DisableDeleteNotify 0. If you receive the same response, you may need to upgrade your firmware., once you have restarted, check if to see if your computer's speed has improved. If it has not, try another method.
+

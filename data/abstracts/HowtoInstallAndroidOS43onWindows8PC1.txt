@@ -1,0 +1,36 @@
+
+Use this method for a fully-functional Android operating system.
+Download and install VirtualBox.
+Download the latest version of Android-x86.
+Launch VirtualBox and click "New.",
+Select "Linux" as from the "Type" menu.
+Select "Linux 2.6 / 3.x / 4.x (32-bit)" from the "Version" menu.
+Select at least "512 MB" for the amount of memory.
+Select "Create a virtual hard disk now" and choose "VDI" as the type.
+Select "Fixed size.",
+Set a size of at least 3 GB.
+Wait while your virtual drive is created.
+Click the Settings button and select the "Storage" section.
+Select the "Empty" entry with the disc icon.
+Click the disc button in the "Attributes" section and select "Choose Virtual Optical Disc File.",
+Select the Android-x86 ISO file that you downloaded.
+Click "Start" to start the virtual machine.
+Use your arrow keys to select "Installation.",
+Select "Create/Modify partitions.",
+Select "No" when asked about GPT.
+Select "New" at the bottom of the screen.
+Select "Primary" and then press .↵ Enter twice.
+Select "Bootable" then select "Write.",
+Select "Quit" once the partition is created.
+Select "sda1" from the top of the list.
+Choose "ext3" as the format.
+Select "Yes" when prompted to install GRUB.
+Choose "Yes" when asked about installing "/system.",
+Wait for installation to complete.
+Unmount the ISO file.
+Reboot the virtual machine and load Android.
+Click the Input menu and uncheck "Mouse Integration.",
+Skip the Wi-Fi setup.
+Sign in with your Google account.
+Finish the initial setup and start using Android.
+Install apps.

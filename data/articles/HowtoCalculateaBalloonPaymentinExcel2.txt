@@ -1,0 +1,37 @@
+ Calculating your payments in this way will allow you to see how much you would pay per month with a given balloon payment at the end of the life of the loan. To find this information, either consult your loan agreement or estimate this information as best you can. Remember, you can always change this information to multiple different values to estimate payments on different loans.
+
+
+You'll need the following information: your annual interest rate, the duration of your loan in years, your loan amount, and your balloon payment amount.
+ Start by opening Excel on your computer. Then, open a new, blank workbook and begin your work on the worksheet that comes up.
+ In the first column, column A, enter the names for the variables you will be using. It's easiest if you enter them as follows, from top to bottom: your annual interest rate, the duration of your loan in years, your loan amount, and your balloon payment amount.
+
+
+If entered correctly, this information will be in cells A1 through A4.
+ Type your loan information into the appropriately-labeled spaces next to your variable names. If entered correctly, they should be entered as follows:
+
+
+Your annual interest rate, for example 4%, should be entered in cell B1. Be sure to include the percent sign.
+Your loan duration, for example 15 years, should be entered in cell B2 as a simple number. In this case, you would just enter 15.
+Your loan amount, also called the principal, should be entered into cell B3. For example, for a loan amount of $150,000, you would enter 150,000. Excel will assume this is an amount of money; no need to enter the dollar sign.
+Enter your balloon amount into cell B4. This should be a negative number, as it is a payment. For example, for a $27,000 balloon payment, you would enter -27,000.
+ The function that will be used here in the payment function, abbreviated by Excel as PMT. To enter this equation, find a nearby empty cell and type "=PMT(". The program will then prompt you for variables like this: =PMT(rate, nper, pv, , )., Additional changes will have to be made to your entered variables within the PMT function. When prompted, enter the variables as follows:
+
+
+For the "rate" prompt, you'll need your periodic rate instead of your annual rate. This means dividing your annual rate in cell B1 by the number of payments per year on your loan. For monthly payments, divide by 12, for quarterly payments by 4, and for semi-annual payments by 2. Enter a comma to move to the next variable.
+
+Assuming monthly payments, your equation should now look like this: =PMT(B1/12
+
+
+For the "nper" prompt, enter your loan duration in cell B2. However, like the rate prompt, this will need to be adjusted to the total number of payments. For monthly payments, multiply by 12, for quarterly by 4, and for semi-annual by 2. Enter a comma to move to the next variable.
+
+Assuming monthly payments, your equation should now look like this: =PMT(B1/12,B2*12,
+
+
+Enter your last two variables, in B3 and B4, for the "pv" and "" prompts, respectively. Be sure to enter a comma after B3. Then, close the equation with a closing parenthesis mark.
+
+Your finished equation should look like this: =PMT(B1/12,B2*12,B3,B4), Press enter. Your result should be displayed in the cell where you entered your equation. It will be a red, negative number. Again, this simply means that this a payment. If it is not a negative number, you've entered some information incorrectly or your loan is not a balloon payment loan.
+
+
+In the example, the program would return a monthly payment of $999.82.
+ If you are comparing multiple loans, save this payment figure elsewhere in the worksheet and enter information from your other loans. This will allow you to compare payments from different loan amounts, interest rates, durations, or balloon payments.
+

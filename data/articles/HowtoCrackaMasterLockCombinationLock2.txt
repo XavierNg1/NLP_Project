@@ -1,0 +1,39 @@
+ Turn the lock's dial clockwise to zero.;
+, Turn the dial clockwise (CW) slowly as you press the shackle. If you can't turn the dial at all from the zero point, release the shackle and turn the dial CW just a number or 2 and then try it again.
+
+
+
+As you turn the dial CW with tension on the shackle, you will come to the first clockwise stopping point where you can't turn the dial anymore. Make note of where it stops. Sometimes, the dial will stick right on the numbers, but sometimes the sticking point will be between the numbers. If so, record the number to the half (example: 22.5).
+While continuing to apply tension to the shackle, turn the dial as far left (counter-clockwise) as you can. Make note of the first counter-clockwise (CCW) stopping point. The CCW stopping point and CW stopping point form your sticking "range", for example, 22.5 to 10. (Note: Some 800XXX and 908xxx locks have a two number sticking range .)
+Determine the first sticking point by finding the number that's in the midpoint of the sticking range. A range of 4 and 5 would have a first sticking point of 4.5. A range of 22.5 and 23.5 would have a first sticking point of 23.
+Each set of numbers that you find will have the same range. For example, one group may be 0.25 to 0.75 and another may be 0.5 to 0.25 on either side of the sticking points.
+ Turn the dial clockwise about one number higher from the first sticking point in order to allow you to "escape" that sticking point.
+ You should find 11 more sticking points, for a total of 12 sticking points in one complete turn of the dial. Write all 12 sticking points down.
+
+
+
+Look at your list of sticking points and eliminate all those which are not whole numbers (that is, cross off any number that ends in 0.5). You should eliminate 7 of the 12 numbers with this step.
+Of the remaining sticking points, choose the number with the unique digit in the "1s" position. Four of the remaining 5 numbers will share the same number in the "1s" place, so for example, if the numbers left on the list are 4, 14, 24, 27, and 34, the number 27 is the only number which does not have a 4 in the "ones" place. This is the third number of the combination.
+If you only have four numbers remaining and they all share the same digit in the "1s" position, check the "note" above in step 3 about a 2-number range... the third number of your combination will be the number that has a 2-number range (for example, if you have 0, 30, 20, 10 left, but 20 has a range of 19 to 21, that would mean that your third combination number is 20).
+ Divide the third number of the combination (27 in this case) by four, and write down the remainder.
+
+
+In this case 27/4 = 6 remainder 3. Remember that you are only concerned with the remainder, which will always be 0, 1, 2, or 3. If the third number of the combination is less than four, that is your magic number.
+The remainder is the magic number. Write it down.
+
+
+
+Add 4 to the magic number (3). Write down the result (7).
+Now add 4 to that and continue adding 4 to each resulting sum until you have gone completely around the dial once. Write down each of these numbers.
+For the example above, the numbers would be 3, 7, 11, 15, 19, 23, 27, 31, 35, and 39. One of these numbers is the first number of the combination. (Note: For some 800XXX locks, this will be the second number of the combination. The next set of numbers will be used as the first)
+
+, If your magic number is 0 or 1, then add 2 to it. Otherwise, subtract 2 from the magic number.
+
+
+Since the example magic number is 3, subtract 2 and get 1.
+Write down the answer and add 4 to it. Now add 4 to each resulting sum until you have gone completely around the dial once.
+In the example, the numbers would be 1, 5, 9, 13, 17, 21, 25, 29, 33, and 37. One of these numbers is the second number in the combination.
+ In this example, since 27 is the third number, you can cross 25 and 29 off your list of possible second numbers.
+ You now know all the possible first numbers (3, 7, 11, 15, 19, 23, 27, 31, 35, 39), all the possible second numbers (1, 5, 9, 13, 17, 21, 33, 37), and the third number (27). You've just narrowed down 64,000 combinations to only 80. Try every possible combination until you find the right one.
+ Apply pressure on the shackle, Turn the dial counter-clockwise (CCW) slowly as you pull the shackle. Once per rotation it should stick. Look at the number when it sticks and add 5 to that value. Find the number you wrote down for the first digit (in step 9) that is nearest the sum. For example if the lock sticks at 17 when rotating CCW, you would write down 17+5=22, then look in the list above and determine that 23 is likely the first number of the combination. , You only have to clear the lock when the first or third number exceeds the second for the first time. So we would try 27-1-27, then rotate CW to 5 and CCW to 27, then CW to 9 and CCW to 27, then CW to 13 and CCW to 27, then CW to 17 and CCW to 27, then CW to 21 and CCW to 27, *now that the next number we would try is 33 which is greater than our first digit we would try 27-33-27, then CW to 37 and CCW to 27. The reason this works is the disk for the second digit isn't impacted when we rotate CCW, so we are effectively just setting the 2nd number to a bigger value. When the value gets too big then we effectively passed the first number *twice* and then picked our second digit -- which is why we have to reset when the 2nd number becomes bigger than the first.
+

@@ -1,0 +1,68 @@
+ Look for numbers that are much higher or much lower than the majority of your data points.
+
+
+Let’s imagine that you have planted a dozen sunflowers and are keeping track of how tall they are each week.
+All of your flowers started out 24 inches tall. Most of your flowers grew about 8-12 inches, so they’re now about 32-36 inches tall.
+But a neighboring child accidentally threw his ball into your yard, and when he ran in to get it, he crushed one of your sunflowers!
+When you measure your flowers at the end of the week, the crushed one is only about 3 inches off the ground. Since the others are so much taller, you might consider this crushed flower an outlier.;
+, This will help you find the median or mid-point later.
+
+
+In order, your sunflower heights in inches are 3, 32, 32, 33, 33, 33, 34, 34, 35, 35, 36, 36.
+ For the sunflower example, the halfway point is between 33 and 34.
+ To find Q1, determine the median number in the first half your data. The median is the number that falls in the middle of the data.
+
+
+In our sunflower example, the first half of the data is 3, 32, 32, 33, 33, 33.
+The middle is between 32 and 33, so the median is 32.5.
+Call this Q1.
+Q1=32.5
+
+, To find Q3, determine the median number in the second half of your data.
+
+
+In our sunflower example, the second half of the data is 34, 34, 35, 35, 36, 36.
+The middle is between 35 and 35, so the median is 35.
+Call this Q3.
+Q3=35
+
+, This number is the interquartile range (IQR).
+
+
+Q3-Q1=IQR
+35-32.5=2.5
+IQR=2.5
+
+, Outliers are any number that is larger than Q3+1.5(IQR) or smaller than Q1-1.5(IQR). Start with your upper limit.
+
+
+Q3+1.5(IQR)
+35+1.5(2.5)
+35+3.75=38.75
+38.75 is your upper limit. Any number higher than 38.75 is an outlier.
+In the sunflower data set, no number is higher than the upper limit.
+ The process is similar to finding outliers beyond the upper limit, but the formula is a little different.
+
+
+Q1-1.5(IQR)
+32.5-1.5(2.5)
+32.5-3.75=28.75
+28.75 is your lower limit. Any number lower than 28.75 is an outlier.
+In the sunflower data set, 3 is less than 28.75, so it is an outlier. You can justify your decision to eliminate it from your data., This will help you determine whether the outliers are causing problems with your data.
+
+
+Perhaps the heights of your 10 sunflowers, in inches are: 34, 32, 33, 33, 34, 3, 35, 35, 36, 36, 33, and 32.
+If you include 3, the average height of your sunflowers is 31.3 inches.
+If you disregard 3, the average height of your sunflowers is 33.9 inches.
+If you wanted to make generalizations about your flowers sunflowers, (such as calculating the average amount that they grew over a week’s time) you may want to reject the outliers.
+ If human error caused a very high or very low number (as it did in the sunflower example), this data point isn’t very useful to you. Ask yourself whether this number is really a part of the data set that you intended to study.
+
+
+Since someone stepped on your sunflower, the outlying data point doesn’t actually tell you anything about how your sunflowers grew. , Base your decision on whether including the number in your data set gives you helpful information or not.
+
+
+In the case of the crushed sunflower, you would probably reject the 3 inch sunflower.
+You might also reject outliers if you think you measured wrong or wrote down the wrong number.
+On the other hand, if your sunflower was much shorter than the others because it was planted in a place where it did not receive direct sunlight, you may decide that this is useful information and include this number in your data set.
+ Eliminate this number from your data. From this point forward, do your calculations without this number.
+ Rejecting outliers makes your data “impure.” You should only reject data points if you have a very good reason. If you need to write up a report of your data, be prepared to explain why you rejected the outliers using the formulas Q3+1.5(IQR) and Q1-1.5(IQR). 

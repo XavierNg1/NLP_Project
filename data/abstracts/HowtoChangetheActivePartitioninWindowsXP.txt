@@ -1,0 +1,9 @@
+
+Click Start, press "Run" and type "diskmgmt.msc".
+Important precaution: In the following steps, you're going to change the active partition of your hard drive, sometimes called the "boot partition".
+Download HxD, a Hex Editor.
+Start HxD, click "Extras -> Open Disk", uncheck "open as read-only" and open your hard drive where Windows is installed on.
+Do not be afraid of what you see, it's easier than you may think.
+You have now set your new partition as the active partition (or "boot" partition as it's called sometimes).
+Reboot your computer, and it should boot from your new active partition.
+

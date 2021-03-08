@@ -1,0 +1,31 @@
+ First we need to calculate the standard deviation of each security in the portfolio. You can use a calculator or the Excel function to calculate that.
+
+
+Let's say there are 2 securities in the portfolio whose standard deviations are 10% and 15%.;
+, We need to know the weights of each security in the portfolio.
+
+
+Let's say we've invested $1000 in our portfolio of which $750 is in security 1 and $250 is in security 2.
+So the weight of security 1 in portfolio is 75% (750/1000) and the weight of security 2 in portfolio is 25% (250/1000).
+ Correlation can be defined as the statistical measure of how two securities move with respect to each other.
+
+
+Its value lies between -1 and 1.
+-1 implies that the two securities move exactly opposite to each other and 1 implies that they move in exactly the same way in same direction.
+0 implies that there is no relation as of how the securities move with respect to each other.
+For our example, let's take correlation as 0.25 which means that if one security increases by $1, the other increases by $0.25.
+ Variance is the square of standard deviation.
+
+
+For this example, variance would be calculated as (0.75^2)*(0.1^2) + (0.25^2)*(0.15^2) + 2*0.75*0.25*0.1*0.15*0.25 = 0.008438.
+ Standard deviation would be square root of variance.
+
+
+So, it would be equal to 0.008438^0.5 = 0.09185 = 9.185%.
+ As we can see that standard deviation is equal to 9.185% which is less than the 10% and 15% of the securities, it is because of the correlation factor:
+
+
+If correlation equals 1, standard deviation would have been 11.25%.
+If correlation equals 0, standard deviation would have been 8.38%.
+If correlation equals 1, standard deviation would have been 3.75%.
+

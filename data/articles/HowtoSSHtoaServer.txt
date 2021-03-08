@@ -1,0 +1,18 @@
+
+
+
+If you are running the Windows Firewall, enter the Control Panel and double-click on Windows Firewall.
+Select the Exceptions tab.
+Click Add Port.
+Enter SSH in the Name field, and 22 in the Port number field.;
+,
+
+
+On a Windows server you can find out the IP address by clicking Start, selecting Run, typing cmd and hitting enter. When a command prompt window opens up, type the command “ipconfig” and hit enter. The IP address of the server is one of the IP properties that will be displayed. Make a note of this address.
+On a Unix-based system, enter the command “ifconfig” and the IP address will be displayed.
+
+
+
+Within Windows, launch the free Unix emulator Cygwin and enter the following command at the command line: “ssh <ipaddress> -l username”. (This is a lower-case l, not a number 1.) Once you are logged in you are at the command prompt of the SSH server and can perform whatever task you desire.
+On a Unix-based system, you simply enter the same command “ssh <ipaddress> -l username “ at the command prompt.
+

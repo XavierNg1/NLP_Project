@@ -1,0 +1,91 @@
+;
+,,
+
+
+This new addition was on the SEL page for an option to Enable or disable the SELOEMEvent Blocking
+
+,
+
+
+<div class="jumpbar-line"> </div>
+<span class="data-area-jump-items"> </span>
+<div class="data-area-options">
+<%writeRes("gen_OtherOptions", "en" ); %>
+<button value="submit" class="inline"onclick="location.href='seladvopt.html';">
+<span><% writeRes("btn_advSettings", "en" ); %></span>
+</button></div>
+The gen_OtherOptions and the btn_advSettings are entries already present in the res_en.txt (//nitrogen_src/src/apps/iDracGUI/iDracGUI/src/conf/res_en.txt)
+These will create an other options: label and add a button next to it. The location.href = ‘seladvopt.html’ is the link to the new HTML page to be added.
+
+
+In the fieldList entry made:
+fieldList= new CheckboxMapping( "OemEventFilteringEnabled" , "OemEventFilteringEnabled"); //Here both tokens are same
+OemEventFilteringEnabled: is the id with which the Agent will recognize it.
+OemEventFilteringEnabled: This CAN be the aim_function_execute(“String” …… where string = OemEventFilteringEnabled.
+In this case it's recommended not to use the exact same String as for the pre-exisitng aim_function_execute, if you are running these individually inside GET and SET functions several times.
+
+
+function pageRendererCallback( xmlDoc ) will have function declarations, which:
+
+Call standard processing method.
+Changed enabled state of fields based on current selections.
+
+
+function loadPageData will load data on the HTML.
+function formSubmit will submit the form.
+
+There may be a need to validate data for different fields
+
+example: a Field like Baud Rate can be between value x and y etc.. if a value outside the range is entered then an appropriate error msg..
+
+
+
+
+function dependencyChecking (SELOEMDependencyChecking) checks:
+
+Privilege like Can configure and based on the privilege grays out the configurable fields.
+If the user has the necessary Privilege then the configurable fields are displayed un-grayed.
+Below this is the actual HTML.
+NOTE: Any function names changed from the standard, needs to be updated here.
+
+
+The following are specific to the new page, if we re-use code from an existing page, then we need to make necessary changes.
+sys_log_eve_adv_settings Which is the Heading String,
+
+sys_log_eve_oemeventfilteringenable which is the Attribute Label &
+btn_retSystemEventLog Return to “Previous Page” must be added to res_en.txt
+The Correct Function name for Dependency Check must be updated
+The Fieldlist ID name(s) OemEventFilteringEnabled should be updated
+
+<input value="1" onclick="javascript:SELOEMDependencyChecking();" id="OemEventFilteringEnabled" name="OemEventFilteringEnabled" type="checkbox" class="checkbox" />
+NOTE: Hence all the necessary additions to res_en.txt should be made.
+
+ProcessSet: Set Data from GUI Control into iDRAC (memory)
+postProcessSet: nothing in particular to be done here, but depends on functionality and some code may be required here.
+
+
+
+
+Adding a new Agent
+
+Add the .h file in src/apps/GUIDataServer/GUI GUIDataServer/include
+Add the .cc file in src/apps/GUIDataServer/GUI GUIDataServer/src
+Include the .h file in GUIDataHandler.cc and add the following lines,
+
+SELADV_Agent* selAdvAgent = new SELADV_Agent(this);
+addAgent("OemEventFilteringEnabled", selAdvAgent);
+
+
+If adding to a pre-existing Agent addAgent("OemEventFilteringEnabled", serviceAgent); //serviceAgent is an example.
+ you navigate in to it using tabs, buttons etc….)
+
+The Get sequence i.e. preProcessGet, ProcessGet and postProcessGet will run once.
+When a setting is changed and the Apply button is clicked
+
+preProcessSet, ProcessSet and postProcessSet will happen additionally an automatic
+preProcessGet, ProcessGet and postProcessGet will also happen.
+
+
+
+
+

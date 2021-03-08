@@ -1,0 +1,143 @@
+ If you need to leave a short comment, you can use the single-line comment code. The comment will only last to the end of the line or the end of the code block. These comments only work within PHP tags, and will be read if placed in HTML.<?php
+ 
+ // This is the standard (C++) way to create a single-line comment
+ 
+ # You can also use this Unix style to create a single-line comment
+ 
+ ?>
+
+
+;
+, Multi-line comments are useful for writing a long explanation, or for preventing a segment of code from being processed. See the "Usage" section below for some tips on using multi-line comments.<?php
+ 
+/* This is how you format
+a multi-line comment. Everything 
+until the ending tag will be included
+in the comment */
+ 
+/* Some people like to include 
+* extra markers at the beginning 
+* of each line. This can help with readability
+* for large comments, but isn't necessary.
+*/
+ 
+ ?>
+
+
+
+
+, You shouldn't have to do this for every line of code, since good code should be fairly easy to parse by other programmers. It is useful if the code is performing irregular or not obvious functions.// Generate curl request
+$session = curl_init($request);
+// Tell curl to use HTTP POST
+curl_setopt ($session, CURLOPT_POST, true);
+
+
+
+
+, Whenever you're working on your own projects, comments can help you remember where you left off. Leave comments on code that isn't working properly, or that you haven't finished yet.
+
+
+
+
+
+// Need to revisit the output for this before moving on
+echo "Hello World!";
+
+
+
+
+, If you plan on collaborating with others, or intend to make your code open-source, comments can help others figure out how your code functions and the best places to make improvements./* Is there a more effective way to accomplish this? */
+Gender:
+<input type="radio" name="gender"
+<?php if (isset($gender) && $gender=="female") echo "checked";?>
+value="female">Female
+<input type="radio" name="gender"
+<?php if (isset($gender) && $gender=="male") echo "checked";?>
+value="male">Male
+
+
+
+
+, This is useful if you're testing something and need to prevent certain code from being run. Anything contained within the comment tags will be ignored when the page is loaded.
+
+
+
+
+
+ <?php
+ 
+echo "/*Hello*/ World!";
+ 
+ /* The word "Hello" will not be displayed 
+ when the above code is run */
+ 
+ ?>
+
+
+
+
+, The comment function will end whenever the first ending tag is hit, so if there's already a multi-line comment inside the code you comment out, the comment will only last until the end of the original nested comment.
+
+
+
+
+
+ <?php
+ 
+ /* 
+echo "Hello World!"; /* This comment will mess things up */
+*/
+ 
+ ?>
+
+
+
+
+
+
+
+
+
+ <?php
+ 
+ /* 
+echo "Hello World!"; // This comment will be fine
+*/
+ 
+ ?>
+
+
+
+
+, You can use some creative code formatting to create documentation for your code directly in the code. This can be useful for open-source projects.
+
+
+
+
+
+ <?php
+ 
+ //=============
+ // HEADING
+ //=============
+ 
+ //-------------
+ // Sub-Heading
+ //-------------
+ 
+ /* Title Of Section */
+ 
+ # Documentation can go here
+ # A second piece can go here
+ 
+ /*
+ * Use these for explaining something
+ * that would take several lines or 
+ * even multiple paragraphs to explain
+ */
+ 
+ ?>
+
+
+
+

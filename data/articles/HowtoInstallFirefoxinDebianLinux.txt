@@ -1,0 +1,14 @@
+ Unpack the archive in /opt/ directory. Use command "sudo mv firefox /opt/" to move extracted folder to /opt directory.
+
+
+The content contains files like firefox, firefox-bin and others that should launch the browser. Try them. If this works, you are done. However do not panic if this fails.
+If the Firefox complains about the missing library that you see in its folder, try export LD_LIBRARY_PATH = <folder where you have placed firefox>. Later you can write the shell script where the first line will be this export statement and second - the actual command to launch the Firefox.
+Firefox may also complain about some other missing libraries. This is because we bypass the Debian package manager that would solve these missing dependencies.
+To get other missing libraries, try to run tool like "Synaptic package manager" that provides a user friendly search by name. If you do not have the user friendly manager, install it with apt-get install synaptic (run as root).
+Firefox should start after you install its needed libraries that way.;
+, It can be the simple script like #!/bin/sh
+export LD_LIBRARY_PATH=/opt/firefox/firefox
+/opt/firefox/firefox/firefox-bin
+
+, At the same time, you preserve the opportunity to launch IceWeasel, if needed.
+

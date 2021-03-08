@@ -1,0 +1,173 @@
+
+Open Excel from the desktop green X icon on the dock or from within the Applications folder in the Microsoft Office folder.
+,
+Open a new workbook and save it as OVERALL STATUS.xlsm, in capital letters.Name four worksheets (ws) from left to right, w/o quotes, as "Article Views and Other", "Daily Sort", "Relateds" and "CAT ANALYSIS".Set Excel menu Preferences to Ribbon - Developer checked or On, so you can work with macros and do things a lot faster.
+Use the data from this author's User Page as a model first, and then modify to suit your own data.
+Paste the articles and views you just copied into the 'Article Views and Other' worksheet cell C17.
+Access in your browser again this author's second ID's data (for example, https://www.wikihow.com/User:Xhohx) and follow the previous two steps again, selecting from Articles Started - View More all 100 articles, copying them, and pasting them right below the first group of articles and views you first pasted in.
+Congratulations––you've just completed the hardest part!,
+Select cell A1 and put a small picture in it from a special font, or a unique key will do, such as Alt or Option Question Mark.
+Use the paint bucket or Format Cells Fill cell A2 canary yellow.
+Input to cell C1 OPENS NEW WINDOW: and input to cell C2, https://www.wikihow.com/User:Xhohx, and input to cell C3, https://www.wikihow.com/User:Chris-Garthwaite -- those you will change to your own id(s) later.
+Format Cells Fill cells B4:B5 yellow.
+In cell C4 to the right, input Chris Garthwaite - INPUT, and in cell C5 below it input xhohx - INPUT.
+Select cell range B6:C6.Input to cell A7 the formula, =SUM(A17:A58) but be careful and do it down to the beginning of id Chris Garthwaite, which starts at the article 'Multiply and Divide Geometrically Like Mother Nature', please!,
+Input to cell A8 the formula, =SUM(A59:A158) but be careful please again to start just below that article and include the very last article by xhohx in column A.Input to cell A9 the formula, =A7+A8,
+Copy cell range A7:A9 and paste it to cell B7:B9.Enter Chris Garthwaite to cell C7, then xhohx to cell C8 and The_Total to cell C9.Select cells B9:C9 and do Insert Names Create in Right Column, OK, so that cell B9 now has the Defined Variable Name of The_Total.
+Enter to cell C10 FILE SAVE and Format Cells Light Blue and Font bold.Enter to cell C11 the label NOWLY and enter to cell C12, PASTELY,Select cell range B11:C12 and Insert Names Create in Right Column, OK.Enter the formula, =TEXT(NOW(),"mm/dd") to cell B11,Copy B11 and do Edit Paste Special Values to cell B12,Enter TODAY to cell A11,
+Copy cell B12 and paste it to cell A12.
+Insert Name Define TODAY to cell ='Article Views and Other'!$A$12, OK.
+Enter to cell A14 the formula, =The_Total; this is where the daily total views will be kept track of and be transferred over to worksheet 'Daily Sort'.
+Insert Name Define WHOLE to ='Article Views and Other'!$A$12:$A$163,
+Enter the formula, =NOW() to cell A13 and Format Cells Number Date ddd.
+Enter to cell B13, TFR to this, then enter to cell B14, column first!, and then enter to cell B15, Yesterday.For the cell range C13 to E13 that ties, surround the cells with a red boldest border and fill them yellow.
+Enter to cell F13, TRANSFER from, then enter to cell F14, this column first!, and then enter to cell F15, Today.
+Insert Name Define _Today to cell range ='Article Views and Other'!$F$16:$F$161,
+Insert Name Define _Yesterday to cell range ='Article Views and Other'!$B$16:$B$161,Enter to cell A17 the formula, =F17-B17,
+Copy cell A17 and paste it to A18 and all the way down to the left in column A of the last article on the bottom.Skip two rows (so currently to A161) and input a totaling formula for columns A, B, F and I in row 161.
+For those bottom 3 rows, from column A to column I, surround it with a red boldest border, highlight in yellow fill each total and use dark blue font bold for each.In cell H15 enter Article #, and Format it underlined.
+In cell H17 enter 142 and Format it Border red boldest outline.
+In cell I14 enter Rising, and in cell I15 enter Stars.Enter into cell J15 the formula, ="*]",
+Copy cell J15 and paste it it column J the full extent of all articles, then select all of what you just pasted and do Edit Paste Special Values right back atop them all.Enter to cell D6 the label, Today, and enter to cell E6, To Date,Enter the formula =A7/A9 to cell D7, enter the formula =A8/A9 to cell D8, and enter the formula =A9/A9 to D9,Copy cell range D7:D9 to E7:E9 and Format Cells Number Percent 0%,
+Enter to cell E5 the label GoalSeek and make it Font dark blue, bold.Enter to cell K14, Authored, and to cell K15, Date,Format Cells for column K, Number, Date, mm/dd/yy,Enter to cell K16 the formula, =now(),Enter to cell K17 3/31/15,
+Enter from your Article History, the Creation Date (first post) for each article.Enter to L13, Today, enter to L14, Less, and enter to L15, Start,Enter to cell L17 and copy to the bottom (of the article list row) the formula, =$K$16-K17,Enter to cell M14, Views per, and enter to cell M15, Days Outstanding,Enter to cell M17 and copy to the the bottom the formula, =F17/L17,Enter to cell N14, Elapsed Days, and to cell N15, Between Starts,Enter to cell N17 and copy to the bottom the formula =K17-K18,
+At the bottom of the entries to columns M and N, skipping a row or two or three, enter the formula that will be something like this: =AVERAGE(M17:M158) and =AVERAGE(N17:N158); the 158 may be higher depending upon how many new articles this author has written.
+Under the M average, enter in the two cells beneath it, AVERAGE Views/Article.
+Enter today as a starting day, as a day of the month mm/dd/yy in cell M11, via the formula, =now().Enter to cell L11 the label, _Today_,
+Select cell range L11:M11 and Insert Names Create in Left Column, OK.Enter to cell N11 the formula, =DAY(M11) and Format Cells Number Number no decimal places.
+Enter to cell N10 the formula, =DAY(M10), and then copy it into the cell range N9:N4 and Format Cells Number Number no decimal places..Enter to cell M10 the formula, =_Today_+1,
+Enter to cell M9 the formula, =M10+1, and copy it to the cell range M8:M4.Enter to cell L10 the formula, =M10, and Format Cells Number Date ddd, and copy and paste this to cell range L9:L4,Enter to L3, Day, enter to M3, Date, enter to N3, DateRange, enter to O3, Total Views to Date, enter to P3, Daily Views.Enter to O1, Pastoid.
+Enter to O2 the formula, =TOTAL_per_wikiHow, and enter to P2 the label (w/o quotes and w/ leading space), " =TOTAL_per_wikiHow" and Format Cells Font Red, bold.Select cell range O4:O10 and Insert Name Define it as _Clear_Total_Views_to_Date.Enter to M11 the formula, =now() and Edit Copy it and Edit Paste Special it back atop itself.Enter to O11 the formula, =MAX(S47:S58),Enter to M12, Projected and align right.Enter to N12, GOAL, and make it Font bold.
+Enter to O12 the formula, =500000-MAX(O4:O11) ... this is stating the goal as the difference between the goal of 500,000 and what's been achieved to date.
+Enter to O10, 434508, and enter to O9, 435117, and enter to O8, 436036 -- Macro b usually does this for you, taking The_Total from Pastoid above each day and finding the next cell upwards to paste it into.Enter to cell O13 the formula, =O12/P16,Enter to P13 the label, Needed/day, and Format Cells O13:P13 Border Outline boldest Purple, Fill light blue, Font red.
+Enter to cell O15, Goalseeking_to_Zero_per_Red__below, and enter to cell P15 the formula, =P29-P28.
+Enter to cell O16, _Days_to_GOAL.
+Enter 88.6876756537355 to cell P16.Enter to Q15, SEEK DAILY.Enter to O28, Macro b, and Format Cells Fill yellow, Font dark blue, Border Red boldest outline.
+Enter to O29, 04.
+Run macros regularly.
+Select cell range 'Article Views and Other'!$M$4:$O$4 and do Insert Name Define as _MNO_Update.
+Select cell range 'Article Views and Other'!$Q$46:$S$46 and do Insert Name Define as _QRS_Update.
+Create some partially accurate, partially fake data.
+Enter to cell R47 the formula, =Q47, and Format Cells Number Custom, dd.Enter to cell S147 the value, 4612.Select cell range S47:S74 and do Edit Fill Series and make the decrement value -4686, OK.
+Select cell range S147:S74 and do Edit Fill Series and make the decrement value -4145.1, OK.
+Enter to the bottommost cell of T beside the data in S, probably T147, the formula, =S147.
+Enter to U146 the formula, =T146/S146, and copy it and paste it to cell range U145:U47.
+Select range T47:U73 and Insert Name Define _AvgWklyReturns, Add.Check to see that cell P31 = 1.27% and cell P33 = 4,686.
+Estimate your own Weekly Article Views Totals to input into column T, and make it add up to your current Total Article Views in column S, or rather take the differences, unless you've already been tracking it all along.
+Enter the Header Information:
+
+Select cell range Q1:Y14 and Format Cells Alignment Center
+Enter to Q2, Daily, and to Q3, Views
+Enter to R3, Average Views
+Enter to S1, Frozen YTD less
+Enter to S2, (Moving YTD-Mvg,
+Enter to S3, MTD) = Frozen MTD (where YTD means Year to Date, or ever, and MTD means Month to Date).
+Enter the Formulas for the upper monthly projections section:
+
+Enter to P4 the formula, =O4-O5, and surround the cell in a thick black border.
+Enter to cell S4 the formula, =IF(O4-('Daily Sort'!$NZ$150-'Daily Sort'!$NQ$150)<0,S5,O4-('Daily Sort'!$NZ$150-'Daily Sort'!$NQ$150)) and Edit Copy it and Edit Paste it to cell range S5:S6.
+Enter to cell S7 the formula, =IF(O7-('Daily Sort'!$NZ$150-'Daily Sort'!$NP$150)<0,S8,O7-('Daily Sort'!$NZ$150-'Daily Sort'!$NP$150))and Edit Copy it and Edit Paste it to cell range S8:S11.Name 4 worksheets (ws) from left to right, w/o quotes, as "Article Views and Other", "Daily Sort", "Relateds" and "CAT ANALYSIS".
+Insert Name Define __1 to cell range ='Article Views and Other'!$C$16:$H$161 -- it helps to approach the live links from 1 cell above or the side with the arrow keys or return, and not directly atop with the mouse, as that sets off the link, and simply to define variable ranges surrounding them.
+Insert Name Define __2 to cell range ='Daily Sort'!$A$5:$F$150,
+Insert Name Define __3 to cell range =Relateds!$B$9:$G$154,
+Insert Name Define __4 to cell range ='CAT ANALYSIS'!$H$5:$M$150,
+Insert Name Define __5 to cell range =Relateds!$I$1:$EX$6,
+Set Developer to Checked or On so you can work with macros.
+The following macro code should be copied from "#** Sub Macro04, etc.",
+Part of the code at the end has been disabled with apostrophes at the beginnings of the lines.
+You should now have the Articles, Views and Article#'s on the 'Daily Sort' worksheet.Enter in cell A1, Article,Set column width for B:C to .08 inches,Enter in D1, Views,Set column width for E to .38 inches,Enter in cell F1, Art#,Enter in cell G1, Rank,Enter in cell H1, Seen,Enter in cell I1, Two,
+When you're ready to run these macros daily on your own data, Macro t will take the information in 'Articles and Views'!WHOLE, i.e.
+Keep it simple and just enter the year's dates across the top.
+Suppose, for example, that you start the process on 04/01.
+Supposing, for example, that your update to column CV started 04/01.
+Edit Copy cell range CV154:CV156 and Edit Paste Special Formulas to cell range CW154:NJ156.
+Note that the middle formula in cell CV155, =SUM($CV$150:CV150), creates the month to date sum of article views by summing from the $Absolute$ starting point of $CV$150 and then relatively for each new cell to the right, so that the formula in cell CW155 is =SUM($CV$150:CW150).
+This author has in cell NL1, 01/17, and in cell NL2, to date.
+Then, summarized, this author has in cell NM1, 1/18-1/31, and in NM2, Period.
+Then, in cell NN1, this author has, To Date 1/31/15, and in cell NN2, 1/31/15 formatted yyyy.
+Next, in cell NO1, is the value, 2/28/2015, formatted mmm, and in cell NO2, is the same date, formatted yyyy.Continue this process for each month, summarizing all the month's days across horizontally into one monthly amount, per article, and then down to a monthly total.
+Enter to cell NL150 the formula, =SUM(NL6:NL149).Enter the months across the top, and the year, for cells NO1 to NY2,Enter to cell NZ1 the label, To Date, and to NZ2 the formula, =now(), formatted yyyy.Enter to cell NZ6 the formula, =SUM(NN6:NY6), and Format Cells Number Custom 0;0;0,
+Enter to cell NZ151 the formula, =NZ150-D150.
+Over to the right, this author analyzed the zeroes of February, 2015 by formulating an IF statement such that if there were an amount <> 0 in each February article-day, return a 0, else return a 1.
+Here is a picture of the SEEN and TWO Categories this author uses; "SEEN" means that it's the category seen by the user in the upper right hand corner of the Article page and "TWO" means that it's the second category, which is listed at the bottom left corner of the article page.
+And here are the First 70 Categories for the current 142 articles (by clicking directly on the image, or double-clicking, you can get a zoomed-in view):
+
+,
+Here are the 2nd 72 Categories for the current 142 articles:
+
+,Input the Ranks, then the 142 * 2 categories, SEEN and TWO, to cell range G6:I147 per the images above.
+The concatenation with the hyphen between is done for the CAT ANALYSIS worksheet.
+If you don't care to input all the categories, dummy in 1 or a few and paste them in below as you see fit.
+You have already run Macro p to populate this worksheet (ws) with Articles, Views and Article#s.Enter in cell A9 the formula, ="*]", and Edit Copy it and Edit Paste it to cell range A10:A151, then Copy A10:A151 and do Edit Paste Special Values for cell range A10:A151 to conserve memory.
+Enter to cell A1 the following text: The objective is usually to update the latest article written with Related wikiHows of formerly written articles listed here on the "Relateds" tab.
+Enter to cell B1 the following text: HOW IT WORKS: 1) Build this spreadsheet with the variable names Searcher for Row 1 and TopRow for Row 166; 2) Go to worksheet tab Article Views and Other and decide on a list of bracketed Relateds to post for an Article on this worksheet tab; 3) Copy them; 4) Click on the next article's filename in the ordered sequence being addressed to open that wikiHow page; 5) Click on Edit and go to Relateds after checking the top of the article to see what Relateds already have links; 6) Edit in the Related wikiHows field and paste the list you brought in -- be careful of duplicates and the article you are working in; 7) Copy the final list of relateds and then PUBLISH THE EDIT; 8) Go to this Relateds worksheet and paste the list of Relateds into cell A166.
+Insert a new comment for cell B1 and input the above text into the comment.
+Set row height for Row 1 to 5.31", hide rows 2:3 and 5.
+Realize that this is a work in progress and this author has yet to decide on an ideal model for analyzing Relateds.Enter to cell EX8 the label, Under 10,Enter to cell EY8 the label, Over 10,Enter to cell EZ8 the label, At 10,Enter to cell EX9 the label, AVAILABLE and Format Cells fill yellow and Border red outline boldest, font red bold,Enter to cell EX10 the formula, =IF(10-EW10>0,10-EW10,"") and Format Cells Fill tan,Enter to cell EY10 the formula, =IF(EW10>10,EW10-10,""),Enter to cell EZ10 the formula, =IF(EW10=10,1,""),Edit Copy cell range EX10:EZ10 and Edit Paste to cell range EX11:EZ151,
+You might try inputting some article rows with 1's less than 10 in total across, then others equal to 10 across, and still other greater than 10 across, just to see that these formulas work, and the next group of formulas as well.Copy cell range EX8:EZ8 and Paste it to FB8:FD8.Enter to cell FB10 the formula, =IF(EW10<10,EW10,""),Enter to cell FC10 the formula, =IF(EW10>10,EW10,""),Enter to cell FD10 the formula, =IF(EW10=10,10,""),Copy cell range FB10:FD10 and Paste it to FB11:FD151,Enter to cell EX153 the formula, =SUM(EX10:EX152) and Paste it to cells EY153:EZ153.
+Format Cells for cell EX153 Fill yellow Border red boldest outline, font red bold.Copy cell range EX153:EZ153 and Paste it to FB153:FD153.
+Copy cell FB153 and Paste it to cell FE153.Surround cell range EX153:EZ156 with Format Cells Border red boldest outline.Enter to EY160 the formula, =EY159/EY158, and format it Percentage, 2 decimal places.Enter to FD157 the label, 10 or Under,
+Enter to A166 the string, [xxxxxxxxxxxxxxxxxxx|
+
+There are 19 x's in the above string.Enter to D166 the formula, =IF(ISERR(FIND("[",A166)),"",FIND("[",A166)),Enter to E166 the formula, =IF(ISERR(FIND("|",A166)),"",FIND("|",A166)),Enter to B166 the formula, =IF(ISERR(MID(A166,D166+2,(E166-D166)-2)),"",MID(A166,D166+2,(E166-D166)-2)),
+Edit Copy cell range A166: E166 and Edit Paste it to cell range A167:E683 (or down quite far because it's always getting deleted from),
+You will follow the instructions in cells A1 and B1, HOW IT WORKS, which basically are designed to keep track of the Related wikiHows actually posted or edited into a brand new article (or an old one):
+
+Copy ready-made ready-to-be-Relateds from sheet 'Article Views and Other' column J, or worksheet 'Relateds' cell range A10:A151 and paste them to cell A167 down.
+VERTICAL UPDATING: You will probably also want to take the new article's prepared ready-to-be-a-Related column A version and spread it downwards IN IT'S COLUMN at the far left of row 1 in column J, and update / populate old wikiHows with the new article as their new Related.WARNING -- From time to time, the macro might not fill A166:E166 with x's and formulas so you have to copy them and paste them from below.
+Select Row166 and Insert Define Name TopRow to =Relateds!$166:$166,
+Select Row1 and Insert Define Name Searcher to =Relateds!$1:$1,Enter to cell F1 and F2 the formula, =now(), and Format Cells Number Custom mm/dd/yy hh:mm a/p,Enter to cell E1 the date and time that the demarcation article between the two ids was written, 10/17/2014 12:00:00 AM,Enter to cell E2 the date and time the first article was written, 3/5/2013 7:44:00 AM,Enter to D1 the formula, =F1-E1,Enter to D2 the formula, =F2-E2, and Format Cells D1:D2 Number Custom 0" days",Select cell K47 and Insert Name Define it as DemarcationCell,Hide column L,Enter to cell M1 the label, Chris G Article Views,Enter to cell M2 the label, Xhohx,Enter to cell K1 the formula, =SUM(K4:DemarcationCell),Select cell K150 and Insert Name Define it as Grand_Total, then also as ThisTotal, OK,Enter to cell K2 the formula, =Grand_Total-K1,Enter to cell K3 the formula, =K1+K2, and enter to cell M3 the label, Both IDs,Select cell K4 and Insert Name Define it as ___Area4PasterCell,
+Enter to cell G1 the formula, =K1/D1, and Format Cell Number Custom, 0.00" Avg/Day for Chris G.",Enter to cell G2 the formula, =K2/D2, and Format Cell Number Custom, 0.00" Avg/Day for Xhohx",
+Enter the following headers for worksheet CAT ANALYSIS:
+
+Enter to cell B1, CHART
+Enter to cell A3, Rank, and copy and paste it to cell C3
+Enter to cell B3, Groups
+Enter to cell D3, Category Seen
+Enter to cell E3, Category 2
+Enter to cell F3, Seen and 2
+Enter to cell G3, Suggested Cat
+Set column width for column N to .18 inches
+Enter to cell O3, Microsoft Excel-Mathematics
+Enter to cell P3, MS XL Imagery-Mathematics
+Enter to cell Q3, Probability and Statistics-Mathematics
+Enter to cell R3, Spreadsheets-Mathematics
+Enter to cell S3, Mathematics-Calculating Volume and Area
+Enter to cell T3, Spreadsheets-Calculating Volume and Area
+Enter to cell U3, Mathematics-Graphics
+Enter to cell V3, MS XL Imagery-Graphics
+Enter to cell W3, Graphics-Geometry
+Enter to cell X3, Mathematics-Geometry
+Enter to cell Y3, Spreadsheets-Geometry
+Enter to cell Z3, Graphics-ECONOMICS
+Enter to cell AA3, Mathematics-ECONOMICS
+Enter to cell AB3, Investments and Trading-Finance and Business
+Enter to cell AC3, Mathematics-Finance and Business
+Enter to cell AD3, Mathematics-Algebra
+Enter to cell AE3, Programming-Microsoft Excel
+Enter to cell AF3, MS XL Imagery-IMOVIE
+Enter to cell AG3, Neurological Disorders-Mental Disorders
+Enter to cell AH3, Positive and Reflective Lifestyles-Philosophy
+Enter to cell AI3, Mathematics-Multiplication
+Enter to cell AJ3, Mathematics-Calculus
+Enter to cell AK3, Painting-Arts and Entertainment
+Enter to cell AL3, Mathematics-Education and Communications
+Enter to cell AM3, Mathematics-Coordinate Geometry
+Enter to cell AN3, Microsoft Excel-wikiHow
+Enter to cell AO3, Meal Planning-Food and Grocery Budgeting
+Enter to cell AP3, Spreadsheets-MS XL Imagery
+Enter to cell AQ3, Mathematics-TRIGONOMETRY
+Size the columns to automatically fit those headers.
+
+,
+Select Row 3 and Insert Name Define it as Categories.Get the Rank, Seen and Two data from worksheet 'Daily Sort' you got off the image I included in this article that could be zoomed in on, which was inclusive in two parts of all 142 articles, and Copy just the data part and Paste it to cell range C6:E147, then use the concatentation formula in cell F6, =D6&"-"&E6, and Copy it and Paste it to cell range F7:F147.Enter to cell B6 the formula, =K6, and Copy it and Paste it to cell range B7:B147,
+Copy cell range C6:C147 to A6:A147 -- the reason for a second Rank listing is to use Rank as the X values in a Chart with the Y values being the Article Views.Select column F and Insert Name Define it as Seen___2,The Suggested Cat(egory) column is for holding temporarily new categories of type Seen or Two (2), because wikiHow has its own inscrutable system of deciding which category is of which type when you edit them into an article.Select column K and Insert Name Define it as Views,Enter to cell O5 the formula, =IF(Seen___2=Categories,Views,"") and Edit Copy it and Edit Paste it to cell range O5:AQ148 -- that is, if the article's concatenated categories equal the concatenated categories across the top, pick up the views of that article in the cell, else return a blank.Enter to cell O150 the formula, =SUM(O3:O148),Enter to cell O151 the formula, =O150/ThisTotal, and Format Cells Number Percentage, 2 decimal places.Copy cell range O150:O151 and Paste it to cell range P150:AQ151,
+Enter to cell R150 the formula, =SUM(O150:AQ150), but be careful when inputting a new concatenation above to insert the column first.Select Row 150 and Insert Name Define it as Totals,
+Use this image's template to enter the information needed to cell range A292:E328.Enter to cell K293 the formula, =SUM(N293:AQ293),Enter to cell L293 the formula, =K293/Grand_Total, and Format Cells Number Percentage, 2 decimal Places.Copy cell range K293:L293 and Paste it to cell range K294:M305,Enter to cell K305 the formula, =SUM(K293:K304), and surround it with Format Cells Border black boldest outline,Copy cell range O3:AQ3 and Paste it to O292:AQ292, then again Paste it to O306:AQ306,From each concatenation in O292:AQ292, delete the hyphen and second part, the type TWO category.From each concatenation in O306:AQ306, delete to the left of the hyphen and first part, the type SEEN category and the hyphen.
+Using the horizontal scroll bar and a page freeze at cell M4, enter the formula, =Totals, per category type.
+Copy cell range K293:M293 and Paste it to K307:M329.
+As before, copy these macros from here into MS Word or a Text Editor application that has a Replace All function and do REPLACE ALL of "#** " with nothing (disregarding the quote marks).
+The way the macros work is as follows:
+
+Sub Macro01_TransferTodayToYesterday_j is DAILY run by pressing command+option(alt)+j first BEFORE getting the wikiHow data.
+Here are the macros, including strikethrough Macro e that still needs work.

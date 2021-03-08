@@ -1,0 +1,39 @@
+ For the purposes of this example, let's assume that the measurement you want to convert is in column A and you'd like to see the conversion results in column B (but in reality, this method will work for any two columns). Click on cell A1 and type in the original unit (the one you'd like converted, e.g. seconds, hours, or days). This is also called the “from_unit.”
+
+
+For example: type “Minutes” into cell A1. In this example, we will convert 21 (number) minutes (from_unit) to seconds (to_unit).
+Excel’s convert function converts a measurement from its original unit, or “from unit,” into a “to-unit” (the unit you're converting the measurement to).
+Labeling your columns will help you organize your data.
+ This will serve as your "to_unit" column. Type in the unit you are converting the measurement to (e.g. seconds or days).
+
+
+For example: enter “Seconds” into cell B1., Type in the original measurement in numbers only. Do not enter in the units.
+
+
+For example: in cell A2, enter “21” (as in 21 minutes).,
+
+
+Select the “Formula” tab.
+Click “Formula Builder”.
+Select cell B2.
+Select “CONVERT.”
+
+, Excel's convert function calls this value the "number."
+
+
+For example: enter "A2".
+For a single conversion, as in this example, you may also type the actual measurement (“21”) instead of the cell name.
+ Enter in the approved abbreviated form of the original unit.
+
+
+For example: type “mn” (the abbreviation for minutes).
+Excel provides a comprehensive list of unit abbreviations here.
+ Type in the approved abbreviation for the "to_unit."
+
+
+For example: type “sec” (the abbreviation for seconds).
+ The converted measurement will appear in your cell (in this case, cell B2).
+
+
+For example: in cell B2, you will see “1260” (as in 1260 seconds).If you receive a “#N/A” error, check the unit abbreviations again. Make sure the abbreviation is correct and that the two units belong to the same group (for example, it is not possible to convert time into length). Please note, unit names and prefixes ARE case-sensitive.
+If you get a “#VALUE!” error, you may have entered the “number” incorrectly. Make sure you have only entered one value or cell reference.

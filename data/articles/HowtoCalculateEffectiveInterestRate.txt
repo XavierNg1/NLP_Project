@@ -1,0 +1,14 @@
+ The effective interest rate attempts to describe the full cost of borrowing. It takes into account the effect of compounding interest, which is left out of the nominal or "stated" interest rate.For example, a loan with 10 percent interest compounded monthly will actually carry an interest rate higher than 10 percent, because more interest is accumulated each month.
+The effective interest rate calculation does not take into account one-time fees like loan origination fees. These fees are considered, however, in the calculation of the annual percentage rate.;
+, The stated (also called nominal) interest rate will be expressed as a percentage.The stated interest rate is usually the "headline" interest rate. It's the number that the lender typically advertises as the interest rate.
+ The compounding periods will generally be monthly, quarterly, annually, or continuously. This refers to how often the interest is applied.
+
+Usually, the compounding period is monthly. You'll still want to check with your lender to verify that, though.
+ The effective interest rate is calculated through a simple formula: r = (1 + i/n)^n - 1.
+
+
+In this formula, r represents the effective interest rate, i represents the stated interest rate, and n represents the number of compounding periods per year.
+ For example, consider a loan with a stated interest rate of 5 percent that is compounded monthly. Using the formula yields: r = (1 + .05/12)^12 - 1, or r = 5.12 percent. The same loan compounded daily would yield: r = (1 + .05/365)^365 - 1, or r = 5.13 percent. Note that the effective interest rate will always be greater than the stated rate.
+ If interest is compounded continuously, you should calculate the effective interest rate using a different formula: r = e^i - 1. In this formula, r is the effective interest rate, i is the stated interest rate, and e is the constant 2.718.
+ For example, consider a loan with a nominal interest rate of 9 percent compounded continuously. The formula above yields: r = 2.718^.09 - 1, or 9.417 percent.
+

@@ -1,0 +1,27 @@
+ Before you can purchase and install an SSL certificate, you will need to generate a CSR on your server. This file contains your server and public key information, and is required to generate the private key.
+
+Open the Exchange Management Console. You can find this by clicking Start, clicking Programs, selecting Microsoft Exchange 2010, and then clicking Exchange Management Console.
+Once the program loads, click the Manage Databases link in the center of the window.
+Select “Server Configuration”. This is located in the left frame. Click the “New Exchange Certificate” link in the Actions list on the right side of the screen.
+Enter a memorable name for the certificate. This is for your own convenience and reference, and will not affect the certificate.
+Enter your configuration information. Exchange should automatically select the proper services, but if it does not you can set them yourself. Make sure all of the services you need protected are selected.
+Enter in your organization information. You will need to enter your two-digit country code, the state or province, city or town name, full company name, section name (i.e. IT or Marketing), and the common name (typically the domain name).
+Enter a location and name for the CSR file that will be generated. Make note of this location for the certificate ordering process.
+ There are several services online that offer SSL certificates. Make sure to only order from a reputable service, since you and your customer’s security is at stake. Popular services include DigiCert, Symantec, GlobalSign, and more. The best service for you will vary depending on your needs (multiple certificates, enterprise solutions, etc.).
+
+You will need to upload your CSR file to the certificate service when you order it. This will be used to generate the certificate for your server. Some providers will have you copy the contents of the CSR file, while others will have you upload the file itself.
+ You will need to download the Intermediate Certificates from the service that you purchased your certificates from. You will receive your Primary Certificate via email or through the customer area of the website.
+
+Copy the certificate file that you receive to your Exchange server.
+ In most cases, you can copy the provided certificate data into a text document and save it as “intermediate.cer”. Open the Microsoft Manage Console (MMC) by clicking Start, selecting Run, and then typing in “mmc”.Click File and select Add/Remove Snap In.
+Click Add select Certificates,a and then click Add again.
+Select Computer Account and then click Next. Choose Local Computer for the storage location. Click Finish and then OK. This will return you to the MMC.
+Select Certificates in the MMC. Choose “Intermediate Certification Authorities” and then select Certificates.
+Right-click on Certificates, choose All Tasks, and then choose Import. Use the wizard to load the Intermediate Certificates that you obtained from your certificate provider.
+ See Step 1 for information on how to open it. Click your certificate in the center of the window and then click the “Complete Pending Request” link in the Actions list.Browse for your Primary certificate file and then click Complete. Once the certificate has been loaded, click Finish.
+Ignore any errors that say the process failed; this is a common bug.
+ Once the certificate has been installed, click the “Assign Services to Certificate” link towards the bottom of the Actions list.
+
+Select your server from the list that appears and click Next.
+Select which services you want to protect with the certificate. Click Next, then Assign, and then Finish.
+

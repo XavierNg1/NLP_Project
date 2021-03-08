@@ -1,0 +1,7 @@
+ Type “chflags hidden” then drag the file or folder that you want to hide into the terminal. The location of the file will be entered in after the command you typed. Press return to hide the file.
+ To unhide the file, type “chflags unhidden <file name and location>” into the Terminal. You must specific the location of the file as well as its name and extension. If hidden files are set to be viewable, then you can drag the file as you did in the first step.
+ To see hidden files in the Finder, open the terminal and type “defaults write com.apple.Finder AppleShowAllFiles TRUE.” This will make all files visible. To set hidden folders back to invisible, type “defaults write com.apple.Finder AppleShowAllFiles FALSE.”
+
+
+You can make a file or folder invisible in Mac or Linux by adding a “.” to the front of a filename. In the terminal type mv sample.txt .sample.txt. This will rename the file so that it cannot be seen.
+

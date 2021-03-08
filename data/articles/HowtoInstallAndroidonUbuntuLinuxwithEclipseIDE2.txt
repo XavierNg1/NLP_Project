@@ -1,0 +1,50 @@
+ If your computer system has 4GB or more of memory most likely it is a 64 bit computer. You can tell if your Ubuntu Linux operating system is 32 or 64 bit by opening up a terminal and running the following command:
+
+
+
+Type/Copy/Paste: file /sbin/init
+
+Download Eclipse IDE it will download into your /home/"your_user_name"/Downloads
+
+Select the correct bit version for your corresponding system architecture. For example, if you are on 32-bit Ubuntu Linux select 32-bit Eclipse IDE and if you are on 64-bit Ubuntu Linux select 64-bit Eclipse IDE.
+
+
+
+
+Type/Copy/Paste: cd /home/"your_user_name"/Downloads
+
+this will change you in your Downloads directory
+
+
+
+Type/Copy/Paste: sudo -s cp -r eclipse-SDK-3.7-linux-gtk-x86_64.tar.gz /usr/local
+
+this will copy your Eclipse IDE to the /usr/local directory
+
+
+
+Type/Copy/Paste: cd /usr/local
+
+this will change you into the eclipse directory
+
+
+
+Type/Copy/Paste: sudo -s chmod a+x eclipse-SDK-3.7-linux-gtk-x86_64.tar.gz
+
+this command makes the eclipse binaries executable for all on the system
+
+
+
+Type/Copy/Paste: sudo -s tar xvzf eclipse-SDK-3.7-linux-gtk-x86_64.tar.gz
+
+this unpacks your Eclipse IDE compressed binaries
+
+
+
+Type/Copy/Paste: exit
+
+this command takes you out of root user
+
+
+
+,

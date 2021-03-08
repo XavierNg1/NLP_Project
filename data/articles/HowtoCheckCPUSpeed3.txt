@@ -1,0 +1,7 @@
+ Most tools available on Linux don't show the actual speed that the processor is running at. Intel has released a tool called turbostat that you can use to check. You'll need to install it manually through the terminal.
+ Note the version number that is displayed (X.XX.XX-XX).
+ Replace X.XX.XX-XX with the version number from the previous step. Enter your admin password if prompted.
+ This will install the MSR module that you'll need to run the tool.
+ This will start the OpenSSL speed test, which will push your CPU to the maximum.
+ Running this will display a variety of readouts about your processor.
+ Each entry is the actual speed of each core. The TSC column is the speed reported normally. This allows you to see the difference your overclock is making. The speeds will look low if you aren't pushing your CPU with a process.

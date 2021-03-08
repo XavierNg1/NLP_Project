@@ -1,0 +1,20 @@
+ Label the currents flowing through each branch. For each branch, there should be current 'name' and direction.;
+, sum of currents flowing into the junction = sum of currents flowing out. This should give as many equations as there are junctions.
+ The loops should cover every possible branch. To check if the loops are independent, see if adding or subtracting two loop equations already written would give the new loop's equation you are looking for.
+
+
+In other words, if you take two loops already written, any loop that you can form by super-imposing them is not an independent loop. Label the independent loops with numbers.
+If any two loops have a common source they must be solved as a single loop by super imposing them.
+ If you had labelled N currents in the branches, you should have N equations to solve all of them completely. With J number of junctions, you get J equations from step 2. Therefore, you should get (N - J) loops to solve for the currents.
+ This can be done as follows. Pick a direction (clockwise or counter-clockwise). Start at some point on the loop and go along the loop in this direction.
+
+
+For every battery/power cell you encounter, if you are going from the negative plate to the positive plate, write +V, where V is the potential difference of the battery. If you are going from the positive to the negative, write -V.
+For every resistor with current I flowing through it, write + I R, if you are going against the current as you go along the loop, and - I R if you are going with the current. (Replace I with whatever the label of the current in that particular branch is).
+For every capacitor you encounter, if you are going from the negative plate to the positive plate, write +q/C, where q is the charge on the positive plate of the capacitor and C is the capacitance. If you are going from the positive to the negative, write -q/C.
+Inductors do not affect steady state DC circuits, and need a variable current to be of any effect.
+ This can be easily done on any mathematical computation platform, like Mathematica, MATlab, Python etc. For reasonable values of N, it can be solved by hand just as any simultaneous system of equations. This can get difficult for large N.
+
+
+To solve by hand, multiply by constants and subtract equations to eliminate variables successively until you get one of the currents. Substitute this back in the system of equations and repeat the process until every current is determined.
+

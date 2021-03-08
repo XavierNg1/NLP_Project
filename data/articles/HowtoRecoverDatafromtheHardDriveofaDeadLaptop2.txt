@@ -1,0 +1,23 @@
+ This will allow you to plug your laptop’s hard drive directly into a compatible desktop computer. Different computers use different hard drive models, so be sure to check your dead laptop’s specifications before making this purchase. Ex. If your laptop has a 2.5 SATA drive, you will need a 2.5 SATA adapter.
+ If you had a Windows, use another Windows; if you had a Linux, use another Linux; etc. Make sure it has enough space to accommodate the files you want to recover from the dead laptop; alternatively, you can hook a second external hard drive up to the working computer and simply use the computer as a transfer system for the files.
+
+
+A Linux computer will be able to read files off of a Windows computer (but not the other way around); unless you understand both systems, however, it is best to use a Windows computer to recover a Windows hard drive.
+ Turn off the laptop, unplug it, and remove the battery. Turn it over and you’ll see that various sections of the laptop base can be unscrewed and removed separately. Either look up your laptop model online to see exactly where the hard drive sits or simply look for the most likely candidate: though it differs between laptops, a laptop hard drive is often similar in size and shape to a 3.5-inch floppy disk. Unscrew the hard drive cover and remove the hard drive. Some models will pop upwards, some will slide outwards, etc.
+
+
+If your laptop has an IDE hard drive, note that there is a detachable adapter sitting over the hard drive interface. Simply pull this adapter off so that the interface is accessible later.
+ You will use the adapter kit to plug the old hard drive directly into the motherboard.
+ How you do this will depend on your drive and adapter types, so use the instructions that came with the kit.
+
+
+If you have an IDE drive, configure it to “slave” mode before connecting it to the IDE ribbon. The configuration should be noted on the hard drive itself and will involve moving a plastic cap over a particular pin or set of pins (aka “jumpers”) on the hard drive interface. Configuring it to slave mode will keep your laptop hard drive from competing with the desktop’s “master” hard drive during boot-up.
+ Plug your desktop back in, power it on, and open BIOS. Go to Standard CMOS Settings or IDE Config, where you will find four settings involving master and slave settings. Change all four fields to auto-detection.
+ Your desktop should now automatically detect the new hardware.
+ If you’re using Windows, go to My Computer and look for the new hard drive. With Linux, the new drive will appear in the dev directory.
+
+
+If the hard drive is not readable, it’s likely that the hard drive itself (and not your computer’s software) failed. If this is the case, you will need professional assistance if you wish to continue the salvage. Be warned that this can be very expensive.
+ Transfer them to either the working computer or to the external hard drive by copying and pasting, clicking and dragging, etc. If you have a lot of large files (ex. songs, movies), note that the transfer could take many hours.
+ Since the hard drive is physically intact, it will probably work fine in the old laptop if you reinstall your operating system.
+

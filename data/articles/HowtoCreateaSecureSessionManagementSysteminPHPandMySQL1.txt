@@ -1,0 +1,55 @@
+
+In this guide we will create a database called "secure_sessions".
+See how to Create-a-Database-in-Phpmyadmin.
+Or you can use the SQL code below will create one for you.Create Database Code:
+
+
+
+
+CREATE DATABASE `secure_sessions` ;
+
+
+
+
+
+Note: Some hosting services don't allow you to create a database through phpMyAdmin, Learn how to do it in cPanel.;
+,
+This means that if there was ever a breach of security in our script the hacker couldn't drop tables from our database. If you're really paranoid, create a different user for each function.
+
+User: "sec_user"
+
+Password: "eKcGZr59zAa2BEWU"
+
+Create User Code:
+
+
+
+
+CREATE USER 'sec_user'@'localhost' IDENTIFIED BY 'eKcGZr59zAa2BEWU';
+GRANT SELECT, INSERT, UPDATE, DELETE ON `secure_sessions`.* TO 'sec_user'@'localhost';
+
+
+
+
+
+Note: It is a good idea to change the password in the code above when running on your own server. (Make sure you change your PHP code also.) Remember it doesn't need to be a password that you can remember so make is as complicated as possible. Here's a random password generator.
+
+The code below creates a table with 4 fields (id, set_time, data, session_key).Create the "sessions" table:
+
+
+
+
+CREATE TABLE `sessions` (
+  `id` CHAR(128) NOT NULL,
+  `set_time` CHAR(10) NOT NULL,
+  `data` text NOT NULL,
+  `session_key` CHAR(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+
+We use the CHAR datatype for fields we know the length of, as the fields "id" and "session_key" will always be 128 characters long. Using CHAR here saves on processing power.
+

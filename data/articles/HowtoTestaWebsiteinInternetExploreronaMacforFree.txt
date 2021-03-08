@@ -1,0 +1,16 @@
+ VirtualBox is a free and open-source virtualization platform that will allow you to run Windows on your Mac.;
+, This is an official Microsoft website that allows you to download temporary builds of Windows for free, especially for web developers.
+,, The archive file is likely to be in excess of 4 GB, so be prepared for a lengthy download.
+
+
+You may be able to speed this up slightly by using the CURL download method, which will fetch multiple, smaller, files then combine them into one large archive. To do this, click on the "Grab them all with URL" link and follow the directions.
+ You should end up with a .ova file (possibly enclosed in several levels of folders). If the resulting file is yet another archive format, your downloaded zip file may have been corrupted due to data loss. Try downloading again.
+ In the "Appliance Settings" window that appears, confirm that these are the settings that you want to use.
+
+
+Generally speaking, it's best to double the default RAM allocation if you have enough spare RAM in your Mac. Just remember that when the virtual machine is running, that amount RAM will be unavailable to your Mac.
+ This process may take several minutes to complete.
+
+
+Although it is now safe to delete the .ova file, it is recommended that you keep it. The Windows OS builds are limited to a 30-90 day trial period before they expire and cease to work. Keeping the .ova file will ensure that you can reinstall the virtual machine without having to download the file again.
+, If the virtual machine already has the guest additions installed, this will make sure that it's running the most recent version.

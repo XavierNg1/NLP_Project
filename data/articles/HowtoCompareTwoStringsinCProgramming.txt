@@ -1,0 +1,108 @@
+
+
+
+strcmp() - This function compares two strings and returns the comparative difference in the number of characters.
+
+strncmp() - This is the same as strcmp(), except that it compares the first n characters. It is considered more secure as it helps prevent crashes from overflow.;
+, You'll want both the <stdio.h> and <string.h> libraries, along with any others you may need for your specific program.
+
+
+
+
+#include <stdio.h>]
+#include <string.h>
+
+
+
+
+, This is the easiest way to learn this function, as it will return an integer that compares the length of the two strings.
+
+
+
+
+]
+#include <stdio.h>]
+#include <string.h>
+ 
+int main ()
+ 
+{
+ 
+}
+
+
+
+
+, For this example, we will be comparing two predefined char strings. You will also want to define the return value as an integer.]
+#include <stdio.h>]
+#include <string.h>
+ 
+int main ()
+{
+  char *str1 = "apple";
+  char *str2 = "orange";
+  int ret;
+}
+
+
+
+
+, Now that you have your two strings defined, you can add the comparison function. We are going to use strncmp(), so we need to ensure that the number of characters to be measured is set in the function.
+
+
+
+
+]
+#include <stdio.h>
+#include <string.h>
+ 
+int main ()
+{
+  char *str1 = "apple";
+  char *str2 = "orange";
+  int ret;
+ 
+  ret = strncmp(str1, str2, 6);
+ 
+  /*This will compare the two strings 
+  up to 6 characters long */
+}
+
+
+
+
+, Now that you have the function in place, you can use an If...Else statement to display which string is longer. strncmp() will return 0 if the strings are the same length, a positive number if str1 is larger, and a negative number if str2 is larger.
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+ 
+int main ()
+{
+  char *str1 = "apple";
+  char *str2 = "orange";
+  int ret;
+ 
+  ret = strncmp(str1, str2, 6);
+ 
+  if(ret > 0)
+  {
+    printf("str1 is longer");
+  }
+  else if(ret < 0)
+  {
+    printf("str2 is longer");
+  }
+  else
+  {
+    printf("The two strings are equal");
+  }
+ 
+  return(0);
+}
+
+
+
+

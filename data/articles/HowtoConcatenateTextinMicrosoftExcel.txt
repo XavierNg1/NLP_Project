@@ -1,0 +1,148 @@
+ The basic function of concatenate is to join two or more text strings together. You can join up to 255 different strings together using one concatenate command. Take the following example:
+
+Entering the Formula
+
+
+A
+B
+C
+
+
+1
+good
+bye
+=Concatenate(A1,B1)
+
+
+
+The Result
+
+
+A
+B
+C
+
+
+1
+good
+bye
+goodbye
+;
+, If you want to join text but leave a space in between, you can add a space to the formula with quotation marks around a single space. This is especially useful for data such as first and last names. For example:
+
+Entering the Formula
+
+
+A
+B
+C
+
+
+1
+John
+Smith
+=Concatenate(A1," ",B1)
+
+
+
+The Result
+
+
+A
+B
+C
+
+
+1
+John
+Smith
+John Smith
+
+
+, As seen above, you can add spaces by placing quotation marks around a blank space in the formula. You can expand this and use quotation marks to insert any text into your concatenation. Take note of the spacing left in the quotation marks to result in a readable sentence.Entering the Formula
+
+
+A
+B
+C
+
+
+1
+Monday
+Friday
+=Concatenate(A1," - ",B1, ", closed weekends.")
+
+
+
+The Result
+
+
+A
+B
+C
+
+
+1
+Monday
+Friday
+Monday – Friday, closed weekends.
+ If you have a date range that you want to join, you will need to use the TEXT function to prevent Excel from treating the dates as mathematical formulas:Entering the Formula
+
+
+A
+B
+C
+
+
+1
+01/14/2013
+06/17/2013
+=Concatenate(Text(A1,"MM/DD/YYYY")," - ",Text(B1,"MM/DD/YYYY"))
+
+
+
+The Result
+
+
+A
+B
+C
+
+
+1
+01/14/2013
+06/17/2013
+01/14/2013 - 06/17/2013
+
+
+, The “&” performs the same function as concatenate. It can be useful for shorter formulas, but can quickly become cluttered for longer ones. Note the space in quotation marks. You must have an “&” between each value that you want to concatenate.
+
+Entering the Formula
+
+
+A
+B
+C
+
+
+1
+John
+Smith
+=A1&" "&B1
+
+
+
+The Result
+
+
+A
+B
+C
+
+
+1
+John
+Smith
+John Smith
+
+

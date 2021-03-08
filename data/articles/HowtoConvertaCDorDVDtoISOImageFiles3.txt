@@ -1,0 +1,13 @@
+ You can use the tools that come with Ubuntu to create ISO files without any additional software.
+ This program comes preinstalled with Ubuntu, and can quickly create ISO files from discs.
+
+
+You can find Brasero by pressing ⊞ Win and then typing "brasero."
+
+, The "Copy CD/DVD" window will appear.
+ If you only have one disc drive, it will be selected by default.
+ This will create an image file from the original disc instead of copying it to a blank one.
+ You'll be prompted to give the image file a name and select the location you want to save it to. After that, Ubuntu will begin creating the ISO file from the disc inserted in the computer.
+ if you'd rather use the Terminal, you can create an ISO file using a single command. Open the Terminal by pressing Ctrl+Alt+T and enter the following:sudo dd if=/dev/cdrom of=/home/username/image.iso
+Replace /dev/cdrom with the path to your disc drive. Replace the path for the ISO file with whatever path you'd like to save it to.
+

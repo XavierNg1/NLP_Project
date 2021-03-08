@@ -1,0 +1,13 @@
+
+By default, the simulator service process is running on the same server as the management console - in such a case confirm the default  parameters by pressing "y" at the prompt: Read default connection parameters ? The default connection parameters are 127.0.01:43500 (localhost as the the host name and 43500 for TCP port).
+Once connected, use HELPcommand to see available options.
+ Device type is considered as a group of devices using the same SNMP record file.
+
+Level 2– for management of devices (agent instances) under current device type (start, stop, add, remove devices).
+
+A specific set of commands is available for each level. In order to see all available command for the current level, use HELP command.
+
+
+
+
+

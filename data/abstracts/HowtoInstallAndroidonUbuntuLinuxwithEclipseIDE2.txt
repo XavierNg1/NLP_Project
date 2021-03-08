@@ -1,0 +1,23 @@
+
+You want to make sure you have the Eclipse Integrated Development Environment (IDE) installed on your system,for example select Eclipse Classic, and download the version for your system architecture such as 32bit or 64 bit version for Linux.
+This is an example of a 64-bit Eclipse IDE setup on 64-bit Ubuntu Linux operating system.
+Open up a terminal and enter the following commands:
+
+
+
+Type/Copy/Paste: cd /home/"your_user_name"/Desktop
+
+this will change you into your user Desktop, make sure you are not root
+
+
+
+Type/Copy/Paste: ln -s /usr/local/eclipse/eclipse
+
+Type/Copy/Paste: chown "your_user_name" eclipse
+
+this will make the Eclipse symbolic link located on your desktop belong to the user
+
+Important, make sure you are not root when you create this symbolic link from your Eclipse IDE /usr/local/eclipse directory to your Desktop /home/"your_user_name"/Desktop
+
+
+

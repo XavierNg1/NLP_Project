@@ -1,0 +1,60 @@
+ Because it's not possible to rip from Spotify short of manually recording as songs play, the easiest way to rip songs is to convert your Spotify playlist into a YouTube playlist and then download the music from there.
+
+
+Open the Spotify website and log in with your account.
+Create a new playlist and label it something like "YouTube" or "Convert" (so you can easily recognize it).
+Add all of the music that you want to rip to the playlist. You may have difficulty matching obscure tracks if the song is not on YouTube, but most songs should match without issue.;
+, Soundiiz is a service that allows you to transfer your playlists from one music streaming service to another.
+ You'll need to create a free account to use the playlist converter.
+ You can use one of the supported social media services to create an account quickly, or you can enter your email and create a password to make a traditional account. Either method is fine.
+ You'll see this in the menu on the left.
+, Soundiiz cannot see your Spotify login information.
+ Your Spotify account is now linked to Soundiiz.
+ Connecting to YouTube will allow Soundiiz to send the new playlist to your YouTube channel.
+, You'll need to have a YouTube channel associated with your Google account, which is created automatically when you sign into YouTube with your Google account.
+ You'll see all of your playlists from your connected accounts in the main frame of the Soundiiz site. Find the Spotify playlist that you want to convert.
+ You'll see this button to the right of the playlist name, next to the "..." button. The Convert button looks like a small box with an arrow pointing to a larger one.
+ This will tell Soundiiz to create a new playlist in YouTube with matching tracks.
+ This will open a tracklist for the playlist.
+ You can go through the list and de-select any songs you don't want to include.
+ Soundiiz will look for exact matches, and will add each match to a new playlist in YouTube. If any tracks cannot be matched, they won't appear in YouTube.
+
+
+It may take a while to scan larger playlists.
+Once your playlist has been converted into a YouTube playlist, you're ready to install the software necessary to download and convert the videos to MP3. The installation process is different for Windows and Mac.
+ youtube-dl is an open-source, command line program that can download YouTube videos and playlists. It is not the most intuitive program, but it is completely free and contains no viruses, malware, or other unwanted programs. It is developed and maintained by the community and generates no profit.
+ You'll see this in the opening paragraph on the page. The youtube-dl.exe file will begin downloading after a moment.
+ This is the base folder for your Windows user account, and contains your Documents, Pictures, Downloads, and other media folders. The default location is C:\Users\userName.
+ This will allow you to run the program from the Command Prompt without having to change any directories.
+ This is another open-source program that will allow youtube-dl to convert the downloaded files into MP3 format. Once you install FFmpeg, you won't be using it directly. Like youtube-dl, FFmpeg contains no malware or additional software.
+ You'll see this in the "More downloading options" section.
+, This will work for most versions of modern Windows. If you're using an older computer, you'll want to check if you're using 32-bit or 64-bit Windows.
+ You can usually find it at the bottom of your browser after it downloads, or in your Downloads folder.
+ The full folder name will vary depending on which version of FFmpeg you downloaded.
+, They should end up in the same location as the youtube-dl.exe file.
+ youtube-dl is now installed and ready to use from the Command Prompt.
+ youtube-dl is a command line program to download YouTube videos that is completely free and open-source. It is developed by the community and no one profits from it. It is the only downloading option that does not include ads, malware, or other privacy concerns.
+,, This is an open-source package manager that will manage "homebrewed" applications, including youtube-dl.
+
+
+Type /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" and press ⏎ Return.
+ Depending on your security settings, you may be prompted for your password before you can proceed.
+ Now that Homebrew is installed, you can use it to download and install youtube-dl:
+
+
+Type brew install youtube-dl and press ⏎ Return.
+ This is another open-source program that youtube-dl will use to convert the downloaded videos into MP3 format. Once this is installed, you'll be ready to use youtube-dl to download the playlist from the Terminal.
+
+
+Type brew install ffmpeg and press ⏎ Return.
+ You'll need to grab the URL for the playlist you want to download with youtube-dl.
+ Make sure you're signed in with the same account that you linked to Soundiiz.
+ You'll see this on the left side of the screen. When you click a playlist, you'll see a list of all of the videos in it.
+ Make sure the entire address in the address bar is highlighted.
+ Press Ctrl+C or ⌘ Cmd+C, or right-click the highlighted address and click "Copy."
+
+,, Enter the following command and replace playlistAddress with the pasted URL of your playlist:
+
+,,, This can take a while if the playlist is really long or you have a slow connection. youtube-dl will download each video in the playlist and then convert it to MP3 format so that it can be played on any audio player.
+, Your new MP3 files will be located in the User folder, the same folder that contains the youtube-dl program files. You can add the MP3 files to your media player library, transfer them to another device, or burn them to a disc.
+

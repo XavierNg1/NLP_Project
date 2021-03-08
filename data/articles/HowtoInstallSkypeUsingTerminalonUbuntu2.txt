@@ -1,0 +1,17 @@
+ While it’s no longer mandatory that Skype be installed by manually downloading the package from Skype’s website, it’s still an option.Try installing Skype from the Canonical Partners repository first. If you run into any issues, use this method as a backup.
+ The path to the package is different depending on whether you’re using 32-bit or 64-bit Ubuntu:
+
+
+If you’re using 32-bit Ubuntu, type: wget http://www.skype.com/go/getskype-linux-beta-ubuntu-32 and press ↵ Enter.
+64-bit Ubuntu, type: wget http://www.skype.com/go/getskype-linux-beta-ubuntu-32 and press ↵ Enter.
+ If you’re using the 64-bit version of Ubuntu, you’ll need Multiarch to install Skype. Here’s how to do it from the command line:Type: sudo dpkg --add-architecture i386 and press ↵ Enter.
+When you return to the command prompt, type: sudo apt-get update and press ↵ Enter.
+ You’ll do this with the “dkpg” command. Make sure the version number aligns with the one you downloaded earlier.Type: sudo dpkg -i skype-ubuntu-precise_4.3.0.37-1_i386.deb and press ↵ Enter.
+As Linux tries to unpack Skype, you’ll see a slew of errors on the screen about dependency issues. This is normal.
+ To correct the errors and start the Skype install:
+
+
+Type: sudo apt-get -f install and press ↵ Enter.
+Wait a few moments as the package installs. When the installation is complete, you’ll return to the command prompt.
+ To start Skype, type skype and press ↵ Enter. Follow the prompts to sign in or create a new account with Skype.
+

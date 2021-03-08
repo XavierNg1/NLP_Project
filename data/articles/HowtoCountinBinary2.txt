@@ -1,0 +1,27 @@
+ When you learned decimal counting, you learned about the "place values": the ones place, tens place, and so on. Since binary has two symbols, the place values multiply by two each time you move to the left:
+
+
+
+1 is the ones place
+
+10 is the twos place
+
+100 is the fours place
+
+1000 is the eights place
+
+, Start with the ones place on the far right, and multiply that digit (0 or 1) by one. On a separate line, move to the twos place, and multiply that digit by two. Repeat this pattern until you've multiplied each digit by its place value. Here's an example:
+
+
+What is the binary number 10011 in decimal?
+The rightmost digit is 1. This is in the ones place, so multiply by one: 1 x 1 = 1.
+The next digit is also 1. Multiply this by two: 1 x 2 = 2.
+The next digit is 0. Multiply this by four: 0 x 4 = 0.
+The next digit is also 0. Multiply this by eight: 0 x 8 = 0.
+The leftmost digit is 1. Multiply this by sixteen (eight times two): 1 x 16 = 16.
+ Now you've converted each digit into its decimal value. To find the value of the full number, just add all the decimal values together. Here's the rest of your example:
+
+
+1 + 2 + 16 = 19.
+The binary number 10011 is the same as the decimal number 19.
+

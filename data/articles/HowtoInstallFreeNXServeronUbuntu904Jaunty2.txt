@@ -1,0 +1,39 @@
+
+
+
+
+
+
+gksudo gedit /etc/apt/sources.list
+deb http://ppa.launchpad.net/freenx-team/ppa/ubuntu jaunty main
+deb-src http://ppa.launchpad.net/freenx-team/ppa/ubuntu jaunty main
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 2a8e3034d018a4ce
+
+
+
+
+,
+
+
+
+
+sudo apt-get update
+sudo aptitude install freenx
+(y)
+
+
+
+
+,
+
+
+
+
+sudo /usr/lib/nx/nxsetup --install
+
+
+
+
+
+For server behind a firewall, default key may be okay, (n) for any public system or for greater security, Generate a custom Key Pair (y)
+

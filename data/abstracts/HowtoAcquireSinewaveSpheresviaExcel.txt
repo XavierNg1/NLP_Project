@@ -1,0 +1,41 @@
+
+Open a new Excel workbook and create 3 worksheets (except Chart if you are using Chart Wizard): Data, Chart and Saves.
+,
+Set Your Preferences: Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+It helps placing the cursor at cell A14 and doing Freeze Panes.
+Enter the Defined Variable Names and some initial values:
+
+In A1, enter a;
+In A2, enter b;
+In A3, enter c_;
+Select cell range A1:B3 and Insert Names Create in Left Column; select cell range B1:B3 and Format Fill yellow (for input);
+In B1, enter 18; f(or the complete sphere, the value = 100)
+In B2, enter .8; f(or the complete sphere, the value = .5)
+In B3, enter .6; f(or the complete sphere, the value = .5)
+In cell D1, enter Change;
+In cell E1, Enter Stretch_y;
+Select cell range D1:E2 and Insert Names Create in Top Row;
+Select cell range D1:D2 and Format Cell Fill White or None.
+Input Column Headers:
+
+A5: t: 0 to 2π
+B5: z
+C4 Charting ... D4: Charting
+C5: x: No z
+D5: y: With z
+E5: Adj_y
+Edit Go To cell range B6:B5765 and Insert Name Define name z to range $B$6:$B$5765;
+Edit Go To cell range E6:E5765 and Insert Name Define name Adj_y to range $E$6:$E$5765.
+
+,
+Enter series or formulas in columns:
+
+Edit Go To Cell range A6:A1445 and input 0 into A6 and "=2*PI()" into A1445 and do Edit Fill Series Trend OK.
+Create the Chart:
+
+Select C4:D5 and make the font Italic.
+That's it, you're finished!
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

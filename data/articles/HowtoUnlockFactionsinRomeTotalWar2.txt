@@ -1,0 +1,37 @@
+ Look in one of the following locations, depending on your game version. This is the first step for altering the Barbarian Invasion expansion as well as the original game.
+
+
+
+Steam version: In Steam, right click the game tab and select Properties → Local Files → Browse Local Files (or from your desktop, go to C:\Programs\Steam\Steam Apps\Common\Rome – Total War)
+
+Rome: Total War basic edition: C:\Program Files\Activision\Rome - Total War
+
+Rome: Total War gold edition: C:\Program Files\The Creative Assembly\Rome - Total War
+
+, Once you've reached one of the folders above, locate the file that contains faction playability information, located in one of the following paths:
+
+
+
+To unlock factions in the base Rome: Total War campaign: \data\world\maps\campaign\imperial_campaign
+
+To unlock factions in the Barbarian Invasion campaign: \BI\data\world\maps\campaign\barbarian_invasion
+
+, Right click that file and copy it, then paste it to your desktop. Open this file.
+
+
+This lets you edit the file even if you are not an administrator account, and gives you an unaltered backup copy in case something goes wrong with your game.
+ The file should begin with a list of faction names, sorted underneath the words "playable," "unlockable," and "nonplayable." Select all factions underneath "unlockable," cut them from the document, and paste them into the list under "playable." Before you do the same for the factions underneath "nonplayable," read the following warnings:
+
+
+In the original campaign, the maximum number of playable factions is 20. Keep at least one faction underneath "nonplayable" to avoid bugs.In the original campaign, most people experience frequent crashes when playing as the "romans_senate" (SPQR) or "slave" (rebels) factions. See Tips below for a possible workaround.
+In the Barbarian Invasion, the following factions should be left under "nonplayable" (they crash the game if you attempt to play as them): romano_british, ostrogoths, slavs, empire_east_rebels, empire_west_rebels, slave.Every faction name must have a "Tab" indent in front of it, and should be the only word on its line.
+ Save the file without changing its name. Move the original, unaltered file to another location, so you can restore it if your game becomes buggy. Drag the altered file back to that folder and open Rome: Total War to see your changes.
+
+
+You may need to close and reopen Rome: Total War before it takes effect.
+ This is only necessary in early versions of Rome: Total War. If the game still doesn't have additional faction options, and you're certain your previous edit contained no typos, try making this additional change:
+
+
+In your Rome – Total War folder, make a backup copy of \Data\Text\campaign_descriptions, then open this file.
+Paste the following into the file, then save it:
+

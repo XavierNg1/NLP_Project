@@ -1,0 +1,15 @@
+ The registry controls how Windows operates. Be very careful while manipulating registry entries, as the wrong changes can render your system inoperable. Do not do these steps until you have performed the steps outlined above.
+
+
+Click the Start menu and type “regedit” into the search box. Select regedit from the list of programs.
+ In the left frame of regedit are directory trees. Scroll up or down until you find the HKEY_LOCAL_MACHINE folder. In this folder, there should be a SOFTWARE folder. Open the SOFTWARE folder, then the Classes folder, followed by AppID. Delete the following entries:
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\esrv.EXE
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\escort.DLL
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\escortApp.DLL
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\escortEng.DLL
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\escorTlbr.DLL
+
+, After your computer has rebooted, all traces of Funmoods should be gone.
+

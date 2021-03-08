@@ -1,0 +1,30 @@
+ There are two versions of Adobe Actionscript: Actionscript 2.0 and Actionscript 3.0. Version 3.0 is the newest version and its code is not compatible with Actionscript 2.0. For this tutorial, make sure you are using an Adobe Flash Actionscript 2.0 document.;
+, When you launch Adobe Flash, select “Flash File (Actionscript 2.0).” If you already have the program open, use the shortcut CtrlN for Windows or ⌘ CommandN for Macs.
+ In Adobe Flash, buttons are quickly created with the button symbol function. To access this function, you can select Insert > Symbol, use the Windows shortcut CtrlF8, or use the Mac shortcut ⌘ CommandF8. In the dialog box, enter a new name into the “Name” field. Use the dropdown menu next to “Type” to select “Button.” The button will appear in your library (see right panel)., Your button has four distinct states: up frame, over frame, down frame, and hit frame. These states are visible in the timeline. The up frame defines the appearance of your button when it is not in use. To create the up frame appearance, you may use the drawing tool. Instead of drawing your own button, you can import a graphic from the “Common Libraries.” Select Window > Common Libraries > Buttons. Choose a button graphic and drag it onto the stage., The over frame defines the appearance of the button when the user hovers over it. Click on the box directly below “Over” in the timeline. Select Insert > Timeline > Keyframe. The button you created should appear on the stage. You can alter the location and/or appearance of the button with the tool bar or the properties panel., The down frame defines the appearance of the button when the user selects, or clicks, it. Select the box directly below “Down” on the timeline. Select Insert > Timeline > Keyframe. The button you created in the up frame should appear on the stage. You can change the location and/or appearance of the button with the tool bar or the properties panel., The hit frame defines an area on the stage that is responsive to the user’s cursor. The hit frame is useful if your button is small or oddly shaped. Select Insert > Timeline > Keyframe. Draw a shape that encompasses all three frames and or a larger area. This shape will not appear in the scene or the final product. Defining the hit frame is optional. If you choose not to define it, the up frame will serve as the default hit frame., When you assign actions to a button, you want to be editing the scene, not the button itself. Click on the scene you would like to edit. Right-click on the button and select “Actions” from the menu. In the “Action” dialog box that appears, you can assign actions by typing in code or inserting code from the “Actions” or library., In Adobe Flash, functions perform specific, repeatable tasks. When the user interacts with buttons via the cursor, these tasks occur. This function is indicated in the actionscript code by on.on ( )
+
+
+
+
+
+, Events are timing cues that communicate to the program that something has happened. For buttons, these timing cues are executed by the mouse. The event is placed within the parens. Common mouse-related events include press: task is executed when the button is pressed; release: task is performed when mouse is released; rollOver: task is completed when mouse is rolled over the button.on (press)
+
+
+
+
+
+, After the close parenthesis, insert a pair of brackets { }. The function you wish to occur when the event occurs in placed within the brackets. Common functions include: play, stop, gotoAndPlay, gotoAndStop, nextframe, next scene, prevFrame, prevScene, stopAllSounds.on (press) {
+gotoAndStop();
+}
+
+
+
+
+
+, For some functions, you will need to list a specific frame or scene to go to. Insert the frame or function number into the parens next to the named function.on (press) {
+gotoAndStop(12);
+}
+
+
+
+
+

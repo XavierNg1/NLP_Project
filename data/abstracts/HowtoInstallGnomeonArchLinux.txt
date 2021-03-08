@@ -1,0 +1,13 @@
+
+Ensure that X Window is working by typing the startx command.
+Install the packages ttf-dejavu and ttf-ms-fonts.
+Install the gnome package.
+Install gdm.
+Run xinit gnome-session to test GNOME.
+Log out of the GNOME session by clicking System>Log Out.
+
+,
+Type systemctl enable gdm.service.
+Reboot by typing reboot.
+Login to GNOME with your login information and enjoy GNOME.
+

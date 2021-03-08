@@ -1,0 +1,122 @@
+ It is given that:
+
+
+S{\displaystyle S} is the surface x2+y2+z2=9{\displaystyle x^{2}+y^{2}+z^{2}=9}
+
+
+G=(2x3+3xy2z)i+(5y2−2z3sin⁡(5x2z2))j+(6y2z+x2y2)k{\displaystyle {\mathbf {G} }=(2x^{3}+3xy^{2}z){\mathbf {i} }+(5y^{2}-2z^{3}\sin(5x^{2}z^{2})){\mathbf {j} }+(6y^{2}z+x^{2}y^{2}){\mathbf {k} }}
+;
+, Notice that although this vector field looks complicated, there are many terms that we can cancel out.
+
+
+∇⋅G=6x2+3y2z+10y+6y2{\displaystyle \nabla \cdot {\mathbf {G} }=6x^{2}+3y^{2}z+10y+6y^{2}}
+
+
+,
+
+
+∮SG⋅dS=∫V(∇⋅G)dV=∫V(6x2+3y2z+10y+6y2)dV{\displaystyle {\begin{aligned}\oint _{S}{\mathbf {G} }\cdot {\mathrm {d} }{\mathbf {S} }&=\int _{V}(\nabla \cdot {\mathbf {G} }){\mathrm {d} }V\\&=\int _{V}(6x^{2}+3y^{2}z+10y+6y^{2}){\mathrm {d} }V\end{aligned}}}
+
+
+, The surface S{\displaystyle S} bounds a sphere of radius 3. Our boundaries in Cartesian coordinates are therefore symmetric. When we are integrating odd functions over symmetric boundaries, we can cross them out, as they evaluate to 0. Because we can treat each variable separately, any expression that has an odd function in it gets annihilated. The second term cancels because z is  an odd function, and the third term cancels because y is odd too. The expressions with quadratic terms in them do not get annihilated because they are even functions. This step is crucial in simplifying the integral to be evaluated.
+
+
+∫V(6x2+3y2z+10y+6y2)dV{\displaystyle \int _{V}(6x^{2}+{\cancel {3y^{2}z}}+{\cancel {10y}}+6y^{2}){\mathrm {d} }V}
+
+
+, As our volume is a sphere, this is only appropriate. The phi integral is evaluated using u-substitution, where u=cos⁡ϕ.{\displaystyle u=\cos \phi .}
+
+
+∫V(∇⋅G)dV=∫03ρ2dρ∫0πsin⁡ϕdϕ∫02πdθ(6ρ2sin2⁡ϕ)=3⋅2∫03ρ4dρ∫0πsin3⁡ϕdϕ∫02πdθ=3⋅2⋅1535(43)(2π)=35245π{\displaystyle {\begin{aligned}\int _{V}(\nabla \cdot {\mathbf {G} }){\mathrm {d} }V&=\int _{0}^{3}\rho ^{2}{\mathrm {d} }\rho \int _{0}^{\pi }\sin \phi {\mathrm {d} }\phi \int _{0}^{2\pi }{\mathrm {d} }\theta (6\rho ^{2}\sin ^{2}\phi )\\&=3\cdot 2\int _{0}^{3}\rho ^{4}{\mathrm {d} }\rho \int _{0}^{\pi }\sin ^{3}\phi {\mathrm {d} }\phi \int _{0}^{2\pi }{\mathrm {d} }\theta \\&=3\cdot 2\cdot {\frac {1}{5}}3^{5}\left({\frac {4}{3}}\right)(2\pi )\\&={\frac {3^{5}2^{4}}{5}}\pi \end{aligned}}}
+
+
+, This torus has the parameters defined below, which give it its distinctive donut shape.
+
+
+{x=(7+3sin⁡u)cos⁡vy=(7+3sin⁡u)sin⁡vz=3cos⁡u{\displaystyle {\begin{cases}x=(7+3\sin u)\cos v\\y=(7+3\sin u)\sin v\\z=3\cos u\end{cases}}}
+
+
+, Recall that dS{\displaystyle {\mathrm {d} }{\mathbf {S} }} has information about the magnitude of the patch and its direction, which can be found via a cross product dS=dru×drv,{\displaystyle {\mathrm {d} }{\mathbf {S} }={\mathrm {d} }{\mathbf {r} }_{u}\times {\mathrm {d} }{\mathbf {r} }_{v},} where r{\displaystyle {\mathbf {r} }} is the arbitrary vector r=xi+yj+zk.{\displaystyle {\mathbf {r} }=x{\mathbf {i} }+y{\mathbf {j} }+z{\mathbf {k} }.}
+
+Calculate differentials.
+
+
+dru=(3cos⁡ucos⁡v)i+(3cos⁡usin⁡v)j+(−3sin⁡u)k{\displaystyle {\mathrm {d} }{\mathbf {r} }_{u}=(3\cos u\cos v){\mathbf {i} }+(3\cos u\sin v){\mathbf {j} }+(-3\sin u){\mathbf {k} }}
+
+
+drv=((7+3sin⁡u)(−sin⁡v))i+((7+3sin⁡u)cos⁡v)j{\displaystyle {\mathrm {d} }{\mathbf {r} }_{v}=((7+3\sin u)(-\sin v)){\mathbf {i} }+((7+3\sin u)\cos v){\mathbf {j} }}
+
+
+
+Compute the cross product to obtain dS.{\displaystyle {\mathrm {d} }{\mathbf {S} }.} The k{\displaystyle {\mathbf {k} }} component can be simplified using the identity cos2⁡v+sin2⁡v=1.{\displaystyle \cos ^{2}v+\sin ^{2}v=1.}
+
+
+3(7+3sin⁡u)|ijkcos⁡ucos⁡vcos⁡usin⁡v−sin⁡u−sin⁡vcos⁡v0|= 3(7+3sin⁡u){\displaystyle {\begin{aligned}&3(7+3\sin u){\begin{vmatrix}{\mathbf {i} }&{\mathbf {j} }&{\mathbf {k} }\\\cos u\cos v&\cos u\sin v&-\sin u\\-\sin v&\cos v&0\end{vmatrix}}\\=\ &3(7+3\sin u)\end{aligned}}}
+
+
+
+
+, Since we are finding the volume ∫VdV{\displaystyle \int _{V}{\mathrm {d} }V} and not the flux, we are free to choose our vector field such that it satisfies that condition. Since the k{\displaystyle {\mathbf {k} }} component of dS{\displaystyle {\mathrm {d} }{\mathbf {S} }} is the simplest, let's choose F=zk,{\displaystyle {\mathbf {F} }=z{\mathbf {k} },} remembering that z=3cos⁡u,{\displaystyle z=3\cos u,} and compute the resulting dot product F⋅dS.{\displaystyle {\mathbf {F} }\cdot {\mathrm {d} }{\mathbf {S} }.} In this example, the surface integral is the easier one to do, since we picked a simple vector field and have already computed the surface element.
+
+
+F⋅dS=(3cos⁡u)3(7+3sin⁡u)cos⁡u{\displaystyle {\mathbf {F} }\cdot {\mathrm {d} }{\mathbf {S} }=(3\cos u)3(7+3\sin u)\cos u}
+
+
+, Our boundaries both go from 0{\displaystyle 0} to 2π,{\displaystyle 2\pi ,} because we need to go all the way around (which closes the hole in the center) and up-and-over (which makes the surface rounded) for both parameters. It is useful to recognize that ∫02πsin⁡udu=0,{\displaystyle \int _{0}^{2\pi }\sin u{\mathrm {d} }u=0,} which allows us to annihilate that term. Even though it is being multiplied by cos2⁡u,{\displaystyle \cos ^{2}u,} that does not affect sin⁡u{\displaystyle \sin u} being odd over the interval {\displaystyle } because cos2⁡u{\displaystyle \cos ^{2}u} is even.
+
+
+∮SF⋅dS=∫02πdu∫02πdv((3cos⁡u)3(7+3sin⁡u)cos⁡u)=(2π)32∫02πducos2⁡u(7+3sin⁡u)=2π327π=126π2{\displaystyle {\begin{aligned}\oint _{S}{\mathbf {F} }\cdot {\mathrm {d} }{\mathbf {S} }&=\int _{0}^{2\pi }{\mathrm {d} }u\int _{0}^{2\pi }{\mathrm {d} }v((3\cos u)3(7+3\sin u)\cos u)\\&=(2\pi )3^{2}\int _{0}^{2\pi }{\mathrm {d} }u\cos ^{2}u(7+{\cancel {3\sin u}})\\&=2\pi 3^{2}7\pi \\&=126\pi ^{2}\end{aligned}}}
+
+
+, This is a problem that uses not only the divergence theorem, but also Jacobian change of variables. It is recommended that you are familiar with this topic in order to follow this example. F{\displaystyle {\mathbf {F} }} is given as below.
+
+
+F=(2x3+xy3+y4z3)i+(y3+x2y2)j+(2x2+y2+x2z)k{\displaystyle {\mathbf {F} }=(2x^{3}+xy^{3}+y^{4}z^{3}){\mathbf {i} }+(y^{3}+x^{2}y^{2}){\mathbf {j} }+(2x^{2}+y^{2}+x^{2}z){\mathbf {k} }}
+
+Draw a diagram of this problem. The surface is an elliptic paraboloid in the shape of a hill, whose axis of symmetry is the z-axis. This is an open surface - the divergence theorem, however, only applies to closed surfaces. In order to use the divergence theorem, we need to close off the surface by inserting the region on the xy-plane "inside" the paraboloid, which we will call D.{\displaystyle D.} Keep in mind that this region is an ellipse, not a circle.
+
+As the problem is concerned with the flux above the xy plane, we will need to subtract the contribution obtained with the region on the plane at the end. How do we do this without getting thrown off by the signs? The flux through D{\displaystyle D} points upwards by convention. However, when we closed off the paraboloid surface using D,{\displaystyle D,} we were concerned with the outward flux penetrating a closed surface. The flux contribution of D{\displaystyle D} will therefore be negative.
+ We recognize that in this region, z=0.{\displaystyle z=0.} Therefore, 5x2+4y2≤20.{\displaystyle 5x^{2}+4y^{2}\leq 20.} Verify that this parameterization satisfies the inequality. It is important that we recognize that 0≤r≤1.{\displaystyle 0\leq r\leq 1.}
+
+
+x=2rcos⁡θ{\displaystyle x=2r\cos \theta }
+
+y=5rsin⁡θ{\displaystyle y={\sqrt {5}}r\sin \theta }
+
+, Because our region is on the xy-plane, we find that the flux through D{\displaystyle D} only relies on the k{\displaystyle {\mathbf {k} }} component of F.{\displaystyle {\mathbf {F} }.} But on D,z=0,{\displaystyle D,\,z=0,} so we need to evaluate −∫D(2x2+y2)dA.{\displaystyle -\int _{D}(2x^{2}+y^{2}){\mathrm {d} }A.} Remember that this negative sign exists because positive flux when analyzing D{\displaystyle D} alone points in the opposite direction of outwards flux regarding surface S.{\displaystyle S.}
+
+
+Use a Jacobian change of variables to transform from physical space into parameter space. First, calculate partial derivatives.
+
+
+∂x∂r=2cos⁡θ;   ∂y∂r=5sin⁡θ{\displaystyle {\frac {\partial x}{\partial r}}=2\cos \theta ;\ \ \ {\frac {\partial y}{\partial r}}={\sqrt {5}}\sin \theta }
+
+
+∂x∂θ=−2rsin⁡θ;   ∂y∂θ=5rcos⁡θ{\displaystyle {\frac {\partial x}{\partial \theta }}=-2r\sin \theta ;\ \ \ {\frac {\partial y}{\partial \theta }}={\sqrt {5}}r\cos \theta }
+
+
+
+Calculate the determinant of the Jacobian matrix. Those familiar with Jacobians should recognize the extra r{\displaystyle r} that results with the conversion from Cartesian to polar coordinates. However, r{\displaystyle r} and θ{\displaystyle \theta } are, while polar, non-physical parameters. 
+
+dA=|∂x∂r∂y∂r∂x∂θ∂y∂θ|drdθ=25rdrdθ{\displaystyle {\begin{aligned}{\mathrm {d} }A&={\begin{vmatrix}{\dfrac {\partial x}{\partial r}}&{\dfrac {\partial y}{\partial r}}\\{\dfrac {\partial x}{\partial \theta }}&{\dfrac {\partial y}{\partial \theta }}\end{vmatrix}}{\mathrm {d} }r{\mathrm {d} }\theta \\&=2{\sqrt {5}}r{\mathrm {d} }r{\mathrm {d} }\theta \end{aligned}}}
+
+
+
+, Now that we have converted into parameter space, we can convert into polar coordinates without worry. The extra 25{\displaystyle 2{\sqrt {5}}} resulting from the Jacobian is crucial in obtaining the correct answer. Substitute the integrand using the parameterization that we made earlier in step 2.
+−∫D(2x2+y2)dA=−25∫01rdr∫02πdθ=−25∫01r3dr∫02π(8cos2⁡θ+5sin2⁡θ)=−25(14)(13π)=−1352π{\displaystyle {\begin{aligned}-\int _{D}(2x^{2}+y^{2}){\mathrm {d} }A&=-2{\sqrt {5}}\int _{0}^{1}r{\mathrm {d} }r\int _{0}^{2\pi }{\mathrm {d} }\theta \\&=-2{\sqrt {5}}\int _{0}^{1}r^{3}{\mathrm {d} }r\int _{0}^{2\pi }(8\cos ^{2}\theta +5\sin ^{2}\theta )\\&=-2{\sqrt {5}}\left({\frac {1}{4}}\right)(13\pi )\\&=-{\frac {13{\sqrt {5}}}{2}}\pi \end{aligned}}}
+This result only gives us the flux through D.{\displaystyle D.} We still need the flux through the paraboloid.
+ In this problem, we wish to evaluate using the volume integral, because the paraboloid shape is easy to evaluate in cylindrical coordinates. 
+
+∇⋅F=7x2+y3+3y2+2x2y{\displaystyle \nabla \cdot {\mathbf {F} }=7x^{2}+y^{3}+3y^{2}+2x^{2}y}
+
+, Since we are integrating over symmetric x{\displaystyle x} and y{\displaystyle y} boundaries, we can look for odd functions of both of these variables and cross them out. Here, the second and fourth terms cancel because of the presence of the y3{\displaystyle y^{3}} and y{\displaystyle y} in those terms.
+
+∫V(7x2+y3+3y2+2x2y)dV{\displaystyle \int _{V}(7x^{2}+{\cancel {y^{3}}}+3y^{2}+{\cancel {2x^{2}y}}){\mathrm {d} }V}
+
+, Then evaluate using any means possible. We recognize that for the z{\displaystyle z} integral, our bounds are 0{\displaystyle 0} and 20−5x2−4y2.{\displaystyle 20-5x^{2}-4y^{2}.} That integral will be trivial. Do not forget the Jacobian, as the substitution we make means that we are working in parameter space. We need not worry about the z{\displaystyle z} dimension because it does not affect the Jacobian, which is why cylindrical coordinates are ideal in this situation - extending into the third dimension is very simple. Verify that the relation dV=25rdrdθdz{\displaystyle {\mathrm {d} }V=2{\sqrt {5}}r{\mathrm {d} }r{\mathrm {d} }\theta {\mathrm {d} }z} holds.
+25∫01rdr∫02πdθ∫020−5x2−4y2dz(7x2+3y2)=25∫01rdr∫02πdθ(20−5(2rcos⁡θ)2−4(5rsin⁡θ)2)(7(2rcos⁡θ)2+3(5rsin⁡θ)2)=25∫01rdr∫02πdθ(20−20r2cos2⁡θ−20r2sin2⁡θ)(28r2cos2⁡θ+15r2sin2⁡θ)=25(20)∫01r3(1−r2)dr∫02πdθ(28cos2⁡θ+15sin2⁡θ)=25(20)(14−16)(43π)=43053π{\displaystyle {\begin{aligned}&2{\sqrt {5}}\int _{0}^{1}r{\mathrm {d} }r\int _{0}^{2\pi }{\mathrm {d} }\theta \int _{0}^{20-5x^{2}-4y^{2}}{\mathrm {d} }z(7x^{2}+3y^{2})\\=\;&2{\sqrt {5}}\int _{0}^{1}r{\mathrm {d} }r\int _{0}^{2\pi }{\mathrm {d} }\theta (20-5(2r\cos \theta )^{2}-4({\sqrt {5}}r\sin \theta )^{2})(7(2r\cos \theta )^{2}+3({\sqrt {5}}r\sin \theta )^{2})\\=\;&2{\sqrt {5}}\int _{0}^{1}r{\mathrm {d} }r\int _{0}^{2\pi }{\mathrm {d} }\theta (20-20r^{2}\cos ^{2}\theta -20r^{2}\sin ^{2}\theta )(28r^{2}\cos ^{2}\theta +15r^{2}\sin ^{2}\theta )\\=\;&2{\sqrt {5}}(20)\int _{0}^{1}r^{3}(1-r^{2}){\mathrm {d} }r\int _{0}^{2\pi }{\mathrm {d} }\theta (28\cos ^{2}\theta +15\sin ^{2}\theta )\\=\;&2{\sqrt {5}}(20)\left({\frac {1}{4}}-{\frac {1}{6}}\right)(43\pi )\\=\;&{\frac {430{\sqrt {5}}}{3}}\pi \end{aligned}}}
+This evaluation may seem long, but if we had not done the necessary simplifications along the way, it would've been hopelessly complicated.
+ Because the former is negative, we end up with a larger quantity. This is the flux through the surface defined by the elliptic paraboloid above the xy-plane. 
+
+43053π−(−1352π)=89956π{\displaystyle {\frac {430{\sqrt {5}}}{3}}\pi -\left(-{\frac {13{\sqrt {5}}}{2}}\pi \right)={\frac {899{\sqrt {5}}}{6}}\pi }
+

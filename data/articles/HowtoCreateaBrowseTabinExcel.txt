@@ -1,0 +1,33 @@
+ The original data must be a table, with headings at the top and rows of data. Note the
+
+
+Tab name
+Row number containing Headings
+Row numbers containing data
+First and last column numbers (with Column A as 1, column B as 2, etc.) An estimate will do.
+We'll use a Nations tab with health information.
+Go ahead and peek ahead to step 18 to see the final result.;
+, Right click on an unused tab at the bottom. Click Rename and enter Browse. If you need to create a blank sheet, click first on Insert and Worksheet and OK.
+.
+ Repeat step 2 to create a tab named Temp. You will drop this tab when done.
+ In the Browse tab, select cell A1 and enter Row. In cell B1, enter the number of the first row of real data of the table you're browsing.
+ On the Menu, click on Developers tab and select Insert.
+ Within the toolbox, click on the scrollbar
+
+, The cursor changes shape. Left click on the upper left corner of the rectangle you're about to draw. Keeping the left button down, drag the cursor to the bottom right corner to draw a rectangle about two rows high and four columns wide.
+ Right click on the new scrollbar and click on Format Control.
+
+
+For Cell Link, enter B1.
+In Min Value enter the row number of the first row of your table;
+In Max Value enter the last row.
+Close out the properties box. Click on the drafting box in the Control Toolbox and close the Toolbox. The scrollbar should now work.
+ Click on the Temp tab and enter Tab, Heading Row, Linked Cell, Column, Heading and Value in row 1, columns A - F.
+ Enter the name of the data tab in cell A2. Enter the heading row number in cell B2 (generally this is row 1). Enter $B$1 in cell C2 and the column numbers beginning in cell D2. Fill out the rows of this table for all the column numbers of interest. Columns A, B and C are usually identical, but has been designed for some flexibility.
+,, Return to the Browse tab, click on cell A3 and on the Menu, click on Edit, Paste Special and Values.
+ The headings should now appear, but the formulas remain. Select the formula cells in column B and click on Edit and Replace. Now this really strange, but replace = with = (no joke). Click the Replace All button.
+ You should now see unformatted data from the spreadsheet.
+ Increment and decrement the row number. Try both the minimum and maximum values of the scroll-bar and verify against the original data.
+ You can copy and paste to any row and column within the Browse tab. For our example, here's the final result.
+ Right click on the Temp tab and select Delete. Click OK on the dialog box popping up for confirmation. Save your spreadsheet.
+

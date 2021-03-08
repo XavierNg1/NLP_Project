@@ -1,0 +1,45 @@
+ Think about what sort of data is needed as input, how to structure the output, and include some intermediate output so you can monitor the progress of your calculation. This will be very useful if you know your calculation will run for a long time or involves multiple complicated steps.
+ Otherwise, you should do this:
+
+, Don't worry about all the minor details of the syntax, just become comfortable with compiling and running.
+, Variables are where information is stored, functions and subroutines are pieces of code that can be executed, and arrays are groups of variables.
+ The "IF" statement will be one of your most frequently used statements, you can execute code based on whether a condition is true or not (e.g. whether the color the user provided was red).
+,,, For example, the book "Numerical Recipes in Fortran" is both a good text on scientific programming algorithms and a good introduction to how to put together codes. More recent editions include chapters on how to program in a mixed-language environment and parallel programming. Another example is "Modern Fortran in Practice" written by Arjen Markus. The book gives an insight into how to write Fortran programs in twenty-first-century style in accordance with the latest Fortran standards., This is a relic from the past. In the early days of computer, there were no terminals. You entered data via punch-cards. A "C" in the first line on the punch card indicated a comment line. The next 4 spaces were reserved for line numbers and the 6th space indicated that the current line is a continuation of the previous line. This is needed because punch cards were only 80 characters wide. So, any line longer than 72 characters would be chopped off! Because of this legacy, lines of fortran are sometimes called "Cards"
+
+
+
+
+
+
+
+
+
+, For example, "Hello, World" could be written as
+
+
+ ! HELLO.F90 -- HELLO WORLD PROGRAM
+ ! PUBLIC DOMAIN
+PROGRAM HELLO
+WRITE (*, *) 'Hello, World!' ! Display 'Hello, World'
+END PROGRAM
+Fortran
+
+, Typically, this is done by issuing the commands (the > indicates the command line prompt)
+
+>f77 -c main.f
+and
+>f77 -c morestuff.f
+which generates the files: main.o and morestuff.o
+then
+f77 -o killerap.x main.o morestuff.o
+which links main.o and morestuff.o to make your killerap.x. The -c and -o flags are pretty common...but you should read up on compilation flags for your particular compiler.;
+, However, most compilers include optimization algorithms that improve things even more. These are typically turned on by including a -O , -O2, or -O3 flag when compiling (again depending upon your version of fortran).
+
+Generally, the lowest level -O or -O2 level is best. Be aware that using the more aggressive optimization option can introduce errors in complex codes and may even slow things down! TEST YOUR CODE.
+
+
+
+
+
+
+

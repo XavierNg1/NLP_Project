@@ -1,0 +1,25 @@
+ This will start the Command Prompt with administrator access. You may be prompted to continue depending on your computer's security settings.
+
+You'll need to be logged in with an administrator account or know the administrator password in order to perform these steps.;
+, You'll need a wireless adapter in order to create a wireless network for your mobile device to connect to. Virtually all Windows laptops have a wireless adapter installed, but many desktop computers do not come with one. Type the following command to check if you have an adapter installed, and if it's compatible:netsh wlan show drivers
+If you get a message saying The Wireless AutoConfig Service is not running, your computer does not have a wireless adapter installed. You can try a USB wireless adapter, or see Install a PCI Card for instructions on installing a network card.
+ You may need to scroll back up to find it. If it says Yes, your wireless adapter supports broadcasting a wireless network. Keep the Command Prompt window open for now.
+
+Not all wireless adapters support hosting their own network. If your computer does not have a compatible adapter, you can try a USB adapter instead.
+ This method requires that the computer you are turning into a wireless hotspot has an Ethernet cable connection to the network. You'll be sharing this connection with the devices that connect to your computer via wireless.Press ⊞ Win+X and select "Network Connections" to load the Network Connections window. Look for an "Ethernet" connection in the list. It will have an Ethernet cable icon underneath the network icon.
+If you don't have an Ethernet connection (i.e. you're using a Surface tablet), see the section below on using Connectify, which can use your wireless adapter to both receive internet and broadcast it to connected devices.
+ Return to the Command Prompt window, or open it in administration mode again if you closed it. Type the following command:netsh wlan set hostednetwork mode=allow ssid=name key=password
+Replace name with the name you want your network to appear as.
+Replace password with the password you want to use to protect your network. It must be at least eight characters long.
+ Enter the following command to start your new hotspot:
+
+netsh wlan start hostednetwork
+
+, You can find it in the ⊞ Win+X menu if you closed it earlier., This will open a new window with details on your Ethernet adapter., It reads "Allow other network users to connect through this computer's Internet connection." A new menu will appear under the box., You'll need to select the network that you just created, as this is the network that you'll be sharing your internet connection with. It could be labeled "Local Area Connection #," "Wi-Fi" or "Microsoft Hosted Virtual Adapter.", Mobile devices that connect to your network will now be able to access the internet using your computer's connection., Now that the new network is set up, you can find the wireless network on your mobile device and try connecting to it:
+
+Android - Open the Settings app and tap "Wi-Fi." Tap your newly-created network in the list of available networks, then enter the password you made when prompted.
+iOS - Open the Settings app on your Home screen. Tap "Wi-Fi" and then find your new network in the "Choose a Network" list. Tap it and then enter the password when prompted.
+ Once you're connected to the wireless network, you can test it out by opening a browser and loading a webpage. You may notice a slower connection on your mobile device than on your computer., When you're done sharing your internet connection, you can disable the hotspot very similarly to how you turned it on:Open the Command Prompt (Admin) from the ⊞ Win+X menu.
+Type netsh wlan stop hosted network and press ↵ Enter.
+Return to the Network Connections window, open the Ethernet connection's Properties, and disable connection sharing in the Sharing tab.
+

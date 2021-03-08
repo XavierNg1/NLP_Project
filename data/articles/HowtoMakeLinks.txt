@@ -1,0 +1,37 @@
+ Links in HTML are defined with the <a> tag. Tags need to have a beginning and an end. This means that links start with the <a> tag and end with the </a> tag. The address you are linking to goes in the first <a> tag designated by the href attribute, and the displayed text for the link goes between the tags. A completed HTML link would look similar to the one above:
+
+
+The finished link would appear as wikiHow Home Page and would be clickable.;
+, You can designate locations on your page that you want the browser to go to when specific links are clicked. For example, you could place a link at the bottom of a long article that will return you to the top of the page. To do this, you need to create the “anchor” that you can refer to with the link:For this example, this code anchor would be placed at the top of the page, either in the header or at the beginning of the body.
+
+
+
+
+
+
+
+
+This link would be placed at the end of the page. Clicking the link would scroll the page back to the top.
+ You can use the href attribute to point to specific files instead of an absolute path. This is useful if you are moving files around often and don’t want your links to break. The files need to be in the current page’s directory in order for this link to work.
+
+
+This will link to the index.htm file located in the same directory as the current page.
+ If you’d rather have your link displayed as a clickable button instead of underlined text, you can use the <form> tag to create the link. This will replace the <a> tag method of creating links. Buttons are not crawled as well by search engine spiders, which means button links don’t get indexed as efficiently as traditional links.
+ CSS (Cascading Style Sheets) allows you to alter the feel of your HTML links. Creating a CSS style and placing it between the <head></head> section of the page will affect all of the <a> tags on your page. There are four selectors which determine the style of the link:a:link – This is what an unvisited link looks like.
+
+a:visited – This is what a visited link looks like.
+
+a:active – This is what a clicked link looks like.
+
+a:hover – This is what a link looks like when the mouse is hovering over it.
+ You can add modifiers to each selector in the style section to change the way the link will look. There are a large number of style elements that you can change by placing the modifiers in braces after the selector. Examples of modifiers include:font-family - This is the font that the link will appear in. You can name any web-enabled font using this modifier.
+
+font-size - This is the size of the font, in points. You can change it like you would in a word processor.
+
+color – This is the color of the link. You can either type out the color (“blue”) or use the color code (“#0000FF”).
+
+text-decoration – This give the links effects such as underline or strikethrough.font-weight – You can use this modifier to make the font bold.
+ Your CSS style guide should be properly formatted and placed in the heading of the page. An example style sheet might look like the one above:
+
+, If you want to have multiple link styles on one web page, you can create multiple CSS style sheets and assign each one a class. You would then refer to that class when you want that style to be applied. An example is shown above:
+

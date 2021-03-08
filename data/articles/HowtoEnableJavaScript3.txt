@@ -1,0 +1,16 @@
+ It's a blue globe with an orange fox on it. By default, Firefox enables JavaScript and prevents you from changing this setting, but some applications interfere with the JavaScript implementation., This option is in the top-right side of the Firefox window., It's a puzzle piece-shaped icon in the drop-down menu., Some of the more popular JavaScript-blocking extensions include "No-Script", "QuickJava", and "SettingSanity"., Click the problem extension and then click Disable or Remove when prompted.
+
+You'll have to restart Firefox for your changes to take place.
+ If disabling the JavaScript-blocking extensions didn't fix your problem, you may need to enable JavaScript from within Firefox's hidden settings:
+
+Enter about:config into the Firefox URL bar.
+Click I accept the risk!.
+Type javascript.enabled into the search bar below the URL bar.
+Make sure the "Value" section of the javascript.enabled item says "False".
+
+If it says "true", JavaScript is enabled. Delete and reinstall Firefox.
+
+
+Double-click javascript.enabled.
+Restart Firefox.
+ If all else fails, uninstall and reinstall Firefox to restore all of the default settings. Because JavaScript is a foundation of the Firefox browser, reinstalling should restore its functionality.

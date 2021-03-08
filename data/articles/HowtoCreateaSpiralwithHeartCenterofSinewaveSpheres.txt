@@ -1,0 +1,133 @@
+
+
+
+Otherwise, please follow the steps as laid out in order to create first the Heart and then the Spiral Charts, Open a new Excel workbook and create 3 worksheets (except Chart if you are using Chart Wizard): Data, Chart and Saves. Here is a picture of the Spiral Chart:;
+, Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank(as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show gridlines and set all boxes below that to auto or checked.
+In Chart, allow show chart names and set data markers on hover and leave the rest unchecked for now.
+In Calculation, Make sure Automatically and calculate before save is checked. Set max change to .000,000,000,000,01 without commas as goal-seeking is done a lot. Check save external link values and use 1904 system
+
+In Error checking, check all the options.
+In Save, select save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ Edit Go To cell range A1:J17288 and Format Cells Number Number Decimal Places 4, Font Size 9 or 10, Fill (from the color wheel) a nice purple fuchsia and make the Border Dark Blue bold Outline.
+
+New: C1: Spiral START Value
+New: C2: Spiral LAST Value
+New: C3: n
+New: D1: 0
+New: D2: "=2*PI()"
+Select cell range C1:D3 and Insert Names Create Names in Left Column, OK.
+New: D3: "=IF(Shrink_To_End="Y",-ABS(Spiral_START_Value-Spiral_LAST_Value),ABS(Spiral_START_Value-Spiral_LAST_Value))"
+New: A2:: Y
+New: B2: Shrink To End
+New: A3: 1
+New: B3: Power
+Select cell range A2:B3 and Insert Names Create Name in Right Column, OK.
+E1: AYE
+E2: BEE
+E3: CEE
+Modified: F1: 36
+F2: .50
+F3: .50
+Select cell range E1:F3 and Insert Name Create in Left Column, OK.
+G1: Stretch_y1
+G2: Enter w/o quotes the formula "=(8.5*(SHRINKER*10))*0.75"
+H1: Stretch_x1
+Modified: H2: Enter w/o quotes the formula "=(8.5*(SHRINKER*10))*2"
+Select cell range G1:H2 and Insert Name Create in Top Row, OK.
+G3: Shrinker
+H3: Enter w/o quotes the formula "=.0025" and Insert Name Define Name Shrinker to cell $H$3.
+I1: ROWS
+J1: "=17285-5"
+I2: MAGIC
+J2: Enter w/o quotes the formula "=J1/SPHERES"
+I3: SPHERES
+Modified: J3: 360 is the only number I can get to work at all right..
+Select cell range I1:J3 and Insert Name Create in Left Column, OK.
+
+
+MODIFIED: Enter the column heading of rows 4 and 5:
+
+Modified: A5: Spiral Cos
+Modified: B5: Spiral Sin
+C5: Indicator
+D5: Randy
+E5: t: 0 to nπ
+F5: z1_
+G5: Adj_x1
+H5: Adj_y1
+I4 and J4: Charting
+I5: x: No z
+J5: y: With z
+Command+Select cells F1:F3 and I3 and Format Fill yellow.
+Select cell J3 and Format Fill sky blue from the color wheel.
+Select cell range I4:J5 and Format Font italic.
+
+
+NEW: Place the cursor in the column headers for C:D (that is, Edit Go To C:D) and Insert Columns. Enter the column variables, headers and column formulas for new columns C:D.
+
+C2: Enter Spirallic YN and Format Fill kelly green.
+C3: Enter Y and Format Fill yellow.
+Select D2 and enter Spiral RANGE (which coincides with n).
+Select cell C4 and Enter Adjustment. Select cell D4 and enter "=0.25" w/o quotes and do Insert Name Define Name Adjustment to cell $D$4. Select C4:D4 and Border Outline Navy Blue bold, fill white, decimal places 4.
+Command+Select cell ranges A1:E3, C2:C3, A2:B2 and A3:B3 and do Border Outline Navy Blue bold,, decimal places 5.
+Select cell C5 and enter SPIRALLIC and do underline.
+Select cell C6 and enter "=IF(Spirallic_YN="Y",Spiral_START_Value+0.00001,1)" and Fill Light Rose colored. Edit Go To cell range C7:C17285 and enter to C7 "=IF(AND(Shrink_To_End="Y",ROW()
+Edit Go To cell range D56:D17285 and Edit Clear Contents. This column is being held in reserve for special effects later.
+
+
+Enter the Thickness Looker lookup table. Not using now but we may again later.
+
+Select cell O5 and enter Thickness Looker.
+Edit Go To cell range O6:O69 and enter 1 into O6 and do Edit Fill Series Column Linear Step Value 1, OK.
+Edit Go To cell range P6:P17 and enter .8 and Fill Down. Enter .85 into P18,  .90 into P19, .95 into P20 and .5 into the cell range P21:P69 via Edit Fill Down.
+Select cell range O6:P69 and Insert Name Define Name Thickness_Looker to cell range $O$6:$P$69 and Format Fill yellow. To the right of P, I have a column I copied and pasted values into P from, as multiplied P by 10, or divided by 100, or subtracted 30, or 50 -- it took a lot of hunting around to get the right values to make the chart come out so you should probably copy the  table and paste values for it in the Saves worksheet at some point, including ...
+Select cell O3 and type Thickness and enter to O4 "=VLOOKUP(SPHERES,Thickness_Looker,2)" and do Insert Name Define Name Thickness to cell $O$4. Format Fill light blue and border red outline bold.
+
+
+MODIFIED: Enter the column formulas:
+
+Modified: Spiral Cos: Edit Go To cell range A6:A17285 and enter into A6 w/o quotes the following formula, "=(IF(COS((ROW()-6)*PI()/180*Adjustment)<0,(ABS(COS((ROW()-6)*PI()/180*Adjustment))^Power)*-1,COS((ROW()-6)*PI()/180*Adjustment)^Power))" and Edit Fill Down. Format Fill yellow and Border Red bold Outline per cell.
+Modified: Spiral Sin: Edit Go To cell range B6:B17285 and enter into B6 w/o quotes the following formula,"=(IF(SIN((ROW()-6)*PI()/180*Adjustment)<0,(ABS(SIN((ROW()-6)*PI()/180*Adjustment))^Power)*-1,SIN((ROW()-6)*PI()/180*Adjustment)^Power))" and Edit Fill Down. Format Fill yellow and Border Red bold Outline per cell.
+Modified: Indicator: Select cell E6 and enter 1 and select cell E7 and enter 0. Edit Go To cell range E8:E17286; enter w/o quotes the formula, "=IF((ROW()-7)/MAGIC=INT((ROW()-7)/MAGIC),1,IF((ROW()-7)=0,1,0))" and Edit Fill Down. This formula says, 'Take a look at the row I'm in, divide it by the number of rows per sphere (MAGIC) and if that number is an integer, return a 1, otherwise if I'm in the next-to-top row also return a 1, otherwise, return a 0.' So now there is an indicator of where 1 sphere ends and the next one begins, no matter how many spheres the user selects to chart. Format Number Number Custom 0.00000;; to stop the zeros from appearing.
+Modified: Randy: Edit Go To cell range F6:F17285 and Insert Name Define Name Randy to cell range $F$6:$F$17285. Edit Go To cell range F6:F17286 and enter into F6 w/o quotes the following formula,"=RANDBETWEEN(0,10)/100"and Edit Fill Down. Warning: Make calculation Manual before adding this variable or column into your formulas, especially as a factor, as it can take 20 minutes to calculate and draw the new chart. It is not currently employed, but a copy of its formula has been saved at the bottom of the x and y formulas.
+Modified: t: 0 to nπ: Select cell G6 and enter 0. Select cell G7:G17285 and enter to G7 the formula "=IF(E7=1,2*PI(),2*PI()/(MAGIC*1)+G6)" and Edit Fill Down.
+Modified: z1_: Edit Go To cell range H6:H17285 and enter w/o quotes into H6 the formula "=CEE*COS(AYE*G6)" and Edit Fill Down. Edit Go To cell range H6:H17285 and Insert Name Define Name z1_ to cell range $H$6:$H$17285.
+Modified: Adj_x1: Edit Go To cell range I6:I17285 and enter w/o quotes into I6 the formula "=IF(E6=1,A6,I5)" and Edit Fill Down. Edit Go To cell range I6:I17285 and Insert Name Define Name Adj_x1 to cell range $I$6:$I$17285. This makes a constant adjustment as if one were referencing a new center every new sphere from Spiral Cos, else it takes the value just above itself.
+Modified: Adj_y1: Edit Go To cell range J6:J17285 and enter w/o quotes into J6 the formula "=IF(E6=1,B6,J5)" and Edit Fill Down. Edit Go To cell range J6:J17285 and Insert Name Define Name Adj_y1 to cell range $J$6:$J$17285. This makes a constant adjustment as if one were referencing a new center every new sphere from Spiral Sin, else it takes the value just above itself.
+Modified: x: No z: Edit Go To cell range K6:K17285 and enter w/o quotes into K6 the formula "=(Stretch_x1*(((BEE^2-CEE^2*COS(AYE*G6)*COS(AYE*G6))^0.5 *COS(G6)))+Adj_x1)*SPIRALLIC" and Edit Fill Down. This is the x part of the heart of the sinewave sphere formula from the text, without the z dimension added or multiplied in, which is why it took me so long to discover how to make it work.
+Modified: y: With z: Edit Go To cell range L6:L17285 and enter w/o quotes into L6 the formula "=(Stretch_y1*(((BEE^2-CEE^2*COS(AYE*G6)*COS(AYE*G6))^0.5 *SIN(G6))+z1_)+Adj_y1)*SPIRALLIC" and Edit Fill Down. This is the y part of the heart of the sinewave sphere formula from the text, with the z dimension added in, which is why it took me so long to discover how to make it work. In the spirallic spheroids Garthwaite Curve, the z-dimension is multiplied into both x and y parts. Furthermore, I have made no adjustment for the Golden Mean Long Leg, which I expected to all along, until it worked without it. The other curve doesn't.
+Modified: Select cell K17286 and enter the formula w/o quotes "=K6" and select cell L17286 and enter the formula w/o quotes "=L6". This makes the top connecting line from the last sphere to the first.
+Modified: Planned Error Value -- Select cell K17287 and enter "=SHRINKER^2*(Stretch_x1*(((BEE^2-CEE^2*COS(AYE*G17287)*COS(AYE*G17287))^0.5 *COS(G17287)))+Adj_x1)*Randy" or +Randy, etc. Warning: this can really take a lot of processing time -- set calculation to Manual first.
+Modified: Planned Error Value -- Select cell L17287 and enter "=SHRINKER^2*(Stretch_y1*(((BEE^2-CEE^2*COS(AYE*G17287)*COS(AYE*G17287))^0.5 *SIN(G17287))+z1_)+Adj_y1)*Randy" or +Randy, etc. Warning: this can really take a lot of processing time -- set calculation to Manual first.
+Modified: Edit Go To cell range K6:L17288 and do Format Fill sky blue.
+Modified: Select cell F5 and Format Fill light sea green, font red, Border navy blue outline bold. Copy this cell to J17287. Then do Edit Paste Special Format of this cell to cell E6, E7, G6, K17286 and L17286 to make distinct the format of those cell's formulas/values.
+
+
+Modified: Edit Go To cell range - a short range -- and from the Ribbon or Chart Wizard select Charts All/Other Scatter Smoothed Line Scatter and Copy or Cut the chart that is atop the data worksheet and paste it to the top left of the Chart worksheet. Hover over the lower right corner until the cursor becomes a double-headed arrow and pull it open to become a large wide rectangle.
+Click in the Plot Area and select Chart Layout from the ribbon and at far left under Current Selection select Series 1, then under that, Format Selection. Set Line to Red, Smoothed line, Weight = 1 pt. and Dashed = Solid. Set Shadow to checked Outer 45 degrees, magenta pink, Size 100%, Blur 0 pt, Distance 30 pt, Transparency 80%. Set Glow to magenta pink Size = 2 pt. 2% transparency, Soft Edges 0 pt. OK.
+Do Current Selection under Chart Layout as Plot Area, Format Selection. No Line, No Glow and No Shadow. Set Fill to Gradient Radial Lower Left Corner, Full Left 0% Orange and Full Right 100% White. No Glow, 3-D is all zeros. OK.
+Do Current Selection under Chart Layout as Chart Area, Format Selection. Fill Gradient color Prussian Blue I think they call it on left 0% to Navy Blue on right 100% Path 0 degrees, Upper Left Corner, Transparency 0%. Line = Auto. Shadow is Unchecked/ No Glow or Soft Edges. 3-D Format is not set. OK.
+The chart handles 360 spheres only at this point.
+The chart's horizontal axis is set to -8 min, +4 Max, and the vertical is set to +/- 4.5.
+
+
+
+Here are the settings for the Spiral Chart, in picture form. Spiral_Last_Value has been changed to "=PI()" from "=2*PI()" and Stretch_X1 has been changed to "=(8.5*(SHRINKER*10))*0.8" from "=(8.5*(SHRINKER*10))*2".
+All the Chart formatting settings are the same but the cell range being charted is different -- it's =SERIES(,'DATA 01'!$K$8:$K$17285,'DATA 01'!$L$8:$L$17285,1) with the horizontal and vertical scales set to auto-checked.
+Here's another picture of the Spiral Chart:
+
+
+
+
+
+
+
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

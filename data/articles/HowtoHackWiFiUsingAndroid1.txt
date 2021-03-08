@@ -1,0 +1,32 @@
+ Not every Android phone or tablet will be able to crack a WPS PIN. The device must have a Broadcom bcm4329 or bcm4330 wireless chipset and must be rooted. The Cyanogen ROM will provide the best chance of success. Some of the known supported devices include:
+
+
+Nexus 7
+Galaxy S1/S2/S3/S4/S5
+Galaxy y
+Nexus One
+Desire HD
+Micromax A67;
+, This tool enables Monitor Mode on your Broadcom chipset, which is essential for being able to crack the PIN. The bcmon APK file is available for free from the bcmon page on the Google Code website.
+
+
+To install an APK file, you will need to allow installation from unknown sources in your Security menu. Step 2 of this article goes into more detail.
+ After installing the APK file, run the app. If prompted, install the firmware and tools. Tap the "Enable Monitor Mode" option. If the app crashes, open it and try again. If it fails for the third time, your device is most likely not supported.
+
+
+Your device must be rooted in order to run bcmon.
+ This will launch a terminal similar to most Linux terminals.Type airodump-ng and tap the Enter button. AIrdump will load, and you will be taken to the command prompt again. Type airodump-ng wlan0 and tap the Enter button.
+ You will see a list of available access points. You must select an access point that is using WEP encryption.
+ This is the MAC address for the router. Make sure that you have the right one if there are multiple routers listed. Jot this MAC address down.
+
+
+Also note the Channel that the access point is broadcasting on.
+ You will need to collect information from the access point for several hours before you can attempt to crack the password. Type airodump-ng -c channel# --bssid MAC address -w output ath0 and tap Enter. Airodump will begin scanning. You can leave the device for a while as it scans for information. Be sure to plug it in if you are running low on battery.
+
+
+Replace channel# with the channel number the access point is broadcasting on (e.g. 6).
+Replace MAC address with the MAC address of the router (e.g 00:0a:95:9d:68:16)
+Keep scanning until you reach at least 20,000-30,000 packets.
+ Once you have a suitable number of packets, you can start attempting to crack the password. Return to the terminal and type aircrack-ng output*.cap and tap Enter.
+ After the cracking process is complete (which could take several hours), the message Key Found! will appear, followed by the key in the hexadecimal form. Make sure that "Probability" is 100% or the key will not work.When you enter the key, enter it without the ":". For example, if the key was 12:34:56:78:90, you would enter 1234567890.
+

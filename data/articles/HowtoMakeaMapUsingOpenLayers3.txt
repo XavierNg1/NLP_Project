@@ -1,0 +1,167 @@
+ If you don't already have a webpage you want to insert the map into, you can use the following HTML5 template; save it as ‘map_page.html’ :
+
+
+
+
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My OpenLayers 3 Map</title>
+</head>
+ 
+<body>
+  <!-- Content goes here. -->
+</body>
+</html>
+
+
+;
+, Your webpage will need to include the OpenLayers library JavaScript file. To do this, paste the following line of code into your HTML file, inside the <head></head> area, on a new line below the <title></title>:
+
+
+
+
+<script src="http://openlayers.org/en/v3.0.0/build/ol.js"
+  type="text/javascript"></script>
+
+
+
+
+, OpenLayers will display the map inside an HTML element, so you need to provide one for it. Paste the following line of markup inside the <body></body>:
+
+
+
+
+<div id="map" class="map"></div>
+
+
+
+
+, You need to set how large the map will be when it is displayed, and you should use CSS to do this. You can add the following to the document <head></head>: 
+
+
+
+
+<style>
+  .map {
+    height: 500px;
+    width: 700px;
+  }
+</style>
+
+
+
+
+, To start writing the JavaScript code that sets up the map, you'll need to add a <script></script> area to the <body></body> after the map container div. Also inside of this, you can create the map object by calling new ol.Map() like this:
+
+
+
+
+<script type='text/javascript'>
+  var map = new ol.Map({ });
+</script>
+
+
+
+
+, OpenLayers will render (display) the map inside an HTML element such as a div or a p. The value that you must pass to the setTarget() function is simply id of the element, which we set to 'map':
+
+
+
+
+map.setTarget('map');
+
+
+
+
+, An OpenLayers map's view is what manages what part of of the map you see. Create a new view object that centers on the coordinates (off the coast of central Africa):Note: Unlike the Leaflet mapping library, OpenLayers 3 deals with coordinates in the format .
+
+
+
+
+var view = new ol.View({
+  center: ,
+  zoom: 1
+})
+map.setView(view);
+
+
+
+
+, OpenLayers maps have layers which are stacked on top of one another, and are what you actually see in a map. There are three types of layers: Image, Tile and Vector. Tile layers are are the standard 'base' layers, and can come from map providers like Google Maps, MapQuest, or OpenStreetMaps. Each layer has a source, which tells OpenLayers where the layer information is coming from.
+
+
+
+
+var tile_layer = new ol.layer.Tile({
+  source: new ol.source.MapQuest({layer: 'osm'})
+})
+map.addLayer(tile_layer);
+
+
+
+
+, In OpenLayers, maps can be 'zoomed in' to one of several levels, from 0 (the most zoomed-out) to around 20 (the most zoomed in). The zoom level is set on the view object, so we have to get that and set its zoom:
+
+
+
+
+map.getView().setZoom(2);
+
+
+
+
+, Below is what your webpage code should look like:
+
+
+
+
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My OpenLayers 3 Map</title>
+  <script src="http://openlayers.org/en/v3.0.0/build/ol-debug.js"
+    type="text/javascript"></script>
+  <style>
+    .map {
+      height: 500px;
+      width: 700px;
+    }
+  </style>
+</head>
+ 
+<body>
+  <div id="map" class="map"></div>
+ 
+  <script type='text/javascript'>
+ 
+    var map = new ol.Map({ });
+ 
+    map.setTarget('map');
+ 
+    var view = new ol.View({
+      center: ,
+      zoom: 1
+    })
+    map.setView(view);
+ 
+    var tile_layer = new ol.layer.Tile({
+      source: new ol.source.MapQuest({layer: 'osm'})
+    })
+    map.addLayer(tile_layer);
+ 
+    map.getView().setZoom(2);
+ 
+  </script>
+ 
+</body>
+</html>
+
+
+
+
+,

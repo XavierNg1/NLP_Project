@@ -1,0 +1,19 @@
+ You will need to make a tweak in your registry in order to make the activation messages disappear. Note that this method will only hide the notices, it will not bypass the activation. Windows will still need to be activated after 30 days. in order to truly crack Windows XP, you will need to download a cracking program or pirated key, which will not be discussed here.
+
+
+Press the Windows key + R to open the "Run" dialog box.
+Enter regedit and press Enter. This will open the Registry Editor
+
+, In the left frame, you can navigate to the different folders in the registry. Navigate to HKEY_LOCAL_MACHINE → SOFTWARE → Microsoft → Windows NT → CurrentVersion (or "Current Version") → WPAEvents.
+ This will open a new dialog box where you can change the value.
+ Delete what's in the box and enter the following line. Click OK when you're done:
+
+
+FF D5 71 D6 8B 6A 8D 6F D5 33 93 FD
+
+, Select Permissions from the menu.
+ In the "Permissions for SYSTEM" frame, check the "Deny" box for the "Full Control" entry. Click OK when you're done.
+
+
+Click "Yes" when asked to confirm your action. Exit the Registry Editor.
+

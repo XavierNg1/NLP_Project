@@ -1,0 +1,37 @@
+ A 2x2 table is the basis for many epidemiological calculations.
+
+
+Before you can draw a 2x2 table yourself, you must understand the variables:
+
+A = The number of people who both had the exposure and developed the disease
+B = The number of people who had the exposure but did not develop the disease
+C = The number of people who did not have the exposure but did develop the disease
+D = The number of people who neither had the exposure nor developed the disease
+
+
+Let's do an example 2x2 table.
+
+
+
+
+
+
+A study looks at 100 smokers and 100 non-smokers, and follows them for development of lung cancer.
+Right away, we can fill in part of the table. The disease is lung cancer, the exposure is smoking, the total numbers of each group is 100, and the total of all the people in the study is 200.
+At the end of the study, they found that 30 of the smokers and 10 of the non-smokers developed lung cancer. Now we can fill in the rest of the table.
+Since A = the number of people exposed who got the disease (i.e. smokers who got lung cancer), we know this is 30. We can calculate B simply by subtracting A from the total: 100 - 30 = 70. Similarly, C is the number of non-smokers who got lung cancer, which we know is 10, and D = 100 - 10 = 90.
+
+;
+,
+
+
+The general formula for relative risk, using a 2x2 table, is:
+We can calculate relative risk using our example:
+Therefore, the relative risk of acquiring lung cancer with smoking is 3.
+
+
+
+If the relative risk = 1, then there is no difference in risk between the two groups.
+If the relative risk is less than 1, then there is less risk in the exposed group relative to the unexposed group.
+If the relative risk is greater than 1 (as in the example), then there is greater risk in the exposed group relative to the unexposed group.
+

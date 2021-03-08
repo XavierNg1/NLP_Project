@@ -1,0 +1,37 @@
+ The "COM Surrogate has stopped working" error usually appears when you're looking through folders containing thumbnails for videos and images. The error is typically caused by codecs (software that processes video files) that aren't compatible with Windows Vista. The most common culprits are DivX and Nero.
+
+
+There several quick fixes you can try to resolve the problem.;
+, If you have either or both of these programs installed, they could be the source of your problems.
+
+
+You can update DivX by downloading the latest version from divx.com. You can update Nero using the update utility in the program, or by downloading the newest version from nero.com.
+ There are a couple of Nero files that can be causing the problem, and renaming them will essentially keep them from running. Doing this will break Nero ShowTime, however, so avoid this fix if you rely on that program.
+
+
+Open C:\Program Files\Common Files\Ahead\DSFilter\
+
+Rename NeVideo.ax to NeVideo.ax.bak
+
+Rename NeVideoHD.ax to NeVideoHD.ax.bak
+
+
+, This isn't a very elegant fix, as you'll no longer be able to see thumbnails for your images or videos, but it will keep the error from appearing whenever you open a folder.
+
+
+Open any folder on your computer.
+Click the "Organize" button in the upper-left corner of the window.
+Select "Folder and search options"
+Click the View tab and check the "Always show icons, never thumbnails" option.
+Click Apply
+
+
+, If you don't rely on Nero, you can remove it from your system completely. This will usually solve your problem, but you'll need another utility to remove it completely.
+
+
+
+Download and install Revo Uninstaller.
+Select any Nero applications from the list.
+Perform a Moderate scan at the end of the uninstallation process.
+Repeat for every Nero entry.
+

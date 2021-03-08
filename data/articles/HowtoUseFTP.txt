@@ -1,0 +1,72 @@
+ FTP stands for File Transfer Protocol, and is a connection method designed for transferring files from a remote server to local computer, and vice versa. While HTTP (Hypertext Transfer Protocol) allows for file transfers, it is not as robust as FTP transfers. FTP is often used in corporate and academic settings, and is the primary way of managing webpage servers.;
+, When you come across FTP addresses on a webpage, they are usually denoted in the same way, though there are variations. For example, you might see ftp.example.com:21. This means that the host is ftp.example.com and the port is 21. You will need both of these when connecting to the FTP server. If the FTP requires a username, it may be written as username@ftp.example.com:21.If no username is specified, then you will usually need to enter "anonymous" as the username when you connect. Note that you are not actually anonymous when you connect to a public FTP.
+ There are three main ways to connect to FTP servers: visual clients, browser-based, or through the command line. Downloading and installing a visual client is the most widely used and easiest way to connect to an FTP, and also affords you the most power and control over the process.
+
+
+The majority of this guide will focus on using an FTP client. If you're interested in how to connect to an FTP using the command line, see the final section of this guide.
+To connect to an FTP through a web browser, simply enter the FTP address into the address bar just like any other website. You may be asked for login credentials, and then you can browse the directories. Using a browser is usually much slower and less reliable than using a designated client.
+ Using a client to connect will often lead to faster uploads and downloads to the FTP server. FTP clients also include a lot of useful features, such as the ability to save server addresses and file queuing. There are a variety of clients available, both for free and purchase. One of the most popular free and open-source clients available is FileZilla.
+
+
+FileZilla can be downloaded for Windows, Mac OS X, or Linux from the website, filezilla-project.org.
+ Once you install the client, you can open it to begin connecting to the FTP server of your choice. If you are using FileZilla, you will have two different options for connecting: Quickconnect or the Site Manager.
+
+
+The Quickconnect bar allows you to enter the FTP information for servers that you do not regularly use. Enter the address into the "Host" field, your username into the "Username" field, your password into the "Password" field, and the server's port into the "Port" field. The Quickconnect history list only stores the last 10 connections.
+The Site Manager allows you to store multiple servers for future use, and allows you to set many more options for the connection. Click the Site Manager button in the upper-left corner of the window, underneath the File menu. Click the "New Site" button, and then fill out the server information in the "General" tab. The "Advanced" tab allows you to change your default directories and adjust the server timezone. Use the Site Manager if you need to set custom settings or plan on connecting to the server often.
+ Select the server you want to connect to from the Site Manager dropdown menu, or enter the server information into the Quickconnect bar and click the "Quickconnect" button. Your client will then attempt to connect to the server based on the information you entered. You will see the details of the connection process in the top frame of the FileZilla window.
+ Once you are connected, you will see the FTP directory tree on the right side of the window. The top frame shows the tree structure, while the bottom frame shows the contents of each folder. Each time you change folders, a small command is sent to the server. This means there will be a slight delay when moving between folders. You can enter in an exact location in the bar at the top of the right side.
+
+
+If you don't have permission for certain directories, you will receive an error when you try to access them.
+ On the left side of the window, you will see two frames for navigating through your local folders. This will allow you to choose files to upload or locations for downloads. You can type in an exact location in the bar at the top of the right side.
+ Navigate to the file or folder that you want to download on the right side of the window. Navigate to the location that you want to save it on the left side of the window. Click and drag the file from the bottom frame on the right to the bottom frame on the left. Your file or folder will start transferring automatically.
+
+
+You can see the size of the file in bytes in the "Filesize" column.
+You can select multiple files to download in the same session by holding Ctrl and clicking on each one you want. Files will be transferred one at a time.
+You can add files to your download queue by right-clicking on them and selecting "Add files to queue"
+
+, Navigate to the file or folder that you want to upload on the left side of the window. Navigate to the location that you want to upload it to on the right side of the window. If you have permissions to upload a file to the FTP server, you can click and drag the file from the left side to the right side to begin uploading.
+
+
+Most public FTPs will not allow anonymous users to upload files.
+Uploads will typically take longer than downloads of the same size.
+ You can watch your transfers in the bottom frame of the window. You will see a list of files you are transferring and have queued, along with their size, priority, and percent completion. You can see your failed and completed transfers by using the tabs at the bottom of the window.
+ Install the server software on the computer that you want to act as the server. If you are running the server for your own personal use, you can probably just use a spare old computer as the server. If you are setting up an FTP server for a corporate setting or for a team to use, you will likely want to ensure that you have a dedicated machine with a solid internet connection.
+
+
+FileZilla has a free open-source server version of its software that is highly recommended for almost any FTP server application, except for when the highest degree of security is required.
+If you plan on making your FTP server available on a 24/7 basis, you will need a dynamic DNS service that will ensure that people always have the correct address for your server, even if the IP address changes.
+ When you first start the FileZilla server software, you will be prompted to connect to a server. By default, the "Server Address" will be set to 127.0.0.1. This points to the local computer. You shouldn't need to change these settings unless you are managing a server on another computer. In that case, it would be more efficient to install the server software on that computer instead.
+ FTPs allow you to create different users with different permissions. This allows you to set folders to only be viewable by certain people, or create different areas on the server for different teams. Without users set, no one could connect to the server.
+
+
+In FileZilla, click the Edit menu and select Users.
+Click the Add button and create a name for the first user.
+Check the "Enable password" box if you want to require a password for the connection. This is highly recommended for security purposes.
+Multiple users can be placed into groups, which allows for further customization of permissions.
+ Once a user has been created, you will need to set the folders that the user will automatically be taken to when they are logged in. Click the "Shared folders" page, and then click the "Add" button to browse for a directory on your computer. When you choose a directory, that directory will be set as the Home Directory for the user.
+
+
+By default, the user will have access to all of the subdirectories in a directory. You can change this by unchecking the "+ Subdirs" box.
+If you set multiple directories as shared for a user, they will need to have aliases set. This will allow them to appear as two directories in the same location for a user. For example, if C:\users\Pictures is the Home Directory and you want to C:\Music, you will need to set the alias for C:\Music to /music. This will make the folder /music appear in the Home Directory, pointing to the C:\Music folder., In the Shared Folders page, you can set the permissions that each user or group has for that specific folder. By default, users will only have "Read" access, which allows them to download from the shared folder. If "Write" access is granted, the user can upload files to that shared folder. If the "Delete" permission is granted, then the user can delete anything in that shared folder.
+ If you want to allow anyone to connect to your FTP server, create a user named "anonymous" and leave the password blank. Make sure the anonymous user does not have access to any sensitive files, and that all the other users are properly password-protected.
+
+
+Anonymous users should rarely, if never, have Delete or Write access to an FTP.
+ By default, your FTP server is running once the program starts up. This means that once your users and permissions are all sorted, you can start distributing login information and letting people connect. If you are running the FTP from your home, you will want to set up a dynamic DNS service, as your IP address is likely to change. This will allow people to connect to your server using a hostname instead of the IP address (for example: ftp.example.net vs. 243.284.172.64).
+
+
+This option costs money, but is very useful if you have lots of people connecting and don't want to have to resend out the IP address every time it changes. See this guide for more details.
+ Windows, Mac OS X, and most Linux distributions have a command-based FTP client available from the Command Prompt or Terminal.
+
+
+To open the Windows Command Prompt, press ⊞ Win+R and type cmd.
+To open the Terminal in most Linux distributions, press Ctrl+Alt+T.
+To open the Terminal in OS X, open the Applications → Utilities folder and select Terminal.
+ The commands are the same for all command line FTP clients regardless of operating system. To connect to the server, type ftp ftp.example.com. After the connection is made, you will be prompted for the username. If you are connecting to a public FTP, type anonymous and press Enter when prompted for the password. Otherwise, enter in your assigned username and password., The FTP is navigated much the same way that any traditional Unix system is navigated. See this guide for detailed instructions on changing directories, or this guide for information on creating directories.
+ By default, the FTP will connect in ASCII mode, which is designed for transferring text files. If you want to upload or download archives, executable files, or media files. To switch to binary mode, type binary and press ↵ Enter.
+ Use the get command to download a file from the remote server to your local computer. Follow the "get" command with the file you want to download. For example, type get example.jpg to download the "example.jpg" from the current location on the FTP.
+ Use the put command to upload a file from your local machine onto the remote FTP server. Follow the "put" command with the location of the file that you want to upload. For example, type put c:\documents\homemovies\example2.avi to copy the "example2.avi" movie file from it's home location to the FTP server.
+ Type close to end the connection with the FTP client. Any transfers currently in progress will be canceled.

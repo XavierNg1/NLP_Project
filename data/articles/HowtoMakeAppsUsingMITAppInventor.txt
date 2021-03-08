@@ -1,0 +1,45 @@
+ Click the New button to create our Wild LifeShow app. This will make a new dialog box to open.;
+, Press OK.
+ This will create a vertical arrangement component on our Screen1. The name of the component will be automatically VerticalArrangement1.
+ We need to change some properties of the VerticalArrangement1. Select VerticalArrangement1 under Components pane. On Properties pane you will see the properties of the component you selected. Change VerticalArrangement1's Width to Fill parent and Height to 350 pixels.
+ Note that the name of Image component is Image1
+
+, Take note of the name of our Label component which is automatically set to Label1.
+ Select Label1 under Components pane and change the following-
+
+
+Check the Font/Bold property.
+In the Text property, type Tap On A Button To Hear Them. You can type anything you like.
+Change the Text Alignment to center.
+Set Text/Color to Blue.
+Change the Width to Fill parent.
+ Get a Horizontal/Arrangement component and place it below our Label component. Take note of the name HorizontalArrangement1
+
+,,
+Now, select Button2 and change its Text property to Bird, Width to Fill parent, Text/Alignment to Center, and have Font/Bold property checked.
+Lastly, select Button3 and change its Text property to Penguin, Width to Fill parent, Text/Alignment to Center, and have Font/Bold property checked.
+ For us to be able to do that, drag a Player component and place it anywhere on Screen1. Since Player is a non-visible component, this will appear underneath Screen1 window.
+ For us to do that, select Screen1 on Components pane and change the Title property under Properties pane to Wild LifeShow.
+ For our app, we used the following image and sound files which you should download to your computer.
+
+
+Elephant.png
+Bird.png
+Penguin.png
+Elephant.wav
+Bird.wav
+Penguin.wav
+
+,,, For instance, we want the Elephant picture to be displayed and Elephant sound file to be played once Button1 is clicked. In order to do that, we got to open the Blocks Editor window. Click on the Open the Blocks Editor button.
+ Locate Button1 and click on it. Now we can see all the events and different properties of Button1. Select and drag the Button1.Click event block on the Blocks Editor space as shown below.
+ This will show the events and properties of Image1. Get the Image1.Picture and place it inside the Button1.click block. Once you place it, you should hear a click sound which means the blocks are properly connected to each other.
+ To do that, click on Built-In tab, then locate and click Text block. Drag the text block over to the right and connect it to Image1.Picture block.
+ Click on text of text block and change it to Elephant.png. Careful with the casing. If you have saved the Elephant.png file as elephant.png, then type elephant.png.
+ Connect a text block to Player1.Source block and change the text of text block to Elephant.wav.
+, For Button2, use Bird and for Button3, use Penguin. Your blocks should look like the snapshot below.
+ Now it's time to see our app in action. If your Android device/phone is connected to your computer, you can click on Package for Phone on Designer/Viewer window in your web browser and then choose Download to Connected Phone. This will install the app on your phone.
+
+
+If you don't have a phone connected, you can launch an emulator from the Blocks Editor window. Click on New emulator and it will launch an emulator for you.
+After the emulator is launched, click on Connect to Device... button. You should see the emulator that you just launched. Click on that and it will load the app on the emulator.
+

@@ -1,0 +1,10 @@
+ Comments exist solely to help developers navigate through their code. Remove all comments.
+
+
+If needed, write all comments in a note document or on a sheet of paper so that you are the only one able to view your comments.;
+, Never use constants. Numbers should be valued directly in code. This will make your code very hard to modify and follow.
+ If you have to use a variable, no one will be able to figure out what the variable actually exists for without digging into the code if it has a very non-descriptive name. Try names such as single letters of the alphabet, or, if you are feeling particularly silly, completely unrelated nouns (such as "dog" or "cat").
+ A good way to do this is to use methods where they are unnecessary. Try to use the most complex features that the language has to offer. For example, C offers a goto command which can be used to jump around code in a very confusing manner.
+ Create classes, methods, and files that have nothing to do with the overall function of your code.
+ Do not indent your code.
+

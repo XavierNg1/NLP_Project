@@ -1,0 +1,13 @@
+
+Enable the root account, install an ssh daemon and apply a static ip address and a host-name to the system.
+Enable the root account:     To enable the root account, run “sudo passwd root” and specify a password for root.
+Install the ssh daemon:     Just run “apt-get install ssh openssh-server” to install the ssh daemon.
+Apply a static ip address and hostname:     Edit /etc/network/interfaces and adjust it to your needs by using code “vi /etc/network/interfaces”.Restart your network by typing “/etc/init.d/networking restart”.
+Edit /etc/hosts.Run "echo mail.example.com > /etc/hostname” and reboot the system by typing command "shut-down -r now".
+Run     "hostname    hostname -f".
+Disable the ubuntu CD in /etc/apt/sources.list     If you'd like to install all packages over the internet instead of from the ubuntu cd, disable the ubuntu cd in /etc/apt/sources.list now: “vi /etc/apt/sources.list”     On ubuntu 6.10 ("edgy eft"), comment out this line:                 “#deb cdrom:/ edgy main restricted            ”On ubuntu 6.06 ("dapper drake"), it's this line:                 "#deb cdrom:/ dapper main restricted            "     Then update the packages database by running “apt-get update”,
+Disable services.
+Change the default shell (ubuntu 6.10 edgy eft only)          If you are on ubuntu edgy eft, most probably /bin/sh is a symlink to /bin/dash, however we need /bin/bash, not /bin/dash.
+Install zimbra         First let's install some prerequisites for zimbra:         apt-get install curl fetchmail libpcre3 libgmp3c2 libexpat1 libxml2 libtie-ixhash-perl        
+
+Afterwards, go to http://www.zimbra.com/community/downloads.html and download      the ubuntu 6 (.tgz) package to /usr/src, for example like      this:         cd /usr/src    wget      http://kent.dl.sourceforge.net/sourceforge/zimbra/zcs-4.5.3_     ga_733.ubuntu6.tgz         (replace the download url with the one you get from      sourceforge.)

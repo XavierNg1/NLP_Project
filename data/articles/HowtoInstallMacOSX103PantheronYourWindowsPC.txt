@@ -1,0 +1,23 @@
+, You can find documentation at the software's website for creating ISO image files.
+, Click "File">"Create Virtual Hard Drive". When the window opens, under "Hard Drive Size", move the slider till you get the virtual size you want. 3GB is plenty to install the operating system.
+
+
+Try using 6GB. It lowers errors to 20%. Only use 3GB if you're low on disk space.
+ Browse your way to the PearPC directory, and save the HD image as "MacHD3GB.img". Once you've done that, click "Create Hard Disk".
+ A Wizard pops up.
+ Next to "PearPC Specifics", click "Browse", and find "ppc.exe" which is in the PearPC directory you extracted it to. Use which ever one of the icons you want to.
+, You can get by with 128MB, but 256MB or 512MB is better. Its ok to set this higher than the amount of actual RAM you have installed in your computer.
+, If you are using 1024x768 with Windows, you can you can use it for PearPC. You must pick "32" for the color depth. There is a small bug in the PearPC Control Panel, that if you pick "16", PearPC will not start. For "Video Driver", put either "video.x", or the full path to the file, which should be "C:\PearPC\video.x". CPU PVR should be set to "G3". That's the PowerPC processor you going to emulate. Even though you can pick "G4", don't, PearPC won't work. Leave "Fullscreen Key Combo" and "Mouse Grab Combo" to their defaults.
+, Click "Finish".
+ Just name it "Mac OS X Panther". For location, leave the filename pearpc.cfg, but save it in the same directory as PearPC, which should be "C:\PearPC".
+, We need to make a small change to the pearpc.cfg file we created with it. Open My Computer, and browse to your PearPC directory. Open the file "pearpc.cfg" with Notepad. Add these 3 lines to the bottom of the file (without the asterisks):
+
+
+pci_ide0_slave_installed = 1
+pci_ide0_slave_image = "C:\PearPC\macosx10.3.iso"
+pci_ide0_slave_type = "cdrom"
+
+,, This starts PearPC. You'll be given a couple options on which drive to boot from, the HD, or CDROM. Choose CDROM.
+ When prompted, choose to format the HD. THIS IS NOT YOUR ACTUAL HD, BUT THE VIRTUAL 3GB HD.
+ Once Mac OS X 10.3 has been installed, you're done! You can now run OS X at any time by running the PearPC Control Panel and clicking the Mac OS X icon. From now on, choose HD instead of CDROM. Once the OS has been installed, you don't need to select the CDROM ISO again.
+

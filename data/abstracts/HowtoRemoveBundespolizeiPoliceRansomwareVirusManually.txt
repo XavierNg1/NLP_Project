@@ -1,0 +1,30 @@
+
+Restart your computer.
+As the computer starts back up, tap the F8 key.
+Choose “Safe Mode with Command” from the Advanced Options menu.
+Optional Step: Type “Taskmgr.exe” and press enter to open the Task Manager.
+Type "Regedit" and press enter.
+Locate a folder named “Winlogon” in the panel to the left.
+In the panel to the right, find the registry key named “Shell.” The complete filename should be something like “C:\Documents and Settings\username\desktop\VIRUS INFO.exe.”
+Though the virus-info portion of the filename will be different for different computers, common examples include “contacts.exe,” “jashla.exe,” and “mahmud.exe.” Write down this information: you will need it again later.
+
+,
+Right-click the word “Shell” and choose Modify.
+Modify the value data to read “Explorer.exe” and hit okay.
+Go to Edit > Find and type the virus info you wrote down earlier.
+Find and delete all the virus’s registry keys.
+When you’re done, exit the registry editor.
+Type “shutdown /r /t 0” and hit Enter.If this doesn't work or you cannot find any entries related to the 'Police' virus, Reboot your PC in safe mode (tapping F8 key whilst booting)
+
+,- Go to Start -> Run and type 'msconfig'
+
+,- In the folder Boot Options turn of everything
+
+,- Save
+
+,- Reboot your PC
+
+,Virus gone
+
+,
+You can leave it this way or repeat steps above and turning on the options one by one.

@@ -1,0 +1,59 @@
+ Of the two approaches in this guide, this one is easier for most people to follow. If you're already comfortable with different bases, try the faster method below.
+
+
+If you're completely new to hexadecimal, you might want to learn the basic concepts.;
+, Each digit in a hexadecimal number represents a different power of 16, just like each decimal digit represents a power of 10. This list of powers of 16 will come in handy during the conversion:
+
+
+165 = 1,048,576
+164 = 65,536
+163 = 4,096
+162 = 256
+161 = 16
+If the decimal number you're converting is larger than 1,048,576, calculate higher powers of 16 and add them to the list.
+ Write down the decimal number you're about to convert. Refer to the list above. Find the largest power of 16 that's smaller than the decimal number.
+
+
+For example, if you're converting 495 to hexadecimal, you would choose 256 from the list above.
+ Stop at the whole number, ignoring any part of the answer past the decimal point.
+
+
+In our example, 495 ÷ 256 = 1.93... , but we only care about the whole number 1.
+Your answer is the first digit of the hexadecimal number. In this case, since we divided by 256, the 1 is in the "256s place."
+
+, This tells you what's left of the decimal number to be converted. Here's how to calculate it, just as you would in long division:
+
+
+Multiply your last answer by the divisor. In our example, 1 x 256 = 256. (In other words, the 1 in our hexadecimal number represents 256 in base 10).
+Subtract your answer from the dividend. 495 - 256 = 239.
+ Refer back to your list of powers of 16. Move down to the next smallest power of 16. Divide the remainder by that value to find the next digit of your hexadecimal number. (If the remainder is smaller than this number, the next digit is 0.)
+
+
+239 ÷ 16 = 14. Once again, we ignore anything past the decimal point.
+This is the second digit of our hexadecimal number, in the "16s place." Any number from 0 to 15 can be represented by a single hexadecimal digit. We will convert to the correct notation at the end of this method.
+ As before, multiply your answer by the divisor, then subtract your answer from the dividend. This is the remainder still to be converted.
+
+
+14 x 16 = 224.
+239 - 224 = 15, so the remainder is 15.
+ Once you get a remainder from 0 to 15, it can be expressed by a single hexadecimal digit. Write this down as a final digit.
+
+
+The last "digit" of our hexadecimal number is 15, in the "1s place."
+
+, You now know all the digits of your hexadecimal number. But so far, we've only been writing them in base 10. To write each digit in proper hexadecimal notation, convert them using this guide:
+
+
+Digits 0 through 9 remain the same.
+10 = A; 11 = B; 12 = C; 13 = D; 14 = E; 15 = F
+In our example, we ended up with digits (1)(14)(15). In the correct notation, this becomes the hexadecimal number 1EF.
+ Checking your answer is easy when you understand how hexadecimal numbers work. Convert each digit back into decimal form, then multiply by the power of 16 for that place position. Here's the work for our example:
+
+
+1EF → (1)(14)(15)
+Working right to left, 15 is in the 160 = 1s position. 15 x 1 = 15.
+The next digit to the left is in the 161 = 16s position. 14 x 16 = 224.
+The next digit is in the 162 = 256s position. 1 x 256 = 256.
+Adding them all together, 256 + 224 + 15 = 495, our original number.
+
+

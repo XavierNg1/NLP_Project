@@ -1,0 +1,34 @@
+ Perform the following actions if you're locked out by the activation timer. If you aren't locked out, skip to the next step.
+
+
+Select "Access your computer with reduced functionality".
+Open Internet Explorer, and then click "File" → "Open".
+Type C:\Windows\Explorer.exe and then click "OK". Confirm that you want to run it when prompted.;
+, There are a couple different ways to do this:
+
+
+Click the Start menu, right click on Command Prompt, and select "Run as administrator".
+Click the Start menu, type cmd, and then press Ctrl+⇧ Shift+↵ Enter.
+ This will add 30 days to your activation timer. Put a space between slmgr and -rearm. It may take a few seconds for the confirmation to appear.
+ Your new 30-day extension will take effect right away.
+ You can repeat the command three times. This will give you 120 days total extension. This is within the terms of the Microsoft EULA.
+
+
+Open the Command Prompt as an administrator and type slmgr -xpr. A notification with the remaining time will appear shortly.
+ Editing the Windows Registry can increase the extension to an entire year. Performing this extension is not as accepted by Microsoft.
+
+
+Open the Registry Editor by pressing ⊞ Win+R and typing regedit. You can also start it from the Command Prompt by typing regedit and pressing ↵ Enter.
+ You can expand each section of the registry in the left frame. Use this to navigate to the following location:
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL
+
+, You'll find this key in the right frame when you've selected the SL folder.
+ Click "OK" to save the changes to the key. This will extend the renewal time by 240 days, for a total of one year of renewals., You can do this each month for the next eight months.
+ Once your year of renewals is up, reinstall Vista from scratch and start all over again. Vista can be reinstalled and running again in about an hour. Once it's reinstalled, follow the process above to keep using Vista forever without activating. You'll never need to install crack software or a hacked version.
+
+
+See How to Install Windows Vista for a guide on reinstalling Vista.
+Reinstalling your operating system is recommended at least once a year anyway for best performance.
+

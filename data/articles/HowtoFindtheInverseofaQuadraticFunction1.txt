@@ -1,0 +1,35 @@
+ If you have the “right” kind of function to begin, you can find the inverse using some simple algebra. This form is something of a variation of y=ax2+c{\displaystyle y=ax^{2}+c}. Comparing this to a standard form quadratic function, y=ax2+bx+c{\displaystyle y=ax^{2}+bx+c}, you should notice that the central term, bx{\displaystyle bx}, is missing. Another way to say this is that the value of b is 0. If your function is in this form, finding the inverse is fairly easy.
+
+Your beginning function does not have to look exactly like y=ax2+c{\displaystyle y=ax^{2}+c}. As long as you can look at it and see that the function consists only of x2{\displaystyle x^{2}} terms and constant numbers, you will be able to use this method.
+
+For example, suppose you begin with the equation, 2y−6+x2=y+3x2−4{\displaystyle 2y-6+x^{2}=y+3x^{2}-4}. A quick examination of this equation shows that there are no terms of x{\displaystyle x} to the first power. This equation is a candidate for this method to find an inverse function.
+;
+, The initial equation may have multiple terms in a combination of addition and subtraction. Your first step is to combine like terms to simplify the equation and rewrite it in the standard format of y=ax2+c{\displaystyle y=ax^{2}+c}.
+
+Taking the sample equation, 2y−6+x2=y+3x2−4{\displaystyle 2y-6+x^{2}=y+3x^{2}-4}, the y-terms can be consolidated on the left by subtracting a y from both sides. The other terms can be consolidated on the right by adding 6 to both sides and subtracting x^2 from both sides. The resulting equation will be y=2x2+2{\displaystyle y=2x^{2}+2}.
+ Recall that the domain of a function consists of the possible values of x that can be applied to provide a real solution. The range of a function consists of the values of y that will result. To determine the domain of the function, look for values that create a mathematically impossible result. You will then report the domain as all other values of x. To find the range, consider the values of y at any boundary points and look at the behavior of the function.Consider the sample equation y=2x2+2{\displaystyle y=2x^{2}+2}. There is no limitation on allowable values of x for this equation. However, you should recognize that this is the equation of a parabola, centered at x=0, and a parabola is not a function because it does not consist of a one-to-one mapping of x and y values. To limit this equation and make it a function, for which we can find an inverse, we must define the domain as x≥0. 
+
+The range is similarly limited. Notice that the first term, 2x2{\displaystyle 2x^{2}}, will always be positive or 0, for any value of x. When the equation then adds +2, the range will be any values y≥2.
+
+Defining the domain and range at this early stage is necessary. You will use these definitions later in defining the domain and range of the inverse function. In fact, the domain of the original function will become the range of the inverse function, and the range of the original will become the domain of the inverse., Without changing the equation in any other way, you need to replace all appearance of y with an x, and all appearances of x with a y. This is the step that actually “inverts” the equation.Working with the sample equation y=2x2+2{\displaystyle y=2x^{2}+2}, this inversion step will result in the new equation of x=2y2+2{\displaystyle x=2y^{2}+2}.
+
+An alternate format is to replace the y terms with x, but replace the x terms with either y−1{\displaystyle y^{-}1} or f(x)−1{\displaystyle f(x)^{-}1} to indicate the inverse function.
+ Using a combination of algebraic steps, and taking care to perform the same operation evenly on both sides of the equation, you will need to isolate the y variable. For the working equation x=2y2+2{\displaystyle x=2y^{2}+2}, this revision will look like the following:x=2y2+2{\displaystyle x=2y^{2}+2}   (original starting point)
+
+
+x−2=2y2{\displaystyle x-2=2y^{2}}    (subtract 2 from both sides)
+
+
+x−22=y2{\displaystyle {\frac {x-2}{2}}=y^{2}}     (divide both sides by 2)
+
+±x−22=y{\displaystyle {\sqrt {\frac {x-2}{2}}}=y}     (square root of both sides; remember that the square root results in both positive and negative possible answers)
+
+
+, As you did at the beginning, examine the inverted equation to define its domain and range. With two possible solutions, you will select the one that has a domain and range that are inverses of the original domain and range.Examine the sample equation solution of ±x−22=y{\displaystyle {\sqrt {\frac {x-2}{2}}}=y}. Because the square root function is not defined for any negative values, the term x−22{\displaystyle {\frac {x-2}{2}}} must always be positive. Therefore, allowable values of x (the domain) must be x≥2. Using that as the domain, the resulting values of y (the range) are either all values y≥0, if you take the positive solution of the square root, or y≤0, if you select the negative solution of the square root. Recall that you originally defined the domain as x≥0, in order to be able to find the inverse function. Therefore, the correct solution for the inverse function is the positive option.
+
+Compare the domain and range of the inverse to the domain and range of the original. Recall that for the original function, y=2x2+2{\displaystyle y=2x^{2}+2}, the domain was defined as all values of x≥0, and the range was defined as all values y≥2. For the inverse function, now, these values switch, and the domain is all values x≥2, and the range is all values of y≥0.
+ To make sure that your work is correct and your inverse is the right equation, select any value for x and place it into the original equation to find y. Then, put that value of y in the place of x in your inverse equation, and see if you generate the number that you started with. If so, your inverse function is correct.As a sample, select the value x=1 to place in the original equation y=2x2+2{\displaystyle y=2x^{2}+2}. This gives the result y=4. 
+
+Next, place that value of 4 into the inverse function x−22=y{\displaystyle {\sqrt {\frac {x-2}{2}}}=y}. This does give the result of y=1. You can conclude that your inverse function is correct.
+
+

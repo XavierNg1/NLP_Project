@@ -1,0 +1,22 @@
+, You can also access the properties window by holding ALT+SPACE+P. Notice the four tabs at the top of the properties dialogue box: Options, Font, Layout, Colors.
+ This will enable you to use the "copy and paste" function in the command prompt window.
+
+It is also recommended that you select "Discard Old Duplicates".
+ You will see two sets of options: "Window size" and "Screen buffer size".
+
+
+
+Window size controls the size of the window you're working with.
+
+Screen buffer size controls what's kept in your computer's buffer memory while you're running the command prompt, which can be up to 9999. It can be viewed using the scroll bar on the side of the window.
+ A width of 80 and height of 300 is a common buffer size.
+ As you will see, there's an additional frame where you can edit the colors more specifically by their numeric values. For example, you can choose a darker green than you already have access to by plugging in: red:0, green:100, blue:0.
+ This is where you choose the font you would like to use. You will see two fonts: Raster fonts (as default) and Lucida Console. With this initial step, however, you only have these two fonts available to you. But don't worry, the next step allows you to add new fonts.
+ Press OK.
+, Right-click on "TrueTypeFont" key, click "New" and then click "String Value".
+ For the next values, just enter a "0" each time. For example, the third value should be named "000" and so on. Please note that you have to name them exactly as shown; otherwise, the function won't work.
+, You should be able to see the new font(s) under the "Font" tab in the properties window the next time you run command prompt.
+ This means that all changes will be gone as soon as you close the current command prompt.
+"Save properties for future windows with same title". Selecting this option will save your changes for all command prompt windows running from the same shortcut. In other words, this is the proper option to set the properties for this specific shortcut.
+ Using this window, however, will affect every command prompt, no matter where it's running from.
+

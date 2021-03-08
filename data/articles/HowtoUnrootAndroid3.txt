@@ -1,0 +1,17 @@
+ In order to unroot your Galaxy device, you'll need the stock firmware for your device and carrier. There are various places that you can find this firmware online. Use a search engine and search for your Galaxy model and carrier, along with the phrase "stock firmware". Unzip the firmware after downloading it to find the .tar.md5 file.
+
+
+Note: This method will not reset your KNOX counter, which is a way for Samsung to tell if your device has been rooted or modified. It's currently possible to root without tripping the KNOX counter, but if you rooted your device using the older methods there is no way to reset the counter.
+ This is an Android developer tool that will allow you to push your stock firmware from your computer to your Android device. You can find the installation files at Odin's XDA thread here.
+ If you haven't connected your device to your computer before, you'll need to install the Samsung USB drivers. The quickest way to do this is to download the drivers from Samsung here. Download the ZIP file, double-click it to open it, and then extract the installer. Run the installer to install the drivers.
+ You'll need to reboot it in a special mode.
+ This will boot the device in Download mode. Connect it to your computer via USB.
+ You should see a green box on the left side of the "ID:COM" section. If you don't see this, your Samsung USB drivers are not properly installed.
+ Browse for the .tar.md5 stock firmware file that you downloaded.
+ Make sure all of the other boxes are unchecked.
+ This may take about 5-10 minutes. When the process is complete, you'll see "PASS!" in the top box in Odin3. Your Galaxy should boot into the normal TouchWiz operating system.
+ If your phone gets stuck in an infinite boot loop after unlocking, you'll need to perform a factory reset. This will delete everything on the device.Press and hold the Power button to shut off the device.
+Press and hold Volume Up, Home, and Power to boot into the Recovery menu.
+Use the Volume buttons to select "wipe data/factory reset" and press the Power button to select it.
+Select "wipe data partition" and then "reboot system now". Your Galaxy will reboot and wipe all of the data, returning it to factory settings.
+

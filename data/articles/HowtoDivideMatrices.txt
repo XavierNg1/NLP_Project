@@ -1,0 +1,92 @@
+ Technically, there is no such thing as matrix division. Dividing a matrix by another matrix is an undefined function.The closest equivalent is multiplying by the inverse of another matrix. In other words, while ÷ is undefined, you can solve the problem * -1. Since these two equations would be equivalent for scalar quantities, this "feels" like matrix division, but it's important to use the correct terminology.
+
+Note that * -1 and -1 * are not the same problem. You may need to solve both to find all possible solutions.
+
+For example, instead of (13263913)÷(7423){\displaystyle {\begin{pmatrix}13&26\\39&13\end{pmatrix}}\div {\begin{pmatrix}7&4\\2&3\end{pmatrix}}}, write (13263913)∗(7423)−1{\displaystyle {\begin{pmatrix}13&26\\39&13\end{pmatrix}}*{\begin{pmatrix}7&4\\2&3\end{pmatrix}}^{-1}}.You may also need to calculate (7423)−1∗(13263913){\displaystyle {\begin{pmatrix}7&4\\2&3\end{pmatrix}}^{-1}*{\begin{pmatrix}13&26\\39&13\end{pmatrix}}}, which may have a different answer.
+;
+, To take the inverse of a matrix, it must be a square matrix, with the same number of rows and columns. If the matrix you're planning to inverse is non-square, there is no unique solution to the problem.The term "divisor matrix" is a little loose, since this is not technically a division problem. For * -1, this refers to matrix . In our example problem, this is (7423){\displaystyle {\begin{pmatrix}7&4\\2&3\end{pmatrix}}}.
+
+A matrix that has an inverse is called "invertible" or "non-singular." Matrices without an inverse are "singular."
+
+
+, To multiply two matrices together, the number of columns in the first matrix must equal the number of rows in the second matrix.If this does not work in either arrangement (* -1 or -1 * ), there is no solution to the problem.
+
+For example, if is a 4 x 3 matrix and is a 2 x 2 matrix, there is no solution. * -1 does not work since 4 ≠ 2, and -1 * does not work since 2 ≠ 3.
+
+Note that the inverse -1 always has the same number of rows and columns as the original matrix . There's no need to calculate the inverse to complete this step.
+
+In our example problem, both matrices are 2 x 2s, so they can be multiplied in either order.
+ There's one more requirement to check before you can take the inverse of a matrix. The determinant of the matrix must be nonzero. If the determinant is zero, the matrix does not have an inverse. Here's how to find the determinant in the simplest case, the 2 x 2 matrix:
+
+
+2 x 2 matrix: The determinant of the matrix (abcd){\displaystyle {\begin{pmatrix}a&b\\c&d\end{pmatrix}}} is ad - bc.In other words, take the product of the main diagonal (top left to bottom right), then subtract the product of the anti-diagonal (top right to bottom left).
+
+For example, the matrix (7423){\displaystyle {\begin{pmatrix}7&4\\2&3\end{pmatrix}}} has the determinant (7)(3) - (4)(2) = 21 - 8 = 13. This is nonzero, so it is possible to find the inverse.
+ If your matrix is 3 x 3 or larger, finding the determinant takes a bit more work:
+
+
+3 x 3 matrix: Choose any element and cross out the row and column it belongs to. Find the determinant of the remaining 2 x 2 matrix, multiply by the chosen element, and refer to a matrix sign chart to determine the sign. Repeat this for the other two elements in the same row or column as the first one you chose, then sum all three determinants. Read this article for step-by-step instructions and tips to speed this up.
+
+
+Larger matrices: Using a graphing calculator or software is recommended. The method is similar to the 3 x 3 matrix method, but is tedious by hand.For example, to find the determinant of a 4 x 4 matrix, you need to find the determinants of four 3 x 3 matrices.
+ If your matrix is not square, or if its determinant is zero, write "no unique solution." The problem is complete. If the matrix is square and its determinant is non-zero, continue to the next section for the next step: finding the inverse.
+ If your matrix is 2 x 2, you can use a shortcut to make this calculation much easier.The first step in this shortcut involves switching the top left element with the bottom right element. For example:
+
+
+(7423){\displaystyle {\begin{pmatrix}7&4\\2&3\end{pmatrix}}} → (3427){\displaystyle {\begin{pmatrix}3&4\\2&7\end{pmatrix}}}
+
+
+Note: Most people use calculators to find the inverse of a 3 x 3 matrix or larger. If you'd like to calculate it by hand, refer to the end of this section.
+ In other words, multiply the top right and bottom left elements by -1:
+
+
+(3427){\displaystyle {\begin{pmatrix}3&4\\2&7\end{pmatrix}}} → (3−4−27){\displaystyle {\begin{pmatrix}3&-4\\-2&7\end{pmatrix}}}
+
+
+, You found the determinant of this matrix in the section above, so there's no need to calculate it a second time. Just write down the reciprocal 1 / (determinant):
+
+In our example, the determinant is 13. The reciprocal of this is 113{\displaystyle {\frac {1}{13}}}.
+ Multiply each element of the new matrix by the reciprocal you just found. The resulting matrix is the inverse of the 2 x 2 matrix:
+
+
+113∗(3−4−27){\displaystyle {\frac {1}{13}}*{\begin{pmatrix}3&-4\\-2&7\end{pmatrix}}}=(313−413−213713){\displaystyle {\begin{pmatrix}{\frac {3}{13}}&{\frac {-4}{13}}\\{\frac {-2}{13}}&{\frac {7}{13}}\end{pmatrix}}}
+
+
+, To check your work, multiply the inverse by the original matrix. If the inverse is correct, their product will always be the identity matrix, (1001){\displaystyle {\begin{pmatrix}1&0\\0&1\end{pmatrix}}} If the math checks out, continue on to the next section to complete your problem.
+
+For the example problem, multiply (313−413−213713)∗(7423)=(1001){\displaystyle {\begin{pmatrix}{\frac {3}{13}}&{\frac {-4}{13}}\\{\frac {-2}{13}}&{\frac {7}{13}}\end{pmatrix}}*{\begin{pmatrix}7&4\\2&3\end{pmatrix}}={\begin{pmatrix}1&0\\0&1\end{pmatrix}}}.
+
+
+Here's a refresher on how to multiply matrices.
+
+Note: Matrix multiplication is not commutative: the order of the factors matters. However, when multiplying a matrix by its inverse, both options will result in the identity matrix., Unless you are learning this process for the first time, save yourself time by using a graphing calculator or math software for larger matrices. If you do need to calculate it by hand, here's a quick summary of one method:Adjoin the identity matrix I to the right side of your matrix. For example, → . The identity matrix has "1" elements along the main diagonal, and "0" elements in all other positions.
+
+Perform row operations to reduce the matrix until the left side is in row-echelon form, then continue reducing until the left side is the identity matrix.
+
+Once the operation is complete, your matrix will be in the form . In other words, the right side will be the inverse of the original matrix.
+ In "ordinary math" with scalar quantities, multiplication is commutative; 2 x 6 = 6 x 2. This is not true for matrices, so you may need to solve two problems:
+
+* -1 is the solution x for the problem x= .
+
+-1 * is the solution x for the problem x = .
+
+If this is part of an equation, make sure you are performing the same operation on both sides. If = , then -1does not equal -1, because the -1 is on the left side of but the right side of ., The dimensions of the final matrix are the outer dimensions of the two factors. It has the same number of rows as the first matrix, and the same number of columns as the second matrix.
+
+Returning to our original example, both (13263913){\displaystyle {\begin{pmatrix}13&26\\39&13\end{pmatrix}}} and (313−413−213713){\displaystyle {\begin{pmatrix}{\frac {3}{13}}&{\frac {-4}{13}}\\{\frac {-2}{13}}&{\frac {7}{13}}\end{pmatrix}}} are 2 x 2 matrices so the dimensions of the answer are also 2 x 2.
+
+To take a more complicated example, if is a 4 x 3 matrix and -1 is a 3 x 3 matrix, then the matrix * -1 has dimensions 4 x 3.
+ Refer to the linked article for full instructions, or refresh your memory with this summary:
+
+To find row 1, column 1 of -1, find the dot product of row 1 and -1 column 1. That is, for a 2 x 2 matrix, calculate a1,1∗b1,1+a1,2∗b2,1{\displaystyle a_{1,1}*b_{1,1}+a_{1,2}*b_{2,1}}.
+
+In our example (13263913)∗(313−413−213713){\displaystyle {\begin{pmatrix}13&26\\39&13\end{pmatrix}}*{\begin{pmatrix}{\frac {3}{13}}&{\frac {-4}{13}}\\{\frac {-2}{13}}&{\frac {7}{13}}\end{pmatrix}}}, row 1 column 1 of our answer is:(13∗313)+(26∗−213){\displaystyle (13*{\frac {3}{13}})+(26*{\frac {-2}{13}})}=3+−4{\displaystyle =3+-4}=−1{\displaystyle =-1}
+
+
+, For example, the element at position 2,1 is the dot product of row 2 and -1 column 1. Try to complete the example on your own. You should get the following answers:
+
+
+(13263913)∗(313−413−213713)=(−1107−5){\displaystyle {\begin{pmatrix}13&26\\39&13\end{pmatrix}}*{\begin{pmatrix}{\frac {3}{13}}&{\frac {-4}{13}}\\{\frac {-2}{13}}&{\frac {7}{13}}\end{pmatrix}}={\begin{pmatrix}-1&10\\7&-5\end{pmatrix}}}
+
+If you need to find the other solution, (313−413−213713)∗(13263913)=(−92193){\displaystyle {\begin{pmatrix}{\frac {3}{13}}&{\frac {-4}{13}}\\{\frac {-2}{13}}&{\frac {7}{13}}\end{pmatrix}}*{\begin{pmatrix}13&26\\39&13\end{pmatrix}}={\begin{pmatrix}-9&2\\19&3\end{pmatrix}}}
+
+

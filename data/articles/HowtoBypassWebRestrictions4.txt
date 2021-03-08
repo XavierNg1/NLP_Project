@@ -1,0 +1,24 @@
+ You can configure your home computer to act as a proxy for your internet browsing at school or work. Once your home proxy is configured, you simply use any web browser to point to the proxy's address, which will then act much like the proxy websites in the previous sections. You will be tricking the blocking software into thinking you are connecting to a legitimate website.
+
+
+The first step to setting up your own proxy server is to install a web server on your home computer. This will transform your home computer into a server that you can access from anywhere in the world. One of the most popular free programs for doing this is WAMPServer, which contains everything you need in one installer. Once you install WAMPServer, you will see its icon in your System Tray.
+Mac users can install MAMP, which performs essentially the same functions.
+Turn on the server by right-clicking on the WAMPServer icon and selecting "Put Online". Test it by right-clicking on the icon again and selecting "Localhost"; if you see the WAMPServer configuration page, then everything worked.
+ This is a free, open-source program that installs a web-based proxy into your server. Make sure to download PHProxy from SourceForge to ensure that you are downloading a legitimate version. This software will turn your web server into a proxy much like a proxy from the lists in the previous sections.
+
+
+PHProxy comes in a single ZIP file. Extract the folder inside the archive and place it into your WAMP (or MAMP) web server root directory. In Windows this is C:\wamp\www\, and in OS X this is Applications/MAMP/htdocs/. Copy the PHproxy folder into this location to install it.
+You don't need to run any installation programs, PHProxy is "installed" simply by being copied into the right folder.
+ Once PHPproxy is installed, you can quickly test it out by opening your browser and typing in the following address: http://localhost/phproxy/. If the PHProxy page appears, then everything went OK.
+
+
+Test the proxy by visiting an address through the "Web Address" field. You should see the site load with your proxy information before the regular site address in the browser's address bar.
+ Ports act like doors to your network, and are typically left closed for security reasons. In order to get your proxy to work, you will need to open some of these doors. This is accomplished by configuring your router to forward all incoming website requests through your new web server. To do so, you will need to know your computer's internal IP address, which is its "location" on your home network. Open your router's configuration page, navigate to the Port Forwarding section, and then create an entry for TCP/UDP traffic on Port 80 to your computer's internal IP address.
+ With port forwarding set up, all you need to know to access your web server from anywhere in the world is your home network's external, or public, IP address. You can quickly discover this by going to Google on your home computer and typing ip address into the search. Your public IP will be listed at the top of the page.
+
+
+Test your proxy by opening the browser on your computer, entering in your public IP address, and ending the address with /phproxy/. For example, if your public IP address is 24.24.24.24, the address for your proxy would be 24.24.24.24/phproxy/.
+ Your proxy is now configured and you can use it wherever you'd like. Simply enter the address you found in the previous step into any browser to bypass any restrictions.Most home networks have IPs that change on a regular basis. If you find that you can no longer connect to your server, your IP has most likely been changed and you will need to find it again.
+If you get caught at school or work connecting to a proxy, you can get into serious trouble.
+A proxy does not encrypt any data coming into your network, so a network administrator could still see what you are looking at if they are monitoring you. All the proxy does is bypass any restrictions put in place on the network.
+

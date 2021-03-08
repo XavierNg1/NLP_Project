@@ -1,0 +1,12 @@
+ This tool lists all of the components installed in your computer. Hardware on your computer is controlled by software called "drivers". Reinstalling your wireless adapter's driver is the quickest way to troubleshoot it when it won't turn on. Windows will handle the heavy lifting automatically.
+
+
+Press ⊞ Win+R and type "devmgmt.msc". This will launch the Device Manager.
+ This will list all of your installed network adapters. You should see your wireless adapter and your Ethernet adapter.
+ This will open a new window.
+ You'll see the driver installation date and version number, along with some options.
+ This is the last option on the list. You'll be prompted to confirm that you want to remove the drivers. Check the "Delete the driver software for this device" box and confirm that you want to remove the driver.
+ You'll need a network connection in order for Windows to automatically install the correct driver. Use an Ethernet cable and attach your laptop to one of your router's LAN ports., Once you're connected to your router via Ethernet, reboot your computer.
+ Windows should detect your driver-less adapter automatically once you log in. It will prompt you to let it find and install the proper driver. If you're connected to your router via Ethernet, Windows will be able to check online for the latest version of the driver. Windows will download and install the automatically.
+ After the driver installation (which may take several minutes), your network adapter should turn back on. If your adapter has an indicator light, you should notice it change from orange to blue.Click the Network icon in the system tray and select your wireless network. You'll need to enter the password if the network is secured.
+

@@ -1,0 +1,13 @@
+ You'll need a program called a "client" to connect. The OpenVPN organization does not provide a client for Mac. Tunnelblick is a free OpenVPN client designed for Mac. You can download Tunnelblick here. Select the "Latest" link to download the installer.
+ This will open a new window. Right-click the Tunnelblick.app file and select "Open". Confirm that you want to open the program. Enter your administrator information to install Tunnelblick., Every OpenVPN service should have configuration files available to download. These make setting up Tunnelblick much simpler. You can download the files from your VPN's support page.
+ Start Tunnelblick once you've downloaded the files. You'll be prompted to select your new configuration files before the client can start. Click "I have configuration files" and then select "OpenVPN Configuration(s)". If the files are specifically for Tunnelblick, select "Tunnelblick VPN Configuration(s)" instead.
+
+
+Select "Open Private Configurations Folder". This will open a new finder window.
+Drag and drop all of your configuration files into the folder that opens.
+ Select a server to connect to it.
+
+
+You'll be prompted for your administrator password the first time that you connect to the server.
+ Enter the username ad password you were assigned by the VPN service when prompted. You can choose to save these to your Keychain for easier logins.
+ You may be prompted to download a security certificate upon connecting to the server. You'll need this certificate to connect.

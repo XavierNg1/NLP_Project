@@ -1,0 +1,42 @@
+ This method requires the PIXEL desktop environment with the latest version of the Raspbian Jessie operating system. It is achieved by editing an "autostart" file that runs commands at startup in the LXDE desktop environment, which is the framework the Raspberry Pi's PIXEL desktop is built on. This method is preferred in scenarios where:
+
+your script requires the desktop environment to run
+your script needs to run from a terminal window
+you want to specify which users the script will autostart for;
+, Click on the raspberry icon in the upper left side of the task bar. Then go to Preferences and click Raspberry Pi Configuration., In the "Boot" section, make sure the option "To Desktop" is selected. Then click OK. Great, let's get started!, In a new terminal window type the following command:
+
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+
+then press ↵ Enter. This will open the main autostart file in the nano editor. Commands added to this file will launch at startup regardless of who is logged in. Don't worry if your autostart file contains a few extra lines that are different than the ones pictured., This will created a new line above the @xscreensaver -no-splash entry. Many users have reported that commands added below this line do not run successfully so it's common practice to add your custom commands above the @xscreensaver entry., This is where you have the most options as you can enter any terminal command you would normally use to launch your script. For example, to run a bash script called "myscript.sh" which is located in the home directory of the user "pi" one would enter the command:
+
+/home/pi/myscript.sh
+
+Likewise, if superuser permissions are required to run the script you can even preface the command with sudo., For example, to run a Python script that requires superuser permissions called "myscript.py" which is located in the home directory of the user "pi", you would enter the full path to both the Python script itself and the Python interpreter, such as:
+
+sudo /usr/bin/python /home/pi/myscript.py
+
+Lastly, if you wish to run your script in a new terminal window on startup, you can use the @lxterminal command with the -e modifier followed by the full path of your script in quotes. For example:
+
+@lxterminal -e "/home/pi/myscript.sh"
+
+This will execute the script from a new terminal window.
+ You will be asked if you would like to save your changes, type Y and press ↵ Enter.
+
+If you don't want your script to run on startup any longer, simply edit the autostart file once again, only this time delete the lines you added previously. Once you save and exit, your script will no longer run automatically on startup.
+ In the terminal type:
+
+sudo reboot
+
+and press ↵ Enter. Your Raspberry Pi will restart and your script will run when the desktop boots up. Nice work!, If you have multiple user accounts on your Raspberry Pi and want a script to autostart for only a specific user, you must instead edit the autostart file associated with that specific user. For example, for the default user "pi" the autostart file is located at:
+
+/home/pi/.config/lxsession/LXDE-pi/autostart
+
+Therefore, to edit this file, in a terminal window you would type:
+
+sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
+
+and press ↵ Enter., Just like before, input the desired command to launch your script in the correct place in the autostart file. When you are satisfied, be sure to save your changes before you exit., In the terminal type:
+
+sudo reboot
+
+and press ↵ Enter. When the computer restarts, log into the user corresponding to the autostart file you recently changed. Your script will run as soon as the desktop boots up!

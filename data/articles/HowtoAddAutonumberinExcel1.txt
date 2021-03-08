@@ -1,0 +1,19 @@
+ This method explains how to make each cell in a column display its corresponding row number.This is a good method to use if rows are frequently added and removed in your worksheet.
+
+
+To create a basic row of consecutive numbers (or other data, such as days of the week or months of the year), see Filling a Column with Continous Numbers.;
+, If the cell is not A1, use the correct cell number.
+
+
+For example, if you are typing in cell B5, type =ROW(B5) instead.
+ The cell will now display its row number. If you typed =ROW(A1), the cell will say 1. If you typed =ROW(B5), the cell will read 5.To start with 1 no matter which row you want to begin your series of numbers, count the number of rows above your current cell, then subtract that number from your formula.
+For example, if you entered =ROW(B5) and want the cell to display a 1, edit the formula to say =ROW(B5)-4, as B1 is back 4 rows from B5.,, This box is called the Fill Handle. When the mouse cursor is directly above the Fill Handle, the cursor will change to a crosshair symbol.
+
+
+If you don’t see the Fill Handle, navigate to File > Options > Advanced and place a check next to “Enable fill handle and cell drag-and-drop.”
+
+, The cells in the column will now display their corresponding row numbers.
+
+
+If you delete a row included in this series, the cells numbers will automatically correct themselves based on their new row numbers.
+

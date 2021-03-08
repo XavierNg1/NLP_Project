@@ -1,0 +1,17 @@
+ Plan to use at least version 8i of Oracle. This is the earliest version that supports the function that permits renaming a table in the program.;
+,
+
+
+One of the major pre-requisites is that the table must be in your own schema.
+There are also certain types of synonyms that you can not rename in Oracle. These include public synonyms as well as types with dependent tables.
+ You will need to know the table name in order to enter the command that allows you to alter it.
+ If you are unsure of dependencies, you can use the “TOAD” tool to check the table’s status.
+
+
+First, select the table you plan to rename in the schema browser,
+Then find the “Used By” tab. Any dependencies will be listed in this section.
+ Keep in mind if you attempt to use the same schema, you will receive an error message in Oracle. The error message will appear on screen as the following: ORA-14047: ALTER TABLE|INDEX RENAME may not be combined with other operations. For example, “priority.table_name” can not be changed to “priority.new_table_name.”
+
+, You will type in the following to make the adjustment: “ALTER TABLE original_table_name RENAME TO new_table_name;” The original name will represent the former table, sequence, view or private synonym.
+ Once you have renamed a table, all of the objects including indexes should move with the change. If the renaming is not successful, you will have to perform some troubleshooting to determine why you are receiving an error message.
+

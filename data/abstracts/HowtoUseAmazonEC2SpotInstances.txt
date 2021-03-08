@@ -1,0 +1,33 @@
+
+Consider whether you need long-lived spot instances or you just need them temporarily to execute a workload.
+Factor in whether you are spinning up and running workloads on the spot instances programmatically, or manually.
+Consider whether your spot instance is a frontend instance.
+Understand the different states of a spot request.
+Understand the steps for a spot instance request to be fulfilled.There are separate spot markets by every combination of availability zone, instance type, and operating system.
+Understand how spot instances are charged.
+Understand the constraints placed by Amazon on spot prices.
+Note that some types of instances are not available on the spot market.
+Understand the key trade-off in bidding strategies.
+Understand the different types of bidding strategies.
+Consider composite bidding strategies.
+Understand the distinction between one-time and persistent spot requests.A one-time spot request is a request that gets canceled after the instance is terminated by the user or interrupted by Amazon.
+Understand how your EC2 platform affects how you can launch spot instances.EC2 Classic (not available for new customers, only supported for legacy customers): You cannot specify an availability zone when launching a spot instance.
+Understand how you can use launch groups to launch multiple spot instances together (useful for distributed computing clusters).
+If using spot instances for front ends with variable traffic loads, understand how to create autoscaling groups of spot instances.A typical setup for handling variable traffic loads is to have a small number of (reserved) on-demand instances (either standalone or in their own autoscaling group) for the baseline capacity and then have an autoscaling group of spot instances to handle the variable additional capacity.
+Consider using spot fleets.
+Consider using autoscaling groups for long-lived spot instances executing predefined workloads.
+Keep in mind that spot markets are very hard to predict.
+Understand how to interpret spot instance pricing history.
+Compare spot instance pricing history by availability zone within a region.
+Compare spot instance prices by instance type (instance class, size, and generation).
+Understand how your own demand can affect spot prices.
+Take steps to make your launching of spot instances faster and more efficient.
+Investigate how to speed up the launch process.
+For short-lived spot instances that execute pre-defined workloads periodically, include automatic termination.
+Monitor for termination notices and act on them.Make sure that when using scripts frequently that spin up spot instances, you use an AMI and launch setting where the associated EBS volume is set to delete on termination of the instance.
+Move to a more defined architecture with AWS where possible, and where the investment is worthwhile.
+Monitor your spot instance costs.
+Periodically check your EC2 console.
+Programmatically access information about spot instance usage.
+Consider using Cloudyn.
+Consider using ClusterK.

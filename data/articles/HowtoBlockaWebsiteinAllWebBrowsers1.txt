@@ -1,0 +1,17 @@
+ Click the Windows logo in the bottom-left corner of the screen or press the ⊞ Win key.
+
+On Windows 8, you must hover your cursor in the top-right corner of the screen and then click the magnifying glass icon.;
+, Doing so will display the Notepad app at the top of the Start menu window., This option will open Notepad using your administrator privileges. If you don't open Notepad in administrator mode, you won't be able to edit the "hosts" file.
+
+On a laptop with a trackpad instead of a traditional mouse, use two fingers to tap the trackpad instead of right-clicking.
+ Doing so will confirm your decision and open Notepad.,, Double-click each folder until you are in the "etc" folder., You should see several files appear in the window., This will open the "hosts" file in Notepad, allowing you to view and edit its contents., You'll see two "localhost" lines of text here., It will say either "::1 localhost" or "127.0.0.1 localhost" at the bottom of the page. Your cursor must be directly below the last line of text on this page.
+
+Be careful not to delete anything that is already in the hosts file.
+ This is the loopback address to your own computer. This is what will return an error page in your web browser when someone tries to visit the blocked site., For example, if you wanted to block Google, you would type www.google.com., This moves your cursor to a new line. The code you entered will tell your computer to redirect the website to your loopback address instead.
+
+You can add as many sites as you want to block, one per line, using the same number (127.0.0.1) as before.
+ The website you added will now be unreachable in any web browser on the computer.
+
+To unblock a site, simply open the hosts file in Notepad again with administrator privileges and delete the lines that you added. Make sure you save your changes after removing the lines you added or the sites will still be blocked.
+
+

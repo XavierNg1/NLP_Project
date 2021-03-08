@@ -1,0 +1,38 @@
+
+Learn the following key concepts of the FIND command:
+
+
+The syntax of .Find is:
+
+expression.Find(What, After, LookIn, LookAt, SearchOrder, SearchDirection, MatchCase, MatchByte, SearchFormat)
+Expression (Required): is any valid range Object.
+You can adapt the following code to your own uses by copying it (down to where it says #** End Sub) in Advanced Editing and pasting it to a word processor and doing a REPLACE ALL for "#** " (w/o the quotes but with the trailing space please).
+Open a new Excel workbook.
+In your browser, go to https://www.wikihow.com/User:Chris-Garthwaite and do (View More) under Articles Started, and select just to the left of the first top one down to just to the right of the bottom one's Views, and copy it.
+Then.
+Note that if you were to use Excel's menu-driven Find command, it would return in the upper left corner (to the left of the formula bar) the cell reference it found, if any, for the string you searched on in the given range of cells, but you would have to hit the right arrow and left arrow (or some such combination) to select the actual cell as the sole ActiveCell I believe.
+Note that the underline used at the right end of code lines is to extend the line to the next line down, so the next line is in fact part of the entire sub-procedure or expression.
+
+,
+You can easily adapt this code by changing the sheet name reference and the cell range reference, and if it's not an Article you're searching for, you can certainly change that everywhere as well.
+
+,
+Here are two more macros that work together to update Related wikiHows:
+
+
+
+
+Sub Macro10()
+' Macro10 Macro
+' Keyboard Shortcut: Option+Cmd+n
+Windows("OVERALL STATUS.xlsm").Activate
+Sheets("Relateds").Select
+Application.Goto Reference:="TopRow"
+Application.CutCopyMode = False
+Selection.Delete Shift:=xlUp
+ActiveWorkbook.Names.Add Name:="TopRow", RefersToR1C1:="=Relateds!R166"
+Range("B166").Select
+Selection.Copy
+Application.Goto Reference:="Searcher"
+' Searcher is a Defined Name Variable comprised of the Article Names
+' and Views pasted AS TRANSPOSED from rows TO COLUMNS in row 1.

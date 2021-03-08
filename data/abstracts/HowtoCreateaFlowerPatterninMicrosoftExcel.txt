@@ -1,0 +1,34 @@
+
+In the previous article, How to Create Artistic Patterns in Microsoft Excel, a Data worksheet was described in great detail.
+Start a new workbook by saving the old workbook under a new name.
+
+,
+The defined variable "top" is being moved and its formula is being changed, to start with.
+The notes in cells E3:E5 have changed a bit;
+
+
+E3: Put "Y" for Spheres / Spheroids proportionally, whether even/odd S_COUNT (in B1)
+E4:  For S_COUNT (B1) > 25, overlapping = "Y" input, otherwise input "N"
+E5: Also: "N" input results in full circle of spheroids / podoids whether odd or even. 
+
+,
+Edit Go To cell range D7:D1447 and with D7 active input w/o quotes the formula "=SIN((ROW()-7)*Factor*PI()/180)" and Edit Fill Down.
+Edit Go To cell range E7:E1447 and input w/o quotes the formula "=(PI())*((SIN(A7/(B7*2))*1*COS(A7)*1*(COS(A7/(B7*2)))*1)+C7)*SIN(A7/(B7*2))" and Edit Fill Down.
+
+,
+Edit Go To cell range F7:F1447 and input w/o quotes the formula "=(PI())*((SIN(A7/(B7*2))*1*SIN(A7)*1*(COS(A7/(B7*2)))*1)+D7)*SIN(A7/(B7*2))" and Edit Fill Down.
+
+,
+Select cell A5 and enter w/o quotes the formula "=IF(TURNS>0,VLOOKUP(TURNS,TURNS_LOOKUP,2),VLOOKUP(TURNS, TURNS_LOOKUP_NEG,2))".
+Cell L1 should read TURNS_LOOKUP, else enter it.
+Select cell O1 and enter TURNS_LOOKUP_NEG.
+Copy from the following pictures the cell range R1:S1441.
+Select cell B2 and enter the formula w/o quotes "=VLOOKUP(S_COUNT,SPHEROIDS_COUNT_LOOKER,2)".
+
+,
+Look for errors and correct any that appear.
+Create the Chart.
+Holding the shift key down, Copy Picture and activate the Saves worksheet and Paste Picture.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

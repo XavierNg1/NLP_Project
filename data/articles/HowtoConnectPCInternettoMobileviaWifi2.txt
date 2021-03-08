@@ -1,0 +1,26 @@
+ This is required in order to turn your PC into a router. Your laptop has a wireless adapter built-in, but many desktops do not have wireless adapters. You can get a USB dongle adapter that you simply plug in and use, or you can install a wireless network card, which may be more powerful.
+
+You can check if your computer has an adapter installed by opening the Start menu or screen and typing ncpa.cpl. Press ↵ Enter and the Network Connections window will open. Look for a connection labeled "Wireless Network Connection." It will have a signal bar icon underneath the connection icon. This indicates that you have a wireless adapter installed.
+See Install a PCI Card for instructions on installing a network card in your computer.
+ This is a free, open-source program that can easily share your computer's internet connection via a new wireless network using protocols built into Windows. You can download it from virtualrouter.codeplex.com.
+
+Virtual Router allows you to share your connection via wireless using the same card that your computer using to connect to the network. In other words, you only need a single wireless connection on your computer to create a Wi-Fi access point and share your internet with mobile devices.
+If you're using Windows 10, you can try this method, but many users report that it doesn't work on their systems. See the next section for a method that is much more likely to work in Windows 10.
+ Follow the prompts to install the program. You can leave any settings at their default. If you downloaded the program from virtualrouter.codeplex.com, it should not have any adware or malware.
+
+You can find the downloaded installer at the bottom of your browser window, and it can also be found in your Downloads folder.
+ Once you've installed Virtual Router, you'll need to launch it. Find and open the Virtual Router Manager program in your Start menu., Virtual Router requires a wireless device with drivers that are made for Windows 7 or 8. If you haven't updated your wireless card drivers in a while, or you upgraded your computer from Windows Vista or earlier, you may need the latest drivers for your device. If you do not have a wireless adapter installed, the program will not start.
+
+Press ⊞ Win+R and type devmgmt.msc to launch the Device Manager.
+Expand the "Network adapters" category, right-click on your wireless adapter, and select "Update Driver Software."
+Click "Search automatically for updated driver software" and follow the prompts to install any drivers that Windows finds.
+See Find and Update Drivers for more details on updating your drivers. If Virtual Router still doesn't work after updating drivers, or there are no updates available, see the Connectify section below.
+ This will be the network name that appears on your device's list of available wireless networks. Make sure it doesn't contain any personal information, as anyone in the vicinity will be able to see it., A password is recommended to prevent unwanted users from accessing your network. Even if you're at home, you should include a password. You'll need to enter this password on your mobile device when connecting to the network., For most people there will only be one connection listed. Select the connection that your computer is receiving the internet from., Your new wireless network will be created, and you'll be able to see it on your mobile device.
+
+If the virtual network does not start, use the program in the next method.
+ Once the new network is up and running, you should be able to find it in the list of available networks on your wireless device. The process for finding this list varies depending on the device you are using, but it's usually in the Settings app.
+
+Android - Open the Settings app and tap "Wi-Fi." Find and tap the newly-created network in the list of available networks. Enter the password when prompted.
+iOS - Open the Settings app on your Home screen. Tap the "Wi-Fi" option at the top of the menu. Select your new wireless network and then enter the password you created.
+See Connect to a Wireless Internet Connection for instructions on connecting a variety of devices.
+ Once you're connected, you should see your device listed in the Virtual Router Manager window on your computer. Open your browser on your mobile device and test that you can load websites.

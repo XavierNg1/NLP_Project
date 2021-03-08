@@ -1,0 +1,58 @@
+ Recall that the electric field E{\displaystyle {\mathbf {E} }} can be written in terms of a scalar potential E=−∇ϕ.{\displaystyle {\mathbf {E} }=-\nabla \phi .} We can then use Gauss’ law to obtain Poisson’s equation as seen in electrostatics.
+
+
+∇2ϕ=−ρϵ0{\displaystyle \nabla ^{2}\phi =-{\frac {\rho }{\epsilon _{0}}}} 
+
+In this equation, it is often the case that we know the charge density ρ,{\displaystyle \rho ,} called the source function, and wish to know the potential ϕ.{\displaystyle \phi .} Therefore, we need to find some way to invert this equation.
+;
+, Since we are dealing with three dimensions, the FTs are adjusted accordingly, with the constant factor there for normalization purposes. The bounds will differ depending on conventions on where to set the potential to 0. Although we will not explicitly write the boundaries until evaluating the integrals, we will set the potential to 0 at infinity, so that we are integrating over all space. 
+
+
+ϕ~(k)=1(2π)3/2∫ϕ(x)e−ik⋅xd3xϕ(x)=1(2π)3/2∫ϕ~(k)eik⋅xd3k{\displaystyle {\begin{aligned}{\tilde {\phi }}({\mathbf {k} })&={\frac {1}{(2\pi )^{3/2}}}\int \phi ({\mathbf {x} })e^{-i{\mathbf {k} }\cdot {\mathbf {x} }}{\mathrm {d} }^{3}{\mathbf {x} }\\\phi ({\mathbf {x} })&={\frac {1}{(2\pi )^{3/2}}}\int {\tilde {\phi }}({\mathbf {k} })e^{i{\mathbf {k} }\cdot {\mathbf {x} }}{\mathrm {d} }^{3}{\mathbf {k} }\end{aligned}}}
+
+
+ρ~(k)=1(2π)3/2∫ρ(x)e−ik⋅xd3xρ(x)=1(2π)3/2∫ρ~(k)eik⋅xd3k{\displaystyle {\begin{aligned}{\tilde {\rho }}({\mathbf {k} })&={\frac {1}{(2\pi )^{3/2}}}\int \rho ({\mathbf {x} })e^{-i{\mathbf {k} }\cdot {\mathbf {x} }}{\mathrm {d} }^{3}{\mathbf {x} }\\\rho ({\mathbf {x} })&={\frac {1}{(2\pi )^{3/2}}}\int {\tilde {\rho }}({\mathbf {k} })e^{i{\mathbf {k} }\cdot {\mathbf {x} }}{\mathrm {d} }^{3}{\mathbf {k} }\end{aligned}}}
+
+
+, The result will relate the potential and charge density in the k{\displaystyle {\mathbf {k} }} space, and as it will turn out, the relation is algebraic, which is considerably simpler. 
+
+Take the Laplacian of ϕ(x).{\displaystyle \phi ({\mathbf {x} }).} We can differentiate under the integral here because the integral is being taken with respect to k,{\displaystyle {\mathbf {k} },} and x{\displaystyle {\mathbf {x} }} is an independent variable.
+
+
+∇2ϕ(x)=1(2π)3/2∫−k2eik⋅xϕ~(k)d3k=ρ(x)ϵ0{\displaystyle \nabla ^{2}\phi ({\mathbf {x} })={\frac {1}{(2\pi )^{3/2}}}\int -k^{2}e^{i{\mathbf {k} }\cdot {\mathbf {x} }}{\tilde {\phi }}({\mathbf {k} }){\mathrm {d} }^{3}{\mathbf {k} }={\frac {\rho ({\mathbf {x} })}{\epsilon _{0}}}}
+
+
+
+FT charge density so that it is also written in the k{\displaystyle {\mathbf {k} }} space.
+
+
+ρ(x)ϵ0=1(2π)3/2∫ρ~(k)ϵ0eik⋅xd3k{\displaystyle {\frac {\rho ({\mathbf {x} })}{\epsilon _{0}}}={\frac {1}{(2\pi )^{3/2}}}\int {\frac {{\tilde {\rho }}({\mathbf {k} })}{\epsilon _{0}}}e^{i{\mathbf {k} }\cdot {\mathbf {x} }}{\mathrm {d} }^{3}{\mathbf {k} }}
+
+
+
+By direct comparison, we see that the below relation holds. 
+
+
+k2ϕ~(k)=ρ~(k)ϵ0{\displaystyle k^{2}{\tilde {\phi }}({\mathbf {k} })={\frac {{\tilde {\rho }}({\mathbf {k} })}{\epsilon _{0}}}}
+
+
+
+If we were given charge density in the k{\displaystyle {\mathbf {k} }} space and wanted to find potential in the same space, it would be very easy. However, we are interested in finding these quantities in the x{\displaystyle {\mathbf {x} }} space. Therefore, we will need to transform a second time.
+ Inverse FT charge density and simplify the resulting expression. The prime symbols for the dummy variables in line 2 signify that we are taking a separate integral.
+
+
+ϕ(x)=1(2π)3/2∫eik⋅xρ~(k)k2ϵ0d3k=1(2π)3/2∫eik⋅xd3kk2ϵ0=1(2π)3∫eik⋅(x−x′)k2d3k∫ρ(x′)ϵ0d3x′{\displaystyle {\begin{aligned}\phi ({\mathbf {x} })&={\frac {1}{(2\pi )^{3/2}}}\int e^{i{\mathbf {k} }\cdot {\mathbf {x} }}{\frac {{\tilde {\rho }}({\mathbf {k} })}{k^{2}\epsilon _{0}}}{\mathrm {d} }^{3}{\mathbf {k} }\\&={\frac {1}{(2\pi )^{3/2}}}\int e^{i{\mathbf {k} }\cdot {\mathbf {x} }}{\frac {{\mathrm {d} }^{3}{\mathbf {k} }}{k^{2}\epsilon _{0}}}\left\\&={\frac {1}{(2\pi )^{3}}}\int {\frac {e^{i{\mathbf {k} }\cdot ({\mathbf {x} }-{\mathbf {x} }^{\prime })}}{k^{2}}}{\mathrm {d} }^{3}{\mathbf {k} }\int {\frac {\rho ({\mathbf {x} }^{\prime })}{\epsilon _{0}}}{\mathrm {d} }^{3}{\mathbf {x} }^{\prime }\end{aligned}}}
+
+
+, It is easier if we change to spherical coordinates (we are using the physicist's convention). In line 5, we recognize that sina=eia−e−ia2i{\displaystyle \sin {a}={\frac {e^{ia}-e^{-ia}}{2i}}} from Euler's formula, and in line 7, we recognize the integral ∫0∞sin⁡aada=π2.{\displaystyle \int _{0}^{\infty }{\frac {\sin a}{a}}{\mathrm {d} }a={\frac {\pi }{2}}.}
+
+
+1(2π)3∫−∞∞eik⋅(x−x′)k2d3k= 1(2π)3∫02πdϕ∫0∞k2dk∫0πsin⁡θdθeik|x−x′|cos⁡θk2= 1(2π)2∫0∞dk∫0πsin⁡θdθeik|x−x′|cos⁡θ, u=cos⁡θ= 1(2π)2∫0∞dk∫−11dueik|x−x′|u= 1(2π)2∫0∞dk1ik|x−x′|(eik|x−x′|−e−ik|x−x′|)= 12π2∫0∞dk1k|x−x′|sin(k|x−x′|), v=k|x−x′|= 12π2|x−x′|∫0∞dvsin⁡vv= 14π|x−x′|{\displaystyle {\begin{aligned}&{\frac {1}{(2\pi )^{3}}}\int _{-\infty }^{\infty }{\frac {e^{i{\mathbf {k} }\cdot ({\mathbf {x} }-{\mathbf {x} }^{\prime })}}{k^{2}}}{\mathrm {d} }^{3}{\mathbf {k} }\\=\ &{\frac {1}{(2\pi )^{3}}}\int _{0}^{2\pi }{\mathrm {d} }\phi \int _{0}^{\infty }k^{2}{\mathrm {d} }k\int _{0}^{\pi }\sin \theta {\mathrm {d} }\theta {\frac {e^{ik|{\mathbf {x} }-{\mathbf {x^{\prime }} }|\cos \theta }}{k^{2}}}\\=\ &{\frac {1}{(2\pi )^{2}}}\int _{0}^{\infty }{\mathrm {d} }k\int _{0}^{\pi }\sin \theta {\mathrm {d} }\theta e^{ik|{\mathbf {x} }-{\mathbf {x^{\prime }} }|\cos \theta },\ u=\cos \theta \\=\ &{\frac {1}{(2\pi )^{2}}}\int _{0}^{\infty }{\mathrm {d} }k\int _{-1}^{1}{\mathrm {d} }ue^{ik|{\mathbf {x} }-{\mathbf {x^{\prime }} }|u}\\=\ &{\frac {1}{(2\pi )^{2}}}\int _{0}^{\infty }{\mathrm {d} }k{\frac {1}{ik|{\mathbf {x} }-{\mathbf {x^{\prime }} }|}}(e^{ik|{\mathbf {x} }-{\mathbf {x^{\prime }} }|}-e^{-ik|{\mathbf {x} }-{\mathbf {x^{\prime }} }|})\\=\ &{\frac {1}{2\pi ^{2}}}\int _{0}^{\infty }{\mathrm {d} }k{\frac {1}{k|{\mathbf {x} }-{\mathbf {x^{\prime }} }|}}\sin {(k|{\mathbf {x} }-{\mathbf {x^{\prime }} }|)},\ v=k|{\mathbf {x} }-{\mathbf {x^{\prime }} }|\\=\ &{\frac {1}{2\pi ^{2}|{\mathbf {x} }-{\mathbf {x^{\prime }} }|}}\int _{0}^{\infty }{\mathrm {d} }v{\frac {\sin v}{v}}\\=\ &{\frac {1}{4\pi |{\mathbf {x} }-{\mathbf {x^{\prime }} }|}}\end{aligned}}}
+
+
+, This is the general solution to Poisson's equation up to a charge density, where ϕ(∞)=0.{\displaystyle \phi (\infty )=0.} The general solution to this equation cannot be written in closed form. Thus, we opt for the integral form, where we integrate the known charge density over all space to find the corresponding potential, though the integration for more complicated charge distributions becomes rather impractical.
+
+
+ϕ(x)=14πϵ0∫ρ(x′)|x−x′|d3x′{\displaystyle \phi ({\mathbf {x} })={\frac {1}{4\pi \epsilon _{0}}}\int {\frac {\rho ({\mathbf {x^{\prime }} })}{|{\mathbf {x} }-{\mathbf {x^{\prime }} }|}}{\mathrm {d} }^{3}{\mathbf {x^{\prime }} }}
+
+

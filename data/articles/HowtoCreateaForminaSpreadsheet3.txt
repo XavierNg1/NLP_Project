@@ -1,0 +1,36 @@
+ Use a custom form when you want to create a form that other people will fill in and you want to have a specific layout and impose limits on some of the values that people can enter. For example, you might be collecting data about specific sports and want to know which sport an individual plays, how often each month, what percentage of free time is spent on the sport and other details.
+
+
+Although you can use a data entry form to collect this data, creating a custom form with complex fields such as “list boxes”,” combo boxes”, “spin buttons”, and “scroll bars” allows you to capture this information efficiently because you can limit what each person enters.
+You can also position the complex fields anywhere you want on the form, not just in columns as with a data entry form. Each list box, etc. is a complex field on the form. You need to create each complex field separately.
+ The Developer tab appears to the right of the View tab. The Developer tab gives you access to the tools you require to create a custom form.
+
+
+Click the Microsoft Office button followed by the Excel Options button.
+Click on the check box named Show Developer tab in the Ribbon.
+Click the Developer tab to display the available tools. Excel uses special terminology for complex fields such as list boxes. They are called “controls”. You will need to use the Insert Controls icon that looks like a briefcase with a hammer and a wrench.
+ Type each title in its own cell. For example, if you are collecting data about people of different ages in different cities, you can enter Name, Age, City.
+
+
+Think about the layout you want in the form when entering titles. You want to leave one or more empty cells either below or to the right of each title so there is space to enter data next to each title.
+ Type each item of data in its own cell. For example, if you are collecting data about sports, you can enter Baseball, Football, Hockey, Tennis, Golf.
+ The INDEX function returns a value from a specific range of data. Enter the INDEX function in the cell destined to display the chosen selection from a control. For example, if A1 is going to contain the selection and the range C1:C5 contains the data, enter INDEX(C1:C5,A1,0) into A1.
+ Use a list box when you want a user to choose from a list of finite items. For example, if you are collecting data about sports, you can limit the sports to Baseball, Football, Hockey, Tennis and Golf. Anyone filling out the form can only choose from those sports. Set the location and values for each list box. Click Insert in the Controls section. Then click List Box (Form Control) under Form Controls.
+Click the worksheet location where you want the upper left corner of the list box to appear, and then drag the list box to where you want the lower right corner of the list box to be.
+Click Properties in the Controls section. In the Format Object window, enter the range where the data is located (C1:C5 in our example) and the cell where the result is to be displayed (A1 in our example).
+ A combo box is almost identical to a list box. However, it combines a text box with a list box. Use a combo box when you want to give a user the option to choose from a list of finite items or to type an alternative. For example, if you are collecting data about sports, you can list Baseball, Football, Hockey, Tennis and Golf as choices, but a user might play soccer or some other sport. Anyone filling out the form can either choose from the sports listed or type soccer or another sport in the text box part of the combo box. Set the location and values for each combo box. Click Insert in the Controls section. Then click Combo Box under Form Controls.
+Click the worksheet location where you want the upper left corner of the combo box to appear, and then drag the combo box to where you want the lower right corner of the combo box to be.
+Right click the combo box and then click Format Control. In the Format Control window, enter the range where the data is located (C1:C5 in our example), the cell where the result is to be displayed (A1 in our example), and a number in the Drop Down Lines box. The number you enter determines how many lines are displayed in the combo box before it is necessary to scroll down to see other items in the list.
+ A spin button appears on the form as a button with an upward pointing arrow on the top half and a downward pointing arrow on the bottom half. Use a spin button when you want a user to select a number from a range of numeric values, including dates or times. For example, if collecting data about sports, you might want to know how many times a month a user plays a chosen sport, but you are going to put any results where the answer is more than 20 all together. In this case, you can set a maximum limit for the spin button to 20. Anyone filling out the form can choose a value from 1 to 20 by using the down or up arrows on the spin button. Set the location and values for each spin button. Click Insert in the Controls section. Then click Spin Button under Form Controls.
+Click the worksheet location where you want the upper left corner of the spin button to appear, and then drag the spin button to where you want the lower right corner of the spin button to be.
+Right click the spin button and then click Format Control. Enter numbers in the value and change fields. Enter the cell where the result is to be displayed (A1 in our example) in the Cell link field.
+ A scroll bar supports a range of values using scroll arrows or the scroll box. Use a scroll bar when you want a user to select a value from a large range of values such as percentages. For example, if collecting data about sports, you might want to know what percentage of a user’s free time is taken up playing a chosen sport each week. In this case, you can use a scroll bar for the range of percentages, setting 1 as the minimum value and 100 as the maximum value. Anyone filling out the form can move the scroll arrows or scroll box to choose the percentage of time spent. Set the location and values for each scroll bar. Click Insert in the Controls section. Then click Scroll Bar under Form Controls.
+Click the worksheet location where you want the upper left corner of the scroll bar to appear, and then drag the scroll bar to where you want the lower right corner of the scroll bar to be.
+Right click the scroll bar and then click Format Control. Enter numbers in the value and change fields. Enter the cell where the result is to be displayed (A1 in our example) in the Cell link field.
+ This removes access to the control tools. Take this action when you have finished adding all the controls you want on the form. You need to take this step so that when you send the form to users they can only enter data in the complex fields (controls) in the form. They will not be able to alter the range of data that can be entered in any complex field (control).
+
+
+Click the Microsoft Office button followed by the Excel Options button.
+Click on the check box named Show Developer tab in the Ribbon.
+ Click the Microsoft Office button followed by the Save As option. Choose Excel Workbook from the list that appears. Choose Excel Template as the value for the Save as Type field and click on the Save button. The custom form is now ready to send to other people to complete.
+

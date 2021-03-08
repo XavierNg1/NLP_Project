@@ -1,0 +1,7 @@
+ You will need an 8GB or larger USB flash drive. You will also need the OS X installer app from the Mac App Store. Download the app and insert the USB drive.
+ It can be found in the Utility folder inside the Applications folder. The Disk Utility will allow you to manipulate the USB drive. In the left frame, select your USB drive and then open the Partition tab. Under Partition Layout, select 1 Partition.
+ From the Format drop-down menu, select Mac OS Extended (Journaled). This will allow your drive to be read by any Mac OS computer. Click the Options button and select GUID Partition Table.
+ This is the .app file that you downloaded from the Mac App Store. It is installed in the Applications folder by default. Right-click on the file and select Show Package Contents. Open Contents and then Shared Support. You should see a file called InstallESD.dmg. Drag this file to your desktop.
+ Click on the USB drive in the left frame. Open the Restore tab and click the Image… the button next to the Source box. Select the InstallESD.dmg file. For Destination, drag the newly created partition into the field.
+ You will be asked for confirmation before the copy process begins. Press Erase to continue. The process can take up to an hour to complete, depending on the speed of your Mac. Once it is finished, you can boot from the USB drive and install Mac OS X as if you were using a disc.
+

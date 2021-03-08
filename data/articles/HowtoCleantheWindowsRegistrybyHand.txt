@@ -1,0 +1,148 @@
+
+
+Click on the "Start" button, then select "Run...".
+
+
+
+ 
+
+
+Type regedit inside of the text box.
+
+
+
+
+
+
+Press "Enter" or click on "Ok".
+
+
+
+
+
+;
+, This will offer a way to undo the changes you make if they negatively impact your operating system or installed software. (See related articles on how to backup your registry. A registry backup is really a critical step, and should be undertaken immediately before beginning any editing of you registry).
+
+Click on the "File" menu and select "Export".
+
+
+
+
+
+
+Select "All" in the "Export range" panel.
+
+
+
+
+
+
+Choose a location for the backup and then enter a name.
+
+
+
+
+
+
+Click on "Save".
+ It is broken into two window panes, with the left pane used to show the entire registry tree and the right pane used to show individual values.
+ Remove any application listings which have already been uninstalled.
+
+Expand the "HKEY_CURRENT_USER" key (looks like a folder) by clicking on the plus (+) sign next to it.
+
+
+
+
+
+
+Expand the "Software" key.
+
+
+
+
+
+
+Look for keys that contain either the application's name, or more commonly, the application's developer (company name).
+
+
+
+
+
+
+Highlight a key for the application.
+
+
+
+
+
+
+Press "Del" to delete it.
+ Remove any application listings which have already been uninstalled.
+
+Press "Ctrl" and "f" to open a find dialog.
+
+
+
+
+
+
+Enter the text used to search for the application's listings.
+
+
+
+
+
+
+Click on "Ok" to search. The key or value should be highlighted when found.
+
+
+
+
+
+
+With the proper key or value highlighted, press "Del" to delete it.
+
+
+
+
+
+
+Press "F3" to find the next result and repeat.
+ Many of the more popular applications, such as Adobe Reader, Quicktime Player, and Real Player, will install a registry value to load an updater or similar process when Windows starts. To delete these:
+
+Expand keys (as done previously) to get to the following location:  My Computer\ HKEY_LOCAL_MACHINE\ SOFTWARE\ Microsoft\ Windows\ Current Version.
+
+
+
+
+
+
+Highlight the "Run" key.
+
+
+
+
+
+
+Look for values inside of the right panel. These will be shortcuts to executable files.
+
+
+
+
+
+
+Highlight a value to remove. If you're not familiar with these, or are unable to guess which ones correlate to which applications, Google for it or use a process search engine such as Process Library
+
+
+
+
+
+
+Press "Del" to delete it. To select multiple entries to delete, hold down "Shift" or "Ctrl" while clicking.
+
+
+
+
+
+
+Repeat this process for the same key path inside of the HKEY_CURRENT_USER location as well. If an application installs for "all users", it will put these startup items inside of the the local machine folder. For current user or single user software installs, they will be put into the current user folder.

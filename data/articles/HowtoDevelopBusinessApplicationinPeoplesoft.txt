@@ -1,0 +1,12 @@
+ (use “File > New” menu) Existing fields can be modified and copied as new fields. These fields are saved into the database, so that can be used in one or more tables. This flexibility allows recycling the fields.;
+, Existing fields can be used for this. Just use the menu “Insert” and select the field to be inserted. Once you double click left button of the mouse OR press “Insert” button, the field is inserted into the record automatically. When all the fields are inserted, then the final product “Record” will look like shown into the following figure.
+ Properties can decide if this record is going to be table OR view in the database. Table stores data into the database while view can’t. View is the runtime SQL query to the table. In this example it will be set as table.
+ Take all the required fields from the record (in Peoplesoft table is called record) and put them on the page (user interface is called page). Depending upon the type of field the drop down box OR the shape of the text box will be formed on the page automatically. It will look like figure shown below.
+ The whole concept of Record to Page to User can be illustrated through following informative figure below.
+ This means the current field will control the display of the other field (which is treated as relative display).
+ Set the property of this field to be relative display (through menu “Properties”). This filed will display data related to the earlier field.
+ The component is the nodal point while it is displayed to the user. Component must be selected as "new" from the Menu and saved once all the required properties are set according to the requirement. Also set the search record for the Component, so that while user accesses the Page, it will help to search the appropriate data efficiently. Figure below gives detailed picture.
+ Insert the component into the menu and put appropriate Menu Label. After inserting the “Component” the Menu properties will look like shown in the figure below.
+ Use the “Security Administration” menu to set the values. The whole concept of Page Security/Access to the User is base on “Roles and Permission Lists”. Role is a combination of small “Role” and/or “Permission List”. Each “Permission List” should be updated, so that the business user will view the required page.
+ The user can start accessing the page after getting proper Roles assigned. The following picture shows how the page will look like in the real time, when business user will access the page. Details in the figure below.
+

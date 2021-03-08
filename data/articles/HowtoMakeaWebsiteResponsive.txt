@@ -1,0 +1,30 @@
+ Because all websites have far more content than can be reasonably displayed on a single screen, every website needs to choose the most important bits of information to show at a given time. The home page, for example, always needs to show the right amount of information that the visitor should see first.
+
+
+Responsive websites need even more careful prioritising because visitors may have limited (or excess) time and ‘visual space’ because of the device they’re using or their environment. As the website is more limited in these ways, what it displays has to be reduced, pushing away the less-important information, and keeping only the important information.;
+, Although you could try to make your website respond to all devices in all conditions, this is probably a waste of time and money. Rather, spend time finding out:
+
+
+How your visitors use your website, including how much time they spend on it, how they read and view the content, how far away they are from the screen, and so on
+What sorts of devices they use most often to view the website, and which devices they may use in the near future
+Where (at home, outside, in a car, at work, etc.) and when they currently and would view your website
+
+, Usually, you’ll want to provide the most information or website content for the size/resolution of the device that the visitor is using; keep in mind the viewing distance on large devices like TVs however. Grid-based layouts simplify this task by providing different numbers of columns for blocks of content depending on the device. For example, a website may use 5 columns for its layout on large devices, 3 columns on tablets, and 1 column on a regular phone.
+ A combination of CSS and JavaScript can be used to detect the device that the website is being used on, and it’s specifications (such as if it supports the Flash or the latest version of HTML), and adjust the website accordingly. CSS Media Queries are particularly useful for determining the size / resolution of the device.
+
+
+For instance, you can use the following media query to set CSS styles for the website when it’s viewed by screens that have more than 1000 pixels horizontally.
+@media only screen and (min-width: 1000px) {  }
+
+
+
+, Responsive websites typically try to display smaller images and videos for mobile devices like phones because phone screens are typically smaller than computer or TV screens, and because phone are often used with limited-bandwidth data contracts. This has become less of a problem, however, as smartphones have increasingly higher-resolution screens. In addition, modern browsers often use pre-fetching that makes it difficult to send a particular-sized image to the device.
+
+
+On the opposite side, as all devices have increasingly higher resolution screens, it has become necessary to display higher-resolution images within websites. Basically, you should be aware of the best sizes for the media on your website, and look out for technology that allows you to choose the right media for the visitor.
+ The visitor could be interacting with the website using a mouse, a keyboard, a touchscreen, or even a screen-reader (for visually-impaired people). Considering this, your website needs to be able to respond to mouse clicks, the ‘tab’, ‘enter’ and other keys, and screen finger-touches.
+
+
+Hover-over effects do not work with anything except for a mouse. Instead you could use requite the visitor to click a button or icon to display whatever was previously displayed on a mouse hover.
+Items need to show that they are focused when a user presses the ‘tab’ key.
+

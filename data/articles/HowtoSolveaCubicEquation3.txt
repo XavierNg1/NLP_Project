@@ -1,0 +1,78 @@
+ For this reason, it's wise to record your a, b, c, and d terms before you begin so you don't forget what each one is.
+
+
+For example, for the equation x3 - 3x2 + 3x - 1, we would write a = 1, b = -3, c = 3, and d = -1. Don't forget that when an x variable doesn't have a coefficient, it's implicitly assumed that its coefficient is 1.
+ The discriminant approach to finding a cubic equation's solution requires some complicated math, but if you follow the process carefully, you'll find that it's an invaluable tool for figuring out those cubic equations that are hard to crack any other way. To start, find Δ0, the first of several important quantities we'll need, by plugging the appropriate values into the formula b2 - 3ac.
+
+
+In our example, we'd solve as follows:
+
+
+
+
+b2 - 3ac
+
+(-3)2 - 3(1)(3)
+9 - 3(1)(3)
+9 - 9 = 0 = Δ0
+
+
+
+
+
+, The next important quantity we'll need, Δ1, requires a little more work, but is found in essentially the same way as Δ0. Plug the appropriate values into the formula 2b3 - 9abc + 27a2d to get your value for Δ1.
+
+
+In our example, we'd solve as follows:
+
+
+
+2(-3)3 - 9(1)(-3)(3) + 27(1)2(-1)
+2(-27) - 9(-9) + 27(-1)
+-54 + 81 - 27
+81 - 81 = 0 = Δ1
+
+
+
+
+
+, Next, we'll calculate the discriminant of the cubic from the values of Δ0 and Δ1. A discriminant is simply a number that gives us information about the roots of a polynomial (you may already unconsciously know the quadratic discriminant: b2 - 4ac). In the case of the cubic, if the discriminant is positive, then the equation has three real solutions. If the discriminant is zero, then the equation has either one or two real solutions, and some of those solutions are shared. If it is negative, then the equation has only one solution. (A cubic equation always has at least one real solution, because the graph will always cross the x-axis at least once.)
+
+
+In our example, since both Δ0 and Δ1 = 0, finding Δ will be a piece of cake. We'd simply solve as follows:
+
+
+
+Δ12 - 4Δ03) ÷ -27a2
+
+(0)2 - 4(0)3) ÷ -27(1)2
+
+0 - 0 ÷ 27
+
+0 = Δ, so our equation has 1 or 2 answers.
+ The last important value we need to calculate is C. This important quantity will allow us to finally find our three roots. Solve as normal, substituting Δ1 and Δ0 as needed.
+
+
+In our example, we would find C as follows:
+
+
+
+
+3√(√((Δ12 - 4Δ03) + Δ1)/ 2)
+
+3√(√((02 - 4(0)3) + (0))/ 2)
+
+3√(√((0 - 0) + (0))/ 2)
+
+0 = C
+
+
+
+
+
+
+, The roots (answers) to your cubic equation are given by the formula (b + unC + (Δ0/unC)) / 3a, where u = (-1 + √(-3))/2 and n is either 1, 2, or 3. Plug in your values as needed to solve — this requires lots of mathematical legwork, but you should receive three viable answers!
+
+
+In our example, we might solve by checking the answer when n is equal to 1, 2, and 3. The answers we get from these tests are the possible answers to our cubic equation — any that give an answer of 0 when plugged into the equation are correct. For example, if we got an answer of 1 for one of our tests, since plugging 1 into x3 - 3x2 + 3x - 1 gives an answer of 0, 1 is thus one of the answers to our cubic equation.
+

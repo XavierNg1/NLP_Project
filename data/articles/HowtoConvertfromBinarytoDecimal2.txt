@@ -1,0 +1,14 @@
+ Let's say we want to convert the binary number 100110112 to decimal. First, write it down. Then, write down the powers of two from right to left. Start at 20, evaluating it as "1". Increment the exponent by one for each power. Stop when the amount of elements in the list is equal to the amount of digits in the binary number. The example number, 10011011, has eight digits, so the list, with eight elements, would look like this: 128, 64, 32, 16, 8, 4, 2, 1
+
+, Now, just write 10011011 below the numbers 128, 64, 32, 16, 8, 4, 2, and 1 so that each binary digit corresponds with its power of two. The "1" to the right of the binary number should correspond with the "1" on the right of the listed powers of two, and so on. You can also write the binary digits above the powers of two, if you prefer it that way. What's important is that they match up.
+ Draw lines, starting from the right, connecting each consecutive digit of the binary number to the power of two that is next in the list above it. Begin by drawing a line from the first digit of the binary number to the first power of two in the list above it. Then, draw a line from the second digit of the binary number to the second power of two in the list. Continue connecting each digit with its corresponding power of two. This will help you visually see the relationship between the two sets of numbers.
+ Move through each digit of the binary number. If the digit is a 1, write its corresponding power of two below the line, under the digit. If the digit is a 0, write a 0 below the line, under the digit.
+
+
+Since "1" corresponds with "1", it becomes a "1." Since "2" corresponds with "1," it becomes a "2." Since "4" corresponds with "0," it becomes "0." Since "8" corresponds with "1", it becomes "8," and since "16" corresponds with "1" it becomes "16." "32" corresponds with "0" and becomes "0" and "64" corresponds with "0" and therefore becomes "0" while "128" corresponds with "1" and becomes 128.
+ Now, add up the numbers written below the line. Here's what you do: 128 + 0 + 0 + 16 + 8 + 0 + 2 + 1 = 155. This is the decimal equivalent of the binary number 10011011.
+ Now, all you have to do is write 15510, to show that you are working with a decimal answer, which must be operating in powers of 10. The more you get used to converting from binary to decimal, the more easy it will be for you to memorize the powers of two, and you'll be able to complete the task more quickly.
+ You can use this method even when you want to covert a binary number such as 1.12 to decimal. All you have to do is know that the number on the left side of the decimal is in the units position, like normal, while the number on the right side of the decimal is in the "halves" position, or 1 x (1/2).
+
+The "1" to the left of the decimal point is equal to 20, or 1. The 1 to the right of the decimal is equal to 2-1, or .5. Add up 1 and .5 and you get 1.5, which is 1.12 in decimal notation.
+

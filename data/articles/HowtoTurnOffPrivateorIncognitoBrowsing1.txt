@@ -1,0 +1,20 @@
+ Since this method involves editing sensitive components of your computer's operating system, backing up your information before continuing will prevent you from losing your data if your computer crashes.
+ It's located at https://support.google.com/chrome/a/answer/187202?hl=en. From here, you can download files that allow you to tweak the Group Policy Editor settings.
+
+If your computer is running Windows Home edition, you will not be able to use this method since the Home edition does not support the Group Policy Editor.
+ You'll see this option near the top of the page., This link's full text says "Zip file of Google Chrome templates and documentation"--you'll find it below the chunk of text at the top of the "Windows and Linux" window. Clicking this link prompts the corresponding file to download to your computer.
+
+You may first need to select a save location (e.g., your desktop) and then click OK to begin downloading.
+ It will be in your browser's default save location (or the location to which you saved it)., It's inside of the policy folder you just opened, below the Common folder., This folder is near the top of the window., It's at the bottom of the window. Right-clicking it will prompt a pop-up menu to appear., This will copy your file; you'll now need to paste it into the proper directory., You can do so by typing "This PC" into the Start menu's search bar, or you can double-click the "This PC" icon on the desktop if you have it.
+
+On some computers, "This PC" is called "My Computer".
+ It's in the bottom-half of the "This PC" window; typically, the hard drive's designation is "C:" (e.g., "OS (C:)")., This folder is near the middle of the window., The folders in this section are alphabetically organized, so just scroll to the "P" section to find this folder., Doing so will paste the "chrome.admx" file into the PolicyDefinitions folder., There is one other file you'll need to copy and paste into a This PC directory., It's toward the top of the page., This file is at the top of the page., It should still be open to the PolicyDefinitions folder to which you copied the "chrome.admx" file., This folder is at the top of the page., You're now ready to disable incognito mode in Google Chrome., This will open the Run program.
+
+You can also right-click the Start icon in the bottom-left corner of the screen and then click Run to do this.
+ This command opens the Group Policy Editor program.,, This option is on the left side of the page., It's on the left side of the page, below Computer Configuration., It's below the Administrative Templates folder on the left side of the page. Doing so will display the Google Chrome values in the window on the right side of the page., This is an option near the middle of the page. Doing so will invoke a new window with various options.,
+
+Be sure to click the radio button next to "Enabled" above the "Options" section if it isn't already selected.
+
+
+You may have to restart Chrome for these changes to take place. If that doesn't work, try restarting your computer and then re-opening Chrome.
+

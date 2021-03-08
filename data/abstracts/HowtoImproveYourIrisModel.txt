@@ -1,0 +1,35 @@
+
+Access the spreadsheet you used for the article Model Your Own Iris in Excel and re-name and re-save it under a new name, something like "Model Your Own Iris in Excel.2".Build the above image by following these steps.
+
+Select the following series with red or yellow glow or red or yellow lines and change the red to blue: Series 93/94 at about 270 degrees, Series 51/52 at about 165 degrees, etc. but leave a few on the lower right and one nearly straight up.
+Construct the Looker vlookup table.Cut (command x) the ShrinkExpand sections at cell range G16:H22 and paste to cell IP4.Select both the picture and the chart and drag them straight down about 25 rows.
+Enter Modifier
+
+Enter to cell F16, Modifier;
+Insert Name Define Modifier to Row 16.
+
+Select cell range E1:IL16 and copy it.
+Do the Formula Replacements for the Secondary Iris Fibers:
+
+Select cell range G27:IL33 and do the following EDIT REPLACES:
+
+Replace DIFF with DIFFS, Replace All, OK;
+Replace STARTPT with STARTPTS, Replace All,, OK;
+Replace Pieces with Peeces, Replace All,, OK; and
+Replace Degrees with Degrees2, Replace All,, OK.
+
+
+
+,
+Modify the Secondary Iris Fibers Start Points, x and y:
+
+Input Modifier2 to cell F37.
+Select the data area equivalent to G26:H34 for each lower series from #123 in row 22 to Series #242 (columns IK and IL)(charting range IK26:IL34), and copy it and double-click in the chart's inner plot area of the iris and do command v paste, then edit the series formula in the formula bar until it becomes like these first three:
+
+=SERIES(,'Circle Data and Chart'!$G$26:$G$34,'Circle Data and Chart'!$H$26:$H$34,2)
+=SERIES(,'Circle Data and Chart'!$I$26:$I$34,'Circle Data and Chart'!$J$26:$J$34,123)
+=SERIES(,'Circle Data and Chart'!$K$26:$K$34,'Circle Data and Chart'!$L$26:$L$34,124) all the way up to the last one:
+=SERIES(,'Circle Data and Chart'!$IK$26:$IK$34,'Circle Data and Chart'!$IL$26:$IL$34,241)
+You'll note that the series number of the first one is 2 instead of 123 or 122 and that's because at one point I tried tucking it under via order arrangement the top or frontmost iris fiber layer -- so just ignore that, please.
+Above is the image of my best final effort.
+Here is the Final Best Image produced from that process:

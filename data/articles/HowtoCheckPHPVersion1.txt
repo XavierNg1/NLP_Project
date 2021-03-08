@@ -1,0 +1,32 @@
+ You can use Notepad or TextEdit. Don't use a word processor such as Microsoft Word.;
+, This small piece of code will return the PHP version information when it is run on your web server.<?php
+echo 'Current PHP version: ' . phpversion();
+?>
+
+
+
+
+, Click "File" → "Save as" and then give the file a name. Add the .php extension to the end of the file name. Name it something simple, like version.php.
+ The file above will output your current PHP version number, but if you want more information, such as system info, build dates, available commands, API information, and more, you can use the phpinfo() command. Save the file as info.php.
+
+
+
+
+
+<?php
+phpinfo();
+?>
+
+
+
+
+, You may have to use an FTP client, or you may be able to upload through your server's admin control panel. Place the file(s) in the root directory of your web server.
+
+
+
+Click here for more details on uploading files to your web server.
+ Once the file has been uploaded to the server, you can use your browser to load the file. Navigate to the location of the file on your server. For example, if you placed it in the root directory of your domain, you would visit www.yourdomain.com/version.php.
+
+
+To see the full readout, visit www.yourdomain.com/info.php.
+

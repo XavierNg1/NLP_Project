@@ -1,0 +1,24 @@
+ The XML declaration does not show in the XML document, but the document cannot work without it.
+ The root element must cover all of the XML document except the declaration, otherwise there will be an error.<case...> </case>
+
+, Children are tags contained inside the root element. Sub-children are inside the children. The tags on the same level are called siblings. The tags that are predecessors of any tags are their parent. The <root> element is the parent of all tags.
+
+
+Children tags include victim, possiblekiller, date.
+There are no sub-children in the example.
+ Attributes are given like in HTML. A <tag attribute="value"></tag> works here too. But as XML is designed to carry information, tags are preferred to attributes.<date>
+<dd>1</dd>
+<mm>2</mm>
+<yyyy>2011</yyyy>
+</date>
+
+, HTML forgives small tag closing mistakes but XML is undeniably brutal in checking the document.
+
+
+To close a line break tag or an open tag, use a space and a slash(/).<open-tag></open-tag>
+
+
+, <killer> and <killer> are not the same.
+ Comment formats are the same as in HTML.<!-- This is a comment -->
+
+,

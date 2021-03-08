@@ -1,0 +1,44 @@
+
+
+
+Huawei (config) #dhcp mode layer-3 standard;
+,
+
+
+Huawei (config) #dhcp-server 1 IP 10.1.1.1 10.1.1.2
+
+,
+
+
+Here the system default DHCP server work mode (load sharing mode), no configuration is necessary.
+Please refer to the specific configuration of DHCP server mode: "DHCP Server 10.6 configuration mode".
+
+
+
+Huawei (config) #vlan 2 smart
+Huawei (config) #port VLAN 2 0/19 0
+Huawei (config) #interface giu 0/19
+Huawei (config-if-giu-0/19) #native-vlan 0 VLAN 2
+Huawei (config-if-giu-0/19) #quit
+Huawei (config) #service-port VLAN 2 GPON 0/2/0 gemport 128 multi-service user-vlan
+rx-cttr 5 tx-cttr 5
+Huawei (config) #service-port VLAN 2 GPON 0/2/0 gemport 129 multi-service user-vlan
+rx-cttr 5 tx-cttr 5
+
+,
+
+
+Huawei (config) #interface vlanif 2
+Huawei (config-if-vlanif2) #ip address 2.2.2.1 24
+
+,
+
+
+Huawei (config-if-vlanif2) #dhcp-server 1
+
+,
+
+
+Huawei (config-if-vlanif2) #quit
+Huawei (config) #save
+

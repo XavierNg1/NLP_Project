@@ -1,0 +1,47 @@
+ The robocopy command replaces the xcopy command. It can quickly copy entire folders without having to worry about defining the contents. For example, to copy all of the contents of the C:\tools directory to the new folder D:\backup\tools, enter the following:
+
+
+
+
+
+robocopy C:\tools D:\backup\tools /e
+
+
+
+
+
+The /e modifier tells robocopy to include all subdirectories. This includes empty folders.
+
+robocopy will automatically copy hidden and system files. It will create new directories if they don't exist at the target location.
+ Mirroring a directory is great for making backups. The mirror option of robocopy will copy all of the contents from the source to the destination. It will then delete anything at the destination that doesn't exist at the source. This ensures that your backup only has the latest versions of your files. For example, to mirror C:\Users\My Documents to D:\backup\My Documents, enter the following:robocopy "C:\Users\My Documents" "D:\backup\My Documents" /mir
+
+
+
+
+
+This function will preserve all permissions of the original files.
+ You may want to include the ability to restart the process in case the connection is severed mid-copy.
+
+
+
+
+
+robocopy "C:\Users\My Documents" "D:\backup\My Documents" /z
+
+
+
+
+, robocopy allows you to create a log file. This can help you pinpoint problems or generate an archive of what's been copied.
+
+
+
+
+
+robocopy "C:\Users\My Documents" "D:\backup\My Documents" /log+:<filename>.txt
+
+
+
+
+
+The /log+ modifier will append the existing log file instead of overwriting it. If you'd prefer to just overwrite the old log file, use /log:<filename>.txt.
+

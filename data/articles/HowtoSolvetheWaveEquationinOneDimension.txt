@@ -1,0 +1,60 @@
+ The wave equation can be derived from various fields in physics, but all wave equations in one dimension must satisfy the form below, where ψ=ψ(x,t){\displaystyle \psi =\psi (x,t)} is the displacement function and c{\displaystyle c} is a constant. As usual, ψ(±∞)=0.{\displaystyle \psi (\pm \infty )=0.}
+
+
+1c2∂2ψ∂t2=∂2ψ∂x2{\displaystyle {\frac {1}{c^{2}}}{\frac {\partial ^{2}\psi }{\partial t^{2}}}={\frac {\partial ^{2}\psi }{\partial x^{2}}}}
+;
+, The point of integral transforms such as the Fourier transform is to simplify the problem in a different space. Once we are done, we then transform back into position space, as desired. In this article, we insert a normalization constant out front for symmetry with the inverse transform.
+
+Let's start with the left side. We can pull the time derivatives out of the integral because the integral does not depend on time.
+
+
+1(2π)1/2∫−∞∞1c2∂2ψ∂t2e−ikxdx=1c2∂2∂t21(2π)1/2∫−∞∞ψe−ikxdx=1c2∂2ψ~(k,t)∂t2{\displaystyle {\begin{aligned}{\frac {1}{(2\pi )^{1/2}}}\int _{-\infty }^{\infty }{\frac {1}{c^{2}}}{\frac {\partial ^{2}\psi }{\partial t^{2}}}e^{-ikx}{\mathrm {d} }x&={\frac {1}{c^{2}}}{\frac {\partial ^{2}}{\partial t^{2}}}{\frac {1}{(2\pi )^{1/2}}}\int _{-\infty }^{\infty }\psi e^{-ikx}{\mathrm {d} }x\\&={\frac {1}{c^{2}}}{\frac {\partial ^{2}{\tilde {\psi }}(k,t)}{\partial t^{2}}}\end{aligned}}}
+
+
+
+Now we move on to the right. We can perform integration by parts twice to get the −k2{\displaystyle -k^{2}} constant out of the integral.
+
+
+1(2π)1/2∫−∞∞∂2ψ∂x2e−ikxdx=1(2π)1/2∫−∞∞−k2ψe−ikxdx=−k2ψ~(k,t){\displaystyle {\begin{aligned}{\frac {1}{(2\pi )^{1/2}}}\int _{-\infty }^{\infty }{\frac {\partial ^{2}\psi }{\partial x^{2}}}e^{-ikx}{\mathrm {d} }x&={\frac {1}{(2\pi )^{1/2}}}\int _{-\infty }^{\infty }-k^{2}\psi e^{-ikx}{\mathrm {d} }x\\&=-k^{2}{\tilde {\psi }}(k,t)\end{aligned}}}
+
+
+
+We have transformed into the k{\displaystyle k} space. Now, we equate the two results we just obtained (we move the c2{\displaystyle c^{2}} to the right) to obtain the wave equation in this space.
+
+
+∂2ψ~∂t2=−k2c2ψ~{\displaystyle {\frac {\partial ^{2}{\tilde {\psi }}}{\partial t^{2}}}=-k^{2}c^{2}{\tilde {\psi }}}
+
+
+
+
+, This is a linear, homogeneous, ordinary differential equation, which is considerably easier to solve.
+
+Set up the characteristic equation. For equations of this form, we try ψ~=erx,{\displaystyle {\tilde {\psi }}=e^{rx},} because derivatives of the exponential function are multiples of itself. Then, we see that (r2+k2c2)erx=0.{\displaystyle (r^{2}+k^{2}c^{2})e^{rx}=0.} Since erx{\displaystyle e^{rx}} can never be 0, we are looking for roots of the equation below. 
+
+
+r2+k2c2=0{\displaystyle r^{2}+k^{2}c^{2}=0}
+
+
+
+Solve the characteristic equation for r.{\displaystyle r.}
+
+
+r=±ick{\displaystyle r=\pm ick}
+
+
+
+By linearity, the general solution is ψ~=F~e−ickt+G~eickt,{\displaystyle {\tilde {\psi }}={\tilde {F}}e^{-ickt}+{\tilde {G}}e^{ickt},} where F~{\displaystyle {\tilde {F}}} and G~{\displaystyle {\tilde {G}}} are arbitrary constants. 
+
+
+, Now that we have ψ~,{\displaystyle {\tilde {\psi }},} all we need to do is to transform back to obtain the physically meaningful result.
+
+
+ψ(x,t)=1(2π)1/2∫−∞∞ψ~(k,t)eikxdk=1(2π)1/2∫−∞∞(F~e−ickt+G~eickt)eikxdk=1(2π)1/2∫−∞∞(F~eik(x−ct)+G~eik(x+ct))dk=F(x−ct)+G(x+ct){\displaystyle {\begin{aligned}\psi (x,t)&={\frac {1}{(2\pi )^{1/2}}}\int _{-\infty }^{\infty }{\tilde {\psi }}(k,t)e^{ikx}{\mathrm {d} }k\\&={\frac {1}{(2\pi )^{1/2}}}\int _{-\infty }^{\infty }({\tilde {F}}e^{-ickt}+{\tilde {G}}e^{ickt})e^{ikx}{\mathrm {d} }k\\&={\frac {1}{(2\pi )^{1/2}}}\int _{-\infty }^{\infty }({\tilde {F}}e^{ik(x-ct)}+{\tilde {G}}e^{ik(x+ct)}){\mathrm {d} }k\\&=F(x-ct)+G(x+ct)\end{aligned}}}
+
+
+, The general solution below, called d'Alembert's solution, describes one-dimensional waves, where F{\displaystyle F} and G{\displaystyle G} are any functions, as long as they contain their respective arguments x−ct{\displaystyle x-ct} and x+ct.{\displaystyle x+ct.} This solution describes a linear combination of waves propagating in the positive and negative x{\displaystyle x} directions, respectively. We can clearly see that c{\displaystyle c} denotes the velocity of the wave; for example, for light waves, c{\displaystyle c} denotes the speed of light. 
+
+
+ψ(x,t)=F(x−ct)+G(x+ct){\displaystyle \psi (x,t)=F(x-ct)+G(x+ct)}  
+
+

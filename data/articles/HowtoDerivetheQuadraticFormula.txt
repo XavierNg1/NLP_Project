@@ -1,0 +1,65 @@
+ While any equation with an x2{\displaystyle x^{2}} term in it qualifies as quadratic, the standard form sets everything to 0. Remember that a,b,c{\displaystyle a,b,c} are coefficients that can be any real number, so don't substitute any numbers in for them - we want to work with the general form.
+
+
+ax2+bx+c=0{\displaystyle ax^{2}+bx+c=0}
+
+The only condition is that a≠0,{\displaystyle a\neq 0,} because otherwise, the equation reduces to a linear equation. See if you can find general solutions for the special cases where b=0{\displaystyle b=0} and where c=0.{\displaystyle c=0.}
+;
+, Our goal is to isolate x.{\displaystyle x.} To start, we move one of the coefficients to the other side, so that the left side only consists of terms with x{\displaystyle x} in it.
+
+
+ax2+bx=−c{\displaystyle ax^{2}+bx=-c}
+
+
+, Note that we could've switched this and the previous step, and still arrived at the same place. Remember that dividing a polynomial by something means that you divide each of the individual terms. Doing so makes it easier for us to complete the square.
+
+
+x2+bax=−ca{\displaystyle x^{2}+{\frac {b}{a}}x={\frac {-c}{a}}}
+
+
+, Recall that the goal is to rewrite an expression x2+2◻x+◻2{\displaystyle x^{2}+2\Box x+\Box ^{2}} as (x+◻)2,{\displaystyle (x+\Box )^{2},} where ◻{\displaystyle \Box } is any coefficient. It may not immediately be obvious to you that we can do this. To see it more clearly, rewrite bax{\displaystyle {\frac {b}{a}}x} as 2b2ax{\displaystyle 2{\frac {b}{2a}}x} by multiplying the term by 22.{\displaystyle {\frac {2}{2}}.} We can do this because multiplying by 1 does not change anything. Now we can clearly see that in our case, ◻=b2a,{\displaystyle \Box ={\frac {b}{2a}},} so we are only missing the ◻2{\displaystyle \Box ^{2}} term. Therefore, in order to complete the square, we add that to both sides - namely, (b2a)2=b24a2.{\displaystyle \left({\frac {b}{2a}}\right)^{2}={\frac {b^{2}}{4a^{2}}}.} Then, of course, we factor.
+
+
+x2+2b2ax+b24a2=b24a2−ca(x+b2a)2=b24a2−ca{\displaystyle {\begin{aligned}x^{2}+2{\frac {b}{2a}}x+{\frac {b^{2}}{4a^{2}}}&={\frac {b^{2}}{4a^{2}}}-{\frac {c}{a}}\\\left(x+{\frac {b}{2a}}\right)^{2}&={\frac {b^{2}}{4a^{2}}}-{\frac {c}{a}}\end{aligned}}}
+
+Here, it is clear why a≠0,{\displaystyle a\neq 0,} since a{\displaystyle a} is in the denominator, and you cannot divide by 0.
+
+If you need to, you can expand the left side to confirm that completing the square works.
+ Here, we want both denominators to be 4a2,{\displaystyle 4a^{2},} so multiply the −ca{\displaystyle {\frac {-c}{a}}} term by 4a4a.{\displaystyle {\frac {4a}{4a}}.}
+
+
+(x+b2a)2=b24a2−4ac4a2=b2−4ac4a2{\displaystyle {\begin{aligned}\left(x+{\frac {b}{2a}}\right)^{2}&={\frac {b^{2}}{4a^{2}}}-{\frac {4ac}{4a^{2}}}\\&={\frac {b^{2}-4ac}{4a^{2}}}\end{aligned}}}
+
+
+, However, it is essential that you recognize that in doing so, you are actually doing two steps. When you take the square root of d2,{\displaystyle d^{2},} you do not get d.{\displaystyle d.} You actually get its absolute value, |d|.{\displaystyle |d|.} This absolute value is critical in getting both roots - simply putting square roots over both sides will only get you one of the roots. 
+
+
+|x+b2a|=b2−4ac4a2{\displaystyle \left|x+{\frac {b}{2a}}\right|={\sqrt {\frac {b^{2}-4ac}{4a^{2}}}}}
+
+Now, we can get rid of the absolute value bars by putting a ±{\displaystyle \pm } on the right side. We can do this because the absolute value does not distinguish between positive and negative, so they are both valid. This tidbit is why the quadratic equation always gets you two roots. 
+
+
+x+b2a=±b2−4ac4a2{\displaystyle x+{\frac {b}{2a}}=\pm {\sqrt {\frac {b^{2}-4ac}{4a^{2}}}}}
+
+
+
+Let's simplify this expression a bit further. Since the square root of a quotient is the quotient of the square roots, we can write the right side as ±b2−4ac4a2.{\displaystyle {\frac {\pm {\sqrt {b^{2}-4ac}}}{\sqrt {4a^{2}}}}.} Then we can take the square root of the denominator. 
+
+
+x+b2a=±b2−4ac2a{\displaystyle x+{\frac {b}{2a}}={\frac {\pm {\sqrt {b^{2}-4ac}}}{2a}}}
+
+
+
+
+,
+
+
+x=−b2a±b2−4ac2a{\displaystyle x={\frac {-b}{2a}}\pm {\frac {\sqrt {b^{2}-4ac}}{2a}}}
+
+
+, This nets the quadratic formula, the formula that solves any quadratic equation in standard form. This works for any a,b,c{\displaystyle a,b,c} and outputs an x{\displaystyle x} that can be real or complex. To confirm that this process works, simply follow the steps of this article in reverse order to recover standard form.
+
+
+x=−b±b2−4ac2a{\displaystyle x={\frac {-b\pm {\sqrt {b^{2}-4ac}}}{2a}}}
+
+

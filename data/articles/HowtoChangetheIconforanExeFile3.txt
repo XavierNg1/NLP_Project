@@ -1,0 +1,26 @@
+ It will typically be located in the folder that you installed the program to, though it may also be wherever you placed it when you downloaded the file.
+ Right-click and select “New” and then “Text Document”. Open the file in Notepad.
+ You will be creating a file that will load the EXE file automatically. You will be able to set an icon for this file, allowing you to customize it. Enter the following code into the text file:
+
+
+
+@echo offstart "" "<filename>"
+
+Replace <filename> with the exact name of the EXE file whose icon you want to change.
+ Name the text file to a name that will help you remember what the file does. For example, you might name it “Launcher” because it will launch the program. Close Notepad once you have saved it.
+ If the extensions are not visible, click the View menu/tab and select Options. In the Folder Options box, click the View tab and then uncheck the “Hide extensions for known types” box. This will show extensions for all of your files. After you are finished with this guide, you can recheck the box to hide your extensions again.
+ These programs will convert your file into an EXE file, which will allow for custom icons. Most Batch/BAT to EXE converters are free to download.
+ In the Options section, ensure that “Invisible application” is checked.
+ Click the Include tab and then click the Add button. Browse for the EXE file that your batch file will be replacing. This process will vary depending on the converter you use.
+ Use the converter program to load in the new icon. This is typically located in the “Versioninformation” section. You will be able to browse for the icon file that contains your new icon.
+ Click the Compile button to create your new file. The batch file will be turned into an EXE file that will load the original EXE file when it is run.
+
+
+This does not actually change the .exe, it makes a new .exe "archive" with a new icon. The archive will run the batch file, which runs the program. It is like "wrapping" the old .exe with an icon and a .bat.
+
+
+
+
+
+
+

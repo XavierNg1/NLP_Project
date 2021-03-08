@@ -1,0 +1,54 @@
+
+Prepare two images for the rollover effect.
+Open any text editor of your choice.
+Locate the <head></head> section.
+Copy the following JavaScript code:
+
+
+
+
+
+
+<script language="javascript">
+        function MouseRollover(MyImage) {
+        MyImage.src = "MyPicture2.jpg";
+    }
+        function MouseOut(MyImage) {
+        MyImage.src = "MyPicture1.jpg";
+    }
+</script>
+
+
+
+
+,
+Paste the JavaScript code in between the <head></head> section onto your text editor.
+Locate the <body></body> section.
+Copy the following code:
+
+
+
+
+
+<div align="center">
+<!--The rollover image displays here.-->
+<img src="MyPicture1.jpg" border="0px" 
+width="650px" height="550px" 
+onMouseOver="MouseRollover(this)" 
+onMouseOut="MouseOut(this)" />
+</div>
+
+
+
+
+,
+Paste the code in between the <body></body> section.
+Review the entire code.
+Click “File” and select “Save.”
+
+,
+Enter a name to save your HTML document.
+Click the “Save” button.
+
+,
+Preview the finished web page in a browser.

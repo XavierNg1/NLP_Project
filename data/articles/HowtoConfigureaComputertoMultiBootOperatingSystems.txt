@@ -1,0 +1,18 @@
+ Alternatively, you can put your hard drive into another Windows computer and partition it using that. Open the Start menu and type diskmgmt.msc. Then press ↵ Enter.;
+, Assuming your primary hard drive is mapped C:\, right click it and click "Shrink Volume". Wait for another dialogue to open.
+ (For example if you had a terabyte hard drive and you wanted to make a 500GB partition later you would shrink your hard drive by 514400 MB). Once you have entered the amount to shrink buy press ↵ Enter.
+ Right click on this space and click "New Simple Volume". A window should then pop up that looks like this.
+,, For example, you could use Windows 10 Technical Preview. If you don't want to then make sure the checkbox Perform a quick format has a tick in it then click Next.
+ Repeat the partitioning process once for each operating system you want to multi-boot. (If your hard drive has less that 500GB capacity, it's best to install 4 OSs maximum and if your hard drive is less than 100GB, it's best to avoid this process altogether.)
+
+, Now that that's done you might get an autoplay window that looks like this. If you do just close it; we don't need to do anything else to the partition now.
+ We have now finished with all we need to do within Windows. Insert the boot media and power down your PC or if you partitioned the hard drive with another computer, turn it off, remove the hard drive, turn off the target computer and insert the partitioned hard drive into the target computer.
+ If you are installing via USB then insert it into the target machine and move onto the next step. If you are installing via a CD/DVD then power on your computer, insert the CD/DVD into the drive, then hold the power button for 6-8 seconds until the computer turns off., Take the normal approach to this, but when you are presented with the screen that asks you where you want to install it only select one. (You may see something called "Disk 0 Partition 1: System Reserved. Ignore this and install to one of the other partitions.)
+
+, When your first operating system has installed, remove the first install source, insert the second one, power down your computer and boot from your boot media.
+
+
+When you install your second operating system make sure to install to a different partition to the one you installed the first OS on or the multi boot will not work.
+ If you don't remove your install source then the computer may try to boot from it again.
+, Both should be listed there.Then you have configured multi boot correctly!
+

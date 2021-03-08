@@ -1,0 +1,117 @@
+ The first step in any restore is to back up your data from the hard drive. If your machine runs well enough attempt recovery, then you may be able to plug a USB2 hard disk and back up your files. You'll have peace of mind and a safety net if the a process below fails, leaving your PC in a state of limbo. A failing hard drive may work intermittently enough to copy data from it, but is at continually at risk of a critical failure.;
+, Sometimes a system that partially boots and/or misbehaves badly, or has a 'dead' application that can't be run anymore can be 'recovered' simply by creating a new user account and logging in as that new user. A corrupted registry is the most common culprit for 'dead' Windows machines, and a large subset of these potentially corrupt entries are in your user profile.
+Click on the "Start" button and go to the "Control Panel" ("Settings" -> "Control Panel"), then select "User Accounts".
+Create a New Account and give it a name.
+Give it 'Administrator' privileges.
+Reboot or log out and login as the 'new' user.
+Verify that the system is stable. If the system is stable, you will still have to restore all of the settings you had on the old account, and move the 'My Documents' contents from the old account to the new one.
+Back up your work.
+Avoid using the old account. Windows will just try to re-use the same corrupted data again.
+ Windows Me, XP, and later have a System Restore feature that will recover your system configuration (drivers, settings, and shared files) from the last configuration that worked. This feature must be enabled prior to encountering a configuration problem in order to use it. To enable it, right click on "My Computer", select "Properties", and click on the "System Restore" tab.
+
+If you're unable to boot into Windows:
+
+
+
+
+
+Boot your PC. If Window recognized that it was unable to load and if System Restore has a valid restore point, you'll have a chance of recovery.
+
+
+
+
+
+
+Press the key prompted by Windows when you receive the message "Boot to last known, good configuration".
+
+
+
+
+
+
+Follow the advice given, and Windows will restore your Windows to a last known, good configuration, then automatically reboot your PC.
+
+
+
+
+
+
+Try booting to "Safe Mode", then following the steps below. Do this by repeatedly pressing F8 immediately before Windows will start to load (after your hardware information is displayed). When you see a boot menu for Windows XP, select either Safe Mode or Safe Mode with Networking for network and Internet access.
+
+
+
+
+
+
+If you're able to boot to the Windows desktop:
+
+
+
+
+
+Click on the "Start" button and go to "Programs" or "All Programs", "Accessories", "System Tools", then select "System Restore".
+
+
+
+
+
+
+Leave the radio button on 'Restore my computer to an earlier time'.
+
+
+
+
+
+
+Click on 'Next'.
+
+
+
+
+
+
+Pick a date before the bad system behaviors began.
+
+
+
+
+
+
+Reboot and see if it works better.
+
+
+
+
+
+
+If it does not, try again with an earlier restore point.
+
+
+
+
+
+
+Go through your documents and files. You'll discover 'versioned' file names of various files that were modified between now and your restore point. Delete or remove the 'old' files and make sure the 'newest' or most correct versions of files exist. Windows XP does not come with a tool to browse the old restore point files to individually recover them, even though that would be super handy. The Windows XP boot disk does not have a 'System Restore' tool to restore Windows to earlier states like this, so your computer must boot to use this method. If the machine does not boot, try one of the methods below to recover your data and your machine.
+ This is only possible if your computer came with a shiny Windows CD or DVD that has a hologram-like surface. Also, this will not work for CDs create using nLite. A Windows reinstall will only replace system files. Your data, settings, and installed applications should remain untouched.
+Verify that your PC attempts boots to the optical drive by default. Enter your BIOS and look under a "Boot" menu or "Advanced Settings" section to find the system's boot order. Set the first device to "ATAPI CD", "Optical", or similar selection. Exit the BIOS and save your settings.
+Insert the Windows disc into your optical drive.
+Press any key if prompted to do so when your PC prompts you to boot from a disc. Some will boot to an optical disc without any user interaction.
+When prompted by the Windows installer, select "Reinstall". Make sure you don't accidentally select "Recover Console" prior to this menu.
+Perform Windows updates once you've completed the reinstall. You may also need to update your hardware drivers as well.
+
+Many manufacturers don't give you a Windows boot disc anymore instead you get a 'Recovery Disc' or a 'Recovery Partition' that contains an image of the boot partition in the state hey shipped the machine.
+Put the disc in (or boot off the 'recovery partition'), follow the prompts, and the version of Windows with all the right drivers and all of the default unlicensed bundleware that came with the PC will be restored and ready to go and need licensing (or deletion) again. These restores will not restore other applications, licenses, or drivers that were installed since the system was initially used. This restore will most likely wipe any data on the Windows partition, including including personal information, documents, and settings, which includes your 'My Documents' and anyone else's 'My Documents' on the computer.
+
+Download and burn a Linux boot disk from your favorite Linux distribution. You may need to use another computer if you have not done this already. As an alternative, use a GParted LiveCD image which includes a very basic copy of the Gentoo Linux distribution.
+Boot from the Linux CD.
+Mount the Windows partition.
+Using Linux, back up your data from the damaged partition onto a USB drive, or the network, or burn a CD.
+
+Try 'UBCD' (see link below), a free ISO of a self-booting CD image accompanied by a big pile of tools and utilities.
+Various hard disk tools like 'Partition Magic' or 'Norton Utilities' come on a bootable CD that will let you tinker with 'bad' drives. It is best to back up any intact data before attempting to 'recover' lost data.
+
+Pull the hard drive out of the dead PC if the computer can't be made to boot, restore or install its operating system.
+Install the drive in an external hard drive enclosure (USB, Firewire, and/or eSATA), then attaching in to anther computer. Nearly every external hard drive enclosure can be used temporarily if needed. Otherwise, purchase or find an unused external hard drive enclosure.
+Try installing the drive into another computer. Make sure to change any settings in the BIOS to avoid booting to this drive.
+Backup the data from the mounted drive. If the drive won't mount, then try data recovery software or professional data recovery services. If that doesn't help, the data on the drive may be permanently lost.
+

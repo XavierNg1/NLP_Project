@@ -1,0 +1,40 @@
+ You may have Home Basic, Home Premium or other editions. For Home Basic and Home Premium, go to the search box in the “Start’ menu.
+
+
+Either right-click or type in “Ctrl + Shift + Enter” on your computer keyboard to select “Run as administrator.” This option appears in a pop-up and runs the registry editor in an advanced state.
+Navigate your way to the following: HKEY_CURRENT_USERSoftwareMicrosoftWindowsCurrentVersionPolicies.
+
+
+
+
+
+
+Open up “System.”
+
+
+
+
+
+
+Select “DisableTaskMgr.” While it seems unusual using a disable tool to enable, this is the correct way to change your settings for enabling.
+Change the Value data to the number 0.
+
+
+Go to your “Start” menu on your desktop screen and click on it.
+
+
+
+
+
+
+Select “Search” and type in “gpedit.msc.” This launches a pop-up tool that takes you into advanced options.
+
+
+
+
+
+
+Navigate your way to “User Configuration” then select the “Administrative Template” option.
+Find the “System” then go into “Ctrl+Alt+Del Options.”
+Select “Remove Task Manager” and choose the option to “Enable.”
+

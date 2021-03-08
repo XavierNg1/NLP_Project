@@ -1,0 +1,177 @@
+, It is an irrational number, but if we truncate it to 20 decimals it would be 2.7182818284590452353.
+Revit usage = exp(x)
+
+,,
+
+
+Fixed value = sqrt(999)
+Parameter = sqrt(Width)
+Formula= sqrt(Width + Height)
+
+,
+
+
+The logarithm of a number to a given base is the exponent to which the base must be raised in order to produce that number. For example, the logarithm of 1000 to base 10 is 3, because three factors of 10 must be multiplied to yield a thousand: 10 × 10 × 10 equals 1000
+Revit usage = log(1000)
+
+,
+
+
+Force checked = 1 < 2
+Force unchecked = 1 > 2
+
+, Conditional statement uses this structure:
+
+
+
+
+IF (<condition>, <result-if-true>, <result-if-false>)
+
+
+
+Supported Conditional Operators
+
+< Less than
+> Greater than
+= Equal
+/ Divide
+AND Both statements are true
+OR One of the statements is true
+NOT Statement is false
+
+
+Conditional statements can contain numeric values, numeric parameter names, and Yes/No parameters. Currently, <= and >= are not implemented. To express such a comparison, you can use a logical NOT. For example, a<=b can be entered as NOT(a>b)
+
+Simple IF Statement
+
+IF (Length < 900, <true>, <false>)
+
+
+
+Formula That Returns Strings
+
+IF (Length < 900, “Opening too narrow”, “Opening OK”)
+
+
+
+Using logical AND
+
+IF ( AND (x = 1 , y = 2), <true>, <false>)
+Returns <true> if both x=1 and y=2, else <false>
+
+
+
+Using logical OR
+
+IF ( OR ( x = 1 , y = 2 ) , <true>, <false>)
+Returns <true> if either x=1 or y=2, else <false>
+
+
+
+Nested IF statements
+
+IF ( Length < 500 , 100 , IF ( Length < 750 , 200 , IF ( Length < 1000 , 300 , 400 ) ) )
+Returns 100 if Length<500, 200 if Length<750, 300 if Length<1000 and 400 if Length>1000
+
+
+IF with Yes/No condition
+Length > 40
+Returns checked box (<true>) if Length > 40
+
+NOT with Yes/No condition
+
+not(Viz)
+Returns checked box (<true>) if Yes/No parameter "Viz" is unchecked, and returns unchecked box (<false>) if Yes/No parameter "Viz" is checked.
+
+
+
+IF AND OR Returning the greatest of three values
+
+Say you have these 3 length parameters, and want a fourth parameter to return the greatest value/length of the 3:
+Length A
+Length B
+Length C
+Return Length (Returns the greatest of the three length parameters)
+Return Length = if(and(or(Length A > Length B, Length A = Length B), or(Length A > Length C, Length A = Length C)), Length A, if(and(or(Length B > Length A, Length B = Length A), or(Length B > Length C, Length B = Length C)), Length B, if(and(or(Length C > Length A, Length C = Length A), or(Length C > Length B, Length C = Length B)), Length C, 0 mm)))
+Another option is to use an extra "Calc" parameter, which is a bit more clumsy but also way easier and more manageable for us mortals.
+Calc = if(Length A > Length B, Length A, Length B)
+Return Length = if(Calc > Length C, Calc, Length C)
+
+
+
+,
+
+
+
+Known: a+b
+
+c = sqrt(a ^ 2 + b ^ 2)
+A = atan(a / b)
+B = atan(b / a)
+
+
+
+Known: a+c
+
+b = sqrt(c ^ 2 - a ^ 2)
+A = asin(a / c)
+B = acos(a / c)
+
+
+
+Known: b+c
+
+a = sqrt(c ^ 2 - b ^ 2)
+A = acos(b / c)
+B = asin(b / c)
+
+
+
+Known: c + A
+
+a = c * sin(A)
+b = c * cos(A)
+B = 90° - A
+
+
+
+Known: c + B
+
+a = c * cos(B)
+b = c * sin(B)
+A = 90° - B
+
+
+
+Known: a + B
+
+b = a * tan(B)
+c = a / cos(B)
+A = 90° - B
+
+
+
+Known: b + A
+
+a = b * tan(A)
+c = b / cos(A)
+B = 90° - A
+
+
+
+Known: a + A
+
+b = a / tan(A)
+c = a / sin(A)
+B = 90° - A
+
+
+
+Known: b + B
+
+a = b / tan(B)
+c = b / sin(B)
+A = 90° - B
+
+
+

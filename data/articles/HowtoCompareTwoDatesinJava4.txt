@@ -1,0 +1,62 @@
+ It is also possible to directly compare the point of time of two dates, although any of the previous approaches are likely to be more readable and so preferable. This will be a comparison of two primitive data types, so it can be done with "<", ">", and "==".
+ Before you can compare the dates, you must create long integers with the data from the previously created Date objects. Luckily, the getTime() method will do most of the work for you.
+
+
+
+
+
+
+long time1 = getTime(date1); //declares primitive time1 from date1
+long time2 = getTime(date2); //declares primitive time2 from date2
+
+
+
+
+
+, Use the less than symbol (<) to compare these two integer values. Since time1 is less than time 2, the first message should print. The else statement is included for proper syntax.
+
+
+
+
+
+
+if(time1 < time2){
+System.out.println("date1 is before date2"); //will print since time1 <time2
+}
+else{
+System.out.println("date1 is not before date2");
+}
+
+
+
+
+
+, Use the greater than symbol (>) to compare these two integer values. Since time1 is greater than time 2, the first message should print. The else statement is included for proper syntax.
+
+
+
+
+
+
+if(time2 > time1){
+System.out.println("date2 is after date1"); //will print since time2 > time1 
+}
+else{
+System.out.println("date2 is not after date1");
+}
+
+
+
+
+
+, Use the symbol to check for equality (==) to compare these two integer values for equality. Since time1 is equal to time3, the first message should print. If the program gets to the else statement, that means the times are not equal.if(time1 == time2){
+System.out.println("the dates are equal");
+}
+else{
+System.out.println("the dates are not equal"); //will print since time1 != time2
+}
+
+
+
+
+

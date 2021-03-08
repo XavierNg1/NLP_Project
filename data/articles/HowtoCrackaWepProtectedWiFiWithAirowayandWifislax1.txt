@@ -1,0 +1,26 @@
+ WiFiSlax is an operating system that you will be loading from a CD. It contains the tools necessary to crack WEP encryption on wireless networks. This only works with WEP encryption, not WPA/WPA2. WiFiSlax is available for free from the developer’s website.
+
+
+Burn the .iso file that you downloaded to a blank CD. You can use any freeware image burning software to do this. Open the burning software, and select Burn Image. Browse for the .iso file that you downloaded.;
+, In order to run this crack, you will need the IPW3945 chipset. To find out if your computer possesses the chipset, open the command line by clicking Start and then entering CMD into the Search or Run box. Once you have access to the command line, type "ipconfig /all". Look for "Intel PRO/Wireless 3945ABG Network Connection". This is a common chipset on many laptops.
+
+
+In other operating systems like Linux-based ones, you can download programs like hardinfo to obtain a complete list of the hardware of your computer
+
+, In order to use WiFiSlax, you will need to make sure that your computer can boot from the CD drive. TO do this, reboot the computer and open the BIOS menu. You can access the BIOS menu when you see the computer manufacturer’s logo. The key you need to press will be displayed on the screen. It is typically F2, F10, F12 or Del.
+
+
+In the BIOS screen, navigate to the Boot menu. Set the first boot device as the CD/DVD drive. This is sometimes labeled as an optical drive. Setting it first will make the computer try to boot from the CD before it loads the operating system from the hard drive like it normally would.
+ After adjusting your BIOS settings and rebooting your computer, press a key when prompted to boot from the CD. When presented with the first menu, select No PCMCIA and then press Enter.
+
+
+Log in with the credentials:
+
+
+User: root
+
+Password: toor
+
+
+Enter the command "startx" to start WiFiSlax with a graphic interface.
+

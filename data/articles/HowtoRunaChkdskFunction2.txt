@@ -1,0 +1,9 @@
+ As the computer boots up, repeatedly hit the F8 key until the Advanced Boot Options appear. This menu allows you to boot to a command prompt without loading Windows.
+ After they finish loading you will be presented with a command prompt.
+ Type “chkdsk” and press enter to run a check on the current drive without fixing any errors.
+
+
+To run chkdsk and fix errors, type “chkdsk c:/f” Replace “c” with the drive letter you would like to fix.
+To run chkdsk and fix errors, locate sectors and retrieve data, type “chkdsk c:/r” Replace “c” with the drive letter you would like to fix.
+You may be prompted to restart if the drive is in use. If prompted, press Y to accept.
+

@@ -1,0 +1,21 @@
+ If you're linking to a long web page, you might want to lead people to a specific point on the page instead of the top. To make this possible, open the HTML document for the destination page. Insert this anchor tag at the point you want to link to:
+
+
+
+<a id="anchorname">Anchor text.</a>
+This will display as normal text, since it is the destination of a link and not a link itself. You can replace "anchorname" with any name, as long as you don't use the same name twice on one page.
+ To link to a specific point on the page, add the symbol # to the end of the URI, followed by the exact name you used for the id attribute. This is case sensitive.
+
+
+For example to link to the anchor <a id="pictures"></a> on the page http://example.edu/vacation.html, type:<a href="http://example.edu/vacation.html#pictures">Link text.</a>.
+You can add this to absolute or relative links (see instructions in separate method).
+ You can also create an anchor by inserting id="anchorname" into any HTML tag.Link to this in exactly the same way. Here are a couple examples:
+
+
+
+<h1 id="topheader">Header Text</h1>
+Link to this by adding #topheader to the URL.
+
+<p id="introparagraph">Paragraph text</p>
+Link to this by adding #introparagraph to the URL.
+

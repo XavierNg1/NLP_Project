@@ -1,0 +1,34 @@
+ If you have protected music that you can't burn to a CD, or you don't use either of the programs listed above, you can use Audacity to re-record your music files as unprotected MP3s. This is the most time-consuming process, but will work for every file. In order to do this, you'll need Audacity, which is a free, opensource audio recorder and editor.
+
+
+You can download Audacity from audacityteam.org. It is available for Windows, Mac, and Linux.
+ Audacity does not come with the ability to save as MP3 until you install an MP3 encoder. LAME is the most popular one, and Audacity is designed to automatically detect it when it is installed in the default location:
+
+
+Download LAME from lame.buanzo.org. Make sure to download the correct installer for your operating system.
+Run the installer and follow all of the prompts to install LAME. Do not change any of the default installation locations so that Audacity can detect it automatically.
+ If you're using a Mac, you'll need a free utility called Soundflower that will allow you to record the audio that your Mac outputs:Download Soundflower from github.com/mattingalls/Soundflower/releases/. Download the Soundflower-2.0b2.dmg file.
+Double-click the DMG file, then double-click the PKG file. This will install Soundflower. You may need to right-click the PKG file and select "Open" if you receive a warning.
+Click the Apple menu and select "System Preferences." Open the Sound menu.
+Select "Soundflower (2ch)" in both the Output and the Input tab. Make sure both volumes are turned up. You will no longer hear sound from your speakers, as it is being routed through Soundflower. This will allow Audacity to capture it.
+ You'll see the track timeline as well as the playback and recording controls.
+ Use the drop-down menus to the left and right of the microphone to set your recording source:
+
+
+Windows - Select "Windows WASAPI" from the first menu, then "Speakers (Manufacturer) (loopback)" from the second menu.Mac - Select "Core Audio" from the first menu, then "Soundflower (2 ch)" from the second menu.
+ Use the drop-down menu on the far right to set your output device:
+
+
+Windows - Select "Speakers" or "Headphones."
+Mac - Select "Built-in Output."
+
+, Audacity usually cannot start recording unless there is audio playing. Start playing a junk track so that you can begin recording.
+ Audacity will begin recording the song as it plays.
+ once the track has finished playing, click Stop. You can then make any necessary edits, such as removing the bit of junk at the beginning before you started the song. Once you're ready, you can export the file as an unprotected MP3:
+
+
+Click "File" or "Audacity" and select "Export Audio."
+Select "MP3 Files" from the "Save as type" menu.
+Choose your quality settings. Higher quality will result in a larger file.
+Give the file a name and choose where to save it. You now have an unprotected MP3 copy of your original file.
+

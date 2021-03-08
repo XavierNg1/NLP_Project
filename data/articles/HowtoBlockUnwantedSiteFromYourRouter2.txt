@@ -1,0 +1,43 @@
+ If you need to block users on your network from accessing specific websites, you'll have much more success with OpenDNS than by blocking them on your router. This is because most home routers do not block https:// websites, and more and more websites are adopting encryption every day. OpenDNS can filter these encrypted sites for everyone on your network.You can sign up for free at opendns.com/home-internet-security/.
+ You'll be setting your router to use OpenDNS's DNS servers, which will process your blocked sites. To do this, open the router's configuration page in your computer's web browser. Common router addresses include:
+
+
+Linksys - http://192.168.1.1
+
+D-Link/Netgear - http://192.168.0.1
+
+Belkin - http://192.168.2.1
+
+ASUS - http://192.168.50.1/
+
+AT&T U-verse - http://192.168.1.254
+
+Comcast - http://10.0.0.1
+
+
+, You'll be prompted to log in when you first open your router's configuration page. If you didn't change the login information, the username is usually "admin" and the password is usually "admin" or blank.
+ You may find this in the "Basic Setup" section of the router.
+ For many routers, you'll need to disable automatic DNS before you are able to enter in your own DNS servers.
+ You'll see two DNS server fields. Enter each of the following DNS addresses, which point to the OpenDNS servers:
+
+
+208.67.222.222
+208.67.220.220
+
+, Click the Save or Apply button and allow your router to reboot with the new DNS settings. This may take a minute or two.
+ Visit opendns.com and log in with your new account. You'll be taken to the OpenDNS dashboard.
+ You can see your home IP address at the very top of the dashboard page. Type this address into the "Add a network" field. This will allow OpenDNS to tell when traffic is coming from your network, and block sites accordingly.
+
+
+You'll need to confirm your network via an email message that is sent to the account you signed up for OpenDNS with.
+ This will allow you to set what content is blocked on your network.
+ You can choose between Low, Medium, and High security. This is great if there is lots of content that you want to block, and OpenDNS updates these lists regularly.
+ You can add as many websites to this list as you'd like. Make sure each one is set to "Always block."
+
+, In order for your new settings to take effect, you'll need to flush your DNS cache. This will happen automatically after a while for every device on your network, but you can do it manually if you need immediate blocking:
+
+
+Windows - Press ⊞ Win+R and type ipconfig /flushdns to flush your DNS. You can now test your filter settings.
+Mac - Open the Terminal from the Utilities folder. Type dscacheutil -flushcache to flush the DNS, then sudo killall -HUP mDNSResponder to restart the DNS service. You'll likely be asked to enter your admin password.
+ Try accessing the newly-added websites from devices on your network. If you added the websites properly, you should reach the OpenDNS Blocked Site page.
+

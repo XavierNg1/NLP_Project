@@ -1,0 +1,47 @@
+ On the taskbar at the bottom of the screen, click the icon that looks like a folder. This folder is known as the “File Explorer”. File Explorer is a folder that shows your most frequently visited folders and most recent files. After clicking File Explorer, a new window will open on your screen. In the left sidebar, there is a list of destinations available on your computer.;
+, This PC is designed to easily access user related folders (such as My Documents), currently connected devices, and your computer's hard drive.
+ Located under Devices and drives, this drive allows access to your computer's data and system folders.
+
+
+
+Scroll down to the bottom.
+Double-click the folder named “Windows”.
+ System32 is a folder that contains important data to keep Windows and all programs running.
+ The drivers folder delves deeper into your computer's hard drive, allowing access to data to various programs.
+ The etc folder keeps your system's configuration files in one neat spot. Double-click this folder to open it.
+ In order to create your blacklist, you will need to edit the hosts file with the URLs of the sites you want blocked.
+
+
+Right click “hosts”.
+In the menu that opens, click “Open With…” (or “Open with another program”).
+A new menu called “How do you want to open this file?” will open.
+Select “Notepad”.
+ At the bottom of the file, you’ll have space to type in.
+
+
+If there isn't any space to type by default, click at the end your document and hit your Enter button two or three times to create space.
+ 127.0.0.1 refers to your computer's local IP address. Any website that tries to connect to your computer will access partially through this localhost.
+
+
+Alternatively, you can type a single space instead of pressing Tab.
+ For example, if you want to block Yahoo!, type www.yahoo.com.
+
+
+Entering variants of the websites will help ensure that they're blocked, like yahoo.com or m.yahoo.com
+
+, Saving your file will allow the new blockings to take effect. To save your file:
+
+
+Click “File”.
+In the dropdown menu, click “Save”.
+ You'll want to make sure the URLs you entered are actually blocked.
+
+
+Open a browser of your choice.
+In the URL box, type the website that you've blocked in your hosts file. Type them exactly as you've entered them in the original file.
+ If your website is successfully blocked, you'll see an Unable to Connect page.
+
+
+If you're still able to access the website, either copy from the browser and paste it into your hosts file.
+Be sure to save the hosts file after making any changes.
+

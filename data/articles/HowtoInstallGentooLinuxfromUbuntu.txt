@@ -1,0 +1,27 @@
+ An intermediate knowledge of Ubuntu and Linux in general is also preferable.
+ You can achieve this through Synaptic by installing the dchroot and debootstrap packages; or the command line by typing sudo apt-get install dchroot debootstrap. This program allows Linux to temporarily pretend that its root directory is one different from normal., Be careful! You don't want to lose any data.
+
+Most websites recommend that, essentially, the more partitions, the better. At a minimum, you will need a root partition (/); but most people have a separate swap partition, home partition (/home). Some also recommend a separate partition for /boot and /var.
+ Swaps need to be formatted as swap partitions.,,, You can change it with the syntax date MMDDhhmmYYYY., Find your local mirror, and download the stage3 tarball from releases/x86/2008.0/stages/ (replace x86 with the architecture of your choice - this guide is only tested for AMD64 and x86). Download the corresponding md5 file.,, This makes sure that the tarball downloaded properly without being corrupted. If it doesn't report as OK, then you'll have to re-download it., sudo tar xvjpf stage3*.bz2. Wait for it to complete.,
+
+Go back to the mirror that you had previously downloaded the stage3 tarball from. Go to the snapshots/ directory, and download the latest Portage file. Move it to /mnt/gentoo, and use the command:
+tar xvjf /mnt/gentoo/portage-<date>.tar.bz2 -C /mnt/gentoo/usr
+A brief introduction to Portage: Portage is a package management system allowing for the relatively easy installation of numerous software packages. It works by downloading a list of these and their inter-relationships from an rsync server. This will point portage toward relevant files which can be downloaded from a huge number of other servers. Once these files are downloaded, the software will be compiled from source by your computer - optimising it for your machine.
+ You do this by editing /mnt/gentoo/etc/portage/make.conf using your favourite text editor. A full guide on various make variables can be found by reading /mnt/gentoo/usr/share/portage/config/make.conf.example. Save your changes to the configuration file, and exit the text editor., Edit make.conf again and ensure that the SYNC variable is set to your most local rsync server. Add as many mirrors are you like to the GENTOO_MIRRORS variable - though put your preferred one first. You can find the list of the available mirrors here.,
+
+First, the dns settings: sudo cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
+
+And your proc system: sudo mount -t proc none /mnt/gentoo/proc.
+And mount-bind the /dev filesystem: sudo mount -o bind /dev /mnt/gentoo/dev.
+ This is simple enough really - and can be exited at any time by typing simply... err... exit. This is a three step process:
+
+First, you change the root directory to /mnt/gentoo: sudo chroot /mnt/gentoo /bin/bash.
+Then, you update the environment in order to ensure that this terminal knows where it's supposed to be: /usr/sbin/env-update
+
+Finally, commit this to (temporary) memory: source /etc/profile
+
+If you want to remind yourself that you're in chroot, you can use this dainty command: export PS1="(chroot) $PS1"
+
+
+, You're inside Gentoo and about... a quarter of the way there. Chin up!, The kernel is the part of the OS which dictates which pieces of software are allowed access to a piece of hardware at any one moment. Without a kernel, there is no operating system, because it can't operate., Now you're going to download a list of packages which you can install from the rsync server that you specified. Type emerge --sync
+,, These flags tell the compiler what options to add, as well as what optimizations to use. It is important to set the right use flags for your system, otherwise you may end up with some unexpected results. It is also good to add flags that tell what not to add support for., Every option you'd like to remove is the word with a dash (-) in front of it. For example, if we want to compile everything with ogg support, we would add ogg. But if we wanted no ogg support, we would add -ogg.,,, Gentoo has all the time zones at /usr/share/zoneinfo. Navigate to the directory and issue the ls command to view the available timezones. Then copy the timezone to /etc/localtime with a command like (# cp /usr/share/zoneinfo/GMT /etc/localtime).,,, Here we configure the kernel so that it has whatever support we need. You need to be sure that you set up your kernel correctly, otherwise you may be without functions that you need.,, Be sure to select all the drivers you'll need to boot your system, such as SCSI drivers (if needed), and be sure they are set to be built into the kernel. If they aren't, you won't be able to boot. Also, be sure you enable support for your file system.,,, This may take some time, so go read a book, watch TV, walk the dog, or whatever else you enjoy doing.,, Change kernel-2.6.24 to whatever you want your kernel to be named. ( cp arch/i386/boot/bzImage /boot/kernel-2.6.24), Run (find /lib/modules/(kernel version)/ -type f -iname '*.o' -or -iname '*.ko') to find all available kernel modules. Of those, add the ones you want to be auto loaded to /etc/modules.autoload.d/kernel-2.6.Do not include the .ko or .o or the path. Just simply say, for example, snd-hda-intel.

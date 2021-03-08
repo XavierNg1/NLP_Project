@@ -1,0 +1,17 @@
+ You can use a built-in tool called TextEdit to modify the code of your notes. The code, called ENML code, is used to format the content of your notes. The syntax is mostly the same as HTML.Editing the HTML of your note won’t affect your ability to edit the note using the built-in tools.;
+, This is so that the note’s “Date Modified” in your filesystem is updated.
+ It’s important that the note is not open while you edit the code. Open a different note, but leave the application open.
+, A link that says “Open database folder” will appear.
+, Double-click the “www.evernote.com” folder instead.
+ Your user account will be an 8-digit folder in the folder you just opened.
+ Here you’ll find several folders with numerical names. Each of these folders contains the raw data for your notes. You’ll need to organize them by date to find the correct one to edit.
+,, Here you’ll see a file called “content.html”. This is the HTML file for your note.
+, Evernote allows the use of XHTML tags to format the note’s layout, as well as in-line CSS to specify colors and font styles.Use the the Evernote Markup Language developer’s guide to learn which elements are allowed.
+ Now that you’re editing the HTML, you can set a new solid color or a background image.
+
+
+Find the <en-note> tag.
+After “en-note”, hit space and type style=”background:#95DEFF;”>.
+The line should now read: <en-note style=”background:#95DEFF;”>.
+To use an image instead of a solid color, add this after en-note instead: style=”background-image:url(‘yourURL’);”>.
+The line should now read: <en-note style=”background-image:url(‘yourURL’);”> where “yourURL” is the full path to the image.

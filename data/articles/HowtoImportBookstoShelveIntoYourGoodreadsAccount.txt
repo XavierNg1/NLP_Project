@@ -1,0 +1,42 @@
+ Among a few types, Goodreads can read CSV, XLS and TXT files- most of which can be prepared in a spreadsheet or super-simple text editor file. (Some differences do exist, and will be explained below.);
+,, That way, the saves much later will be less annoying and take less time. An empty file at first will make the initial save much easier to complete and subsequent saves almost equally fast throughout.
+
+
+For Microsoft Excel 2003 and 2007 versions, the CSV format will be available if you scroll down quite a bit and is in the list
+For Microsoft Excel 2010, 2013 and 2016, you'll have three types that are widely shown; click the "CSV (comma delimited)" format type.
+For other super simple text editors you might need to select the "All file types" and type in the (dot)CSV file name extension following the file name.
+Remember the path you are using to save your file. You'll need this path later when trying to import the books.
+ There are some key differences between creating one on a Excel spreadsheet versus creating one in a super simple text editor, though the data that must be present will be the same. The import files must contain at the bare minimum a column of ISBNs or ASINs (or a mix of both, dependent on the types of book you'd like to import (hardcover and paperback under the ISBN number and ASIN for Kindle eBooks)).
+
+
+For spreadsheet users: Begin to list in a column (potentially column A) all the ISBN's from all the books you're looking to import. You can add a column header, if you want, but these should be the only set of numbers that can exist in the file you are creating.
+Make sure that the data format these numbers are being saved as are saved as "text" and not numbers or something else weird, otherwise you may end up with cells that look a bit like scientific notation in a spreadsheet that the importer tool can't understand correctly, despite the data saving correctly behind the scenes.
+
+Do not include any symbols such as the hyphen in your ISBN columns.
+If you are listing from a spreadsheet, you must type in a column header with "ISBN" as your column name for the rest of the file to read and track the changes.
+
+
+For simple text-editors: For those having to use a simple text editor, list each book's ISBN or ASIN singly, followed by a comma and a space without writing any other information or column headers signifying what this data is replicating.
+ If you skip a line, all book data rows following the broken-whitespace line will not be imported. Goodreads is strict on not having this broken line in the resultant spreadsheet that it imports.
+ It doesn't matter what you type thereafter, as long as you don't type any other sets of numbers that are 10 or 13 digits long. Sometimes, even another single digit column with numbers can throw the importer for a loop - such as a quantity. It only needs columns for the ISBN or ASIN.
+ If Goodreads doesn't happen to have the books on hand in their database when you go to import, you'll be held responsible for adding the books to the database, so this doesn't happen the next time someone else goes to add the same book.
+
+
+(This is something that no one wants to happen when importing, so perhaps you might want to search before you import to see if you can find the titles of the books and hope that the ISBNs show up in the end result.) However, if Goodreads finds duplicates of the same book that you already have on one of your shelves, no problem, it'll skip that listing and move forward with "no ill effects"
+
+, This is crucial; You don't want to loose all of your work now.
+
+
+Double-check the file extension, if you are saving your work in a super simple text editor - some will save them as .csv.txt instead of the required CSV file name extension files. The browse button will not see these weirdly formatted files as uploadable files and will discard whatever is in there until you provide a working file that is understands.
+If it has the extended TXT portion on it's file format extensions, you'll need to remove the .txt portion from the file type and you should be ready from there. However, only a few of these text editors still exist, so you shouldn't need to worry if you only operate current systems without many of these clunky third party programs (with the exception of spreadsheet programs such as Excel or OpenOffice).
+, Click the "My Books" link on the top navigation bar to the site and click the "import/export" button from near the left hand side of the page.
+ However, this button will be labelled differently, dependent on your web browser you choose to use when you import these books (Sometimes it will be called "choose file" instead of "Browse".) If you've scrolled down until you eyes noticed "import from a Web Page", you've went a tiny bit too far (this line will be directly above this labeled line.
+ You'll still have to click one more button to import the list of books.
+, It should be there. If not, check for this status at the very bottom of the list on the import/export page listing how many were imported since last shelf clearing and see if it had to skip any for obvious reasons.
+
+
+If you don't want this totals list listed on your account, you will have to Remove all the books on your account with their "Remove all books" method that exists on this import/export page, but that seems a bit too tedious if you don't want to loose your books that you potentially just imported. You won't get any reprieve if you used a disk cleanup-like program to clear these statistics out - since Goodreads doesn't store any information of these statistics behind the scenes.
+
+You're best bet is just to let the numbers of imported books increase and not to worry about what that page says below the "import" box.
+ Look under the "read" shelf to find these imported books. You can later move them to their other component shelves, if you'd like, but they are put here at first.
+

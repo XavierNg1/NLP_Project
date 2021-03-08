@@ -1,0 +1,30 @@
+ This includes creating the following files and folders (all of which should be added to the skins folder of your MediaWiki installation):
+
+A TrialSkin.php file - This is where you will put most of the code and define the layout of pages.
+A TrialSkin.deps.php file - This is a standard file that most likely will contain the same code. It is created to fix a bug with PHP.
+The trialskin directory - All other files related to your skin should go in this directory, including style-sheets and images.
+A /skins/trialskin/main.css file which will contain the main stylesheet for the skin - Browser specific stylesheet fixes files, such as /skins/trialskin/IE60Fixes.css - ;
+, Replace TrialSkin with the name of your skin and trialskin with the name of your skin after turning all letters to small case.,,, You will most likely need that variable. However, if you do not need it, then there is no need to do this step. You'll find a standard example of declaring the execute() function with the most commonly used code in the "Declaration of the execute() Function" sub-section., Most likely, although you might need to dramatically change the layout, but you'll need to render the same set of information that normal skins do (with some alterations maybe). The most commonly added elements/components/blocks for a page are (see corresponding sub-sections for details and/or sample codes):
+
+The XHTML code which opens (and eventually closes) the HTML output that will be sent to the client's browser.
+The head element, which imports style-sheets, scripts, defines the page's meta data, and specifies the title to be displayed in the browser's title bar for the specific page being viewed.
+The body opening tag. This tag opens the body element of the page and specifies what happens when the page loads or is double clicked if such handlers exist.
+The site's name block.
+The site's logo image.
+The site's tag-line
+Site Notice block.
+User message notification block (if there is a need for it)
+The user's toolbar.
+Intrapage navigation block.
+Search.
+Toolbox.
+Language links.
+Page name.
+Page subtitle.
+Undelete notice.
+Page contents.
+Category links.
+Page toolbar.
+Footer.
+Closing trail.
+

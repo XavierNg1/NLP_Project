@@ -1,0 +1,15 @@
+ In much the same way you can make changes to the settings in your car’s computer using applications, there are others that are designed to allow you to manipulate the settings using programming code. The best application for this is called ELM327 app for Android or Apple devices.There may be other options available to you for download.
+Ensure the application you choose allows you to manually input lines of code to interact with the car’s computer.
+ Insert the OBDII Bluetooth adaptor into the OBDII port and hit the “Start” button on the Prius without pressing the brake pedal to the floor. This will engage the vehicle’s electrical system.Be aware, modifying the code in your vehicle’s computer may cause other issues and should only be done by professionals.
+Doing this may void your warranty if you have one.
+ Once the application is connected to the Bluetooth adaptor, type in the series of codes required to adjust the settings on the reverse alarm. These codes serve as prompts, and the vehicle will respond with codes as well. Type the following codes into the application: Enter the command “AT SH 7c0” and the vehicle should respond, “ok.”
+Type “21ac” and the response should be “61 AC 00” which represents the reverse horn setting.
+Enter the code “3bac40” which will adjust the setting. You will receive two lines of code from the car indicating that you are done.
+ When you type the command “21ac” again, it will prompt the computer to display the current backup horn setting. While “00” represented having the setting on, it should now read “40” which indicates that the horn will only beep once. Close the application once you have verified the new setting is in place.
+Start the vehicle and test to ensure the backup horn is off.
+ If the horn still beeps while the vehicle is in reverse, take it to your local Toyota Dealership. They have the tools on hand to deactivate the reverse beep without voiding your warranty or causing any further issues.The price for this service may range from $50 to $200 depending on the availability of the tools needed and the dealership itself.
+This is the safest way to deactivate the backup horn.
+ If you decide you'd like to turn the reverse alarm back on at any point, reconnect to the Bluetooth adapter and enter the same series of codes to adjust it back to its original setting.Enter the command “AT SH 7c0” and the vehicle should respond, “ok.”
+Type “21ac” and the response should be “61 AC 40” which represents the reverse alarm being set to off.
+Enter the code “3bac00” which will re-activate the alarm. You will receive two lines of code from the car indicating that you are done.
+

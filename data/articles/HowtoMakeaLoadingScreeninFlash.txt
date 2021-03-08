@@ -1,0 +1,20 @@
+, We're going to create a very simple screen to start with.
+
+
+
+
+
+
+Select the Rectangle tool from the Tools bar. Draw a rectangle about 10px high and 100px long and make it a movieclip (F8). This will be the bar that represents the amount of your movie that has loaded. In the Properties tab of the object, give this movieclip the instance name "progressBar".
+
+
+
+
+
+
+Draw a text area on the stage that will hold the percentage of the movie that has loaded.When creating the textarea, make sure that the Type dropdown (near the top of the Properties tab) is set to Dynamic Text. Also in the Properties tab, click Character Embedding and select both "Numerals" and "Punctuation". (Tip: Hold down Ctrl while clicking to select multiple menu items.)Once created, give this textarea the instance name "percentageLoaded". Note: Do not make the textarea a symbol.
+ If you've used the Actions window before, it may already be visible to you. If not, press F9 or use the menu Window>Actions.
+
+
+Create a new layer in the timeline for only your ActionScript. You can use the New Layer icon below the timeline or the menu Insert>Timeline>Layer. This will keep your ActionScript separate and clear of movieclips and makes life much easier when you have hundreds of layers or movieclips.
+Add the following code to the Actions frame. Read the comments in the code (marked with //) to see what each part does.

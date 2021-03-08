@@ -1,0 +1,67 @@
+
+
+For this tutorial, let's start with a new, blank scene.
+Add a model to the scene.
+
+Optional: Adjust the camera slightly so we can see the entire Lycantar model.
+Let's add the mirror to the scene.
+
+
+
+
+
+Scroll down slightly and click on the thumbnail for the One-Sided Square.
+
+Move the square behind the Lycantar so we can see the reflections in it:
+
+Open the Object Parameters Palette, making sure the name at the top says "square_1", and change the following settings to move it in place:
+
+Scale: 300
+xScale (width): 250
+yScale (height): 210
+yRotate: 18 (turned so we can see the reflection clearer)
+xTrans (left/ right): -0.232
+zTrans (front/ back): -0.381
+
+
+Feel free to adjust these value to suit your taste.
+
+,
+Now, let's make the square into a reflective mirror.
+Switch to the Material Room (by clicking on the "Material" Tab at the top of the Poser screen).
+
+If the "square_1" is not already selected, select it from the pull-down list on the left (next to the word "Object").
+The Diffuse_Color and Specular_Color can be any color you like, but either full black or full white will work the best.
+Left-click on the plug icon next to the word "Reflection_Color" and drag to the the right: this will create a new shader node.
+
+On the Reflect node, set the following:
+
+Color: white (255, 255, 255)
+Quality: 0.2 (a higher quality will create longer renders times, though you may or may not see a difference in quality)
+Softness: 0
+RayBias: 0.002907 (this should be the default setting, which is fine)
+You can also adjust these settings to suit your taste or to create various effects.
+
+,
+On the PoserSurface node, change the following:
+
+Diffuse_Color: black (0,0,0)
+Diffuse_Value: 0 (this means the "mirror" has no color of its own)
+Specular_Color: black (0,0,0)
+Specular_Value: 0 (this means the "mirror" has no sheen or highlighting of its own)
+Highlight_Size: 0.05
+Reflection_Color: white (255,255,255) (which is probably the default color)
+Reflection_Value: 1
+
+,
+
+Next, let's set the box's properties to make sure it will reflect.
+,Switch back to the Pose Room (by clicking on the "Pose" Tab at the top of the Poser screen).Click on the "Properties" tab on the "Parameter Dials" palette.
+Make sure both the "Visible" and "Visible in Ray Tracing" checkboxes are checked.Now, let's set the render options so Poser will create reflections.
+
+Go to Render > Render Settings.
+,
+Click the tab for "FireFly" to enable it.To keep things easy, click on the "Auto Settings" button.
+Drag the slider from left-to-right (or from "Draft" to "Final") until the "Raytracing" box becomes checked, or at about the third notch from the right.Click the "Save Settings" button (which has the same effect as clicking an "OK" button).
+
+Render the scene by going to Render > Render or click the "Render" button at the top of the Document Window (the button that looks like a camera).

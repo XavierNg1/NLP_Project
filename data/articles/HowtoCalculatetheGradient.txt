@@ -1,0 +1,28 @@
+ The gradient generalizes the derivative to functions of multiple variables. When you take a gradient, you must input a scalar function - calculating the gradient then outputs a vector function, where the vectors point in the direction of greatest increase. In the diagram above, the gradient is represented by the blue vector field.
+
+The gradient is recognized by grad{\displaystyle \operatorname {grad} }, or the nabla symbol ∇{\displaystyle \nabla } called the del operator, which can be written out as ∇=(∂∂x,∂∂y,∂∂z).{\displaystyle \nabla =\left({\frac {\partial }{\partial x}},{\frac {\partial }{\partial y}},{\frac {\partial }{\partial z}}\right).} Gradients are most commonly taken in three dimensions.
+
+The gradient is not defined for a vector field. It only takes in scalar functions.
+;
+,
+
+In Cartesian coordinates, the gradient of a function f(x,y,z){\displaystyle f(x,y,z)} is ∇f=∂f∂xi+∂f∂yj+∂f∂zk,{\displaystyle \nabla f={\frac {\partial f}{\partial x}}{\mathbf {i} }+{\frac {\partial f}{\partial y}}{\mathbf {j} }+{\frac {\partial f}{\partial z}}{\mathbf {k} },} where i,j,k{\displaystyle {\mathbf {i} },{\mathbf {j} },{\mathbf {k} }} are unit vectors pointing in the x, y, and z axes, respectively.
+,
+
+
+∂f∂x=5y2+6x2z2{\displaystyle {\frac {\partial f}{\partial x}}=5y^{2}+6x^{2}z^{2}}
+
+
+∂f∂y=10xy+6{\displaystyle {\frac {\partial f}{\partial y}}=10xy+6}
+
+
+∂f∂z=4x3z{\displaystyle {\frac {\partial f}{\partial z}}=4x^{3}z}
+
+
+, 
+
+Therefore, ∇f=(5y2+6x2z2)i+(10xy+6)j+(4x3z)k{\displaystyle \nabla f=(5y^{2}+6x^{2}z^{2}){\mathbf {i} }+(10xy+6){\mathbf {j} }+(4x^{3}z){\mathbf {k} }}
+
+Note that we have mapped from a scalar field to a vector field. 
+
+

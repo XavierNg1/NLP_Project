@@ -1,0 +1,41 @@
+ Select your image you want to make art from trigonometry by -- here, for example, the objective is a black chess bishop. Decide on the basic curve to employ. Here, for example, the curve selected was the spherical helix curve because it stacks nicely like the lathing work on chess pieces, also because of shading considerations it's better than the sine wave  sphere  and finally because of the way spheres are joined, they settle atop one another in a smooth fashion. The basic plan is to select one side of the Square of Spheres previously done in the article How to Make a Square of Spherical Helixes, then to modify the curves of those spheres as if lathing had been applied.;
+, Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+In Edit, set all the first options to checked except Automatically Convert Date System. Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show grid lines and set all boxes below that to auto or checked.
+In Chart, allow show chart names and set data markers on hover and leave the rest unchecked for now.
+In Calculation, make sure Automatically is checked and "calculate before save" is also checked. Set max change to 0.001 without commas as goal-seeking is not done much. Check save external link values and use 1904 system
+In Error checking, check all the options.
+In Save, select save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer.
+ It helps to place the cursor between the A of Column A and the 1 in Row 1 in the upper leftmost corner and select the entire worksheet, then set Format Cells➛Number➛Number Decimal Places to 4 and Font Size at 9 to 12.
+
+In cell B1, enter GMLL and in cell B2 enter "=-(1-SQRT(5))/2" w/o quotes, decimal places 6.
+In cell C1, enter Factor and in cell C2 enter -.25
+In cell D1, enter N and in cell D2 enter 1 and format fill yellow.
+Select cell range A1:D2 and Insert Name Create Names in Top Row, OK.
+In cell G1, enter the note "{0,1} to (0,0}, {(0,0} to {1,0}, {1,0} to {1,1}, {1,1} to {0,1}" w/o quotes.
+In cell G2, enter 1 and Format Cell Number Number Custom "p = "0 (including quotes) and Insert Name Define Name p to cell $G$2.
+In cell A3, enter -968115 and Format Cell Number Number Custom "top="0 (including quotes) and Insert Name Define Name top to cell $A$3.
+In cell B3, enter -25822 and Format Cell Number Number Custom "c_base="0 (including quotes) and Insert Name Define Name c_base to cell $B$3.
+In cell C3, enter 36 and Format Cell Number Number Custom "Spheres="0 (including quotes) and Insert Name Define Name Spheres to cell $C$3.
+,
+Edit Go To cell range A6:A364 and enter into A6 the formula "=(A5+(-Top*2)/(ADJROWS))" w/o quotes and Edit Fill Down.
+Enter into B5 "=c_base" w/o quotes and format fill light rose.
+Edit Go To cell range B6:B364 and enter into B6 the formula "=B5" w/o quotes and Edit Fill Down.
+,, Edit Go To cell range E5:F64 and format fill yellow and enter to E5 the formula "=((SIN(A5/(B5*2))*GMLL*COS(A5)*GMLL*(COS(A5/(B5*2))) *GMLL)+G5)^(N-0)" w/o quotes and where the last symbol is zero, not oh. Then tab over to cell F5 and enter the formula "=I5*((SIN(A5/(B5*2))*GMLL*SIN(A5)*GMLL*(COS(A5/(B5*2)))*GMLL) +H5)^(N-0)" w/o quotes, and do Edit Fill Down.
+
+
+Then the remaining 300 cells or 5 spheres are reversed and the call to column I is on the X side=: Edit Go To E65:F364 and enter to E65 "=I65*((SIN(A65/(B65*2))*GMLL*COS(A65)*GMLL*(COS(A65/(B65*2)))*GMLL)+G65)^(N-0)" w/o quotes, then tab over to F65 and enter "=((SIN(A65/(B65*2))*GMLL*SIN(A65)*GMLL*(COS(A65/(B65*2)))*GMLL)+H65)^(N-0)" w/o quotes and Edit Fill Down. You may wish to follow me and format each 60 row x+y set as a lightly filled different color to tell them apart.
+, Edit Go To H6:H364 and enter to H6 the formula "=H5-p/360" and Edit Fill Down.
+ Enter to I5 1.075 and enter to the cell range I6:I64 1 and Edit Fill Down. Enter 4.5 for cell range I65:I68 via Edit Fill Down. Enter "=PI()" for cell range I69:I73 via Edit Fill Down. Go To cell I125 and enter "=1/-1.33" and select cell range I73:I125 and do Edit Fill Series Column Linear Trend (or possibly Growth Trend -- I forget), OK. Edit Go To cell range I126:I184 and enter "=1/-1.33" and Edit Fill Down. Edit Go To cell range I185:I244 and enter 1.33 and Edit Fill Down. Edit Go To cell range I245:I304 and enter .75 and Edit Fill Down. Edit Go To cell range I305:I355 and enter 2 and Edit Fill Down. Edit Go To cell range I356:I364 and enter "=2*PI()" and Edit Fill Down.
+ Scatter, Smoother Line Scatter. If not in Chart Wizard where a chart is automatically opened, copy or cut the chart from atop the Data worksheet and activate the Chart worksheet and paste it in the upper left corner. Expand it by pulling on the lower right corner by hovering over it until the cursor becomes a double headed arrow and then grabbing the corner and pulling down and to the right to form an approximate square.
+Do Chart Layout to remove the Chart Grid Lines, Axes and Legend. At far left under Current Selection, choose Plot Area and beneath that select Format Selection. Do Line No Line. Do Fill Pattern or Texture -Texture White Marble. Do 3D Format Top Circle Width and Height 6 pts each and Depth & Surface - Surface = Dark Edge. OK.
+Back under Current Selection, choose Series 1, Format Selection. Do Shadow checked perspective, black, 63% size, all the rest 0's. Angle is 115 degrees quoted and unchangeable.
+Line - Smoothed. Gradient (see picture please). Weight = 35 pt. Path states Upper Left Corner (but I don't believe it and didn't select anything) and Gradient from left to right is 15% Very Dark Navy Blue, 41% Black, 48% Charcoal Grey, 52% White, 54% Charcoal Grey, 66% Light Grey, 71% Light (not lightest) Blue, 81% White, 96% Very Dark Navy Blue. Glow is Light Blue at 8pt size and 25% transparency with 4 pt Soft Edges, OK. Effect is to resemble adhesed marble with various light and medium spray glazes.
+ Then, with the Shift key down, Copy Picture, lift the Shift key and select the Saves worksheet, and depress the Shift key and do Paste Picture below the formulas -- that way, you'll have a record of how your settings were when you accomplished the image. If you want, copy the BISHOP column too, for safety's sake, along with the MAIN X and Y columns and x and y of p columns. Fortunately, there aren't all that many rows.
+
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

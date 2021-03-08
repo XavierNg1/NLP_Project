@@ -1,0 +1,150 @@
+ This integral is attractive for a couple of reasons. First, it is related to the inverse tangent function, which allows for easy evaluation (make sure that you are able to evaluate this integral the standard way). Second, we introduce a{\displaystyle a} and b{\displaystyle b} as parameters independent of x,{\displaystyle x,} so that the integral depends on these two parameters.
+
+
+∫−∞∞1ax2+bdx=πab{\displaystyle \int _{-\infty }^{\infty }{\frac {1}{ax^{2}+b}}{\mathrm {d} }x={\frac {\pi }{\sqrt {ab}}}}
+;
+, The trick here is that we can pull the differentiation operator under the integral. Since we differentiate our result as well, we are essentially turning an integration problem into a differentiation problem. Notice that as the integral gets negated, the result also negates because of the negative exponent, so the answers will stay positive.
+
+
+dda∫−∞∞1ax2+bdx=∫−∞∞∂∂a1ax2+bdx{\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }a}}\int _{-\infty }^{\infty }{\frac {1}{ax^{2}+b}}{\mathrm {d} }x=\int _{-\infty }^{\infty }{\frac {\partial }{\partial a}}{\frac {1}{ax^{2}+b}}{\mathrm {d} }x}
+
+
+∫−∞∞x2(ax2+b)2dx=π2a3b{\displaystyle \int _{-\infty }^{\infty }{\frac {x^{2}}{(ax^{2}+b)^{2}}}{\mathrm {d} }x={\frac {\pi }{2{\sqrt {a^{3}b}}}}}
+
+We can differentiate again and again until we get the integral we want. Now, we can easily evaluate integrals like the ones listed below without having to resort to residues.
+
+
+∫−∞∞x2(x2+5)2dx=π25{\displaystyle \int _{-\infty }^{\infty }{\frac {x^{2}}{(x^{2}+5)^{2}}}{\mathrm {d} }x={\frac {\pi }{2{\sqrt {5}}}}}
+
+
+∫−∞∞x4(x2+3)3dx=3π83{\displaystyle \int _{-\infty }^{\infty }{\frac {x^{4}}{(x^{2}+3)^{3}}}{\mathrm {d} }x={\frac {3\pi }{8{\sqrt {3}}}}}
+
+
+
+
+, We can do the same thing here.
+
+
+∫−∞∞1(ax2+b)2dx=π2ab3{\displaystyle \int _{-\infty }^{\infty }{\frac {1}{(ax^{2}+b)^{2}}}{\mathrm {d} }x={\frac {\pi }{2{\sqrt {ab^{3}}}}}}
+
+This result allows us to obtain integrals listed below. The first one in particular is a standard example of an integral that can be evaluated by residues, but here, we need only keep differentiating a result that we already obtained. The second one, if done using residues, requires a lot of algebra, but by differentiating under the integral, we need only differentiate three times. 
+
+
+∫−∞∞1(x2+1)2dx=π2{\displaystyle \int _{-\infty }^{\infty }{\frac {1}{(x^{2}+1)^{2}}}{\mathrm {d} }x={\frac {\pi }{2}}}
+
+
+∫−∞∞1(x2+4)4dx=5π2048{\displaystyle \int _{-\infty }^{\infty }{\frac {1}{(x^{2}+4)^{4}}}{\mathrm {d} }x={\frac {5\pi }{2048}}}
+
+
+
+In general, we can differentiate with respect to a{\displaystyle a} or b{\displaystyle b} any number of times, which allows us to evaluate integrals like the one below as well (differentiate w.r.t. a{\displaystyle a} twice, then differentiate w.r.t. b{\displaystyle b} twice). Notice that by differentiating with respect to a,{\displaystyle a,} we are increasing the degree of the numerator and denominator by 2, while differentiating with respect to b{\displaystyle b} only increases the degree of the denominator by 2. Recognition of this pattern allows for a quicker evaluation.
+
+
+∫0∞x4(x2+9)5dx=π2834{\displaystyle \int _{0}^{\infty }{\frac {x^{4}}{(x^{2}+9)^{5}}}{\mathrm {d} }x={\frac {\pi }{2^{8}3^{4}}}}
+
+
+
+
+, The differential of the inverse tangent was a place where we could determine many integrals. Another good place to start is the general exponential function.
+
+
+∫01xadx=11+a{\displaystyle \int _{0}^{1}x^{a}{\mathrm {d} }x={\frac {1}{1+a}}}
+
+
+, The derivative of the general exponential function is xaln⁡x.{\displaystyle x^{a}\ln x.} The presence of the logarithm allows us to determine a host of integrals involving the logarithmic function. This is a very lucrative result, because even the simplest integral of its kind, the integral of the log function, requires an integration by parts. 
+
+
+∫01xaln⁡xdx=−1(1+a)2{\displaystyle \int _{0}^{1}x^{a}\ln x{\mathrm {d} }x=-{\frac {1}{(1+a)^{2}}}}
+
+In general, with each derivative, the power of the logarithm inside the integral is increased by one. This process allows us to determine integrals like these very easily because it is very easy to take derivatives of the right side (if the bounds are from 0 to 1 - if the upper bound is different, then the derivatives will be a bit more work).
+
+
+∫01x4ln⁡xdx=−125{\displaystyle \int _{0}^{1}x^{4}\ln x{\mathrm {d} }x=-{\frac {1}{25}}}
+
+
+∫01x5ln2⁡xdx=1108{\displaystyle \int _{0}^{1}x^{5}\ln ^{2}x{\mathrm {d} }x={\frac {1}{108}}}
+
+
+∫01ln4⁡xdx=24{\displaystyle \int _{0}^{1}\ln ^{4}x{\mathrm {d} }x=24}
+
+
+∫06x3ln⁡xdx=81(4ln⁡6−1){\displaystyle \int _{0}^{6}x^{3}\ln x{\mathrm {d} }x=81(4\ln 6-1)}
+
+
+
+
+, We can evaluate integrals where the integrand is of the form xnlnk⁡x{\displaystyle x^{n}\ln ^{k}x} by appealing to Taylor series and power series. 
+
+We begin by considering a=n+ϵ{\displaystyle a=n+\epsilon } for some small number ϵ,{\displaystyle \epsilon ,} rewrite xϵ=eϵln⁡x,{\displaystyle x^{\epsilon }=e^{\epsilon \ln x},} and Taylor our expression around ϵ=0.{\displaystyle \epsilon =0.}
+
+
+∫01xn+ϵdx=∫01xneϵln⁡xdx=∑k=0∞ϵkk!∫01xnlnk⁡xdx{\displaystyle \int _{0}^{1}x^{n+\epsilon }{\mathrm {d} }x=\int _{0}^{1}x^{n}e^{\epsilon \ln x}{\mathrm {d} }x=\sum _{k=0}^{\infty }{\frac {\epsilon ^{k}}{k!}}\int _{0}^{1}x^{n}\ln ^{k}x{\mathrm {d} }x}
+
+
+∫01xn+ϵdx=11+n+ϵ=11+n11+ϵn+1=1n+1∑k=0∞(−1)k(ϵn+1)k=∑k=0∞(−1)kϵk(n+1)k+1{\displaystyle {\begin{aligned}\int _{0}^{1}x^{n+\epsilon }{\mathrm {d} }x&={\frac {1}{1+n+\epsilon }}={\frac {1}{1+n}}{\frac {1}{1+{\frac {\epsilon }{n+1}}}}\\&={\frac {1}{n+1}}\sum _{k=0}^{\infty }(-1)^{k}\left({\frac {\epsilon }{n+1}}\right)^{k}=\sum _{k=0}^{\infty }{\frac {(-1)^{k}\epsilon ^{k}}{(n+1)^{k+1}}}\end{aligned}}}
+
+Equating the coefficients, we arrive at the general answer.
+
+
+1k!∫01xnlnk⁡xdx=(−1)k(n+1)k+1{\displaystyle {\frac {1}{k!}}\int _{0}^{1}x^{n}\ln ^{k}x{\mathrm {d} }x={\frac {(-1)^{k}}{(n+1)^{k+1}}}}
+
+
+∫01xnlnk⁡xdx=(−1)kk!(n+1)k+1{\displaystyle \int _{0}^{1}x^{n}\ln ^{k}x{\mathrm {d} }x={\frac {(-1)^{k}k!}{(n+1)^{k+1}}}}
+
+
+
+For this result to be defined, n>−1{\displaystyle n>-1} and k{\displaystyle k} must be a whole number, since it is the argument of the factorial function.
+ This is a very conventional example where differentiating under the integral cancels out part of the integrand.
+
+
+∫01x4−1ln⁡xdx{\displaystyle \int _{0}^{1}{\frac {x^{4}-1}{\ln x}}{\mathrm {d} }x}
+
+
+, We can then differentiate under the integral with respect to a.{\displaystyle a.}
+
+
+I(a)=∫01xa−1ln⁡xdx{\displaystyle I(a)=\int _{0}^{1}{\frac {x^{a}-1}{\ln x}}{\mathrm {d} }x}
+
+
+dIda=dda∫01xa−1ln⁡xdx=∫01xadx=11+a{\displaystyle {\frac {{\mathrm {d} }I}{{\mathrm {d} }a}}={\frac {\mathrm {d} }{{\mathrm {d} }a}}\int _{0}^{1}{\frac {x^{a}-1}{\ln x}}{\mathrm {d} }x=\int _{0}^{1}x^{a}{\mathrm {d} }x={\frac {1}{1+a}}}
+
+
+, This is an indefinite integral, so there will be a constant of integration. However, the constant vanishes because I(0)=0.{\displaystyle I(0)=0.}
+
+
+I(a)=∫11+ada=ln⁡(1+a){\displaystyle I(a)=\int {\frac {1}{1+a}}{\mathrm {d} }a=\ln(1+a)}
+
+
+, In our example, a=4.{\displaystyle a=4.} This result tells us information about the entire class of integrals, highlighting the power of this technique and its tendency to generalize results.
+
+
+∫01x4−1ln⁡xdx=ln⁡5{\displaystyle \int _{0}^{1}{\frac {x^{4}-1}{\ln x}}{\mathrm {d} }x=\ln 5}
+
+
+, We can also use differentiation under the integral for more complicated expressions - expressions where it is actually hopeless from the perspective of finding an antiderivative (it certainly exists, but good luck finding it).
+
+
+∫01ln4⁡xx(ln2⁡x+1)3dx{\displaystyle \int _{0}^{1}{\frac {\ln ^{4}x}{x(\ln ^{2}x+1)^{3}}}{\mathrm {d} }x}
+
+
+, By carefully examining the integral, we see that there exists an f(x)2+1{\displaystyle f(x)^{2}+1} term in the denominator. Furthermore, both the function and its derivative are present in the integral, so after doing the u-sub, the extra x{\displaystyle x} term vanishes. This changes the integral into one related to the inverse tangent integral, which we just discussed! The resulting integrand is even, so the evaluation over the negative reals is going to give the same result as the evaluation over the positive reals. 
+
+
+∫01ln4⁡xx(ln2⁡x+1)3dx=∫−∞0u4(u2+1)3du=∫0∞u4(u2+1)3du{\displaystyle \int _{0}^{1}{\frac {\ln ^{4}x}{x(\ln ^{2}x+1)^{3}}}{\mathrm {d} }x=\int _{-\infty }^{0}{\frac {u^{4}}{(u^{2}+1)^{3}}}{\mathrm {d} }u=\int _{0}^{\infty }{\frac {u^{4}}{(u^{2}+1)^{3}}}{\mathrm {d} }u}
+
+
+, Using our result from part 1, we differentiate w.r.t. a{\displaystyle a} twice to obtain our result by setting a=1{\displaystyle a=1} and b=1.{\displaystyle b=1.}
+
+
+∫0∞1ax2+bdx=π2ab{\displaystyle \int _{0}^{\infty }{\frac {1}{ax^{2}+b}}{\mathrm {d} }x={\frac {\pi }{2{\sqrt {ab}}}}}
+
+
+∫0∞u4(u2+1)3du=123π8=3π16{\displaystyle \int _{0}^{\infty }{\frac {u^{4}}{(u^{2}+1)^{3}}}{\mathrm {d} }u={\frac {1}{2}}{\frac {3\pi }{8}}={\frac {3\pi }{16}}}
+
+
+, The (unnormalized) sinc function sin⁡xx{\displaystyle {\frac {\sin x}{x}}} is a classic function that does not possess an antiderivative that can be written in closed form, yet has an exact integral when integrating over all reals. There are many different methods to evaluate this function, but differentiating under the integral is one method. 
+
+
+∫−∞∞sin⁡xxdx=π{\displaystyle \int _{-\infty }^{\infty }{\frac {\sin x}{x}}{\mathrm {d} }x=\pi }
+
+

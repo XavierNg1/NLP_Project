@@ -1,0 +1,68 @@
+ To set up a server, you'll need some files from the Minecraft website:
+
+
+Visit https://minecraft.net/en/download/server in Safari.
+Download the JAR file for the server program.;
+, This will be the folder for your server program. You can place it somewhere easy to access, such as on your desktop. The server can be labeled anything, such as "Minecraft Server."
+
+, When you run the file, the folder will fill with the various configuration files for the new server. For now, just drag the downloaded server JAR file to the new folder.
+ You'll want to remove the version numbers from the end of the file. This will make it easier to run commands for the server later.
+ You can find this in your Applications folder. From the desktop, click the Go menu and select "Applications."
+
+, This will switch the new document to a plain text document.
+ This set of commands will start the server. You can replace -Xms1G -Xmx1G with -Xms2G -Xmx2G to increase the RAM for the server from 1 GB to 2 GB:#!/bin/bash
+cd "$(dirname "$0")"
+exec java -Xms1G -Xmx1G -jar minecraft_server.jar
+
+
+
+
+, Select "Save" from the TextEdit menu and save the file in the same folder as the server file you downloaded from the Minecraft website.
+ You can find this in the Utilities folder. From the desktop, click the Go menu and select "Utilities."
+
+, Make sure to include a single space after a+x.
+ This will add the path to that file at the end of the chmod a+x command.
+ This will change the permissions of the start.command file, allowing it to start your server.
+ This will start your server. You'll see some error messages, but this is only for the first time you run the sever. The server will generate several files in the folder its in.
+
+
+The server will stop automatically after running the first time.
+ You'll need to make a small change to this file to proceed.
+ Save the change to the file and close it.
+ This will start the server back up and show the server command line. Additional files will be downloaded and the server's world will be generated, which may take a few moments.
+ Replace <username> with your Minecraft username. This will give you admin privileges when you connect to the server from your Minecraft account.
+ Double-click this file and select TextEdit when prompted for a program to open it. You can change the values of these entries to change how the server works, but be aware that incorrect entries may cause the server to malfunction. You'll need to restart the server after making any changes.The gamemode entry lets you choose from 0 - Survival, 1 - Creative, 2 - Adventure, 3 - Spectator.
+You can change the level-seed entry to enter any seed you'd like to use.
+ When you're connecting to the server from other computers on the same network, you'll need to know the server's IP address.
+
+
+On the Mac running the server, click the Apple menu, select "System Preferences," then select "Network."
+Select your network connection and look for the "IP Address" entry. Make note of this address.
+ You don't need to forward any ports or change other advanced settings if the other computer is on the same local network as the server computer. If your server computer is powerful enough, you can run Minecraft on it at the same time, but this isn't recommended for most computers.
+
+
+If you want to have your friends join your server over the internet, see the next section.
+ This will begin scanning for available games. There's a good chance that you won't see your server available, even though it is.
+ This will open a window allowing you to enter an address.
+ After entering the address, you will connect directly to it and the game will load. If you cannot connect, make sure both computers are on the same network.
+
+
+Multiple computers can connect to the same server using this address, as long as they are all on the same local network.
+If you are playing on the same computer as the server, enter localhost instead of the server IP address.
+ You'll need this address in order to properly forward ports so that others can connect to your server.
+
+
+Click the Apple menu on the server Mac and select "System Preferences."
+Click the "Network" option and then select your active connection.
+Note the "IP Address" line.
+ In order for others to connect to your server over the internet, you'll need to configure your router to allow incoming connections. To do this, you'll have to access your router's settings. If you are using a router like Netgear or Belkin, you can access your router's configuration page from your web browser. If you're using an Apple AirPort router, you can use the AirPort Utility from your Utilities folder.
+
+
+See Access a Router for detailed information on opening your router's configuration page.
+ The location of these settings will vary from router to router. Generally, you'll find them in the WAN or the Advanced section. It may be labeled "Applications and Gaming" or "Virtual Servers."
+
+, Enter your server's IP address into the IP address field, then enter 25565 into the Port field. Make sure to select "TCP" as the protocol. Save your changes when complete.
+ Your friends will need to enter your public IP address in order to connect to your Minecraft server. The quickest way to determine your public IP address is to open Google on the server computer's web browser and type "my IP." Your public IP will be displayed at the top of the search results.
+ Now that the server is accessible from the internet, your friends can connect by opening the Multiplayer menu in Minecraft, clicking "Direct Connect," and then entering the server address.
+ Whenever your server computer restarts, it will get a new local IP address from your router. When this happens, you'll need to change the port forwarding rules to reflect the new address, or no one will be able to connect from the internet. Also, your internet service provider may occasionally change your public IP address, which will need to be entered whenever your friends connect.
+

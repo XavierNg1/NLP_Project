@@ -1,0 +1,50 @@
+ Many Perl packages are available for free, such as ActivePerl , c:\openssl-0.9.8h will be assumed throughout this article.
+Open a Visual Studio command prompt and change the current directory to the one you extracted OpenSSL on (issue the command: cd c:\openssl-0.9.8h)
+Issue the command:perl Configure VC-WIN32 --prefix=c:/openssl
+Where c:/openssl is the directory where you want OpenSSL to be installed to.
+Issue the command:ms\do_ms
+to build the make-files
+
+Make sure no errors occurred while executing. This is a batch file that invokes many other commands so take extra care to the messages that show up.
+If an error ensues stating that an environment variable is not defined (something like "%OSVERSION% is not defined"), you might need to add the following line to the file c:\openssl-0.9.8h\util\pl\VC-32.pl near the top of the file before the first if statement:$FLAVOR = 'WINXP';
+This is most likely to happen if building in a Windows XP SP2 or higher machine.
+If you have to do the previous step, you might want to use Wordpad instead of notepad to open Perl files if you don't have notepad++ or some other editor that can interpret UNIX-style end-of-lines.
+
+
+Issue the following command and make sure you do that in a Visual Studio command prompt:nmake -f ms\ntdll.mak.
+
+If everything goes right, a new directory named out32dll will be created in the OpenSSL source directory with some executable and dll files in it.
+ Make sure you download the source package not one of the binary ones.
+Extract the files to your hard drive. c:\bind-9.5.0-P2 will be assumed throughout this article.
+Open the folder (c:\bind-9.5.0-P2) in Windows Explorer and find the two files libdns.dsp and libdns.mak.
+Open the files above in notepad (right click and choose "open with". Do not open the files with Visual Studio).
+Replace all occurrences of openssl-0.9.8d with your version (in this case, open ssl-0.9.8h)
+
+In future versions, BIND may change to support a newer version on OpenSSL. For best results, use the search feature of your text editor to look for all occurrences of "openssl-" and replace manually.
+
+Open the BindBuild.dsw file in Visual Studio.
+
+The file can be found in the win32utils directory.
+You might be prompted to convert the project into current Visual Studio format if you have a VS installation higher than VS 7. In such case, choose "yes to all".
+
+
+Configure the output platform:
+
+In VS 7: Go to Project > Properties > C/C++ > General . Select "Platform" from the Drop Down Box as : Win32.
+In later versions, this will mostly be set, but you can make sure by right clicking the solution icon and choosing properties. There you'll see if the platform is Win32 or not. If not, change it.
+
+
+Add additional include directories:
+
+VS 7: Go to Project > Properties > C/C++ > General, in the "Additional Include Directories" give the path of OpenSSL folder that has all the header files under inc32 . In the example given so far, that would be c:\openssl-0.9.8h\inc32 and click apply.
+Higher versions of VS: Right click a project, choose "Properties" then in "Configuration Properties" > C/C++, add the folder to the additional include directories.
+
+
+Build BIND:
+
+In VS 7: Go to Build > Batch Build > Select All > Build/Rebuild
+In VS 8 and higher: Go to Build > Build Solution
+
+
+Under the build folder you'll find two directories, "Debug" and "Release" where you'll find BINDinstall.exe which you can use to install BIND.
+

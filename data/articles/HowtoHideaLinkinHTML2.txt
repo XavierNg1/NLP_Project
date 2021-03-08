@@ -1,0 +1,29 @@
+ You can do this by including additional information in your link tag. Find your link tag and include the appropriate code for either your ID or class. Your code should look like:
+
+
+class=Link.com
+id=Link.com, You can reference the name you've created by using a "." for classes or the "#" symbol for your ID. The code of this should look similar to:
+
+
+Classes: .Link.com
+IDs: #Link.com
+
+, Both of these features will have the effect of hiding your link, but each function hides the link in a different way. By changing the display feature to "none", you will remove the link from the page layout.This may cause other elements of your page to move if they define their position in reference to your link. Changing your visibility to "hidden" will hide the link without influencing the page layout.Your code for this stage should simply look like:
+
+
+display: none
+visibility: hidden
+
+, Incorrect code can cause significant errors in your webpage or change important elements of your design. Your final HTML and CSS code should look like:
+
+
+
+HTML Code:
+<a href=Link.com
+class=Link.com>Link</a>
+
+CSS Code:
+.Link.com {
+display: none;
+}
+

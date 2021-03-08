@@ -1,0 +1,20 @@
+ This tool comes installed with OS X. Its location varies depending on the version you are using. This will only find the public IP address of the site. If the site is protected by a VPN or a content distribution service, you may not be able to find the actual IP address.Mavericks (10.9) and earlier - You can find the Network Utility in the "Utilities" folder in your Applications directory.
+Yosemite (10.10) and later - Click the Apple menu and select "About This Mac". Click the "System Report" button and then open the Window menu from the menu bar. Select "Network Utility."
+Any version - Just type "network utility" into a Spotlight Search and it should appear at the top of the results list.
+ This will open the Ping section of the utility., You don't need to include the www. portion of the address.
+ You'll only need one ping to determine the address.
+ The display will show the IP address of the website after 64 bytes from.
+ Many websites are hidden behind a proxy service, which makes finding their actual IP difficult, if not impossible. If the proxy is not properly configured to protect all of the website's services, you may be able to find the actual IP address. Try pinging the following addresses to see if you can find the actual address:
+
+
+ftp.sitename.com}}
+cpanel.sitename.com}}
+mail.sitename.com}}
+
+, Like Windows, you can use the command line to perform the ping command to find IP addresses. You can find the Terminal in the Utilities folder.
+
+
+Type ping sitename.com and press ⏎ Return.
+Press Ctrl+C to stop the ping command from running, as it will run continuously.
+Note the website's IP address. It will be displayed after 64 bytes from.
+

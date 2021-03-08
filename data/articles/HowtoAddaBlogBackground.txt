@@ -1,0 +1,31 @@
+ If you are editing your blog offline then you can open it in Dreamweaver to change HTML. Blogging services like Blogger allow you to change HTML online by going to the Design page and selecting the "Edit HTML" tab. You need to be able to access the HTML codes for your blog, and how you do this can vary greatly depending on what blogging services and methods you use.
+ Instead, you can just edit your HTML to change the existing color to the one that you want.
+
+
+Search for "HTML color chart" on the Internet. You should be able to find a table that displays different colors along with their color name and HEX (Hexadecimal) number. The HEX number is the number used within the HTML, so you need to remember the HEX number for the particular color that you want as your background.
+Find the code on your blog that defines the background color. It will look like this.
+
+body {
+background-color:#XXXXXX;
+
+
+
+,
+
+
+Change the HEX number to the number for the color that you want as your background. After you save and apply the new HTML, you will see the new color as the background.
+ There are many websites that allow you to download blog backgrounds or you can use an image that is already saved on your computer.;
+, Photo hosting websites such as Picasa, Flickr and Photobucket allow you to upload images for free. Your blog hosting service may also allow you to upload images in a similar way to how the rest of your blog is hosted.
+ To do this you need to open the image in your Internet browser and copy the URL where it is displayed.
+ Here is the HTML code.
+
+
+
+
+body {
+background-image: url(image URL);
+
+
+You need to add the code where the body of your blog HTML begins. Replace "image URL" with the full URL where your image is located.
+ You should see the image added as the background.
+

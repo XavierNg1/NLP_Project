@@ -1,0 +1,17 @@
+ A parallel circuit branches into multiple paths, which then join back together. Current flows through each branch of the circuit.
+
+If your circuit has resistors on the main path (before or after the branched area), or if there are two or more resistors on a single branch, Skip down to the combination circuit instructions instead.
+ Since each resistor only slows current passing through one branch, it only has a small effect on the total resistance of the circuit. The formula for total resistance RT is 1RT=1R1+1R2+1R3+...1Rn{\displaystyle {\frac {1}{R_{T}}}={\frac {1}{R_{1}}}+{\frac {1}{R_{2}}}+{\frac {1}{R_{3}}}+...{\frac {1}{R_{n}}}}, where R1 is the resistance of the first branch, R2 is the resistance of the second branch, and so on up to the last branch Rn.
+
+For example, a parallel circuit has three branches, with resistances of 10 Ω, 2 Ω, and 1 Ω.Use the formula 1RT=110+12+11{\displaystyle {\frac {1}{R_{T}}}={\frac {1}{10}}+{\frac {1}{2}}+{\frac {1}{1}}} and solve for RT:Convert fractions to a common denominator: 1RT=110+510+1010{\displaystyle {\frac {1}{R_{T}}}={\frac {1}{10}}+{\frac {5}{10}}+{\frac {10}{10}}}1RT=1+5+1010=1610=1.6{\displaystyle {\frac {1}{R_{T}}}={\frac {1+5+10}{10}}={\frac {16}{10}}=1.6}Multiply both sides by RT: 1 = 1.6RTRT = 1 / 1.6 = 0.625 Ω.
+ If you don't know the individual resistances, you'll need the current and voltage instead:
+
+In a parallel circuit, the voltage across one branch is the same as the total voltage across the circuit.As long as you know the voltage across one branch, you're good to go. The total voltage is also equal to the voltage of the circuit's power source, such as a battery.
+
+In a parallel circuit, the current may be different along each branch. You need to know the total current, or you won't be able to solve for total resistance.
+ If you know the total current and the voltage across the whole circuit, you can find the total resistance using Ohm's Law: R = V / I.
+
+For example, a parallel circuit has a voltage of 9 volts and total current of 3 amps. The total resistance RT = 9 volts / 3 amps = 3 Ω.
+ If a branch on the parallel circuit has no resistance, all of the current will flow through that branch. The resistance of the circuit is zero ohms.
+
+In practical applications, this usually means a resistor has failed or been bypassed (short-circuited), and the high current could damage other parts of the circuit.

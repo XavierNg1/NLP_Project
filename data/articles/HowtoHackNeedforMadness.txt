@@ -1,0 +1,59 @@
+ This can be done at www.arcadetown.com(go to racing games and choose Need for Madness, press download now).;
+,, To change music, go to step 4. To change stage laps, go to step 6.
+, These are the compressed files for each stage (you can obviously see that). To change music files use WinZip, IZArc, or another unzipping program to open it. You can also right-click and select Extract all... then go through the steps to extract it. Now, you should see music files inside them in mod format. So if you wanted to make stage 4 music be stage 5 music, you would copy the file in it and paste it in stage 5 folder and rename it to "stage5.mod". Be sure to delete the original file. If you want to change it by a music that is not existing there then you can use a mod converter to convert it to mod and then rename it to stage#.mod and add it to the zip file. If it asks to replace the file then do so., If you can find the right kind of MPEG to convert a video to (the audio part of the MPEG), then you can put in your own music.
+ Each stage is saved in a text file written in a special script. To edit a stage, open that stage's text file. Here is a list of the commands (note: the letters a, b, c, etc. are what you change):
+
+, It appears near the beginning of each file.
+, a is the piece type, b is the x-coordinate (from your starting point), c is the y-coordinate (from your starting point), d is the rotation (in degrees), and e tells the computer controlled cars what type of piece it is (type p for a straight piece, pr for a jump, pt for a turn, ph for a quarter pipe, etc.) The types are
+
+
+
+
+0 = Tornado Shark statue
+1 = Formula 7 statue
+2 = Wow Caninaro statue
+3 = La Vite Crab statue
+4 = Nimi statue
+5 = MAX Revenge statue
+6 = Lead Oxide statue
+8 = Radical One statue
+9 = DR Monstaa statue
+10 = Long, paved track
+11 = Long, paved track with walls
+12 = Long, paved track at an angle to the right
+13 = Long, paved track at an angle to the left
+14 = Paved track with a right curve
+15 = Long, dirt track
+16 = Long, grass track
+17 = Dirt track with a right curve
+18 = Long, dusty paved track
+19 = Dusty paved track with a right curve
+20 = Long, track going from dirt to paved
+21 = Medium length track going from dirt to paved
+22 = Short, track going from paved to dusty paved
+23 = Short, paved track with an end facing back
+24 = Short, dirt track with an end facing front
+25 = Paved, track segment
+26 = Medium sized, ramp
+27 = Medium sized, paved ramp with walls
+28 = Full, paved bump
+29 = Half bump: low and high
+30 = Paved bump; half
+31 = Large, paved ramp
+32 = Small, paved ramp
+33 = Dirt "speed bump"
+34 = Medium dirt ramp
+35 = Small dirt ramp
+36 = Paved Quarter-pipe
+37 = Spikes
+38 = Fake Checkpoint(Hurdle)
+39 = Fake track border segment
+40 = Blue Checkpoint
+41 = Fixing Loop
+42 = Black Checkpoint
+
+
+
+, Works the same way as set.
+fix(a,b,c,d,e)x- creates an electrified hoop. Same as for set and chk, except that d is the height(it has to be negative) and e is the rotation.
+ A #10 straight is 2400 wide by 5600 high. A #14 turn is 4200 by 4200 (discovered by trial and error). Alternatively you can divide the coordinate system by 800 in planning and use 2x7 and 4x4 respectively.

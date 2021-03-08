@@ -1,0 +1,49 @@
+ Batch (.BAT) files contain text commands that instruct the computer what to do. To write your own simple .BAT file, you don't need special editing software - just Windows' basic Notepad program. Notepad can usually be found in the Start menu, or, alternatively, in the "Accessories" folder.
+
+
+
+
+
+
+;
+, By default, .BAT files open up a command prompt window and display the commands being run. @echo off and CLS stop the commands in the command prompt window from appearing, making the processes that are taking place invisible to the user being pranked.
+ Now, it's time to write a series of commands that will cause your fake virus to open either lots of program windows or an infinite amount of program windows. This is an important distinction - leaving a program running which opens an infinite amount of windows will eventually crash a computer. See below for instructions on making both kinds of "virus":
+
+
+
+
+
+
+
+
+
+To open a finite number of windows, start a new line and type the following command into your notepad window: start (program name here). In place of the phrase of parentheses, put the name of a program on your computer or its precise file location. This command causes the computer to open a window of the program you specify. For example, start iexplore.exe will open a window of Internet Explorer. Repeat this "start" command as many times as you'd like - your "virus" will open a window for every time you repeat this command. Here are just a few ideas for programs you may want to enter after "start":
+
+iexplore.exe - Internet
+calc.exe - Calculator
+notepad.exe - Notepad
+winword.exe - Word 2013
+
+
+To open an infinite number of windows, first start a new line and type :A, including the colon. Then, in the line under that, type start iexplore.exe (or use some other program). Finally, in the line under that, type goto A. This will cause the computer to open a window of Internet Explorer (or whatever program you specified) and then immediately return to the point in the instructions before it opened the program, effectively causing it to open new windows until the command prompt is closed or the computer crashes.
+ For startling effect, you may want to add a message to your "virus" that makes the user think his or her computer is experiencing an error. To display a message, start a new line and type echo Your Message Here, typing your desired message where indicated. Then, start a new line and type pause. This causes your desired message to pop up in a command prompt window.
+
+
+
+
+
+
+
+
+
+To make your prank more believable, use a message that sounds like something your computer might actually display in the event of an error. For instance, you might try: Fatal Error. C:// directory corrupted.
+ When you're finished, select File > Save As..., then make a file name ending in ".bat" (for example, pinball.bat). In the dropdown window next to "Save as type:", be sure to select "All files". Save your file anywhere on the computer.
+ Now, all you've got to do to "detonate" your E-bomb is to trick someone into opening it! You can do this any way you like. One of the most sure-fire ways to trick someone into opening one is to create a shortcut of your batch file, then change its icon to something the user usually uses, then change the shortcut's name to match the new icon. Sit back and watch your results from a good vantage point!
+
+
+
+
+
+
+
+

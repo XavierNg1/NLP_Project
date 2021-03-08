@@ -1,0 +1,17 @@
+ In this tutorial we have used D-Link DSL 2750U router with an IP address of 192.168.1.1, as well as two RedLeaf DF-2011 IP cameras with the IP addresses of 192.168.1.20 and 192.168.1.30. Please note that you must have a static IP address at the installation location of the cameras so you can see the streams from the IP cameras.
+
+If you would like to watch more than a few IP cameras, it’s recommended to use your NVR (Network Video Recorder) port settings (i.e. using the web client of your NVR) instead of those of every single IP camera.;
+, Enter its IP address in your web browser’s address bar (e.g. 192.168.1.20). The default username/password of RedLeaf IP cameras is admin/admin. If this doesn't work, contact the camera providers to figure out your username and password.
+ The browser may prompt you to install an appropriate plug-in to show the live video stream, like Quicktime, which you can download here.
+
+If necessary, minimize the security and privacy levels of the browser to get the required plug-ins or built-in Active-X installed. (e.g. “Phishing and malware protection” or “Pop-up allowed” options may temporarily need change in defaults)
+
+,, In your camera’s web console, click on Setup tab and then Open Network > UPnP menu. In order to manually perform the port forwarding in the modem/router, you may uncheck “Enable” box, and let the “Router State” remain in failure state. Click on Save button to save the changes.
+ Open Network > Connection menu. Apart from https port which is optional to use, you need to forward the other four ports respectively in your modem. But before proceeding to the next step (if no NVR server is used) make sure that you have set unique TCP, UDP, HTTP, and RTSP port numbers to each of the IP cameras. Unique port numbers help the modem to properly recognize the proper IP camera for which the requested traffic is deemed to, thus routing would be accomplished correctly.
+ In this example we have set the following network settings for Camera #1 and #2.
+ Log in to your modem by entering its username and password, then navigate to Advanced Setup > NAT > Virtual Servers. This tab’s name and location may be different in other router brands. In a Linksys modem you may find Single Port Forwarding page in Applications and Gaming tab with a slightly different configuration options., Click on Add to have a new record of virtual server added. User Interface is the external interface connected to your ISP and needs a static IP address already set. Click on Custom Service and choose an appropriate name for the supposed camera (e.g. Readleaf_20). Check Enable Loopback box and enter the IP address of your camera in the Server IP Address Field. Fill in the virtual server table as shown below and save the changes.
+
+
+The same procedure applies to the second camera, but make sure you apply different Custom service name, Server IP address, External and Internal port numbers.
+ Open your browser on a computer connected to the internet that you want to watch the stream from the IP camera, and enter the public IP address (i.e. your static IP address) followed by the http port of your IP camera (e.g. 87.117.243.10:8020). When you are logged in, you should be able to see the video of the camera by clicking on the Live tab.
+ After assuring that you can see the video from camera you can revert the security modification applied in Step 5 to its previous values so the security warning will no longer appear.

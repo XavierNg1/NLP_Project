@@ -1,0 +1,30 @@
+ To do this, run terminal and type in “sudo apt-get install gnupg” and follow through with any prompting you may get.;
+, To install a popular GUI, go to the terminal and type in “sudo apt-get install kgpg”. Follow through with any prompting you may get.
+, To do this, click on the keys tab on the drop down bar, and from the drop down menu select Generate Key Pair. A new interface will pop up. The new interface will ask you for details so that it can generate your key pair. It will ask you for your name and e-mail address, for example.
+
+
+For name, put your screen name; you can either leave e-mail blank, put your real e-mail address, or use a fake e-mail address. It should be noted that the name and e-mail address you use will be visible to anyone you send your public key to.
+It will also ask you for a comment, which you can leave blank if you wish, or you can put a comment in if you have a reason to do so.
+ Usually a key does not need an expiration date, although if you feel the need to put one in, you can do so. After an expiration date passes, your key will no longer function, and you will be required to generate a new pair.
+ As a rule of thumb, the larger the key size, the more secure messages encrypted with the key are going to be. Select 4096 as your key size.
+ The default algorithm, DSA & ElGamal, should be selected.
+ You will be taken to a new interface and asked to supply a passphrase. The passphrase should be very long and random, your best bet is to use KeePassX to generate a passphrase.
+ A window will pop up explaining that a new key pair is being generated. During the generation of the key pair, you should move your mouse about randomly in order to create a large amount of entropy, thus making your key pair more secure. Continue to move your mouse until the generating key pair window closes.
+, You need to send your public key to all those you wish to communicate with, so that they can encrypt information before sending it to you. To do this, right click on the key pair you just generated, and select export public keys. A new window will pop up asking you where you would like to export the public key to. Select clipboard. Your public key will now be stored on your clipboard (meaning it is what will paste when you go to paste something.)
+
+, simply by pasting the key where you would like it to appear. Now others can use your public key to send encrypted information to you.
+ Go to KGPG and select File → Open Editor. A new window will pop up that allows you to input text into it. Paste the encrypted information into this window and select decrypt. You will be prompted for your passphrase. After correctly entering your passphrase, the information will decrypt and you will be able to read it.
+ To do this, copy their public key to your clipboard. Now, go to KGPG and go to Keys → Import Keys. A new window will pop up and ask from where you want to import the new key. Select clipboard and then click ok. The persons public key will be added to your keyring.
+ A new window will pop up that allows you to input text into it. Type the message you wish to send to the individual in this window, then click on the Encrypt button. A new window will pop up asking which key you want to use to encrypt the information.
+ Now simply click on the key of the person the message is intended for, and select ok. Your message is now encrypted.
+
+
+To send the message to the individual, simply copy and paste the encrypted block of text to your clipboard, and e-mail it to them, or send it to them in a private message, or whatever.
+ To sign your encrypted message, click the sign/verify button and select your private key. You will be prompted to enter your passphrase, and after correctly entering your passphrase a signature will be attached to your message.
+ To do this:
+
+
+Simply paste their signed message into the editor, and click on the sign/verify button. A window will pop up telling you if the signature is valid or not.
+After you verify the signature, remove the signature from the editor. You will also need to remove one extra “*” at the top and bottom of the message, so that “*****BEGIN PGP MESSAGE*****” is the first line and “*****END PGP MESSAGE*****” is the last line.
+After doing this, simply click the decrypt key and enter your passphrase after you are prompted to do so.
+

@@ -1,0 +1,11 @@
+ Head out to the Internet and pull down all of the .dmg images for the applications you want to carry around. Keep them together in some folder so you can easily find them all later.;
+, Later in the process, the contents of this folder will be turned into your new .dmg archive.
+ Instead of installing the apps into /Applications, drag them into ~/Desktop/Your-New-Folder instead.
+ This is how we convert the folder into a .dmg archive.
+ In the "Select Folder to Image" dialogue, navigate to the folder you created in step 2 and click the "Image" button.
+ If you want to edit the image (add a cool background, change the arrangement of icons, etc) prior to distribution, change Image Format from "Compressed" to "Read/Write" and continue reading. Otherwise, leave it on "Compressed". Congratulations! You're finished!
+
+,, Add your desired background to the mounted image's drive, then click View -> Show View Options (in the menu bar). Change Background from "White" to "Picture", and drag in the background from the mounted drive.
+ Open Terminal, type "MV" then drag in the background picture from the mounted drive. type ".background.jpg" (or whatever file extension you had used), then hit enter.
+, Eject the mounted drive, then return to Disk Utility. In the menu bar, click on Images -> Convert. Give your finalized image a name and a location to save to, and ensure the Image Format is set to Compressed. Click on save, wait for the progress bar to finish, and voila! You have your own custom .dmg archive with all your favorite apps, customized and ready to go!
+

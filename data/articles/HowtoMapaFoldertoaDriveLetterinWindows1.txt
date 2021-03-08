@@ -1,0 +1,6 @@
+ On Windows Vista or Windows 7, open the command prompt as default user, not as Administrator. The reason will be explained later.;
+, For example: SUBST X: "D:\Documents\John\Letters".
+ You should see a newly created drive letter X:, with which you can access your mapped folder directly.
+, To automatically map your folder when your system starts, put the SUBST command in a batch file, and put the batch file in your Autostart folder in the start menu. Advanced users can use the windows task scheduler, however this is not covered here.
+ These mappings are only created for the user who originally issued the SUBST command. When you login as "John", and you open a command prompt as "Administrator" and execute the SUBST command, "John" will not be able to see any mapped drive letters because the mapping was created for "Administrator". This is why you need to open the command prompt as a default user in Windows Vista and Windows 7. When using the task scheduler, again make sure that the command is executed under the default user account.
+

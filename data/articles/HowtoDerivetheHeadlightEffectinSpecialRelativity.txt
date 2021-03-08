@@ -1,0 +1,60 @@
+ 4-momentum P{\displaystyle P} is the relativistic analog of linear momentum in Newtonian mechanics, upgraded to include an additional time component. This time component describes energy, so 4-momentum unifies linear momentum and energy into a single mathematical object. Below, we write 4-momentum as a row vector to save space, even though it should be thought of as a column vector.  
+
+
+P=(Ec,px,py){\displaystyle P=\left({\frac {E}{c}},p_{x},p_{y}\right)}
+;
+, The 4-momentum of a photon from the source's rest frame then depends on the angle relative to the velocity of the source v,{\displaystyle v,} which we will say points in the +x{\displaystyle +x} direction. Below, we assume that all photons are emitted with the same energy. 
+
+
+P=(Ec,Eccos⁡θ,Ecsin⁡θ){\displaystyle P=\left({\frac {E}{c}},{\frac {E}{c}}\cos \theta ,{\frac {E}{c}}\sin \theta \right)}
+
+Try not to let the c{\displaystyle c} constants throw you off - think of them less as constants and more as unit conversion factors. 
+
+
+, This is the frame moving in the −x{\displaystyle -x} direction with respect to the source. The result of this signage is that we have positive quantities on the off-diagonal of the Lorentz transformation. Note that we denote primes for the coordinate frame, not the moving frame.
+
+
+(E′cE′ccos⁡θ′E′csin⁡θ′)=(γγβ0γβγ0001)(EcEccos⁡θEcsin⁡θ){\displaystyle {\begin{pmatrix}{\frac {E^{\prime }}{c}}\\{\frac {E^{\prime }}{c}}\cos \theta ^{\prime }\\{\frac {E^{\prime }}{c}}\sin \theta ^{\prime }\end{pmatrix}}={\begin{pmatrix}\gamma &\gamma \beta &0\\\gamma \beta &\gamma &0\\0&0&1\end{pmatrix}}{\begin{pmatrix}{\frac {E}{c}}\\{\frac {E}{c}}\cos \theta \\{\frac {E}{c}}\sin \theta \end{pmatrix}}}
+
+Above, β=vc{\displaystyle \beta ={\frac {v}{c}}} and γ=11−v2c2,{\displaystyle \gamma ={\frac {1}{\sqrt {1-{\frac {v^{2}}{c^{2}}}}}},} the Lorentz factor.
+ The matrix equation above is a system of linear equations. The third one is trivial and does not tell us anything new. 
+
+
+E′c=γEc+γβEccos⁡θE′=γE(1+βcos⁡θ){\displaystyle {\begin{aligned}{\frac {E^{\prime }}{c}}&=\gamma {\frac {E}{c}}+\gamma \beta {\frac {E}{c}}\cos \theta \\E^{\prime }&=\gamma E\left(1+\beta \cos \theta \right)\end{aligned}}}
+
+
+, The end result of the derivation is an angle transformation that looks a bit similar to the addition of velocities formula.
+
+
+E′ccos⁡θ′=γβEc+γEccos⁡θγEc(1+βcos⁡θ)cos⁡θ′=γEc(β+cos⁡θ)cos⁡θ′=β+cos⁡θ1+βcos⁡θ{\displaystyle {\begin{aligned}{\frac {E^{\prime }}{c}}\cos \theta ^{\prime }&=\gamma \beta {\frac {E}{c}}+\gamma {\frac {E}{c}}\cos \theta \\{\frac {\gamma E}{c}}\left(1+\beta \cos \theta \right)\cos \theta ^{\prime }&={\frac {\gamma E}{c}}\left(\beta +\cos \theta \right)\\\cos \theta ^{\prime }&={\frac {\beta +\cos \theta }{1+\beta \cos \theta }}\end{aligned}}}
+
+This is the headlight effect. 
+
+
+, Because of its non-intuitiveness, a visual has been inserted above as viewed from the coordinate frame of reference. 
+
+The vertical lines are the result of the angle transformations. Assuming a 180 degree vision, we can see that an observer moving at a relativistic velocity can also see slightly behind her as well.
+
+The color denotes the relativistic Doppler effect. We can see that the observer's view in front of her has become blueshifted, and the blueshifting view becomes more concentrated near the center of her field of view. At fast enough velocities, she can see blueshifted infrared, and even microwave and radio waves, as visible light.
+
+
+
+
+
+
+To the right is the view of a tunnel from her reference frame. As she moves faster, it will seem that she is moving backwards at first, but this is not the case - her field of view is actually becoming wider. Her view also gradually becomes blueshifted in front of her and redshifted behind her, corresponding to the narrowing cone in the first animation. Remember, in her reference frame, she is not moving, but everything else is.
+
+Also of note is how the tunnel gradually becomes warped. This is a consequence of relativity of simultaneity. In Newtonian mechanics, it is assumed that an observer is seeing the top and bottom of a wall at the same time, so the vertical lines are straight. This is not the case in special relativity. Due to the finite speed of light, light near the middle reaches her before light at the top and bottom, so the tunnel appears convex-shaped. 
+
+
+, A light source moving at β=35{\displaystyle \beta ={\frac {3}{5}}} emits photons at angles of θ=±π2{\displaystyle \theta =\pm {\frac {\pi }{2}}} - in other words, straight above and below. What are the angles relative to the direction of velocity in the coordinate frame?
+
+
+Solution: use the headlight effect formula to obtain the angles we are interested in. Observe that the angles will transform the same way in either direction.  
+
+
+cos⁡θ′=β+cos⁡θ1+βcos⁡θcos⁡θ′=35+cosπ21+35cosπ2cos⁡θ′=35θ′≈±53.13∘{\displaystyle {\begin{aligned}\cos \theta ^{\prime }&={\frac {\beta +\cos \theta }{1+\beta \cos \theta }}\\\cos \theta ^{\prime }&={\frac {{\frac {3}{5}}+\cos {\frac {\pi }{2}}}{1+{\frac {3}{5}}\cos {\frac {\pi }{2}}}}\\\cos \theta ^{\prime }&={\frac {3}{5}}\\\theta ^{\prime }&\approx \pm 53.13^{\circ }\end{aligned}}}
+
+
+
+

@@ -1,0 +1,34 @@
+ You'll be checking for any available updates for the Adobe Camera Raw plugin. This plugin includes support for CR2 files, and is updated when newer camera models are released.;
+, If you're using Photoshop CC, select "Updates..." instead. This will look for any updates available online for Photoshop and its plugins, including the Camera Raw plugin. The Camera Raw plugin adds support for various raw files, including the CR2 format.
+ If the Camera Raw plugin has an update available, it will be listed in the Adobe Application Manager list. Select it and click the "Update" button.
+ If the automatic update process fails, you can download the latest Adobe Camera Raw (ACR) update available for your version of Photoshop. You can see the version of Photoshop you're running in the program's title bar. Earlier versions do not support later ACR releases. Follow the links below and run the installer to install the plugin:Adobe CS4 - ACR 5.7 (https://www.adobe.com/support/downloads/thankyou.jsp?ftpID=4683&fileID=4375)
+Adobe CS5 - ACR 6.7 (https://www.adobe.com/support/downloads/thankyou.jsp?ftpID=5603&fileID=5613)
+Adobe CS6 - ACR 9.1.1 (https://helpx.adobe.com/camera-raw/kb/camera-raw-plug-in-installer.html)
+Adobe CC 2014/15 - 9.7 (https://helpx.adobe.com/camera-raw/kb/camera-raw-plug-in-installer.html)
+
+, After installing the latest version of ACR for Photoshop, try opening the CR2 file again. If the ACR update included support for your camera, the CR2 file will open in a Camera Raw window.
+
+
+If you're using an older version of Photoshop with an older version of ACR, you may not be able to open photos taken with cameras released after that ACR version. For example, if you have a Canon EOS 5D Mark III, you'll need ACR 7.1 or later, which isn't available in CS4 or CS5. If this is the case, see the next section for conversion instructions., The conversion utility will only allow you to select folders, not individual files. Make sure CR2 files are properly sorted into folders so that you can easily convert them. You'll be able to convert files in subfolders as well.
+ This utility will convert your CR2 files into a compatible DNG format. DNG is an open raw format that will still give you access to all of the raw colors. This converter is necessary if you are running a version of Photoshop that is too old to support your camera model.
+
+
+You can download the latest version of "DNG Converter" from the Adobe Updates site (http://www.adobe.com/downloads/updates.html). Click the link for your operating system to download the correct installer.
+ Double-click the downloaded EXE file (Windows) or DMG file (Mac). Follow the prompts to install the converter program.In Windows, this will involve clicking through some installation screens. For Mac users, you'll drag the DNG Converter program to your Applications folder.
+ After installing, start Adobe DNG Converter from your Start menu (Windows) or the Applications folder (Mac).
+ Click the "Select Folder" button to browse for the correct folder. If the folder contains other folders with more CR2 files, check the "Include images contained within subfolders" box.
+
+
+When you run the converter again to convert newly-added files, you can check the "Skip source image if destination image already exists" box. This will prevent you from converting old files a second time.
+ By default, the converted files will be put in the same location as the originals. You can choose a different folder if you'd prefer the converted files end up somewhere else.
+ You can apply automatic formatting to the converted file names by filling out the text fields.
+
+
+Click the first drop-down menu to select a format for the file name. You can then add additional text using the extra fields. For example, you could use the first field to label each file by four digit serial number, and the second to add the date.
+ If you're using older versions of Photoshop, you may need to change the ACR compatibility to match your version.
+
+
+In the "Change Preferences" menu, use the "Compatibility" drop-down menu to select the correct version. See Step 3 in the first section for a list on the version you need to convert to.
+ This may take a long time if you are converting hundreds of images.
+ Once the files have been converted, simply double-click one to open it in the Camera Raw plugin in Adobe Photoshop.
+

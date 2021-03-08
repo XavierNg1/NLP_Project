@@ -1,0 +1,72 @@
+ Since the Payment Schedule uses the Mortgage Calculator to give you an accurate evaluation of how much you'll owe/pay off per month, these should go in the same document. You'll need a separate column for each of the following categories:
+
+
+
+Date - The date the payment in question is made.
+
+Payment (number) - The payment number out of your total number of payments (e.g., "1", "6", etc.).
+
+Payment ($) - The total amount paid.
+
+Interest - The amount of the total paid that is interest.
+
+Principal - The amount of the total paid that is not interest (e.g., loan payment).
+
+Extra Payment - The dollar amount of any extra payments you make.
+
+Loan - The amount of your loan that remains after a payment.
+ This will go in the first empty cell at the top of the "Loan" column.
+ In the date column, you'll input the date on which you take out the loan, as well as first two dates upon which you plan to make the monthly payment (e.g., 2/1/2005, 3/1/2005 and 4/1/2005). For the Payment column, enter the first three payment numbers (e.g., 0, 1, 2).
+ To do so, you'll need to perform the following steps:
+
+
+Select the first entry in your Payment (Number) column.
+Drag your cursor down until you've highlighted to the number that applies to the number of payments you'll make (for example, 360). Since you're starting at "0", you'd drag down to the "362" row.
+Click Fill in the top right corner of the Excel page.
+Select Series.
+Make sure "Linear" is checked under the "Type" section (when you do your Date column, "Date" should be checked).
+Click OK.
+, The formula for calculating your Payment per Period value relies on the following information in the following format: "Payment per Period<Total Loan+(Total Loan*(Annual Interest Rate/Number of Payments per Year)),Payment per Period,Total Loan+(Total Loan*(Annual Interest Rate/Number of Payments per Year)))".
+
+
+You must preface this formula with the "=IF" tag to complete the calculations.
+Your "Annual Interest Rate", "Number of Payments per Year", and "Payment per Period" values will need to be written like so: $letter$number. For example: $B$6
+Given the screenshots here, the formula would look like this: "=IF($B$10<K8+(K8*($B$6/$B$8)),$B$10,K8+(K8*($B$6/$B$8)))" (sans the quotation marks).
+ This will apply the Payment per Period formula to your selected cell.
+
+
+In order to apply this formula to all subsequent cells in this column, you'll need to use the "Fill" feature you used earlier.
+, The formula for calculating your Interest value relies on the following information in the following format: "Total Loan*Annual Interest Rate/Number of Payments per Year".
+
+
+This formula must be prefaced with a "=" sign in order to work.
+In the screenshots provided, the formula would look like this: "=K8*$B$6/$B$8" (without quotation marks).
+ This will apply the Interest formula to your selected cell.
+
+
+In order to apply this formula to all subsequent cells in this column, you'll need to use the "Fill" feature you used earlier.
+, For this formula, all you need to do is subtract the "Interest" value from the "Payment ($)" value.
+
+
+For example, if your "Interest" cell is H8 and your "Payment ($)" cell is G8, you'd enter "=G8 - H8" without the quotations.
+ This will apply the Principal formula to your selected cell.
+
+
+In order to apply this formula to all subsequent cells in this column, you'll need to use the "Fill" feature you used earlier.
+ This should be directly below the initial loan amount you took out (e.g., the second cell in this column).
+ Calculating the Loan value entails the following: "Loan"-"Principal"-"Extra".
+
+
+For the screenshots provided, you'd type "=K8-I8-J8" without the quotations.
+ This will apply the Loan formula to your selected cell.
+
+
+In order to apply this formula to all subsequent cells in this column, you'll need to use the "Fill" feature you used earlier.
+ Your payment should be the same all the way down. The interest and loan amount should decrease, while the values for the principal increase.
+ At the bottom of the table, sum the payments, interest, and principal. Cross-reference these values with your mortgage calculator. If they match, you've done the formulas correctly.
+
+
+Your principal should match up exactly with the original loan amount.
+Your payments should match the total cost of the loan from the mortgage calculator.
+Your interest should match the interest cost from the mortgage calculator.
+

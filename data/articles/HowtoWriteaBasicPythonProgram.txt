@@ -1,0 +1,94 @@
+ On Linux, you can press the Alt button to open a search bar. Type "terminal" and click on Terminal.;
+, Terminal commands are shown in this document as:
+
+
+
+
+
+command -options filename.ext
+
+
+
+
+
+sudo apt-get install build-essential
+
+
+The "sudo" command gives permission to the terminal to modify your computer. This is necessary to install any program. You will be required to enter your password.
+
+
+The "apt-get install" command tells the computer to install the package "build-essential" which is required to install Python.
+
+
+
+sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+
+
+These are programs that Python uses to run correctly. They are also known as “dependencies”.
+ Use the following command:
+
+
+
+
+
+cd ~/Downloads/
+
+
+
+The "cd" command changes to the correct working directory so the computer can find and put programs in the right place.
+
+
+
+wget http://python.org/ftp/python/2.7.5/Python-2.7.5.tgz
+
+
+
+, This time, we change to the newly created Python directory.
+ It will alert you of any critical errors.
+
+
+
+
+./configure
+
+
+
+, It compiles the source code and creates the executables.
+
+
+
+
+make
+
+
+
+, With the following command, all of the applications and libraries associated with Python are moved into the correct places on your computer.
+
+
+
+
+
+sudo make install
+
+
+
+
+,
+
+
+Any text editor that can save files with a ".py" extension will do. Ubuntu 12.04 or greater is packaged with the Gedit editor.
+
+
+
+
+
+In Python, whatever is enclosed in quotes after the word print will be printed out to the screen.
+
+
+
+Be careful that the file is not saved as "hello_world.py.txt".
+,
+
+
+Remember to use the "cd" command to change directories.
+If you need a list of all subdirectories at your current location, use the "ls" command. "ls" stands for "list subdirectories".

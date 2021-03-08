@@ -1,0 +1,34 @@
+ You'll need to get the following information in order to connect successfully to the network.
+
+
+Server: The domain name of the server used to connect to IRC, such as chat.freenode.net
+
+
+Port: In most cases, this is 6667, but if you're not sure, check your own IRC client or the network's website.
+
+Nickname: The nickname your bot should use. Keep in mind some special characters are usually not allowed (@#!~).
+
+Ident: The ident field appears after the nickname when someone performs a WHOIS like this: nickname!ident@hostname
+
+
+GECOS: This field typically holds a user's real name or a general description of the bot but you can put whatever you want in there.
+
+Channel: You usually want your bot to be present in one or more channels. On most networks, these are prefixed with '#' but it might be something else.
+ The most basic way to do this is by naming a few variables according to the configuration names above. You could also store them in a config file and parse them out, but for right now we'll just stick with the absolute necessities.
+ To do this, you'll need to open a socket to the server on the specified port. You should also add some error handling code in this part in case the connection fails for whatever reason. In this case, PHP provides us some neat functions to handle the error effectively.
+ This means supplying your nickname, ident, and GECOS to the server, not registering with NickServ. To do this, just write the NICK and USER commands to the server, followed by a carriage return and newline. It is imperative that you do it exactly as shown, because that is how it is specified in RFC1459, the specification for the IRC protocol. Note that the middle two parameters (in this case, * and 8) must be specified, but they are ignored by the server. Those two are only used between linked servers, not by a directly connecting client.
+ If you didn't use a loop, your script would immediately terminate and the bot would be basically useless. In order to stay connected, you have to fetch data from the server, check for any input in the stream you want, and respond to it if so. Here, we're grabbing data using socket_read() to grab any data available for us. If there is, we keep on doing whatever's in the loop. It might be helpful to also output the raw data to the console so you can see what's going on from the bot's perspective.
+ This is important. If you don't respond to pings in a timely manner, the server will disconnect you. Let's take care of that first. Pings look like this when sent from the server: PING :rajaniemi.freenode.net. The server doesn't have to put its name after the ':', it can supply whatever it wants. You *must* repeat back exactly what the server said, except using PONG.
+ Okay, so we have a bot that connects to the network and responds to pings, but otherwise does nothing. For people to see and use your bot, it should be in a channel (otherwise you'd have to tell it to respond to private messages).
+
+
+To do this, we'll check for server status codes 376 or 422. 376 means the MOTD (message of the day) finished. 422 means there wasn't any MOTD to send. That MOTD is just something the server sends when you connect, but it is a good indicator for when we can start joining channels.
+You'll need to issue a JOIN command. This command can be followed by one or more channels separated by a comma.
+Notice that the data the server sends is conveniently delimited by spaces. This way we can split the data and reference it using an array index.
+ Now for the fun part. Your bot's joined the channel, so now you can use it for what you wanted to. Let's create an example command called @moo.
+
+
+Note the offset where messages begin (this applies to both channels and private messages). It is always in the same place.
+You can handle commands with spaces in them by splicing the chunked data back together ($d). That's beyond the scope of this article.
+If the target is a channel (such as #botters-test), then you reply to that. If it's a private message, this bit will be your bot's nickname! You must then reply using the sender's nickname, not yours (otherwise you'd be talking to yourself, and that's just silly).
+ You can add many new features using the above implementation. There are many other commands that can be issued to the IRC network, such as managing ops, kicking and banning, setting the topic, among many other features.

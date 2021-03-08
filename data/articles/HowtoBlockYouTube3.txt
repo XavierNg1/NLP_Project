@@ -1,0 +1,36 @@
+ Most routers cannot block HTTPS websites, which means you won't be able to effectively block YouTube using just your router's filtering tools. OpenDNS is a free (for home use) web filtering service that can block YouTube on any computer or device connected to your network, even the YouTube app. You can sign up for OpenDNS Home at opendns.com/home-internet-security/.
+
+
+Note that if someone is using a smartphone with a cellular data connection, they'll be able to circumvent these blocks. You'll need to use additional blocks on mobile devices to prevent access to YouTube on cellular networks.
+ You'll be setting your router to connect to the OpenDNS DNS servers, which will block the websites that you set. To change your router's DNS settings, you'll need to open your router's configuration page in a browser.
+ You can access your router's configuration page by entering the address into the browser's address bar. See Access a Router for details. Common addresses include:
+
+
+Linksys - http://192.168.1.1
+D-Link/Netgear - http://192.168.0.1
+Belkin - http://192.168.2.1
+ASUS - http://192.168.50.1/
+AT&T U-verse - http://192.168.1.254
+Comcast - http://10.0.0.1
+
+, If you've changed the login information, log in with your administrator account. Otherwise, use the default login for your router. This is usually "admin" or blank for the username, and "admin" or blank for the password.
+ This section contains your DNS settings.
+ Your router will connect to the OpenDNS servers, which will block all traffic to the sites you specify. Enter the following into the two DNS server fields:208.67.222.222
+208.67.220.220
+
+, After changing your router settings, point your web browser to your OpenDNS account page. Log in with the account you created earlier. You can use the link that came in your registration email.
+ You'll need to add your home network's IP address to OpenDNS so that it can apply custom filters. You'll see your IP address at the top of the page. Enter this address into the "Add a network" address field.
+
+
+You'll be asked to give your network an easily-identifiable name and given a link to the OpenDNS Updater. This program will automatically update your OpenDNS network settings whenever your dynamic IP address changes. It's recommended that most home users download this program.
+ OpenDNS will send you an email to confirm that you've added the correct network. Click the link to verify your network IP and gain access to custom filtering.
+ This will allow you to set which sites you want blocked.
+ Enter the following URLs into the block list to block YouTube on computers and mobile devices, including the YouTube app. Make sure to set each one to "Always block:"youtube.com
+m.youtube.com
+ytimg.com
+ytimg.l.google.com
+youtube.l.google.com
+googlevideo.com
+
+, The method above will block all YouTube traffic on your network, but won't be able to block YouTube if someone connects using a cellular data connection.
+

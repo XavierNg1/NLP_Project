@@ -1,0 +1,28 @@
+ The attribute style=" " allows you to use CSS inside an HML document. This is an easy way to set font color even if you don't know CSS. Try putting the style attribute inside one of these HTML tags:
+
+
+<p style=" ">The p tag surrounds a whole paragraph of text.</p>
+<a style=" " href="https://www.wikihow.com">The a tag surrounds a link.</a>
+<span style=" ">Use the span tag if you want to color part of a paragraph without changing the formatting.</span>
+
+, Insert color: followed by a color name or hex code inside the quotation marks.For detailed information on color names and codes, see the method above or try these examples:
+
+
+<span style="color:red">This makes red text.</span>
+<span style="color:#556B2F">This is the color code for dark olive green.</span>
+<span style="color:#745">CSS supports shortened 3-digit color codes. The code 745 is short for 774455.</span>
+
+, If you want to style every photo caption or chapter title on a large web page, you don't need to type in the full code every time. Instead, define a CSS class in the head of the document, so you can refer to it with a shorthand every time you want to use that style.Here's an example which demonstrates a couple new uses of the style attribute:
+
+
+In the <head>section of your HTML document, paste the following code:
+<style type="text/css">
+.fancy {
+font-family: Cursive;
+color: darkgreen;
+font-size:150%;
+}
+</style>
+In the body of the same document, use the attribute class="fancy" to add this style to an element. For example <p class="fancy">this paragraph</p> would show up as dark green, large text in cursive font.
+Note that you can use any word instead of "fancy" to describe a style.
+

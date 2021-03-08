@@ -1,0 +1,19 @@
+ This is where you can make administrative changes to your Mac. Use the search bar to find it, or search in Finder under /Applications/Utilities/Terminal.Terminal is a black on white text window. It allows you to work with some of the code on your computer.
+ You will not be making large or difficult changes to the file, but it is best to have a backup anyway. To make one automatically, type “sudo /bin/cp /etc/hosts /etc/hosts-original” on the Command Line and hit "enter."
+
+
+You may be prompted to type in your administrative password. This is the password used to get into the computer when it is started.
+ Type “sudo nano /etc/hosts” and hit "enter" to open the "hosts" file in another window. This is the file that you actually need to adjust in order to block websites. Scroll down to the very bottom, past the final line (usually some form of the phrase "localhost."
+
+, This line tells your computer to block the site following it. Write out the number and then press the space bar., With one space, write out the URL of the website, starting with www. So, if you want to block Google, you'd write out "127.0.0.1 www.google.com". Make sure this is on its own line.
+
+
+Do not add the "http://"
+
+, If you want more sites, hit enter, then add 127.0.0.1, a space, and the website. This will block the sites completely from your computer, on any browser., Press the Control Key + "O" (the letter, not "zero") to save the file, then close the window down. Your changes are almost in effect.
+ While still in Terminal, type in “sudo dscacheutil -flushcache” and press "enter." This will flush the cache, allowing your changes to take place. Open a browser to test if the change went through.
+
+
+If it didn't, check out the Host file again, making sure your changes are at the end, on separate lines, and are properly formatted.
+If this still doesn't work. Restart your computer, then try the sites again. They will be blocked.
+

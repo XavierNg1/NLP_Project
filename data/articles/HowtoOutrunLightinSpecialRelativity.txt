@@ -1,0 +1,156 @@
+ Make sure that you are familiar with these transformations, which form the foundation of special relativity, as well as the variables involved. Below are the transformations in 1+1 dimensions.
+
+
+ct′=γ(ct−βx)x′=γ(x−βct){\displaystyle {\begin{aligned}ct^{\prime }&=\gamma (ct-\beta x)\\x^{\prime }&=\gamma (x-\beta ct)\end{aligned}}}
+
+Here, β=vc{\displaystyle \beta ={\frac {v}{c}}} and γ=11−v2c2,{\displaystyle \gamma ={\frac {1}{\sqrt {1-{\frac {v^{2}}{c^{2}}}}}},} the Lorentz factor.
+;
+, Gamma can be written in many different ways, a few of which are listed below. It is important to be able to recognize the Lorentz factor no matter how it is written.
+
+
+γ=dtdτ=11−β2{\displaystyle \gamma ={\frac {{\mathrm {d} }t}{{\mathrm {d} }\tau }}={\frac {1}{\sqrt {1-\beta ^{2}}}}}
+
+
+, Rapidity ξ{\displaystyle \xi } is a dimensionless quantity that is related to velocity β.{\displaystyle \beta .}
+
+In special relativity, rapidity is a more natural quantity to work with because, unlike velocity, rapidity is linearly additive via tanh−1⁡β3=tanh−1⁡β1+tanh−1⁡β2,{\displaystyle \tanh ^{-1}\beta _{3}=\tanh ^{-1}\beta _{1}+\tanh ^{-1}\beta _{2},} where ξ=tanh−1⁡β.{\displaystyle \xi =\tanh ^{-1}\beta .}
+
+
+, Graph the function ξ=tanh−1⁡β,{\displaystyle \xi =\tanh ^{-1}\beta ,} for it illustrates some important properties of rapidity. 
+
+First, when |β|≪1,tanh−1⁡β≈β.{\displaystyle |\beta |\ll 1,\tanh ^{-1}\beta \approx \beta .} In other words, rapidity reduces to Newtonian velocity at everyday speeds. This confirms that our definition of rapidity is compatible with Newtonian mechanics.
+
+Second, tanh−1⁡β{\displaystyle \tanh ^{-1}\beta } has a domain of (−1,1),{\displaystyle (-1,1),} but a range of (−∞,∞).{\displaystyle (-\infty ,\infty ).} As you approach the speed of light, rapidity starts to increase faster and faster until it becomes infinite at light speed. 
+
+
+, Using hyperbolic trigonometric identities, one can rewrite γ{\displaystyle \gamma } and βγ{\displaystyle \beta \gamma } in terms of ξ.{\displaystyle \xi .} The latter quantity is often seen in special relativity. All three basic hyperbolic functions are listed below.
+
+
+β=tanh⁡ξ{\displaystyle \beta =\tanh \xi }
+
+
+γ=cosh⁡ξ{\displaystyle \gamma =\cosh \xi }
+
+
+βγ=sinh⁡ξ{\displaystyle \beta \gamma =\sinh \xi }
+
+
+, The relative ease of hyperbolic derivatives makes this parameterization attractive. 
+
+
+ct′=ctcosh⁡ξ−xsinh⁡ξx′=xcosh⁡ξ−ctsinh⁡ξ{\displaystyle {\begin{aligned}ct^{\prime }&=ct\cosh \xi -x\sinh \xi \\x^{\prime }&=x\cosh \xi -ct\sinh \xi \end{aligned}}}
+
+
+, 4-vectors are objects that are useful in special relativity because they transform linearly under the Lorentz transformations. They are the Minkowski space analog of regular vectors in Euclidean space. 
+
+There are two types of 4-vectors in special relativity: contravariant and covariant. Contravariant vectors are what we normally think of as vectors - they inversely change under a change in reference axes (a change in basis) to preserve their coordinate-independent properties, such as their magnitude. 4-position and 4-velocity are contravariant 4-vectors. In index notation, superscript indices indicate the presence of contravariance. 
+
+
+Covariant vectors change the same way under a change in basis, and are denoted by subscript indices. An example of a covariant vector would be the gradient. We can also define the covariant form of a contravariant vector by applying the appropriate metric tensor to lower the index. In steps 4 and 7, we normalize the 4-vectors by doing exactly this.
+ The metric is a tensor that is fundamental to special relativity. This metric will be used in this section to manipulate 4-vectors. In the below definition, μ{\displaystyle \mu } and ν{\displaystyle \nu } are indices running from 0 to 3. 
+
+
+ημν=(10000−10000−10000−1).{\displaystyle \eta _{\mu \nu }={\begin{pmatrix}1&0&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&-1\\\end{pmatrix}}.}
+
+This is the timelike Minkowski metric that yields a positive spacetime interval for timelike events (see step 4). Some authors define the spacelike metric, which negates the signs.
+
+In 3-dimensional Euclidean space, the corresponding metric looks identical to the 3x3 identity matrix. When performing transformations in Euclidean space, you are in fact multiplying by this metric in the process.
+ 4-position is a 4-vector that describes coordinates in both space and time, called events. 
+
+
+Xμ=(ct,x,y,z){\displaystyle X^{\mu }=(ct,x,y,z)}
+
+
+, When the 4-position is normalized, the resulting Lorentz scalar describes the spacetime interval, an invariant quantity - one that is unchanged under changes in reference frames. The spacetime interval is the Minkowski space analog of the magnitude of a vector in Euclidean space. 
+
+
+XμXμ=XμXνημν(cτ)2=(ct)2−x2−y2−z2{\displaystyle {\begin{aligned}X^{\mu }X_{\mu }&=X^{\mu }X^{\nu }\eta _{\mu \nu }\\(c\tau )^{2}&=(ct)^{2}-x^{2}-y^{2}-z^{2}\end{aligned}}}
+
+As a consequence of our definition of the Minkowski metric, when (cτ)2>0,{\displaystyle (c\tau )^{2}>0,} the spacetime interval is said to be timelike. When (cτ)2<0,{\displaystyle (c\tau )^{2}<0,} it is said to be spacelike. Finally, when (cτ)2=0,{\displaystyle (c\tau )^{2}=0,} the interval is said to be light-like or null.  
+
+
+, In Newtonian mechanics, velocity is easy to define as the time rate of change of position, since time is independent of reference frame. However, special relativity does not posit absolute time. The way we get around this is by taking the rate of change of 4-position with respect to proper time, because the spacetime interval as written in terms of proper time is invariant. Here, we will take the derivative with respect to cdτ{\displaystyle c{\mathrm {d} }\tau } to convert to dimensionless units, though 4-velocity is typically defined without the 1c{\displaystyle {\frac {1}{c}}} factor.
+
+
+Vμ=dXμcdτ{\displaystyle V^{\mu }={\frac {{\mathrm {d} }X^{\mu }}{c{\mathrm {d} }\tau }}}
+
+
+, It is not immediately obvious how this should be rewritten, given that time is relative. 
+
+Use the chain rule to rewrite the derivatives with respect to coordinate time t.{\displaystyle t.}
+
+
+dXμcdτ=(cdtcdτ,dxcdτ,dycdτ,dzcdτ)=(dtdτ,dxdtdtcdτ,dydtdtcdτ,dzdtdtcdτ){\displaystyle {\begin{aligned}{\frac {{\mathrm {d} }X^{\mu }}{c{\mathrm {d} }\tau }}&=\left(c{\frac {{\mathrm {d} }t}{c{\mathrm {d} }\tau }},{\frac {{\mathrm {d} }x}{c{\mathrm {d} }\tau }},{\frac {{\mathrm {d} }y}{c{\mathrm {d} }\tau }},{\frac {{\mathrm {d} }z}{c{\mathrm {d} }\tau }}\right)\\&=\left({\frac {{\mathrm {d} }t}{{\mathrm {d} }\tau }},{\frac {{\mathrm {d} }x}{{\mathrm {d} }t}}{\frac {{\mathrm {d} }t}{c{\mathrm {d} }\tau }},{\frac {{\mathrm {d} }y}{{\mathrm {d} }t}}{\frac {{\mathrm {d} }t}{c{\mathrm {d} }\tau }},{\frac {{\mathrm {d} }z}{{\mathrm {d} }t}}{\frac {{\mathrm {d} }t}{c{\mathrm {d} }\tau }}\right)\end{aligned}}}
+
+
+
+Recall that β=vc{\displaystyle \beta ={\frac {v}{c}}} and γ=dtdτ.{\displaystyle \gamma ={\frac {{\mathrm {d} }t}{{\mathrm {d} }\tau }}.}
+
+
+dXμcdτ=(γ,βxγ,βyγ,βzγ)=(γ,βγ){\displaystyle {\begin{aligned}{\frac {{\mathrm {d} }X^{\mu }}{c{\mathrm {d} }\tau }}&=(\gamma ,\beta _{x}\gamma ,\beta _{y}\gamma ,\beta _{z}\gamma )\\&=(\gamma ,\beta \gamma )\end{aligned}}}
+
+
+
+In the last step, we compressed the spatial components of the 4-vector. Notice again that our definition outputs a dimensionless 4-velocity. This convenience will be seen in the derivation.
+
+
+
+VμVμ=VμVνημν=γ2−(βγ)2=γ2(1−β2){\displaystyle {\begin{aligned}V^{\mu }V_{\mu }&=V^{\mu }V^{\nu }\eta _{\mu \nu }\\&=\gamma ^{2}-(\beta \gamma )^{2}\\&=\gamma ^{2}(1-\beta ^{2})\end{aligned}}}
+
+Recall that γ2=11−β2.{\displaystyle \gamma ^{2}={\frac {1}{1-\beta ^{2}}}.} This is excellent, as we recognize that 4-velocity is automatically normalized.
+
+
+VμVνημν=1{\displaystyle V^{\mu }V^{\nu }\eta _{\mu \nu }=1}
+
+
+
+If we defined 4-velocity in units of velocity, the Lorentz scalar would be c2.{\displaystyle c^{2}.} We are now ready to begin the derivation. 
+
+
+, For simplicity, we will work in 1+1 dimensions.
+
+
+Vμ=(γβγ)=(cosh⁡ξsinh⁡ξ){\displaystyle V^{\mu }=\left({\begin{matrix}\gamma \\\beta \gamma \end{matrix}}\right)=\left({\begin{matrix}\cosh \xi \\\sinh \xi \end{matrix}}\right)}
+
+It is easy to see here why 4-velocity is automatically normalized, since cosh2⁡ξ−sinh2⁡ξ=1.{\displaystyle \cosh ^{2}\xi -\sinh ^{2}\xi =1.}
+
+
+, Note the use of the chain rule.
+
+
+dVμdτ=(sinh⁡ξdξdτcosh⁡ξdξdτ)=(sinh⁡ξcosh⁡ξ)dξdτ{\displaystyle {\frac {{\mathrm {d} }V^{\mu }}{{\mathrm {d} }\tau }}=\left({\begin{matrix}\sinh \xi {\frac {{\mathrm {d} }\xi }{{\mathrm {d} }\tau }}\\\cosh \xi {\frac {{\mathrm {d} }\xi }{{\mathrm {d} }\tau }}\end{matrix}}\right)=\left({\begin{matrix}\sinh \xi \\\cosh \xi \end{matrix}}\right){\frac {{\mathrm {d} }\xi }{{\mathrm {d} }\tau }}}
+
+
+, The comoving frame is inertial for a moment of time with respect to the object. All we need to do is to apply a Lorentz transformation to boost to that frame. 
+
+
+(cosh⁡ξ−sinh⁡ξ−sinh⁡ξcosh⁡ξ)(sinh⁡ξcosh⁡ξ)dξdτ=(01)dξdτ{\displaystyle \left({\begin{matrix}\cosh \xi &-\sinh \xi \\-\sinh \xi &\cosh \xi \end{matrix}}\right)\left({\begin{matrix}\sinh \xi \\\cosh \xi \end{matrix}}\right){\frac {{\mathrm {d} }\xi }{{\mathrm {d} }\tau }}=\left({\begin{matrix}0\\1\end{matrix}}\right){\frac {{\mathrm {d} }\xi }{{\mathrm {d} }\tau }}}
+
+This confirms that proper acceleration is simply the rate of change of rapidity with respect to proper time. Boosting to comoving frames is how we deal with acceleration in special relativity. 
+
+You can check that this process works by applying the Lorentz transformation to the 4-velocity. The resulting quantity (10){\displaystyle \left({\begin{matrix}1\\0\end{matrix}}\right)} simply describes that object's 4-velocity within the comoving frame - it is moving in time, but not in space, as we would expect.
+
+
+If dξdτ{\displaystyle {\frac {{\mathrm {d} }\xi }{{\mathrm {d} }\tau }}} is constant, than it can be dimensionally written as dξdτ=1τ0.{\displaystyle {\frac {{\mathrm {d} }\xi }{{\mathrm {d} }\tau }}={\frac {1}{\tau _{0}}}.}
+
+Then, separating variables and integrating gives ξ=ττ0,{\displaystyle \xi ={\frac {\tau }{\tau _{0}}},} so the 4-velocity becomes (coshττ0sinhττ0).{\displaystyle \left({\begin{matrix}\cosh {\frac {\tau }{\tau _{0}}}\\\sinh {\frac {\tau }{\tau _{0}}}\end{matrix}}\right).}
+
+
+, Integrating generates constants which can be disregarded. Remember that since we defined 4-velocity with an extra c{\displaystyle c} factor, we must add that as we integrate.
+
+
+(ctx)=(cτ0sinhττ0cτ0coshττ0){\displaystyle \left({\begin{matrix}ct\\x\end{matrix}}\right)=\left({\begin{matrix}c\tau _{0}\sinh {\frac {\tau }{\tau _{0}}}\\c\tau _{0}\cosh {\frac {\tau }{\tau _{0}}}\end{matrix}}\right)}
+
+
+, The solution to constant acceleration is hyperbolic motion, as recognized by the hyperbolic functions, analogous to parabolic motion in Newtonian mechanics.
+
+
+ct=cτ0sinhττ0x=cτ0coshττ0{\displaystyle {\begin{aligned}ct&=c\tau _{0}\sinh {\frac {\tau }{\tau _{0}}}\\x&=c\tau _{0}\cosh {\frac {\tau }{\tau _{0}}}\end{aligned}}}
+
+If τ≥0,{\displaystyle \tau \geq 0,} then the equations describe a hyperbola in the first quadrant on the spacetime diagram. In the coordinate axes, the hyperbola starts at the point (0,cτ0),{\displaystyle (0,c\tau _{0}),} shown as a green dot. When the diagram is scaled to ct{\displaystyle ct} such that the time axis has units of distance, light rays are graphed as red dotted lines with a slope of 1. The light beam emitted at t=0{\displaystyle t=0} is shown as a red dot and generates a light cone.
+
+Because the hyperbola has those lines as asymptotes, the light ray and the object’s trajectory will never intersect each other. Furthermore, in the coordinate frame, any light that is emitted after the light beam emitted at t=0{\displaystyle t=0} will never reach the object either. 
+
+Therefore, the object cannot be affected by those light rays in any way, creating an apparent event horizon. The object, in a limited sense, is able to "outrun" light, as long as it keeps accelerating.
+
+

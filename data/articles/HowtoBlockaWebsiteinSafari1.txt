@@ -1,0 +1,6 @@
+ To block specific websites, you will need to edit your "hosts" file. This file determines what can and cannot be accessed by the computer's network adapter. Adding websites to this file will prevent them from loading in any browser, including Safari.;
+, Type sudo pico /etc/hosts and press Enter. You will be asked to enter in the Administrator password. The hosts file will open in the Terminal's text editing program.
+ Use your arrow keys to navigate. Create a new line by pressing Enter.
+ For every site you want to block, enter 127.0.0.1 example.com and press Enter. Each entry should be on its own line.
+ Once you have entered all of the sites that you want to block, save and exit by pressing Ctrl + O and then press Enter.
+ In order for the settings to take effect, you will need to flush your cash. You can do this by typing sudo dscacheutil -flushcache and pressing Enter. For more details on flushing the DNS, see this article.

@@ -1,0 +1,6 @@
+ In most Linux distributions, this will copy the image of your screen to the clipboard. In some distributions, this will launch a screen capture utility, allowing you to save the image directly to a file. If the image was copied to the clipboard, it will need to be pasted into an image editor and saved.
+ Again, this will work with most Linux distributions, but not all of them. The screenshot of the active window will be copied to the clipboard, or the screen capture utility will open and prompt you to save the image. If the image is copied to the clipboard, it will need to be pasted into another program.
+ With the ImageMagick utility, you can take a variety of different screenshots. Install ImageMagick by typing sudo apt-get install imagemagick (Many distributions come with it already installed). Use the following commands to take different types of screenshots. The screenshots will be saved to your working directory:import –window root -pause 5 fileName.png - Change the -pause timer to adjust how long it will wait before capturing the screenshot. This will take a screenshot of the entire desktop.
+
+import fileName.png - This will turn your cursor into a crosshair. Click a window to capture just that window, or click and drag to capture everything inside the box.
+

@@ -1,0 +1,14 @@
+ In most of the Debian based Linux distros, the terminal (or console) can be opened by pressing Ctrl+Alt+T. If this fails, Search for "Console", "Terminal" or "Konsole" in your search box, which is usually located in the launcher.;
+, Type date into the terminal to check your current system date. The date command will print your current system date.
+ To set a new date and time, you need to write it in the format DD MMM YYYY HH:MM:SS. In the format given:
+
+
+DD is the new date's day in two digits. For example, if the day is 8, DD must be 08.
+MMM is the first three letters of the month. For example, if the month is April, MMM must be APR.
+YYYY is the year. For example, if the year is 2015, YYYY must be 2015.
+HH:MM:SS will set the time. HH is the hour, MM is the minute and SS is the second.
+For example, the date 8 April 2015 (Time 1PM) could be reformatted into 08 APR 2015 13:00:00
+
+
+, Now, use the command date -s"DD MMM YYYY HH:MM:SS" to set your new date. Replace the text DD MMM YYYY HH:MM:SS with the date you have formatted in the previous step (including double quotes).
+

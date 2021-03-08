@@ -1,0 +1,10 @@
+ Type "Payment Date" in cell A4, "Starting Balance" in cell B4, "Interest paid" in cell C4, "Principal Paid" in cell D4 and "Ending Balance" in cell E4. Select cells A4 through E4 and click the Word wrap button on the formatting tool bar., Click in cell A5 and enter the date of the first payment. Position the mouse pointer in the lower right corner of cell A5. The Fill handle (+) should now be visible. Click and drag the fill handle from cell A5 to cell A17. The payment dates for the next 12 months should be visible in the payment date column.,
+
+Click in cell B5 and type "=B2" under the Starting Balance heading.
+Click in cell C5 and type "=B5*$C$2/12."
+Click in cell D5 and type "=$E$2-C5."
+Click in cell E5 and type "=B5-D5."
+Click inside cell B6 and type "=E5."
+Click in cell E6 and type "=B6-D6."
+
+, Finally, position the mouse pointer in the lower right corner of cell B6 and use the Fill handle (+) to copy the formula from B6 through B17. Repeat this process for cells C6, D6 and E6. The payoff sheet formulas have been entered and the finance spread sheet is ready to use.

@@ -1,0 +1,32 @@
+
+For those who have completed the article and workbook from Acquire a Ring of Sinewave Spheres in Excel, this article directly follows that one, so do a SAVE AS of that workbook and save it under a new appropriate name for this project, and look for NEW and MODIFIED notes in the steps below.
+Set Your Preferences: Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+It helps placing the cursor at cell A16 and doing Freeze Panes.
+Enter the upper Defined Name Variables Section (here's a picture):
+
+MODIFIED: A1: Aligned left, enter Sine Waves on Cylinders in a Ring and Format Font Apple Chancery or something fancy and nice?,
+Enter the column headings of rows 4 and 5:
+
+A5: Adj Cos (for Adjusted Cosine)
+B5: Adj Sin
+C5: Indicator
+D5: Randy (for RandBetween)
+E5: t: 0 to nπ
+F5: z1_
+G5: Adj_x1
+H5: Adj_y1
+I4 and J4: Charting
+MODIFIED: I5: x: Plus z
+MODIFIED: J5: y: Plus z
+Modified: Select cell range I4:J5 and Format Font bold italic.
+
+,
+Enter the column formulas
+
+Adj Cos: Edit Go To cell range A6:A17285 and enter into A6 w/o quotes the following formula, "=17*COS((ROW()-6)*0.25/12*PI()/180)" and Edit Fill Down.
+Create the Chart:
+
+Edit Go To cell range I6:J17286 and from the Ribbon or Chart Wizard select Charts All/Other Scatter Smoothed Line Scatter and Copy or Cut the chart that is atop the data worksheet and paste it to the top left of the Chart worksheet.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

@@ -1,0 +1,13 @@
+ Please open the terminal application that you would commonly use. If a GUI is not present on your machine, then move on to the next step.
+ Please type in "su -" followed by the password to the root account.
+
+
+Only the Root user can update, or install things from the ports collection.
+ You'll need to install SVN; So type in "cd /usr/ports/devel/subversion" and "make install clean"
+
+
+If you're using pkg-ing, typing "pkg install subversion" will work too.
+ You can type in "svn checkout https://svn0.us-east.FreeBSD.org/ports/head /usr/ports" to connect the folder with subversion, and then "svn update /usr/ports" to update the ports collection
+
+You can replace "us-east" above with either "us-west", or "eu" depending on your location.
+

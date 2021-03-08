@@ -1,0 +1,33 @@
+ If possible, you should also get a copy of the written specifications for the program, although not all software developers work with them. In some cases, the programmer will deviate from the specs, based on short development time or not being able to code a particular feature.;
+, While it is possible to create a help file by hand, using a rich-text-format (.rtf) file, most help file authors use a software application to write their help files, such as RoboHelp, Help and Manual, Doc-To-Help, MadCap Flare or HelpLogix. Most help authoring tools include a text editor or work with a word-processing program like Microsoft Word and provide a user interface that lets the help author see how the help file will look as he or she is writing it while writing computer code behind the scenes to make the help file work. Some help authoring tools also include graphics editors for creating screenshots to include in the help file.
+
+
+There are a number of help file formats: The most common is HTML Help, which is used by applications that run in Windows. (An older format, WinHelp, is no longer supported.) Apple and Unix each have their own formats, as well, as does Sun Microsystems, with its JavaHelp. Software applications designed to run under several operating systems may use a cross-platform help system that runs in the user's Web browser. Whichever help authoring tool you use should support the help format(s) you are going to create help files in.
+ Your help authoring tool will create a help project file for you, based on the filename you provide and other information. The main project file contains information about the other files, which include a contents file, an index file, one or more image files and other files.
+
+
+The contents file includes the text in the help file that explains how the software application you are documenting works. The text is usually broken down into topics that cover a specific screen, feature or procedure.
+The index file is a list of the help file's topics. It is used to create a table of contents that users can use to select a topic to view, as well as a searchable index within the help file.
+Image files are graphic files of program screens or portions of those screens displayed within the help file to enhance the users' ability to understand what the help file text is referring to.
+ Unless you're writing the help file to appear in the user's Web browser, the help file will appear in its own window. Your help authoring tool will let you adjust the window's horizontal and vertical dimensions to a size that will let the end user read the help file without its getting in the way of the application itself. The main help window is often in a tri-pane format, with the table of contents on the left and the selected topic on the right.
+
+
+Help files can also have, in addition to the main window, secondary windows that describe a particular feature in detail and automatically sizing pop-up windows that give short descriptions of features. Help files can also include embedded text that appears only when highlighted text or a button is clicked.
+ To do this, you'll need to review the specs or the program itself to create the topics to document the program's screens and features. As you create each topic, your help authoring tool will add it to the help file's table of contents and index.
+
+
+While you can build the table of contents as you go, it helps to have some plan for how to organize it. You can organize the table of contents around the program's screens, its features, ways to use it or some combination thereof.
+As you write the topics, consider other information in the help file that users will want to have quick access to. You can create jumps, or hyperlinks, in the help file text that connect to the topics that have that information.
+ Many program features are best explained with a combination of text and graphics. You can create screenshots with either the application that comes with your help authoring tool or with a separate application, such as Microsoft Paint, Paint Shop Pro or SnagIt.
+
+
+Text and screenshots should be laid out together in a topic such that users can see the screenshot and its supporting text without undue scrolling. In many cases, you'll want to show a portion of a program screen instead of the entire screen, or show the screenshot in a smaller size than the original. Your screenshot application should be capable of resizing the screenshot without blurring or loss of detail.
+If you anticipate changes to the user interface between the test and final versions of the program, you may want to hold off on creating screenshots until you have the final version of the program to work with.
+ Some programs include "Help" buttons for a user to click and display the topic in the help file that specifically describes how that screen works. Displaying a topic this way is called context-sensitive help and requires creating a map file for the programmer to link the "Help" button to the specific topic in your help file. Your help authoring tool can create one for you, or the programmer can code it and give it to you to include in the help file.
+ Compiling creates the actual help file that will be included with the program. For most help formats, this will incorporate all the component files that were created when you created the help file, although some uncompiled help formats also require the individual help topic files to be included with the program.
+ Once you compile the help file, you need to test it to make sure that all the hyperlinks connect to the topics they're supposed to and all the graphics display correctly. The help file also needs to be tested to ensure that the content is accurate and appropriate for the users and in a consistent format. You'll want to review the help file yourself and have the people testing the application review it as well.
+
+
+On larger help file projects, compiling and testing are ongoing processes. You'll want to compile the help file and check your work several times before creating the final version.
+ Depending on the project nature and help file format, you may have to provide the developer with several files, including a map file if there are context-sensitive topics.
+

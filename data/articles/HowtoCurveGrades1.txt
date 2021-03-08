@@ -1,0 +1,43 @@
+ This is one of the most common (if not the most common) methods teachers and professors use for curving grades. This curving method requires the teacher to find the highest score in the class and set this as the "new" 100% for the assignment. This means that you subtract the highest score in the class from the hypothetical "perfect" score, then add the difference to every assignment, including the highest-scoring one. If done correctly, the highest-scoring assignment will now have a perfect score and every other assignment will have a higher score than it previously did.
+
+
+For example, let's say the highest grade on a test was a 95%. In this case, because 100-95 = 5, we would add 5 percentage points to all of the student grades. This makes the 95% score an adjusted 100%, and every other score 5 percentage points higher than it was.
+This method also works using absolute scores, rather than percentages. If the highest grade was a 28/30, for instance, you would add 2 points to the score of every assignment.;
+, This technique is among the simplest of the methods used to curve grades. It is especially useful for when there was one especially difficult item on an assignment that a large majority of the class missed. To curve grades according to a flat-scale curve, simply add the same number of points to each student's grade. This can be the number of points that an item most of the class missed was worth, or it can be some other (arbitrary) number of points that you think is fair.
+
+
+For instance, let's say that the entire class missed one problem which was worth 10 points. In this case, you might choose to add 10 points to every student's score. If you think the class doesn't deserve full credit for the missed problem, you might also choose to only give out 5 points.
+This method is closely related to previous method, but it isn't exactly the same. Because this method doesn't specifically set the highest score in the class as a 100% maximum score, it allows for the possibility that none of the assignments receive a perfect score. It even allows for scores over 100%!
+
+, This curving method mitigates the effect that a few very low scores can have on a student's grade. Therefore, it's especially useful in situations where a student (or an entire class) bombed a certain assignment but have since shown serious improvement and, in your opinion, deserve not to fail. In this case, instead of the normal percentage designations for letter grades (90% for A, 80% for B, etc. down to 50-0% being an F), you define a lower limit for failing grades - a minimum score that is higher than zero. This makes it so that particularly low-scoring assignments have a less drastic effect when averaged with a student's good scores. In other words, a few bad scores are less likely to drag a student's overall grade down.
+
+
+For example, let's say that a student completely bombs his first test, scoring a 0. However, since then, he's studied hard, receiving 70% and 80% on his next two tests. Un-curved, he has a 50% grade right now - a failing score. If we set a lower limit on failing scores of 40%, his new average is 63.3% - a D. It's not a great score, but it's probably more fair than failing a student who's shown real promise.
+You may choose to set separate lower limits for assignments that are turned in vs. assignments that are not. For example, you may decide that, for failing assignments, the lowest possible grade is a 40%, unless it's not turned in at all, in which case 30% is the lowest possible score.
+ Often, the range of grades on a given assignment are distributed in a way that resembles a bell curve - a few students get high scores, most of the students score mid-range scores, and a few students get low scores. What if, for instance, on a particularly difficult assignment, the few high scores are in the 80% range, the mid-range scores are in the 60% range, and the low scores are in the 40% range? Do the very best students in your class deserve low B's and the average students deserve low D's? Probably not. By using a bell curve grading method, you set the class's mean grade as a middle C, which means that your best students should get A's and your worst students should get F's, regardless of their absolute scores.
+
+
+Begin by determining the class's mean (average) score. Add up all the scores in the class, then divide by the number of students to find the mean. Let's say that, after doing this, we find an average score of 66%.
+Set this as a mid-range grade. The precise grade you use is at your discretion - you may want to set the mean as a C, C+, or even B-, for instance. Let's say that we want to set our 66% as a nice, round C.
+Next, decide how many points separate the letter grades in your new bell curve. Generally, bigger point intervals mean that your bell curve is more forgiving to low-scoring students. Let's say that in our bell curve, we want to separate our grades by 12 points. This means that 66 + 12 = 78 becomes our new B, while 66 - 12 = 54 becomes our new D, etc.
+Assign grades according to the new bell curve system.
+ When you have a very specific idea of the grade distribution you want, but the actual grades in your class don't fit, you may want to use a linear scale curve. This curve allows you to adjust the distribution of grades so to get the mean score exactly where you want it. However, it's also somewhat math intensive and it technically uses a different grading curve for each student, which some may perceive to be unfair.
+
+
+First, choose 2 raw scores (actual student scores) and determine what you want them to be after the curve. For instance, let's say the actual mean score on an assignment is 70% and you want it to be 75%, while the actual lowest score is 40% and you want it to be 50%.
+
+Next, create 2 x/y points: (x1, y1) and (x2, y2). Each x value will be one of the raw scores you chose, while each y value will be the corresponding score that you want the raw score to be. In our case, our points are (70, 75) and (40, 50).
+
+Plug your values into the following equation: f(x) = y1 + ((y2-y1)/(x2-x1)) (x-x1). Note the lone "x" without any subscripts - for this, plug in the score of each individual assignment. The final value you get for f(x) is the assignment's new grade. To clarify - you have to do the equation once for each student's score.
+In our case, let's say we're curving an assignment that got an 80%. We would solve the equation as follows:
+
+f(x) = 75 + (((50 - 75)/(40-70))(80-70))
+f(x) = 75 + (((-25)/(-30))(10))
+f(x) = 75 + .83 (10)
+f(x) = 83.3 . The 80% score on this assignment is now 83.3%.
+
+
+
+
+
+

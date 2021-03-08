@@ -1,0 +1,28 @@
+
+Install IIS 5.1.
+Once it has completely installed you will have to open it (this may be tricky because it doesn't include any shortcuts on the desktop or in the start menu).
+If it opens then congratulations, you have successfully installed it.
+In the left panel select "Websites".
+
+,
+Here you will see if it is running or not, the local IP Address it is configured on, and the current port it is using (Port 80 is default, however you may need to change this because most ISPs block that port).
+
+,
+Now right click on "Default Web site" and click properties, then go to the "Web site" tab.
+Now decide what port you want to use (anything above 1024 should be fine).
+After you have decided on the port you need to open the port in your router.
+Next go to the "Home Directory" tab, and select a local path.
+Now go to the "Documents" tab.
+Next close the properties window and right click on "Default Web Site" again.
+Now expand "Default Web Site" and you should see the name of your virtual directory.
+Once again, right click on "Default Web Site", this time rollover "All Tasks" and click on "Permissions Wizard"
+
+
+Click next.
+Now test to see if your site works.To access your site from another location that is not on your network then type: http:// externalIPaddress:port/virtualdirectory/ (once again if you did not change the port from port 80 then type: http:// externalIPaddress/virtualdirectory/)
+
+
+,To find out your external IP Address then go to http://whatismyip.com
+
+,
+If it works then good job.

@@ -1,0 +1,99 @@
+ In order to create a table, you must have a database to house it in. You can open your database by typing USE database at the MySQL command prompt.
+
+
+If you don't remember your database's name, type SHOW DATABASES; to list the databases on the MySQL server.
+If you don't have a database yet, you can create one by typing CREATE DATABASE database;. The database name cannot contain spaces.;
+, Every entry in the table is stored as a certain type of data. This allows MySQL to interact with them in different ways. The data types you will use will depend on the needs of your table. There are many more types than these, but you can use these to make a basic, useful table:
+
+
+
+INT - This data type is for whole numbers, and is often used for ID fields.
+
+DECIMAL - This data type stores decimal values, and is defined by the total number of digits and after the number after the decimal. For example: DECIMAL(6,2) would store numbers as "0000.00".
+
+CHAR - This is the basic data type for text and strings. You would normally define a limit for the number of characters stored, such as CHAR(30). You can also use VARCHAR to vary the size based on input. Phone numbers should also be stored using this data type, as they often contain symbols and do not interact with numbers (they are not added, subtracted, etc.).
+
+DATE - This data type stores dates in the format YYYY-MM-DD. Use this if you need to store someone's age as opposed to their actual age, otherwise you will need to update the entry every year.
+ To create your table in the command line, you will be creating all of your fields in one command. You create tables using the CREATE TABLE command, followed by your table's information. To create a basic employee record, you would enter the following command:
+
+
+
+
+CREATE TABLE employees (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, lastname VARCHAR(20), firstname VARCHAR(20), phone VARCHAR(20),  dateofbirth DATE)
+
+
+
+
+
+
+INT NOT NULL PRIMARY KEY AUTO_INCREMENT creates an ID number for each employee that is added to the record. The number increases each time automatically. This allows you to easily reference employees with other functions.
+Although VARCHAR allows you to trim the size based on input, you can set a limit for it so that the user can't input strings that are too large. In the above example, both first name and last name are limited to 20 characters each.
+Note that the phone number entry is stored as VARCHAR so that symbols are handled correctly.
+ Once you create your table, you will receive a message that it was successfully made. You can now use the DESCRIBE command to ensure that you included all the fields you wanted to and that they have the right data types. Type DESCRIBE database; and refer to the chart that appears to check your table's structure.
+ If you are using PHP to administer your MySQL database through a webserver, you can create a table using a simple PHP file. This assumes that the database already exists on your MySQL server. Enter the following code to create the same table as Step 3, replacing the connection information with your own:
+
+
+
+
+<?php
+$connection=mysqli_connect({{samp|server}},{{samp|user}},{{samp|password}}, {{samp|database}});
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+$sql = "CREATE TABLE employees 
+(
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+lastname VARCHAR(20),
+firstname VARCHAR(20),
+phone VARCHAR(20),
+dateofbirth DATE
+)";
+ 
+if (mysqli_query($connection,$sql))
+{
+echo "Table employees created successfully";
+}
+else
+{
+echo "Error creating table: " . mysqli_error($connection);
+}
+?>
+
+
+
+
+
+, You can enter data into your table directly from the command line. You can use one command to enter all of the related fields for an entry using INSERT INTO:
+
+
+
+
+INSERT INTO employees (id, lastname, firstname, phone, dateofbirth) VALUES (NULL, 'Smith', 'John', '(555)555-5555', '1980-01-31');
+
+
+
+
+
+
+By entering NULL for the ID, the value will increase by 1 from the last entry, resulting in the next ID number.
+Make sure that each value you enter has single quotes (') around it.
+ If you have all of the data in front of you, you can insert multiple entries with one INSERT INTO command. Simply separate the value sets with a comma:
+
+
+
+
+INSERT INTO employees (id, lastname, firstname, phone, dateofbirth) VALUES (NULL, 'Smith', 'John', '(555)555-5555', '1980-01-31'), (NULL, 'Doe', 'Jane', '(555)555-5551', '1981-02-28'), (NULL, 'Baker', 'Pat', '(555)555-5554', '1970-01-31');
+
+
+
+
+
+, Once you've inserted a few entries, you can display your table to see how everything looks. This will let you see if you've missed any information or if something is in the wrong spot. To display the table created above table, type SELECT * FROM employees.
+
+
+You can perform more advanced displays by adding filters to the search. For example, to return the table sorted by date of birth, you would type SELECT lastname, firstname, dateofbirth FROM employees ORDER BY dateofbirth
+
+Reverse the order of the results by adding DESC to the end of the command.
+ There are other ways to enter data into your new table. One of the most common is through using a form on a web page. To see how to create a basic form to fill out your table, see this guide.
+

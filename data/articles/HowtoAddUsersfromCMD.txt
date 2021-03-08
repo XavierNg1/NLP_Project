@@ -1,0 +1,13 @@
+ Do not use quotes when typing. If you don't have access to "My Computer" or this does not work, move on to step 2.
+ This should give you quick access to the control panel. If this does not work, or these options do not exist in the start menu, move on to step 3.
+ Type in "Control Panel", without the quotes. If for some reason this fails, or you do not have access to run, move on to step 4.
+ Start menu>programs>accessories>Right click Command Prompt>Run as Administrator. Type in "control panel" without the quotes. Should this fail, leave the command window open and move on to step 5.
+ Type "net" for information, and learn the syntax. Some basics for the net command...
+
+
+To change a password, type "net user (username) *". Don't type the quotes, and do not forget the star.
+To add a user, type "net user (username) /ADD". Don't type the quotes.
+To delete a user, type "net user (username) /DELETE". Don't type the quotes.
+Type in "net accounts/?" for help on the net accounts command. You can use this to force log-offs and set expiration times on user accounts.
+If you need to do much more, try typing in all of the suggested net commands with a "/?" at the end. Try looking on a search engine for help on how to use the command.
+,,

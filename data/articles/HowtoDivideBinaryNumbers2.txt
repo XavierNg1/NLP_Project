@@ -1,0 +1,31 @@
+ One way to solve division problems – in any base – is to keep subtracting the divisor from the dividend, then the remainder, while tallying up the number of times you can do so before getting a negative number. Here's an example in base ten, solving the problem 26 ÷ 7:
+
+
+26 - 7 = 19 (subtracted 1 time)
+19 - 7 = 12 (2)
+12 - 7 = 5 (3)
+5 - 7 = -2. Negative number, so back up. The answer is 3 with a remainder of 5. Note that this method does not calculate any non-integer portion of the answer.
+ While you can easily use the method above in binary, we can subtract by a more efficient method as well, which saves time when programming computers to divide binary numbers. This is the subtraction by complements method in binary. Here are the basics, calculating 111 - 011 (make sure both numbers are the same length):
+
+
+Find the ones' complement of the second term, subtracting each digit from 1. This is easily done in binary by switching each 1 to 0 and each 0 to 1.In our example, 011 becomes 100.
+Add one to the result: 100 + 1 = 101. This is called the twos complement, and lets us perform subtraction as an addition problem.Essentially, the result is as though we added a negative number instead of subtracting a positive one, once we finish the process.
+Add the result to the first term. Write and solve the addition problem: 111 + 101 = 1100.
+Discard the carry digit. Discard the first digit of your answer to get the final result. 1100 → 100.
+ Now you know the subtraction method of solving division problems, and the twos' complement method of solving subtraction problems. You can combine this into one method for solving division problems, using the steps below.If you like, you can try to figure it yourself before you continue.
+ Let's go through the problem 100011 ÷ 000101. The first step is solving 100011 - 000101, using the twos' complement method to turn it into an addition problem:
+
+
+Twos' complement of 000101 = 111010 + 1 = 111011
+100011 + 111011 = 1011110
+Discard carry bit → 011110
+
+, In a computer program, this is the point where you increment the quotient by one. On paper, make a note somewhere in a corner where it won't get confused with your other work. We've successfully subtracted one time, so the quotient so far is 1.
+ The result of our last calculation is the remainder left over after the divisor "went in" once. Continue adding the twos' complement of the divisor each time and discarding the carry bit. Add one to the quotient each time, repeating until you get a remainder that's equal to or smaller than your divisor:011110 + 111011 = 1011001 → 011001 (quotient 1+1=10)
+011001 + 111011 = 1010100 → 010100 (quotient 10+1=11)
+010100 + 111011 = 1001111 → 001111 (11+1=100)
+001111 + 111011 = 1001010 → 001010 (100+1=101)
+001010 + 111011 = 10000101 → 0000101 (101+1=110)
+0000101 + 111011 = 1000000 → 000000 (110+1=111)
+0 is smaller than 101, so we stop here. The quotient 111 is the answer to the division problem. The remainder is the final result of our subtraction problem, in this case 0 (no remainder).
+

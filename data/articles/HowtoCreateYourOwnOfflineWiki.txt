@@ -1,0 +1,46 @@
+
+
+
+You need a virtual server to run the MediaWiki package. Go to this link and download the recommended version of WAMP Stack.
+Download the Mediawiki Module for WAMP Stack. Scroll down for 'MediaWiki' and download latest available version.;
+,
+
+
+Double click on the downloaded WAMP installer to open it. Click Next.
+This will show a bunch of components to be installed. To avoid ending up missing component just leave them as they are. Click Next.
+It will ask where to install WAMP. To keep data safe, choose other partition rather than C:\ drive. Because if your PC crashes or do not starts properly, data may be irrecoverable and lost. So use any other drive. For example: D:\My wiki\
+Click Next. A dialogue box will ask for database (MySQL) password. This is for securing database from unauthorized access. Choose a good password.
+Upon clicking next installation will begin. After completion click Finish.
+ This module will only work with WAMP Stack from Bitnami (the software installed before).
+
+
+Double click to run the Mediawiki module.
+Choose Language and click Next.
+It will ask for WAMP Stack folder location. Browse to where WAMP stack software was installed. Click Next.
+Fill in the details:
+
+Login name - This will be used to log into the wiki (default password will be database password)
+Real name - not necessary
+Email address - not necessary when using offline and personal purpose
+Password for MySQL - which is database password, given earlier when installing WAMP software.
+
+
+Upon clicking Next, give your wiki a great name.
+Click Next and press the Finish button. That's it! Your wiki is installed, and the basic settings will be automatically configured.
+
+
+
+Go to the WAMP installed folder location.
+Find a Folder name bitnamiwamp. Open it.
+Now look for manager-windows file.
+Right click on it, select send to option then select Desktop (create shortcut)
+Come back to desktop and double click on the shortcut. This will open up Bitnami WAMP Stack Control center.
+
+
+
+Click on "Go to Application" button; the browser will open with Bitnami welcome screen.
+On the welcome screen, Click the "Applications" button
+The next screen will show what application is installed. Look for "Bitnami MediaWiki Module"
+Click on "Access" link under "Bitnami MediaWiki Module."
+The wiki main page will come up. Make a bookmark of it. Put it in browser bookmark toolbar for easy access.
+

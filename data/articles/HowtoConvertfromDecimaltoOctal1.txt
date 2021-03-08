@@ -1,0 +1,71 @@
+ Of the two methods on this page, this method is easier to understand. If you're already confident working in different number systems, try the faster remainder method, below.;
+, For this example, we'll convert the decimal number 98 into octal.
+ Remember that "decimal" is called base 10 because each digit represents a power of 10. We call the first three digits 1s place, the 10s place, the 100s place — but we could also write this as the 100 place, the 101 place, and the 102 place. Octal, or the base 8 number system, uses powers of 8 instead of powers of 10. Write a few of these powers of 8 in a horizontal line, from largest to smallest. Note that these numbers are all written in decimal (base 10):
+
+
+82  81  80
+
+Rewrite these as single numbers:
+64  8  1
+You don't need any powers of 8 larger than your original number (in this case, 98). Since 83 = 512, and 512 is larger than 98, we can leave it off the chart.
+ Take a look at your decimal number: 98. The nine in the 10s place tells you that there are nine 10s in this number. 10 goes into this number 9 times. Similarly, with octal, we want to know how many "64s" go into the final number. Divide 98 by 64 to find out. The easiest way to do this is to make a chart, reading top to bottom:98÷
+
+
+64   8   1=
+
+
+1 ← This is the first digit of your octal number.
+ Calculate the remainder of the division problem, or the amount left over that doesn't go in evenly. Write your answer at the top of the second column. This is what's left of your number after the first digit is calculated. In our example, 98 ÷ 64 = 1. Since 1 x 64 = 64, the remainder is 98 - 64 = 34. Add this to your chart:
+
+
+98   34
+÷
+64   8   1
+=
+1
+
+, To find the next digit, we move one step down to the next power of 8. Divide the remainder by this number and fill out your chart's second column:
+
+
+98   34
+÷     ÷
+
+64   8   1
+=    =
+
+1    4
+
+
+, Just as before, find the remainder of your answer and write it at the top of the next column. Keep dividing and finding the remainder until you've done this for every column, including 80 (the ones place). Your final row is the final decimal number converted to octal. Here's our example with the full chart filled out (note that 2 is the remainder of 34÷8):
+
+
+98   34   2
+÷     ÷    ÷
+
+64   8   1
+=    =    =
+
+1    4    2
+
+The final answer: 98 base 10 = 142 base 8. You can write this as 9810 = 1428
+
+
+, To check your work, multiply each digit in octal by the power of 8 it represents. You should end up with your original number. Let's check our answer, 142:
+
+
+2 x 80 = 2 x 1 = 2
+4 x 81 = 4 x 8 = 32
+1 x 82 = 1 x 64 = 64
+2 + 32 + 64 = 98, the number we started with.
+ Practice this method by converting the decimal number 327 into octal. When you think you have the answer, highlight the invisible text below to see the whole problem laid out.
+
+
+Highlight this area:
+327  7   7
+÷     ÷    ÷
+64   8   1
+=    =    =
+5    0    7
+The answer is 507.
+(Hint: it's fine to have 0 as the answer to a division problem.)
+

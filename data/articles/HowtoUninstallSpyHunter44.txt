@@ -1,0 +1,15 @@
+ If you are seeing a "SpyHunter" option before Windows loads when your computer is booting up, you'll need to repair your boot manager.Instructions on creating a recovery disc if you can't find your installation disc.
+ You can do this by pressing the correct key (usually F2, F10, F11, or Del).
+ Set the computer to boot from the CD/DVD drive.
+ You'll be prompted to press any key to start it.
+ This is located on the main screen before Windows installs.
+ If you have more than one installed, make sure to select Windows.
+ This will launch the Command Prompt.
+ Type the following commands and press ↵ Enter after each one. Wait for the process to complete.
+
+
+bootrec /fixmbr
+bootrec /fixboot
+
+, Verify that it is booting properly. Windows should now boot normally.
+

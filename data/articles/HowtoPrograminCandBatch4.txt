@@ -1,0 +1,66 @@
+ A function is a group of statements, or instructions, that perform a specific task. Each function is assigned a type, a name, parameter(s), and statements. You will use the C++ function “system” to run a batch file. To explore functions, try coding this program:
+
+
+
+
+
+// function example
+#include <iostream>
+Using namespace std;
+int addition (int a, int b)
+{
+        int r;
+        r=a+b
+        return r;
+}
+ 
+int main ( )
+{
+        int z;
+        z = addition (5,3);
+        cout << “The result is “ << z;
+}
+
+
+
+
+
+This program contains two functions: ‘’addition’’ and ‘’main’’. The compiler will always call ‘’’main’’ first—in this program it will call the variable “z” of type “int’’. The call will pass along two values, 5 and 3, to the “‘addition”’ function. These values correspond to the parameters declared by the “addition” function—“int a, int b”.
+Inside the “addition” function, there is a third variable: “(int r)”, that is directly related to the expression r=a+b. The two values from the “main” function, 5 and 3, will be added together to equal “r.” In this instance, r equals 8.
+The final statement, “return r;” ends the “addition” function and returns control to the “main” function. Since “return” has a variable, “r,” the call to return to “main” is evaluated as a specific value and sends this variable to the “main” function.
+The “main” function resumes where it left off when it was called to “addition”: “cout << “The result is “ << z;.” This line of code prints “The result is 8” on the screen., Statements are individual instructions that are always executed in sequential order. C++ programs, however, are not limited to linear sequences. You may incorporate flow control statements to alter the path of your program. The “while loop” statement is a common flow control statement—it tells the program to execute a statement a specific number of times or while the condition is fulfilled.
+
+
+
+
+
+// custom countdown using while
+#include <iostream>
+using namespace std;
+ 
+int main ()
+{
+        int n = 10;
+ 
+        while (n>0) 
+{
+                cout << n << ", ";
+                 --n;
+}
+ 
+        cout << "liftoff!\n";
+}
+
+
+
+
+
+“int n= 10”: This line of code sets the variable “n” to 10. 10 is the first number in the countdown.
+“while (n>0)”: The loop will continue as long as the value of “n” is greater than 0.
+If the condition is true, the program executes the the following code: “cout << n << ", "; --n;”. The number “10” will appear on the screen. Each time the loop is executed, the number “n minus 1” will appear on the screen.
+“cout << "liftoff!\n";”: When the statement is no longer true—when “n” equals “0”—the phrase “liftoff!” will appear on the screen., When you run a batch file with your C++ program, you will use the “system ( )” function. The “system” function tells the command line processor to execute a command. Enter the batch file’s name within the parentheses of the “system ( )” function.source(HelloWorld.cmd)
+
+
+
+
+

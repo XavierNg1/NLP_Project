@@ -1,0 +1,32 @@
+ Date implements Comparable<Date> and so two dates can be compared directly with the compareTo method. If the dates are for the same point in time, the method returns zero. If the date being compared is before the date argument, a value less than zero is returned. If the date being compared is after the date argument, a value greater than zero is returned. If the dates are equal, a value of 0 is returned.
+ You will need to create each date object before you can start comparing them. One way to do this is to use the SimpleDateFormat class. It allows for easy entry of date values into date objects.
+
+
+
+
+
+
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd"); //For declaring values in new date objects. use same date format when creating dates
+Date date1 = sdf.parse("1995-02-23"); //date1 is February 23, 1995
+Date date2 = sdf.parse("2001-10-31"); //date2 is October 31, 2001
+Date date3 = sdf.parse("1995-02-23"); //date3 is February 23, 1995
+
+
+
+
+
+, The code below will show you each case -- less than, equal, and greater than.
+
+
+
+
+
+
+date1.compareTo(date2); //date1 < date2, returns less than 0
+date2.compareTo(date1); //date2 > date1, returns greater than 0
+date1.compareTo(date3); //date1 = date3, so will print 0 to console
+
+
+
+
+

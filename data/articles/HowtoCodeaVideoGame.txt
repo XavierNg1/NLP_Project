@@ -1,0 +1,50 @@
+ Most video games are made using a specialized engine that allows you to “script” events, characters, and so forth without having to code each one from scratch. Creating a full game engine from scratch can take years, so most independent developers use an existing engine. You'll only need to follow one of the following steps in this section, depending on how comfortable you are with programming and how much time you want to spend on the little details.;
+, These tools require very little programming knowledge, so they may not be for you if you're interested in the coding aspects of game-making. On the other hand, a simple dive-right-in approach could teach you a lot about your game, and let you tweak the higher-level concept before you move on to a larger prototype. Here are several free options:
+
+
+For mobile games, try MIT App Inventor or Game Salad
+For browser games, try Scratch, or the more serious version Snap! intended as an introductory programming tool
+For adventure games, use Visionaire.
+If you want a drag-and-drop program with the option to delve into coding as well, try the free version of GameMaker
+
+, This is a great option for getting your hands dirty, getting game-coding experience without having to start completely from scratch. Many professional independent game developers start at this level. While there are many engines and Integrated Development Environments (IDEs) available, the following are free and relatively easy to learn:
+
+
+For mobile games: ProjectAnarchy
+For 3D games on any platform: Unity
+For more advanced coders: LWJGL (based in Java), SFML (based in C++)
+
+, If you already have some programming knowledge and are dead set on building your own engine, here are a few places to get started. If this is your first attempt, you'll likely need tutorials
+
+
+ActionScript will let you make a Flash-based engine. This is a good place to start for intermediate programmers.
+Java is relatively simple to learn. You'll need a Java Development Kit (JDK), plus Eclipse or another Integrated Development Environment (IDE) for Java. If you're not sure how to get started.
+If you already know a programming language (especially a C language or Python), look for an IDE for that language. It should include a compiler and the ability to easily work on graphics, audio, and other code in the same project.
+ If you are up to the challenge and chose one of the advanced tools in the previous step, you will most likely need to find a tutorial, a help forum, or an experienced game developer for advice specific to your language. If you're not sure where to start or what to ask about, here are a few basic components you'll need to build early on:
+
+
+A client-side server, which interprets user input and processes the result. Make the input system responding correctly before you put serious work into graphics and gameplay. (Try researching "action listeners" if you're stuck.)
+AI for other characters, so they react to the user's actions. For a simpler project, just have the characters move and act in a set path.
+Ability to render graphics (put together and send instructions to the graphics card).
+A game loop that runs constantly while the game is executed. This should take user input, process it, process other game logic (such as enemy movement, background animation, and triggered events), calculate what needs to be drawn (displayed on screen), and send the information to the graphics card. Run this at least 30 times per second (30 fps) if your system can handle it.
+ Spend a good amount of time nailing down what your game is before you touch a line of code. What genre is it? Is it 2D or 3D? Does the player progress in the game by solving puzzles, following/creating the story, fighting enemies, and/or exploring? The more questions you answer and the more detail you give your ideas, the more time you'll save in the long run. If you decide to make a major change after you've already started coding, the change can take many times longer to implement.
+
+
+Pare this down to something way, way simpler than your original idea. A small prototype that explores how your game works and gives a couple levels to play is an excellent start. Once it’s finished, you can use it as a foundation to expand into a full game, or incorporate what you learned into a new project.
+ At this point, there are weeks or months of hard but rewarding work ahead of you. While a team of people will generally divide up the tasks below and work on them simultaneously, an individual will have to decide which task is easiest to start with or most important at each stage. Read through all the steps below and start on the task that appeals to you most.
+ Unless you're making at text-base game, you'll need 2D images, and possibly 3D models and textures (patterns you apply to the models). Music and sound effects you can delay until a bit later in the process, but they are highly recommended if you plan to publish your game. Simple icons, user interface, and fonts are lowest-priority when your game is young, but a little effort here can greatly improve the player experience.
+
+
+There are many places to find free or cheap art assets online. Try this list at makeschool.com.
+Hiring an artist will make a big difference. If you can't afford to, gather the assets yourself and show the result to artistic friends or post it to game development or art forums online for advice.
+ Much of this will be written as planning documents outside the game code itself, although a story-based game may need to include branching dialogue trees. Even a game without a traditional story should have a sense of progression that you need to plan around. A platformer could involve a series of movement and weapon upgrades, while a puzzle game might add more features as it ramps up the complexity and difficulty of the puzzles.
+ Start with a small, simple level or area. Focus on constructing the path the player takes through the level, then add side paths (optional), more detailed graphics, and tweak the difficulty (such as by adjusting platform heights or moving enemies around).
+
+
+Use light sources and item drops to guide the player to the next spot in the area. Use shadows to discourage players from entering dead-ends or awkward paths, and use enemies for both purposes (depending on how the game teaches you to bypass enemies). A well-designed area makes the player feel like he is making his own decisions or exploring, but guides him along the most straightforward route using subtle clues.
+ This is not necessary if you are using simple game-making software. If you are willing to delve into the deeper end of graphics systems, you can start by creating shaders and particle effects, or going through the graphics code and removing tasks that are unnecessary for your game. Because graphics are almost always the choke point that determines processing speed, even a 2D game usually goes through significant optimization tweaks and rewrites in order to minimize the burden on the graphics card and processor.
+ Once you have a simple level or a prototype of gameplay, have your friends play the game and offer feedback. Find out what people think is fun, and what frustrates them. Later on in the process, when the game is more polished, feedback from strangers or acquaintances can be an excellent source of honest advice, as they are less invested in your success or encouraging you.
+
+
+Players are not trained to offer feedback from a developer's perspective. If players dislike an aspect of the game, there's usually something about it that could be improved... but the specific suggestions the players make are often not useful. Ask them very specific questions to discover the exact features that bother them.
+

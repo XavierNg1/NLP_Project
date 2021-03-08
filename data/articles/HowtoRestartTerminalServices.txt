@@ -1,0 +1,17 @@
+
+
+
+Go to the computer you want to work on, then click on the "Start" button. If you are using Windows 7, the "Start" button will most likely appear in the form of the Windows logo.
+Enter "Remote Desktop Connection" into the search field located within the "Start" menu, then click directly on the link of the same name when it appears in the search results.
+Enter the Internet Protocol (IP) address or name of the computer that you want restarted into the "Computer" box.
+Click on the "Connect" button to connect to that specific computer from your remote location. You will now have the ability to enter commands that will allow that specific computer to reboot, or restart.;
+, The procedure for accessing the command prompt will vary depending on the version of Windows being used.
+
+
+If you are using Windows 7, click on the "Start" menu, then type "command prompt" into the search box. The command prompt box will display as the first option in the list of search results.
+If you are using any other version of Windows, open your "Start" menu, click on "Run," then type "cmd." The command prompt box will then open on your screen.
+ After the command has been entered, the computer will have been completely rebooted from the remote location.
+
+
+Type "shutdown -t 0 -r -f" into the command prompt box, then press the "Enter" key on your keyboard. This specific command will instruct the computer to terminate all running applications and restart the computer immediately in 0 seconds. This is not recommended, however, due to the complexities involved in restarting a terminal server properly. shutdown.exe merely calls an API that does a restart without any consideration as to the operating system and is not Terminal Services/Remote Desktop Services aware.
+

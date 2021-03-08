@@ -1,0 +1,42 @@
+ You shouldn't limit yourself to any particular language, but there are a few guidelines.
+
+
+C is the language that Unix was built with. It (along with assembly language) teaches something that's very important in hacking: how memory works.
+Python or Ruby are high-level, powerful scripting languages that can be used to automate various tasks.
+Perl is a reasonable choice in this field as well, while PHP is worth learning because the majority of web applications use PHP.
+Bash scripting is a must. That is how to easily manipulate Unix/Linux systems—writing scripts, which will do most of the job for you.
+Assembly language is a must-know. It is the basic language that your processor understands, and there are multiple variations of it. You can't truly exploit a program if you don't know assembly.;
+, The process of gathering information about your target is known as enumeration. The more you know in advance, the fewer surprises you'll have.
+ Cygwin will help emulate a *nix for Windows users. Nmap in particular uses WinPCap to run on Windows and does not require Cygwin. However, Nmap works poorly on Windows systems due to a lack of raw sockets. You should also consider using Linux or BSD, which are both more flexible. Most Linux distributions come with many useful tools pre-installed.
+ Make sure you've fully understood all common techniques to protect yourself. Start with the basics — but make sure you have authorization to attack your target : either attack your own network, ask for written permission, or set up your own laboratory with virtual machines. Attacking a system, no matter its content, is illegal and WILL get you in trouble.
+ Can you reach the remote system? While you can use the ping utility (which is included in most operating systems) to see if the target is active, you can not always trust the results — it relies on the ICMP protocol, which can be easily shut off by paranoid system administrators.
+ Run a scan of the ports, and try pOf, or nmap to run a port scan. This will show you the ports that are open on the machine, the OS, and can even tell you what type of firewall or router they are using so you can plan a course of action. You can activate OS detection in nmap by using the -O switch.
+ Common ports such as FTP (21) and HTTP (80) are often well protected, and possibly only vulnerable to exploits yet to be discovered.
+
+
+Try other TCP and UDP ports that may have been forgotten, such as Telnet and various UDP ports left open for LAN gaming.
+An open port 22 is usually evidence of an SSH (secure shell) service running on the target, which can sometimes be brute forced.
+ There are several methods for cracking a password, including brute force. Using brute force on a password is an effort to try every possible password contained within a pre-defined dictionary of brute force software
+
+
+Users are often discouraged from using weak passwords, so brute force may take a lot of time. However, there have been major improvements in brute-force techniques.
+Most hashing algorithms are weak, and you can significantly improve the cracking speed by exploiting these weaknesses (like you can cut the MD5 algorithm in 1/4, which will give huge speed boost).
+Newer techniques use the graphics card as another processor — and it's thousands of times faster.
+You may try using Rainbow Tables for the fastest password cracking. Notice that password cracking is a good technique only if you already have the hash of password.
+Trying every possible password while logging to remote machine is not a good idea, as it's easily detected by intrusion detection systems, pollutes system logs, and may take years to complete.
+You can also get a rooted tablet, install a TCP scan, and get a signal upload it to the secure site. Then the IP address will open causing the password to appear on your proxy.
+It's often much easier to find another way into a system than cracking the password.
+ Try to get root privileges if targeting a *nix machine, or administrator privileges if taking on Windows systems.
+
+
+Most information that will be of vital interest is protected and you need a certain level of authentication to get it. To see all the files on a computer you need super-user privileges - a user account that is given the same privileges as the "root" user in Linux and BSD operating systems.
+For routers this is the "admin" account by default (unless it has been changed); for Windows, this is the Administrator account.
+Gaining access to a connection doesn't mean you can access everything. Only a super-user, the administrator account, or the root account can do this.
+ Often, to gain super-user status you have to use tactics such as creating a buffer overflow, which causes the memory to dump and that allows you to inject a code or perform a task at a higher level than you're normally authorized.
+
+
+In Unix-like systems this will happen if the bugged software has setuid bit set, so the program will be executed as a different user (super-user for example).
+Only by writing or finding an insecure program that you can execute on their machine will allow you to do this.
+ Once you have gained full control over a machine, it's a good idea to make sure you can come back again. This can be done by backdooring an important system service, such as the SSH server. However, your backdoor may be removed during the next system upgrade. A really experienced hacker would backdoor the compiler itself, so every compiled software would be a potential way to come back.
+ Don't let the administrator know that the system is compromised. Don't change the website (if any), and don't create more files than you really need. Do not create any additional users. Act as quickly as possible. If you patched a server like SSHD, make sure it has your secret password hard-coded. If someone tries to login with this password, the server should let them in, but shouldn't contain any crucial information.
+

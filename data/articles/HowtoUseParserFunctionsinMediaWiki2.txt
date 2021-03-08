@@ -1,0 +1,30 @@
+ While you can put anything instead of a parameter, it won't have much use.
+
+
+Replace y with what parameter you want to check.
+Replace z with what you want to appear if y is supplied.
+Replace a with what you want to appear if y isn't supplied.;
+, As with #if:, this parser function is most helpful when used with parameters rather than plain text.
+
+
+Replace y and z with what strings/parameters you want to compare.
+Replace a with what you want to appear if y and z are the same.
+Replace b with what you want to appear if y and z aren't the same.
+
+
+
+
+{{ #switch: y | a=b | c=d | e=f }}
+
+Replace a, c, e, etc. with what result you want to appear if what you supply for y.
+Replace b, d, f, etc. with what you want to appear if y happens to equal a, c, e, and so on.
+ This parser function can be pretty handy with parameters and magic words at times.
+
+
+
+{{ #expr: y }}
+
+Replace y with the math problem you want to solve.
+
+
+

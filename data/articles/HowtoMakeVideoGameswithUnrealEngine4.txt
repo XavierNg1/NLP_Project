@@ -1,0 +1,86 @@
+ Go to https://unrealengine.com and click the blue "Get Unreal" button in the upper-right corner. Fill out the registration form, then click the "Sign Up" button. If you agree with the End User License Agreement, then accept it to proceed.
+
+
+Click the Download button and open the .msi file that downloads.
+Choose a folder path and click "Install" to install the Epic Games Launcher.
+Run the Epic Games Launcher and login using the registration info you provided when you registered your account.
+Click the yellow button that says "Install Engine".
+Accept the EULA to download and install Unreal Engine 4.
+Click the yellow button that says "Launch" to run the Unreal Engine.
+ A project, in the context of UE4, is a file used to store all the data for each game you are developing. When you open UE4, the first thing it will do is launch the Unreal Project Browser.
+
+In the "Projects" tab, you can open your existing projects. In the "New Project" tab, you can create a new blank project or a new project based on a template. To create a new project, make your selections, then click on the green "Create Project" button in the bottom-right.
+ A level, in the context of the Unreal Engine, is an area where gameplay occurs. To create, open, or save a level, use the File Menu.
+
+To test a level directly in the Level Editor, use the play button in the toolbar at the top of the screen. To enter or exit full screen mode, use the F11 key.
+ An actor, in the Unreal Engine, is any object that has been added to a level.
+
+For example, find the cube in the menu on the left side of the screen. Click on it, then drag-and-drop it into the window in the middle. The cube in the middle window is now an actor within the level.
+Note that not all actors are physical objects. For example, there are several actors that simply mark specific places in a Level where certain things should occur. These are still actors even though players will never see them in the game.
+ Mesh is a 3D-modeling term that refers to visible 3D objects. Unreal Engine has two main types of mesh actors - the static mesh actor and the skeletal mesh actor.
+
+The static mesh actor is for meshes with no moving parts.
+The skeletal mesh actor is for meshes that do having moving parts.
+The starter content contains some meshes you can use but third-party 3D-modeling programs, such as Maya, 3D Studio Max, or Blender, create most meshes used in games. You can find lots of meshes for free and for sale in the Epic Games Launcher and on the Internet in general.
+ Brushes, also known as geometry brushes, are actors that model 3D space. This is very close to the definition of a mesh, but there are some key differences between the two.
+
+Brushes are for simpler shapes while meshes are for more complex shapes. Brushes are easier to work with but require more memory. So, in general, use brushes to quickly prototype the layouts of levels, and then replace them with meshes for the final product. You can access brushes from the Geometry tab on the left side of the Editor.
+ The material of an actor is a property that is common to both meshes and brushes. A material is an asset you can apply to the surfaces of Actors to make those actors appear to be made out of that material. For example, you could apply a wood material to a cube mesh to make a "wooden cube.", The purpose of a light actor is to represent visible light. Note that they only represent the light itself and not the object from which the light emanates. For example, to have a lamp in your level, you would need a static mesh actor of a lamp, including the light bulb, in addition to a light actor in the same location as the bulb. There are four types of light actors in Unreal:
+
+Directional Light Actor - used to mimic light coming from an extremely long distance away, such as outer space; used primarily for sunlight and moonlight.
+Point Light - for light that emanates in all directions, like from a light bulb, or fire.
+Spot Light - emits light in the shape of a cone, like from a flashlight, or, as the name suggests, a spot light.
+Sky Light Actor - emulates the light that reflects off the atmosphere (the "glow" of the atmosphere).
+ The Level Editor is the home screen when developing games in the Unreal Engine application. The large rectangle in the middle is the viewport. The thin strip above that is the toolbar. At the bottom of the screen is the content browser. On the left side of the screen is the modes panel. On the right side of the screen is the world outliner at the top, and below that, the details panel., To use mouse navigation, hold down one of the following mouse buttons or button combinations and drag the mouse to perform the action:
+
+LMB - move forward or backwards, rotate left or right
+LMB+RMB / MMB - move left, right, up, or down
+RMB - rotate in any direction
+
+, To use WASD navigation, keep the RMB held down the entire time: Maya refers to a popular 3D-modeling program that uses these controls. To use Maya navigation, keep the Alt key held down, then hold one of the following mouse buttons and drag the mouse
+
+Drag the mouse - rotate in any direction
+
+W, A, S, D keys - forward, left, backwards, right
+
+Q and E keys - up, down
+
+Z and C keys - zoom in and out
+
+, Maya refers to a popular 3D-modeling program that uses these controls. To use Maya navigation, keep the Alt key held down, then hold one of the following mouse buttons and drag the mouse:
+
+LMB - tumble/orbit the camera around a single point of interest
+RMB - dolly/zoom the camera towards and away from a point of interest
+MMB - track/pan the camera up, down, left, and right
+
+, To move, rotate, and scale actors in the Level Editor, use the Move, Rotate, and Scale Tools. You can see which tool is selected by looking at the first three icons in the upper-right of the viewport.
+
+To switch between the tools, click their icons, or use the shortcut keys W, E, and R.
+When the Move Tool is selected, three colored arrows will appear on the currently selected actor. To move an actor along a particular axis, click on the corresponding arrow and drag the mouse. To move an actor in two dimensions, click on the connector between the arrows. For all three dimensions at once, click on the white sphere in the middle of the arrows.
+When the Rotate Tool is selected, you can rotate an actor around one of the three axes by clicking on one of the colored arcs and dragging the mouse.
+When the Scale Tool is selected, you can make your actors bigger or smaller. Just like with the Move Tool, you can manipulate the actor in one, two, or three dimensions at a time.
+ When an actor is selected, the details panel will display the properties of that actor, most of which can be edited.
+
+The transform category is common to all actors. In the transform category, you can move, rotate, and scale actors manually by entering values directly. This is useful when you need precision or exact values.
+Mobility is a setting that applies primarily to mesh actors and light actors. For meshes, there are two options - static and moveable. Static means the actor will remain in place the entire time, while moveable means it's possible for the actor’s location to change. For light actors, there is a third option - stationary. This is used for lights that don’t move, but can change in other ways such as changing color or turning on or off.
+ A blueprint in the Unreal Engine is an asset that contains data and instructions. With blueprints, you specify the logic that controls your games and keeps track of important data such as health, energy, score, etc., There are two main types of blueprints, the level blueprint and blueprint classes.
+
+A level blueprint holds data and instructions for a particular level. It might hold data such as the time remaining to complete the Level, or the number of keys you’ve collected in that level, and so on. It also stores instructions that pertain only to that level.
+Blueprint classes are a way to turn any actor or asset into a blueprint. This allows you to create objects with custom traits and behaviors. One of the great things about blueprint classes is that you can use them to create as many copies, or instances, of your creation as you want. Once you complete a blueprint class, it will be available to you in the content browser, and each time you drag it into the viewport, it will create a new instance of that actor. Each instance has its own data independent from the other instances.
+ To open a level blueprint, go to the toolbar, click the blueprints button, then click on “Open Level Blueprint.” This will open the Level Blueprint Editor. Inside the Level Blueprint Editor is the event graph.
+
+The event graph is where you script logic. If you’re a programmer, you can script the logic in pure code using C++. However, Epic Games has a visual scripting system that allows non-programmers to script logic and can be convenient even for programmers with experience.
+ The scripting system works by using various nodes, that each serve a specific purpose, and connecting those nodes together. By default, the level blueprint starts off with two commonly used nodes in the graph. They are disabled to start with, but can be used right away by connecting them to another node.
+
+The first node is the Event BeginPlay Node. An event node is a node that activates when a certain event occurs. So an Event BeginPlay Node, inside of a level blueprint, will be activated by the event of the level first starting.
+The second default node is also an event node. The Event Tick Node is a node that activates on every tick of gameplay. Before every frame of the game draws on the screen, any logic that connects to the Event Tick Node will execute. This is useful in situations where you need to constantly check certain conditions that, when met, will have an immediate effect on the game, such as the main character colliding with something harmful.
+ The icons along the left and/or right sides of nodes are pins. Pins on the left side of a node are input pins and pins on the right side of a node are output pins. They input/output data to and from nodes and specify the order in which Nodes should execute. Pins connect to one another with wires.
+
+To create a wire, left-click on a pin and then drag the mouse while still holding the LMB. This will drag a wire out of that pin. If you hover over another pin and release the LMB, it will connect the end of the wire to that pin.
+Pins with a white icon that looks like a play button are execution pins. Execution pins on the left side of a node are input execution pins. When a wire connected to an input execution pin activates, it will trigger execution of that node. Execution pins on the right side of a node are output execution pins. Wires connected to an output execution pin will activate once that node has finished executing. Output execution pins can only connect to input execution pins and vice-versa.
+By chaining nodes together through their execution pins, you can define a series of nodes that should execute, one after the other, every time the first node in the series activates. The first node in a chain will always be an event node.
+Pins with a circular icon are data pins. The purpose of data pins is to pass data between nodes. Output data pins can only connect to input data pins and vice-versa. Whatever data the output data pin contains is sent to the input data pin it connects to.
+ To add a new node to the event graph, you will need to select that node from the node menu. The node menu is brought up by right-clicking on any empty space in the graph, or by releasing the LMB over any empty space when dragging out a wire from an output execution pin. When doing the latter, the node you add will automatically connect to the wire.
+
+There are many nodes available to choose from in the node menu. They are organized into categories, but if you know at least part of the name of the node you’re looking for, you can use the search box at the top of the node menu to search for it.
+

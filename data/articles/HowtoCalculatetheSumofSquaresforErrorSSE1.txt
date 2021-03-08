@@ -1,0 +1,100 @@
+ The clearest way to calculate the sum of squared errors is begin with a three column table. Label the three columns as Value{\displaystyle {\text{Value}}}, Deviation{\displaystyle {\text{Deviation}}}, and Deviation2{\displaystyle {\text{Deviation}}^{2}}., The first column will hold the values of your measurements. Fill in the Value{\displaystyle {\text{Value}}} column with the values of your measurements. These may be the results of some experiment, a statistical study, or just data provided for a math problem.In this case, suppose you are working with some medical data and you have a list of the body temperatures of ten patients. The normal body temperature expected is 98.6 degrees. The temperatures of ten patients are measured and give the values 99.0, 98.6, 98.5, 101.1, 98.3, 98.6, 97.9, 98.4, 99.2, and 99.1. Write these values in the first column.
+ Before you can calculate the error for each measurement, you must calculate the mean of the full data set.Recall that the mean of any data set is the sum of the values, divided by the number of values in the set. This can be represented symbolically, with the variable μ{\displaystyle \mu } representing the mean, as:
+
+
+μ=Σxn{\displaystyle \mu ={\frac {\Sigma x}{n}}}
+
+
+
+For this data, the mean is calculated as:
+
+
+μ=99.0+98.6+98.5+101.1+98.3+98.6+97.9+98.4+99.2+99.110{\displaystyle \mu ={\frac {99.0+98.6+98.5+101.1+98.3+98.6+97.9+98.4+99.2+99.1}{10}}}
+
+
+μ=988.710{\displaystyle \mu ={\frac {988.7}{10}}}
+
+
+μ=98.87{\displaystyle \mu =98.87}
+
+
+
+
+, In the second column of your table, you need to fill in the error measurements for each data value. The error is the difference between the measurement and the mean.For the given data set, subtract the mean, 98.87, from each measured value, and fill in the second column with the results. These ten calculations are as follows:
+
+
+99.0−98.87=0.13{\displaystyle 99.0-98.87=0.13}
+
+
+98.6−98.87=−0.27{\displaystyle 98.6-98.87=-0.27}
+
+
+98.5−98.87=−0.37{\displaystyle 98.5-98.87=-0.37}
+
+
+101.1−98.87=2.23{\displaystyle 101.1-98.87=2.23}
+
+
+98.3−98.87=−0.57{\displaystyle 98.3-98.87=-0.57}
+
+
+98.6−98.87=−0.27{\displaystyle 98.6-98.87=-0.27}
+
+
+97.9−98.87=−0.97{\displaystyle 97.9-98.87=-0.97}
+
+
+98.4−98.87=−0.47{\displaystyle 98.4-98.87=-0.47}
+
+
+99.2−98.87=0.33{\displaystyle 99.2-98.87=0.33}
+
+
+99.1−98.87=0.23{\displaystyle 99.1-98.87=0.23}
+
+
+
+
+, In the third column of the table, find the square of each of the resulting values in the middle column. These represent the squares of the deviation from the mean for each measured value of data.For each value in the middle column, use your calculator and find the square. Record the results in the third column, as follows:
+
+
+0.132=0.0169{\displaystyle 0.13^{2}=0.0169}
+
+
+(−0.27)2=0.0729{\displaystyle (-0.27)^{2}=0.0729}
+
+
+(−0.37)2=0.1369{\displaystyle (-0.37)^{2}=0.1369}
+
+
+2.232=4.9729{\displaystyle 2.23^{2}=4.9729}
+
+
+(−0.57)2=0.3249{\displaystyle (-0.57)^{2}=0.3249}
+
+
+(−0.27)2=0.0729{\displaystyle (-0.27)^{2}=0.0729}
+
+
+(−0.97)2=0.9409{\displaystyle (-0.97)^{2}=0.9409}
+
+
+(−0.47)2=0.2209{\displaystyle (-0.47)^{2}=0.2209}
+
+
+0.332=0.1089{\displaystyle 0.33^{2}=0.1089}
+
+
+0.232=0.0529{\displaystyle 0.23^{2}=0.0529}
+
+
+
+
+, The final step is to find the sum of the values in the third column. The desired result is the SSE, or the sum of squared errors.
+
+For this data set, the SSE is calculated by adding together the ten values in the third column:
+
+
+SSE=6.921{\displaystyle SSE=6.921}
+
+

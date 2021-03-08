@@ -1,0 +1,22 @@
+
+Get a compiler.
+After installing DEV-CPP, open it.
+Get ready to write a program to display text in a textbox.
+In the main screen of DEV-CPP, go to File -> New -> Project.
+At the begin of your source, type "#include <windows.h>" (without the quotes).
+Write one method to handle all the messages and write another method where we will handle the messages from the resources.
+Make a Resource Script.
+Make your first control: a simple menu.
+The "IDR_THEMENU" part defines your menu as THEMENU.
+Now for the button part.
+The IDD_SIMPLECONTROL defines your dialog.
+That's it!,
+Go to File -> New -> Source File.
+Save this file as resource.h Do you remember we did "#include "resource.h""?,
+Get back to the source, our Simple Program.c or whatever you called it.
+Don't worry too much with all the technical stuff here.
+Type:BOOL CALLBACK SimpleProc(HWND hWndDlg, UINT Message, WPARAM wParam, LPARAM lParam){switch(Message){case WM_INITDIALOG:return TRUE;case WM_COMMAND:switch ( LOWORD (wParam) ) {case ID_HELLO:MessageBox(NULL,"Hey", "Hallo!,
+This part handles the dialog messages.
+Make sure that your SimpleProc comes before the int WINAPI WINMAIN part!,
+Press F9 to compile and run your program!
+

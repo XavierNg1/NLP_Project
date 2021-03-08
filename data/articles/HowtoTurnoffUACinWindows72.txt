@@ -1,0 +1,11 @@
+ UAC is designed to prevent programs from making unwanted changes to your system settings. It's usually best to leave it enabled to help prevent malware infections, but if you have a program that you use often and trust to have access to your system settings, you can create special UAC-bypass shortcuts for it., Select "Schedule tasks" from the list of results.
+ Give the task a name that will allow you to remember it.
+,, Make sure you select the actual program executable, and not your desktop or Start menu shortcut.
+ Ensure that "Allow task to run on demand" is checked, then click OK.
+ Type schtasks /run /TN "TaskName" into the field. Replace TaskName with the name you gave the task you created.
+
+
+Proceed through the rest of the shortcut creation wizard to create the new shortcut on your desktop.
+Right-click on the new shortcut, select "Properties", and click Change Icon... to change the shortcuts icon. You can browse to the program executable again to the get the same icon as the program.
+ UAC will no longer prompt you to accept the program every time you start it. You can repeat this method for any other programs you want to bypass.There are freeware programs, such as "UAC Pass" and "UAC Trust Shortcut", that can create these shortcuts for you, but there shouldn't be a need once you know how to do it yourself.
+

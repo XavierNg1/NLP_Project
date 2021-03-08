@@ -1,0 +1,21 @@
+ If you don’t have SNMP set up on your devices, you will need to configure them using the command line:
+
+
+Open a command prompt and telnet into your router. Login to the device.
+Go into privilege mode by typing in enable. This allows you to make configuration changes.
+Type in conf t to give the device configuration commands.
+You’ll see a banner to enter in configuration commands. You will now need to enter in 3 lines of commands to tell the router to start NetFlow and export the data:
+
+ip flow-export source fastethernet0/0 (export and source traffic to fastethernet0/0)
+ip flow-export source version 5 (this exports ver. 5 NetFlow, the best to start with)
+ip flow-export destination <IP> <port> (location of NMS to send the data to)
+
+;
+, Tell that interface what traffic you require:
+
+
+ip flow egress (monitor outbound flow)
+ip flow ingress (monitor inbound flow)
+ip route-cache flow
+
+,

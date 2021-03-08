@@ -1,0 +1,69 @@
+
+
+sudo apt-get install smbfs (In new version install sudo apt-get install cifs-utils)
+
+
+
+ 
+
+;
+,
+
+sudo mkdir /mnt/backup
+
+
+
+
+
+
+
+,
+
+sudo vi /etc/fstab
+
+
+
+
+
+
+
+, Scroll to the end and press a to append text. Note that the text should all be on one line.
+
+//YOUR_SERVER/YOUR_SHARE /mnt/backup cifs domain=YOUR_DOMAIN,username=YOUR_USERNAME,password=YOUR_PASSWORD 0 0
+
+
+
+
+
+
+
+, To exit vi you leave edit mode by pressing escape. Then enter command mode by typing colon. Then enter wq to write and quit.
+
+Type <escape>:wq<return>
+
+
+
+
+
+
+
+,
+
+sudo mount -a
+
+
+
+
+
+
+
+,
+
+ls /mnt/backup
+
+
+
+
+
+
+

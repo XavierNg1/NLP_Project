@@ -1,0 +1,20 @@
+ Most program languages require import. In python it's import random.
+ It can be a file, a user input or a PHP post/get.
+
+This example is just going to use Python 2.7's raw_input(); if you are on Python, 3 use input().
+The names should also be in lowercase, and there should be two of them.
+The next lines are name1=raw_input('Name1:').lower() and name2=raw_input('Name2:').lower()
+
+
+, To do that we place the names in a list, , and sort it with .sort().
+
+You need to save the list as well so the full line is names=.sort()
+
+
+, It will be the to names merged "".join(names).
+
+So the next line should be random.seed("".join(names)).
+
+
+The full line is love=str(round(random.random()*100)).
+ It should be something like print(love+"%").

@@ -1,0 +1,15 @@
+ If you already have a database, username, and password, you can skip this step. If you do not have access to a MySQL console, you'll want to enter this query in phpMyAdmin or another online query tool. If your web host provides you with a username and database already (and you have no control over creating more), use those and skip this step.
+ If you're at this step, then it is assumed you are logged into MySQL with a root account and want to create a separate user to access the hit counter. If this does not apply, use whatever username you already have for accessing the database. Be sure to use your own credentials, not the ones used in this example. Grant the user permissions to your database., This table will keep track of the number of hits we get. Use the table structure as shown in the image., This file will contain a class you can include in other PHP scripts when you want it to log a hit., Create local class members to hold your credentials and the database connection info., In the constructor, you should establish the database connection and initialize the hit counts at zero., These methods can be called from any other script that instantiates the HitCounter class.
+
+Add a method for processing views. This method gets called on every page load that should be counted towards a hit.
+Add a getter for the total views. This will get called in places where you want to show the total view count.
+Add a getter for the unique hits. You'll call this where you want to show the unique view count.
+ These methods do the brunt of the work for the hit counter. They're marked private so that they can only be used internally.
+
+
+getData() retrieves the current view counts from the database. If there isn't any data, it sets this data to zero.
+
+isNewVisitor() determines whether the visitor has already visited our website in their current session
+
+visit() increments the total hit counter, and increments the unique visitor counter if the user has not visited the website in their current session.
+ This should be an actual page you intend the visitor to see. If you already have a website, this should be the front facing PHP script (usually index.php). Basically, any PHP file that is accessible from the web and you want to use to update the counter., It's recommended to use require_once over include., This will tell the hit counter to update the counts. It's also necessary to get the current counts for display., You can choose to show either the total number of hits or only the unique hits. It can be embedded anywhere HTML it output by the PHP script., Your hit counters should now increment appropriately when you view your web page. If you keep refreshing, your total hit count will increase but your unique session count will stay the same. This is good.

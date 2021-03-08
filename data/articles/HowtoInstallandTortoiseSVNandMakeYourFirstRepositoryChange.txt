@@ -1,0 +1,29 @@
+;
+,,, Click Next >
+
+, If you're happy to proceed, click the 'I accept the terms...' radio button and then click Next >.
+ Unless you are really low on disk space, it isn't worth worrying about this. When you're ready to continue, click Next >
+
+,, Tortoise is now installed. Click Finish.
+ We start by creating a directory in which we'll store the the working copy.
+ The Explorer context menu appears, along with Subversion commands that are added with TortoiseSVN. Click on the option 'SVN Checkout....
+
+
+
+URL Repository: This is the URL of the repository on which you want to work. This is the address of the repository, or portion of a repository for which you want to make a working copy. You can get the repository URL from the repository's screen in uberSVN:
+
+Checkout directory: This is the location on your local file system where the checkout will occur. By default it will be the location that you're currently focused on in Explorer, however you can change it here.
+
+Checkout Depth: The Checkout Depth drop-down allows you to limit what you checkout. Useful if you only want to make a change in one directory of a very large repository.
+
+Revision: You can get the latest version of the repository, called 'HEAD' (most up-to-date version), or select a specific revision to go back to a version before particular changes.
+When you've finished with these options and you're ready to do the checkout, click OK.
+ All files and folders that are included in the checkout will be logged.
+ The working copy is now in place on your computer, ready to edit and change to your heart's desire. One of the benefits of Tortoise as a shell replacement is the fact that it can overlay repository files with status icons that tell you the current state of each file.
+ In this example the file 'system.txt' will be modified and saved.
+, To apply changes to the repository that you've made in your local copy you need to use the SVN Commit command. You can select individual files or their directories, then right click to get the context menu. On the menu, click SVN Commit.
+ It's human nature to try to leave this blank because you're in a hurry and can't be bothered, but simple log messages can really help with troubleshooting problems at a later date.
+ If the commit was successful the repository's revision number will increase. Click OK. That's it, you're working with version control.
+ You see, it's not possible to commit something unless Subversion already has a record of the file you are adding. So first, right click the file and choose Add... from the Subversion commands., Although Subversion now knows about the file, you still need to perform a commit. So again, right click the file and choose SVN Commit... from the menu.
+ While Subversion gives you lots of tools for scrutinizing file changes, it's nice to have a quick summary to look back on. To complete the commit, click OK.
+, Probably 90% of the work you need to do is covered here. If you get stuck though, don't forget that you can read the user guide by clicking on the Help link in the TortoiseSVN commands menu.

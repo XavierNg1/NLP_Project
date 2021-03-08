@@ -1,0 +1,23 @@
+ To ensure you’re logged into Windows 8 as a user with administrative rights, at the Start screen, right-click the bottom left corner of the screen, click on “Control Panel,” click on “User Accounts” and then on "Manage another account." You will see the user accounts and their assigned status (e.g. Administrator, Standard user, and so on).
+
+
+If for some reason you do not know the account you’re working under, open the main User Accounts page where the current user will be shown on the right side of the page.;
+, To do that, just move the cursor to the bottom-right corner of the screen and right-click. Next, select “Command Prompt (Admin).” Alternately, you can go to the Start page, type CMD, right-click on it, and run as Admin.
+ Just type the following commands, and press enter after each one of them.
+
+
+netsh
+wlan
+set hostednetwork mode=allow
+set hostednetwork ssid= ”the name of the hotspot”
+set hostednetwork key= “password which should be at least 8 characters long”
+start hostednetwork
+
+, Once there, select “Network and Sharing Center,” and on the left, select “Change Adapter Settings.”
+
+, This would be the one you are currently connected to the Internet with and would love to share. Right-click on it, and go to "Properties."
+
+, After that, check the option that says “Allow other network users to connect through this network’s Internet connection.”
+
+, It may be labelled “Local Area Connection * 2” or something to that effect. Once done, click on “Okay.” You have just successfully shared your internet connection.
+

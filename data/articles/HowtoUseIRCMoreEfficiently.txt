@@ -1,0 +1,78 @@
+ While some commands are only open to channel operators (and thereby the "advanced" users), there are many that are open to novices and intermediates alike.;
+,
+
+
+
+/join <room1>] : same as /j.
+
+
+/j <room1>] : enter one or more channel, and, if needed, provide the channel key of the respective room.
+
+
+
+/quit : disconnect from the server.
+ This can be done when used to register a nickname to an email, or when trying to sign into a nickname. Use /nickserv command to send a command to nickserv.
+ It's not always the quick commands that can speed up your efficiency in IRC.
+ Either use simple text that can be shown to just about anyone, or you can use the /msg <nick> <message> command to direct the reply at only one person in the group but will be seen by the remainder of the group.
+ Type /away command to set an away message, or use no message to return from being away.
+ Use the /nick <new nickname> to change your nickname.
+ If you wanted to tell a group that you are reading a certain book, you can use the /me command to input it and mention it to the group.
+
+
+
+/me <action to perform> : perform an action. (in the above example the correct code would be /me is reading a book (which would be shown as (your nick) is reading a book))
+
+, Use the /query <nick> <message> to begin this mode.
+ Use the invite <nick> command to bring someone into your current room. If no room is stated, the invitation will go out to the person to be invited into the current channel.
+ Use either the #* /clear (to clear the current conversation page), or /clearall (to clear all conversation pages which are open).
+ Use the /topic to show or modify the current channel topic. If you type just /topic and nothing else, you can show the current one without changing it.
+ Use the /whois <nick> command to get information on someone who is presently at the conversation, and /whowas <nick> to obtain the information on a person who has left the discussion.
+
+
+
+
+/deop <nick1> <nick2> ... : remove channel operator right from someone. You must be a channel operator to do this.
+
+/devoice <nick1> <nick2> ... : remove channel voice right from someone. If the channel is moderated (i.e. +m), they are no more allowed to participate. You must be a channel operator to do this.
+
+/kick <nick> : kick someone from a channel. You must be a channel operator to do this.
+
+/op <nick1> ... : give the operator right to someone. You must be a channel operator to do this.
+
+/remove <nick> : remove someone from a room. You must be a channel operator to do this.
+
+/voice <nick1> ... : give channel voice right to someone. You must be a channel operator to do this.
+
+
+
+
+/action <action to perform> : perform an action
+
+/chanserv <command> : send a command to chanserv
+
+/ctcp <nick> : send ctcp msg to <nick>.
+
+/debug <option> : send debug information to the current conversation
+
+/list : display a list of chat rooms on the current network.
+
+/memoserv : send a command to memoserv.
+
+/mode <+|-><A-Za-z><nick|channel> : modify a channel or someone mode.
+
+/names : list the users present in a particular channel, or the current one if not specified.
+
+/notice <destination> : send a notice to a user or a channel.
+
+/opserv : send a command to opserv
+
+/ping : know how much lag someone, or, if not specified, the server, has.
+
+/quote : send a raw command to the server
+
+/time : show the current local time at the IRC server.
+
+/umode <+|-><A-Za-z><nick|channel> : modify someone mode.
+
+/version : send a CTCP version request to a user.
+

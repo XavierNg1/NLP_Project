@@ -1,0 +1,4 @@
+ This can be done by pressing Ctrl+Alt+T. Then type in the following command: gksu gedit /etc/NetworkManager/NetworkManager.conf You will be required to give an administrative password.;
+, In the last line, replace the managed=false to managed=true. Then save the file and exit the editor.
+ If you don't want to restart your PC, then give the terminal this command: sudo restart network-manager.
+

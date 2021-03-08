@@ -1,0 +1,12 @@
+ Some databases don’t have a root (admin) password by default, so you may be able to get in leaving the password field empty. Some others have default passwords that can be found easily by searching database tech support forums.
+ If the admin secured the account with a password (a likely situation), try common username/password combinations. Some hackers publicly post lists of passwords they’ve cracked while using auditing tools. Try some different username and password combinations.
+
+
+A reputable site with collected password lists is https://github.com/danielmiessler/SecLists/tree/master/Passwords.
+Trying passwords by hand can be time-consuming, but there’s no harm in giving it a shot before breaking out the big guns.
+
+
+
+Tools like DBPwAudit (for Oracle, MySQL, MS-SQL and DB2) and Access Passview (for MS Access) are popular password auditing tools that can be run against most databases.You can also search Google for newer password auditing tools specifically for your database. For instance, a search for password audit tool oracle db if you’re hacking an Oracle database.
+If you have an account on the server that hosts the database, you can run a hash cracker like John the Ripper against the database’s password file. The location of the hash file is different depending on the database.Only download from sites that you can trust. Research tools extensively before using them.
+

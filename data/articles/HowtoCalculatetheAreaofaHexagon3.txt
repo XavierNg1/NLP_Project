@@ -1,0 +1,36 @@
+ If you know the vertices of the hexagon, the first thing you should do is create a chart with two columns and seven rows. Each row will be labeled by the names of the six points (Point A, Point B, Point C, etc), and each column will be labeled as the x or y coordinates of those points. List the x and y coordinates of Point A to the right of Point A, the x and y coordinates of Point B to the right of Point B, and so on. Repeat the coordinates of the first point at the bottom of the list. Let's say you're working with the following points, in (x, y) format:A: (4, 10)
+B: (9, 7)
+C: (11, 2)
+D: (2, 2)
+E: (1, 5)
+F: (4, 7)
+A (again): (4, 10)
+
+, You can think of this as drawing a diagonal line to the right and downward one row from each x coordinate. List the results to the right of the chart. Then, add the results.
+
+
+4 x 7 = 28
+9 x 2 = 18
+11 x 2 = 22
+2 x 5 = 10
+1 x 7 = 7
+4 x 10 = 40
+
+28 + 18 + 22 + 10 + 7 + 40 = 125
+
+
+
+, Think of this as drawing a diagonal line from each y coordinate downward and to the left, to the x coordinate below it. Once you multiply all of these coordinates, add the results.
+
+
+10 x 9 = 90
+7 x 11 = 77
+2 x 2 = 4
+2 x 1 = 2
+5 x 4 = 20
+7 x 4 = 28
+90 + 77 + 4 + 2 + 20 + 28 = 221
+
+, Just subtract 221 from 125. 125 - 221 = -96. Now, take the absolute value of this answer: 96. Area can only be positive.
+ Just divide 96 by 2 and you'll have the area of the irregular hexagon. 96/2 = 48. Don't forget to write your answer in square units. The final answer is 48 square units.
+

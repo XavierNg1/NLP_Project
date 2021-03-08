@@ -1,0 +1,22 @@
+;
+, Remember to format it by DATE (or else the formula won't be working.)
+
+, Here we will be writing a pretty simple formula to calculate the difference.
+ Switch to the formula bar. Here, write =DATEDIF(A1,B1,"d") (A1 being the cell with start date and A2 with end date.) It will output the number of days between the two dates.
+
+
+The syntax is: =DATEDIF(start_date,end_date,mode)
+
+The various modes that can be used are "m", "y", "d", "ym", "yd", "md"
+
+"m" refers to only months.
+"y" refers to only years.
+"d" refers to only dates.
+"ym" filters off the unique years and returns the month difference between the months considering both years to be same.
+"yd" filters off the unique years and returns the month difference between the days considering both years to be same.
+"md" filters off the unique months and returns the difference between the days considering both months to be same.
+ So, now a common thing that many excel pages may need is the number of years, months and dates between two specific dates can be easily found by applying the formula:
+
+
+=DATEDIF(A1,B1,"y") & " years, " & DATEDIF(A1,B1,"ym") & " months, " & DATEDIF(A1,B1,"md") & " days"
+

@@ -1,0 +1,32 @@
+ Finder allows you to access your user files and will open to the Documents folder by default.
+ Click Applications in the left sidebar and scroll down to access the Utilities folder, which contains important system based applications, such as Keychain Access and Disk Utility.
+ Terminal is an application that runs using the command line, similar to DOS.
+
+
+
+In the blank window that appears, type sudo nano /etc/hosts
+Press Enter.
+ You'll be prompted to enter your administrator password, which is what you use to access your computer. Type it in and then press Enter.
+
+
+Open the hosts file. After pressing enter, a new window will open for you to edit. The hosts file is used to dictate how different web sites connect to your computer and save data.
+ There will already be text within your host file. Do not delete or change this text. Underneath the text, there should be space for you to type.
+
+
+If there isn't already any space, click your mouse at the end of the last line of text and press Enter to create a new line to write on.
+ 127.0.0.1 is your computer's local IP address. This is what web sites use to access your computer's files and save data.
+ For example, if you wish to block Bing, type in www.bing.com.
+
+
+Typing in variations of websites will help ensure that they're blocked, like bing.com or m.bing.com
+
+, Since the hosts file opens in a special window, you'll be unable to save normally.
+
+
+If, when you save, your file name ends with “-original”, delete that ending.
+ You can also click Save to exit.
+ Click the red circle in the top left corner of the window to close out of the text editor and return to the Terminal's interface.
+ While the Terminal window is still open, type the new command into the new command line.
+ This will commit the changes to your computer and also formally close the special text editor.
+ Test the websites you've blocked. If successful, your computer will be unable to connect to the website.
+

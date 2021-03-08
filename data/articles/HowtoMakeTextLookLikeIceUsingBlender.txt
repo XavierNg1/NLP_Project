@@ -1,0 +1,66 @@
+ Also, make sure that you have Default for the other option.
+ Then, delete the cube., This will add text to your scene, lying flat on the 'ground'., This will have your text perfectly aligned., You need to be in Edit Mode to do that. You can go to Edit Mode by pressing your Tab key. The large white area you see in the screenshot is your cursor. Delete the text and put in what you want.
+,,,, This will round out your text., Your text is complete.,,, Press S >> 5 >> Enter. This will increase its size by 5 times., Then zoom in very closely so that you can have your text just above your surface. Use your directional arrows to make the adjustments.
+,,, Because the word wikiHow is larger, the cube was scaled up 3 times.,, By now, it will probably be at the top.,,, You want to make sure your cube is around the text and the plane is centered above it.
+
+You might want to make your light source a little larger. Try something like 2.5 (if you used 3 before).
+,, Choose Emission from the options. That is because it will be emitting light. Set the Strength to 20.,, This time, leave it at default.,,,
+
+Click on the muted color that you see there.
+Go to the Value bar (black and white stripe) and increase the values there. Instead of close to the bottom, put it about midway, as you see in the screenshot.
+Go to the color wheel and choose a blue, such as what you might see in ice.
+
+
+
+Right click on the text to select it.
+Press ALT + C. Then select Mesh from Curve/Meta/Surf/Text.
+Select the Physics icon.
+Choose the Physics for: Fluid option.
+Under the Type of Fluid, choose Fluid.
+
+
+Right click on the box to select it.
+Choose the Physics for: Fluid option.
+
+
+
+
+
+
+Under the Type of Fluid, choose Domain. (Now it will hold water.)
+
+,,, Depending on your system, it could take a few seconds or a few minutes., Using the arrows, go through the Frames until you find one that is appearing to melt, but still legible., This will select the original text, not the text you just 'melted'., Find the one that says Text. Click on the camera and the eye so that they are grayed out.
+
+
+Right click on the Fluid text to select it.
+Click on the Material modifier and then New.
+Select Glass BSDF for the surface material.
+
+
+Go to View >> Front.
+Hold down the Shift key and the middle mouse button and center your text in the screen.
+Zoom in to the bottom of the text. With the 'melting', the table will no longer be in contact with the text. Adjust this until they are almost touching again. Leave a small space between the two surfaces.
+Center your image again in your screen.
+Go to View >> Align View >> Align Active Camera to View.
+Go to View >> Properties. Select Lock Camera to View.
+
+Turn the Properties menu off by Selecting View >> Properties again.
+
+
+Move your text around until it looks like you want it to look, placement wise.
+
+
+Click on the Camera and then press Render. For the initial run, leave it at default.
+
+
+
+
+
+
+If you want to get rid of the sharpness and angularity that you see here, press ESC and right click your text. Go to the Shading option on the left of your screen, and select Smooth. Click on the Render button again to try out that look.
+
+
+Go to the Sampling option further down. Change the Render to 500.
+Start the Render.
+,, If you don't want it to be a PNG file, then, in the lower right hand part of the screen, you can change that.
+

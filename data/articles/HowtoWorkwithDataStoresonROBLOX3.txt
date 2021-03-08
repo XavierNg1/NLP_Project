@@ -1,0 +1,49 @@
+ It is extremely vital that every player has a key that is unique to them. They will hold onto that key, which will store all of their data. In order to do this, we use the player's ID. Once you have set the data store, simply call on a function to load the player, and then find the player's ID. The code should look as follows:
+
+
+
+
+
+
+
+local datastore = game:GetService("DataStoreService"):GetDataStore("name")
+ 
+game.Players.PlayerAdded:connect(function(player)
+    local key = "user_" .. player.userId
+end)
+
+
+
+
+
+This will automatically create a key that is unique to that player only, for every player will have one unique ID. The "user_" will not matter.
+ Now that you've got a unique key to each player, you're set to making the data store update and retrieve data. Underneath your key, you will want to add a method that is most suitable to your needs. In this case, we'll use "UpdateAsync".
+
+
+Start with a function to help the server understand what you are intending to do.
+
+
+
+
+
+
+local datastore = game:GetService("DataStoreService"):GetDataStore("name")
+ 
+game.Players.PlayerAdded:connect(function(player)
+    local key = "user_" .. player.userId
+ 
+    datastore:UpdateAsync(key, function(old)
+        local newValue = old or 0 -- could be nil
+        newValue = newValue + 50
+        return newValue
+   end)
+end)
+
+
+
+
+
+
+In this function, we set up another function, old. "old" was our previously saved data. In this scenario, every time a player entered the server, the server would locate its key, which is their userId, and it would update the data by 50 points, returning and displaying that new value.
+ You've successfully stored and updated a player's data.
+

@@ -1,0 +1,22 @@
+ You can take a backup using a plugin like BackWPUp or in your web host’s control panel or via FTP. A good backup is key to being able to edit theme files without worries. If you mess up even one line of code, you will need to restore that file from your backup.;
+,
+
+
+Try not to choose the wordpress theme editor. It is generally not a good idea, since all changes are made to your website live and there is no undo option. So, if you do something wrong, you can't fix it, and you’re in a world of trouble.
+
+A better thing to do would be to download the file to your PC and use a code editor on your pc. Once you are done, upload the file via FTP.
+ Due to the abundance of wordpress themes out there, it is impossible to pinpoint where the footer link will be located. It is in a different place for each theme.
+ Is there a file named credits.php? or class-credits.php ? Look for these hints. Look also in the footer.php file or in class-main-footer.php. You can also try searching your theme for the keyword credits. Once you have located the file, you can proceed to the next step.
+ Once you have located that elusive footer link, all that is left if either changing it or removing it. In the file, locate the footer link text. It will be wrapped in a lot of php code so be careful not to edit any of the code.
+
+
+Only edit the text variable or remove it completely. For example, if the code looks like what is shown in the picture, change or remove references to the theme maker.
+
+
+
+Go to your website. Does it display correctly? Does it display at all? Is the footer link gone? If yes, congrats! You have successfully removed that annoying footer link. Give yourself a clap on the back for a job well done.
+
+However, if you didn't succeed, restore your backup and try again.
+
+
+

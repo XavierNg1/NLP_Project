@@ -1,0 +1,28 @@
+ Teleporting is a special command, and is only available in specific situations:
+
+
+If you're playing online, you need Operator access for the server. To become an operator, an existing admin or operator needs to type /op YourName into the chat window.
+In local multiplayer, the game needs to be started with Cheats enabled. This needs to be done by the player opening the game to local multiplayer.
+For single player, Cheats need to be enabled when creating the world ("More World Options...").;
+, Minecraft uses three coordinates (XYZ) to determine player location in the world. The "X" coordinate is the position east or west of the spawn point. The "Z" coordinate is the position north or south of the spawn point. The "Y" coordinate is the elevation above bedrock. Sea level is Y:63. Your spawn point may not be at exactly 0,0,63, as this is sometimes underwater.
+
+
+You can view your current coordinates in game by pressing F3, Fn+F3 (laptops and Macs), or Alt+Fn+F3 (newer Macs).
+If you're playing with others, you'll be able to teleport to someone by using their player name.
+ You can open this by pressing T.
+ If you want to teleport yourself to someone else in the same server, enter the following command. Make sure that the player's name does not contain any spaces:/tp PlayerName
+
+, You can teleport to any location in the world by entering the coordinates. If you aren't sure about the Y coordinate (common with village-finding tools online), enter "83" to try to avoid teleporting into something and suffocating. You may fall for a bit, but you should be able to survive:
+
+
+
+/tp X Y Z (e.g. /tp 517 72 -169)
+Note that X and Z must use numbers between -30,000,000 to 30,000,000. The Y coordinate must be positive.
+You can replace the coordinates with relative positions by using a ~. For example, /tp 200 ~10 200 will teleport you to X,Z:200,200 and 10 blocks above your current elevation. Relative coordinates can only teleport the player as far as the world allows; anything further results in a game crash. Relative coordinates can be used to go to negative Y values.
+ You can use the teleport command to move any player on the server:
+
+
+/tp TargetPlayer XYZ OR DestinationPlayer
+Teleport a player to your current location by typing /tp TargetPlayer @P}}.
+You can teleport all players to yourself by typing /tp @a @p.
+

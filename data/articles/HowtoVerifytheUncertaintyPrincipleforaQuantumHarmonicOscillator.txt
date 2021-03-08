@@ -1,0 +1,107 @@
+ This partial differential equation is the fundamental equation of motion in quantum mechanics that describes how a quantum state ψ{\displaystyle \psi } evolves in time. H^{\displaystyle {\hat {H}}} denotes the Hamiltonian, the energy operator that describes the total energy of the system.
+
+
+iℏ∂ψ∂t=H^ψ{\displaystyle i\hbar {\frac {\partial \psi }{\partial t}}={\hat {H}}\psi }
+;
+, While the position and momentum variables have been replaced with their corresponding operators, the expression still resembles the kinetic and potential energies of a classical harmonic oscillator. Since we are working in physical space, the position operator is given by x^=x,{\displaystyle {\hat {x}}=x,} while the momentum operator is given by p^=−iℏ∂∂x.{\displaystyle {\hat {p}}=-i\hbar {\frac {\partial }{\partial x}}.}
+
+
+H^=p^22m+12mω2x^2{\displaystyle {\hat {H}}={\frac {{\hat {p}}^{2}}{2m}}+{\frac {1}{2}}m\omega ^{2}{\hat {x}}^{2}}
+
+
+, We see that the Hamiltonian does not depend explicitly on time, so the solutions to the equation will be stationary states. The time-independent Schrödinger equation is an eigenvalue equation, so solving it means that we are finding the energy eigenvalues and their corresponding eigenfunctions - the wavefunctions.
+
+
+−ℏ22md2ψdx2+12mω2x2ψ=Eψ{\displaystyle -{\frac {\hbar ^{2}}{2m}}{\frac {{\mathrm {d} }^{2}\psi }{{\mathrm {d} }x^{2}}}+{\frac {1}{2}}m\omega ^{2}x^{2}\psi =E\psi }
+
+
+, This differential equation has variable coefficients and cannot easily be solved by elementary methods. However, after normalizing, the solution for the ground state can be written like so. Remember that this solution only describes a one-dimensional oscillator. 
+
+
+ψ(x)=(mωπℏ)1/4exp(−mω2ℏx2){\displaystyle \psi (x)=\left({\frac {m\omega }{\pi \hbar }}\right)^{1/4}\exp \left(-{\frac {m\omega }{2\hbar }}x^{2}\right)}
+
+This is a Gaussian centered at x=0.{\displaystyle x=0.} We will use the fact that this function is even to simplify our calculations in the next part. 
+
+
+, The uncertainty of an observable such as position is mathematically the standard deviation. That is, we find the average value, take each value and subtract from the average, square those values and average, and then take the square root.
+
+
+σx=⟨x2⟩−⟨x⟩2{\displaystyle \sigma _{x}={\sqrt {\langle x^{2}\rangle -\langle x\rangle ^{2}}}}
+
+
+, Since the function is even, we can deduce from symmetry that ⟨x⟩=0.{\displaystyle \langle x\rangle =0.}
+
+If you set up the integral needed to evaluate, you will find that the integrand is an odd function, because an odd function times an even function is odd. 
+
+
+⟨x⟩=∫−∞∞x|ψ(x)|2dx{\displaystyle \langle x\rangle =\int _{-\infty }^{\infty }x|\psi (x)|^{2}{\mathrm {d} }x}
+
+
+
+One property of an odd function is that for every positive value of the function, there exists a doppelgänger - a corresponding negative value - that cancels them out. Since we are evaluating over all x{\displaystyle x} values, we know the integral evaluates to 0 without having to actually do the calculations.
+ Since our solution is written as a continuous wavefunction, we must employ the integral below. The integral describes the expectation value of x2{\displaystyle x^{2}} integrated over all space. 
+
+
+⟨x2⟩=∫−∞∞x2|ψ(x)|2dx{\displaystyle \langle x^{2}\rangle =\int _{-\infty }^{\infty }x^{2}|\psi (x)|^{2}{\mathrm {d} }x}
+
+
+, We know that the wavefunction is even. The square of an even function is even as well, so we can pull out a factor of 2 and change the lower bound to 0. 
+
+
+⟨x2⟩=2(mωπℏ)1/2∫0∞x2exp(−mωℏx2)dx{\displaystyle \langle x^{2}\rangle =2\left({\frac {m\omega }{\pi \hbar }}\right)^{1/2}\int _{0}^{\infty }x^{2}\exp \left(-{\frac {m\omega }{\hbar }}x^{2}\right){\mathrm {d} }x}
+
+
+, First, let α=mωℏ.{\displaystyle \alpha ={\frac {m\omega }{\hbar }}.} Next, instead of integrating by parts, we will use the gamma function.
+
+
+⟨x2⟩=2(mωπℏ)1/2∫0∞x2e−αx2dx,  u=αx2=2(mωπℏ)1/2∫0∞uαe−udu12αx,  x=uα=(mωπℏ)1/2α−3/2∫0∞u1/2e−udu=(mωπℏ)1/2(mωℏ)−3/2Γ(32),  Γ(32)=π2=ℏmω1ππ2=ℏ2mω{\displaystyle {\begin{aligned}\langle x^{2}\rangle &=2\left({\frac {m\omega }{\pi \hbar }}\right)^{1/2}\int _{0}^{\infty }x^{2}e^{-\alpha x^{2}}{\mathrm {d} }x,\ \ u=\alpha x^{2}\\&=2\left({\frac {m\omega }{\pi \hbar }}\right)^{1/2}\int _{0}^{\infty }{\frac {u}{\alpha }}e^{-u}{\mathrm {d} }u{\frac {1}{2\alpha x}},\ \ x={\sqrt {\frac {u}{\alpha }}}\\&=\left({\frac {m\omega }{\pi \hbar }}\right)^{1/2}\alpha ^{-3/2}\int _{0}^{\infty }u^{1/2}e^{-u}{\mathrm {d} }u\\&=\left({\frac {m\omega }{\pi \hbar }}\right)^{1/2}\left({\frac {m\omega }{\hbar }}\right)^{-3/2}\Gamma \left({\frac {3}{2}}\right),\ \ \Gamma \left({\frac {3}{2}}\right)={\frac {\sqrt {\pi }}{2}}\\&={\frac {\hbar }{m\omega }}{\frac {1}{\sqrt {\pi }}}{\frac {\sqrt {\pi }}{2}}\\&={\frac {\hbar }{2m\omega }}\end{aligned}}}
+
+
+, Using the relation we wrote in step 1 of this part, σx{\displaystyle \sigma _{x}} immediately follows from our results.
+
+
+σx=ℏ2mω{\displaystyle \sigma _{x}={\sqrt {\frac {\hbar }{2m\omega }}}}
+
+
+, As with average position, a symmetry argument can be made that leads to ⟨p⟩=0.{\displaystyle \langle p\rangle =0.}
+, Instead of using the wavefunction to calculate this expectation value directly, we can use the energy of the wavefunction to simplify the calculations needed. The energy of the ground state of the harmonic oscillator is given below.
+
+
+E0=12ℏω{\displaystyle E_{0}={\frac {1}{2}}\hbar \omega }
+
+
+, We expect this relation to hold not just for any position and momentum but also for their expectation values as well.
+
+
+12ℏω=⟨p2⟩2m+12mω2⟨x2⟩{\displaystyle {\frac {1}{2}}\hbar \omega ={\frac {\langle p^{2}\rangle }{2m}}+{\frac {1}{2}}m\omega ^{2}\langle x^{2}\rangle }
+
+
+,
+
+
+mℏω=⟨p2⟩+m2ω2ℏ2mω{\displaystyle m\hbar \omega =\langle p^{2}\rangle +m^{2}\omega ^{2}{\frac {\hbar }{2m\omega }}}
+
+
+⟨p2⟩=mℏω2{\displaystyle \langle p^{2}\rangle ={\frac {m\hbar \omega }{2}}}
+
+
+,
+
+
+σp=mℏω2{\displaystyle \sigma _{p}={\sqrt {\frac {m\hbar \omega }{2}}}}
+
+
+, The uncertainty principle is a fundamental limit to the precision with which we can measure certain pairs of observables, such as position and momentum. See the tips for more background on the uncertainty principle.
+
+
+σxσp≥ℏ2{\displaystyle \sigma _{x}\sigma _{p}\geq {\frac {\hbar }{2}}}
+
+
+,
+
+
+ℏ2mωmℏω2≥ℏ2ℏ2≥ℏ2{\displaystyle {\begin{aligned}{\sqrt {\frac {\hbar }{2m\omega }}}{\sqrt {\frac {m\hbar \omega }{2}}}&\geq {\frac {\hbar }{2}}\\{\frac {\hbar }{2}}&\geq {\frac {\hbar }{2}}\end{aligned}}}
+
+Our results are in agreement with the uncertainty principle. In fact, this relation only achieves equality in the ground state - if higher energy states are used, then the uncertainties in the position and momentum only grow.
+
+

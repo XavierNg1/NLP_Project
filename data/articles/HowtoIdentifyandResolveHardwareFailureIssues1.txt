@@ -1,0 +1,19 @@
+ Bad sectors are sectors on a hard drive that can no longer be used. This may be due to permanent damage or the inability of the OS to access them. If you find your system freezing, getting stop errors, or other errors this may be due to bad sectors. Use chkdsk and repair these problems.;
+, To do that, click on Start (in the bottom left-hand corner), and then you would see several options and select computer.
+
+
+Right-click the volume that you wish to check and click on properties.
+In the Properties dialogue box, click on the Tools tab.
+Under Error-Checking there is a button that says Check Now. Click on this to start chkdsk.
+In the Check Disk dialogue box, select the options you wish to run. To attempt to fix bad sectors you must check the second option, Scan For and Attempt Recovery of Bad Sectors.
+If you are checking the system volume, you will see the message “Windows can’t check the disk while it’s in use. Do you want to check for hard disk errors the next time you start your computer?” Click Schedule Disk Check to run the check next time you start your computer.
+
+
+
+Type chkdsk without parameters to see the status of the disk.
+Chkdsk /? Will display all of the possible parameters.
+Type chkdsk c: \f \v to check and repair the disk as well as displaying any clean-up messages. 5. If you wish to check a volume other than c: change to the appropriate letter.
+If you are checking your system volume, you will see a message saying:
+“The type of file system is NTFS. Cannot lock current drive. Chkdsk cannot run because the volume is in use by another process. Would you to schedule this volume to be checked the next time the system restarts? (Y/N)”
+Type Y, and then restart your computer. A message will appear saying that chkdsk is running. When this finishes, Windows will start automatically.
+

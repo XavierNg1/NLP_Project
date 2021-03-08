@@ -1,0 +1,14 @@
+
+Navigate to your File System folder.
+Scroll through the /etc folder.
+Right click the file slim.conf, and under the Scripts menu, click Browse as root.
+Wait for a new window of the /etc folder to appear.
+Scroll down the file until you see the line starting like this: # default_user.
+
+,
+Delete the #, then type in your user name directly following the line.
+Scroll further down the file until you see the line starting like this: # auto_login no.
+
+,
+Delete the # and change the no to yes.
+Save your slim.conf file.

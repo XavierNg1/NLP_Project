@@ -1,0 +1,28 @@
+ The following tips will help you navigate the formula.
+
+"Range" refers to the cells you would like to include when finding the mode (most common) text. For example, if the names I am using are in cells A1 to A20, I would type in A1:A20 everywhere the word "Range" appears in the formula.
+
+
+
+ 
+
+
+Blank cells cannot be used. If needed, set aside a column solely for the text you intend to include.
+
+
+
+
+
+
+Merged cells cannot be used for this formula.
+
+
+
+
+
+;
+,,
+
+The most common text will appear.
+ Next, the MATCH function matches up numerical values with each different string of text. Thirdly, the COUNTIF function determines how many times each word is used, and the MAX function determines the most commonly occurring word. There needs to be ONE most commonly occurring word, as two evenly popular words will give you an error message.
+

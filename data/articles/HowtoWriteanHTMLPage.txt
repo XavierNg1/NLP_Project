@@ -1,0 +1,160 @@
+ NotePad is a good option that can be downloaded for free. You can write HTML with most text editing software, but more complex software with automatic formatting can make it harder to organize your HTML page.TextEdit is not recommended, as it will often save the file in a format your browser may not recognize as HTML.
+You can also use an online HTML editor. Specialized HTML editing programs are not recommended for beginners., Select File → Save As in the top menu. Change the file format to "Web Page," ".html" or ".htm". Save it in a location where you can easily find the file.
+
+
+There is no difference between these three options.
+ Double click the file, and it should automatically open as a blank web page in your browser. Alternatively, you can open a browser, such as Firefox or Internet Explorer, and use File → Open File to select the document.
+
+
+This web page is not online. It can only be viewed on your computer.
+ Type this into your blank document: <strong>Hello</strong>. Save the document. Refresh the blank web page in your browser, and you should see the word "Hello" appear at the top of the page in bold. Anytime you want to test your new HTML during this tutorial, save the .html document, then refresh your browser window to see how the HTML is interpreted.
+
+
+If you see the words "<strong>" and "</strong>'' appear in your browser, your file isn't being properly interpreted as HTML. Try a different text editing program or a different browser.
+ HTML instructions are written in "tags" that tell the browser how to interpret and display your web page. They are always written between angle brackets <like these>, and are not displayed on the web page. You've already used them in the example above:
+
+
+<strong> is a "start tag" or "opening tag". Anything written after this tag will be defined as "strong text" (usually indicated in bold on a web page).
+</strong> is an "end tag" or "closing tag," which you can identify from the / symbol. This shows where the strong text stops. Most tags (though not all) need an end tag to function, so remember to include it.
+ Delete everything in your HTML document. Begin again with the following text, exactly as written (ignoring the bullet points). This HTML code tells the browser what type of HTML you'll be using, and that all your HTML will be contained within the <html> and </html> tags.<!DOCTYPE HTML PUBLIC "-
+<html>
+</html>
+
+, HTML documents are divided into two sections. The "head" section is for special information, like the title of the page. The "body" section includes the main content of the page. Add these both to your document, remembering to include end tags. The new text to add is in bold:
+
+
+<!DOCTYPE HTML PUBLIC "-
+<html>
+<head>
+</head>
+<body>
+</body>
+</html>
+
+, Most tags that go in the head section are not important to learn as a beginner. The title tag is easy to use, though, and will determine what shows up as the name of your browser window or on the browser tab. Put the title start and end tags inside the head tags, and write any title you like between them:
+
+
+<!DOCTYPE HTML PUBLIC "-
+<html>
+<head>
+<title>My first HTML page.</title>
+</head>
+<body>
+</body>
+</html>
+
+, For this section, we'll be working only within the body tags. The other text will still be there in your document, but we'll save some space by not repeating it every time in this guide. Write anything you like between the <body> and </body> tags, and it will appear as the first content on your web page. For example:
+
+
+<body>
+I'm following the wikiHow guide to write an HTML page.
+</body>
+
+, Organize your page with header tags, which instruct the browser to display text between them in a larger size. These are also used by search engine bots and other tools to determine what your page is about and how it is organized. <h1> </h1> is the largest header, and you can create smaller headers all the way down to <h6> </h6>. Try them out on your page:
+
+
+<body>
+<h1>Welcome to My Web Page.</h1>
+I'm following the wikiHow guide to write an HTML page.
+<h3>My goals today:</h3>
+<h5>Completed goals:</h5>
+Learn how to use headers.
+<h5>Uncompleted goals:</h5>
+Learn more text formatting tags.
+</body>
+
+, You've already seen the "strong" tag, but there are many more ways to format your text. Play around with these, or with multiple tags around the same string of text. Always remember to add the end tag afterward!
+
+
+
+<strong>Important text, displayed as bold in browsers.</strong>
+
+
+<em>Emphasized text, displayed as italics in browsers.</em>
+
+
+<small>Slightly smaller text than usual. This automatically scales if used in a heading.</small>
+
+
+<del>Text that is no longer applicable, displayed with a strike-through line.</del>
+
+
+<ins>Text that has been inserted later than the rest, displayed as an underline.</ins>
+
+
+, You might have noticed that hitting the "enter" key isn't enough to get your text to display on a different line. These tags can help you form paragraphs and line breaks, or arrange your text in other ways:
+
+
+
+<p> Short for "paragraph," this will keep all text between these tags in one paragraph, and separate it out from text above and below it.</p>
+
+
+<br> This will create a line break. Do not include an end tag for this, since it's not altering any other content. Use this for poems or address lines, not to separate paragraphs.<pre>If you need to display text very precisely, this tag will set the text inside to a fixed-width font (each letter exactly the same width), and let you create spaces and line breaks as you would for normal typing instead of with tags.</pre>
+
+
+<blockquote>This defines text that has been quoted from a source.</blockquote> You can describe the source afterward with the <cite>cite tag</cite>.
+ Comment tags are not visible on the web page. They allow you to write notes to yourself in the HTML document, without interfering with the content. <!--- Write your comment inside the tag. ---> Do not add an end tag.
+
+
+Tags that stand by themselves and do not use end tags are called "empty tags."
+
+, The best way to remember these tags is to use them in your own web page. Here's an example using tags from each of the steps you've learned so far. Try to predict what it would look like in a browser, than copy-paste it to your document and find out.
+
+
+<!DOCTYPE HTML PUBLIC "-
+<html>
+<head>
+<title>My first HTML page.</title>
+</head>
+<body>
+<h1>Welcome to My Web Page.</h1>
+I hope you enjoy the site!<p><strong>I made it just for you.</strong>
+<h2>Part One: How I Discovered HTML</h2>
+<!---Note to self: remember that "h1" is a larger header than "h2"--->
+I've been learning HTML for <del>one</del> <ins>two</ins>hours now, so I'm an expert.
+</body>
+</html>
+
+, Tags can have extra information written inside them, called "attributes." These show up as extra words within the tag itself, in the form of attribute-name="specific value". For example, just about any HTML tag can have the title attribute:
+
+
+<p title="Introduction">Introductory paragraph goes here.</p> gives the paragraph a title, "Introduction," which appears when you mouse over the paragraph in the web page.
+ Use the <a> </a> tag to create a hyperlink to any other web page. Insert the URL of the web page to link to using the href attribute. Here's an example that links to the page you're reading now:
+
+
+<a href="https:Visitors to your website can click this text to follow the link.</a>
+
+, Another attribute that just about any HTML tag can use is the "id" element. Inside any tag, write id="example" or use any name that does not include spaces.This won't have any visible effect, but we'll use it in the next step.
+
+
+For example, add this to your document: <p id="example">This paragraph will be used as an example to show how the id attribute works.</p>
+
+, Now we can use the hyperlink tag, <a> </a>, to link to another spot on the same page. Instead of a URL, we'll use the # symbol, followed by the id value we're linking to. For example, <a href="#example">This text will link to the paragraph with the id "example."</a>
+
+
+All HTML values are case-insensitive."#EXAMPLE" and "#example" will link to the same place.
+If your page is short enough to display all at once, you might not notice anything happen when you click the link in your browser. Resize the window until a scroll bar appears, then try again.
+ The <img> tag is an empty tag, meaning no closing tag is necessary. All the information the browser needs to display the image will be added using attributes.Here's an example that will display the wikiHow logo, followed by a description of each attribute:
+
+
+<img src="http:
+The src=" " attribute tells the browser where to find the image. (Note that it's generally considered rude to display an image from someone else's site – and the image will disappear if that site ever goes offline.)
+The style=" " attribute can do many things, but most importantly it's used to set the width and height of the image in pixels. (You can instead use the separate width=" " and height=" " attributes, but this can lead to weird resizing problems if you are using CSS.)
+The alt=" " attribute is a brief description of the image, which the user will see if the image fails to load. This is considered a requirement, since it's used by screen readers for blind visitors., HTML validation checks for errors in your code. If your web page isn't displaying correctly, validation can help you find the mistake causing problems. It can also teach you more about HTML, by identifying code that looks fine on your display, but isn't recommended due to updates in the HTML standard. Using invalid HTML doesn't make your site unusable, but it can cause problems or inconsistent display in different browsers.
+
+
+Try a free online validation service from W3C or search for another HTML 5 validator online.
+ There are many more HTML tags and attributes, and many places to learn them:
+
+
+Try w3schools and HTML Dog for more tutorials and comprehensive lists of tags.
+Find a web page you like the look of, and use your browser's "View Page Source" function to see the HTML for yourself. Copy-paste it into your own document and play with it to see how it works.
+Read other articles to learn about making HTML tables, using meta tags to boost your search engine visibility, or using div and span to help with css styling.
+ Choose a web hosting service, and you can upload as many HTML pages as you like to your personal web domain. To do this, you'll need to use FTP uploading software, but many web hosts provide this service as well.
+
+
+When linking to pages or images on your own site, you do not need to use the full address. For example, if your domain name is www.superskilledhtmlcoder.com, then <a href="/journal/monday.html">the text inside these tags</a> will link to the address "www.superskilledhtmlcoder.com/journal/monday.html"
+
+, If your HTML page is looking a little bare-bones, try learning some basic CSS to add color, different fonts, and greater control over element placement. Linking a CSS "stylesheet" to the HTML page lets you make powerful changes quickly, automatically adjusting the style of all text within a certain tag. You can play around with a basic stylesheet here, or delve into a more detailed tutorial at HTML Dog's CSS guide.
+ JavaScript is a programming language used to add more function to your HTML pages. JavaScript commands are inserted between the start and end tags <script> </script>, and can be used to add interactive buttons, calculate math problems, and much more.
+

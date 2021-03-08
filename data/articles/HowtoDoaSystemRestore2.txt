@@ -1,0 +1,19 @@
+ Reboot your computer and load the Advanced Startup menu. You can access this by pressing the F8 key as your computer boots up. Select “Safe Mode with Command Prompt” from the list of options. You will be taken to a DOS-style command prompt.
+
+
+For more details on starting in Safe Mode, see this article.
+This method is for Windows 7, Vista, and XP. Windows 8 users should refer to the next section.
+If you can’t access the Advanced Startup menu, insert your installation disc and boot from it. Select “Repair your computer” and then select “System Restore”.
+ Once you are at the command prompt, you will need to start the System Restore program. The command is slightly different depending on your operating system:
+
+
+Windows 7 and Vista – Type rstrui.exe and press Enter.Windows XP – Type %systemroot%\system32\restore\rstrui.exe and press Enter., You will be presented with a list of available restore points, sorted by date. There will be a short description of what the change was that caused the point to be created. Select the point to start the restore process.
+
+
+Restoring from the command prompt is irreversible, as no Undo restore point will be created. You can always restore to a different point.
+ The restore process can take quite a while to finish. Once it is complete, your system will be rebooted and you will be returned to Windows. A message will be displayed confirming that the restore was successful.
+
+
+If you changed your boot options to load Safe Mode, you will need to change them back so that you load into Windows regularly.
+ Once the restore is complete, you can go back to using Windows as you normally would. Check to see if the problems you were encountering still occur. If you want to use restored programs, you will most likely need to reinstall them.
+

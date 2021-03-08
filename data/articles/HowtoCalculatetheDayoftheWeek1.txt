@@ -1,0 +1,10 @@
+ If the resulting number is greater than 6, subtract the highest multiple of 7 in it. Hold this number till step 3.;
+, Add to the resulting number the number you get when you divide it by 4 and round down (i.e., drop the decimal). Now add the value for the Century from the Century Table. If the Month is Jan. or Feb. and the Year is a leap year, subtract 1.
+ If the resulting number is greater than 6, subtract the highest multiple of 7 in it. Using the resulting number, look up the Day-of-week in the Weekday-Table.
+
+
+Note: In step 2, you can tell if a year is a leap year if it is evenly divisible by 4, that is, there is no remainder. However, '00 years are not leap years unless they are evenly divisible by 400, which 1600 and 2000 are.
+Note re: Century Table and Year Value. The four-number cycle (0-5-3-1) of the Century Table repeats itself indefinitely, as shown in the table by the 0 for century 2000. So the value for the 3300s would be 5. This value for any century can instead be computed by multiplying 5 times the difference between the (2-digit) century and the highest multiple of 4 in it. For example, the 3400s would be: 5 X (34-32) = 10 (and 10, when reduced by the 7s in it, equals 3). This formula could even be extended further to encompass and compute the entire Year value in one felled swoop, but that formula, at its simplest, would be too complicated to carry around in one’s head and then perform the calculation quickly and precisely, which are the goals of the process explained here.
+Note: This process can be used in reverse to find either the Month, Day or Year, if any one of them is missing but the Day-of-the-Week is known."
+Note: The person who put up the example misread the second step, which slows down the formula considerably. The first line of the example should show 6/4 and not 90/4, with all subsequent lines of the example changed accordingly. The result is still the same, but the original way is faster.
+

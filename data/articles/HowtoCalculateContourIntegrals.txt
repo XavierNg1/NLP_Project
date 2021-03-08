@@ -1,0 +1,127 @@
+ 
+
+
+Definition. Given a complex function f(z){\displaystyle f(z)} and a contour γ,{\displaystyle \gamma ,} the integral of f(z){\displaystyle f(z)} over γ{\displaystyle \gamma } is said to be the Riemann sum limn→∞∑i=0nf(zi)Δzi.{\displaystyle \lim _{n\to \infty }\sum _{i=0}^{n}f(z_{i})\Delta z_{i}.} If this limit exists, then we say f(z){\displaystyle f(z)} is integrable on γ.{\displaystyle \gamma .} We communicate this by writing ∫γf(z)dz.{\displaystyle \int _{\gamma }f(z){\mathrm {d} }z.}
+
+Intuitively, this is a very straightforward generalization of the Riemann sum. We are simply adding up rectangles to find the area of a curve, and send the width of the rectangles to 0 such that they become infinitesimally thin.
+;
+, 
+
+If we parameterize the contour γ{\displaystyle \gamma } as z(t),{\displaystyle z(t),} then by the chain rule, we can equivalently write the integral below.
+
+
+∫γf(z)dz=∫Δtf(z(t))dzdtdt{\displaystyle \int _{\gamma }f(z){\mathrm {d} }z=\int _{\Delta t}f(z(t)){\frac {{\mathrm {d} }z}{{\mathrm {d} }t}}{\mathrm {d} }t}
+
+
+
+This is the integral that we use to compute. An important note is that this integral can be written in terms of its real and imaginary parts, like so.
+
+
+∫Δtf(z(t))dzdtdt=∫Δt(u(t)+iv(t))dt{\displaystyle \int _{\Delta t}f(z(t)){\frac {{\mathrm {d} }z}{{\mathrm {d} }t}}{\mathrm {d} }t=\int _{\Delta t}(u(t)+iv(t)){\mathrm {d} }t}
+
+
+
+
+, 
+
+The simplest contours that are used in complex analysis are line and circle contours. It is often desired, for simplicity, to parameterize a line such that 0≤t≤1.{\displaystyle 0\leq t\leq 1.} Given a starting point z1{\displaystyle z_{1}} and an endpoint z2,{\displaystyle z_{2},} such a contour can generally be parameterized in the following manner.
+
+
+z(t)=(1−t)z1+z2,  0≤t≤1{\displaystyle z(t)=(1-t)z_{1}+z_{2},\ \ 0\leq t\leq 1}
+
+
+
+A circle contour can be parameterized in a straightforward manner as well, as long as we keep track of the orientation of the contour. Let z0{\displaystyle z_{0}} be the center of the circle and r{\displaystyle r} be the radius of the circle. Then the parameterization of the circle, starting from t=0,{\displaystyle t=0,} and traversing the contour in the counterclockwise direction, is as such.
+
+
+z(t)=z0+reit,  0≤t≤2π{\displaystyle z(t)=z_{0}+re^{it},\ \ 0\leq t\leq 2\pi }
+
+
+
+Calculating dzdt{\displaystyle {\frac {{\mathrm {d} }z}{{\mathrm {d} }t}}} from both of these contours is trivial. 
+
+There are two important facts to consider here. First, the contour integral ∫γf(z)dz{\displaystyle \int _{\gamma }f(z){\mathrm {d} }z} is independent of parameterization so long as the direction of γ{\displaystyle \gamma } stays the same. This means that there are an infinite number of ways to parameterize a given curve, since the velocity can vary in an arbitrary way. Second, reversing the direction of the contour negates the integral.
+
+
+∫−γf(z)dz=−∫γf(z)dz{\displaystyle \int _{-\gamma }f(z){\mathrm {d} }z=-\int _{\gamma }f(z){\mathrm {d} }z}
+
+
+
+
+, We know that t{\displaystyle t} is real-valued, so all that remains is to integrate using the standard integration techniques of real-variable calculus.
+
+The visual above shows a typical contour on the complex plane. Starting from the point a,{\displaystyle a,} the contour traverses a semicircle in the counterclockwise direction with radius a{\displaystyle a} and closes the loop with a line going from −a{\displaystyle -a} to a.{\displaystyle a.} If the point z=i{\displaystyle z=i} as shown is taken to be the pole of a function, then the contour integral describes a contour going around the pole. This type of integration is extremely common in complex analysis.
+ γ{\displaystyle \gamma } is the curve connecting the origin to 1+i{\displaystyle 1+i} along a straight line.
+
+
+∫γ(xy2+2xyi)dz{\displaystyle \int _{\gamma }(xy^{2}+2xyi){\mathrm {d} }z}
+
+
+, Our curve is especially simple: x=t{\displaystyle x=t} and y=t.{\displaystyle y=t.} So we write our contour in the following manner.
+
+
+z(t)=t+it,  0≤t≤1{\displaystyle z(t)=t+it,\ \ 0\leq t\leq 1}
+
+
+, Substitute our results into the integral.
+
+ dzdt=1+i{\displaystyle {\frac {{\mathrm {d} }z}{{\mathrm {d} }t}}=1+i}
+
+
+∫γ(xy2+2xyi)dz=∫01(t3+i2t2)(1+i)dt{\displaystyle \int _{\gamma }(xy^{2}+2xyi){\mathrm {d} }z=\int _{0}^{1}(t^{3}+i2t^{2})(1+i){\mathrm {d} }t}
+
+
+,
+
+
+∫01(t3+i2t2)(1+i)dt=∫01(t3+i2t2+it3−2t2)dt=14+i(23+14)−23=−512+1112i{\displaystyle {\begin{aligned}\int _{0}^{1}(t^{3}+i2t^{2})(1+i){\mathrm {d} }t&=\int _{0}^{1}(t^{3}+i2t^{2}+it^{3}-2t^{2}){\mathrm {d} }t\\&={\frac {1}{4}}+i\left({\frac {2}{3}}+{\frac {1}{4}}\right)-{\frac {2}{3}}\\&=-{\frac {5}{12}}+{\frac {11}{12}}i\end{aligned}}}
+
+
+, Our parameterization changes to x=t{\displaystyle x=t} and y=t3.{\displaystyle y=t^{3}.}
+
+
+z(t)=t+it3{\displaystyle z(t)=t+it^{3}}
+
+
+dzdt=(1+i3t2)dt{\displaystyle {\frac {{\mathrm {d} }z}{{\mathrm {d} }t}}=(1+i3t^{2}){\mathrm {d} }t}
+
+
+∫γ(xy2+2xyi)dz=∫01(t7+i2t4)(1+i3t2)dt=∫01(t7+i2t4+i3t9−6t6)dt=18+i(25+310)−67=−4156+710i{\displaystyle {\begin{aligned}\int _{\gamma }(xy^{2}+2xyi){\mathrm {d} }z&=\int _{0}^{1}(t^{7}+i2t^{4})(1+i3t^{2}){\mathrm {d} }t\\&=\int _{0}^{1}(t^{7}+i2t^{4}+i3t^{9}-6t^{6}){\mathrm {d} }t\\&={\frac {1}{8}}+i\left({\frac {2}{5}}+{\frac {3}{10}}\right)-{\frac {6}{7}}\\&=-{\frac {41}{56}}+{\frac {7}{10}}i\end{aligned}}}
+
+We have shown here that for non-analytic functions such as f(z)=xy2+2xyi,{\displaystyle f(z)=xy^{2}+2xyi,} the contour integral is dependent on the path chosen. We can show that this function is non-analytic by checking if the real and imaginary parts satisfy the Cauchy-Riemann equations. As ∂u∂x=y2{\displaystyle {\frac {\partial u}{\partial x}}=y^{2}} and ∂v∂y=2x,{\displaystyle {\frac {\partial v}{\partial y}}=2x,} this is enough to demonstrate non-analyticity. 
+
+
+, As it pertains to contour integrals, the theorem is used to easily compute the value of contour integrals so long as we can find an antiderivative. The proof of this theorem is similar to all other fundamental theorem of calculus proofs, but we will not state it here for brevity. 
+
+Suppose the function f(z){\displaystyle f(z)} has an antiderivative F(z){\displaystyle F(z)} such that ddzF(z)=f(z){\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }z}}F(z)=f(z)} through a domain D,{\displaystyle D,} and let γ{\displaystyle \gamma } be a contour in D,{\displaystyle D,} where z0{\displaystyle z_{0}} and z1{\displaystyle z_{1}} are the start and end points of γ,{\displaystyle \gamma ,} respectively. Then ∫γf(z)dz{\displaystyle \int _{\gamma }f(z){\mathrm {d} }z} is independent of path for all continuous paths γ{\displaystyle \gamma } of finite length, and its value is given by F(z1)−F(z0).{\displaystyle F(z_{1})-F(z_{0}).}
+
+
+, γ{\displaystyle \gamma } is the semicircle going counterclockwise from z=−i{\displaystyle z=-i} to z=i.{\displaystyle z=i.}
+
+
+∫γzdz{\displaystyle \int _{\gamma }{\sqrt {z}}{\mathrm {d} }z}
+
+
+, 
+
+
+z(t)=eit,−π2≤t≤π2{\displaystyle z(t)=e^{it},-{\frac {\pi }{2}}\leq t\leq {\frac {\pi }{2}}}
+
+
+dzdt=ieit{\displaystyle {\frac {{\mathrm {d} }z}{{\mathrm {d} }t}}=ie^{it}}
+
+
+∫γzdz=∫−π/2π/2e12Log⁡eitieitdt=i∫−π/2π/2e32itdt=23e32it|−π/2π/2=23(e3π4i−e−3π4i)=232isin3π4=223i{\displaystyle {\begin{aligned}\int _{\gamma }{\sqrt {z}}{\mathrm {d} }z&=\int _{-\pi /2}^{\pi /2}e^{{\frac {1}{2}}\operatorname {Log} e^{it}}ie^{it}{\mathrm {d} }t\\&=i\int _{-\pi /2}^{\pi /2}e^{{\frac {3}{2}}it}{\mathrm {d} }t\\&={\frac {2}{3}}e^{{\frac {3}{2}}it}{\Bigg |}_{-\pi /2}^{\pi /2}\\&={\frac {2}{3}}\left(e^{{\frac {3\pi }{4}}i}-e^{-{\frac {3\pi }{4}}i}\right)\\&={\frac {2}{3}}2i\sin {\frac {3\pi }{4}}\\&={\frac {2{\sqrt {2}}}{3}}i\end{aligned}}}
+
+
+, However, in this method, the z{\displaystyle {\sqrt {z}}} in the integrand presents a problem. Since we know that z=e12Log⁡z,{\displaystyle {\sqrt {z}}=e^{{\frac {1}{2}}\operatorname {Log} z},} the presence of the logarithmic function indicates a branch cut over which we cannot integrate. Fortunately, we can choose our branch cut such that our contour is well-defined in our domain. The principal branch of the logarithm, where the branch cut consists of the non-positive real numbers, works in this case, because our contour goes around that branch cut. As long as we recognize the principal logarithm has an argument defined over (−π,π],{\displaystyle (-\pi ,\pi ],} the rest of the steps are simple computations.
+
+
+∫γzdz=23z3/2|−ii=23(i32−(−i)32)=23(e32Log⁡i−e32Log⁡(−i)){\displaystyle {\begin{aligned}\int _{\gamma }{\sqrt {z}}{\mathrm {d} }z&={\frac {2}{3}}z^{3/2}{\Bigg |}_{-i}^{i}\\&={\frac {2}{3}}\left(i^{\frac {3}{2}}-(-i)^{\frac {3}{2}}\right)\\&={\frac {2}{3}}\left(e^{{\frac {3}{2}}\operatorname {Log} i}-e^{{\frac {3}{2}}\operatorname {Log} (-i)}\right)\end{aligned}}}
+
+For the principal branch of the logarithm, we see that Log⁡i=iπ2{\displaystyle \operatorname {Log} i=i{\frac {\pi }{2}}} and Log⁡(−i)=−iπ2.{\displaystyle \operatorname {Log} (-i)=-i{\frac {\pi }{2}}.}
+
+
+∫γzdz=23(e32iπ2−e−32iπ2)=23(e3π4i−e−3π4i)=232isin3π4=223i{\displaystyle {\begin{aligned}\int _{\gamma }{\sqrt {z}}{\mathrm {d} }z&={\frac {2}{3}}\left(e^{{\frac {3}{2}}i{\frac {\pi }{2}}}-e^{-{\frac {3}{2}}i{\frac {\pi }{2}}}\right)\\&={\frac {2}{3}}\left(e^{{\frac {3\pi }{4}}i}-e^{-{\frac {3\pi }{4}}i}\right)\\&={\frac {2}{3}}2i\sin {\frac {3\pi }{4}}\\&={\frac {2{\sqrt {2}}}{3}}i\end{aligned}}}
+
+

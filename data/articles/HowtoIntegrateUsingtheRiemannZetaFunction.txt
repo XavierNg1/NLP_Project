@@ -1,0 +1,116 @@
+ The identity involving the integral, the Gamma function, and the Riemann zeta function is pretty straightforward to derive.
+
+
+∫0∞xs−1ex−1dx{\displaystyle \int _{0}^{\infty }{\frac {x^{s-1}}{e^{x}-1}}{\mathrm {d} }x}
+;
+, This allows us to rewrite the integral in terms of a power series 11−e−x=∑k=0∞e−kx.{\displaystyle {\frac {1}{1-e^{-x}}}=\sum _{k=0}^{\infty }e^{-kx}.}
+
+
+∫0∞xs−1e−x1−e−xdx=∑k=0∞∫0∞xs−1e−(k+1)xdx{\displaystyle \int _{0}^{\infty }{\frac {x^{s-1}e^{-x}}{1-e^{-x}}}{\mathrm {d} }x=\sum _{k=0}^{\infty }\int _{0}^{\infty }x^{s-1}e^{-(k+1)x}{\mathrm {d} }x}
+
+
+, Then we see that the integral is simply the Gamma function after pulling the terms with k{\displaystyle k} out of the integral. Furthermore, the sum is simply the Riemann zeta function.
+
+
+∑k=0∞∫0∞us−1(k+1)s−1e−uk+1du=(∑k=0∞1(k+1)s)Γ(s)=Γ(s)ζ(s){\displaystyle \sum _{k=0}^{\infty }\int _{0}^{\infty }{\frac {u^{s-1}}{(k+1)^{s-1}}}{\frac {e^{-u}}{k+1}}{\mathrm {d} }u=\left(\sum _{k=0}^{\infty }{\frac {1}{(k+1)^{s}}}\right)\Gamma (s)=\Gamma (s)\zeta (s)}
+
+This is a result that can be used to evaluate any types of integrals of this form. Furthermore, we can introduce additional parameters and differentiate under the integral to yield even more results, which we explore in part 2.
+ These integrals can directly be evaluated using the Riemann zeta function and should be considered trivial.
+
+
+∫0∞xex−1dx=π26{\displaystyle \int _{0}^{\infty }{\frac {x}{e^{x}-1}}{\mathrm {d} }x={\frac {\pi ^{2}}{6}}}
+
+
+∫0∞x2ex−1dx=2ζ(3){\displaystyle \int _{0}^{\infty }{\frac {x^{2}}{e^{x}-1}}{\mathrm {d} }x=2\zeta (3)}
+
+
+∫0∞x2xex−1dx=15π8ζ(7/2){\displaystyle \int _{0}^{\infty }{\frac {x^{2}{\sqrt {x}}}{e^{x}-1}}{\mathrm {d} }x={\frac {15{\sqrt {\pi }}}{8}}\zeta (7/2)}
+
+
+∫0∞x3ex−1dx=π415{\displaystyle \int _{0}^{\infty }{\frac {x^{3}}{e^{x}-1}}{\mathrm {d} }x={\frac {\pi ^{4}}{15}}}
+
+
+, We introduce an additional constant α,{\displaystyle \alpha ,} allowing us to determine some more integrals. Make sure that you verify this integral using u-substitution.
+
+
+∫0∞xs−1eαx−1dx=Γ(s)ζ(s)αs{\displaystyle \int _{0}^{\infty }{\frac {x^{s-1}}{e^{\alpha x}-1}}{\mathrm {d} }x={\frac {\Gamma (s)\zeta (s)}{\alpha ^{s}}}}
+
+
+, If you are familiar with differentiating under the integral, you will recognize that doing so will negate both the integral and the result, so the answers will stay positive no matter how many times we differentiate.
+
+After simplifying, we get these results.
+
+
+∫0∞xseαx(eαx−1)2dx=Γ(s+1)ζ(s)αs+1{\displaystyle \int _{0}^{\infty }{\frac {x^{s}e^{\alpha x}}{(e^{\alpha x}-1)^{2}}}{\mathrm {d} }x={\frac {\Gamma (s+1)\zeta (s)}{\alpha ^{s+1}}}}
+
+
+∫0∞xs+1eαx(1+eαx)(eαx−1)3dx=Γ(s+2)ζ(s)αs+2{\displaystyle \int _{0}^{\infty }{\frac {x^{s+1}e^{\alpha x}(1+e^{\alpha x})}{(e^{\alpha x}-1)^{3}}}{\mathrm {d} }x={\frac {\Gamma (s+2)\zeta (s)}{\alpha ^{s+2}}}}
+
+
+
+For each of these integrals, we can set α=1{\displaystyle \alpha =1} to obtain these results.
+
+
+∫0∞xsex(ex−1)2dx=Γ(s+1)ζ(s){\displaystyle \int _{0}^{\infty }{\frac {x^{s}e^{x}}{(e^{x}-1)^{2}}}{\mathrm {d} }x=\Gamma (s+1)\zeta (s)}
+
+
+∫0∞xs+1ex(1+ex)(ex−1)3dx=Γ(s+2)ζ(s){\displaystyle \int _{0}^{\infty }{\frac {x^{s+1}e^{x}(1+e^{x})}{(e^{x}-1)^{3}}}{\mathrm {d} }x=\Gamma (s+2)\zeta (s)}
+
+
+
+We can also combine these results to obtain another integral. This identity can be verified by writing the right side in integral form and multiplying the top and bottom of the right integral by (ex−1).{\displaystyle (e^{x}-1).}
+
+
+∫0∞xs(ex−1)2dx=Γ(s+1)(ζ(s)−ζ(s+1)){\displaystyle \int _{0}^{\infty }{\frac {x^{s}}{(e^{x}-1)^{2}}}{\mathrm {d} }x=\Gamma (s+1)(\zeta (s)-\zeta (s+1))}
+
+
+
+
+, This introduces some more integrals involving logarithms. However, it also introduces derivatives of the Gamma function and the Riemann zeta function. Obviously, more of these can be found simply by repeatedly differentiating with respect to either α{\displaystyle \alpha } or s.{\displaystyle s.}
+
+
+∫0∞xs−1ln⁡xex−1dx=Γ(s)ζ′(s)+Γ′(s)ζ(s){\displaystyle \int _{0}^{\infty }{\frac {x^{s-1}\ln x}{e^{x}-1}}{\mathrm {d} }x=\Gamma (s)\zeta ^{\prime }(s)+\Gamma ^{\prime }(s)\zeta (s)}
+
+
+, Using the techniques discussed in this section, as well as u-substitution, we can evaluate these classes of integrals.
+
+
+∫0∞x3e4x−1dx=π428⋅3⋅5{\displaystyle \int _{0}^{\infty }{\frac {x^{3}}{e^{4x}-1}}{\mathrm {d} }x={\frac {\pi ^{4}}{2^{8}\cdot 3\cdot 5}}}
+
+
+∫0∞x2e4x2−1dx=π32ζ(3/2){\displaystyle \int _{0}^{\infty }{\frac {x^{2}}{e^{4x^{2}}-1}}{\mathrm {d} }x={\frac {\sqrt {\pi }}{32}}\zeta (3/2)}
+
+
+∫0∞x3e2x(e2x−1)2dx=38ζ(3){\displaystyle \int _{0}^{\infty }{\frac {x^{3}e^{2x}}{(e^{2x}-1)^{2}}}{\mathrm {d} }x={\frac {3}{8}}\zeta (3)}
+
+
+∫0∞x2x3(ex−1)2dx=2827Γ(13)(ζ(73)−ζ(103)){\displaystyle \int _{0}^{\infty }{\frac {x^{2}{\sqrt{x}}}{(e^{x}-1)^{2}}}{\mathrm {d} }x={\frac {28}{27}}\Gamma \left({\frac {1}{3}}\right)\left(\zeta \left({\frac {7}{3}}\right)-\zeta \left({\frac {10}{3}}\right)\right)}
+
+
+, In this section, we consider a related function to the Riemann zeta function whose terms alternate signs - the Dirichlet eta function. This relation can be derived in a similar manner as before. It converges whenever Re⁡(s)>0.{\displaystyle \operatorname {Re} (s)>0.}
+
+
+∫0∞xs−1ex+1dx=Γ(s)η(s)=Γ(s)2s−1−12s−1ζ(s){\displaystyle \int _{0}^{\infty }{\frac {x^{s-1}}{e^{x}+1}}{\mathrm {d} }x=\Gamma (s)\eta (s)=\Gamma (s){\frac {2^{s-1}-1}{2^{s-1}}}\zeta (s)}
+
+
+, The same differentiation under the integral that was performed on the Riemann zeta function can be done on the Dirichlet eta function as well. We write some of these integrals below, where we set α=1{\displaystyle \alpha =1} at a convenient time.
+
+
+∫0∞xsex(ex+1)2dx=Γ(s+1)η(s){\displaystyle \int _{0}^{\infty }{\frac {x^{s}e^{x}}{(e^{x}+1)^{2}}}{\mathrm {d} }x=\Gamma (s+1)\eta (s)}
+
+
+∫0∞xs(ex+1)2dx=Γ(s+1)(η(s)−η(s+1)){\displaystyle \int _{0}^{\infty }{\frac {x^{s}}{(e^{x}+1)^{2}}}{\mathrm {d} }x=\Gamma (s+1)(\eta (s)-\eta (s+1))}
+
+
+, It turns out that the Dirichlet eta function is also useful in certain fields of physics, which is why we go over them in this article.
+
+
+∫0∞x2e4x+1dx=3128ζ(3){\displaystyle \int _{0}^{\infty }{\frac {x^{2}}{e^{4x}+1}}{\mathrm {d} }x={\frac {3}{128}}\zeta (3)}
+
+
+∫0∞xex(ex+1)2dx=ln⁡2{\displaystyle \int _{0}^{\infty }{\frac {xe^{x}}{(e^{x}+1)^{2}}}{\mathrm {d} }x=\ln 2}
+
+
+∫0∞x2e3x(e3x+1)2dx=π2162{\displaystyle \int _{0}^{\infty }{\frac {x^{2}e^{3x}}{(e^{3x}+1)^{2}}}{\mathrm {d} }x={\frac {\pi ^{2}}{162}}}
+
+

@@ -1,0 +1,28 @@
+ Common types of properties are:
+
+
+Accessors to Fields: the property simply retrieves the value of a private field and writes to it.
+Event Triggering Accessors to Fields: accessors that, besides retrieving and writing the value of the field, also trigger an event related to the field. For example firing an event when the value changes (which is the most common amongst this kind of properties)
+Calculated Fields: these are used to emulate a field that is not actually stored in the object but calculated from already stored values. For example, the "Area" property in a "Circle" object is not actually stored but is rather calculated from the radius of the circle.
+Data Store Values: these are properties used to retrieve data from a data storage such as a database or a file.;
+,, Properties can be public, internal, protected, protected internal or private. This defines which parts of code an access this property. Usually, properties are either public, protected or private. We rarely need to create internal or protected internal properties.
+ That is to decide whether users should be able to read the property only or assign to it as well.
+ That is to decide whether the property will belong to the class itself and not to any particular object of the class (static scope) or belong to objects of the class (see Tips below)
+
+, This means you decide whether you expect inheriting classes to need to change the implementation of the property or not. The property can be virtual (which means inheriting classes can override it - change its implementation), abstract (meaning the implementation of the property is not know at the moment but all inheriting classes should provide an implementation of it if they don't want to be abstract themselves, or normal which means inheriting classes must use the implementation provided or overwrite the method which renders the new implementation inaccessible via a base reference.
+ For example, for the "Area" property, how will you calculate and return the area if the property is used in a statement like "x = a.Area;"
+
+, In other words, what should happen when the property is assigned a value like in a statement like "a.Area = 20;". This step is only done if you choose to implement a read-write property in 4. For read-only properties (like the Area example), you skip this step.
+ If left out, the least possible accessibility is assumed (this is usually private)
+
+returnType is the data type of the data represented by the property. This can not be void.
+
+PropertyName is the name of the property you are declaring.
+
+retrieval-code is the code used to retrieve data from the property.
+
+returnValue is the value you want to return to the caller of the property (usually this is a result of the processing done by the retrieval code)
+
+assigning-code is the code used to assign some value to the property. The value the user will provide in the assignment statement that will trigger this code is passed to the set method as a reference named value. For example, if the user wrote the code: a.Area = 10; there will be a reference called value inside the body of set{} that has the value of 10.
+Items between squared brackets in the syntax above are optional (e.g. the set method is optional).
+

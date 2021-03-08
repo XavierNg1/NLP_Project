@@ -1,0 +1,57 @@
+ DRM stands for "Digital Rights Management", and is a form of copy-protection that is included on every file that you purchase from iTunes. The DRM in your video files prevents you from playing them on non-Apple devices or without being logged in with your Apple ID. In order to sync purchased videos with your Android device, you will need to remove this DRM.If you're trying to add video files that weren't purchased from iTunes but aren't compatible with Android, click here to move on to the next section.;
+, This method will discuss how to remove DRM from your files for free, but the process is significantly more complex than using a paid tool. Popular paid tools include:
+
+
+TunesKit
+iTunes Video DRM Removal
+Aimersoft DRM Media Converter
+
+, If you want to strip the DRM for free, you'll need to jump through a few hoops first. The best free DRM removal tool, Requiem, hasn't been updated in a few years, and won't work with any version of iTunes past 10.7. You'll need to downgrade if you have a newer version.
+
+
+Uninstall all Apple software on your computer, including iTunes, iCloud, Bonjour, and any other Apple programs.
+Open the iTunes Media Library folder. This can typically be found in C:\Users\Username\Music\iTunes.
+Rename iTunes Library.itl to iTunes Library.bak.
+Download and install iTunes. You can download the installer from Apple here.
+Rename iTunes Library.bak to iTunes Library.itl to replace the newly installed Library file with your original.
+ In order to run Requiem, you'll need to install the Java runtime environment. You may already have this installed.
+
+
+You can download the latest version of Java here. Make sure to not allow it to install the Ask toolbar during the setup process by unchecking the box.
+ You'll need to download Requiem from the community forum post here. It will download in .zip format.
+ You can extract a .zip file by right-clicking on it and selecting "Extract here".
+ Requiem will not run if iTunes is running.
+ Requiem will automatically start scanning your iTunes library and remove the DRM from any DRM-protected file it finds. This process may take a while, especially for large libraries.
+
+
+You can remove DRM from individual files or folders by dragging and dropping them onto the Requiem program.
+ Requiem will replace the original file with the DRM-free one, and the original will be moved to the Trash or Recycle. Make sure that you test to ensure that the file plays before emptying deleting it completely.
+ Videos purchased from iTunes are usually either .m4v or .mov format, neither of which will play on Android natively. You'll need to convert the video files first before syncing them with your Android device. Handbrake is a free, open-source video converter that can quickly convert any video into the proper format.
+
+
+You can download Handbrake for free from handbrake.fr.
+Handbrake can also be used to convert any other video format, such as .mkv, to one compatible with your Android device.
+ You can find your videos files in your iTunes Media folder (usually C:\Users\Username\Music\iTunes\iTunes Media).
+ Make sure you choose some place easy to find again later.
+ If you don't see the Presets panel, click "Presets" → "Show Preset Panel".
+
+
+These presets will automatically format the converted video to a format that is playable on your device while sacrificing as little quality as possible.
+ This will add the conversion project to the Handbrake queue.
+ You can continue to add videos to your conversion queue using the same process above. Make sure to click "Add to Queue" for each one.
+ Handbrake will begin working through your conversion queue, and you will be able to monitor the progress by looking at the status bar. Converting videos can take a while, especially for full-length movies.
+
+
+Handbrake will use a lot of your CPU's power while converting, so you may want to avoid doing other tasks on the computer during the conversion process.
+ Use a USB cable to connect your Android device to your computer and unlock the device's screen. It should appear as a removable drive immediately.
+
+
+If you're using an older version of Android, you may have to select "USB Mass Storage" from the Notification bar after connecting the device.
+Mac users will need to download Android File Transfer here. After installing the program and connecting your Android device, it will appear on your desktop as a removable drive.
+ Many devices will not have a dedicated Movies or Videos folder, so you can create one if you don't have one. You can also add the videos to your Pictures folder and you'll be able to open them in your Gallery or Photos app.
+ You'll likely need to wait a few minutes for the videos to copy onto the Android device. Copying lots of videos or several large videos may take a while to complete.
+ Once the video has been copied, you'll be able to open it on your Android device. Your Gallery or Photos app will usually be able to find the new videos automatically, though you may have to switch to the "Videos" section of the app.
+
+
+If you can't get the videos to open in your Gallery or Photos app, you can download VLC Player for your Android. This app will play nearly any video file and will allow you to browse your phone's storage to select it. You can download VLC for free from the Google Play Store.
+

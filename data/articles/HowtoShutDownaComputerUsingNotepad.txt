@@ -1,0 +1,23 @@
+ This is the free text editing program that comes with every version of Windows. You can use it to create a command that, when run, will shut down Windows for you.
+
+
+You can find Notepad by clicking the Start menu and selecting "Programs" → "Accessories" → "Notepad". You can also click the Start menu, type notepad, and press ↵ Enter.;
+, This is the command to shut down the computer.
+ By default, the shutdown process will be delayed by 30 seconds. You can change this by using the -t gflag with the number of seconds you want to delay.
+
+
+For example, to create a shutdown command that waits 45 seconds, type shutdown.exe -s -t 45.
+To create a shutdown command that shuts the computer down immediately, type shutdown.exe -s -t 00.
+ If you want, you can add a personalized message to the shut down notice by using the -c flag. Using the above example, type shutdown.exe -s -t 45 -c "comment". The comment must be in quotes.For example, you can let the user know how long until the shutdown begins by typing shutdown.exe -s -t 45 -c "Computer will shut down in 45 seconds".
+ You will need to save the file as a batch file, which Windows can execute to run the shutdown command.
+ This will allow you to change the file type.
+ Replace it with .bat.
+
+
+If you don't see the three letter file extensions, click here.
+ A new copy will be created with the .bat extension, and it will have a different icon than a standard text file.
+ The shutdown will occur according to the rules you created.
+
+
+Make sure you've saved anything you need to before running the shut down program.
+

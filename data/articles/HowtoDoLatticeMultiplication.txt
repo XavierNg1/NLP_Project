@@ -1,0 +1,41 @@
+ The number a corresponds ot the number of digits of the multiplicand (number being multiplied) and b to the digits of the multiplier (number doing the multiplying).
+
+
+The multiplicand is the first number in a multiplication operation while the multiplier is the last number.
+For the sake of formality, number the cells from the left to the right, then from the top to the bottom.
+So the first cell is located on the first row and first column, the second cell is located on the first row but on the second column, and so on and so forth.
+For a clearer understanding, let’s try an example. Suppose you want to multiply 789 with 461.
+Since they both have three digits, your table will be a 3 x 3.;
+, Also, align the digits of the multiplier with the rows and place them on the right side of the table.
+
+
+For example:
+
+, For the first cell, draw a line from the top most right corner going down to the left.
+
+
+For the second cell, also draw a line from the top most right side going to the left until it reaches the last cell on its left.
+Repeat this process for the remaining cells. Your table should be full of right triangles by now.
+Following Step 2 and Step 3, you now place the digits on their respective sides and create the diagonal paths as well.
+ Multiply the first number of the multiplicand, and the first number of the multiplier.
+
+
+If the answer is less than 10, write the answer on the lower triangle and write 0 on the upper triangle.
+If the answer is more than 10, write the first digit of the answer on the upper triangle of the cell, and the second digit on the lower triangle.
+Then, multiply the first digit of the multiplicand to the succeeding digits of the multiplier. Repeat the same step for the next digits of the multiplicand.
+Following the example, you multiply the digits of the multiplicand and the multiplier.
+ Start from the last triangle of the last cell, then go up the table.
+
+
+Place the answer on the left side of the diagonal paths.
+If the answer exceeds ten, write the last number of the answer on the same left side while “carrying over” the second digit to the next diagonal path.
+Following your example, look at the last cell. Since it contains only the number 9, you just copy that and it will serve as one of the digits of your final answer.
+Now, look at the second diagonal path from the bottom. To get a digit for the final answer, let’s add them: 8+0+4=12.
+Since the answer of that diagonal path is greater than ten, you ought to retain the last digit, 2, and carry over the first digit, 1, to the next diagonal path.
+Then, repeat the procedure for all remaining diagonal paths.
+ Go from the top to the bottom, then from left to right.
+
+
+Simply combine the numbers side by side.
+To get the final answer, just combine the numbers going from top to bottom, then left to right. Therefore: 789 x 461 = 363,729
+

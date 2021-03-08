@@ -1,0 +1,32 @@
+ Navigate to the download page. Under the Windows section, select the "mingw-setup" variant; this is an all-in-one installer that includes all necessary tools. Select either download link to continue.;
+, After clicking a download link, a window will appear, prompting you to select a location to save the installer file. First, choose a save location, then click "Save" to continue.
+ After the download completes, start the installer. The installer will be located in the location specified when it was downloaded.
+ After launching the installer, the setup wizard will appear on screen. To continue, click the "Next" button.
+ Read the end user license agreement. After reading, click "I Agree" if you agree to the terms and want to install the software.
+ Make sure that "Full" installation is selected from the drop down menu at the top; this includes all necessary software components. After this is done, click "Next" to continue.
+ By default, Code::Blocks will install under C:\Program Files (x86)\CodeBlocks\. If you want to use this, click "Install", otherwise, use the "Browse" button to select a custom install path before starting install.
+ The installation will take several minutes to complete and will show its progress in the window.
+ When prompted, do not run Code::Blocks. First, complete install wizard.This is done by clicking the "Next" button on the installer screen, then clicking "Finish" on the completion page.
+ To launch the program, double click the Code::Blocks icon the installer placed on your desktop. If you do not have a desktop shortcut, the program can be found under Start--> All Programs ---> Code::Blocks --> CodeBlocks.exe
+
+, If prompted, accept GNU GCC Compiler as the default. To do this, click the entry for GNU GCC Compiler, then click "Set as Default". To continue, click "OK".
+ If prompted, select the option to associate Code::Blocks with C and C++ file types, then click "OK". This will allow you to open these types of files in Code::Blocks by default.
+ On the main page, select the link next to the folder icon. This will open a new window in which you will set up your project.
+ On the "New from Template" window, select the "Files" heading on the left side of the window. Then, select the "C/C++ Source" option. Click "Go" to continue.
+ Use the wizard to create and configure your C file. To continue, click "Next".
+ Select the option to create a "C" file. Once selected, click the "Next" button to continue.
+ Click the "..." button on the setup menu to open the explorer window to allow you to create your C file.
+ First, browse to the location you wish to save your C file in (it is recommended that you make a separate folder for each project). Next, choose a name for your C file. Finally, click "Save" to save your file with the name and location specified.
+ To confirm creation of your C file, click "Finish".
+ To create your "Hello World" program, copy the code below into Code::Blocks.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+printf("Hello World.\n");
+return 0;
+}, Click the "Build and Run" icon to run your program. This function compiles then runs your program in one convenient step.
+ After running, a terminal window will pop up with the message "Hello World." The process should return 0. If a different value appears, there may be an issue with your program. The execution time will vary based on the speed of your computer.
+

@@ -1,0 +1,83 @@
+ Lowering these will result in an uglier game, but it will perform much, much better. Most players will get significant FPS gains from making the changes in this section, and won't need to worry about the more advanced sections below.
+
+
+Click the Options button in the CS:GO main menu. You'll find this at the top of the screen.
+Select Video Settings. This will open the video options for the game.;
+, Lower all of the below settings to their lowest settings, then play your game and see what kind of frame rates you get. You can then raise settings one at a time until you reach a good compromise between graphics and performance. Details for each setting are explained below.
+ The resolution is the number of pixels that the game renders on your screen. A higher resolution will result in a crisper image, but at a cost to performance. Lowering your resolution will have one of the biggest impacts on your FPS.
+
+
+Choose 1600x900 or 1280x720 if you usually use 1920x1080. This will keep the same aspect ratio. The image will be blockier and a little blurrier, but you should notice a major increase in smoothness.Avoid switching to a 4:3 aspect ratio. While this will give big performance boosts, you actually lose part of the viewable area. This puts you at a disadvantage while playing the game.
+ If this is enabled, your performance will be decreased in an effort to save your laptop's battery life. If you're going for maximum framerate, plug your laptop in and disable this setting.
+ There are several effects and detail options in the "Advanced Video Options" section. Generally, turning these down or off will always result in a performance boost, though the gains you experience will vary depending on your system.Shadows can be particularly taxing on your computer, so lower "Global Shadow Quality" if you can stomach the results.
+Lowering the "Effect detail" option will help prevent you from slowing down during chaotic firefights.
+Lowering the "Model / Texture Detail" option will help with older graphics cards, but will not make as much of a difference if its your CPU causing problems.
+ Anti-aliasing is a process that smooths out edges in the game, making them look less jaggy. Anti-aliasing can be very computationally expensive, which means it will drag down your FPS. If you don't mind things looking a little rough, set Anti-Aliasing to "2x MSAA" or turn it off. This will give a big performance boost.
+ Motion blur is designed to make movements look smoother at lower frame rates. Since you're gunning for a high FPS, you don't need this enabled. Disabling motion blur will improve performance and make it easier to see what's going on when you look around in the game.
+ Make sure any programs that are obviously open, such as Word or your web browser, are all closed before starting CS:GO. Closing open programs will help free up RAM that CS:Go can use to improve performance.
+ Your torrent programs can be easy to forget, as they typically minimize to the system tray. If you're actively downloading a torrent, both your connection and your FPS will suffer. Check your system try to see if your torrent program is downloading in the background.
+ If you have an antivirus program that takes a lot of resources like Norton or McAfee, consider turning it off while you play Counter-Strike. You won't receive viruses through the game, so you can safely disable it while you're playing.
+
+
+Consider installing a lightweight antivirus instead if you need to disable it often. Windows comes with Windows Defender for free, which is an adequate protection against most viruses with a minimal performance footprint. See Turn on Windows Defender for details.
+ You may have malware running in the background on your computer, eating up your resources without you knowing. Running regular malware scans will help keep your system clean and free up more power for games.
+
+
+One of the most effective malware scanners is Malwarebytes Anti-Malware. You can download it for free from malwarebytes.org. See Remove Malware for details.
+ The Steam Overlay appears when you press the shortcut keys for it, and allows you to access Steam features while in game. This can cause performance problems for older computers, so you can turn it off.
+ This will open the Steam preferences menu.
+ This will open the overlay options.
+ This will disable the Steam Overlay for all of your games, including CS:GO.
+ The Steam Overlay will no longer load, potentially improving your performance.
+ You can add special commands to CS:Go that modify it when it launches. These commands can help optimize performance.
+ This will open a new window.
+ Another new window will open for you to enter launch options.
+ You can paste the following code exactly for the best performance gains. If your computer is dual-core (most modern computers are quad-core), change -threads 4 to -threads 2:
+
+
+-novid -high -threads 4 -nojoy +cl_forcepreload 1 -nod3d9ex
+
+, When you boot up CS:GO, the intro video will not load, the game will take high CPU priority, it will run across all four cores of your processor, joystick support will be disabled, maps will preload, and Alt+Tab ↹ will work better.
+ If you haven't updated your graphics card drivers in a while, you'll want to get the latest version. Updated drives can make a big difference in performance, especially for older cards. You can figure which drivers you need by opening the Device Manager.
+
+
+Open the Start menu or screen and type "device manager" to find and open it.
+ This will show all of the graphics adapters that you have installed. You will likely only have one or two items listed here.
+ The "Display adapters" section will show the current model of your graphics card. If you have an Intel and an AMD or NVIDIA entry, you can ignore the Intel entry. The model of your graphics card will be listed after the manufacturer (i.e. NVIDIA GeForce GTX 670)
+
+
+When you have two adapters listed here, one if for your motherboard and the other is for your graphics card. The motherboard graphics will almost always be Intel, and is not used if your monitor is connected to a graphics card from NVIDIA or AMD.
+ You'll be able to download drivers directly from the manufacturer's website. Below are the driver download sites for the major manufacturers:
+
+
+NVIDIA - http://www.nvidia.com/Download/index.aspx
+
+AMD - http://support.amd.com/en-us/download
+
+Intel - https://downloadcenter.intel.com/
+
+
+, Use the search function or the automatic driver detection feature on the driver website to find the correct download. All of the major manufacturers can automatically detect your adapter and download the correct drivers for you.
+
+
+Most driver installers are about 300 MB in size, and may take a little while to download.
+ After you download the driver installer, run it from your Downloads folder to begin installation. The installation may take a while, and your screen may flicker or go black during it.
+
+
+Decline the installation of any driver management software like GeForce Experience, as these typically just make your games run slower when they're open.
+ If you're playing on a laptop, you'll get the best performance if you are plugged in. This is because your system will automatically throttle itself if it is running off battery to help make the battery last longer. This is great for word processing, but terrible for gaming., Your power-saving settings may be holding your hardware back, even if you're plugged in. You can change these settings from the Control Panel.
+
+
+You can open the Control Panel from the Start menu. In Windows 10, right-click the Start button and select "Power Options" to skip the whole Control Panel.
+ If you are in Category view, click "Hardware and Sound," then "Power Options."
+
+, This will reveal the "High performance" option.
+ This will prevent your laptop from throttling your hardware while playing the game, which may increase your performance. Make sure to keep the laptop plugged in, as you'll lose battery quickly.
+ Visit http://www.coderbag.com/Programming-C/Disable-CPU-Core-Parking-Utility and click the link at the bottom of the article to download it. This utility will "unpark" your idle CPU cores, potentially giving your game a serious performance boost.
+
+
+This only applied to computers running Windows 7 and earlier. This behavior changed in Windows 8 and 10, making this process irrelevant.
+ Extract the downloaded ZIP file to your desktop or Documents folder and run the UnparkCPU.exe file inside. Confirm that you want to run it when prompted by Windows.
+ This will check to see if any of your CPUs are currently in "Park" mode.
+ All of your parked CPU cores will be unparked, allowing your system to access their full potential.
+ You'll need to reboot in order for the changes to take effect. Once you reboot, load up CS:GO to see if there's a noticeable difference.

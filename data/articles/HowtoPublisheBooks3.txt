@@ -1,0 +1,39 @@
+ It is important to understand how ereaders work and how text displays on the screen. In understanding what is expected, you will know how your own eBook should look when you are done with formatting.
+
+
+To get an idea of what eBooks look like, get or borrow an ereader. Look at eBooks and notice how you can interact with them and change them.
+It is important to know that there are no “pages” in eBooks like there are in traditional books. eBooks are designed so that the text is fluid, able to resize at any time. You cannot format the book with set pages or page numbers in mind.
+ Ereaders work by converting the text of your book to HTML, the same technical language which is used to make web pages. HTML is, essentially, a formatting language. It tells a computer how text and images should appear, regardless of the device or screen size. You will need to learn basic HTML skills in order to format your eBook so that it displays correctly on all devices.Namely, you will need to know how to use tags (specific words placed in angle brackets) which correlate with the normal formatting found in word processors.
+
+
+Tags almost always come in pairs: an opening tag and a closing tag. The opening tag will contain a word in a set of brackets and a closing tag will contain the same word but it will be preceded by a forward slash. Contained between the tags will be all of the text that you want to take on the type of formatting indicated by the tag. In other words, all text in a sentence that you want to be in italics will need to be sandwiched between italics tags.
+Certain characters to not render well in HTML, especially if they are auto-formatted by programs like Word, and will need to be changed or directly encoded in order to display properly in your eBook. These characters include quotation marks, apostrophes, and ellipses. Use your text editor’s search function to manually replace these or replace them with HTML specific code. For example, to ensure that ellipses are always encoded properly (regardless of device) replace them with “&hellip”.
+ There are a number of tags you will need to know in order to correctly format your text. There are, of course, an enormous number of HTML tags but here are some examples of the most relevant and basic for the purpose of creating eBooks:
+
+
+<strong>text</strong> will create bold text.
+<em>text</em> will create italicized text.
+<p>text</p> will turn the text into a paragraph.
+Another important HTML tag is the image tag, which works a little differently than the tags above. You will need to include the address of the image, the way a web address or file on your computer is listed. You will also need to add a basic description, such as “cover”, so that the publishing program will know what it is for. The image tag is formatted like this: <img src=“image address.jpg” alt=“description” />
+
+, As discussed above, the size of text in an eBook is fluid. Readers can adjust the size, making it bigger or smaller, according to their needs and preference. This means that you cannot use normal “point” font sizes, like what is used in a word processor. Instead, you will use HTML and a relative sized system of measurement for text. The best unit of measurement to use is called “em”.
+
+
+The size 1em will be the basic size. 2em will then be the next size up and so on. Labeling your text in this way will allow your text to change size relatively, so that when the reader changes the text size it will stay proportional and remain readable.
+Indentations will also be sized in the same way. What that size is, however, is completely up to you.
+These em’s can also be in half steps (example: 1.5, 2.5, etc.). Use the half steps if you cannot get the look you want using the normal sizes.
+ Once you have done all of the text formatting, you will need to create an actual HTML file, with proper coding, to place the text in. This will need to be set up with all of the normal tags associated with a basic HTML page, such as <html>, <body>, etc. You can read about how to set up a basic HTML page here or you can use the included template.
+
+
+Your HTML page will also need to include a style section. This will help format all of the text in your eBook and keep it looking consistent. You can read about this online or simply use and modify the included template.
+ The easiest and cheapest software to use to create an eBook in these formats is Calibre. It is available for free. Be sure that you are downloading it from a reputable source, however.
+
+
+Begin by opening the program. Click “Add Books” and then the HTML file that you have created.
+Highlight your book in the list and press “Edit metadata”. This will allow you to change the author name (Author Sort - last name, first name format), product description/flap copy/synopsis (Comments), as well as add a cover image, ISBN number, publisher info, etc. Be sure to save all of this data by pressing "OK".
+Now, select convert books. Select the format you would like it to be in from the drop-down menu. EPUB and MOBI will cover the largest number of ereaders.
+Next you will want to format the Table of Contents. If you have followed the template included in this tutorial, this will be very simple. There are, of course, other ways to encode the Table of Contents as well. You can use whatever method is best for you. If you have followed the template, you will now go to the field labeled “Level 1 TOC” and input the following code: //h:pAfter the Table of Contents is formatted, go to “Epub Output”. In the left toolbar, look for "Preserve Cover Aspect Ratio” and be sure that it is checked.
+Click "OK", let the program work, and when it is done you can save your eBook file. Now you are done!
+
+, There are a number of eBook publishing services that work from raw Word files. The most common is Smashwords. In order to properly format a Word document for epublishing, you will need to go back through the document as manually re-enter all of the automatic formatting (such as indents and capitalization). This will ensure that everything displays correctly once it has been converted to HTML.
+

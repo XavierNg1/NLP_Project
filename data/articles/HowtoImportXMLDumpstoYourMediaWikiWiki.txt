@@ -1,0 +1,36 @@
+ anything below 20MB should be safe). Trying to import large dumps this way may result in timeouts or connection failures. There are two reasons that this happens.
+
+
+The PHP upload limit found in PHP configuration file php.ini
+
+
+
+Maximum allowed size for uploaded files.
+
+
+upload_max_filesize = 20M
+
+
+And also the hidden variable limiting the size in the input form. Found in the mediawiki source code, includes/SpecialImport.php
+
+
+
+<input type='hidden' name='MAX_FILE_SIZE' value='20000000' />
+
+
+You could decrease the limit by adding this in php.ini:
+
+max_execution_time = 1000  ; Maximum execution time of each script, in seconds
+max_input_time = 2000  ; Maximum amount of time each script may spend parsing request data
+; Default timeout for socket based streams (seconds) default_socket_timeout = 2000;
+, Though it is the most recommended method, it gets slow when importing huge dumps. If you are trying to import something as huge as Wikipedia dumps, use mwdumper. importDump.php is a command line script located in the maintenance folder of your MediaWiki installation. If you have shell access, you can use importdump.php with this command.
+php importDump.php <dumpfile>
+
+
+where <dumpfile> is the name of your dump file. Even if the file is compressed in .bz2 or .gz file extension it gets decompressed automatically.
+ It is a Java application that is capable of reading, writing and converting MediaWiki XML dumps to SQL dump (for later use with mysql or phpmyadmin) which can then be imported into the database directly. It is much faster than importDump.php, however, it only imports the revisions (page contents), and does not update the internal link tables accordingly -- that means that category pages and many special pages will show incomplete or incorrect information unless you update those tables.
+
+
+If available, you can fill the link tables by importing separate SQL dumps of these tables using the mysql command line client directly. For Wikimedia wikis (including Wikipedia) this is provided along with the XML dumps. Otherwise, you can run rebuildall.php, which will take a long time, because it has to parse all pages. This is not recommended for large data sets.
+ It is a multi-platform ANSI C program and importing via this may be fast, but does not update secondary data like link tables, so you need to run rebuildall.php, which nullifies that advantage.
+

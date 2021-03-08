@@ -1,0 +1,37 @@
+ Before we start the process of adding a drive, we need to do a small amount of research inside your machine. The goal of the research is to find out if it will be easy or not to add the new hard drive. We also need to find out what kind of drive you need to buy. You may be able to do this research by reading through your computer's manuals, but it is far easier to simply open the case and look inside.
+
+
+The first question to answer is: How many hard disk drives have already been installed inside the case? In the majority of machines, the answer to this question is "one." Having only one hard disk drive installed makes it easy to install another one. After you open up your computer's case and look inside, you will probably find one optical drive (a CD or DVD drive), a single hard disk drive and perhaps a floppy disk drive. The optical and floppy drives will be easy to find because you can see them on the outside of the case. The hard drive may take a little searching. If you have no idea what a hard drive looks like, look at the photo above.
+If there are already two drives installed inside your case, then adding a new one is more difficult.;
+, Is there space available to add another hard-disk drive? Your current hard disk is probably mounted in a small metal cage or rack inside the machine. Make sure there is space available in the cage for another drive. If not, adding an external drive is an option.
+
+
+An external drive connects to your computer through either a USB 2.0 connection or a FireWire connection, so your computer needs to have USB 2.0 or FireWire connectors. Once you buy the drive, all you have to do is connect it and fire up your computer. The drive will come with configuration instructions, but on Windows XP and other modern systems, it will likely be plug-and-play. You can start saving files on your new drive immediately.
+There is one big advantage to an external drive: you can plug it into multiple machines and move files around. You can take it with you anywhere you go. The only real disadvantage is that it will be slower than an internal drive. If it takes a minute to copy a gigabyte of data on an internal drive, it might take two minutes on an external drive. That may or may not be important depending on what you want to do. For most applications, the slower speed is irrelevant.
+ There are two systems in common use: IDE drives (also known as PATA, or Parallel ATA), and SATA (Serial ATA) drives. PATA drives have wide, flat cables or thick cables as wide as your finger, while SATA drives have thin cables about the diameter of a pencil. You will need to know whether to buy an IDE or SATA drive, and you should be able to tell by looking at the cables. Also note that some cables only offer a connector from ONE hard drive to the motherboard, while others have connectors for two or more.
+
+
+Now that you have confirmed that there is space to install a new drive in your machine and you know what type of drive you need (PATA or SATA), you can buy a new drive.
+ You can buy a new hard drive from many different places: a retail store, a large computer store, a local computer parts store or by mail order. Wherever you go to buy it buy it, keep three things in mind:
+
+
+Buy a "normal" 3.5-inch wide hard drive. They're sold everywhere, but you want to avoid the smaller hard disk drives made for laptops.
+Make sure the new drive has the correct cable system (SATA or PATA) to match your machine.
+ Buy the biggest drive you can afford, because it will probably fill up before you know it.
+,
+
+
+Before we start working with the drive, we need to talk about static electricity. Your computer is highly sensitive to static shocks. This means that if you build up static electricity on your body and a shock passes from your body to something like a hard drive, that hardware will probably fail and you will have to buy another one.
+ The way to eliminate static electricity is by grounding yourself. There are lots of ways to do this, but probably the easiest way is to wear a grounding bracelet on your wrist. Then you connect the bracelet to something grounded (like a copper pipe or the center screw on a wall outlet's face plate). By connecting yourself to ground, you eliminate the possibility of static shock. You can get a bracelet for a few dollars. An alternative is to touch the power supply whenever you make a "big" motion, like taking off a jacket or getting up and sitting down again. A bracelet is superior in any case.
+ Let's talk about this in more detail, because most people have IDE drives.
+
+
+In the IDE system, most motherboards allow you to have two IDE cables. Each cable can connect to two drives. Usually you use one cable to connect one or two optical drives to your machine. The other cable is used to connect one or two hard drives to your machine.
+You want both hard drives to be on the same cable. The two drives on the cable are called "master" and "slave." You want your existing hard drive (which contains the operating system and all of your current data) to be the "master" and the new hard drive to be the "slave." The drive should have instructions on them that tell you how to set the jumpers for master and slave. So read the instructions and set the jumpers. If you are using SATA drives, you do not need to set jumpers for master and slave because each drive gets its own cable. Check out How IDE Controllers Work to learn more about the master and slave configuration. Avoid using a large tool to remove the jumpers, as this can knock the pins out of alignment.
+, If it fits, then it's a match. Connect the IDE or SATA cable to the drive.
+ To do this, click the Start button, open the Control Panel, Switch to Classic View, click on Administrative Tools, click on Computer Management, click on Disk Management.
+
+
+Look at the graphical area in the bottom right of this display. Disk 0 is your original hard drive. Disk 1 is the new hard drive. Chances are that the new drive will not be initialized, or formatted. Click the small button to initialize the drive, and then format it as an NTFS volume (right click on the new drive, then click “Format...”). Formatting may take an hour or more, so be patient.
+When the formatting is done, you are ready to use your new drive.
+

@@ -1,0 +1,14 @@
+ You will need 2 programs to make this hack work: CommView (which will be used to look for vulnerabilities in the network you’re trying to access) and AirCrackNG (which will break the security key itself)
+
+
+Make sure your computer’s wireless adaptor is compatible with CommView.
+ Use CommView to scan for wireless networks. Choose a network with a WEP key and a decent signal.
+ Right click on the network you want to access, select “Copy MAC address”, go to the Rules tab, then MAC Addresses, enable MAC address rules, then click Action→Capture→Add Record→Both. Paste in the MAC address.
+ Sort out the Management (M) and Control (C ) packets so that you are only viewing the Data (D) packets.
+ Go to the Logging tab and enable auto saving. You may need to change the settings on the Directory size and File size. Try 2000 and 20, respectively.
+ Wait until you have at least 100,000 packets.
+ Make sure all of the logs are selected.
+ Go to the folder where the logs were saved and open the log file. Click File→Export→WireShark/tcpdump format and save it where you can find it easily.
+ Start Aircrack and choose WEP. Open the file and click “Launch”.
+ When the command prompt opens, you’ll need to enter the index number for the target network. It is probably 1. Hit enter and wait. If it works, the key will be shown.
+

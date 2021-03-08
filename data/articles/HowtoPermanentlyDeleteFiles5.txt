@@ -1,0 +1,20 @@
+ SDelete is a downloadable command line tool produced directly by Microsoft for use with the Windows command line. You can download this tool here: http://technet.microsoft.com/en-us/sysinternals/bb897443.aspx
+
+
+This utility is another secure delete application. As with Eraser, it overwrites a file's on-disk data so thoroughly that the original data patterns become unrecoverable. It does not delete the file names located in free disk space, but it does delete all the associated file data securely and completely.
+ From your "Start" menu, access the "Run" option. Type cmd into the "Open" text field and click on the "OK" button or hit ↵ Enter on your keyboard.
+ From within the Command Prompt, navigate to the directory in which the SDelete utility has been saved using the cd command.
+
+
+For instance, if the program is located at C:\cmdtools, type cd C:\cmdtools in the command line. Likewise, if the program is located at C:\downloads, type cd C:\downloads in the command line.
+After typing the directions to the right location, hit ↵ Enter to navigate to that directory within the prompt.
+ Use the SDelete tool by typing sdelete <path to file or directory>.
+
+
+In this context, <path to file or directory> refers to the Windows path you would need to follow in order to reach the file or folder you are trying to reach.
+For example, you might type <c:\Users\Public\Public Documents\securedata.txt to reach a text file labeled as securedata.txt in your computer's public documents.
+ As soon as you hit ↵ Enter on your keyboard, the utility will run and delete the file or folder indicated.
+
+
+Upon completion, you will receive confirmation within the Command Prompt that your data has been permanently deleted. At this point, you can close the prompt. The task has been finished.
+

@@ -1,0 +1,16 @@
+ Click Start click Run. Enter “regedit” into the field and press Run. This will open the Registry Editor. Be careful to not remove anything that you aren’t sure about, otherwise your system may not work.
+
+
+In Windows 8, Press the Windows key + X and select Run. Enter “regedit”.
+ MyStart and Incredibar entries will be located in several spots in the registry. Look for the following entries in HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE:HKEY_CURRENT_USER\Software\Conduit\RevertSettings http://mystart.Incredibar.com?a=1ex6GUYANIc&i=38
+HKEY_CURRENT_USER\Software\IM\38 "PPD"
+HKEY_CURRENT_USER\Software\ImInstaller\Incredibar
+HKEY_CURRENT_USER\Software\Incredibar
+HKEY_CURRENT_USER\Software\Incredibar-Games_EN
+HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main StartPage "http://mystart.Incredibar.com?a=1ex6GUYANIc&i=38"
+HKEY_LOCAL_MACHINE\SOFTWARE\Conduit\Toolbars "Incredibar-Games EN Toolbar"
+HKEY_LOCAL_MACHINE\SOFTWARE\Incredibar-Games_EN\toolbar
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Toolbar "Incredibar-Games EN Toolbar"
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Incredibar-Games EN Toolbar
+
+, To remove the entries once you find them, right-click on them and select Delete. You may be asked to confirm that this is what you want to do. Repeat the process for each entry.

@@ -1,0 +1,19 @@
+ You will need a little over 100 MB of free space. After extracting the file, the application can be opened.
+
+A major advantage of the offline version is the use of CUDA and cuDNN for much faster (around 15x) processing. CUDA can be downloaded and installed from the Nvidia website, but it is only available to users with a Nvidia graphics card that supports it. cuDNN is available after filing a developer's application on the Nvidia website with approval and is purely optional.
+You can create a shortcut of the executable for easy access.
+ The user interface has been translated into English from the original Japanese. In it, you can see the similarities and expansion of tools with regards to the web demo.
+ Unlike with the web demo, you must download your image from the internet. You can manually type in the filepath, but drag-and-drop will be much easier (open up Windows Explorer).
+
+The default output path will be in the same folder as your input image with a similar name.
+ There are four options, of which you should only use two: "scale" and "noise+scale." Noise only has a default scale factor of 0.5 - that is, it will automatically downsize your image by half; while "noise(auto)+scale" is redundant., As with the web demo, you should only use level 1 if you choose to remove noise, as it is powerful enough. If you only need to upscale your image, leave this alone., With the offline software, you have much more freedom in how large your image can be. Many users commonly use an image cropping tool to complement Waifu2x for the desired resolution and aspect ratio. If that is the case, you must judge whether the image to upscale is wider than your desired aspect ratio or not. The following will assume that you have a monitor of 16:9 aspect ratio and 1920x1080 resolution (though yours may vary!)
+
+In most cases, the image you are working with will not be as wide as 16:9. Therefore, to calculate the scaling factor, you divide 1920 by the image's width. For example, an image of 1500x1000 would have a scaling factor of 1920/1500 = 1.28.
+In the case where the image is wider than 16:9, you divide 1080 by the image's height. For example, an image of 1000x500 would have a scaling factor of 1080/500 = 2.16.
+Waifu2x always rounds down when it calculates the final image resolution. If your numbers are not round like in the previous examples, be sure to always round up in the third or fourth decimal place.
+ As mentioned above, if you have a CUDA-supported graphics card, be sure to use it, as the processing times speed up tremendously. If you have cuDNN, you can check if Waifu2x will use it with the cuDNN check button. Otherwise, you can use the CPU., Do not touch the output file extension, model (unless you are using a photo, which is not recommended), extensions to be covered in the folder, or block size. The output image will be in the same folder as your input image. The image above demonstrates waifu2x against other upscaling programs.
+
+
+The view log is still in Japanese, though you can see how long it took for the image to process.
+If you need to convert multiple images, repeat the above steps starting from step 3.
+

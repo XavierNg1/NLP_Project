@@ -1,0 +1,51 @@
+
+To find the Demand Curve and Function for a single product, one must understand that in standard Economics, the relationship is inverse: Price Y determines Units Demanded X, or f(y) = x.
+Create the Column Headings and columns for the Data Findings per Research data subset of the Regression worksheet:
+
+
+Into cell A2, enter #.
+Input the Prices at which Demand was found:
+
+
+Into cell A3, enter 1 and select cell range A3:A16 and do Edit Fill Series Column Linear Step Value 1, OK.
+Enter the number of Units Sold ("UNIT FINDS") per research at the above prices into column C:
+
+
+From C3:C16, top to bottom, enter the following units: 60, 58, 57, 56.5, 51.75, 48.5, 46, 43, 40.5, 39.25, 32.5, 32, 31.25 and 27.
+
+,
+Enter the slope m's Numerator and Denominator column formulas:
+
+
+Select cell range D3:D16 and enter to D3 w/o quotes the formula "=(C3-X_BAR)*(B3-Y_BAR)" and Edit Fill Down.
+Find slope m, x intercept b and the Forecast Unit Sales based on the Mean Price:
+
+
+Enter m to cell D18 and into cell E18 enter the formula w/o quotes "=D17/E17".
+Determine the coordinates of the Regression Line of the Demand Function Curve per research:
+
+
+Enter to cell D23 Line P=Y and enter to cell E23 Regression Line X
+Enter the following Prices to cell range D24:D28, top to bottom: 0, 10, "=Y_BAR", 35, "=-$E$19/$E$18".
+Create the Chart "Regression Line Demand Function Curve per Research Findings"
+
+
+Copy E23:E28 and Paste to A23:A28.
+Next, we'll do the data and chart for a curve that is not a straight line, using Multi-Variable Analysis, via pieces until we arrive at a curve that's an acceptable percentage within difference from the findings.
+
+,
+Enter the Preliminary Headings and Data:
+
+
+Into cell A34, enter n. Into cell A35, enter 1 and select cell range A35:A51 and do Edit Fill Series Column Linear Step Value = 1, OK.
+Enter the rest of the Multi-Variable Data Headings and Formulas:
+
+
+Enter to cell D34 Diff and enter to cell range D35:D51 into the cell D35 the formula w/o quotes "=C35-E35" and Edit Fill Down.
+Create the Chart of "Multi-Variable Analysis of Demand Function Curve Into Pieces w/ Acceptable Percentage Difference < 3%"
+
+
+Select the cell range B35:E51 and, using the Chart Wizard or Charts from the Ribbon, select Charts, All/Other, Scatter, Smoothed Line Scatter.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

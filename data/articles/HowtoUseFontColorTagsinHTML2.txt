@@ -1,0 +1,33 @@
+ Place a <font> tag in front of the text you'd like in color. Close it with a </font> tag after the text.
+
+
+Example:
+<font>I plan to make this text blue.</font>
+
+, Insert color=" " inside the opening font tag. The color you want will go inside the quotation marks.
+
+
+Example:
+<font>color=" "I plan to make this text blue.</font>
+
+, Color names are always one word, with no spaces. Try a simple name like "blue" or "red", or a descriptive name like "lightblue" or "darkblue". For more options, look up the list of recognized color keywords, which includes "maroon", "steelblue", and "lime".Example:
+<font color="blue">I plan to make this text blue.</font>
+
+, HTML allows you to choose from millions of colors, but it doesn't have a name for every one. Instead, it uses a six-digit code written in a number system called hexadecimal. There are many websites that list hex color codes, or that let you pick a color on screen and tells you the hex value. The code begins with the symbol # and has six digits using the numbers 0-9 or the letters A-F.
+
+
+<font color="FF0000">The code #FF0000 is the same as the color name red.</font>
+<font color="00FF00">This code produces green text.</font>
+<font color="0000FF">This code makes blue text.</font>
+
+, You don't need to know how hex color codes work to use an online color picker. If you'd like to experiment, however, start with the basics:
+
+
+Each six digit code is divided into red, green, and blue values ("RGB"). For example, the code #FF0000 really means "red: FF green: 00 blue: 00."
+To change the amount of red, change the first two digits. You can use anything from 00 (no red at all) to 99 (some red) or the letters AA (a little more red) through FF (maximum red).
+Use the same system to change the green value (middle two digits) or blue value (last two digits).
+ For more precise color selection, you'll need to know two more concepts:
+
+
+Each of the three color values is a two digit number. To make small adjustments, just change the second digit. For example, #850000 and #890000 are very similar, but #A50000 is much brighter.
+The RGB values combine using the additive color system. Red and green make yellow; blue and green make cyan; and red and blue make magenta.

@@ -1,0 +1,11 @@
+ VirtualBox acts as a "computer" on which to host operating systems.;
+,,, Windows XP is the default OS selected, so all you have to do is name it. (Windows XP, for example, is a good name).
+ Don't allocate too much because there will be less RAM for your host system to run, which will crash your entire system.
+ Click Next to Continue. You will be taken through the Create New Virtual Disk wizard, which will allow you to choose hard disk size, dynamically expanding/fixed size, etc.
+ After that, the new Virtual Machine will be created.
+ Click the Storage section on the left hand side of the window. Click on the Empty CD medium in the Storage Tree.
+, Select it with "Select", then press OK in the Settings Window. Launch the VirtualBox by pressing "Start".
+ You should have the Windows installer running now. Remember that since you have not yet install the Guest Additions, you will have to press your Host key (normally Right-Ctrl)
+
+, While the machine is running, under the "Devices" menu, click "Install Guest Additions", which will launch a setup wizard inside Windows XP. Now you will have OS mouse integration, so you won't have to press the host key to switch between your host and guest. You also can copy and paste between the two operating systems. Now that you have Windows XP installed, you can install programs you use.
+

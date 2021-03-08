@@ -1,0 +1,18 @@
+ Changing the partitions on your USB drive will erase all of the data on it, so make sure everything important is saved to another location.
+ This guide will use Ubuntu, which comes with GParted Partition Editor already installed. If your Linux distribution doesn't have GParted installed, you can install it from gparted.org/ or your distribution's package manager.
+
+
+In Ubuntu, open the Dash and type "gparted," or click "System" → "Administration" → "GParted Partition Editor."
+
+, You can identify your USB drive by the size. Make sure you don't proceed with your hard drive selected, or you could lose all of your data.
+ Right-click the visual display of the USB drive and select "Unmount" to deactivate it and prepare it for partitioning.
+ This will delete the current partition on the USB drive.
+ This will open the "Create new Partition" window.
+ Use the slider or the text fields to set the size of your first partition. Make sure to leave enough space for additional partitions.
+ The partition labels will be the easiest way to differentiate between your partitions.
+ If you intend to use the drive with just Linux, select "ext2." If you want to boot Windows from the first partition select "ntfs" (this will only work on the first partition on the drive). To use the partition for general storage between different computers, select "fat32" or "exfat."
+
+, This will create the new partition from the unallocated space.
+ You can continue to create new partitions from the unallocated space that remains after creating the other partitions.
+ Click "Apply" to confirm. All of your changes will be applied to the USB drive. This may take a little while to complete., You'll be able to access all of the partitions as if they were individual USB drives.
+

@@ -1,0 +1,22 @@
+
+
+
+On the local computer go to the control panel.
+Locate the network and sharing center icon(name varies depending on operating system). Select the icon.;
+, Usually it is called Local Area Connection. Click on that and select Properties.
+ Next select Use the following Ip address.
+ Make it the first available IP on the network(not the router address, and not .0, or .255. As these are reserved addresses). If you are unsure of what address to use, find out the network address and make the local pc a host on that network.(if you are unsure do not attempt it until you have researched). Usually 192.168.1.1, or 192.168.10.1 will work.
+ This identifies which part of the address identifies the host(pc) and which part identifies the network.
+ This information can be found by checking your current(unchanged) config.
+
+
+Go to Run.
+Type cmd.
+In the terminal window type ipconfig /all
+
+
+,,
+
+
+For improved performance try setting it to a service such as "open DNS" which offers fast servers, to speed up the url to ip process, this might give faster web browsing(in theory). For this set "preferred" to 208.67.222.222 and set "alternative" to 208.67.220.220 .
+, NOTE: that the last figure in the IP address you gave this pc, is the unique identifier. If you used 192.168.1.1(for Example!) then the last.1 is unique and cannot be reused whilst used on that pc. For the next Pc set it to 192.168.1.2(Example!) and so on. So each has a unique ID. Be careful not to clash them with each other or the router(or other device) or you will get errors.

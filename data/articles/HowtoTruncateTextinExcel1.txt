@@ -1,0 +1,11 @@
+ If you have an existing document with your data already entered, you can double-click it to open it; otherwise, you'll need to open a new workbook and enter your data now.;
+, This method is useful for text that you already have in your spreadsheet.
+
+
+Note that this cell must be different than the cell in which your target text appears.
+ The LEFT and RIGHT formula are built on the same premise, though the LEFT formula displays characters from the left side of your cell's text and the RIGHT formula displays characters from the right. The formula is "=DIRECTION(Cell Name, Number of characters to display)" without the quotation marks. For example:=LEFT(A3, 6) displays the first six characters in cell A3. If the text in A3 says "Cats are better", the truncated text will read "Cats a" in your selected cell.
+
+=RIGHT(B2, 5) displays the last 5 characters in cell B2. If the text in B2 says "I love wikiHow", the truncated text will read "kiHow" in your selected cell.
+Keep in mind that spaces count as characters.
+ Your selected cell will automatically fill with the truncated text.
+

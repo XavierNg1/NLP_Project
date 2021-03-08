@@ -1,0 +1,13 @@
+ To use this comparison formula, both sheets must be in the same workbook file.
+ You'll see this at the bottom of the screen to the right of your open sheets.
+, Type or copy the following formula into A1 on your new sheet:
+
+
+=IF(Sheet1!A1<> Sheet2!A1, "Sheet1:"&Sheet1!A1&" vs Sheet2:"&Sheet2!A1, "")
+
+,, Drag it down as far down as the first two sheets go. For example, if your spreadsheets go down to Row 27, drag the Fill box down to that row.
+ After dragging it down, drag it to the right to cover the original sheets. For example, if your spreadsheets go to Column Q, drag the Fill box to that column.
+ After dragging the Fill box across the new sheet, you'll see cells fill wherever differences between the sheets were found. The cell will display the value of the cell in the first sheet and the value of the same cell in the second sheet.
+
+
+For example, A1 in Sheet1 is "Apples," and A1 in Sheet2 is "Oranges." A1 in Sheet3 will display "Sheet1:Apples vs Sheet2:Oranges" when using this comparison formula.

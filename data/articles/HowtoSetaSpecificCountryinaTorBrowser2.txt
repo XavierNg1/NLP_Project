@@ -1,0 +1,10 @@
+ It's a blue face icon in your Mac's Dock., This key command brings up a dialogue box in which you can type a folder address., Its pathway is ~/Library/Application Support/TorBrowser-Data/Tor. Doing so will take you to the location where the "torrc" file is stored., Doing so will prompt a pop-up window., This will force "torrc" to open as a text document in TextEdit., It should be near the bottom of the text on this page. You'll see something like "{us}" to the right of the "ExitNodes" phrase.
+
+If you don't see this line of text, copy ExitNodes {} StrictNodes 1 into the file.
+ You can view a comprehensive list of supported countries beneath the "List of country codes for Tor" heading here: http://www.b3rn3d.com/blog/2014/03/05/tor-country-codes/
+
+For example, you would change "{us}" to "{ug}" to transfer your preferred country from the United States to Uganda.
+ This is in the top-left corner of the screen., It's near the top of the drop-down menu., It should appear in the "Tor" folder pane in the Save As window., This will replace the old "torrc" file with your newly updated "torrc" file., Doing so will take a minute, since Tor will need to connect with your new country's servers. After it connects, your country settings will be active.
+
+You can double-check this by going to Google, clicking the onion icon in the top-left corner of the browser, and looking at the country name above the "Internet" value here.
+

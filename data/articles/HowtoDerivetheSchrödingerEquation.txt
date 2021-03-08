@@ -1,0 +1,94 @@
+ 
+
+This operator U^(t){\displaystyle {\hat {U}}(t)} translates a quantum state |ψ⟩{\displaystyle |\psi \rangle } forward in time. 
+
+
+U^(t)|ψ(0)⟩=|ψ(t)⟩{\displaystyle {\hat {U}}(t)|\psi (0)\rangle =|\psi (t)\rangle }
+
+
+
+It is defined by the generator of time-translations H^,{\displaystyle {\hat {H}},} the Hamiltonian, which moves the time-evolution operator away from the identity operator.
+
+
+U^(dt)=1−iℏH^dt{\displaystyle {\hat {U}}({\mathrm {d} }t)=1-{\frac {i}{\hbar }}{\hat {H}}{\mathrm {d} }t}
+
+
+
+Dimensional analysis suggests that H^{\displaystyle {\hat {H}}} should have dimensions of Planck's constant divided by time, or energy. Hence the Hamiltonian is known as the energy operator.
+
+If we assume that the state |ψ(0)⟩{\displaystyle |\psi (0)\rangle } is normalized, then the state at any other time must satisfy the normalization condition as well. Therefore, U^{\displaystyle {\hat {U}}} and H^{\displaystyle {\hat {H}}} must both be unitary operators. Because these operators are unitary, they are also Hermitian operators.
+
+
+⟨ψ(0)|U^†U^|ψ(0)⟩=⟨ψ(t)|ψ(t)⟩=1{\displaystyle \langle \psi (0)|{\hat {U}}^{\dagger }{\hat {U}}|\psi (0)\rangle =\langle \psi (t)|\psi (t)\rangle =1}
+
+
+;
+, 
+
+We recognize that the translation of a state forward in time by t{\displaystyle t} and then by dt{\displaystyle {\mathrm {d} }t} can be written as U^(dt)U^(t).{\displaystyle {\hat {U}}({\mathrm {d} }t){\hat {U}}(t).} Then we simply substitute.
+
+
+U^(t+dt)=U^(dt)U^(t)=(1−iℏH^dt)U^(t){\displaystyle {\hat {U}}(t+{\mathrm {d} }t)={\hat {U}}({\mathrm {d} }t){\hat {U}}(t)=\left(1-{\frac {i}{\hbar }}{\hat {H}}{\mathrm {d} }t\right){\hat {U}}(t)}
+
+
+U^(t+dt)−U^(t)=(−iℏH^dt)U^(t){\displaystyle {\hat {U}}(t+{\mathrm {d} }t)-{\hat {U}}(t)=\left(-{\frac {i}{\hbar }}{\hat {H}}{\mathrm {d} }t\right){\hat {U}}(t)}
+
+
+
+
+, 
+
+The derivative of an operator is defined in the same manner as the derivative of a function.
+
+
+dU^dt=limΔt→0U^(t+Δt)−U^(t)Δt{\displaystyle {\frac {{\mathrm {d} }{\hat {U}}}{{\mathrm {d} }t}}=\lim _{\Delta t\to 0}{\frac {{\hat {U}}(t+\Delta t)-{\hat {U}}(t)}{\Delta t}}}
+
+
+
+Rearranging terms, we see that the time-evolution operator must satisfy the following equation.
+
+
+iℏdU^dt=H^U^{\displaystyle i\hbar {\frac {{\mathrm {d} }{\hat {U}}}{{\mathrm {d} }t}}={\hat {H}}{\hat {U}}}
+
+
+
+Strictly speaking, this is an operator equation. If we allow it to act on the initial state |ψ(0)⟩,{\displaystyle |\psi (0)\rangle ,} then we obtain the time-dependent Schrödinger equation. Solutions to this equation can rarely be written in closed form. In practice, this equation is dealt with by substituting the appropriate Hamiltonian into the equation and then numerically evaluating.
+
+
+iℏddt|ψ(t)⟩=H^|ψ(t)⟩{\displaystyle i\hbar {\frac {\mathrm {d} }{{\mathrm {d} }t}}|\psi (t)\rangle ={\hat {H}}|\psi (t)\rangle }
+
+
+
+
+,
+
+If H^{\displaystyle {\hat {H}}} is time-independent, then we may obtain an expression for U^{\displaystyle {\hat {U}}} by making an infinite number of infinitesimal time translations. This can be written in a convenient manner that takes advantage of the matrix exponential. As n{\displaystyle n} grows larger, the number of translations grows, but the translations become smaller. 
+
+
+U^(t)=limn→∞n=e−iH^t/ℏ{\displaystyle {\hat {U}}(t)=\lim _{n\to \infty }\left^{n}=e^{-i{\hat {H}}t/\hbar }}
+
+
+
+When H^{\displaystyle {\hat {H}}} is time-independent, we deal with the time-independent Schrödinger equation, an eigenvalue equation. We find the energy eigenstates and their corresponding energies. We label the energy eigenstate as |E⟩.{\displaystyle |E\rangle .} These eigenstates play an important role in quantum mechanics. 
+
+
+H^|E⟩=E|E⟩{\displaystyle {\hat {H}}|E\rangle =E|E\rangle }
+
+
+
+
+, 
+
+It is easy to see how the time-evolution operator acts on an eigenstate of H^{\displaystyle {\hat {H}}} if we use the Taylor expansion. If H^{\displaystyle {\hat {H}}} repeatedly acts on an eigenstate, then we see that H^n|E⟩=En|E⟩.{\displaystyle {\hat {H}}^{n}|E\rangle =E^{n}|E\rangle .} Therefore, when H^{\displaystyle {\hat {H}}} acts on its eigenstate, H^{\displaystyle {\hat {H}}} can be replaced by the eigenvalue E{\displaystyle E} describing the energy of |E⟩.{\displaystyle |E\rangle .}
+
+
+e−iH^t/ℏ|E⟩=|E⟩=|E⟩{\displaystyle {\begin{aligned}e^{-i{\hat {H}}t/\hbar }|E\rangle &=\left|E\rangle \\&=\left|E\rangle \end{aligned}}}
+
+
+e−iH^t/ℏ|E⟩=e−iEt/ℏ|E⟩{\displaystyle e^{-i{\hat {H}}t/\hbar }|E\rangle =e^{-iEt/\hbar }|E\rangle }
+
+
+
+The state merely gains an overall phase, which does not affect any of its observables, hence the notion of time-independence. Such states are often referred to as stationary states.
+
+

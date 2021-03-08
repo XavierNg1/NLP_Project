@@ -1,0 +1,19 @@
+
+Open the Start menu.
+Type task scheduler into Start.
+Click Task Scheduler.
+Click Create Task.
+Enter a name and description for your task.
+Check the "Run whether user is logged on or not" box.
+Check the "Run with highest privileges" box.
+Click the Triggers tab.
+Click New.
+Set up your task.
+Check the "Enabled" box.Click OK.
+Click the Actions tab.
+Type cmd.exe into the "Program/script" field.
+Type /c "exit" into the "Add arguments" field.Click OK.
+Click the Conditions tab.
+Check the "Wake the computer to run this task" box.
+Click OK, then enter your Administrator password.
+Click OK.

@@ -1,0 +1,108 @@
+ Include features and what you want the player to accomplish. It's good to have a basic outline of what you want to do with your game written out so that you can refer to it while you work on it.
+
+
+See this guide for more details on writing a game design document.;
+, Draw a basic layout of what you want the screens to look like. These don't have to be very detailed, but you should at least have an idea about where the various elements will be placed on the screen. These will be incredibly useful later when you start building the interface for your game.
+ Traditionally, you would need to learn how to code in ActionScript 3 in order to create Flash games. While you can still do that, there are programs available that can make game creation much easier to learn that require no coding experience. Some of the most popular options for making games include:
+
+
+Stencyl - This is a newer tool that allows you to build games using objects and logic scripts. These games can then be converted into Flash projects and uploaded to any website that supports Flash games.
+Construct 2 - As Flash gets older, it has started to be replaced by other means of creating games. One of the newest ways to create an online game is to use HTML5. Normally this requires a lot of coding knowledge, but Construct 2 allows you to create games using objects and scripting, much like Stencyl.
+Flash Builder - This is the traditional method for creating Flash games. This requires a fair amount of ActionScript knowledge, but it is one of the easier languages to learn the basics of. Flash Builder costs money, but you can use the open-source FlashDevelop program to get most of the same functionality.
+ Stencyl is a game creation program that doesn't require any coding knowledge. Instead, you can use a variety of logic tools to manipulate objects in the game.
+
+
+Stencyl can be used for free if you only want to publish your game online. The free version will have a Stencyl logo appear at the beginning. If you get the paid version, you can publish to other platforms.
+ When you start Stencyl, you will be shown a list of your games. There will be several example games on the list that you can look at to see how they work. To start working on your own game, click the box with the dotted line labeled "Click here to create new Game".
+ There are several kits that contain premade assets and objects that can help you get your game up and running quickly. Select a kit if you'd like, or select "Blank Game" if you plan on making your own.
+
+
+You can download kits that other users have made online.
+ Before you start creating your game, you'll need to enter a few pieces of information.
+
+
+Name - This is the name of your game. You can change this later to whatever you'd like.
+Screen size - This is size of your game screen, and is very important as it will affect the art that you use. Since people will most likely be playing your game within their web browser, the screen size doesn't have to be very big. Try Width: 640 px Height: 480 px. This is a good size to get started with.
+ When you first load your new game, you will be taken to the Dashboard. This is where you can see all of the scenes for your game and access any resources. You can also change your game settings from here. You will be spending most of your time working in the Dashboard.
+
+
+Scenes - This is the main window of the Dashboard, and shows the actual game and all the assets. Your game will be a collection of scenes.
+Resources - This is the list of all the objects and assets in your game. it includes actors, backgrounds, fonts, scenes, logic, sounds, and tilesets. The resources are organized in a tree on the left side of the screen.
+Settings - The Game and Settings options allow you to adjust how the mechanics of your game works, including controls, gravity, collisions, loading screens, and more.
+ An actor is any object that moves or can be interacted with in the game (player, enemy, doors, etc.). You will need to create an actor for each object in your game. To create an actor, click the "Actor Types" option in the Resources menu. Select the actor you want from the list (the list is determined by the kit you chose).
+
+
+Assign the actor to a Group (Player, Enemy). This will help determine the collision properties of the actor. Select your actor to open the Actor Editor. Click the Properties tab, and then choose the appropriate group from the drop-down menu.
+Add behaviors (jumping, stomping, walking). Behaviors are what allow your actor to perform actions. Click the Behaviors tab, and then click the "+ Add Behavior" button in the lower-left corner. Select a behavior (such as "Walking") from the list, and then click "Choose".
+Set the controls. If you are creating a player character, then you'll probably want to allow the player to move it. When you add the Walking behavior, you will be taken to the Walking attributes screen. You can use the drop-down menus to choose what keys will move the actor left and right. You can assign animations as well if the kit you are using contains any.
+You can add multiple behaviors to customize what an actor can do.
+ The scene is what the player sees when playing the game. It is the background, as well as any objects and actors that are visible. To create a new scene, click the Scenes option in the Resources tree, and then click the dashed box. Give your new scene a name to continue.
+
+
+Background - Your scene will be sized automatically, so you don't need to worry about that at the moment. You can choose to use a color as a background, which will have tiles placed over it. You can choose from a solid color or a gradient. Click "Create" when you're finished. This will open the Scene Designer.
+Place tiles - The tileset included in your kit will be loaded on the right side of the window. Click the Pencil tool in the left menu, and then click the tile that you want to use. You can then place the tile onto your scene. Click and drag with the mouse to place multiple tiles.
+Placing actors - Click the Actors tab above your tileset to switch to your available actors. You must have created them previously for them to appear in this list. Click the actor you want to place, and then click where on the scene you want it to appear. If you hold down ⇧ Shift, the actor will snap to the grid.
+Adding gravity - Click the "Physics" tab at the top of the window, and then enter in a value into the "Gravity (Vertical)" field. Entering 85 will simulate real-world gravity.
+ After you've created a scene and placed some actors, you can test the game out. Click the "Test Game" button at the top of the screen to play what you have so far. You can use the keys you set when creating your actors to control your player character.
+
+
+Find any aspects that don't work, and try to fix them. For example, are the enemies behaving correctly? Can you defeat your enemies? Are there are any platforms that are unreachable or chasms that can't be crossed? Return to to the relevant area of your game editor to fix any of the problems you find. This may take a little while, but the end result will be a much more fun and playable game.
+ Now that you have a working, playable first scene, it's time to start building the whole game. Add more levels and challenges, and keep testing your additions to ensure that they're fun and working properly.
+ If you are going to be uploading the game to a site that hosts Flash games, or uploading to your own site, you'll probably want to enable "Site Locking". This will prevent your game from being played if it's not on the allowed list of sites.
+
+
+Open "Game Settings" from your "Resources" tree. Select the "Loader" section. Enter the sites that you want to allow into the "Site Lock" field, separated by a comma with no space. For example, newgrounds.com,kongregate.com.
+While on this screen, enter your home page into the "Your Home Page" field, if you have one. This will let players who play your game get linked to your site.
+ Once you're satisfied with your game, you can export it into the Flash format. This will let you upload the game to a site that hosts Flash games, or to your own website. Click Publish select Web and then click Flash. Save the file to an easy-to-find location on your computer.
+ Once you have your Flash (.SWF) file, you can upload it to the host of your choice. There are a variety of sites online that host Flash games, and some may even let you make money from ad revenue with your game. You can also upload your game to your own website, but you'll want to ensure that you have the bandwidth to cater to players if the game gets popular.
+
+
+See this guide for uploading your game to your own web site.
+If you want to upload your game to a site like Newgrounds or Kongregate, you will need to create an account and then go through the upload process for the site. The terms and conditions will vary from site to site.
+If you want to publish your game to the Stencyl Arcade, you can do so from within the Stencyl Program. Click Publish select Stencyl and then click Arcade. The game will be automatically uploaded, so make sure you're happy with the name before doing this. Stencyl Arcade has an 8 MB file size limit., This program allows you to create HTML5 games with very little coding. You will have to assign some variables, but this is all done through menus with no actual coding required.
+
+
+Construct 2 is free, though some features are limited unless you upgrade. The free version cannot publish to any other platforms than HTML5.
+ When you first start Construct 2, you will be greeted with a Welcome menu. Click "New Project" link to begin a new game. There are also a couple of included examples that you can use to see how basic games are created.
+
+
+When creating a new project, you will be given a list of templates. For your first project, you'll probably want to start with an empty project. This will allow you to get a hang of the basics without templates getting in the way.
+ In the left frame of the project window, you will see a series of items in the Properties frame. You can use this to set your screen size and enter in your game and company information.
+ Double-click the layout. Select "Tiled background" from the General section. Click on your layout to place the background. This will open the background editor. You will need to create your own using image editing software, or download textures from a variety of locations online.
+
+
+Set background to the size of the layout. Do this by selecting the background object and changing the size in the Properties frame.
+Change layer name and lock it. You'll want to lock the layer to prevent accidentally moving it while placing other objects. Click the "Layers" tab on the right side of the screen. Select the layer, and click the Pencil icon. Name the layer "Background", and then click the "Padlock" button to lock the background.
+ In the Layers tab, click the "+" button to create a new layer. Rename it to "Main". This will be the layer that most of your game objects reside on. Ensure that the Main layer is selected before continuing.
+ In Construct 2, your inputs will need to be added as objects to your game. They are invisible, and will enable keyboard and mouse use throughout the project.
+
+
+Double-click your layout and select "Mouse" from the Input section. Do the same to insert the "Keyboard" object.
+ It's time to start adding some game objects to your layout. Double-click the layout and select "Sprite" from the General section. Use the crosshairs to choose where you want to place the sprite. The image editor will open, allowing you to either load an existing sprite or create a new one.
+
+
+When you select the sprites on your layout, the sprite's properties will load in the left frame. Change the sprite's name so that you can identify and refer to it easier.
+ To add a behavior, click the object you want to add a behavior full to select it. Click the "Add/edit" link in the Behaviors section of the Properties frame. A list of available behaviors will appear.
+
+
+Behaviors are pre-configured pieces of logic that allow you to quickly add functionality to your objects. You can choose from a wide variety of premade behaviors that can perform a wide range of functions. For example, to make the floor solid, give it the "Solid" behavior. To move the player-character in eight directions, give it the "8 direction movement" behavior.
+ You can edit existing behaviors to customize the the way your objects work. You can change the values to change the speed, direction, and other properties.
+ Events are a list of conditions, and are what drive the game. If conditions are met, event occurs. If conditions are not met, event doesn't occur. The event sheet is typically run around 60 times per second. Each time it runs is called a "tick".
+ Double-click in the blank Event sheet. A list of available objects will appear. Select the object that you want to create an event for, or you can create a System event.
+
+
+Select when the action occurs. After selecting the object, you will be asked to select when the event should occur. This can be based on other events or at certain times. "Every tick" is always.
+Add an action. You will be asked to select one of your objects. Choose from a list of actions. For example, if you are making a top-down shooter, and want the player's character to always be looking at the mouse, you would create a "Set angle toward position" action on every tick set to the Player object. When asked for the coordinates, enter "Mouse.X" for X and "Mouse.Y" for Y. This will keep the player's ship always pointed towards the cursor.
+ These are the backbone of your game. Adding and tweaking behaviors and events will help you make a unique and fun game that people will be clamoring to play. Experiment with different events to try to get the exact game you want.
+ There are two types of variables in Construct 2: instance variables and global variables. These allow you to set custom values for your objects and game, such as health, time limits, scores, and more.
+
+
+Instance Variables - Instance variables are variables assigned to single objects. They are used for things such as enemy and player health. You can add instance variables after selecting an object by clicking the "Add / edit" link in the Variables section of the Properties frame. Give the variable a name that can be referred to in an event, as well as an initial value.
+Global Variables - Global variables are variables assigned to the whole game. They are used for things such as the player score. To create a global variable, open the Event sheet and right-click on a blank space. Click "Add global variable", give it a name that can be referred to in an event, and then enter an initial value.
+ When creating an interface, it's usually best to do so on a new layer. This is because the interface rarely moves or changes, so it's good to have it on a locked layer. In the Properties frame for the new layer, set "Parallax" to 0. This will keep the layer from scrolling when the screen does.
+
+
+Use Text boxes and variables to create your interface. You can set your text boxes to display remaining health, score, ammo or anything else the player would need to see on a regular basis.
+ Now that you've got some objects on the screen with events and behaviors, you can start testing and adding content. Click the "Play" button at the top of the screen to build and test the game. Make note of anything that didn't work, and try to fix it so that your game will be playable and fun.
+ If you're satisfied with your game, you can export it so that it can be uploaded to a website and played by anyone. To export the game, click the File menu and select Export. Save the project to a location that you can easily locate.
+ There are several sites that allow you to upload HTML5 games for others to play. You can also add the game to your own website. See this guide for details on uploading the game to your own web site.

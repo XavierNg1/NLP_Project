@@ -1,0 +1,39 @@
+ If your site lives at www.myawesomeblog.com, you’re going to want to set up a subdomain at mobile.myawesomeblog.com. How you accomplish this is usually pretty straightforward but differs depending on your host. If you use Dreamhost and from their control panel, you can add subdomains effortlessly. You want to set up your subdomain as a “mirror” of your main site, meaning the subdomain is really just pointing to your existing site.;
+, The next thing we’re going to do is a create a PHP file which will be automatically pre-pended to every page of our site. Call this file something like "global_prepend.php" and throw it at the root of your server:
+
+
+
+
+
+
+<?php
+function callback($buffer) {
+if ($_SERVER== 'mobile.myawesomeblog.com') {
+$buffer = str_replace('http://www.myawesomeblog.com', 'http://mobile.myawesomeblog.com', $buffer);
+$buffer = preg_replace('/+/', '', $buffer);
+$buffer = preg_replace('/\s{2,}/', ' ', $buffer);
+$buffer = preg_replace('/(<a*>)(<img+alt=")(*)("*>)(<\/a>)/i', '$1$3$5<br />', $buffer);
+$buffer = preg_replace('/(<link+rel="*stylesheet"*>|<img*>|style="*")|<script*>.*?<\/script>|<style*>.*?<\/style>|<!--.*?-->/i', '', $buffer);
+$buffer = preg_replace('/<\/head>/i', '<meta name="robots" content="noindex, nofollow"></head>', $buffer);
+}
+return $buffer;
+}
+ob_start("callback");
+?>
+
+
+
+
+
+, If you don’t already have an .htaccess file at the root of your server, open up a new text file and add these lines to it:
+
+
+php_value auto_prepend_file /localfilepath/global_prepend.php php_value auto_append_file /localfilepath/global_append.php
+
+
+Important Note: If you copy these two lines from your web browser, you might need to delete the carriage return and make your own. Sometimes a browser’s carriage return will cause your .htaccess file to fail (you’ll know immediately if it has failed because your site won’t come up).
+
+
+Then save it to the root of your server with the filename ".htaccess". If you already have an .htaccess file, just add the above lines to it.
+ Voila!
+

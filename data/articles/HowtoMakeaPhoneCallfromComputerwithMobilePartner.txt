@@ -1,0 +1,40 @@
+ The tools you use to unlock your modem will depend on the model. You can find the model of the USB modem either printed on the modem itself, or in the Device Manager.
+
+
+To open the Device Manager, press ⊞ Win+R and type devmgmt.msc. Your modem will be listed in the "Network adapters" or "Ports (COM & LPT)" section.;
+, The IMEI is usually printed on the box that the modem came in, and may be printed on the modem itself. The IMEI is 15 digits long., Search for an unlock code generator that will work for your model. You should be able to find one easily by performing a web search for "model unlock code". Enter your IMEI into the code generator box and write down the code that is generated.
+
+
+Don't run a generator for your IMEI multiple times, as you may permanently lock your modem.
+ Now that you have an unlock code, you'll need a code writer program for your modem. You can usually find one by searching for "model code writer". Download the program to your computer so that you can run it.
+
+
+Code writers are not official programs, so it may be difficult to find one that you can safely download. Only download code writers from trusted sites, and avoid any download links that force you to fill out surveys or complete other tasks to access the link.
+If you can't find a code writer for your modem's model, you may be able to apply the unlock code in Mobile Partner.
+ You'll need to select your modem from the list of available devices, so make sure that it is plugged in. Enter your unlock code when prompted and your modem will be unlocked.
+ Now that your modem is unlocked, you can insert the out-of-network SIM card into it. Refer to your modem's documentation for instructions on changing the SIM card in the modem., Make sure to get the latest available version to ensure that it is compatible with your operating system. You can download Mobile Partner directly from Huawei at consumer.huawei.com/en/support/index.htm. Search the Downloads section for "Mobile Partner" to find the download link.
+ Double-click the ZIP file that you downloaded, and then select "Extract all". This will create a new folder containing the setup file for Mobile Partner. Run the setup file to install the Mobile Partner software to your computer.
+ This will open the Mobile Partner Options menu.
+ This will open the profile editor, which is what allows Mobile Partner to connect to your chosen mobile network.
+ Mobile Partner comes with several popular networks pre-configured that you can select from the "Profile Name" menu. If your network is listed here, select it.
+
+
+Newer versions of Mobile Partner will automatically detect your APN settings based on the SIM card in your modem.
+ You can add your network if you know the APN settings for it. This is only necessary in older versions of Mobile Partner that don't automatically detect your APN settings.
+
+
+You can find the APN settings for your network by searching for "network name apn" in your favorite search engine. Use the information you find to fill out the fields for your new Mobile Partner profile.
+ In the main Mobile Partner window, select your network profile and click "Connect". If your APN settings are correct, you will be connected to your mobile network.
+
+
+If you didn't use a code writer to unlock your modem, you will be prompted to enter the unlock code now if the SIM doesn't match. Enter the code from the first method to unlock your modem and continue.
+ This will open the phone dialer.
+ When the dialer opens, you can either click the buttons to dial a number manually, or you can select from your contacts to make the call. The number will be dialed and the call will be played through your computer speakers or headphones.
+
+
+You'll need a microphone installed in order to talk during a phone call.
+ If you have a webcam installed on your computer, you can click the Video call button on the dialer instead to start a video call with the recipient.
+
+
+If you don't see the video option, navigate to C:\Program Files (x86)\Mobile Partner and find the "SysSettings.xml" file. Right-click on this file and select "Edit". Find the <callvideo>0</callvideo> line and change 0 to 1.
+

@@ -1,0 +1,11 @@
+ For the sake of this article, let's just install default plugins that are essential to running a non-Vanilla Multiplayer Server. Ironically, we'll be installing the plugin called Essentials. Open a new browser tab and go to http://dev.bukkit.org/server-mods/essentials/
+
+, You'll be taken to a new page, so just click Download again. Once you finish downloading the plugin, open up the .zip folder and copy the .jar files you see in it. Go to the folder that has your server files in it. You should see a folder called plugins. Open that up and paste the files in the folder.
+ Run the server, and you should now see the tag in some messages on start-up. This is just creating the necessary files in your plugins folder. Now stop the server as described above.
+ Go back to the main folder of your server and somewhere by the run.bat file should be something called server.properties. Open this file. You might have a prompt pop up telling you to search the web for something to open this file, but just click on the option to choose from existing programs, hit OK and select Notepad.
+ You can also change the amount of people that can enter your server, and you can even set it to "whitelist" mode, which would only allow people you specify in a different file to log in to the server. Go ahead and mess around with a few of the settings as you see fit. Change some of the values that say "true" to "false". For example: By default, allow-nether is set to true. The Nether tends to cause lag on servers. Change allow-nether=true to allow-nether=false
+
+, The gamemode by default is set to 0, which is the Survival gamemode. Change this value 0 to 1, which is Creative.
+ Double-click run.bat again to start up your server and open up your regular Minecraft client once the server is completely up.. Log in to Minecraft, navigate to the Multiplayer Server page, select Direct Connect, and type in "localhost" without quotes. Join the server and you should successfully join the server you created. On command prompt, type in the command: op <your exact account name here> (as shown in the picture to the right). This command will give your account name operator status, which gives you access to just about every command. Choose a good looking spot and hit the T key in Minecraft and type: /setspawn
+
+,

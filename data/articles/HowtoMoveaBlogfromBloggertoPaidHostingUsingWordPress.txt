@@ -1,0 +1,18 @@
+ Do this on your old site before you even migrate. You can create a blog post to let everyone know that you intend to shift to a new site and of course, provide the link to your new blog. Also let your readers know of the tentative date that you are migrating and do not shut down your old blog at least until a much later time down the road.;
+, Look around for the paid hosting site that fulfills your blogging criteria. Paid hosting sites that you might want to keep a look out for are those that offer Fantastico or Simple Scripts installers so that you can easily install most popular applications easily. Also, keep a look out for extra features such as free domain names and free advertising credits. And of course, compare the price and the memory space offered.
+ You need to install WordPress on your new server. Make use of installers such as Fantastico or Simple Scripts on your web host's control panel. Click on it and follow the steps to setup WordPress.
+ To do this, you first need to login to WordPress admin panel at www.yoursite.com/wp-admin/. Click on "Posts" from the left navigation panel. Click on the "trash" link immediately below the "Hello World" default post.
+
+
+
+Select Tools from the left navigation panel, click on Import and select Blogger from the list.
+Click on "Install Now" in the popup window.
+Activate the plugin. You will be prompted for access to your Blogger account. Once access is provided, you will be redirected back to WordPress where you will be able to see your blog name or a list of them if you have a few.
+Click on the Magic Import Button beside the blog that you want to import to WordPress. Complete the steps as instructed.
+ The final but most important step is to do this, which will redirect all traffic from the old blog to the new one. In the admin panel, go to Settings and choose Permalinks. Click on "Custom Structure" and paste the following in the text box.
+
+
+/%year%/%monthnum%/%postname%.html
+
+,, At your Blogger blog, set the custom domain by selecting Settings, then Publishing and click "Custom domain". Key in your URL and save the settings. Failure to do this step will result in an error message on your Blogger blog if it is accessed; readers will not be directed to your new URL.
+

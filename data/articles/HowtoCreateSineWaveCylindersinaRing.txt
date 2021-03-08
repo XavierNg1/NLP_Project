@@ -1,0 +1,86 @@
+ Otherwise, create a new Excel workbook with three worksheets: DATA 01, CHART (unless using Chart Wizard) and SAVES
+,
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show gridlines and set all boxes below that to auto or checked.
+In Chart, allow Show chart names and set Data markers on hover and leave the rest unchecked for now.
+In Calculation, Make sure Automatically and Calculate before save is checked. Set max change to .000,000,000,000,01 without commas as goal-seeking is done a lot. Check Save external link values and Use 1904 system
+
+In Error checking, check all the options.
+In Save, select Save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ Edit Go To cell range A1:J17288 and Format Cells Number Number Decimal Places 4, Font Size 9 or 10, Fill (from the color wheel) a nice fuchsia and make the Border Dark Blue bold Outline.,
+NEW: D1: Lines
+NEW: D2: Radius
+NEW: D3: Height
+E1: AYE
+E2: BEE
+E3: CEE
+MODIFIED: F1: 30
+MODIFIED: F2: .40
+MODIFIED: F3: .25
+Select cell range E1:F3 and Insert Name Create in Left Column, OK.
+MODIFIED: G1: Stretch_x1
+MODIFIED: G2: Enter w/o quotes the formula "=(8.5*(SHRINKER*10))*Degrees/ VLOOKUP(Degrees,D_Lookup,2)"
+MODIFIED: H1: Stretch_y1
+MODIFIED: H2: Enter w/o quotes the formula "=(8.5*(SHRINKER*10))*Degrees/ VLOOKUP(Degrees,D_Lookup,3)"
+Select cell range G1:H2 and Insert Name Create in Top Row, OK.
+G3: Shrinker
+H3: Enter w/o quotes the formula "=0.1*12/SPHERES" and Insert Name Define Name Shrinker to cell $H$3.
+I1: ROWS
+J1: "=17285-5"
+I2: MAGIC
+MODIFIED: J2: Enter w/o quotes the formula "=ROUND(J1/SPHERES,0)"
+I3: SPHERES
+MODIFIED: J3: 24 for now.
+Select cell range I1:J3 and Insert Name Create in Left Column, OK.
+NEW: K1: Enter w/o quotes "=IF(ABS(ROUND(COS(Degrees*PI()/180),5))<0.1,0.01*M1,COS(Degrees*PI()/180))"
+NEW: L1: Enter w/o quotes "=IF(ABS(ROUND(SIN(Degrees*PI()/180),5))<0.1,0.01*N1,SIN(Degrees*PI()/180))"
+NEW: K2: Ajx1_
+NEW: L2: Ajy1_ and select cell range K1:L2 and Insert Name Create Names in Bottom Row, OK.
+NEW: L3: 90 and Format Font size 14.
+NEW: M3: Degrees and Format Font Size 14. Select L3:M3 and Insert Name Create Name Right Column, OK.
+NEW: M1: Enter w/o quotes "=SIGN(COS(Degrees*PI()/180))"
+NEW: N1: Enter w/o quotes "=SIGN(SIN(Degrees*PI()/180))"
+NEW: M2: Sign(Cos(D)) and N2: Sign(Sin(D))
+NEW: Format A1:N5 Format Cell Alignment Center Horizontal and otherwise follow the formatting shown in the picture if you please, especially the bright yellow fill for degrees. Note: "SPHERES" really refers to CYLINDERS. It should have been changed.
+
+Select cell J3 and Format Fill sky blue from the color wheel.
+Select cell range I4:J5 and Format Font italic.
+Select cells A4:B4 and Format Fill white (varies with picture's yellow).
+
+
+K4: Enter D_Lookup
+K5: Degrees
+L5: WidthAdj
+M5: HeightAdj
+N5 BOTHAdj
+Edit Go To cell range K6:K366 and enter 0 into K6 and do Edit Fill Series Column Linear Step Value 1, OK. Format Cells yellow with Border red bold Outline each.
+Copy cell K7 and paste it to cell range L6:N366.
+In the WidthAdj or X column, change from 1 to .01 to following range: L91:L101 and format fill light blue. Also change from 1 to .01 for cell range L270:L281 and format fill light blue. These may need further adjustment.
+In the HeightAdj or Y column, change from 1 to .01 cell range M6:M11 and format fill light blue. Also change from 1 to .01 cell range M181:M191 and format fill light blue. Lastly change from 1 to .01 cell range M361:M366 and format fill light blue. These are where the axes are vertical or horizontal and the cylinders tend to become straight lines otherwise, plus and minus the 5 surrounding degrees. The BOTHAdj column was used as a temp get-by while discovering the values that worked best. YOu may wish to refine the approach, so BOTHAdj was left in.
+Edit Go To cell range K6:N366 and Insert Name Define Name D_Lookup to cell range $K$6:$N$366.
+
+MODIFIED: Adj Sin: Edit Go To cell range B6:B17285 and enter into B6 w/o quotes the following formula,"=Adj_Sin*SIN((ROW()-6)*0.25/12*PI()/180)+17" and Edit Fill Down.
+Indicator: Select cell C6 and enter 1. Edit Go To cell range C7:C17286 and enter w/o quotes the formula, "=IF((ROW()-7)/MAGIC=INT((ROW()-7)/MAGIC),1,IF((ROW()-7)=0,1,0))" and Edit Fill Down.
+MODIFIED: Randy: Edit Go To cell range D6:D17286 and enter into D6 w/o quotes the following formula,"=RANDBETWEEN(0,100)/100" and Edit Fill Down. Edit Go To cell range D6:D17285 and Insert Name Define Name Randy to cell range $D$6:$D$17285.
+t: 0 to nπ: Select cell E6 and enter 0. Select cell E7 and enter the formula "=(2*PI()/MAGIC)". Edit Go To cell range E8:E17285 and enter w/o quotes into E8 the formula "=IF(C8=1,2*PI(),2*PI()/MAGIC+E7)" and Edit Fill Down.
+z1_: Edit Go To cell range F6:F17285 and enter w/o quotes into F6 the formula "=CEE*COS(AYE*E6)" and Edit Fill Down. Edit Go To cell range F6:F17285 and Insert Name Define Name z1_ to cell range $F$6:$F$17285.
+Adj_x1: Edit Go To cell range G6:G17285 and enter w/o quotes into G6 the formula "=IF(C6=1,A6,G5)" and Edit Fill Down. Edit Go To cell range G6:G17285 and Insert Name Define Name Adj_x1 to cell range $G$6:$G$17285.
+Adj_y1: Edit Go To cell range H6:H17285 and enter w/o quotes into H6 the formula "=IF(C6=1,B6,H5)" and Edit Fill Down. Edit Go To cell range H6:H17285 and Insert Name Define Name Adj_y1 to cell range $H$6:$H$17285.
+MODIFIED: x: Mostly w/ z: Edit Go To cell range I6:I17285 and enter w/o quotes into I6 the formula "=SPHERES/12*(SHRINKER^2*(Stretch_x1*((BEE*COS(E6))+z1_*IF(OR(AND(Degrees>=85,Degrees<=95), AND(Degrees>=265,Degrees<=275)),0,1)))*Ajx1_)+G6"
+MODIFIED: y: Mostly w/ z: Edit Go To cell range J6:J17285 and enter w/o quotes into J6 the formula "=SPHERES/12*(SHRINKER^2*(Stretch_y1*((BEE*SIN(E6))+z1_*IF(OR(Degrees<=5,AND(Degrees>=175, Degrees<=185),AND(Degrees>=355,Degrees<=360)),0,1)))*Ajy1_)+H6"
+Select cell I17286 and enter the formula w/o quotes "=I6" and select cell J17286 and enter the formula w/o quotes "=J6". This makes the top connecting line from the last sphere to the first.
+H17287: Enter MAX and cell H127288: enter MIN.
+I17287: Enter w/o quotes "=MAX(I6:I17285)" and cell I17288: enter w/o quotes "=MIN(I6:I17285)". Copy I17287:I17288 and Paste Special Formulas to J17287:J17288. This will greatly help making chart adjustments since good detail is had at these limits. In general, it helps to round up a small bit.
+Edit Go To cell range I6:J17288 and do Format Fill sky blue.
+Select cell D5 and Format Fill light sea green, font red, Border navy blue outline bold. Then do Edit Paste Special Format of D5 to cell C6, E6, E7, I17286, J17286, I5 and J5 to make distinct the format of those cell's formulas/values.
+ Hover over the lower right corner until the cursor becomes a double-headed arrow and pull it open to become a large approximate square. You may very well have to adapt the axes for special situations like degrees = 5.
+Click in the Plot Area and select Chart Layout from the ribbon and at far left under Current Selection select Series 1, then under that, Format Selection. Set Line to Black, Smoothed line, Weight = 1 pt. and Dashed = Solid. Set Shadow to checked Outer 45 degrees, black, Size 100%, Blur 4 pt, Distance 30 pt, Transparency 75 %. Set Glow to very light blue Size = 1 pt. 2% transparency, Soft Edges 0 pt. OK.
+Do Current Selection under Chart Layout as Plot Area, Format Selection. No Line, No Glow and No Shadow. Set Fill to No. Gradient to None. 3-D is all zeros. OK.
+Do Current Selection under Chart Layout as Chart Area, Format Selection. Fill Gradient color Prussian Blue I think they call it on left 0% to Light Blue on right 100%, Path, 0 degrees, Transparency 0%. Line = Auto. Shadow is Unchecked/ No Glow or Soft Edges. 3-D Format is not set. OK.
+Set axes to Font 9, color red, and a MIN MAX formula at the bottom of the data worksheet helps quite a bit in setting the chart parameters for columns I and J.
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

@@ -1,0 +1,13 @@
+ You can find this in your list of applications or by searching for "terminal".
+ This should display a large block of network information.
+
+
+If you get an error message that mentions your lack of administrative privileges, enter sudo /sbin/ifconfig .
+If you are using Solaris or some other Unix builds, you may need to enter /sbin/ifconfig -a to display information for more than one device.
+If you get a message telling you that ifconfig is deprecated, switch to the instructions for Enter a Terminal Command in recent Linux builds above.
+
+
+
+If there is too much information for you to find your IP address, enter /sbin/ifconfig | less to limit the amount displayed, or /sbin/ifconfig | grep 'inet addr:' to only display the IP address.
+If you're not sure which device you're looking for, you most likely want "eth0", the first ethernet adapter recognized. To only view information for eth0, enter /sbin/ifconfig eth0 .
+

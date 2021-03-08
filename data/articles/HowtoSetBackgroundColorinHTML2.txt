@@ -1,0 +1,91 @@
+ Many people prefer to use an image as the background for their website. This allows you to make your background a pattern, texture, photo, or any other kind of image. As of HTML5, all types of backgrounds should be set with CSS (Cascading Style Sheets) inside of the <style></style> tags.
+ All of the style information for your page (including the background color) should be coded between these tags. If you already have <style> tags set, just scroll to that part of the file.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<style>
+ 
+</style>
+ 
+</head>
+</html>
+
+
+
+
+, Anything you do to the "body" element in CSS will affect the entire page.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<style>
+body { 
+ 
+}
+ 
+</style>
+</head>
+<body>
+</body>
+ 
+</html>
+
+
+
+
+, When you add this property, you'll need the file name of your image. Make sure the image file is stored in the same folder as the HTML file (or enter the full path to the file on your web server).<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-image: url("imagename.png");
+    background-color: #93B874;
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+It's a good idea to also add the background-color property, just in case the background image doesn't load.
+ You can stack multiple images on top of each other. This can be useful if you have images with transparent backgrounds that complement each other when layered.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-image: url("image1.png"), url("image2.gif");
+    background-color: #93B874;
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+The first image listed will appear on top. The second image will appear behind the first image.
+

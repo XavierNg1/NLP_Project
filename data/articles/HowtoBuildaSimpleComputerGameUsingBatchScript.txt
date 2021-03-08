@@ -1,0 +1,150 @@
+ Before deciding to make a shoot-em-up game or point-and-click game, know that even with MS DOS 8, batch script has serious limitations to its capabilities. You will not be able to create more of a game than a text-based game. It can be a quiz or a scenario game, but you will have only text. As to whether or not you want to have ASCII graphics is up to you, but the game will still be based entirely on text input.;
+, The script is not that hard to learn, you may even learn it simply by looking at a program. To know any scripting language you may need to know some basic commands in your computer's command line. For this command line, the basic commands that you will need are:
+
+
+echo
+color
+title
+goto
+if
+set
+labeling (not a command, but how to label)
+
+,
+
+
+The echo command is used to print out text to the console. Below, the echo command prints out "Hello, world!":
+
+
+
+
+
+
+The color command is used to change the color of the text in the command line. This isn't very useful, and probably shouldn't be focused on until you have finished the game itself, but the results of the color change can be quite appealing. Colors in DOS command lines are numbered, there is a table of the colors at the end of this article. The following command will change the text color to black background with green text:
+
+
+
+
+
+
+The title command simply changes the name of the window on the title bar and task bar, and is by no means useful, however, it can make your program look professional. Using it like so will change the title of the window to "Fun Program":
+
+
+
+
+
+
+The goto command is used to go to a certain part of the program. You will be using it to determine what will happen when certain answers are chosen from questions. To use the goto command to go to a label called "WRONG":
+
+
+
+
+
+
+The if command is used to determine what will happen if a certain event occurs. After the if statement (if ), a command follows. At the if statement, if a certain event is true, the command in the statement will be carried out. You will be using this statement to determine which goto command is to be used. This if statement will be true if the input is equal to 12:
+
+
+
+
+
+
+The set command is actually quite complicated, since it may be used in many ways. As for now, all you need it for is to get the computer to receive input. To do this:
+
+
+
+
+
+
+Finally, labeling. Labeling can name certain parts of the program so that you may use the goto command. You can name certain sections of the program anything, so long as the name isn't a command. To label a section "main", type the following:
+
+
+
+:MAIN
+
+
+
+
+
+Labeled sections include the label itself and all code that follow it until another label is present or the file reaches the end! Make sure you place the label before the section being labeled, and another label following it so that the computer understands what section is labeled! Example below:
+
+
+
+@echo off
+:LABEL1
+echo THIS IS A TEST OF TEXT
+set/p input=THIS IS A TEST INPUT_
+if %input%==1 goto LABEL1
+goto LABEL2
+:LABEL2
+echo TEST
+
+
+
+
+
+The first line of the above program may have been confusing to you. This line turns off the display of the code inside the file, so it doesn't look like it was all typed out on a console. As of now that is unimportant, right now you should be determining what the above program will do(ignore the first line). The program will display text saying "THIS IS A TEST OF TEXT", then it will prompt for input. If the input is "1"(meaning you typed in 1), the program will return to LABEL1 and the commands below it will repeat. If the condition in the if statement is not met, the computer will print text to the console "TEST". Copy the above program into two different windows running notepad. In one, save it as TEST1 in any folder and run it. Notice how the text is displayed. In the second window, erase the first line and save it as TEST2 and run it. Notice the difference?
+
+
+Once you have a general understanding of how the above commands may be used, you may move on to the next step.
+ It is suggested that a beginner use notepad, but if you would like to use MS DOS EDIT, that's fine, too. It is also suggested to a beginner to begin with a basic quiz game, so this is what this article will show you how to do. Remember to start by turning off the echo. Then introduce your game with some text through the echo command, then use set to allow input with the goto command. This may sound confusing, so look above (Note: the command REM creates comments, i.e. notes for the developer that won't show in the final result):
+
+, At this point, you should save your file(save as something.bat), and put it in a folder that you created for the game. After saving it, run it and make sure it works.
+
+
+From this point on you will be having multiple files per game (especially if you want to have ASCII graphics). You can get the batch script to print out the contents of any file on the screen with the type command. The below will print the contents of TEST.txt:
+
+
+
+
+
+
+It's important to remember to include the file extension, or the command may not work properly.
+
+
+Create an instructions page in notepad. It should say something like:
+
+
+
+
+
+
+Save this as INST.txt in the folder of the batch file, then make it so that your game will print the text to the console on the instructions page:
+
+
+
+
+
+
+Run the program and make sure it works.
+ This is where most of your creativity/research, work, and time is spent working on the game, as well as where most of the game's scripting should be. There should be a place that you go when you get an answer wrong, and a way to advance to the next question when you get the answer right. The above will have basic questions about the exterior of a car. You may replace them with what you like.
+
+
+Run the program and make sure it works.
+ Creating a winning screen is as simple as the instructions screen. Create a text document with praise for winning and save it as WIN.txt in the batch folder. Add the following lines to the end of your game for the winning screen:
+
+,, Start by going to each label and placing the cls command after it. This will clear the screen at each label so you don't have a screen full of unnecessary information.
+ If you want, make all of the answers on the list complete sentences. NOTE THAT YOU SHOULD AVOID CONTRACTIONS IN THE BATCH SCRIPT ECHO COMMAND! You should also avoid slashes and greater than/less than symbols, stars, percent symbols, and any other unusual symbols. These symbols will create a syntax error that causes the program to stop, lag, or crash.
+ Generate ASCII art in separate text documents and use the type command to display them in the program:
+
+, Think of your own things to correct. Then add your color with the color command. It is suggested that you place it at the beginning of the program so that the whole program is of this color. Here is the explanation of how to use it directly from the command line:
+
+Sets the default console foreground and background colors.
+
+COLOR attr Specifies color attribute of console output
+
+Color attributes are specified by TWO hex digits -- the first corresponds to the background; the second the foreground. Each digit can be any of the following values:
+
+0 = Black 8 = Gray 1 = Blue 9 = Light Blue 2 = Green A = Light Green 3 = Aqua B = Light Aqua 4 = Red C = Light Red 5 = Purple D = Light Purple 6 = Yellow E = Light Yellow 7 = White F = Bright White
+
+If no argument is given, this command restores the color to what it was when CMD.EXE started. This value either comes from the current console window, the /T command line switch or from the Default Color registry value.
+
+
+In other words, if you wanted a bright white background and black text:
+
+
+
+@echo off
+color f0
+:MAIN
+cls
+echo.

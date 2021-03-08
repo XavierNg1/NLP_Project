@@ -1,0 +1,6 @@
+
+Go to the Settings menu and create a new Project Parameter called “Limiting Ht” to assign the maximum height of a particular wall type.
+Add values to template wall types according to their structure via Type Properties.
+Query the maximum height of a wall instance.
+Begin a new Wall Schedule (View-New-Schedule/Quantities) and add the fields: Type, Length, Area and the custom parameter Limiting Ht.
+Set the filter for the Wall Schedule to values where Height Check is greater than 0’-0”.

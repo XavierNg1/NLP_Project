@@ -1,0 +1,21 @@
+;
+, MacOS X and Linux are fine as well, just do the corresponding operations.
+ Download the desktop image. An important thing to note here is that you'll need to download the 64bit edition, since the 32bit edition will not boot in EFI mode.
+ The Disk Utility can be found in Applications/Utilities. Open it up and resize your "Macintosh HD" partition to a size you like. To write the information to disk and let the Disk Utility resize your partition, just hit Apply.
+ Keep holding the option (alt) button when the computer is restarting. You will see different options appear on the screen. Choose the EFI option from the USB port. Select "Install Ubuntu" and press enter.
+
+
+The Ubuntu will run successfully and the installation instruction will appear. (Hint: Sometimes the installer is not able to find the Wi-Fi signal, so make sure to have a wired cable to plug into the Macbook and reboot the installer.)
+
+, (Hint: when the installationsart has the message "This computer currently has Mac OS X on it. What would you like to do?", make sure you select the "something else" option.)
+
+, Select "logical" as the partition type, and "Beginning of this space" as the location of the new partition. Type in "/" as the mount point, and click OK.
+ This should be 2 times less the amount of memory in you disk. Again choose "logical" and "Beginning of this space" as the location of the new partition. Use "/home" as the mount point.
+ Click the "Install Now" button to continue.
+
+
+Choose your location and click "Continue".
+Choose your keyboard layout. Choose your preferred language and click "Continue".
+ Start with entering your name, your computer's name, a preferred username, and a password. (Hint: you can also choose automatic login which requires no password.) Click "Continue".
+ It will show you the progress of the installation. Once the installation is finished, you will need to reboot your computer. Once that your computer has been rebooted, the installation is complete and you are able to start using Ubuntu.
+

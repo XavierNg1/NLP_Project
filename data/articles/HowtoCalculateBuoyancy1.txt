@@ -1,0 +1,29 @@
+ The force of buoyancy that acts on an object is directly proportional to the volume of the object that is submerged. In other words, the more of a solid object that is submerged, the greater the force of buoyancy that acts on it. This means that even objects that sink in liquid have a buoyancy force pushing upwards on them. To begin to calculate the buoyancy force acting on an object, your first step should generally be to determine the volume of the object that is submerged in fluid. For the buoyancy force equation, this value should be in meters3.
+
+
+For objects that are completely submerged in fluid, the submerged volume will be equal to the volume of the object itself. For objects that are floating on the surface of a fluid, only the volume under the surface of the fluid is considered.
+As an example, let's say that we want to find the buoyancy force acting on a rubber ball floating in water. If the ball is a perfect sphere with a diameter of 1 meter (3.3 ft) and it's floating exactly halfway submerged in the water, we can find the volume of the submerged portion by finding the volume of the entire ball and dividing it in half. Since the volume of a sphere is (4/3)π(radius)3 , we know our ball's volume is (4/3)π(0.5)3 = 0.524 meters3. 0.524/2 = 0.262 meters3 submerged.;
+, The next step in the process of finding the buoyancy force is to define the density (in kilograms/meter3) of the liquid that the object is submerged in. Density is a measure of an object or substance's weight relative to its volume. Given two objects of equal volume, the object with the higher density will weigh more. As a rule, the higher the density of the fluid an object is submerged in, the greater the force of buoyancy. With fluids, it's generally easiest to determine density simply by looking it up in reference materials.
+
+
+In our example, our ball is floating in water. By consulting an academic source, we can find that water has a density of about 1,000 kilograms/meter3.
+The densities of many other common fluids are listed in engineering resources. One such list can be found here.
+ Whether an object sinks or floats in the fluid it's submerged in, it's always subject to the force of gravity. In the real world, this constant downward force is equal to about 9.81 Newtons/kilogram. However, in situations in which another force, like centrifugal force, is acting on the fluid and the object submerged in it, this must also be taken into account to determine the total "downward" force for the entire system.
+
+
+In our example, if we're dealing with an ordinary, stationary system, we can assume that the only downward force acting on the fluid and object is the standard force of gravity — 9.81 Newtons/kilogram.
+However, what if our ball was floating in a bucket of water being swung at great speed in a horizontal circle? In this case, assuming the bucket is being swung fast enough to ensure that both the water and the ball don't fall out, the "downward" force in this situation would be derived from the centrifugal force created by swinging the bucket, not from the earth's gravity.
+ When you have values for the volume of your object (in meters3), the density of your fluid (in kilograms/meter3), and the force of gravity (or the downward force of your system), finding the buoyancy force is easy. Simply multiply these three quantities to find the force of buoyancy in newtons.
+
+
+Let's solve our example problem by plugging our values into the equation Fb = Vs × D × g. Fb = 0.262 meters3 × 1,000 kilograms/meter3 × 9.81 newtons/kilogram = 2,570 Newtons.
+ Using the buoyancy force equation, it's easy to find the force that's pushing an object up out of the fluid it's submerged in. However, with a little extra work, it's also possible to determine whether the object will float or sink. Simply find the buoyancy force for the entire object (in other words, use its entire volume as Vs), then find the force of gravity pushing it down with the equation G = (mass of object)(9.81 meters/second2). If the force of buoyancy is greater than the force of gravity, the object will float. On the other hand, if the force of gravity is greater, it will sink. If they are equal, the object is said to be neutrally buoyant.
+
+
+For example, let's say we want to know if a 20 kilogram cylindrical wooden barrel with a diameter of .75 meters (2.5 ft) and a height of 1.25 meters (4.1 ft) will float in water. This will take several steps:
+
+We can find its volume with the cylindrical volume formula V = π(radius)2(height). V = π(.375)2(1.25) = 0.55 meters3.
+Next, assuming ordinary gravity and water with ordinary density, we can solve for the force of buoyancy on the barrel. 0.55 meters3 × 1000 kilograms/meter3 × 9.81 newtons/kilogram = 5,395.5 Newtons.
+Now, we'll need to find the force of gravity on the barrel. G = (20 kg)(9.81 meters/second2) = 196.2 Newtons. This is much less than the buoyancy force, so the barrel will float.
+ When performing buoyancy problems, don't forget that the fluid that the object is submerged in doesn't necessarily have to be a liquid. Gases also count as fluids, and, although they have very low densities compared to other types of matter, can still support the weight of certain objects floating in them. A simple helium balloon is evidence of this. Because the gas in the balloon is less dense than the fluid around it (ordinary air), it floats!
+

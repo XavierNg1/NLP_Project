@@ -1,0 +1,119 @@
+ As with the Laplace transform, calculating the Fourier transform of a function can be done directly by using the definition. We will use the example function f(t)=1t2+1,{\displaystyle f(t)={\frac {1}{t^{2}+1}},} which definitely satisfies our convergence criteria. 
+
+
+F{1t2+1}=∫−∞∞e−iωtt2+1dt{\displaystyle {\mathcal {F}}\left\{{\frac {1}{t^{2}+1}}\right\}=\int _{-\infty }^{\infty }{\frac {e^{-i\omega t}}{t^{2}+1}}{\mathrm {d} }t}
+;
+, This integral resists the techniques of elementary calculus, but we can make use of residue theory instead. The absolute value stems from the fact that we close the contour in the lower half plane when ω>0{\displaystyle \omega >0} and in the upper half plane when ω<0.{\displaystyle \omega <0.}
+
+
+F{1t2+1}=πe−|ω|{\displaystyle {\mathcal {F}}\left\{{\frac {1}{t^{2}+1}}\right\}=\pi e^{-|\omega |}}
+
+
+, The rectangular function rect⁡(t),{\displaystyle \operatorname {rect} (t),} or the unit pulse, is defined as a piecewise function that equals 1 if −12<t<12,{\displaystyle -{\frac {1}{2}}<t<{\frac {1}{2}},} and 0 everywhere else. As such, we can evaluate the integral over just these bounds. The result is the cardinal sine function.
+
+
+F{rect⁡(t)}=∫−1/21/2e−iωtdt=2ωsinω2{\displaystyle {\mathcal {F}}\{\operatorname {rect} (t)\}=\int _{-1/2}^{1/2}e^{-i\omega t}{\mathrm {d} }t={\frac {2}{\omega }}\sin {\frac {\omega }{2}}}
+
+If the unit pulse is shifted such that the bounds are 0 and 1, then there exists an imaginary component as well, as seen by the graph above.
+
+
+∫01e−iωtdt=sin⁡ωω+i(cos⁡ω−1ω){\displaystyle \int _{0}^{1}e^{-i\omega t}{\mathrm {d} }t={\frac {\sin \omega }{\omega }}+i\left({\frac {\cos \omega -1}{\omega }}\right)}
+
+
+
+
+, The Gaussian function is one of the few functions that is its own Fourier transform. We integrate by completing the square.
+
+
+F{e−t2}=∫−∞∞e−t2e−iωtdt=∫−∞∞e−(t2+iωt−ω2/4+ω2/4)dt=e−ω2/4∫−∞∞e−(t+iω/2)2dt=πe−ω2/4{\displaystyle {\begin{aligned}{\mathcal {F}}\{e^{-t^{2}}\}&=\int _{-\infty }^{\infty }e^{-t^{2}}e^{-i\omega t}{\mathrm {d} }t\\&=\int _{-\infty }^{\infty }e^{-(t^{2}+i\omega t-\omega ^{2}/4+\omega ^{2}/4)}{\mathrm {d} }t\\&=e^{-\omega ^{2}/4}\int _{-\infty }^{\infty }e^{-(t+i\omega /2)^{2}}{\mathrm {d} }t\\&={\sqrt {\pi }}e^{-\omega ^{2}/4}\end{aligned}}}
+
+
+, A simple integration by parts, coupled with the observation that f(t){\displaystyle f(t)} must vanish at both infinities, yields the answer below.
+
+
+F{f′(t)}=∫−∞∞f′(t)e−iωtdt,  u=e−iωt, v=f′(t)dt=iωf^(ω){\displaystyle {\begin{aligned}{\mathcal {F}}\{f^{\prime }(t)\}&=\int _{-\infty }^{\infty }f^{\prime }(t)e^{-i\omega t}{\mathrm {d} }t,\ \ u=e^{-i\omega t},\ v=f^{\prime }(t){\mathrm {d} }t\\&=i\omega {\hat {f}}(\omega )\end{aligned}}}
+
+In general, we can take n{\displaystyle n} derivatives.
+
+
+F{f(n)(t)}=(iω)nf^(ω){\displaystyle {\mathcal {F}}\{f^{(n)}(t)\}=(i\omega )^{n}{\hat {f}}(\omega )}
+
+
+
+This yields the interesting property, stated below, which may be familiar in quantum mechanics as the form that the momentum operator takes in position space (on the left) and momentum space (on the right). 
+
+
+−iddt→ω{\displaystyle -i{\frac {\mathrm {d} }{{\mathrm {d} }t}}\to \omega }
+
+
+
+
+, The symmetry of the Fourier transform gives the analogous property in frequency space. We will first work with n=1{\displaystyle n=1} and then generalize.
+
+
+F{tf(t)}=∫−∞∞tf(t)e−iωtdt=∫−∞∞i∂∂ω(e−iωt)f(t)dt=iddωf^(ω){\displaystyle {\begin{aligned}{\mathcal {F}}\{tf(t)\}&=\int _{-\infty }^{\infty }tf(t)e^{-i\omega t}{\mathrm {d} }t\\&=\int _{-\infty }^{\infty }i{\frac {\partial }{\partial \omega }}(e^{-i\omega t})f(t){\mathrm {d} }t\\&=i{\frac {\mathrm {d} }{{\mathrm {d} }\omega }}{\hat {f}}(\omega )\end{aligned}}}
+
+In general, we can multiply by tn.{\displaystyle t^{n}.}
+
+
+F{tnf(t)}=indndωnf^(ω){\displaystyle {\mathcal {F}}\{t^{n}f(t)\}=i^{n}{\frac {{\mathrm {d} }^{n}}{{\mathrm {d} }\omega ^{n}}}{\hat {f}}(\omega )}
+
+
+
+We immediately obtain the below result. This is a symmetry that is not fully realized with the Laplace transforms between the variables t{\displaystyle t} and s.{\displaystyle s.}
+
+
+iddω→t{\displaystyle i{\frac {\mathrm {d} }{{\mathrm {d} }\omega }}\to t}
+
+
+
+
+, Multiplication by eiat{\displaystyle e^{iat}} in the time domain corresponds to a shift in the frequency domain.
+
+
+F{eiatf(t)}=∫−∞∞f(t)e−i(ω−a)tdt=f^(ω−a){\displaystyle {\mathcal {F}}\{e^{iat}f(t)\}=\int _{-\infty }^{\infty }f(t)e^{-i(\omega -a)t}{\mathrm {d} }t={\hat {f}}(\omega -a)}
+
+
+, A shift in the time domain corresponds to multiplication by e−iωc{\displaystyle e^{-i\omega c}} in the frequency domain, which again illustrates the symmetry between t{\displaystyle t} and ω.{\displaystyle \omega .} We can easily evaluate this using a simple substitution.
+
+
+F{f(t−c)}=∫−∞∞f(t−c)e−iωtdt=∫−∞∞f(t)e−iω(t+c)dt=e−iωcf^(ω){\displaystyle {\begin{aligned}{\mathcal {F}}\{f(t-c)\}&=\int _{-\infty }^{\infty }f(t-c)e^{-i\omega t}{\mathrm {d} }t\\&=\int _{-\infty }^{\infty }f(t)e^{-i\omega (t+c)}{\mathrm {d} }t\\&=e^{-i\omega c}{\hat {f}}(\omega )\end{aligned}}}
+
+
+, The stretch property seen in the Laplace transform also has an analogue in the Fourier transform.
+
+
+F{f(ct)}=∫−∞∞f(ct)e−iωtdt,  u=ct=1c∫−∞∞f(u)e−iωu/cdu=1cf^(ωc){\displaystyle {\begin{aligned}{\mathcal {F}}\{f(ct)\}&=\int _{-\infty }^{\infty }f(ct)e^{-i\omega t}{\mathrm {d} }t,\ \ u=ct\\&={\frac {1}{c}}\int _{-\infty }^{\infty }f(u)e^{-i\omega u/c}{\mathrm {d} }u\\&={\frac {1}{c}}{\hat {f}}\left({\frac {\omega }{c}}\right)\end{aligned}}}
+
+
+, If you have had some exposure to Laplace transforms before, you know that the exponential function is the "simplest" function that has a Laplace transform. In the case of the Fourier transform, this function is not well-behaved because the modulus of this function does not tend to 0 as t→∞.{\displaystyle t\to \infty .} Nevertheless, its Fourier transform is given as the delta function.
+
+
+F{eiat}=2πδ(ω−a){\displaystyle {\mathcal {F}}\{e^{iat}\}=2\pi \delta (\omega -a)}
+
+ The imaginary exponential oscillates around the unit circle, except when t=0,{\displaystyle t=0,} where the exponential equals 1. You can think of the contributions by the oscillations as canceling themselves out for all t≠0.{\displaystyle t\neq 0.} At t=0,{\displaystyle t=0,} the integral of the function then diverges. The delta function is then used to model this behavior.
+
+This result gives us the Fourier transform of three other functions for "free." The Fourier transform of the constant function is obtained when we set a=0.{\displaystyle a=0.}
+
+
+F{1}=2πδ(ω){\displaystyle {\mathcal {F}}\{1\}=2\pi \delta (\omega )}
+
+
+
+Using Euler's formula, we get the Fourier transforms of the cosine and sine functions.
+
+
+F{cos⁡at}=π(δ(ω−a)+δ(ω+a)){\displaystyle {\mathcal {F}}\{\cos at\}=\pi (\delta (\omega -a)+\delta (\omega +a))}
+
+
+F{sin⁡at}=−iπ(δ(ω−a)−δ(ω+a)){\displaystyle {\mathcal {F}}\{\sin at\}=-i\pi (\delta (\omega -a)-\delta (\omega +a))}
+
+
+
+
+, We can use the shift property to compute Fourier transforms of powers.
+
+
+F{tneiat}=2πindndωnδ(ω−a){\displaystyle {\mathcal {F}}\{t^{n}e^{iat}\}=2\pi i^{n}{\frac {{\mathrm {d} }^{n}}{{\mathrm {d} }\omega ^{n}}}\delta (\omega -a)}
+
+

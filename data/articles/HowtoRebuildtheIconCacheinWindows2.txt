@@ -1,0 +1,13 @@
+ The quickest way to open the Command Prompt in any version of Windows is to:
+
+Press the ⊞ Win+R at the same time.
+Type cmd.
+Click/tap OK or hit ↵ Enter.
+ Type the commands below into the Command Prompt, hitting enter after each line of code is entered. You can also highlight and copy them (either by right-clicking and pressing Copy or by pressing Ctrl+C. Right-click in the Command Prompt and select Paste. Ctrl+V won't work.
+
+cd /d %userprofile%\AppData\Local
+attrib –h IconCache.db
+del IconCache.db
+start explorer
+
+, The icons should now be fixed.

@@ -1,0 +1,52 @@
+ Replace them with underscores. You can also use the "capitalization technique", where you capitalize the first letter of each word.
+
+
+Example
+
+
+Okay: EmpRecord or Emp_Record
+
+Not Okay: Emp Record
+You could also go with Emprecord, but that will make it inconvenient to read.
+
+;
+,
+
+
+Example
+
+Okay: EmpRecQ1
+Not Okay: EmployeeRecordForQuarterOne
+
+
+
+, Please note that /, \, :, *, ?, ", <, > and | cannot be present in a file name. The two most commonly used symbols are ! and _. The others are not advisable.
+
+
+Example
+
+If you plan on using Emp_Record and EmpRecQ1 very frequently, then rename them as
+
+Okay: _Emp_Record or _EmpRecQ1 or !Emp_Record or !Emp_RecordQ1
+
+
+Not Okay: Emp_Record_ or Emp_RecQ1!
+
+Please note that Emp_Record_ or Emp_RecQ1! are acceptable as file names but will not serve your purpose of showing up at the top.
+Note: For step three to work, you must sort the file names in ascending order.
+
+
+
+Example
+
+Continuing with the above example, if you have two employee data files, one for the first quarter and one for the second, name them like this:
+
+
+Okay: EmpRecQ1 and EmpRecQ2
+
+
+Not Okay: EmpRecQ1 and EmployeeRecQ2
+
+Please note that Emp_Record_ or Emp_RecQ1! are acceptable as file names but will not serve your purpose of showing up together.
+
+Note: For step four to work, you must sort by filename (ascending or descending, it does not matter).

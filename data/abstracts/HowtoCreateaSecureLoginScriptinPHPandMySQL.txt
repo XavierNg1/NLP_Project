@@ -1,0 +1,36 @@
+
+Install a Web Server, PHP and MySQL on your server.
+Create a MySQL database.
+Create a user with only SELECT, UPDATE and INSERT privileges.
+Create a MySQL table named "members".The code below creates a table with four fields (id, username, email, password).
+Create a table to store login attempts.
+Create a test row in table "members".
+Create a global configurations page
+Create a folder called "includes" in the root directory of the application and then create a new PHP file in that directory.
+Create the database connection page
+This is the PHP code that we will use to connect to our mySQL database.
+Securely start a PHP session.
+Create the Login Function.
+The Brute Force Function.
+Check logged in status.
+Sanitize URL from PHP_SELF
+This next function sanitizes the output from the PHP_SELF server variable.
+Create the login processing page (process_login.php)
+Create a file to process logins, called process_login.php in the application's includes directory.
+Create a logout script.
+Registration Page.
+Create sha512.js file
+This file is an implementation in JavaScript of the hashing algorithm sha512.
+Create forms.js file
+This file, which you should create in the js directory of the application, will handle the hashing of the passwords for the login (formhash()) and registration (regformhash()) forms:
+
+
+
+function formhash(form, password) {
+    // Create a new element input, this will be our hashed password field.
+Create the login form (index.php).
+Create the register_success.php page
+Create a new PHP web page called register_success.php, in the root directory of the application.
+Create the error page
+Create a new HTML page in the root directory of the application.
+Page Protection Script.

@@ -1,0 +1,50 @@
+ The Windows Firewall protection depends on some particular services in order to function properly. Configure the start up types of these services properly.
+
+
+Press the Windows Key + X simultaneously.
+Select Run option.
+Type “services.msc” and press ENTER key of your keyboard.
+Scroll down the page. Right click Windows Firewall service and select Properties option from the context menu.
+Click the General tab.
+Click the Start button in the dialog box.
+Set Start up Type: Automatic
+Click OK.
+In the same manner as in the Step # 4-8, set the Start up Type of Windows Management Instrument to Automatic and re-start that particular service.;
+,
+Click the Search icon.
+Type “Command Prompt”.
+Click the Apps icon.
+Right click that from the Search Results.
+Click the “Run as administrator” icon at the bottom.
+Type the following commands:
+Netsh in tip reset reset.log
+Netsh winsock reset catalog
+Exit the Command Prompt, and then restart your computer.
+ To do this, open the Windows Registry Editor and locate the Spooler key. Delete the string with corrupt parameters. For automatic registry cleaning try Reginout. This will fix Windows 8 error 1075
+
+
+Press Windows Key + R.
+Type “RegEdit” in the Open textbox.
+Click the OK button.
+The Registry Editor will open.
+Locate the following sub key:
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\Spooler
+Delete the “DependOnService” string.
+Locate the following sub key:
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\NetLogOn
+Delete the “DependOnService” string.
+Exit Registry Editor window.
+ If the Repository folder contents are corrupt delete the folder contents as outlined below:
+
+Open the Command Prompt as administrator. (Refer Steps # 1-7 from “Reset the TCP/ IP Stack” paragraph)
+Type the following commands:
+net stop winmgmtren %windir%\System32\Wbem\Repository Repository_bak
+net start winmgmt
+Exit the Command Prompt.
+ After this, you won’t again encounter Windows 8 error 1075.
+
+Open the Command Prompt as administrator. (Refer Steps # 1-7 from “Reset the TCP/ IP Stack” paragraph)
+Type the following command and press ENTER:
+ipconfig /flushdns
+You’ll receive a message that the DNS resolver cache is successfully flushed.
+

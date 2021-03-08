@@ -1,0 +1,56 @@
+ On your phone, go to the keypad and type the code *#7465625#
+
+
+Only "Network Lock" should be ON
+Proceed if "Network Lock" is ON
+
+ADB stands for Android Debug Bridge. This allows you to send programme commands to your phone, which is connected to your desktop, via USB.
+If you do not already have ADB installed, you can install the AndroidControl 1.3.1 package which contains the ADB executable. Your may download it from here.
+
+;
+,, HxD is a hex editor that will allow you to make the all important change to one of the files which will be copied from your phone. You may download this win32 executable from: http://download.cnet.com/HxD-Hex-Editor/3000-2352-10891068.html?part=dl-HxDHexEdi&subj=uo&tag=button
+
+,, SuperOneClick is a software that allows you to root your phone in an extremely easy and safe way. NOTE: Your phone must be rooted for it to be unlocked using this method. If it is already rooted, skip this and go onto 5. If your phone is NOT rooted, please continue by downloading and installing SuperOneClick then continue onto 4.
+
+
+Download the SuperOneClick zipped file from here.
+Extract the file to your Desktop or to any folder you choose.
+ This section is for phones that are NOT already rooted.
+
+
+On your phone, turn the USB debug option ON. The option is found at: Applications > Settings > Applications > Development - USB debugging.
+Run the SuperOneClick executable.
+Connect your phone to the computer via the USB cable.
+Wait for drivers to load.
+Click on the "Root" command button.
+Wait until the process is completed.
+Close SuperOneClick and unplug your phone.
+Your phone should now be rooted. The app "Superuser" should now exist.
+
+
+
+Ensure that "USB debug option" is On. Refer to 4a.
+Connect your phone to your computer via the USB Cable.
+Using the windows "Command Prompt", change folders to the location where you extracted the "AndroidControl" file in 1b; the "adb.exe" file resides here.
+Enter this command at the prompt: "adb devices". Under "List of devices attached" you should get a reply looking like "6442d495f989 device". If nothing is printed, try the command again. If nothing is again printed, check if you are in the correct folder, or if your USB cable is properly connected to the computer, or if the drivers for your phone are properly installed. Continue after the issue is resolved.
+Enter this command at the Command Prompt: "adb shell" This opens the adb shell
+Enter "su" This grants root privileges
+Enter "cat /efs/nv_data.bin >> /sdcard/nv_data.bin" This copies the file we want (nv_data.bin) to the SD card.
+Enter twice the command "exit"
+Mount your phone's SD Card.
+Copy the "nv_data.bin" file from the SD Card to your Computer's Desktop. Place another copy of this file (make a backup) in another folder on your computer.
+Run HxD hex editor by clicking on the icon it installed on your desktop.
+Drag the "nv_data.bin" file, which is on your desktop, to the HxD editor window.
+Select menu: Search > Goto; then, in the dialogue box, type 40a05
+Change the value DA to DB
+Save the file and copy it from your Desktop back to your SD Card, replacing the one already there.
+Unmount the SD Card and do 5e and 5f again.
+Enter "rm /efs/nv_data.bin" This removes the nv_data.bin file from your phone.
+Enter "rm /efs/nv_data.bin.md5" This removes the nv_data.bin.md5 file from your phone. This file is automatically recreated.
+Enter "cat /sdcard/nv_data.bin >> /efs/nv_data.bin" This copies the adjusted nv_data.bin from your SD Card back to your phone.
+Enter "chmod 755 /efs/nv_data.bin" This changes the file permission.
+Enter "chown radio.radio /efs/nv_data.bin || chown 1001.1001 /efs/nv_data.bin" Changes file root owner to radio group radio.
+Do 5h again
+Unplug USB cable and restart your phone
+
+,,

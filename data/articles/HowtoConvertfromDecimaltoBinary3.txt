@@ -1,0 +1,10 @@
+ List the powers of two in a "base 2 table" from right to left. Start at 20, evaluating it as "1". Increment the exponent by one for each power. Make the list up until you've reached a number very near the decimal system number you're starting with. For this example, let's convert the decimal number 15610 to binary.
+ Choose the biggest number that will fit into the number you are converting. 128 is the greatest power of two that will fit into 156, so write a 1 beneath this box in your chart for the leftmost binary digit. Then, subtract 128 from your initial number. You now have 28.
+ Using your new number (28), move down the chart marking how many times each power of 2 can fit into your dividend. 64 does not go into 28, so write a 0 beneath that box for the next binary digit to the right. Continue until you reach a number that can go into 28.
+ 16 can fit into 28, so you will write a 1 beneath it's box and subtract 16 from 28. You now have 12. 8 does go into 12, so write a 1 beneath 8's box and subtract it from 12. You now have 4 .
+ Remember to mark a 1 beneath each number that does go into your new number, and a 0 beneath those that don't.
+ The number will be exactly the same from left to right as the 1's and 0's beneath your chart. You should have 10011100. This is the binary equivalent of the decimal number 156. Or, written with base subscripts: 15610 = 100111002.
+
+
+Repetition of this method will result in memorization of the powers of two, which will allow you to skip Step 1.
+

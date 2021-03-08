@@ -1,0 +1,19 @@
+ You will need a Mozilla Persona account for this step.;
+,,, There are currently three types of playback control events:
+
+
+Loop events: allows you to choose portions of the video to be repeated for a specific number of times (or indefinitely).
+Pause events: pauses the video at a certain point for a specified period of time (or indefinitely).
+,,
+
+
+The Start and End properties are common to all types of events in Popcorn Maker. They denote the times, relative to the original video's start, when the events start and finish respectively. Pause events are the exception. The "end time" is meaningless in pause events, only the start time is taken into consideration when implementing the event.
+
+In a pause event, the start time is when will the video pause. The end time is not necessary and won't affect the event's behavior.
+In loop events, start and end times denote the start and end of the portion of the video that will be repeated.
+In skip events, start and end times denote the beginning and end of the interval in the video that will be skipped (jumped, forwarded).
+
+
+The "Number of loops" in a loop event is the number of times that you want the loop interval to repeat. Setting this to 0 will cause this portion to repeat indefinitely.
+The "Pause Duration" in a pause event is the amount of time (in seconds) that you want the video to be paused. Setting this to 0 will pause the video indefinitely (viewers will still be able to continue playing the video past the pause point if they press the play button).
+

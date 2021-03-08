@@ -1,0 +1,20 @@
+ Before doing any analysis make sure the data is well organized, have headers and there are no blank cells.;
+, Select the cells from the first list and make sure to include the header cells. In this case click on A1 then Ctrl+⇧ Shift+↓. Then go to INSERT tab and in Tables group click Table button. In the Create Table dialog box check My table has headers then click OK.
+ To do this, click any cell in the created table and then go to DESIGN tab and in the Properties group under Table Name write the desired table name. In this case rename the table to ORDERS.
+ Select the cells from the second list and make sure to include the header cells. In this case select E1:F1 then Ctrl+⇧ Shift+↓. Then go to INSERT tab and in Tables group click Table button. In the Create Table dialog box check My table has headers then click Ok.
+ Click any cell in the created table and then go to DESIGN tab and in the Properties group under Table Name write the desired table name. In this case rename the table to ORDERSTATUS.
+ Now that we have created the tables we need to compare the values between them. Our look up key is the ORDER_ID column. The data in the ORDER_ID column is used to link both tables. The look up column does not have to be on the left side of the tables. To join and compare the data between two tables go to GEGPRIFTI tab and then in the Database group click Join tables button. In the Join tables dialog box:
+
+
+Go to Left table drop box and select ORDERS.
+Go to Right table drop box and select ORDERSTATUS.
+The columns of each table are displayed in Left table output columns and in the Right table output columns lists. By default the first column of each table is set to be as join key. If it happens that the join key is a different column then right click and set it as key column.
+In the Join type click the last button FULL OUTER JOIN. Click Run and see the result created in a new worksheet.
+ From the results you see that:
+
+
+There are orders from the ORDERS table that are not in the ORDERSTATUS table.
+There are orders from the ORDERSTATUS table that are not in the ORDERS table.
+There are orders that are in both tables.
+ Be aware that the way that the two key columns join together effects the output results. By default the matching values of key columns are not case insensitive. So o4521 is equal to O4521. If you want o4521 not to be equal to O4521 when matching then go to Database group settings and check Case sensitive from the Key column matching radio boxes.
+

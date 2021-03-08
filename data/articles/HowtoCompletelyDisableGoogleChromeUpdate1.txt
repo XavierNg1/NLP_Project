@@ -1,0 +1,12 @@
+ From the desktop, click the Go menu and select "Utilities." Open Terminal from this folder.
+
+
+You can also press ⌘ Command+⇧ Shift+U on any Finder window or the desktop to open the Applications folder.;
+, Enter the following command and hit ⏎ Return. This will disable automatic update checks for all Google products:
+
+
+defaults write com.google.Keystone.Agent checkInterval 0
+
+, Your changes will be applied, and Chrome will no longer check for updates.
+ Regularly updating Chrome will help keep your computer secure. You can check for updates by opening the Chrome menu and selecting "Help" → "About Google Chrome."You can switch back to automatic updates by opening Terminal again and using the same command, replacing 0 with the interval between update checks in seconds. For example, to check for updates every 24 hours (the max), set checkInterval 86400.
+

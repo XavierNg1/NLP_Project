@@ -1,0 +1,67 @@
+ So, for example, if you have a workbook with 2880 rows that creates 12 round spheres, 2880/12=240 x,y pairs you want, starting at the top probably. Otherwise, follow the steps below to create such a workbook and calculate the arc length of the sphere via the distance formula. You will need to create a new workbook and 4 worksheets: Data, Chart, Arc Length and Saves.
+
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show grid lines and set all boxes below that to auto or checked.
+In Chart, allow show chart names and set data markers on hover and leave the rest unchecked for now.
+In Calculation, make sure Automatically is checked and calculate before save is also checked. Set max change to .001 as goal-seeking is not done in this project. Check save external link values and use 1904 system
+
+In Error checking, check all the options.
+In Save, select save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ It helps by placing the cursor between the A of Column A and the 1 in Row 1 in the upper leftmost corner and selecting the entire worksheet. Format Cells Number Number Decimal Places 4, Font Size 9 or 10.,
+Input GM into cell B1 and "=(-(1-SQRT(5))/2)" w/o quotes into cell B2. GM stands for Golden Mean.
+Input Factor1 into C1 and "=VLOOKUP(ABS(Spheroids),Looker,IF(Spheroids<=24,2,2))"
+Input KEY into cell D1 and "=IF(Spheroids<=24,Spheroids*VLOOKUP(Spheroids,LOOKER2,2),Spheroids)"
+Input Number into cell E1 and 1 into cell E2. This is used to warp output but we won't be using it. Format Fill yellow.
+Input CHAOS into cell H1 and 1 into cell H2. Also used to warp output; also unused now.
+Select cell range A1:H2 and Insert Name Create Names in Top Row, OK. Align Center. Format Fill Chaos yellow.  Command+Select cell range A2:E2, H2 and do Border black bold Outline. Do Insert New Comment on all constants, variables and formulas as originally given, copying the original formula or value from the formula bar into the new comment -- this applies to A4 to H4 as well.
+Input Tip to cell A3 and "=(Base*12/(VARIABLE*1)*PI())*CHAOS" into A4, w/o quotes as usual.
+Input Base to cell B3 and "=16*107" into B4.
+Input Spheroids to cell C3 and 24 to cell C4.
+Input ShrinkExpand to cell D3 and 1 to cell D4.
+Input PiDivisor to cell E3 and 180 to cell E4.
+Input Thickness to cell F3 and 2 to cell F4. This is the relative Ring Size.
+Input ShrinkExpand2 to G3 and 1.5 to G4.
+Input VARIABLE to H3 and 1 to H4.
+Format Fill C4 purple to really set it off from the other cells, Format Fill D4:H4 yellow. Make Font size 14 for cells C4 and F4. Select cell range A4:H4 and Format Cell Border black bold outline, then do red bold outline for cell F4. F4 is critical to good sphere roundness and sphere size overall, now that the Lookup Table for KEY has been doubled.
+
+Input constant c to B5.
+Input Cos to C5.
+Input Sin to D5.
+Input Main X to E5.
+Input Main Y to F5.
+Input Second X to G5.
+Input Second Y to H5.
+
+Enter 1 to I6. Edit Go To cell range I6:I180 and do Edit Fill Series Column Linear Step Value=1 OK.
+Input .125 to cell J6. Edit Go To cell range J6:J180 qnd Edit Fill Down.
+Input "=I6*$K$35/$I$35" to K6 w/o quotes. Edit Go To cell range K6:K180 and Edit Fill Down. Select K35 and input .125; that completes the LOOKER TABLE so go to I6:K180 and Insert Name Define Name Looker to cell range $I$6:$K$180.
+Input LOOKER2 to L5.
+Enter 1 to L6. Edit Go To cell range L6:L29 and do Edit Fill Series Column Linear Step Value=1 OK.
+Enter the following values to MK6:M29 please: MK6:48; M7:32, then 16, 8 2*PI(), 2*PI(), 2*PI(), 4 from M13 down to M21, then 2 down to M29.
+Enter DOUBLED!! into cell M5.
+Select L6:M29 and Format Fill yellow with red bold border and Insert Name Define Name LOOKER2 to cell range $L$6:$M$29.
+Select Row 5 and set Font Red, Underlined, Bold, Aligned center horizontally.
+ Format Fill Light Rose. Do Insert New Comment of original formula for all of these top formulas.
+Edit Go To A7:A2886 and input to A7 "=(A6+(-Tip*2)/(AjRows))" w/o quotes and Edit Fill Down.
+Select B6 and input "=Base*24/Spheroids". Insert New Comment.
+Select B7:B2886 and input to B7 "=B6" and Edit Fill Down Insert New Comment = INC,
+Edit Go To C6:C2886 and input to C6 "=Thickness*Spheroids/KEY*(COS((ROW()-6)*Number*PI()/PiDivisor*Factor1))" w/o quotes and Edit Fill Down. INC.
+Edit Go To D6:D2886 and input to D6 "=Thickness*Spheroids/KEY*(SIN((ROW()-6)*Number*PI()/PiDivisor*Factor1))" w/o quotes and Edit Fill Down. INC.
+Edit Go To E6:E2886 and input to E6 "=((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+C6)/ShrinkExpand" w/o quotes and Edit Fill Down. INC.
+Edit Go To F6:F2886 and input to F6 "=((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+D6)/ShrinkExpand" w/o quotes and Edit Fill Down. INC.
+We won't be using column G or H but I'll give them to you anyway, in case you want to measure the arc lengths of two rings of spheres, one external to another,
+Edit Go To G6:G2886 and input to G6 "=((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+C6)/ShrinkExpand2" w/o quotes and Edit Fill Down. INC.
+Edit Go To H6:H2886 and input to H6 "=((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+D6)/ShrinkExpand2" w/o quotes and Edit Fill Down. INC.
+ Cut it and Paste it to the Arc Length worksheet upper left corner and drag it by the lower left corner until it occupies the region A35 to 1/2 the J column. Decrease the J column to fit along the edge of the Chart Area. Use Chart Layout to get ride of grid lines and legend. Set vertical scale to Minimum -.05 and Maximum .3 with Major Unit .05 and then set the horizontal axis scale to Minimum ,85 and Maximum 1.15 with Major Unit .05. Clock on the chart and then Chart Layout and do Current Selection Series 1, Format Selection. For Marker Style, select round circle size 3 to 5, as you prefer. What will be measured is the distance between markers, which you may see if you uncheck Smoothed Line. Thus, it's only an approximation, better in small areas than in large ones. I do not know how to calculate the total error. At least not between Excel and Excel. For Calculus vs. Excel, I can do it if given a function I can find the derivative for; this is not one of those, unfortunately.
+Enter 2880 to L1 and "=Spheroids" to L2. Input Rows to K3 and enter "=L1/L2" to L3 and Insert Name Define Name Rows to $L$3.
+Input Row# to K5. Input Main X to L5. Input Main Y to M5. Input Arc to N4 and Length to N5 and do Font size 16 for those. Copy them and paste them to O4:O5, then input Cumulative to O3. Input S# (for Sphere#) to P5 and format the font red. Select columns K:P and align center and do Format Column Autofit Selection.
+Input 1 to cell K6 and Edit Go To cell range K6:K2885 and do Edit Fill Series Column Linear Step Value=1, OK.
+Input "=Data!E6" into cell L6 then input "=Data!F6" to cell M6. Edit Go To L6:M2885 and Edit Fill Down.
+Input to N7 "=((L7-L6)^2+(M7-M6)^2)^0.5" and copy and paste it to N8.
+Input to O8 "=SUM($N$7:N8)" which will keep a cumulative total running beside the distance formula in Arc Length.
+Edit Go To O8:N2885 and Edit Fill Down. Now you have the arc length cumulatively along the entire path. If you Edit Go To cell O125, you should see the cumulative total of the first sphere there, the one in the chart, at 7.3507 -- it would be nice to have a way to find these no matter how many integer spheres were input.
+Go to cell P6 and input "=IF(K6/Rows<>INT(K6/Rows),"",INT(K6/Rows))", which formula leaves a blank unless the row number is evenly divisible by the Rows/Spheres (120)=2880/24 calculated up top automatically. Format Fill P6 yellow and make the font bold red size 16. Edit Go To P6:P2885 and Edit Fill Down. Now we have each sphere# in bold red large font to make it easy to find the cumulative totals.
+ Then copy a picture of the chart with some of the data of the Arc Length worksheet and with the shift key again depressed, Paste Picture underneath the two sets of data, the formulas and values you just pasted as a good record of how you created the image., THE INTeger function is a relic from the past and is not advertised any more but is valuable.,'CumTotal,,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

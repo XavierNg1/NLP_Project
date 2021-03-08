@@ -1,0 +1,39 @@
+
+Create a new Excel workbook with three worksheets: Data, Chart (unless using Chart Wizard) and Saves.
+Set Your Preferences: Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+It helps by placing the cursor at cell A16 and doing Freeze Panes.
+Enter the upper Defined Name Variables Section on the Data worksheet - there are pictures of the Data section below.
+Enter the Spheres_Lookup Table
+
+
+O1: Enter Spheres_Lookup
+P1: Enter MagicNumber
+Q1: Enter 0.636619772367581 or "2/PI()" w/o quotes and Copy and Paste Special Values back to the same cell.
+Enter the column headings of rows  8 and 9:
+
+
+A9: Enter t range
+B8: Enter Constant and B9: Enter 2*c
+C9: Enter t rng/2c
+D8: Enter sin  and D9: Enter (t rng/ 2c) = D
+E8 Enter cos   and E9: Enter (t rng) =E
+F8: Enter sin   and F9: Enter (t rng) =F
+G8: Enter cos   and G9: Enter (t rng/2c)=G
+H8: Enter H= cos((Row-10)*   and H9: Enter Factor*Converter)*Circ
+I8: Enter: I= sin((Row-10)*    and I9: Enter Factor*Converter)*Circ
+J8: Enter (D*E*G*Chgr^3)+H    and J9: Enter Charting X
+K8: Enter (D*F*G*Chgr^3)+I    and K9: Enter Charting Y and Format Fill J8:K9 light green.
+Here are pictures of the Variables Section, Column Headers and first few rows of data:
+
+,
+Enter the column formulas
+
+
+A10: Enter "=t*IF(Spheres=ODD(Spheres),0,1)" w/o quotes.
+Create the Charts
+
+
+Edit Go To J10:K1450 and from the Ribbon or Chart Wizard select Charts All/Other, Scatter, Smooth Lined Scatter.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

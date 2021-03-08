@@ -1,0 +1,10 @@
+ Go to the Google Charts Gallery and find the chart type you would like to place on your website. This article will detail how to implement and customise a column chart. Although a column chart is used for the sake of example, the method this article employs to accept user input is universal to all Google chart types.;
+,, These variables must be declared inside the  script tags surrounding the code for the Google chart.  Set these variables equal to default numeric values. These values will be the first numbers displayed when the chart is initially loaded.
+ Change the names of the chart axes if you'd like.
+ In this example, the variables will be called "ask" and "bid".
+ Inside the first "form" tag, set method equal to "post", action equal to a hashtag, id equal to "formvalue" and onkeyup equal to "drawChart()".
+
+
+Remember to refer to the image below as a reference. The next step will explain out to insert input boxes so that they integrate with your Google chart.
+ Inside each "input" tag, set the type equal to "number", set the name to anything you wish, set the value equal to "1" and set the id equal to a non-numeric value other than the variables declared in Step 3. Before the "input" tags, type  a word or phrase that describes each input box, followed by a colon. In the picture above, this description word or phase is "Value 1" and "Value 2".
+ Type the ID declared in Step 6 into the parentheses between the apostrophes. Set the variables declared in Step 3 equal to this value. Use the picture above as a reference.

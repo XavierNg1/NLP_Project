@@ -1,0 +1,93 @@
+ Use GetAsync to return the value of the entry in the data store with the given key. Make sure to give each player a unique set of keys, as setting two players the same key will override their own in-game data, causing chaos between the two parties. If you want to know how to set a unique key, read on.
+
+
+The following code will output nil, because the server couldn't find any value linking to the key; it is important to show the server exactly what we are trying to output, so that the server will know what needs to be displayed.
+
+
+
+
+
+
+local datastore = game:GetService("DataStoreService"):GetDataStore("name")
+ 
+game.Players.PlayerAdded:connect(function(player)
+    local key = "user_" .. player.userId
+ 
+    datastore:GetAsync(key)
+end)
+
+
+
+
+
+, Use SetAsync to set the value of the key, and overrides all existing data stored for the unique key.
+
+
+If the previous set of information is important, consider using UpdateAsync, which will be taught below.
+The following code shows you how to implement both, the ":GetAsync()", and the ":SetAsync()", methods.
+
+
+
+
+
+
+local datastore = game:GetService("DataStoreService"):GetDataStore("name")
+ 
+game.Players.PlayerAdded:connect(function(player)
+    local key = "user_" .. player.userId
+ 
+    datastore:SetAsync(key, 90) -- sets the key to the value, 90
+    local data_stored = datastore:GetAsync(key) -- is able to detect the value change
+    print(data_stored) -- prints the output
+end)
+
+
+
+
+
+Note: This will not work, unless you have the API access enabled. To do this, read the first instruction of this guide.
+ This validates data, and must therefore wait until the server can find the time to update it. For this to work, you will need to pass two parameters; the first is a string that takes the unique key you have set up: "'user_' .. player.userId", and the second is a function that will take in the old value.
+
+
+
+
+
+
+local datastore = game:GetService("DataStoreService"):GetDataStore("name")
+ 
+game.Players.PlayerAdded:connect(function(player)
+    local key = "user_" .. player.userId
+ 
+    datastore:UpdateAsync(key, function(old)
+        -- do stuff
+    end)
+end)
+
+
+
+
+In this case, we called the old value "old". Inside this function, we will need to make a variable that will account for our updated score, and then return that so it can display our new score.
+
+
+
+
+local datastore = game:GetService("DataStoreService"):GetDataStore("name")
+ 
+game.Players.PlayerAdded:connect(function(player)
+    local key = "user_" .. player.userId
+ 
+    datastore:UpdateAsync(key, function(old)
+        local new = old or 0 -- could be nil
+        new = new + 1 -- add 1 to the old value
+        return new -- returns it with the new value
+    end)
+end)
+
+
+
+
+
+Note that the server will return nil if the key does not exist or is not assigned correctly.
+If the function does not exist, the update will be cancelled.
+ This method only works on integers.
+

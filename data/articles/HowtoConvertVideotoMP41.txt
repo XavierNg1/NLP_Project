@@ -1,0 +1,27 @@
+ Open the video's page on YouTube. Copy the whole URL from the address bar.
+
+
+You can also use this method for many other free video sites. This will not work for services like Netflix or Hulu.;
+, There are a variety of sites that will download YouTube videos. Popular sites include keepvid.com, savefrom.net, and clipconverter.cc.
+ Click the "Continue" or "Download" button.
+ There will be several options to choose from.
+ Choose which quality you want to download. 720p and 1080p are the highest quality options. You will have to download the audio and video tracks separately for 1080p video. 720p videos and below will contain both audio and video.
+ The speed will depend on the video's length, quality, and the speed of your connection.
+
+
+If you downloaded the 720p version or lower, you're finished. If you downloaded the 1080p version, read on for instructions on joining the audio and video files.
+ You'll also need to download the MP3 file for the 1080p video as well. This is the separate audio file that you will be joining with the video file.
+ This is a command-line tool that lets you join the audio and video files for the 1080p video. The following steps will walk you through installing ffmpeg in Windows and joining the two files. ffmpeg can be a little confusing, so see this guide if you need more details.
+
+
+Download the ffmpeg files from http://ffmpeg.org/download.html. ffmpeg works for all operating systems.
+Extract the ffmpeg files to a folder labeled ffmpeg on your C: drive.
+Press ⊞ Win+Pause and click "Advanced system settings". Click the Environment Variables... button.
+Find the "Path" variable in the "System variables". Select it and click Edit....
+Add ;c:\ffmpeg\bin to the end of the "Variable value" line and click OK. This completes the ffmpeg installation in Windows.
+ You'll be using the Command Prompt to join files. Place both files in your User folder.
+
+
+Press ⊞ Win+R and type cmd to launch the Command Prompt. Command Prompt will start in your User folder. Type cd X:\path\to\files to open a different directory if necessary.
+Type ffmpeg -i audioFile.mp3 -i videoFile.mp4 -acodec copy -vcodec copy outputFile.mp4 and press ↵ Enter. Replace the file names with the actual file names of the audio and video files. Name the output file whatever you'd like. This will combine the two files into a new video file in the same folder. The process may take a few minutes.
+

@@ -1,0 +1,29 @@
+ For simplicity, name it WINXP and place it in the root directory of your hard drive. You will need to create a folder “C:\WINXP\”. This folder will temporarily house the Windows installation.;
+, In order to create a bootable disc from your Windows folder, you will need to have an i386 folder on your computer. You can find it at the root of your Windows installation hard drive. The typical location is C:\i386\.
+
+
+Copy the folder to the WINXP folder you created in the first step. Make sure that you copy and not move the files. To ensure this, right-click on the i386 folder and select copy. Navigate to the WINXP folder, right-click, and select Paste. The files will begin copying. Depending on the speed of your computer, this could take a few minutes.
+After copying, you should have an i386 folder in your WINXP folder. The directory should look like C:\WINXP\i386\.
+ Navigate to the WINXP folder and right-click in the window. Select New, and then Text Document from the submenu. This will create a new text document in the WINXP folder. In the text document, type “Windows” without the quotes, and add a single space after it. Hit the Enter key once.
+
+
+Click Save and set the filename as “WIN51”. Include the quotes to make sure that the file is saved without an extension.
+ Depending on which version of Windows you originally installed, you will need to make specific copies of the file you just created. All the files that you create should be located in the WINXP folder.
+
+
+XP Home: Make a copy of the file named WIN51IC.
+XP Home SP1: make the above file plus one named WIN51IC.SP1
+XP Home SP2: make the above files plus one named WIN51IC.SP2
+XP Home SP3: make the above files plus one named WIN51IC.SP3
+XP Pro: Make a copy of the file named WIN51IP.
+XP Pro SP1: make the above file plus one named WIN51IP.SP1
+XP Pro SP2: make the above files plus one named WIN51IP.SP2
+XP pro SP3: make the above files plus one named WIN51IP.SP3
+
+, If you have ever upgraded your Windows XP installation with a Service Pack, then you will need to upgrade your installation. This is because even though the system is upgraded when a Service Pack is installed, the installation file is not.
+
+
+Download the Service Pack installation file from Microsoft. Make sure to download the pack that was last installed. This guide will assume you are slipstreaming to SP3. Rename the downloaded file to XPSP3.EXE and place it at the root of your C: drive for easy access.
+Open the command prompt. Click start and select Run… Enter “cmd” into the field and press enter. This will open the command prompt. Type the following command and press Enter:C:\XPSP3.EXE /integrate:C:\XPSETUP
+
+

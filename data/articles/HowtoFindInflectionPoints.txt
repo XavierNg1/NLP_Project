@@ -1,0 +1,52 @@
+ To understand inflection points, you need to distinguish between these two. 
+
+A concave down function is a function where no line segment that joins two points on its graph ever goes above the graph. Intuitively, the graph is shaped like a hill.
+
+A concave up function, on the other hand, is a function where no line segment that joins two points on its graph ever goes below the graph. It is shaped like a U.
+
+In the graph above, the red curve is concave up, while the green curve is concave down.
+
+Functions in general have both concave up and concave down intervals. Inflection points exist when a function changes concavity. 
+;
+, A root of a function is the point where the function equals zero. In the graph above, we can see that the roots of the green parabola are at x=−1{\displaystyle x=-1} and x=3.{\displaystyle x=3.} These are the points at which the function intersects the x-axis.
+ Before you can find an inflection point, you’ll need to find derivatives of your function. The derivatives of the basic functions can be found in any calculus text; you’ll need to learn them before you can move on to more complex tasks. First derivatives are denoted as f′(x){\displaystyle f^{\prime }(x)} or dfdx.{\displaystyle {\frac {{\mathrm {d} }f}{{\mathrm {d} }x}}.}
+
+Say you need to find the inflection point of the function below.
+
+
+f(x)=x3+2x−1{\displaystyle f(x)=x^{3}+2x-1}
+
+
+
+Use the power rule.
+
+
+f′(x)=3x3−1+2x1−1=3x2+2{\displaystyle {\begin{aligned}f^{\prime }(x)&=3x^{3-1}+2x^{1-1}\\&=3x^{2}+2\end{aligned}}} 
+
+
+
+
+, The second derivative is the derivative of the derivative, and is denoted as f′′(x){\displaystyle f^{\prime \prime }(x)} or d2fdx2.{\displaystyle {\frac {{\mathrm {d} }^{2}f}{{\mathrm {d} }x^{2}}}.}
+
+
+f′′(x)=(2)(3)x2−1=6x{\displaystyle {\begin{aligned}f^{\prime \prime }(x)&=(2)(3)x^{2-1}\\&=6x\end{aligned}}}
+
+
+, Your answer will be a possible inflection point.
+
+
+6x=0x=0{\displaystyle {\begin{aligned}6x&=0\\x&=0\end{aligned}}}
+
+
+, If the sign of the second derivative changes as you pass through the candidate inflection point, then there exists an inflection point. If the sign does not change, then there exists no inflection point.
+
+Remember that you are looking for sign changes, not evaluating the value. In more complicated expressions, substitution may be undesirable, but careful attention to signs often nets the answer much more quickly. For example, instead of evaluating numbers immediately, we could instead look at certain terms and judge them to be positive or negative. 
+
+In our example, f′′(x)=6x.{\displaystyle f^{\prime \prime }(x)=6x.} Then plugging a negative x{\displaystyle x} yields a negative f′′(x),{\displaystyle f^{\prime \prime }(x),} while plugging a positive x{\displaystyle x} yields a positive f′′(x).{\displaystyle f^{\prime \prime }(x).} Therefore, x=0{\displaystyle x=0} is an inflection point of the function f(x)=x3+2x−1.{\displaystyle f(x)=x^{3}+2x-1.} There was no need to actually evaluate for our chosen values.
+ 
+
+
+f(0)=(0)3+2(0)−1=−1.{\displaystyle f(0)=(0)^{3}+2(0)-1=-1.}
+
+
+, The coordinate of the inflection point is denoted as (x,f(x)).{\displaystyle (x,f(x)).} In this case, (0,−1),{\displaystyle (0,-1),} as graphed above.

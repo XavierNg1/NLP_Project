@@ -1,0 +1,12 @@
+  These are the first lines of code in the program and are preceded by a hash sign.  They are needed for the program to properly compile.  In this case the only preprocessor directive needed is iostream, formatted as shown below.  Notice that there is no semicolon used at the end of this statement.;
+,  In addition to preprocessor directives, the first lines of the code must also define the namespace being used.  The standard namespace, formatted as shown below, is sufficient for this code.  Note that this line ends with a semicolon.
+  To create the main function, type “int main()” as shown below.  The parentheses are for setting the parameters of the function, but here no parameters are needed and thus the parentheses are empty.  There is no semicolon after the function definition.
+  On the next line, make a set of curly braces as shown in the graphic.  Everything included within these curly brackets is part of the main function.  The code up to this point should look something like the picture below.
+  Cout is used with the insertion operator, which is written as << (two “less than” signs).  The actual output then follows, written within quotation marks.  The line must end with a semicolon.
+  Within the main function, type the cout statement using the proper syntax.  For example:   cout << “type text here”;
+
+,  Cout can also be used to output the values of variables, as long the variable has already been defined.  Simply write the name of the variable after the insertion operator as shown below.
+  Insertion operators can be simply chained together, one after the other as shown in the figure.
+  Cin is used with the extraction operator, which is written as >> (two “greater than” signs).  The operator is then followed by a variable where the inputted data is stored.  The line must end with a semicolon.
+  First declare a variable. Then write a cin statement to define a value for the variable as shown.  When the program runs, the input that user enters will be assigned to the variable.  Note that the cin statement does not output any text onto the monitor.
+  Cin and cout statements can and should be used together.  For instance, a cout statement may be used to prompt the user to assign a value to a variable, which is then assigned through a cin statement as shown in the figure.

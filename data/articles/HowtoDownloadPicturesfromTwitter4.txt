@@ -1,0 +1,14 @@
+ Click the image you want to save to open it.
+ Right-click the image, and then click Inspect Element. This opens the browser's HTML code inspector tool.
+
+
+
+In Chrome, this looks like a magnifying class in the top left corner of the inspector pane.
+In Safari, this looks like a target in the header, toward the right.
+ This jumps the inspector to the approximate location of the image in the HTML code.
+ The gallery image is saved in a series of nested
+tags. The image is located in <div class="Gallery">, <div class="Gallery-media">, <img class="media-image" src="IMAGE URL" />. Click the right arrows to expand a div until you see the img src tag.
+ Look for a URL that starts with https://pbs.twimg.com/media/.
+ Go to the new tab and save the image.
+ The image is downloaded to your default download folder.
+

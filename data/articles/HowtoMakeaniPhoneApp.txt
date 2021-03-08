@@ -1,0 +1,132 @@
+ Xcode is the development environment that all iPhone apps are created in. Xcode is available for free from Apple, but requires OS X 10.8 or later to be installed. There is no official way to run Xcode on a Windows or Linux PC. This means that if you want to develop an iPhone app but don't have a Mac, you'll need to invest in one first.
+
+
+To develop iOS 8 apps, you will need Xcode 6.0.1 and the iOS 8 SDK, both of which are available from Apple. The iOS 8 SDK contains a significant number of new APIs that allow you to create all kinds of new app experiences, including iCloud integration and Touch ID.
+To develop iOS 10 apps, you'll need Xcode 8 and the iOS 10 SDK, also available from Apple. There are significant changes to the Swift language and the SDK in this version of Xcode that you'll want to be aware of, but the good news is that there are to be no more "code breaking" changes to the Swift language after this version.;
+, While you can code completely within Xcode, you'll find that working with large chunks of code is much easier if you have a dedicated text editor that specializes in programming syntax. TextMate and JEdit are two very popular choices.
+ If you plan on creating custom art and designs for your app, you will want a program that can create vector graphics. Vector graphics scale without losing clarity, and are essential for a good-looking app. Popular vector programs include CorelDraw, Adobe Illustrator, Xara Designer and Inkscape. A nice, free, vector graphics drawing program is DrawBerry. It is not as powerful as the professional programs, but it is good for a first-time user, or if you just don't want to pay for something just for one use.
+ It handles data and object manipulation. Objective-C is a derivative of the C family of languages, and is an object-oriented language. If you already have a basic understanding of C or Java, Objective-C should be, for the most part, pretty easy to grasp.
+
+
+A newer option is to create your app using the Swift language, the follow-on to Objective-C. Swift has a much friendlier syntax and a more modern feel.
+While it's possible to build a basic app without knowing Objective-C, you cannot perform any sort of advanced function without coding it yourself. Without Objective-C, all you can do is move back and forth between screens.
+There are a variety of tutorials available online, as well as a wealth of information to be found in various books about Objective-C or Swift. If iPhone app development is something you want to take seriously, you'll be well-served by having some resources handy.
+Some of the more popular online Objective-C and Swift communities include the Apple Developer Forums, the iPhoneSDK Google Group, and StackOverflow.
+ If you simply don't have any interest in learning Objective-C or Swift or don't have an artistic bone in your body, there are a large number of freelancers and development teams out there that may be able to take on various aspects of your project for you. Outsourcing your development is a complicated process, but can save you lots of headaches if you're not the programming type. Make sure that everyone involved signs a Non-Disclosure Agreement, and that pay structures are in place before any work begins.ODesk and Elance are two of the most popular freelancing services on the Internet, and both have hundreds of developers and artists of all skill levels.
+ In order to distribute your app on the App Store or give it to others to test, you will need to sign up for an Apple Developer account. The account costs $99 per year and will require you to enter in tax and bank account information.
+
+
+You can create your account at the iOS Dev Center website.
+ Once you've signed up for a Developer account, you will have access to Apple's development resources. These resources include a variety of sample projects which can give you a tremendous amount of insight into how app development works. Find an example that is related to the kind of app you want to create and mess around with it in Xcode.
+ Before you even open Xcode for the first time, you should have a well-thought-out plan for your app and its features. This could include a design document which outlines all of the functionality of the app, sketches of the user interface and flow between screens, and a basic idea of the types of systems that will need to be implemented.
+
+
+Try to stick to your design document as much as possible while you are developing your app. This will help keep you focused on the features you want.
+Try to draw at least one thumbnail sketch for each screen in your app.
+ The audience of your app will have a lot to do with the way it looks and the functionality of the application. For example, a to-do list app will have a much different audience than a gory shooting game. This will help you
+
+, If your app is a utility of some kind, it should offer a solution to a problem that hasn't been solved before or a unique solution or method or one that does it better than previous attempts. If your app is a game, it should have a unique feature or features that help set it apart and attract specific gamers.
+ Your user interface will be determined by the type of content you are showing the user of your app. For example, if the app deals with photos, you will want a user interface that makes looking at photos and navigating through them as easy as possible.
+ The user interface should never get in the way of the user. This means that options should be clearly visible, and the user should never have to question what button does what. If you are using icons, they should accurately represent their function. Navigation through the app should be fluid and natural.
+
+
+UI design is as much an art form as it is a science. You will likely be revising your design constantly as your project evolves.
+ Open up Xcode, and start a new Project from the File menu. Select "Application" under the "iOS" heading on the left side of the window. In the template section, choose "Empty Application".
+
+
+There are a variety of templates available, all designed for different tasks. Start with a blank template until you get more comfortable with the development process. You can try one of the more complicated templates once you're familiar with how everything works.
+You will need to provide a Product Name, your company identifier, and the class prefix. If you don't have a company identifier from Apple yet, enter com.example. For the class prefix, enter XYZ.
+Select "iPhone" from the Devices menu.
+ The Storyboard is the visual representation of all of your app's screens. It shows the contents of each screen as well as the transitions between them. The Storyboard tool will help you develop the flow of your app.
+
+
+Click File → New → File.
+Under the iOS heading, click "User Interface".
+Select Storyboard, and click Next.
+Select iPhone from the Devices menu, and then name the file "Main". Make sure that it is saved in the same location as your project.
+ Once you create the Storyboard, you will need to assign it as the main interface of your app. This will load the Storyboard when the app is launched. If you don't assign the storyboard, nothing will happen when you start the app up.
+
+
+Click your project name in the left navigation tree.
+Find the Targets heading in the main frame. Select your project from the Targets list.
+Find the Deployment Info section in the General tab.
+Enter Main.storyboard into the "Main Interface" text field.
+ View controllers dictate how content is viewed by the user. There are a variety of preset view controllers available, including standard views and tables. You will add view controllers to your storyboard, which tells the app how to display the content to the user.
+
+
+Select your "Main.storyboard" file in the project navigation menu. You will see a blank canvas appear in the Interface Builder window.
+Find the Object Library. This is located at the bottom of the right frame, and can be selected by clicking the little cube button. This will load a list of objects that can be added to your canvas.
+Click and drag the "View Controller" object onto the canvas. Your first screen will appear on the canvas.
+Your first "Scene" is complete. When the app is started, the view controller will load your first screen.
+ Once you have the view controller set, you can start populating the screen with the interface objects you need, such as labels, text input fields, and buttons. Interface objects can all be found in the Objects Library list that you found the View Controller object in.
+
+
+Click and drag objects from the list to add them to your screen.
+Most objects can be resized by clicking and dragging the boxes on the edge of the object. When resizing, guidelines will appear on the screen so that you can ensure everything lines up correctly.
+ You can adjust the properties for each object, allowing you to create a custom and intuitive interface. For example, you can add placeholder text to a text input field that will help guide the user on what they should input.
+
+
+Select the object you want to customize and click the "Attributes Inspector" button at the top of the right frame. The button looks kind of like a shield.
+Customize the object to your liking. You can change font style, font size, text color, alignment, background images, placeholder text, border style, and much more.
+The available options will change depending on the object you are customizing.
+ As your project grows, you will probably need to add more screen to display all the content necessary for the app to be useful. For example, if you are making a to-do list app, you will need at least two screens: one for inputting a to-do list item, and one for viewing the entire list.
+
+
+More screens are added by dragging and dropping view controller objects onto blanks parts of your canvas. If you can't find a blank spot to drop it, click the "zoom out" button until you find empty areas. Make sure to drop the view controller onto the canvas and not onto an existing screen.
+You can change the initial screen by selecting the view controller you want to lead with from the project outline. Click the Attribute Inspector button and check the "Is Initial View Controller" box. For example, if you are making a to-do list, you'll want the actual list to be the first thing the user sees when the app is launched.
+ Now that you have two screens in your app, it's time to make it so that the user can move back and forth between them. You can do this through the use of a Navigation Controller, which is a specialized View Controller. This controller adds a navigation bar to the top of your app that allows user to move back and forth between screens.Your navigation controller should be added to your initial view so that it can control all subsequent screens.
+Select your initial view in the project outline.
+Click Editor → Embed In → Navigation Controller.
+You should see a gray navigation bar appear at the top of the screen you added the controller to.
+ Now that you have inserted the navigation bar, you can start adding navigation tools to it. This will allow your user to move back and forth between screens.
+
+
+Add a title to the navigation bar. Click the Navigation Item underneath the view controller you assigned it to. Open the Attribute Inspector and type the title of the current screen in the Title field.
+Add a navigation button. Open the Objects library if its not already open and find the Bar Button Item. Click and drag it to the navigation bar. Typically, buttons that move you "forward" in the app are placed to the right, and buttons that move you "back" are placed to the left.
+Give the button a property. Buttons can be configured to have specific properties that make them easy to adapt to the circumstance. For example, if you are creating a to-do list, you'll want an "Add" button to create a new entry. Select the button, and open the Attribute Inspector. Find the Identifier menu and choose "Add". The button will change to a "+" logo.
+ In order for your button to function, you will need to connect it to another screen. In our to-do list example, the button is located on the overall list, and needs to be linked to the entry screen. To link the button, hold the Ctrl and drag the button onto the second screen.When you release the mouse button, the Action Segue menu will appear with a list of options. Choose "Push" to use the push transition when moving between screens. You can also choose "Modal", which will open the screen as a self-contained action as opposed to a sequence.
+If you use Push, a navigation bar will be added automatically to your second screen and a "back" button will be automatically created. If you choose modal, you will need to manually insert a second navigation bar as well as add a "Cancel" and "Done" button (for a to-do list; the labels of your buttons will change depending on the needs of your app).
+"Cancel" and "Done" buttons can be created the same way that you created the "Add" button. Simply select "Cancel" or "Done" from the Identifier menu in the Attribute Inspector.
+ Up to this point, you've been able to create a basic navigable interface without the need for any coding. If you want to add any deeper functionality, such as data storage and handling user input, you'll need to get your hands dirty in the code. Coding is outside of the scope of this guide, but there are a large number of Objective-C tutorials available online.You can use your navigable interface prototype to help you hire a developer. Having a working interface will make it much easier to explain what you need on the coding side of things.
+ Xcode comes with a built-in iOS simulator that lets you test your app on a variety of simulated iOS devices. To start the Simulator, choose "Simulator and Debug" from the dropdown menu at the top of the Xcode window, and then choose the device you want to test on.
+ Click the Build button, which looks like a traditional Play button, to compile the app and run it. Building the app may take a few minutes. you can watch the progress in the toolbar. Once the build process is complete, the iOS Simulator will open and you can begin testing your app.
+ Before distributing your app for testing, you can test it on your own device (if you have one). First, plug your device into your computer via USB. Close iTunes if it opens. Select "Device and Debug" from the dropdown menu, and then click the Build button. After a few seconds the app should launch on the iPhone. test all of the functionality before closing the app.
+ If your app crashed, you need to start figuring out what happened and why. This is a vast subject and there are countless reasons why your app may have crashed. Open the debug console and read the error messages. Most of the time they are rather cryptic. If you do not understand the error, try Googling the error message. Chances are, you will find a post on the Apple development forum where a friendly seasoned developer has answered their plea.
+
+
+Debugging can be a very time consuming and tedious time for you. If you don't give up and persevere, in time you will get better at it. You will start to recognize the errors, track them down quickly, and even expect them on occasions. One common mistake is releasing an object from memory more than once. Another is forgetting to allocate memory and initialize an object before trying to add or assign to it. With each app your errors will become fewer and fewer.
+ The iPhone has a very limited amount of memory. Each time you allocate an object some memory, you have to release it when you are done with it and give back the memory. Instruments is the iPhone SDK tool for viewing and analyzing your memory usage amongst other things.
+
+
+With Device and Debug selected as before, choose Run → Run with Performance Tool → Leaks. This will launch Instruments and start the app on your device. Go ahead and use the app as normal. It will seem to freeze periodically as Instruments records and analyzes your memory usage. Any leaks will result in a red spike in the Leaks timeline. The source of the leaks will be displayed in the lower half of the screen.
+Double clicking on the leaked objects will attempt to take you to the responsible code or clicking on the little arrow in the address column will show you the leak history. Sometimes where the leak is detected is not necessarily where it originated from.
+If you get really stumped, try by process of elimination. Comment out and/or carefully bypass areas of your code and run it. Sometimes you can narrow down the general area and then eventually home in on the responsible line. When you know where it is, you can fix or rewrite it. Remember, using Google can often provide you with the quickest direct links to internal Apple forums or documentation that deal with your issue.
+ While testing your app in a simulated setting is a good way to ensure that your app works and that the interface looks good, nothing beats testing from users other than yourself. Just make sure you've ironed out the most egregious bugs before sending it out for external testing. In order to distribute your app to your testers, you will need to create an Ad-Hoc certificate on the iOS Dev Center site.
+
+
+External testers can provide a lot of feedback that you wouldn't expect. This can be especially useful if you have a complex app.
+In order to authorize tester's devices, you will need each device's UDID number.
+Choose Device from the drop down list and press the "Build" icon. In the Finder, navigate to your project's folder and look for the "Ad-Hoc-iphoneos" folder. Inside there will be an app. Copy your "AdHoc.mobileprovision" certificate you got from the iOS Dev Center into the same folder. Select the app and the certificate and zip them up. This archive can be given to your external tester. You will need to create a separate archive for each Ad-Hoc certificate., Select Device and Release from the drop-down menu. Press the "Build" icon. In the Finder, navigate to your project's build folder and look for the "Release-iphoneos" folder. Inside there will be an app. Zip it up into an archive.
+
+
+In order for new apps to pass Apple certification, they will need to be optimized for iOS 8 and the Retina display.
+ You can access this from the iOS Dev Center. If you have any unfinished steps to complete for setup, they will be listed at the top of the page. Make sure that all of your banking and tax information has been entered correctly.
+ Click "Manage Your Applications" and then select "Add new Application". Fill out the App name, SKU number and select the bundle ID. Select your app bundle from the drop down menu.
+
+
+Fill out the forms providing your app description, keywords, support site, category, contact email, copyright etc.
+Fill out the Rights and Pricing forms.
+Have your iTunes artwork ready. You will need a large 512x512 vector icon, as well as some screenshots of your app. Screenshots can be grabbed from the iPhone simulator using Command + Shift + 4 and dragging the cross-hair over the area. Make sure they are 320x480 for iPhone. Screenshots are a very important part of marketing your app, so make sure that they show the most important parts.
+ Click "Ready to Upload Binary" and you will be taken to a screen that directs you to download the Application Uploader tool. Download it and press Done.
+
+
+Install the Application Uploader tool and launch it. The first time you run the program, it will ask for your iTunes login information.
+The Application Uploader tool will check your iTunes Connect account and find any apps you are ready to upload binaries for. They will be displayed in the drop-down menu. Select the one you want, choose the Distribution zip you created earlier and upload it. The uploader will check some internal stuff within the bundle and will return an error if it finds anything incorrect, such as an incorrect version number, missing icon etc. If everything is fine, it will upload the zip and finish.
+ There is nothing to do now except wait for the review process. Apple will notify you in a few days or weeks via email if your application state changes to "In review". When it goes into review, the process is very quick. If it fails the initial barrage of tests, you will get a rejection email telling you why, and Apple will offer suggestions for fixing it. If your app passes inspection, Apple will send you an email informing you that your app is ready for sale. Your app will now appear on the iTunes app store
+
+, Now that your brand-new app is available for purchase, it's time to start spreading the word. Utilize social media, send out press releases to App-focused sites, make some YouTube videos, and do everything you can to get people talking about your app.
+
+
+You can send free copies to reviewers, who will then write about your app on their website or review it on their YouTube channel. If you are able to get it in the hands of popular reviewers, this can lead to a lot of sales.
+ Download the free iTunes Connect Mobile app for your iPhone. Login each day and check your sales, markets, and countries of sale. This is the fun part! Apple will periodically send you emails with links to your latest sales data. You can download them for your records. Good luck!
+

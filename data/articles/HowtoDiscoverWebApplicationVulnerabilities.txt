@@ -1,0 +1,19 @@
+ It frequently applies to both network layer (OSI Model Layer 3) and application layer (OSI Model Layer 7). The attack targeting at application layer generally involves session fixation, session side-jacking, cross site scripting, and the attempts to change log in cookie or unique session id. URL manipulation however, involves the modification of uniform resource locator's properties. These could be on parameters, unique ids, server/referral path, protocols, port numbers, or even directly on the link address itself...
+Often, the web servers had been mis configured (broken access list i.e. .htaccess) by inexperienced administrators to allow users perform stuffs that are supposedly out of their permissions. The web server properties must be regularly audited to prevent any possible intrusion.
+
+
+For instance, once the intruders logged into a bank account, he could change his unique id to somebody else's, this situation is particularly possible if the URL string contains some predictable character pattern such as order of numbering.
+
+
+http://www.bank.com/aspx/Main.aspx?function=TransactionDetails&account_no=5204320422040006 to become (notice the last digit "6" becomes 7") http://www.bank.com/aspx/Main.aspx?function=TransactionDetails&account_no=5204320422040007
+
+Note the above method could be largely empowered to harvest all existing user accounts if fuzzing technique is applied. Tools that are good for web application fuzzing are WebScarab, Spike, Peach and a few others.
+
+;
+, Apart from numbering approach, intruders could perform crawling against hidden directory once they are logged in to account. There is a technique called "Vertical Privilege Escalation" where intruders altering the hidden directory parameter to access admin rights, once they had logged into system with normal user account.
+ Buffer overflows, cross site scripting, and blind or non-blind SQL injection are among the most common attacks against poorly engineered input mechanism.
+ cgi) is also a type input attack but with purpose to cause error rebounce in order to gather more information that could be used for web exploitation (i.e.) PATTERN: "..../page.php?something=..."
+
+
+Note with the example above, the intruders do not expect any "luck" to accidentally access the administrator directory by randomly altering the parameter with a list of possible strings (characterized fuzzing could do this as well). Instead, they expected to see the error message re-bounce, which could provide them more information regarding internal architecture, particular on database. Many websites that requested authentication to access protected pages did not actually encrypt their traffic, this had led to possibility of sniffing (in plain text), spoofing and men-in-the-middle attack. Even so, many websites applied SSL only on certain authenticated webpage, but after authentication the web traffic fall back to unencrypted state again, thus allowing session hijacking because the cookie value and session id could be sniffed and spoofed. The hidden values in source codes such as 'ViewState' as hidden form field could be reviewed at client side with tools such as 'viewstatepeeker', which could track the changes to a website during post backs.
+

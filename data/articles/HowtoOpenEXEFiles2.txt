@@ -1,0 +1,60 @@
+ EXE files are not designed for OS X, so you'll need to use special software to get them to run. You'll be installing the open-source "wine" utility, which adds a Windows "wrapper" to the EXE file, giving it access to the essential Windows files that it needs to run. The wine utility does not work with every Windows EXE file, and some programs work better than others. You do not need a Windows disc to install wine.
+ This is a free development tool that is required in order to compile software code. You won't be using it directly, but the tools you'll be installing to open EXE files relies on it.
+
+
+Start Xcode after you finish downloading it, and click the "Xcode" menu. Select "Preferences" and then click the "Downloads" tab. Click the Install button next to "Command Line Tools".
+ This is a free utility that simplifies the compiling process, which you'll be using to build your version of wine. You can download MacPorts from macports.org/install.php. Click the link for the version of OS X that you are using, and then double-click the .pkg file that is downloaded to your computer to install MacPorts.
+ You'll need to use the Terminal to adjust some of MacPorts' settings. You can open the Terminal from the Utilities folder.
+ Paste this command into the Terminal window and press Return:
+
+
+
+
+
+echo export PATH=/opt/local/bin:/opt/local/sbin:\$PATH$'\n'export MANPATH=/opt/local/man:\$MANPATH | sudo tee -a /etc/profile
+
+
+
+
+, You will be prompted for your admin password before the command can run. You won't see anything as you type the password. Press Return after you have finished typing the password. If you don't have a password associated with the admin account, the process will fail.
+ This command will tell MacPorts whether or not you have a 64-bit system. Paste the following command and press Return:
+
+
+
+
+
+if ; then echo "+universal" | sudo tee -a /opt/local/etc/macports/variants.conf; else echo "n/a"; fi
+
+
+
+
+, This quick command will tell Xcode that you agree to the license agreement, allowing you to compile code. Close and reopen the Terminal window after running this command:
+
+
+sudo xcodebuild -license
+
+, Once you've reopened the Terminal window, you can start installing wine. You may be prompted for the admin password again. The installation process may take a while to complete. You'll know that it's finished when you are returned to the Terminal input:
+
+
+sudo port install wine
+
+, Use the cd command to navigate to the location that your EXE file is stored on your Mac. You'll need to do this through the Terminal.
+ Enter the following command to run an EXE file that's in your current directory. Replace fileName with the actual file's name:
+
+
+wine fileName.exe
+
+, If the EXE file is a standalone program, you'll be able to start using it immediately. If it's a setup file for a program, you'll be able to proceed through the installation prompts as if you were using Windows.
+
+
+Not every program works with wine. For a full list of compatible programs, visit appdb.winehq.org.
+ If you used an EXE file to install a program, you'll need to use wine to run the installed program file.
+
+
+Type cd ~/.wine/drive_c/Program\ Files/ to open the Program Files directory that your wine programs are installed to.
+Type ls to see a list of all of your installed programs. Type cd programName to open a program's directory. If the program's directory has a space, you'll need to include a \ before the space. For example, Microsoft Office would be cd Microsoft\ Office.
+Type ls again in the program's directory to find the EXE file.
+Type wine fileName.exe to run the program.
+ .NET is a software library for many Windows programs, and Mono is the open-source replacement that wine can use. you only need to install this if your programs require .NET.Type sudo port install winetricks and press Return.
+Type winetricks mono210 and press Return to install Mono.
+

@@ -1,0 +1,17 @@
+ If you don't have them, please view the article down the bottom on how to log in to the hidden administrator account.;
+, If you wish to hide an already existing account, skip to step 4. You probably know how to do that. User accounts. But here, for the reason of speed, go to start and then to run. Type 'lusrmgr.msc' and click ok., Right click and say New User. Create the user and then go to the 'Member of' tab. From here, you may manage the privileges of the user you are creating. Most people will opt for an administrator account. To do this, click on the current group assigned to the new user and click remove. Then, click Add. In the pop up window, type in administrators then click Check Names. Apply and close these windows.
+ This is where it starts getting complicated. To start off, go 'File-Export' and save the registry to a safe file on your computer where you will not forget about.
+
+
+Navigate Very Carefully to the following directory: My Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList
+
+
+
+
+
+
+This key location does not exist past windows XP, so in Vista and afterwards you must navigate as far as you can then create keys from there on. This can be done in the tree menu by right clicking and choosing Key.
+
+
+
+Give this the EXACT name of the account you want hidden. Click OK and click back on the directory navigator on the file you have opened. Then, hold left on your keypad until everything is minimized. This will return everything to its normal state ready for next time.

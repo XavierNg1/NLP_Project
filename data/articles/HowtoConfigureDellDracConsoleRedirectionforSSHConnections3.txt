@@ -1,0 +1,40 @@
+,,
+For the first part (grub interaction) you'll need to add a "serial" and "terminal" line to the grub.conf. You must comment out the splashimage for this to work. Note that it's unit=1 and speed=115200 which is different from the DRAC4:
+splashimage=(hd0,0)/grub/splash.xpm.gz
+hiddenmenu
+serial --unit=1 --speed=115200
+terminal --timeout=5 serial console
+
+
+
+Next pass to the kernel the console arguments so you can see all the messages once the kernel loads and beyond (output from rc scripts for example.) Note that it's ttyS1:
+kernel /vmlinuz-2.6.9-67.ELsmp ro root=LABEL=/ console=tty0 console=ttyS1,115200
+
+Add a agetty line in the /etc/inittab to redirect the serial console correctly and restart init afterwards. This will provide you with a login prompt in the serial console once the system has booted. For example (Note: ttyS1):
+
+CONS:2345:respawn:/sbin/agetty -i -h -L 115200 ttyS1 vt100
+
+
+
+To allow root login access to the new console add 'ttyS1' to /etc/securetty (if it's not already there).
+
+After you've added the above line to /etc/inittab Restart init with:
+init q
+
+
+
+, For example : ssh test.host.com -l root
+
+Type the drac password to log into the Drac.
+Either use racadm commands or the connect command (Example: racadm help ).
+To connect to the serial console redirection connect to com2. For example: connect com2
+
+To disconnect use "+" (Press the Control key and the backslash key together to disconnect cleanly from the connection.)
+
+If it says the port is in use by another user that probably means the connection was not cleanly terminated. Best way to clear that up is to reset the drac card with the following command: racadm racreset
+
+Also useful for when you need to reboot the host: racadm serveraction gracereboot
+
+
+
+

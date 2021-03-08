@@ -1,0 +1,38 @@
+ A custom number format specifies the exact format for your data, including the number of leading or trailing zeroes. To begin, select the columns, rows, or groups of cells you'd like to change.
+ Click the Home tab on the ribbon and look in the Number group. On Excel for Windows, click the dialog launcher next to the word Number (a small arrow in a square).On Excel for Mac, click the dropdown menu (it says General by default) and select Custom....
+
+
+On old versions of Excel without a ribbon menu, instead click Format → Cells → Number tab., In Excel 2013 and Excel 2016, just select any format on the list. When you edit that default format, Excel will automatically create a new custom format without altering the default option.On all other versions of Excel, select Custom from the list of options instead. Look for a text box labeled Type where you can enter your custom format.
+
+
+If your data represents calendar dates, phone numbers, or other common data types, browse the list of default options. You may be able to use one of them rather than creating your own format.
+ Custom formats use several "placeholder characters" to specify how digits should display. The character 0 (zero) tells Excel to display a zero in that position if there is no other digit there.For example, the format 000 will add leading zeroes to the hundreds and tens place if necessary. 97 will display as 097, and 3 will display as 003.
+
+
+Numbers to the left of the decimal point are always displayed. Even though there are only three digits in the format code 000, the number 3750 will still display as 3750.
+ Custom number formats will delete all digits after the decimal point unless you specify otherwise. To change this, just add a decimal point to the end of your custom code, followed by 0 (or one of the placeholder characters described below).For example, 000.000 will round to the nearest thousandth, and add up to three trailing zeros after the decimal point. Here's how various numbers look in the 000.000 format:
+
+
+13.1 becomes 013.100
+95001 becomes 95001.000
+5.0057 becomes 5.006
+
+, The symbol # is another placeholder character in custom formats. This will prevent all leading zeroes if used at the front of the number, and prevent all trailing zeroes if used after the decimal point.For example, the custom format 00.## allows for a leading zero in the tens place, but no trailing zeroes:
+
+
+5.8 becomes 05.8
+2.71 becomes 02.71
+15.0 becomes 15
+38.315 becomes 38.32
+
+, Excel treats anything inside quotation marks as text in your custom format, and will display it exactly as you typed it.This may be useful if each cell in your original database had exactly two leading zeros, for example. To restore these, set your spreadsheet to the custom format "00"#.
+
+
+If your data includes digits after a decimal point, prevent rounding by using the custom format "00"#.## instead, using as many # or 0 characters after the decimal point as necessary.
+ If your goal is to align the decimal points in a column, there's no need to add leading or trailing zeroes. Use the ? character in your custom format, and Excel will add empty spaces instead to align the digits in the column. For example:
+
+
+?.??? rounds to the nearest thousandth with no trailing zeroes, and aligns the decimal points.
+000.? adds leading zeros up to the thousands place, rounds to the nearest tenth with no trailing zeros, and aligns the decimal points.
+?.00 rounds to the nearest hundredth with trailing zeros and aligns the decimal points.
+

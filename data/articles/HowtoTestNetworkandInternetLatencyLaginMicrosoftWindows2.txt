@@ -1,0 +1,22 @@
+ You can enter the commands for testing network and internet latency directly at the command line.
+
+
+Click on Start, select Run.
+Type cmd, and press OK. This will launch the command line window where you can simply type the test commands to execute them. You can also search for cmd.exe in the windows search
+
+, The Ping loopback test will test your computer’s connection to verify that there are no local hardware problems causing the network or internet latency issue.
+
+
+Type “Ping 127.0.0.1 -n 20”. This IP address is the same for nearly all built in network connections, the “-n 20” extension will send 20 packets of data before terminating the test. If you forget to type “-n 20” you can cancel the test by entering Ctrl+C.
+View the statistics. The time it took for the packet of data to travel locally should be less than 5ms and there should be zero packet loss.
+ Now that you have verified that your local port is working, you can Ping remote servers to test the latency. Again, normal latency varies by the type of connection from 5 - 40ms for cable modem, 10 - 70ms for DSL, 100 to 220ms for dial-up and 200 - 600 for cellular. The distance to the remote server also adds to latency, you can estimate an additional 1ms in latency for every 60 miles (100km) the data travels.
+
+
+Type “Ping” followed by the IP address or site URL you wish to ping and hit enter. You may want to start with the URL of your internet service provider and proceed to other sites you commonly access.
+View the report. As the test pings the remote address, it will report back the results, the final number after the “time = “ is the time it took, in milliseconds, for the packet to travel to the remote site and back to your computer. Note: the “-n 20” extension works with this command, as does the “Ctrl+C” should you forget to enter it.
+ The traceroute test will show the path that data travels from your computer to the remote server and any delay in that path. This can be helpful in determining the source of network or internet delays.
+
+
+Type “tracert” followed by the IP address or site URL you wish to route and hit enter.
+View the results. As the test traces the path it will display each address along the way and the time it took for a data packet to travel and acknowledge receipt for each “hop” along the path. The more “hops” or other devices the data packet needs to route through, the more delay you will experience.
+

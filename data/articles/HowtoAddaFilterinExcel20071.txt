@@ -1,0 +1,14 @@
+;
+, Excel can filter the data in all selected cells within a range, as long as there are no completely blank rows or columns within the selected range. Once a blank row or column is encountered, filtering stops. If the data in the range you wish to filter is separated by blank rows or columns, remove them before proceeding with the AutoFilter.
+
+
+Conversely, if there is data on the worksheet that you do not want to be part of the filtered data, separate that data using one or more blank rows or blank columns. If the data you don't want to filter is located beneath the data to be filtered, use at least one completely blank row to end filtering. If the data you don't want to filter is located to the right of data to be filtered, use a completely blank column.
+It is also good practice to have column headings within the range of data being filtered.
+,, Drop-down arrows will appear at the top of each column range. If the range of cells contains column headings, the drop-down arrows will appear in the headings.
+ Do one of the following:
+
+
+To filter the data by criteria, click to clear the "(Select All)" check box. All other check boxes will be cleared. Click to select the check boxes of the criteria that you want to appear in the filtered list. Click "OK" to filter the range by the selected criteria.
+To set up a number filter, click "Number Filters" and then click the desired comparison operator from the list that appears. The "Custom AutoFilter" dialog box appears. In the box to the right of the comparison operator selection, either select the desired number from the drop-down list box or type the desired value. To set up the number filter by more than one comparison operator, click either the "And" radio button to indicate that both criteria must be true, or click the "Or" radio button to indicate that at least 1 criterion must be true. Select the second comparison operator, and then select or type the desired value in the box to the right. Click "OK" to apply the number filter to the range.
+To filter the data by color-coded criteria, click "Filter by Color." Click the desired color from the "Filter by Font Color" list that appears. The data is filtered by the selected font color.
+

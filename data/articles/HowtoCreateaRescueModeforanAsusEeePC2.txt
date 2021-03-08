@@ -1,0 +1,109 @@
+ Type the following command and press
+
+
+
+
+
+after it:vi /mnt-system/boot/grub/menu.lst
+
+, The vi editor is not intuitive for those familiar with more graphical editors such as Notepad, Wordpad, or Word on Microsoft Windows. It is very powerful, but at the same time, very complicated and difficult to learn. For now, follow the steps below to edit this file.
+
+
+Use the cursor keys to move down to the first entry (paragraph) for "Normal Boot". Place the cursor on the first line of this section.
+Copy the section by using the following keystrokes. This will copy five lines from where the cursor is located:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Move the cursor down below this section to the next blank line. Paste our previously copied text by using:
+
+
+
+
+
+
+For the third line of this new entry, starting with "kernel" (ie: kernel /boot/vmlinuz-2.6.21.4-eeepc quiet rw vga=785 irqpoll root=/dev/sda1), add a space and then XANDROSBOOTDEBUG=y at the end of this line. For example:kernel /boot/vmlinuz-2.6.21.4-eeepc-2GB quiet rw vga=785 irqpoll root=/dev/sda1 XANDROSBOOTDEBUG=y.
+To do this, press
+
+
+
+
+
+to switch vi into insert mode, move the cursor to this location, and insert text. To remove text, use
+
+
+
+
+
+only; do not use
+
+
+
+
+
+.
+Rename the title of this new entry to anything you desire. For example, rename it to "Rescue Mode".
+To get out of vi's insert mode, and back into command mode, press
+
+
+
+
+
+.
+Save your file by pressing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+. To exit vi without saving, press
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+ Do this by pressing
+
+
+
+
+
+
+
+
+
+
+twice (possibly three times) until you either see a message that states "Press to restart", or the until the Eee PC restarts on its own. If you followed all of the examples above, the default boot selection should be the new kernel.

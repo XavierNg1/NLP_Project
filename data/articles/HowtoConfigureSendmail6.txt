@@ -1,0 +1,14 @@
+ If things don't work as expected, you can test with Sendmail's test mode:
+
+sendmail -bt
+Here are some examples of things to try in test mode (make sure the domain is in class w:):
+
+$=w
+# is the map working?
+/map virtuser joe@yourdomain.com
+/map virtuser jane@yourdomain.com
+/map virtuser @yourdomain.com
+is the rewriting working? #** ,0 joe@yourdomain.com #** ,0 some@yourdomain.com
+
+
+

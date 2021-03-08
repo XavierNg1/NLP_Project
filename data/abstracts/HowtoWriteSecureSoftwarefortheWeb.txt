@@ -1,0 +1,13 @@
+
+Avoid SQL injections.
+Never open any filename based on a parameter which the user supplies.
+Sanitise any data that you write to a page.
+Never pass a user-supplied variable to a shell.
+Use functions like PHP's eval very, very carefully.
+Check the referrer on all HTTP POST requests that have side-effects.
+Never allow an HTTP GET request to have a side-effect.
+Verify credentials at every step.
+Don't store passwords as plain text.
+When using a database, do not store database login information directly in the root folder of your application.
+Don't depend on robots.txt to hide sensitive areas of your site.
+Get into the correct mindset.

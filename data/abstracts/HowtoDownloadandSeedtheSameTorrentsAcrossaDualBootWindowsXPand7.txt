@@ -1,0 +1,23 @@
+
+Create a folder to use as your only download location for torrents (ie.
+Create 3 folders for the storage of the .torrent files only, one for each OS (ie.
+Download the small/powerful program "Belvedere" released by the website Lifehacker.
+http://lifehacker.com/341950/belvedere-automates-your-self+cleaning-pc
+
+,
+Install Belvedere and open it up from your system tray, it will run on boot from now on automatically.
+
+,
+Under the Folders tab on the left, click the + to add a folder to monitor for incoming .torrents (your web browsers download folder, ie.
+Create rules for Belvedere to follow on the right side in the same tab.
+For description, name it "Copy Windows 7 .torrents".
+Repeat the process adding a new rule.
+Name it "Copy Windows XP .torrents" for the description.
+Repeat the rule one more time to make a third copy to the "C:\Torrents\Orig" folder created earlier, you will see why this is important later.
+Write another rule that will delete the .torrent from your Downloads folder so you won't build a huge messy stockpile and your web browsers download folder will be clean.
+Making each rule recursive will make sure that these actions are done in order and not all at once (otherwise it may delete your file before it copies to the other 3 locations).
+Now you're almost done!,
+Open uTorrent and under Options/Preferences/Directories check the box "Put new downloads in:" and browse to your Downloads folder you made in the first step, not the one in your User folders.
+Remove any .torrents you currently have in your Downloads folder.
+Repeat all the same steps exactly in XP, only this time point uTorrent to automatically load .torrents from the other "C:\Torrents\XP" folder.
+By having uTorrent delete .torrents as they load, it will be easy to determine which OS needs which .torrent added, and that way if you delete a torrent and its data in one OS, it doesn't try to re-add it over again when you switch.

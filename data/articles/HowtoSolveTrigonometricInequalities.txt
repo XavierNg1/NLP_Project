@@ -1,0 +1,69 @@
+ Solving trig inequalities finally results in solving basic trig inequalities.
+
+
+The transformation process proceeds exactly the same as in solving trig equations.
+The common period of a trig inequality is the least common multiple of all periods of the trig functions presented in the equality.
+For example: the trig inequality sin x + sin 2x + cos x/2 < 1 has 4Pi as common period.
+For example: the trig tan x + cot x/2 has 2Pi as common period.
+Unless specified, the solution set of a trig inequality must be solved, at least, within one whole common period.;
+,, Solving basic trig inequalities proceeds by studying the various positions of the variable arc x that rotates on the trig unit circle, and by using trig tables, or calculators.
+
+
+Example 1. Solve: sin x > 0.709
+
+Solution. The solution set is given by the trig unit circle and Trig Table:
+
+
+Pi/4 + 2k.Pi < x < 3Pi/4 + 2k.Pi
+Example 2. Solve: tan x < 0.414
+
+Solution. Solution set given by Trig Table and unit circle:
+
+
+-Pi/2 + k.Pi < x < Pi/8 + k.Pi
+
+, If the inequality is complicated, containing two or more trig functions, solve it in 4 steps.
+
+
+
+Example. The inequality (cos 2x < 2 + 3sin x) will be transformed into standard form: R= cos 2x - 3sin x -2 < 0.
+Example. The inequality (2tan x + tan 2x > 3cot x) will be transformed to R= 2tan x + tan 2x - 3cot x > 0.
+ Find the common period. The common period of a trig inequality must be the least multiple of all the periods of the trig functions contained in this inequality.
+
+
+Example. The trig inequality R= cos 2x - 3sin x - 2 < 0 has 2Pi as common period that is the least multiple of the 2 periods 2Pi, and Pi.
+Example. The trig inequality sin x + sin 2x + sin 3x > 0 has 2Pi as common period that is the least multiple of the 3 periods: 2Pi, Pi, and 2Pi/3.
+Example. The trig inequality sin 3x + cos x/2 - 1 < 0 has 4Pi as common period.
+ Transform and solve the trig equation R= 0 for x. To know how to transform and to solve the trig equation R= 0, please read the article "How to solve trig equations" on this wikiHow website. As a reminder, there are 2 approaches:
+
+
+a. The first approach transforms the given trig equation into a product of many basic trig equations. Next, separately solve these basic trig equations to get all values of x within the common period. These values of x will be used in STEP 4.
+
+Example. Solve the trig inequality: cos x + cos 2x + cos 3x > 0.
+Solution. Using trig identities, transform the equation R= cos x + cos 2x + cos 3x = 0 into a product: cos 2x (1 + 2cos x) = 0.
+Next, solve the 2 basic trig equations f(x) = cos 2x = 0 and g(x) = 1 + cos 2x = 0 to get all values of x within the common period.
+
+
+b. The second approach transforms the given trig equation into one trig equation containing only one trig function (called t) as variable. Solve for t from this transformed trig equation. Then solve these t values for x. The common function variables to select are sin x = t; cos x = t; tan x = t; and tan x/2 = t.
+
+Example. Solve: R= cos 4x + 3cos2x + 1 < 0.
+Solution. Transform the equation Rinto a trig quadratic equation with cos 2x = t as variable:
+2cos^2 2x + 3cos 2x + 1 = 2t^2 + 3t + 1 = 0
+
+
+Solve this quadratic equation for t. There are 2 real roots: t = -1 and t = -1/2. Then, solve the two basic trig equation cos 2x = t = -1 and cos 2x = t = -1/2 for x. All these values of x will be used in STEP 4.
+ Solve the given trig inequality R(x) < 0 (or > 0) by the algebraic method, using a Sign Table.
+
+
+Example. Solve the inequality R= sin x + sin 3x < -sin 2x (1)
+Solution. Standard form: sin x + sin 2x + sin 3x < 0. The common period is 2Pi. Transform (1) into a product: R= 2sin 2x(cos x - 1/2) < 0. In step 3 solve R(x) = 0. Solve the basic equation f(x) = sin 2x = 0. The solution arcs are: 0, Pi/2, Pi, 3Pi/2, 2Pi. Then, solve the equation g(x) = cos x - 1/2 = 0. The arcs are Pi/3, 5Pi/3. All these 7 values of x will be used to set up a sign table in Step 4, to solve R(x) < 0 (or > 0)
+
+, These consecutive values of x create various intervals between them.
+
+
+First, figure the variation of f(x)= sin 2x on the second line of the sign table. This proceeds by considering the various positions of the arc x that rotates on the trig unit circle. For example if x is in the first quadrant, the arc 2x is in the second quadrant and sin 2x is positive. Mark the intervals with + and - signs according to the variation of f(x).
+Next, figure the variation of g(x) = cos x - 1/2 on the third line of the sign table. Solve and mark the intervals with + or - sign as in the above operation.
+The bottom line figures the variation of R, with + and - signs that are the combined signs of the product R= f(x).g(x) in each interval. In this example, all the - intervals of the bottom line constitute the solution set of the given trig inequality R(x) < 0 within the common period. The solution set: (Pi/3 , Pi/2) and (Pi , 3Pi/2) and (5Pi/3 , 2Pi).
+Note 1. The approach to determine the variation of f(x) and g(x) is exactly the same approach in solving basic trig inequalities, that is the study of various positions of the variable arc x on the trig unit circle.
+Note 2. The graphing method. This method uses graphing calculators to directly graph the given trig inequality R> 0 (or < 0). This method, if allowed by teachers/tests/exams, is fast, accurate and convenient. To know how to proceed, see the last chapter of the above mentioned trig book.
+

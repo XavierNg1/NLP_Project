@@ -1,0 +1,22 @@
+ Installing another operating system on your computer will reformat your hard drive, thus erasing any files stored on your previous OS. For this reason, you should back up any important files onto a removable device. After the installation, you can easily copy them back into Debian., This USB stick is going to be used as the Debian installer. All of its contents will be erased, so make sure to back up any files that you want to keep.
+
+The USB stick should have at least 2 GB of storage to hold the installer
+
+, There are many popular choices when it comes to software used to create Live USB sticks. UNetBootin is available to people using Windows, Mac OS X and Linux. We will be using UNetBootin in this article.
+
+If you choose not to use UNetBootin, these instructions will still generally apply to most Live USB creators.
+ From the Debian website under the "Getting Debian" tab, you will be presented with the option to download either the small or complete installation image. Choose the one that best suits your situation.
+
+Choose the small installation image if your computer can connect to the Internet.
+Choose the larger complete installation image if your computer can not connect to the Internet. This image contains more packages, making it easier to install on devices that have no Internet connection.
+
+This file will take longer to download, so you also have the option of downloading it over a torrent. If you have a BitTorrent client, using it will make downloading the file much quicker.
+ On Windows, click the start button and search for "UNetBootin". On Mac OS X, open Spotlight search and enter the same keyword. You will probably be asked to grant the application administrative privileges. Enter your password and press enter., Click on the "Diskimage" radio button. Ensure that "ISO" is selected from the drop down menu, and press the button at the very left in order to open the file explorer. In this window, locate the ISO file you downloaded earlier and open it., At the bottom of the window, ensure that "USB Drive" is selected from the "Type" drop down menu and that you have the correct drive selected in the Drive menu. This is very important, as if these to aren't set correctly, you could end up formatting the wrong USB stick, or worse, your entire hard drive. Finally, hit OK to set up the USB stick.
+
+This process may take a while. It might be a good idea to save and close all of your work since you will need to reboot your computer to start the installation.
+ Once you have all of your work saved, reboot your computer. Once you are presented with the manufacturer splash screen, you should see that the key used to enter the boot menu listed in one of the bottom corners of your screen. Press this key.
+
+If you aren't given the option to enter the boot menu, then it's probably hidden in the BIOS menu. Enter the BIOS menu instead, and navigate to the tab labeled "Boot Menu".
+If you aren't given the option to enter the boot menu or the BIOS menu, then you will need to search your model up online to figure out what key you need to press. Typically, you'll need to press F2, F11, F12 or Del.
+Once you are in the Boot menu, your USB stick should be listed as either the brand name (Lexar, SanDisk, etcetera) or something along the lines of Debian followed by the version name and number. Select this option to boot into the installer.
+ During the installation, it may be a good idea to plug your computer into your router using an Ethernet cable to ensure that you don't lose connection mid installation. Enter the required information at each prompt. If you want to dual boot Debian with another OS such as Windows, you will be given the option to partition your hard drive near the end of the installation to do this.

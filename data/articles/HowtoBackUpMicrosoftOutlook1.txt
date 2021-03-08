@@ -1,0 +1,16 @@
+ All of your Outlook information, including emails, folders, contacts, calendars , and more, is stored in a single .pst or .ost file file on your computer. Copying this file will create a full backup of your Outlook information.;
+, You'll need to navigate to C:\Users\%username%\AppData\Local\Microsoft\Outlook\. There are a couple of ways that you can do this:You can open an Explorer window and navigate to this folder, but you'll need to display hidden files first. Click the "View" tab and select "Hidden items," or click the "View" menu, select "Folder options," and then check "Display hidden files and folders." This will allow you to see the "AppData" folder in your User folder.
+You can press ⊞ Win, type %appdata%, and press ↵ Enter. This will open the "Roaming" folder. Go up one level so that you're in the "AppData" folder, then open "Local" → "Microsoft" → "Outlook."
+In Windows XP, the location is C:\Documents and Settings\%username%\Local Settings\Application Data\Microsoft\Outlook\.
+ These are the data files for that user's Outlook program. The files will be named after the email address they are associated with. Most users will have .pst files, while Exchange users will typically have an .ost file.
+
+
+Copy the file by selecting it and then pressing Ctrl+C or right-click it and select "Copy."
+
+, There are several ways that you can securely backup this data file, depending on your needs. Creating multiple backups will help ensure that your file stays safe in case something goes wrong.
+
+
+You can copy the file to a USB drive. Most .pst files will be around 10-100 MB in size, which should fit on most USB drives.
+You can burn the file to a disc. This allows you to file the disc away, but may not be the best use of a whole disc due to the relatively small file size. See How to Burn a DVD for more details.
+You can upload the file to a cloud storage service such as Google Drive or OneDrive. This has the benefit of giving you access to the file anywhere you can connect to the internet. See How to Back Up Data for more details on uploading files to a cloud storage service.
+

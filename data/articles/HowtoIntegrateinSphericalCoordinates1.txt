@@ -1,0 +1,22 @@
+ Coordinate conversions exist from Cartesian to spherical and from cylindrical to spherical. Below is a list of conversions from Cartesian to spherical. Above is a diagram with point P{\displaystyle P} described in spherical coordinates.
+
+
+x=ρsin⁡ϕcos⁡θy=ρsin⁡ϕsin⁡θz=ρcos⁡ϕρ2=x2+y2+z2{\displaystyle {\begin{aligned}x&=\rho \sin \phi \cos \theta \\y&=\rho \sin \phi \sin \theta \\z&=\rho \cos \phi \\\rho ^{2}&=x^{2}+y^{2}+z^{2}\end{aligned}}}
+
+In the example where we calculate the moment of inertia of a ball, x2+y2=ρ2sin2⁡ϕ{\displaystyle x^{2}+y^{2}=\rho ^{2}\sin ^{2}\phi } will be useful. Make sure you know why this is the case.
+ We are dealing with volume integrals in three dimensions, so we will use a volume differential dV{\displaystyle {\mathrm {d} }V} and integrate over a volume V.{\displaystyle V.}
+
+
+∫VdV{\displaystyle \int _{V}{\mathrm {d} }V}
+
+Most of the time, you will have an expression in the integrand. If so, make sure that it is in spherical coordinates.
+ 
+
+
+dV=ρ2sin⁡ϕdρdϕdθ{\displaystyle {\mathrm {d} }V=\rho ^{2}\sin \phi {\mathrm {d} }\rho {\mathrm {d} }\phi {\mathrm {d} }\theta }
+
+Those familiar with polar coordinates will understand that the area element dA=rdrdθ.{\displaystyle {\mathrm {d} }A=r{\mathrm {d} }r{\mathrm {d} }\theta .} This extra r stems from the fact that the side of the differential polar rectangle facing the angle has a side length of rdθ{\displaystyle r{\mathrm {d} }\theta } to scale to units of distance. A similar thing is occurring here in spherical coordinates.
+ Choose a coordinate system that allows for the easiest integration. 
+
+Notice that ϕ{\displaystyle \phi } has a range of ,{\displaystyle ,} not .{\displaystyle .} This is because θ{\displaystyle \theta } already has a range of ,{\displaystyle ,} so the range of ϕ{\displaystyle \phi } ensures that we don’t integrate over a volume twice.
+ Once everything is set up in spherical coordinates, simply integrate using any means possible and evaluate.

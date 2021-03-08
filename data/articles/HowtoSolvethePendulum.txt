@@ -1,0 +1,254 @@
+ 
+
+The governing differential equation for a simple pendulum is nonlinear because of the sin⁡θ{\displaystyle \sin \theta } term. In general, nonlinear differential equations do not have solutions that can be written in terms of elementary functions, and this is no exception. 
+
+However, if we assume that the angle of oscillation is small, e.g. θ<15∘,{\displaystyle \theta <15^{\circ },} then it is reasonable to make the approximation that sin⁡θ≈θ.{\displaystyle \sin \theta \approx \theta .} We see that θ{\displaystyle \theta } is the first term in the Taylor series for sin⁡θ{\displaystyle \sin \theta } about θ=0,{\displaystyle \theta =0,} so our error in this approximation is on the order of O(θ3).{\displaystyle O(\theta ^{3}).}
+
+
+sin⁡θ=θ−θ33!+θ55!−θ77!+⋯{\displaystyle \sin \theta =\theta -{\frac {\theta ^{3}}{3!}}+{\frac {\theta ^{5}}{5!}}-{\frac {\theta ^{7}}{7!}}+\cdots }
+
+
+
+We then obtain the equation for a simple harmonic oscillator. This equation is linear and has a well-known solution.
+
+
+d2θdt2+glθ=0{\displaystyle {\frac {{\mathrm {d} }^{2}\theta }{{\mathrm {d} }t^{2}}}+{\frac {g}{l}}\theta =0}
+
+
+;
+, Since this is a linear differential equation with constant coefficients, our solution must either be in the form of exponentials or trigonometric functions. For physical reasons, we expect that the equation of motion be oscillatory (trigonometric) in nature.
+
+Obtain the characteristic equation and solve for the roots.
+
+
+r2+gl=0{\displaystyle r^{2}+{\frac {g}{l}}=0}
+
+
+r=±gli{\displaystyle r=\pm {\sqrt {\frac {g}{l}}}i}
+
+
+
+Since our roots are imaginary, our solution is indeed oscillatory, as expected. From the theory of differential equations, we obtain our solution below. We write the angular frequency ω=gl.{\displaystyle \omega ={\sqrt {\frac {g}{l}}}.}
+
+
+θ(t)=c1cos⁡ωt+c2sin⁡ωt{\displaystyle \theta (t)=c_{1}\cos \omega t+c_{2}\sin \omega t}
+
+
+
+
+, A more useful formulation of the solution involves making the following manipulation.
+
+Multiply the solution by c12+c22c12+c22.{\displaystyle {\frac {\sqrt {c_{1}^{2}+c_{2}^{2}}}{\sqrt {c_{1}^{2}+c_{2}^{2}}}}.}
+
+
+c12+c22(c1c12+c22cos⁡ωt+c2c12+c22sin⁡ωt){\displaystyle {\sqrt {c_{1}^{2}+c_{2}^{2}}}\left({\frac {c_{1}}{\sqrt {c_{1}^{2}+c_{2}^{2}}}}\cos \omega t+{\frac {c_{2}}{\sqrt {c_{1}^{2}+c_{2}^{2}}}}\sin \omega t\right)}
+
+
+
+Draw a right triangle with angle ϕ,{\displaystyle \phi ,} hypotenuse length c12+c22,{\displaystyle {\sqrt {c_{1}^{2}+c_{2}^{2}}},} opposite side length c1,{\displaystyle c_{1},} and adjacent side length c2.{\displaystyle c_{2}.} Replace the constant c12+c22{\displaystyle {\sqrt {c_{1}^{2}+c_{2}^{2}}}} with a new constant Θ,{\displaystyle \Theta ,} denoting amplitude. Now we can simplify the quantities in parentheses. The result is that the second arbitrary constant has been replaced with an angle. 
+
+
+θ(t)=Θ(sin⁡ϕcos⁡ωt+cos⁡ϕsin⁡ωt)=Θsin⁡(ωt+ϕ){\displaystyle {\begin{aligned}\theta (t)&=\Theta (\sin \phi \cos \omega t+\cos \phi \sin \omega t)\\&=\Theta \sin(\omega t+\phi )\end{aligned}}}
+
+
+
+Because ϕ{\displaystyle \phi } is arbitrary, we can also use the cosine function as well. Mathematically, the two phase factors are different, but in terms of finding the equation of motion given initial conditions, only the form of the solution matters. Writing it in terms of cosine is slightly more common because it fits initial conditions well (imagine a pendulum being let go at some angle - the cosine function fits this situation naturally).
+
+
+θ(t)=Θcos⁡(ωt+ϕ){\displaystyle \theta (t)=\Theta \cos(\omega t+\phi )}
+
+
+
+
+, Initial conditions are solved in the usual manner with regards to second-order differential equations given the general solution. 
+
+Assume initial conditions θ(0)=θ0{\displaystyle \theta (0)=\theta _{0}} and dθdt(0)=0.{\displaystyle {\frac {{\mathrm {d} }\theta }{{\mathrm {d} }t}}(0)=0.} This is equivalent to saying that we release a pendulum without any force at some angle θ0{\displaystyle \theta _{0}} from equilibrium, provided that θ0{\displaystyle \theta _{0}} is not too great.
+
+Substitute these conditions into the general solution. Differentiate the general solution and substitute these conditions into that as well. We immediately obtain ϕ=0{\displaystyle \phi =0} and Θ=θ0.{\displaystyle \Theta =\theta _{0}.}
+
+
+θ(t)=θ0cos⁡ωt{\displaystyle \theta (t)=\theta _{0}\cos \omega t}
+
+
+
+If you are given numbers, then simply follow the above steps with the appropriate numbers substituted.
+
+
+Physically, the angular frequency is the number of radians rotated per unit time. It is therefore related to the period via the relation ω=2πT.{\displaystyle \omega ={\frac {2\pi }{T}}.} We can then solve for the period T.{\displaystyle T.}
+
+
+ω=gl{\displaystyle \omega ={\sqrt {\frac {g}{l}}}}
+
+
+T=2πlg{\displaystyle T=2\pi {\sqrt {\frac {l}{g}}}}
+
+
+
+The order of g{\displaystyle g} and l{\displaystyle l} can get confusing. If it does, we go back to physical intuition. Intuitively, a longer pendulum should have a longer period than a shorter pendulum, so l{\displaystyle l} should be on top.
+ This equation is no longer linear and is not easily solved. It turns out that the period of such a pendulum can be written exactly in terms of elliptic integrals - integrals that historically were studied to find the arc length of ellipses, but naturally arise in the study of pendulums as well. 
+
+
+d2θdt2+glsin⁡θ=0{\displaystyle {\frac {{\mathrm {d} }^{2}\theta }{{\mathrm {d} }t^{2}}}+{\frac {g}{l}}\sin \theta =0} 
+
+To make things simple, we are given the same initial conditions as before: θ(0)=θ0{\displaystyle \theta (0)=\theta _{0}} and dθdt(0)=0.{\displaystyle {\frac {{\mathrm {d} }\theta }{{\mathrm {d} }t}}(0)=0.}
+
+
+, 
+
+
+2dθdtd2θdt2+2gldθdtsin⁡θ=0{\displaystyle 2{\frac {{\mathrm {d} }\theta }{{\mathrm {d} }t}}{\frac {{\mathrm {d} }^{2}\theta }{{\mathrm {d} }t^{2}}}+{\frac {2g}{l}}{\frac {{\mathrm {d} }\theta }{{\mathrm {d} }t}}\sin \theta =0}
+
+We can then make use of the chain rule for both terms.
+
+
+2dθdtd2θdt2=ddt(dθdt)2{\displaystyle 2{\frac {{\mathrm {d} }\theta }{{\mathrm {d} }t}}{\frac {{\mathrm {d} }^{2}\theta }{{\mathrm {d} }t^{2}}}={\frac {\mathrm {d} }{{\mathrm {d} }t}}\left({\frac {{\mathrm {d} }\theta }{{\mathrm {d} }t}}\right)^{2}}
+
+
+ddtcos⁡θ=−sin⁡θdθdt{\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }t}}\cos \theta =-\sin \theta {\frac {{\mathrm {d} }\theta }{{\mathrm {d} }t}}}
+
+
+
+Then, we arrive at the following equation.
+
+
+ddt(dθdt)2=2glddtcos⁡θ{\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }t}}\left({\frac {{\mathrm {d} }\theta }{{\mathrm {d} }t}}\right)^{2}={\frac {2g}{l}}{\frac {\mathrm {d} }{{\mathrm {d} }t}}\cos \theta }
+
+
+
+
+, The integration introduces an integration constant. Physically, this constant represents the cosine of an initial angle. There are two solutions because the pendulum can move counterclockwise or clockwise.
+
+
+(dθdt)2=2gl(cos⁡θ−cos⁡θ0){\displaystyle \left({\frac {{\mathrm {d} }\theta }{{\mathrm {d} }t}}\right)^{2}={\frac {2g}{l}}(\cos \theta -\cos \theta _{0})}
+
+
+dθdt=±2glcos⁡θ−cos⁡θ0{\displaystyle {\frac {{\mathrm {d} }\theta }{{\mathrm {d} }t}}=\pm {\sqrt {\frac {2g}{l}}}{\sqrt {\cos \theta -\cos \theta _{0}}}}
+
+
+,
+
+From our previous results, we found that Θ=θ0{\displaystyle \Theta =\theta _{0}} was the amplitude of oscillation. This suggests that half the period is the time taken for the pendulum to traverse from −θ0{\displaystyle -\theta _{0}} to θ0.{\displaystyle \theta _{0}.}
+
+
+T2=l2g∫−θ0θ0dθcos⁡θ−cos⁡θ0{\displaystyle {\frac {T}{2}}={\sqrt {\frac {l}{2g}}}\int _{-\theta _{0}}^{\theta _{0}}{\frac {{\mathrm {d} }\theta }{\sqrt {\cos \theta -\cos \theta _{0}}}}}
+
+
+
+Because cos⁡θ{\displaystyle \cos \theta } is even, we can factor out a 2.
+
+
+T=22lg∫0θ0dθcos⁡θ−cos⁡θ0{\displaystyle T=2{\sqrt {\frac {2l}{g}}}\int _{0}^{\theta _{0}}{\frac {{\mathrm {d} }\theta }{\sqrt {\cos \theta -\cos \theta _{0}}}}}
+
+
+
+This integral is tough, and cannot be evaluated using elementary methods. However, it can be evaluated exactly in terms of the Beta function if we assume that θ0=π/2,{\displaystyle \theta _{0}=\pi /2,} i.e. the angle of oscillation is 90°. This is large enough to be outside the scope of the small-angle approximation. We do this calculation in the next step.
+ 
+
+When θ0=π/2,{\displaystyle \theta _{0}=\pi /2,} cos⁡θ0=0{\displaystyle \cos \theta _{0}=0} and we obtain the following integral.
+
+
+T=22lg∫0π/2dθcos⁡θ{\displaystyle T=2{\sqrt {\frac {2l}{g}}}\int _{0}^{\pi /2}{\frac {{\mathrm {d} }\theta }{\sqrt {\cos \theta }}}}
+
+
+
+This integral still does not have an antiderivative that can be written in terms of elementary functions, but it can be evaluated exactly in terms of the Beta function, itself written in terms of the Gamma function.
+
+
+Γ(α)Γ(β)2Γ(α+β)=∫0π/2cos2α−1⁡θsin2β−1⁡θdθ{\displaystyle {\frac {\Gamma (\alpha )\Gamma (\beta )}{2\,\Gamma (\alpha +\beta )}}=\int _{0}^{\pi /2}\cos ^{2\alpha -1}\theta \sin ^{2\beta -1}\theta {\mathrm {d} }\theta }
+
+
+
+We see from direct comparison that α=1/4{\displaystyle \alpha =1/4} and β=1/2.{\displaystyle \beta =1/2.} Given that Γ(1/2)=π,{\displaystyle \Gamma (1/2)={\sqrt {\pi }},} we arrive at the following answer.
+
+
+∫0π/2dθcos⁡θ=π2Γ(1/4)Γ(3/4){\displaystyle \int _{0}^{\pi /2}{\frac {{\mathrm {d} }\theta }{\sqrt {\cos \theta }}}={\frac {\sqrt {\pi }}{2}}{\frac {\Gamma (1/4)}{\Gamma (3/4)}}}
+
+
+
+We now make use of Euler's reflection formula to simplify, since Γ(3/4){\displaystyle \Gamma (3/4)} is related to Γ(1/4).{\displaystyle \Gamma (1/4).}
+
+
+Γ(z)Γ(1−z)=πsin⁡(πz){\displaystyle \Gamma (z)\Gamma (1-z)={\frac {\pi }{\sin(\pi z)}}} 
+
+
+∫0π/2dθcos⁡θ=Γ2(1/4)22π{\displaystyle \int _{0}^{\pi /2}{\frac {{\mathrm {d} }\theta }{\sqrt {\cos \theta }}}={\frac {\Gamma ^{2}(1/4)}{2{\sqrt {2\pi }}}}}
+
+
+
+Combining with our previous result, and setting the period of the pendulum with small-angle approximation T0,{\displaystyle T_{0},} we arrive at the following result. Note that Γ(1/4){\displaystyle \Gamma (1/4)} is transcendental.
+
+
+T=lgΓ2(1/4)π=Γ2(1/4)2π3/2T0≈1.18T0{\displaystyle T={\sqrt {\frac {l}{g}}}{\frac {\Gamma ^{2}(1/4)}{\sqrt {\pi }}}={\frac {\Gamma ^{2}(1/4)}{2\pi ^{3/2}}}T_{0}\approx 1.18T_{0}}
+
+
+
+Thus, the period of a pendulum given an amplitude of 90° has a period about 18% longer than that given by the simple harmonic oscillator. 
+
+
+,
+
+We first restate the integral to be evaluated.
+
+
+T=22lg∫0θ0dθcos⁡θ−cos⁡θ0{\displaystyle T=2{\sqrt {\frac {2l}{g}}}\int _{0}^{\theta _{0}}{\frac {{\mathrm {d} }\theta }{\sqrt {\cos \theta -\cos \theta _{0}}}}}
+
+
+
+Make use of the following substitutions. The third line immediately follows from the second substitution.
+
+
+cos⁡θ=1−2sin2θ2{\displaystyle \cos \theta =1-2\sin ^{2}{\frac {\theta }{2}}} 
+
+
+sinθ2=sinθ02sin⁡ϕ{\displaystyle \sin {\frac {\theta }{2}}=\sin {\frac {\theta _{0}}{2}}\sin \phi }
+
+
+12cosπ2dθ=2kcos⁡ϕdϕ{\displaystyle {\frac {1}{2}}\cos {\frac {\pi }{2}}{\mathrm {d} }\theta =2k\cos \phi {\mathrm {d} }\phi }
+
+
+
+For simplicity, let k=sinθ02.{\displaystyle k=\sin {\frac {\theta _{0}}{2}}.} Notice that when θ=0,{\displaystyle \theta =0,} ϕ=0,{\displaystyle \phi =0,} and when θ=θ0,{\displaystyle \theta =\theta _{0},} ϕ=π/2.{\displaystyle \phi =\pi /2.}
+
+
+T=22lg∫0θ0dθcos⁡θ−cos⁡θ0=2lg∫0θ0dθsin2θ02−sin2θ2=2lg∫0π/21k2kdϕ1−sin2⁡ϕ1−sin2⁡ϕ1−sin2θ2=4lg∫0π/2dϕ1−k2sin2⁡ϕ{\displaystyle {\begin{aligned}T&=2{\sqrt {\frac {2l}{g}}}\int _{0}^{\theta _{0}}{\frac {{\mathrm {d} }\theta }{\sqrt {\cos \theta -\cos \theta _{0}}}}\\&=2{\sqrt {\frac {l}{g}}}\int _{0}^{\theta _{0}}{\frac {{\mathrm {d} }\theta }{\sqrt {\sin ^{2}{\frac {\theta _{0}}{2}}-\sin ^{2}{\frac {\theta }{2}}}}}\\&=2{\sqrt {\frac {l}{g}}}\int _{0}^{\pi /2}{\frac {1}{k}}{\frac {2k{\mathrm {d} }\phi }{\sqrt {1-\sin ^{2}\phi }}}{\frac {\sqrt {1-\sin ^{2}\phi }}{\sqrt {1-\sin ^{2}{\frac {\theta }{2}}}}}\\&=4{\sqrt {\frac {l}{g}}}\int _{0}^{\pi /2}{\frac {{\mathrm {d} }\phi }{\sqrt {1-k^{2}\sin ^{2}\phi }}}\end{aligned}}}
+
+
+
+This integral is called the complete elliptic integral of the first kind, denoted by K(k).{\displaystyle K(k).} This integral does not have a solution expressible in terms of elementary functions, but it can be expressed as a series by way of the Beta function again.
+
+The period can thus be written exactly as follows. 
+
+
+T=4lgK(sin2θ02){\displaystyle T=4{\sqrt {\frac {l}{g}}}K\left(\sin ^{2}{\frac {\theta _{0}}{2}}\right)}
+
+
+
+
+, A more detailed explanation of this evaluation can be found here.
+
+We must make use of the binomial series.
+
+
+(1−x)α=∑m=0∞(αm)(−1)mxm{\displaystyle (1-x)^{\alpha }=\sum _{m=0}^{\infty }{\alpha  \choose m}(-1)^{m}x^{m}}
+
+
+
+
+K(k)=∫0π/2dϕ1−k2sin2⁡ϕ=∫0π/2dϕ∑m=0∞(−1/2m)(−1)mk2msin2m⁡ϕ=∑m=0∞(−1/2m)(−1)mk2m∫0π/2sin2m⁡ϕdϕ=∑m=0∞(−1)mΓ(1/2)m!Γ(1/2−m)Γ(1/2)Γ(1/2+m)2m!k2m=π2∑m=0∞(−1)mΓ(1/2+m)(m!)2Γ(1/2−m)k2m=π2∑m=0∞(−1)mΓ2(1/2+m)π(m!)2sin⁡(π(m+1/2))k2m=π2∑m=0∞2k2m=π2{\displaystyle {\begin{aligned}K(k)&=\int _{0}^{\pi /2}{\frac {{\mathrm {d} }\phi }{\sqrt {1-k^{2}\sin ^{2}\phi }}}\\&=\int _{0}^{\pi /2}{\mathrm {d} }\phi \sum _{m=0}^{\infty }{-1/2 \choose m}(-1)^{m}k^{2m}\sin ^{2m}\phi \\&=\sum _{m=0}^{\infty }{-1/2 \choose m}(-1)^{m}k^{2m}\int _{0}^{\pi /2}\sin ^{2m}\phi {\mathrm {d} }\phi \\&=\sum _{m=0}^{\infty }{\frac {(-1)^{m}\Gamma (1/2)}{m!\Gamma (1/2-m)}}{\frac {\Gamma (1/2)\Gamma (1/2+m)}{2\,m!}}k^{2m}\\&={\frac {\pi }{2}}\sum _{m=0}^{\infty }{\frac {(-1)^{m}\Gamma (1/2+m)}{(m!)^{2}\Gamma (1/2-m)}}k^{2m}\\&={\frac {\pi }{2}}\sum _{m=0}^{\infty }{\frac {(-1)^{m}\Gamma ^{2}(1/2+m)}{\pi (m!)^{2}}}\sin(\pi (m+1/2))k^{2m}\\&={\frac {\pi }{2}}\sum _{m=0}^{\infty }\left^{2}k^{2m}\\&={\frac {\pi }{2}}\left\end{aligned}}}
+
+In this derivation, we used the binomial series, the relation between the Gamma and the factorial functions Γ(z)=(z−1)!,{\displaystyle \Gamma (z)=(z-1)!,} Euler's reflection formula to simplify the Γ(1/2+m){\displaystyle \Gamma (1/2+m)} and Γ(1/2−m){\displaystyle \Gamma (1/2-m)} terms, the fact that (−1)msin⁡(π(m+1/2))=1{\displaystyle (-1)^{m}\sin(\pi (m+1/2))=1} for all integers m,{\displaystyle m,} and the double factorial identity relating it to the Gamma function, written below. 
+
+
+(2m−1)!!=2mΓ(m+1/2)π{\displaystyle (2m-1)!!={\frac {2^{m}\Gamma (m+1/2)}{\sqrt {\pi }}}}
+
+
+
+
+, This is a very important series, and from this, we obtain the period of a true pendulum. Let T0=2πlg{\displaystyle T_{0}=2\pi {\sqrt {\frac {l}{g}}}} be the period of the pendulum using the small-angle approximation. The series clearly demonstrates the deviation from this approximation as θ0{\displaystyle \theta _{0}} gets larger. Since the region of convergence is |k|<1,{\displaystyle |k|<1,} we see that at 180°, the series diverges, corresponding to a pendulum at unstable equilibrium. Remember that k=sinθ02{\displaystyle k=\sin {\frac {\theta _{0}}{2}}} in this relation.
+
+
+T=T0{\displaystyle T=T_{0}\left}
+
+The graph above shows the elliptic integral in red, along with its series expansions truncated to 2nd, 4th, and 10th order. We can clearly see the divergence here, as well as the series being progressively better approximations the more terms we keep.
+
+

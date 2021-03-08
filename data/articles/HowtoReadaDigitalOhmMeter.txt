@@ -1,0 +1,8 @@
+ Most multimeters cover it all except for extremely high (greater than 100 mega ohm or very precise low readings between 0 and 1 ohm, like 0.249 ohm). Many DMMs have auto ranging feature.;
+, Sometimes they are separate from voltage or current terminals. Usually there are three terminals. Common, voltage/resistance, and current.
+ For low ranges it is about 1.5v. For high ranges it could be 30V.
+ Wait for it to reset itself. Select the resistance function and a range approximating what you expect to measure. Place each probe on both ends of the circuit. For example, if you are checking an electric fan you might put a probe on each terminal of the power cord to see if you get a low resistance when the power switch is on.
+ If you are holding the probe tips and the UUT wires between your fingers the reading will be of the UUT and your body in parallel - ie. less than the UUT really is.
+ If you are trying to read a 1.0 ohm on a 4 digit multimeter set to the 200 ohm range with a 1% stated accuracy you could be off 10% because of the plus or minus 1 digit. So it is important to use the lowest range that includes the resistance you are measuring.
+ Short the tips of the probes by rubbing them together, and look at the reading. It will be between 0.1 and 0.5 ohm depending on your probes. Now press the relative button. The reading will go to zero. Now when you read the circuit, the reading will represent only the resistance at the probe tips. The probe wire resistance has been zeroed out.
+

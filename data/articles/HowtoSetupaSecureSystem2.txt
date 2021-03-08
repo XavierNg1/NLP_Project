@@ -1,0 +1,6 @@
+ A BIOS password will prompt the user to type in a password before even booting the system. This prevents any unwanted users from using your computer or changing settings in the BIOS. Enter the BIOS and find the option to set a password, set it to prompt for the password to do anything on the computer.
+ Group Policies editor can be started by going to START>RUN>gpedit.msc, or, alternatively, typing it into the command line.
+, Under system in user configuration, find "prevent access to the command prompt". Double click it, and select enable, and click "ok".
+ Under "Control Panel", find "prohibit access to the control panel", and enable it.
+ Under "system", "user profiles". Find "Limit profile size". Enable it, and set the limited size in kilobytes (for a gigabyte, type 10000, for 10 gigabytes, type 100000, etc.).
+

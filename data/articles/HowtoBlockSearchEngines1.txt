@@ -1,0 +1,118 @@
+ A robots.txt file is a plain or ASCII text file that informs search engine spiders what they are allowed to access on your site. Files and folders listed in a robots.txt file may not be crawled and indexed by a search engine spiders. You may need a robots.txt file if:
+
+
+You want to block specific content from search engine spiders.
+You are developing a live site and are not prepared to have search engine spiders crawl and index the site
+You want to limit access to reputable bots.;
+, To create the file, launch a plain text editor or a code editor. Save the file as: robots.txt. The file name must be all lowercase.Do not forget the “s.”
+When you save the file, choose the extension “‘.txt”’. If you are using Word, select the “Plain Text” option.
+ It is possible to block every reputable search engine spider from crawling and indexing your site with a “full-disallow” robots.txt. Write the following lines in your text file:
+
+
+
+
+
+
+
+User-agent: *
+Disallow: /
+
+
+
+
+
+Using a “full-disallow” robots.txt file is not strongly recommended. When a bot, such as Bingbot, reads this file, it will not index your site and the search engine will not display your website.
+
+User-agents: this is another term for search engine spiders, or robots
+
+*: the asterisk signifies that the code applies to all user-agents
+
+Disallow: /: the forward slash indicates that the entire site is off-limits to bots, Instead of blocking all bots, consider blocking specific spiders from certain areas of your site.Common conditional-allow commands include:
+
+
+Block a specific bot: replace the asterisks next to User-agent with googlebot, googlebot-news, googlebot-image, bingbot, or teoma.Block a directory and its contents:
+
+
+
+
+User-agent: *
+Disallow: /sample-directory/
+
+
+
+
+
+Block a webpage:
+
+
+
+
+User-agent: *
+Disallow: /private_file.html
+
+
+
+
+
+Block an image:
+
+
+
+
+User-agent: googlebot-image
+Disallow: /images_mypicture.jpg
+
+
+
+
+
+Block all images:
+
+
+
+
+User-agent: googlebot-image
+Disallow: /
+
+
+
+
+
+Block a specific file format:
+
+
+
+
+User-agent: *
+Disallow: /p*.gif$
+
+
+
+
+
+
+, Many people want to welcome, instead of block, search engine spiders because they want their entire site indexed. To accomplish this, you have three options. First, you can opt out of creating a robots.txt file—when the robot does not find a robots.txt file, it will continue to crawl and index your entire site. Second, you can create an empty robots.txt file—the robot will find the robots.txt file, recognize that it is empty, and continue to crawl and index your site. Lastly, you can write a full-allow robots.txt file.Use the code:
+
+
+
+
+
+
+
+User-agent: *
+Disallow:
+
+
+
+
+
+When a bot, such as googlebot, reads this file, it will feel free to visit your entire site.
+
+User-agents: this is another term for search engine spiders, or robots
+
+*: the asterisk signifies that the code applies to all user-agents
+
+Disallow: the blank disallow command indicates that all files and folders are accessible
+
+, After you have written the robots.txt file, save the changes. Upload the file to your site’s root directory. For example, if your domain is www.yourdomain.com, place the robots.txt file at www.yourdomain.com/robots.txt.
+

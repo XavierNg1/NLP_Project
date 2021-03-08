@@ -1,0 +1,82 @@
+ Save the workbook as "Orderly Chaos" or something like that.
+;
+, Recommended Settings: Set General to R1C1 Off and Show the 10 Most Recent Documents; edit set all the Top options to checked except Automatically Convert Date System. Display number of decimal places = blank (for integers preferred), Preserve display of dates and set 30 for 21st century cutoff; View: show Formula Bar and status bar, I prefer hover for comments and all of Objects, Show gridlines and all boxes below that auto or checked; Chart - show chart names and data markers on hover. Leave rest unchecked for now; Calculation -- Automatically and calc before save, max change .000,000,000,000,01 w/o commas if you do goal-seeking a lot and save external link values and use 1904 system; Error checking - check all; Save - save preview picture with new files and Save Autorecover after 5 minutes; Ribbon -- all checked except Hide group titles and Developer.,
+
+Into cell A1, input w/o commas 1.000,033,333,33 and do Format Cell Number Custom "Adjuster "0.00000000000 and then Insert Name Define name Adjuster for cell $A$1. The quotes for "Adjuster" are required.
+Into cell A2, input 10 and do Format Cell Number Custom "TURNS" +0.0;"TURNS" -0.0 and then Insert Name Define name TURNS for cell $A$2. The quotes for "TURNS" are required.
+Into cell A3, input 1439 and do Format Cell Number Custom "AdjRows" 0 and then Insert Name Define name AdjRows for cell $A$3. The quotes for "AdjRows" are required.
+Into cell A4, input -308100 and do Format Cell Number Custom "t_" +0.0000;"t_" -0.0000 and then Insert Name Define name t_ for cell $A$4. The quotes for "t_" are required.
+Into cell A5, input the formula (w/o quotes). "=IF(TURNS>0,VLOOKUP(TURNS,TURNS_LOOKUP,2),VLOOKUP(TURNS,TURNS_LOOKUP_NEG, 2)" and do Format Cell Number Custom "Adj" +0.0000;"Adj" -0.0000 and then Insert Name Define name Adj for cell $A$5. The quotes for "Adj" are required.
+Into cell B1, input 19 and do Format Cell Number Custom "S's Count" 0.00 and then Insert Name Define name S_Count for cell $B$1. S_Count stands for Spheroids count, but it's now off a bit, and won't do small counts of spheroids properly at all. The quotes for "S's Count" are required.
+Into cell B2, input 12 and do Format Cell Number Custom "Var" +0.000000;"Var" -0.000000 and then Insert Name Define name Var for cell $B$2.The quotes for "Var" are required.
+Into cell B3, input 4.5 and do Format Cell Number Custom "db_" +0.00000000;"db_" -0.00000000 and then Insert Name Define name db_ for cell $B$3. The quotes for "db_" are required. Do Insert Comment and input this: "Initial Value =+4.5; Input here of -4.5 when cell B1 "S's Count" = 24 results in about 43 spheroids; try +.1010101 when B1=36 will result in about 56 spheroids. Input +2.25 = 45 spheroids when S's COUNT in B1 =(only) 36. Input=9 results in about 24 S's. Input = -9 results in perhaps 80 non-spheroidal sub-cycles. -25 gets sphere shifts when B1=36? Set B1 to 8, input -25 here results in 10+(2*.6)=11.2 Spheroids (given a "Y"). If B1=6 and B5=-25, result=6+(2*.8)=7.6 S's. db_ may have stood for decibels at one point -- unsure though."
+Into cell B4, input the formula w/o quotes "=Factor*PI()/db_" and do Format Cell Number Custom "c_adj " 0.000000000 and then Insert Name Define name c_adj for cell $B$4. The empty parentheses for PI are correct. The quotes for "c_adj" are required.
+Into cell B5, input the formula "=-0.25*PI()/Var" and do Format Cell Number Custom "Cc_" +0.00000000;"Cc_" -0.00000000 and then Insert Name Define name Cc_ for cell $B$5. The quotes for "Cc_" are required.
+Into cell C3, input .01 and do Format Cell Number Custom "Divisor " 0.00 and then Insert Name Define name Divisor for cell $C$3. The quotes for "Divisor " are required.
+Into cell C4, input w/o quotes the formula "=ABS(Factor/0.25)" and do Format Cell Number Custom 0.0%"=". Do Insert Edit Comment as follows: "%age Factor is to .25, w/ result that spheroids-circle % is occupied, eg. 24% here is most of Quadrant 1 or 2." I only know this works if D3 = N. The quotes for "=" are required.
+Into cell D1, input the formula "=ROUND((-A4*PI())+(Adj),0)" w/o quotes and do Format Cell Number Custom "top" 0.0000 and then Insert Name Define name top for cell $D$1. Leave D2 blank, like C1 and C2, C5 and D5. The quotes for "top" are required.
+Into cell D3, input N. The only cell that is dependent on D3 is D4..
+Into cell D4, input w/o quotes the formula, "=IF(D3="Y",IF(ODD(S_COUNT)=S_COUNT,-S_COUNT*0.01,S_COUNT*0.01),-0.25)"
+Select cell range A1:D5 and Format Cell Border Left Right Top  Bottom Outline dark black. With the command key depressed constantly, select cells A1, A2, B1, D3 and do Format Cell Color canary yellow (for input cells)(until you're better acquainted with the system).
+Into cell E1, input GMSL=.  Into cell E2, input GMLL=. GM stands for the Golden Mean and SL and LL stand for Short and Long Leg respectively.
+Into cell F1, input 0.381966011250105 and Insert Name Define GMSL for cell $F$1.
+Into cell F2, input 0.618033988749895 and Insert Name Define GMLL for cell $F$2. Try getting your rings to have an accuracy of 15 decimal places when the ends finally meet, if possible.
+Into cell E3, Format Cell Alignment Left and input "Put "Y" for spheres or spheroids proportionally, whether Even/Odd S_Count (in B1)" w/o the outermost quotes.
+Into cell E4, Format Cell Alignment Left and input "For S_Count (B1) > 25, overlapping = "Y" input, otherwise input "N" " w/o the outermost quotes.
+Into cell E5, Format Cell Alignment Left and input "Also: "N" input results in full circle of spheroids / podoids whether odd or even." w/o the outermost quotes.
+Into cell G1, input .61 and do Format Cell Number Custom "Sync1 " .0000 and then Insert Name Define name Sync1 for cell $G$1. The quotes for "Sync1 " are required.
+Into cell G2, input the formula w/o quotes, "=G1/GMLL".
+Into cell H1, type "<=INPUT=> " w/o the quotes and Format Cell Align Center.
+Into cell H2, type "<=Let Calc=> " w/o the quotes and Format Cell Align Center.
+Into cell I1, input .78 and do Format Cell Number Custom "Sync2 " .0000 and then Insert Name Define name Sync2 for cell $I$1. Sync1 and Sync2 are the Ring-Spreaders for the multiple rings you saw in the top right image. The quotes for "Sync2 " are required.
+Into cell I2, input the formula w/o quotes, "=I1/GMSL". Phew! We're done with the variables!
+
+, Select Row 6 and Format Cell Font Underline., Do Format Cell Fill Purple because the formula in the cell below it is different, and that's unusual. Do Format Cell Number Custom "Keeper! " 0.0 The quotes for "Keeper! " are required.
+Edit Go To cell range A8:A1447 and with A8 the active high-lighted cell, input the formula,                 "=((A7+(-TOP*2)/(AdjRows)))*Adjuster" and do Edit Fill Down. That's 1440 cells; 1440/360=4.
+Edit Go To cell B7 and input the formula w/o quotes, "=ROUND(-EXP((PI()^2)+(B5*-(db_))),0)+c_adj". Do Format Cell Fill Rosy-colored because the next cells formulas are different.
+Edit Go To cell range B8:B1447 and with B8 the active high-lighted cell, input the formula, "=B7" and do Edit Fill Down. That's why the c heads the column; it stands for constant.
+Edit Go To cell range C7:C1447 and with C7 the active high-lighted cell, enter the formula, "=PI()/25*COS((ROW()-7)*Factor*PI()/180)+SIN((ROW()-7)*Factor*PI()/180)" and do Edit Fill Down. By taking the cosine of the row 7 rows less than row 7 when the formula is in row 7, it is taking the cosine of 0. It will then take the cosine of 1,2,3, ... up to 1440. So 4 cycles of 360. But the Factor = .25 so that's 1 cycle. Multiplying by PI()/180 converts from radians to degrees for the trigonometric functions.
+Edit Go To cell range D7:D1447 and with D7 the active high-lighted cell, enter the formula, "=PI()/25*SIN((ROW()-7)*Factor*PI()/180)+COS((ROW()-7)*Factor*PI()/180)" and do Edit Fill Down. At the very bottom of your worksheet, in cell A1450 is the note to yourself, "r=π; 2πr = 2(π^2) = Avg Ring Circumference; 2r=D=2π. Spinning Diam. D 180º is 2π*π is C = 2π^2 (for External Ring, not GMLL or GMSL Rings on sep Chart ". That may not be correct, though.
+ Edit Go To cell range E7:E1447 and with E7 the active high-lighted cell, enter the formula, "=PI()*((SIN(A7/(B7*2))*GMLL*COS(A7)*GMLL*(COS(A7/(B7*2)))*GMLL)+C7)" and do Edit Fill Down.
+ Edit Go To cell range F7:F1447 and with F7 the active high-lighted cell, enter the formula, "=PI()*((SIN(A7/(B7*2))*GMLL*SIN(A7)*GMLL*(COS(A7/(B7*2)))*GMLL)+D7)" and do Edit Fill Down.
+ Edit Go To cell range G7:G1447 and with G7 the active high-lighted cell, enter the formula, "=E7*GMLL*Sync1" and do Edit Fill Down.
+ Edit Go To cell range H7:H1447 and with H7 the active high-lighted cell, enter the formula, "=F7*GMLL*Sync1" and do Edit Fill Down.
+ Edit Go To cell range I7:I1447 and with I7 the active high-lighted cell, enter the formula, "=E7*GMSL*Sync2" and do Edit Fill Down.
+ Edit Go To cell range J7:J1447 and with J7 the active high-lighted cell, enter the formula, "=F7*GMSL*Sync2" and do Edit Fill Down. Yes!! That part's done!!
+
+, Select cell N1 and type TURNS LOOKUP NEG. Adjust column width by double-clicking on the right side of the column-separation line between columns N and O at the top.
+Edit Go To cell range L2:L1440 and input 1 into Li. Do Edit Fill Series Rows Linear Step Value=1 OK.
+Select cell M1 and input 72 into M1. Select cell M2 and enter the formula, "=-360-80" into M2. Select cell range M3:M1440 and with M3 the active high-lighted cell, enter the formula," =M2+$M$1" and do Edit Fill Down.
+Select cell N1 and input the formula, "=-72*S_COUNT*Factor" into N1. Select cell N2 and enter -1440 into N2. Select cell range N2:N1442 and with N2 the active high-lighted cell, do Edit Fill Series Rows Linear Step Value=1 OK.
+Upside down series: Select cell O1442 and input the formula, "=M2-$M$1". Select cell O1441 and enter the formula, "=O1442-$M$1". Edit Copy cell O1441 and Edit Paste it to the entire cell range O1440:O2.
+Select the cell range L2:M1441 and Insert Name Define name TURNS_LOOKUP to that cell range.
+Select the cell range N2:O1442 and Insert Name Define name TURNS_LOOKUP_NEG to that cell range.
+Select cell Q1 and type SPHEROIDS COUNT LOOKER. Enter a 0 in cell Q2 and a 1 in cell Q25. Select cell range Q2LQ25 and do Edit FIll Series Columns Linear and the Automatic Step Value of .043478260 should be confirmed with an OK.
+Select from the 1 in cell Q25 to Q64 and do Edit Fill Series Columns Linear Step Value 1 OK. Enter 10,000 into cell Q65.
+Select cell R2 and enter into it -6,363,636. Select cell R25 and enter -586,600 into it. Select cell range R2:R25 and do Edit Fill Series Columns Linear, accept the Automatic Step Value if it is 251175.47826087, else input that for the Step Value, OK.
+Select cell range R26:R65 and input the following numbers into the cells from top to bottom: -286600, -186600, -126600, -96600, -76600, -6000, -50100, -42600, -35100, -30100, -25200, -21700, -17900, -15400, -12600, -10300, -8000, -6500. -4800, -3300, -1800, -900, 133, 1330, 2230, 3130, 4030, 4730, 5430, 6170, 6690, 7340, 7730, 8500, 8770, 9290, 9810, 10130, 10400, 10500.
+Edit Go To cell range Q2:R65 and Insert Name Define name SPHEROIDS_COUNT_LOOKER. Nice. You are done with the DATA sheet pretty much as far as data entry goes!
+
+, Using either the Chart Wizard or the Chart Button on the Ribbon (activated in Preferences), select All, Scatter, Smoothed Line Scatter. Depending on your version of Excel, a new chart window will be created or you will need to either cut or copy and paste the just-created Chart onto the CHART worksheet. Stretch it until it's big and square and it should look pretty much like mine.
+ERRORS: If you have errors or error values, you've made a mistake somewhere along the line. Select the cell that has the error value that is furthest left and topmost first. Look for a typo in a formula or unmatched parentheses. Possibly, a Defined Name is wrong -- they need to be input into the formulas exactly as they were defined. Do Insert Name Define to check. if you have DIV/0! If you don't, look for a variable that somehow did not get filled in with a value perhaps. At any rate, what you want to do is select the cell with the error, and after checking all those typical errors, do Tools Auditing Trace Precedents and/or Trace Error. If fixing a few topmost leftmost errors does not fix the rest of your errors on your worksheet, you may need to do it the hard way, from the bottom right upwards then leftwards.
+The next chart has 3 chart series. Select each range indicated (eg. G7:H1446 for #1) and do Chart All Scatter Smoothed Line Scatter. Do Chart Add Data for #2 and #3. You may need to edit the series by double-clicking on the plot-series line that comprises the chart. Here are the correct series from the innermost outwards:
+
+1)   =SERIES(,DATA!$G$7:$G$1446,DATA!$H$7:$H$1446,1) 
+2)  =SERIES(,DATA!$I$7:$I$1446,DATA!$J$7:$J$1446,2)       
+3)   =SERIES(,DATA!$E$7:$E$1446,DATA!$F$7:$F$1446,3)
+
+
+Notice that series C7:D1446 is missing from the above. Chart that if you like. It is the basic tilted ellipse form the others all rely upon. If PI(()/25 is removed, the skew will go away. You may choose also to just do the COS() function for X and the SIN() function for Y. Keep Factor and PI()/180 -- please see Tips below and picture.
+, That way, you have the formulas with checkable data results in order to re-create the chart long into the future., I've written 89 articles and had 5 deleted already, which meets the auditing standard for materiality of data loss., You're done!
+
+
+
+
+
+ CHAOS CIRCLE
+
+
+
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

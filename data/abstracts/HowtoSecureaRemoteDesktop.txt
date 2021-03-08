@@ -1,0 +1,7 @@
+
+Limit users who can log on to the host computer.%SystemRoot%\system32\secpol.msc /s
+
+,
+Expand the Local Policies tree and select the folder titled User Rights Assignment.
+Set the number of password attempts until the user is locked out.
+Allow only certain IP addresses to access the Remote Desktop.

@@ -1,0 +1,22 @@
+ Formatting a drive will erase all of the data on a drive, so make sure that everything you need to save is backed up to a safe location. You can then restore this data to your new drive.
+
+
+In OS X your programs will be safe backed up when you use the built-in Time Machine (TM), so they don't need to be reinstalled manually – saving a lot of time. If your back up is a simple copy, your programs will – in many cases – actually still work, since a Mac program mostly is one big file and not a lot of small files everywhere in the system.
+Your settings and preference files can also be backed up, and using TM will replace them correctly without you having to think about placing.
+See this guide for details on backing up your data with TM
+
+, If you are formatting a new drive, it will need to be installed in your system. See this guide for instructions on installing an internal hard drive. If the drive is external, plug it into the computer via USB, FireWire, or Thunderbolt.
+ Click Go and select Utilities. If you don't have a Utilities option, select Applications and then double-click the "Utilities" folder. Open the Disk Utility program.
+ All of your connected drives will be listed in the left pane of the Disk Utility window. Make sure you select the correct drive.
+ This will open the formatting options for your drive.
+ The file system is the way that the hard drive stores and catalogs files. The file system will determine what the drive is compatible with. Use the Volume Format drop-down menu to select your file system. If the drive is internal or you are only using it in OS X, choose "Mac OS Extended (Journaled)". If the drive is external and also used with af PC, select "exFAT".
+
+
+FAT32 and exFAT can be written to and read by all newer operating systems. FAT32 is an older system, and doesn't support files larger than 4 GB, but can be read by virtually any operating system. exFAT has no restrictions, but won't work with older operating systems like Windows 95.
+In general exFAT will be the best option for an external drive. It is compatible with the most systems and can store the largest files.
+ If you are primarily using the drive for one use, giving it a name will help you identify what's on it. For example, if you are using a second drive to store your music, movies, and pictures, naming it "Media" will quickly let you know what it contains.
+ Click Erase to begin formatting the drive. The format process should only take a few seconds.
+
+
+Formatting your drive this way does not securely wipe the data. To ensure that your data is truly erased, see the last section of this article.
+

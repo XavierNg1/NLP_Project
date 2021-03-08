@@ -1,0 +1,22 @@
+ You can use this method to restore search engines, website-specific settings, and download preferences, which do not usually cause bugs. Your saved passwords, bookmarks, browsing history, and cookies should be restored automatically. If these are missing, you may still be able to retrieve them using these instructions.
+
+
+If you want to restore your add-ons or settings, change them manually instead of using this method. Restoring them from the backup will most likely recreate your old bugs.
+ Enter about:support in the address bar, or click ≡ → ? → Troubleshooting information.
+ You can find the folder containing your profile data by clicking a button near the top of the page. Look for the following words, depending on your system and Firefox version:Windows: Show Folder
+Mac: Show in Finder
+Linux: Open Directory
+Firefox 13 or earlier (any OS): Open Containing Folder
+
+, Your old data from before the reset should be saved in a folder on your desktop. If you can't find it, search your computer for a folder called "Old Firefox Data."On Windows, you may need to show hidden files.
+ You should always close Firefox before you change its profile settings.
+ Open "Old Firefox Data" and choose a file you wish to transfer. (See below for how to identify them.) Right-click the file and select Copy. Open your new profile folder. Right-click on any blank space inside the folder and select Paste.On a Mac, hold down Ctrl and click the file to "right-click."
+If prompted, choose to replace or overwrite existing files.
+ It's best to move as few files as possible, since one of them could be responsible for the bug. Here are some suggested files to transfer:search.json — your added search engines
+permissions.sqlite — preferences for which websites are allowed to store cookies, open popup windows, etc.
+mimeTypes.rdf — preferences for handling downloaded files (which program opens which file type)
+Firefox attempts to restore the items below automatically. You do not need to restore them yourself unless an error occurred during the reset.
+places.sqlite — bookmarks and browsing history
+key3.db and logins.json — saved passwords
+formhistory.sqlite — autofill information for online forms
+

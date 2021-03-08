@@ -1,0 +1,24 @@
+ If you have a jailbroken iPhone, you can use tools from Cydia to change the icon of any app on your device, system, or otherwise., You can only use Cydia on jailbroken devices. If you don't have a jailbroken device, try one of the other methods in this article. Download the following tools from Cydia, all of which should be available in the main repo:
+
+iFile
+IconMaker
+Terminal
+
+, Copy the image to your iPhone by either sending it to yourself via email or by using iFile. You can also take images with your iPhone's camera.
+
+You can download icon replacements from various websites like DeviantArt or you can create your own.
+You can use any image you'd like and IconMaker will convert it to the proper size.
+ This app will convert your image file into the proper size and format. Tap the Camera button to pick an image that you have in your Camera roll. if the image is located somewhere else on your iPhone, use iFile to find it and then select "IconMaker" after opening it., These two settings are necessary to generate proper icon files., This will create five icon files., This will copy the newly-created icon files to your clipboard., The location will vary depending on if the app was downloaded from the App Store or if it's a Stock or Cydia app. Navigate to one of the following locations in iFile and then select the app you want to change icons for:
+
+Stock/Cydia - /var/stash/Applications.XXXXXX
+App Store - /var/mobile/Applications
+
+, There may be several icon files present. Either rename these files or delete them completely. Note that sometimes the file will have the app's name instead of "icon" in the file name:
+
+icon.png
+icon@2x.png
+icon~ipad.png
+icon@2x~ipad.png
+iconClassic.png
+
+, This will paste the new icon files that you copied into the folder. They will already be named properly thanks to IconMaker., Terminal will allow you to reset your UI so that you don't have to reboot to see your changes., After a few moments, your interface will refresh and you'll be able to see your new icon.

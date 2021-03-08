@@ -1,0 +1,33 @@
+ This method is used by computers to subtract binary numbers, since it uses a more efficient program. For a human used to ordinary decimal subtraction problems, this is probably the more difficult method to use, but could be useful to understand as a programmer.We'll use the example 101 - 11 = ?
+
+
+, For example, convert 101-11 to 101-011 so that both have three digits.
+
+
+101 - 011 = ?
+
+, Change all the 0s to 1s and all the 1s to 0s in the second term. In our example, the second term becomes: 011 → 100.
+
+
+What we're actually doing is "taking the one's complement," or subtracting each digit in the term from one. The "switching" shortcut works in binary, since the only two possibilities result in switching the term: 1 - 0 = 1 and 1 - 1 = 0.
+ Once you have the "reversed" term, add one to the result. In our example, we get 100 + 1 = 101.
+ Use binary adding techniques to add the new term to the original term, instead of subtracting:
+
+
+101 + 101 = 1010
+If this does not make sense to you, review how to add binary numbers.
+ This method should always end up with an answer one digit too long. For example, our example problem involved three-digit numbers (101 + 101), but we ended up with a four digit solution (1010). Simply cross out the first digit, and you'll have the answer to the original subtraction problem:1010 = 10
+
+Therefore, 101 - 011 = 10
+
+If you don't have an extra digit, you tried to subtract a larger number from a smaller one. See the tips section for how to solve problems like that, and start again.
+ This method is called the "two's complement" method, since the "reverse the digits" steps results in the "one's complement," and then the number 1 is added.If you'd like a more intuitive understanding of why this method works, try it in base ten:
+
+
+56 - 17
+Since we're using base ten, we'll take the "nine's complement" of the second term (17) by subtracting each digit from nine. 99 - 17 = 82.
+Change this into an addition problem: 56 + 82. If you compare this to the original problem (56 - 17), you can see that we've added 99.
+56+82=138. But since our changes added 99 to the original problem, we'll need to subtract 99 from the answer. Again, we'll use a shortcut, just like in the binary method above: add 1 to the total number, then delete the digit on the left (which represents 100):
+
+138 + 1 = 139 → 139 → 39 This is finally the solution to our original problem, 56-17.
+

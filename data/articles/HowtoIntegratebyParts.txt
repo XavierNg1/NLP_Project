@@ -1,0 +1,152 @@
+ We see that the integrand is a product of two functions, so it is ideal for us to integrate by parts. 
+
+
+∫xexdx{\displaystyle \int xe^{x}{\mathrm {d} }x}
+;
+, 
+
+
+∫udv=uv−∫vdu{\displaystyle \int u{\mathrm {d} }v=uv-\int v{\mathrm {d} }u}
+
+
+, We choose u=x{\displaystyle u=x} because its derivative of 1 is simpler than the derivative of ex,{\displaystyle e^{x},} which is only itself. That results in dv=exdx,{\displaystyle {\mathrm {d} }v=e^{x}{\mathrm {d} }x,} whose integral is trivial.
+
+
+du=dx{\displaystyle {\mathrm {d} }u={\mathrm {d} }x}
+
+
+v=ex{\displaystyle v=e^{x}}
+
+In general, integration of parts is a technique that aims to convert an integral into one that is simpler to integrate. If you see a product of two functions where one is a polynomial, then setting u{\displaystyle u} to be the polynomial will most likely be a good choice.
+
+You can neglect the constant of integration when finding v,{\displaystyle v,} because it will drop out in the end. 
+
+
+,
+
+
+∫xexdx=xex−∫exdx{\displaystyle \int xe^{x}{\mathrm {d} }x=xe^{x}-\int e^{x}{\mathrm {d} }x}
+
+The result was that our integral now consists of just one function - the exponential function. As ex{\displaystyle e^{x}} is its own antiderivative with a constant, evaluating it is much easier.
+ Remember to add the constant of integration, as antiderivatives are not unique.
+
+
+∫xexdx=xex−ex+C{\displaystyle \int xe^{x}{\mathrm {d} }x=xe^{x}-e^{x}+C}
+
+
+, Definite integrals require evaluation at the boundaries. While the integral below looks like it has an integrand of just one function, the inverse tangent function, we can say that it is the product of inverse tangent and 1. 
+
+
+∫01tan−1⁡xdx{\displaystyle \int _{0}^{1}\tan ^{-1}x{\mathrm {d} }x}
+
+
+,
+
+
+∫abudv=uv|ab−∫abvdu{\displaystyle \int _{a}^{b}u{\mathrm {d} }v=uv{\Bigg |}_{a}^{b}-\int _{a}^{b}v{\mathrm {d} }u}
+
+
+, Since the derivative of an inverse trig function is algebraic and therefore simpler, we set u=tan−1⁡x{\displaystyle u=\tan ^{-1}x} and dv=dx.{\displaystyle {\mathrm {d} }v={\mathrm {d} }x.} This results in du=11+x2dx{\displaystyle {\mathrm {d} }u={\frac {1}{1+x^{2}}}{\mathrm {d} }x} and v=x.{\displaystyle v=x.}
+,
+
+
+∫01tan−1⁡xdx=xtan−1⁡x|01−∫01x1+x2dx{\displaystyle \int _{0}^{1}\tan ^{-1}x{\mathrm {d} }x=x\tan ^{-1}x{\Bigg |}_{0}^{1}-\int _{0}^{1}{\frac {x}{1+x^{2}}}{\mathrm {d} }x}
+
+
+, The numerator is proportional to the derivative of the denominator, so u-subbing is ideal.
+
+Let u=1+x2.{\displaystyle u=1+x^{2}.} Then du=2xdx.{\displaystyle {\mathrm {d} }u=2x{\mathrm {d} }x.} Be careful in changing your boundaries.
+
+
+∫01x1+x2dx=12∫121udu=12ln⁡2{\displaystyle {\begin{aligned}\int _{0}^{1}{\frac {x}{1+x^{2}}}{\mathrm {d} }x&={\frac {1}{2}}\int _{1}^{2}{\frac {1}{u}}{\mathrm {d} }u\\&={\frac {1}{2}}\ln 2\end{aligned}}}
+
+
+
+
+, Be careful with the signs.
+
+
+∫01tan−1⁡xdx=π4−12ln⁡2{\displaystyle \int _{0}^{1}\tan ^{-1}x{\mathrm {d} }x={\frac {\pi }{4}}-{\frac {1}{2}}\ln 2}
+
+
+, Occasionally, you may find yourself with an integral that requires multiple instances of integration by parts in order to get the desired answer. Such an integral is below.
+
+
+∫excos⁡xdx{\displaystyle \int e^{x}\cos x{\mathrm {d} }x}
+
+
+, 
+
+
+∫udv=uv−∫vdu{\displaystyle \int u{\mathrm {d} }v=uv-\int v{\mathrm {d} }u}
+
+
+, As one of the functions is the exponential function, setting that as u{\displaystyle u} will get us nowhere. Instead, let u=cos⁡x{\displaystyle u=\cos x} and dv=exdx.{\displaystyle {\mathrm {d} }v=e^{x}{\mathrm {d} }x.} What we find is that the second derivative of u{\displaystyle u} is simply the negative of itself. That is, d2dx2cos⁡x=−cos⁡x.{\displaystyle {\frac {{\mathrm {d} }^{2}}{{\mathrm {d} }x^{2}}}\cos x=-\cos x.} This means that we need to integrate by parts twice to get an interesting result. 
+
+
+du=−sin⁡x{\displaystyle {\mathrm {d} }u=-\sin x}
+
+
+v=ex{\displaystyle v=e^{x}}
+
+
+,
+
+
+∫excos⁡xdx=excos⁡x−∫−exsin⁡xdx=excos⁡x+∫exsin⁡xdx{\displaystyle {\begin{aligned}\int e^{x}\cos x{\mathrm {d} }x&=e^{x}\cos x-\int -e^{x}\sin x{\mathrm {d} }x\\&=e^{x}\cos x+\int e^{x}\sin x{\mathrm {d} }x\end{aligned}}}
+
+
+, Be careful with the signs.
+
+
+u=sin⁡x,dv=exdx,du=cosxdx,v=ex{\displaystyle u=\sin x,\,{\mathrm {d} }v=e^{x}{\mathrm {d} }x,\,{\mathrm {d} }u=\cos {x}{\mathrm {d} }x,\,v=e^{x}}
+
+
+∫exsin⁡xdx=exsin⁡x−∫excos⁡xdx{\displaystyle \int e^{x}\sin x{\mathrm {d} }x=e^{x}\sin x-\int e^{x}\cos x{\mathrm {d} }x}
+
+
+∫excos⁡xdx=excos⁡x+exsin⁡x−∫excos⁡xdx{\displaystyle \int e^{x}\cos x{\mathrm {d} }x=e^{x}\cos x+e^{x}\sin x-\int e^{x}\cos x{\mathrm {d} }x}
+
+
+, In this problem, what we have found is that by performing integration by parts twice, the original integral came up in the work. Instead of performing integration by parts endlessly, which will get us nowhere, we can solve for it instead. Don't forget the constant of integration at the very end.
+
+
+2∫excos⁡xdx=excos⁡x+exsin⁡x∫excos⁡xdx=12excos⁡x+12exsin⁡x+C{\displaystyle {\begin{aligned}2\int e^{x}\cos x{\mathrm {d} }x&=e^{x}\cos x+e^{x}\sin x\\\int e^{x}\cos x{\mathrm {d} }x&={\frac {1}{2}}e^{x}\cos x+{\frac {1}{2}}e^{x}\sin x+C\end{aligned}}}
+
+
+, We shall call this function G(x),{\displaystyle G(x),} where G{\displaystyle G} is any function that satisfies G′=g.{\displaystyle G^{\prime }=g.}
+, Since this is a product of two functions, we use the product rule. Sharp minds will intuitively see the resulting integration by parts formula as closely related to the product rule, just as u-substitution is the counterpart to the chain rule. 
+
+
+ddxfG=fG′+f′G=fg+f′G{\displaystyle {\begin{aligned}{\frac {\mathrm {d} }{{\mathrm {d} }x}}fG&=fG^{\prime }+f^{\prime }G\\&=fg+f^{\prime }G\end{aligned}}}
+
+
+, The above expression says that fG{\displaystyle fG} is the antiderivative of the right side, so we integrate both sides to recover the integral of the left side.
+
+
+∫(fg+f′G)dx=fG{\displaystyle \int (fg+f^{\prime }G){\mathrm {d} }x=fG}
+
+
+,
+
+
+∫fgdx=fG−∫f′Gdx{\displaystyle \int fg{\mathrm {d} }x=fG-\int f^{\prime }G{\mathrm {d} }x}
+
+The goal of integration by parts is seen in the expression above. We are integrating f′G{\displaystyle f^{\prime }G} instead of fg,{\displaystyle fg,} and if used correctly, this results in a simpler evaluation. 
+
+
+, We let u=f,v=G,du=f′dx,dv=gdx.{\displaystyle u=f,\,v=G,\,{\mathrm {d} }u=f^{\prime }{\mathrm {d} }x,\,{\mathrm {d} }v=g{\mathrm {d} }x.}
+
+
+∫udv=uv−∫vdu{\displaystyle \int u{\mathrm {d} }v=uv-\int v{\mathrm {d} }u}
+
+In general, there is no systematic process by which we can make the integral easier to evaluate. However, it is often the case that we want a u{\displaystyle u} whose derivative is easier to manage, and a dv{\displaystyle {\mathrm {d} }v} that can easily be integrated.
+
+For definite integrals, it is easy to show that the formula holds when writing the boundaries for all three terms, though it is important to remember that the boundaries are limits on the variable x.{\displaystyle x.}
+
+
+∫abudv=uv|ab−∫abvdu{\displaystyle \int _{a}^{b}u{\mathrm {d} }v=uv{\Bigg |}_{a}^{b}-\int _{a}^{b}v{\mathrm {d} }u}
+
+
+
+

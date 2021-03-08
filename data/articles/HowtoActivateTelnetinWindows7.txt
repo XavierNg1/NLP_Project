@@ -1,0 +1,16 @@
+ By default, Telnet is not installed with Windows 7. It will need to be manually activated in order for you to use it. You can do so through the Control Panel, which can be accessed from the Start menu.;
+, The option available to you will depend on whether your Control Panel is in Icon or Category view, but they both take you to the same place.
+ You may be asked for the Administrator password.
+ In the list of available features, you will see an entry labeled Telnet Client. You may have to scroll down to find it. Check the box next to Telnet Client, and click OK.
+
+
+You may have to wait a minute or two for the client to be installed after selecting it.
+ If you'd rather do everything through the Command Prompt, you can install Telnet with a quick command. First, open the Command Prompt by typing cmd into the Run box. At the command line, type pkgmgr /iu:"TelnetClient" and press ↵ Enter. After a moment, you will be returned to the command prompt.Restart the command prompt to begin using Telnet.
+ Telnet runs through the Command Prompt. You can access the command prompt by pressing Win and typing cmd into the Run field.
+ Type telnet and press ↵ Enter to start Microsoft Telnet. The Command Prompt will disappear, and you will be taken to the Telnet command line, displayed as Microsoft Telnet>.
+ At the Telnet command line, type open serveraddress . You have successfully connected to the server when you receive either a welcome message or are prompted for your username and password.
+
+
+For example, to watch ASCII Star Wars, type open towel.blinkenlights.nl and press ↵ Enter.
+You can also start a connection directly from the Command Prompt by typing telnet serveraddress .
+ To do so, open the Telnet command line by pressing Ctrl+]. Type quit and press ↵ Enter to close the connection.

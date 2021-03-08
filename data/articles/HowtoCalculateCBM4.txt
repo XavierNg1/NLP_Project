@@ -1,0 +1,34 @@
+ If the shipment contains multiple batches, and each batch consists of a certain number of equally sized packages, you can calculate the total CBM without calculating the CBM of each individual carton. You'll need to start by finding the unit CBM of the standard carton in each batch.
+
+
+Use whichever unit CBM calculation is needed based on the shape of the package (rectangular, cylindrical, or irregular).
+
+Example: The rectangular, cylindrical, and irregular packages described in the previous sections of this article are all being delivered in a single shipment. This means that unit CBM of the rectangular batch is 0.0012 m3, the unit CBM of the cylindrical batch is 0.32 m3, and the unit CBM of the irregular batch is 1.69 m3.
+ Within each batch, multiply the unit CBM you calculated by the number of units or packages in that particular batch. Repeat this process until you have gone through each batch within the shipment.
+
+
+
+Example: There are 50 packages in the rectangular batch, 35 packages in the cylindrical batch, and 8 packages in the irregular batch.
+
+Rectangular batch CBM: 0.0012 m3 * 50 = 0.06 m3
+
+Cylindrical batch CBM: 0.32 m3 * 35 = 11.2 m3
+
+Irregular batch CBM: 1.69 m3 * 8 = 13.52 m3
+
+
+
+
+, After calculating the total CBM of each batch within the shipment, you'll need to add those totals together to find the overall CBM of the entire shipment.
+
+
+
+Example: Total CBM = 0.06 m3 + 11.2 m3 + 13.52 m3 = 24.78 m3
+
+
+, Review your work. At this point, you should know the total CBM of the entire shipment. No further calculations should be needed.
+
+
+
+Example: The total CBM of the entire shipment, including all three batches, will be 24.78. This means that 24.78 cubic meters of space are required to pack and ship all of the units involved.
+

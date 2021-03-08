@@ -1,0 +1,44 @@
+
+This article relies on the previous accomplishment of the five articles preceding it:
+
+How to Create Artistic Patterns in Microsoft Excel
+How to Create a Flower Pattern in Microsoft Excel
+How to Create a Tornado Screw Pattern in Microsoft Excel
+
+How to Create a Uniform Spiral Pattern in Microsoft Excel, and
+
+How to Create an Insectoid Pattern in Microsoft Excel.
+Please complete those before attempting this one.
+Set Defined Variables, Formats for Values and Formulas that have changed since How to Create an Insectoid Pattern in Microsoft Excel and verify those that haven't changed:
+
+On=0 Off=1 is set to 1 (no change).
+Set column Formulas that have changed since "Create Special Designs and Patterns 05" and verify those that haven't changed:
+
+A7:A1447'a formulas remain the same.
+Note: In column L, with the column header in cell L6 of TT, is the data series for L7:L1447 of 0 to 2*PI() but I don't have any dependents for it under audit, so it's currently useless.
+The Lookup Tables remain the same, though their locations may have changed somewhat.
+For those readers who completed the article Create a Pink Love Note of Spheres in Form of a Heart, copy cells from that worksheet's cell range Z2:AF1447 and paste them to the current Data sheet's cell range U1:AA1446 as a means of saving tons of time.
+Otherwise, enter the following column headings in row 6: U6: Ball#; V6: H; W6: K; X6: X; Y6: Y; Z6: Radius; AA6: FFF.
+*
+
+
+Allowing for scratches, and dynamics, with proper array formulation, each ball can be made to move as it should, in theory.
+Create the above graphic using this series:
+
+=SERIES(,Data!$F$7:$F$1447,Data!$G$7:$G$1447,1)
+
+,
+
+=SERIES(,Data!$X$7:$X$1446,Data!$Y$7:$Y$1446,1)
+Final image;
+
+
+
+
+
+
+
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

@@ -1,0 +1,7 @@
+ (e.g. X:\SteamInstalls) Make sure Steam is not running before you do this.;
+, X:\SteamInstalls\steamapps), open a new Command Prompt. (Run -> cmd.exe).
+ This will allow us to symbolically link our new game installation location with where the Steam client perceives it to be. Type the following in the prompt and hit Enter:
+
+
+mklink /D "C:\Program Files (x86)\Steam\steamapps" "X:\SteamInstalls\steamapps"
+

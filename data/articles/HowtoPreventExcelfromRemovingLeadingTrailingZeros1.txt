@@ -1,0 +1,12 @@
+ If you only need to correct a few cells, you can fix them one at a time. Edit each cell to start with an apostrophe ('), then type the number exactly as it should appear. The apostrophe tells Excel to store this cell as text, meaning it cannot be used for formulas.
+
+
+If you need to use the numbers in formulas, skip down to custom number format instructions.;
+, Once you import data into a default Excel workbook, the leading and trailing zeros disappear permanently. The easiest way to fix this is to clear the faulty data and start again. Return to your original database and save it as a .csv file or a .txt file.
+ You will import your data into this workbook as text, meaning it will not be usable in formulas. You will, however, keep the formatting.
+
+
+This method does allow you to import some columns as text and some columns as numbers. Only the text columns will keep leading and trailing zeros.
+ Click the Data tab on your ribbon menu, then look in the External Data Sources section. Click the icon labeled Text or From Text., Select the text file in the "Choose a File" window. Follow the onscreen instructions to complete Steps 1 and 2.
+ In Step 3 of the Text Import Wizard, you should see a preview of your spreadsheet. Click on a column to select it, then select an option to set the format for that column. Specifically, to keep leading and trailing zeros in columns containing phone numbers and similar data, select those columns and choose Text. You can now complete the import and load your spreadsheet with the zeros, as intended.
+

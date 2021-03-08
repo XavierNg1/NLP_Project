@@ -1,0 +1,58 @@
+ There you will find a number of binaries that you can download, each having various requirements. Pick the one most appropriate for your needs.;
+, It should create a Subversion installer on your desktop. Double click that file, and follow the installation steps as directed.
+ Alternately, search in Spotlight for Terminal. Enter the following at the $ prompt:
+
+
+svn If that returns "Type 'svn help' for usage," then svn is working correctly.
+
+
+
+
+
+
+If /usr/local/bin is not in your path, edit your .profile and add a line like the following:
+
+
+
+
+
+
+export PATH=$PATH:/usr/local/bin
+
+
+Open another Terminal window and try again with: svn , You will need this to distribute a Subversion project.
+, You can checkout in the terminal with this command: svn checkout file:///Users//svnroot
+
+
+For remote access, enable "ssh access" (in System Preferences/Sharing) and checkout with: svn checkout svn+ssh://my.domain.com/Users//svnroot
+
+
+
+
+
+
+
+, For example, svnX supports all current versions of Mac OS X from 10.5 to 10.8. You can get it at http://code.google.com.
+ Under Repositories, add the URL und Login Data from the SVN Server.
+
+
+Open the window; if you get an error, check the LogIn.
+
+
+
+
+
+
+Switch to the Terminal and type: svn import -m "your Import message" /my/local/project/path /my/remote/svn/repository This command adds all files from the local Project to the SVN Server.
+
+
+
+
+
+
+Add the path of your SVN repository (from the SVN server) to the list in the Working Copy window in SVNx.
+ When you're working on this Project, you will see your modifications here.
+ Make a small modification on your working copy, then refresh the the Working Copy window.
+
+
+SVNx displays all files with modifications. Press the Commit button to add it to the SVN Server Repository.

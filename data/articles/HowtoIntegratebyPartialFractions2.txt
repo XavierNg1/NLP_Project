@@ -1,0 +1,41 @@
+ Notice that right now, the right side is factored by coefficients.
+
+
+3x−4=A(x+2)+B(x−3){\displaystyle 3x-4=A(x+2)+B(x-3)}
+;
+, Instead of factoring by the coefficients A{\displaystyle A} and B,{\displaystyle B,} we factor by powers of x.{\displaystyle x.}
+
+
+3x−4=Ax+2A+Bx−3B=(A+B)x+(2A−3B){\displaystyle 3x-4=Ax+2A+Bx-3B=(A+B)x+(2A-3B)}
+
+
+, Because both sides are equal, that means that the coefficients of the x{\displaystyle x} terms are equal. We obtain a system of equations, where the number of equations depends on the degree of the denominator that you started out with. 
+
+
+A+B=32A−3B=−4{\displaystyle {\begin{aligned}A+B&=3\\2A-3B&=-4\end{aligned}}}
+
+
+,
+
+
+A=3−B{\displaystyle A=3-B}
+
+
+2A−3B=−42(3−B)−3B=−46−5B=−4B=2{\displaystyle {\begin{aligned}2A-3B&=-4\\2(3-B)-3B&=-4\\6-5B&=-4\\B&=2\end{aligned}}}
+
+
+A=3−2=1{\displaystyle A=3-2=1}
+
+
+, Our integral is now ready to evaluate because we know the integral of 1x.{\displaystyle {\frac {1}{x}}.}
+
+
+∫3x−4x2−x−6dx=∫(x+1)dx+∫1x−3dx+∫2x+2dx{\displaystyle \int {\frac {3x-4}{x^{2}-x-6}}{\mathrm {d} }x=\int (x+1){\mathrm {d} }x+\int {\frac {1}{x-3}}{\mathrm {d} }x+\int {\frac {2}{x+2}}{\mathrm {d} }x}
+
+
+, Although the u-subs are very easy to do, it is still recommended that you show all your work if you are not familiar with doing these types of integrals yet.
+
+
+∫3x−4x2−x−6dx=12x2+x+ln⁡|x−3|+2ln⁡|x+2|+c{\displaystyle \int {\frac {3x-4}{x^{2}-x-6}}{\mathrm {d} }x={\frac {1}{2}}x^{2}+x+\ln |x-3|+2\ln |x+2|+c}
+
+

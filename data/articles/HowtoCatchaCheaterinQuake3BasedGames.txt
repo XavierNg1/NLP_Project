@@ -1,0 +1,16 @@
+ Join the spectators, and follow the player you suspect of cheating.;
+, While you are following your suspect, open your console and type "/record" (to stop recording, enter "/stoprecord"). A good demo is at least five minutes long, but many streaming services require a longer demo for certain bans (for example, PBBans generally requires a ten minute demo for wallhacks). This will serve as evidence if somebody wants to appeal your ban.
+ This is most helpful if you suspect somebody is using wallhacks or chams. To take a PBSS, open your console, log into RCON (/rconpassword <password>), and type "/rcon pb_sv_plist". You'll then see a list of all the players connected to your server. Take note of the player's slot number (the leftmost number). Then type "/rcon pb_sv_getss <slot number>. To review your PBSS's, go to the /game/pb/svss folder in your server using FTP. Taking good PBSSes will be discussed in the next section.
+ Below is a great example of a multihack that contains all of the most common hacks:
+
+
+
+http://www.youtube.com/watch?v=aG9uw3jFDmo&feature=related
+
+Here's a brief description of the various hacks seen in this video:
+
+Aimbot. An aimbot "snaps" the player's aim from player to player automatically. The aimbot in this video would be referred to as "full snap" because it moves from head to head instantly. A "humanized" bot will move between targets more slowly and inaccurately.
+Wallhack. A wallhack allows the player to see nearby players through walls. The server doesn't return the position of players on the whole map, so the effectiveness of a wallhack is limited to nearby players.
+Chams. Chams are any kind of visual that could not be produced by the unchanged game itself. These include player information, enemy spawn timers, and rocket cameras.
+ Use the pb_sv_plist command and write down the last eight characters of the player's GUID. Go to the PBBans homepage and click on the MPi (if you have a PBBans account) or the MBi. Enter the GUID in the text entry field, then select "GUID", "Exact Match," and the game name from the drop down menus. Check "Show Linked GUIDs" and "Alias Tracker." It is up to the server owner what criteria constitutes a ban. The most common criteria are an exact IP match and a common alias between two GUIDs. PBBans also has a similar tool.
+

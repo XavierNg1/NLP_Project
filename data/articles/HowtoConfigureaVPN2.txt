@@ -1,0 +1,12 @@
+ You will need to open a port on your router that points to the IP address of the computer hosting the VPN. Enter your router’s IP address into a web browser address bar. This is typically 192.168.1.1, 192.168.0.1, or 192.168.2.1. Refer to your router’s documentation for details.
+
+
+Navigate to the Port Forwarding section. This may be labeled Virtual Servers or Applications.
+Create a new port forwarding entry. Set the external port to something random, such as 23452. Set the internal port to 1723. Forward to port to the IP address of the computer running the VPN server.
+ You can access this directly by searching for “ncpa.cpl”. Click on the result in the search list.
+ Click File and select “New Incoming Connection”.
+ By default, the list will include users registered on your Windows network. You can add other users by clicking the “Add someone…” button. You can create new usernames and passwords this way.
+ This will allow users to access the VPN using any internet connection.
+ Depending on who you are giving access to your VPN to, you may want to disable “File and Printer Sharing” to protect the security of your files. If you are using the VPN to access your files remotely, leave this checked.
+ Connecting users will need to enter this when they make the connection to the VPN.
+ Open the Network Connections window again (ncpa.cpl). Your VPN connection should appear in the list, and will notify you if other clients are currently connected to it.

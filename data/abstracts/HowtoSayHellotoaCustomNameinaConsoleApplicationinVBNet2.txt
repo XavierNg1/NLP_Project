@@ -1,0 +1,12 @@
+
+Open up VB.Net and you should arrive on the home page.
+Make sure that Console Application is highlighted and then give a name for your project.
+Now that you are in the code, select the line just under Sub Main() and write dim' .
+After the dim write name and As String.
+Now, you are going to write two lines of code.
+The second line of code will say name = console.readline() .
+Then you will put another Console.Writeline but this time you will add Console.Writeline("Hi {0}", name).
+Finally, add a console.readkey under the last line of code you entered because this makes the application available to read without immediately exiting.
+
+,
+Run the application and then you should be asked for your name and then the application should say hi to you!

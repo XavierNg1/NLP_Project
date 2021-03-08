@@ -1,0 +1,14 @@
+ Items that have been give the "Hidden" attribute are not shown in your folders by default. You will need to enable the showing of hidden files in order to access them. You can do this from the Control Panel.;
+, If you are in Category view, select "Appearance and Personalization", and then select "Folder Options".
+ Click the View tab. This will open a list of advanced settings for your folders.
+ This can be found under the "Hidden files and folders" section of the advanced settings list. Click the Apply button after setting hidden files to be displayed.
+ Any hidden files or folders should now be displayed. The icons will be slightly grayed out to indicate that they are hidden files.
+ Some viruses and other malware will modify your Windows registry, causing the displaying of hidden files to not work properly. You may see both the "Show" and "Hide" options selected when you open the Folder Options window, or your settings may get reset every time you close the window. To fix this:Press the Windows key + R to open the Run dialog box, or select it from the Start menu.
+Type regedit and press Enter
+Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\ CurrentVersion\Explorer\Advanced\Folder\Hidden\SHOWALL. Use the directory tree in the left frame to move between folders.
+Find the "CheckedValue" key. It should be REG_DWORD format. If the format is something else, delete it.
+Right-click and create a new "DWORD (32-bit) Value" called "CheckedValue". If you already have a "CheckedValue" key, ensure that it is REG_DWORD format and set to "1".
+Set the Value Data field of the new "CheckValue" key to 1.
+
+Run a virus scan. If this has happened to your system, there's a good chance that your computer is infected, which could cause the problem to appear again.
+

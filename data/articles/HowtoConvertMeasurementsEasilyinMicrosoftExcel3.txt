@@ -1,0 +1,16 @@
+ For the purposes of this example, lets assume that in addition to entering an original measurement in cell A2, you also filled cells A3 and A4 with a measurement. You've already converted the measurement in cell A2 by entering a convert formula in cell B2. You can quickly convert the rest of your measurements (the ones in A3 and A4) by dragging the formula down into the cells in column B.
+
+
+For example: in cell A2, you entered “1”; in cell A3, you entered “5”; in cell A4, you entered “10”. The convert function you entered in cell B2 reads: “=Convert(A2, “in”, “cm”)”.
+When you are converting multiple measurements, you must enter the cell's name instead of your measurement in the "number" space.
+ When you select a cell, a small, gray square appears in the lower right corner.
+ Only select as many cells in column B as are filled with original measurements in column A.
+
+
+For example: since you entered measurements in cells A3 and A4, you will select cells B3 and B4.
+Alternately, you may apply the convert function to multiple cells using the “fill” method. After you've selected cell B2, hold down ⇧ Shift and select your cells from Column B. You should select all the cells that have corresponding measurements in column A. Click the “Home” tab. Select “Fill” then select and “Down.” The converted measurements will appear in column B.
+ The measurements listed in column A will be converted and appear in column B.
+
+
+For example: you will see “2.54” in cell B2; “12.7” in cell B3; and “25.4” in cell B4.If the function returns the “#N/A” error, check the unit abbreviations again. Make sure the abbreviation is correct and that the two units belong to the same group (for example it is not possible to convert mass into length). Please note, unit names and prefixes ARE case-sensitive.
+If the function returns the “#VALUE!” error, this means you have entered the “number” incorrectly. Make sure you have only entered one value or cell reference.

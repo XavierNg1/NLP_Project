@@ -1,0 +1,29 @@
+, What about giving "D:\Training\RaspberryPi\MATLAB\Playground" a shot?, There are at least two ways to do this:
+
+Either open MATLAB, choose "New Script".
+
+
+
+ 
+
+
+Or use Notepad++ and build an .m file.
+ Save it with a name for example "1_BlinkingLED.m" (WARNING: in MATLAB, avoid using space in file name).
+
+
+
+
+
+mypi = raspi;
+for i = 1:10
+   writeLED(mypi,’led0’,1);
+   pause(0.2);
+   writeLED(mypi,’led0’,0);
+   pause(0.2);
+end
+
+
+
+
+
+,

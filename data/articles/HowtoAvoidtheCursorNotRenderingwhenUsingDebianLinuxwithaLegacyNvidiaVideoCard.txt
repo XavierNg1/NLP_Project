@@ -1,0 +1,5 @@
+ Please do note, that it isn't enough to simply bring up a text console in your GNU or KDE x-windows session - you must have a true console without the various x modules loaded as these have dependencies on which we shall be removing. To get to your text console, you need to press the following key-combination:Ctrl + Alt + F1;
+, It is required to do this due to the previously mentioned dependencies. There are two variations to this task which shall depend on the desktop environment that which you have chosen to run. In the console window opened in step number 1, execute the following command (noting that you will be prompted for your login-password to confirm that the command to be executed shall be run as the root user):sudo apt-get --purge remove xserver-xorg-video-nouveau
+
+, Do the reboot of your computer by executing the following command (noting that you may, depending on your password time-out settings) be prompted for your login-password to confirm that the command to be executed shall be run as the root user):sudo shutdown -r now
+

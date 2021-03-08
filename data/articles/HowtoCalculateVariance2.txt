@@ -1,0 +1,46 @@
+ In most cases, statisticians only have access to a sample, or a subset of the population they're studying. For example, instead of analyzing the population "cost of every car in Germany," a statistician could find the cost of a random sample of a few thousand cars. He can use this sample to get a good estimate of German car costs, but it will likely not match the actual numbers exactly.
+
+
+Example: Analyzing the number of muffins sold each day at a cafeteria, you sample six days at random and get these results: 38, 37, 36, 28, 18, 14, 12, 11, 10.7, 9.9. This is a sample, not a population, since you don't have data on every single day the cafeteria was open.
+
+If you have every data point in a population, skip down to the method below instead.
+ The variance of a data set tells you how spread out the data points are. The closer the variance is to zero, the more closely the data points are clustered together. When working with sample data sets, use the following formula to calculate variance:s2{\displaystyle s^{2}} = ∑/(n - 1)
+
+
+s2{\displaystyle s^{2}} is the variance. Variance is always measured in squared units.
+
+
+xi{\displaystyle x_{i}} represents a term in your data set.
+
+∑, meaning "sum," tells you to calculate the following terms for each value of xi{\displaystyle x_{i}}, then add them together.
+
+x̅ is the mean of the sample.
+
+n is the number of data points.
+ The symbol x̅ or "x-bar" refers to the mean of a sample.Calculate this as you would any mean: add all the data points together, then divide by the number of data points.
+
+
+Example: First, add your data points together: 17 + 15 + 23 + 7 + 9 + 13 = 84Next, divide your answer by the number of data points, in this case six: 84 ÷ 6 = 14.Sample mean = x̅ = 14.
+
+You can think of the mean as the "centre-point" of the data. If the data clusters around the mean, variance is low. If it is spread out far from the mean, variance is high.
+ Now it's time to calculate xi{\displaystyle x_{i}} - x̅, where xi{\displaystyle x_{i}} is each number in your data set. Each answer tells you that number's deviation from the mean, or in plain language, how far away it is from the mean..
+
+
+Example:x1{\displaystyle x_{1}} - x̅ = 17 - 14 = 3x2{\displaystyle x_{2}} - x̅ = 15 - 14 = 1x3{\displaystyle x_{3}} - x̅ = 23 - 14 = 9x4{\displaystyle x_{4}} - x̅ = 7 - 14 = -7x5{\displaystyle x_{5}} - x̅ = 9 - 14 = -5x6{\displaystyle x_{6}} - x̅ = 13 - 14 = -1
+
+It's easy to check your work, as your answers should add up to zero. This is due to the definition of mean, since the negative answers (distance from mean to smaller numbers) exactly cancel out the positive answers (distance from mean to larger numbers).
+ As noted above, your current list of deviations (xi{\displaystyle x_{i}} - x̅) sum up to zero. This means the "average deviation" will always be zero as well, so that doesn't tell use anything about how spread out the data is. To solve this problem, find the square of each deviation. This will make them all positive numbers, so the negative and positive values no longer cancel out to zero.Example:(x1{\displaystyle x_{1}} - x̅)2=32=9{\displaystyle ^{2}=3^{2}=9}(x2{\displaystyle (x_{2}} - x̅)2=12=1{\displaystyle ^{2}=1^{2}=1}92 = 81(-7)2 = 49(-5)2 = 25(-1)2 = 1
+
+You now have the value (xi{\displaystyle x_{i}} - x̅)2{\displaystyle ^{2}} for each data point in your sample.
+ Now it's time to calculate the entire numerator of the formula: ∑. The upper-case sigma, ∑, tells you to sum the value of the following term for each value of xi{\displaystyle x_{i}}. You've already calculated (xi{\displaystyle x_{i}} - x̅)2{\displaystyle ^{2}} for each value of xi{\displaystyle x_{i}} in your sample, so all you need to do is add the results together.
+
+
+Example: 9 + 1 + 81 + 49 + 25 + 1 = 166.
+ A long time ago, statisticians just divided by n when calculating the variance of the sample. This gives you the average value of the squared deviation, which is a perfect match for the variance of that sample. But remember, a sample is just an estimate of a larger population. If you took another random sample and made the same calculation, you would get a different result. As it turns out, dividing by n - 1 instead of n gives you a better estimate of variance of the larger population, which is what you're really interested in. This correction is so common that it is now the accepted definition of a sample's variance.Example: There are six data points in the sample, so n = 6.Variance of the sample = s2=1666−1={\displaystyle s^{2}={\frac {166}{6-1}}=} 33.2
+
+
+, Note that, since there was an exponent in the formula, variance is measured in the squared unit of the original data. This can make it difficult to understand intuitively. Instead, it's often useful to use the standard deviation. You didn't waste your effort, though, as the standard deviation is defined as the square root of the variance. This is why the variance of a sample is written s2{\displaystyle s^{2}}, and the standard deviation of a sample is s{\displaystyle s}.
+
+For example, the standard deviation of the sample above = s = √33.2 = 5.76.
+
+

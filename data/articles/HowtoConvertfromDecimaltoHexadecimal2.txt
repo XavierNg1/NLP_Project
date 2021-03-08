@@ -1,0 +1,26 @@
+ Treat the division as an integer division. In other words, stop at a whole number answer instead of calculating out the digits after the decimal point.
+
+
+For this example, let's be ambitious and convert the decimal number 317,547. Calculate 317,547 ÷ 16 = 19,846, ignoring the digits after the decimal point.
+ Now that you've divided your number by 16, the remainder is the part that can't fit into the 16s place or higher. Therefore, the remainder must be in the 1s place, the last digit of the hexadecimal number.
+
+
+To find the remainder, multiply your answer by the divisor, then subtract the result from the dividend. In our example, 317,547 - (19,846 x 16) = 11.
+Convert the digit into hexadecimal notation using the small number conversion chart at the top of this page. 11 becomes B in our example.
+ You've converted the remainder into a hexadecimal digit. Now to continue converting the quotient, divide it by 16 again. The remainder is the second-to-last digit of the hexadecimal number. This works from the same logic as above: the original number has now been divided by (16 x 16 =) 256, so the remainder is the portion of the number that can't fit into the 256s place. We already know the 1s place, so this remainder must be the 16s place.
+
+
+In our example, 19,846 / 16 = 1240.
+Remainder = 19,846 - (1240 x 16) = 6. This is the second-to-last digit of our hexadecimal number.
+ Remember to convert remainders from 10 to 15 into hexadecimal notation. Write each remainder down as you go. The final quotient (smaller than 16) is the first digit of your number. Here's our example continued:
+
+
+Take the last quotient and divide by 16 again. 1240 / 16 = 77 Remainder 8.
+77 / 16 = 4 Remainder 13 = D.
+4 < 16, so 4 is the first digit.
+ As mentioned earlier, you're finding each digit of the hexadecimal number from right to left. Check your work to make sure you wrote them in the right order.
+
+
+Our final answer is 4D86B.
+To check your work, convert each digit back to a decimal number, multiply by powers of 16, and sum the results. (4 x 164) + (13 x 163) + (8 x 162) + (6 x 16) + (11 x 1) = 317547, our original decimal number.
+

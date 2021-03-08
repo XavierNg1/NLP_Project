@@ -1,0 +1,61 @@
+ VirtualBox from Oracle is available for free from the developer's website. Make sure that you download the correct version for your operating system.
+
+
+There are multiple choices for Linux versions. Choose the package that matches your Linux distribution, or use the "All distributions" option if your Linux distribution is not listed.;
+, If you are using Windows, double-click the setup file and follow the prompts to install. If you are using a Mac, open the DMG file that you downloaded and drag the VirtualBox file to your Applications folder.
+
+
+During the Windows installation, keep all of the options set to their default.
+ VirtualBox allows you to manage your various virtual machines, and easily create new ones. You can run VirtualBox directly from the installation program, or you can start it from the desktop icon.
+ When creating a virtual machine, you will need to install the operating system just like you would on a regular computer. This means that you will need the installation discs for the operating system you want to install on the virtual machine.
+
+
+If you download the ISO file for the installation disc, you can burn it to a blank DVD, or install it directly from the ISO file.
+ This will open the wizard that will guide you through the process to create your first virtual machine.
+ On the first screen of the wizard, you will be asked to give the new virtual machine a name as well as choose what operating system you will be installing. Choose the type of operating system from the Type menu, and then choose which version you are installing from the Version menu.
+
+
+For example, if you are installing Windows 7, choose "Microsoft Windows" from the Type menu, and then "Windows 7" from the Version menu.
+If you are installing the 64-bit version of the operating system, make sure to choose the 64-bit version from the Version menu.
+ You will need to designate how much of your computer's RAM will be allocated to your virtual machine. VirtualBox will automatically choose the recommended minimum amount for the operating system you selected, but you can increase or decrease this if you'd like.
+
+
+You can only go as high as the amount of RAM physically installed in your system.
+It is not recommended that you set it to the max amount, as there won't be any left for your regular operating system to use when the virtual machine is running.
+ Your virtual machine will need a virtual hard drive in order to install the operating system and any programs. This virtual hard drive is carved out of the free space available on your computer. VirtualBox will set a recommended size based on the operating system, but you can set it to whatever you'd like.
+
+
+Make sure that the virtual hard drive has at least enough space to install the operating system. Check the specifications for your operating system to see how much space you should allocate at minimum.
+Remember that any programs you install will also take up space on your virtual hard drive, so plan accordingly.
+The most common format for virtual hard drives is VDI (VirtualBox Disk Image).
+ Once the virtual machine has been configured, the wizard will close and you will be taken back to the VirtualBox main window. Double-click your new machine in the left menu to start it up for the first time.
+
+
+A new wizard will appear to help start the operating system installation.
+If you are installing from a disc, insert it into your computer and select "Host drive" and the right drive letter from the drop-down menu.
+If you are installing from an image file, click the folder icon to browse through your computer for the installation image file.
+ After selecting the installation media, the operating system installation will begin. Installation proceeds the same way it would as if you were installing the operating system on a regular computer. See the following guides for instructions on installing the operating system of your choice:
+
+
+Windows 8
+Windows 7
+Windows Vista
+Windows XP
+Install OS X
+Linux Mint
+Ubuntu Linux
+
+, Once the operating system is installed, your virtual machine is ready to go. Simply double-click the machine in the left menu of the VirtualBox main page to start the virtual machine. The virtual computer will boot and load into the operating system that you installed.
+
+
+Your virtual machine will run in a window. Whenever the virtual machine window has focus, any keystrokes or mouse clicks will affect the virtual machine and not your physical computer.
+You can create a desktop shortcut for your virtual machine by right-clicking on the machine in the VirtualBox window and selecting "Create Shortcut on Desktop".
+ You have a couple of different options when closing your virtual machine, and each will affect the machine slightly differently. When you click the "X" in the upper-right corner of the window, you will be presented with several options:
+
+
+Save the machine state - This will save the virtual machine in exactly the state that it's in when you close it. Any programs you are running will be saved in their current state, and everything will be restored when you start the machine again.
+Send the shutdown signal - This will send a power-down signal to the virtual machine, and it will shut down as if the power button was pressed on a physical computer.
+Power off the machine - This will power down the machine as if power was cut to the computer. Nothing will be saved.
+ VirtualBox allows you to copy your virtual machine's exact state, allowing you to return to that state at any time. This is incredibly useful for testing software or other configurations.You can take a snapshot by clicking the Machine menu and selecting "Take snapshot". The snapshot will be added to the list of your virtual machines on the left side of the VirtualBox menu.
+You can restore a snapshot by right-clicking the snapshot and selecting "Restore". Any changes to your virtual hard drive since the time the snapshot was created will be lost when the snapshot is restored.
+

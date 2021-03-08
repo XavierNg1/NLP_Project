@@ -1,0 +1,10 @@
+
+Start small until you understand what you are doing and work your way up.
+Ascertain exactly what your power requirements are.
+If you are designing for a single voltage/wattage combo, i.e. 12volt 12 watts, the conversion of Watts to Amps is governed by the equation Amps = Watts/Volts:
+
+
+For example, 12 watts/12 volts = 1 amp - so there is your design spec, you need to build a device that will output 12 volts - if you want to charge the device directly from the solar panel without using the power adaptor that came with your device, you also need to understand what sort of charge cycle your battery requires.
+Read up on parallel and series wiring - which is not very complicated - basically if you tie the "+" of one solar cell to the "-" of the next solar cell and repeat this your voltage will be a multiple of the number of cells tied together - i.e.
+If you are building an ac voltage panel, add an inverter which converts d.c. to a.c. and supplies a clean sine wave so that any device you plug into the panel will operate properly.
+

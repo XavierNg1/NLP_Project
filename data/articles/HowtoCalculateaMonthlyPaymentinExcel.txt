@@ -1,0 +1,29 @@
+;
+,
+
+
+This will help you find your work later on if you need to refer to it or make changes to the information.
+
+
+
+Type "Balance" in cell A1, "Interest rate" in cell A2 and "Periods" in cell A3.
+Type "Monthly Payment" in cell A4.
+
+
+
+The outstanding balance due will be entered in cell B1.
+The annual interest rate, divided by the number of accrual periods in a year, will be entered in cell B2. You can use an Excel formula here, such as "=.06/12" to represent 6 percent annual interest that is accrued monthly.
+The number of periods for your loan will be entered in cell B3. If you are calculating the monthly payment for a credit card, enter the number of periods as the difference in months between today and the date you would like to have your account paid in full.
+For example, if you would like to have your credit card account paid off 3 years from today, enter the number of periods as "36." Three years multiplied by 12 months per year is equal to 36.
+, It will be labeled "fx."
+
+,,,
+
+
+Click inside the "Rate" field window and then click cell B2. The "Rate" field will now pull the information from this cell.
+Repeat for the "Nper" field by clicking inside this field and then clicking cell B3 to force the number of periods to be pulled.
+Repeat once more for the "PV" field by clicking inside the field and then clicking cell B1. This will force the balance of your loan or credit card account to be pulled for the function.
+,
+
+
+Your calculated monthly payment will be shown in cell B4, next to the "Monthly Payment" label.

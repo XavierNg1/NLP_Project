@@ -1,0 +1,28 @@
+ You can create a quick script that will cycle the keyboard indicator LEDs for Caps Lock, Num Lock, and Scroll Lock in Windows. This will only work if the keyboard has these LEDs, usually located in the upper-right corner of the keyboard.;
+, This code will create a script that will loop the lights. The script is written in VisualBasic, which will allow you to run it on any Windows computer.MsgBox "Look at your keyboard for a cool light show!" 
+set wshShell = wscript.CreateObject("wscript.shell")
+wscript.Createobject("WScript.Shell")
+do
+wscript.sleep 100
+wshShell.sendkeys"{NUMLOCK}"
+wshShell.sendkeys"{CAPSLOCK}"
+wshShell.sendkeys"{SCROLLLOCK}"
+loop
+
+
+
+
+, Click the File menu and select "Save as".
+ This will allow you to save the text file as a different type of file.
+ This will save it as a Visual Basic script. For example, you could name it "keyboardshow.vbs". If you want to play a trick on some one, name it something else so that they open it without realizing what it will do.
+ Choose a location that you can easily find it, such as on your desktop or in your Documents folder.
+ Double-click the file you created to start the script. You should see the "Look at your keyboard for a cool light show!" appear in a dialog box, and the indicator LEDs will start turning on and off in a loop. You can run this script on any Windows computer.
+
+
+Because the script is constantly "pressing" the three keys, it will make typing anything legible virtually impossible. You'll need to stop the script to resume typing. Using this script may slow down older computers.
+You can use a USB drive to move this to any Windows computer. You may have trouble emailing it as an attachment, as many email services don't allow VBS attachments. This is because Visual Basic is a common way to create a virus.
+ The light show will continue until you force the show to stop. You can do this from the Task Manager. To open the Task Manager, press Ctrl+Alt+Del and select "Task Manager", or press Ctrl+⇧ Shift+Esc to open it directly. Make sure that you let someone know how to turn it off if you're playing a prank on them.
+ This will display all of the processes that are currently operating on your computer. If you don't see either of these tabs, click the "More details" option. In Windows 10, there will be both a "Processes" and "Details" tab. Select the "Details" tab.
+ It can usually be found at the end of the list.
+ Confirm that you want to stop the process. This will return the keyboard to it's regular function.
+

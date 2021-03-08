@@ -1,0 +1,22 @@
+
+
+Import the Public Key into GPG.;
+,
+
+Save it in a Folder.
+
+
+Save it in the same Folder.
+
+
+Change the working directory to the Folder where your file and signature-file are saved.
+
+
+Type the following command into a command-line interface:
+gpg --verify E.g., if you have acquired
+(1) the Public Key 0x416F061063FEE659,
+(2) the Tor Browser Bundle file (tor-browser.tar.gz), and
+(3) the signature-file posted alongside the Tor Browser Bundle file (tor-browser.tar.gz.asc),
+You would type the following:
+gpg --verify tor-browser.tar.gz.asc tor-browser.tar.gz
+

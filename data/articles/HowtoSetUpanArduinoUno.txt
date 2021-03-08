@@ -1,0 +1,20 @@
+;
+,, You will have to restart your device to activate the new drivers.
+ The first time you connect the Arduino, OSX will tell you that it has detected a new interface. Simply click on ‘Network Preferences’ and then click ‘Apply.’
+
+, It may be around an 80MB download, fully expanded to 230MB, so depending on your internet connection you may want to grab a coffee.
+ Close any pop-up windows and decline any search for drivers through Windows’ tool.
+ Press ↵ Enter and the Device Manager panel should open.
+ You should see an Arduino Uno on the list, with one of those yellow "problem" indications. Double-click on that, select ‘Update Drivers’ and then select ‘Browse my computer for driver software.’
+
+, In the drivers folder, you should see an Arduino Uno file. Select that. The driver installation process will deem it a "communications port" and report a "mistake unsigned driver" when installing. Ignore that, proceeding with the installation anyway.
+, On either system, you may have a tools menu. Click that and ensure a matching board is chosen. The Uno is the default and may already be highlighted in your installation. Ensure the serial port is chosen correctly, too
+
+
+On a Mac, the port names are a bit more confusing, but it will be one of the listed USB ports. Perhaps it will be listed as cu-USB.
+, To ensure that the board is working and is connected correctly, go ahead and click ‘Upload.’
+
+
+After a short moment compiling the application, some orange lights that are labeled TX / RX on the Arduino will begin flashing. This means that data is being transmitted or received. When the process is done, the code will be run immediately.
+ That is as far as this tutorial will take you. You’ve now set up your Arduino and figured out how to upload apps to it, confirming that it works properly.
+

@@ -1,0 +1,38 @@
+ You'll want this information when you visit the manufacturer's website.
+
+
+Open the System Information app in Windows. For Windows Vista and Windows 7, enter msinfo32 into the search bar (or the Run box in Windows XP), then click System Summary.
+Your BIOS version will be displayed under your computer's processor speed. Write down the version number and date (if it appears).;
+, This is an important first step to determine where to locate and download the correct BIOS update version.
+
+
+Did you purchase the computer as a bundled, pre-built system, or was it assembled from purchased components? If it's a bundled system—for example, a Dell—check their website; if the computer was custom assembled, visit the website of the motherboard manufacturer. Look for something like "Drivers and Downloads."
+Be sure to download the BIOS update for the model you own. If the updater is not written well, it could write over your BIOS with another model's BIOS, and hello, paperweight!
+Also be sure to download any Read Me files and other documentation—and then read it! This is not the time to just wing it. There may be important precautions that you should know before updating, and ignoring those could ruin your whole day.
+ If using BIOS update software executed from Windows or another operating system, backup the existing BIOS image first. Most BIOS updater have this functionality built-in (e.g., "Save" or "Backup"), and will advise you to perform a backup first. Check your manufacturer's website for information on their recommended way to backup the BIOS.
+ The biggest danger with flashing a BIOS comes in the event of power loss during the procedure. You may not be able to control the power company, but you can control how it affects you.
+
+
+If you are updating a laptop, first make sure the battery is fully charged, and then plug into the wall power so you are not running off the battery. In the event of power failure, your battery will keep things running.
+If you are updating a desktop computer, it's best if you are plugged into an uninterruptible power supply (UPS). Like the laptop's battery, the UPS will keep everything running, while others are running around in the dark.
+ Run the downloaded installer or .exe file for the BIOS updating software.
+
+
+If the software prompts you for a floppy, use a formatted 1.44MB 3.5" floppy disk.Insert it into the drive and restart the system to boot from it. Some floppy images contain an "autoexec.bat" file to automatically run the BIOS update. Others will just have the update software, the updated BIOS image, and possibly a 'readme' text file containing directions. If there are no directions, but there are at least two files (ie: "A06_123.bin" and "awflash.exe"), follow this example: Enter a command such as "awflash A06_123.bin" and press enter. This will execute the update software and specify the A06_123.bin file to flash the BIOS.
+Compare the two versions. Most BIOS update software will read the existing BIOS image and determine its version, then compare this to the downloaded BIOS image. If the system's existing BIOS version is older, perform the update. The user interface of BIOS software may vary greatly, yet typically menu buttons or selections such as "Write", "Update", or "Confirm" will perform the BIOS update.
+ After the update is completed, many update programs will automatically restart the computer. Some updaters will request your permission to do so while others will warn about this before starting the update. A few will prompt you to power cycle the system yourself. To perform the power cycling procedure manually:
+
+
+Completely power down the PC by either pressing the power button or initiating the power off sequence from the operating system.
+Flip the master power switch on the back of your PC to the off position, if applicable.
+Wait a minute.
+Flip the master power switch back into the on position, if applicable.
+Power up the PC.
+ This is not always necessary, depending on what features have changed between the existing version and the updated version. To do so:
+
+
+When the PC is powering up, immediately initiate execution of the BIOS utility. For most systems, this is done by pressing the Delete key on the keyboard within the first 2 to 10 seconds of turning the computer. Some systems might use different keys such as F2, F10, CTRL, Enter, etc.
+If you don't know the keystroke sequence for entering the BIOS utility, watch the monitor to see if the computer displays it.
+To clear the BIOS settings, look for an option to "Restore Defaults" or "Load Fail-Safe Defaults". This may be on the main page of the BIOS utility or on the last page of a tabbed menu. Use the arrow keys to navigate, and follow the on-screen instructions. When complete, save the settings and exit the BIOS utility.
+ If you know the settings you want, change them now. If you have never changed BIOS settings before, it is not required to do so. Most PCs will function just fine using the default BIOS settings.
+

@@ -1,0 +1,312 @@
+
+
+The main issue of trying to get a customized KDE Kubuntu based distribution is dealing with many of the hidden default settings in Kubuntu to begin with. Ideally it would be much easier to have a base KDE install where those defaults are not present. Fortunately there is a way to do this using the Ubuntu Repositories.;
+, However, whether you use the Live CD, or the Alternate Install CD you are going to end up with the default setting we don't want.
+In order to avoid getting those configuration files installed one needs to do the installation through another method. That method is to simply use the Ubuntu Server Edition CD instead. The server Edition does not install the X-Server and therefore does not install a GUI. Because of this we can install KDE clean and without the messy Kubuntu default settings.
+Download the Ubuntu Server Edition ISO file and create the CD from the image. On the selected machine install the Ubuntu Server. When asked what additional services you wish to install do not select any. This will install only the core Ubuntu components and base files on the system.
+, However, it has to be done correctly or we may as well have used the Kubuntu CDs. Since we only have a command line at this point we will have to utilize it. Login and at the prompt and type the following command EXACTLY as I have it here;
+
+sudo apt-get install x org kdm kde-core pmount synaptic -y
+
+
+After the installation completes run the following command
+
+sudo shutdown -r now
+
+
+
+, The current installation is extremely minimal and would require a great amount of time to go through and individually find all the correct packages needed. So I have used Synaptic to create a recovery file of all the software you need for your core install system.
+Click Reload in Synaptic to update the apt sources.
+In Synaptic go to File >> Read Markings >> browse to the file BaseBuild that was included in the archive along with this file.
+Click Apply
+
+, Since we used the server edition for the base install we have the server kernel. As we are either building a Desktop System, or a Demonstration System (as is the case with me) we certainly don't need the server kernel.
+The core packages file installed the 2.4.26-18-generic kernel packages (latest at time of this how to) so use synaptic to remove all of the old 2.4.6-xx-server kernel packages on your machine. (Use Completely Remove option to purge them.)
+
+, This will allow you to have a clean base install to work from if you want to create different types of Kubuntu Based Distributions.
+At this point I am going to let you play on your own. We are going to install the software packages we want to be included on our CD/DVD ISO image. It is completely your choice of what to install. You know what you want to have on your live CD/DVD. There is one important note about what you install though. DO NOT INSTALL ANY PACKAGE THAT WILL SETUP THE KUBUNTU DEFAULTS. If you do then the rest of this How To will become useless for use as I am basing it on a build that is free of these default settings.
+Final word of warning, be careful on what you include in your customized distribution. Especially if you include non-open source packages. Some of these by their license must be installed separately by the end user. Also note, even including some open source packages may prove an issue because of some legal restrictions. If you are not sure about some things research, ask in a forum, ask those who also make distributions, etcetera. Do not land yourself in hot water for illegal distribution of software.
+Finally to assist you here is a copy of my sources.list file:
+
+deb cdrom:/ hardy main restricted
+
+See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to newer versions of the distribution.
+
+
+deb http://us.archive.ubuntu.com/ubuntu/ hardy main restricted
+deb-src http://us.archive.ubuntu.com/ubuntu/ hardy main restricted
+
+Major bug fix updates produced after the final release of the distribution.
+
+
+deb http://us.archive.ubuntu.com/ubuntu/ hardy-updates main restricted
+deb-src http://us.archive.ubuntu.com/ubuntu/ hardy-updates main restricted
+
+N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free licence. Please satisfy yourself as to your rights to use the software. Also, please note that software in universe WILL NOT receive any review or updates from the Ubuntu security team.
+
+
+deb http://us.archive.ubuntu.com/ubuntu/ hardy universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ hardy universe
+deb http://us.archive.ubuntu.com/ubuntu/ hardy-updates universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ hardy-updates universe
+
+N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu team, and may not be under a free licence. Please satisfy yourself as to your rights to use the software. Also, please note that software in multiverse WILL NOT receive any review or updates from the Ubuntu security team.
+
+
+deb http://us.archive.ubuntu.com/ubuntu/ hardy multiverse
+deb-src http://us.archive.ubuntu.com/ubuntu/ hardy multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ hardy-updates multiverse
+deb-src http://us.archive.ubuntu.com/ubuntu/ hardy-updates multiverse
+Uncomment the following two lines to add software from the 'backports' repository.
+
+N.B. software from this repository may not have been tested as extensively as that contained in the main release, although it includes newer versions of some applications which may provide useful features. Also, please note that software in backports WILL NOT receive any review or updates from the Ubuntu security team.
+
+
+deb http://us.archive.ubuntu.com/ubuntu/ hardy-backports main restricted universe multiverse
+deb-src http://us.archive.ubuntu.com/ubuntu/ hardy-backports main restricted universe multiverse
+Uncomment the following two lines to add software from Canonical's 'partner' repository. This software is not part of Ubuntu, but is offered by Canonical and the respective vendors as a service to Ubuntu users.
+deb http://archive.canonical.com/ubuntu/ hardy partner
+deb-src http://archive.canonical.com/ubuntu/ hardy partner
+deb http://security.ubuntu.com/ubuntu/ hardy-security main restricted
+deb-src http://security.ubuntu.com/ubuntu/ hardy-security main restricted
+deb http://security.ubuntu.com/ubuntu/ hardy-security universe
+deb-src http://security.ubuntu.com/ubuntu/ hardy-security universe
+deb http://security.ubuntu.com/ubuntu/ hardy-security multiverse
+deb-src http://security.ubuntu.com/ubuntu/ hardy-security multiverse
+Linux Mint Elyssa Repositories
+
+deb deb-src deb deb-src deb deb-src Medibuntu
+Bleeding Edge Wine Packages
+GPG Add Key Command: wget -q
+deb
+deb-src
+Remastersys
+There is a known problem in Hardy Heron, Kaffeine is broken and will not function fully. It is best to not include it until it is fixed. If you have it installed you should purge all kaffeine files from your system or you will have issues. (This will be updated when kaffeine is fixed)
+
+
+
+, You will also need a test account to see how things come together as you do them. Test often (you should test each time you make a change to the default desk configuration) and make sure everything is coming together as you planned. Each time you make a change use 'Krusader' or some other File manager in root mode and clean out the entire home folder (including the hidden folders, especially) of your test account. When you do that it will repopulate with new default folders and when you log into it will be as if you logged in for the first time. The reasoning and purpose of this is so we can see what a new user will experience when they use the Live CD/DVD for the first time. Since our global settings will only affect a new user we must make KDE think your test account has never been logged into before each time we use it.
+Your initial desktop should look nothing like a standard Kubuntu desktop. Which is good because we can now modify it in any manner we choose. The following steps will take you from this to your final layout step by step. In some cases I will tell you to hand edit the files and in others I will have you use the Kiosk Admin Tool. There are some cases where you can use either method, and I will mention that. However, based on my experiences while putting this How To together I will emphasize what I feel is the better method of the two.
+ Make sure all panel applets you wish to use are also installed.
+Most everything we want to do with the kicker panel needs to be done via the Kiosk Admin Tool. The final part of this step will require the hand editing of a file. You will see and understand why when we get to that.
+Start by opening the Kiosk Admin Tool. You will find it under 'System' in the programs section of the KDE Menu.
+The default profile should be the only one listed and highlighted. Click on 'Setup Profile' to start. Then click 'Panel' you will get a notice click 'OK' to continue. Click 'Setup Panel' to begin configuring the Global default settings of the kicker panel. Just as if you were on your own desktop right click on kicker to bring up the options. Start with 'Configure Panel' Here you can set the panel looks and operations. When you are all done setting up the panel use the 'Add Applet to Panel” to select what Applets you want starting up and arrange them on the panel where you want. Go back to 'Configure Panel' to make any final adjustments. When done with that click on 'Save' in Kiosk Admin Tool to save your changes. Now use the following command to do a bit of hand editing to your default settings;
+kdesu kate /etc/kde-profile/default/share/config/kickerrc
+Look at the line labeled Untrusted Applets= and see what's listed there. If any applet you have previously selected is listed there then remove it from this line.
+ First make sure that you have installed the cursor theme you wish to use as the default.
+The following information is from Debian Admin
+If you want to change the default cursor theme first you need to install one of the available cursor themes
+
+crystalcursors
+dmz-cursor-theme
+xcursor-themes
+comixcursors
+Chameleon-custor-theme
+Big-cursor
+For example i am installing crystal cursors
+aptitude install crystalcursors
+
+
+This will complete the installation.
+Now you need to run the update-alternative to set/change the current cursor-theme, when prompted give the number of the theme and press enter.
+sudo update-alternatives --config x-cursor-theme
+There are 24 alternatives which provide `x-cursor-theme’.
+Selection Alternative
+
+/etc/X11/cursors/core.theme
+/etc/X11/cursors/redglass.theme
+/etc/X11/cursors/whiteglass.theme
+/etc/X11/cursors/handhelds.theme
++ 5 /etc/X11/cursors/crystalblue_classic.theme
+/etc/X11/cursors/crystalblue_nonanim.theme
+/etc/X11/cursors/crystalblueleft.theme
+/etc/X11/cursors/crystalblueleft_classic.theme
+/etc/X11/cursors/crystalblueleft_nonanim.theme
+/etc/X11/cursors/crystalgray.theme
+/etc/X11/cursors/crystalgray_nonanim.theme
+/etc/X11/cursors/crystalgrayleft.theme
+/etc/X11/cursors/crystalgrayleft_nonanim.theme
+/etc/X11/cursors/crystalgreen.theme
+/etc/X11/cursors/crystalgreen_classic.theme
+/etc/X11/cursors/crystalgreen_nonanim.theme
+/etc/X11/cursors/crystalgreenleft.theme
+/etc/X11/cursors/crystalgreenleft_classic.theme
+/etc/X11/cursors/crystalgreenleft_nonanim.theme
+/etc/X11/cursors/crystalwhite.theme
+/etc/X11/cursors/crystalwhite_nonanim.theme
+22 /etc/X11/cursors/crystalwhiteleft.theme
+/etc/X11/cursors/crystalwhiteleft_nonanim.theme
+/etc/X11/cursors/crystalblue.theme
+
+
+Press enter to keep the default, or type selection number: 23
+Using ‘/etc/X11/cursors/crystalwhiteleft_nonanim.theme’ to provide ‘x-cursor-theme’
+
+, This will create the file structure the default profile will use to set the default settings. Using Krusader (or some other file manager) in root mode copy the files from your working desktop directory to /etc/kde-profile/default/share/apps/kdedesktop (or kdesktop)/Desktop/
+If you want functional Icons for System, Home and Trash then simply cut and past each of the following into new text files on your desktop to create them. Each one should have its own file and it should be named appropriately:
+
+Comment=Home Folder
+Encoding=UTF-8
+Icon=folder_home
+Name=Home
+Type=Link
+URL=system:/home
+-----------------------------------
+Comment=Contains removed files
+EmptyIcon=trashcan_empty
+Encoding=UTF-8
+Icon=trashcan_full
+Name=Trash
+Type=Link
+URL=trash:/
+-------------------------------------
+Comment=System Folder
+Encoding=UTF-8
+Icon=system
+Name=System
+Type=Link
+URL=system:/
+
+
+Once the above files are created then copy them to the Before mentioned directory. Once copied all new (first time) users will get the Icons for System, Home and Trash on their desktop.
+NOTE: I recommend you at least put the Trash Icon on new desktops.
+ Enter the following into the dialog box:
+
+kdesu kedit /etc/kde-profile/defaults/share/config/kdeglobals
+
+Just above the section add the following:
+Theme=name of the Icon Theme you wish to use
+In my case the entry looks like this
+Theme=oxygen
+
+
+
+
+All new users I setup on my system will now default to the Oxygen Icon Theme set for KDE3 when they first login.
+, It will allow to bring up the theme dialog. Whether you create your own color scheme or use an existing one use of the Kiosk Admin Tool is safest and most efficient way to import or select the color default and theme. Same with Style and Windows Decorations. Once you have setup the decorations, style and color themes click on save and exit .Kiosk Admin Tool. Test and see all your work come together in the test account.
+ To do so use the following command:
+
+kdesu kate /etc/kde-profile/default/share/config/ksplashrc
+
+
+Simply put in the following two lines:
+
+Theme=name of ksplash theme
+
+
+Save the file.
+ Since its easier to replace it than to fix it I am including a copy of my kdmrc file in this package. Simply take my kdmrc and as root copy it to /etc/kde3/kdm and over write the current kdmrc file. Then edit the file by hand:
+kdesu kate /etc/kde3/kdm/kdmrc
+Look for the line Theme= and place the path to and the name of the KDM theme there. You will be glad to know you will be able to use the KDM theme manager after that. Because the KDM theme setting is global that's all you need to do.
+ In Kcontrol under 'System Administration' select 'Login Manager'. Click on 'Administrator Mode' and then enter your password. Click the 'Background' tab and select the background you want displayed. I personally like to choose the same background as the one in my default settings. You can choose whatever you want of course.
+ Use the following command to do so:
+
+kdesu kate /etc/kde-profile/default/share/config/knotify.eventsrc
+
+
+I suggest you cut and past the following into it:
+
+presentation=1
+soundfile=/usr/share/sounds/KDE_Logout_new.wav
+presentation=1
+soundfile=/usr/share/sounds/KDE_Startup_new.wav
+
+
+Now lets look at this one a bit. It took me awhile to figure this out. Unlike other configuration settings this is not a simple if else function, where if the user has settings use them else use default. In other words this works very differently from the other configurations and we need to know what is happening.
+Lets look at the knotify.eventsrc file in my home directory here:
+
+commandline=
+logfile=
+presentation=1
+soundfile=
+commandline=
+logfile=
+presentation=1
+soundfile=
+commandline=
+logfile=
+presentation=1
+soundfile=
+commandline=
+logfile=
+presentation=1
+soundfile=
+commandline=
+logfile=
+presentation=16
+soundfile=
+commandline=
+logfile=
+presentation=0
+soundfile=
+commandline=
+logfile=
+presentation=2
+soundfile=
+commandline=
+logfile=
+presentation=1
+soundfile=KDE_Logout_3.ogg
+commandline=
+logfile=
+presentation=2
+soundfile=
+commandline=
+logfile=
+commandline=
+logfile=
+presentation=65
+soundfile=KDE_Chimes_2.ogg
+commandline=
+logfile=
+presentation=1
+soundfile=KDE_Error_1.ogg
+commandline=
+logfile=
+presentation=65
+soundfile=KDE_Vox_Ahem.ogg
+commandline=
+logfile=
+presentation=1
+soundfile=KDE_Beep.ogg
+commandline=
+logfile=
+presentation=2
+soundfile=
+commandline=
+logfile=
+commandline=
+logfile=
+presentation=2
+soundfile=
+Now lets look at Kubuntu's default knotify.eventsrc file that sets their default sounds.
+presentation=65
+soundfile=/usr/share/sounds/KDE_Error_1.ogg
+presentation=1
+soundfile=/usr/share/sounds/kubuntu-login.ogg
+Carefully look at the user file then look at the default file. You will notice that the lines in the default file fill in the missing lines from the user's file. For example The KDE startup sound is defined in our default file but the lines in the default file do not exist in the users file.
+This is a typical entry for an event sound in the users file:
+<< Name of Event
+commandline=
+logfile=
+presentation=2
+soundfile=<<path and name of soundfile
+If we have a defined default sound then last two lines are removed and those lines are read from the default file making this an if then process. If the presentation and soundfile lines are not present in file <a> then read from file <b>. Which makes for a somewhat confusing scenario.
+Add to that any attempt to dig up actual documentation on the file enteries utterly failed. The only thing I could find out is if you set presentation=0 no sound will play for that event even if defined. So in other words I haven't a clue about the rest of the entries and I have no idea what effect the numbers under presentation= does. Though best guess is it's a time delay of some kind. Whatever means, well your guess is as good as mine on that.
+So with all that in mind if you decide to define default sounds then here is what I suggest you do to ensure they work. Use the presentation= number as defined from the file I took from my ~/.kde/share/config/ folder.
+In the file /etc/kde-profile/default/share/config/knotify.eventsrc make enteries like so:
+presentation=number as defined in the list
+soundfile=path/name to file
+Do this for each event you want to have a default sound for.
+ Now open a terminal and use the following command:
+sudo apt-get clean
+Close the terminal
+
+, In this case we want to make a distributable copy. However, we need to modify the Remastersys config files first.
+Select “Modify the remastersys config file to customize options” and click “OK”
+The only two you really need to concern yourself with are Title and Filename. Change those to what you want then return to the main menu.
+Select “Make a Distributable copy to share with friends” and click “OK”
+Remastersys will now build your ISO file. That file once made will be located in /home/remastersys/remastersys/filename.iso
+Burn your first CD or DVD and test it out.
+Here is how the desktop on my Live DVD came out:
+

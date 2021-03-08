@@ -1,0 +1,6 @@
+ And test it again. It is hard to debug JavaScript errors after the code is minified. The JavaScript becomes less recognizable due to removing whitespace and shortening variable names (just a few of the things minifying will do to your source code).;
+, This may help identify problems before your code is compressed and/or minified by pointing out common errors. There are some online analyzers like JSLint or JSHint.
+ The best thing is to try a variety of services and programs to see what works and what gives you the best compression ratio. Some of these tools are online such as JSCompress, Dean Edward's packer, Google Closure Compiler, or the YUI Compressor.
+ After you minify the source code you will want to put it into your project. Remember to keep the original code so you can make changes if (and when) a bug is found.
+ If you don't test your code, you're going to have a bad time. This is because minified code is significantly different from your original code. It is important to double-check that the functionality is exactly the same.
+

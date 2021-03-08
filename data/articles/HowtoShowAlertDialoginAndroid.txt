@@ -1,0 +1,321 @@
+ An AlertDialog is when the Android app uses the Android system to put up important information for a user to read.An AlertDialog can also be used to warn or ask the user to change an important setting. It will contain three components of the dialog box.
+
+
+A title is optional but can be useful to put in a simple message or question. This can also contain an icon
+The content area which can display a message, list or other custom layout functions.
+Action buttons that are used for the user to send a response to the AlertDialog box. Can be a positive button, a negative button or a neutral button. You can only have one of each type and up to three buttons on a given alert dialog.;
+, A class is a template that allows you to create other objects that have their own properties and behaviors. The AlertDialog class is a subclass of the Dialog class that features its own unique properties of being able to display up to three buttons in addition to a standard Dialog prompt.
+ What is the purpose of the AlertDialog box? What are the options going to be for the user? Is it possible that the user would ignore this process otherwise? Write down what the user will be prompted for and note their choices and what they do. If the writing seems unclear for the user, they may not understand the purpose of the AlertDialog box.
+ Draw what you want the AlertDialog box to look like. Write down the list the options you would like to implement and their resulting actions. Think carefully about what the user is being prompted for and ensure the writing does not create ambiguity.
+ A software development kit or SDK is used to develop software in a specialized environment for creating programs and applications. You can download SDK direct from the Android developer website., Even if you have an existing project, creating a project can be ideal if you want to create a testing environment before adding code to your main project. From the menu bar click on File>New>New Project… and follow the prompts to create a new application.
+ The AlertDialog will need to be brought up by an action performed by the user. You can edit the main layout of the app under the “activity_main.xml” file to provide a button to test the AlertDialog with. There are two ways to create a button. Switch between design and coding methods by clicking on either Design or Text which are located at the bottom of the main window pane to switch between the different modes.
+
+
+The Android SDK allows you to edit your layout such as the main front end which can be found in the project hierarchy under the Layout folder by using a drag and drop interface to create a button.
+You can also create a button in XML code yourself by editing the XML document. Note the line indicating the onClick action is used to execute the AlertDialog box when the button is clicked on.
+
+
+
+
+
+<Button
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="Test Alert Dialog"
+   android:id="@+id/buttonTest"
+   android:layout_alignParentTop="true"
+   android:layout_centerHorizontal="true"
+   android:layout_marginTop="77dp"
+   android:onClick="showDialog" />
+
+
+
+
+, This will be needed in order to access the class to create the AlertDialog prompt. The AlertDialog’s class provides the ability to create the Dialog box on screen, set it’s options, display titles and show contents within the Dialog window. To import the class, open the “MainActivity.java” file. Scroll to the top of the file and place this among the other classes being imported to the project.
+
+
+
+
+
+import android.app.AlertDialog;
+
+
+
+
+
+This class will be useful for your entire application. Be sure to add it to the top of your code hierarchy.
+ A button object help identify a push-button widget as seen in the XML code.In your main java code, “MainActivity.java” identify and initialize a button object in the beginning of your main method, which is the main class of your app.
+
+
+
+
+
+private Button buttonAlertDialog;
+buttonAlertDialog = (Button) findViewByID(R.id.buttonTest);
+
+
+
+
+, Using an OnClickListener, you will be able to anticipate when the user taps on the button to initiate an action. An OnClickListener is performed by listening for user input when they click on a corresponding button. We will use the listener to open our AlertDialog prompt.
+
+
+
+
+
+buttonAlertDialog.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View alertView) {
+});
+
+
+
+
+, Within the onClick function, you will need to create an AlertDialog object and provide it with a title, message and button types to use for your prompt.
+
+
+Create the alert dialog box object and set the builder to refer to the new object and create the box.
+
+
+
+
+
+AlertDialog alertDialog1 = new AlertDialog.Builder(MainActivity.this)
+
+
+
+
+, A setter function allows you to provide a variable to an object. This is ideal to avoid using global variables that can cause performance issues. A title is entirely optional, but you can set one to appear at the top of the AlertDialog window.
+
+
+
+
+
+alertDialog1.setTitle(“wikiHow Alert Example”);
+
+
+
+
+, Enter a message to describe what you want the user to answer.
+
+
+
+
+
+alertDialog1.setMessage(“Android is providing you a message to acknowledge.”);
+
+
+
+
+, Provide buttons for the user to use. You can use a combination of a positive button, a negative button and a neutral button. You can use any combination of the three types but can only use one of each for up to three buttons. Use the onClick functions to provide an action when the user clicks on one of the three buttons at the bottom of the AlertDialog prompt.
+
+
+
+
+
+alertDialog1.setPositiveButton("OK", new OnClickListener()
+{
+   public void onClick(DialogInterface dialog, int which){
+}
+}).alertDialog1.setNegativeButton("OK", new OnClickListener()
+{
+   public void onClick(DialogInterface dialog, int which){
+}
+}).alertDialog1.setNeutralButton("OK", new OnClickListener()
+{
+   public void onClick(DialogInterface dialog, int which){
+}
+});
+
+
+
+
+, You can provide a cancel function to the back key on the Android device itself without tapping one of the buttons as well. If it is set to false, the back button on the Android device is ignored.alertDialog1.setCancelable(true);
+
+
+
+
+, Use this to create the AlertDialog object. This will need to be done before showing the AlertDialog on screen.
+
+
+
+
+
+alertDialog1.create();
+
+
+
+
+, Once the object is created, use this action to show the AlertDialog on screen.
+
+
+
+
+
+alertDialog1.show();
+
+
+
+
+, You can use one of three different types of lists you can use. Instead of using the setMessage function, use a list if you want to provide multiple choice answers. Your list will need to have an array created independently to list the different available options. The list will use an array to display the different available options.
+
+
+
+
+
+final CharSequence[] items = {"Edit", "Rate", "Share", "Related"};
+
+
+
+
+, Use setItems to provide a list of options to choose from. This will appear as a list of radio buttons to check. The function will require an array of options to choose from and an onClickListener to represent the user’s input.
+
+
+
+
+
+dialog.setItems(items, new DialogInterface.OnClickListener() {
+   public void onClick(DialogInterface dialog, int item) {
+       //Place resulting actions in this function
+       //The Item integer variable is the index position of the selected item
+   }
+});
+
+
+
+
+, Use setMultiChoiceItems if you want the user to be able to select several options. Their options will be shown in checkboxes when used.
+
+
+
+
+
+dialog.setMultiChoiceItems(items, null, new DialogInterface.OnMultiChoiceClickListener() 
+{
+   public void onClick(DialogInterface dialog, int item, boolean isChecked)     
+   {
+         if(isChecked)
+                //If there are checked items
+       //Item is the index position of the selected item
+   }
+});
+
+
+
+
+, Use setSingleChoiceItems if you want the user’s singular choice to be persistent. Their options appear with radio buttons which appear as circles with dots inside of a selected choice.
+
+
+
+
+
+dialog.setSingleChoiceItems(items, -1, new DialogInterface.OnMultiChoiceClickListener() 
+{
+   public void onClick(DialogInterface dialog, int item)     
+   {
+         if(isChecked)
+                //If there are checked items
+       //Item is the index position of the selected item
+   }
+});
+
+
+
+
+, A custom AlertDialog allows you to create a layout featuring it’s own parameters and can obtain information that can be used to obtain a user’s login information, configuration settings and more. You can create a new layout that will be created in XML coding format. Some Android SDK provide the ability to use a drag-and-drop function to easily create a layout that will auto-convert into XML for you. From the menu bar at the top of the window, click on File>New>XML>Layout XML File. Provide a layout file name then click on Finish. Your new layout will appear in the main window pane.
+ You can add in components using one of two methods. You can open the layout file from looking in the project hierarchy shown on the left hand side. Then open the following folder paths: “<AppName>>app>src>main>res>layout”
+
+, A new class will allow you to separate the code for your unique alert layout. Click on File>New>Java Class. Type in a name for your new Java class then click on OK. For this example, we will call this example class “CustomDialogExample.”
+
+, The Dialog Fragment allows for maximum compatibility with the different versions of Android OS. import android.support.v4.app.DialogFragment;
+
+
+Make sure the main class method extends to the DialogFragment.
+
+
+
+
+
+
+public class CustomDialogExample extends DialogFragment
+
+
+
+
+, A Layout Inflater instantiates a layout XML file into view objects.A View object is the basic structure for user interface components in a rectangular screen space and draws objects and widgets on screen.LayoutInflater inflater;
+View customView;
+
+
+
+
+, We will need for it to be public so that it can be accessed elsewhere in the application and it will return a Dialog object. It will take in a Bundle object
+
+
+
+
+
+public Dialog onCreateDialog(Bundle savedInstanceState){
+}
+
+
+
+
+, With the LayoutInflater and View objects created, inflate the layout and obtain the custom layout onto the View object from within the onCreateDialog function.
+
+
+
+
+
+inflater = getActivity().getLayoutInflater();
+customView = inflater.inflate(R.layout.dialog_custom_background, null);
+
+
+
+
+, In the onCreateDialog function, use the AlertDialog builder to create the layout.
+
+
+
+AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());}}
+
+
+
+You may wish to add in a button to close the AlertDialog.
+
+
+
+
+
+builder.setView(customView).setPositiveButton("OK", new OnClickListener()
+{
+   public void onClick(DialogInterface dialog, int which){}
+});
+
+
+
+
+, Because we are not in the main focus of the application, we will end the onCreateDialog function by returning with our new AlertDialog.
+
+
+
+
+
+return builder.create();
+
+
+
+
+, You will need to call upon your function from elsewhere, such as the main method of your application. For this example, we will call this public function customAlertDialogExample which will take in a View object.
+
+
+
+
+
+public void customAlertDialogExample(View customView)
+{
+CustomDialogExample dialog = new CustomDialogExample();
+dialog.show(getSupportFragmentManager(), “MyCustomAlertDialog”);
+}
+
+
+
+

@@ -1,0 +1,11 @@
+
+Since a cellular automaton produces visual phenomena, you will need to use a programming language in which you know how to render graphics to the screen.
+Assuming that you have a programming language in which you know how to create simple graphics, the first task is to understand what a cellular automaton looks like and how it evolves over time.
+That's basically all the Game of Life is - just a 2D grid of cells.
+To draw this grid to the screen, you need a double-nested loop which reads each cell, calculating each position depending on its place in the grid.You will then need a loop which constantly reads the cells and generates the next generation from them using the Game of Life's rules.
+The rules of the Game of Life are as follows:
+
+If a cell (whether ON or OFF) has exactly 2 or 3 ON cells in the 8 cells surrounding it, then that cell becomes (or remains) ON.After the new generation has been created, it should replace the old one and become the current generation.
+Now the process repeats: clear the screen, redraw the grid, calculate the next generation as described above.
+That's it!,
+Once you've got it working and have had fun watching it, you might want to try making your own rules.

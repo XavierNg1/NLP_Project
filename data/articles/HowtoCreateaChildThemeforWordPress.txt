@@ -1,0 +1,7 @@
+ First, access your files where they are hosted (on the server) instead of from the admin panel. Make your way to the Themes folder, click, and you should see the directories of all themes that are installed. Create a new directory here and title the new directory "my theme-child". Insert the name of your theme in place of "my theme". Thus, if you are using kippis theme, it would be kippis-child.;
+, It's a fact that the only file you need to officially create a child theme is a CSS file. Under the directory you just created, make a new file called style.css. Copy and paste the code shown in the image inside it.
+ Don't forget to save!
+
+, Log onto your admin area and go to Administration Panels -> Appearance -> Themes. You will see your child theme listed there. Click to activate.
+ When you need to make changes, copy the entire file (like functions.php and content.php) over to your new child theme. Now you can remove footer links and edit anything else safely.
+

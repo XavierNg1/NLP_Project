@@ -1,0 +1,163 @@
+ Bra-ket notation is widely used in quantum mechanics and can take some getting used to. 
+
+A state is denoted by a ket vector |ψ⟩.{\displaystyle |\psi \rangle .} In order to denote useful information, we need a basis with which to work with. Typically, we will set the z{\displaystyle z} axis as a basis for states that we will work with in this article, much like how we can choose Cartesian coordinates to represent the components of linear momentum or an electric field. Other bases can be chosen as well - for example, the x{\displaystyle x} axis can just as easily be a basis for which we describe the state |ψ⟩.{\displaystyle |\psi \rangle .}
+
+In the z{\displaystyle z} basis, the state can be written as follows. 
+
+
+|ψ⟩=c+|↑z⟩+c−|↓z⟩{\displaystyle |\psi \rangle =c_{+}|\uparrow _{z}\rangle +c_{-}|\downarrow _{z}\rangle }
+
+
+
+As we can see, |ψ⟩{\displaystyle |\psi \rangle } is written in the z{\displaystyle z} basis consisting of the up and down states. These basis elements form a complete set, so that these two basis elements are all that is needed to describe the particle's spin in the z{\displaystyle z} direction. The constants in front of the kets are called probability amplitudes and are in general complex numbers. The vector space that describes spin-1/2 particles (and particles in quantum mechanics in general) is called a Hilbert space, which is basically a glorified Euclidean space. 
+
+Classically, a particle should always be in a definitive state - either spin up or spin down. As we will see, this is not necessarily the case in quantum mechanics - a particle can be in a superposition of two states at the same time!
+;
+,
+
+The most basic operation done is the inner product (the dot product is an inner product). The inner product ⟨ϕ|ψ⟩{\displaystyle \langle \phi |\psi \rangle } is described by the ket |ψ⟩{\displaystyle |\psi \rangle } being acted upon by the bra vector ⟨ϕ|.{\displaystyle \langle \phi |.} As you may know, inner products return a scalar as a result. The physical significance of the inner product is that it describes the probability amplitude for the particle initially in the state |ψ⟩{\displaystyle |\psi \rangle } to be found in the state |ϕ⟩.{\displaystyle |\phi \rangle .}
+
+Using our knowledge of the inner product, we can now write the state |ψ⟩{\displaystyle |\psi \rangle } in terms of inner products. Remember that when a bra meets a ket, they form a bracket (inner product) and are consequently just numbers. 
+
+
+|ψ⟩=|↑z⟩⟨↑z|ψ⟩+|↓z⟩⟨↓z|ψ⟩{\displaystyle |\psi \rangle =|\uparrow _{z}\rangle \langle \uparrow _{z}|\psi \rangle +|\downarrow _{z}\rangle \langle \downarrow _{z}|\psi \rangle }
+
+
+
+
+,
+
+Since the basis elements are orthonormal, the inner product of the up state with the down state is 0 (and vice versa). 
+
+
+⟨↓z|↑z⟩=⟨↑z|↓z⟩=0{\displaystyle \langle \downarrow _{z}|\uparrow _{z}\rangle =\langle \uparrow _{z}|\downarrow _{z}\rangle =0}
+
+
+
+In contrast, the inner product of a basis vector with itself is 1, as determined by our normalization condition.
+
+
+⟨↑z|↑z⟩=⟨↓z|↓z⟩=1{\displaystyle \langle \uparrow _{z}|\uparrow _{z}\rangle =\langle \downarrow _{z}|\downarrow _{z}\rangle =1}
+
+
+
+Our basis elements |↑z⟩{\displaystyle |\uparrow _{z}\rangle } and |↓z⟩{\displaystyle |\downarrow _{z}\rangle } were chosen so that they are orthonormal. If we were to start with a particle in the up state and measure the spin, there would be no chance that we would find the particle in the down state, and vice versa. However, we would find that there is a 100% chance that a particle in the up state is measured to be in the up state. 
+
+Since the state is normalized, we expect that the inner product of the state with itself is also 1. 
+
+
+⟨ψ|ψ⟩=1{\displaystyle \langle \psi |\psi \rangle =1}
+
+
+
+
+, We know that every observable must have a real value, but we just said that the amplitudes are generally complex numbers. In order to find the actual probability, we take the modulus squared of the inner product.
+
+The probability that an arbitrary state |ψ⟩{\displaystyle |\psi \rangle } can be found in the up state is denoted by |⟨↑z|ψ⟩|2.{\displaystyle |\langle \uparrow _{z}|\psi \rangle |^{2}.} Since the amplitude may be complex, the modulus squared is the amplitude multiplied by its complex conjugate. We denote conjugates by the ∗{\displaystyle *} symbol.
+
+
+|⟨↑z|ψ⟩|2=⟨↑z|ψ⟩∗⟨↑z|ψ⟩{\displaystyle |\langle \uparrow _{z}|\psi \rangle |^{2}=\langle \uparrow _{z}|\psi \rangle ^{*}\langle \uparrow _{z}|\psi \rangle }
+
+
+
+
+,
+
+
+|ψ⟩=i3|↑z⟩+23|↓z⟩{\displaystyle |\psi \rangle ={\frac {i}{\sqrt {3}}}|\uparrow _{z}\rangle +{\sqrt {\frac {2}{3}}}|\downarrow _{z}\rangle }
+
+
+, To find the probability amplitude for the particle to be found in the up state, we take the inner product for the up state and the down state.
+
+
+⟨↑z|ψ⟩=i3⟨↑z|↑z⟩+23⟨↑z|↓z⟩=i3{\displaystyle \langle \uparrow _{z}|\psi \rangle ={\frac {i}{\sqrt {3}}}\langle \uparrow _{z}|\uparrow _{z}\rangle +{\sqrt {\frac {2}{3}}}\langle \uparrow _{z}|\downarrow _{z}\rangle ={\frac {i}{\sqrt {3}}}}
+
+
+⟨↓z|ψ⟩=i3⟨↓z|↑z⟩+23⟨↓z|↓z⟩=23{\displaystyle \langle \downarrow _{z}|\psi \rangle ={\frac {i}{\sqrt {3}}}\langle \downarrow _{z}|\uparrow _{z}\rangle +{\sqrt {\frac {2}{3}}}\langle \downarrow _{z}|\downarrow _{z}\rangle ={\sqrt {\frac {2}{3}}}}
+
+
+, The probability is the modulus squared. Remember that the modulus squared means to multiply the amplitude with its complex conjugate.
+
+
+|⟨↑z|ψ⟩|2=−i3i3=13{\displaystyle |\langle \uparrow _{z}|\psi \rangle |^{2}={\frac {-i}{\sqrt {3}}}{\frac {i}{\sqrt {3}}}={\frac {1}{3}}}
+
+
+|⟨↓z|ψ⟩|2=2323=23{\displaystyle |\langle \downarrow _{z}|\psi \rangle |^{2}={\sqrt {\frac {2}{3}}}{\sqrt {\frac {2}{3}}}={\frac {2}{3}}}
+
+
+, We can clearly see that these probabilities sum to 1, so our given state is normalized.
+
+
+|⟨↑z|ψ⟩|2+|⟨↓z|ψ⟩|2=13+23=1{\displaystyle |\langle \uparrow _{z}|\psi \rangle |^{2}+|\langle \downarrow _{z}|\psi \rangle |^{2}={\frac {1}{3}}+{\frac {2}{3}}=1}
+
+
+,
+
+We first recall the arbitrary state written in terms of the z{\displaystyle z} basis.
+
+
+|ψ⟩=|↑z⟩⟨↑z|ψ⟩+|↓z⟩⟨↓z|ψ⟩{\displaystyle |\psi \rangle =|\uparrow _{z}\rangle \langle \uparrow _{z}|\psi \rangle +|\downarrow _{z}\rangle \langle \downarrow _{z}|\psi \rangle }
+
+
+
+The state |ψ⟩{\displaystyle |\psi \rangle } can be written in terms of a column vector. Recall that a classical vector such as linear momentum can be written as p=(px,py,pz),{\displaystyle {\mathbf {p} }=(p_{x},p_{y},p_{z}),} where we have abandoned the unit vectors. The vector can then be written as a column vector. However, we need to first establish a basis. Our basis for the linear momentum vector is obvious from the subscripts, indicating Cartesian coordinates. However, when writing the state for the spin angular momentum of a particle, we must first understand which basis we are writing the state in. Any basis is fine - the state does not change with a change in coordinates - but the representation does change. 
+
+We can write our arbitrary state as the following, where the inner products have made it clear that we are expressing the state in the z{\displaystyle z} basis. As with writing out the state explicitly in part 1, we could've just as easily written the state in the x{\displaystyle x} basis, or any other direction. 
+
+
+|ψ⟩→(⟨↑z|ψ⟩⟨↓z|ψ⟩){\displaystyle |\psi \rangle \to {\begin{pmatrix}\langle \uparrow _{z}|\psi \rangle \\\langle \downarrow _{z}|\psi \rangle \end{pmatrix}}}
+
+
+
+
+, Notice how simple the vectors are.
+
+
+|↑z⟩=(⟨↑z|↑z⟩⟨↓z|↑z⟩)=(10){\displaystyle |\uparrow _{z}\rangle ={\begin{pmatrix}\langle \uparrow _{z}|\uparrow _{z}\rangle \\\langle \downarrow _{z}|\uparrow _{z}\rangle \end{pmatrix}}={\begin{pmatrix}1\\0\end{pmatrix}}}
+
+
+|↓z⟩=(⟨↑z|↓z⟩⟨↓z|↓z⟩)=(01){\displaystyle |\downarrow _{z}\rangle ={\begin{pmatrix}\langle \uparrow _{z}|\downarrow _{z}\rangle \\\langle \downarrow _{z}|\downarrow _{z}\rangle \end{pmatrix}}={\begin{pmatrix}0\\1\end{pmatrix}}}
+
+
+, In bra-ket notation, the inner product is linear in the second argument - that is, the ket vector, while it is antilinear (conjugate-linear) in the first argument - that is, the bra vector. Therefore, when writing the corresponding bra, we must take the transpose and take the complex conjugate of all the elements in the vector. 
+
+
+⟨ψ|=(⟨ψ|↑z⟩⟨ψ|↓z⟩)=(⟨↑z|ψ⟩∗⟨↓z|ψ⟩∗){\displaystyle \langle \psi |={\begin{pmatrix}\langle \psi |\uparrow _{z}\rangle &\langle \psi |\downarrow _{z}\rangle \end{pmatrix}}={\begin{pmatrix}\langle \uparrow _{z}|\psi \rangle ^{*}&\langle \downarrow _{z}|\psi \rangle ^{*}\end{pmatrix}}}
+
+
+, Inner products consist of two vectors and output a scalar, so when two combine, the usual rules of matrix multiplication apply. 
+
+Let's take the inner product of the state with itself. We see that the formulation of matrix mechanics is consistent with our expectations.
+
+
+⟨ψ|ψ⟩=(⟨↑z|ψ⟩∗⟨↓z|ψ⟩∗)(⟨↑z|ψ⟩⟨↓z|ψ⟩)=⟨↑z|ψ⟩∗⟨↑z|ψ⟩+⟨↓z|ψ⟩∗⟨↓z|ψ⟩=|⟨↑z|ψ⟩|2+|⟨↓z|ψ⟩|2=1{\displaystyle {\begin{aligned}\langle \psi |\psi \rangle &={\begin{pmatrix}\langle \uparrow _{z}|\psi \rangle ^{*}&\langle \downarrow _{z}|\psi \rangle ^{*}\end{pmatrix}}{\begin{pmatrix}\langle \uparrow _{z}|\psi \rangle \\\langle \downarrow _{z}|\psi \rangle \end{pmatrix}}\\&=\langle \uparrow _{z}|\psi \rangle ^{*}\langle \uparrow _{z}|\psi \rangle +\langle \downarrow _{z}|\psi \rangle ^{*}\langle \downarrow _{z}|\psi \rangle \\&=|\langle \uparrow _{z}|\psi \rangle |^{2}+|\langle \downarrow _{z}|\psi \rangle |^{2}=1\end{aligned}}}
+
+
+
+
+, 
+
+Rewrite the state in the z{\displaystyle z} basis as a column vector.
+
+
+|ψ⟩=13(i2){\displaystyle |\psi \rangle ={\frac {1}{\sqrt {3}}}{\begin{pmatrix}i\\{\sqrt {2}}\end{pmatrix}}}
+
+
+
+Calculate the amplitudes.
+
+
+⟨↑z|ψ⟩=(10)13(i2)=i3{\displaystyle \langle \uparrow _{z}|\psi \rangle ={\begin{pmatrix}1&0\end{pmatrix}}{\frac {1}{\sqrt {3}}}{\begin{pmatrix}i\\{\sqrt {2}}\end{pmatrix}}={\frac {i}{\sqrt {3}}}}
+
+
+⟨↓z|ψ⟩=(01)13(i2)=23{\displaystyle \langle \downarrow _{z}|\psi \rangle ={\begin{pmatrix}0&1\end{pmatrix}}{\frac {1}{\sqrt {3}}}{\begin{pmatrix}i\\{\sqrt {2}}\end{pmatrix}}={\sqrt {\frac {2}{3}}}}
+
+
+
+Since these were the same inner products as found last time, it follows that the probabilities will be the same. 
+
+Although we never actually use any matrices in this article, it turns out that they are crucial to matrix mechanics, as they represent operators. For example, when the spin angular momentum operator S^z{\displaystyle {\hat {S}}_{z}} acts on an eigenstate of the operator, the result is the eigenstate times the eigenvalue corresponding to that eigenstate. The eigenvalue is the quantity actually observed in the lab, while the very act of applying an operator corresponds to a measurement made by a detector.
+
+When just calculating probabilities, there is no advantage in using matrix mechanics over directly taking the inner products. However, when dealing with additional topics such as expectation values, uncertainties, and eigenstates/eigenvalue problems, matrices must be used for clarity and simplicity. 
+
+

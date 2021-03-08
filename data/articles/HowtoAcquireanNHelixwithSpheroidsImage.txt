@@ -1,0 +1,95 @@
+ Otherwise, open a new Excel workbook and create 3 worksheets (except Chart if you are using Chart Wizard): Data, Chart and Saves. The following article then is a copy, with modifications, of *How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border, since both workbooks derive from the same workbook, "THE Garthwaite Curve".
+
+
+In Preferences General, set Use R1C1 checkbox to off.
+Under View, set show row and column headings to On or checked and show gridlines. Show scroll bars and sheet tabs and outline symbols and zero values. Show formula bar by default and show status bar. It is very important to show the formula bar.
+Under Ribbon, check everything except Hide Group Titles and Developer.;
+,,
+
+Into cell A1, type AjRows.
+Into cell B1, type GM (for Golden Mean).
+Into cell C1, type Factor1.
+Into D1, type KEY.
+Into cell E1, type Number. 
+
+, Into cell A2, input 2880 (as the number of adjusted rows in the data-set). In cell B2, input the formula "=-(1-sqrt(5))/2" (without quote marks). This is the Golden Mean or Ratio or Proportion, known since Euclid's time, such that a:b as b:(a+b), and is quadratic and has many special properties -- it's used because it maintains in proportion the square of a number to the number such that for the Pythagorean Theorem, a given Pythagorean triplet will grow in constant proportion to itself, and since the sine and cosine functions are Pythagorean functions, it applies to them as well. In cell C2, input .125 or "=1/8". Into cell D2, input w/o quotes "=IF(Spheroids<=24, Spheroids*VLOOKUP(Spheroids,LOOKER2,2)*2,Spheroids". Into cell E3, type 1.,
+
+Into cell A3, type Tip.
+Into cell B3, type Base.
+Into cell C3, type Spheroids.
+Into cell D3, type ShrinkExpand.
+Into cell E3, type PiDivisor.
+Into cell F3, type Thickness.
+Into cell G3, type ShrinkExpand2
+Into cell H3, type Variable.
+,
+
+Into cell A4, input "=Base*12/(VARIABLE*1)*PI()" -- the empty parentheses for pi are correct. Do Insert Name Define name as Tip for cell A4.
+Into B4, input 1712, which is 2^4 * 107 (where 2^4 means 2 raised to the power of 4).
+Into cell C4, type 120 for now -- the lookup table that is going to be prepared is set to take any number of spheroids up to 150.
+Into cell D4, type 2 for now. Setting up another plot column set of data with ShrinkExpand set to a different value will insert or surround one circle of spheroids with another one.
+Into cell E4, input 180. Differentiating this variable creates special effects.
+Into cell F4, type 2.
+Into cell G4, type 2.
+Into cell H4, type 1.
+ Do the same for cell range A4:G4 please., Generally, viewing 4 decimal places will inform one of the differences in the sine and cosine function results.,
+
+Into cell A5, type Base t.
+Into cell B5, type c.
+Into cell C5, type Cos (for cosine).
+Into cell D5, type Sin (for sine).
+Into cell E5, type Main X.
+Into cell F5, type Main Y.
+Into cell G5, type Second X.
+Into cell H5, type Second Y.
+
+
+MODIFIED Into cell B6, input the formula, "=(Base*24/Spheroids)". Into cell B7, type "=B6". Do Edit Go To cell range B7:B2886 and do Edit Fill Down.
+Into cell A6, input "=If(odd(Spheroids)=Spheroids,0,Tip)". This formula states that if the number of spheroids input is odd, result=0, else result=Tip (where Tip was defined above as 12*PI()*B4 or 1712, for a total of 64,540.8795). In the case of the result becoming 0, the column will decrement to twice Tip, negatively from 0. The number of spheroids charted will be odd, eg. 31.
+ The value in cell A2886 should be decremented to -64,540.8795 if spheroids is even (eg. at 32), else it will equal 2*-64,540.8795. Please see Note 6 in the Tips section regarding differentiating cells A7 and A6 because their formulas are different.,
+
+Do Edit Go To cell range C6:C2886 and input into cell C6 the formula, "=Thickness*Spheroids/KEY*(COS((ROW()-6)*Number*PI()/PiDivisor*Factor1))" (without the quotation marks, as always). Do Edit Fill Down. By taking the cosine of the cell 6 rows up from cell C6, we are taking the cosine of 0 to begin with, then in subsequent rows, take the cosine up to 360 and in cycles then to 2880+6. 2880/360=8. So there are 8 cycles. Number is a variable for getting partial circle effects like animation motion likenesses when a fraction because the next piece, *PI()/PiDivisor. converts from pi radians to degrees and vice versa. Recall that PiDivisor is set to 180 degrees. Multiplying by Factor1 is taking back the 8 by 1/8th.
+Do Edit Go To cell range D6:D2886 and input into cell D6 the following formula: "=Thickness*Spheroids/KEY*(SIN((ROW()-6) *Number*PI()/PiDivisor*Factor1))". Do Edit Fill Down.
+ Do Edit Go To cell range E6:E2886 and input into cell E6 the following formula: "=((SIN(A6/(B6*2))*GM*COS(A6)*GM)+U6)/ShrinkExpand". Do Edit Fill Down.
+
+Do Edit Go To cell range F6:F2886 and input the formula "=((SIN(A6/(B6*2))*GM*SIN(A6)*GM)+W6)/ShrinkExpand". Do Edit Fill Down. You may notice the z-dimension has been omitted.
+ Do Edit Go To cell range G6:G2886 and input into cell G6 the following formula: "=((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+C6)/ShrinkExpand2". Do Edit Fill Down.
+
+Do Edit Go To cell range H6:H2886 and input into cell H6 the formula "=((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+D6)/ShrinkExpand2". Do Edit Fill Down.
+ While the sheet will now produce the chart wanted, for small numbers of spheroids like 1 or 2 or 3, they cannot appear in a ring properly. A solution for that contingency has been worked out.
+
+Do Edit Go To cell range I6:I155 and input 1 into cell I6 and then do Edit Fill Series Columns Linear, Step Value 1 and blank stop value; press OK. That should input the series from 1 to 150 in that cell range.
+Do Edit Go To cell range J6:J155 and input into cell J6 .125 and then do Edit Fill Down. That will input the constant value of .125 in that cell range.
+Do Edit Go To cell range K6:K155 and input "=I6*$K$35/$I$35" and do Edit Fill Down and then input the value .125 in cell K35.
+Do Edit Go To cell range I6:K155 and Insert Name Define Name Looker. Format Cells Border Red bold Outline. Input Looker in cell J5, font bold red.
+Go to Factor1 cell C2. Input the formula, "=VLOOKUP(ABS(Spheroids),Looker,IF(Spheroids<=24,3,2))". If that next to last number is changed from 3 to 2 in the VLookup Formula just given, it will always return .125, otherwise it will adjust for the number of spheroids input the value of Factor1 (so that will no longer be an available variable). Change the font of cell C2 to dark blue italic or something red or something that helps one remember not to change it.
+
+
+Select cell L5 and enter LOOKER2 into it.
+Edit Go To cell range L6:29 and input 1 into L6 and do Edit Fill Series Column Linear Step Value 1, OK.
+Enter the following numbers down from cell M6 to M29: 24, 16, 8, 4, =PI(), =PI(), =PI(), 2 from M13 to M21 and enter 1 from M22 to M29.
+
+
+Enter HELIX DATA into cell N1.
+Enter X Stretch into cell T1. Font red.
+Enter Y Stretch into cell W1. Font red.
+Enter 5 into cell T2 and format fill yellow font red and do Insert Name Define name X_Stretch to cell $T$2.
+Enter 5 into cell W2 and format fill yellow font red and do Insert Name Define name Y_Stretch to cell $W$2.
+Enter ±6π or +/- 6 pi into cell Q4.
+Enter the column headings into row 5: N5: a; O5: c; P5: n; Q5: t; R5: (i); S5: z; T5: X1; U5: 90 degrees X2; V5: X3; W5: Y.
+a, c, n: Enter .3 to cell N6, 3 into cell O6 and 1 into cell P6. Select N6:P6 and Format Fill yellow for input. Enter "=N6" into cell N7 and copy it and paste it to cell range N7:P2886.
+t: Select cell Q6 and enter "-6*PI())". Go to cell Q2889 and enter 6, font red, size 14, fill yellow. Go to cell Q2888 and enter "=PI()". Go to cell Q2887 and enter "=Q2889*Q2888" w/o quotes and do Insert Name Define Name Destiny to cell $Q$2887. Edit Go To cell range Q7:Q2886 and enter into cell Q7 w/o quotes the formula "=Destiny*2/2880+Q6" and Edit Fill Down.
+(i): Leave column R blank for now. More will be said in Tips.
+z: Edit Go To cell range S6:S2886 and enter w/o quotes into S6 the formula "=Q6/(2*PI()*O6)".
+X1: Edit Go To cell range T6:T2886 and enter w/o quotes into T6 the formula "=X_Stretch*(N6*COS(Q6+(2*PI()*R6)/P6)+S6)".
+90 degrees X2: Edit Go To cell range U6:U2886 and enter w/o quotes into U6 the formula "=(T6-0.3-S6)". This is the column currently accessed by the chart.
+X3: Edit Go To cell range V6:V2886 and enter w/o quotes into V6 the formula "=-1*(T6+0.3+S6)". This is changed in The Tips section below when creating a Double Helix is accomplished.
+Y: Edit Go To cell range W6:W2886 and enter w/o quotes into W6 the formula "=Y_Stretch*(N6*SIN(Q6+(2*PI()*R6)/P6)+S6)".
+Edit Go To cell range N1:W2889 and Format Fill very light blue and Border Deep Purple bold Outline.
+ Do that now for cell C2 until you see the red corner flag and remember to do it for all the other formulas later please. The Abs() Absolute function allows one to input a negative number of spheroids; the effect will be to flip the graph 180 degrees horizontally (from left to right or right to left), as one can tell with an odd number of spheroids., Have a blank worksheet ready to copy a new chart into and expand and format it at will.
+
+Do Edit Go To cell range E6:F2886. Press the Charts button, All, or Chart Wizard. Select chart type Scatter Smoothed Line Scatter. Command c copy it and access the new worksheet and command v paste it into the new worksheet. Your chart should look like the example above except for detailing and the arc above has yet to be added. Adjust the chart size by dragging the bottom right corner until you get a square plot area. Get rid of the Vertical and Horizontal Axes, Legend and Gridlines via the Chart Layout tab. Clicking on the plot area will give access to the gradient style; the setting for that are Plot Area Fill Gradient Radial Centered Far Left White, 30% Ultramarine Blue, 55% Deep Navy Blue, no Line, Shadow, Glow or 3-D Format. Double-clicking on the chart plot line itself will give access to changing that under Format Selection of Chart Layout: set Series 1 Line to Ultramarine Blue, smoothed line, weight 1 pt. Glow is medium dark muddy red wine 1 pt 0 transparency 0 pt soft edges. Shadow for the line is checked, Perspective, 248 degrees, dark navy blue 33% size, 0 pt blur, 72 pt distance and 11% transparent. Chart Area Fill Gradient is Radial Centered left 41% White and fully right 100% Hot Pink Fuschia.
+Click in the Plot Area and do menuitem Chart Add Data and in response to the query go to Data worksheet and select cell range G6:H2886. Sometimes this does not come out right and has to be edited in the formula bar of the Chart worksheet. Click on the newly plotted series and edit in the formula bar until it reads as follows: "=SERIES(,Data!$G$6:$G$2886,Data!$H$6:$H$2886,2)". With it selected and Chart Layout active, do Format Selection for Series 2, Line Dark Brown with a hint of red, smoothed line, 0% transparency, line weight 1 point, No Shadow or Glow, etc.
+, Somehow it comes out wrong sometimes and one must click on the new chart series in the Chart worksheet and type in G's for E's in the plot series in the formula bar -- then it's OK., They should be separate with the first series inside the second series. Select a good color for the second series and line thickness should probably be set to 1 for each.,,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

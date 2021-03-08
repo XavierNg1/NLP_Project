@@ -1,0 +1,23 @@
+ They take up about 3GB in total, and many people neglect to use them. iPhoto has its own trash, so be sure to locate that and delete any unwanted files in addition to removing the program.
+ This can be either an external hard disk or a pen drive, although larger files will usually require an external.
+
+
+If you plan on using with other computers, reformat the media device first using Disc Utility.
+For use on Mac only devices: choose Mac OSX Journaled
+For use on Windows/Mac: choose exFAT (older mac OS's may not have this option and can choose MS-DOS (FAT), which has a filesize limit of 4GB. So if you have files over that size, you cannot transfer them. exFat has no size limitation).
+ Some backup programs will save the huge files from virtual memory. This is potentially dangerous. Avoid backup programs which back up the disk in sector by sector mode.
+ Dropbox is a cloud-based file-saving utility, letting you access files from multiple devices anywhere there is internet. Dropbox will save you space on your hard drive by not forcing you to download multiple copies of files across several different platforms.
+
+
+Clear out your Dropbox cache regularly. Dropbox's cache is hidden and stores deleted files.Instead of downloading information to Dropbox's servers, it saves deleted files in the cache so that it can retrieve them if you happen to change your mind. Delete files that are no longer necessary to keep.
+ It maps your disk and shows you the sizes of files and folders using a graphical visualization called "treemaps." Look at what files are taking up space on your computer relative to how much you are using them. Delete, compress, or archive any files you don't regularly use.
+ CCleaner clears about 200MB of disk space per use by getting rid of junk files and invalid Registry entries., Local backups have their obvious advantages, but if you're trying to converse space on your hard drive, it can be costly, in terms of space, as well as unnecessary. Disabling local backups can clear up 100GB to a terabyte of free space. After executing it, wait about 20-30 minutes (just to be safe) and you should see the difference. To disable Time Machine local backup storage:
+
+
+Access terminal by navigating to Applications → Utilities → Terminal
+
+Type in "sudo tmutil disablelocal" and hit Enter
+When it prompts you for a password, just enter your user admin password
+
+, Use symlinks (aliases) for all of the folders in ~/.
+

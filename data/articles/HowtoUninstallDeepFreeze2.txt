@@ -1,0 +1,20 @@
+ If you don't have the password for Deep Freeze, you're going to have to get your hands a little dirty in your system BIOS. Press your BIOS Setup key during the reboot process. The key varies by manufacturer, but is typically F2, F10, or Del.
+ In order to bypass the password, you will need to set your computer’s date at least ten years ahead or behind the current date. This will trick Deep Freeze into thinking it should no longer be running. Once the date is changed, save and reboot your computer again.
+ Press and hold F8 during the boot process. This will open Window’s Advanced Startup menu. Select "Debug" or "Debugging Mode" from the list of options.
+ Hit Ctrl+⇧ Shift+Del as soon as the Welcome screen disappears. This will open the Task Manager. Timing is critical here, so if you don’t hit it in time, you will have to restart and try again.
+ To see all the processes that are running, click on the Processes tab of your Task Manager. End the process as soon as you find it. You may also need to end the process "FrzState2K.exe".
+
+
+To end the process, select it and click End Process at the bottom of the window. Your computer will ask you to confirm that you want to end the process.
+ This is typically located at C:\Program Files\Faronics\. Delete the entire folder.
+
+***Be careful when deleting items in the registry. Deleting the wrong item could render Windows inoperable, forcing a reinstallation.***
+
+You can access the registry by pressing ⊞ Win+R and typing regedit into the field in. Browse for the "Faronics" folder in HKEY_LOCAL_MACHINE\SOFTWARE\. Delete the entire Faronics folder. Once you've done all of this, Deep Freeze should be uninstalled., If you cannot get Deep Freeze to uninstall, you may be forced to format and reinstall your Windows operating system. This will erase all of the data on the disk, so make sure everything you need is properly backed up. See the following guides for details on reinstalling your operating system:
+
+
+Windows 8
+Windows 7
+Windows Vista
+Windows XP
+

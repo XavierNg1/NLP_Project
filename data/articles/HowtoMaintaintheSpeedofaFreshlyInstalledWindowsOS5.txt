@@ -1,0 +1,9 @@
+ It acts as a standby to load memory-hungry applications until actual physical memory becomes available. It works on the concept of swapping. You're going to use a predefined hard-disk space which is going to emulate the actual physical memory. So let's see how to access your Virtual Memory settings from Windows and modify it to favor speed.,(In case of Vista, look at the left hand side for Advanced System Settings. Click on it).
+, There is another Advanced tab there. Click on it.
+ Click on the ‘Change’ button.
+, Now click on custom size, and set the initial and maximum size to be the same value. This is very important because, when you set both the sizes to the same value, it helps to assure Windows that, at any given time, this specified space will be readily available for it to use, if done otherwise, causes some delay for Windows to move from initial value to the mark in the maximum value.
+,
+
+
+For example, if you have 512MB physical memory in your computer, it's wiser to set the initial and maximum value to the double of 512 in other words set it to 1024MB. Whatever your memory size be, just double it and set it for the virtual memory.
+

@@ -1,0 +1,21 @@
+ Since you will be only using it as a guide, quality isn't required. The sample used in this article was taken with a cell phone. Since it will be resized to a small size and a drop shadow will be added, small defects will not be noticed. Select the source image based primary on how it reflects your personality or attitude, not necessarily on quality. That being said, if you can find an appropriate high resolution image, it'll make the processing simpler.;
+, Cut the head on contour. Different methods are available. Do not forget to add an alpha channel to the layer, because you will want deleted regions to become transparent. You can use a combination of the tools described below:
+
+
+The Magic Wand - This is most useful when the background contains large areas with uniform colors, highly contrasting with the subject (not the case with the image used in this example). Use "Select contiguous regions" and adjust the threshold as needed.
+Cut on path - Use "Select shapes from image". Work at a high zoom and add short segments. The results are good when the contrast between background and figure is high.
+Quick Mask - This is a very powerful tool, it may be a bit overwhelming for a simple hackergotchi.
+
+Toggle Quick Mask, erase the face, toggle Quick Mask off, invert selection and remove it.
+Note: The selection is left unfinished on purpose, the scope of this tutorial is to be quick.
+
+
+Erase - This one is fairly simple to use. Select rectangular regions of the background and delete them.
+
+Then zoom in and use the eraser on the contour.
+ After scaling, the images become blurry, so sharpen it.
+ Most beginners are tempted to use the default value proposed by GIMP. Do NOT do this, as it is too large for a hackergotchi. Use smaller values. In this case try the X and Y offset of 1 px and a blur radius of 4 px.
+
+
+An alternative is to use a perspective shadow.
+

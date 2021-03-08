@@ -1,0 +1,72 @@
+
+
+
+For this article, create a new workbook and create the following worksheets: Data, later copy it to become Data (2), Chart1, Chart2 and Saves.
+,
+Set Your Preferences: Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+It helps by placing the cursor at cell A16 and doing Freeze Panes.
+Enter the upper Defined Name Variables Section on the Data worksheet (here's a picture):
+
+Cell A1: enter AjRows
+B1: enter GM (for Golden Mean)
+C1: enter Factor1
+D1: enter KEY
+E1: enter Thickness
+A2: 2880
+B2: "=(-(1-SQRT(5))/2)" w/o quotes and Format Cell Number Number Decimal Places 8
+C2: "=VLOOKUP(ABS(Spheroids),Looker,IF(Spheroids<=24,2,3))"
+D2: "=IF(Spheroids<=24, Spheroids*VLOOKUP(Spheroids,LOOKER2,2),Spheroids)"
+E2: .5 and Format Cell Number Number Decimal Places 1.
+Enter the column headings of rows 4 and 5:
+
+A5: Base t
+B5: constant c
+C5: Cos
+D5: Sin
+E4 and F4: METHOD 1
+E5: Main X
+F5: Main Y
+G4: M1-M2 and G5 DIFF and copy G4:G5 to H4:H5.
+Enter the column formulas
+
+A6: "=IF(ODD(Spheroids)=Spheroids,0,Tip)" w/o quotes and Format Fill light rose.
+Create the Lookup Tables
+
+Enter LOOKER into cell K5.
+Create the Method1 full Chart
+
+Edit Go To cell range E6:F2886 and select either Charts from the Ribbon or Chart Wizard.
+Create the Method1 partial Chart
+
+Edit Go To cell range E6:F246 (the first two spheroids) and select either Charts from the Ribbon or Chart Wizard.
+That completes the Method1 spreadsheet for now, except that I have Inserted a New Comment for important formulas I might overwrite, copying the formula from the formula bar into the new comment.
+Enter the Column Formulas for Data(2) that are different from Data:
+
+Cos: Edit Go To cell range C6:C2886 and enter to C6 w/o quotes the formula "=(COS((ROW()-6)*PI()/180*Factor1))" and Edit Fill Down.
+Enter the Defined Variables Section that changes for Method2.
+Enter the Difference Column's formulas
+
+Select cell G6 and enter, w/o quotes, the formula "=Data!E6-'Data (2)'!E6" which very much depends upon what titles you've given your worksheets.
+Create the Chart for Data(2) / Method2
+
+Edit Go To cell range E6:F2886 on Data (2) and select either Charts from the Ribbon or Chart Wizard.
+Create the Method 2 Partial chart
+
+Edit Go To cell range E6:F246 on Data (2) (the first two spheroids) and select either Charts from the Ribbon or Chart Wizard.
+Analyze the spheres into thirds (beginning, middle, end) and look for a pattern between the two methods:
+
+Select on the Data worksheet cell range E6:F:45 and do Format Cell Border red bold outline.
+GOAL SEEKING Y'S TO ZERO:
+
+I2891: Enter "=0-H2891" w/o quotes.
+In Excel, if I let the x value of {x, y} Cartesian coordinate pairs of a graph equal the cosine of rows 0 to 360, and then I let the y values equal the sines of rows 0 to 360 -- I have just taken all those row numbers and treated them as angles, right?,In the Garthwaite Curve -- that ring of spiral balls you see me use all the time in many various ways -- I found out how to get 3-dimensionality out of Excel, by combining the z-dimension formula in with x and y (or in some other curves, just with y).
+The formula for the "ball", formally called a "spherical helix", is short but a little difficult to explain, so I won't.
+Imagine a triangle made by extending the hypotenuse at 30 degrees, then 45 degrees, then 60 degrees.And, for other curves, we are usually distorting the sine and/or cosine by adding/multiplying/subtracting or dividing it by something else.
+Just when you think you understand, and you say to yourself, "Aha!,
+Why?,
+So if the sine and cosine vary between 0 and 1 ordinarily (without further adjustment), and they are ADDED together as one is small and the other is large, they will tend to equal 1.
+If you can grasp that much, you are ahead of the game in terms of grasping trig and its ability to produce beautiful and unique designs that possess a unique clarity of definition, because when the "half-curve" is applied to a variable of 10pi to 0, the result is 5pi turns of the spiral of the helix of the sphere from one endpoint of 0 to the other endpoint of 0, which is a nice aesthetic number of turns to behold as a minimum.
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

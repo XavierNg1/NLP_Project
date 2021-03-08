@@ -1,0 +1,43 @@
+ The content of an HTML form must be typed within the <form> and </form> tags. These tags act as a container for your form, like other container tags like <div></div> and <table></table>You can use CSS or HTML inside the <form></form> tags to make your form look the way you want.;
+, To start your form, scroll to the location in your file where the form should begin and type <form> on its own line. This tag signifies the beginning of your form.
+ This tells the <form> tag what to do with the form data. You’ll define this by adding action=”path_to_script” to the <form> tag.
+
+
+For example: <form action=”/cgi-bin/myformscript.pl”> (if the script that will parse the form data is located in a directory on your server called “cgi-bin”).
+If the script is on another server: <form action=”https:
+
+To send the form data to an email address (not a script):<form action=”mailto:you@yourdomain.com” enctype=”text/plain”>
+
+
+, Now that you’ve defined where the form data will be sent, you must decide whether your form will “GET” or “POST” the data. Then, you will add either “GET” or “POST” as the method attribute inside the <form> tag.Use method=”get” to request data from a resource. You should only use GET to retrieve data. Never use GET with sensitive information like passwords or social security numbers.
+Use method=”post” to submit data to be processed. Use this if the form data is sensitive, such as for passwords or credit card numbers.
+The end result should follow this format: <form action=”/cgi-bin/myformscript.pl” method=”post”>
+
+
+, You can add a blank box in which your visitors can type their names, comments, or anything else you may need. Start this on a new line after the <form> tag.
+
+
+For example, First Name: <input type=”text” id=”name” /> creates a text box prefaced by “First Name:” so users know what to type into the box.
+Change the “id=” value (“name” in the example) to match what you’re doing with the data. If the data is sent to a script, this value should correspond with something in the script.
+ If your script calls for a user to enter a password, you’ll add another <input />, this time with the “type” attribute set to “password.”
+
+
+On a new line, type Password: <input type=”password” name=”password” />
+
+
+, If you’d like visitors to choose from a list of items, create a list of options with radio buttons. To do this, you’ll use the <input /> tag with the “type” attribute set to “radio”.
+
+
+To create a radio buttons to select either “Dog” or “Cat”:
+
+<input type=”radio” name=”pets” value=”dog” /> Dog
+<input type=”radio” name=”pets” value=”cat” /> Cat
+
+
+A group of radio buttons should all have the same “name” attribute.
+ There are so many types of inputs and lists you can include in your form. A great way to expand your HTML form knowledge is to browse W3school’s HTML Forms site. Additionally, there are many helpful wikiHows articles to walk you through setting up items like selectable lists, reset/clear buttons, and check boxes.
+ Once your visitor fills out the form, they’ll need to submit it by clicking a submit button. Here’s an example:<button type="submit">Send your message</button>
+Replace “Send your message” with the text you want to appear on the button.
+ This tag indicates that the form is over. Remember, all form content must be inside <form> and </form>.
+ Now that you’ve added a form to your HTML document, upload it to your web server and give it a test run!
+

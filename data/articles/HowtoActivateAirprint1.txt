@@ -1,0 +1,47 @@
+
+
+
+For XP operating system, open the "Printers and Faxes" window; this is accessible through "Printers and Other Hardware" in the "Control Panel." Right click on the desired printer, and select "Sharing" from the context menu. Go to the "Sharing" tab, and select the "Share this printer" radio button.
+
+
+
+
+
+
+For Vista and Windows 7 operating systems, go to the "Network and Sharing Center," available through "Network and Internet" in the "Control Panel." Under "Printer Sharing" select "Turn on Printer Sharing" and then "Apply" or "Save Changes." Go to the "Devices and Printers" panel, available from the "Start Menu," right click the desired printer and select "Printer Properties" from the context menu. Under "Sharing" select "Share this printer."
+
+
+
+
+
+;
+,
+
+
+Create a folder called "AirPrint."
+
+
+
+
+
+
+If you have a 64-bit machine, put this folder in "C:\ Program Files (x86)." and If you have a 32-bit machine, put this folder in "C:\ Program Files."
+
+
+
+
+
+
+Download AirPrint.zip (available on Mediafire), and unzip it into the folder you created.
+
+
+
+If you put the AirPrint folder in "C:\ Program Files (x86)": sc.exe create AirPrint binPath= "C:\ Program Files (x86)\AirPrint\airprint.exe -s" depend= "Bonjour Service" start= auto.
+
+
+
+
+
+
+If you put the AirPrint folder in "C:\ Program Files": sc.exe create AirPrint binPath= "C:\ Program Files\AirPrint\airprint.exe -s" depend= "Bonjour Service" start= auto.
+,

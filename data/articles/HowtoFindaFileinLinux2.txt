@@ -1,0 +1,40 @@
+ The locate command generally works much faster than find, because it works off a database of your file structure. Not all Linux distributions come with the locate functionality installed, so enter the following commands to attempt to install it:
+
+
+Type sudo apt-get update and press ↵ Enter.
+You can install it in Debian and Ubuntu like this: Type sudo apt-get install mlocate and press ↵ Enter. If locate is already installed, you'll see the message mlocate is already the newest version.
+In Arch Linux, use the pacman package manager: pacman -Syu mlocate
+
+For Gentoo, use emerge: emerge mlocate
+
+
+, The locate command will not be able to find anything until its database has been built and updated. This happens automatically daily, but you can manually update it too. You'll need to do this if you want to start using locate immediately.Type sudo updatedb and press ↵ Enter.
+ The locate command is fast, but it doesn't have as many options as the find command. You can perform a basic file search in much the same way as the find command.
+
+
+
+
+
+locate -i "*.jpg"
+
+
+
+
+
+This command will search you entire system for files with the .jpg extension. The wildcard character * functions the same way it does with the find command.
+Like the find command, the -i ignores the case of your query.
+ If your searches are returning too many results to handle, you can trim them down using the -n option, followed by the number of results you want displayed.
+
+
+
+
+
+locate -n 20 -i "*.jpg"
+
+
+
+
+
+Only the first 20 results that match the query will be displayed.
+You can also use the | pipe to send the results to less for easy scrolling.
+

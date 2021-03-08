@@ -1,0 +1,32 @@
+ Let's say you are asked to calculate the sum of the first "n" odd numbers, written as , by induction.(The last term here derives from the fact that if you double any number and then subtract 1 from that value, the resulting number will always be odd.) At first, you might notice that the sum of consecutive odd numbers seems to follow a pattern (e.g., 1 + 3 = 4; 1 + 3 + 5 = 9; 1 + 3 + 5 + 7 = 16; 1 + 3 + 5 + 7 + 9 = 25).The sum seems to be the number of odd numbers you are adding squared, right? Now that we have an idea of the pattern at play here, we can begin our proof.;
+, In our example, we have noticed a pattern relating to the sum of the first "n" odd numbers. To complete the task we are assigned (i.e., calculating the sum of the first "n" odd numbers), we could actually take the time to write out all the odd numbers, starting with 1 all the way to "n," and add them up. But there is an easier way. Based on what we observed about the first few summations we did, we could offer this property, which we will try to prove via induction:
+
+
+1 + 3 + . . . + (2n - 1) = n^2
+We will refer to this property as P(n), because "n" is the variable we used above.
+The left-hand sign of the equation represents the sum of the first "n" odd numbers, beginning with 1.
+ It is helpful to think of induction in terms of dominoes, which recalls the "chain of implications" discussed in the introduction above. Think of every value of "n" in the property above, P(n), as an individual domino, arranged in a line. If we can show that P(1)—the first value in the chain—is true, that means we can knock over the first domino. Further, if we assume that any one domino can be knocked over (i.e., P(n) holds true for some arbitrary value of "n") and, with that assumption, that the following domino can also be knocked over (i.e., P(n + 1) is also true), that means we can knock over all the dominoes with our stated property. This means the property is true in all cases and we have achieved our goal through induction.
+ The "base case" for a particular property is some small value used to show that the first statement of the property holds true. In this case, we will use "1," as this is the first odd number and easy to work with. If the property holds true for the base case, we will have shown we can knock over the first domino and we can move on to the next step.
+
+
+P(1): 1 = 1^2
+P(1): 1 = 1 (It held, we're good. First domino down.)
+
+, The next step of induction involves making an assumption. In our example, we will assume that for some arbitrary value of "n"—let's say "k"—that the statement is true. That is, we have faith that our property will hold regardless of the value used for "n." If this wasn't true, our property (i.e., our solution to the original problem of calculating the sum of the first "n" odd numbers) wouldn't have much use. While we haven't proved anything yet, this assumption is important, and takes the following form:
+
+
+P(k): 1 + 3 + . . . + (2k - 1) = k^2
+Remember that we are assuming this is true going forward in the proof (i.e., that we can knock over any individual domino in the chain).
+ In other words, we assume that P(k) holds true and, using that assumption, try to prove that P(k + 1) also holds true. If we can do that, we have proven that our theory is valid using induction because if knocking down one domino (assuming P(k) is true) knocks down the next domino (using that assumption, proving P(k + 1) is also true), all the dominoes will fall and our property will be proved valid. So let's try that:
+
+
+P(k): 1 + 3 + . . . + (2k - 1) = k^2 is true.
+P(k + 1): 1 + 3 + . . . + (2k - 1) + (2(k + 1) - 1) = (k + 1)^2
+The italicized portion above on the left-hand side of the equation represents the addition of the next odd-numbered term in the sequence, k + 1. If we can make that left-hand side equal the right-hand side, we will have succeeded.
+From our assumption, we know that the un-italicized portion above equals k^2, so let's make that replacement.
+P(k + 1): k^2 + (2(k + 1) - 1) = (k + 1)^2
+P(k + 1): k^2 + 2k + 1 = (k + 1)^2
+P(k + 1): (k + 1)^2 = (k + 1)^2
+
+, By use of a little algebra, we have proved that our property holds true not only for some arbitrary value of "n," but also for the value following that value. We have shown that P(1) is true, assumed that P(k) is true, and proved that, based on that assumption, P(k + 1) is also true. To use our continuing domino analogy, we successfully knocked down the first domino, showing our property has some value. Then, assuming that any arbitrary domino in the chain could be knocked over, we proved that doing so will necessarily knock down the next domino, ad infinitum down the rest of the chain. Thus, we have shown that our property holds in general and have successfully concluded our proof by mathematical induction.
+

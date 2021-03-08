@@ -1,0 +1,13 @@
+
+
+
+If the denominator consists of a single term under a radical, such as /sqrt(5), then multiply numerator and denominator by that radical to get *sqrt(5)/sqrt(5)*sqrt(5) = *sqrt(5)/5.
+
+For cube or higher roots, multiply by the appropriate power of the radical to make the denominator rational. If the denominator was cbrt(5), then multiply numerator and denominator by cbrt(5)^2.
+
+
+If the denominator consists of a sum or difference of square roots such as sqrt(2) + sqrt(6), then multiply numerator and denominator by its conjugate, the same expression with the opposite operator. Thus /(sqrt(2) + sqrt(6)) = (sqrt(2)-sqrt(6))/(sqrt(2) + sqrt(6))(sqrt(2)-sqrt(6)). Then use the difference of squares identity to rationalize the denominator, simplifying (sqrt(2) + sqrt(6))(sqrt(2)-sqrt(6)) = sqrt(2)^2 - sqrt(6)^2 = 2-6 = -4.
+
+This works for denominators like 5 + sqrt(3) too since every whole number is a square root of some other whole number. This works for a sum of square roots like sqrt(5)-sqrt(6)+sqrt(7). If you group it as (sqrt(5)-sqrt(6))+sqrt(7) and multiply it by (sqrt(5)-sqrt(6))-sqrt(7), your answer won't be rational, but will be of the form a+b*sqrt(30) where a and b are rational. Then you can repeat the process with the conjugate of a+b*sqrt(30) and (a+b*sqrt(30))(a-b*sqrt(30)) is rational. In essence, if you can use this trick once to reduce the number of radical signs in the denominator, then you can use this trick repeatedly to eliminate all of them.
+This even works for denominators containing higher roots like the 4th root of 3 plus the 7th root of 9. Just multiply numerator and denominator by the denominator's conjugate. Unfortunately, it is not immediately clear what the conjugate of that denominator is nor how to go about finding it. A good book on algebraic number theory will cover this, but I will not.
+ You now have whatever you started with up there times the denominator's conjugate. Go ahead and expand that product like you would for a product of polynomials. See if anything cancels or simplifies and combine like terms if possible.

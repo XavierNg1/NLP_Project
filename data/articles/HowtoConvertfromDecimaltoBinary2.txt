@@ -1,0 +1,11 @@
+ For this example, let's convert the decimal number 15610 to binary. Write the decimal number as the dividend inside an upside-down "long division" symbol. Write the base of the destination system (in our case, "2" for binary) as the divisor outside the curve of the division symbol.
+
+
+This method is much easier to understand when visualized on paper, and is much easier for beginners, as it relies only on division by two.
+To avoid confusion before and after conversion, write the number of the base system that you are working with as a subscript of each number. In this case, the decimal number will have a subscript of 10 and the binary equivalent will have a subscript of 2.
+ Write the integer answer (quotient) under the long division symbol, and write the remainder (0 or 1) to the right of the dividend.Since we are dividing by 2, when the dividend is even the binary remainder will be 0, and when the dividend is odd the binary remainder will be 1.
+ Continue downwards, dividing each new quotient by two and writing the remainders to the right of each dividend. Stop when the quotient is 0.
+ Starting with the bottom remainder, read the sequence of remainders upwards to the top. For this example, you should have 10011100. This is the binary equivalent of the decimal number 156. Or, written with base subscripts: 15610 = 100111002
+
+This method can be modified to convert from decimal to any base. The divisor is 2 because the desired destination is base 2 (binary). If the desired destination is a different base, replace the 2 in the method with the desired base. For example, if the desired destination is base 9, replace the 2 with 9. The final result will then be in the desired base.
+

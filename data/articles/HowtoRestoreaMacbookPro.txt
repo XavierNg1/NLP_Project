@@ -1,0 +1,22 @@
+ Restoring your Macbook Pro will wipe and erase all the data from your computer’s hard drive.;
+, This will prevent your computer from shutting down and interfering with the restoration process.,,, Your Macbook will prompt you to select your Internet connection type.
+ An Internet connection is required to reinstall OS X and the latest updates from Apple. The Recovery menu will display on-screen after your Macbook connects to the Internet.
+, The default startup disk on the Macbook Pro is “Macintosh HD OS X.”
+
+,, This will instruct your Macbook Pro to erase the startup disk so it can reinstall OS X.
+, When the process is complete, your Macbook Pro will be restored to the original factory settings., In some cases, your computer may take up to several hours to reinstall OS X, depending on your Internet speed. If the progress bar has not advanced after one hour, select the option to quit installation or reboot your computer to restart the installation process., This step can often help resolve problems associated with reinstalling OS X.
+
+
+Restart your Macbook Pro and launch Disk Utility.
+Select the disk you’re trying to restore in the left column of Disk Utility.
+Select the “Partition” tab, then click and drag the resize corner of the partition to make the partition slightly smaller.
+Click on “Apply,” then follow the steps outlined in Part One of this article to reinstall OS X.,
+
+
+Follow steps #3 and #4 from Part One to access the Recovery menu.
+Select “Reinstall OS X,” then select “Continue.”
+Click on “Continue” when a dialog informs you about verifying eligibility with Apple, then click “OK.”
+Click on “Utilities” from the menu bar and select “Terminal.”
+Type “date” into Terminal, then press Enter. The date displayed on-screen will be incorrect, and is the source of your error.
+Type “date,” followed by the correct date using the format MMDDHHMMYYYY (Month, Date, Hour, Minute, Year).
+Exit Terminal, then follow the steps outlined in Part One to reinstall OS X.

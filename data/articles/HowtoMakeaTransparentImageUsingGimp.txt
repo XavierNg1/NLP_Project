@@ -1,0 +1,42 @@
+ Launch GIMP and bring up your image by selecting File > Open... from the taskbar at the top of the GIMP window, then browsing for your image. When you select your chosen image, it should load into the central editing window, with two smaller windows, the Toolbox window on the left and the Dialogs window on the right, by default. Keep track of these side windows, as they contain the tools we'll use to make our transparent image.;
+, In GIMP, "Channels" differ from standard "Layers" in that they contain all of an image's graphical data for a specific color. In other words, in GIMP, color images have three channels by default: Red, Green, and Blue. Black-and-white images have only one channel: Gray. In addition, some channels have an extra channel called an "Alpha channel." This Alpha channel is the channel we'll manipulate to create transparency in our image. See below to determine whether your image has an Alpha channel.
+
+
+First, select Windows > Dockable Dialogs > Channels from the menu at the top of the central editing window.
+You should see a tab labeled with red, green, and blue squares on top of each other appear in the Dialogs window on the right. If not already selected, click this tab.
+You should see entries for Red, Green, and Blue channels at the top of this tab (or, if the image is black-and-white, one single Gray channel). Below these, you may or may not see an "Alpha" channel. If you do not see one, add one to your image in the next step. If you do see one, skip the next step.
+ If your image doesn't already have an Alpha channel, don't worry - adding one is easy. Simply select Layer > Transparency > Add Alpha channel from the menu bar at the top of the central editing window. This creates an Alpha channel, which you'll use to make a transparent image.
+ At the very top of your Toolbox window (by default, this is to the left of the editing window) are tools for selecting different parts of your image. In the next step, we'll use one, the Fuzzy Selection tool, to grab part of our image that we'd like to make transparent. However, depending on the situation, another selection tool may be appropriate. The first seven tools at the top of the Toolbox window are all selection tools. In order from the top left, they are:
+
+
+The Rectangle Select tool. This tool grabs a straight-edged rectangular portion of your image.
+The Ellipse Select tool. This tool grabs a circular, oblong, or oval portion of your image.
+The Free Select tool. This tool allows you to draw (freehand) around the portion of your image you'd like to select using your mouse - great for small, oddly-shaped bits.
+The Fuzzy Select tool. This is the tool we'll use in this guide. This tool intelligently grabs a part of the image that it identifies as an object distinct from the rest. For instance, if one part of your image is a different color than the rest and you click on that part of your image with the Fuzzy Select tool, GIMP will try to grab that specific part of the image and nothing else.
+The Select by Color tool. This tool allows you to select all the similarly-colored regions in an image.
+The Scissors Select tool. This tool uses GIMP's edge-fitting abilities to intelligently grab shapes.
+The Foreground Select tool. This tool attempts to grab objects in your image that GIMP identifies as being in the foreground.
+ For this step, we'll assume you're using the Fuzzy Select tool, though any of the above tools are valid. Click on the Fuzzy Select tool's icon in the Toolbox window (it looks like a magic wand), then click the part of your image you'd like to make transparent (for instance, the background). GIMP will attempt to grab this portion of the image - you should see a dotted border around the part of the image you clicked on.
+
+
+If the dotted border doesn't seem to include the right area, you may need to adjust the tool's sensitivity. After clicking on the Fuzzy Select tool, you should see, among other things, a small meter that reads "Threshold" in the lower part of the Toolbox window. By adjusting this meter, you can change how sensitive the Fuzzy Select tool is - in other words, how readily it differentiates between objects in your image.
+
+Generally, for images with a small range of color or black-and-white images, low thresholds are better, while higher thresholds are appropriate for images with a large range of color. Experiment to find the right sensitivity for your needs.
+ If you want the part of the image you've selected to be 100% transparent, you should simply delete it. With an Alpha channel present, parts of your image with nothing in them become fully transparent. After deleting part of your image, you should see a checkered background - this signifies transparency.
+
+
+Be sure to closely examine your image after you've made parts of it transparent, especially if you've used the Fuzzy Selection tool. Small bits of your image may remain, especially near the border between two objects. You may need to zoom in and use the Eraser tool for touch-up work.
+ Let's say you don't want the part of your image that you've selected to be 100% transparent. Let's say, for instance, that you only want it 50% transparent. Luckily, GIMP offers a variety of partial transparency options, which range from extremely basic to somewhat complex. Three common options which should cover most situations are listed below - choose the one that's right for you:
+
+
+Use the eraser tool. Select the eraser tool from the toolbox window. You should see an "Opacity" meter appear below. By adjusting the opacity to a level below 100%, you can use the eraser tool to "paint" parts of your image with partial transparency.
+Make an entire layer partially transparent. Open the Layers tab in your Dialogs window (by default, it is the first tab). At the top, you should see a list of the layers in your image. Select the layer you want, then adjust the opacity meter at the top of the tab until you get the level of transparency you want.
+Use a floating selection. Using any of the selection tools listed above, select a portion of your image. Once it's selected, click Select > Float from the menu bar at the top of the editing window. This creates a floating selection - essentially a temporary layer that you can quickly edit. If you're not there already, go to the Layers tab of the Dialogs window - you should see your new temporary layer. Select this layer and adjust its opacity to your liking. When you're satisfied, click anywhere in your image that's outside your selection - your cursor should have an anchor next to it. By clicking, you "anchor" the floating selection, applying the changes you made to your image and getting rid of the temporary layer.
+
+If you're having problems, try ensuring the Alpha channel is highlighted in the Channels tab of the Dialogs window before proceeding through the rest of the process.
+ Both .GIF and .PNG file types should be transparency-compatible. Save your image in the format that suits your purpose. Usually, .PNG files are better because they support all the features of .GIF files and others, but, for instance, if you're making an animated .GIF, you'll obviously want to save your file in that format. If unsure, try saving in both formats - it won't hurt.
+
+
+To save your image, select File > Save or File > Save As... from the menu bar at the top of the editing window. To export your image, use File > Export or File > Export As...
+
+

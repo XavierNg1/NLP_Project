@@ -1,0 +1,31 @@
+
+Open a new Excel workbook and create 3 worksheets (except Chart if you are using Chart Wizard): Data, Chart and Saves.
+,
+Set Your Preferences: Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+It helps placing the cursor at cell A16 and doing Freeze Panes.
+Enter the upper Defined Name Variables Section (here's a picture):
+
+A1: Aligned left, enter Sinewave Spheres in a Ring and Format Font Apple Chancery or something fancy and nice?,
+Enter the column heading of rows 4 and 5:
+
+A5: Adj Cos (for Adjusted Cosine)
+B5: Adj Sin
+C5: Indicator
+D5: Randy (for RandBetween)
+E5: t: 0 to nπ (varies from data chit)
+F5: z1_ (varies from data chit)
+G5: Adj_x1
+H5: Adj_y1 (varies from data chit)
+I4 and J4: Charting
+I5: x: No z
+J5: y: With z
+Command+Select cells F1:F3 and I3 and Format Fill yellow.
+Enter the column formulas:
+
+Adj Cos: Edit Go To cell range A6:A17285 and enter into A6 w/o quotes the following formula, "=17*COS((ROW()-6)*0.25/12*PI()/180)" and Edit Fill Down.
+Create the Chart:
+
+Edit Go To cell range I6:J17286 and from the Ribbon or Chart Wizard select Charts All/Other Scatter Smoothed Line Scatter and Copy or Cut the chart that is atop the data worksheet and paste it to the top left of the Chart worksheet.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

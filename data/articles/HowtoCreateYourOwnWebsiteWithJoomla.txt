@@ -1,0 +1,49 @@
+
+
+
+Registering a domain name can be done through numerous Registrar's, just do a Google search and make sure it's a suitable available name . One that you are committed to using.
+
+Example Registrar: http://www.godaddy.com
+
+Example Registrar: http://www.tucows.com
+
+
+;
+, You'll need one unless you are planning on hosting your own server.
+
+
+You will need a Hosting environment. The hosting environment is basically the place you store your files and folders.
+You can create your own hosting servers and even DNS servers if you wanted to but that involves hardware you might not have.
+This can be done by finding a suitable "Host" via a Google search, just remember to compare prices. (If you are opting to purchasing a Hosting service sure to get a host that offers a C-panel or c-panel like interface to your service. Some Registrar's even offer hosting too.)
+
+, After you have your domain name registered, your host access, & and a few minutes to spare, you are ready to install Joomla, but before we actually install we will need to do 3 more simple steps.
+
+
+Login to your Host's Server (At this point everything is kind of assuming you have a UI similar to C-Panel)
+Create a directory (folder) in your hosting environment via your C-Panel interface to your server (the host) ., Call the folder whatever seems relative, then remember it. FYI the stereo typical will be: /htdocs/new folder or w/e
+Create your DNS pointer record to the folder we created, This can also be done via the C-Panel, just look for Domain control or something specifying your administration over your domains. Once there, update or create a new pointer record stating: (Usually via a Drop Down Menu field and a Text field.) .....www,yourdomainname,com -is equal to- /htdocs/new folder ... Save the pointer record.
+ This is fairly automated in most cases when using C-Panel and extension's "Simple Scripts" or other CMS installers.
+
+
+Find your Installer script in your C-Panel, when installing you are just going to specify a few data fields. Specifically your Domain Name you wish to be installing Joomla for, (selected usually by a drop down menu list compiled of all your domain names you have records for)
+
+Define what domain/folder your going to install Joomla into.
+Define which Mysql Database you are going to use for your site, (This is usually done more or less automatic, just need to fill out a few fields of data during the scripted installation, basically defining the database name & database admin username & password)
+
+
+Provide Admin Login Data. (Obviously be sure to remember this) & Basic Site Data..
+SELECT WHAT VERSION YOU WANT TO INSTALL
+Submit/Save/Create/Install w/e the button is called to initializes the script
+Once the installer script has ran its course, you should be able to go to your website via your internet browser like anyone else would. (Assuming your DNS record has been properly set)
+To make changes to the site, via the "back-end" ..Just surf to www,yourdomainname,com/administrator & use your admin log in information you defined during installation.
+ Log in to the "back-end" as Administrator and you can ...create / install / modify... the following: (OR SKIP TO STEP 6 for Quick Example of How to build a "Home" page and a "Contact Us" page.
+
+
+Articles - (Future Link to information about Article creation and management)..
+Menus - (Future Link to information about Menu creation and management)
+Plugins - (Future Link to information about Plugin installation, management, or creation)
+Modules - (Future Link to information about Module installation, management, or creation)
+Components (Future Link to information about Component installation, management, or creation)
+Packages - (Basically any combination of extensions aka Plugins, Modules, & or Components that are specifically developed to work in unison.These are all in effect Content or Content Management
+
+,

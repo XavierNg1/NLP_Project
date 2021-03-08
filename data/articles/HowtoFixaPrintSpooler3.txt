@@ -1,0 +1,22 @@
+ While not always necessary, this increases the chance that the scan will succeed.
+ Search for "Command Prompt" with the search bar. Right-click Command Prompt and select "Run as administrator." Enter your administrator password.
+ In the window that opens, type sfc /scannow and press ↵ Enter. You must type this exactly as it appears. This tells System File Checker to scan your files for corruption, and attempt to repair them.
+
+
+This will revert your system files back to the default state. If you've intentionally modded them, backup your computer before you start the scan., Leave the Command Prompt window open while the scan checks your files. Read the message once it's done:
+
+
+If it says "Windows Resource Protection found corrupt files and successfully repaired them," restart your computer in regular mode, then try to print.
+If it says "Windows Resource Protection found corrupt files but was unable to fix some of them," continue to the next step.
+For any other message, try another solution listed on this page.
+ If the scan identifies problems but failed to repair them, you'll need to do so yourself. Find more information as follows:In the Command Prompt, type findstr /c:"" %windir%\Logs\CBS\CBS.log >"%userprofile%\Desktop\sfcdetails.txt" and press ↵ Enter.
+
+Find Sfcdetails.txt on your Desktop and open it.
+Find the report with today's date. Find the name of the file that's corrupted or missing.
+ Find this file on another computer with the same version of Windows, and transfer it to yours. Alternatively, download a new copy from online — but make sure you do so from a trustworthy website.
+
+
+It is also possible to extract the file from a Windows installation disk., Here's how to replace the corrupted file with a new one:In Command Prompt, type takeown /f followed by a space and the exact path and file name of the corrupt file. It should look something like this: takeown /f C:\windows\system32\oldfile. Press ↵ Enter.
+Next, enter the command icacls (path to corrupt file) /grant administrators:F — replacing "(path to corrupt file)" with the same path and file name you used above.
+Transfer the new file by entering copy (path to new file) (path to corrupt file), replacing the words in parentheses with the correct paths and file names.
+

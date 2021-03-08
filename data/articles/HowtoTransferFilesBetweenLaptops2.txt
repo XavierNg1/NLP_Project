@@ -1,0 +1,13 @@
+ An FTP (File Transfer Protocol) is another handy way to transfer files between machines using only the internet. First you'll work with the server computer - the one that has the files you want to transfer - in order to make it accessible. FTP is generally best if you feel you need recurring access between your two laptops.
+
+
+On a Mac, go to System Preferences->Sharing->Services and check "FTP Access". Next click "Start" and wait for the change to apply. Note that this path may be slightly different in different versions of OSX.
+In Windows, go to Control Panel->Programs->Programs and Features->Turn Windows features on or off. Next click the plus symbol next to "Internet Information Services" (IIS), then put a check next to "FTP Server." Click "OK".
+ This is software that allows you to easily access FTP servers with only the server address or IP address. Popular ones include FileZilla, WinSCP, Cyberduck, and WebDrive., Now all you need to do is log in to the FTP server from the client computer and access your files for fast and secure transfer.
+
+
+On a Mac, go to Finder->Go->Connect to Server. You will be prompted for the server or IP address of the server computer. Enter it and click "Connect".
+In Windows, open your internet browser and type the server computer's IP address into the address bar directly. Go to File->Login As. Enter the username and password to log in.
+If you're having trouble finding your server computer's IP address, consult Find Your IP Address on a Mac or Find the IP Address of Your PC.
+For more details on the FTP method of transferring files, check out Set up an FTP Between Two Computers.
+

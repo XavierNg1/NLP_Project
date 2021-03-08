@@ -1,0 +1,27 @@
+
+If you have completed the workbook from the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border, you may SAVE AS that workbook under a new appropriate name having to do with the above helix image you're going to create, and then modify it according to the steps below as read MODIFY/IED or NEW.It helps placing the cursor at cell A14 and doing Freeze Panes.
+ MODIFIED: Create some Defined Name Variables.
+MODIFIED: Select cells A1:E2 and Insert Names Create in Top Row.
+MODIFIED: Create some more Defined Name Variables.
+MODIFIED: Select cells A3:H4 and Insert Names Create in Top Row.
+MODIFIED: Input the formulas and values to row 4.
+MODIFIED: Select cells A2:G2 and Format Cells Border thick line Top Bottom Sides Center and format number with 4 decimal places.
+MODIFIED: Put the entire sheet in font Lucida Fax size 9 by selecting the very top left cell between A and 1 for column and row and thus select the entire worksheet.
+MODIFIED: Create the Column Headings.
+MODIFIED: Input the t and c Formulas.
+MODIFIED: Do Edit Go To cell range A7:A2886 and input "=(A6+(-Tip*2)/(AjRows))" into cell A7, then do Edit Fill Down.
+MODIFIED: Input the (Adjusted) Cosine and Sine formulas.
+MODIFIED: Input the Main X and Main Y Formulas.
+NEW/MODIFIED: Input the Second X and Second Y Formulas.
+MODIFIED: Input the LOOKER table.
+MODIFIED/NEW: Input the (original) LOOKER2 vlookup table.
+NEW: Enter the HELIX DATA table constants and formulas.
+It is also a good idea to do Insert Comment a copy of all the formulas so far into the cells so there are always the original formulas should they ever be overwritten.
+Create the Chart.Shrink the chart on the original Data worksheet and put it at the bottom of the data.
+On the Chart worksheet, select menuitem Chart Add Data and then select back on the Data sheet cells G6:H2886 and hit OK.
+There should now be two series: 1) =SERIES(,Data!$E$6:$E$2886,Data!$F$6:$F$2886,1) and 2) =SERIES(,Data!$G$6:$G$2886,Data!$H$6:$H$2886,2).
+Finished!
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

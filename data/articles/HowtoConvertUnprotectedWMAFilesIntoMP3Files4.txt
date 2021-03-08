@@ -1,0 +1,24 @@
+ You will need MPlayer (an open source media player), LAME (an open source MP3 encoder), and the Win32 codecs which unlock the WMA format. In the console use the following commands to install the programs:
+
+
+sudo aptitude install mplayer
+sudo aptitude install lame
+sudo aptitude install ubuntu-restricted-extras
+Replace the Ubuntu commands with whatever distribution you are running.
+ Run the following command to convert one file at a time. Replace song.wma and song.mp3 with the name of the file that you want to convert:
+
+
+mplayer -vo null -vc dummy -af resample=44100 -ao pcm:waveheader song.wma;lame -m s -V 3 audiodump.wav;mv audiodump.mp3 song.mp3;rm audiodump.wav
+
+, If you want to convert every WMA file on your hard drive to MP3, use the following commands. You can adjust the quality of the encoding by changing the “resample=#”:
+#!/bin/bash
+for file in "$@"; do mplayer \
+-vo null \
+-vc dummy \
+-af resample=44100 \
+-ao pcm:file="${file%%.}.wav" \
+"$file"
+lame -V9 "${file%%.}.wav" "${file%%.}.mp3"
+rm -f "${file%%.}.wav"
+done
+

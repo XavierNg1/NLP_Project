@@ -1,0 +1,8 @@
+ This can be done by clicking on the AV Menu and clicking on File Manager. Then select the File System tab.;
+, Locate the slim.conf file. The files should be arranged in alphabetic order.
+ You may be required to fill in an administrative password.
+ Scroll down again, and this time, double click on the slim.conf file. A gedit window will appear; it should look like the picture above.
+, This final line should look like this: default_user YOUR USERNAME. This will automatically fill in your user name during login, but you will still be required to enter a password.
+, The final line should look like this: auto_login yes.
+ Just close the window and save the changes you made to it. The next time you reboot, the auto-login should be activated.
+

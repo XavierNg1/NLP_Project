@@ -1,0 +1,6 @@
+,, The following points should help you decide:
+
+
+Most fields are normal. That is, they are neither const nor read-only.
+If your field is intended to hold a simple constant value and that value is a ValueType child that can be initialized immediately or a string value, you should declare the field as const. Constant (const) fields can be initialized only in the declaration of the field.
+If your field is intended to hold a constant that is from a reference type (such as a Button, Student or any other class that is not a struct or enum), declare it as readonly. Read only fields can be initialized either in the declaration or within any constructor of the class and not anywhere else.

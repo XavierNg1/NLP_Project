@@ -1,0 +1,18 @@
+ Check this by typing java -version into the command terminal. If you don't have the latest version of Java, update it before proceeding.
+ A .jar file is made executable by collecting the class files of your Java application; compilers or JVM (Java Virtual Machine) understand these formats. .jar files execute from javaw (Java web start). You need to set application's entry point within jar file. (An entry point is a class containing the main function of your application). You will set the entry point using the Manifest file. Here's how to do it:
+
+
+The Jar tool automatically sets meta-inf/manifest.mf as path of the .jar file. When you open a default Manifest file, it should read "Manifest-Version: 1.0, Created-By: 1.6.0 (Sun Microsystems Inc)"
+Make a manifest addition .txt file. Enter Main Class: ., with the bracketed portions filled in with your specific information. (This is in the form of an attribute value pair.) Do not forget to add an empty line at the end of the file.
+Enter this terminal command to modify the Manifest file to include the application's entry point, changing the bracketed portions to your specific file names: jar cfm Review your Manifest file. After you set the entry point, it should read: "Manifest-Version: 1.0,Created-By: 1.6.0 (Sun Microsystems Inc), Main Class: ."
+Alternatively, you can set the entry point using the .jar tool. This overrides the Main-class attribute in the Manifest's file. Enter the following terminal command: jar cfe , Run the .jar file using the following command (the main method of your java application executes): java -jar , To open the .jar file by double-clicking on it, change the directory to the location of javaw (java web start) executable. Type the following command into terminal: C:\Program Files\Java\j2rex.y.z\bin\javaw.exe" -jar "%1" %*
+
+, With Linux, double-clicking the .jar file opens it in a zip archiver showing the contents of the .jar file. Instead, right-click and select "Open Terminal.";
+,, If you want to run the .jar file by double-clicking, then you might have to try changing the file type association (similar to the instructions for Windows) for your flavour of Linux system.
+
+
+Make sure the above command works.
+Type the following command into terminal: $>/usr/lib/jvm/jre-1.6.0-sun/bin/java -jar %f
+
+Set the path according to where Java is located on your system.
+

@@ -1,0 +1,67 @@
+ The determinant of a matrix detA=0{\displaystyle \det A=0} when A{\displaystyle A} is non-invertible. When this occurs, the null space of A{\displaystyle A} becomes non-trivial - in other words, there are non-zero vectors that satisfy the homogeneous equation Ax=0.{\displaystyle A{\mathbf {x} }=0.}
+
+, As mentioned in the introduction, the action of A{\displaystyle A} on x{\displaystyle {\mathbf {x} }} is simple, and the result only differs by a multiplicative constant λ,{\displaystyle \lambda ,} called the eigenvalue. Vectors that are associated with that eigenvalue are called eigenvectors. 
+
+
+Ax=λx{\displaystyle A{\mathbf {x} }=\lambda {\mathbf {x} }}
+
+We can set the equation to zero, and obtain the homogeneous equation. Below, I{\displaystyle I} is the identity matrix.
+
+
+(A−λI)x=0{\displaystyle (A-\lambda I){\mathbf {x} }=0}
+
+
+, In order for (A−λI)x=0{\displaystyle (A-\lambda I){\mathbf {x} }=0} to have non-trivial solutions, the null space of A−λI{\displaystyle A-\lambda I} must be non-trivial as well. 
+
+The only way this can happen is if det(A−λI)=0.{\displaystyle \det(A-\lambda I)=0.} This is the characteristic equation.
+ det(A−λI){\displaystyle \det(A-\lambda I)} yields a polynomial of degree n{\displaystyle n} for n×n{\displaystyle n\times n} matrices. 
+
+Consider the matrix A=(1432).{\displaystyle A={\begin{pmatrix}1&4\\3&2\end{pmatrix}}.} 
+
+
+|1−λ432−λ|=0(1−λ)(2−λ)−12=0{\displaystyle {\begin{aligned}{\begin{vmatrix}1-\lambda &4\\3&2-\lambda \end{vmatrix}}&=0\\(1-\lambda )(2-\lambda )-12&=0\end{aligned}}}
+
+Notice that the polynomial seems backwards - the quantities in parentheses should be variable minus number, rather than the other way around. This is easy to deal with by moving the 12 to the right and multiplying by (−1)2{\displaystyle (-1)^{2}} to both sides to reverse the order.
+
+
+(λ−1)(λ−2)=12λ2−3λ−10=0{\displaystyle {\begin{aligned}(\lambda -1)(\lambda -2)&=12\\\lambda ^{2}-3\lambda -10&=0\end{aligned}}}
+
+
+, This is, in general, a difficult step for finding eigenvalues, as there exists no general solution for quintic functions or higher polynomials. However, we are dealing with a matrix of dimension 2, so the quadratic is easily solved.
+
+
+(λ−5)(λ+2)=0λ=5,−2{\displaystyle {\begin{aligned}&(\lambda -5)(\lambda +2)=0\\&\lambda =5,-2\end{aligned}}}
+
+
+, Let's substitute λ1=5{\displaystyle \lambda _{1}=5} first.
+
+
+(A−5I)x=(−443−3){\displaystyle (A-5I){\mathbf {x} }={\begin{pmatrix}-4&4\\3&-3\end{pmatrix}}}
+
+The resulting matrix is obviously linearly dependent. We are on the right track here. 
+
+
+, With larger matrices, it may not be so obvious that the matrix is linearly dependent, and so we must row-reduce. Here, however, we can immediately perform the row operation R2→4R2+3R1{\displaystyle R_{2}\to 4R_{2}+3R_{1}} to obtain a row of 0's.
+
+
+(−4400){\displaystyle {\begin{pmatrix}-4&4\\0&0\end{pmatrix}}}
+
+The matrix above says that −4x1+4x2=0.{\displaystyle -4x_{1}+4x_{2}=0.} Simplify and reparameterize x2=t,{\displaystyle x_{2}=t,} as it is a free variable. 
+
+
+, The previous step has led us to the basis of the null space of A−5I{\displaystyle A-5I} - in other words, the eigenspace of A{\displaystyle A} with eigenvalue 5.
+
+
+x1=(11){\displaystyle {\mathbf {x_{1}} }={\begin{pmatrix}1\\1\end{pmatrix}}}
+
+Performing steps 6 to 8 with λ2=−2{\displaystyle \lambda _{2}=-2} results in the following eigenvector associated with eigenvalue -2.
+
+
+x2=(−43){\displaystyle {\mathbf {x_{2}} }={\begin{pmatrix}-4\\3\end{pmatrix}}}
+
+These are the eigenvectors associated with their respective eigenvalues. For the basis of the entire eigenspace of A,{\displaystyle A,} we write
+
+
+{(11),(−43)}.{\displaystyle \left\{{\begin{pmatrix}1\\1\end{pmatrix}},{\begin{pmatrix}-4\\3\end{pmatrix}}\right\}.}
+
+

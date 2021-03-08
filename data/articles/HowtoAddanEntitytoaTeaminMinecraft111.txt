@@ -1,0 +1,29 @@
+
+
+
+If cheats aren't enabled, press Escape and then click on Open to LAN, turning cheats On first.
+These steps are only guaranteed to work on Minecraft PC 1.11.x.;
+,
+
+
+Eg:  /scoreboard teams add Elektrosonikai
+
+
+,
+
+
+Eg:  /scoreboard teams join Elektrosonikai Elektrosonix
+
+
+,
+
+/give (your player name) minecraft:repeating_command_block
+Eg: /give Elektrosonix minecraft:repeating_command_block
+
+The reason why you are using a repeating command block is because the command has to be affecting the mobs constantly in order to affect new ones that spawn in. If you don't care about new mobs, a repeating command block is not necessary.
+,,
+
+
+Eg: /scoreboard teams join Elektrosonikai @e,  They should be set to read the following: Repeat, Unconditional, and Always Active.
+ No matter what gamemode you are in, the mob you chose (Wither Skeletons in the example) should be incapable of attacking you.  Success!
+

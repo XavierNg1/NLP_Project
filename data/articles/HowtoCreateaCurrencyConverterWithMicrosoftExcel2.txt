@@ -1,0 +1,34 @@
+ Go to http://www.x-rates.com/table/ in your browser. This will display the current conversion rates from USD to other popular currencies.
+
+You can also change the default currency from dollars to anything else by clicking the USD - US Dollar box on the left side of the page and then selecting a different currency.
+ Click the URL in your browser's address bar to select it, then press Ctrl+C to copy the URL., It's a green app with a white "X" on it., You'll find this option in the upper-left side of the window., It's near the top-middle of the Excel window., This option is in the upper-left side of the Excel window., To do this:
+
+Delete the URL in the "Address:" field.
+Click the "Address:" field.
+Press Ctrl+V.
+Click Go.
+ There are two tables--a top 10 currency table and a comprehensive currency table--with yellow right-facing arrows in their top-left corners on this page. Click an arrow to cause a checkmark
+
+
+
+
+
+to appear in its place., This button is at the bottom of the page., This will insert the chart's values in your Excel sheet; you'll see the currency name in the "A" column, the currency conversion value in the "B" column, and the inverse currency conversion in the "C" column.
+
+Your baseline currency (e.g., the one you're converting from) will appear at the top of the chart.
+ In a new column (e.g., the "E" column), enter the currency value you want to convert from.
+
+For example: if you're converting from dollars to euros, you might type "123" into E1 to signify $123.
+ In the cell immediately to the right of the currency data you just entered, type in the following formula: =.
+
+For example: if the conversion rate for dollars to euros is in the D4 cell, you would type =D4 into F1 and press ↵ Enter.
+ In the cell immediately to the right of the conversion rate cell, multiply the first currency and the exchange rate together with the following formula: =*. Doing so will display the converted currency value.
+
+In keeping with the previous example: for dollars to euros, you would type =E1*F1 into the G1 cell and press ↵ Enter.
+ In order to keep the values as up-to-date as possible, you'll need to update your currency converter:
+
+Click the Data tab.
+Click the Connections button at the top of the "Connections" group of options.
+Click Refresh.
+Click Close.
+

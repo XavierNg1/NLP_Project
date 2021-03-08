@@ -1,0 +1,33 @@
+ To move a file from the home folder into the documents folder, you first need to use the "cd" command to move into your home folder:
+
+
+
+
+  cd ~
+
+
+
+;
+, Now that you are in the folder you want to copy files from, choose which file you want to copy and run the "cp" command to copy it to the folder you want it copied to. So if the file you want copied to the documents folder is called myFile.txt, the command to use is...
+
+
+
+
+  cp myFile.txt documents
+
+
+
+
+
+, The best way to do this is by running these commands and finding your file in the list.
+
+
+
+
+cd documents
+ls
+
+
+
+
+

@@ -1,0 +1,110 @@
+ CSS uses the C-like "comment block"-style comments: /*---*/. This allows for multi-line comments, and you can quickly use it to disable portions of your code./* Everything between the starting and ending tags will be a comment */
+
+
+;
+, Only the parts of your page that are processed as CSS will support the comments. This means they will work in your CSS style page, as well a the <style> block of your HTML page. They will not work on other parts of the HTML page. If you need to comment in a HTML block, use HTML comments.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+    color: #93B874; /*You can create comments at the end of lines */
+    /* Or you can create comments between lines */
+    font-family: "times";
+} 
+ 
+/* You can create multi-line comments.
+Everything between the two comment tags will
+not be processed when displaying the page */
+</style>
+</head>
+<body>
+ 
+<p> This is a standard HTML paragraph. The comments above will not appear on the page. </p>
+ 
+</body>
+</html>
+
+
+
+
+, One of the more important uses for comments is to prevent pieces of code from being processed. This is great for testing changes and debugging code.
+
+
+
+
+
+<style>
+p {
+    color: #93B874; 
+    /* font-family: "times"; */
+} 
+ 
+/* The comment tags above will prevent the
+"font-family" attribute from being applied */
+ 
+</style>
+
+
+
+
+, You don't need to comment every line of code that you enter, as CSS is fairly self-explanatory, but it's useful to include comments for code that may not be immediately obvious at first glance. This not only helps people who may be collaborating or learning from your code, it can also help you remind yourself about the function of the code.
+
+
+
+
+
+<style>
+img {
+        opacity: 0.5;
+        filter: alpha(opacity=50); /* For IE6-8 */ 
+}
+ 
+/* The comment above indicates that the code on 
+that line is for Internet Explorer 6, 7, and 8 */
+ 
+</style>
+
+
+
+
+, You can create detailed documentation for your code using CSS comments and other characters. This allows you to explain the function of the program and provide instructions for other coders/users. CSS compression will automatically strip this out when it comes time to run the code, so you don't have to worry about length affecting the size of the file./***********************************
+************************************
+ This Makes for a Good Title Header
+************************************
+***********************************/
+ 
+/*========Section Heading=========*/
+ 
+/*------Sub-Section Heading-------*/
+ 
+/*This can be the text for each of
+* for each of your paragraphs.
+* Adding an * to the beginning of
+* each line makes it a little easier
+* for the reader to parse */
+
+
+
+
+, CSS doesn't have a "single-line" comment function, like // in JavaScript. You can, however, use use invalid CSS at the beginning of a line to keep the following function from being processed. This isn't considered good practice for major debugging, but it can be useful in a quick pinch.<style>
+p {
+    color: #93B874; 
+    XXXXfont-family: "times";
+} 
+ 
+/* The "XXXX" above will prevent "font-family"
+from being processed. Code hacks like this 
+should not be left on a live website, as they
+could potentially cause problems for the reader */
+ 
+</style>
+
+
+
+

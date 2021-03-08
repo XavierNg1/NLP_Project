@@ -1,0 +1,31 @@
+
+For those of you who have completed an article and workbook involving the Garthwaite Curve and/or spherical helices, you may do a SAVE AS of that workbook and save considerable time and effort, for what you want is one sphere's data to apply the distance formula s=((x2-x1)^2 + (y2-y1)^2)^.5 to each new set of 4 x's and y's.
+Set the Preferences under the Excel menu:
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+Go to cell A16 and do Freeze Panes under the Window menu.
+Create the Defined Variables upper section (here's a picture):
+
+Input AjRows into cell A1 and 2880 into cell A2.
+Input the Column Headings:
+
+Input Base t to A5.
+Input the Lookup Tables:
+
+Input LOOKER to I5.
+Input the Column Formulas:
+
+Input to A6 "=IF(ODD(Spheroids)=Spheroids,0,Tip)" w/o quotes.
+Measure the Arc Length
+
+Create the Chart
+Select E6:F125 and create a chart that is Scatter, Smooth Line Scatter.
+Copy the formulas from the Data worksheet and paste then to the Saves worksheet, then again below but to Paste Special Values atop itself this time to preserve the formatting but obtain only values.
+You may want to total the Arc Length column as a double check on the cumulative formula, which will not work without the leading number having the absolute reference dollar signs.
+For your final chart, make the chart title read the total Arc Length of the number of Spheroids you input by typing in the text box something like a reference to the worksheet or workbook and then a defined variable name (I cannot get it to work on XL2011 sheets unless I import from older versions and edit those text boxes): ='Revised-THE Garthwaite Curve.xlsx!,
+The final image.
+
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

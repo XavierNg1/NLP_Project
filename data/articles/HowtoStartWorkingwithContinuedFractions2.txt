@@ -1,0 +1,86 @@
+ In Preferences, General, make sure the "Use R1C1 reference style" box is unchecked, so that the columns are represented alphabetically.;
+, Here is what you need to know:
+
+It is known that 40/31 is larger than 1, so 31/31 + 9/31 will be the last step for 40/31;
+Each step is inverted, so 31/9 will be the next to last step, i.e. 27/9 =3, so 3+4/9, for 40/31 only;
+The 4/9 will need to be inverted so the first step will be 9/4, which is 2+1/4, for 40/31.
+Enter into cells A1 to A4 the number sequence 4, 2, 3, 1.
+Enter into cell C2, 2+1/4
+Enter into cell C3, 3+1/(2+1/4) and notice how the info in cell C2 was repeated in the denominator.
+Enter into cell C4, 1+1/(3+1/(2+1/4)) and notice that there are now 2 denominators and that the information from both cell C3 and C2 was used in C4.
+Enter into cell D2, 9/4
+Enter into cell D3, 31/9
+Enter into cell D4, 40/31 (our objective fraction!)
+Enter into cell E3, 3+4/9
+Enter into cell E4, 1+9/31 (31/31 + 9/31 = 40/31).
+Enter into cell B1 the formula, without quotes, "=A1"
+Enter into cell B2 the formula, without quotes, "=A2+1/B1"
+Enter into cell B3 the formula, without quotes, "=A3+1/B2"
+Enter into cell B4 the formula, without quotes, "=A4+1/B3"
+Confirm the result of the formula in cell B4 is 1.29032258064516, if the cell is formatted number for 14 digits to display.
+Enter into cell B6 the formula, without quotes, "=40/31". The same result should occur.
+Copy cell C4 to cell C6 and paste it, then insert an = sign at the beginning and hit return. The same result, 1.29032258064516, will appear due to the correctness of the continued fraction just constructed.
+ The framework of a continued fraction is derived from it.
+
+Dividing by x we can rewrite it as Equation : x= b +1/x
+Substitute the expression for x given by the right-hand side of this equation for x in the denominator on the right-hand side to get Equation : x = b + 1/(b+ 1/x)
+Continue this incestuous procedure indefinitely, to produce a never-ending staircase of fractions that is a type-setter’s nightmare, Equation (usually descending vertically with each denomination line and growing smaller and smaller in font size):
+
+x = b + 1/(b+ 1/(b+ 1/(b + ...)))
+This staircase is an example of a continued fraction. If we return to Equation 1 then we can simply solve the quadratic equation to find the positive solution for that is given by the continued fraction expansion of Equation 4; it is Equation : x = (b + sqrt(b^2 +4))/2
+
+
+Picking b=1, generate the continued fraction expansion of the golden mean, phi, as Equation :
+
+Phi = (sqrt(5)+1)/2 = 1+1/(1+1/(1+1/(1+1/(1+1/(1+1/(1+1/(1+1/(1+1/(1+1/(1+1/(1+...)))))))))))
+
+
+
+
+
+
+
+
+Define a general continued fraction of a number as Equation :
+
+a0+1/(a1+1/(a2+1/(a3+1/(1+...+1/(an+...)))))
+Where the an = are n+1 positive integers, called the partial quotients of the continued fraction expansion (cfe).
+, Continued fractions can be finite in length or infinite, as in our example above. Finite CFE's are unique so long as we do not allow a quotient of in the final entry in the bracket (equation 8), so for example, we should write 1/2 as rather than as . We can always eliminate a 1 from the last entry by adding to the previous entry.
+
+If cfe's are finite in length then they must be evaluated level by level (starting at the bottom) and will reduce always to a rational fraction; for example, the cfe 40/31 done above. However, cfes can be infinite in length, as in Equation 6 above. Infinite cfes produce representations of irrational numbers.
+If we make some different choices for the constant in Equations 4 and 5 then we can generate some other interesting expansions for numbers which are solutions of the quadratic equation. In fact, all roots of quadratic equations with integer coefficients, like Equation 5, have cfes which are eventually periodic, like or .
+Here are the leading terms from a few notable examples of infinite cfes:
+
+e         = sqrt(2) = sqrt(3) = π         = , Now that you see how it's done, you can continue the process! Have fun!!
+
+In cell A8, use Option+p to make the pi symbol, π. Make it bold and aligned center.
+Into cell B8, enter the formula, without quotes, "=PI()". Do Format Cells Fill Canary Yellow and Font Firetruck Red.
+From cell A9 to cell A31, input the numbers in the pi series above, from .
+Since the first number in the series, 3, is followed by a semi-colon, it will always lead the progression of the continued fraction, unlike for the example of 40/31.
+Enter to cell C10, 3+1/7.
+Enter to cell C11, 3+1/(7+(1/15)).
+Enter to cell C12, 3+1/(7+(1/(15+1/(1)))).
+Enter to cell C13, 3+1/(7+(1/(15+1/(1+1/(292)))))
+Enter to cell D10, 22/7.
+Enter to cell D11, 333/106
+Enter to cell D12, 355/113.
+Enter to cell D13, 103993/33102.
+Enter to cell E10, 21/7+1/7.
+Enter to cell E11, 318/106+15/106
+Enter to cell E12, 339/113 +16/113
+Enter to cell E13, 99306/33102 + 4687/33102
+Enter to cell F13, or make a Comment to cell E13 that  99306/33102 + 4687/33102 =     (3*((7*4687)+293))/((7*((15*293)+292))+293)+(((15*293)+292))/((7*((15*293)+292))+293)    where 4687 = ((15*293)+292).
+The result of that = 3.1415926530119, vs. π = 3.14159265358979, so that's a fairly good approximation.
+Now, let's see if there's an easier way. You should still have the series of pi CFEs in the range from in cells A9 to A31. If not, input them and check them now.
+ The result should equal 84.5, The result should equal 1.01183431952663, The result in cell B10 should be 3.14159265358979 which is pi, accurate to 14 decimal places (which is as good as it gets in Microsoft Excel)., It will take some time and concentration but you will come to appreciate the work of the man who figured it out in 1685, John Wallis (the teacher and contemporary of Isaac Newton).
+
+For irrational numbers, we are looking at a fractal expression. Note that there are 23 rows from A9 to B31 required to get the accuracy of 14 decimals. I do not know the relation of one to the other, but it seems that this is a fairly formidable means of calculating pi fairly precisely. n.b. If all the numerators in the continued fraction expansion = 1, then it is called "canonical", else it is termed "generalized". The following convergent cfe's for π are generalized:
+
+
+
+
+
+
+
+
+, Good luck and have fun!!,,

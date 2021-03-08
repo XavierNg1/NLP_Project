@@ -1,0 +1,16 @@
+
+Ensure that you have a fully operational, complete version of Ubuntu running GNOME (GDM).
+Enable the Universe repositories.
+
+,
+Open the terminal (Applications -> Accessories -> Terminal) and type:sudo apt-get install beagle.
+
+,
+You will be prompted for the root (or primary user) password.
+After Beagle has installed, whilst still in the terminal, type sudo gedit /etc/fstab.
+Open the Run dialog (press Alt+F2) and type in beagled.
+
+,
+Open another run dialog, and type beagle-settings.
+You should now be able to search your computer!,
+One final step: you will probably want Beagle to run every time you turn the computer on, indexing your data continually.

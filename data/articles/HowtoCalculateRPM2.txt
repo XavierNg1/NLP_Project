@@ -1,0 +1,20 @@
+ The driver gear is the gear connected to a motor or other power source, usually by an axle. The driver gear’s rate of rotation is known.
+
+
+For the purposes of this example, we’ll treat the driver gear as having 80 teeth and a rotation rate of 100 rpm.
+ The driven gear is the gear whose teeth mesh with those of the driver gear. The driver gear’s teeth push the teeth of the driven gear, which causes the entire driven gear to rotate. This is the gear whose rate of rotation we’re trying to find.
+
+
+For this example, we’ll assume two different driven gear sizes, one that’s smaller than the driver gear, and one that’s larger than the driver gear.
+The smaller driven gear will have fewer teeth than the driver gear. Our smaller gear will have 20 teeth.
+The larger driven gear will have more teeth than the driver gear. Our larger gear will have 160 teeth.
+ To find the ratio of the two gears, you divide the number of teeth in one gear by the number of teeth in the other. Although the correct way is to always divide the number of teeth of the driver gear by those of the driven gear or vice versa, we’ll divide the larger number by the smaller number.
+
+
+For our driven gear that has 20 teeth, we’ll divide the number of teeth the driver gear has, 80, by 20 to get 80 / 20 = 4.
+For our driven gear that has 160 teeth, we’ll divide that number by the number of teeth the driver gear has, 80, to get 160 / 80 = 2.
+ How we figure this depends on whether the driven gear is smaller or larger than the driver gear.
+
+
+If the driven gear is smaller than the driver gear, we multiply the result of the ratio between the driver and driven gear by the RPM of the driver gear. For our smaller driven gear with 20 teeth, we multiply the RPM of the driver gear, 100, by the result of 4 from the previous step to get 100 x 4 = 400RPM for the driven gear.
+If the driven gear is larger than the driver gear, we divide the result of the ratio between the driven and driver gear into the RPM, of the driver gear. For our lager driven gear with 160 teeth, we divide the RPM of the driver gear, 100, by the result of 2 from the previous step to get 100 / 2 = 50RPM for the driven gear.

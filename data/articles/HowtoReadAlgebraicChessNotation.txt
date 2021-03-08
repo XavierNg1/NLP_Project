@@ -1,0 +1,67 @@
+ Although not absolutely necessary, having a chess set in front of you will help you follow along as you read chess notations.;
+, There are 64 squares on the chessboard (32 white, 32 dark), and each one has a unique name denoted by the algebraic chess notation:
+
+
+The vertical files (columns) are labeled a through h, starting from left to right on White's side;
+The horizontal ranks (rows) are numbered 1 through 8, starting from bottom to top on White's side.
+A given square on the chessboard is denoted by the lowercase file (column) letter, followed by the rank (row) number. For example, g5 is the square corresponding to the file g and rank 5.
+ Usually, each chess piece is denoted by the first letter of its name in uppercase, except for the knight (N) and the pawn (nothing). For figurine algebraic notation, a specific symbol is used for each piece.
+
+
+King = K or ♔ or ♚
+Queen = Q or ♕ or ♛
+Rook = R or ♖ or ♜
+Bishop = B or ♗ or ♝
+Knight = N (since K is already taken by a more important piece) or ♘ or ♞
+Pawn = (no letter) -- pawns are denoted by the absence of a letter or ♙ or ♟
+
+,
+
+
+Label the move number first. Each pair of moves is prefaced by a number followed by a period which indicates the ordinal number of the pair of moves - i.e., 1. for the first pair of moves (white, then black0, 2. for the second pair of moves, and so on.
+Write white's move after the move number and follow it with black's move, one pair of moves per line according to the following conventions:
+
+
+Denoting a move to an open square: Write the capital letter which designates the piece, followed by the coordinate of the destination square. For example, a knight going to the square f3 would be denoted as Nf3; a pawn going to the square e4 would be denoted simply as e4. (Remember that pawns do not get a letter).
+
+Denoting a capture:. Each capture move is denoted by the letter of the piece, followed by a lowercase x, then the coordinate of the destination square. For example, a bishop capturing a piece at c4 would be denoted as Bxc4. Sometimes, the x will be omitted.
+
+When a pawn makes a capture, the file (column) from which the pawn departed is used in place of a piece initial. Thus, a pawn on e4 captures a piece on d5 would be denoted as exd5, or simply ed5 as the x is sometimes omitted.
+En passant moves are denoted by the file (column) of departure of the capturing pawn, followed by the square to which it moves, followed, optionally, by the abbreviation "e.p.". Thus, a pawn on e5 capturing en passant a pawn on d5 is denoted as exd6 or exd6 e.p.
+
+
+
+If two or more identical pieces can move to the same square, the letter for the piece is followed by:
+the file (column) of departure if they differ;
+the rank (row) of departure if the files are the same but the ranks differ;
+both the rank and file if neither alone uniquely defines the piece.
+For example, if two knights on d2 and f2 can both reach e4, the move is denoted as Nde4 or Nfd4, as appropriate. If two knights on d2 and d6 can both reach e4, the move would be denoted as N2d4 or N6d4, as appropriate. If three knights on d2, d6, and f2 can all reach e4, with capture, the move would be denoted as Nd2xe4, N6xe4, or Nfxe4, as appropriate.
+
+
+For pawn promotion, the piece to which it is promoted is written after the destination coordinate. For example, a pawn on e7 moving to e8 and promoting to a knight would be denoted as e8N. Sometimes an equal sign (=) is used, as in e8=N, or parentheses are used, as in e8(N), or a slash (/) is used, as in e8/N. Only the first type is used in FIDEstandard.
+
+For castling, O-O denotes king side castle, while O-O-O denotes queen side castle.
+
+A check is denoted by + after the move notation; double check may be denoted by ++.
+Checkmate is denoted by # after the move notation. Some older chess literature may denote ++ as checkmate.
+A 1-0 is used at the end of the game to denote a white win, 0-1 to denote a black win, and ½-½ (or 0.5-0.5) to denote a draw. The words "White Resigns" or "Black Resigns" may be used to denote a resignation.
+
+
+
+Punctuation is commonly used to comment on the effectiveness of moves, usually relative to the skill of the player. It is placed after the move. For example:
+
+! a good move
+!! an excellent move
+? a questionable move
+?? a blunder
+!? an interesting move but unclear
+?! a dubious move but worth considering
+
+
+
+, List of moves are denoted as numbered pairs by White followed by Black. For example, 1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5.
+
+
+Moves may be interrupted by comments. When the record resumes with a Black move, an ellipsis (…) takes the place of the White move. For example: 1. e4 e5 2. Nf3 Black now defends his pawn. 2...Nc6.
+
+

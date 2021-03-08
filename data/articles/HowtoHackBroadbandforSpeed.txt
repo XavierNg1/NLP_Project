@@ -1,0 +1,18 @@
+ Look to the lower left side of your screen, and locate the Start icon. It looks like a circled colored window. Click on it.;
+, Once you've clicked on the Start icon, look to the bottom of the window and enter Run in the search bar.
+ After entering Run in the Start menu's search bar, look to the very top of the window and select the program Run. A smaller window will appear, asking you to type in the name of a program.
+ Then click OK. This command will open up a new window labeled Local Group Policy Editor.
+ Once the Local Group Policy Editor window appears, look to the left side for various items to select from. Extend Administrative Templates from Computer Configuration (not from User Configuration) by clicking on the little arrow. Under Administrative Templates, extend Network. Under Network, select QoS Packets Scheduler. Limit Reservable Bandwith should be at the right side of the window.
+ After entering QoS Packets Scheduler, double-click on Limit Reservable Bandwidth., Within the Limit Reservable Bandwidth window, look under Options on the left hand side of the window. You'll see an option to enter Bandwidth Limit. Enter 0, then click on OK.
+ Now, go back to Start. Once you've opened the Start menu, look to the right side of the menu and click on Control Panel.
+ Once you're in Control Panel, scroll down until you see Network and Sharing. Click on it.
+ In the Network and Sharing window, you'll be able to view your basic network information. Look to the left side of the window, and locate Change Adapter Settings. Click on it.
+ Then, scroll down to Properties, and click on it.
+ Then, select Properties.
+ Under the general tab of your Internet Protocol Version 4 window, scroll down to the option Use The Following DNS Server Addresses. Click on the circle next to it to enable this option.
+ Under Use The Following DNS Server Addresses, you'll see two lines of value boxes one above the other. The first one is labeled as Preferred DNS Server, and the second is Alternate DNS Server. Enter 8.8.8.8 in the first line of boxes. Then, enter 8.8.4.4. in the second line.
+
+
+
+Your broadband speed will now up to 20% faster than before.
+

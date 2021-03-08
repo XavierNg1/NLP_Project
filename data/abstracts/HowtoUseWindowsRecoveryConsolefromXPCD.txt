@@ -1,0 +1,29 @@
+
+You've probably got in your hands some recovery/restore CD's from your PC vendor.
+Go out and purchase a Windows XP retail CD package.
+Pop in the Windows XP CD, reboot, making sure to select boot from the CD option.
+Windows XP will start to load.
+Usually your admin password is blank, so just hit a return when prompted for a password.
+
+,
+Type 'help' for the commands that the RC can run.
+Try 'fixboot'.
+Try 'fixmbr'; again, this may damage a partition table that it doesn't understand, so be wary of taking this step... you may want to use this as a last resort and only if you have a single partition on the disk.
+
+,
+Run CHKDSK /P C:
+
+,
+If you get errors still, rerun or also do a CHKDSK /R C:.
+
+,
+If the CHKDSK finally succeeds without errors, then you should be able to exit from the RC and reboot OK.
+
+,Run CMD
+
+,
+TYPE "HELP" to view the commands.
+
+,
+Choose from the list displayed.
+

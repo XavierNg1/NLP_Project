@@ -1,0 +1,93 @@
+ Knowing the purpose of your wiki will help decide the software and hosting options to choose from. Wikis can be personal pages, sprawling communities, or anything in between. You can use a wiki to track your life goals, create a product manual for your business, collaborate with coworkers on a project, create a neighborhood newsletter, create a discussion place for a hobby, and much more.
+
+
+Wikis work best when they have a broad focus that allows as many knowledgeable writers and editors to contribute as possible. If you are trying to build a popular wiki with lots of community involvement, then the focus should be open-ended enough to allow for lots of expanding.
+For example, it would be better to start a wiki about a game company and all their games than just one of their games.;
+, It would be useless to create a wiki which is a double of another one. The target of a wiki is to write together, not isolate each other. Even if you think the other wiki is slightly different from your concept, if you don't easily adopt the concept of another wiki, why would other people easily adopt your own?, Your wiki will need advice and motivation, so talk about your project and make other people follow you. They are more likely to contribute to the project if they are called before the creation of the wiki as they will feel like co-creators., If you are going to need a lot of control over your wiki, or you want to run your own, you're going to want to host your wiki on your own service. If you don't have any technical experience, a wiki on a wiki farm will be much easier to get up and running, though you won't have as much control over it.
+
+
+If you foresee your wiki getting very popular with lots of pages and traffic, you may find hosted wikis too limiting. It can also be difficult to get your wiki contents off of a wiki farm's servers so that you can move it to your own later on.Using a wiki farm means that your wiki's URL will have the farm's name in it. For example, if you use Wikia, your wiki's address will be yourwiki.wikia.com. Hosting your own wiki means you can purchase your own domain, making your wiki's address yourwiki.com.
+The cost of hosting your own wiki will vary depending on the host that you pick. Be sure to find one that has a good uptime guarantee and high-quality support. Follow this guide for more help on finding your own host.
+ Whether picking a wiki farm or going with your own host, you're going to come across several different wiki software packages. Most wiki farms offer whichever software their farm is running, but if you host your own you can use whichever package suits your needs the best. Use services such as WikiMatrixto compare the features of various software packages.
+
+
+
+MediaWiki – This is the most popular wiki software on the net, and runs wikiHow, Wikipedia, and many other wiki sites. Many of the most popular wiki farms use the MediaWiki software as well.TikiWiki - This is the second most popular wiki software available, and runs a large number of wikis and wiki farms. TikiWiki has strong plugin support, allowing you to add features such as forums, image galleries, calendars, and more.
+
+UserPress – This is a wiki plugin for WordPress. It has most of the functionality of MediaWiki and other standalone wiki software, but it's much easier to use.
+
+DokuWiki - This is a smaller wiki software program that is growing in popularity, especially in enterprise-level implementations. It is designed first and foremost for team and workgroup collaboration, and has multiple levels of user access., If you decide to go with a wiki farm for your new wiki, you'll need to do some comparisons. There are a lot of options out there, both free and paid. The main benefit of using a farm is the ease of getting your wiki up and running. Be aware that moving to a different farm or to your own server can be very difficult. Some of the more popular farms include:
+
+
+
+Wikia – This is a popular entertainment and lifestyle wiki host. Wikia is one of the largest video game wiki farms on the web, and it is also one of the fastest growing wiki farms in other respects.
+
+WikiFoundry – This is an alternative to Wikia and allows for private sites. It is one of the wikis where they can opt to require writer status in order to edit.
+
+Wikispaces – This is a wiki host designed for educational and academic uses. It is very popular in university settings.
+
+Wikispot – This is a host designed for communities and non-profit services, though it is not limited to those. However, as of 30th April 2015, it has discontinued its services in favor of focusing on a geographically-oriented wikis project: LocalWiki.
+
+Wikidot – This is an all-purpose (business, personal, community, education) wiki farm that allows you to use your own purchased domain name with a free Wikidot-hosted account. Wikidot also allows for the creation of web pages beyond wikis.
+
+Miraheze - This is a wiki farm for any purpose needed and with two types of wikis, private and public. MediaWiki extensions can be requested and enabled (including VisualEditor and Flow). There are no ads on Miraheze.
+ The process will vary from site to site, but general all you need to do is create a username and then click the "Create Wiki" link on the farm's homepage. Some wiki farms require you to fill out a form to be submitted for approval, while others simply ask you for a title and some other basic information.
+
+
+For step-by-step instructions for creating a Wikia wiki, click here.
+For step-by-step instructions for creating a Wikidot page, click here.
+Most other farm services are very similar to the two guides posted above.
+Once your wiki is created, you can skip down to the next section of this guide.
+ Most wiki farms offer a variety of customization options, including premade templates and the ability to upload custom images. Find a template that suits the needs of your wiki, or upload banners and other images to create a unique wiki.
+
+
+See this guide to learn how to customize a Wikia wiki.
+ If you decide you want to host your own wiki, you will most likely need to transfer the wiki software onto the server. Some hosts come with wiki software ready to be installed, but it may not match the software that you want to use (for example, they may offer a quick TikiWiki installation, but you want to use MediaWiki). The following steps are a basic guide to installing MediaWiki, follow this guide for detailed more information, or this guide for TikiWiki information.
+
+
+The wiki software will come in a compressed file. You can either extract this file on your computer, or extract it on the server.
+Place the extracted wiki software folder into the "web" directory on your server.
+Rename the uploaded folder to what you want the URL to look like. For example, if your website is www.example.com, renaming the folder to "w" will make your wiki homepage www.example.com/w/index.php.
+ MediaWiki supports MySQL and SQLite. If you are using SQLite, you only need to choose a name for the database and it will be installed automatically. If you are running MySQL, you will need to download it for your server if it is not already installed, and then create a new database using the following commands:create database wikidb;grant index, create, select, insert, update, delete, alter, lock tables on wikidb.* to 'username'@'localhost' identified by 'password';
+
+
+Replace username and password with the username and password you want to use as the wiki's owner.
+
+localhost Can be left as "localhost" unless your database is located on a different server than the web server you're installing your wiki on. In that case, replace localhost with the address of the database's server.
+See this guide for more details on creating a MySQL database.
+ Once you have the MediaWiki files uploaded and the database has been created, you can visit the index.php page on your server through your browser to run the automated install script. After Mediawiki finishes the configuration tests, you will be asked to fill out a form with your wiki information:Wiki name - This is the name for your wiki. It will show up in the metadata for your wiki, and will be integrated throughout the site.
+Contact e-mail - This is the main administrative email address. It will be displayed on all email notifications and on some of the error pages.
+Language - Use the drop-down menu to choose the language of the wiki interface.
+Copyright and Licenses - Choose your license information. GNU Free Documentation License is the license compatible with Wikipedia.
+Admin username and password - This will be the first admin account that can block users from editing and perform other administrative duties. You can create more later.
+Database host - This is where the database is located. If it is on the same server as your wiki software, set it to localhost.
+Database name - The name of your database.
+Database username/password - The username and password used to access the database., Once you've got the base wiki up and running, you can change the visual appearance using user-made skins or by playing around with the CSS code. Change the logo on the wiki to match the function of the wiki.
+ Your wiki will come installed with a set of default permissions that may work for your needs, but many people will want to change who can access and edit what. This is especially important in business settings where you want multiple collaborators to work on a product page, but don't want it vandalized by anonymous users.
+
+
+You can use the permissions file to create different levels of users, such as creating patrol admins who can make edits that don't appear in the recent changes log, or sysops who can merge pages without having to get approval. This will allow you to create a powerful and diverse user base that will keep your wiki running smoothly.
+ As soon as your wiki is up and running, it's time to get to work writing articles! When your wiki is born, it won't have any pages and no other contributors. To change this, you'll need to start adding some content. Good content will drive other people to your wiki. As more people come, other visitors will begin contributing their own articles and edits to your wiki. It will take some time, but you'll have a community before you know it!
+
+
+Remember, when you're starting out, it's up to YOU to create the content that will bring people to your wiki. Be sure that you are well-versed in the topic you are covering so that you can have comprehensive articles available from day one.
+ Category pages contain lists of related pages. In addition to categories containing the main content, you may want to create a category page called "Organization" for pages of your site like the front page, and maybe create a category page called "Help" for the help articles of the site. Remember that categories themselves can have sub-categories by categorizing a category page.
+ A policy guide is the general rules for the writing on your wiki. This policy guide will allow other contributors to see how the information on your wiki should be represented to the readers. You don't have to be rigid while creating the policies. Try to make them flexible, as people won't be able to easily work or contribute well to a wiki with overly strict rules.
+
+
+You may want to write standards on how weaving the web of links should be done, and on article noteworthiness standards.
+Not all of your contributors will follow the style guide you create, but it will aid in patrolling and editing articles.
+A guide is more friendly than verbally reprimanding. It's more social to be corrected by a text than by a person.
+ You will find creating articles much more efficient if you learn some basic wiki syntax. This will let you edit pages directly without having to use any guided editors, which can let you adjust the layout and style to your liking.
+ If a content copy is plagiarism, reusing the styles and the templates of other wikis is encouraged. Templates are pages that can easily be appended to other pages. Some uses for templates include nominating articles for deletion, marking an article as a stub, or just simply to note something; but there are a variety of other creative uses for templates. Wikis are open communities that are examples. Look how it works, see how people interacts, reuse their habits and understand why another wiki is successful. Compare your wiki to a wiki with the same size, not Wikipedia. Wikipedia is giant and needs different rules than you.
+ The main draw of a wiki is that anyone can edit it, but this is also its biggest challenge. The more people that come to your wiki, the higher your chances of being vandalized. Luckily, almost all wiki software allows for quick rollbacks of articles to their previous versions. Be as much tolerant as possible. If your version and the new version are both correct, prefer the contributor version. It will enlarge the wiki point of view and welcome the contributors.
+ If your wiki is interesting, you will find that certain people come back often to create and curate content. If you find that people are enthusiastic about your wiki, then give the dedicated ones more control over the site. Be supportive and nice to your editors. It is important that they have a helping hand to guide them and to motivate them to work on the wiki. By creating admins from your community, you relieve a lot of the pressure that you face when it comes to patrolling and maintaining your content.
+
+
+Set up forums and talk pages to allow your community members to discuss the wiki's rules and style.
+Allow your admins to vote on policy and style changes.
+Run community events such as editing competitions to get all your loyal editors excited.
+ Do everything you can to spread word about the existence of your wiki. Describe your wiki on wikiindex.org . Search narrow wikis and suggest to point to each other. Your wiki is a node in the wiki network. Do not hesitate to ask questions on the other wikis. The more you talk, the more you will be known. Advertise it through social media, tell everyone you know to tell everyone they know, post in forums related to your wiki, and link it in blog comments. Anything that you can do to get people to visit your site will increase the chances of your wiki succeeding.
+ As your wiki becomes more and more popular, continue adding features that benefit your site. Things such as forums, chat rooms, polls, calendars and more can all add good functionality to your wiki. Be creative with your content! Also ensure that you are updating to the newest version of your wiki software package whenever possible to get the latest features and security fixes.
+ A wiki is a collaborative, community effort. Enjoy the community that you create with your wiki, and always strive to make it better. The Internet was built in order to facilitate communication and the wiki is currently one of the most effective environments for collecting and sharing information. Congratulations on starting your own!
+

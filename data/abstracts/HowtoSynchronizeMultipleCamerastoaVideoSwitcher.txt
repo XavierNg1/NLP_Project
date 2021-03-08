@@ -1,0 +1,17 @@
+
+Identify your switcher as the type that needs to be timed or "genlocked" with camera inputs.
+Identify your cameras as the type that can be timed or "genlocked".
+Acquire enough BNC cables to do the job.
+Each camera needs a reference signal from the switcher to be able to synchronize with a master heartbeat or genlock video signal.For each pair of BNC cables, use tape to label one cable as "REF" on both ends and the second cable "VID" on both ends.
+At the switcher (or VDA) connect one end of the cables labeled "REF" to any BB connector.
+At the cameras, connect the cable labeled "REF" to the "REF IN" or the "GEN IN" connector.Find the "PROGRAM OUT" connector on the back of the switcher and use a BNC cable to hook it up to a color monitor.
+Find the switch on the cameras (or the CCUs) that turn on the camera's internal color bars.
+At this point, an engineer would use a waveform monitor and vectorscope to accurately time the system but if you had an engineer, you would not be reading this tutorial and it is beyond the scope of this "how-to" to explain the use of a waveform and vectorscope.
+Set up a "horizontal wipe".
+On the PREVIEW bus, punch up switcher COLOR BARS if the switcher has built in color bars.
+On camera one itself (or on the CCU) find the adjustment for "H-PHASE".
+Tweak on the H-PHASE adjustment until the camera bars line up vertically pretty nicely with the switcher bars.
+Repeat this procedure adjusting camera two with the timed CAM 1 in PREVIEW and CAM 2 in PROGRAM.
+Now that the cameras are "horizontally timed", go back to camera one and find the S/C PHASE (sub-carrier phase) adjustment.
+Repeat the procedure that was performed with the horizontal phase except adjust the S/C and try to match the colors, first with the switcher bars and then (more importantly) with each other.
+When none of the cameras jump or tear when you push the switcher buttons and slide the T-bar and the color bars match, you can now switch back from bars to camera images.

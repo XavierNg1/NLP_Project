@@ -1,0 +1,33 @@
+ You'll need a file manager app in order to find the hosts file, which you'll be using to block websites. One of the most popular free options is ES File Explorer, which you can get on the Google Play Store.
+ You'll see your Android folders.
+ This will take you to the root folder.
+ This is where the hosts file is located.
+ This will tell your file manager that you want to open the file as a text file.
+ Most file managers include a text editor that will be at the top of the list.
+ You'll be creating a new line for each site you want to block.
+ Enter the following to block the main YouTube site:
+
+
+127.0.0.1 www.youtube.com
+
+, Create a new line and enter the following to block the mobile YouTube site:
+
+
+127.0.0.1 m.youtube.com
+
+, Once you've blocked the YouTube website, you'll need to block the YouTube app as well. Since the app cannot be deleted from many Android devices, you'll need to use a third-party app to block access to it. Popular app blockers include:
+
+
+AppLock
+App Lock
+Smart AppLock
+Perfect AppLock
+
+, When you start your app locker, you'll be prompted to create a new passcode. This code will be required to access locked apps or change the app locker settings.
+ Block the following apps to prevent access to YouTube as well as prevent the block from being circumvented:
+
+
+YouTube
+Play Store
+Settings
+

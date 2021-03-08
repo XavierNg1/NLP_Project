@@ -1,0 +1,28 @@
+ This console allows you to enter commands that change the game, including the fast switch command. The console is disabled by default.CS: GO - Open the Options menu and select "Game Settings." Set "Enable Developer Console" to "Yes." Note: Fast Switch is enabled by default for CS: GO and cannot be disabled.CS: Source - Open the Options menu and select "Advanced." Check the "Enable developer console (~)" box. You can also check "Fast weapon switch" in this screen to enable it without having to use console commands.;
+, You don't need to be in a game for it to appear.
+
+
+This has been known to cause problems on keyboards using a French layout. If you can't get the console to open and you use a French layout for your keyboard, you'll need to change layouts when playing.
+ You may need to force the console on the game's shortcut if you can't get it to appear:
+
+
+Right-click on the game in your Steam library and select "Properties."
+Click "Set Launch Options" in the "General" tab.
+Type -console into the field. The console will appear whenever the game is started.
+ If you didn't open the console in the previous section, press ~ to open it now. It will appear as a smaller window inside Counter-Strike.
+
+
+You don't need to be in a game to enable fast switch, but it may help for testing purposes.
+ This will enable the fast switch feature so that you'll pull out the selected weapon as soon as you hit the corresponding number key.
+
+
+Remember, CS: GO has this feature enabled by default, and it cannot be disabled. There is no need to enter a fast switch command for CS: GO.
+ Press one of the number keys assigned to your weapons (usually 1-4). Your weapon will be pulled out immediately without having to confirm with another click. If you have more than one grenade, you'll still have to select which one you use.
+ If you can't get used to fast switch, you can turn it off with basically the same command:
+
+
+Open the console and type hud_fastswitch 0 to turn off fast switch.
+ Many players find using the mouse wheel to scroll through all three weapons and grenades to be a waste of time in combat. You can bind mouse wheel up and mouse wheel down to your primary and secondary weapons, allowing you to switch in the middle of a fight without moving your fingers:Open the console by pressing ~.
+Type bind wheelup slot1 and press ↵ Enter. This will make scrolling up on the wheel automatically switch to your primary weapon.
+Type bind wheeldown slot2 and press ↵ Enter. This will make scrolling down on the wheel automatically switch to your pistol.
+

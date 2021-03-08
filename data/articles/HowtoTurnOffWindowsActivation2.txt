@@ -1,0 +1,19 @@
+ You will be enabling the SkipRearm function, which when combined with another command will allow you to continually extend your trial period, effectively disabling registration.
+
+Press the Windows key + R to open the "Run" dialog box.
+
+
+
+
+
+
+Enter regedit and press Enter. This will open the Registry Editor.
+ In the left frame, you can navigate to the different folders in the registry. Navigate to HKEY_LOCAL_MACHINE → SOFTWARE → Microsoft → Windows NT → CurrentVersion → SL
+
+, This will open a box allowing you to change the value. At default, it will read 00000000. Change the value to 00000001 and press OK.
+
+
+Close the Registry Editor after editing the entry.
+ You will need to do this as an administrator. To do this, click the Start button and enter cmd into the field. Press Ctrl + Shift + Enter to open it as an administrator.
+ Entering in this command will reset the timer on your trial, and because you enabled SkipRearm in the previous step, you can perform this action indefinitely. Type the following and press Enter: slmgr -rearm. Close the Command Prompt by typing exit and pressing Enter.
+ You can repeat these steps every 30 days in order to reset your trial timer. You may or may not need to change the registry each time, it varies from system to system.

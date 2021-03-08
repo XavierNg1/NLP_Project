@@ -1,0 +1,48 @@
+ Discounted cash flow (DCF) calculations are used to adjust the value of money received in the future. In order to calculate DCFs, you will need to identify a situation in which money will be received at a later date or dates in one or more installments. DCFs are commonly used for things like investments in securities or companies that will provide cash flows over a number of years. Alternately, a business might use DCFs to estimate the return from an investment in production equipment, for example.
+
+In order to calculate DCFs, you will need a definable set of future cash flows and know the date(s) that you will receive those cash flows.;
+, To calculate the present value of future cash flows, you will first need to know their future values. With fixed payments like annuities or bond coupon payments, these cash flows are set in stone; however, with cash flows from company operations or project returns you will need to estimate future cash flows, which is an entire calculation in itself. While it may seem that you could just project current growth trends over the next set of years, the proper calculation of future cash flows will involve much more.
+
+For example, you might include industry trends, market conditions, and operational developments in cash flow projections for a company. Even then it may not be even close to accurate when the cash flows actually arrive.For simplicity, though, let's say you are considering an investment that will return you a set amount at the end each year for three years. Specifically, you will receive $1,000 the first year, $2,000 the second year, and $3,000 the third year. 
+
+The investment costs $5,000 to buy, and you want to know if it is a good investment based on the present value of the money you will receive. 
+
+
+, The discount rate is used to "discount" the future cash flow value back to its present value. The discount rate, sometimes also called the personal rate of return, represents the amount that is "lost" each year due to inflation and missed investment opportunities. You might choose to use the return on a safe investment, plus a risk premium.For example, imagine that instead of investing in the investment providing future cash flows, you could invest your money in treasuries earning a guaranteed return of 2 percent per year.
+
+In addition, you expect to be compensated for taking the risk of loss of your money, say a risk premium of 7 percent.
+
+Your discount rate would be the sum of these two figures, which is 9 percent. This represents the rate of return you would earn by investing your money elsewhere, such as in the stock market.
+ The only other variable you'll need once you have the discount rate and cash flow future values is the dates at which those cash flows will be received. This should be pretty self-explanatory if you've purchased an investment, have a set of structured payouts, or have created a model for a company's future cash flows; however, make sure to clearly record the cash flows with their associated years. Creating a chart may help you organize your ideas. For example, you might organize the example payouts as follows:Year 1: $1,000
+
+Year 2: $2,000
+
+Year 3: $3,000
+
+
+, In its simplest form, the DCF formula is DCF=CFn(1+r)n{\displaystyle {\text{DCF}}={\frac {CF_{n}}{(1+r)^{n}}}}. In the formula, CFn{\displaystyle CF_{n}} refers to the future value of the cash flow for year n and r represents the discount rate. For example, using the first year of the example investment from the part "Gathering Your Variables," the present value of that cash flow for $1,000 after one year, using the discount rate of 9 percent, would be represented as: DCF=$1,000(1+0.09)1{\displaystyle {\text{DCF}}={\frac {\$1,000}{(1+0.09)^{1}}}}.The discount rate must be represent as a decimal rather than by a percentage. This is done by dividing the discount rate by 100. Therefore, the 9 percent rate from above is shown as 0.09 (9÷100{\displaystyle 9\div 100}) in the equation.
+ The total value of discounted cash flows for an investment is calculated as the present values of each cash flow. So, the other cash flows must be added to the calculation in the same method as the first one. For the previous example, we would add the $2,000 and $3,000 payments at the end of the second and third years to the equation.In total, this gives: DCF=$1,000(1+0.09)1+$2,000(1+0.09)2+$3,000(1+0.09)3{\displaystyle {\text{DCF}}={\frac {\$1,000}{(1+0.09)^{1}}}+{\frac {\$2,000}{(1+0.09)^{2}}}+{\frac {\$3,000}{(1+0.09)^{3}}}}
+
+
+, Solve your equation to get your total discounted value. The result will be the present value of your future cash flows. Start by adding the discounted rate to the 1 within parentheses:This gives DCF=$1,000(1.09)1+$2,000(1.09)2+$3,000(1.09)3{\displaystyle {\text{DCF}}={\frac {\$1,000}{(1.09)^{1}}}+{\frac {\$2,000}{(1.09)^{2}}}+{\frac {\$3,000}{(1.09)^{3}}}}
+
+From there, calculate the exponent. This is done by raising the "1.09" in parentheses to the power above it (1,2, or 3). Solve this by either typing "^" into Google or using the exponent button, xy{\displaystyle x^{y}} on a calculator.
+
+After solving the exponent, the equation will be: DCF=$1,0001.09+$2,0001.1881+$3,0001.295029{\displaystyle {\text{DCF}}={\frac {\$1,000}{1.09}}+{\frac {\$2,000}{1.1881}}+{\frac {\$3,000}{1.295029}}}
+
+Next, divide each cash flow by the number underneath it. This yields: DCF=$917.43+$1,683.36+$2,316.55{\displaystyle {\text{DCF}}=\$917.43+\$1,683.36+\$2,316.55}
+
+Finally, add up the present values to get the total, which is DCF=$4,917.34{\displaystyle {\text{DCF}}=\$4,917.34}.
+ In some cases it may be necessary to change the discount rate used to account for changes to expectations, risk, or taxes. For example, businesses analyzing a project might add a risk premium on to the discount rate used to discount the cash flows from a risky project. This artificially lowers the returns to account for risk. The same might be done for a very long time window between the present and the future cash flows to account for uncertainty.
+
+Discount rates may be converted to real rates (rather than nominal rates) by removing inflation from the discount rate.
+
+A spreadsheet program, such as Excel, has functions that can help with these calculations. 
+
+
+, To use your DCF result, you will need to understand what your figures represent. Your total DCF is the sum of the present values of future payments. That is, if you received an amount equivalent to your future payments today it would be the total DCF value; therefore, you can now compare future amounts of money directly to the present cost of investing to get that money., In general, DCF calculations are used to discount cash flows from an investment to see if that investment is worthwhile. This is done by comparing the value of buying into the investment to the present value of its future cash flows. If the present value of the future cash flows is higher than the cost of investing, it may be a good investment. If they are lower, you will be effectively losing money.For example, in the example used in the other two parts, you had the option of buying an investment that would pay $6,000 total over three years ($1,000 + $2,000 +$3,000) at an initial investment cost of only $5,000.
+
+While this may seem like a good deal, you can see that, using a discount rate of 9 percent, you are better off investing your money elsewhere. 
+
+This is because the present value of the cash flows, $4,917.34 is lower than the cost of the investment, $5,000.
+ In finance, DCF calculations are used for DCF analysis, which is a method used to assess the value of a company. In this method, the company's free cash flows are as estimated for the next five or ten years and a "terminal value" are discounted back to the present. The present value of these amounts is then used as the "enterprise value" of company. Then, debt is removed from the enterprise value to arrive at a valuation for the company.

@@ -1,0 +1,28 @@
+ This is the easiest way to burn an ISO.
+
+If you are using Fedora(Or Kubuntu) double click the ISO file, and a burn dialogue will appear.
+
+
+
+
+
+
+If you are using Ubuntu, right click the ISO file, and open it with Brasero(Ubuntu), and clicking on Burn.
+ Run the command "sudo cdrecord -v speed=16 dev=2,0,0 cdrom.iso"
+
+
+In some systems that have only one DVD/CD writer, you can simply Run the command "sudo cdrecord cdrom.iso"
+
+
+
+
+
+
+In other cases, You will need to replace dev=2,0,0 to point to your burning device. To see a list of all CD burning devices on your system, Run the command "cdrecord -scanbus", and replace "2,0,0" accordingly.
+
+
+
+
+
+
+

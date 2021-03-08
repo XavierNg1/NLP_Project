@@ -1,0 +1,92 @@
+;
+, A window will pop up asking you to either sign in with your Magento account or sign up if you don't have one. This is an essential step as a Magento account is needed to get it up and running.,,,,
+
+Now Magento will check to see whether your environment (in this case WAMP) has the dependencies it requires in order to run.
+To start the check press Start Readiness Check
+
+
+,, Magento needs it to store information.
+
+Navigate to http://localhost/phpmyadmin/ in a new tab.
+
+
+
+
+
+
+Press New
+
+
+
+
+
+
+Make the database name magento, leave all other settings default and press Create
+
+
+
+
+
+
+Once you get a prompt telling you that Database magento has been created." you should navigate back to the tab where you have your Magento installer open.
+
+
+
+
+
+
+Press Next. If you have named your database something different just swap magento in the Database Name field for whatever you named yours.
+
+
+
+This is completely optional, but you can change the Magento Admin Address to just Admin as while this lowers the security of Magento we am in a local environment and the only person who has access to it is us (unless you have configured your server to be publicly accessible). This is a good idea as you will not loose any security and it makes it much easier to remember.
+
+
+
+
+
+
+You can also change some settings under Advanced Options for instance, you can tell Magento to use https:// layer instead of the unencrypted and much less safe http:// layer for your admin and shopping cart areas. This is a good option to consider if you decide to publish your website.
+There are a few other options to consider too, but all of these options are changeable later on in the admin area, so if you change your mind later on down the track you don't have to reinstall Magento.
+If you are done you can press Next
+
+
+
+
+
+
+
+,
+
+
+Set your default time zone, currency, and language by scrolling through the drop-down menus.
+
+
+
+
+
+
+There are also some module settings, but as usual you can change them later but the default settings should be fine.
+Once you are done you can proceed by pressing Next
+
+
+
+
+
+
+
+,
+
+
+Enter a username, an email and a password (you'll need to repeat this). For the username Admin was used, as we are in a local environment you can use whatever email you want and you can make your password whatever you want but it is good to get into the habit of using strong ones.
+When you have done this you can continue by pressing the Next button.
+ Well done! All your configuration is done and all that is left is for Magento to be installed. Just hit Install Now to start!
+
+, Once Magento has installed itself you should:
+
+
+Take a screenshot of the success screen if you are liable to forget some of the important information,
+Go to the admin panel by pressing Launch Magento Admin,
+Take a look at your website by following your store address (in this case http://localhost/magento/)
+Give yourself a pat on the back because you just installed Magento in your Windows development environment!
+

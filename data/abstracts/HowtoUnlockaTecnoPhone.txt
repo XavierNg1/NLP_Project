@@ -1,0 +1,17 @@
+
+Open the Settings.
+Tap “About”.
+Tap the Build Number 7 times.
+Tap the “Back” button.
+Tap “Developer Options”.
+Enable “USB Debugging”.
+Download and install the Android SDK.
+Download and install the USB driver for your device.
+Connect your device to your computer via USB.
+Open the command line on your computer.
+Navigate to the “platform-tools” directory in the command line.
+Enter “adb devices” into the command line (optional).
+Enter “adb reboot-bootloader”.
+Enter “fastboot oem unlock”.
+Press the Volume Up button on your device.
+Enter “fastboot reboot”.

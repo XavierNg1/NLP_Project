@@ -1,0 +1,21 @@
+ The following tips might help:
+
+
+If you are declaring a dynamic array, use the array items' data type.
+If you are declaring the pointer to access the data of a variable, use the same data type as the variable.
+If you are declaring the pointer to traverse a list structure, use the list node data type (usually a user created struct).
+If you are declaring the pointer to traverse a tree, use the data type of the tree node, or a pointer to the tree node type as the type (pointer to a pointer of tree node type!).;
+,, This can be done using one of the following methods:
+
+
+Allocating memory and pointing to it by the pointer: int * i = malloc(sizeof(int)*n); where n is the number of memory blocks to assign.
+Assigning the address of a variable to the pointer: int * i = & x; where "x" is an integer and (&) means address-of.
+Assigning an array identifier to the pointer: int * i = array1; where array1 is an integer array(int[] array1;).
+Assigning a reference to the pointer: int * i = a; where "a" is an integer reference (int & a;).
+Assigning another pointer to the pointer: int * i = z; where "z" is another integer pointer (int * z;)
+
+,, For example, if you have an integer pointer i, you can use iwhich will retrieve the integer that is after the integer immediately after the integer pointed to by the reference (the integer that is 2 integers after the current location). The pointer i will still be pointing to the same memory location. Another alternative to this is getting the value at the pointer 2 steps after this pointer: *(i + 2)
+
+, i += 5; will advance the integer pointer i 5 integers forward.
+ (free(i); where i is a pointer)
+

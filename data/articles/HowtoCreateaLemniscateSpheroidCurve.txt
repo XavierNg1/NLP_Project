@@ -1,0 +1,141 @@
+ Save the workbook into a logical file folder.
+ Open Preferences in the Excel menu. Recommended Settings: Set General to R1C1 Off and Show the 10 Most Recent Documents; Edit - set all the Top options to checked except Automatically Convert Date System. Display number of decimal places = blank (for integers preferred), Preserve display of dates and set 30 for 21st century cutoff; View - show Formula Bar and Status Bar, hover for comments and all of Objects, Show gridlines and all boxes below that auto or checked; Chart - show chart names and data markers on hover. Leave rest unchecked for now; Calculation -- Automatically and calculate before save, Limit iteration checked, max iterations 100, max change .000,000,000,000,01 w/o commas as this problem involves precise goal seeking and save external link values and use 1904 date system; Error checking - check all; Save - save preview picture with new files and Save Autorecover after 5 minutes; Ribbon -- all checked except Hide group titles and Developer.,
+A1: x=sin(a*π)
+B1: y=mx+b
+C1: m ±180
+D1: b
+E1: Enter the formula w/o quotes, "=2880*.125"
+F1: x = r*cos øπ*adj (Use whatever symbol you can for angle theta, ø -- Option o is convenient on the Mac.)
+G1: y = r^2*sin 2øπ*adj
+H1: radius r
+I1: ø degrees
+J1: sin 2øπ*adj
+
+,
+
+Edit Go To cell range A2:A361 and with A2 the active cell enter w/o quotes the formula "=SIN((ROW()-2)*PI()/180)" and Edit Fill Down.
+Edit Go To cell range B2:B361 and with B2 the active cell enter w/o quotes the formula "=(C2*A2)+D2" and Edit Fill Down.
+Select cell C2 and enter 1. Edit Go To cell range C3:C181 and with C3 the active cell enter w/o quotes the formula "=1+C2" and Edit Fill Down. Edit Go To cell range C182:C361 and with C182 the active cell enter w/o quotes the formula "=C181-1" and Edit Fill Down and Format Cells Font Color Red.
+Select cell D2 and enter 25, or another y-intercept of arbitrary choice. Format Cells Fill Yellow. Edit Go To cell range D3:D361 and with D3 the active cell enter the formula w/o quotes, "=D2" and Edit Fill Down.
+Edit Go To cell range A2:B361 and choose Charts from the Ribbon or use Chart Wizard and choose All/Other and scroll down and select Scatter Smoothed Line Scatter. A 45 degree or so slanted propeller blade lemniscate small chart should appear. Move it atop the data in columns A:E.
+Select cell E2 and enter the formula "=1/8" and Format Cells Number Number Custom "Adj "0.0000 with quotes, then Insert Name Define name Adj for cell $E$2 and Format Cells Fill Sky Blue and Border Black Bold Outline. (It belongs to the data at right or with both sets of data.)
+
+It is left up to the reader whether or not to Insert New Comment of the formulas just input. It is a good practice to do so.
+
+Edit Go To cell range G2:G2882 and with G2 active, input w/o quotes the formula, "=(H2^2*Adj)*J2" and Edit Fill Down and Insert New Comment "Original formula =(H2^2*Adj)*J2"
+Select cell H2 and input w/o quotes the formula, "=Unadjusted_Radius" and Insert New Comment "Original formula =Unadjusted_Radius"; Activate the Chart worksheet and select cell J63 and enter Unadjusted Radius. Select cell J64 and enter "=VLOOKUP(Spheroids,LemniscateLooker,4)" and Format Cells Font Red Fill Sky Blue Border Black Bold Outline and Insert Name Define name Unadjusted_Radius for cell $J$64. Return to the Lemniscate worksheet and Edit Go To cell range H3:H2882 and with cell H3 active enter the formula w/o quotes "=H2" and Edit Fill Down.
+
+SPECIAL NOTE: The Unadjusted Radius needs to be adjusted depending upon how many spheroids are entered on the DATA worksheet. Overnight, a Lookup Table was constructed and developed into the formulation, i.e in the first column is the number of Spheroids, and in the fourth column are the values found to provide the roundest spheres for that number of spheroids. Then the variable Unadjusted_Radius is set to "=VLOOKUP(Spheroids,LemniscateLooker,4)" and the Lookup Table has the Defined Name LemniscateLooker. It was a project because there are a minimum number of spheroids really necessary to make up the curve at all. One should feel free to make adjustments to the table at their own discretion. Find it via Edit Go To LemniscateLooker.
+
+
+Edit Go To cell range I2:I2882 and enter 1 and Edit Fill Series Columns Linear Step Value 1, OK.
+Edit Go To cell range J2:J2882 and with J2 active, input w/o quotes the formula, "=SIN(2*I2*PI()/180*Adj)" and Edit Fill Down and Insert New Comment "Original formula =SIN(2*I2*PI()/180*Adj)". This will later be modified for Height.
+Select all input columns A:J and do Format Columns Autofit Selection.
+Edit Go To cell range F2:G2882 and choose Charts from the Ribbon (or use Chart Wizard) and choose All/Other and scroll down and select Scatter Smoothed Line Scatter. Bernoulli's Lemniscate should appear which should be moved atop the data but not the first few rows. Select cells F1:J2882 and Format Cells Fill Sky Blue, Border Black bold Outline. Format Cell H2 Fill Orange, Font White, Border Black bold Outline.
+ I suggest reading through this first and comparing it to one of my other articles you've completed to see if you can copy that sheet, as would be much quicker (see related wikiHows below). In that case, insert 5 columns at column I and move the Looker Table to the right please. Copy and Paste the Lemniscate data from Step 5 F1:J2882 then into the newly inserted columns.
+
+A1: AjRows
+B1: GM (for Golden Mean)
+C1: Factor1
+D1: KEY
+E1: Number (there were some notes following this in the previous sheet but we don't need to repeat those).
+ I realize that error values will result until all the LOOKUP Tables have been input.
+
+A2: 2880
+B2: "=-(1-SQRT(5))/2" Enter formulas w/o quotes please.
+C2: "=VLOOKUP(ABS(Spheroids),Looker,2)"
+D2: "=IF(Spheroids<=64,Spheroids*VLOOKUP(Spheroids,LOOKER2,5) *PI(),Spheroids*PI())"
+Select cell range A2:D2 and Format Sky Blue, Border Black bold Outline.
+E2: 1 (this is used as a warper). Format Cells Fill Yellow and Border Black bold Outline.
+Edit Go To cell range A1:E2 and Insert Name Create Top Row. OK There may have been some NewDates variables -- they won't be used and have been deleted.
+
+
+A3: Tip
+B3: Base
+C3: Spheroids
+D3: ShrinkExpand
+E3: PiDivisor
+F3: Thick1
+G3: Thickness
+H3: ShrinkExpand2
+
+, I realize some errors will result until all names have been defined and Lookup Tables have been completed.
+
+A4: "=Base*12*PI()"
+B4: "=16*107"
+Activate the Chart worksheet and select cell H63 and enter Spheres. Select cell H64 and Insert Name Define name Spheres for cell $H$64, Input 25. Format Cells Fill Yellow Font Red Size 18 Border Black bold Outline to signify it as an input cell.
+C4: "=Spheres"
+D4: 2
+E4: 180
+F4: "=VLOOKUP(Spheroids,Thick1Looker,7)" and Insert New Comment and paste in the Original formula.
+G4: "=VLOOKUP(Spheroids,ThicknessLooker,6) and insert New Comment and paste in the Original formula.
+H4: 1.5
+Edit Go To cell range A3:H4 and Insert Name Create Top Row. OK There may have been some NewDates variables -- they won't be used and have been deleted. Format Cells Fill Sky Blue and Border Black bold Outline. Select jointly with the Command key cells B4, D4 and E4 and Format Cells Fill Font Yellow. It would be a good idea to Insert New Comment and edit in the original values and formulas for all these cells, especially the yellow Input ones -- it's far easier than coming back here to research their original values.
+
+
+A5: Base t
+B5: c
+C5: Cos
+D5: Sin
+E5: Main X
+F5: Main Y
+G5: Second X
+H5: Second Y
+
+, Some errors will result until the worksheets are complete.
+
+A6: "=IF(ODD(Spheroids)=Spheroids,0,Tip)"
+Edit Go To cell range A7:A2886 and with A7 active enter w/o quotes the formula "=(A6+(-Tip*2)/(AjRows))". Split the screen and on the bottom half, let row 2884 show. If Spheroids = 25, the check figure in A2886 will be -129081.75. Do Insert New Comment for cells A6 and A7 and copy and paste in the Original formulas into the comments the formulas you just entered.
+Select cell B6 and enter w/o quotes "=IF(Spheroids<=24,Base*24/Spheroids,Base*24/Spheroids)"
+Edit Go To cell range B7:B2886 and with B7 active, enter "=B6" and Edit Fill Down. Do Insert New Comment for cells B6 and B7 and copy and paste in the Original formulas you just entered into the comments.
+Select cell range A6:B7 and Format Cells Fill Sky Blue.
+Edit Go To cell range C6:C2886 and with C6 active, enter "=Thick1*Spheroids/KEY*(COS((ROW()-6)*Number*PI()/PiDivisor*Factor1))" and Edit Fill Down and Insert New Comment and edit in (via copy and paste after Original formula) "Original formula =Thick1*Spheroids/KEY*(COS((ROW()-6)*Number*PI()/PiDivisor*Factor1))".
+Edit Go To cell range D6:D2886 and with D6 active, enter "=Thick1*Spheroids/KEY*(SIN((ROW()-6)*Number*PI()/PiDivisor*Factor1))" and Edit Fill Down and Insert New Comment and edit in (via copy and paste after the first 2 words) "Original formula =Thick1*Spheroids/KEY*(SIN((ROW()-6)*Number*PI()/PiDivisor*Factor1))".
+Edit Go To cell range E6:E2886 and with E6 active, enter "=((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+I6)/ShrinkExpand" and Edit Fill Down and Insert New Comment and edit in (via copy and paste after the first 2 words) "Original formula =((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+I6)/ShrinkExpand)".
+Edit Go To cell range F6:F2886 and with F6 active, enter "=((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+J6)/ShrinkExpand" and Edit Fill Down and Insert New Comment and edit in (via copy and paste after the first 2 words) "Original formula =((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+J6)/ShrinkExpand".
+Edit Go To cell range G6:G2886 and with G6 active, enter "=((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+C6)/ShrinkExpand2" and Edit Fill Down and Insert New Comment and edit in (via copy and paste after the first 2 words) "Original formula =((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+C6)/ShrinkExpand2".
+Edit Go To cell range H6:H2886 and with H6 active, enter "=((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+D6)/ShrinkExpand2" and Edit Fill Down and Insert New Comment and edit in (via copy and paste after the first 2 words) "Original formula =((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+D6)/ShrinkExpand2".
+Select cell range C6:H6 and Format Cells Fill Sky Blue.
+ Select cell K4 and enter Unadjusted Radius and Format Cells Alignment Horizontal Center. *If you would be pasting atop the LOOKER Table, STOP. Insert 5 columns and move the LOOKER Table right. Then do the copy and paste of the Lemniscate data and formulas.,
+
+Select cell M3 and enter Height.
+Select cell M4 and enter w/o quotes the formula "=IF(Spheroids<=12,6,2)" and Insert Name Define name Height to cell $M$4 and Format Cells Fill Sky Blue Font Red Alignment Horizontal Centered Border Black bold Outline.
+Select cell M6 and enter w/o quotes the formula "=Height*SIN(2*L6*PI()/180*Adj)", copy it in the Formula Bar, and Insert Comment and edit in "Original formula " and paste in the formula. Copy M6 and Edit Go To cell range M6:M2886 and Paste Special Formulas (there's no need to paste a comment into all the cells).
+Activate the Lemniscate worksheet and select cell J2 and enter the formula w/o quotes, "=Height*SIN(2*I2*PI()/180*Adj)" and Edit Go To cell range J2:J2882 and Edit Fill Down. In cell J2 Insert New Comment and edit in "Original formula =Height*SIN(2*I2*PI()/180*Adj)".
+
+
+Enter LOOKER into cell N5 and Format Cells Font Red Underline Single Alignment Center.
+Edit Go To cell range N6:N69 and enter 1 and then do Edit Fill Series Columns Linear Step Value 1 OK.
+Edit Go To cell range O6:O69 and enter .125 and Edit Fill Down. This is the default value.
+Edit Go To cell range P6:P69 and with P6 the active cell, enter w/o quotes the formula "=N6*$P$35/$N$35" and Edit Fill Down, then select cell P35 and enter .125
+Select cells N6:P69 and Define Name LOOKER to cell range $N$6:$P$69. Fornmt cells Fill Yellow (because there's an easier way to do some of this -- one doesn't need a Lookup Table for a constant and the third column is formulaic).
+
+
+Select cell Q5 and enter Lemniscate.
+Enter the following values in cells Q6:Q68. .4, .4, .4,. 4, .4, .4, .425, .45, .475, .5, .58, .68. .74, .82, .9, 0.927777777, .0.955555555, 0.983333333, 1.0388888, 1.06666666, 1.0944444, 1.1222222, 1.15, 1.15, 1.32, 1.49, 1.83 and Edit Go To cell range Q35:Q68 and enter 2 and Edit Fill Down and select dell range Q6:Q69 and Format Cells Fill Sky Blue. Insert Names Define name LemniscateLooker to cell range $N$6:%Q$69.
+
+
+Select cell R5 and enter LOOKER2 into it.
+Enter the following values in cells R6:R269. 24, 16, 8, 4, =PI(), =PI(), =PI(), and select cell range R13:R21 and enter 2 and Edit Fill Down and select range R6:R69 and Format Cells Fill Medium Sky Blue. Select cell range R22:R69 and enter 1 and Edit Fill Down. Select cell range N6:R69 and Insert Name Define name LOOKER2 to cell range $N$6:$R$69.
+
+
+Select cell S5 and enter ThicknessLooker into it.
+Enter the following values into cells S6:S69. Select cell range S6:S17 and enter 1,8 and Edit Fill Down. S18:S20 -- 1.85, 1.9, 1.96. Select cell range S21:S69 and enter 1.5 and Edit Fill Down. Select cell range S6:S69 amd Format Cells Fill Yellow (because some of these perhaps should be changed). Insert Name Define name ThicknessLooker to cell range $N$6:$S$69.
+
+
+Select cell T5 and enter Thick1Looker into it.
+Edit Go To cell range T6:T69 and Format Cells Sky Blue and with T6 the active cell, enter w/o quotes the formula "=IF(N6>=36,N6*0.075,IF(N6>=17,0.1*N6,IF(N6>=8,N6/5,N6/2.5)))" and Edit Fill Down. Copy the formula in T6 by selecting across it within the Formula Bar and doing command+c and Insert New Comment and edit in ""Original formula (and either paste in the formula or enter into the comment box the exact copy of the original formula:) =IF(N6>=36,N6*0.075,IF(N6>=17,0.1*N6,IF(N6>=8,N6/5,N6/2.5)))"; expand the comment to fit the formula by clicking near the edge until grab-boxes appear and then pull those down and to the right.
+ Work was done to get an overall pleasing effect, not to be consistent. A series approach probably will not work as well as IF Statement bracketing but it may certainly be tried. The formula for a series approach for the increment hasn't occurred yet to the author. It may lie in a TREND Series perhaps which gets smaller and then is resorted to become larger and is pasted in. Needless to say practically, very small quantities of Spheres (x<6) present a particular dilemma in attempting to form a lemniscate with so few. The character limit for an IF Statement is 256 if memory serves, including spaces, if any. Please see the PercentRing solution below.
+Fractional quantities of spheres may be entered, with various results, as seen on the far right of the chart and the example of 2pi below in Tips.
+ Select cell F64:F65 and enter -.25 IN F64 and Format Cells Number Number Percentage Decimal Places 2 and Font Size 14 (if 9 or 10 is standard). Format cell F64 Fill Yellow Font Color Red. Insert Name Define name PercentRing for cell $F$64. Insert Name Define name Interpretation for cell $F$65 and Format Cells Font Fill Sky Blue. Select cells E64:E65 and Align Right and enter Entry in E64 and select cell E65 and enter =IF(Interpretation<1,"Shrinkage Interpretation",IF(Interpretation>1,"Expansion Interpretation","No Change")). Select cell F65 and enter the formula w/o quotes "=1+PercentRing". It's set up to take values between 100% AND -500%, depending on the Spheroids count, else the axes must be adjusted for logarithmic values (perhaps). So, there will be a facility for Shrinking (or Expanding) the background ring of spheres right on the Charts worksheet. Activate the DATA worksheet and select cell H3 and enter THE DIVISOR and align center and select cell H4 and enter the formula w/o quotes "=1.5*(1-PercentRing)" This may seem backwards but it isn't because it's a divisor, rather than a factor. In subtracting -.25, we add it to 1 and get 125%, which increases 1.5, and so increases the divisor and makes the resulting chart smaller, being more divided. Format Cells Fill Sky Blue.
+
+If a zero is entered in the Chart worksheet PercentRing cell, the result will be 100.00% below and so "No Change".
+Thus, to produce a graph that looks like the graph at the top of this article, enter 25 Spheres and -.25 Entry for PercentRing, (approximately). The graph will have changed in total size but will have improved in sphere roundness a good deal.
+
+
+Edit Go To cell range E6:F2886 and either with the Chart Wizard or with the Ribbon make a new chart by selecting Charts on the Ribbon, All/Other, scroll down to Scattered Smoothed Line Scattered and a small chart should appear next to the LOOKER Table. The spheroids may look somewhat flat. There's a fix for that.
+Copy the small chart to the Chart worksheet and pull open the chart at the lower right hand corner when the cursor changes to a double-headed arrow upon hovering or clicking there, and expand it so that it reaches just beyond column L and down to row 62.
+Then activate the Data worksheet and Edit Go To cell range G6:H2886 and copy it. Activate the Chart worksheet, click inside the chart and do Command+v Paste. It may very well appear wrong as the series =SERIES(,Data!$E$6:$E$2886,Data!$H$6:$H$2886,2) instead of as the correct series =SERIES(,Data!$G$6:$G$2886, Data!$H$6:$H$2886,2), so ShrinkExpand2 didn't work right, but it is the version in the picture at the top of this article. What you do is double-click on the ring of spheres and make them 75% transparent purple, which one is free to make 100% transparent if so desired, line weight 1. The lemniscate is also line weight 1 in the article chart. The latter version was corrects to the correct series and the PercentRing adjustment fixes the problem with ShrinkExpand2.
+,,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

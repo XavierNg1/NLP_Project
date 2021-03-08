@@ -1,0 +1,15 @@
+ There are many IDEs available for Android, but Netbeans is a great place to start with. It is good for beginners but if you are a pro then you can switch to Eclipse IDE or official Android IDE i.e. Android Studio. First of all you need to download Netbeans IDE; you can download it from the Netbeans site for free. The latest version of Netbeans is 8.1, the estimated file size is about 94 MB.;
+, Now, you'll need to download Java Virtual Machine, you can download it here for free. Make sure to download the latest version. It is available for Windows, Mac and Linux too.
+ It's time for you to download the third important component i.e. Java Software Development Kit. Download the latest version, for example Java SE (JDK) 7 Download, from here for free.
+ First you should install JVM and JDK, then go for Netbeans IDE. Your environment for Java programming is complete; now we can proceed to Android environment setup.
+ Now you need to download the latest Android SDK i.e. 24.0.2. After installing the SDK, open the Netbeans IDE and go to Tools > Plugins.
+ You should see a dialog box containing all the plugins, click on Settings, click Add on the bottom of the right-hand-side of the dialog box. Enter a name in your Update Center Customizer and enter the this URL: http://nbandroid.org/release81/updates/updates.xml.
+ Your update center is now available in the settings, select it by clicking on the check box and move Available Plugins and click on Check for Newest. You will a list of new plugins, find Android plugins and download it right away.
+ Now select the Android SDK in Netbeans. To do this, go to Tools > Options > Miscellaneous > Android. Look for the location of your Android SDK with file browser; after you find your SDK click on OK.
+ You have successfully set up the Android Environment but still you can't start programming. You need to download some of the Android SDK components. Go to Tools > Android SDK Manager. Now Android SDK Manager will appear on your screen.
+
+
+You will see a huge list of installed and available plugins; you need to download 4 necessary packages: Android Platform Tools (latest version 24.4.1), Android SDK Build Tools, SDK platform (latest version Android Marshmallow 6.0) and ARM EABI v7a System Image (latest version 24).
+Click on the check box of these 4 packages and download them. If you have a slower internet connection, you can download the packages on your phone. Just Google "Download Android SDK Package Offline Installation" .
+ Now you're done, start Netbeans IDE and begin your programming. Happy programming!
+

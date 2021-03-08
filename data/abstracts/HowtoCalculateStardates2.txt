@@ -1,0 +1,11 @@
+
+Know the base date that has been used.
+To calculate the year, look at the thousands (and above) digits.
+From this number, subtract the stardate base date, divide by 1000, and then add the common base date.
+Determine if it's a leap year.
+To calculate month and day, look at the hundreds digit, and the lower digits.
+Multiply by 365 (366 for leap years).
+Divide by a thousand, then round to the nearest whole number.
+Add one.
+Determine the largest month number that can be subtracted from this number.
+Subtract the month number to get the date.

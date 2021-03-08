@@ -1,0 +1,11 @@
+
+Create a new workbook or open the workbook in which you want to use your newly created User Defined Function (UDF).
+Open the Visual Basic Editor which is built into Microsoft Excel by going to Tools->Macro->Visual Basic Editor (or pressing Alt+F11).
+
+,
+Add a new Module to your workbook by clicking in the button shown.
+Create the "header" or "prototype" of your function.
+Add the code of the function making sure you 1) use the values provided by the parameters; 2) assign the result to the name of the function; and 3) close the function with "end function".
+Go back to your workbook and use the function by starting the content of a cell with an equal sign followed by the name of your function.
+Verify the result is Ok after using the function several times to ensure it handles different parameter values correctly:
+

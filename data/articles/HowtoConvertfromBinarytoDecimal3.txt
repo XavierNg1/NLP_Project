@@ -1,0 +1,10 @@
+ This method does not use powers. As such, it is simpler for converting large numbers in your head because you only need to keep track of a subtotal. The first thing you need to of is to write down the binary number you'll be converting using the doubling method. Let's say the number you're working with is 10110012. Write it down.
+ Since you're working with the binary number 10110012, your first digit all the way on the left is 1. Your previous total is 0 since you haven't started yet. You'll have to double the previous total, 0, and add 1, the current digit. 0 x 2 + 1 = 1, so your new current total is 1.
+ Your current total is now 1 and the new current digit is 0. So, double 1 and add 0. 1 x 2 + 0 = 2. Your new current total is 2.
+ Just keep going. Next, double your current total, and add 1, your next digit. 2 x 2 + 1 = 5. Your current total is now 5.
+ Next, double your current total, 5, and add the next digit, 1. 5 x 2 + 1 = 11. Your new total is 11.
+ Double your current total, 11, and add the next digit, 0. 2 x 11 + 0 = 22.
+ Now, double your current total, 22, and add 0, the next digit. 22 x 2 + 0 = 44.
+ Now, you're down to your last number and are almost done! All you have to do is take your current total, 44, and double it along with adding 1, the last digit. 2 x 44 + 1 = 89. You're all done! You've converted 100110112 to decimal notation to its decimal form, 89.
+ Write your final answer as 8910 to show that you're working with a decimal, which has a base of 10.
+ Doubling is used because the given number is of base 2. If the given number is of a different base, replace the 2 in the method with the base of the given number. For example, if the given number is in base 37, you would replace the "x 2" with "x 37". The final result will always be in decimal (base 10).

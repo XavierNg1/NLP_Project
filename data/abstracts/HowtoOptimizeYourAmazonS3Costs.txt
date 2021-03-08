@@ -1,0 +1,30 @@
+
+Understand your S3 use case.
+Understand the main way S3 affects costs.
+Understand the central role played by buckets in organizing your S3 files, and the use of "object" for S3 files.
+Understand the different ways you can interact with S3 files.
+Understand the pros and cons of dealing with S3 and its differences from a traditional filesystem.
+Before you begin, make sure that you are compressing data where permitted by the requirements of your application.
+If compressing data is not possible at the point where you are first writing it out, consider running an alternative process to re-ingest and compress the data.
+Understand the differences between the four types of S3 storage.Standard storage is the most expensive for storage, but is cheapest and fastest for making changes to data.
+Get a sense of how your costs are growing.
+Explore whether object versioning makes sense for your goals.Object versioning allows you to keep older versions of a file.
+Explore lifecycle policies for your data.
+Use the following heuristics for determining the best storage class based on your use case.
+Use the following common-sense benchmarks based on your storage use case.
+If using S3 for live-serving content, put it behind a CDN such as Amazon CloudFront, CloudFlare, or MaxCDN.
+Understand the key co-location advantage of EC2/S3.
+Determine the location (AWS region) of your S3 bucket(s).
+Investigate whether cross-region replication makes sense for your bucket.Cross-region replication between buckets in different regions automatically syncs up updates to data in one bucket with data in other buckets.
+If syncing regular updates to already existing files, choose a folder structure that allows the use of the AWS CLI's sync feature.
+Keep in mind the following heuristics for estimating transfer costs.
+If request pricing is a significant concern, keep your data in standard storage.
+If live-serving a static site or static images or video through S3, put it behind a CDN.
+If using S3 as a data store for key-value lookup, you need to trade off PUT request pricing against data transfer pricing when determining the sizes of the files you need to shard your data into.In general, using a smaller number of medium-sized files is better for a data lake.
+If you are subdividing data across files, use a small number of mid-sized files (somewhere between 1 MB and 100 MB) to minimize request pricing and overload.
+If you see large unexpected request costs, look for rogue processes that are doing regex matching.
+Keep in mind the following heuristics for request costs.
+Set up monitoring for your S3 costs.
+Write scripts to give easy-to-read daily reports of your costs broken down in various ways.
+Build an expected cost model and use your script to identify discrepancies between actual costs and your model.
+Debug high costs.

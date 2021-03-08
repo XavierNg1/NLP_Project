@@ -1,0 +1,23 @@
+ To do this, calculate the discriminant D=B2−AC.{\displaystyle D=B^{2}-AC.} If this is positive, the PDE is hyperbolic. Negative means it is elliptic, and if it equals zero, it is parabolic. 
+
+, Call them  λ+{\displaystyle \lambda _{+}} and λ−{\displaystyle \lambda _{-}}.
+
+
+λ±=B±DA{\displaystyle \lambda _{\pm }={\frac {B\pm {\sqrt {D}}}{A}}} 
+
+
+, Solve both of these, and put your constants of integration onto the left and everything else on the right. 
+
+
+dy±dx=λ±{\displaystyle {\frac {{\mathrm {d} }y_{\pm }}{{\mathrm {d} }x}}=\lambda _{\pm }}
+
+
+, You should now have two equations of the form η=f(x,y){\displaystyle \eta =f(x,y)} and ν=g(x,y).{\displaystyle \nu =g(x,y).}
+, Using the chain rule ux=uηηx+uννx,{\displaystyle u_{x}=u_{\eta }\eta _{x}+u_{\nu }\nu _{x},} you can plug in the values for ηx{\displaystyle \eta _{x}} and νx{\displaystyle \nu _{x}} by differentiating your equations for η{\displaystyle \eta } and ν.{\displaystyle \nu .} Do the same thing for uy{\displaystyle u_{y}} where uy=uηηy+uννy.{\displaystyle u_{y}=u_{\eta }\eta _{y}+u_{\nu }\nu _{y}.}
+, For example, the result for uxx{\displaystyle u_{xx}} is given below. In the same way, you can find uxy{\displaystyle u_{xy}} and uyy.{\displaystyle u_{yy}.} Don't forget to plug in all values you can calculate from the equations for η{\displaystyle \eta } and ν.{\displaystyle \nu .} 
+
+
+uxx=(uηηηx+uηννx)ηx+(uηνηx+uνννx)νx{\displaystyle u_{xx}=(u_{\eta \eta }\eta _{x}+u_{\eta \nu }\nu _{x})\eta _{x}+(u_{\eta \nu }\eta _{x}+u_{\nu \nu }\nu _{x})\nu _{x}}
+
+
+, Your equation is now ready to be solved given certain boundary conditions, otherwise, this is as far as you can go.

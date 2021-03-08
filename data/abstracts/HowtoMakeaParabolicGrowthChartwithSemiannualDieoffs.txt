@@ -1,0 +1,32 @@
+
+Open a new Excel workbook and create 3 worksheets: Data, Chart (unless working with Chart Wizard) and Saves.
+Set the Preferences under the Excel menu:
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents.
+Go to cell A17 and do Freeze Panes under the Window menu.
+Create the Defined Variables upper section (here's a picture of the data chit for the whole worksheet):
+
+Into cell A1, enter TopRow
+Into cell B1, enter "=ROW(Top)", w/o quotes.
+Input the Column Headings into rows 6 and 7:
+
+A7, enter Indicator
+B7, enter ParabolaCount
+C7, enter a
+D7, enter b
+E7, enter c_
+F7, enter x_Low
+G7, enter x_High
+H7, enter x
+I7, enter y=Population
+J7 enter y
+K7, enter Y=NEG?,
+Input the Column Formulas:
+
+Edit Go To cell range A8:A1448 and enter to cell A8 the formula without quotes, "=IF((ROW()-8)/RowsPerP=INT((ROW()-8)/RowsPerP),1,0)" and Edit Fill Down.
+Create the Chart:
+
+Select H8:I1447 and using the Chart Wizard or Charts from the Ribbon, select All/Other, Scatter, Smooth Line Scatter.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

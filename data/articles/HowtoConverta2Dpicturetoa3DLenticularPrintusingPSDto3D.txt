@@ -1,0 +1,20 @@
+ Check the image size. It may need to be modified for the resolution of 75.55 × 8 = 604.4lpi. In this example the document size is very small, so the document size is adjusted for high 6cm, width 8cm, then the size of the image data.
+ It is divided into 8 layers.
+
+
+
+Use the pen tool to do the image matting. Each balloon is selected, then cut; click on button on the lower right corner to create a new layer, and then paste those clipped layers to a new layer.
+See the picture of original image after separating one layer. Separate other layers according to the process above. Eventually all the layers are separated to the corresponding layer.The clipped part is separated into a new layer, as shown in figure 1.6.
+ Because in the 3d stereo image, each layer in stereoscopic display will be of left and right displacement. Therefore, in the background, the blank area will be displayed. It is not reasonable, so it needs to complement the blank area.　　　
+
+
+The method to complement graph is to use the rubber stamp tool. Paste the other similar image to the blank area. In this way, the viewer would not see the unreasonable blank graph, even if the layer has displacement.
+,
+
+
+The grating and a lens are not consistent with the actual data. Upon the determination, the actual raster resolution is 75.55lpi, so the grating will be changed into 75.55lpi, lens will be replaced in 8, focus and depth keep the same.;
+, When the above settings are adjusted, a displacement will be automatically generated. You can adjust a little as per the effect.
+ Preview the single layer after each end of hooking line for every layer.
+ Preview the results.
+, Output the image to a paper, covered with the grating, and you can achieve the stereo sense on the vision.
+

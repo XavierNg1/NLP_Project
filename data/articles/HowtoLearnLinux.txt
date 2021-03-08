@@ -1,0 +1,56 @@
+ For server-level operations, CentOS, SUSE, or Red Hat Enterprise Linux are the most popular distributions. For the home users, Ubuntu, Linux Mint or ElementaryOS are good distributions. For someone who wants the latest applications, there is Fedora. However, Ubuntu will suffice for nearly all types of users.(http://www.ubuntu.com)
+
+
+The image below shows OpenSUSE.;
+, In Linux, the user can choose what their desktop (and related bits and pieces) looks like. Distros like Ubuntu or Mageia give you the choice. The most popular desktop environments include kde and gnome. These can be chosen during installation.To switch between desktop environments (assuming they are there!) the command switchdesk is used. (e.g. Open Terminal and type in switchdesk kde to switch to kde.
+
+
+Below is a picture of Gnome 3.
+ In Gnome 3, one has to click on "Applications" to view applications. In Kde, there is a type of 'start menu' in the bottom bar. Thus the installed applications can be viewed. To open an application, click on it once. To surf the web, there may be an application titled 'web' or 'browser', or some distros even come with Firefox bundled. All the fundamental applications usually come bundled with the distro. Installation of extra applications are covered in the later sections of this article.
+
+If you are using a wireless dongle in your laptop, then after installation of the OS, connect it and follow the instructions given in your dongle's manual to install it.
+Open the browser from the list of applications. It may be Firefox, Midori, or just Web/Browser.
+Access the internet!
+
+, You can download files and applications via the terminal.
+
+
+File downloads are similar to Windows, but you must keep in mind the type of file you are downloading. If it is an application, make sure it is meant for Linux and not Windows or Mac.
+If you are trying to open a document (e.g. a text document) and there is no inbuilt application for opening it, try opening it in the browser (e.g. Firefox can open a text document).
+
+To do this, right click on it and then select Open With. Then choose your browser and set it as the default. Usually, there are options for this at the top or bottom of the window.
+ The first place you should always look is in the Software Center that came with your OS. This is the application that will help you find new apps you can install; it will also help you install and uninstall them easily. If you can't find the application you want in the Software Center, then you may be able to find it on the internet and install it using the Terminal.
+
+
+Applications may come in a binary package(installation without compiling - this is easier) or in a tar.gz/tar.bz2/tgz package (this is more difficult).
+The image below shows the downloading of a binary package from a repository.
+ Follow these steps to install a tar.gz/tar.bz2/tgz package.
+
+
+The first thing you need to do is extract it to a folder. For this example, let's make it your desktop. You can extract an archive right-clicking on it and choosing the appropriate entry. It should create a new folder with a similar name, e.g. program-1.2.3. Now you need to open your terminal and then go to that directory: cd /home/yourusername/Desktop/program-1.2.3. Make sure you first read a file called INSTALL or INSTALL.txt or README. Check if there are any of these files with the ls command, then display the right one with: (type these in the terminal. Note: please make sure you have root/superuser privileges. Become root first. Do this by typing sudo -s in distros like Ubuntu. In distros like Mageia, the "su" command works.)
+xdg-open INSTALL
+The file will contain the right indications to go on with the compiling process. Usually the three "classical" steps are:
+./configure
+make
+sudo make install
+You may also need to install some dependencies, generally after a configure error that will tell you what you are missing. You can also use check install instead of make install.,
+
+
+For Ubuntu/Debian/distros based on either (e.g. ElementaryOS) the binary package comes with a .deb extension. Go to the Terminal and type dpkg -i /home/yourusername/directory/filename.deb
+OR you can right click on the file, go to properties, copy the directory given and type:
+dpkg -i
+Make sure there is a space and a slash (/) before the directory. The directory looks like this:
+(space)/directory
+
+, You should not have problems finding files and documents and downloads in linux because they are generally listed as follows:
+
+
+Downloads can be found under Downloads (unless the user specifies). The Downloads folder is /home/username/Downloads (generally it is this one) or it may be /username/home/Downloads for your distro. (Then you are not using Ubuntu, Linux Mint, etc.)
+Documents can be found under Documents.The directory is /home/username/Documents.
+You can always see the directory of a file by right clicking on it and then selecting "Properties".
+ One can easily set up their Dropbox account or sync their bookmarks and open tabs via the browser.
+
+
+Use Ubuntu One. Ubuntu users get Ubuntu One, which gives them free cloud storage. This can be used for sharing of files across multiple platforms. Below:Ubuntu One
+
+

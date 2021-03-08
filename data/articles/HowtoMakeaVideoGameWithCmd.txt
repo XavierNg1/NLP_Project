@@ -1,0 +1,91 @@
+;
+, Save the file as ‘My Game’.bat
+
+, Start by typing:
+
+
+@echo off
+title ‘My Game’
+color 0A
+if "%1" neq "" ( goto %1)
+pause
+
+, Now save it and run, it will come up with an error and all the different colour combinations. Find the one you like and type it in after “color”, instead of “zz”. A good combination is color 0A, it makes the text green and the background black.
+ To create the menu get rid of pause and type in:
+
+
+:Menu
+cls
+echo ‘1. Start’
+echo ‘2. Instructions’
+echo ‘3. Exit’
+set /p answer=‘Type the number of your option and press enter.’
+if %answer%==1 goto ‘Start_1’
+if %answer%==2 goto ‘Instructions’
+if %answer%==3 goto ‘Exit’
+
+, To create the exit screen type in this:
+
+
+:‘Exit’
+echo Thanks for playing !
+exit /b
+Now for the instructions type in:
+ :‘Instructions’
+cls
+echo ‘Instructions’
+echo.
+Then write:
+echo ‘Your instructions here’
+As many times as you like then type:
+pause
+goto Menu
+
+, Type in a scenario:
+
+
+:Start_1
+cls
+echo ‘You have run into bad guys. Their forces are:’
+echo ‘3 farmers’
+echo ‘You have a high chance of winning.’
+set /p answer=‘Would you like to fight or run?’
+if %answer%==‘Fight’ goto ‘Fight_1’
+if %answer%==‘Run’ goto ‘Run_1’
+
+, Now to make fighting and running:
+
+
+:Run_1
+cls
+echo You ran away safely !
+pause
+goto ‘Start_1’
+:Fight_1
+echo You have chosen to fight.
+echo The battle is waging.
+set /p answer= Type number 1 and press enter to continue:
+if %answer%==1 goto Fight_1_Loop
+:‘Fight_1_Loop’
+set /a num=%random%
+if %num% gtr 4 goto ‘Fight_1_Loop’
+if %num% lss 1 goto ‘Fight_1_Loop’
+if %num%==1 goto ‘Lose_Fight_1’
+if %num%==2 goto ‘Win_Fight_1’
+if %num%==3 goto ‘Win_Fight_1’
+if %num%==4 goto ‘Win_Fight_1’
+:‘Lose_Fight_1’
+cls
+echo Sorry, you lost the battle :(
+pause
+goto Menu
+:‘Win_Fight_1’
+cls
+echo Congrats, you won the fight!
+set /p answer=‘Would you like to save?’
+if %answer%==‘Yes’ goto ‘Save’
+if %answer%==‘No’ goto ‘Start_2’
+:‘Save’
+goto ‘Start_2’
+Now you can repeat the code used in ‘Start_1’ to create a second fight and a third and fourth and so on.
+Also when you type e.g. :Fight_1 you also have to make sure that parts that say goto Fight_1 stay the same as each other so if you change one you have to change both.

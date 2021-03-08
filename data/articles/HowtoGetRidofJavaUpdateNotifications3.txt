@@ -1,0 +1,4 @@
+ To do so, click the magnifying glass icon in the top-right section of your Mac's menu bar.
+
+If you aren't using an account with administrator privileges, you might not be able to disable the Java update.
+ Typing "Terminal" into the Spotlight text field will bring up a black box; this is the Terminal icon., Doing so will open Terminal., The command is as follows: sudo defaults write /Library/Preferences/com.oracle.java.Java-Updater JavaAutoUpdateEnabled -bool false., This will run the command. The Java update should no longer appear when you start your Mac.

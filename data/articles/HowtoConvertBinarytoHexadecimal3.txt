@@ -1,0 +1,45 @@
+ Hexadecimal converts 4 binary digits into one hexadecimal unit. So, in order to convert the number, you first need to break it up into groups of four, starting on the right. For example:
+
+Convert 11101100101001{\displaystyle 11101100101001} into a hexadecimal number.
+
+
+11101100101001=(11)(1011)(0010)(1001){\displaystyle 11101100101001=(11)(1011)(0010)(1001)}
+
+
+, The zeros will not affect the conversion, but they will make it easier to visualize. Remember, you want all groups of 4-digit binary numbers.
+
+Convert 11101100101001{\displaystyle 11101100101001} into a hexadecimal number.
+
+'11101100101001=(11)(1011)(0010)(1001){\displaystyle 11101100101001=(11)(1011)(0010)(1001)}
+
+
+(11)(1011)(0010)(1001)={\displaystyle (11)(1011)(0010)(1001)=}(0011)(1011)(0010)(1001){\displaystyle (0011)(1011)(0010)(1001)}
+
+
+, You'll need to convert each binary set by itself, so separate them on your paper to make them easier to work with. Work on converting each individual string of four into its hexadecimal counterpart. For our example:0011=0+0+2+1=3{\displaystyle 0011=0+0+2+1=3}
+
+
+1011=8+0+2+1=11=B{\displaystyle 1011=8+0+2+1=11=B}
+
+
+0010=0+0+2+0=2{\displaystyle 0010=0+0+2+0=2}
+
+
+1001=8+0+0+1=9{\displaystyle 1001=8+0+0+1=9}
+
+
+, Once you've converted all the 4-digit parts, simply ram them together to get your final answer. So, for the example above:
+
+(0011) (1011) (0010) (1001)</math>
+
+ 3 B 2 9
+
+
+11101100101001=3B29{\displaystyle 11101100101001=3B29} 
+
+
+, There are only 16 possible 4-digit combinations of binary numbers. So, if you don't want to figure out each string individually, you can use this conversion table.
+
+
+
+

@@ -1,0 +1,18 @@
+;
+, Save it as a project.
+ It is up to you to use your favorite method to turn everything but the subject transparent. Do the same for all objects in the scene.
+ It does not need to be perfect, as only a bit of the cloned part will be displayed on the final result.
+ Save as a PNG image, for the alpha channels.
+, Change the axis to Camera.
+ If you do not know, you can use guesswork to change it later.
+, You do not need to edit details, or subdivide that often. The edges matching the outlines of the object should be bigger than the object, because you have transparency in your image. You will need to do a lot of messing around to get the correct perspectives. Try scaling and moving the mesh, rotating the camera, etc.
+ The relative distance between the two meshes is important, as it will be a big factor in how the brain translates the depth in the final result. Add all the other meshes too.
+
+
+
+On a mesh, add a new material, and click shadeless, and enable transparency, setting it to 0 with Z transparency.
+Add a new texture. Change texture type to image. Add the respective image to the mesh. Enable premultiply. Change coordinates to sticky. Enable the influence of alpha. Press space in the 3D view and click 'Add Sticky'. Do the same for every other object in the scene.
+ Do the process of adding the texture but for the background.
+ If there is a missing texture, check if the alpha influence is enabled, and that you added sticky.
+ Do not change the position of the camera too much, and don't make it too lengthy.
+

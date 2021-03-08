@@ -1,0 +1,40 @@
+ In real life, it's rare to work with a single pure liquid — usually, we deal with liquids that are mixtures of several different component substances. Some of the most common of these mixtures are created by dissolving a small amount of a certain chemical called a solute in a large amount of a chemical called a solvent to create a solution. In these cases, it's useful to know an equation called Raoult's Law (named for physicist François-Marie Raoult),which looks like this: Psolution=PsolventXsolvent. In this formula, the variables refer to;
+
+
+
+Psolution: The vapor pressure of the entire solution (all of the component parts combined)
+
+Psolvent: The vapor pressure of the solvent
+
+Xsolvent: The mole fraction of the solvent.
+Don't worry if you don't know terms like "mole fraction" — we'll explain these in the next few steps.
+ Before you calculate the vapor pressure of a mixed liquid, you need to identify the substances with which you are working. As a reminder, a solution is formed when a solute is dissolved in a solvent — the chemical that dissolves is always the solute and the chemical that does the dissolving is always the solvent.
+
+
+Let's work through a simple example in this section to illustrate the concepts we're discussing. For our example, let's say that we want to find the vapor pressure of simple syrup. Traditionally, simple syrup is one part sugar dissolved in one part water, so we'll say that sugar is our solute and water is our solvent.Note that the chemical formula for sucrose (table sugar) is C12H22O11. This will be important soon.
+ As we saw in the Clausius Clapeyron section above, a liquid's temperature will affect its vapor pressure. In general, the higher the temperature, the greater the vapor pressure — as the temperature increases, more of the liquid will evaporate and form vapor, increasing the pressure in the container.
+
+
+In our example, let's say that the simple syrup's current temperature is 298 K ( about 25 C).
+ Chemical reference materials usually have vapor pressure values for many common substances and compounds, but these pressure values are usually only for when the substance is at 25 C/298 K or at its boiling point. If your solution is at one of these temperatures, you can use the reference value, but if not, you'll need to find the vapor pressure at its current temperature.
+
+
+The Clausius-Clapeyron can help here — use the reference vapor pressure and 298 K (25 C) for P1 and T1 respectively.
+In our example, our mixture is at 25 C, so we can use our easy reference tables. We find that water at 25 C has a vapor pressure of 23.8 mm HG, The last thing we need to do before we can solve is to find the mole fraction of our solvent. Finding mole fractions is easy: just convert your components to moles, then find what percentage of the total number of moles in the substance each component occupies. In other words, each component's mole fraction equals (moles of component)/(total number of moles in the substance.)
+
+
+Let's say that our recipe for simple syrup uses 1 liter (L) of water and 1 liter of sucrose (sugar.) In this case, we'll need to find the number of moles in each. To do this, we'll find the mass of each, then use the substance's molar masses to convert to moles.
+Mass (1 L of water): 1,000 grams (g)
+Mass (1 L of raw sugar): Approx. 1,056.7 gMoles (water): 1,000 grams × 1 mol/18.015 g = 55.51 moles
+Moles (sucrose): 1,056.7 grams × 1 mol/342.2965 g = 3.08 moles (note that you can find sucrose's molar mass from its chemical formula, C12H22O11.)
+Total moles: 55.51 + 3.08 = 58.59 moles
+Mole fraction of water: 55.51/58.59 = 0.947
+
+
+, Finally, we have everything we need to solve our Raoult's Law equation. This part is surprisingly easy: just plug your values in for the variables in the simplified Raoult's Law equation at the beginning of this section (Psolution = PsolventXsolvent).
+
+
+Substituting our values, we get:
+Psolution = (23.8 mm Hg)(0.947)
+Psolution = 22.54 mm Hg. This makes sense — in mole terms, there's only a little sugar dissolved in a lot of water (even though in real-world terms the two ingredients have the same volume), so the vapor pressure will only decrease slightly.
+

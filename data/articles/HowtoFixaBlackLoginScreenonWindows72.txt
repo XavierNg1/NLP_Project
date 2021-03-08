@@ -1,0 +1,15 @@
+ Your video card drivers may be causing problems when Windows loads. Removing them will allow you to boot normally and then install the latest working drivers.
+ This will open the Advanced Boot Options menu if you are quick. If Windows tries to load, you'll need to reboot and try again.
+ This will load Windows in Safe Mode, which will usually work even if Windows normally shows a black screen.
+
+
+If Safe Mode will not work, try a Startup Repair.
+,,, You may have one or more display adapters listed here.
+,,, If the video drivers were causing the problem, Windows should now boot normally, though at a lower resolution than you may normally use.
+ If removing the old display drivers fixed your problem, you'll want to install the latest available drivers to get your display capabilities back:
+
+
+Open your web browser.
+Visit the driver download page for your graphics adapter. You're likely using either Intel, AMD, or NVIDIA. If you aren't sure, just try the auto-detection software for each one.
+Run the autodetection tool on the driver site to scan your computer and retrieve the proper files.
+

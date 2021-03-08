@@ -1,0 +1,30 @@
+ The marquee tag is obsolete, and developers are strongly encouraged to avoid it. Different browsers will display it differently, and future updates could prevent the text from blinking at all.Learn the Javascript approach instead if you are creating a professional web site.
+
+
+Google Chrome does not support the "scrollamount" attribute, which this method relies on.In that browser, your text will scroll across the page instead of blinking.;
+, Open your HTML document in a simple text editor. Type <marquee> in front of the text you would like to blink. Type </marquee> after the text.
+
+
+As always, set up your HTML page first with <html>, <head>, and <body> tags.
+ Change the opening tag to <marquee width="300">. This will not change the size of your font. There are two reasons why you might need to change this to a different number:
+
+
+If your text does not fit, it will scroll instead of blinking. Increase the width to prevent this.
+In Chrome, the text will scroll across a distance determined by the width.
+ Inside the same tag, write scrollamount="300" (or the same number as the width). By default, marquee text scrolls across the page. By setting the scroll amount to the same number as the width, the text will "scroll" into the same position it was already in. This causes a blink effect.
+
+
+Your text should now look something like this:
+<marquee width="300" scrollamount="300">Blinking text here.</marquee>.
+ Open the HTML file in a web browser to see the effect. If the text is blinking too quickly or too slowly, change the speed with the attribute scrolldelay="500". The default delay is set to 85.Use a higher number for a slower blink, or a lower number for a faster blink.
+
+
+You should now have:
+<marquee width="300" scrollamount="300" scrolldelay="500">Blinking text here.</marquee>
+
+, Many web users find blinking text annoying. To stop the animation once you've grabbed the reader's attention, enter loop="7". Now the text will blink seven times, then disappear. (You can use any number instead of seven.)
+
+
+The completed code:
+<marquee width="300" scrollamount="300" scrolldelay="500" loop="7">Blinking text here.</marquee>
+

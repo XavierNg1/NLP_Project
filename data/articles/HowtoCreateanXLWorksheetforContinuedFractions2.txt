@@ -1,0 +1,35 @@
+ Or, open Excel from within your Applications folder, and select File, Open a New Workbook from the menu. Or, better yet, from the previous article on Continued Fractions, Start Working with Continued Fractions, open it and use the worksheet, Approach 2.
+
+
+Recommended Settings: Set General to R1C1 Off and Show the 10 Most Recent Documents;
+Edit - set all the Top options to checked except Automatically Convert Date System.
+Display number of decimal places = blank (for integers preferred), Preserve display of dates and set 30 for 21st century cutoff;
+View - show Formula Bar and status bar, hover for comments and all of Objects, Show gridlines and all boxes below that auto or checked;
+Chart - show chart names and data markers on hover. Leave rest unchecked for now;
+Calculation -- Automatically and calc before save, max change .000,000,000,000,01 w/o commas if you do goal-seeking a lot and save external link values and use 1904 system;
+Error checking - check all; Save - save preview picture with new files and Save Autorecover after 5 minutes;
+Ribbon -- all checked except Hide group titles and Developer (unless you plan to write macros).
+ Label worksheet 1 "Approach 1" and label worksheet 2 "Approach 2", or something similar.,,, For each String Formula in column G, you must manually copy it and do Edit Paste Values into cell to the right, eg. paste special values into H4 from G4, or H5 from G5, etc. And then in the Formula Bar, you must click past the right end of the formula with the mouse as if editing, then hit the Enter or Return key, This will convert the string into an actual formula! Otherwise, a macro might be used, but that is beyond the scope of this article. The result in H4 should be 4.46236559139785; the result in H5 should be 2.16279069767442; the result in H6 should be 6.14285714285714; and the result in H7 should be 7.00000 ... for your future reference;
+Enter, without quotes, the formula "=INT(H4)" into cell I4 -- the returned value should be the Integer Part, 4 of the Decimal Number, 4.46236559139785;
+Enter, without quotes, the formula "=H4-I4" into cell J4 -- the returned value should be the Decimal Part .46236559139785 of the Decimal Number, 4.46236559139785;
+Enter, without quotes, the formula "=ROUND(J4*F4,0)" into cell K4 -- the returned value should be the Rounded Remainder, 43;
+Enter, without semi-quotes, the formula '=K4&"/"&F4' into cell L4 -- the returned value should be the Fraction String, 43/93;
+Enter, without quotes, the formula "=F4" into cell M4 -- the returned value should be the Inverted Numerator, 93;
+Enter, without quotes, the formula "=K4" into cell N4 -- the returned value should be the Inverted Denominator, 43;
+Enter, without the external semi-quotes but keeping the 2 internal quotes to the formula, the formula '=IF(I4<>0,I4,"")' into cell O4 -- the returned value should be the (first part of the) Answer, 4 -- Format Cell Fill Canary Yellow;
+Enter, without the external semi-quotes but keeping the 2 internal quotes to the formula, the formula '=IF(O4<>"",P3+1,0)' into cell P4 -- the returned value should be the (first part of the) Max formula, 1;
+Select cell range B4:P21 and Edit Fill Down;
+Select cell range H4:H23 and Format Cells Border Bold Outline Dark Blue per cell.;
+Select cell range H5:H21 and Edit Clear Contents -- this is where you will do the tricky part of pasting special the values and editing in the formula bar to turn the string into a live formula manually;
+Enter, without the external semi-quotes but keeping the 2 internal quotes to the formula, the formula '=M4&"/"&N4' into cell B5 -- the returned value should be the Inverted Fraction(s);
+Select cell range B5:B21 and do Edit Fill Down;
+Select cell range B2:N21 and do Format Cells Border Dark Blue Boldest Border Surrounding Border to all the cells;
+Select cell range B2:O21 and do Format Cells Border Dark Blue Boldest Border Surrounding Border to all the cells;
+Select cell range B2:P23 and do Format Cells Border Dark Blue Boldest Border Surrounding Border to all the cells;
+Select cell G22 and enter, without quotes but with the trailing space, "ANSWER: ", and do the same for cell G23;
+Enter to cell H22 the formula, without surrounding semi-quotes but keeping all internal quote marks, '=""' -- the result of this formula will be ;
+Enter to cell H23 the formula, without surrounding semi-quotes but keeping all internal quote marks, '=MID(H22,1,MAX(P4:P20)*IF(MAX(P4:P20)>9,2.5,2)+MAX(P4:P20)-1)&IF(MAX(P4:P20)>9,"","]")' -- the result of this formula will be , the Answer.
+Go ahead now and do the tricky part for cells H5, H6 and H7 by copying the formulas in G5 and doing Paste Special Values to H5, then editing in the Formula Bar at the far right of the formula with the Edit Bar of the mouse, once, then clucking Enter (or Return). Do so for G6--H6 and G7--H7 as well. Check your results with the values given above "for future reference".
+Your Final Answer then should be .
+Hooray! You finished the hard part!
+

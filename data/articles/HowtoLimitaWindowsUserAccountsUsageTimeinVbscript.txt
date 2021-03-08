@@ -1,0 +1,30 @@
+ General overview: There are 2 scripts that should be placed together. Timer.vbs, the main program itself, CheckTimeLeft.vbs, which produces a messagebox showing the time left for the day.
+
+
+How Timer.vbs works: It creates a log file and writes to it every minute the user account is logged on, thus the time used is not lost in multiple logins/logouts. Once the time used for the day is up, it locks the computer by pressing Windows+L.
+
+
+
+
+
+;
+, Timer.vbs at (The set-up (for admin accounts): Place the script files in the C:\ root drive. In this set-up, the log-file will be produced at C:\timelog.txt
+
+
+
+
+
+
+The set-up (for limited, UAC'ed accounts): You'll have to change a few constants, as limited accounts have no rights to access the C:\ root drive. So we can place the scripts and set the log-file to be produced in the user's My Documents folder for example. In Timer.vbs, change lines 9 and 10 to a suitable folder. In CheckTimeLeft.vbs, change line 6. In SetTime.vbs, change lines 6 and 7.
+
+
+
+
+
+
+The set-up, continued. Create a shortcut to Timer.vbs and place it in the user's Start Menu\Startup folder. (For Vista/7 users, a user's Start Menu folder is at C:\Users\<username>\AppData\Roaming\Microsoft\Windows\Start Menu) You're done.
+ Make sure the number set is in minutes.
+
+
+What happens now? Whenever the user logs in he'll see a messagebox telling him the time left for the day. A warning is produced at the 15min, 10min, 5,4,3,2,1min left mark.
+

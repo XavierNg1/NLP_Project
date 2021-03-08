@@ -1,0 +1,11 @@
+ XHTML is written exactly like HTML, with a few stipulations:;
+, This should be placed at the very top of your document, and is written like: <?xml version='1.0' encoding=utf-8' ?> Adjust the encoding attribute to the proper encoding of your document. In most cases, this will be UTF-8.
+ The current version of XHTML, XHTML 1.0, defines three DTD's. These are "Strict", "Transitional", and "Frame set". Unless you have a good reason to do otherwise, use the Strict DTD. The DOCTYPE for the Strict DTD is: <!DOCTYPE html PUBLIC "-
+
+, For example, use <p></p> for a paragraph instead of <P></P>.
+ For example, if you use <p> to start a paragraph, make sure there is a closing </p> at the end. Empty elements, such as <br> and <img> (which have no content inside of them) must be closed as well. Put a slash at the end of the tag: <br /> is the correct XHTML syntax for a line break.
+ This was also a requirement in HTML, but is especially important for XHTML. For example <b><i>Some text</b></i> is incorrect, because the <b> tag is being closed before the <i> tag even though it started first. The correct syntax would be: <b><i>Some text</i></b>.
+ In HTML it would be valid to write <a href=nextPage.html>Next Page</a>. However, in XHTML all attributes must be quoted: <a href="nextPage.html">Next Page</a>.
+ For example: <input type="checkbox" checked> should be <input type="checkbox" checked="checked" />).
+ Use XHTML for the content of your document (such as text, images, links, etc.) and use CSS (Cascading Style Sheets) to dictate how that content should be displayed to the user. HTML tags that are used for presentation (such as <font>) should not be used.
+

@@ -1,0 +1,41 @@
+ You will need to understand how to take derivatives in calculus to find this article useful. You can learn of the process a bit here and more from the articles in Related WikiHows.;
+, D(p) = y)
+In cell C1, enter E(p) In cell D1, enter D Prime p (i.e. D'(p), the derivative of D(p).)
+In cell E1, enter R=p*D(p)=xy (i.e. the Revenue Function).
+
+
+
+Find the Derivative D'(p) (or D Prime p). This = -39.
+Find E(p) = -p*D'(p) / D(p) = p*39 / (975 - 39p)
+Set E(p) = to 1:  p*39 / (975 - 39p) = 1
+Solve for p:  39p = 975 - 39p; 78p = 975; p = 12.5 
+Revenue is maximized when price p = $12.50 and demand is unit elastic.
+ Insert Name Define Name D_of_p to column B.
+Edit Go To cell range C2:C27 and enter the formula w/o quotes "=-p*D_Prime_p/D_of_p" and Edit Fill Down. This column is next because it is in chart order next to y and easier that way.
+Edit Go To cell range D2:D27 and enter -39 and Edit Fill Down. Insert Name Define Name D_Prime_p to column D.
+Edit Go To cell range E2:E27 and enter w/o quotes the formula "=p*D_of_p" and Edit Fill Down.
+Format Cell Fill yellow for cell range A17:E17 where p=12.5. D(p) = 487.50, E(p) = 1, D'(p)=-39 and R = $6.093.75 (at a local maximum of Revenue).
+ Click on the bottom series 1 or 2 and do Chart Layout  Format Selection, Axis - Plot series on Secondary axis, OK. Edit the chart series title in the formula bar so that it reads "=SERIES("p=x,E(p)=y",Data!$A$2:$A$27,Data!$C$2:$C$27,1)". Click on the other series and edit it in the formula bar until it reads "=SERIES("p=x,D(p)=y",Data!$A$2:$A$27,Data!$B$2:$B$27,2)".
+Select Chart Layout Axes and select Primary Horizontal Axis - Default Axis (or whichever axis aligns the 1 with the grid lines). Also set the horizontal scale to major unit 2.5. Set the Vertical Axis to Default Axis.
+Select data point {12.5,1) and make marker square dot, black fill size 8. Select data point (12.5, 487.50) and make marker round circle red dot red fill size 8. Add left-aligned data labels to each pertinent data point.
+ Read down and find that a E(p)=1, price p =12.5, so then move up the price gridline to the Demand Function D(p) and find the red dot and read that 487.5 units will be demanded at the price of $12.50, for a Total Revenue of $6,093.75 (per the yellow highlighted row #17). At this point, Marginal Revenue = $0.
+,
+D(p) = -.01p^2 - .03p + 600  .
+Final Image:
+
+
+
+
+
+
+
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+Final Image:
+
+
+
+
+
+
+

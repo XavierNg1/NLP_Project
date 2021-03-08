@@ -1,0 +1,24 @@
+ The formula for calculating compound interest accumulation on a given account balance is: A=P(1+(rn))n∗t{\displaystyle A=P(1+({\frac {r}{n}}))^{n*t}}.
+
+(P) is the principal (P), (r) is the annual rate of interest, and (n) is the number of times the interest is compounded per year. (A) is the balance of the account you are calculating including the effects of interest.
+
+(t) represents the periods of time over which the interest is accumulating. It should match with the interest rate you are using (e.g. if the interest rate is an annual rate, (t) should be a number/fraction years). To determine the appropriate fraction of years for a given time period, simply divide the total number of months by 12 or divide the total number of days by 365. 
+;
+, Review the terms of your personal savings account or contact a representative from your bank to fill in the equation.
+
+The principal (P) represents either the initial amount deposited into the account or the current amount that you will be measuring from for your interest calculation. 
+
+The interest rate (r) should be in decimal form. A 3% interest rate should be entered as 0.03. To get this number, simply divide the stated percentage rate by 100. 
+
+The value of (n) is the number of times per year the interest is calculated and added onto your balance (aka compounds). Interest most commonly compounds monthly  (n=12), quarterly (n=4), or yearly (n=1) but there can be other options, depending on your specific account terms., Once you have determined the amounts of each variable, insert them into the compound interest formula to determine the interest earned over the specified time scale. For example, using the values P=$1000, r=0.05 (5%), n=4 (compounded quarterly), and t=1 year, we get the following equation:  A=$1000(1+(0.054))4∗1{\displaystyle A=\$1000(1+({\frac {0.05}{4}}))^{4*1}}.
+
+Interest compounded daily is found in a similar way, except you would substitute 365 for the 4 used above for variable (n)., Now that the numbers are in, it's time to solve the formula. Start by simplifying the simple parts of the equation. This includes dividing the annual rate by the number of periods to get the periodic rate (in this case 0.054=0.0125{\displaystyle {\frac {0.05}{4}}=0.0125}) and solving the object n∗t{\displaystyle n*t} which here is just 4∗1{\displaystyle 4*1}. This will yield the following equation: A=$1000(1+(0.0125))4{\displaystyle A=\$1000(1+(0.0125))^{4}}.
+
+This is then further simplified by solving for the object within the parenthesis, 1+0.0125=1.0125{\displaystyle 1+0.0125=1.0125}. The equation will now look like this: A=$1000(1.0125)4{\displaystyle A=\$1000(1.0125)^{4}}.
+ Next, solve the exponent by raising the result of the last step to the power of four (aka 1.051∗1.051∗1.051∗1.051{\displaystyle 1.051*1.051*1.051*1.051}). This will give you 1.051{\displaystyle 1.051}. Your equation is now simply: A=$1000(1.051){\displaystyle A=\$1000(1.051)}. Multiply these two numbers together to get A=$1051{\displaystyle A=\$1051}. This is your account value with 5% interest (compounded quarterly) after one year.
+
+Note that this is slightly higher than $1000∗5%{\displaystyle \$1000*5\%} that you may have expected when the annual interest rate was quoted to you. This illustrates the importance of understanding how and when your interest compounds!
+
+The interest earned is the difference between A and P, so total interest earned =$1051−$1000=$51{\displaystyle =\$1051-\$1000=\$51}.
+
+

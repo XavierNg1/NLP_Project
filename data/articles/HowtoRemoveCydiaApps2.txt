@@ -1,0 +1,37 @@
+ Rebooting your jailbroken device in Safe Mode will deactivate any installed tweaks, which will usually allow you to open Cydia and uninstall the packages using the above method. To enter Safe Mode follow these steps:
+
+
+Power off your device.
+Turn it back on while holding the Volume Up button.
+Continue holding the Volume Up button until the lockscreen appears. Your device is now in Safe Mode, and installed tweaks have been disabled.
+Remove your programs. Follow the steps in the previous method to uninstall any packages you want.
+ If Cydia still won't open, even in Safe Mode, you will need to use SSH to connect to your device from another computer on the network and remove the package. To do this, you will need to have OpenSSH already installed on your device.
+
+
+OpenSSH can be installed through Cydia. This is a bit of a Catch-22 for this method, as Cydia won't load. This method is for those that have previously installed OpenSSH for other reasons.
+ You will need to know your device's IP address in order to connect to it from another computer on your network. You can find your device's IP address by opening the Settings app and selecting Wi-Fi. Tap the arrow next your network's name, and look for the IP Address entry.
+
+
+Make sure you are on the same network as the computer you are going to use to connect.
+ You will need to track down the package identifier before you can remove the package from your phone. To do so, find the Cydia package database online. You can find it by visiting ModMyi.com and clicking on the Cydia Apps option in the menu bar.
+
+
+Use the search tool to search for the package you want to remove.
+Select the program from the search result to open the details.
+Look for the "Identifier" entry in the package details. Copy it down exactly.
+Repeat this for each package you want to remove.
+ Now that you've got the details for the package(s) you want top remove, you will need to connect to your device using the SSH protocol. This is built-in to most operating systems, so you will not need to install anything extra. Make sure you are using a computer on the same network as the iPhone or iPad.
+
+
+Open the Command Prompt or Terminal.
+Type ssh root@IP Address and press ↵ Enter. Replace IP Address with the IP address for your device.
+Enter your password if requested. By default, the OpenSSH password is "alpine".
+ Now that you are connected to your device, you can manually remove the packages that you want to get rid of. To do so, enter in the following commands:
+
+
+
+apt-get update - This will ensure that the package manager is updated before proceeding.
+
+apt-get --purge remove identifier - Replace identifier with the ID you copied from the Cydia database.
+
+respring - This will reboot the iPhone interface, finishing the removal process.

@@ -1,0 +1,19 @@
+ Press Ctrl+Alt+T on your keyboard to open a Terminal window. Alternatively, you can go to "Applications" and select "Accessories." From this folder, locate "Terminal" and double-click to open up the Terminal window.
+
+
+Note that the Shred tool is available for Ubuntu and most distributions of Linux, but may not be available for all Linux-based platforms.
+ Within the Terminal window, type the basic shred command, shred filename. The actual command itself is the shred part of the line. The part should be filled in with the options you might expect the use.
+
+
+
+-n allows you to overwrite a file N number of times. If you wanted to overwrite the file 15 times, you would type -n 15
+
+
+-u instructs the tool to remove the file after it has been shredded.
+
+-z instructs the tool to overwrite the file with only zeros after shredding it with ones and zeros. As a result, it will appear as though it has not undergone a shredding process.
+For example, if you want to shred a file called "secret.txt" 20 times, you would type, shred -u -z -n 20 secret.txt
+
+
+, Hit ↵ Enter on your keyboard and let the tool run. Once finished, you should get a confirmation in your Linux Terminal that the action is done and the file is erased.
+

@@ -1,0 +1,8 @@
+;
+, Right click on the name of the project you want to generate a JAR file from, and select Properties from a drop down menu.
+ On your Properties window, look at the list of Categories on the left side. Go over to Build and under it should be Packaging, click on it. You should see Compress JAR File checkbox on the right, mark it.
+ Press the OK button at the bottom right.
+ There are several ways to it, but the easiest one is to press a button with an icon of a hammer next to the drop down menu for running configuration.
+ Most common one is in My Documents/NetBeansProjects, on Windows, and Home/NetBeansProjects folder, on Ubuntu (Linux). In case the folder isn't there, click on Help, select About and check under Userdir.
+ Open up Command Prompt/Terminal or make a batch file that has this line included: java -jar "<name of jar file>".
+

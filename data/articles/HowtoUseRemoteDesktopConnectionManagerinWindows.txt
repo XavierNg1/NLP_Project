@@ -1,0 +1,13 @@
+ If you are trying to connect to another computer, completely the following steps on the computer you are attempting to connect to. If someone else is going to remote connect to you, follow the steps on your own computer.
+
+
+Click the Start button. If you are on Windows XP then the run prompt should be on the bottom right area of your Start menu; click it and type "winver". If you are on Windows Vista and up, just type "winver" and press enter. This should tell you what version of Windows you have. Only versions: Windows XP Professional, Windows Vista Business, Windows Vista Ultimate, Windows Vista Enterprise, Windows 7 Professional, Windows 7 Ultimate, Windows 7 Enterprise, Windows 8 Pro, Windows 8.1 Pro and Windows 10 Pro are supported.
+If your version of Windows is supported, great! Onto the next step!;
+, To do this, for Windows XP navigate to the run dialogue and type "mstsc" and for Windows Vista and greater, just type "mstsc". This should display the Remote Desktop Connection dialogue.
+ If you know the name of the computer you want to connect to, enter it in the field on the computer that you are connecting from. Otherwise, you have to find the name or IP.
+
+
+Windows XP: On the computer you are connecting to, navigate to the run dialogue and then type "cmd". You should see a black screen with white text, don't worry! Your computer isn't broken. Type in "ipconfig" and press enter. A string of text should then be displayed. Next to "IPv4 Address" there should be a sequence of numbers separated by periods. This is the computer's IP. Paste this into the computer that is going to connect to the other computer.
+For Vista and later users, do the same for windows XP or, click "Start" and then right click on "Computer" and click "Properties". When the window opens up you should see the heading "Computer name, domain, and workgroup settings" and underneath a sub-heading called "Computer name." Next to this you should see some text. This is the name of the computer. Paste this into the field on the remote connection window on the computer that you are going to remote connect from.
+ After you have entered the IP/name of the computer you are going to connect to click the "Connect" button. If you followed the steps correctly, the computer that is being connected to should lock itself and the remote session should begin.
+

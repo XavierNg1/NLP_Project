@@ -1,0 +1,19 @@
+ Try using information greater than the current date.
+
+
+And these are the results.;
+, SQL Mail must be configured and running in the server for this stored procedure to work. Using msdb.dbo.sp_send_dbmail you can send the results of a query as an email as simple as in the picture.
+
+
+This is how it looks in Outlook.
+ If you need the results to have a more professional look, the best option is to send them as html. That is a feature of the sdb.dbo.sp_send_dbmail stored procedure. Combining that option and the XML capabilities of SQL Server. Write a stored procedure to transform the results into an HTML table and returning characters. Like the one in the picture.
+
+
+The result of the previous stored procedure is the raw html report. Take a look at the “for xml path(‘tr’)” part of the query, which is simply creating the tr-td tags structure of the table. Run the report like the one on the picture.
+This is what you will be getting.
+
+
+
+This is how it will look at the end.
+ It’s not difficult to get a list of recipients with their email addresses and create a cycle to execute the msdb.dbo.sp_send_dbmail procedure within the same job. Finally, schedule the job to run as frequently as necessary and get a daily report directly from SQL.
+

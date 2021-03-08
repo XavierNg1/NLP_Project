@@ -1,0 +1,30 @@
+ myType, TemplateName, variable1, and variable2 can be named anything you want. myType will represent a type that hasn't been identified, TemplateName will represent the name of your template, and variable1 and variable2 will represent the variables to be used in your function template. Note that you can have as much variables as you want.
+
+
+
+
+template <class myType>
+myType TemplateName(myType variable1, myType variable2)
+{
+ 
+};
+
+
+
+;
+, It should involve the variables you defined (in the example above they would be variable1 and variable2). Here's a sample template:
+
+
+
+
+template <class T>
+T GetMax (T a, T b) {
+   T result;
+   result = (a>b)? a : b;
+   return (result);
+}
+
+
+
+
+

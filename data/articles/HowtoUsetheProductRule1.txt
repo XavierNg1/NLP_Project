@@ -1,0 +1,112 @@
+ Differentiating works, at the first level, with equations that consist of a single function. The derivative (the result of differentiating) represents the instantaneous slope of the function at a given selected point.
+
+Some easy examples of single functions and their derivatives are:
+
+
+f(x)=x3{\displaystyle f(x)=x^{3}}………….. f′(x)=3x2{\displaystyle f^{\prime }(x)=3x^{2}} 
+
+
+g(x)=6x−4{\displaystyle g(x)=6x-4}………….g′(x)=6{\displaystyle g^{\prime }(x)=6}
+
+
+h(x)=sin⁡x{\displaystyle h(x)=\sin x}………….h′(x)=cos⁡x{\displaystyle h^{\prime }(x)=\cos x}
+
+
+
+If you need to review finding these single derivatives, you may want to read Take Derivatives.
+;
+, It is quite common for an equation to involve the product of two functions. This requires a special form to find the derivative. You cannot simply apply the “regular” rules of differentiating to a product.
+
+Some product functions include the following:
+
+
+f(x)=x3cos⁡x{\displaystyle f(x)=x^{3}\cos x}.....g(x)=x2(2x+3){\displaystyle g(x)=x^{2}(2x+3)}.....h(x)=sin⁡xex{\displaystyle h(x)=\sin xe^{x}}....., The product rule is a format for finding the derivative of the product of two or more functions. The product rule is formally stated as follows:If y=uv,{\displaystyle y=uv,} then dydx=dudxv+udvdx.{\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}={\frac {{\mathrm {d} }u}{{\mathrm {d} }x}}v+u{\frac {{\mathrm {d} }v}{{\mathrm {d} }x}}.}
+
+Another way to write this rule uses the shorthand notation f′{\displaystyle f^{\prime }} (read as “f-prime”), where the “prime” (apostrophe) represents the derivative of the function. With this notation, the product rule can be viewed as:
+
+If y=uv,{\displaystyle y=uv,} then y′=u′v+uv′{\displaystyle y^{\prime }=u^{\prime }v+uv^{\prime }}
+
+
+
+In short, the derivative of a product of two functions can be found by finding the derivatives of each function independently. You then multiply the derivative of the first function times the second original function, and add that to the product of the derivative of the second function time the first original function.
+ For the equation you are trying to differentiate, the first step is to identify the two functions that form the product. It is helpful to identify them with separate variables, such as u{\displaystyle u} and v{\displaystyle v}.For example, given the equation y=x3cos⁡x{\displaystyle y=x^{3}\cos x}, you can separate the two functions as:
+
+
+u=x3{\displaystyle u=x^{3}}
+
+
+v=cos⁡x{\displaystyle v=\cos x}
+
+
+
+
+, Once you have separated your original equation into its two parts, you then need to find the two separate derivatives.For the example y=x3cos⁡x{\displaystyle y=x^{3}\cos x}, these will be:
+
+
+u′=3x2{\displaystyle u^{\prime }=3x^{2}}
+
+
+v′=−sin⁡x{\displaystyle v^{\prime }=-\sin x}
+
+
+
+
+, After you have found the separate derivatives, the next step is just to put the pieces together in the correct order. Recall that the product rule is:y′=u′v+uv′{\displaystyle y'=u'v+uv'}
+
+Using the parts for this sample function, substitute the terms for u{\displaystyle u}, v{\displaystyle v}, u′{\displaystyle u^{\prime }} and v′{\displaystyle v^{\prime }} as follows:
+
+
+y′=u′v+uv′{\displaystyle y^{\prime }=u^{\prime }v+uv^{\prime }}
+
+
+y′=3x2cos⁡x+x3−sin⁡x{\displaystyle y^{\prime }=3x^{2}\cos x+x^{3}-\sin x}
+
+
+
+
+, Occasionally, the product rule will result in a polynomial that can be simplified by combining like terms. With this example, that is not the case. The final result is:y′=3x2cos⁡x+x3−sin⁡x{\displaystyle y^{\prime }=3x^{2}\cos x+x^{3}-\sin x}
+
+
+, Consider another example that was mentioned above, g(x)=x2(2x+3){\displaystyle g(x)=x^{2}(2x+3)}, and apply the product rule to find the derivative as follows:
+
+Identify the two separate functions:
+
+
+u=x2{\displaystyle u=x^{2}}
+
+
+v=2x+3{\displaystyle v=2x+3}
+
+
+
+Find the two derivatives:
+
+
+u′=2x{\displaystyle u^{\prime }=2x}
+
+
+v′=2{\displaystyle v^{\prime }=2}
+
+
+
+Combine the parts together according the product rule:
+
+
+g′(x)=2x(2x+3)+x2(2){\displaystyle g^{\prime }(x)=2x(2x+3)+x^{2}(2)}
+
+
+
+Combine and simplify terms:
+
+
+g′(x)=2x(2x+3)+x2(2){\displaystyle g^{\prime }(x)=2x(2x+3)+x^{2}(2)}
+
+
+g′(x)=4x2+6x+2x2{\displaystyle g^{\prime }(x)=4x^{2}+6x+2x^{2}}
+
+
+g′(x)=6x2+6x{\displaystyle g^{\prime }(x)=6x^{2}+6x}
+
+
+
+

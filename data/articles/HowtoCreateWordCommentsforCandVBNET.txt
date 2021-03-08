@@ -1,0 +1,39 @@
+
+
+
+Open Visual Studio (2008 or later)
+Go to:
+
+File—New Project—Visual C#—Windows Forms Application.
+If you need to create a Visual Basic project, Windows Forms Application, you can name the project Word Comments.
+Click ‘OK’.
+
+;
+,
+
+
+After building project Word Comments in Form 1, you will need to add a button in Form1.
+
+
+
+Open Solution Explorer.
+
+Click project —Add Reference—Find "C:\Program Files\e-iceblue\Spire.Doc"(the default folder which you installed the Spire Doc in)
+Double-click the folder Bin.
+
+
+If the target framework of the project is:
+
+Net 2.0, double-click folder NET2.0.
+Net 3.5, double-click folder NET3.5.
+Net 4.0, double-click folder NET4.0.
+
+
+Select assembly Spire Doc dll and click ‘OK’
+
+,
+
+
+After you create the project Word Comments, double-click “button1”, you can see the cold view and the following method has been added automatically.
+Below is the encoding
+

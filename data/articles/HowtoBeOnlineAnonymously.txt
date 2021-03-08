@@ -1,0 +1,103 @@
+ Every time you visit a website, it will log your IP address (your computer's "address" on the internet), what site you're coming from, the browser you are using, your operating system, how long you spend on the site, and what links you click.
+ Your search engine queries are associated with your IP address (and account if you are logged in). These are compiled and analyzed to more accurately target ads and provide relevant search results.
+ If your computer is logged into any social networks (Facebook, Twitter, etc.), these networks will be able to track your browsing history if the websites you visit have social network plugins ("Like" buttons, Retweets, etc.).
+ This is most commonly used to determine if customers are using the network to download torrents of copyrighted materials.
+ No matter how much you cover your tracks, there is always some information that can potentially be used to profile and potentially identify you. The goal of using anonymity tools is to reduce the amount of information available, but due to the nature of the internet, you cannot ever be truly anonymous.
+ It's not exactly easy to stay anonymous online, and requires a significant amount of conscious effort. You'll face much slower connections when browsing websites, and you'll have to jump through more hoops before you even go online. If your anonymity is important to you, be prepared to make some sacrifices.
+
+
+The next section will cover how to keep your personal information from being tied to your IP address, but does not guarantee anonymity. To increase your anonymity online, see the two sections at the end of this article.
+ Make sure that the email address does not contain any personal information, and is not tied to any accounts that store your personal information.
+
+
+
+Click here for details on creating a disposable email address.;
+, Major search engines like Google, Bing, and Yahoo! all track your searches and tie them to your IP address. Use an alternative search engine that does not track your searches, such as DuckDuckGo or StartPage.
+ If you've used the internet for more than a week, chances are you have a hefty number of passwords to keep track of. It can be tempting to use the same password, or slight variations, for multiple sites to make things easier for you, but this is a massive security risk. If one website with your password and email is hacked, every site that you use that same combination with is in jeopardy. A password manager will remember the passwords for each site you visit, allowing you to create strong and even random passwords for each one.
+
+
+
+Click here for detailed instructions on setting up a password manager.
+With a password manager, you don't need to worry about creating a password you can remember. Instead, you can create strong passwords that are virtually impossible to crack. "Kz2Jh@ds3a$gs*F%7" is a much stronger password than "MyDogName1983".
+ When it comes to online anonymity, things can get technical real quick. Before you start diving in, it will help to have a basic understand of some of the more common terms.
+
+
+
+Traffic - In networking terms, traffic is the transfer of data from one computer to another.
+
+Server - This is a computer located remotely that hosts files and sets up connections. All websites are stored on servers that you access using your web browser.
+
+Encryption - This is the act of protecting data sent over a network by using a randomly generated code. When data is encrypted, it is scrambled according to the unique code that only you and the server have. This ensures that if the data is intercepted, it cannot be decoded.
+
+Proxy - A proxy server is a server that is configured to collect and then resend network traffic. In essence, a proxy server allows you to connect to it, and then it will send out your requests for websites. It then receives the data from the websites and then sends it to you. This has the benefit of hiding your IP address from the website you are accessing.
+
+VPN - A VPN is a Virtual Private Network. This is an encrypted connection between you and a server. It is traditionally used in corporate environments so that remote workers could remotely and securely access company resources. A VPN can be thought of as a "tunnel" through the internet that connects you directly with a server.
+ There are thousands of web-based proxies available, and they change every day. These are websites that route traffic through the proxy server. They only affect traffic going through that website; open another tab in your browser and anything you send will be anonymously sent.When using a web-based proxy, avoid any sites that use secure login (Facebook, banking, etc.) as proxy sites should never be trusted.
+Most web-based proxies cannot display certain content such as videos.
+ A proxy server is a a server that relays your internet traffic. This has the benefit of masking your personal IP address from sites when you connect through a proxy. The downside is that you have to trust the proxy server to not do anything malicious with your traffic.
+
+
+There are a wide variety of proxy services available online, both free and paid. Free servers are typically ad-supported.
+Once you've found a proxy server that you want to connect to, you will need to configure your browser to connect to the server. This will only affect the traffic that originates from your browser (i.e. an instant messaging program will not be relayed through the proxy server unless it is configured to as well).
+Much like web-based proxies, you should avoid logging into anything secure, as you cannot trust a proxy company to not divulge your data.
+Do not connect to any "open" proxies. These are proxy servers that have been left open by someone else, and are typically malicious or illegal.
+ A virtual private network will encrypt your traffic to and from the network, increasing your privacy. It will also make your traffic appear to be originating from the VPN server, much like a proxy server. Most VPNs cost money, and many will still log your traffic in order to comply with government requests.
+
+
+Don't trust any VPN company that says it doesn't log anything. No VPN will risk getting shut down to protect a single customer from a government request.
+ Tor is a network that acts as multiple proxies, bouncing your traffic between multiple relays before reaching the destination or you. Only traffic that goes through the Tor Browser will be anonymized, and browsing using the Tor Browser will be significantly slower than regular web surfing.
+
+
+
+Click here for detailed information about using Tor., If you want to browse truly anonymously, there are several things you'll want to set up before going online. This may seem like a lot of hassle, but following these steps is the only way to ensure that you have some semblance of anonymity online.
+
+
+This method will help you configure your own person VPN on your own personal, out-of-country server. This is much more secure than subscribing to a VPN service, as you can't always trust a company to be safe with your data.
+ Your computer has a lot of services that connect to the internet, each of which can compromise your online anonymity without you realizing it. Windows is especially insecure, as well as Mac OS X to a lesser extent. The first step to being anonymous is to install Linux to a virtual machine, which is like a computer within a computer.A virtual computer has a "wall" around it that prevents any data from crossing over to your physical computer. This is essential for keeping your physical computer's signature from showing up while browsing anonymously.
+
+Click here for detailed instructions on installing Linux on a virtual machine. The entire process is free, but may take about an hour.
+TailsOS is one of the most popular privacy-oriented Linux distributions. It is very lightweight and entirely encrypted.
+ This will set you back a few dollars every month, but will help ensure that you are browsing anonymously. It is important to subscribe to a VPS in another country, so that traffic to and from the VPS can't be tracked to your home IP address.
+
+
+You will be using your VPS to install VPN (Virtual Private Network) software onto. This will allow you to connect through your VPN, masking your actual IP address.
+Pick a VPS service that allows you to pay with methods that don't reveal your identity, such as DarkCoin.
+Once you sign up for a VPS, you'll need to install your own operating system on it. Install one of the following Linux distributions to allow easy setup for your VPN: Ubuntu, Fedora, CentOS, or Debian.
+Note that your VPS provider can still be hit with a court order to reveal your VPN information if your government suspects that illegal activity is happening on your VPN. There really isn't much you can do to prevent this.
+ The VPN is what your computer will connect to in order to access the internet. This will essentially make it appear as if you are browsing from the VPS's location, not your home, as well as encrypt all data to and from the VPS. This step is a little more complicated than installing a virtual operating system. It is arguably the most important step however, so if anonymity is important to you, make sure to complete this. These steps are specifically for OpenVPN on Ubuntu, one of the more reliable free VPN solutions.Log into your VPS operating system. The process for this will vary depending on the VPS service you choose.
+Visit the OpenVPN website and download the correct software package. There will be multiple options, so make sure to choose the correct one for your VPS's operating system. You can find all the available downloads at openvpn.net/index.php/access-server/download-openvpn-as-sw.html
+
+Open the terminal on your VPS and type dpkg -i openvpnasdebpack.deb to install the OpenVPN software that you downloaded. The command will be different if you're not using Ubuntu or Debian.
+Type passwd openvpn and set a new password when prompted. This will be the admin password for your OpenVPN software.
+Open the web browser on your VPS and enter in the address displayed in the terminal. This will open the OpenVPN control panel. Log in with the username openvpn and the password you created. Once you log in for the first time, your VPN is ready to go.
+ You will need to access the OpenVPN Connect Client to download the configuration file needed for your connection program.
+
+
+Enter in the same address you used on the VPS to access the admin panel, without the /admin part of the address.
+Login with your OpenVPN admin account using "openvpn" as the username and the password you created earlier.
+Download the client.opvn or client.conf file onto your virtual computer.
+ Once your VPN is configured on your VPS, you'll need to set up your virtual computer to connect directly to it. The following instructions are for Ubuntu and Debian, so you may need to change the commands to match your OS.
+
+
+Open the terminal and type sudo apt-get install network-manager-openvpn-gnome
+
+Wait for the package to download and install.
+Open the Network Manager and click the "VPN" tab.
+Click the "Import" button and then select the configuration file that you downloaded.
+Review your settings. The Certificate and Key fields should populate automatically, and your VPN address should appear in the Gateway field.
+Click the "IPV4 Settings" tab and select "Automatic (VPN) addresses only" from the Methods drop-down menu. This will ensure that all of your internet traffic is routed through the VPN.
+ At this point, with your VPS and VPN configured and running, you're browsing with pretty strong anonymity. Your VPN will encrypt all traffic to and from your virtual machine. If you want to take it one step further, the Tor Browser can add another layer of protection, at the cost of browsing speed.You can download the Tor browser from torproject.org
+
+Running Tor through your VPN will hide the fact that you are using Tor from your ISP (they will only see encrypted VPN traffic).
+Run the Tor installation program. The default settings will provide comprehensive protection for most users.
+For more detailed information on using Tor, click here.
+ if you're very concerned about anonymity, you'll want to change VPS providers at least monthly. This means reconfiguring OpenVPN each time, but you'll get faster and faster at it as you repeat the process. Make sure to completely reset a VPS before you switch to the new one., Now that everything is configured, the strength of your anonymity rests on your browsing habits.
+
+
+Use alternative search engines like DuckDuckGo or StartPage.
+Avoid any sites with Javascript. Javascript code can be used to reveal IP addresses and deanonymize your traffic.
+Disconnect from the Tor network when opening files that you downloaded through Tor.
+Do not download torrent files while connected to the Tor network.
+Avoid any site that does not use HTTPS (Look in the address bar to see if the site is using HTTP or HTTPS).
+Avoid installing browser plugins.
+

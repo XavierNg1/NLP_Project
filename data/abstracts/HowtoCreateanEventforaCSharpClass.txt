@@ -1,0 +1,11 @@
+
+Create the Event Arguments Class:
+
+
+Decide what you want to communicate with your event subscribers (other programmers who will attach event handlers to your event).
+Declare the event delegate.
+Declare the event itself in the containing class: use the event handler delegate you declared/decided in 2 as the event type.
+Declare the event-firing method - a protected virtual method that has exactly the following declaration: protected virtual void OnEventName(EventNameEventArgs e){ if(EventName != null) { EventName(this, e); } } Use the event arguments class you decided to use in 1
+
+,
+Call the event-firing method you declared in 4 whenever the event occurs.

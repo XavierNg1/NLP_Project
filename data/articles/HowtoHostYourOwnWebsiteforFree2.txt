@@ -1,0 +1,27 @@
+ Many internet service providers (ISPs) restrict users from doing so.
+
+
+
+Open Start, click Run, type "cmd" (without quotes) and press OK.
+Enter "ipconfig/all" (without quotes) and press Enter.
+Write down the shown IP address, subnet mask, default gateway and DNS servers. You will need them later.
+,,, Highlight it and click properties. Keep the command prompt window open.
+ If it is already checked, skip to the step where you return to the command prompt window.
+ The last digit of the IP address should be different than the one you copied down. Click OK.
+
+
+If you get a message saying IP address is already in the network, choose a different last number.
+ Type in: "ping www.yahoo.com" (without quotes).
+
+
+If it came back as "Reply from 67.195.160.76" or something similar, you're good to go.
+If it came back as "Request timed out," contact your internet service provider. Because this problem is the DNS servers, they will be able to tell you which DNS servers to use.
+You have completed the first step which is to setup a static IP address. Please note: This usually requires a router to do. The reason being, you are just giving your router a static IP. If you do not have a router, you need to pay for a static IP from your ISP, or sign up for a free static DNS service.
+ Wampserver is good because it contains Apache and automatically configures itself.
+
+
+Note: During installation it will ask for a server name. type "localhost" for the server name. You must type it exactly as shown here, but do not include the quotes. When asked for an email address, enter your email address.
+ Save the files for your site in that folder.
+
+
+The address for your site will be: yourstaticipaddress/yourfolderinthewwwdirectory/. Except if you signed up for a static DNS service.

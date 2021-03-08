@@ -1,0 +1,37 @@
+ You may be able to solve your calendar problem by removing the calendar account from your computer and then adding it back. This will remove and then reload your events for the calendar. If this doesn't fix the problem, you can move on to the next step.
+
+
+Click the Apple Menu and select "System Preferences".
+Select "Internet Accounts" and then select the account that you are getting your calendar from.
+Click the "-" button. This will remove the account from your Mac. Reboot your computer
+Select the type of account from the main "Internet Accounts" window and log in. Your account will be added back to your Mac.;
+, Before deleting your Calendar cache, you'll want to make a backup of each of your calendars. Clearing the cache may remove all of your information, so you might need to restore these backups after you're done.Select a calendar to export.
+Click the File menu and select "Export" → "Export".
+Save the calendar backup file somewhere that you can find it. Repeat with your other calendars until they are all backed up.
+ There is a very good chance that your calendars will be completely deleted if you clear your cache, so make absolutely sure that you have a backup file for each of your calendars. Only proceed after you are certain that you won't lose anything important.
+ Click the File menu and select "Close" to ensure that Calendar is completely closed.
+
+
+You won't be able to delete the files in your cache unless the Calendar app has been closed completely. Press ⌘ Command+⌥ Option+Esc and select "calendar" from the list if you are unsure.
+ This will make the "Go" menu appear in the top menubar. The Finder icon can usually be located in the Dock, or you can open any folder. Clicking the desktop also makes Finder active, as the desktop is considered a Finder window.
+ You'll see more options than you would if you weren't holding the key.
+ The "Library" option will only appear if you are holding the ⌥ Option key. Select it to open the "Library" folder.
+ You'll see several files displayed.
+ There may be several of these files, possibly labeled "Calendar Cache~2" or something similar. Delete all of them.If you get a message saying the the file are in use, you'll need to make sure that Calendar is completely closed. Right-click on the Calendar app in your Dock and select "Quit", or press ⌘ Command+⌥ Option+Esc and then select Calendar to force-quit it.
+ Depending on the version of OS X you are using, you may or may not have all of these files. Check each of the following locations and delete the files if you find them:Open the "Caches" folder in the "Library" folder. Delete the "com.apple.ical" file.
+Open the "Preferences" folder in the "Library" folder. Delete all of the "com.apple.ical" files. There may be multiple copies of this file. Delete all copies that you can find.
+ In many cases, Calendar will pull the latest version of your calendars from your accounts and reload them. You may need to manually add CalDAV shared calendars.
+
+
+To add shared CalDAV calendars, open the Calendar Preferences menu and select "Accounts". Resubscribe to your shared calendars in this window.
+ If your calendars are not coming back after deleting your cache, you can restore them from your exported calendars. Click the File menu and select "Import" → "Import". Browse for the backup file you created earlier and select it to load the calendar. Repeat this for each calendar that you want to restore.
+
+
+If clearing the cache removes your connection to Google Calendar, you can fix it by going to Apple → System Preferences → Internet Accounts. Highlight Google and recheck the Calendar. Relaunch Calendar and a few seconds later and everything should be back.
+
+
+
+
+
+
+

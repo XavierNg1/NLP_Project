@@ -1,0 +1,71 @@
+
+Create a playlist of everything you want to rip in Spotify.
+Visit the Soundiiz website.
+Click the Sign Up button.
+Create an account.
+Click the Spotify button in the Soundiiz web app.
+Click Connect.
+
+,
+Enter your Spotify login information.
+Click OKAY to confirm.
+Click the YouTube button in Soundiiz.
+Click Connect.
+
+,
+Select your Google account or log in.
+Find your playlists.
+Click the Convert button next to the playlist.
+Click YouTube in the Destination Platform section.
+Click Save Configuration.
+Click Confirm Tracklist to attempt to match all tracks.
+Wait while Soundiiz matches your Spotify playlist to YouTube videos.
+Visit the youtube-dl website.
+Click the Windows executable link.
+Open your User folder.
+Copy the youtube-dl.exe file into your User folder.
+Visit the FFmpeg website.
+Click the Windows logo.
+Click the Windows Builds button.
+
+,
+Click the Download FFmpeg button.
+Open the ZIP file after downloading it.
+Double-click the ffmpeg-### folder.
+Double-click the bin folder.
+
+,
+Select the three EXE files and drag them into your User folder.
+Press ⊞ Win+R and type cmd to start the Command Prompt.
+Click the Go menu from the desktop.
+Click the Utilities option.
+
+,
+Open Terminal from the Utilities folder.
+
+,
+Enter the command to install Homebrew.
+Enter your user password if prompted.
+Enter the command to install youtube-dl.
+Enter the command to install FFmpeg.
+Open YouTube in your browser.
+Sign in with your YouTube account.
+Click your playlist in the Library section of the menu.
+Highlight the playlist URL.
+Copy the highlighted address.
+Return to the Command Prompt or Terminal window.
+
+,
+Type the youtube-dl command and paste the address.
+youtube-dl --extract-audio --audio-format mp3 playlistAddress
+
+
+,
+Press ↵ Enter or ⏎ Return to run the command.
+
+,
+Wait while youtube-dl downloads and processes the songs.
+You can cancel the download by pressing Ctrl+C or ⌘ Cmd+C.
+
+,
+Find your new MP3s.

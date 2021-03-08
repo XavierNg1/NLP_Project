@@ -1,0 +1,60 @@
+;
+,
+
+
+Your browser should now just show the image, but no descriptive information.
+You should see a URL similar to this: https://www.wikihow.com/images/a/af/Framing_hammer_956.jpg
+
+Copy this URL.
+
+
+
+The Image MapEditor is a tool that will help you to select the appropriate region(s) within your image for use as links to other pages.
+Once you have selected your region(s), the Image Map editor will also generate the correct code to define those region(s). This code can then be pasted into your article to make your image map work as intended.
+ Be sure to include the file extension (e.g., .PNG, .JPG, .GIF) as well.
+ The image will display in a box labeled "Image" below the "Load Image" box.
+
+
+
+Choose the area type that best matches the shape of your image (This example uses a rectangle, which will be the most commonly used shape to select an entire image).
+
+Click on "Rectangle" in the "New Area" box.
+Move your mouse pointer to the upper left corner of your image and then left click.
+Move your mouse pointer to the lower right corner of your image and then right click. The XY coordinates for the corners of your image will now be displayed in the boxes indicating "Left/Top" and "Right/Bottom"
+
+
+, If you would like to keep the default settings, you do not need to do anything with this box. By default, these settings will superimpose a blue circle with an "i" in it on the bottom left corner your image which provides a link to the image's information page (the rest of the image will link to the page you select).
+
+
+If you do not want to display the information link, select "None."
+If you would like to select a different location for the information link, choose one of the other locations.
+ This is the code you will paste into wikiHow to create your image link.
+
+
+The code begins with the text <imagemap></imagemap> and ends with the text . Be sure you copy these and everything between.
+The rest of the code defines your area:
+
+"rect 1 1 299 298" indicates a rectangle starting at pixel 1,1 (i.e., upper right) and going to pixel 299,218.
+The "]" are the brackets that will surround the page the image will link to. This follows standard wiki markup.
+, You should see something like this:
+<imagemap>
+Image:Framing_hammer_956.jpg|
+rect 1 1 299 218 ]
+desc none
+</imagemap>
+
+, For this example we are adding a link to "How to Use a Hammer Safely"
+
+,,
+
+
+If you followed the instructions for this code, you would see:
+
+
+
+
+
+
+
+
+

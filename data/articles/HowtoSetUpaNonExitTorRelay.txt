@@ -1,0 +1,18 @@
+
+
+
+If you'd like to use Tor to make anonymous your Internet traffic in the future, the Tor Browser Bundle is recommended.
+If you don't plan to use Tor for personal purposes but simply want to contribute, the Vidalia Relay Bundle is your best bet.;
+, If possible, synchronize your clock with public time servers.
+ In Windows, it will be in your start menu under Vidalia Bundle.
+ Choose Control Panel. Click Setup Relaying. Choose "Relay Traffic for the Tor network".
+ You can avoid spam by munging your email address, i.e. <firstname dot="" lastname="" at="" gmail="" com="">.
+ Push the "Test" button to see if it works. If it does work, great. If not, see step 9.
+ Select how much bandwidth you want to provide. You can find out your upload speed using this wikiHow article.
+ Verify that all checkboxes are unchecked. Click the "OK" button.
+ Wait a few minutes and look for messages that say "Server Port Reachability Test Successful! - Your relay's server port is reachable from the Tor network!" and "Directory Port Reachability Test Successful! - Your relay's directory port is reachable from the Tor network!"
+
+
+If either message does not show up, return to the "Setup Relaying" dialog "Basic Settings" tab and note the two ports displayed (these should usually be 443 and 9030). Make sure that these ports are opened in your software and hardware firewall.
+ Access your router configuration through the web interface and either look for an option "allow changes for security settings via UPnP" or manually (preferably for security) create a portforwarding rule which is needed to be be reachable from the network and a similar rule for port 9030(default) if you checked "Mirror the Relay Directory".
+

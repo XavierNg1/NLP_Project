@@ -1,0 +1,26 @@
+;
+,,, These are what are causing your access to the useful resources to be blocked.
+
+
+The only IP redirects that should be there are the ones that begin with the localhost IP, 127.0.0.1. Any redirect that begins with any other IP address should be deleted.
+
+You can find the redirects with any other IP address below the localhost IP redirects.
+ Note that you cannot save the file directly to your "etc" folder, which means that you must do the following:
+
+
+When saving the file, click on the "Save as type:" drop-down and select "All Files", and then click the 'Save' button. The file must be saved to the desktop.
+Notepad++ users can skip steps 6-10, and go straight to step 11.
+For Notepad users, since Notepad tends to want to be smart and save the file as a ".txt" file, you are required to follow steps 6-10, since you do not want this extension.
+,
+
+
+This option will not appear in the Category view, so if that is what shows up, you are required to click the "View by:" drop-down in the upper right and select either of the "Large icons" and "Small icons" options.
+ In the dialog box, select the "View" tab, and scroll down until you see the "Hide extensions for known file types" option. Untick it, and then click the 'Apply' button and then the 'OK' button.
+ This is the Hosts File that you had saved earlier. Double-click or right-click on it. You should now be able to rename the file. Delete the ".txt" from the file name, and then click outside of the file or press Enter.
+ Click the 'Yes' button.
+
+
+
+In the next step, the edits to your file are finally saved.
+ Then, drag your edited Hosts File from the desktop in place of the old one. Go back and see if your edits to the file are saved. You should now be able to connect to those resources that you had been blocked from accessing previously.
+

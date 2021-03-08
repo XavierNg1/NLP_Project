@@ -1,0 +1,12 @@
+
+Understand what will happen.
+Navigate to /System/Library/CoreServices/.
+Double-click Dock.app.
+Open /Content/Resources/.
+Right-click on "DockMenus.plist" and open it in a text editor.
+Find the "finder-running" section.
+Add the code to the "finder-running" section.
+Open the Terminal.
+Close all Finder windows.
+Type .killall Dock and press ⏎ Return.
+Right-click on the Finder icon in your dock and select "Remove from Dock".

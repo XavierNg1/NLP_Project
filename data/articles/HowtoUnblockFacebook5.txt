@@ -1,0 +1,41 @@
+ If you have a computer at home that you can leave on while you're at work or school, you can use it to create your own private proxy server. Since you're connecting to your own computer (which you trust), you can safely log into any website that requires a secure login.
+
+
+You can use this method to create a webpage that you can then access from the blocked network, or you can configure a portable browser to connect directly to the proxy server. Both will be covered here.
+This is by far the most secure method, should bypass most blocks, and won't cost you anything (other than electricity and internet costs for your home computer).
+ This is a free, open-source web server program that is easy to install and configure. Click here for detailed instructions on installing XAMPP.
+ This is a free, open-source proxy utility for your new webserver. You can download PHProxy from sourceforge.net/projects/poxy/.
+
+
+Extract the ZIP file that you downloaded and copy the folder to your "www" or "htdocs" folder in the XAMPP installation directory. This is all you need to do to install PHProxy.
+Test it out by opening your browser and visiting http://localhost/phproxy/. If the PHProxy page appears, you've placed the folder in the correct location.
+ If you just let PHProxy server run after installing it, anyone will be able to connect to it and use it, which is bad news. You can use Apache's ".htaccess" function to create a username and password that will be required to access PHProxy.
+
+
+
+Click here for detailed instructions on creating an .htaccess file.
+ This is often the most complicated step, as it requires adjusting your router's settings, and the process varies from router to router. Ports control the flow of data into and out of your network. In order to connect to your server from another location, you'll need to open port 80 to allow incoming connections.
+
+
+
+Click here for detailed instructions on opening ports.
+
+You will need to know the IP address of your home computer when opening the port.
+ This is the address that identifies your network on the internet, and you will use it to connect to your server from another location.
+
+
+You can quickly determine your public IP address by opening Google on your home computer and typing my ip.
+ Now that everything is configured and you know your home network's public IP address, you can connect to your proxy through any web browser.Type http://homeIPaddress/phproxy, replacing homeIPaddress with your home network's public IP address. Enter your username and password that you specified in the .htaccess file.
+Once you load PHProxy in your browser, you can use it to access any blocked sites, including Facebook. Since you're connecting through your home computer, you can securely log in to any site that requires a username and password.
+ You can configure a portable web browser to connect directly to your PHProxy server. This will allow you to use all of the browser functions without having to connect through the PHProxy website interface. A portable browser can be placed on a USB drive, which you can then plug into any computer to use.
+
+
+Download Firefox Portable from portableapps.com.
+Run the setup file and choose your USB drive as the installation location.
+Launch Firefox from your USB drive and click the Menu (☰) button.
+Select "Options" and then click the "Advanced" section.
+Click the Network tab and then click Settings...
+
+Select "Manual proxy configuration" and then enter your PHProxy information. Enter the PHProxy address into the "HTTP Proxy" field and make sure the Port is set to 80. Check the "Use this proxy server for all protocols" box.
+Run the portable Firefox on any computer to automatically connect directly to your PHProxy server.
+

@@ -1,0 +1,69 @@
+ OpenDNS is free for use at home, and a more powerful version is available to businesses for a fee. OpenDNS is installed into your network’s router, and affects all network traffic. This means that it blocks websites on any device connected to the router, including computers, tablets, game consoles, and mobile phones.
+
+
+OpenDNS will block sites on every device, so it may not be as useful for parents who want to access blocked sites when the children aren't around.
+ Most routers can be accessed by entering 192.168.1.1 or 192.168.0.1 into a web browser’s address bar on a device that is connected to the network. You may then be asked to enter your username and password.
+
+
+Your router’s login address and default username/password combination will vary by manufacturer. If you cannot access your router, try checking the default settings at RouterPasswords.com.
+
+
+
+
+
+
+If you still cannot access your router due to a forgotten username or password, you can press the reset button on the router to reset it to the factory settings. This will erase all of your network settings, including wireless settings.
+ This is typically located in the Internet section of the router. Look for DNS accompanied by two or three fields where you can enter IP addresses. For most default settings there will be two options, though the exact wording may change: “Get Automatically from ISP” and “Use These DNS Servers”. Select “Use These DNS Servers” so that you can input the OpenDNS server information.
+ In the Primary and Secondary DNS fields, enter the following addresses:
+
+
+208.67.222.222
+208.67.220.220
+
+, Once the settings have been updated, you will want to flush the DNS on each computer connected to the network. This will ensure that your new settings will take effect immediately.
+ Chances are your home internet connection has been assigned a dynamic IP by your internet service provider. This means your home IP address will occasionally change. OpenDNS needs to be configured to update its settings when your IP address changes, otherwise the filtering will not work.
+
+Log in to your OpenDNS Dashboard using the username and password you received when you signed up.
+
+
+
+
+
+
+Select your network in the Home or Settings tab. Click Advanced Settings and scroll to the Dynamic IP Update section. Check the boxed labeled Enable and then click Apply to save your settings.
+
+
+
+
+
+
+Download an OpenDNS Dynamic IP Updater program. This program should be installed on a computer that your children will not have access to so that it cannot be disabled. Ideally this computer will be always on, or on before other computers connect.
+ Once you have OpenDNS configured, you’re ready to start setting your filters. These filters will block sites that meet certain criteria, such as pornography, academic fraud, social media, and many more. You can either filter out categories, set overall tiers of protection, block specific websites, or only allow specific websites.
+
+Log in to your OpenDNS Dashboard. Select the network that you want to adjust the filtering for. Click on the Web Content Filtering link.
+
+
+
+
+
+
+Choose your filter level. You can choose between three tiers of filtering: Low, Moderate, and High. OpenDNS will provide examples of what gets filtered at each level.
+
+
+
+
+
+
+Set a custom filter. If you’d like to define which filters you would like to activate, click the Custom option and then check each box that you want to enable. For example, checking
+
+
+
+
+
+
+Add domains to your black- or whitelist. In the “manage individual domains” section, you can enter in domains that you want to either be always blocked or always allowed, regardless of the filters set. For example, you could have the Social Networking filter enabled, but adding “twitter.com” to the Always Allowed list will allow Twitter to be accessed.
+ Once you’ve enabled your filters, you can monitor the web usage on your network to see if people are trying to access sites that they shouldn’t. To do this, you will first need to ensure that stat logging is enabled. Log in to the Dashboard and click the Settings tab. Check the box labeled “Enable stats and logs” and then click apply.
+
+
+Click the Stats tab to view the logs for your network. You can use the left menu to see what websites are being accessed and when. This will give you an idea if your children are attempting to access sites that they shouldn’t.
+

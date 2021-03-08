@@ -1,0 +1,24 @@
+
+Connect your drive and open Disk Management.
+Plug the drive into another USB slot.
+Plug the drive into another computer.
+Press .the Windows key + R and type devmgmt.msc.
+Expand the "Disk drives" category.
+Right-click on the USB drive and select "Uninstall".
+Unplug the USB drive and then plug it back in.
+Update your USB drives.
+Press .Enter and type diskmgmt.msc.
+Right-click on the partition for your USB drive.
+Select "Format" from the menu.
+Select "FAT32" as the file system.
+Uncheck "Perform a quick format".
+Click .OK to start formatting the drive.
+Open the Command Prompt.
+Type .diskpart and press Enter.
+Type .list disk and press Enter.
+Type .select disk # and press Enter.
+Type .clean and press Enter.
+Type .create partition primary and press Enter.
+Type .active and press Enter.
+Type .format fs=fat32 and press Enter.
+Type .exit and press Enter.

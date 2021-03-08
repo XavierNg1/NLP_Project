@@ -1,0 +1,35 @@
+ This means ordering them from the smallest value to the largest value. Make sure to include all repeated values.For example, if your set of numbers is , you would reorder them like this: .
+;
+, To do this, simply count each number in the set. Don’t forget to count each instance of a repeated value.
+
+For example, the set has 10 numbers.
+ The formula is Q3=34(n+1){\displaystyle Q_{3}={\frac {3}{4}}(n+1)}, where Q3{\displaystyle Q_{3}} is the upper quartile, and n{\displaystyle n} is the number of numbers in the data set., Remember that n{\displaystyle n} is the number of numbers in the data set.
+
+For example, if there are 10 numbers in your data set, your formula will look like this: Q3=34(10+1){\displaystyle Q_{3}={\frac {3}{4}}(10+1)}.
+ According to the  order of operations, you must attend to the parentheses first when evaluating a mathematical expression. In this instance, add 1 to the number of numbers in the data set. 
+
+For example:Q3=34(10+1){\displaystyle Q_{3}={\frac {3}{4}}(10+1)}Q3=34(11){\displaystyle Q_{3}={\frac {3}{4}}(11)}
+
+
+, You could also multiply by .75{\displaystyle .75}. This will show you the placement of the value in the data set that is at the three-fourths, or 75 percent mark, and thus the place where the data set is split into the upper quartile and the lower quartiles. This will not give you the number of the upper quartile.For example:Q3=34(11){\displaystyle Q_{3}={\frac {3}{4}}(11)}Q3=814{\displaystyle Q_{3}=8{\frac {1}{4}}}So, the upper quartile is given by the number at the 814{\displaystyle 8{\frac {1}{4}}} position in the data set.
+ If you calculated a whole number, simply find that number in the data set.
+
+For example, if you calculated 12 using the formula, then the upper quartile is the 12th number in the data set. 
+
+
+,  Usually, you will calculate a fraction or decimal using the formula. In this instance, find the value above and below this position in the data set, and find their mean, or average. To do this, divide the sum of the two values by 2. This will give you the upper quartile of your data set.For example, if you calculated 814{\displaystyle 8{\frac {1}{4}}} using the formula, then the upper quartile is between the 8th and 9th number in the data set. In the set , 11 and 12 are the 8th and 9th number. Calculate 11+122{\displaystyle {\frac {11+12}{2}}} to find the average:11+122{\displaystyle {\frac {11+12}{2}}}=232{\displaystyle ={\frac {23}{2}}}=11.5{\displaystyle =11.5}So, the upper quartile of the data set is 11.5
+
+
+, Enter each value into a separate cell. Don’t forget to include any repeated values. You can enter your data in any cells in the spreadsheet.
+
+For example, you might enter the data set into cells A1 through A10 in the spreadsheet.
+ The quartile function is =(QUARTILE(AX:AY, Q)), where AX and AY is the data range, and Q is the quartile.Begin typing this function into Excel, then when it pops up in the menu, double-click on it to select.
+ Select the first cell of the data range, then scroll down or across to select all the cells in the range. 
+, Make sure you include a comma after the data range, and two closing parentheses.
+
+For example, if you want to find the upper quartile of cells A1 through A10, your function will look like this: =(QUARTILE(A1:A10, 3)).
+ To do this, hit enter after typing the function into Excel. This will show you the actual upper quartile, not the position of the quartile in the data set.
+
+Note that with the release of Office 2010, there are two different quartile functions: QUARTILE.EXC and QUARTILE.INC. These functions cannot be used in earlier versions of Excel, and QUARTILE can still be used.
+
+The two Excel quartile functions use a different formula to calculate the upper quartile. QUARTILE/QUARTILE.INC uses the formula Q3=34(n−1){\displaystyle Q_{3}={\frac {3}{4}}(n-1)}, and the QUARTILE.EXC function uses the formula Q3=34(n+1){\displaystyle Q_{3}={\frac {3}{4}}(n+1)}. Both formula are accepted ways to calculate quartiles, although the former is becoming standardized in statistical software.

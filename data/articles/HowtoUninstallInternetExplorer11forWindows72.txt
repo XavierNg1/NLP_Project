@@ -1,0 +1,33 @@
+ You can do this by clicking the Start Menu, clicking Accessories, right-clicking on Command Prompt, and then selecting "Run as administrator".
+ This command will uninstall the Windows Explorer updates:FORFILES /P %WINDIR%\servicing\Packages /M Microsoft-Windows-InternetExplorer-*11.*.mum /c "cmd /c echo Uninstalling package @fname && start /w pkgmgr /up:@fname /norestart"
+
+
+Paste the above command and press ↵ Enter
+
+
+, You will likely receive several errors messages upon running the command. You will need to click OK in each of the error windows that appears., Once you are returned to the Command Prompt, the uninstallation process is almost complete. You will need to reboot your computer to finish the process.
+ If you don't want to be prompted to install Internet Explorer 11 again later, you can hide it from Windows Update so it gets ignored.
+
+Open the Control Panel. You can open the Control Panel from the Start Menu.
+
+
+
+
+
+
+Select "Windows Update". If you are in Category view, select "System and Security" and then "Windows Update".
+
+
+
+
+
+
+Click the "# optional update(s) available" link.
+
+
+
+
+
+
+Right-click on the Internet Explorer 11 entry. Select "Hide update".
+ If you are downgraded to an older version of Internet Explorer, you can upgrade to any later edition if you want. For example, if uninstalling Internet Explorer 11 leaves you with Internet Explorer 8, you can install Internet Explorer 9 or 10 manually.

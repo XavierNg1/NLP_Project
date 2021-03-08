@@ -1,0 +1,26 @@
+ The /remind command lets you use Slackbot to set reminders for just about anything. When you set a reminder, you’re telling Slackbot to send you a message at a certain time. Start by launching Slack and signing in to your team.
+
+
+You can also send reminders to another team member or an entire channel.
+ You can set a reminder from anywhere in Slack using text commands, so it doesn’t matter which channel you join., The format for setting a slack reminder is /remind , though those elements need not be in order.Here are some examples:
+
+
+/remind me to do jumping jacks on Tuesday at 1:30pm
+/remind @natalie “Stop working so hard!” in 5 minutes
+/remind #writing-team on Jan 14th 2017 at 11:55 to call the conference bridge
+
+/remind #design of free bagels every Tuesday at 8am *this sets a recurring reminder
+
+, When Slackbot notifies you of a reminder, you’ll also see a few options at the end of the message:Click or tap “Mark as complete” if you’ve completed the task and don’t need another reminder.
+Choose “15 mins” or “1 hour” to tell Slackbot to send you this message again in that amount of time. This is also called “Snoozing.”
+Those this option is not listed, you can use /snooze to define your own snooze period. For example, /snooze 5 minutes.
+Select “Tomorrow” to snooze the message until this time tomorrow.
+ Now you’ll see a list of upcoming reminders, as well as those which occurred in the past or are incomplete. Here you’ll see the option to mark reminders as complete or delete reminders no longer needed.Each reminder that has not yet been marked as complete will display a link to mark it now.
+Using /remind list in a channel will show you channel reminders in addition to those which only apply to you.
+ You can easily turn any message to Slack into a reminder. This works the same way as reminders set using text commands.
+
+
+Hover your mouse over the message until the “…” appears at its top right corner.
+Select “Remind me about this.”
+Choose a time period from the list.
+

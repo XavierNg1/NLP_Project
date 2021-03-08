@@ -1,0 +1,26 @@
+
+Create the button on the required page.
+Create a new HTML page with the necessary controls which is linked to the previously created button.
+
+,
+Link the controls in the page to an existing Agent or create a new Agent.
+In Self.html (//nitrogen_src/src/apps/iDRACGUI/iDRACGUI/web), under the html section, add the below lines.
+Create the new HTML page(see src/apps/idracgui/idracgui/web/seladvopt.html for reference)
+
+
+The fieldList will contain the new Controls on the page like, text field (Read Only or R/W), Check box etc..
+Adding a New Agent or tagging along with an existing Agent
+
+
+Tagging along with an existing agent
+
+Choose the right agent, you must be able to do
+
+preProcessGet: Ensure The IDs you added were invoked
+ProcessGet: Where the Data is “GOTTEN” from iDRAC (memory)
+postProcessGet: Where Data changes are reflected on the GUI
+preProcessSet: Same as PreProcessGet but invoked only when a SET action happens.
+How the Get-Set Sequence goes
+
+
+When the html page is loaded (i.e.

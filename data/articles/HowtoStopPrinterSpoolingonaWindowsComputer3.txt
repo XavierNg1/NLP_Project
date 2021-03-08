@@ -1,0 +1,12 @@
+ Press Ctrl + Alt + Delete, then click Task Manager.
+ From the tabs on the top of the Task Manager window, click the one titled, Services You will see a list of all services currently running on your computer.
+ Find the Spooler service, right-click, and select Stop from the dropdown menu.
+
+
+If you have trouble finding the Spooler service, try tapping the 's' key to cycle through all items in the list that start with the letter 's'.
+ In order for the printer to not just start printing out documents once you restart spooling, you will have to cancel any outstanding print jobs. Enter C:\Windows\system32\spool\PRINTERS into the File Explorer address bar and press ↵ Enter. You may be asked to Continue as an admin from a pop-up dialog box. Click Continue if prompted.
+
+
+Do not delete the PRINTERS folder, only the entries inside.
+ Right-click the Spooler option from the Task Manager's service list and select Start from the dropdown menu.
+

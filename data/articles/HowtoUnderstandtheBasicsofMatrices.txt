@@ -1,0 +1,31 @@
+ A matrix is a collection of numbers, called elements, arranged in a rectangle or a square. The numbers do not have to be positive, and they can be decimals or even complex numbers. A square matrix is, as the name suggests, a matrix that is square in shape, with the same number of columns and rows. In algebra, a matrix is usually represented by a capital letter in bold or underlined. The numbers in a matrix are surrounded by square (or curved, sometimes, but not curly) brackets.
+ The dimension of matrix A, dim(A), is how many rows and columns it has. dim(A) = m x n represents a matrix with m rows and n columns., To multiply a matrix by a scalar, multiply all of the elements by the scalar., Simply add or subtract the relevant elements. The matrices must have the same dimensions if you are to add or subtract them. In other words, A+B and A-B exist if and only if dim(A) = dim(B).,
+The resultant matrix has dimensions dim(C) = m x p, so it isn't the same size as the starting matrices (unless you are multiplying square matrices).
+If AxB is possible, BxA is only possible if m = p
+However, in common with scalar multiplication, Ax(BxC) = (AxB)xC, and Ax(B+C) = AxB + AxC
+
+
+, This can be a bit tricky until you get the hang of it. For AxB:
+
+Draw the matrices into a grid, like the one on the left of the photo. A goes on the left and B goes on top.
+For each element in the resultant matrix, consider the column and row that it is in.
+Multiply the first element in the row by the first element in the column. Do this for the second elements, and the third, and so on.
+Add up the products of the elements. This is the value of the element in the resultant matrix.
+Do this for each element in the resultant matrix.
+ The minor of an element of a matrix is the determinant of the matrix that is left when you erase the row and column containing that element., This is a value that is used in calculating the inverse of a matrix. It is usually written as det(A) or |A|. If you see a matrix with lines instead of square brackets, it means the determinant of that matrix. The determinant only exists for square matrices. For a 2x2 matrix, the determinant is simply ad-bc. For a 3x3 matrix, it's a bit trickier: a x minor(a) - b x minor(b) + c x minor(c), A cofactor of an element is related to the minor of that element. You need to know the position of the element in the matrix. Say the element is in the first row and second column. It's position is 1,2. For an element at position i,j, calculate (-1)(i+j). The cofactor is the minor multiplied by this value., The transpose of a matrix, AT, is the matrix that you get when you flip A around it's diagonal axis. Rows become columns and columns become rows., This is a matrix with 1's along the diagonal axis, and zeroes elsewhere. It results in a couple of places:
+
+
+AxI = IxA = A
+
+
+AxA-1 = I
+
+
+, The inverse of a matrix, A-1, reverses the effect of the matrix A. Multiplying the two together cancels them out, leaving the identity matrix. To take the inverse:
+
+Calculate |A|
+Calculate the cofactor of every element in the matrix.
+Replace every element in the matrix with it's cofactor. This is matrix C.
+
+A-1 = CT/|A|
+

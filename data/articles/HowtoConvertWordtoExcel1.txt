@@ -1,0 +1,44 @@
+ When you import a document into Excel, certain characters will be used to determine what data goes into each cell in the Excel spreadsheet. By performing a few formatting steps before importing, you'll be able to control how the final spreadsheet appears and minimize the amount of manual formatting you have to perform. This is especially useful if you are importing a large list from a Word document into Excel.
+
+
+This method works best when you have a list of multiple entries, each formatted the same (list of addresses, phone numbers, email addresses, etc.).;
+, Before beginning the conversion process, you'll want to ensure that each entry is formatted in the same way. This means fixing any punctuation errors or reorganizing any entries that don't match the rest. This will ensure that the data transfers properly.
+ Displaying the normally hidden formatting characters will help you determine the best way to split up the entries. You can display them by clicking the "Show / Hide Paragraph Marks" button in the Home tab or by pressing Ctrl+⇧ Shift+*
+
+
+Most lists will either have one paragraph mark at the end of each line, or one at the end of the line and one in the blank line between entries. You will be using the marks to insert the characters used by Excel to differentiate between cells.
+ Excel will use space between entries to determine the rows, but you'll need to get rid of it for now to help the formatting process. Don't worry, you'll be adding it back in a little bit. This works best when you have one paragraph mark at the end of an entry and one in the space between entries (two in a row).
+
+
+Press Ctrl+H to open the Find and Replace window.
+Type ^p^p into the Find field. This is the code for two paragraph marks in a row. If each entry is a single line and there are no blank lines between them, use a single ^p instead.
+Enter a delimiting character into the Replace field. Make sure that it isn't a character that appears anywhere in the document, such as ~.
+Click Replace All. You'll notice that the entries may combine themselves, but that's not a concern right now as long as the delimiting character is in the right place (between each entry)
+
+, Now that your entries are separated so that they appear in subsequent rows, you'll want to define what data will appear in each field. For example, if each entry is a name on the first line, a street address on the second line, and a state and zip code on the third line, you can
+
+
+Press Ctrl+H to open the Find and Replace window.
+Remove one of the ^p marks in the Find field.
+Change the character in the Replace field to a comma ,.
+Click Replace All. This will replace the remaining paragraph symbols with the comma separator, which will separate each line into a field.
+ Once you've done the two Find-and-Replace steps above, your list will not look like a list anymore. Everything will be on the same line, with commas between every piece of data. This final Find-and-Replace step will return your data to a list while keeping the commas that define the fields.
+
+
+Press Ctrl+H to open the Find and Replace window.
+Enter ~ (or whatever character you chose originally) into the Find field.
+Enter ^p into the Replace field.
+Click Replace All. This will break your entries back into individual groupings separated by the commas.
+ Now that your formatting is complete, you can save the document as a text file. This will allow Excel to read and parse your data so that it goes in the correct fields.
+
+
+Click the File tab and select "Save As".
+Click the "Save as type" drop-down menu and select "Plain Text".
+Name the file as you prefer and click Save.
+If the File Conversion window appears, just click    OK   .
+ Now that you've saved the file in plain text, you can open it up in Excel.Click the File tab and select Open.
+Click the "All Excel Files" drop-down menu and select "Text Files".
+Click Next > in the Text Import Wizard window.
+Select "Comma" in the Delimiter list. You can see how the entries will be separated in the preview at the bottom. Click Next >.
+Select the data format for each of the columns and click Finish.
+

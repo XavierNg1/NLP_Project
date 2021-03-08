@@ -1,0 +1,18 @@
+, Below that heading you will see two links that say "In browser" and "Download". Click on the link that says Download.
+ Download this server and place it anywhere on your computer for now. Be sure it's in a place you'll remember later so you can access it more easily, like your desktop.
+ If you see a version that matches your Minecraft version, download that file.
+
+If you don't see one that matches your Minecraft version, you will either have to use a developmental build (not recommended for beginners) or play with a downgraded version of Minecraft that matches the current recommended build you just saw.
+ Now would be the time to move the Minecraft_Server.exe you downloaded before to your desktop.
+ This can be named anything you want, but try to name it something that explains what will be in the folder. "Server", "MC_Server", and "Minecraft_Server" are all decent examples of possible folder names.
+, Select "Rename" and name the file "craftbukkit".
+ Enter the following, formatted the same way (for Windows):
+
+java -Xmx1024M -jar craftbukkit.jar -o true
+PAUSE
+
+, Under the drop-down menu that says "Save as type: Text Documents (*.txt)", click on All Files. Save the file as: run.bat
+
+, Now, double click on run.bat and you might see Command Prompt open up and a bunch of error messages. This is completely normal the first time you run a server since it is generating all of the files necessary. Once the world is generated, stop the server by typing "stop" in Command Prompt without quotes.
+ If you go back to your server folder, you should see a bunch of files that were created after running your server. Leave these alone for now.
+

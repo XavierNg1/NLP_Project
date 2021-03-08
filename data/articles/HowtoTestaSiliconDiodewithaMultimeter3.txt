@@ -1,0 +1,16 @@
+ The diode check function does not give enough current to find the actual forward voltage your diode will have in a circuit. To confirm that your silicon diode has the intended forward voltage (about 0.7V), set up a simple circuit to test it:Connect the positive terminal of a battery to a resistor.
+Connect the other end of the resistor to the anode of the diode.
+Connect the cathode to the negative terminal of the battery.
+Measure the forward voltage across the diode.
+ The PIV of a diode is the maximum reverse voltage the diode can withstand before it breaks down. Breakdown permanently destroys most diodes, so it is not practical to test this quantity. The exception is zener diodes, which are specifically designed to withstand excess current and regulate the voltage.
+
+
+A typical silicon rectifier diodes has a PIV around 50V, but models are available that can withstand hundreds of volts.
+ Zener diodes are used to maintain a specific voltage — so they aren't too useful if you don't know what that voltage is. Set up this circuit so you can identify this value:Find a variable power supply and confirm that it is turned off.
+Connect the positive terminal of the power supply to a 100Ω resistor.
+Connect the other end of the resistor to the cathode of the diode.
+Connect the anode to the negative terminal of the power supply.
+Connect the multimeter leads to measure reverse voltage across the diode (with the positive lead next to the cathode).
+Set the variable power supply to its lowest setting and turn it on.
+Gradually increase the power supply while watching the multimeter's voltage reading. Once the voltage stops increasing as power increases, you've found the breakdown voltage. Do not continue increasing the voltage, or the diode could be destroyed.
+

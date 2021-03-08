@@ -1,0 +1,21 @@
+ This is necessary for moving forward with the .htaccess method - check with your web host if you’re unsure.;
+, An .htaccess file is a file that web servers check for information on how to handle errors, security, and redirect requests for your site. Check your root directory (where all your website files are stored) and then download the file for editing.
+ If no .htaccess exists in your root folder currently, you can create one using an application like Notepad (or a similar plain text application). The code for the file is contained in the next step.
+
+
+Make sure that when you save your .htaccess file it begins with a “.”
+Note that this file has no tail extension (e.g. “.com” or “.txt”)
+
+, Paste the following code into the .htaccess text file: .redirect 301 /old/oldURL.com http://www.newURL.com
+
+
+In the code, "oldURL.com" represents the landing page address your visitors will need to be redirected from while "http://www.newURL.com" represents the address you'd like your visitors redirected to.
+There should be exactly one blank space between "oldURL.com" and "http://"
+Don't add "http://www" to the (old) URL in the first part of the code!The code "301" is most commonly used on redirected sites and means "moved permanently". Research other "300" codes to learn about other functions.
+ Change “http://www.newURL.com” to the domain address you'd like visitors to be redirected to.
+ Change the dropdown to “all files” and save the file as .htaccess with no extension.
+ Rename any existing .htaccess files or html files with the same name to keep a backup copy. For example use the name .htaccessbackup so that you can find and recognize the file in case you need to do a restore of the previous code.
+ Now that you've modified the code you need to put this file back so the old URL can read it and redirect as planned.
+ Open a new private browsing window and type the old domain name into your web browser. If you've done everything correctly it will redirect to the new site.Using a private browsing window simply ensures that your browser is accessing the new redirect instead of relying on cached data (data stored to help your most commonly visited pages load faster).
+In lieu of a private browsing window, you can also clear your browser's cache through the browser preferences menu. For more information on how to do that, see Clear-Your-Browser's-Cache.
+

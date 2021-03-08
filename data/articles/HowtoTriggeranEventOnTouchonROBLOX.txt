@@ -1,0 +1,47 @@
+ If you don't have ROBLOX Studio, feel free to install it. This will be the main engine you're going to be using for your scripts and parts. When opening ROBLOX Studio, you'll be greeted to an empty baseplate.
+
+
+
+
+
+
+Insert a part. A part is any sort of brick or block on a said game. To the right, on the explorer, you'll see a brick named "Part".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If you don't have explorer opened, head over to the "View" tab on ROBLOX Studio, and enable Explorer, as this is a key component in making the trigger. While you're at it, if you don't have Properties opened, feel free to enable Properties. It can be found next to the Explorer tab.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+When inserting a part into the game, click on the Part in the Explorer itself. The Part should be selected, if not already, and right-click on it. Scroll over to "Insert Object", and pick "Script".
+
+
+
+
+
+
+Upon clicking on Script, you will be greeted with a code-like sheet, with the command "print("Hello, World!")". This is the most basic and widely world known command. It allows the computer to print the words, "Hello, World!". Delete the command, and here, you will start scripting the function.;
+, Because function is already defined in the ROBLOX database, you don't need to redefine it. Start off by simply printing out the function you will be using: function onTouched(). The end command should show up. This should be ignored for now, and you want to start working directly underneath function onTouched()., However, if you test the game out (F5), the computer won't do anything. This is because you haven't told the computer what to do. You just simply defined that something WILL happen when we touch this object., In this instance, what you want to do, is to create a directory to the part you want happen., The script should automatically have the "end" code after it., Workspace follows that, because that's what you can see in the Explorer as the first line of directory. Because Baseplate is seen inside Workspace, you only need to then direct it onto script.,, You want it so that once the Baseplate is destroyed, the script no longer works. This is similar to before, except for the directory. Like how we destroyed the baseplate, the Destroy() command will be used in this. The directory is pretty easy, and doesn't take long at all. Because you only want the script to malfunction upon usage, you can simply insert: script: Destroy()., If you place it above our previous line of code, the script will just destroy itself without doing anything to the baseplate., So, that's our main body of code done. But, when you test the game out, it doesn't do anything. Why is that? With any script, you haven't called our function. This is the key piece of code, otherwise everything wouldn't work, and it's the CallOut code. Coding is similar to an essay, you've done all of the introduction (functions), and the main body, but you're left with the conclusion. In this piece of coding, you need to redefine what we meant with onTouched., In this case, the Parent would be the Part, so that now the Part will be selected. To make something happen on touch, we want to use the special code, "Touched", and just connect it as whatever we called our function (onTouched). The conclusion should appear something as script.Parent.Touched:connect (onTouched), To recap, your script should appear something like this:

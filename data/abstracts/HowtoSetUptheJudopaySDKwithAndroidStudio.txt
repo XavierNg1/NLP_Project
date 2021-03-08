@@ -1,0 +1,50 @@
+
+Download the judo Android SDK.
+Download and install Android Studio.
+Begin a new project in Android Studio.
+
+
+,
+Confirm that the ‘build.gradle’ file is in your SDK library.
+
+
+Create the build.gradle files.
+
+
+,
+Add dependencies to your new project.
+
+
+,
+Access the unzipped SDK files and copy the ‘JudoLibrary’ folder to your new ‘libs’ folder.
+
+
+,
+From Android Studio, open 'settings.gradle' and 'build.gradle', found in the JudoPayExample folder.
+
+,
+Add the below lines of code to the dependencies on build.gradle, making sure that ‘JudoPayExample’ shows the module name used in project creation:
+
+,
+
+
+,
+Plug the following line into ‘settings.gradle’: ':JudoPayExample:libs:JudoLibrary' Be sure that ‘JudoPayExample’ shows the module name used in project creation.
+
+,
+Integrate the judo UI.
+
+
+,
+Access the Android manifest from your package explorer and below the default tag, plug in the following, using the unique package name in place of ‘judopay’:
+
+,
+Copy "fragment_container.xml" from JudoAndroidSDK\JudoExample\res\layout.
+
+
+,
+Swap all instances of “StartActivity.class” with the name selected when the project was created, or to any process that needs to occur after the following activities.
+
+
+,
+Well done!

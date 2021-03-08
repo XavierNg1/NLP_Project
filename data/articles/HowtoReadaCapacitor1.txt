@@ -1,0 +1,24 @@
+ The base unit of capacitance is the farad (F). This value is much too large for ordinary circuits, so household capacitors are labeled with one of the following units:1 µF, uF, or mF = 1 microfarad = 10-6 farads. (Careful — in other contexts, mF is the official abbreviation for millifarads, or 10-3 farads.)
+1 nF = 1 nanofarad = 10-9 farads.
+1 pF, mmF, or uuF = 1 picofarad = 1 micromicrofarad = 10-12 farads.;
+, Most large capacitors have a capacitance value written on the side. Slight variations are common, so look for the value that most closely matches the units above. You may need to adjust for the following:
+
+
+Ignore capital letters in the units. For example, "MF" is just a variation on "mf." (It is definitely not a megafarad, even though this is the official SI abbreviation.)
+Don't get thrown by "fd." This is just another abbreviation for farad. For example, "mmfd" is the same as "mmf."
+Beware single-letter markings such as "475m," usually found on smaller capacitors.See below for instructions.
+ Some capacitors list a tolerance, or the maximum expected range in capacitance compared to its listed value. This isn't important in all circuits, but you may need to pay attention to this if you require a precise capacitor value. For example, a capacitor labeled "6000uF +50%/-70%" could actually have a capacitance as high as 6000uF + (6000 * 0.5) = 9000uF, or as low as 6000 uF - (6000uF * 0.7) = 1800uF.
+
+
+If there is no percentage listed, look for a single letter after the capacitance value or on its own line. This may be code for a tolerance value, described below.
+ If there is room on the body of the capacitor, the manufacturer usually lists voltage as a number followed by a V, VDC, VDCW, or WV (for "Working Voltage").This is the maximum voltage the capacitor is designed to handle.
+
+
+1 kV = 1,000 volts.
+
+See below if you suspect your capacitor uses a code for voltage (a single letter or one digit and one letter). If there is no symbol at all, reserve the cap for low-voltage circuits only.
+If you are building an AC circuit, look for a capacitor rated specifically for VAC. Do not use a DC capacitor unless you have an in-depth knowledge of how to convert the voltage rating, and how to use that type of capacitor safely in AC applications., If you see one of these next to a terminal, the capacitor is polarized. Make sure to connect the capacitor's + end to the positive side of the circuit, or the capacitor could eventually cause a short or even explode.If there is no + or -, you can orient the capacitor either way.
+
+
+Some capacitors use a colored bar or a ring-shaped depression to show polarity. Traditionally, this mark designates the - end on an aluminum electrolytic capacitor (which are usually shaped like tin cans). On tantalum electrolytic capacitors (which are very small), this mark designates the + end.(Disregard the bar if it contradicts a + or - sign, or if it is on a non-electrolytic capacitor.)
+

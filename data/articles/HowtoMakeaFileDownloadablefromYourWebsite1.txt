@@ -1,0 +1,50 @@
+ You'll be adding your download link to an HTML web page. If you don't have an existing site, you can create a basic HTML page to test out the download link. See Create a Simple Web Page with HTML for details.;
+, The easiest way to link a file is by placing the file in the same folder as the page's HTML file. Use the control panel file manager or the file browser in your FTP program to navigate to the folder containing the HTML file you'll be adding the link to.
+
+
+Your FTP client should already be configured to connect to your webserver since you've uploaded your site there before. If it isn't, see How to Use FTP for instructions on configuring your FTP client to connect to your server.
+If your web server has an online control panel, you can access your server files directly through the web management interface. You'll be able to access this when you sign into your site as an administrator. Once you're in the control panel, select the "File Manager" option.
+If you created your website using a website creation tool like WordPress, Weebly, or Wix, see the platform-specific instructions in the methods below.
+ You can upload pretty much any type of file, from PDF files to ZIP files. Note that some servers may limit the size of the file you are allowed to upload, and large files can eat through your allotted bandwidth pretty quickly. Browsers may block potentially malicious files from being downloaded by your visitors, such as EXE or DLL files.
+
+
+To upload files using your FTP program, drag the file into the folder in the FTP window that you want to upload it to. It will begin uploading immediately. Your upload speeds will typically be much slower than your download speeds, so it may take a while to completely upload the file.
+If you are using the virtual control panel file manager, click the "Upload" button at the top of the window. Browse your computer for the file you want to upload. Large files may take a while to upload to your server.
+ Once the file is uploaded, you'll need to add the link to it on your web page. Open the HTML file that you want to add the link to. You can double-click it in the control panel file manager to open it in the built-in page editor. If you're using an FTP, right-click the HTML file on your server and use "Open With" to open it in your code or text editor.
+ Place your cursor in the spot in the code that you want to insert your download link. This could be in the body of a paragraph, at the bottom of a page, or anywhere else.
+ Enter the following HTML5 code for your download link. This will start the download immediately for users after they click the link. As long as the file to be downloaded is in the same folder as the HTML file, you just need to use the name and extension. If the file is located in another folder, you'll need to include the folder structure.<!-- Uploaded file in same location as HTML file -->
+<a href="examplefile.pdf" download>Link text</a>
+ 
+<!-- Uploaded file in different location than HTML file -->
+<a href="/path/to/file/examplefile2.jpg" download>Link text</a>
+
+
+
+
+
+The <a> download attribute does not work in Safari, Internet Explorer, or Opera Mini. Users with these browsers will open the file in a new page and have to save it manually., You can use an image instead of text to create the download link. This requires a button image already on your web server.
+
+
+
+
+
+<a href="examplefile.pdf" download>
+        <img src="/images/downloadbutton.jpg">
+</a>
+
+
+
+
+, If you define the <a> download attribute, you can change the name for the file when someone downloads it. This can make it easier for users to identify files that they download from you.
+
+
+
+
+
+<a href="083116sal_rep.pdf" download="August 31 2016 Sales Report">Download the report</a>
+
+
+
+
+, Once you're satisfied with your code, save the changes to your HTML file and reupload it if necessary. You'll be able to see your new download button live on your website.
+

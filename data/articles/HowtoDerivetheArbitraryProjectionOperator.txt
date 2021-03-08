@@ -1,0 +1,41 @@
+ One can start from angular momentum and solve the eigenvalue problem to derive the state below, but we will start with it directly in this article.
+
+
+|↑n⟩=cos⁡θ2|↑z⟩+eiϕsin⁡θ2|↓z⟩{\displaystyle |\uparrow _{\mathbf {n} }\rangle =\cos {\frac {\theta }{2}}|\uparrow _{\mathbf {z} }\rangle +e^{i\phi }\sin {\frac {\theta }{2}}|\downarrow _{\mathbf {z} }\rangle }
+
+This is a linear combination of the up-state and down-state in the z{\displaystyle {\mathbf {z} }} basis. For a spin-1/2 particle, these two orthonormal basis vectors form a complete spanning set. Thus, any state can be expressed as a linear combination of the basis vectors.
+;
+, When a ket acts on a bra, the result is an operator. 
+
+
+|↑n⟩⟨↑n|=(cos⁡θ2eiϕsin⁡θ2)(cos⁡θ2e−iϕsin⁡θ2)=(cos2⁡θ2e−iϕcos⁡θ2sin⁡θ2eiϕcos⁡θ2sin⁡θ2sin2⁡θ2){\displaystyle {\begin{aligned}|\uparrow _{\mathbf {n} }\rangle \langle \,\uparrow _{\mathbf {n} }\!|&={\begin{pmatrix}\cos {\frac {\theta }{2}}\\e^{i\phi }\sin {\frac {\theta }{2}}\end{pmatrix}}{\begin{pmatrix}\cos {\frac {\theta }{2}}&e^{-i\phi }\sin {\frac {\theta }{2}}\end{pmatrix}}\\&={\begin{pmatrix}\cos ^{2}{\frac {\theta }{2}}&e^{-i\phi }\cos {\frac {\theta }{2}}\sin {\frac {\theta }{2}}\\e^{i\phi }\cos {\frac {\theta }{2}}\sin {\frac {\theta }{2}}&\sin ^{2}{\frac {\theta }{2}}\end{pmatrix}}\end{aligned}}}
+
+This is a Hermitian operator, and it must, as we are working with an orthonormal basis and real eigenvalues.
+ We see that cos2⁡θ2=12(1+cos⁡θ),{\displaystyle \cos ^{2}{\frac {\theta }{2}}={\frac {1}{2}}(1+\cos \theta ),} and sin2⁡θ2=12(1−cos⁡θ).{\displaystyle \sin ^{2}{\frac {\theta }{2}}={\frac {1}{2}}(1-\cos \theta ).} Therefore, part of the operator can be written as below.
+
+
+12I+12cos⁡θσz{\displaystyle {\frac {1}{2}}I+{\frac {1}{2}}\cos \theta \sigma _{z}}
+
+
+, On the off-diagonal, we see that the signs of the complex exponential directly correspond to σy.{\displaystyle \sigma _{y}.} Using Euler's formula and the double angle trig identity, we can expand out the exponential and write out the σx{\displaystyle \sigma _{x}} and σy{\displaystyle \sigma _{y}} terms as such. 
+
+
+12sin⁡θcos⁡ϕσx+12sin⁡θsin⁡ϕσy{\displaystyle {\frac {1}{2}}\sin \theta \cos \phi \sigma _{x}+{\frac {1}{2}}\sin \theta \sin \phi \sigma _{y}} 
+
+Putting it all together, the projection operator can be written algebraically below.
+
+
+Pn=12(I+sin⁡θcos⁡ϕσx+sin⁡θsin⁡ϕσy+cos⁡θσz){\displaystyle P_{\mathbf {n} }={\frac {1}{2}}(I+\sin \theta \cos \phi \sigma _{x}+\sin \theta \sin \phi \sigma _{y}+\cos \theta \sigma _{z})}
+
+
+
+
+, We see that the coefficients of the Pauli matrices above are simply the magnitudes of the unit vector n{\displaystyle {\mathbf {n} }} written out in spherical coordinates, so we can use the dot product as a shorthand notation. It is easy to verify that there is a sign change for projections of the down-state.
+
+
+Pn=12(I+n⋅σ){\displaystyle P_{\mathbf {n} }={\frac {1}{2}}(I+{\mathbf {n} }\cdot {\boldsymbol {\sigma }})}
+
+
+P−n=12(I−n⋅σ){\displaystyle P_{-{\mathbf {n} }}={\frac {1}{2}}(I-{\mathbf {n} }\cdot {\boldsymbol {\sigma }})}
+
+

@@ -1,0 +1,6 @@
+
+Using fdisk
+
+To get a list of the disks attached to your computer and the partitions on them, run sudo fdisk -l.
+To get the list of partitions on /dev/sdb, run sudo fdisk /dev/sdb -l.
+To create a partition on the disk /dev/sdb, first run the command sudo fdisk /dev/sdb.

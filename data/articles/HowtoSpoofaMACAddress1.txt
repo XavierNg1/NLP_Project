@@ -1,0 +1,29 @@
+ Look to the bottom left side corner of your screen, and locate the Start icon. It looks like a round, multi-colored window.;
+, Once you've opened the Start menu, look to the right side of the menu, and click on Control Panel.
+ After launching the Control Panel, you'll have several options to choose from. Click on Network and Internet.
+ From within the Network and Internet category, locate the Network and Sharing Center option. It'll likely be the very first choice you see in the new window. Once you've located it, click on it.
+ After entering the Network and Sharing Center, you'll be able to view your communications/network set up and connections. Look to the left side of the window, and select Change Adapter Settings.
+ In this window, you'll be able to view various network connections. Click on Local Area Connection.
+ From within the Local Area Connection window, click on Properties. Then, select Configure.
+ From the Configure window, look to the top right side of the window and locate Advanced options. Click on Advanced.
+ Under the new Advanced options, you'll see a smaller window with the header Settings. Scroll down until you hit Locally Administered Address. Click on it.
+ Once you've clicked on Locally Administered Address, you'll see some text within a yellow background. It'll say something along the lines of Change the MAC Address used by the network adapter. This indicates the option of changing your MAC Address.
+ Right next to the Settings window, you'll see space provided under the header Value. That's where you'll be typing in a new combination of characters to change your address. Before typing in a new value, you should take a look at the combination of your current MAC Address.
+ Go to the Start button, and click on it. You'll note a search bar on the bottom, below All Programs. Type in cmd, and look to the top of the search results within the same window. You'll see something labeled as cmd.exe. Click on it.
+
+
+A new, black window with some text will appear.
+ Looking at the window, note where a blank underscore blinks off and on. That's the space you can type in. Type getmac, and press enter.
+
+
+A list of Physical Addresses will appear. The first address is your current MAC Address.
+ Now, you can change your current MAC Address to a new one by following the format of your current address (12 characters total), and changing the numbers and letters. You may arbitrarily use letter combinations from A to F, and any numbers. Under Value, type in your new address.
+
+
+For example, if the first 4 characters are arranged as F1-D2 you can change them to F4-D1. Perform the same action for the remaining characters. You're maintaining the format, but changing the combination.
+ The Advanced options window will disappear, and you'll see some movement in the Local Area Connection under the Network Connections tab.
+
+
+At first, you'll see a red cross next to Local Area Connection and it'll say Disabled, or Unplugged. This means the system is registering a change.
+After only a few seconds, you'll see the red cross vanish and the Local Area Connection will be Enabled. You have successfully spoofed your MAC Address.
+

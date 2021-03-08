@@ -1,0 +1,83 @@
+
+Open a new Excel workbook and prepare 2 worksheets:
+
+Either click on the green "X" icon, or double-click on Excel in the Microsoft Office folder in your Applications folder by opening a Finder window, in order to start Excel;
+Using the File menu or the icon, Open a new workbook;
+Save the workbook as "Model Your Own Iris In Excel" into a logical folder, such as "wikiHow Articles" or "MS XL Imagery";
+Create via the + button at the bottom or access the second worksheet tab and double-click edit-name it "Saves" -- this will be used to Paste Values and Charts to which you wish to keep and remember, while still having the top worksheet tab for doing the main work on -- if you were to copy and paste, the formula results would change with varying inputs on the top worksheet from the Defined Named Variables, which are global;
+Double-click on the first leftmost worksheet tab and edit-name it "Circle Data and Chart" (w/o quotes).
+Set Preferences:
+
+Be mindful that these settings will affect your future XL work;
+General - Set Show this number of recent documents to 15; set Sheets in new workbook to 3; this editor works with Body Font, in a font size of 12; set your preferred file path/location;
+View - Check Show formula bar by default; check Indicators only, and comments on hover for Comments; show All for objects; Show row and column headings, Show outline symbols, Show zero values, Show horizontal scroll bar, Show vertical scroll bar, Show sheet tabs;
+Edit - Check all; Display 0 number of decimal places; set Interpret as 21st century for two-digit years before 30; Uncheck Automatically convert date system;
+AutoCorrect - Check all
+Chart - In Chart Screen Tips, check Show chart names on hover, and check Show data marker values on hover; leave the rest unchecked;
+Calculation - Automatically checked; Limit iteration to 100 Maximum iterations with a maximum change of 0.0001, unless goal seeking (which is not anticipated for this project), then .000 000 000 000 01 (w/o spaces); check Save external link values;
+Error checking - Check all and this editor uses dark green or red to flag errors;
+Save - Check all; set to 5 minutes;
+Compatibility - check Check documents for compatibility
+Ribbon - All checked, except Hide group titles is unchecked.
+
+,If you have completed the article Create a Sin and Cos Circle in Excel you can copy whole sections of it onto the following worksheet, being careful to re-name your various Defined Variable Names.
+Enter the Pupil Circle (this is the Inner Pupil Circle where the fibers bind to each other)
+
+Enter into cell A1, Pupil Circle, and Format Cells Font Underline and Bold it;
+Enter into cell A2, Cos;
+Enter into cell B2, Sin;
+Enter into cell G20, ShrinkExpand2;
+Enter into cell H20, 1.5; (the Pupil Circle formula depends on this)
+Enter into cell G21, X Offset2;
+Enter into cell H21, 5; (the Pupil Circle formula depends on this)
+Enter into cell G22, Y Offset2;
+Enter into cell H22, 5; (the Pupil Circle formula depends on this)
+Select cell range H20:H22 and Format Cells Font Red, Fill Yellow;
+Select cell range G20:H22 and Format Cells Border Outline External Thick Red;
+Still selecting cell range G20:H22.
+Format worksheet numbering
+
+Select the entire worksheet by selecting the blank "cell" above the 1 of Row 1 and to the left of Column A, and Format Cells Number Number Custom +0.0000;-0.0000;=0.0000
+Select Row 1 and Format Cells Number Number Custom 00;
+Select cell range E15:E363 and Format Cells Number Number Custom 000;
+Select cell range G15:H15 and Format Cells Number Number Custom 000.
+
+,
+Enter Black Circle headers and formulas
+
+Enter into cell C1, 1;
+Enter into cell D1, BlackCircle; (this is the outer back pupil circle);
+Enter into cell C2, Cos;
+Enter into cell D2, Sin;
+Enter into cell G16, ShrinkExpand;
+Enter into cell G17, X Offset;
+Enter into cell G18, Y Offset;
+Enter into cell H16, 5; (the BlackCircle formula depends on this)
+Enter into cell H17, 5; (the BlackCircle formula depends on this)
+Enter into cell H18, 5; (the BlackCircle formula depends on this)
+Select cell range H16:H18and Format Cells Font Red, Fill Yellow;
+Select cell range G16:H18 and Format Cells Border Outline External Thick Red;
+Still selecting cell range G16:H18.
+Create the Basic Chart
+
+Edit Go To cell range C3:D363 and do menu item Insert Chart or select Charts from the Ribbon, All, Scatter, Smoothed Line Scatter -- a chart should appear atop your worksheet -- resize it to fit into I16:P47 and pull the Plot Area open until it's about 1/2" from each side of the external border.
+Decide the style you want: thin fiber style or blocks style (extra wide line thicknesses).
+Decide whether you will have just the front group of fibers, or both front and back groups and, if so, how detailed the back group needs to be.Decide if you need an "exploding flower" as part of your design -- if so, research the designs of the Eggies Spiritual Adventures series of articles written by xhohx and you will find a rose pattern with a hole in the center to get you started -- try Create a Dakini and Boddhisattva Aspect of the Mother Planet or see the Related wikiHow below.
+Decide how many fibers you want per quadrant -- this example uses 30 per quadrant of 90 degrees, or 120 in all 4 quadrants of 360 degrees.
+Do Data Series 2 and chart it:
+
+Using the Command key between selections and the Shift key within selections, select cell ranges G1:H1, G2:H3 and G4:H14 simultaneously and do Format Cells Border Red Bold Outline per section.
+Do Data Series 3:
+
+Copy G1:H15 and paste it to I1;
+Change I1's cell contents to =G1+1; (so that it automatically increments to 3)
+Increase by 3 each of the references in cells I2:J3 -- this is most quickly accomplished by selecting cell range I2:J3 and doing Edit Replace 5 with 8, All, OK.
+Change J4 to the briefer (D*pc)*sin(º);
+Change I15 to =G15+3; Go back and change G15 to 5.
+
+Copy I1:J15 and paste it to K1, then copy I1:L15 and paste those two series to M1, bringing your total to 4.
+
+Find a picture like the following one, "Reflection Candidate", and cut out the background in Excel using Format Picture.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

@@ -1,0 +1,54 @@
+
+
+
+1P(1−PL)dP=kdt{\displaystyle {\frac {1}{P\left(1-{\frac {P}{L}}\right)}}{\mathrm {d} }P=k{\mathrm {d} }t}
+;
+, Since the denominator on the left side has two terms, we need to separate them for easy integration.
+
+Multiply the left side by LL{\displaystyle {\frac {L}{L}}} and decompose.
+
+
+LLP−P2dP=LP(L−P)dP=APdP+BL−PdP{\displaystyle {\begin{aligned}{\frac {L}{LP-P^{2}}}{\mathrm {d} }P&={\frac {L}{P(L-P)}}{\mathrm {d} }P\\&={\frac {A}{P}}{\mathrm {d} }P+{\frac {B}{L-P}}{\mathrm {d} }P\end{aligned}}}
+
+
+
+Solve for A{\displaystyle A} and B.{\displaystyle B.}
+
+
+L=A(L−P)+BP, let L=0{\displaystyle L=A(L-P)+BP,\ {\text{let }}L=0}
+
+
+0=−AP+BP, A=B{\displaystyle 0=-AP+BP,\ A=B}
+
+
+let P=0:L=AL{\displaystyle {\text{let }}P=0:L=AL}
+
+
+A=1, B=1{\displaystyle A=1,\ B=1}
+
+
+
+
+,
+
+
+∫1PdP+∫1L−PdP=∫kdtln⁡|P|−ln⁡|L−P|=kt+C{\displaystyle {\begin{aligned}\int {\frac {1}{P}}{\mathrm {d} }P+\int {\frac {1}{L-P}}{\mathrm {d} }P&=\int k{\mathrm {d} }t\\\ln |P|-\ln |L-P|&=kt+C\end{aligned}}}
+
+
+, We negate both sides, because when we combine the logs, we want P{\displaystyle P} to be on the bottom, for simplicity. As always, C{\displaystyle C} is never affected, as it is arbitrary. 
+
+
+−ln⁡|P|+ln⁡|L−P|=−kt+Cln|L−PP|=−kt+C{\displaystyle {\begin{aligned}-\ln |P|+\ln |L-P|&=-kt+C\\\ln \left|{\frac {L-P}{P}}\right|&=-kt+C\end{aligned}}}
+
+
+, We let A=eC{\displaystyle A=e^{C}} and recognize that it too is unaffected by the plus-minus sign, so we can discard it.
+
+
+ln|L−PP|=−kt+C|L−PP|=e−kt+CL−PP=±Ae−ktLP−1=Ae−ktPL=1Ae−kt+1{\displaystyle {\begin{aligned}\ln \left|{\frac {L-P}{P}}\right|&=-kt+C\\\left|{\frac {L-P}{P}}\right|&=e^{-kt+C}\\{\frac {L-P}{P}}&=\pm Ae^{-kt}\\{\frac {L}{P}}-1&=Ae^{-kt}\\{\frac {P}{L}}&={\frac {1}{Ae^{-kt}+1}}\end{aligned}}}
+
+
+P=LAe−kt+1{\displaystyle P={\frac {L}{Ae^{-kt}+1}}}
+
+The above equation is the solution to the logistic growth problem, with a graph of the logistic curve shown. As expected of a first-order differential equation, we have one more constant A,{\displaystyle A,} which is determined by the initial population.
+
+

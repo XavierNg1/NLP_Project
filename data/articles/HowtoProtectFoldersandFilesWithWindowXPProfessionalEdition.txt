@@ -1,0 +1,55 @@
+
+
+
+Most owners of home computers are administrators after the initial installation of Window XP Professional.
+If you're not sure, follow these steps:
+
+Select "Start", "Control Panel" and the "User Accounts" icon.
+If your account says "Computer Administrator" and "Password Protected", you're done.
+If you're not "Computer Administrator", select "Change my account type" to "Computer Administrator".
+If you're not "Password Protected", select "Change my password" and enter a new password.
+Close the "User Accounts" window by selecting the "Red X" at the top right hand corner.
+Select "Start", "Shut Down", "Restart", "OK".
+
+;
+,
+
+
+For purposes of this demonstration, you'll create a folder and will be using this folder.
+Select "Start", "My Computer", "View" (top left hand corner), "Explorer Bar", "Folders".
+Check that "Simple File Sharing" is disabled. (The default Windows XP setting is for Simple File Sharing to be enabled)!
+
+Select "Tools" (5th menu), "Folder Options", "View" tab.
+Scroll down "Advanced Settings" to bottom option ("Use simple file sharing (Recommended)") and uncheck if checked.
+Select "OK".
+
+
+Select Drive (C:), "File" (top left hand corner), "New", "Folder". Key in your first name as the new folder name and hit .
+With the right mouse button, select the new folder with your first name, select "Properties", then the "Security" tab on the top.
+Under "Groups or users names:", select "Administrators".
+Under "Permissions for Administrators", notice all permissions are checked under the "Allow" column.
+Under "Groups or users names:", select "Everyone".
+Under "Permissions for "Everyone", notice all permissions are checked under the "Allow" column except the "Full Control" permission.
+Select the "Deny" column for the "Modify" permission.
+This will prevent others on your computer from having access to this folder.
+
+
+
+Using the same folder you created for this demonstration, select the folder with the right mouse button, select properties.
+Under the "Group or user names:", select "Everyone" to grant or deny special permissions and select the "Advanced" button.
+Select "Everyone" and the "Edit" button.
+Notice all permissions are inactive while "Full Control" and "Delete Subfolders and Files" are unchecked.
+Do not change any settings.
+
+
+
+In the "Advanced Security Settings" dialog box, select the "Owner" tab at the top.
+As Administrator, you can take ownership of a folder or file by selecting your name below the "Change owner to:" column.
+Select the "Replace owner on subcontainers and objects" check box.
+Select the "Permissions" tab at the top.
+
+
+
+By default, subfolders and files inherit permissions that you assign to their parent folder.
+To prevent a subfolder or file from inheriting permissions from a folder, clear the "Inherit From Parent The Permission Entries That Apply to Child Objects" check box.
+

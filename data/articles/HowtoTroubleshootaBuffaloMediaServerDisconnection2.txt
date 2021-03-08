@@ -1,0 +1,8 @@
+ If the NAS isn’t powered on yet, turn it on by plugging it to a power source., Go to your NAS IP address and log in using the admin account., Click on “Extensions” in the menu to access the extension functionalities of the NAS., From the Extensions sub-menu, click on “MediaServer.”, Click on it., How you configured these settings may affect how your media server works. Focus on the synchronization and refresh settings., “Refresh Interval” sets the duration between refresh of the DLNA server. Refreshing the server is important as this is how its contents get updated. You just don’t want this to happen while you’re streaming a movie.
+
+A good setting here would be one that will avoid a refresh during your movie times.
+ “Synchronize I/O” gets the DLNA server to refresh and update every time there’s a change with your media server’s contents. It may be a good idea to have this set to enabled, so every time there’s a new content or an update to one of your files, the server will automatically refresh and show you the latest content for your consumption.
+
+This option will, however, prove to be a bad idea if your BitTorrent is also running at the same time and it’s downloading and updating files in the same folder. This means that whenever Bittorrent does something to the folder you use for streaming movies, the DLNA server will refresh itself, which in turn will cause the streaming to stop.
+If your movie folder is different from the one BitTorrent uses for its downloads, then this shouldn’t be a problem.
+

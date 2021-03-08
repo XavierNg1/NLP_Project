@@ -1,0 +1,51 @@
+ In fact, every website begins with a default white background. However, while a white background can be very sleek and clean looking when used with a harmonious color scheme, a different colored background may be favored with different themes.;
+,, Now, you body tag should look like this-<body bgcolor="COLORNAME">
+where COLORNAME is the name of the color. COLORNAME can be filled with many types of color representatives-
+
+
+
+<body bgcolor="red">(color name)
+
+<body bgcolor="#FF0000">(hex value)
+
+<body bgcolor="rgb(255, 8, 9)">(RGB value)
+
+, But remember that typing an uncommon color as "Ultramarine Bluish Green" will result in white.
+
+
+
+
+<body background="red.gif">(in same folder)
+
+<body background="\Folder1\red.gif">(inside a different folder)
+
+<body background="imagepage1/red.gif">(in a different webpage)
+
+,, You can also give IDs and Classes and use both External and internal stylesheets.
+, You can also give IDs and Classes and use both External and internal stylesheets.
+, It can be from the same folder, different folder or a different web page.
+
+
+
+<body style="background-image:red.gif;">(in same folder)
+
+<body style="background-image:\Folder1\red.gif">(inside a different folder)
+
+<body style="background-image:imagepage1/red.gif">(in a different web page).
+, Your body tag must be now changed to-<body style="background-image: url('SRC'); background-repeat:REPEAT-SETTINGS; "> Where REPEAT-SETTINGS are the settings. There can be many repeat settings, like-
+
+
+
+<body style="background-image: red.gif; background-repeat: repeat;">(The background will repeat both vertically and horizontally.)
+
+<body style="background-image: red.gif; background-repeat: repeat-x;">(The background will repeat horizontally.)
+
+<body style="background-image: red.gif; background-repeat: repeat-y;">(The background will repeat vertically.)
+
+, To do them you just need to do some simple tweaks to the code in the above section. Do the tweaks to make the body tag look like this-
+
+
+
+<body style="background-image:url('SRC'); background-attachment:fixed; background-position:POSITION; background-repeat:REPEAT SETTINGS;">
+where SRC is the source of the background image, POSITION is the position of the image(it can range from center to top-right); background-attachment is the main "catalyst" of this background type. It is used to tell the position of the background and it is recommended that it should not be changed.
+

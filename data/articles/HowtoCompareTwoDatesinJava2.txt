@@ -1,0 +1,43 @@
+ Dates can be compared with the equals, after and before methods. If two dates are for the same point in time, the equals method will return true. The examples will use previously created dates from the compareTo method.
+ The code below shows a true and false case. If date1 is before date2, before returns true. If it is not, before returns false.
+
+
+
+
+
+
+System.out.print(date1.before(date2)); //prints true
+System.out.print(date2.before(date2)); //prints false
+
+
+
+
+
+, The code below shows a true and false case. If date2 is after date1, after returns true. If it is not, after returns false.
+
+
+
+
+
+
+System.out.print(date2.after(date1));//prints true
+System.out.print(date1.after(date2));//prints false
+
+
+
+
+
+, The code below shows a true and false case. If the dates are equal, equals returns true. If they are not, equals returns false.
+
+
+
+
+
+
+System.out.print(date1.equals(date3));//prints true
+System.out.print(date1.equals(date2));//prints false
+
+
+
+
+

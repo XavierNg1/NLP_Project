@@ -1,0 +1,27 @@
+ This won't work on a test, but is a great choice in any other setting. Since there are only 8 possible combinations of numbers, it is actually a pretty easy chart to memorize. All you have to do is separate the numbers in groups of three, then match them with the chart in the pictures.Note how numbers 8 and 9 don't have straight conversions. In octal, these numbers do not exist, since there are only 8 digits (0-7) in a base-eight system.
+ Say you need to convert the binary number 10010.11 to an octal number. Normally, you work from right to left to group the numbers into sets of three. With the decimal, you work away from the point. So, for the numbers left of the decimal (10010), you start at the point at work left (010 010, or, converted fully, 115.24). For the numbers to the right (.11), you start from the point and work right (110). When adding zeros, always add them in the direction you're working. The final breakdown is 010 010 . 110.
+
+101.1 → 101 . 100
+
+1.01001 → 001 . 010 010
+
+1001101.0101 → 001 001 101 . 010 100
+
+
+, You'll need the chart to work backward, as a simple "3" doesn't give you enough information to do the math unless you already know the octal system well and want to re-think each combination. Simply use the following chart to easily convert each octal digit into a set of three binary numbers, then ram them together:
+
+0 → 000
+
+1 → 001
+
+2 → 010
+
+3 → 011
+
+4 → 100
+
+5 → 101
+
+6 → 110
+
+7 → 111

@@ -1,0 +1,39 @@
+ If you start with an initial amount A0{\displaystyle A_{0}} that grows exponentially, the final amount Af{\displaystyle A_{f}} is described by the formula Af=A0(1+r)t{\displaystyle A_{f}=A_{0}(1+r)^{t}}. The variable r represents the growth rate per time period (as a decimal), and t is the number of time periods.
+
+To make sense of this formula, picture a $100 investment with a 0.02 annual interest rate. Every time you calculate growth, you multiply the amount you have by 1.02. After one year, that's ($100)(1.02), after two years that's ($100)(1.02)(1.02), and so on. This simplifies to (1.02)t{\displaystyle (1.02)^{t}}, where t is the number of time periods.
+
+Note: If r and t do not use the same time unit, use the formula Af=A0(1+rn)nt{\displaystyle A_{f}=A_{0}(1+{\frac {r}{n}})^{nt}}, where n is the number of times growth is calculated per time period. For example, if r = 0.05 per month and t = 4 years, use n = 12, since there are twelve months in a year.
+ In most real-world situations, a quantity grows "continuously" instead of increasing only at regular intervals. In this case, the formula for growth is Af=A0(e)rt{\displaystyle A_{f}=A_{0}(e)^{rt}}, using the mathematical constant e.This formula is often used to approximate population growth, and always when calculating continuously compounded interest. In situations where growth is calculated at regular intervals, such as annually compounded interest, the formula above is more accurate.
+
+You can derive this from the formula from the one above using calculus concepts.
+ When the population doubles, the final amount Af{\displaystyle A_{f}} will equal twice the initial amount, or 2A0{\displaystyle 2A_{0}}. Plug this into the formula and remove all A terms using algebra:
+
+
+2A0=A0(e)rt{\displaystyle 2A_{0}=A_{0}(e)^{rt}}
+
+Divide both sides by A0{\displaystyle A_{0}}
+
+
+2=ert{\displaystyle 2=e^{rt}}
+
+
+, The term logm(n){\displaystyle log_{m}(n)} means "the exponent m is raised by to get n." Because the constant e comes up so often in real world situations, there's a special term "natural log," abbreviated "ln," that means loge{\displaystyle log_{e}}. Use this to isolate t on one side of the equation:
+
+
+2=ert{\displaystyle 2=e^{rt}}
+
+
+ln(2)=ln(ert){\displaystyle ln(2)=ln(e^{rt})}
+
+
+ln(2)=rt{\displaystyle ln(2)=rt}
+
+
+ln(2)r=t{\displaystyle {\frac {ln(2)}{r}}=t}
+
+
+, Now you can solve for t by entering the decimal growth rate r into this formula. Notice that ln(2) is approximately equal to 0.69. Once you convert the growth rate from decimal to percentage form, you can round this value to get the "rule of 70" formula.
+
+Now that you know this formula, you can adjust it to solve similar problems. For example, find "tripling time" with the formula ttriple=ln(3)r{\displaystyle t_{triple}={\frac {ln(3)}{r}}}.
+
+

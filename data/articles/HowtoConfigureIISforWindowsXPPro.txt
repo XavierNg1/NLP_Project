@@ -1,0 +1,90 @@
+ This is a Windows Add-on available in Windows XP Pro or Windows XP Media Center editions of Windows XP.
+
+Open Control Panel from the Start Menu.
+
+
+
+ 
+
+
+Click on Add or Remove Programs
+
+
+
+
+
+
+Click on Add/Remove Windows Components
+
+
+
+
+
+
+Select Internet Information Services from the Windows Component Wizard
+
+
+
+
+
+
+Select Next. The Wizard may prompt you for your XP Installation Disc.
+
+
+
+
+
+
+IIS 5.1 will now be installed
+
+
+
+
+
+;
+,
+
+First go to the Control Panel again and click "Performance and Maintenance" and then navigate to "Administrative Tools". (For Service Pack 3, click directly on "Administrative Tools")
+
+
+
+
+
+
+Now you should see "Internet Information Services"; open the program up (You may create a shortcut on the desktop so it is easier to find).
+ Now to set it up properly read on.
+,, Change the IP Address to what your local IP Address is if it is not already set (to find out what your local address is click "start", then "run", then type in "cmd", then type in "ipconfig". Now look at the address beside "IP Address" and that is what it should be in IIS).
+ You can leave it at port 80 but only if your ISP doesn't block it. If you do decide to change the port then note than whenever you navigate to your website then your syntax must be "domain.com:portnumber".
+ To do this type in you gateway in a browser and follow the steps there.
+ You should use "driveletterofWindows:\Inetpub\wwwroot". This folder was automatically created upon installation.
+ Here you can set a default document to redirect to if no document is typed into the URL. To add a new document to the list click "Add" and then type in the name (you do not need the path but the file must be in the home directory that you previously chose).
+ This time rollover "New" and then click "Virtual Directory" (you don't have to do this but it is a good practice). Select a logical name for your virtual directory such as "root" or something similar as to avoid confusion.
+ Expand the directory and you should see all of the files in there that are in your "Home Directory". Relax, you are almost done.
+
+
+
+
+
+
+
+Select "Select new security settings from template".
+
+
+
+
+
+
+Click next.
+
+
+
+
+
+
+Select "Public Site". Now just keep clicking next until it is finished.
+
+
+
+Open up your favorite browser and type into the Location Bar: http:// localIPaddress:port/virtualdirectory/ or type in : http:// computername:port/virtualdirectory/ (if you did not change the port from port 80 then type in: http:// computername/virtualdirectory/)
+
+,,, For reasons why it didn't work consult the Tips section.

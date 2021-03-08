@@ -1,0 +1,59 @@
+
+Collect the necessary information which is important to display the actual month, and highlight the actual day.
+Determine what day was the first day, how long is the month, and, of course, which is the actual day, with the above information.
+
+,
+Use the PHP built-in function: getdate().
+As next step we need to fill to following lines.
+As semi final step we need to add the rest of the month to the last line.
+The complete code using the CSS is the following: <tbody></tbody>
+
+01
+
+<!DOCTYPE html PUBLIC "-
+
+
+<tbody></tbody>
+
+02
+<html>
+
+<tbody></tbody>
+
+03
+<head>
+
+<tbody></tbody>
+
+04
+
+   # "style/style.css"rel="stylesheet"type="text/css"/>
+
+
+<tbody></tbody>
+
+05
+</head>
+
+<tbody></tbody>
+
+06
+<body>
+
+<tbody></tbody>
+
+07
+<?php
+
+<tbody></tbody>
+
+08
+
+functionshowCalendar(){
+
+
+<tbody></tbody>
+
+09
+
+    // Get key day informations.

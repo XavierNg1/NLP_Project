@@ -1,0 +1,56 @@
+ In any case, the rule is for f(x) = x^n, the derivative f '(x) = nx^(n-1), and the n now in the coefficient is multiplied by any pre-existing coefficient. So, for example, the derivative of 6x^3 is 3*6x^(3-1) or 18x^2. The derivative of a constant C = 0. For this article you will also need to know how to use Microsoft Excel and it's a good practice to follow the steps exactly as given. Step 1 then is to open a new workbook and create two worksheets titled Data and Saves.
+
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show grid lines and set all boxes below that to auto or checked.
+In Chart, allow Show chart names and set Data markers on hover and leave the rest unchecked for now.
+In Calculation, make sure Automatically is checked and Calculate before save is also checked. Set max change to .001 as goal-seeking is not done in this project. Check Save external link values and Use 1904 system
+
+In Error checking, check all the options.
+In Save, select Save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ Select columns A:J and Format Cells Number Number Custom +0.0000;-0.0000;+0.0000, Font Size 9 or 10., In that way, you can concentrate on the functions you wish to see the derivative (arc length) "differences" for.
+Select row 1 and make Font bold.
+Into cell A1, enter x, color blue.
+Into cell B1, enter eg. y=x^3; y=3x^2 and make the eg. y=x^3 blue font bold and the y=3x^2 black font bold by selecting over them in the formula bar and using the Text Color Tool.
+Into cell C1, enter Function and do Font color blue.
+Into cell D1, enter Derivative and do Font color black.
+Select cell range F1:J1 and make font color blue.
+Into cell F1, enter F ... (for Function).
+Into cell G1, enter d ... (for derivative).
+Into cell H1, enter From a.
+Into cell I1, enter To b.
+Into cell J1, enter Increment.
+Into cell J2, enter .25 and Insert Name Define Name Increment to cell $J$2 and format fill canary yellow for input.
+Into cell I2, enter "=A362" w/o quotes. This is the end of the x Range of values.
+Into cell H2, enter -30 and format font red and format fill canary yellow for input.
+Into cell E2, enter Power. Into cell E3, enter Coefficient. Into cell E4, enter Constant.
+Format Fill cell range F2:F4 canary yellow for input.
+Input 3 into cell F2 and Insert Name Define Name F_Power to cell $F$2.
+Input -5 into cell F3 and Insert Name Define Name F_Coefficient to cell $F$3.
+Input 5 into cell F4 and Insert Name Define Name F_Constant to cell $F$4.
+Input "=F_Power-1" into cell G2 and Insert Name Define Name d_Power to cell $G$2.
+Input "=F_Power*F_Coefficient" into cell G3 and Insert Name Define Name d_Coefficient to cell $G$3.
+Input "=F_Constant*0" into cell G4 and Insert Name Define Name d_Constant to cell $G$4.
+Enter TEXT: into cell E5.
+Input ="("&TEXT(F_Coefficient,"0.0000")&"*x^"&TEXT(F_Power,"0.0000")&" + "&TEXT(F_Constant,"0.0000")&")"&" - "&"("&TEXT(d_Coefficient,"0.0000")&"x^"&TEXT(d_Power,"0.0000")&" + 0"&")", including all quotation marks into cell F5.
+Enter Paste Text: into cell E6. Copy the value in cell F5 and do Paste Special Value into cell F6; this will be the title for your Chart.
+ You can Define Name for H2 later if you wish.
+Into cell A3, input "=A2" w/o quotes.
+Edit Go To cell range A4:A362 and enter into cell A4 the formula w/o quotes "=IF(A3=A2,A3+Increment,A3)" and Edit Fill Down. Format Fill Color Light Rose. Edit Go To cell range A2:A362 and Insert Name Define Name x to cell range $A$2:$A$362. Approximately 360 rows are being used because graduation to trigonometric functions is anticipated.
+Edit Go To cell range B2:B362 and input to cell B2 the formula w/o quotes "=IF(A1<>A2,Function,Derivative)" and Edit Fill Down.
+Edit Go To cell range C2:C362 and input to cell C2 the formula w/o quotes "=F_Coefficient*x^F_Power+F_Constant" and Edit Fill Down. Insert Name Define Name Function to cell range $C$2:C$362.
+Edit Go To cell range D2:D362 and input to cell D2 the formula w/o quotes "=d_Coefficient*x^d_Power+d_Constant" and Edit Fill Down. Insert Name Define Name Derivative to cell range $D$2:D$362.
+Select columns L:M and Format column width .35"
+Edit Go To cell range M1:M362 and input 1 into cell M1 and do Edit Fill Series Column Linear Step Value 1, OK.
+Edit Go To cell range L1:L362 and enter to cell L1 the following formula w/o quotes, "=IF(ODD(ROW())=ROW(),0,1)", and Edit Fill Down. Copy this cell range and do Paste Special Values right back over it.
+Select rows 1:362 and do menu item Data Sort, and at the next to the bottom under Column when you click in its space, will be a zero -- select it because we are going to sort all the odd rows to the top because the derivatives are in the odd rows in column B, and we want to format all those bold black font. Click on the plus button at the bottom left of the Sort dialog box to bring up the Then by sort line. Click in the Column column and Then By Row and select the very bottommost 1 -- meaning we want to otherwise keep the rows in their original order after the preliminary sort. Click OK (shut your eyes first! Just kidding!). Order should be Smallest to Largest on both cases.
+The derivatives in column B end below where in column  M the last odd number, 361, appears. Select B2:B181 and Format Font black bold. Your nice sheet is a total wreck with errors all over the place, right?? Let's fix that.
+Select rows 1:362 and do menu item Data Sort. See the little Minus symbol at the bottom left? We want to subtract out the top first sort by odd numbered rows, so select that line and then hit the Minus button. Order should still be Smallest to Largest on the remaining sort of the original row order. Close eyes. But hit OK first. Et voilá! Everything is cool.
+ Edit Go To cell range O3:O362 and enter to O3 the formula "=SQRT((A3-A2)^2+(B3-B2)^2)" w/o quotes and Edit Fill Down. Enter to cell O363 "=SUM(O3:O362)" and Format Cell border dark blue bold outline. Enter to cell N363 Total Arc Length and Format Align right cell range N363:N365. Enter Limit a to Limit b / 361 to cell N364, and enter to cell N365 Arc Length Area. Enter "=B366" to cell O364 and enter to cell O365 "=O363*O364" w/o quotes. Enter "=A362-A2" to cell B365 and enter to cell C365 Limit a to Limit b. Enter to cell B366 "=B365/361" w/o quotes and enter to cell C366 Limit a to Limit b / 361. For the Integration Formulas and so forth, follow the formulas copied to the right in the picture in Tips where it discusses "The Total Area by Integration ..." in order to arrive at that total.
+ We help the chart fill the space a bit by making the line a little weightier than normal, but not so much as to badly distort the results really.
+Edit Go To cell range A2:B362 and using either Chart Wizard or the Charts option on the Ribbon, select Charts, All/Other, Scatter, Smooth Line Scatter. There's probably sufficient space to work with the chart that appears on the Data worksheet, or you can copy or cut it to a separate Charts worksheet.
+Go to Paste Text in cell F6 and get the Chart Title; copy it. Select Chart Layout and select Chart Title and wand over the default text and paste in the text you copied previously. You may need to play with it a bit as far as location and font size, etc. to get it just how you prefer. Other than that, the assignment is complete. Ooops. Almost forgot. Do Chart Layout Current Selection Series 1 Format Selection. Make Line Weight 8 pt (or not -- it's up to you; 1 is fine if the increment is right for the range.) -- (it's a matter of whether you're after some artistic effect or the strict mathematical depiction; below in Tips I give the strict mathematical depiction for the example function and derivative).
+, Then again, just below that, make another copy bu this time do Copy Picture and Paste Picture with the shift key held down, or Paste Special Values -- either way, and then a copied and pasted picture of the chart. Be fastidious and methodical about your work and pay attention to details. Save the workbook every so often, just in case. Maintain a good backup system. Do Insert New Comment on original variable values and formulas by copying them from the formula bar so you can easily get back to where you started without having to dump the file and start over completely. This worksheet will be used in the near future by me as a building block to more advanced lessons, so think about a folder system for Calculus work please. That implies that almost all the previous work was either Geometry or Trig, with Algebra applied to both. There will be more of each in the future, God Willing., Time is limited, unfortunately. The basic thrust so far has been to cover turning Math into Art; that is the specialty deserving attention. Why? Because it preserves the creative aspect of mathematics -- it's that simple. When looking at these forms, one can make out a neckline here, a man wearing a tee-shirt in this other one -- they are meant to stimulate the imagination. If math gets taught along the way, it's a great side benefit!
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

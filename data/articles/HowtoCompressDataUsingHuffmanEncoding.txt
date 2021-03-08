@@ -1,0 +1,39 @@
+ Include a dummy character to mark the end of the file -- this will be important later. For now, call it the EOF (end of file) and mark it as having a frequency of 1.
+
+
+For example, if you want to encode a text file reading "ab ab cab," you would have 'a' with frequency 3, 'b' with frequency 3, ' ' (space) with frequency 2, 'c' with frequency 1, and EOF with frequency 1.;
+, You'll be building a big binary tree with each character as a leaf, so you should store the characters in a format such that they can become nodes of the tree. Place these nodes into a priority queue with each character's frequency as its node's priority.
+
+
+A binary tree is a data format where each piece of data is a node that can have up to one parent and two children. It's often drawn as a branching tree, hence the name.
+A queue is an aptly named data collection where the first thing to go into the queue is also the first thing to come out (like waiting in line). In a priority queue, the data are stored in order of their priority, so that the first thing to come out is the most urgent thing, the thing with the smallest priority, rather than the first thing enqueued.
+In the "ab ab cab" example, your priority queue would look like this: {'c':1, EOF:1, ' ':2, 'a':3, 'b':3}
+
+, Remove (or dequeue) the two most urgent things from the priority queue. Create a new tree node to be the parent of these two nodes, storing the first node as its left child and the second as its right child. The priority of the new node should be the sum of the priorities of its child. Then enqueue this new node in the priority queue.
+
+
+The priority queue now looks like this: {' ':2, new node:2, 'a':3, 'b':3}
+
+, Note that in addition to the nodes you created for the characters and their frequencies, you will also be dequeuing, turning into trees, and re-enqueueing parent nodes, nodes that are already themselves trees.
+
+
+When you're finished, the last node in the queue will be the root of the encoding tree, with all the other nodes branching off from it.
+The most frequently used characters will be the leaves closest to the top of the tree, while the rarely used characters will be positioned at the bottom of the tree, farther away from the root.
+ Walk through the tree to reach each character. Every time you visit a node's left child, that's a '0'. Every time you visit a node's right child, that's a '1'. When you get to a character, store the character with the sequence of 0s and 1s that it took to get there. This sequence is what the character will be encoded as in the compressed file. Store the characters and their sequences in a map.
+
+
+For example, start at the root. Visit the root's left child, and then visit that node's left child. Since the node you're at now doesn't have any children, you've reached a character. This is ' '. Since you walked left twice to get here, the encoding for ' ' is "00".
+For this tree, the map will look like this: {' ':"00", 'a':"10", 'b':"11", 'c':"010", EOF:"011"}.
+ This will allow the file to be decoded.
+ For each character in the file to be encoded, write the binary sequence you've stored in the map. Once you've finished encoding the file, make sure to add the EOF to the end.
+
+
+For the file "ab ab cab", the encoded file will look like this: "1011001011000101011011".
+Files are stored as bytes (8 bits, or 8 binary digits). Because the Huffman Encoding algorithm doesn't use the 8-bit format, encoded files will often not have lengths that are multiples of 8. The remaining digits will be filled in with 0s. In this case, two 0s would be added at the end of the file, which looks like another space. This could be a problem: how would the decoder know when to stop reading? However, because we included an end-of-file character, the decoder will get to this and then stop, ignoring anything else that's been added on after.
+ First, read the header, which should be the encoding map. Use this to build a decoding tree in the same way you built the tree you used to encode the file. The two trees should be identical.
+ Traverse the tree as you read: if you read in a '0', go to the left child of the node you're at, and if you read in a '1', go to the right child. When you reach a leaf (a node without any children), you've arrived at a character. Write the character into the decoded file.
+
+
+Because of the way the characters are stored in the tree, the codes for each character have a prefix property, so that no character's binary encoding can ever occur at the start of another character's encoding. The encoding for each character is totally unique. This makes decoding much easier.
+ Congratulations! You've decoded the file.
+

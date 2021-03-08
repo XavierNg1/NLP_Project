@@ -1,0 +1,108 @@
+ Expect to use keys A-Z/0-9/, the symbols (!$| etc), and Enter. Most commands do not check entry for upper/lowercase, so for the moment don't worry about CAPS (or cApS). Each command (and its parameters) goes on one line. Open a command line window (cmd.exe) to test the commands you want to run. Arrange your windows so you can see them both.;
+, To start writing the file, most people start with @echo off as it stops each command being printed as it is processed. It reduces clutter on the user's screen.(This section does some hand-holding. If you want the finished script, jump to the next section.)
+
+
+
+
+  : @echo OFF
+
+
+
+
+, Remember to press enter after each command., Type:
+
+
+
+
+ : echo Welcome TO the Backup Script!
+
+
+
+
+, Good.,
+
+
+
+
+  : echo.
+, This code below gives the user a choice. Either they press F, or N, or they press Q or CTRL-Z which cancels the whole script.
+
+
+
+
+ : choice /C:FNQ /N SELECT ull Backup OR ew FILES only. Press OR TO EXIT.
+ If the user presses Q the program returns a "3", and goes to section "end". If they press N the program returns a "2", and goes to section "small_backup". If they press F, the program returns a "1", and goes to "full_backup". "Errorlevel" is not a error message as such, just the only way to set output from the CHOICE command.
+
+
+
+
+
+
+  : IF errorlevel 3 GOTO END
+  : IF errorlevel 2 GOTO small_backup
+  : IF errorlevel 1 GOTO full_backup
+
+
+
+
+, Type:
+
+
+
+
+  : :small_backup<br>
+  : echo.
+  : echo.
+  : echo You chose TO backup NEW FILES. Hit ANY KEY TO start OR ctrl-z TO cancel.
+pause >nul
+xcopy c:\mydirectory d:\mybackup /s/m/e
+GOTO END
+: :full_backup<br>
+: echo.
+: echo.
+: echo You chose TO backup ALL FILES. Hit ANY KEY TO start OR ctrl-z TO cancel.
+
+
+
+pause >nul xcopy c:\mydirectory d:\mybackup /s/e goto end
+
+ :end
+exit
+
+</source>
+
+
+Create the directories referred to above, and copy a few small test files into the source directory ready for testing. Later you can change those directory names to suit your real <my documents="">.
+,,
+
+
+
+
+
+   @echo OFF
+ echo Welcome TO the Backup Script!
+ echo.
+ choice /C:FN /N SELECT ull Backup OR ew FILES Backup, OR ctrl-z TO EXIT.
+ IF errorlevel 3 GOTO END 
+ IF errorlevel 2 GOTO small_backup
+ IF errorlevel 1 GOTO full_backup
+ :small_backup
+ echo.
+ echo.
+ echo You chose TO backup NEW FILES. Hit ANY KEY TO start OR ctrl-z TO EXIT.
+ pause >nul
+ xcopy c:\mydirectory d:\mybackup /s/m/e
+ GOTO END
+ :full_backup
+ echo.
+ echo.
+ echo You chose TO backup ALL FILES. Hit ANY KEY TO start OR ctrl-z TO EXIT.
+ pause >nul
+ xcopy c:\mydirectory d:\mybackup /s/e
+ GOTO END
+ :END
+ EXIT
+
+
+
+

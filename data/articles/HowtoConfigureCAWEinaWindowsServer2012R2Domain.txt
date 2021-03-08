@@ -1,0 +1,118 @@
+
+
+Install Windows 7 Virtual Machine.
+Change the Windows 7 Virtual Machine name to w7a15.
+Install Windows Server 2012 R2 Virtual Machine.
+Change the server name to w12r2a10 and set password to Passworda10.;
+,
+
+Computer name, IP address, subnet mask, preferred DNS
+
+w12r2a10, 172.16.150.10, 255.255.255.0, 172.16.150.10
+
+
+W7a15, 172.16.150.15, 255.255.255.0, 172.16.150.10
+
+Verify a successful ping of w12r2a10 and w7a15 in both directions.
+
+
+Install AD DS and configure w12r2a10 to host domain kim.com.
+Install and configure AD CS with certificate services with default settings.
+Install and configure Web Server (IIS) role with default settings.
+Display, on w7a15, kim.com homepage by FQDN, http://w12r2a10.kim.com.
+Verify you cannot display securely, on w7a15, kim.com domain homepage by FQDN, https://w12r2a10.kim.com.
+
+
+Go to "Administrative Tools" and click "IIS Manager," on w12r2a10.
+Expand "Sites."
+Click "Default Web Site."
+Double click SSL, in the center pane, to display the SSL Settings menu that has an SSL checkbox and three radio buttons labeled Ignore, Accept, and Require.
+Notice that Require SSL is unchecked and Ignore is selected; these are the default settings after configuring SSL Bindings.
+Verify you cannot display, on w7a15, kim.com domain homepage by FQDN, https://w12r2a10.kim.com.
+Verify that kim-W12R2A10-CA is not listed in "IE Trusted Root Certification Authority."
+Verify that Personal does not have a certificate issued by domain kim.com.
+
+
+Note that for a domain user to request a certificate when using a client that is not a domain member, you must create a special CA site, which is placed in the Sites branch in IIS manager and is given the name certsrv.
+Go to "Administrative Tools" and click "IIS Manager," on w12r2a10.
+Expand w12r2a10 (KIM\...).
+Expand "Sites."
+Click "Default Web Site."
+Notice that certsrv is not listed; therefore, you must add AD CS feature, (CAWE) Role Service.
+
+
+Go to "Server Manager" on w12r2a10.
+Click "Add Roles" and features to display "Add Roles and Features Wizard," before you begin..
+Click Next to display "Select installation type."
+Notice that role-base or feature-base is selected.
+Click Next to display "Select destination server."
+Notice that there is only one server, so there is nothing to select.
+Click Next to display "Select server roles."
+Click the triangle next to ADCS to expand it.
+Click the checkbox next to Certification Authority Web Enrollment (CWE).
+Click "Add Required Role Services," when prompted.
+Click Next, until "Install" is shown.
+Click Install.
+Leave the Installation progress open.
+Hover the progress bar to see when the install completes, 100%.
+
+
+Click Configure ADCS on the destination server to configure the service and display "Credentials."
+Click Next to display "Role Services."
+Click the box next to "Certification Authority Web Enrollment."
+Click Next to display the confirmation page.
+Click Configure.
+Click Close until you are returned to "Server Manager."
+
+,
+
+Expand "Sites" in IIS manager.
+Click "Default Web Site" and notice that certsrv is listed.
+
+
+Log on to w7a15 as maya.
+Go IE and on W7a15.
+Type https://w12r2a10.kim.com/certsrv.
+Click Continue to this website (not recommended) when prompted with "This CA is not trusted."
+Type kim\maya Password01 at the Windows Security prompt.
+Click Request a certificate at the "Microsoft Active Directory Certificate Services - kim-w12r2a10-CA" prompt.
+Click "Advanced Certificate Request."
+Click Create and submit a request to this CA.
+When prompted with Web access confirmation, click Yes.
+Click Submit on "Advanced Certificate Request."
+Click Yes when prompted with Web access confirmation.
+Click Install this certificate.
+Click Install this CA certificate.
+Click when prompted with "Do you want to open or save this file?"
+Click Allow when prompted with "A website wants to open web content…"
+Click Install Certificate when prompted with "Certificate Information."
+Click Next on "Welcome to the Certificate Import Wizard."
+Click on Certificate Store display, the radio button next to "Place all certificates in the following store."
+Click Browse.
+Click Trusted Root Certification Authorities on "Select Certificate Store."
+Click OK.
+Click Yes on "Security Warning."
+Click Next.
+Click Finish.
+Click Yes when prompted with "Security Warning. You are about to install a certificate…"
+Click OK on "Certificate Import Wizard."
+Click OK on "Certificate Information."
+Click Install Certificate on "Certificate Issued."
+Terminate IE when your new certificate has been successfully installed.
+,
+
+View Issued Certificates, on w12r2a10, and notice that the Requester Name for this newly acquired certificate is KIM\maya.
+
+
+Change the IE homepage on w7a15 to point to https://w12r2a10.kim.com.
+Terminate IE.
+Start IE and be sure the displayed page is using https, not http.
+
+
+Change the home page to https://w12r2a10.kim.com.
+Verify that user andi cannot display https homepage.
+Log off as user andi.
+
+
+Verify that user maya can still display the https homepage.
+

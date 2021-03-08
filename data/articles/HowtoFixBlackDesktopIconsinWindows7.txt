@@ -1,0 +1,14 @@
+ Right click on the Task Bar and select Start Task Manager. When you have Task Manager opened, click on the Processes tab. Under the tab, locate explorer.exe, right-click on it and chose End Process. Click on End Process in the confirmation dialogue box.;
+, Click on the File menu in the Task Manager and select New Task (Run...). Now type CMD in the box and press ↵ Enter. You will see command prompt window opened.
+ Type the commands in the order listed as following and press ↵ Enter at the end of each command.
+
+
+CD /d %userprofile%\AppData\Local
+DEL IconCache.db /a
+exit
+
+, Now again click on the File menu in Task Manager and select New Task (Run...), type CMD in the box and press ↵ Enter key to open Command Prompt again. Type in the following command in CMD and press ↵ Enter at the end. After entering the below command, you will find your desktop again with fixed icons.
+
+
+explorer.exe
+

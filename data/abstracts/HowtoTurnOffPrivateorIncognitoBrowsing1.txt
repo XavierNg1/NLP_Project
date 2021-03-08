@@ -1,0 +1,30 @@
+
+Consider backing up your PC.
+Go to Google's Chrome policies page.
+Click the Windows and Linux tab.
+Click the "Zip file" link.
+Double-click the policy_templates folder.
+Double-click the Windows folder.
+Double-click admx.
+Scroll down and right-click the "chrome.admx" file.
+Click Copy.
+Open This PC.
+Double-click your hard drive's icon.
+Double-click Windows.
+Scroll down and double-click PolicyDefinitions.
+Right-click an empty space in this folder, then click Paste.
+Switch back to the policy_templates folder.
+Scroll up and double-click en-US.
+Copy the "chrome.adml" file.
+Switch back to This PC.
+Double-click en-US.
+Paste the "chrome.adml" file into en-US.
+Press ⊞ Win+R.
+Type gpedit.msc into Run.
+Press ↵ Enter or click OK. As long as your computer has the Group Policy Editor program installed, doing so will open the program.
+Click the arrow left of Computer Configuration.
+Click the arrow left of Administrative Templates.
+Click Google Chrome.
+Double-click Incognito mode availability.
+Click the drop-down menu under "Options" and select Incognito mode disabled.
+Click OK. At long last, incognito mode should now be disabled on your computer's version of Chrome.

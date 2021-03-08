@@ -1,0 +1,159 @@
+ Inputs for the Review might be the trigger document, such as a Higher Management Order, Terms of Reference Review Exercise (for example, after identified inconsistencies, management proposes an Asset Management Review exercise) and current process documentation. On the average, the time of the Review is one to two months, and performed by two reviewers. The Review resource consumption can vary depending on enterprise size and process complexity. Reviewers can be internal resources (managers, analysts etc); however, using external resources for the Review can be beneficial, because it brings unprejudiced view on the process. In order to identify the outputs, objectives and scope of the Review the “Work package IT Process Review” document can be created. This document might include the following paragraphs:
+
+
+
+“Assignment” paragraph that describes the objective, rationale, theme, key resources, main stakeholders of the Review.
+
+“Timeline” of the Review (start date and draft finalization, final review report date, final presentation deadlines).
+
+“Scope” can be depicted from several perspectives: organizational, geographical, review depth and extend (covering only some of process activities or deliverables), other special perspectives related to the particular process; e.g. for Asset Management, it can be the types of IT assets.
+
+“Reporting” describes what, when and whom to report the review status. Usually, the reviewer has to report to the management or interested staff, e.g. process owner, project manager of capability development project) regarding the status of the Review on weekly or daily basis. The report can have the following structure:
+
+Activities done on this week;
+Activities planned for next week;
+Issues impede the Review (e.g. resistance to provide or no permission to access needed information).
+
+
+
+“Evidences”. It is also useful to point the place where all files related to the Review have to be stored.
+
+“Main activities” of the Review has to described and later included into Review Plan.
+
+“Issue management and Escalation” paragraph has to guide how to maintain the issue log and how to escalate the issues encountered during the Review (e.g. lack of or insufficient collaboration, lack of time, etc)
+
+“Products” will show the list of intermediate/supporting results (Findings, Product Lifecycle, Management reference processes), end results (Review Report, Review Summary or Process Improvement Strategy) and needed approvals of the resulted documents.;
+, Every time, it is useful to have a Review Plan in order to control the pace of the Review. The basic Plan can have the following activities:
+
+, The most common stakeholders of any process are (from most important for the Review):
+
+
+Process owner;
+Business users / External users (e.g. for Asset Management: Finance and Audit dept. representatives);
+Other business supporting teams (e.g. for Asset Management: Logistics, Custodians etc);
+Team Leader (Process Manager);
+IT functions (for example, for Asset Management: Project Managers, Contract Holders, On-Site Support, Service Desk, Technology Management, end users and Change Management, Configuration Management Team, Change Management, Request Management, Security teams);
+Process Team members (Process administrators/analysts);
+Representatives from IT Governance and Controls Teams;
+Representatives from other teams involved into the process;
+Subject matter experts (particularly former managers).
+ Reviewer has to identify key business requirements of the process, that can be provided by business process teams used the IT process (e.g. Finance dept for Asset Management process), driven from legislation, business policy etc.
+ Start to create the level 1 and 2 process flowchart based on current situation (including inputs/outputs and stakeholders of the process) and create product workflow (e.g. asset life cycle that shows the owners of the asset for Asset Management process) in order to keep the real picture of the process and to use them as a references.
+ Process controls can be taken from the Controls Framework (e.g. derived from ISO/IEC 27002 or COBIT) and embedded into the process/product workflow (e.g. asset lifecycle with “ownership” controls for Asset Management process).
+ The Findings can be identified by:
+
+
+Comparing actual process activities to the process documentation;
+Interviewing and analyzing the actual activities performed within the process.
+Analyzing process data quality (e.g. for Asset and Configuration Management process: CMDB).
+
+Common Findings are:
+
+Process model/procedure and work instructions are available but incomplete, not reflecting process requirements and actual activities of the process.
+Roles and responsibilities across the lifecycle are not clearly defined. Also responsibilities across teams are not clearly defined and agreed.
+Ownership is not assured across the lifecycle in terms of formal owner and/or physical ownership.
+Missing controls and labor intensive solutions and manual controls (excel sheets) not guaranteed to be up to date, consistent and complete.
+
+
+
+
+
+Analysis of process documentation. One of the crucial steps of the Review is analysis of documentation related to the process that includes:
+
+Policy Framework;
+Controls Framework;
+Model/Procedures;
+Work instructions;
+KPIs, reports and logs;
+Job Aids, Forms and Templates;
+And so forth.
+ While identifying findings, reviewer interviews stakeholders trying to cover all of them. In order to perform interview successfully, prepare questions prior to the interview organizing questions, by process activities, tasks or findings. Do not forget to make MoMs (Minute of Meetings), especially when it is agreed to provide the information needed for Review. All findings can be confirmed or refined by stakeholders during the interview.
+ Process metrics are needed to show the current state of the process and can be requested from the process team (e.g. for Asset Management process: number of assets, , number of changes per period, purchases by period, number of assets per location, type or movements).
+ Each Finding can have possible solutions that can be provided by the reviewer, main of them are:
+
+
+Review, update and agree process model/procedure and work instructions, Define and agree roles and responsibilities.
+Document and embed all required work instructions.
+Define and embed missing controls. Ensure ownership across the lifecycle by defining and embedding more strict controls.
+Review and clean up registers, journals and databases to reflect current status of the enterprise.
+Automation of the processes.
+Delegate administrative tasks between teams based on updated instructions.
+Formalize existing activities and integration with other processes.
+ Outputs of the process Review are:
+
+, All process errors and inconsistencies identified during the Review have to be kept in special file named as Findings Log (for convenience, it is better to use Excel sheet). Possible structure of the file with columns as follows:
+
+
+
+
+Id – Unique identification of the finding;
+Short – Short title of the finding that has to clearly state the problem. E.g. for Asset Management: The process for disposing an asset is not defined;
+Description – Full description of the finding including evidences and related facts;
+Process Step – E.g. for Asset Management: Order an Asset, Receive an Asset etc.;
+Stakeholders – Stakeholders who are involved into the finding;
+Document – Related process documentation;
+Impact – Impact that can negatively affect the company: Critical, Major, Average, Minor
+Impact Clarification – This column has to prove the impact status;
+Follow up – Steps that are needed to eliminate the findings. E.g. establish the process, update Process Model or update Work Instruction.
+Link to Evidences – All Findings have to be supported by appropriate relevant documented evidences. E.g. process documentation, different databases (for Asset Management, it is Asset Register), filled forms, email correspondence or training register.
+ The essential output of the review is Process Review Report document with the purpose to report of IT Process Review conducted on in some IT organizational structure. The final document has to be reviewed and approved by Team Lead (manager), Process Owner and Process Owner’s Line Manager. Since the document is read by management, it has to be short (20-25 pages) and meaningful as much as possible. The Review Document usually has following structure:
+
+
+
+
+Executive summary. Short description of the purpose of the document, key findings and key recommendations. As the main part of document, it has to be concise (1-2 pages) and comprehensive.
+
+
+Introduction has to include:
+
+The purpose and scope (with “out of scope”) of the Review.
+Intended audience (e.g. leadership teams, business teams)
+Timelines
+Key activities conducted for the Review.
+
+
+Process stakeholders and contacts
+Some statistical information about a process including the source of information.
+Listing of key requirements for the process
+One page report about physical verification if it is conducted, e.g. for Asset and Configuration Management, it can be audit, physical review or inventory.
+The controls applied to the process:
+
+Control Description
+Control appliance state (e.g. for Asset Management, IT asset ownership flow with ownership controls can be provided
+
+
+High level view (Findings can be grouped into 7-10 high-level Findings) on Findings including:
+
+
+
+Title and short description
+Impact
+Impact description
+Possible solutions
+
+
+Relation between findings and review scope in a form of table with scope list as rows and Findings as columns with colored intersections - dark color for close relation, light color for weak one. This can help to view the “weak” places of the process.
+Proposed steps to mitigate the risks and resolve findings
+Annexes
+
+Process documentation
+List of Findings (usually hyperlink to the excel findings).
+ While not a mandatory output of the Review, this may be the Review Summary with the following contents:
+
+
+Purpose and Scope
+Some numbers
+Key requirements
+Physical verification overview
+Controls
+High-level view of findings
+Relation between Findings and Review Scope
+Further steps to do.
+ Another output for of the Review can be the Process Improvement Strategy Presentation made for management and business processes users. This document may include:
+
+
+Main identified problems and possible solutions;
+Current process vs. improved process (describing changes in process flow needed the improvement);
+High-level plan to implement the improvements.
+ After the Process Review Report is agreed by the organization's Leadership Team usually, all identified issues are added as risks into organization's Risk Mitigation Plan. Track them until they are fully eliminated.
+

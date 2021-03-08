@@ -1,0 +1,14 @@
+ Go to the host computer's system properties and select the Remote tab. If Remote Desktop is set up, the box that reads "Allow Users to Connect Remotely" should be checked. If not, check it now. Click the Select Remote Users button, and add which groups of users that can have access to the computer.
+
+
+In most versions of Windows, this will still allow users in the administrator group to access the host computer. If you want to change that, go to the Run box in your Windows Start Menu and enter;
+,, Go to the "Allow log on through Terminal Services" option and remove the administrators selection from the local security settings screen. If you want to allow a specific administrator to access the Remote Desktop Connection, you can always add them through the previous step.
+ While still in the local security settings section, expand the Account Policies tree and choose the Account Lockout Policy folder. This folder has three settings that you can alter--Account Lockout Duration, Account Lockout Threshold, and Reset Account Locked After. The Account Lockout Threshold option is the amount of times a person can enter the wrong password before being locked out. The Account Lockout Duration and the Reset Account options allow you to set how long a user will be locked out from the system after passing the number in the Account Lockout Threshold section. Change these to whatever is appropriate for your system.
+
+
+In order to manually unlock a user who has been locked out, go to Administrative Tools in the Start Menu and select Computer Management. In the Local Users and Groups setting, you can click on an individual user and restore their access by un-checking the Account is Disable box.
+ IP addresses are a unique series of numbers that identifies a computer, and through Windows it is possible to limit the Remote Desktop Connection to only known and trusted IP addresses. To do so, navigate to your Windows Firewall settings through the Windows Control Panel. In the Firewall options, select the Exceptions tab and highlight Remote Desktop. Click the edit button followed by the Change Scope button.
+
+
+This screen gives you the option to limit access to a local network, or create a custom list of IP addresses that are allowed access. Enter the IP addresses and click OK. Your Remote Desktop is now secure.
+

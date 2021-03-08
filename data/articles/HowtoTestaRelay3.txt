@@ -1,0 +1,10 @@
+ When solid-state relays start to short, they will almost always fail. Solid-state relays should be checked with an ohmmeter across the normally open (N.O.) terminals when control power is off.The relays should be open, switched to OL, and closed (0.2 , the internal resistance of the ohmmeter) when control power is applied.
+ You can further confirm that the relay is bad by taking a multi-meter, put it in diode test and checking across A1(+) and A2(-). The meter will apply a small voltage to make the semiconductor conduct and read that voltage on the screen. This will check the (typically NPN) transistor from the base(P) to the... emitter.
+
+
+If its bad, the meter will read 0 or OL, but if the relay is good it will read 0.7 for a silicon transistor (which almost all of them are) or 0.5 for a germanium transistor (which are relatively rare but not unheard of).
+ Solid-state relays are easy to troubleshoot, cheap to replace and last a long time if they stay cool. Typically, new relays come in DIN rail packages and block mountings.
+
+
+There is also a special type of relay called an SCR that comes in two flavors for heating wires and IR lamps and ovens, usually for exquisite process temperature control. This is basically a fast switch on a much faster switch that can turn off and on, which fail often due to temperature fluctuations.
+

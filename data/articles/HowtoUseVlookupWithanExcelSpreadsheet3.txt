@@ -1,0 +1,13 @@
+ You must have at least two columns of information for Vlookup to work, but you can have as many as you need
+
+, In the cell, enter this formula: =VLOOKUP(lookup_value, table_array, col_index_num, range_lookup).
+
+
+You can use any cell to write this is, but remember that whatever cell you choose is entered as the “lookup value” in your function code.
+Refer to the guide above for the information about what each of those values should be. Following our same example of a student list using the aforementioned values, our Vlookup formula would look like this: =VLOOKUP(F3,A2:B32,2,FALSE), Select the cell with your Vlookup code. In the bottom right corner, select the cell handle and drag it to include one or more other cells.
+
+
+This allows you to search using Vlookup, because you must have at least two cells in order to have an input/output of information.
+You can enter the purpose of each cell in an adjacent (but not joined) cell. For example, to the left of the box where you search for a student, you can put “Student Names.”
+
+, To do this, enter the lookup value, as per our example it would be the name of a student, in one of the cells that you included in your Vlookup code. Then, Vlookup should automatically supply you with the grade of said student in the adjoined cell.

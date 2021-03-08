@@ -1,0 +1,38 @@
+;
+, Turn it on when everything works fine.
+
+
+
+Install Loopback Adapter in the host PC
+
+Control Panel -> Device Manager -> Add Hardward -> Loopback Adapter
+Set the parameters of Loopback Adapter as follows (different IP address can be used), the following is an example:-
+
+IP address: 192.168.1.1
+Subnet Mask: 255.255.255.0
+Leave other fields empty.
+
+
+
+
+Set the Network of guest PC to Loopback Adapter: Settings -> Networkings -> Adapter 1-> Microsoft Loopback Adapter and run the guest PC.
+Set IP address for guest PC as follows;-
+
+IP address: 192.168.1.2
+Subnet mask: 255.255.255.0
+Default getaway: 192.168.1.1
+
+
+Ensure that host PC and guest PC can communicate with each other. Test it by ping-ing the IP address from both host and guest PC: -
+
+Command-> ping 192.168.1.2
+Command-> ping 192.168.1.1
+Command-> ping 192.168.0.20 (being the IP address of physical network adapter).
+ After communication between PC has been performed, share the internet connection by: -
+
+
+Right click on the physical network connection that used to connect to the internet: Right click->properties->Sharing Tab-> Check on "Allow internet sharing...". If sharing is successful, Windows Vista will show an icon "Internet getaway connection" in network folder. In Windows XP, an icon "Internet getaway connection" will be shown in connection folder.
+Test internet connection from the guest PC by ping-ing the website (example: ping www.google.com). If guest PC unable to connect to the website, change the URL to IP address of the website (example: ping 72.14.203.147).
+If test is successful when ping-ing using website IP address, change the DNS setting of guest connection by: Right click -> properties-> IPV 4-> Check "Use the following DNS server address" and place in your broadband modem IP address (example: 192.168.0.1) and click Ok.
+If test is failed even though using website IP address, check for other errors.
+

@@ -1,0 +1,18 @@
+
+Decide the type of the pointer (that is, the type of data the pointer will be pointing to).
+Declare the pointer using a syntax like this: data-type * pointer-identifier; where
+
+
+
+data-type is the type you decided in step 1
+
+pointer-identifier is the identifier or name of the pointer variable
+
+,
+Assign the pointer to an initial memory location.
+Whenever you need to extract the data item currently pointed to by the pointer, use the value-at-address operator (*): int x = *i; where i is an integer pointer.
+
+,
+Use the indexing operator on the pointer as if it was an array whenever you want to get a memory location next to the pointer without actually advancing the pointer.
+Use the increment(++), decrement(--), += and -= operators whenever you need to change the current location.
+After you finish using the pointer, if you allocated memory to that pointer, make sure you free the allocated memory using the free() function.

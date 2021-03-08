@@ -1,0 +1,181 @@
+ You can download it by clicking on this link.;
+,
+
+Place the bPermissions.jar into the plugin folder, and run the server so that the files are generated.
+
+
+
+
+
+
+Once the server has fully loaded, type "stop" and close the console.
+
+
+Inside your plugins folder you should now see a new folder called bPermissions.
+
+
+
+
+
+
+Open this folder, and you will see some new files. For now, we will leave these files as they are.
+
+
+
+Open the world folder and you will see a YAML file for each world you have on your server. If you have only the default worlds you will see two files, groups.yml, and users.yml.
+
+
+
+
+
+
+These are the files that we use to create permission groups and assign groups to players.
+
+
+Open the group.yml in notepad. It is usually an empty file in latest version of servers. If you should see two square brackets: []. Delete them so we have an empty file.
+
+
+For this wikiHow, you will be using three groups, player, moderator, and admin. You may choose to have more, or less groups than this.
+
+
+
+
+
+
+Write without quotes, "default: ", and then the name of your default group, mine will be "player". Your first line should look like the line in the image.
+
+
+We can now add the groups to the world file.
+
+
+
+
+
+
+Go to the next line and type groups:
+
+
+
+
+
+
+Then, go to the next line, and add four spaces, making sure you don't add tabs, and no tabs were added automatically. Write the name of your first group. Go to the next line, four spaces, name of second group.
+Repeat until all your groups are listed. They should look similar to the groups in the image.
+
+
+You will now need to add the basic permissions each group will have. With bPermissions, you will be assigning multiple groups to your players.
+
+
+
+
+
+
+Instead of groups of players, it will be, groups of permissions added to your players. Generally, your default group will be a base group. It will contain all the permissions you want every player to have.
+
+
+
+
+
+
+So in your default group, go to the next line, add 4 spaces and add the permission:
+
+
+
+
+
+
+
+- bPermissions.build: This will allow the player to place and break blocks.
+Then, under your admin type group, add the permission:
+
+
+
+- bPermissions.admin
+
+
+
+
+
+
+It should look similar to the image.
+
+
+As the plugin Essentials has a lot of permissions and is quite popular.
+
+
+
+
+
+
+Just like in the previous step, add the permissions you want each group to have. But keep in mind, the permissions should be relevant to the group.
+
+
+
+
+
+
+Here are some permissions for the MOTD, teleporting to spawn, and home / sethome commands to the player group. Kick and ban permissions to the moderator group, and Bukkit server commands to the admin group.
+
+
+
+
+
+
+Your groups.yml should now look similar to the one in the image.
+
+
+
+
+
+
+
+Note: if you have a lot of plugins, you will probably have a lot of permission nodes to add. But, take your time to make sure it is formatted correctly, and no tabs have been added.
+
+
+Now that we have the permissions added, it is a good idea to add the players that will have the bPermissions.admin node to the file. This permission will allow the player to add groups to other players in-game.
+
+
+
+
+
+
+In this example there are three players; Notch, Jeb, and NewGuy.
+
+
+
+
+
+
+Notch is an admin, so he has all three permission groups, meaning, he can do everything a default player can, as well as, what a moderator can, and is able to use the server commands too.
+Jeb, as the moderator has the default player permissions and the moderator permissions.
+Finally, NewGuy has only just joined the server, so he is automatically given the permissions of the default group.
+
+As new players join the server, they will automatically be added to this list.
+Make a new line, type players:
+New line, 4 spaces, add the player name like this: Notch:
+Then, another line, 4 spaces, and add the groups. Repeat for all players you wish to manually add.
+Your groups.yml, should look similar to the image.
+
+Your permissions are now setup. You can save the file and it should work as expected. However, many people like to add a prefix to their name so they know which players are in which groups.
+To do this, you need a chat plugin. The plugin I recommend is bChat.
+
+bChat has just one file, config.yml.
+Open the config.yml and you are able to format the chat for your server. The format that you could use is: format: '+PREFIX +WHITE+NAME: +WHITE+MESSAGE'
+
+,
+To add a prefix to a group we must open up the groups.yml that we added all our permissions to. The prefix is added using a permission.
+The permission is:
+- prefix.priority.prefix
+The priority works like this: The higher the number, the higher the priority.
+For example, we added three groups to the player Notch. Each of those groups could have a permission node for a prefix. So we use the priority to make sure that the prefix for the highest ranking group is used.
+So for the default group we might use a priority of 10, moderator could be 20, and admin 30. Here is an example of a prefix that is the group in square brackets
+- prefix.30.This would produce:
+Notch: message here
+We can also add color to the prefix:
+- prefix.30.+REDThis prefix system is useful as it allows us to use the multi-group system, while still providing a way for per group prefixes.
+Your groups.yml may look similar to the image.
+
+You can use commands to add/remove groups to players, and add/remove permission nodes from groups. The command is:
+/p For example,
+/p global addgroup admin JebAdds the admin group to the player Jeb.
+

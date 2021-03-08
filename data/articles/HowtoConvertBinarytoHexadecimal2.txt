@@ -1,0 +1,128 @@
+ Binary numbers can only be 1 and 0. Hexadecimal numbers can be 0-9, or A-F, since hexadecimal is base-16. You can convert any binary string to hexadecimal (1, 01, 101101, etc.), but you need four numbers to make the conversion (0101→5; 1100→C, etc.). For this lesson, start with the example 1010.
+
+1010
+
+If you don't have 4 digits, add zeros to the front to make it four digits. So, 01 would become 0001., Each of the four numbers signifies a type of number decimal system number. The last digit is the one's place. You will make sense of the rest of the digits in the next step. For now, write a small one above the last digit.1010
+
+
+10101{\displaystyle 1010^{1}}
+
+Note that you are not raising anything to any power -- this is just a way to see what digit means what.
+ These are the rest of your place holders. If you're curious, this is because each digit represents a different power of 2. The first is 23{\displaystyle 2^{3}}, the second 22{\displaystyle 2^{2}}, etc.
+
+1010
+
+
+18041201{\displaystyle 1^{8}0^{4}1^{2}0^{1}}
+
+
+, Luckily, this conversion is easy once you have four numbers and know what they all mean. If you have a one in the first number, you have one eight. If you have a zero in the second column, you have no fours. The third column tells you how many twos, and the second how many ones. So, for our example:1010
+
+
+18041201{\displaystyle 1^{8}0^{4}1^{2}0^{1}}
+
+ 8 0 2 0
+
+
+, Once you have your new hexadecimal numbers, simply add them up.
+
+1010
+
+
+18041201{\displaystyle 1^{8}0^{4}1^{2}0^{1}}
+
+ 8 0 2 0
+
+
+8+0+2+0=10{\displaystyle 8+0+2+0=10}
+
+
+Final answer: The binary number 1010 converts to A in the hexadecimal system.
+ This is so you don't get confused when reading hexadecimal ("is that a 1 and a 5, or a 15?"). Luckily, the system is super easy, since you can't have a hexadecimal number bigger than 15. Simply start the alphabet with 10, so that:
+
+
+10=A{\displaystyle 10=A}
+
+
+11=B{\displaystyle 11=B}
+
+
+12=C{\displaystyle 12=C}
+
+
+13=D{\displaystyle 13=D}
+
+
+14=E{\displaystyle 14=E}
+
+
+15=F{\displaystyle 15=F}
+
+
+, The following examples have answers in white beneath them. To see the work and the answers, highlight the area under the question by clicking and dragging your mouse over it.
+
+ Convert 1 to hexadecimal.
+
+
+Add zeros to get four digits: 0001
+
+
+Find your place holders: 08040211{\displaystyle 0^{8}0^{4}0^{2}1^{1}}
+
+
+Add up the digits: 0+0+0+1=1{\displaystyle 0+0+0+1=1}
+
+
+ Final answer: 1
+
+
+
+ Convert 0101 to hexadecimal.
+
+
+Add zeros to get four digits: 0101
+
+
+Find your place holders: 08140211{\displaystyle 0^{8}1^{4}0^{2}1^{1}}
+
+
+Add up the digits: 0+4+0+1=5{\displaystyle 0+4+0+1=5}
+
+
+ Final answer: 5
+
+
+
+ Convert 1110 to hexadecimal.
+
+
+Add zeros to get four digits: 1110
+
+
+Find your place holders: 18141201{\displaystyle 1^{8}1^{4}1^{2}0^{1}}
+
+
+Add up the digits: 8+4+2+0=14{\displaystyle 8+4+2+0=14}
+
+
+ Final answer: E
+
+
+
+ Convert 0011 to hexadecimal.
+
+
+Add zeros to get four digits: 0011
+
+
+Find your place holders: 18041211{\displaystyle 1^{8}0^{4}1^{2}1^{1}}
+
+
+ Add up the digits: 8+0+2+1=11{\displaystyle 8+0+2+1=11}
+
+
+ Final Answer: B
+
+
+
+

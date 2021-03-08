@@ -1,0 +1,43 @@
+ (x-h)^2 / a^2 + (y-k)^2 / b^2 = 1 or (x-h)^2 / b^2 + (y-k)^2 / a^2 = 1, where a>b. If it's not in standard format, put it in standard format. For example, if given the equation 9(x-2) - 16(y+4) = 144, simply divide both sides by 144 and simplify: 9(x-2)/144 - 16(y+4)/144 = 144/144; then (x-2)/16 - (y+4)/9 = 1 is in standard form.
+, (h,k±a) = (-1,11), (-1,-9) are the coordinates of the vertices. b = sqrt(64) = 8.
+Foci depend on a^2 + b^2 = c^2. 100 + 64 = 164 = c^2 so sqrt(164) = c and sqrt(4*41) = c, so 2*sqrt(41) = c and this  is 12.8062 = c. (h,k±c) is (-1, 13.8062), (-1, -11.8062) are the coordinates of the Foci.
+The asymptotes have slope a/b which = 10/8, or 5/4 when simplified. The asymptotes pass through the Center at point (-1,1). Therefore using the Point-Slope formula for a line, in which y1-y2 = m(x1-x2), and substituting in y for y1, k for y2, x for x1 and h for x2 -- we have:
+Asymptote1: y-1 = 5/4*(x- -1) or y-1 = 5/4x + 5/4 or y = 5/4x + 9/4 as the asymptotic line equation.
+Asymptote2 is found by changing the slope to become negative. Thus we have Asymptote2: y-1 = -5/4(x- -1) or y-1 = -5/4x - 5/4 or y = -5/4x - 1/4 as the equation of the second asymptotic line of the hyperbola.
+ Open a new workbook, save it as ANALYZE A HYPERBOLA and start a new worksheet titled Hyperbola.
+
+Input x into cell A1 and y into cell B1 and Format Cell font red, align center horizontal.
+Select between the A of Column A and the 1 of Row 1 and thus the entire worksheet at upper leftmost corner. Format Cells Number Number Decimal Places 2 and Font Size 9 or 10. Format align center horizontal.
+Look over your figures to see the extent of the hyperbola to guide your x values series. Generally, a value range of ±15 is adequate. Select cell A2 and input -15 and select cell A32, and input 15. Do Edit Fill Series Column Linear Trend OK.
+For the y values of the ellipse, you need to restate the ellipse's formula in terms of what y equals all by itself. Subtract the x term from both sides and arrive at (y-1)^2/100 = 1 + (x+1)^2/64. Multiply both sides by 100 and take the square root to arrive at (y-1)=sqrt(100+100/64*(x+1)^2). Add -1 to both sides and arrive finally at y=sqrt(100+100/64*(x+1)^2) +1. You can simplify 100/64 to 25/16 if you like -- Excel doesn't care much either way. Input that formula to B2 as "=sqrt(100+100/64*(A2+1)^2) +1" where A2 is the X value, and select cell range B2:B32 and Edit Fill Down.
+Notice that all the y values are positive. Clearly, you've only taken half the square roots. Copy A2:A43 to A45 and paste and then sort the column from largest values to smallest. That sets up a continuum with the -15 ending at A64. For the y values, copy the formula in cell B43 and insert a minus sign in front of it so that it reads now " =-SQRT(100+(100/64)*(A34+1)^2)+1" when you copy and paste it into cell B34 down to B64, adjusting the cell reference as it goes. Make a copy of cell B34, place a space in front of it and paste it to C34, then left-align it.
+Make columns C and D 16.17 units wide. Input y of Asymptote1 into cell C1 and y of Asymptote2 into cell D1. Enter into cell C2 the formula w/o quotes "=5/4*A2+9/4" and enter into D2 w/o quotes the formula "=-5/4*A2-1/4". Copy C2:D2 and Paste to C3:D32.
+Select A2:D32 and using the Chart Wizard or the Ribbon, select Charts All/Other, Scatter, Smooth Line Scatter and leave the chart on the Hyperbola worksheet. Add vertical gridlines and stretch the chart until the grid squares are approximate squares.
+Select in the Plot Area of the Chart and do menu item Chart Add Data and in response to the data query, respond with A34:B64. This may not occur correctly, sp just edit the series formula in the formula bar until it reads =SERIES("Hyperbola",Hyperbola!$A$2:$A$64,Hyperbola!$B$2:$B$64,1) and make sure there's an empty data set at A33:B33 and that in menu item Chart Source Data you have Show empty cells as gaps.
+Select cell G1 and enter HYPERBOLA ANALYSIS and make Font Blue, bold, underlined.
+Go to cell G3 and enter (Y-1)^2/100 + (X+1)^2/64 = 1 and format font size 18 bold.
+Go to cell G4 and enter (Y-k)^2/a^2 + (X--h)^2/b^2 = 1 and format font size 18 bold.
+Go to cell G4 and enter y=SQRT(100+(100/64)*(A2+1)^2)+1 and format font size 12 bold.
+Copy cells A1:B1 to cells F6:G6 for the x y headers in red.
+Input the Center (x,y) pair in cells F7:G7 and add the title Center at (h,k) in cell H7. The center is at (-1,1) (input without parentheses).
+Input the Vertices (x,y) pairs in cells F9:G9 and add the title Vertices at (h,y±a) in cell H9. The vertices are at (-1,11) and (-1,-9) (input without parentheses).
+Input the Foci (x,y) pairs in cells F12:G12 and add the title Foci at (h,y±c) in cell H12. The foci are at (-1,13.8602) and (-1,-11.8602) (input without parentheses).
+Input the Asymptote Linear Formulas in cells G15:G16 and add the titles Asymptote1 at H15 and Asymptote2 in H16. The asymptote formulas are y = 5/4 x + 9/4  and y = -5/4 x + 1/4, aligned right.
+Select H7:H16 and make font size 14, bold.
+Go to cell range J11:K15 and align left. Enter to J11 a^2 + b^2 = and enter to K11 c^2. Enter to J12 100+64 = and enter to K12 c^2. Enter to J13 sqrt(164) = and enter to K13 c. Enter to J14 2(sqrt(41) =  and enter to K14 c. Enter to J15 "=2*SQRT(41)", format decimal places 4 and enter to K15 c. Put a border around the whole of J11:K15.
+Select in the Plot Area of the Chart and do menu item Chart Add Data and in response to the data query, respond with the (x,y) pairs you just input. They may not "land correctly" and so require editing in the formula bar -- just edit them until they appear as given above, eg. Series 3 should be "=SERIES("Vertices",Hyperbola!$F$9:$F$10,Hyperbola!$G$9:$G$10,3)" and notice how I've typed in the title "Vertices" at the beginning of the series description -- do that for each series, please, so that they appear correctly in the Legend.
+Format the Vertices with a thin brown line and Size 8 red markers. Format the Center as a large Light Blue Dot and the Foci as Large Black squares.
+Add data labels with both x and y if you prefer, as the chart above demonstrates, though it gets a bit crowded. Use font size 8 or 9.
+Move the Legend to the top of the Chart.
+Copy the Chart and Data with Grabber and save paste to a Paster worksheet to save your work and then save the workbook.
+
+
+
+
+ Hyperbola's Facts
+
+
+
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

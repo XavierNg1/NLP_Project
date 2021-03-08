@@ -1,0 +1,29 @@
+ This will open Skype's Options menu, where you'll be checking what playback device is selected.;
+, You'll see options for your microphone and speakers on the right.
+ This should be the port that your speakers or headphones are plugged into. It should typically be the "Speakers" option.
+ This can help you determine if you've selected the correct playback device.
+ If your regular playback device is located lower on the list, move it to the top so that it is chosen as the default., If you've selected the correct device and it's still not working, try unplugging your speakers or headset and then plugging it back in. Oftentimes, this will cause Skype to re-detect the device. Make sure that the "Automatically adjust speaker settings" box is checked before plugging it back in.
+ Oftentimes, a simple reboot will solve the problem that you're having. If rebooting doesn't work, try the more advanced fixes in the next section.
+ Open the Start menu or screen and type "mmsys.cpl". This will launch the Sound panel. In the "Playback" tab, find your speakers or headset and then click the "Set Default" button. Try Skype again to see if it is working now. If it isn't, read on.
+ Press ⊞ Win+R and type "devmgmt.msc". This will launch the Device Manager, which lists all of your installed hardware.
+ This will display all of the sound adapters installed on your device. You may have multiple sound devices listed here.
+ Select "Search automatically for updated driver software" to have Windows find the latest version online. The "driver" is the software that controls your hardware. Updating the driver can help fix issues with it not working in Skype.If Windows finds an updated version, follow the prompts to install it and then test your speakers in Skype again.
+ If updating the drivers doesn't fix your problem, turning the card off and then back on may fix it.
+
+
+Right-click on the hardware in Device Manager and select "Disable". Confirm that you want to turn it off.
+Once it's disabled, right-click it again and select "Enable". This will turn it back on. Try Skype again to see if it's working.
+ Windows includes a troubleshooting utility for your audio hardware. This utility will scan for errors and attempt to fix them.
+
+
+Open the Start menu or screen and type "troubleshooting". Select "Troubleshooting" from the list of results.
+Click the "Troubleshoot audio playback" link. You'll be prompted for the administrator password if you aren't logged in with an administrator account.
+Follow the prompts to run the troubleshooter. It will scan your audio software and hardware, and attempt to fix any problems that it finds.
+ If all else fails, reinstalling Skype may solve your problem. This will ensure that you have the latest version of Skype installed and that there are not any corrupt configuration files.
+
+
+Open Skype and click the Contacts menu. Select "Advanced" → "Backup Contacts to File". This will create a backup of your contacts list so that you don't lose it when you uninstall.
+Open the Control Panel and select "Uninstall a program", or "Programs and Features". Find Skype in the list and click "Uninstall".
+Visit skype.com and download the installer for the latest version of Skype.
+Restore your contacts by opening the Contacts menu and select "Advanced" → "Restore Contacts from File".
+

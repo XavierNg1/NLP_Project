@@ -1,0 +1,82 @@
+ Exponential decay occurs in a general exponential function f(x)=ax,{\displaystyle f(x)=a^{x},} where |a|<1.{\displaystyle |a|<1.}
+
+In other words, as x{\displaystyle x} increases, f(x){\displaystyle f(x)} decreases and approaches zero. This is exactly the type of relation we want to describe half-life. In this case, we want a=12,{\displaystyle a={\frac {1}{2}},} so that we have the relationship f(x+1)=12f(x).{\displaystyle f(x+1)={\frac {1}{2}}f(x).}
+;
+, Of course, our function does not depend on generic variable x,{\displaystyle x,} but time t.{\displaystyle t.}
+
+
+f(t)=(12)t{\displaystyle f(t)=\left({\frac {1}{2}}\right)^{t}}
+
+Simply replacing the variable doesn't tell us everything, though. We still have to account for the actual half-life, which is, for our purposes, a constant. 
+
+We could then add the half-life t1/2{\displaystyle t_{1/2}} into the exponent, but we need to be careful about how we do this. Another property of exponential functions in physics is that the exponent must be dimensionless. Since we know that the amount of substance depends on time, we must then divide by the half-life, which is measured in units of time as well, to obtain a dimensionless quantity.
+
+Doing so also implies that t1/2{\displaystyle t_{1/2}} and t{\displaystyle t} be measured in the same units as well. As such, we obtain the function below.
+
+
+f(t)=(12)tt1/2{\displaystyle f(t)=\left({\frac {1}{2}}\right)^{\frac {t}{t_{1/2}}}}
+
+
+, Of course, our function f(t){\displaystyle f(t)} as it stands is only a relative function that measures the amount of substance left after a given time as a percentage of the initial amount. All we need to do is to add the initial quantity N0.{\displaystyle N_{0}.} Now, we have the formula for the half-life of a substance.
+
+
+N(t)=N0(12)tt1/2{\displaystyle N(t)=N_{0}\left({\frac {1}{2}}\right)^{\frac {t}{t_{1/2}}}}
+
+
+, In principle, the above formula describes all the variables we need. But suppose we encountered an unknown radioactive substance. It is easy to directly measure the mass before and after an elapsed time, but not its half-life. So let's express half-life in terms of the other measured (known) variables. Nothing new is being expressed by doing this; rather, it is a matter of convenience. Below, we walk through the process one step at a time.
+
+Divide both sides by initial amount N0.{\displaystyle N_{0}.}
+
+
+N(t)N0=(12)tt1/2{\displaystyle {\frac {N(t)}{N_{0}}}=\left({\frac {1}{2}}\right)^{\frac {t}{t_{1/2}}}}
+
+
+
+Take the logarithm, base 12,{\displaystyle {\frac {1}{2}},} of both sides. This brings down the exponent.
+
+
+log1/2(N(t)N0)=tt1/2{\displaystyle \log _{1/2}\left({\frac {N(t)}{N_{0}}}\right)={\frac {t}{t_{1/2}}}}
+
+
+
+Multiply both sides by t1/2{\displaystyle t_{1/2}} and divide both sides by the entire left side to solve for half-life. Since there are logarithms in the final expression, you'll probably need a calculator to solve half-life problems.
+
+
+t1/2=tlog1/2(N(t)N0){\displaystyle t_{1/2}={\frac {t}{\log _{1/2}\left({\frac {N(t)}{N_{0}}}\right)}}} 
+
+
+
+
+, 300 g of an unknown radioactive substance decays to 112 g after 180 seconds. What is the half life of this substance?
+
+
+Solution: we know the initial amount N0=300 g,{\displaystyle N_{0}=300{\rm {\ g}},} final amount N=112 g,{\displaystyle N=112{\rm {\ g}},} and elapsed time t=180 s.{\displaystyle t=180{\rm {\ s}}.}
+
+Recall the half-life formula t1/2=tlog1/2(N(t)N0).{\displaystyle t_{1/2}={\frac {t}{\log _{1/2}\left({\frac {N(t)}{N_{0}}}\right)}}.} Half-life is already isolate, so simply substitute and evaluate. 
+
+
+t1/2=180 slog1/2(112 g300 g)≈127 s{\displaystyle {\begin{aligned}t_{1/2}&={\frac {180{\rm {\ s}}}{\log _{1/2}\left({\frac {112{\rm {\ g}}}{300{\rm {\ g}}}}\right)}}\\&\approx 127{\rm {\ s}}\end{aligned}}}
+
+
+
+Check to see if the solution makes sense. Since 112 g is less than half of 300 g, at least one half-life must have elapsed. Our answer checks out.
+ A nuclear reactor produces 20 kg of uranium-232. If the half-life of uranium-232 is about 70 years, how long will it take to decay to 0.1 kg?
+
+
+Solution: We know the initial amount N0=20 kg,{\displaystyle N_{0}=20{\rm {\ kg}},} final amount N=0.1 kg,{\displaystyle N=0.1{\rm {\ kg}},} and the the half-life of uranium-232 t1/2=70 years.{\displaystyle t_{1/2}=70{\rm {\ years}}.}
+
+Rewrite the half-life formula to solve for time. 
+
+
+t=(t1/2)log1/2(N(t)N0){\displaystyle t=(t_{1/2})\log _{1/2}\left({\frac {N(t)}{N_{0}}}\right)}
+
+
+
+Substitute and evaluate.
+
+
+t=(70 years)log1/2(0.1 kg20 kg)≈535 years{\displaystyle {\begin{aligned}t&=(70{\rm {\ years}})\log _{1/2}\left({\frac {0.1{\rm {\ kg}}}{20{\rm {\ kg}}}}\right)\\&\approx 535{\rm {\ years}}\end{aligned}}}
+
+Remember to check your solution intuitively to see if it makes sense. 
+
+

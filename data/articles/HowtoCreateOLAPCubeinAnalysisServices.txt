@@ -1,0 +1,32 @@
+ Create car_transactions database. Open SQL Server Management Studio and execute the command CREATE DATABASE car_transactions;;
+,, Open SQL Server Management Studio and insert records into the tables.
+ Open SQL Server Management Studio. In Object Explorer, right-click the Logins folder and select New Login. Type login name. Select SQL Server authentication. Type and confirm password. Our password is simply. We clear Enforce password policy option. Select default database. Click Server Roles.tab and Select the appropriate role. Click OK.
+ On the Microsoft Windows task bar, click Start, point to All Programs, expand the Microsoft SQL Server xxxx folder, and then select SQL Server Business Intelligence Development Studio.
+
+
+On the File menu, point to New and then select Project. Name your project. The text in the Solution Name box changes automatically to match the project name. If you want select Create Directory for Solution and change the solution name. Click OK to create the project.
+ The first task in creating an Analysis Services project is to create a data source. The data source contains the information that Analysis Services uses to connect to the source database. It contains the data provider name, the server and database name, and the authentication credentials that Analysis Services will use.
+
+
+In BIDS in Solution Explorer, right-click the Data Sources folder and select New Data Source. The Data Source Wizard appears. On the Welcome page, click Next. On the Select How To Define The Connection page, click the New button. The Connection Manager dialog box appears.
+Type a server name: localhost. In the Select Or Enter A Database Name list box, select car_transactions. Click Test Connection. A dialog box opens with the message “Test connection succeeded.”. Click OK. Click OK to close the Connection Manager dialog box. In the Data Source Wizard, on the Select How To Define The Connection page, click Next. On the Impersonation Information page, select Use The Service Account and click Next. Click Finish to complete the wizard.
+Now that you have created a data source, you are ready to create a data source view.
+ A data source view is a logical data model that exists between your physical source database and Analysis Services dimensions and cubes.
+
+
+When you create a data source view, you designate the tables and views in the source database that contain data that you want to use to build dimensions and cubes.
+In Solution Explorer, right-click the Data Source Views folder and select New Data Source View. The Data Source View Wizard appears. On the Welcome page, click Next.
+On the Select a Data Source page, select the car_transactions relational data source and click Next. Select dimensions and facts tables and then click Add Related Tables and Click Next. Accept the default name and click Finish. The Data Source View designer appears, displaying the tables you selected.
+ Creating a customer dimension: In Solution Explorer, right-click the Dimensions folder and select New Dimension. On the Welcome to the Dimension Wizard page, click Next. Verify that Use An Existing Table is selected and click Next.
+
+
+Select Customers from the Main Table list. Select Surname from the Name Column list and then click Next. Verify that the Cities and Countries tables are selected and click Next. From the Available Attributes list, select all attributes and click Next.
+On the Completing The Wizard page, type dimension name and click Finish. Drag the Country attribute from the Attributes pane and drop to Hierarchies pane. Drag the City and Cust ID attribute from the Attributes pane and drop it on <new level>. In the Hierarchies pane, right-click the new hierarchy header and select Rename. Type Country Customers Hierarchy and press Enter.
+In Object Explorer, right-click the Customers dimension, and select Process. Then click Yes. In the Process Dimension dialog box, click Run. In the Process Progress dialog box, click Close. Now that the Customers dimension has been built. You can preview the dimension - click Browser tab. Create another dimension: salesmen, cars and time.
+ In Solution Explorer, right-click the Cubes folder and select New Cube. On the Welcome To The Cube Wizard page, click Next. Verify that Use Existing Tables is selected and click Next.
+
+
+In the Measure Group Tables list, select the Transactions_facts_table and click Next. The Select Measures page lists the measure groups and measures that the wizard will create. Click Next. On the Select Existing Dimensions page, verify that the Customers, Cars and Salesmen dimensions are selected. Click Next.
+On the Completing The Wizard page, type the name of the cube and click Finish. The Cube Designer appears, displaying the structure of the Car transactions cube.
+In the Dimensions, right-click and select Add Cube Dimension. In the Add Cube Dimension, select Time and click OK. In the Cube Designer, click the Dimension Usage tab. Select the cell in the grid at the intersection of the Time dimension and the Transactions Cars Facts measure group. Click the ellipsis button. Choose Regular type. Choose Date. Create the relationship between Date column (Time dimension) and SalesDate column (facts table). Choose SalesDate. In Solution Explorer, right-click the Car Transactions cube and select Process Cube. Click Run to process cube. Select Browser tab to preview cube.
+

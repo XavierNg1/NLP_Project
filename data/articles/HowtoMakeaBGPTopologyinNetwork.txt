@@ -1,0 +1,52 @@
+, And the aim to configure BGP in devices and make a BGP topology out of this.
+,,
+
+
+Sample Configuration for configuring bgp in one device (125.62.173.139) with neighbors (125.62.174.253, 125.62.174.254) having address-family ipv4 and vpnv4
+
+router bgp 65112
+bgp router-id 125.62.173.139
+no bgp default ipv4-unicast
+bgp log-neighbor-changes
+bgp graceful-restart restart-time 120
+bgp graceful-restart stalepath-time 360
+bgp graceful-restart
+neighbor IBGP_PEERS peer-group
+neighbor IBGP_PEERS remote-as 65112
+neighbor IBGP_PEERS update-source Loopback0
+neighbor MPBGP_PEERS peer-group
+neighbor MPBGP_PEERS remote-as 65112
+neighbor MPBGP_PEERS update-source Loopback1
+neighbor 125.62.173.253 remote-as 65112
+neighbor 125.62.173.253 peer-group IBGP_PEERS
+neighbor 125.62.173.254 remote-as 65112
+neighbor 125.62.173.254 peer-group IBGP_PEERS
+neighbor 125.62.174.253 remote-as 65112
+neighbor 125.62.174.253 peer-group MPBGP_PEERS
+neighbor 125.62.174.254 remote-as 65112
+neighbor 125.62.174.254 peer-group MPBGP_PEERS
+ !
+address-family ipv4
+neighbor IBGP_PEERS send-label
+neighbor 125.62.173.253 activate
+neighbor 125.62.173.254 activate
+no auto-summary
+no synchronization
+exit-address-family
+ !
+address-family vpnv4
+neighbor MPBGP_PEERS send-community extended
+neighbor 125.62.174.253 activate
+neighbor 125.62.174.254 activate
+exit-address-family
+ !
+
+
+
+,,
+
+
+blue ->RR
+Yellow -->NPE
+Gree -->AGG
+

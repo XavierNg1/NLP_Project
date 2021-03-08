@@ -1,0 +1,64 @@
+;
+,
+
+
+
+Sample Macro Using If...Then...Else Statement
+
+Sub Using_IF()
+Dimension the variable.
+Dim x As Integer
+' Place a value in x.
+x = Int(Rnd * 2000)
+' Test to see if x less than or equal to 10.
+If x <= 10 Then
+' Display a message box.
+MsgBox "X is <=10"
+' Test to see if x less than or equal to 100 and greater than 10.
+ElseIf x <= 100 And x > 10 Then
+MsgBox "X is <=100 and > 10"
+' Test to see if x less than or equal to 1000 and greater than 100.
+ElseIf x <= 1000 And x > 100 Then
+MsgBox "X is <=1000 and > 100"
+' Test to see if x less than or equal to 2000 and greater than 1000.
+ElseIf x <= 2000 And x > 1000 Then
+MsgBox "X is <= 2000 and > 1000"
+If none of the above tests returned true.
+Else
+MsgBox "X does not fall within the range"
+End If
+End Sub
+
+
+
+Sample Macro Using Select Case Statement
+
+Sub Using_Case()
+' Dimension the variable.
+Dim x As Integer
+' Place a value in x.
+x = Int(Rnd * 2000)
+' Start the Select Case structure.
+Select Case x
+' Test to see if x less than or equal to 10.
+Case Is <= 10
+' Display a message box.
+MsgBox "X is <=10"
+' Test to see if x less than or equal to 100 and greater than 10.
+Case 11 To 100
+MsgBox "X is <=100 and > 10"
+' Test to see if x less than or equal to 1000 and greater than 100.
+Case 101 To 1000
+MsgBox "X is <=1000 and > 100"
+' Test to see if x less than or equal to 2000 and greater than 1000.
+Case 1001 To 2000
+MsgBox "X is <= 2000 and > 1000"
+' If none of the above tests returned true.
+Case Else
+MsgBox "X does not fall within the range"
+End Select
+End Sub
+
+
+
+, You can use Excel to accomplish this if you like.,, Paste the REPLACE(d) ALL code into the new module that pops up and separate the two macros with a single return line.,

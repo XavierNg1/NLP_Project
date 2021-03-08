@@ -1,0 +1,66 @@
+,,, Save the workbook into a logical file folder.;
+,
+
+
+Enter On=0,Off=1 cell A4 = 1
+NEW: Enter Spirallic YN into cell A5 and N into cell A6. Insert Name Define Name Spirallic_YN for cell $A$6.
+Enter Adjuster = 1 in cell B1.
+Enter TURNS = 1 in cell B2.
+Enter AdjRows = 1440 in cell B3.
+Enter t = -308,160 in cell B4.
+Enter S's Count = 1 in cell C1.
+Enter Designer =VLOOKUP(S_COUNT,SPHEROIDS_COUNT_LOOKER,2) in cell C2.
+Enter Var = 12 in cell C3.
+Enter Cc =-0.25*PI()/C3 in cell C4.
+Enter db = 4.5 in cell C5.
+Enter Divisor = 40,571,226,658.4877 in cell D2.
+Enter AAA = 0 in cell D3.
+Enter Factor =IF(E3="Y",IF(ODD(S_COUNT)=S_COUNT,-S_COUNT*0.01,S_COUNT*0.01),-0.25)
+Enter Power = 1 in cell E1.
+NEW: Enter 60 into cell E2 and Format Cell Number Number Custom "(FFF)" 0.000000 with parentheses and quotes. Go to cell AA7 and enter "=E2" and Insert Name Define name FFF to cell $AA$7.
+Enter YN = Y for Part-Cycle in E3.
+Enter YN = Y for Molecules in cell E4 and Insert Name Define Name Molecules to $E$4 or just copy and paste it in there. Enter
+top does not appear on the worksheet. If it did, it would probably do so in cell D1. Store it there now if you prefer.
+G1 GMSL = 0.381966011250105
+G2 GMLL = 0.618033988749895
+H1 = .98 and J1 = .96. H2 Sync1 =H1/GML and J2 Sync2 =J1/GMSL.
+
+
+
+Enter Series 1 to PI into cell L5 and SPIRALLIC into L6, formatted underlined, bold, centered.
+Select L7:L1447 and Edit Clear Contents.
+Enter 1 into cell L7 and =PI() into cell L1447 via shift+tab. Then do tab to take it back to top of the selected range, L7:L1447.
+Do Edit Fill Series Columns Linear Step=accept proposed value or hit Trend if it stays on 1, OK.
+Insert Name Define Name SPIRALLIC to cell range L7:L1447.
+
+
+
+The long formula in cells A7:A1447 has apparently not changed.
+Check that the formula in cell B7 is =IF(EVEN(S_COUNT)=S_COUNT,ROUND((-B4*PI())+(Adj),0),0.0000000000001)
+Check that the formulas in cell range B8:B1447 are still =((B7+(-TOP*2)/(AdjRows)))*$B$1
+Check that the formula in C7 is =ROUND(-EXP((PI()^2)+(Cc*-(db))),0)+Designer
+Check that the formulas in cell range C8:C1447 are still =C7 (i.e. relatively equivalent).
+Check the formulas in D7:D1447 are =(X7/IF(Divisor=0,S_COUNT,Divisor)+(IF(COS((ROW()-7)*PI()/180*Factor)<0,ABS(COS((ROW()-7)*PI()/180*Factor))^Power*-1,COS((ROW()-7)*PI()/180*Factor)^Power)*IF(AAA=1,0,1)) +IF(AAA=0,0,AB7*IF(MOLECULES="Y",Factor,1))^Power)
+Check the formulas in E7:E1447 are =(Y7/IF(Divisor=0,S_COUNT,Divisor)+(IF(SIN((ROW()-7)*PI()/180*Factor)<0,ABS(SIN((ROW()-7)*PI()/180*Factor))^Power*-1,SIN((ROW()-7)*PI()/180*Factor)^Power)*IF(AAA=1,0,1)) +IF(AAA=0,0,AC7*IF(MOLECULES="Y",Factor,1))^Power)
+NEW: Enter the formula into cell range F7:F1447 =IF(A7=0,F6,((PI())*((SIN(B7/(C7*2))*GMLL*COS(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+D7)))*IF(Spirallic_YN="Y",SPIRALLIC,1) and Edit Fill Down.
+NEW: Enter the formula into cell range G7:G1447 =IF(A7=0,G6,((PI())*((SIN(B7/(C7*2))*GMLL*SIN(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+E7)))*IF(Spirallic_YN="Y",SPIRALLIC,1) and Edit Fill Down.
+Check the formula in H7 is =F7*GMLL*Sync1
+Check the formula in I7 is =G7*GMLL*Sync1
+Check the formula in J7 is =F7*GMSL*Sync2
+Check the formula in K7 is =G7*GMSL*Sync2
+The lookup tables have not changed, except for the following, perhaps:
+Check the value in cell U4, ADJ_Y is 0.141592653589793
+The value in FFF, cell AA7, should read 60.
+NEW? Under Radius in column Z  are variable amounts. The formula in cell Z7 is =ROUND(((X7-V7)^2+(Y7-W7)^2)^0.5,4) and this is relatively the same in Z8 and Z1447.
+Check for errors. If there are any, there are none in the example workbook. Please see the Warnings section below for help, if and as needed.
+
+
+
+Edit Go To cell range F7:G1447 and, using either the Chart Wizard or the Ribbon, select Charts, All/Other, Scatter-Smoothed Line Scatter. A chart will appear atop the data unless using Chart Wizard, in which case a new Chart sheet will appear.
+Assuming the former case, Copy or Cut the chart from atop the data and paste it to the Chart worksheet, then expand it by hovering over the lower right corner until the cursor becomes a double-headed arrow and clicking to drag the Chart Area until about a 6" wide by 4" tall rectangle is formed.
+Using Chart Layout, select the Horizontal Axis and set Minimum to 2.72, Maximum to 3.5, Major unit to 1.5. Minor unit to 1.5 and Vertical Axis crosses at 2.72, in Base 10, OK.
+Using Chart Layout, select the Vertical Axis and set Minimum to -.85, Maximum to .07 Major unit to 1.5. Minor unit to .3 and Vertical Axis crosses at 0.0, in Base 10, OK. There is a slight skew to the chart but it's pretty good as spheres go. It's done according to Min Max row formulas at the bottom of columns F and G kept there for just such an occasion.
+The axes may now be safely eliminated (unless it's felt a better job can be done to eliminate the slight skew), as well as any grid lines and legend. A printer is not hooked up to this computer and the older computer cannot read the newer Excel files, so, for now, it's difficult to check with a compass and see if my eyes are telling me it's as nearly a circle as I think. It looks just slightly skewed to the lower left to me but it's such a small discrepancy, I can live with it.
+
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

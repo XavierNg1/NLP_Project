@@ -1,0 +1,28 @@
+ Open the HTML file for the page you would like to edit. (If you're starting from scratch and need some background info, create the document before reading this article.);
+, Add the following code to the body of your HTML document, where you would like the link to appear:
+
+
+<a href="https://www.wikihow.com/">Link text</a>
+This displays like this: Link text.
+ Anything in between the <a> and </a> tags will appear on your page as a link. You can alter this with other html tags just as you would any other text.
+
+
+You can also turn an image into a link:<a href="https://www.wikihow.com/"><img src="wikihow_logo.png"></a>.
+The user will see the image wikihow_logo.png, and can click the image to visit https://www.wikihow.com/.
+ The <a></a> tag you just created is called an "anchor." The href attribute inside the anchor defines the destination of the link. Replace https://www.wikihow.com/ in the example above with the URI you would like to link to.
+
+
+Always surround the URI with quotation marks.
+URIs are case sensitive.Copy-paste them or type them in exactly as they appear.
+ You do not need to include a full URL if you are linking to a page on the same website (although it will work). It's easier to keep your website organized if you use relative links instead, without including the domain name. Here's a simple example linking from one page to another in the same folder:
+
+
+Let's say you're editing the page http://example.edu/about/author.html.
+To link to the page http://example.edu/about/family.html, just type the file name:<a href="family.html">Link text</a>
+
+
+, You can also use relative links to direct the link to any other page on the same site. There are only two things you need to know:To link to a page in a subfolder, include the new file path. For example, if you're on the page http://example.edu/about/author.html and want to link to http://example.edu/about/pets/dog.jpg, you can skip everything up to "about:"<a href="/pets/dog.jpg">Link text</a>
+
+To link to a page in a different branch of the site, use "../" to move up to a higher folder. For example, to link from /about/author.html to http://example.edu/writing/books.html, type:<a href="../writing/books.html">Link text</a>
+
+

@@ -1,0 +1,119 @@
+ In order to get a unique solution for each variable in a linear system using a matrix, you need to have as many equations as the number of variables that you are trying to solve. For example, with variables x, y and z, you would need three equations. If you have four variables, you need four equations.
+
+
+If you have fewer equations than the number of variables, you will be able to learn some limiting information about the variables (such as x = 3y and y = 2z), but you cannot get a precise solution. For this article, we will be working toward getting a unique solution only.;
+, Before you can transfer information from the equations into matrix form, first write each equation in standard form. The standard form for a linear equation is Ax+By+Cz=D, where the capital letters are the coefficients (numbers), and the last number - in this example, D - is on the right side of the equals sign.
+
+
+If you have more variables, you will just continue the line as long as necessary. For example, if you are trying to solve a system with six variables, your standard form would look like Au+Bv+Cw+Dx+Ey+Fz =G. For this article, we will focus on systems with only three variables. Solving a larger system is exactly the same, but just takes more time and more steps.
+Note that in standard form, the operations between the terms is always addition. If your equation has subtraction instead of addition, you will need to work with this later my making your coefficient negative. If it helps you remember, you can rewrite the equation and make the operation addition and the coefficient negative. For example, you can rewrite the equation 3x-2y+4z=1 as 3x+(-2y)+4z=1.
+ A matrix is a group of numbers, arranged in a block-looking format, that we will work with to solve the system. It actually carries the same data as the equations themselves, but in a simpler format. To create the matrix from your equations in standard form, just copy the coefficients and result of each equation into a single row, and stack those rows one on top of each other.
+
+
+For example, suppose you have a system that consists of the three equations 3x+y-z=9, 2x-2y+z=-3, and x+y+z=7. The top row of your matrix will contain the numbers 3,1,-1,9, since these are the coefficients and solution of the first equation. Note that any variable that has no coefficient showing is assumed to have a coefficient of 1. The second row of the matrix will be 2,-2,1,-3, and the third row will be 1,1,1,7.
+Be sure to align the x-coefficients in the first column, the y-coefficients in the second, the z-coefficients in the third, and the solution terms in the fourth. When you finish working with the matrix, these columns will be important in writing your solution.
+ By convention, a matrix is designated with a pair of square brackets, , around the entire block of numbers. The brackets do not factor into the solution in any way, but they do illustrate that you are working with matrices. A matrix can consist of any number of rows and columns. As we work through this article, we will use brackets around terms in a row to help join them.
+ In working with matrices, it is common convention to refer to the rows by the abbreviation R and the columns with the abbreviation C. You can use numbers together with these letters to indicate a specific row or column. For example, to indicate Row 1 of a matrix, you can write R1. Row 2 would be R2.
+
+
+You can indicate any specific position in a matrix by using a combination of R and C. For example, to pinpoint the term in the second row, third column, you could call it R2C3.
+ Before you begin doing any work to solve your system of equations, you should recognize what you will be trying to do with the matrix. Right now, you have a matrix that looks like this:
+
+
+3 1 -1 9
+2 -2 1 -3
+1 1 1 7
+You will be working with some basic operations to create the “solution matrix.” The solution matrix will look like this:
+1 0 0 x
+0 1 0 y
+0 0 1 z
+Notice that the matrix consists of 1’s in a diagonal line with 0’s in all other spaces, except the fourth column. The numbers in the fourth column will be your solution for the variables x, y and z.
+ The first tool at your disposal for solving a system using a matrix is scalar multiplication. This is simply a term that means you will be multiplying the items in a row of the matrix by a constant number (not a variable). When you use scalar multiplication, you must remember to multiply every term of the entire row by whatever number you select. If you forget and only multiply the first term, you will ruin the entire solution. You are not required, however, to multiply the entire matrix at the same time. You are only working on one row at a time with scalar multiplication.
+
+
+It is common to use fractions in scalar multiplication, because you often want to create that diagonal row of 1s. Get used to working with fractions. It will also be easier, for most steps in solving the matrix, to be able to write your fractions in improper form, and then convert them back to mixed numbers for the final solution. Therefore, the number 1 2/3 is easier to work with if you write it as 5/3.
+For example, the first row (R1) of our sample problem begins with the terms . The solution matrix should contain a 1 in the first position of the first row. In order to “change” our 3 into a 1, we can multiply the entire row by 1/3. Doing this will create the new R1 of .
+Be careful to keep any negative signs where they belong.
+ The second tool you can use is to add or subtract any two rows of the matrix. In order to create the 0 terms in your solution matrix, you will need to add or subtract numbers that get you to 0. For example, if R1 of a matrix is and R2 is , you can subtract the first row from the second row and create the new row of , because 1-1=0 (first column), 3-4=-1 (second column), 5-3=2 (third column), and 8-2=6 (fourth column). When you perform a row-addition or row-subtraction, rewrite your new result in place of the row you started with. In this case, we would take out row 2 and insert the new row .
+
+
+You can use some shorthand and indicate this operation as R2-R1=.
+Recognize that adding and subtracting are merely opposite forms of the same operation. You can either think of adding two numbers or subtracting the opposite. For example, if you begin with the simple equation 3-3=0, you could consider this instead as an addition problem of 3+(-3)=0. The result is the same. This seems basic, but it is sometimes easier to think of a problem in one form or the other. Just keep track of your negative signs.
+ You cannot expect the terms always to match so you can use simple addition or subtraction to create 0s in your matrix. More often, you will need to add (or subtract) a multiple of another row. To do this, you perform the scalar multiplication first, then add that result to the target row that you are trying to change.
+
+
+Suppose you have a Row 1 of and a Row 2 of . You want to create a 0 term in the first column of R2. That is, you want to change the 2 into a 0. To do this, you need to subtract a 2. You can get a 2 by first multiplying Row 1 by the scalar multiplication 2, and then subtract the first row from the second row. In shorthand, you can think of this as R2-2*R1. First multiply R1 by 2 to get . Then subtract this from R2 to get . Simplify this and your new R2 will be .
+ As you work with the matrix, you will be changing a single row at a time, either through scalar multiplication, row-addition or row-subtraction, or a combination step. When you change the one row, make sure to copy the other rows of your matrix in their original form.
+
+
+A common mistake occurs when conducting a combined multiplication and addition step in one move. Suppose, for example, you need to subtract double R1 from R2. When you multiply R1 by 2 to do this step, remember that you are not changing R1 in the matrix. You are only doing the multiplication to change R2. Copy R1 first in its original form, then make the change to R2.
+ To solve your system, you will work in a very organized pattern, essentially “solving” one term of the matrix at a time. The order for a three-variable matrix will begin as follows:
+
+
+1. Create a 1 in the first row, first column (R1C1).
+2. Create a 0 in the second row, first column (R2C1).
+3. Create a 1 in the second row, second column (R2C2).
+4. Create a 0 in the third row, first column (R3C1).
+5. Create a 0 in the third row, second column (R3C2).
+6. Create 1 in the third row, third column (R3C3).
+ At this point, if you have done the steps correctly, you are halfway to the solution. You should have the diagonal line of 1’s, with 0’s beneath them. The numbers in the fourth column are really irrelevant at this point. Now you will work your way back up to the top as follows:
+
+
+Create a 0 in the second row, third column (R2C3).
+Create a 0 in first row, third column (R1C3).
+Create a 0 in the first row, second column (R1C2).
+ If your work is correct, you will have created the solution matrix with 1’s in a diagonal line of R1C1, R2C2, R3C3 and 0’s in the other positions of the first three columns. The numbers in the fourth column are the solutions to your linear system.
+ To practice these steps, begin with the sample we used before: 3x+y-z=9, 2x-2y+z=-3, and x+y+z=7. When you write this into a matrix, you will have R1= , R2=, and R3=.
+ Notice that R1 currently begins with a 3. You need to change it into a 1. You can do this by scalar multiplication, by multiplying all four terms of R1 by 1/3. In shorthand, you can note this as R1*1/3. This will give a new result for R1 as R1=. Copy R2 and R2, unchanged, as R2=and R3=.
+
+
+Notice that multiplication and division are merely inverse functions of each other. We can say we are multiplying by 1/3 or dividing by 3, and the result is the same.
+ Currently, R2=. To move closer to the solution matrix, you need to change the first term from a 2 to a 0. You can do this by subtracting twice the value of R1, since R1 begins with a 1. In shorthand, the operation is R2-2*R1. Remember, you are not changing R1, but just working with it. So first, copy R1 as R1=. Then, when you double each term of R1, you will get 2*R1=. Finally, subtract this result from the original R2 to get your new R2. Working through term by term, this subtraction is (2-2), (-2-2/3), (1-(-2/3)), (-3-6). These simplify to give the new R2=. Notice that first term is 0, which was your objective.
+
+
+Copy down the unaffected row 3 as R3=.
+Be very careful with subtracting negative numbers, to make sure you keep the signs correct.
+For now, leave the fractions in their improper forms. This will make later steps of the solution easier. You can simplify fractions in the final step of the problem.
+ To continue forming the diagonal line of 1’s, you need to transform the second term -8/3 into 1. Do this by multiplying the entire row by the reciprocal of that number, which is -3/8. Symbolically, this step is R2*(-3/8). The resulting second row is R2=.
+
+
+Notice that as the left half of the row starts looking like the solution with the 0 and 1, the right half may start looking ugly, with improper fractions. Just carry them along for now.
+Remember to continue copying the unaffected rows, so R1=and R3=.
+ Your focus now moves to the third row, R3=. To create a 0 in the first position, you will need to subtract a 1 from the 1 that is in that position currently. If you look up, there is a 1 in the first position of R1. Therefore, you simply need to subtract R3-R1 to get the result you need. Working term by term, this will be (1-1), (1-1/3), (1-(-1/3)), (7-3). These four mini-problems simplify to give the new R3=.
+
+
+Continue to copy along R1=and R2=. Remember that you only change one row at a time.
+ This value is currently 2/3, but it needs to be transformed into a 0. At first glance, it looks like you might be able to subtract double the R1 values, since the corresponding column of R1 contains a 1/3. However, if you double all the values of R1 and subtract them, you will affect the 0 in the first column of R3, which you do not want to do. This would be taking a step backward in your solution. So you need to work with some combination of R2. If you subtract 2/3 of R2, you will create a 0 in the second column, without affecting the first column. In shorthand notation, this is R3- 2/3*R2. The individual terms become (0-0), (2/3-2/3), (4/3-(-5/3*2/3)), (4-27/8*2/3). Simplifying gives the result R3=.
+ This is a simple step of multiplying by the reciprocal of the number that is there. The current value is 42/24, so you can multiply by 24/42 to create the desired value of 1. Notice that the first two terms are 0’s, so any multiplication will remain 0. The new value of R3=.
+
+
+Notice that the fractions, which appeared quite complicated in the previous step, have already begun to resolve themselves.
+Continue to carry along R1=and R2=.
+Notice that at this point, you have the diagonal of 1’s for your solution matrix. You just need to transform three more items of the matrix into 0’s to find your solution.
+ R2 currently is , with a value of -5/8 in the third column. You need to transform it to a 0. This means conduction some operation involving R3 that will consist of adding 5/8. Because the corresponding third column of R3 is a 1, you need to multiply all of R3 by 5/8 and add the result to R2. In shorthand, this is R2+5/8*R3. Working term by term, this is R2=(0+0), (1+0), (-5/8+5/8), (27/8+5/8). These simplify to R2=.
+
+
+Copy along R1=and R3=.
+ The first row is currently R1=. You need to transform the -1/3 in the third column to a 0, by using some combination of R3. You do not want to use R2, because the 1 in the second column of R2 would affect R1 in the wrong way. So, you will multiply R3*1/3 and then add the result to R1. The notation for this is R1+1/3*R3. Working it out term by term results in R1=(1+0), (1/3+0), (-1/3+1/3), (3+1/3). These simplify to give a new R1=.
+
+
+Copy the unchanged R2=and R3=.
+ If everything has been done properly, this should be your final step. You need to transform the 1/3 in the second column to a 0. You can get this by multiplying R2*1/3 and subtracting. In shorthand, this is R1-1/3*R2. The result is R1=(1-0), (1/3-1/3), (0-0), (10/3-4/3). Simplifying gives the result of R1=.
+ At this point, if all has gone well, you should have the three rows R1=, R2=and R3=. Notice, if you write this in the block matrix form with the rows on top of each other, you will have the diagonal 1’s, with 0’s everywhere else, and your solutions in the fourth column. The solution matrix should look like this:
+
+
+1 0 0 2
+0 1 0 4
+0 0 1 1
+
+, When you translated your linear equations into a matrix, you put the x-coefficients in the first column, the y-coefficients in the second column, the z-coefficients in the third column. There, to rewrite your matrix back into equation form, these three lines of the matrix really mean the three equations 1x+0y+0z=2, 0x+1y+0z=4, and 0x+0y+1z=1. Since we can drop the 0-terms and don’t need to write the 1 coefficients, these three equations simplify to give you the solution, x=2, y=4 and z=1. This is the solution to your system of linear equations.
+ It is always a good idea to check that your solution actually is correct. You do this by testing your results in the original equations.
+
+
+Recall that the original equations for this problem were 3x+y-z=9, 2x-2y+z=-3, and x+y+z=7. When you replace the variables with their solved values, you get 3*2+4-1=9, 2*2-2*4+1=-3, and 2+4+1=7.
+ Perform the operations in each equation according to the basic rules of operations. The first equation simplifies to 6+4-1=9, or 9=9. The second equation simplifies as 4-8+1=-3, or -3=-3. The final equation is simply 7=7.
+
+
+Because each equation simplifies to a true mathematical statement, your solutions are correct. If any of them did not resolve correctly, you would have to go back through your work and look for any errors. Some common mistakes occur in dropping negative signs along the way or confusing the multiplication and addition of fractions.
+ For this given problem, the final solution is x=2, y=4 and z=1.
+

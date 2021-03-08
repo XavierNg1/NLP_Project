@@ -1,0 +1,24 @@
+ Place all the files you want to include in the JAR file inside a single folder. They will need to be referenced through a single command line, so specifying separate paths is not feasible.;
+, This can be done by clicking on Start and then Run. Type "cmd" into the text box and click the "OK" button.
+ By default, the command prompt will read "C:\>."
+
+
+To navigate deeper into the hard drive, use the "change directory" command by typing "cd."
+For example, if your files are stored at "C:\myfiles," then you should type "cd \myfiles."
+To go directly to the directory, hold down shift and right click on the folder in explorer. Then select "Open command window here".
+ You will need to run the jar.exe utility to create a JAR file, and that file is located in the bin directory.
+
+
+Use the "path" command to specify the JDK bin directory. For example, if you installed JDK to the default location, you would type: "path c:\Program Files\Java\jdk1.5.0_09\bin"
+If you aren't sure of the exact directory, navigate to it in Windows Explorer and take note of the directory's full path.
+ The format of the command line for creating the JAR file looks like this: "jar cf 'jar-file'.jar input-file(s)."
+
+
+The "jar" portion refers to the jar.exe program, which compiles the JAR file.
+The "c" option specifies that you want to create a JAR file
+The "f" option means that you want to specify the filename.
+The "jar-file" portion is where you should type the name that you want the file to have.
+"Input-file(s)" is a space-separated list of all the files to be included in the JAR file.
+For example, you might type "jar cf myjar manifest.txt myclass.class." This would create a JAR file with the filename "myjar.jar" which would include the files "manifest.txt" and "myclass.class."
+If you add directories to the JAR file, the jar.exe utility will automatically add their contents.
+

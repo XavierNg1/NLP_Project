@@ -1,0 +1,81 @@
+ In a word processing program, create a simple list of your most recent content. Aim for 10-15 items, though you can make the feed with less or more. Copy the URL into the list, write the title and a short description, and write down the publish date.
+ Open up Notepad (Windows) or TextEdit (Mac). Before you can start entering your content information, you need to add your RSS header information. Enter the following code to the top of the text file:
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>Title of your Feed</title>
+<link>http://www.yourwebsite.com/</link>
+<description>This is the description of your Feed. 
+Keep it to one or two sentences.</description>
+
+
+
+
+
+, Each piece of content will need to be a separate <item> entry below the header. Copy the following code for each entry you need to make, replacing the items with the information for your content.<item>
+<title>Content Title</title>
+<link>Direct URL to content</link>
+<guid>Unique ID for content. Copy the URL again</guid>
+<pubDate>Wed, 27 Nov 2013 15:17:32 GMT 
+(Note: The date must be in this format)</pubDate>
+<description>Description for your content.</description>
+</item>
+
+
+
+
+
+, Once you have entered all of your items, close off the <rss> and <channel> tags before saving the file. An example feed with three items would look similar to this:
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>My Cool Blog</title>
+<link>http://www.yourwebsite.com/</link>
+<description>My latest cool articles</description>
+<item>
+<title>Article 3</title>
+<link>example.com/3</link>
+<guid>example.com/3</guid>
+<pubDate>Wed, 27 Nov 2013 13:20:00 GMT</pubDate>
+<description>My newest article.</description>
+</item>
+<item>
+<title>Article 2</title>
+<link>example.com/2</link>
+<guid>example.com/2</guid>
+<pubDate>Tue, 26 Nov 2013 12:15:12 GMT</pubDate>
+<description>My second article.</description>
+</item>
+<item>
+<title>Article 1</title>
+<link>example.com/1</link>
+<guid> example.com/1</guid>
+<pubDate>Mon, 25 Nov 2013 15:10:45 GMT</pubDate>
+<description>My first article.</description>
+</item>
+</channel>
+</rss>
+
+
+
+
+
+, Once you have finished creating the feed, save it as an XML file. Click File and select Save As. In the file type menu, select All Files. Change the extension from .TXT to .XML, and name the file to match the title of the feed. Make sure that the file name doesn’t have any spaces.
+ Now that you have an XML file, it’s time to upload it to your website. Use your FTP program or cPanel to place the XML file on your website’s homepage. Make sure to create a link to the XML file so that people can subscribe to it.
+ With your feed online, you can start spreading the link around to various Feed Directories. Search the web to find directories that match your feed’s interests. Diligently spreading your feed will usually result in an increase in traffic.
+
+
+If you are creating a list for a podcast, you can submit your feed to iTunes. This will allow iTunes users to find your feed through the iTunes store. Follow this guide to submit your XML file to iTunes. It will need to be approved before it appears in searches.
+ If you are manually creating and maintaining your RSS feed, you will need to update it whenever you create new content that you want to publish. To do this, open the latest versions of your XML file in a text editor, and add your new content to the top of the list, using the code from above. Save the file and re-upload it to your website.
+
+
+Try to keep your feed from getting too long. This will help load times for your readers. When you add a new piece of content to your feed, remove the last entry. If you are always adding new entries to the top of your list, you can quickly delete the last entry to keep your feed trim
+

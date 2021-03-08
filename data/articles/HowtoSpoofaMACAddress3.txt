@@ -1,0 +1,22 @@
+ Look to the top left corner of your screen, and click on the square icon representing your Terminal option.
+ Once you've opened Terminal, type in Macchanger in the space provided. You might have to type it twice. So if you enter the command and the system comes back saying Try Macchanger, simply type it again and hit the Return button on your keyboard.
+
+
+Several commands will come up with the corresponding codes.
+Towards the bottom you'll see various characters labeled as MAC Address.
+ The system will generate three addresses. The top two will likely say Permanent, and Current MAC Address. The last one will say New.
+
+
+You can choose to keep the new address provided, in which case no further action is needed.
+To choose a MAC Address of your own choosing, follow the next steps.
+ Keep in mind that your new address must be 17 characters long, including the colons. Make sure to follow the following format: XX:XX:XX:XX:XX:XX. Replace the Xs with any number combination, and only use the letters A through F. For example: 56:95:ac:ee:6e:77.
+
+
+The full command would look something like: macchanger eth0 -m 56:95:ac:ee:6e:77
+
+, Your new MAC Address is now set. You'll be able to see it under New.
+
+
+If the above macchanger steps haven't worked for you, you might need to turn off your interface. To do so, simply go back to Terminal and type in the following command: ifconfig eth0 down.
+Now try the above steps again.
+

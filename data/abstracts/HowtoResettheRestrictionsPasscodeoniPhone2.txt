@@ -1,0 +1,26 @@
+
+Open the Settings menu on your iPhone.Tap General.Tap Restrictions.
+Enter your Restrictions passcode incorrectly at least once.Plug your iPhone into your computer’s USB port.
+Open iTunes.
+Click the button for your device.
+Click Back Up Now.
+Open your web browser.
+Visit the iBackupBot website.Click the Download button.
+Click the Download Free Trial button for your operating system.
+Double-click the setup file after downloading it.
+Follow the prompts to install.
+Start iBackupBot.
+Expand your device’s backup in the left frame.Expand System Files.Expand HomeDomain.Expand Library.Expand Preferences.
+Type springboard into the search field and press ↵ Enter.
+Double-click com.apple.springboard.plist.
+,
+Select the iBackupBot plist editor.
+Click Cancel when prompted to upgrade.
+Scroll down to find the <key>SBParentalControlsFailedAttempts</key> line.
+Create a new line beneath <integer>#</integer>.Type <key>SBParentalControlsPin</key> and press ↵ Enter.Type <string>1111</string>.
+Click the Save button.
+Close the open text file.
+Click the Restore button.Check Reboot device after restore and Don’t copy backup.Uncheck Remove items from device that will not be restored.
+Click Restore and wait.
+Try out your new Restrictions passcode.
+Troubleshoot restore problems.

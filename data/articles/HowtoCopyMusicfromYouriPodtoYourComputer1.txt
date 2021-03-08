@@ -1,0 +1,31 @@
+ You can do this by clicking the music note icon in the dock at the bottom of the screen.
+
+This method will guide you through copying music to your computer without having to syncing to iTunes.
+You can use this method if you’ve synced your iPod with a different computer in the past and you want to get your music on a different computer.;
+,,,,,,,, You can use the USB cable came with the iPod or another compatible cable., It’s a small square button near the top left part of the screen containing a small iPod icon., It’s in the left sidebar.,, You can find it by clicking the magnifying glass at the top right corner of the screen and typing “Terminal.”
+
+, You’ll do this by typing commands at the command prompt in Terminal. Follow these steps as shown:Type defaults write com.apple.finder AppleShowAllFiles TRUE (all on the same line)
+Press ⏎ Return
+
+Type killall Finder
+
+Press ⏎ Return
+
+
+,
+Type iPod Recovery and press ⏎ Return.
+ It’s the blue and gray square smiling face icon in the dock at the bottom of the screen., It’s on the left side of Finder.
+ You’ll find it in the main panel of Finder.,, An easy way to do this is to click a blank white part of the window and press ⌘ Command+A., The files will copy from the iPod. Depending on the amount of music, this may take several minutes.,,,, The music will now copy to your iTunes library.
+
+Once you see all of your music in iTunes, you can safely delete the “iPod Recovery” folder from the desktop by dragging it to the Trash.
+ Open the Terminal app again and enter the following commands to re-hide special folders:
+
+
+Type defaults write com.apple.finder AppleShowAllFiles FALSE
+
+Press ⏎ Return
+
+Type killall Finder
+
+Press ⏎ Return.
+

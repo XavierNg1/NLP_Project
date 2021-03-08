@@ -1,0 +1,39 @@
+ This software is available for free from Microsoft, and allows you to connect to and manage your SQL server from a graphical interface instead of having to use the command line.
+
+
+In order to connect to a remote instance of an SQL server, you will need this or similar software.
+Mac users can use open-source programs such as DbVisualizer or SQuirreL SQL. The interfaces will be different but the same general principles apply.To learn how to create databases using command line tools, see this guide.;
+, When you first start the program, you will be asked what server you would like to connect to. If you already have a server up and running, and have the permissions necessary to connect to it, you can enter in the server address and authentication information. If you want to create a local database, set the Database Name to . and the authentication type to "Windows Authentication".
+
+
+Click Connect to continue.
+ After the connection to the server, either local or remote, is made, the Object Explorer window will open on the left side of the screen. At the top of the Object Explorer tree will be the server you are connected to. if it is not expanded, click the "+" icon next to it. Located the Databases folder., Right-click on the Databases folder and select "New Database...". A window will appear, allowing you to configure the database before creating it. Give the database a name that will help you identify it. Most users can leave the rest of the settings at their default.You will note that as you type the database name, two additional files will be created automatically: the Data and the Log file. The data file houses all of the data in your database, while the log file tracks changes to the database.
+Click OK to create the database. You will see your new database appear in the expanded Databases folder. It will have a cylinder icon.
+ A database can only store data if you create a structure for that data. A table holds the information that you enter into your database, and you will need to create it before you can proceed. Expand the new database in your Databases folder, and right-click on the Tables folder and select "New Table...".
+
+
+Windows will open on the rest of the screen which will allow you to manipulate your new table.
+ It is highly recommended that you create a Primary Key as the first column on your table. This acts as an ID number, or record number, that will allow you to easily recall these entries later. To create this, enter "ID" in the Column Name field, type int into the Data Type field, and uncheck the "Allow Nulls." Click the Key icon in the toolbar to set this column as the Primary Key.
+
+
+You don't want to allow null values because you always want the entry to be at least "1". If you allow nulls, your first entry will be "0".
+In the Column Properties window, scroll down until you find the Identity Specification option. Expand it and set "(ls Identity)" to "Yes". This will automatically increase the value of the ID column for each entry, effectively automatically numbering each new entry.
+ Tables are composed of fields, or columns. Each column represents one aspect of a database entry. For example, if you were creating a database of employees, you might have a "FirstName" column, a "LastName" column, an "Address" column, and a "PhoneNumber" column.
+ When you finish filling out the fields for the Primary Key, you will notice that new fields appear underneath it. These allow you to enter in your next column. Fill out the fields as you see fit, and ensure that you pick the right data type for the information that will be entered in that column:
+
+
+
+nchar(#) - This is the data type you should use for text, such as names, addresses, etc. The number in parentheses is the maximum number of characters allowed for this field. Setting a limit ensures that your database size stays manageable. Phone numbers should be stored with this format, as you don't perform mathematical functions on them.
+
+int - This is for whole numbers, and is typically used in the ID field.
+
+decimal(x,y) - This will store numbers in decimal form, and the numbers within the parentheses denote the total number of digits and the number digits following the decimal, respectively. For example decimal(6,2) would store numbers as 0000.00.
+ When you are finished creating your columns, you will need to save the table before entering information. Click the Save icon in the toolbar, and then enter in a name for the table. Naming your table in a way that helps you recognize the contents is advisable, especially for larger databases with multiple tables.
+ Once you've saved your table, you can begin adding data to it. Expand the Tables folder in the Object Explorer window. If your new table is not listed, right click on the Tables folder and select Refresh. Right-click on the table and select "Edit Top 200 Rows".The center window will display fields for you to begin entering data. Your ID field will be filled automatically, so you can ignore it right now. Fill out information for the rest of the fields. When you click on the next row, you will see the ID field in the first row fill automatically.
+Continue this process until you've entered all the information you need.
+ Click the Execute SQL button on the toolbar when you are finished entering the information to save it to the table. The SQL server will run in the background, parsing all of the data into the columns you created. The button looks like a red exclamation point. You can also press Ctrl+R to execute as well.
+
+
+If there are any errors, you will be shown which entries are filled out incorrectly before the table can be executed.
+ At this point, your database has been created. You can create as many tables as you need within each database (there is a limit, but most users will not need to worry about that unless they are working on enterprise-level databases). You can now query your data for reports or any other administrative purposes. See this guide for detailed information on running queries.
+

@@ -1,0 +1,30 @@
+ The most common target is Microsoft Windows, especially older versions. Many old Windows users do not update their operating system, leaving them vulnerable to security holes that may be fixed in newer versions.
+
+
+Mac OS X and Linux are both fairly virus-proof due to the way permissions work and the general architecture of the operating system. 95% of all viruses target Windows users.;
+, A virus is only a virus if it can spread to other users. You will need to figure out the delivery method before beginning, as it is one of the fundamentals of the virus's code. Common delivery mechanisms include:
+
+
+Executable file (.EXE, .BAT, .COM etc.) - This program needs to be run by the user, and is often disguised as something else (such as an image).
+Macro (Microsoft Office) - Macros are programs that are embedded into a document or email. They target Word, Outlook, and other macro-enabled products. The most common method of delivery is via email with an infected document attached.
+Web script - These are pieces of malicious code that are injected into sites without the webmasters' knowledge., Successful viruses exploit weak spots in a program's or system's security to spread and carry out their actions. This requires a lot of research and know how, but there are communities out there that can help you find what you need.
+ Once your virus has infected a system, what do you want it to do? Effects can range from nothing, to displaying a message, to deleting files, and much worse. Be aware that creating and spreading a malicious virus is a serious crime in most countries.
+ In order to create a virus, you will need to have at least a basic understanding of at least one computer language or scripting tool. More complex viruses often involve several languages. For really effective viruses, you will need to be familiar with assembly languages.
+
+
+If you're interested in making executable viruses, C or C++ is a good place to start.
+If you want to make macro viruses, learn the macro language for your target programs such as Microsoft Office.
+
+Visual Basic can be used to create malicious programs for Windows users.
+ This will be a long process, especially if this is your first time coding something. Experiment as much as possible, and research ways to replicate your code depending on the language you are using. There are tutorials on forums and community blogs for a variety of languages.
+
+
+Research polymorphic code. This will alter the code of your virus every time it replicates, making it difficult to track with antivirus programs. Polymorphic code is fairly advanced, and is implemented differently in every language.
+ Besides polymorphic coding, there are other ways to hide your virus. Encryption is a very common tool used by virus developers. It takes a lot of practice and reading, but it can go a long way in increasing the lifespan of your virus.
+ Once you have a prototype up and running, test it out on as many different machines and setups as possible. This will be easiest if you are able to set up virtual machines in different configurations.
+
+
+Make sure that you keep your tests contained so that you don't accidentally release your virus before you are ready. Put the test machines on an isolated network and see the effects of the virus spreading.
+Adjust your virus's code as you observe it working on the test machines. Fix any issues that it runs into
+
+, If you're satisfied with your virus's performance, it's time to release it. Before you do, however, ask yourself if you're prepared to face any consequences that may come from releasing a virus into the wild. It may be better to use that experience and work on new projects.

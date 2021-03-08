@@ -1,0 +1,44 @@
+
+Select compatible components.
+Assemble your hardware into a working computer.
+Look for its BIOS welcome screen when you turn your machine on.
+Know that the BIOS settings for every motherboard are going to be similar but not exactly the same.
+Save the changes.
+Install OS X.
+Connect your USB drive to an existing Mac (ask a friend if you don't have one or make a virtual machine with Mac OS X) and open Disk Utility (in your Macintosh HD -> Applications -> Utilities folder).
+
+,
+Click on your thumb drive in Disk Utility and then click the Partition tab.
+
+,
+Click on the drop-down menu that reads "Current" and choose "1 Partition.
+
+,
+Click on the "Options..." button and select the partition scheme labeled "Master Boot Record.",
+Give the thumb drive the name USB (which you can change later).
+
+,
+Set the drive's format to "Mac OS X Extended (Journaled).
+
+,
+Click the "Apply" button and then the "Partition" button.
+
+,When Disk Utility has finished partitioning your disk, make sure the "Install OS X Mavericks" application you purchased from the Mac App Store is in your Applications folder.
+Open UniBeast and click "Continue" three times, then agree.
+Look for the option of Laptop support and Legacy USB support.
+Wait about 15-45 minutes (it can vary) for UniBeast to do it's thing.
+When UniBeast finishes, you'll have a hackintosh-bootable USB thumb drive.
+Look for a welcome screen and choose your language when the OS X Mavericks Installer finishes booting.
+Select the disk you want to use for installation and format it.
+Set up to install the drivers.
+Click the Quick Start tab and choose EasyBeast, UserDSDT, or DSDT-Free.
+Select the Drivers tab to choose what drivers you'll need.
+Skip the Bootloaders section, as you won't need to make any changes there.
+
+,
+Click the Customize tab to change a few options.
+Click Save to save a backup of your configuration so you can load it up again later, when updating or in the event of a fresh install.
+
+,
+Click Build, then click Install.
+Restart your hackintosh.

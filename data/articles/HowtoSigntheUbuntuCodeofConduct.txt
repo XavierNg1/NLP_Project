@@ -1,0 +1,33 @@
+ This is a digital key which allows you to sign digital documents. There are many other uses for OpenPGP keys in Ubuntu such as uploading packages and using the bug tracker's e-mail interface.
+
+
+In Ubuntu, open the "System" menu, then go to Preferences->Passwords and Encryption Keys. Click File->New->PGP Key and follow the on-screen instructions to generate your key. If you're unable to use the graphical PGP key generator, you can run "gpg --gen-key" from the terminal. The most important part of the key to remember is the passphrase. If you forget your passphrase, the key is no longer usable.;
+, Without publishing your key, it will be rendered useless. Ubuntu needs your key to verify that it is you signing the document.
+
+
+To do this, in Passwords and Encryption Keys, select the My Personal Keys tab, and then your key. Next, open the Remote menu and click Sync and Publish Keys... and then press the Sync button. You may need to select the Ubuntu keyserver using the 'Key Servers' button first.
+If using the terminal, find the output from the first step and find the bit like "pub 2048R/D8FC66D2". Copy the code after the slash and run the command gpg --send-keys --keyserver keyserver.ubuntu.com D8FC66D2, replacing the code with your key code.
+ In Passwords and Encryption Keys, click My Personal Keys then your key and either double click it or press spacebar. Select the Details tab. Copy the code from the "Fingerprint" section.
+ Create an account if you don't have one already.
+
+
+Once logged in, click your name in the top-right corner. This is your profile.
+Next to "Signed Ubuntu Code of Conduct", you may see "No". Click the pencil icon next to it. You can access this directly by visiting the Code of Conduct page at https://launchpad.net/codeofconduct.
+ Follow the Register an OpenPGP key on the Code of Conduct page. Enter your fingerprint, then hit "Import Key".
+ Launchpad should have sent a verification e-mail to you with an encrypted message.
+
+
+Open the e-mail and copy everything from "----BEGIN PGP MESSAGE----" to "----END PGP MESSAGE----" including those two lines. There are various methods of decrypting messages for different mail clients.Alternatively, paste the message into a text file and save.
+Open your terminal and point it to the directory of your text file.
+Run the command gpg -d file.txt, substituting the name of your file for file.txt. PGP will prompt you for your passphrase.
+If entered correctly, your decrypted message will be shown in the terminal.
+ It will show you your name, e-mail, fingerprint, and key type/ID. At the bottom it will give you a token link to confirm the key to your Launchpad account. Visit the link and click "Continue" to confirm.
+ It will show that you have submitted your OpenPGP key.
+, Make sure that you understand what Ubuntu is about, how you should communicate with others, and how you should behave in the Ubuntu community.
+ To do this, open the terminal and navigate to the directory you downloaded the file to.
+
+
+Run the command gpg --clearsign UbuntuCodeofConduct-1.1.txt to digitally sign the file (you will be prompted for your passphrase). This creates a file like "UbuntuCodeofConduct-1.1.txt.asc".
+Open that file in your text editor, and copy it.
+On the Ubuntu Code of Conduct page, click "Sign it!" then paste into the textbox. Click "Continue". Congratulations, you've signed the Ubuntu Code of Conduct!
+

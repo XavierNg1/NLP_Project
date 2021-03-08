@@ -1,0 +1,37 @@
+ From the MySQL command line, enter the command CREATE DATABASE <DATABASENAME>;. Replace <DATABASENAMEs> with the name of your database. It cannot include spaces.
+
+
+For example, to create a database of all the US states, you might enter CREATE DATABASE us_states;
+
+Note: Commands do not have to be entered in upper-case.
+Note: All MySQL commands must end with ";". If you forgot to include the semicolon, you can enter just ";" on the next line to process the previous command.;
+, Enter the command SHOW DATABASES; to list all of the databases you have stored. Besides the database you just created, you will also see a mysql database and a test database. You can ignore these for now.
+ Once the database has been created, you will need to select it in order to begin editing it. Enter the command USE us_states;. You will see the message Database changed, letting you know that your active database is now us_states.
+ A table is what houses your database’s information. To create one, you will need to enter all of your table formatting in the initial command. To create a table, enter the following command: CREATE TABLE states (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, state CHAR(25), population INT(9));. This will create a table named "states" with three fields: id, state, and population.
+
+
+The INT command will make the id field contain only numbers (integers).
+The NOT NULL command makes sure that the id field cannot be left blank.
+The PRIMARY KEY designates the id field as the key field in the table. The key field should be set to a field that cannot contain any duplicates.
+The AUTO_INCREMENT command will automatically assign increasing values into the id field, essentially automatically numbering each entry.
+The CHAR(characters) and INT(integers) commands designate the types of data allowed in those fields. The number next to the commands indicated how many characters or integers can fit in the field.
+ Now that the table has been created, it’s time to start entering your information. Use the following command to input your first entry: INSERT INTO states (id, state, population) VALUES (NULL, 'Alabama', '4822023');
+
+
+This is essentially telling the database to enter the information provided into the three corresponding fields in the table.
+Since the id field contains the command NOT NULL, entering NULL as the value will force it to automatically increment to 1, thanks to the AUTO_INCREMENT command.
+ You can create multiple entries using a single command. To enter the next three states, use the following command:INSERT INTO states (id, state, population) VALUES (NULL, 'Alaska', '731449'), (NULL, 'Arizona', '6553255'), (NULL, 'Arkansas', '2949131');.
+
+
+This will create a table that looks like the following:
+
+
+
+
+
+
+, Now that the basic database has been created, you can enter queries to return specific results. First enter the command: SELECT * FROM states;. This will return your entire database, as signified by the "*" command, which means "all".
+
+
+For a more advanced query, enter the following command: SELECT state, population FROM states ORDER BY population; This will return a table with the states sorted by population instead of by alphabetical listing. The id field will also not be displayed, since you only asked for the state and population entries.
+To list the states by population in reverse order, enter the following command: SELECT state, population FROM states ORDER BY population DESC;. The DESC command will list them in descending order, which will sort it by high to low instead of low to high.

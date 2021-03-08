@@ -1,0 +1,34 @@
+
+A solid colored background is the most basic type of background that you can put on a website.
+Open your web code (source).
+
+,
+In the body tag, add an attribute called bgcolor.
+Experimenting with RGB and # can lead to many shades, but you can take the easy first way.
+Add the background property to the body tag, so it looks like this-<body background="SRC">
+where SRC is the source of the image SRC can be in the same folder,or another folder/webpage.
+Remember to type the .gif/ .jpeg /.bmp extension.
+
+,
+To add a solid colored background in CSS, add a style attribute.
+Your body tag should look like this-
+
+
+
+<body style="background-color: COLORNAME;">
+where the COLORNAME is the name of the color, hex value or RGB(Also remember the last steps of the solid colored background in HTML, the are applicable here too) .
+
+,
+To add an image, add the style attribute to the body tag.
+Your body tag should now look like this-
+
+
+<body style="background-image:url('SRC'); ">
+
+,
+Remember that SRC is the source.
+Remember to add the .extensions too.
+
+,
+To make a repeated pattern background, add a background as said in the steps above.
+Fixed image backgrounds look cool and do not change as you scroll down.

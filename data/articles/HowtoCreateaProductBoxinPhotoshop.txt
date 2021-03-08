@@ -1,0 +1,69 @@
+ To have plenty of space to work with, for "Name:" enter ProductBox, "Width:" enter 600, for "Height:" enter 600, "Resolution:" enter 72, and "Background Contents:" enter White. Click "OK.";
+,
+
+
+Create a front and side for the product box as separate documents, or open the front and side images downloaded from the "Things You'll Need" section below. For this How-to, the images being used are the downloaded images. If you want to create your own front and side, download the images from below and use them as a starting point for your own images.
+Activate the product_box_front document by clicking its toolbar. Press CTRL+A to select the entire document, and then CTRL+C to copy the contents of the document.
+Activate the ProductBox document we just created by clicking its toolbar. Type CTRL+V to paste the front of the box into the document.
+Activate the product_box_side document by clicking its toolbar. Type CTRL+A to select the entire document, and then CTRL+C to copy the contents of the document.
+Activate the ProductBox document we created, and type CTRL+V to paste the side of the box into the document. You can now close the front and side of the box documents, you don't need them anymore. Our new ProductBox document should look something like this:
+
+Notice the front and the side of the box are sitting on top of each other. We're going to fix that.
+ Now we are going to move the front and side of the box in place, and then distort them to give the box a 3D look.
+
+
+Give the layers some names. In the Layers Palette, right click the layer that contains the front of our box and select Layer Properties. Change Name: to Front. Now do the same for the layer that contains the side of our box, and change the name to Side.
+Click on the Front layer in the Layers Palette. Type V to make sure the Move tool is open. Inside the document, drag and move the front of our box to the right till the front is nearly to the edge of the document.
+Click on the Side layer in the Layers Palette. Inside the document, drag the side of the box till it's lined up with the left edge of the front of the box. Your document should now look like this:
+If the two layers are lined up correctly, then the front and the side should look like one flat image.
+
+
+Making sure the Side layer is selected in the Layers Palette, click Image>Adjustments>Brightness/Contrast. Set the Brightness to -20. Since the light is supposed to be striking the product box from the front, the side of the box should be a bit darker than the front.
+ This is the tricky part. We need to distort the front and the side of the box using the Distort tool.
+
+
+Click the Front layer in the Layers Palette. Now click Edit>Transform>Distort. This creates a distort box around the front of the box. Grab the square handle on the top right corner, and drag it down about 150 pixels.
+Grab the square handle on the bottom right corner, and drag it up about 150 pixels.
+Grab the square handle on the center right side, and drag it in about 200 pixels. Make sure the right side of the front is straight. Adjust the corner handles a little bit to straighten out the side if you need to. Now hit ENTER to confirm the distortion. Your document should now look like this:
+If your image doesn't look pretty close to this, distort the image more until you achieve the right effect.
+
+
+Now we need to distort the side of the box. Click the Side layer in the Layers Palette. Click Edit>Transform>Distort. This creates the same kind of distort box around the side.
+Grab the upper left corner square handle, and drag it down about 75 pixels. Now grab the bottom left corner square handle, and drag it up about 75 pixels. We don't want the box to look as deep as it does, so grab the left center side handle and drag it in about 150 pixels. Hit ENTER to confirm the distortion. Your image should now look like this:
+
+If your image doesn't look pretty close to this, distort the side a bit more until you achieve the right effect.
+
+
+
+Click the Front layer in the Layers Palette. We want to link the Front and Side layer, so that if you move one, they both move. So click the small box next to the layer name on the Side layer.
+This shows a little "chain link" in the box. This means the two layers are linked together.
+
+
+Use the move tool(V) to move the box up into the right hand corner of the document. Now when we move the Front layer, the Side layer follows with it. Your document should now look like this:
+If your document doesn't look pretty close to this, move the box a bit more until you get the right position.
+
+
+
+Click and hold down the left mouse button on the Front layer, and drag the layer down to the New Layer icon at the bottom of the Layers Palette.This creates a copy of the Front layer named Front Copy.
+ Set "Lightness" to -100.
+
+
+Click "OK." This makes your Front Copy layer completely black. Now move the Front Copy layer below the Front layer. Do this by left clicking and holding down the Front Copy layer, and drag it below the Front layer. Now you can't see the Front Copy layer because its behind the Front layer. Right click the Front Copy layer and select "Layer Properties." Rename this layer to "Box Shadow."
+Click "Edit">"Transform">"Distort" with the Box Shadow layer selected. We are going to distort this layer so that it looks like a shadow being cast behind the box. Drag the top left corner handle down until its level with the side of the box. Now drag the top right corner square handle until the back of the Box Shadow layer is running at the same angle as the bottom of the box. Now drag the bottom right corner handle until it meets the bottom right corner of the box. Make any adjustments to the corners until it looks "right". Hit ENTER to confirm the distortion. Your image should now look like this:
+
+
+, We need to make some minor adjustments.
+
+
+Click Filters>Blur>Gaussian Blur. Set "Radius" to 10.
+
+Click "OK."
+Make sure the Box Shadow layer is selected, and set the Opacity to 50% in the Layers Palette.
+ Crop the document just a bit until its just as big as the product box.
+
+
+Type C to open the Crop tool. This tool works a bit like the Square Marquee tool. Draw a box around the entire product box including the shadow. You should now see a dark area around the image, with the inside light box being just as big as the product box and shadow.
+
+You can adjust the size of the crop by dragging the square handles in and out. Once you are satisfied, hit ENTER to confirm the crop.
+ That's it, you're done! Your final image should look something like this:
+

@@ -1,0 +1,13 @@
+ To start a new project, click on the New Project link on the left side of the screen. A new window will appear. Select visual C++ from the left side of the screen, and select Empty Project from the middle section of the screen. At the bottom of the window you can give the project a name, and then click OK to create the new project.;
+, This will open a new window.
+ Then click Add to add the CPP file in which you will write your code.
+ Add #include <iostream> then hit Enter. Add #include <string> then hit Enter. Finally, add using namespace std;. The picture above will show how it should look when completed. These lines of code allow you to use the standard input and output functions of C++ and will allow you to work with the string data type.
+ Type the lines of code in the above picture. Main is the function that runs first in a C++. When 0 is returned at the end of the function, the program knows to end.
+ For this project we will be asking the user to enter their name. The data type used to hold multiple characters are called strings.
+ Names are usually related to the type of data they are holding. In this example, you will be asking for a name, so name the variable name.
+ For string, set them to an empty string by assigning them the value "".
+ Output statements are written as: cout << “Enter your name : ”
+
+, You can store what they have typed in to the variable with a cin statement. Example: cin  >> name; This will store what the user enters into the string variable you created.
+, The run button is the button that has the play symbol on it and is called Local Windows Debugger. Once you click that button, your program will run asking for your name and then outputting your name back to you. If you made an errors, the compiler will list the error messages. Make sure no lines of code are underlined in red. If they are, check to make sure you did not forget a step or made a typo. If your program runs correctly, then congratulations, you have just performed input and output operations in C++.
+

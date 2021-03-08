@@ -1,0 +1,15 @@
+ You can open the Start menu by pressing either the Windows key on your keyboard, or by clicking the Start icon in the lower left corner of your screen.;
+, In the start menu, type cmd, which is the code for Command Prompt. You should see the Command Prompt program listed.
+ Right-click the Command Prompt icon and select Run As Administrator from the dropdown menu. Click yes on the pop-up warning dialog box.
+
+
+The command prompt allows you to enter in text-based commands to your computer. These commands can also be accomplished by using the graphical interface, your keyboard, and the mouse, but you can sometimes save time by using the command prompt
+
+, Type net stop spooler into the command prompt, then press ↵ Enter. You will see a line saying, The Print Spooler service is stopping. After a bit of time, and if successful, you will see The Print Spooler service was stopped successfully.
+ In order for the printer to not just start printing out documents once you restart spooling, you will have to cancel any outstanding print jobs. Enter C:\Windows\system32\spool\PRINTERS into the File Explorer address bar and press ↵ Enter. You may be asked to Continue as an admin from a pop-up dialog box. Click Continue if prompted.
+
+
+Do not delete the PRINTERS folder, only the entries inside.
+ In order for your system to print documents in the future, you will have to restart the spooling service. Type net start spooler into the command prompt and press ↵ Enter. If successful, you will see The Print Spooler service was started successfully.
+ The spooling service should now be terminated and your printer will no longer print any documents from the queue. You can close the command prompt.
+

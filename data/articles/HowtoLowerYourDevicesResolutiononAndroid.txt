@@ -1,0 +1,26 @@
+ Go to your app drawer/app list, then look for the Google Play Store app. Tap it to open.;
+, Tap the first one on the results list, which is made by Jack Palevich and MTM Developers, respectively.
+ Download and install by tapping the “Install” button.
+ Tap “Open” to launch the app or open from the app drawer. On the main app screen, you’ll see the pixels per inch as well as the screen resolution.
+
+
+Take note of your device’s pixels per inch; we will be using this in the Terminal Emulator.
+ Open the Android Terminal Emulator app. This is a console similar to the old Windows DOS console which runs commands input by the user.
+
+
+
+First, type “su” on the command line, without the quotation marks. Press Enter.
+Then type “wm_density_(pixels per inch of your specific device)”. The “_” resembles a space. Again, do not put quotation marks. Press Enter.
+Then type “wm_size_(desired resolution)” Make sure to input a resolution that is lower, but still makes the display comprehensible.
+ Reboot your device since some app icons and text won’t adjust in real time.
+
+
+If you want to revert to your default resolution and pixel density, input these in the Terminal Emulator:
+
+su
+wm density reset
+wm size reset
+
+
+Done! make sure to research the best step down in terms of resolution for your device. Benchmarks for 3D and 2D performance should improve noticeably.
+

@@ -1,0 +1,24 @@
+,, This one's followed by the 12 articles in the Related wikiHows at the bottom of the page., Save the workbook into a logical file folder., Enter "=ROUND(1440/S_COUNT,1)" into cell A1. Format Cell Number Number Custom "Rrs" 0. Insert Name Define name Rrs to cell $A$1.
+
+Enter the formula "=ROUND(1440/Rrs,0)" into cell A2.
+Enter On=0,Off=1 into cell A3.
+Enter 1 into cell A4.
+Edit Go To cell range A7:A1447 and with A7 active, enter the formula without quotes or spaces   "=IF(OR( AND((ROW()-7)>Rrs,(ROW()-7)<=Rrs*2),                                    AND((ROW()-7)>Rrs*4,(ROW()-7)<=Rrs*5),                                                 
+
+, Format Cell Fill Yellow Font bold and Number Number Custom "Divisor" 0.00 with quotes., Format Cell Fill Yellow Font bold and Number Number Custom "AAA" +.00000000;"AAA" -.00000000 with quotes., Enter 24 into S's Count cell C1 for Spheroids (the example chart uses 25 but the pairs come out better with 24). Enter 968277 into cell D3, top. Enter .61 into cell H1 and .78 into cell J1.,
+B8:B1447: "=((B7+(-TOP*2)/(AdjRows)))*$B$1"
+C7: "=ROUND(-EXP((PI()^2)+(Cc*-(db))),0)+Designer"
+C8:C1447:  "=C7"
+NEW: D7:D1447: "=IF(A7=0,D6,COS((ROW()-7)*Factor*PI()/(180))*((ROW()-7)/Divisor))"
+NEW: E7:E1447: "=IF(A7=0,E6,DEGREES((ROW()-7))/41500)" This uses the DEGREES() function for the first time. See Tips below and Excel Help under Home > Function References > Math and Trigonometry Functions.
+NEW: F7:F1447: "=IF(A7=0,F6,((PI())*((SIN(B7/(C7*2))*GMLL*COS(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+D7)))"
+NEW: G7:G1447: "=IF(A7=0,G6,((PI())*((SIN(B7/(C7*2))*GMLL*SIN(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+E7)))"
+H7:H1447: "=F7*GMLL*Sync1"
+I7:I1447: ""=G7*GMLL*Sync1"
+J7:J1447: "=F7*GMSL*Sync2"
+K7:K1447: "=G7*GMSL*Sync2"
+
+, Here below is an image of my header rows and data to check against your own and the previous file's (*02" for short) original formulas. There should be no errors. Make sure there is a formula in cell A7.
+ Refer to the prior article for any basic problems with charting. Basically, chart the last 3 pairs of columns as individually paired sets of {x,y}'s for a threesome effect.,,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

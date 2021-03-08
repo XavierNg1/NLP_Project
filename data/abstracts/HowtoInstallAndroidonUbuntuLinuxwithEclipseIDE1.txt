@@ -1,0 +1,30 @@
+
+Prepare your Ubuntu Linux development environment and ensure it meets the system requirements.
+If you are running a 64-bit distribution of Android SDK on your development machine, you need to install the ia32-libs:
+
+
+
+Type/Copy/Paste: sudo apt-get install ia32-libs
+
+This command installs additional libraries needed for development with the Android SDK
+
+
+
+Type/Copy/Paste: javac -version
+this command checks for the Java JDK on your system:
+
+It should respond back with:
+
+java 1.7.0
+or something very similar
+
+
+
+
+
+Type/Copy/Paste: java -version
+
+this command checks for the Java JRE ( Java Runtime Environment ) on your system
+
+
+

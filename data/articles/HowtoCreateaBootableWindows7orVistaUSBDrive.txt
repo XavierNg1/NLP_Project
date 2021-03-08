@@ -1,0 +1,40 @@
+ There are a number of free burning utilities available online. You need one that can create ISO files.
+
+
+If you received your Windows 7 as a downloadable ISO file from Microsoft, you can skip to the next section.;
+, Open your new burning program. Look for an option such as “Copy to Image” or “Create Image.” If prompted, select your DVD drive as the source.
+ Choose an easy to remember name and location for the file. The ISO you make will be equal in size to the disc you are copying. This means it can take up several gigabytes of space on your hard drive. Be sure you have enough storage available.
+
+
+Creating the ISO can take a long time, depending on the speed of your computer and DVD drive.
+ This is available for free from Microsoft. Despite its name, this tool works with Windows Vista ISOs as well. You can run this tool on virtually any version of Windows.
+ This is the ISO that you created or downloaded in the first section. Click Next.
+ You are given the option to either burn to a DVD or create a USB device. For this guide, click USB Device.
+ Make sure that your flash drive is connected correctly. You will need at least 4GB space on your flash drive to copy over the Windows installation.
+ The program will format the USB drive to boot correctly, then copy the ISO file onto the drive. The copying process can take up to 15 minutes to complete, depending on the speed of your machine.
+ First plug-in your USB stick to your USB port and copy all the content to a safe location in your hard drive.
+ To open a command prompt, go to the Start menu and search for CMD. Right-click on it and select Run as Administrator to use it with admin rights.
+ To do so, type in the following command in the command prompt: DISKPART
+
+
+Running DISKPART will display the version of DISKPART you are running and the name of your PC.
+Type “list disk” to see a display of all your connected disk drives. Make a note of the number assigned to your Flash drive.
+ Execute the following list of commands one-by-one. Make sure you replace Disk 1 with the proper Disk number from DISKPART.select disk 1cleancreate partition primaryselect partition 1activeformat fs=NTFS QUICKassignexit
+
+, Use the bootsect utility that is shipped with Windows 7/Vista. To do so:
+
+
+Insert the Windows 7/Vista DVD and note down the drive letter of the DVD drive. For this guide, the DVD drive is D: and the USB drive is G:.
+Navigate to the directory where bootsect is found.D:cd d:\boot
+
+Use the bootsect to make the USB Drive bootable. This updates the drive with BOOTMGR compatible code and prepares it to boot Windows 7/Vista.BOOTSECT.EXE/NT60 G:
+
+Close the Command Prompt windows.
+ The safest and the fastest way would be to use the Windows Explorer. Open the disk, select everything, and drag it into your flash drive. This could take a few minutes to copy.
+ To boot from the USB drive, you will have to set the BIOS to boot from USB first instead of the hard drive. To open the BIOS, reset your computer and hit the displayed key to enter Setup. The key varies by manufacturer, but is usually F2, F10, F12, or Del.
+
+
+Open the Boot menu in your BIOS. Change the 1st Boot Device to your USB drive. Be sure that it is inserted, or you may not be given an option to choose it. Depending on your manufacturer, it may say Removable Device or list your flash drive’s model.
+ If you set the boot order correctly, your Windows 7 or Vista installation will load after the manufacturer’s logo disappears.
+ The installation process will load and the Windows setup will begin. Check out our guide on installing Windows 7 for an in-depth walkthrough.
+

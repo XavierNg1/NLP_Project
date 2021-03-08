@@ -1,0 +1,15 @@
+ Select "Run" from the list of default programs on the right-hand side of your Start menu.
+
+
+You can also hold down the ⊞ Win key and tap R to bring up the Run program without touching the Start menu.
+ Registry editor lets you edit system values--in this case, the logon values. Type in "regedit" without the quotations into Run and click OK to bring up the Registry Editor.Type in "regedt32.exe" without the quotation marks if the first version you type in doesn't work.
+ Click on this folder, but do not double-click. This will expand the folder to show you its contents. Scroll through this folder until you find the "SOFTWARE" folder.
+ Scroll through "SOFTWARE" until you find the "Microsoft" folder.
+ Scroll through "Microsoft" until you find the "Windows NT" folder.
+ Scroll through "Windows NT" until you find the "Current Version" folder.
+ Scroll through "Current Version" until you find the "Winlogon" folder.
+ Within this folder, find the "DefaultUserName", "DefaultPasswordType", and "AutoAdminLogon" values., Check to make sure that the value in the properties box matches your username.
+ When it opens, enter your password as you normally do to log in.
+ When it opens, type "1" into the value box (without quotation marks).
+ Close all of your programs and restart by going to the Start menu, selecting "Power", and clicking "Restart". Your computer should boot up straight to the desktop!
+

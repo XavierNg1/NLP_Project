@@ -1,0 +1,95 @@
+
+Check to see if your Ubuntu Linux operating system architecture is 32-bit or 64-bit, open up a terminal and run the following command below.
+Check if you have Java installed on your system.
+Completely remove the OpenJDK/JRE from your system and create a directory to hold your Oracle Java JDK/JRE binaries.
+Download the Oracle Java JDK for Linux.
+Copy the Oracle Java binaries into the /usr/local/java directory.
+Unpack the compressed Java binaries, in the directory /usr/local/java
+
+
+
+32-bit Oracle Java on 32-bit Ubuntu Linux installation instructions:
+
+
+Type/Copy/Paste: sudo tar xvzf jdk-8u20-linux-i586.tar.gz
+
+
+
+64-bit Oracle Java on 64-bit Ubuntu Linux installation instructions:
+
+
+Type/Copy/Paste: sudo tar xvzf jdk-8u20-linux-x64.tar.gz
+
+
+
+,
+Double-check your directories.
+Edit the system PATH file /etc/profile and add the following system variables to your system path.
+Scroll down to the end of the file using your arrow keys and add the following lines below to the end of your /etc/profile file:
+
+
+
+Type/Copy/Paste:
+JAVA_HOME=/usr/local/java/jdk1.8.0_20
+JRE_HOME=/usr/local/java/jre1.8.0_20
+PATH=$PATH:$JRE_HOME/bin:$JAVA_HOME/bin
+export JAVA_HOME
+export JRE_HOME
+export PATH
+
+,
+Save the /etc/profile file and exit.
+
+,
+Inform your Ubuntu Linux system where your Oracle Java JDK/JRE is located.
+Inform your Ubuntu Linux system that Oracle Java JDK/JRE must be the default Java.
+Reload your system wide PATH /etc/profile by typing the following command:
+
+
+
+Type/Copy/Paste: source /etc/profile
+Note your system-wide PATH /etc/profile file will reload after reboot of your Ubuntu Linux system
+
+,
+Test to see if Oracle Java was installed correctly on your system.
+A successful installation of 32-bit Oracle Java will display:
+
+
+
+Type/Copy/Paste: java -version
+
+This command displays the version of java running on your system
+
+
+You should receive a message which displays:
+
+java version "1.8.0_20"
+Java(TM) SE Runtime Environment (build 1.8.0_20-b26)Java HotSpot(TM) Server VM (build 25.20-b23, mixed mode)
+
+
+
+
+Type/Copy/Paste: javac -version
+
+This command lets you know that you are now able to compile Java programs from the terminal.
+A successful installation of Oracle Java 64-bit will display:
+
+
+
+Type/Copy/Paste: java -version
+
+This command displays the version of java running on your system
+
+
+You should receive a message which displays:
+
+java version "1.8.0_20"
+Java(TM) SE Runtime Environment (build 1.8.0_20-b26)Java HotSpot(TM) Server VM (build 25.20-b23, mixed mode)
+
+
+
+
+Type/Copy/Paste: javac -version
+
+This command lets you know that you are now able to compile Java programs from the terminal.
+Congratulations, you just installed Oracle Java on your Linux system.

@@ -1,0 +1,49 @@
+ Recall that sin⁡x{\displaystyle \sin x} is simply the imaginary part of the exponential function eix.{\displaystyle e^{ix}.} This integral is continuous except for the singularity at x=0.{\displaystyle x=0.}
+
+
+∫−∞∞eixxdx{\displaystyle \int _{-\infty }^{\infty }{\frac {e^{ix}}{x}}{\mathrm {d} }x}
+
+
+, The easiest improper integrals evaluated using residue theory use a semicircular arc that traces the real line from some boundary −a{\displaystyle -a} to a{\displaystyle a} and arcs counterclockwise back to −a,{\displaystyle -a,} while a→∞.{\displaystyle a\to \infty .} However, we cannot use this because of the pole at the origin. The solution is to use an indented contour that goes around the pole.
+
+
+∫Γeizzdz{\displaystyle \int _{\Gamma }{\frac {e^{iz}}{z}}{\mathrm {d} }z}
+
+The contour Γ{\displaystyle \Gamma } is split into four parts. We begin from −a{\displaystyle -a} and traverse the real line to some small number −ϵ.{\displaystyle -\epsilon .} Then a semicircular arc γϵ{\displaystyle \gamma _{\epsilon }} with radius ϵ{\displaystyle \epsilon } goes clockwise to ϵ{\displaystyle \epsilon } on the real axis. This contour then goes to a,{\displaystyle a,} from which a semicircular arc γa{\displaystyle \gamma _{a}}with radius a{\displaystyle a} goes counterclockwise and back to −a.{\displaystyle -a.} The important thing to note here is that this integral does not have any singularities within the contour, and is therefore 0. We can therefore write the following.
+
+
+∫−a−ϵeixxdx+∫ϵaeixxdx=−∫γϵeizzdz−∫γaeizzdz{\displaystyle \int _{-a}^{-\epsilon }{\frac {e^{ix}}{x}}{\mathrm {d} }x+\int _{\epsilon }^{a}{\frac {e^{ix}}{x}}{\mathrm {d} }x=-\int _{\gamma _{\epsilon }}{\frac {e^{iz}}{z}}{\mathrm {d} }z-\int _{\gamma _{a}}{\frac {e^{iz}}{z}}{\mathrm {d} }z}
+
+
+, Typically, for this integral to vanish, the degree of the denominator must be at least two greater than the degree of the numerator. Jordan's lemma says that if such a rational function is multiplied by an eiz{\displaystyle e^{iz}} term, then the degree of the denominator need only be at least one greater. Therefore, this integral vanishes.
+
+
+∫γaeizzdz=0{\displaystyle \int _{\gamma _{a}}{\frac {e^{iz}}{z}}{\mathrm {d} }z=0}
+
+
+, 
+
+If you are familiar with contour integrals of 1z{\displaystyle {\frac {1}{z}}} involving circular arc contours, the example involves the fact that the integral depends on the angle that the arc traverses. In our example, the arc is being integrated from the angle π{\displaystyle \pi } to 0{\displaystyle 0} in a clockwise fashion. Such an integral will therefore equal −πi.{\displaystyle -\pi i.} 
+
+We can generalize this result to arcs of any angle, but more importantly, for residues. See the tips for the theorem that this step uses. The residue at the origin is easily found to be Res⁡(0)=1.{\displaystyle \operatorname {Res} (0)=1.}
+
+
+limϵ→0+∫γϵeizzdz=−πiRes⁡(0)=−πi{\displaystyle \lim _{\epsilon \to 0^{+}}\int _{\gamma _{\epsilon }}{\frac {e^{iz}}{z}}{\mathrm {d} }z=-\pi i\operatorname {Res} (0)=-\pi i}
+
+
+
+
+, Because ϵ→0{\displaystyle \epsilon \to 0} and a→∞,{\displaystyle a\to \infty ,} negate our result (see step 2) to arrive at our answer.
+
+
+∫−∞∞eixxdx=∫−a−ϵeixxdx+∫ϵaeixxdx=πi{\displaystyle \int _{-\infty }^{\infty }{\frac {e^{ix}}{x}}{\mathrm {d} }x=\int _{-a}^{-\epsilon }{\frac {e^{ix}}{x}}{\mathrm {d} }x+\int _{\epsilon }^{a}{\frac {e^{ix}}{x}}{\mathrm {d} }x=\pi i}
+
+
+, The above result really gives us two real results. First of all, the integral of the sinc function immediately follows.
+
+
+Im⁡∫−∞∞eixxdx=∫−∞∞sin⁡xxdx=π{\displaystyle \operatorname {Im} \int _{-\infty }^{\infty }{\frac {e^{ix}}{x}}{\mathrm {d} }x=\int _{-\infty }^{\infty }{\frac {\sin x}{x}}{\mathrm {d} }x=\pi }
+
+Second of all, the integral of a related function cos⁡xx{\displaystyle {\frac {\cos x}{x}}} follows as well if we take the real part of our result, which is 0. However, this is to be expected, as this function is odd.
+
+

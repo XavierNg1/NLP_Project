@@ -1,0 +1,16 @@
+;
+, Type the following command into the terminal: sudo grub-install --root-directory=/media/grub2 /dev/sda.
+ Here are a few examples. Type the following command into the terminal: sudo gedit /etc/grub.d/40_custom and paste these menu entries to the end of the file. Replace /PATH-TO-UBUNTU-ISO/FILENAME.iso with the appropriate path. On my system it would be /home/myUserName/Downloads/lubuntu-natty-i386.iso
+=====menuentry "Ubuntu 10.10 Desktop ISO" {
+loopback loop /PATH-TO-UBUNTU-ISO/FILENAME.iso
+linux (loop)/casper/vmlinuz boot=casper iso-scan/filename=/PATH-TO-UBUNTU-ISO/FILENAME.iso noeject noprompt splash --
+initrd (loop)/casper/initrd.lz
+}
+menuentry "Linux Mint 10 Gnome ISO" {
+loopback loop /FILEPATH/linuxmint10.iso
+linux (loop)/casper/vmlinuz
+file=/cdrom/preseed/mint.seed boot=casper initrd=/casper/initrd.lz iso-scan/filename=/FILEPATH/linuxmint10.iso noeject noprompt splash --
+initrd (loop)/casper/initrd.lz
+}
+
+,

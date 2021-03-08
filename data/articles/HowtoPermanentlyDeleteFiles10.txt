@@ -1,0 +1,21 @@
+ Press Ctrl + Alt + T on your keyboard to open a Terminal window. Alternatively, you can go to "Applications" and select "Accessories." From this folder, locate "Terminal" and double-click to open up the Terminal window.
+
+
+Note that the Secure-Delete package of tools is available for Ubuntu and several other distributions of Linux, but may not be available for all Linux-based platforms.
+ Within the Terminal, type apt-get install secure-delete. Hit ↵ Enter to instruct the Terminal to install the package. This package comes with four different commands.
+
+
+The one you need for the purpose of permanently deleting files from your computer is srm or "secure remove."
+Other options include smem (secure memory wiper) which wipes traces of data from the computer's memory, sfill (secure free space wiper) which wipes all traces of data from the free space on your disk, and sswap (secure swap wiper) which wipes all traces of data from your swap partition.
+ To delete a file using the secure remove command, type srm myfile.txt in the Terminal. Replace myfile.txt with the actual name of your file.
+ This will delete an entire directory rather than specific files. The package includes several other options:
+
+
+Type 'smem in the Terminal.
+Type sfill mountpoint/ in the Terminal.
+Type cat /proc/swaps in the Terminal.
+ After typing your command, hit ↵ Enter. The utility should run and permanently, securely delete the file or directory specified in your instructions.
+
+
+You should receive a confirmation message within the Terminal once the action is complete and the data is gone for good. (In Ubuntu or some other dist. of linux you may receive the message "Couldn't find a free filename for 'dir' " but the process will be complete and your directory will be removed/shredded).
+

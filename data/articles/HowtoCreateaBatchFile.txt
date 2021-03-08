@@ -1,0 +1,19 @@
+ The bat file programming language is generally considered easy to learn and does not require you to use external programs or compilers you may be unfamiliar with. If this is your first attempt at writing a bat file, a good starting goal is to learn the use of commands and syntax.
+
+
+In programming, syntax is the spelling and grammar that your computer has been programmed to understand.Think of this as the language you will use to communicate with your computer. If you violate the rules of the programming language you are using, your computer will be unable to interpret and execute the commands you program.;
+, You should be cautious when using some commands, like the delete command, which can alter files that your computer needs to run.If this happens, you may have to reinstall windows on your machine.
+
+
+A complete list of commands can be found in your command prompt window. Find the "Run" command in your start menu, or press ⊞ Win+R. Once the black command prompt screen appears, type "help" and press enter. A complete list of command prompt commands, which also work for bat files, will appear.
+ Most programmers prefer a no-frills text editor, like Notepad++. This is because extra features in word processing software are usually included for improved interface for the user. Your computer, already understanding the rules of batch file programming language, only needs to read the code you have written.
+
+
+Notepad++, in addition to being free, is also coded to ensure a high execution speed of the programs you write, as well as minimizing the file size., The first line of code in your bat file should always be "@echo off", unless debugging. The use of the symbol "@" will prevent the echoing of your line of code, and following the echo command with "off" will prevent your computer from displaying the command prompt when your bat file runs.After this first line of code, you can use basic commands and syntax to write the code you wish your bat file to perform.
+ Any misspelled words, improper format, or grammatical mistake could result in critical error that renders your bat file useless. If you receive an error message, you might want to consider using the "pause" command to stall your program at a point in the code. When your computer reaches the "pause" command, it will stop running your code and display the message, "Press any key to continue".If you receive no error message prior to the point in your code where you have inserted "pause," you know that your programming syntax, grammar, and spelling were correct up to that point. Adjust the location of your "pause" command to narrow down where you've made a mistake.
+ Now that you've finished writing your code, you can click the "File" menu, likely on the top menu bar of your text editor, and select "Save as". This will open a directory where you can navigate to a location on your computer where you wish to save your bat file. When you have selected your save destination, name your file in the field to the bottom of your save directory, and end your file name with the extension ".bat".
+
+
+For example, if your file name were "CreateABatchFile," you would end the name of your file like so: CreateABatchFile.bat.
+ Navigate through your file directory until you have reached the location to which you saved your bat file. Double-click the file or right-click it and select the "run" option to see if your new bat file works.
+

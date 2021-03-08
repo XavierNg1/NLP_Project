@@ -1,0 +1,113 @@
+ We evaluate the complete elliptic integral of the first kind first; the second kind is not much different and uses the same techniques. We shall evaluate the trigonometric form, but note that Jacobi's form is a completely equivalent way of writing it. 
+
+
+K(k)=∫0π/2dϕ1−k2sin2⁡ϕ{\displaystyle K(k)=\int _{0}^{\pi /2}{\frac {{\mathrm {d} }\phi }{\sqrt {1-k^{2}\sin ^{2}\phi }}}}
+;
+,
+
+The binomial series is the Taylor expansion for the expression (1+x)α{\displaystyle (1+x)^{\alpha }} for any real number α.{\displaystyle \alpha .} 
+
+
+(1+x)α=∑m=0∞(αm)xm{\displaystyle (1+x)^{\alpha }=\sum _{m=0}^{\infty }{\alpha  \choose m}x^{m}}
+
+
+
+We can then write the integrand as such by identifying x{\displaystyle x} and α,{\displaystyle \alpha ,} making sure to pull out any terms that are not dependent on ϕ.{\displaystyle \phi .}
+
+
+K(k)=∫0π/2dϕ1−k2sin2⁡ϕ=∫0π/2∑m=0∞(−1/2m)(−1)mk2msin2m⁡ϕdϕ=∑m=0∞(−1/2m)(−1)mk2m∫0π/2sin2m⁡ϕdϕ{\displaystyle {\begin{aligned}K(k)&=\int _{0}^{\pi /2}{\frac {{\mathrm {d} }\phi }{\sqrt {1-k^{2}\sin ^{2}\phi }}}\\&=\int _{0}^{\pi /2}\sum _{m=0}^{\infty }{-1/2 \choose m}(-1)^{m}k^{2m}\sin ^{2m}\phi {\mathrm {d} }\phi \\&=\sum _{m=0}^{\infty }{-1/2 \choose m}(-1)^{m}k^{2m}\int _{0}^{\pi /2}\sin ^{2m}\phi {\mathrm {d} }\phi \end{aligned}}}
+
+
+
+Notice that we are evaluating this integral term-by-term.
+
+
+First, expand the binomial coefficients in terms of the Gamma function if necessary. Otherwise, leave it in terms of factorials. Remember that m!=Γ(m+1).{\displaystyle m!=\Gamma (m+1).}
+
+
+(−1/2m)=Γ(1/2)m!Γ(1/2−m){\displaystyle {-1/2 \choose m}={\frac {\Gamma (1/2)}{m!\,\Gamma (1/2-m)}}}
+
+
+
+Second, recall the definition of the Beta function in terms of trigonometric functions.
+
+
+Γ(α)Γ(β)2Γ(α+β)=∫0π/2cos2α−1⁡ϕsin2β−1⁡ϕdϕ{\displaystyle {\frac {\Gamma (\alpha )\Gamma (\beta )}{2\,\Gamma (\alpha +\beta )}}=\int _{0}^{\pi /2}\cos ^{2\alpha -1}\phi \sin ^{2\beta -1}\phi {\mathrm {d} }\phi }
+
+
+
+We identify α=1/2{\displaystyle \alpha =1/2} and β=m+1/2.{\displaystyle \beta =m+1/2.}
+
+
+K(k)=∑m=0∞(−1)mΓ(1/2)m!Γ(1/2−m)Γ(1/2)Γ(1/2+m)2m!k2m{\displaystyle K(k)=\sum _{m=0}^{\infty }{\frac {(-1)^{m}\Gamma (1/2)}{m!\,\Gamma (1/2-m)}}{\frac {\Gamma (1/2)\Gamma (1/2+m)}{2\,m!}}k^{2m}}
+
+
+
+
+,
+
+Euler's reflection identity is stated below.
+
+
+Γ(z)Γ(1−z)=πsin⁡(πz){\displaystyle \Gamma (z)\Gamma (1-z)={\frac {\pi }{\sin(\pi z)}}}
+
+
+
+We can simplify our series using this formula if we let z=1/2+m.{\displaystyle z=1/2+m.}
+
+
+Γ(1/2+m)Γ(1/2−m)=πsin⁡(π(1/2+m)){\displaystyle \Gamma (1/2+m)\Gamma (1/2-m)={\frac {\pi }{\sin(\pi (1/2+m))}}}
+
+
+
+We simplify further by making the observation that (−1)msin⁡(π(1/2+m))=1{\displaystyle (-1)^{m}\sin(\pi (1/2+m))=1} for all m.{\displaystyle m.}
+
+
+K(k)=π2∑m=0∞Γ2(1/2+m)π(m!)2k2m{\displaystyle K(k)={\frac {\pi }{2}}\sum _{m=0}^{\infty }{\frac {\Gamma ^{2}(1/2+m)}{\pi (m!)^{2}}}k^{2m}}
+
+
+
+
+, 
+
+The double factorial identity can be related to the Gamma function in the following manner.
+
+
+(2m−1)!!=2mΓ(1/2+m)π{\displaystyle (2m-1)!!={\frac {2^{m}\Gamma (1/2+m)}{\sqrt {\pi }}}}
+
+
+
+We can then simplify this series like so.
+
+
+K(k)=π2∑m=0∞2k2m{\displaystyle K(k)={\frac {\pi }{2}}\sum _{m=0}^{\infty }\left^{2}k^{2m}}
+
+
+
+This series can also be written only with double factorials when making use of the identity (2m)!!=2mm!,{\displaystyle (2m)!!=2^{m}m!,} which is sometimes encountered in the literature as well.
+
+
+K(k)=π2∑m=0∞2k2m{\displaystyle K(k)={\frac {\pi }{2}}\sum _{m=0}^{\infty }\left^{2}k^{2m}}
+
+
+
+
+,
+
+
+K(k)=π2{\displaystyle K(k)={\frac {\pi }{2}}\left}
+
+ The series has a few properties that immediately stand out. First, we can see that for small k,{\displaystyle k,} the higher-order terms are suppressed, mainly due to the factorials. This is the justification for the small-angle approximation when analyzing a pendulum.
+
+Second, its region of convergence is |k|<1.{\displaystyle |k|<1.} When k=1,{\displaystyle k=1,} the integral diverges because the factorials cancel each other out in the large m{\displaystyle m} limit, although this divergence is very slow - K(0.9999)≈5.645,{\displaystyle K(0.9999)\approx 5.645,} for example. 
+
+A physical example of when k=1{\displaystyle k=1} is when a pendulum is released from an angle of 180°, denoting an unstable equilibrium point. The period, being written in terms of this elliptic integral, then diverges, for the pendulum never falls down.
+ Using the techniques presented in this article, the power series for this integral can also be found.
+
+
+E(k)=π2∑m=0∞2k2m1−2m{\displaystyle E(k)={\frac {\pi }{2}}\sum _{m=0}^{\infty }\left^{2}{\frac {k^{2m}}{1-2m}}}
+
+
+E(k)=π2{\displaystyle E(k)={\frac {\pi }{2}}\left}
+
+

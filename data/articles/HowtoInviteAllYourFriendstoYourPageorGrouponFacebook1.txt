@@ -1,0 +1,19 @@
+ Since you'll be entering a JavaScript code into your browser, you will need to perform this step on a computer.;
+, You'll find this on the right side of your screen.
+
+
+Please note that this method will only work for Page invites; you'll have to stick to a manual method to add friends to a Group.
+ Depending on which browser you're using, your process for doing so will vary:
+
+
+Chrome/Firefox - Hold Ctrl + ⇧ Shift and tap J (⌘ Command + ⌥ Option + J on Mac).Safari - Hold ⌥ Option + ⌘ Command and tap C. if this doesn't work, you'll need to enable the console from Safari's "Preference" tab (top left corner of your screen). Click the "Advanced" tab, then click the box next to "Show Develop menu...".Opera - Hold Ctrl + ⇧ Shift and tap I, then click the "Console" option at the top right corner of the pop-up menu.
+ The console entry field should be at the bottom of your screen.The code is as follows: javascript:var inputs = document.getElementsByClassName(‘uiButton _1sm’); for(var i=0; i<inputs.length;i++) { inputs.click(); }
+
+If your code doesn't work, try this rendition: javascript:var inputs = document.getElementsByClassName('_1pu2'); for(var i=0;i<inputs.length;i++) { inputs.click(); }
+
+If you're using Google Chrome, you can enter this code into your browser URL at the top of the page. You may need to re-type the "javascript:" part first, since the Chrome URL bar might automatically delete it.
+ This should begin inviting your friends. The process may take a few minutes to complete.
+
+
+The JavaScript code has an upper limit of 500 invites, so you may have to repeat this process multiple times if you have more than 500 friends. Doing so will increase the risk of being blocked from inviting more friends by Facebook.
+

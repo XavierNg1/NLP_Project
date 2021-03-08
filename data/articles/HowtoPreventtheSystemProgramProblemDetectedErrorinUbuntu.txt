@@ -1,0 +1,10 @@
+ This can be done by running a certain command in the terminal, so open it up by pressing Ctrl+Alt+T. Then type the following command into the terminal: sudo rm -r /var/crash/*. Then press ↵ Enter. You will be required to type in your administrative password.;
+,
+
+
+On your keyboard, press Alt+F2 to bring up a "Run Application" dialog and type gksudo gedit /etc/default/apport. Then press ↵ Enter.
+Alternatively, type the following command into the terminal: gksudo gedit /etc/default/apport. Then press ↵ Enter.
+You will be required to enter an administrative password.
+ In the fourth line, change the enabled=1 to enabled=0. Then save the file and exit.
+ To restart apport, type the following into the command line: sudo restart apport. From now on, you will not see the error message appear again.
+

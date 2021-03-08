@@ -1,0 +1,11 @@
+ You can do this by pressing Ctrl+Alt+T. Then type in sudo apt-get update. You will be prompted for your root password. All this command does is updates the list of programs in your repository.
+
+
+Some distros do this automatically.;
+, After apt-get is done, run sudo apt-get upgrade. Again, enter your password and wait 2-3 seconds. You will see a list of packages which should be installed to upgrade.
+
+
+You can upgrade individual packages as follows: sudo apt-get upgrade firefox.
+ You will be asked if you want to upgrade those packages, if yes, press Y and hit ↵ Enter. If you don't want to upgrade then press N and press ↵ Enter to abort.
+ Bear in mind that this can be a very large download, and might take a considerable time, depending on your internet connection speed.
+

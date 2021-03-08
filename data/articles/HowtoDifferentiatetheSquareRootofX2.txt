@@ -1,0 +1,42 @@
+ The chain rule is a rule for derivatives that you use when the original function combines a function within another function. The chain rule says that, for two functions f(x){\displaystyle f(x)} and g(x){\displaystyle g(x)}, the derivative of the combination of the two can be found as follows:If y=f(g(x)){\displaystyle y=f(g(x))}, then y′=f′(g)∗g′(x){\displaystyle y^{\prime }=f^{\prime }(g)*g^{\prime }(x)}.
+ Using the chain rule requires that you first define the two functions that make up your combined function. For square root functions, the outer function f(g){\displaystyle f(g)} will be the square root function, and the inner function g(x){\displaystyle g(x)} will be whatever appears under the radical sign.For example, suppose you wish to find the derivative of 3x+2{\displaystyle {\sqrt {3x+2}}}. Define the two parts as follows:
+
+
+f(g)=g=g12{\displaystyle f(g)={\sqrt {g}}=g^{\frac {1}{2}}}
+
+
+g(x)=(3x+2){\displaystyle g(x)=(3x+2)}
+
+
+
+
+, To apply the chain rule to the square root of a function, you will first need to find the derivative of the general square root function:f(g)=g=g12{\displaystyle f(g)={\sqrt {g}}=g^{\frac {1}{2}}}
+
+
+f′(g)=12g−12{\displaystyle f^{\prime }(g)={\frac {1}{2}}g^{-{\frac {1}{2}}}}
+
+
+f′(g)=12g{\displaystyle f^{\prime }(g)={\frac {1}{2{\sqrt {g}}}}}
+
+
+
+Then find the derivative of the second function:
+
+
+g(x)=(3x+2){\displaystyle g(x)=(3x+2)}
+
+
+g′(x)=3{\displaystyle g^{\prime }(x)=3}
+
+
+
+
+, Recall the chain rule, y′=f′(g)∗g′(x){\displaystyle y^{\prime }=f^{\prime }(g)*g^{\prime }(x)}, and then combine the derivatives as follows:y′=12g∗3{\displaystyle y^{\prime }={\frac {1}{2{\sqrt {g}}}}*3}
+
+
+y′=12(3x+2∗3{\displaystyle y^{\prime }={\frac {1}{2{\sqrt {(3x+2}}}}*3}
+
+
+y′=32(3x+2{\displaystyle y^{\prime }={\frac {3}{2{\sqrt {(3x+2}}}}}
+
+

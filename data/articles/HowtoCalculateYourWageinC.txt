@@ -1,0 +1,19 @@
+ To be able to write code in C++, you need to download a program. The program used in this example is Microsoft Visual Studio 2010 Express edition. The link is provided at the bottom of the article. You can also find it using Google.;
+, When opened, you will be greeted with a screen like this. You want to click on “New Project” under the Microsoft Visual C++ 2010 Express logo.
+ Give it any name you want. Choose a location to save your program, and make sure that it is easily accessible.
+
+
+A popup box will appear. Click Next, because you still need to customize some of the settings. Hitting “Finish” will not allow you to do this.
+, To create the new file, go to the top bar and click the "Project" menu. After that, click "Add New Item". Select the "C++ File (.cpp)" option from the list.
+ Give it any name you want. The location should be in the project folder by default. After you're done, click Add at the bottom of the window. You will now see an empty document. This is where you will write the code.
+ Begin with the basic necessities. To make a comment, put ". IOStream is the library that allows a program to accept inputs from the keyboard and output them to the screen. Below that is the main function. That is where the code will be contained. The "return 0" line makes the program exit when it is done.
+ We now need to insert the variables that we are going to use for the program. Type the variables you see in the above picture. The "float" in front of the variables defines the type of variable it is: a floating point variable.
+ We now need to create the user interface for the program. The user can type in their hourly wage and hours they worked. "Cout" is what sends the text to the screen. "Cin" takes the user input and stores it to the variable. The << (output) and >> (input) between each action helps separate the code so the machine can read it. We need to contain the text we write in a set of double quotation marks (" "). This tells the program when the text starts and ends. The "endl" ends the line and produces a space between the output and input to help the user read the program better.
+ The condition will be if the hours are over 40 so we can calculate the overtime. If the hours are above 40, do this part of the code. If not, do the other part.
+ Now we have to include the calculations for the math portion of the code. Standard operation procedures are understood by the program, but we can use parenthesis to make sure we don’t make a mistake. When we take a variable and make it equal to something, it will make that variable equal to what we want it to be. For example, the overtime will be equal the (hours – 40) multiplied by 1.5 to help get the extra time that was spent at work.
+ In this step, we set the yearly wage to be equal to the weekly wage * 50. In this article, we're using 50 to represent 50 weeks with 2 weeks of vacation days. Not every workplace provides paid vacation days to their employees.
+ We want to output the results to the user. We can type them a message using cout and " ". To get the weekly wage to output, we can use our cout statement.
+ To be able to run the program, you would usually have to build the solution and debug it. For a simple program like this, you shouldn’t run into any trouble. You can use the shortcut ctrl+F5 to start the program without debugging it.
+ After pressing ctrl+F5, a black box (more formally, the command line) will come up. That is your program. You can type in any number.
+ After filling out the hourly wage and the hours, the program will go line by line. If the hours are above 40 it will do the if-statement, and if not it will do the else statement. It will then display the output to the user.
+

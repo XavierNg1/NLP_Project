@@ -1,0 +1,220 @@
+ 
+
+For example, consider the system of equations written below.
+
+
+x1′=3x1+5x2x2′=x1−x2{\displaystyle {\begin{aligned}x_{1}'&=3x_{1}+5x_{2}\\x_{2}'&=x_{1}-x_{2}\end{aligned}}}
+
+
+
+We consider the variables x1=x1(t){\displaystyle x_{1}=x_{1}(t)} and x2=x2(t){\displaystyle x_{2}=x_{2}(t)} and their respective derivatives to be functions of t.{\displaystyle t.}
+
+From linear algebra, any system of equations such as this one can be written in matrix form x′=Ax.{\displaystyle {\mathbf {x} }'=A{\mathbf {x} }.} In general, one also considers a forcing term b(t){\displaystyle {\mathbf {b} }(t)} which may or may not be time-dependent, but in this section, we focus only on the homogeneous case where this term is 0.
+
+
+(x1′x2′)=(351−1)(x1x2){\displaystyle {\begin{pmatrix}x_{1}'\\x_{2}'\end{pmatrix}}={\begin{pmatrix}3&5\\1&-1\end{pmatrix}}{\begin{pmatrix}x_{1}\\x_{2}\end{pmatrix}}}
+
+
+;
+,
+
+First, we find the characteristic equation det⁡(A−λI)=0.{\displaystyle \operatorname {det} (A-\lambda I)=0.} A useful formula for finding the characteristic equation of a 2×2{\displaystyle 2\times 2} matrix is λ2−Tr⁡(A)λ+det⁡(A)=0{\displaystyle \lambda ^{2}-\operatorname {Tr} (A)\lambda +\operatorname {det} (A)=0}, where Tr{\displaystyle \operatorname {Tr} } denotes the trace of the matrix, the sum of the main diagonal elements.
+
+
+|3−λ51−1−λ|=λ2−2λ−8=0{\displaystyle {\begin{vmatrix}3-\lambda &5\\1&-1-\lambda \end{vmatrix}}=\lambda ^{2}-2\lambda -8=0}
+
+
+
+Solve for the eigenvalues. This quadratic equation can be factored. In general, use the quadratic formula. In this article, we label the two eigenvalues as λ1{\displaystyle \lambda _{1}} and λ2.{\displaystyle \lambda _{2}.}
+
+
+λ1=4{\displaystyle \lambda _{1}=4}
+
+
+λ2=−2{\displaystyle \lambda _{2}=-2}
+
+
+
+
+, 
+
+
+The eigenvalues are real and distinct. From linear algebra, finding the eigenvectors in this case is easy, as the eigenvectors should span the space with a dimension equal to the dimension of the matrix. Our example has two real and distinct eigenvalues, which we solve in the next section.
+
+
+The eigenvalues are complex. We only need to deal with one eigenvector for reasons we discuss later.
+
+
+The eigenvalues are degenerate. (They have multiplicity of order 2 or higher.) It is sometimes the case that degenerate eigenvalues of a matrix end up having eigenvectors that span a space with dimension equal to the degeneracy (multiplicity) of the eigenvalue. For example, an eigenvalue with degeneracy two may end up having two linearly independent eigenvectors. However, it is also entirely possible that the degenerate eigenvalue has an eigenspace that fails to span with a dimension equal to the degeneracy. In order to rectify this situation, we must introduce the concept of generalized eigenvectors, discussed later.
+ To do so, substitute an eigenvalue into the matrix A−λI{\displaystyle A-\lambda I} and row-reduce. For 2×2{\displaystyle 2\times 2} matrices, the second row is always a linear combination of the first row, and so the row-reduction is trivial. For higher dimensional matrices, the linear dependence of the rows (and columns!) is less obvious. 
+
+
+λ1=4: (−151−5)→(−1500){\displaystyle \lambda _{1}=4:\ {\begin{pmatrix}-1&5\\1&-5\end{pmatrix}}\to {\begin{pmatrix}-1&5\\0&0\end{pmatrix}}}
+
+This matrix tells us that −x1=−5x2.{\displaystyle -x_{1}=-5x_{2}.} Setting x2=t{\displaystyle x_{2}=t} to be a free variable, we see that x1=5t.{\displaystyle x_{1}=5t.} Because t{\displaystyle t} can be set to anything, we opt to set t=1{\displaystyle t=1} for convenience and arrive at the eigenvector v1=(51).{\displaystyle {\mathbf {v} }_{1}={\begin{pmatrix}5\\1\end{pmatrix}}.}
+
+We do this with all other eigenvalues as well. Therefore, the eigenvector associated with eigenvalue λ2=−2{\displaystyle \lambda _{2}=-2} is v2=(−11).{\displaystyle {\mathbf {v} }_{2}={\begin{pmatrix}-1\\1\end{pmatrix}}.}
+
+
+, Below, c1{\displaystyle c_{1}} and c2{\displaystyle c_{2}} are arbitrary constants.
+
+
+x=c1e4t(51)+c2e−2t(−11){\displaystyle {\mathbf {x} }=c_{1}e^{4t}{\begin{pmatrix}5\\1\end{pmatrix}}+c_{2}e^{-2t}{\begin{pmatrix}-1\\1\end{pmatrix}}}
+
+In general, we have eigenvalues λ1{\displaystyle \lambda _{1}} and λ2,{\displaystyle \lambda _{2},} with their corresponding eigenvectors.
+
+
+x=c1eλ1tv1+c2eλ2tv2{\displaystyle {\mathbf {x} }=c_{1}e^{\lambda _{1}t}{\mathbf {v} }_{1}+c_{2}e^{\lambda _{2}t}{\mathbf {v} }_{2}}
+
+
+
+
+, 
+
+The fundamental theorem of algebra guarantees that, for polynomial equations with real coefficients, the solutions are real numbers or come in complex conjugates. This implies that if λ=a+bi{\displaystyle \lambda =a+bi} is a solution to the characteristic equation, then λ∗=a−bi{\displaystyle \lambda ^{*}=a-bi} is also a solution. 
+
+Similarly, if v{\displaystyle {\mathbf {v} }} is the eigenvector associated with eigenvalue λ,{\displaystyle \lambda ,} then v∗{\displaystyle {\mathbf {v} }^{*}} is an eigenvector associated with eigenvalue λ∗.{\displaystyle \lambda ^{*}.}
+
+The solution to the system of differential equations can therefore be written out as a linear combination of the real and imaginary parts of the eigenvector associated with eigenvalue λ.{\displaystyle \lambda .} This is why we only need to deal with one eigenvalue.
+
+Let's consider a system with matrix A=(2−51−2).{\displaystyle A={\begin{pmatrix}2&-5\\1&-2\end{pmatrix}}.} This matrix has eigenvalues of λ=±i.{\displaystyle \lambda =\pm i.}
+
+
+, We still row-reduce here just as with the real and distinct eigenvalue case, but the complex numbers mean that it is no longer immediately obvious that there exists linear dependency between the rows and columns. Nevertheless, if our work is correct, it is guaranteed that there be linear dependence, so for 2×2{\displaystyle 2\times 2} matrices, we can again row-reduce trivially. Here, we first swap rows, and then row-reduce. We then set x2{\displaystyle x_{2}} as a free variable, solve for x1,{\displaystyle x_{1},} and set t=1{\displaystyle t=1} for convenience, just as before.
+
+
+λ=i: (2−i−51−2−i)→(1−2−i00){\displaystyle \lambda =i:\ {\begin{pmatrix}2-i&-5\\1&-2-i\end{pmatrix}}\to {\begin{pmatrix}1&-2-i\\0&0\end{pmatrix}}}
+
+
+v=(2+i1){\displaystyle {\mathbf {v} }={\begin{pmatrix}2+i\\1\end{pmatrix}}}
+
+
+, This first term is analogous to the form of the solution where the eigenvalues are both real and distinct. In general, we would have eλt=e(a+bi)t{\displaystyle e^{\lambda t}=e^{(a+bi)t}} as the exponential.
+
+
+eitv{\displaystyle e^{it}{\mathbf {v} }}
+
+
+, In general, our eigenvalue is of the form λ=a+bi,{\displaystyle \lambda =a+bi,} so we would also have a real exponential out in front.
+
+
+eit=cos⁡t+isin⁡t{\displaystyle e^{it}=\cos t+i\sin t}
+
+
+(cos⁡t+isin⁡t)(2+i1){\displaystyle (\cos t+i\sin t){\begin{pmatrix}2+i\\1\end{pmatrix}}}
+
+
+, Remember that i2=−1.{\displaystyle i^{2}=-1.}
+
+
+(cos⁡t+isin⁡t)(2+i1)=(2cos⁡t+2isin⁡t+icos⁡t−sin⁡tcos⁡t+isin⁡t){\displaystyle (\cos t+i\sin t){\begin{pmatrix}2+i\\1\end{pmatrix}}={\begin{pmatrix}2\cos t+2i\sin t+i\cos t-\sin t\\\cos t+i\sin t\end{pmatrix}}}
+
+
+, The general solution is the linear combination of the real and imaginary parts of this vector.
+
+
+x=c1(2cos⁡t−sin⁡tcos⁡t)+c2(2sin⁡t+cos⁡tsin⁡t){\displaystyle {\mathbf {x} }=c_{1}{\begin{pmatrix}2\cos t-\sin t\\\cos t\end{pmatrix}}+c_{2}{\begin{pmatrix}2\sin t+\cos t\\\sin t\end{pmatrix}}}
+
+
+, As mentioned previously, it is sometimes the case that there are n{\displaystyle n} linearly independent eigenvectors associated with an eigenvalue of degeneracy of order n.{\displaystyle n.} This always occurs when the matrix A{\displaystyle A} is Hermitian. If this is the case, then proceed to solve the system according to the real and distinct eigenvalues case. If not, then continue here.
+
+Consider the matrix A=(31−4−1).{\displaystyle A={\begin{pmatrix}3&1\\-4&-1\end{pmatrix}}.} This matrix has eigenvalue λ=1{\displaystyle \lambda =1} with degeneracy of order 2. Using the methods outlined in previous sections, we find that there exists only one eigenvector v=(−12).{\displaystyle {\mathbf {v} }={\begin{pmatrix}-1\\2\end{pmatrix}}.} 
+
+Our eigenspace fails to span the space of dimension 2. This is a problem. Recall that the general solution to a second order differential equation with repeated roots in its characteristic equation involved multiplying a term by t{\displaystyle t} in order to achieve linear independence. If we substitute this solution x=teλta{\displaystyle {\mathbf {x} }=te^{\lambda t}{\mathbf {a} }} as an ansatz, we obtain a system of equations, one of which, a=0,{\displaystyle {\mathbf {a} }=0,} is untenable with the requirement that an eigenvector be non-zero. One of the solutions must therefore include another vector w{\displaystyle {\mathbf {w} }} which we find momentarily.
+ 
+
+The Cayley-Hamilton theorem says that every matrix satisfies its own characteristic polynomial. That is, if p(λ){\displaystyle p(\lambda )} is a characteristic polynomial in λ,{\displaystyle \lambda ,} then replacing λ{\displaystyle \lambda } with the matrix A{\displaystyle A} itself must give the zero matrix. (Try it for the matrix above.) 
+
+This is a deep result implying that every vector space must be spanned by a linear combination of the eigenvectors v{\displaystyle {\mathbf {v} }} and the generalized eigenvectors w.{\displaystyle {\mathbf {w} }.}  So even though these generalized eigenvectors are not eigenvectors of A,{\displaystyle A,} i.e. they do not lie in the null space of A−λI,{\displaystyle A-\lambda I,} they can be chosen such that they lie in the null space of (A−λI)2.{\displaystyle (A-\lambda I)^{2}.} (Hence, generalized.) In general, they may lie in the null space of (A−λI)n,{\displaystyle (A-\lambda I)^{n},} for an eigenvalue with degeneracy of order n.{\displaystyle n.}
+
+
+, We know that (A−λI)2w=0.{\displaystyle (A-\lambda I)^{2}{\mathbf {w} }=0.} Then it follows that, since (A−λI)v=0,{\displaystyle (A-\lambda I){\mathbf {v} }=0,} we obtain the following important relation. This is the formula to find the generalized eigenvector given an eigenvector corresponding to an eigenvalue of degeneracy 2. This formula is shown to work if we act both sides by A−λI.{\displaystyle A-\lambda I.} 
+
+
+(A−λI)w=v{\displaystyle (A-\lambda I){\mathbf {w} }={\mathbf {v} }}
+
+
+, Solving this with row-reduction for the 2×2{\displaystyle 2\times 2} case is again trivial. Setting a free variable w2=t{\displaystyle w_{2}=t} and setting it to 0 for convenience, we have the generalized eigenvector below.
+
+
+w=(−1/20){\displaystyle {\mathbf {w} }={\begin{pmatrix}-1/2\\0\end{pmatrix}}}
+
+
+, The general solution to our system is given below.
+
+
+x=c1et(−12)+c2(tet(−12)+et(−1/20)){\displaystyle {\mathbf {x} }=c_{1}e^{t}{\begin{pmatrix}-1\\2\end{pmatrix}}+c_{2}\left(te^{t}{\begin{pmatrix}-1\\2\end{pmatrix}}+e^{t}{\begin{pmatrix}-1/2\\0\end{pmatrix}}\right)}
+
+In general, we have the following formula.
+
+
+x=c1eλtv+c2(teλtv+eλtw){\displaystyle {\mathbf {x} }=c_{1}e^{\lambda t}{\mathbf {v} }+c_{2}\left(te^{\lambda t}{\mathbf {v} }+e^{\lambda t}{\mathbf {w} }\right)}
+
+
+
+In each of these cases, one obtains two arbitrary constants c1{\displaystyle c_{1}} and c2.{\displaystyle c_{2}.} Given initial conditions when t=0,{\displaystyle t=0,} one can easily solve for the constants. What will result is a system of algebraic equations.
+ Recall that, if the variables x{\displaystyle {\mathbf {x} }} and A{\displaystyle A} were scalars, then the solution to this differential equation would be ceat.{\displaystyle ce^{at}.} So the solution to x′=Ax{\displaystyle {\mathbf {x} }'=A{\mathbf {x} }} is in the form of a matrix exponential, up to a constant.
+
+
+eAt=I+(At)+(At)22!+(At)33!+⋯{\displaystyle e^{At}=I+(At)+{\frac {(At)^{2}}{2!}}+{\frac {(At)^{3}}{3!}}+\cdots }
+
+Given initial conditions x(0)=x0,{\displaystyle {\mathbf {x} }(0)={\mathbf {x} }_{0},} the solution is x=eAtx0.{\displaystyle {\mathbf {x} }=e^{At}{\mathbf {x} }_{0}.}
+
+
+, For distinct (real and complex) eigenvalues, one can use the formulas given below, where eAt=eλ1tB+eλ2tC.{\displaystyle e^{At}=e^{\lambda _{1}t}B+e^{\lambda _{2}t}C.} These formulas have the advantage of not needing to care about the eigenvectors.
+
+
+B=A−λ2Iλ1−λ2,  C=I−B{\displaystyle B={\frac {A-\lambda _{2}I}{\lambda _{1}-\lambda _{2}}},\ \ C=I-B}
+
+However, finding the matrix exponential is made easier through diagonalization A=PDP−1,{\displaystyle A=PDP^{-1},} where P{\displaystyle P} is the change of basis matrix whose columns are the eigenvectors of A,{\displaystyle A,} and D{\displaystyle D} has the eigenvalues of A{\displaystyle A} along its main diagonal in the same order as their corresponding eigenvectors in P.{\displaystyle P.}
+
+
+, 
+
+Consider the matrix (351−1).{\displaystyle {\begin{pmatrix}3&5\\1&-1\end{pmatrix}}.} To diagonalize, we find the eigenvalues and corresponding eigenvectors. D{\displaystyle D} has the eigenvalues on the main diagonal. P{\displaystyle P} has the eigenvectors as its columns. The order of the eigenvectors and the eigenvalues must match!
+
+
+(351−1)=16(5−111)(400−2)(11−15){\displaystyle {\begin{pmatrix}3&5\\1&-1\end{pmatrix}}={\frac {1}{6}}{\begin{pmatrix}5&-1\\1&1\end{pmatrix}}{\begin{pmatrix}4&0\\0&-2\end{pmatrix}}{\begin{pmatrix}1&1\\-1&5\end{pmatrix}}}
+
+
+
+
+, The advantage of diagonalization is that diagonal matrices are easier to work with. Here, taking the exponential of a diagonal matrix is equivalent to taking the exponential of the individual elements of the matrix eAt=PeDtP−1.{\displaystyle e^{At}=Pe^{Dt}P^{-1}.}
+
+
+eAt=16(5−111)(e4t00e−2t)(11−15)=16(5e4t+e−2t5e4t−5e−2te4t−e−2te4t+5e−2t){\displaystyle {\begin{aligned}e^{At}&={\frac {1}{6}}{\begin{pmatrix}5&-1\\1&1\end{pmatrix}}{\begin{pmatrix}e^{4t}&0\\0&e^{-2t}\end{pmatrix}}{\begin{pmatrix}1&1\\-1&5\end{pmatrix}}\\&={\frac {1}{6}}{\begin{pmatrix}5e^{4t}+e^{-2t}&5e^{4t}-5e^{-2t}\\e^{4t}-e^{-2t}&e^{4t}+5e^{-2t}\end{pmatrix}}\end{aligned}}}
+
+If we include the constant vector c,{\displaystyle {\mathbf {c} },} we can disregard the extra 1/6{\displaystyle 1/6} factor out front. Although this solution may not look like the solution we found previously, it is equivalent if we make the transformation c1+c2→c1{\displaystyle c_{1}+c_{2}\to c_{1}} and −c1+5c2→c2.{\displaystyle -c_{1}+5c_{2}\to c_{2}.} Thus, if eAt{\displaystyle e^{At}} is found, then your work is pretty much over.
+ Once again, if it so happens that you find degenerate eigenvalues and the matrix is still diagonalizable, then all is well and you can proceed to find eAt{\displaystyle e^{At}} the normal way. 
+, To begin, we write the series expansion for eAt.{\displaystyle e^{At}.}
+
+
+eAt=e(A−λI)t+λIt=eλtI(I+(A−λI)t+(A−λI)22!)⋯{\displaystyle e^{At}=e^{(A-\lambda I)t+\lambda It}=e^{\lambda t}I\left(I+(A-\lambda I)t+{\frac {(A-\lambda I)^{2}}{2!}}\right)\cdots }
+
+We can use the series expansion exactly because the matrix (A−λI)2{\displaystyle (A-\lambda I)^{2}} is nilpotent - that is, the matrix to some power is 0. In our case, A−λI{\displaystyle A-\lambda I} has nilpotency 2, so the Taylor series truncates to first order, giving us the relation below.
+
+
+eAt=eλt(I+(A−λI)t){\displaystyle e^{At}=e^{\lambda t}(I+(A-\lambda I)t)}
+
+
+
+In general, one would start from the series again and truncate based on the degeneracy of the eigenvalue and to what extent the eigenspace corresponding to the eigenvalue fails to span the space of dimension equal to the degeneracy of the eigenvalue.
+
+
+Consider the matrix (100020022).{\displaystyle {\begin{pmatrix}1&0&0\\0&2&0\\0&2&2\end{pmatrix}}.} Since this is a triangular matrix, the eigenvalues are read off the main diagonal. We find eigenvector (100){\displaystyle {\begin{pmatrix}1\\0\\0\end{pmatrix}}} corresponding to eigenvalue λ=1{\displaystyle \lambda =1} and eigenvector (001){\displaystyle {\begin{pmatrix}0\\0\\1\end{pmatrix}}} corresponding to degenerate eigenvalue λ=2.{\displaystyle \lambda =2.} 
+
+To find the generalized eigenvector, we have (A−λI)2=(−100000000).{\displaystyle (A-\lambda I)^{2}={\begin{pmatrix}-1&0&0\\0&0&0\\0&0&0\end{pmatrix}}.} We can set either x2{\displaystyle x_{2}} or x3{\displaystyle x_{3}} as free variables. By setting one of them, we obtain a redundant solution, but the other one is the generalized eigenvector we are looking for: (010).{\displaystyle {\begin{pmatrix}0\\1\\0\end{pmatrix}}.}
+
+
+, A{\displaystyle A} is not diagonalizable, but there exists a matrix P{\displaystyle P} such that A=PJP−1,{\displaystyle A=PJP^{-1},} where J{\displaystyle J} is the Jordan normal form. J{\displaystyle J} is "almost" diagonal in the sense that it is identical to D{\displaystyle D} but also requires us to put a 1 directly above the eigenvalue corresponding to the generalized eigenvector within P.{\displaystyle P.} One can do the computation J=P−1AP{\displaystyle J=P^{-1}AP} to confirm that this is the case.
+
+
+A=(100001010)(100021002)(100001010){\displaystyle A={\begin{pmatrix}1&0&0\\0&0&1\\0&1&0\end{pmatrix}}{\begin{pmatrix}1&0&0\\0&2&1\\0&0&2\end{pmatrix}}{\begin{pmatrix}1&0&0\\0&0&1\\0&1&0\end{pmatrix}}}
+
+
+, Analogous to introducing an additional t{\displaystyle t} in the solution to a constant coefficient linear differential equation with repeated roots in its characteristic equation, one needs to introduce a term deλtdλ{\displaystyle {\frac {{\mathrm {d} }e^{\lambda t}}{{\mathrm {d} }\lambda }}} corresponding to the off-diagonal element in J.{\displaystyle J.} As the degeneracy goes up, more derivatives need to be taken in succession going up the column.
+
+
+eAt=P(et000e2tte2t00e2t)P−1{\displaystyle e^{At}=P{\begin{pmatrix}e^{t}&0&0\\0&e^{2t}&te^{2t}\\0&0&e^{2t}\end{pmatrix}}P^{-1}}
+
+

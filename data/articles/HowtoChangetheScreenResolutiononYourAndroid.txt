@@ -1,0 +1,51 @@
+ This is the gear-shaped app in your App Drawer (or on one of your Home screens).;
+, If you're on a Galaxy device, you'll first have to make sure you're in the "Device" section by tapping the pertinent tab at the top of the screen.
+ This option may also say "About Phone" or "About Tablet" depending on your operating system version.
+ You should see an option entitled "Build Number" here.
+ You'll need to do this quickly. If you successfully perform this step, you should see a text bubble pop up above the Build Number option that says something to the effect of being "one step away from being a developer."
+
+, It should be in the bottom right or left corner of your phone or tablet.
+ It should be directly above About Device.
+ A checkmark should appear next to this option.
+
+
+If there's already a checkmark next to "USB Debugging", don't un-check it.
+ Doing this will confirm your decision to enable USB Debugging, which is a feature that allows you to modify your phone's system processes--in this case, the screen resolution--via a USB link. You'll be using a computer from this point on.
+
+
+If this is your first time enabling USB debugging on your Android, you'll need to tap "Allow" on your Android after connecting it to your computer. Doing so will fully implement the USB Debugging feature.
+ The Android Studio suite contains all of the tools you'll need to alter your Android's screen resolution.
+ It's the green button in the middle of the page.
+
+
+The Android Studio website will detect which type of computer you have (PC or Mac) and provide you with that format of download automatically.
+ This will confirm that you've read and accepted Android's terms and conditions of software use.
+ It's at the bottom of this window. Depending on your computer type, the end of this button will say either "For Windows" or "For Mac", followed by a version number.
+ This is a large download, so it may take awhile. Depending on your chosen browser, you may have to choose a save location first (e.g., your desktop).
+ If prompted, you'll need to allow the setup to install files on your computer before continuing.
+
+
+The setup icon will be in your default "Downloads" folder.
+ This essentially entails clicking Next until the installation begins, though you can customize your installation options (such as the installation location and the shortcut options) from here.
+ This may take up to an hour.
+ Doing so will launch the Android Studio Developer Kit by default.
+ Again, you'll simply click Next until Android SDK begins unpacking its components.
+
+
+This setup section is primarily dedicated to ensuring that you don't download any components you don't want.
+ Your Android SDK is now installed and ready to use with your Android device. You won't need to do anything within the SDK program in order to change your Android's resolution, so you can exit the program if you like.
+ To do this, attach the small end of your Android's charger cable to your phone, then plug the large end into your computer's USB port.
+
+
+USB ports are rectangular openings typically located on one side of your laptop (or on your CPU if you're using a desktop computer).
+After connecting your Android to your computer, you may need to confirm that you wish to "trust" it in a pop-up window before continuing.
+ For a Mac, this application is called "Terminal", whereas PC users will open the "Command Prompt" application.
+
+
+Mac users will open the Finder (the blue face icon in your Dock) and type in "Terminal", then click on the Terminal app when it pops up.
+PC users should type "Command Prompt" into the search bar (bottom left corner of your screen) and click on the first item at the top of the list.
+, This should display your Android's developer information.
+ It's the number immediately to the right of the word "Density" (e.g., "480"). If anything goes wrong while changing your DPI, you'll need to know which resolution to revert back to.
+ Make sure you replace the "DPI" section with your desired resolution number (for example, 540).
+ Your device will reboot automatically. When it finishes rebooting, your updated screen resolution settings should be in place.
+

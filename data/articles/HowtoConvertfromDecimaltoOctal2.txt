@@ -1,0 +1,35 @@
+ We'll start with the decimal number 670.
+
+
+This method is faster than the successive division method. Most people find it more difficult to understand why it works, and may want to start with the easier method above.
+ Ignore decimal values for now. You'll see why this calculation is useful soon.
+
+
+In our example: 670 ÷ 8 = 83.
+ Now that we've "counted by 8" as many times as we can, the remainder is the small number left over. This is the last digit of our octal number, in the ones place (80). The remainder is always smaller than 8, so it can't be represented by any of the other digits.In our example: 670 ÷ 8 = 83 remainder 6.
+Our octal number so far is ???6.
+If your calculator has a "modulus" or "mod" button, you can find this value by entering "670 mod 8."
+
+, Set aside the remainder and return to your division problem. Take your answer and divide by 8 again. Note the answer, then find the remainder. This is the second-to-last digit of your octal number, the 81 = 8s place.
+
+
+In our example: The answer to our last division problem was 83.
+83 ÷ 8 = 10 remainder 3.
+Our octal number so far is ??36.
+ As before, take the answer to your last division problem. Divide it by 8 again, and find the remainder. This is the third-to-last digit of your octal number, the 82 = 64s place.
+
+
+In our example: The answer to our last division problem was 10.
+10 ÷ 8 = 1 remainder 2.
+Our octal number so far is ?236.
+ When you calculate your last division problem, the answer will be 0. The remainder to this problem is the first digit in your octal number. You have now fully converted the decimal number.
+
+
+In our example: The answer to our last division problem was 1.
+1 ÷ 8 = 0 remainder 1.
+Our final answer is the octal number 1236. We can write this as 12368 to show that it is an octal number.
+ If you're having trouble understanding this method, here's an explanation:You start with a pile of 670 units.
+The first division problem divides these into groups, with 8 units in each group. Anything left over, the remainder, doesn't fit into the octal 8s place. It must be in the 1s place instead.
+Now you take your pile of groups, and divide them into sections with 8 groups each. Each section now has 8 groups with 8 units each, or 64 units total. The remainder doesn't fit into these, so it can't fit into the octal 64s place. It must be in the 8s place.
+This continues until you discover the entire number.
+

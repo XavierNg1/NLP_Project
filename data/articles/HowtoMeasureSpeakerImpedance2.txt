@@ -1,0 +1,28 @@
+ A speaker's impedance varies with frequency, so you'll need a tool that allows you to send out a sine wave at any given frequency. An audio frequency oscillator is the most accurate option. Any signal generator or function generator with a sine wave or sweep function will work, but some models may give inaccurate results due to changing voltages or poor sine wave approximation.If you are new to audio tests or DIY electronics, consider audio testing tools that connect to a computer. These are often less accurate, but novices may appreciate the auto-generated graphs and data., Look for the power on the amp label or spec sheet in watts RMS. Higher power amplifiers produce more accurate measurements with this test., This test is part of a standard series of tests to measure the "Thiele-Small parameters." All of these tests were designed for low voltages.Lower the gain on your amp while a voltmeter set to AC voltage is connected to the amp's output terminals. Ideally the voltmeter should read somewhere between 0.5 and 1 V, but if you don't have sensitive tools, just set it to below 10 volts.
+
+
+Some amps produce inconsistent voltage at low frequencies, which is a common source of inaccuracy in this test. For best results, check with the voltmeter to make sure the voltage stays constant as you adjust the frequency using the sine wave generator.
+Use the highest quality multimeter you can afford. The inexpensive models tend to be less accurate for the measurements later in this test. It may help to purchase higher quality multimeter leads at an electronics store., Find the power rating (in watts RMS) closest to your amplifier's on the list below. Choose a resistor with the recommended resistance, and the listed wattage rating or higher. The resistance doesn't need to be exact, but if it's too high, you may clip the amplifier and disrupt the test. Too low, and your results will be less accurate.100W amp: 2.7k Ω resistor rated to at least 0.50W
+90W amp: 2.4k Ω, 0.50W
+65W amp: 2.2k Ω, 0.50W
+50W amp: 1.8k Ω, 0.50W
+40W amp: 1.6k Ω, 0.25W
+30W amp: 1.5k Ω, 0.25W
+20W amp: 1.2k Ω, 0.25W
+
+, This may vary slightly from the printed resistance. Write down the measured value.
+ Hook the speaker up to the amplifier, with the resistor between them. This creates a constant current source powering the speaker.
+ Wind or reflected sound waves could disrupt this sensitive test. At minimum, keep the speaker magnet side down (cone up), in a windless area. If high accuracy is required, bolt the speaker to an open frame, with no solid objects within 2 ft (61 cm) in any direction., Using Ohm's Law (I = V / R or current = voltage / resistance), calculate the current and write it down. Use the resistor's measured resistance for R.
+
+
+For example, if the resistor has a measured resistance of 1230 ohms, and the voltage source is 10 volts, the current I = 10/1230 = 1/123 amps. You can leave this as a fraction to avoid rounding errors.
+ Set the sine wave generator to a frequency at the mid or upper range of the speaker's intended use. (100 Hz is a good starting point for bass units.) Place an AC voltmeter across the speaker. Adjust the frequency downward about 5 Hz at a time, until you see the voltage rise sharply. Tweak the frequency back and forth until you find the frequency where the voltage is highest. This is the resonance frequency of the speaker in "free air" (an enclosure and surrounding objects will change this).
+
+
+You can use an oscilloscope instead of a voltmeter. In this case, find the voltage associated with the greatest amplitude.
+ You can substitute impedance Z for resistance in Ohm's Law. Calculate Z = V / I to find the impedance at resonance frequency. This should be the maximum impedance your speaker will encounter in the intended audio range.
+
+
+For example, if I = 1/123 amps and the voltmeter measures 0.05V (or 50mV), then Z = (0.05) / (1/123) = 6.15 ohms.
+ To find the impedance across the speaker's intended frequency range, adjust the sine wave in small increments. Record the voltage at each frequency, and use the same calculation (Z = V / I) to find the speaker's impedance at each frequency. You may find a second peak, or the impedance may be fairly steady once you get away from the resonance frequency.
+

@@ -1,0 +1,7 @@
+ When a hard drive is freshly formatted, the system files are located at the beginning of the drive, and the rest is a large block of free space. This space is optimally filled as new data is added to the drive. As files are altered, deleted, and moved around the hard drive, pieces of data and small blocks of free space get left behind.
+ As the amount of fragments increase in the drive, performance starts to deteriorate. The drive will take longer to find files, and free space on the drive will be misreported.
+ Many modern file systems are built to limit the amount of fragmentation that occurs. If you notice your system starting to slow down, defragmentation could increase your hard drive’s read speed.
+
+
+Solid state drives (flash memory) do not require defragmentation, as there is no mechanical read mechanism. Defragmenting a solid state drive will actually cause it to fail sooner, because data can only be written a certain number of times.
+

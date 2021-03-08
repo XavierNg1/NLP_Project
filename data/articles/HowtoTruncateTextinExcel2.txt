@@ -1,0 +1,12 @@
+ This cell must be different than the cell in which your target text appears.
+
+
+If you haven't already added your data to Excel, you'll need to do so first.
+ MID chops characters off of the beginning and end of your selected cell's text. To set up the MID formula, you type "=MID(Cell Name, Starting Character Number, Number of characters to display)" without the quotation marks. For example:
+
+
+
+=MID(A1, 3, 3) displays three characters from cell A1, the first of which is the third character from the left in the text. If A1's text says "racecar", the truncated text will read "cec" in your selected cell.
+Similarly, =MID(B3, 4, 8) displays eight characters from cell B3, starting with the fourth character from the left. If B3's text says "bananas aren't people", the truncated text will read "anas are" in your selected cell.
+ This will add the truncated text to your selected cell.
+

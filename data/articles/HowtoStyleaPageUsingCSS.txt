@@ -1,0 +1,24 @@
+ CSS is a simple and straightforward language. A CSS style is made up of three key parts. Take this CSS code snippet: p {color: red; font-size: 2em;}. This style makes all paragraph's(data enclosed in <p> tags) red and increases the font size. The three parts are called the selector, the declaration block, and the declarations.
+
+
+The selector in our example is the p before the opening brace. A selector defines which part of the HTML will receive the style(in this case HTML paragraphs).
+The declaration block in our example is everything from the opening brace to the closing brace. The declaration block is made up of declarations for that style. A style will have only one declaration block.
+Our example actually has two declarations. They are color: red; and font-size: 2em;. Declarations tell what you want to do with the element defined in the selector of the style. You can have as many declarations as you want in a style.
+, In a CSS style, declarations are what defines what part of the element you want to style and how it should appear. For example to turn this text red the declaration is color: red; (this example actually uses the HTML font tag because wikiHow's editor doesn't support some of the CSS needed). Make sure you end declarations with a semicolon.
+ Possible values: blue, red, or a hex code.
+font-weight: changes font to bold, italics, etc. Possible values: bold, italic.
+text-align: aligns text. Possible values: right, left, center.
+border: changes or creates a border around the selected element. A possible value could be border: 1px solid red. This creates a border 1 pixel in size that is solid and red in color.
+margin: this creates a margin around the selected element. A possible value is margin-left: 5px. This creates adds five pixels of empty space to the top of the element.
+background-color: changes the background. Possible values: red, black, and hex code.;
+, Many sites use more complex declarations for positioning among other things.
+ Style Sheets consist of many styles all together. There are three types of style sheets:
+
+
+External style sheets are text files saved with the .css extension. They are linked to an HTML document using the <link> tag.
+Internal style sheets are styles defined in the <script> tag. They are created in the HTML document.
+Inline styles are styles declared in the tag they apply to. For example <p style="color: red"> is an inline style declared in the tag it applies to.
+ While this is a good practice it is easier to use internal style sheets when you are learning CSS. It is not recommended that you use inline styles.
+ This tag is used in the head of the document. After you link to a style sheet it is in use throughout the entire page. The href attribute defines the file location and name of your style sheet. All external style sheets must be save with the .css extension and created in na text editor such as Notepad.
+ All styles go in between the two script tags. For example here is a simple page that uses internal styles to turn all paragraphs green.
+ It can use styles and the div tag to create sidebars and multi-column layouts. For example this page has no CSS.,,, Then it adds a 5 pixel border to the left of the paragraphs. Finally it turns them dark blue. All together this page would look like this:

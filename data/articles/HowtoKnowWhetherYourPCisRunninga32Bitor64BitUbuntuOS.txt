@@ -1,0 +1,28 @@
+ Go to Applications > Accessories > Terminal and type in the following command (or to use copy/paste method): sudo uname --m and hit  Enter
+
+
+If the response is i686, you have a 32-bit version of Ubuntu.
+
+
+
+
+
+
+If the response is x86_64 for example, you have a 64-bit version of Ubuntu.
+
+
+
+
+
+;
+, You have other commands for other information also, so type those commands or to use copy/paste method to the Terminal:
+
+sudo uname --s,  shows you the kernel name
+sudo uname --n, shows you the network node host name
+sudo uname --r, shows you the kernel release
+sudo uname --v,  shows you the kernel version
+sudo uname --m, shows you machine hardware name
+sudo uname --p, shows you the processor type or "unknown"
+sudo uname --i,  shows you the hardware platform or "unknown"
+sudo uname --o,  shows you the operating system.
+

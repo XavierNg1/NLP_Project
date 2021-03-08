@@ -1,0 +1,17 @@
+ This method is for T-Mobile and AT&T Galaxy S4s. It must be done on a stock phone, custom ROMs will not work.
+
+This method will most likely not work for CDMA phones, such as Sprint and Verizon phones.
+ You will need to enter a code in the dialer to open the Service menu. Once the dialer is open, enter the following code: *#27663368378#
+, After you enter the code, the phone will automatically open the ServiceMode menu. From here, select UMTS.
+
+Tap the menu selection on your screen to select it. If you select the incorrect option, press the Menu button on your phone and select Back.
+The Service Mode menu is a diagnostic menu for your phone, and is very powerful. Only make changes to settings specified in this guide. Changing any other settings may result in your phone becoming inoperable.
+ In the UTMS menu, select DEBUG SCREEN. In the Debug menu, select PHONE CONTROL. In the Phone Control menu, select NETWORK LOCK., When you select this option, you should receive the following displayed on your screen:
+SHA256_ENABLED_FLAGSHA256_OFF => SHA256_ON, Select SHA256_ENABLED_FLAGwith your finger. The phone should display:
+MENU NOT EXIST
+PRESS BACK KEY
+In order to continue, press the menu button on your phone and select Back., When you back up, the message from Step 4 should now be displayed as:
+SHA256_ENABLED_FLAGSHA256_OFF => Not Change
+, Press the menu button and select Back four times until you are back in the UMTS Main Menu. Select COMMON and then select NV REBUILD. The following message should be displayed:
+Golden-Backup exist
+You can Restore Cal/NV, In the NV REBUILD menu, select Restore Back-up. The phone will automatically reboot. At this point the phone is unlocked. You can insert a SIM card from another carrier to use another service.

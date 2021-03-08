@@ -1,0 +1,45 @@
+ You will create a three column table in Excel, with the same three headings as above.
+
+In cell A1, type in the heading “Value.”
+
+In cell B1, enter the heading “Deviation."
+
+In cell C1, enter the heading “Deviation squared.”
+
+
+, In the first column, you need to type in the values of your measurements. If the set is small, you can simply type them in by hand. If you have a large data set, you may need to copy and paste the data into the column.
+ Excel has a function that will calculate the mean for you. In some vacant cell underneath your data table (it really doesn’t matter what cell you choose), enter the following:=Average(A2:___)
+
+Do not actually type a blank space. Fill in that blank with the cell name of your last data point. For example, if you have 100 points of data, you will use the function:
+
+=Average(A2:A101)
+
+This function includes data from A2 through A101 because the top row contains the headings of the columns.
+
+
+
+When you press Enter or when you click away to any other cell on the table, the mean of your data values will automatically fill the cell that you just programmed.
+ In the first empty cell in the “Deviation” column, you need to enter a function to calculate the difference between each data point and the mean. To do this, you need to use the cell name where the mean resides. Let’s assume for now that you used cell A104.The function for the error calculation, which you enter into cell B2, will be:
+
+=A2-$A$104.  The dollar signs are necessary to make sure that you lock in cell A104 for each calculation.
+ In the third column, you can direct Excel to calculate the square that you need.In cell C2, enter the function
+
+=B2^2
+
+
+
+
+, After you have entered the functions in the top cell of each column, B2 and C2 respectively, you need to fill in the full table. You could retype the function in every line of the table, but this would take far too long. Use your mouse, highlight cells B2 and C2 together, and without letting go of the mouse button, drag down to the bottom cell of each column.
+
+If we are assuming that you have 100 data points in your table, you will drag your mouse down to cells B101 and C101. 
+
+When you then release the mouse button, the formulas will be copied into all the cells of the table. The table should be automatically populated with the calculated values.
+ Column C of your table contains all the square-error values. The final step is to have Excel calculate the sum of these values.In a cell below the table, probably C102 for this example, enter the function:
+
+=Sum(C2:C101)
+
+
+
+When you click Enter or click away into any other cell of the table, you should have the SSE value for your data.
+
+

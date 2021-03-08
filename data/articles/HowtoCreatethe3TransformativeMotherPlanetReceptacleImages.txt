@@ -1,0 +1,145 @@
+ If using that workbook saved under a new name for this article, look for the word NEW or MODIFIED by the Step or Sub-Step (as otherwise all but the last few steps were directly copied and organized into sub-steps). Save the workbook under the filename that makes sense to you in your line of endeavor. The source file for this article is "Eggies.xlsx".
+;
+, Recommended Settings: Set General to R1C1 Off and Show the 10 Most Recent Documents; Edit - set all the Top options to checked except Automatically Convert Date System. Display number of decimal places = blank (for integers preferred), Preserve display of dates and set 30 for 21st century cutoff; View - show Formula Bar and status bar, hover for comments and all of Objects, Show gridlines and all boxes below that auto or checked; Chart - show chart names and data markers on hover. Leave rest unchecked for now; Calculation -- Automatically and calc before save, max change .000,000,000,000,01 w/o commas if you do goal-seeking a lot and save external link values and use 1904 system; Error checking - check all; Save - save preview picture with new files and Save Autorecover after 5 minutes; Ribbon -- all checked except Hide group titles and Developer., Select cell range A2:N2 and do Format Cell Border Outline Left Right Top Bottom Outline Black Bold. Do Format Cell Font Color (fire engine) Red. That is because typically these variables won't be changed.
+MODIFIED: In the cell range A3:L3, input the following Variable Names: A3: Tip B3: Base; C3: Spheroids; D3: ShrinkExpand; E3: PiDivisor F3: NewDate2; G3: Base2; H3: Spheroids2; I3: ShrinkExpand2; K3: ShrinkExpand3; L3: Base4
+MODIFIED: Select cell range A3:L4 and Insert Name Create (Create Names in) Top Row. Select cell range A4:L4 and do Format Cell Border Outline Horizontal Center Vertical Center Outline Black Bold. Do Format Cell Font Color (fire engine) Red. That is because typically some of these variables will change but most will not.
+Input variable values in row 2: A2: input 2880; Insert New Comment and edit in 2880.
+B2: input "=(-(1-SQRT(5))/2)^IF(Spheroids<24,1,1)"
+MODIFIED: C2: input "=VLOOKUP(ABS(Spheroids),LOOKER,IF(Spheroids<=24,3,3))"
+MODIFIED: D2: Input "=VLOOKUP(ABS(Spheroids),LOOKER,IF(Spheroids<=24,2,2))"
+E2: Input 1. This variable, Number, is not being used at present. It's purpose is to warp or skew the output via incorporation into the formulas in cell range C6I2886. Insert a New Comment if you like.
+F2: Input "=1954/9/2". This variable, NewDate1, is not being used at present. It's purpose is to warp or skew the output personally via incorporation into the formulas in cell range C6: I2886. It is a birth date in format yyyy/mm/dd, i.e. a double quotient. Insert a New Comment if you like.
+G2: Input "=1-(-(1-SQRT(5))/2)^IF(Spheroids<24,1,1)"
+MODIFIED: H2: Input "=IF(Spheroids>=31,Spheroids/30,Spheroids)" w/o the quotes. Insert New Comment and edit in "Keeps Spheroids round. Formula now is =IF(Spheroids>=31,Spheroids/30,Spheroids)". Expand the comment frame if need be.
+MODIFIED: I2: Input "=IF(Spheroids>=30,Spheroids,Spheroids2)" w/o the quotes. Insert New Comment and edit in "Keeps Spheroids2 round. New formula is =IF(Spheroids>=30,Spheroids,Spheroids2)". Expand the comment frame if need be.
+NEW: In J2, enter 1.
+THIS IS NEW: In M2, enter 100.
+NEW: In N2, enter 1.
+    Select cell R8 and enter LOOKER2 for the entry of that table.
+
+Edit Go To cell range R9:R108 and with R9 the active high-lighted cell, do Edit Fill Series Columns Linear Step Value 1 OK.
+Enter.01 into cell S9; enter .35 into cell S14; enter .5 into cell S20; enter .75 into cell S26; and enter 1 into cell S32. Do Edit Fill Series Columns Linear Accept proposed Step Value OK for each sub-range, i.e. from .01 to .35, from .35 to .5, from ,5 to .75, and from .75 to 1.
+Edit Go To cell range S32:S108 and with S32 the active high-lighted cell, do Edit Fill Series Columns Linear Step Value .04166667
+MODIFIED: Edit Go To cell range R9:S108 and Insert Name Define LOOKER2 to cell range $R$9:$S$108. Format Cells Border fire engine Red Bold Outline.
+Note that .125*240- = 30 Spheroids. 1/24 = 1/8 * 1/3 = .0416667 and 240/2880 = 1/12th. Or, another way of saying it is that 2880/30 = 96 spiralling datapoints per spheroid. This is what is meant when it is said the formula achieves good roundness, i.e. is a good sphere.
+, Expand the comment frame if need be.
+B4: Input "=16*107". Insert New Comment and edit in "Original constant value =16*107."
+MODIFIED: C4: Input 30. Do Insert New Comment and edit in comment "See Lookup Tables for range of Spheroids values contemplated by this worksheet." Expand the comment frame if need be.
+D4: Input 1. Do Insert New Comment and edit in comment "Input 1 if keeping input data for Spheroids normalized, else 2 to shrink by 1/2, or .5 to expand by a factor of 2, since ShrinkExpand is a Divisor." Expand the comment frame if need be.
+E4: Input 180. Do Insert New Comment and edit in comment "Normally this will not be changed, but can be for warping effects. Original value 180". Expand the comment frame if need be.
+F4: Input "=(1958/4/13)". This variable, NewDate2, is not being used at present. It's purpose is to warp or skew the output personally via incorporation into the formulas in cell range C6: I2886. It is a birth date in format yyyy/mm/dd, i.e. a double quotient. Insert a New Comment if you like.
+G4: Input "=16*107". Insert New Comment and edit in "Original constant value =16*107."
+MODIFIED: H4: Input 40 . Insert New Comment and edit in "=Spheroids is original formula because most often Spheroids2 is the Standard or Goal for Spheroids, and needs to correspond per period on a 1:1 basis. Now = 40" Expand the comment frame if need be.
+MODIFIED AGAIN: I4: Input '=(1/F2890)^(3/2)". Insert New Comment and edit in "Original formula =ShrinkExpand is most usual value as Standard or Goal, e.g. 100% of Normal. But if 80% of Normal is the New Goal, say for a Personal Fitness Program, then a little math is required.  ShrinkExpand2 = 1/.80, or 1.25 would be the new input. This is because it was thought the natural trend would be to want to shrink by say a factor of 2, so 2 = 1/.50 and the New Goal is to be 50% of Normal, or shrink by a factor of 2 (as a divisor). You may change the formulas and comments so that ShrinkExpand and ShrinkExpand2 are multiplicative instead of divisive if preferred. Was 1.19122798149309; now is =(1/F2890)^(3/2)." Expand the comment frame if need be.
+THIS IS NEW: K4: Input "=1/(0.5*MIN(H2889:I2890))" and Edit Comment and edit in "This formula, =1/(0.5*MIN(H2889:I2890)) now current".
+NEW: L4: Input "=16*107"
+
+, A5: Base t; B5: c; C5: Cos; D5: Sin; E5: Main X; F5: Main Y; G5: Count2; H5: Second X; I5: Second Y; J5: Rose X; K5: Rose Y; L5: Count4; M5: EGGIES X; N5: EGGIES Y. Select cell range A5:N5 and Format Cell Font Underline. Select the following cells with Shift+Command: C4, D4, F4. G4, H4, I4, K4, L4, J2, M2, N2 and Format Cell Fill canary yellow (for input cells) and Font size 14. Format Cells A4:L4 Number Number Decimal Places 4 and select column range A:N and do Format Column Autofit Selection.,, Expand the comment frame if need be. Do Format Cell Fill Light Rose color to distinguish it from the other cells in the column.
+MODIFIED: Edit Go To cell range A7:A2886 and with A7 the active high-lighted cell, input "=(A6+(-Tip*2)/(AjRows))" and do Edit Fill Down. Select cell A7 and copy the the formula in the formula bar and do Insert New Comment and edit comment "Original formula "=(A6+(-Tip*2)/(AjRows)) to bottom A2886 (as adjusts per cell on the way down)". Expand the comment frame if need be.
+MODIFIED: Cell B6: Input "=IF(Spheroids<=24,Base*24/Spheroids,Base*24/Spheroids)"
+Edit Go To cell range B7:B2886 and with B7 the active high-lighted cell, input "=B6" and do Edit Fill Down. Select cell B7 and copy the the formula in the formula bar and do Insert New Comment and edit comment "Original formula =B6 to bottom B2886 (as adjusts per cell on the way down)". Expand the comment frame if need be.
+Edit Go To cell range C6:C2886 and with C6 the active high-lighted cell input "=Spheroids/KEY*(COS((ROW()-6)*Number*PI()/PiDivisor*Factor1))" and do Edit Fill Down. Select cell C6 and do Insert New Comment and edit it "Original Formula =Spheroids/KEY*(COS((ROW()-6)*Number*PI()/PiDivisor*Factor1))". Expand the comment frame if need be. This formula and the next one form the ring the Spheroids occupy, By taking the cosine of the cell 6 rows above the cell it's in, C6, the formula is taking the cosine of 0, which = 1.
+MODIFIED: Edit Go To cell range D6:D2886 and with D6 the active high-lighted cell input "=Spheroids/KEY*(SIN((ROW()-6)*Number*PI()/PiDivisor*Factor1))" and do Edit Fill Down. Select cell D6 and do Insert New Comment and edit it "Original Formula =Spheroids/KEY*(SIN((ROW()-6)*Number*PI()/PiDivisor*Factor1)). By taking the sine of the cell 6 rows above the cell we're in, C6, the formula is taking the sine of 0, which = 0. Therefore, between the formula in C6 and the one in D6, the {x,y} coordinates of the first cell would be {1,0} if nothing else were affecting them. It proceeds counterclockwise from there. so that is how to read the chart, from 0 degrees counter clockwise back to 360 degrees. Even though there are basically 2880 rows being charted, and 2880/360 = 8, the factor = 1/8th at .125, so a level of detail is achieved while keeping everything normalized for a single cycle in the typical case.
+Edit Go To cell range E6:E2886 and with E6 the active high-lighted cell, input the formula, "=((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+C6)*VLOOKUP(ROW(),SpreadLooker,3)/ShrinkExpand" w/o quote marks and do Edit Fill Down. Select cell E6 and do Insert New Comment "Original Formula =((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+C6)*VLOOKUP(ROW(),SpreadLooker,3)/ShrinkExpand multiplies each term of the standard formula for a spherical helix per 'CRC Standard Curves and Surfaces' by David von Seggern,  1993, by GM (Golden Mean) to keep things proportional, with the z dimension added into the x and y dimensions. This is then multiplied by the Lookup Table SpreadLooker, which either randomizes the data or accepts inputs per the Goal Looker worksheet. Lastly, it is subject to ShrinkExpand, a variable for normalizing or growing or shrinking its chart relative to the Standard or Goal chart data series of Second X and Second Y." Expand the comment frame as much as necessary. I realize that there may be #NAME? error values -- these will be fixed in a little while.
+Edit Go To cell range F6:F2886 and with F6 the active high-lighted cell, input the formula,"=((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+D6)*VLOOKUP(ROW(),SpreadLooker,3)/ShrinkExpand" w/o quote marks and do Edit Fill Down. Select cell F6 and do Insert New Comment "Original Formula =((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+D6)*VLOOKUP(ROW(),SpreadLooker,3)/ShrinkExpand (see note in E6 for details)." I realize that there may be #NAME? error values -- these will be fixed in a little while.
+MODIFIED: Cell G6: Input "=IF(Spheroids2
+Edit Go To cell range G7:G2886 and with G7 the active high-lighted cell, input the formula,"=G6". Do Insert New comment and edit in "Original Formula =G6 down to G2886 as adjusts per cell thereto."
+MODIFIED: Edit Go To cell range H6:H2886 and with H6 the active high-lighted cell, input the formula,"=((SIN(A6/(G6*2))*GM*COS(A6)*GM*(COS(A6/(G6*2)))*GM)+Spheroids2/KEY2_*(COS((ROW()-6)*Number*PI()/PiDivisor*Factor2)))/ShrinkExpand2" w/o quotes and Edit Fill Down. Do Insert Comment and edit comment "Original formula =((SIN(A6/(G6*2))*GM*COS(A6)*GM*(COS(A6/(G6*2)))*GM)+Spheroids2/KEY2_*(COS((ROW()-6)*Number*PI()/PiDivisor*Factor2)))/ShrinkExpand2 with ShrinkExpand2 being the Goal or Standard the Spheroids of Main X and Main Y are to attain." See original Step 25 for notes on ShrinkExpand2. Expand the comment frame if need be.
+MODIFIED: Edit Go To cell range I6:I2886 and with I6 the active high-lighted cell, input the formula,"=((SIN(A6/(G6*2))*GM*SIN(A6)*GM*(COS(A6/(G6*2)))*GM)+Spheroids2/KEY2_*(SIN((ROW()-6)*Number*PI()/PiDivisor*Factor2)))/ShrinkExpand2" w/o quotes and Edit Fill Down. Do Insert Comment and edit comment "Original formula =((SIN(A6/(G6*2))*GM*SIN(A6)*GM*(COS(A6/(G6*2)))*GM)+Spheroids2/KEY2_*(SIN((ROW()-6)*Number*PI()/PiDivisor*Factor2)))/ShrinkExpand2 with ShrinkExpand2 being the Goal or Standard the Spheroids of Main X and Main Y are to attain." See original Step 25 for notes on ShrinkExpand2.Expand the comment frame if need be.
+NEW: Edit Go To cell range J6:J2886 and with J6 the active high-lighted cell, input the formula "=ROSE!C6/(ShrinkExpand3)" and Edit Fill Down, which may have errors because there may not be a ROSE worksheet yet. Do Insert New Comment and edit in "Original formula =ROSE!C6/(ShrinkExpand3) as refers to the Rose worksheet."
+NEW: Edit Go To cell range K6:K2886 and with K6 the active high-lighted cell, input the formula "=ROSE!D6/(ShrinkExpand3)" and Edit Fill Down, which will have errors because there is not ROSE worksheet yet. Do Insert New Comment and edit in "Original formula =ROSE!D6/(ShrinkExpand3) as refers to the Rose worksheet."
+NEW: Select cell L6 and enter the formula w/o quotes "=IF(Eggies4<=24,Base4*24/Eggies4,Base4*24/Eggies4)" and Insert New Comment and edit in "Original formula =IF(Eggies4<=24,Base4*24/Eggies4,Base4*24/Eggies4)"
+NEW: Edit Go To cell range L7:L2886 and with L7 active and high-lighted, enter the formula w/o quotes "=L6" and Edit Fill Down. Do Insert New Comment and edit in "Original formula =L6".
+NEW:Edit Go To cell range M6:M2886 and with M6 the active high-lighted cell, input the formula,"=((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+C6)*VLOOKUP(ROW(),SPREADLooker,4)/ShrinkExpand4" w/o quotes and Edit Fill Down. Do Insert Comment and edit comment "Original formula =((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+C6)*VLOOKUP(ROW(),SPREADLooker,4)/ShrinkExpand4"
+NEW:Edit Go To cell range N6:N2886 and with N6 the active high-lighted cell, input the formula,"=((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+D6)*VLOOKUP(ROW(),SPREADLooker,4)/ShrinkExpand4" w/o quotes and Edit Fill Down. Do Insert Comment and edit comment "Original formula =((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+D6)*VLOOKUP(ROW(),SPREADLooker,4)/ShrinkExpand4"
+
+,
+
+Create a new worksheet via Insert Worksheet or the Plus button at the right end of the worksheet tabs and name it ROSE.
+Enter the Row 1 headings: B1: Top; C1: Changed:  G1: a; H1: n; I1: Converter; J1: Converter_Y
+Select cell range B1:J2 and Insert Name Create Names in Top Row.
+Enter the values of row 2: B2: -4; C2: Graphing D2: Graphing G2: =SQRT(MIN('GOAL LOOKER'!B2:B65)) which will cause an error until the Goal Looker worksheet is done. H2: 45; I2: .01; J2: "=Converter"
+Enter the Headings in row 5. A5: Theta ø; B5: Series; C5: x; D5: y; E5: r; F5: ø; G5: a^2; H5: sin n Theta I5: p^2
+Edit Go To A6:A2886 and enter 0 in A6 and Edit Fill Series Columns Linear Step Value 1 OK. Insert Name Define name Theta for cell range $A$6:$A$2886.
+Select cell B6 and enter "=Top" and Format Cells Light Blue.
+Edit Go To cell range B7:B2886 and enter "=B6-Top/360" and Edit Fill Down. Do Insert New Comment and edit in "Original formula =B6-Top/360".
+MODIFIED: Edit Go To cell range C6:C2886 and enter "=I6*COS(Theta*Converter)+COS((ROW()-6)*PI()/180)" and Edit Fill Down. Do Insert New Comment and edit in "Original formula =I6*COS(Theta*Converter) changed to =I6*COS(Theta*Converter)+COS((ROW()-6)*PI()/180) - the open rose position."
+MODIFIED: Edit Go To cell range D6:D2886 and enter "=I6*SIN(Theta*Converter_Y)+SIN((ROW()-6)*PI()/180)" and Edit Fill Down. Do Insert New Comment and edit in "Original formula =I6*COS(Theta*Converter_Y) changed to =I6*SIN(Theta*Converter_Y)+SIN((ROW()-6)*PI()/180) -- the open rose position."
+Edit Go To cell range E6:E2886 and enter "sqrt(I6)" and Edit Fill Down. (Nothing depends on this column so you can ignore it if you wish.)
+Edit Go To cell range F6:F2886 and enter "=SIN(Theta*Converter)" and Edit Fill Down.
+Edit Go To cell range G6:G2886 and enter "=a^2" and Edit Fill Down.
+Edit Go To cell range H6:H2886 and enter "=SIN(n/2*A6*Converter)" and Edit Fill Down.
+Edit Go To cell range I6:I2886 and enter "=(G6*H6)^2" and Edit Fill Down.
+Select C6:D2886 and chart them using a smoothed line scatter graph. Keep it off to one side, or at bottom -- my window is split at row 7 as per usual; you may prefer to work otherwise. The chart should look like this:
+
+
+
+
+
+
+, Enter the remaining Lookup Tables, starting with LOOKER on the Data worksheet:
+
+Edit Go To cell range  O6:O2886 and with O6 the active cell, enter 1. Do Edit Fill Series Columns Linear Step Value 1 OK. Select cell O5 and type LOOKER.
+MODIFIED: Edit Go To cell Range P6:P2886 and with P6 the active cell, enter .125 and then do Edit Fill Down. Select P5 and type Std. 1/8th
+Edit Go To cell range Q6:Q2886 and with Q6 the active high-lighted cell, enter the formula, "=O6*$Q$35/$O$35" and do Edit Fill Down. Select cell Q35 and input .125; Select cell Q5 and type Relative.
+Edit Go To cell range O6:Q2886 and Insert Name Define LOOKER to range $O$6:$Q$2886. Format Cells Border (fire engine) Red Bold Outline.
+
+Select cell W1 and type DIVIDED BY. Select cell W2 and Insert Define Name as DIVIDED_BY and Format Cells Border Outline Black.
+Select cell W2 and input 1. Do Insert Comment and edit comment "Try .25 or .5 when Lookup Table fully operational -- playing with this idea -- not settled yet. Entering a 6 leads to beginning of chaos! Has to do with Phases?"
+Select cell U6 and input the formula, "=(6+AjRows/(Spheroids))/DIVIDED_BY". Do Insert New Comment and edit in "Original formula =(6+AjRows/(Spheroids))/DIVIDED_BY So, in the case of 24 Spheroids and 2880 AjRows, 2880/24 = 120 + 6 = 126. The original Vlookup formula finds which row() it's currently in and compares it to this number, thus bracketing the (spheroids) data into groups (of rows)."
+MODIFIED: Select cell U4 and enter formula "=U6-6" w/o quotes. Do Insert New Comment and edit in "Original formula =U6-6." Insert Name Define Increment for cell $U$4. Do Format Cells Number Custom "Increment "0.00 and double click the U column header's right divider line to auto-adjust to fit. Format Font 14 red and Border Blue bold Outline.
+MODIFIED: Edit Go To cell range U7:U64 and with U7 the active high-lighted cell, enter the formula, "=Increment+U6" and do Edit Fill Down. Do Insert New Comment and edit in "Original formula =Increment+U6"
+Select cell V4 and type SpreadLooker. Format Cells Fill canary yellow Font fire engine Red Bold.
+Enter 1 into cell V5.
+MODIFIED: Edit Go To cell range V6:V64 and with V6 the active high-lighted cell, enter the formula, "=Spheroids-IF((Spheroids-(ROW()-5))>0,(Spheroids-(ROW()-5)),0)" and do Edit Fill Down. Do Insert New Comment and edit in "Original formula =Spheroids-IF((Spheroids-(ROW()-5))>0,(Spheroids-(ROW()-5)),0) which will progress in a step value of 1 until the number of Spheroids is reached and then repeat that number."
+Select cell W4 and type Spreader.
+MODIFIED: Edit Go To cell range W5:W64 and with cell W5 active and high-lighted, enter the formula, "=VLOOKUP(V5,Goal_Looker_Eggbasket,2)" and do Edit Fill Down. Do Insert New Comment and edit in "Original formula =VLOOKUP(V5,Goal_Looker_Eggbasket,2), i.e. it will lookup the Spheroid number from column V here and then go on the Goal Looker worksheet's #2 B column of the Defined Range 'Goal_Looker_Eggbasket' there in cells A2:C65 matching that Spheroid number -- i.e. it will return a unique value per Spheroid for the number of Spheroids the user has input."
+Select cell X4 and type Eggbasket.
+MODIFIED: Edit Go To cell range X5:X64 and with cell X5 active and high-lighted, enter the formula,"=VLOOKUP(V5,Goal_Looker_Eggbasket,3)" and do Edit Fill Down. Do Insert New Comment and edit in "Original formula =VLOOKUP(V5,Goal_Looker_Eggbasket,3), i.e. it will look up the Spheroid number from column V here and then go on the Goal Looker worksheet's #3 C column of the Defined Range 'Goal_Looker_Eggbasket' there in cells A2:C65 matching that Spheroid number -- i.e. it will return a unique value per Spheroid for the number of Spheroids the user has input. This value will be returned to Main X and Main Y."
+Edit Go To cell range U5:X105 and Insert Define Name  SpreadLooker to cell range $U$5:$X$64.
+MODIFIED: Do Format Cells Fill sky blue. Select cell U6 and do Format Cells Fill color rosy red and font red because the formula is different from the others in the column.
+Select cell range W5:X64 and Format Cells Number Decimal Places 2.
+
+
+MODIFIED: Input the Column Headings. A1: RANGE; B1: Pasted VAL; C1: EggBasket; D1: RandBetween; E1: Spiral. Select columns A:E and do Format Column Autofit Selection, Format Cells Number 2 decimal places OK.
+MODIFIED: Edit Go To cell range A2:C65 and Insert Name Define  Goal_Looker_Eggbasket  to cell range $A$2:$C$65.
+Edit Go To cell range A2:A65 and with A2 the active high-lighted cell, input 1, then do Edit Fill Series Columns Linear Step Value 1 OK.
+NEW: Enter the following values into column B from B2:B65 from the image below:
+NEW: Enter the following values into column C from C2:C65 from the image below:
+
+
+
+
+
+The chart on the ROSE worksheet should now appear.
+
+
+Activate Data worksheet and Edit Go To under Main X and Main Y cell range E6:F2886. Either do Chart Wizard or select Chart on the Ribbon (activated in Preferences) and select All, Scattered, Smoothed Line Scattered. If using Chart Wizard, a new Chart worksheet will be created. Otherwise, copy or cut and paste the chart into the upper left corner of the Chart worksheet you created at the beginning, and hover the mouse over the lower right corner until it becomes a double-headed arrow and then use it to pull the chart into an expansion of a large Square. Format Selection Glow 8 pt yellow transparency 25% no soft edges and Line Weight 1 and Dark Blue from the color table. This is the chaotic planet surface.
+On the Chart worksheet, do menuitem Chart Add Data. In response to the Range request, activate the Data worksheet again and Edit Go To under Second X and Second Y cell range H6:I2886. When I do it, it does not work right and it takes column E instead of column H. Click on the second standard ring series, or double-click until it appears in the formula bar and edit it until it reads as follows: =SERIES(,Data!$H$6:$H$2886,Data!$I$6:$I$2886,2). Edit the line of Series 2 to be dashed and 1 point line weight and Foresty Green to Lawn Green to Leafy Green in hue. It's a yellowish-green, not a blue-green 0 transparency with no transparent glow. This is the external planet ring. The line is dashed square dot bolder, smoothed line solid color.
+On the Chart worksheet, do menuitem Chart Add Data. In response to the Range request, activate the Data worksheet again and Edit Go To under Rose X and Rose Y cell range J6:K2886. When I do it, it does not work right and it takes column E or something instead of column J and K. Click on this next/center series3, or double-click until it appears in the formula bar and edit it until it reads as follows: =SERIES(,Data!$J$6:$J$2886,Data!$K$6:$K$2886,3). Edit the line of Series 3 to be .25 point line weight and very light pink to flesh-toned in hue. It's a very light orange 8 pt 80% very transparent glow. This is the central heart of the planet and it's a radial rose. The transparency of the smoothed solid line is 73% and it shows as very light pink.
+On the Chart worksheet, do menuitem Chart Add Data. In response to the Range request, activate the Data worksheet again and Edit Go To under EGGIES X and EGGIES Y cell range M6:N2886. When I do it, it does not work right and it takes column E or something instead of column M and N.We want =SERIES(,Data!$M$6:$M$2886,Data!$N$6:$N$2886,4). Edit the line to be .25 point line weight and very bright blue in hue. These are the visiting spheroids and they're very glad to be home. Smoothed line, no glow, transparency or soft edges.
+Double-click on the Plot Area and set the Gradient to be Radial, Centered, Dark Purple on left and Prussian Blue on right. My pigments are all put away right now or it would be easier to say if it was Prussian, Cerulean, Ultramarine, Cobalt or some other blue. Sorry - get them mixed up. I have No Line set for either the Plot Area or the Chart Area, no Chart Titles, No Axes which are all controlled by Chart Layout (which appears on the Ribbon when you click on the Chart Plot Area).
+Copy the formulas  from A1:X34 to the Saves worksheet and then, below the formulas, paste them again, and then do Paste Special Values right over them. Then with the shift key held down, tale a picture of the chart under each of the two series definitions, Pasting Pictures with the shift key depressed into the Saves worksheet under the data. Do this for each chart below.
+Save the workbook. Save the Goal Looker data into its own column pair at left, with two more on the way. The first chart should look like this:
+
+
+
+
+
+
+, Save the Goal Looker as Pasted Values into two new columns at right. Edit Go To cell range C2:C65 and input .33 into cell C2 and do shift+tab and input -.33 into cell C65 and do Edit Fill Series Column accept the proposed Step Value (-.01) OK. Here's the data chit for it:
+,, Edit Go To cell range B2:B65 and with B2 active, enter 1 and do Edit Fill Down. Save the new column pair at far right as pasted values. Here's the data chit for it:
+
+Additionally, the rose goes to the closed position. Activate the ROSE worksheet and select cells C6:D6 and copy and paste them to C4 and in E4 note OPEN position. They will show errors but that is acceptable for now.
+In cell C2888, enter the formula "=I2888*COS(Theta*Converter)" and in D2888 enter the formula "=I2888*SIN(Theta*Converter_Y)". Note in E2888 CLOSED position. Errors will result but they are acceptable for now.
+Copy C2888:D2888 and Paste Special Formulas to cell range C6:D2886.
+Activate the chart and give the M and N series 4 EGGIES spheroids a fleshy tone with a very muted yellow glow of pt 2. Here's the chart for it:
+
+
+
+
+
+
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

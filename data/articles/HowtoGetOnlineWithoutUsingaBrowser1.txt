@@ -1,0 +1,23 @@
+ File Transfer Protocol is not used much by average users today, but it was very common in the age before the Web. You can connect to a server, look around in its filesystem, and download any files you might want. The Mozilla FTP server may not be accessible, Most operating systems come with a command line FTP tool, but you can also just type an ftp:// address into your file manager's address bar.Make sure that Internet Explorer is your primary browser. This is the only way that you can use FTP to download a browser.;
+, Open FTP by hitting ⊞ Win, then typing FTP and pressing ↵ Enter. This should open up a command line window with a blinking cursor after ftp> . It is important that you do these steps relatively quickly, or else you may be automatically disconnected.
+
+
+In order to reach the Mozilla FTP server from Windows Explorer: type ftp://ftp.mozilla.org into the address bar of Windows Explorer, then press Enter. Next, copy the Firefox Setup .exe file to your computer. Simply drag and drop the file, right-click and "Copy To Folder,", or copy and paste it to your desktop., Type open ftp.mozilla.org and press ↵ Enter. If successful, a few lines of text will be generated and the blinking cursor will now be after User (ftp.mozilla.org:(none)): .
+ You do not need to actually create or register any account to connect and download the Firefox installer over FTP.Username: anonymous. Enter in anonymous and press ↵ Enter. You will then be prompted to enter in a password.
+
+Password: anonymous. Enter in anonymous and press ↵ Enter. You will not actually see the letters appear as you type them. Don't worry, this is normal and to be expected.
+After entering in the log-in credentials, multiple lines of text will be generated explaining a bit about the directory you have connected to. If successful, the last line of text generated will say Login successful.
+ Type cd pub/mozilla.org/firefox/releases/latest/win32/en-US and press ↵ Enter. This will connect you to the directory containing the Firefox installer.
+
+
+When you use FTP, everything is contained within folders or directories. Just like you access documents on your own computer by opening folders within folders, you can connect to and access information on remote servers and websites in a similar fashion with FTP commands.
+The cd command stands for change directories. It is the command which tells the host that you would like to change the directory you are connected to.
+ Type ls and press ↵ Enter. After pressing ↵ Enter you should see two files: Firefox Setup 39.0.exe and Firefox Setup Stub 39.0.exe. At the time of writing this article, this is the current version of Firefox. However, you may see a different version. It should still say Firefox Setup, though.
+ Choose which folder on your system you want the Firefox installer to be downloaded. For convenience, it is probably best to just use your C drive by typing lcd C:\ and pressing ↵ Enter. If you want to use a different drive, just enter in its name instead of C.
+ Type get "Firefox Setup 39.0.exe" and press ↵ Enter. Again, the version of the setup may different. In which case, replace the 39.0 with whatever version of the setup was listed after you used the ls command earlier.
+
+
+You may be prompted by a pop-up dialog box to give permission to the server host to send a file directly to your computer. Give permission.
+After waiting a little while, a line of text should appear saying Transfer Complete.
+ Look for the file within your C drive, or wherever you told the server to send the installer. Double-click the installer to start the process of installing Firefox.
+

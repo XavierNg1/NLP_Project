@@ -1,0 +1,37 @@
+
+Normally, people ask “Antivirus soft wares are supposed to be in-built for an OS if they promise security, right?,
+Well the answer is, improved security is one of the promises offered by any OS from its previous versions.
+Make sure you're a user with administrative rights.
+
+,
+Go on to Control Panel -> System -> Advanced Tab, and under Startup and Recovery click Settings.
+
+,
+A new window pops up, in which you must click the ‘Edit’ button.
+
+,
+You should see a text file opening up.
+In the last line you should see something like this “/NoExecute=OptIn”.
+Now save the file and close it, for those who want to know where the actual DEP is, under Advanced Tab click on Settings which is under Performance, you should find DEP in the popped up window.
+
+,
+Now restart the system, and feel the first speed boost to your XP system.
+
+,Since Vista doesn’t allow you to directly edit the bootloader settings, here is how you do it in Vista.
+Be sure to be a user with administrative rights.
+
+,
+Click Start -> Run and then type in “command.com” without quotes and then you should have the command prompt.
+
+,
+In there, just type in the following and it doesn't matter which directory you're in.
+
+,” bcdedit.exe /set {currentuser} nx AlwaysOff ” (without quotes)
+
+,
+If you did it correctly, it will say “The Command Completed Successfully”.
+For Vista users who do not own Vista Service Pack 1, I would recommend you order it, and get it installed in your system as soon as you can.
+If DEP is disabled, doesn't that make my system more vulnerable to attacks though it improves my speed?”
+
+
+3rd party Antivirus softwares will rescue you from that trouble, That's what they were built for!

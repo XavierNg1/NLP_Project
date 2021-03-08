@@ -1,0 +1,13 @@
+ You'll see this in your System Tray. If you are connecting your computers through a switch with no router, you'll need to assign each computer on the network its own individual IP address. This process is handled automatically if you're using a router.
+
+
+Think of an IP address as a mailing address. Each computer on the network needs a unique IP address so that information sent across the network reaches the correct destination.
+, You'll see this next to "Connections."
+
+,, Make sure you don't uncheck it, just highlight it.
+,,,,, This will save the settings for that computer. This computer is now configured on your network with a unique IP address.
+ Follow the steps above on the second computer to open the Internet Protocol Version 4 (TCP/IPv4) Properties window.
+, Notice that the final group of numbers has incremented by 1.
+ These values should be the same as they were on the first computer (255.255.0.0 and 192.168.0.0 respectively).
+ Repeat these steps for each additional computer, incrementing the IP address by 1 each time (up to 255). The "Subnet mask" and "Default gateway" fields should be the same on each computer.
+

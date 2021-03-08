@@ -1,0 +1,22 @@
+ Connect to your router by entering its IP address. This will vary slightly from manufacturer to manufacturer, and will be listed in the documentation.
+
+
+Here are some common IP addresses for various routers:
+Linksys, 3Com, Asus, Dell, US Robotics: 192.168.1.1
+Qwest (AKA CenturyLink), DLink, Netgear, Trendnet, Senao: 192.168.0.1
+Belkin, Microsoft, and SMC: 192.168.2.1
+Apple: 10.0.1.1
+If you have misplaced your documentation, and you do not see your router listed here, search on Google for your router name and "default IP address" to find the correct information.
+Another way to locate your router's IP address: on a PC, open the command prompt (click on Start > Run/Search for cmd) and enter ipconfig. Look for the Default Gateway line, and try that number.
+On a Macintosh, open the Network control panel (System Preferences..., Network) and look for Router: This is your router's IP address.;
+, If prompted, enter your router's user name and password, and log into your router. Not all routers will require this step. If your router defaults to requiring a password, it will be listed with the documentation. If so, the default password is generally “admin,” and you may leave the User name field blank.
+ Scroll down until you see DHCP Server (Enable) (Disable) radio buttons. If it is disabled, select Enable
+
+, This is optional, and is totally dependent on personal preference. If you're not sure what this is, it's totally safe to skip this step.
+
+
+Some routers let you set the maximum number of DHCP clients. If your router has this setting, count all the computers, smart phones, and other internet-active devices (such as Apple TV), then add a couple extra, for guests who may visit with their smart phones and want to access the internet. Once the pre-defined maximum is reached, no one else can get an address until one expires!
+
+, Use the DNS servers provided to you by your ISP, or use the following DNS servers: 205.152.37.254, 205.152.132.235, 205.152.132.23; There are many DNS servers out there. It's best to use your ISP's if possible.
+ Click the Save or Apply button, or whatever your router calls the button that locks in your changes.
+ Open up the network configurations for the computers on your network. On a PC, go to Control Panel -> Network Connections -> Local Area Connection (or Wireless Connection) and select Obtain IP address automatically. On a Mac, go to System Preferences, then click on Network, and select Using DHCP. On a WiFi-enabled device, check the WiFi settings, and select DHCP as the source of the IP address.

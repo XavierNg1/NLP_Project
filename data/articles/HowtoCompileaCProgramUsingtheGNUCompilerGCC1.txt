@@ -1,0 +1,14 @@
+, This should return the version number of the C compiler. If the command is not found, it is likely that GCC isn't installed.If it’s not installed, consult the documentation for your Linux distribution to learn how to get the correct package.
+If you’re compiling a C++ program, use “g++” instead of “gcc.”
+
+,
+
+For example, if your source code file, “main.c”, is located in /usr/wikiHow/source, type cd /usr/wikiHow/source.
+ Replace “main.c” with the name of your source file, and “HelloWorld” with the name of your finished program. The program will now compile.
+
+
+If you see errors and want to see more information about them, use gcc -Wall -o errorlog file1.c. Then, view the “errorlog” file in the current directory with cat errorlog.
+To compile one program from multiple source files, use gcc -o outputfile file1.c file2.c file3.c.
+To compile multiple programs at once with multiple source files, use gcc -c file1.c file2.c file3.c.
+ Type ./HelloWorld but replace “HelloWorld” with the name of your program.
+

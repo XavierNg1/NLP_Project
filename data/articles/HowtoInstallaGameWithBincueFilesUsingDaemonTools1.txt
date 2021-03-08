@@ -1,0 +1,15 @@
+ A .bin file is a binary file that can contain a wide variety of data. The most common form of a .bin file is a CD or DVD image. The file is created by copying the content of a CD into a single file that can be either burned onto a disc or mounted into a virtual drive.
+
+
+.bin and .cue files need to have the same file name, and should be located in the same folder.;
+, In order to mount or burn a .bin image, you must have a .cue file. The .cue file tells the mounting or burning software where the .bin file is located. Luckily, you can make or adjust a .cue file very easily.
+
+
+To create a new .cue file, right-click in the folder where the .bin file is located. Select New, then Text Document. Notepad should open. Enter the following lines into the Notepad document:FILE "filename.bin" BINARY
+TRACK 01 MODE1/2352
+INDEX 01 00:00:00
+
+Change “filename” to the name of the .bin file you are loading.
+Click File, then Save As… name the file the same as the .bin file, and change the extension from .txt to .cue. Click Save.
+If you need to check to make sure a .cue file that you received is correctly formatted, simply open it with Notepad and check that the lines above are correct. To open a .cue file with Notepad, right-click on it and select Open With… Select notepad from the list of programs, or search for it if it does not appear.
+

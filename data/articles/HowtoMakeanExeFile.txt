@@ -1,0 +1,18 @@
+ IExpress is a utility that is included with Windows, and it provides an easy way to package your program as an executable. It can also make Windows MSDOS into an .exe file.To run the program, press the "Start" button and then click "Run." In the dialog box, type "Iexpress.exe" and press the Enter key. If you use Windows Vista, you can just press the "Start" button and begin typing "Iexpress," and the program's icon will appear in the search results.;
+, When the iExpress program launches, you will be asked to choose between opening an existing executable or creating a new one. Choose to create a new one by selecting the radio button that reads, "Create new self extraction directive file."
+
+, The next screen will ask you to choose between 3 options for the action that should be taken when a user opens your Exe file. The first is to extract the files and then run an additional command (for instance, to make changes to the registry). The second is to extract the files only (this is the recommended option). The third option is only applicable for distributing Active-X controls.
+ The next screen will ask you to specify the title for your executable package. This is not the filename for the Exe file; this is the title that will appear across the top of all windows opened by the installer.
+ The next screen in iExpress will allow you to specify a text prompt given to the user upon opening the executable. If you don't wish to provide a prompt, check the radio button that reads "No prompt."
+
+, The next screen will allow you to choose a license agreement for your software. The installer will inform the user that the agreement you pick governs the use of the software. To display a license agreement, type the agreement into a plain text file (using the ".txt" extension) and attach it after selecting the radio button reading, "Display a license."
+
+, The next screen will allow you to choose the files that your executable should install; you can select as many or as few as needed. Add a file by clicking the "Add" button and then navigating to the file's location on your hard drive. You will be able to see the files you've added in the iExpress window.
+ The next screen will ask you to specify the filename for the Exe file; remember it must end with the ".exe" extension. This screen also includes a check box for either hiding or showing the full extraction process to the user.
+
+
+
+Click Next to create the package.
+Click the Finish button on the final iExpress screen to compile the Exe file and save it in the location you specified. You can test the executable by double-clicking on it to extract the files.
+ Just make a simple BAT or VBS script and convert to EXE.
+

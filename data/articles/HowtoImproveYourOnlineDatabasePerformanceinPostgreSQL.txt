@@ -1,0 +1,11 @@
+ Adjust it large enough to hold most commonly accessed tables/indexes AND small enough to avoid swap page-in activity.
+work_mem: Controls the amount of memory used for sorting and hash operations. If not big enough, sorting spills over to disk. To help adjust properly, watch Postgres temp location on disk: $PGDATA/base/DBOID/pgsql_tmp. Memory allocated per session. Adjusted per session.
+work_maintenance_mem: Controls the amount of memory used for DB maintenance operations such as “vacuum” and “create index”. Can dramatically reduce time to complete such DB maintenance operations.
+effective_cache_size: Sets the optimizer assumption on how effective the O/S disk cache. It doesn’t physically allocate memory. Adjust it to at least 2/3 of available RAM to influence the optimizer to perform index scans over table scans(seqscan).
+random_page_cost: Sets estimated cost of non-sequentially fetching. Lower it to influence the optimizer to perform index scans over table scans.
+enable_indexscan: When set to true, query optimizer favors index scan over table scans
+enable_seqscan: When set to true, optimizer favors table (sequential) scans over index scans.
+enable_hashjoin: When set to true, optimizer favors use of hash joins.
+enable_nestloop: When set to true, optimizer favors use of nested loop joins.
+enable_mergejoin: When set to true, optimizer favors use of merge joins. Used for tuning/testing queries. Note: Before deciding on using the Postgres optimizer hints (step 6-10) in production, you should re-visit the other query tuning parameters (step 1 to 5) and fine-tune
+max_fsm_pages: Sets the maximum number of disk pages for which free space will be tracked in the shared free-space map. Properly adjust upward to make vacuum runs faster and eliminate/reduce the need to “vacuum full” or “reindex”. Should be slightly more than the total number of data pages which will be touched by updates and deletes between vacuums. Requires little memory (6 bytes per slot), so be generous adjusting its size. When running vacuum with “verbose” option, DB engine advises you about the proper size.;

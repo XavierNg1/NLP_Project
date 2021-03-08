@@ -1,0 +1,35 @@
+ You need to know two pieces of information to perform this calculation:Interest rate (r). This is the interest rate that the bank quotes for savings accounts of your type. Pay attention to the different rates for different types of accounts. For example, a money market account will generally have a higher interest rate than a savings account, and a savings account will have a higher interest rate than a checking account (if the checking account earns any interest at all). The rate should be expressed as a decimal, so a number like 3% would be used as 0.03.
+
+Compounding frequency (n). Ask a lending official at the bank how often the bank compounds interest per year.
+;
+, There is a fairly simple formula for calculating the APY, based on the annual interest rate and the number of times interest is compounded. This formula is:APY=(1+rn)n−1{\displaystyle {\text{APY}}=(1+{\frac {r}{n}})^{n}-1}
+
+
+, Suppose, for example, your bank advertises a 1% interest rate on savings accounts and compounds interest quarterly. This means that r=0.01{\displaystyle r=0.01} and n=4{\displaystyle n=4}. Apply these figures to the calculation as follows:APY=(1+rn)n−1{\displaystyle {\text{APY}}=(1+{\frac {r}{n}})^{n}-1}
+
+
+APY=(1+.014)4−1{\displaystyle {\text{APY}}=(1+{\frac {.01}{4}})^{4}-1}
+
+
+APY=1.00254−1{\displaystyle {\text{APY}}=1.0025^{4}-1}
+
+
+APY=0.010038{\displaystyle {\text{APY}}=0.010038}
+
+You probably need an advanced calculator to perform the exponent function for this calculation. Most simple calculators have, at most, a button for squaring a number. You will need a more advanced calculator with a “^” button to raise the number to any chosen exponent.
+ Notice that, for this example, the APY result is very nearly the same as the bank’s interest rate. The increase is only 0.0038%. Even so, if you have a large amount of money, invested over time, this increase can add up., Suppose, as a second example, the bank offers the same 1.0% interest rate but compounds the interest daily rather than quarterly. In this case, the rate is the same, r=0.01{\displaystyle r=0.01}, but n=365{\displaystyle n=365}.Technically the number of days in a year is probably more accurately represented as 365.25. That difference could become meaningful with large amounts of money. For this example, however, just use n=365{\displaystyle n=365}.
+
+
+APY=(1+rn)n−1{\displaystyle {\text{APY}}=(1+{\frac {r}{n}})^{n}-1}
+
+
+APY=(1+.01365)365−1{\displaystyle {\text{APY}}=(1+{\frac {.01}{365}})^{365}-1}
+
+
+APY=1.0025365−1{\displaystyle {\text{APY}}=1.0025^{365}-1}
+
+
+APY=0.01005{\displaystyle {\text{APY}}=0.01005}
+
+
+, When the same interest rate is compounded daily, rather than quarterly, the APY increases from 1.0038% to 1.005%. Again, when working with large amounts of money, over time, this difference gains higher significance.

@@ -1,0 +1,86 @@
+ This is considered the "traditional" method of animation, in that each frame has the same picture but slightly altered. When the frames are played together, the images appear to move. This is the same basic technique used by traditional hand-animators, and is more time-consuming than tweening (See the next section).
+
+
+By default, Flash will produce animations at 24 frames per second (FPS). That means one second of animation will have 24 frames, but not every frame has to be different. You can adjust this if you'd like, and many Flash animations use 12 FPS, but 24 will produce much "smoother"-looking animation.;
+, There are a variety of Flash animation programs available, but the most powerful is Adobe's Flash Professional CC. You can install the trial for free, or you can use another product if subscribing to Adobe's Creative Cloud doesn't appeal to you. The rest of this article will refer to Flash Professional or any other editing program as "Flash".
+ Because frame-by-frame animation requires multiple images with slight differences, you will need to create all of these assets by hand. You can create them all before you begin, or make them as you go. You can use the Flash program to draw directly in your project, or you can draw your assets in your favorite image creation program.
+
+
+If you want your images to scale without sacrificing quality, you will want to create them as vectors instead of rasters. Vector images will redraw themselves whenever they are scaled, which means there won't be any pixelation or aliasing. Raster images are the traditional images you're probably used to (photos, Paint images, etc.). These do not scale well, and can look quite ugly if you want to make them larger.
+ When you first start Flash, you will have a blank layer and an empty Timeline. As you add frames, your timeline will be populated automatically. You can interact with layers much in the same way that you would in Photoshop.
+
+
+Before adding your image, create a basic background for your movie. Rename Layer 1 to "Background" and then lock the layer. Create a second layer and name it whatever you'd like. This will be the layer that you create your animation on.
+Add your drawing to the canvas in the first frame. You can either import your drawing from your computer, or you can use Flash's drawing tools to create a drawing directly in the program.
+Your first frame will be a keyframe. Keyframes are frames that have an image, and form the backbone of your animation. You will be creating a new keyframe each time the picture changes.
+Keyframes are denoted by a black dot in the timeline.
+You don't need a new image in each frame. In general having a keyframe every four-five frames will produce a good animation.
+ By turning your drawing into a symbol, you can easily add it multiple times in a frame. This is especially useful if you need to quickly create multiple objects, such as a school of fish.
+
+
+Select your entire drawing. Right-click on the selection and select "Convert to Symbol". This will add the image to your Library where you can quickly access it in the future.
+Delete the drawing. Don't worry! You will be adding it back to the scene by simply dragging the object from your Library. You can add multiple instances of the same drawing to your scene with ease!
+
+, Once you have your first frame ready, you can add your blank frames that will exist between the first keyframe and the second keyframe. Press F5 four or five times to add blank frames after your first keyframe.
+ Once you've added a few blank frames, you're ready to create your second keyframe. There are essentially two different ways you can do this: you can copy your existing keyframe and make small adjustments, or you can create a blank keyframe and insert a new image. If you are using art created in another program, you'll want the second method. If you created your art using Flash's design tools, use the first method.
+
+
+To create a keyframe using the contents of the previous keyframe, press F6. To create a blank keyframe, right-click on the last frame in your timeline and select "Insert Blank Keyframe". Anything in your scene will be removed.
+Once you've created your second keyframe, you will need to make adjustments to the image to give the effect of motion. If you're using Flash's design tools, you can use the Transform tool to select aspects of your drawing and move them slightly, such as the arm of a stick-person.
+If you're inserting new art for each keyframe, you will want to ensure that it is placed in the same location or in the next logical location on the screen. This will ensure that the art doesn't jump around between frames.
+ Now that you've created two keyframes, it's time to iterate. You will be repeating essentially the same process until you are finished with your animation. Add a few blank frames between each keyframe, and ensure that your movements look fluid.Make small, incremental changes. Your animation will look much smoother if you make very small changes to the keyframe. For example, if you want a stick person waving an arm, your second keyframe should not be the other end of the wave. Instead, use a few keyframes to transition from the beginning of the wave to the end. This will produce a much smoother animation.
+ Flash contains a function called tweening, which allows you to essentially set start- and end-points for your object. Flash will then move and transform the object based on your settings between these two points, creating the illusion of animation. You will not need to create images for every keyframe like you would with frame-by-frame animation.
+
+
+Tweening is especially useful for creating "morphing" effects, where one object becomes another one over the course of the animation.
+Frame-by-frame animation and tweening can be used in conjunction in the same movie.
+You can only have one object undergoing a motion tween at a time. This means that if you want multiple objects to animate at once, they will all need to be on separate layers.
+ Unlike frame-by-frame animation, you will not need to create multiple objects to animate using the tween function. Instead, you will be creating one object, and then changing its properties during the tweening process.
+
+
+Before adding your image, create a basic background for your movie. Rename Layer 1 to "Background" and then lock the layer. Create a second layer and name it whatever you'd like. This will be the layer that you create your animation on.
+It is highly-recommended that you use Flash's built-in design tools or import your image from a vector-drawing program. Vectors can scale easily without distortion, while traditional raster images will not scale and transform well.
+ In order to tween your object, you will need to convert it into a symbol. This is the format for objects that Flash uses in order to manipulate them. If you try to tween an object that has not been made into a symbol, you will be prompted to do so first.
+
+
+Right-click on your object and select "Convert to Symbol" The object will be added to your Library, which makes it easy to clone objects., A motion tween moves the object from one location to another Right-click the symbol in your scene and select "Create Motion Tween". 24 frames will be added to your timeline, as this is the default length of a tween. Remember, by default Flash will animate at 24 frames per second, meaning that this motion tween will take one second to complete.
+
+
+When you create the motion tween, you are automatically moved to the last frame of the tween.
+ Once you have created the tween, you can move the object to the location that you want it to end up at. Flash will display the trajectory line, which is dotted to show the location of the object for each frame of the tween.
+
+
+When you first create the trajectory, it will be a straight line from the starting point to the ending point.
+ If you ran your animation right now, your object would move along the trajectory, but your background would disappear after one frame. To fix this, you will need to extend your background across all the frames of the animation.
+
+
+Select your background layer in the timeline. Click the last frame on your timeline, which should also be the frame your motion tween ends on. Press F5 to insert frames up to this point, which will keep your background displayed during the entirety of the tween.
+ Adding keyframes to your trajectory will allow you to transform your object during the motion tween. You can only make changes to an object if it is keyframed. To add keyframes to your trajectory, first select the frame in the timeline that you want to turn into a keyframe. Then, click and drag the object into the position you want it to be at during that frame. Your trajectory will adjust automatically, and a keyframe will be added to the timeline. Keyframes are denoted by diamond icons in the timeline.
+ To change the path of your object, you can click and drag each of the frame position markers on the path to a new location. Avoid putting to much variation in the path, or the object will move in an erratic fashion (unless this is your goal!)., Once you have your keyframes and trajectory established, you can transform your object so that it changes as it moves through the motion tween trajectory. You can change the shape, color, rotation, size, and any other property of the object.Select the frame that you want the transformation to occur in.
+Open the object's Properties panel. You can press Ctrl+F3 if the panel is not currently visible.
+Change any values in the Properties window to affect the object. For example, you can change the hue or color, add filters, or change the scale.
+You can also use the Free Transform tool to freely change the shape however you'd like.
+ Test your motion tween by pressing Ctrl+↵ Enter. Ensure that the transformations look good and that the animation is moving at the correct speed. If your animation is moving too fast, you can either lower the FPS of the scene or increase the tween span.
+
+
+By default, the FPS is 24, so try lowering it to 12. To do so, click outside the scene and then change the FPS in the Properties panel. Changing it to 12 will double the length of your animation, but may make it more "jerky".
+To change your tween span, select the layer that contains the tween and use the slider to pull it out. If you want the tween to be twice as long, extend it to 48 frames. Make sure to insert blank frames in your background layer so that the background doesn't disappear halfway through the animation. To extend the background, select the layer, click the last frame of the animation in the timeline, and then press F5
+
+
+, You can add sound effects to actions that occur in your animation to help make it stand out and give it some personality. Music makes your animation more immersive, and can make a good animation into an incredible one. Flash supports a variety of file formats, including AAC, MP3, WAV, and AU. Choose the on that gives you the best quality for the lowest file size.
+
+
+MP3 will typically give you perfectly acceptable sound quality while keeping the file size to a minimum. Avoid WAV files if possible, as these are often quite large.
+ Before you can add sounds to your project, they need to be added to Flash's Library. This will allow you to quickly add them to your project later. Click File → Import → Import to Library. Browse for the sound file on your computer. Make sure that the sound file has an easy to remember name, so you can quickly find it from the menu later.
+ This is not strictly necessary, as you can add sound to existing layers, but putting each file on its own layer will give you much more control over fading in and out, when to start and stop, and it is easier to move sounds around.
+ On the sound's layer, select the frame in the animation that you want the sound to start at. Press F7 to insert a blank keyframe. For example, if you want to include a music file that plays for the duration of the animation, select the first frame on the music file's layer. If you are adding dialog for a character, select the frame where the character begins talking.
+ In the Properties frame, you will see a Sound section. You may need to expand it to see the options. Click the "Name" menu and select the file you want from your Library.
+ Once you've selected a file, you can configure how it will play. What you select will be based on what you need the sound to accomplish in the animation. You can change the Effect, the Sync, and the Repeat settings of each sound using the menu underneath the Name menu in the Properties frame.
+
+
+Effect - This lets add effects to the sound, such as fading in and out or adding echo. You can select from preset settings in the drop-down menu, or you can click the pencil icon next to the menu to create your own custom settings.
+Sync - This determines how the song is played in the animation. Event will play the sound until it is finished. If the same sound is triggered again before the first one ends, the the original will keep playing until it finishes. Start works like Event, but stops if the sound plays again. Stop stops the sound in that frame. If you want to use this in conjunction with other sound properties, create a new keyframe where you want the sound to stop and use this option. Stream will attempt to match the sound that is playing with the number of frames on other layers. This is best used for dialogue.
+Repeat - This setting allows you to set how long the sound repeats. You can set it to play only once, or have it loop as many times as you want. If your animation is a looping animation, you should set your music to loop infinitely.
+ When you are finally finished with your project, save it as an SWF file. This is the format used to play the movie. You can play it in virtually any web browser, or use a dedicated Flash player to watch it. There are also a variety of sites that you can upload it to for others to see, such as Newgrounds, Albino Blacksheep and Kongregate.
+ This guide addresses the basics of creating an animation, but there is so much more you can learn and do. Add a few buttons and branching paths, and you've got a choose-your-own-adventure game. You can take a crash course in ActionScript and gain much more control over the finer details of your animation. Keep experimenting, and you'll soon find yourself learning all kinds of tricks and implementations.
+

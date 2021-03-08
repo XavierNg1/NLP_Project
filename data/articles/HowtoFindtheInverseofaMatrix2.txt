@@ -1,0 +1,29 @@
+ A matrix can have an inverse matrix only if its number of columns is equal to its number of rows. If your matrix is not square, there is no inverse., If your matrix has 2 rows and 2 columns, you can find its inverse directly with the method above. If your matrix has 3 or more rows and 3 or more columns, use this method.
+
+For example, take this matrix:
+This matrix, A, is square with 3 rows and 3 columns, so you should use this second method.
+ Let arc be the element in the matrix at the rth row and the cth column. Its cofactor Arc will then be (-1)r+c det (arc), where det (arc) is the determinant of a matrix formed by skipping the rth row and the cth column, in which element arc lies.
+
+In the example above, all the cofactors are:
+A11 =5 , A12 =-1 ,A13 =-7 ,A21 =-1 ,A22 =-7 ,A23 =-5 ,A31 =-7 ,A32 =5 ,A33 =-1
+
+, A determinant is a particular number that can be calculated from any square matrix. It is typically denoted with vertical bars, just like an absolute value. Add all the cofactors of all the elements in the first row of the matrix to find the determinant.
+
+In the example above, you would calculate the determinant as follows:
+A11 + 2 A12 + 3 A13 = 5-2-21=-18
+
+, If the determinant is 0, there is no inverse matrix.
+
+In the example above, the determinant is not 0 (it’s 3), so you would continue.
+ If the determinant is not 0, then construct a matrix with your cofactors.
+
+In the example above, your cofactor matrix would look like this:
+
+, Once you’ve made a cofactor matrix, you’ll want to exchange rows with columns and columns with rows to take a transpose of the cofactor matrix.
+
+In the example above, your transposed cofactor matrix would look like this:
+
+, After calculating your transposed matrix, divide each of its elements by the determinant. The resulting matrix will be the multiplicative inverse of your original matrix.
+
+In the example above, your inverse matrix will look like this:
+

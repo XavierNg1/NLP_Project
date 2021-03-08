@@ -1,0 +1,143 @@
+,,,,
+Given Points P0 and P1, a linear Bézier curve is simply a straight line between those two Points.
+The curve is given by B(t) = P0 + t*(P1 - P0) = (1-t)*P0 + t*P1, where t is an element in the range , inclusive, and is equivalent to linear interpolation.
+Enter the sub headers and formulas which create the chart:
+
+Enter t to cell A11; enter X P0 to cell B11; enter Y P0 to cell C11; enter X P1 to cell D11; enter Y P1 to cell E11; enter (1-t)*P0 + t*P1 to cell K11 and also to cell L11;
+Enter .4 to cell A12; enter 2 to cell B12; enter 2 to cell C12; enter 4 to cell D12; enter 3 to cell E12; enter to cell K12, w/o quotes, the formula "=(1-t)*Psub0_X+t*Psub1_X" and Format Cells Font Red ; enter to cell L12, w/o quotes, the formula "=(1-t)*Psub0_Y+t*Psub1_Y" and Format Cells Font Red ;
+
+
+Enter Chart data:
+
+Enter to cell M10 w/o quotes "Linear Bézier curve";
+Enter to cell N10 X;
+Enter to cell O10 Y;
+Enter to cell M11 P0;
+Enter to cell M12 B(t);
+Enter to cell M13 P1;
+Enter to cell M14 t;
+Copy Interpolater from cell K1 and paste it to cell M15;
+Enter to cell N11 w/o quotes the formula, "=B12";
+Enter to cell O11 w/o quotes the formula, "=C12";
+Enter to cell N12 w/o quotes the formula, "=K12";
+Enter to cell O12 w/o quotes the formula, "=L12";
+Enter to cell N13 w/o quotes the formula, "=D12";
+Enter to cell O13 w/o quotes the formula, "=E12";
+Enter to cell N14 w/o quotes the formula, "=A12";
+Enter to cell N15 w/o quotes the formula, "=Interpolater";
+
+
+
+,
+Your chart should now resemble this one, except that I did Copy Picture including the data section and did Paste Picture onto the 'Saves' worksheet, then copied that and opened it in Preview in order to save it as a jpg file:
+
+
+
+
+
+
+
+,
+B(t) = (1-t)*+ t*, where t is an element in the range , inclusive, which can be interpreted as the linear interpolant of corresponding points in the linear Bézier curves from P0 to P1 and from P1 to P2 respectively.
+Rearranging the preceding equation algebraically gives:
+B(t) = (1-t)^2*P0 + 2*(1-t)*t*P1 + t^2 * P2, where t is an element in the range , inclusive.
+The derivative of the Bézier curve with respect to t is
+B´(t) = 2*(1-t)*(P1 - P0) + 2*t*(P2 - P1), from which it can be concluded that the tangents to the curve at P0 and P2 intersect at P1.
+As t increases from 0 to 1, the curve departs from P0 in the direction of P1, then bends to arrive at P2 from the direction of P1.
+The second derivative of the Bézier curve with respect to t is:
+B´´(t) = 2*(P2 - 2*P1 + P0].
+A quadratic Bézier curve is also a parabolic segment. As a parabola is a conic sector, some sources refer to quadratic Béziers as "conic arcs".
+Enter the sub headers and formulas which create the chart:
+
+Enter t to cell A34; enter X P0 to cell B34; enter Y P0 to cell C34; enter X P1 to cell D34; enter Y P1 to cell E39; enter X P2 to cell F34; enter Y P2 to cell G34; enter ((1-t)^2+(1-t)t*P1+t^2* P2)*Interpolater to cell K39 and also to cell L39;
+Enter .2 to cell A35; enter 1 to cell B35; enter 3 to cell C35; enter 2 to cell D35; enter 1.5 to cell E35; enter, w/o quotes, "=A35" to cell A40; copy cell A40 and paste it to cell range B40:G40; enter to cell K40, w/o quotes, the formula "=((1-t)^2+(1-t)*t*Psub1_X+t^2*Psub2_X)*Interpolater" and Format Cells Font Red ; enter to cell L40, w/o quotes, the formula "=((1-t)^2+(1-t)*t*Psub1_Y+t^2*Psub2_Y)*Interpolater" and Format Cells Font Red (given the Interpolater = 1);
+
+
+
+,
+Enter to cell M39 P0;
+Enter to cell M40 B(t)*Interp;
+Enter to cell M41 P2;
+Enter to cell N39 "=B40" w/o quotes;
+Enter to cell N40 "=K40" w/o quotes;
+Enter to cell N41 "=F35" w/o quotes;
+Select cell range E40:O40 and Format Cells Font Red;
+Select cell range M39:O41 and Format Cells Border Red Dashed Line (long dash) and do Border All selection icon.
+
+Format the Axes, Vertical Gridlines and Axes Titles as you did for the Linear Chart above;
+Do Chart Layout, Chart Title, Format Title, Text Box and check Resize shape to fit text;
+Edit-click in the new Text-Box title box and title the chart Bézier Quadratic Curve (return) P0, P1i, P2 and P0, B(t)i, P2; OK.
+Drag the chart so that its upper left corner is in cell M19 and resize it so its lower right corner is in cell Q31.
+Except for some Data Marker Styles and Fill and perhaps a few other details, your chart should resemble this one:
+
+
+
+
+
+
+,
+The curve starts at P0 going toward P1 and arrives at P3 coming from the direction of P2. Usually, it will not pass through P1 or P2; these points being there only to provide directional information.
+The distance between P0 and P1 determines "how long" the curve moves into direction P2 before turning towards P3.
+Writing BPiPjPk(t) for the quadratic Bézier curve defined by points Pi, Pj and Pk, the cubic Bézier curve can be defined as a linear combination of two quadratic Bézier curves.
+B(t) = (1-t)*BP0,P1,P2(t) + t*BP1,P2,P3(t), with t as an element in the range , inclusive.
+For some choices of P1 and P2, the curve may intersect itself, or contain a cusp.
+Any series of 4 distinct points can be converted to a cubic Bézier curve that goes through all 4 points in order.
+Given the starting and ending point of some cubic Bézier curve, and the points along the curve corresponding to t = 1/3 and t = 2/3, the control points for the original Bézier curve can be recovered.
+The derivative of the cubic Bézier curve with respect to t is
+B´(t) = 3*(1-t)^2 * + 6*(1-t)*t*(P2 - P1) + 3*t^2 *(P3 - P2).
+The second derivative of the Bézier curve with respect to t is:
+B´´(t) = 6*(1-t)*(P2 - 2*P1 + P0) + 6*t*(P3 - 2*P2 + P1).
+Enter the sub headers and formulas that create the chart:
+
+Enter t to cell A71; enter X P0 to cell B71; enter Y P0 to cell C71; enter X P1 to cell D71; enter Y P1 to cell E71; enter X P2 to cell F71; enter Y P2 to cell G71;
+Enter ((1-t)^3*P0+3*(1-t)^2*t*P1+3*(1-t)*t^2*P2+t^3* P3)*Interpolater to cells K71, L71, K76, L76, K82 and L82;
+Enter .5 to cell A72; enter -3 to cell B72; enter -4 to cell C72; enter -.5 to cell D72; enter 1 to cell E72; enter -1 to cell F72; enter 3 to cell G72; enter 4 to cell H72; enter 1 to cell I72;
+Enter, w/o quotes, "=1/3" to cell A77; enter, w/o quotes, "=B72" to cell B77 and copy cell B77 and paste it to cell range C77:I77;
+Enter, w/o quotes, "=2/3" to cell A83; enter, w/o quotes, "=B77" to cell B83 and copy cell B83 and paste it to cell range C83:I83;
+Enter in cell A85, the text w/o quotes, "For further information, see:" and enter in cell A86 http://en.wikipedia.org/wiki/B%C3%A9zier_curve which then step into in the formula bar and edit it at the middle/end of it, adding nothing, press return, and it should become a live link;
+Enter to cell K72, w/o quotes, the formula "=((1-t)^3*Psub0_X+3*(1-t)^2*t*Psub1_X+3*(1-t)*t^2*Psub2_X+t^3*Psub3_X)*Interpolater" and Format Cells Font Red ; copy this same formula and paste it to cells K77 and K83 ;
+Enter to cell L72, w/o quotes, the formula "=((1-t)^3*Psub0_Y+3*(1-t)^2*t*Psub1_Y+3*(1-t)*t^2*Psub2_Y+t^3*Psub3_Y)*Interpolater" and Format Cells Font Red ; copy this same formula and paste it to cells L77 and L83 ;
+
+
+
+, Copy cell N71 and paste it to cell range N72:N84;
+You want to have 3 series of 4 digits each, separated by 2 spaces between the series. Edit Series 1 from N71 to N74 so that the P's subscripts read 0, 1i, 2, 3; Delete the entry in cell N75, and edit Series 2 from N76 to N79 so that the P's subscripts read 0,1i, 2, 3; Delete the entry in cell N80, and edit Series 3 from N81 to N84 so that the P's subscripts read 0,1, 2i, 3;
+Copy from cell K1 the label Interpolater: and paste it to cell R71; Enter to cell S71 the formula, w/o quotes, "=Interpolater", (stripping off the colon and extra space first if you copied it from R71);
+Format Cells Border Red Bold Surrounding Box to cell range Q71:S71 and use the Paint bucket tool in the Toolbar to fill the cell range Q72:S72 with a band of bright red.
+Enter to cell O71 the formula w/o quotes, "=B72" and enter to cell P71 "=C72";
+Enter to cell O72 the formula w/o quotes, "=K72" and enter to cell P72 "=L72";
+Enter to cell O73 the formula w/o quotes, "=F72" and enter to cell P73 "=G72";
+Enter to cell O74 the formula w/o quotes, "=H72" and enter to cell P74 "=I72";
+Enter to cell O76 the formula w/o quotes, "=B77" and enter to cell P76 "=C77";
+Enter to cell O77 the formula w/o quotes, "=K77" and enter to cell P77 "=L77";
+Enter to cell O78 the formula w/o quotes, "=F77" and enter to cell P78 "=G77";
+Enter to cell O79 the formula w/o quotes, "=H77" and enter to cell P79 "=I77";
+Enter to cell O81 the formula w/o quotes, "=B83" and enter to cell P81 "=C83";
+Enter to cell O82 the formula w/o quotes, "=D83" and enter to cell P82 "=E83";
+Enter to cell O83 the formula w/o quotes, "=K83" and enter to cell P83 "=L83";
+Enter to cell O84 the formula w/o quotes, "=H83" and enter to cell P84 "=I83";
+Format cells fill yellow and font red for the Shift and Command cell range selection wherever there is an i in the P subscript, for the X and Y values only, i.e. cell range O72:P72+O77:P77+O83:P83.
+ Double-click on the curve and edit the title in the front of the series formula in the formula bar until the formula reads, "=SERIES("Cubic Curve",Sheet1!$O$71:$O$74,Sheet1!$P$71:$P$74,1)", w/o quotes externally.
+Click inside the chart but not on any chart object once and select menu Chart Source Data;
+
+Below the Series box, click the Add button, then enter the name: ="Control Point 01"; then for the X values, select on your sheet or type in =Sheet1!$O$76:$O$79 and for the Y values select on your sheet or type in =Sheet1!$P$76:$P$79 -- hit OK and verify in the formula bar that the series formula is correct. You should have a second curve; double click on it and format chart series Line Red Weight 5 Dashed line; OK.
+Double click in the plot area, Again below the Series box, click the Add button, then enter the name: ="Control Point 02"; then for the X values, select on your sheet or type in =Sheet1!$O$81:$O$84 and for the Y values select on your sheet or type in =Sheet1!$P$81:$P$84 -- hit OK and verify in the formula bar that the series formula is correct. You should have a second curve; double click on it and format chart series Line Green Weight 4 Tiny Dashes line;
+Now add the series name ="Control Point Marker #00" with X values =Sheet1!$K$72 and Y values =Sheet1!$L$72 and Format that series or data Point as a big blue-filled style round dot.
+Now add the series name ="Control Point Marker #01" with X values =Sheet1!$K$77 and Y values =Sheet1!$L$77 and Format that series or data Point as a big red-filled style round dot.
+Now add the series name ="Control Point Marker #02" with X values =Sheet1!$K$83 and Y values =Sheet1!$L$83 and Format that series or data Point as a big green-filled style round dot.
+
+
+Select the chart and the chart data underneath it by selecting the cell range that includes them, once you've repositioned the chart over the chart data properly to extend from upper left cell 1/2 of M49 to lower right the left quarter of cell T69, and hold the Shift key down and do Edit Copy Picture, activate the Saves worksheet and hold down the Shift Key again and do Paste Picture, Do Copy via command and v, and open the app Preview and do File New from Clipboard. Export it as a .jpg or .png file into your same folder so you can easily send it to friends or keep it with your photos, etc.
+Here are the versions created for this article with Interpolate set to 1.4 and 1:
+
+
+
+
+
+
+
+
+
+
+
+

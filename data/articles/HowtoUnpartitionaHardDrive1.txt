@@ -1,0 +1,23 @@
+ You will have to delete all the data from the partition in order to unpartition your drive. Look at our article on how to back up your computer for a detailed guide on how to do this.;
+, Your Windows computer will have come with this tool pre-installed. This tool lists all drives and will show how each drive partitions the data. Access the tool through either of these methods:
+
+
+Press the start key, type "compmgmt.msc" in the search field and press Enter. Select Disk Management from the options on the left of the Computer Management window.
+Access Disk Management directly by pressing the Start key, typing "Disk Management" and pressing enter. The Disk Management window should pop up.
+ In the Disk Management window, you should see a list of Disks, starting with Disk 0. The drives associated with each disk will be listed horizontally.
+
+
+Right-click the partition you want to delete and click "Delete Volume" from the menu. Look for what you called the drive when you originally partitioned it. This will delete all data from this partition, which is the only way to unpartition a drive.
+
+
+For Windows 7 and Vista users: Right click the same partition and select "Delete Partition" from the menu.
+
+
+You should now see the partition as unallocated space. The partition should be highlighted on the top with a black bar, as opposed to a purple bar for the other partitions.
+ Allocating space back to the original drive will take away memory from the partition and add it back to the original drive. The original drive is essentially absorbing the partition. If the partitioned drive is C, right-click on C and select "Extend Volume" from the menu.
+ The Wizard should have automatically popped up when you clicked "Extend Volume."
+
+
+Keep on clicking Next to progress through the Wizard. Click Finish when available.
+ Your original drive will no longer be partitioned and all the space will be on that disk.
+

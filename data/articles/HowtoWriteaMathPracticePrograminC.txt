@@ -1,0 +1,98 @@
+,, This is:
+
+
+
+
+#include <iostream>
+int main()
+using namespace std;{
+
+
+
+
+
+
+
+
+
+The first line of the code(#include <iostream>), which starts with a # symbol is called a pre-processor directive statement. Here, it directs the processor to add the contents of iostream file into the program.
+ This is so that the compiler knows what type that the variables will be:
+
+
+
+
+int result;
+int solution;
+int score;
+
+
+
+
+
+
+
+
+
+, These can be any problems, but C++ is a very operator rich language so make sure to use parenthesis if you want a certain order of operations., This should say something about how the program works, and how to play. An example:
+
+
+
+
+std::cout << "This is math game" << std::endl;
+std::cout << "To play, input your answer and press enter" << std::endl;
+
+
+
+
+
+, This should use if and else statements to tell the user if they are wrong. Your code should look something like this (note: you need to define all the variables used in this example beforehand):
+
+
+
+
+std::cout << "10 + 15 ";
+std::cin >> result;
+std::cin.ignore();
+solution = 10 + 15;
+ if ( result == solution ) {
+   std::cout << "Correct! ";
+   score = score + 1;
+   std::cout << "Your current score is " << score <<"\n";
+ } else {
+   std::cout << "You're wrong\n";
+ }
+
+
+
+
+
+, The one in the example works by declaring score as an integer, then adding one to the score if the problem is correct. At the end, the scoring system should count up scores and tell the player if they failed or won. The code should look something like this:
+
+
+
+
+std::cout << "Your total score: " << score <<"\n";
+ if ( score < 4 ) {
+      std::cout << "You failed!";
+ } else if ( score == 5 ) {
+      std::cout << "All correct! Nice job :-)";
+ } else {
+      std::cout << "Good job!";
+ }
+
+
+
+
+
+,, Name it something like "math_game.cpp"
+
+
+
+
+
+, You should be able to play through it without any problems, assuming the code was compiled correctly.
+
+
+
+
+

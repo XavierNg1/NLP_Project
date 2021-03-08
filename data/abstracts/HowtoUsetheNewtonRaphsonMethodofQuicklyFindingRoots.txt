@@ -1,0 +1,21 @@
+;
+,
+Format cell B1 of a new worksheet with a thick outline and color canary yellow -- this means that it is an input cell.
+Input the number of which the root is to be found in cell B1.
+In cell A1, type "Square".
+Select cell range A1:B2 and Insert Name Create in Left Column.
+And now select cell range B4:B15 and input the following formula, "=B3-((B3^2-Square)/(2*B3))" and Edit Fill Down so that the formula calculates all the way down to cell B15 for large numbers.
+Bear in mind that this method can find roots for complicated equations like x^5 * (4x^2 +1)^2 so long as one can take the first derivative (see Calculus I and II).
+Find the answer to the Neutral Operation of (a+b) = a^b, called "neutral" between the operations of Addition and Exponentiation on either side of the equals sign.
+
+,
+Select Row 1 and Insert Row.
+Try to find (a+b) = a^b when b=10, i.e.
+Select cell C2 and Insert Define Name InitialGuess for it and you may type "InitialGuess" into cell B2 if you so choose.
+Select cell range C4:C15 and input into C4 the formula "=C3+(((C3)^Powerful)-Powerful-C3)/(Powerful*(-C3)^(Powerful-1))" and Edit Fill Down so that cell C15 contains the computed result of 1.27411386474511, which is the answer we seek.
+
+,
+(1.27411386474511 + 10) = 1.27411386474511^10 = 11.2741138647451 and the problem of (a+b) = a^b when b = 10 has been solved.
+Save the workbook.
+Final image:
+,See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.

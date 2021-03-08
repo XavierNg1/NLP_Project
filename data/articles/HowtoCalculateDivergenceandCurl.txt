@@ -1,0 +1,107 @@
+ Divergence is a measure of source or sink at a particular point. – In other words, how much is flowing into or out of a point. Hence, it is only defined for vector fields and outputs a scalar. Below is an example of a field with a positive divergence.
+
+The divergence is recognized by div{\displaystyle \operatorname {div} } or ∇⋅{\displaystyle \nabla \cdot }, where the dot signifies the similarity to taking a dot product.
+
+
+ 
+
+;
+, This applies for vector fields F=Fxx^+Fyy^+Fzz^{\displaystyle {\mathbf {F} }=F_{x}{\mathbf {\hat {x}} }+F_{y}{\mathbf {\hat {y}} }+F_{z}{\mathbf {\hat {z}} }} defined in Cartesian coordinates only.
+
+
+∇⋅F=(∂∂x,∂∂y,∂∂z)⋅(Fx,Fy,Fz)=∂Fx∂x+∂Fy∂y+∂Fz∂z{\displaystyle \nabla \cdot {\mathbf {F} }=\left({\frac {\partial }{\partial x}},{\frac {\partial }{\partial y}},{\frac {\partial }{\partial z}}\right)\cdot (F_{x},F_{y},F_{z})={\frac {\partial F_{x}}{\partial x}}+{\frac {\partial F_{y}}{\partial y}}+{\frac {\partial F_{z}}{\partial z}}}
+
+
+, If the vector field F{\displaystyle {\mathbf {F} }} is given in cylindrical (ρ,ϕ,z){\displaystyle (\rho ,\phi ,z)} or spherical coordinates (r,θ,ϕ){\displaystyle (r,\theta ,\phi )} (where θ{\displaystyle \theta } is the polar angle), then the divergence does not have a simple form. 
+
+
+∂Fx∂x+∂Fy∂y+∂Fz∂z{\displaystyle {\frac {\partial F_{x}}{\partial x}}+{\frac {\partial F_{y}}{\partial y}}+{\frac {\partial F_{z}}{\partial z}}}
+
+
+1ρ∂(ρFρ)∂ρ+1ρ∂Fϕ∂ϕ+∂Fz∂z{\displaystyle {\frac {1}{\rho }}{\frac {\partial (\rho F_{\rho })}{\partial \rho }}+{\frac {1}{\rho }}{\frac {\partial F_{\phi }}{\partial \phi }}+{\frac {\partial F_{z}}{\partial z}}}
+
+
+1r2∂(r2Fr)∂r+1rsin⁡θ∂∂θ(Fθsin⁡θ)+1rsin⁡θ∂Fϕ∂ϕ{\displaystyle {\frac {1}{r^{2}}}{\frac {\partial (r^{2}F_{r})}{\partial r}}+{\frac {1}{r\sin \theta }}{\frac {\partial }{\partial \theta }}(F_{\theta }\sin \theta )+{\frac {1}{r\sin \theta }}{\frac {\partial F_{\phi }}{\partial \phi }}}
+
+
+,
+
+
+F=(3x2−5x2y4)x^+(xy4z2−sin⁡(2x2z3))y^+(5z2+yz)z^{\displaystyle {\mathbf {F} }=(3x^{2}-5x^{2}y^{4}){\mathbf {\hat {x}} }+(xy^{4}z^{2}-\sin(2x^{2}z^{3})){\mathbf {\hat {y}} }+(5z^{2}+yz){\mathbf {\hat {z}} }}
+
+
+∇⋅F=6x−10xy4+4xy3z2+y+10z{\displaystyle \nabla \cdot {\mathbf {F} }=6x-10xy^{4}+4xy^{3}z^{2}+y+10z}
+
+As you can see, we have mapped from a vector field to a scalar field. 
+
+
+, The curl, defined for vector fields, is, intuitively, the amount of circulation at any point. The operator outputs another vector field. A whirlpool in real life consists of water acting like a vector field with a nonzero curl. Above is an example of a field with negative curl (because it's rotating clockwise).
+
+The curl is recognized by curl{\displaystyle \operatorname {curl} } or ∇×{\displaystyle \nabla \times }, where the times symbol signifies the similarity of taking a cross product.
+ The curl of a function is similar to the cross product of two vectors, hence why the curl operator is denoted with a ∇×.{\displaystyle \nabla \times .} As before, this mnemonic only works if F{\displaystyle {\mathbf {F} }} is defined in Cartesian coordinates.
+
+
+∇×F=|x^y^z^∂/∂x∂/∂y∂/∂zFxFyFz|{\displaystyle \nabla \times {\mathbf {F} }={\begin{vmatrix}{\mathbf {\hat {x}} }&{\mathbf {\hat {y}} }&{\mathbf {\hat {z}} }\\\partial /\partial x&\partial /\partial y&\partial /\partial z\\F_{x}&F_{y}&F_{z}\end{vmatrix}}}
+
+
+, Below, we do it by cofactor expansion (expansion by minors).
+
+
+∇×F=(∂Fz∂y−∂Fy∂z)x^−(∂Fz∂x−∂Fx∂z)y^+(∂Fy∂x−∂Fx∂y)z^{\displaystyle \nabla \times {\mathbf {F} }=\left({\frac {\partial F_{z}}{\partial y}}-{\frac {\partial F_{y}}{\partial z}}\right){\mathbf {\hat {x}} }-\left({\frac {\partial F_{z}}{\partial x}}-{\frac {\partial F_{x}}{\partial z}}\right){\mathbf {\hat {y}} }+\left({\frac {\partial F_{y}}{\partial x}}-{\frac {\partial F_{x}}{\partial y}}\right){\mathbf {\hat {z}} }}
+
+
+, The curl does not have a simple form if F{\displaystyle {\mathbf {F} }} is in cylindrical or spherical coordinates.
+
+
+(∂Fz∂y−∂Fy∂z)x^−(∂Fz∂x−∂Fx∂z)y^+(∂Fy∂x−∂Fx∂y)z^{\displaystyle \left({\frac {\partial F_{z}}{\partial y}}-{\frac {\partial F_{y}}{\partial z}}\right){\mathbf {\hat {x}} }-\left({\frac {\partial F_{z}}{\partial x}}-{\frac {\partial F_{x}}{\partial z}}\right){\mathbf {\hat {y}} }+\left({\frac {\partial F_{y}}{\partial x}}-{\frac {\partial F_{x}}{\partial y}}\right){\mathbf {\hat {z}} }}
+
+
+(1ρ∂Fz∂ϕ−∂Fϕ∂z)ρ^−(∂Fz∂ρ−∂Fρ∂z)ϕ^+1ρ(∂(ρFϕ)∂ρ−∂Fρ∂ϕ)z^{\displaystyle \left({\frac {1}{\rho }}{\frac {\partial F_{z}}{\partial \phi }}-{\frac {\partial F_{\phi }}{\partial z}}\right){\boldsymbol {\hat {\rho }}}-\left({\frac {\partial F_{z}}{\partial \rho }}-{\frac {\partial F_{\rho }}{\partial z}}\right){\boldsymbol {\hat {\phi }}}+{\frac {1}{\rho }}\left({\frac {\partial (\rho F_{\phi })}{\partial \rho }}-{\frac {\partial F_{\rho }}{\partial \phi }}\right){\mathbf {\hat {z}} }}
+
+
+1rsin⁡θ(∂∂θ(Fϕsin⁡θ)−∂Fθ∂ϕ)r^−1r(∂∂r(rFϕ)−1sin⁡θ∂Fr∂ϕ)θ^+1r(∂∂r(rFθ)−∂Fr∂θ)ϕ^{\displaystyle {\begin{aligned}{\frac {1}{r\sin \theta }}\left({\frac {\partial }{\partial \theta }}(F_{\phi }\sin \theta )-{\frac {\partial F_{\theta }}{\partial \phi }}\right){\mathbf {\hat {r}} }&-{\frac {1}{r}}\left({\frac {\partial }{\partial r}}(rF_{\phi })-{\frac {1}{\sin \theta }}{\frac {\partial F_{r}}{\partial \phi }}\right){\boldsymbol {\hat {\theta }}}\\&+{\frac {1}{r}}\left({\frac {\partial }{\partial r}}(rF_{\theta })-{\frac {\partial F_{r}}{\partial \theta }}\right){\boldsymbol {\hat {\phi }}}\end{aligned}}}
+
+
+,
+
+
+F=(5x2y2−7xz3)x^+(4x−5xy−y4)y^+(xz+z2)z^{\displaystyle {\mathbf {F} }=(5x^{2}y^{2}-7xz^{3}){\mathbf {\hat {x}} }+(4x-5xy-y^{4}){\mathbf {\hat {y}} }+(xz+z^{2}){\mathbf {\hat {z}} }}
+
+
+,
+
+
+∇×F=|x^y^z^∂/∂x∂/∂y∂/∂zFxFyFz|{\displaystyle \nabla \times {\mathbf {F} }={\begin{vmatrix}{\mathbf {\hat {x}} }&{\mathbf {\hat {y}} }&{\mathbf {\hat {z}} }\\\partial /\partial x&\partial /\partial y&\partial /\partial z\\F_{x}&F_{y}&F_{z}\end{vmatrix}}}
+
+
+Fx=5x2y2−7xz3{\displaystyle F_{x}=5x^{2}y^{2}-7xz^{3}}
+
+
+Fy=4x−5xy−y4{\displaystyle F_{y}=4x-5xy-y^{4}}
+
+
+Fz=xz+z2{\displaystyle F_{z}=xz+z^{2}}
+
+
+
+
+,
+
+
+(∂Fz∂y−∂Fy∂z)x^=0−0{\displaystyle \left({\frac {\partial F_{z}}{\partial y}}-{\frac {\partial F_{y}}{\partial z}}\right){\mathbf {\hat {x}} }=0-0}
+
+
+(∂Fz∂x−∂Fx∂z)y^=z−(−21xz2){\displaystyle \left({\frac {\partial F_{z}}{\partial x}}-{\frac {\partial F_{x}}{\partial z}}\right){\mathbf {\hat {y}} }=z-(-21xz^{2})}
+
+
+(∂Fy∂x−∂Fx∂y)z^=(4−5y)−10x2y{\displaystyle \left({\frac {\partial F_{y}}{\partial x}}-{\frac {\partial F_{x}}{\partial y}}\right){\mathbf {\hat {z}} }=(4-5y)-10x^{2}{y}}
+
+
+,
+
+
+∇×F=−(z+21xz2)y^+(4−5y−10x2y)z^{\displaystyle \nabla \times {\mathbf {F} }=-(z+21xz^{2}){\mathbf {\hat {y}} }+(4-5y-10x^{2}y){\mathbf {\hat {z}} }}
+
+Note that we have mapped to another vector field.
+
+

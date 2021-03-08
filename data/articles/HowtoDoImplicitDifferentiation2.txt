@@ -1,0 +1,62 @@
+ Congratulations! You've differentiated your equation implicitly — not an easy task for first-timers! Using this equation to find the slope (dy/dx) for any (x, y) point is as simple as plugging in the x and y values for your point into the right side of the equation, then solving for (dy/dx).
+
+
+For example, let's say that we want to find the slope at the point (3, -4) for our example equation above. To do this, we would substitute 3 for x and -4 for y, solving as follows:
+
+
+
+(dy/dx) = (-2y2 - 2x + 5)/(2(2xy + y + 4)
+(dy/dx) = (-2(-4)2 - 2(3) + 5)/(2(2(3)(-4) + (-4) + 4)
+(dy/dx) = (-2(16) - 6 + 5)/(2(2(3)(-4))
+(dy/dx) = (-32) - 6 + 5)/(2(2(-12))
+(dy/dx) = (-33)/(2(2(-12))
+(dy/dx) = (-33)/(-48) = 3/48, or 0.6875.
+ The chain rule is an important piece of knowledge to have when dealing with calculus problems (including implicit differentiation problems). The chain rule states that for a function F(x) which can be written as (f o g)(x), the derivative of F(x) is equal to f'(g(x))g'(x). For difficult implicit differentiation problems, this means that it's possible to differentiate different individual "pieces" of the equation, then piece together the result.
+
+
+As a simple example, let's say that we need to find the derivative of sin(3x2 + x) as part of a larger implicit differentiation problem for the equation sin(3x2 + x) + y3 = 0. If we think of sin(3x2 + x) as "f(x)" and 3x2 + x as "g(x)", we can find the differentiation as follows:
+
+
+
+f'(g(x))g'(x)
+(sin(3x2 + x))' × (3x2 + x)'
+cos(3x2 + x) × (6x + 1)
+(6x + 1)cos(3x2 + x)
+
+
+
+
+
+, Though it's not common in basic calculus, some advanced applications may require the implicit differentiation of more than two variables. For each extra variable, you'll need to find an extra derivative with respect to x. For instance, if you're working with x, y, and z, you'll need to find both (dz/dy) and (dz/dx). We can do this by differentiating the equation with respect x twice — the first time, we'll insert a (dz/dx) every time we differentiate a term with z, and the second time, we'll insert a (dz/dy) every time we differentiate a z. After this, it's just a matter of solving for (dz/dx) and (dz/dy).
+
+
+For example, let's say that we're trying to differentiate x3z2 - 5xy5z = x2 + y3.
+First, let's differentiate with respect to x and insert (dz/dx). Don't forget to apply the product rule where appropriate!
+
+
+
+x3z2 - 5xy5z = x2 + y3
+
+3x2z2 + 2x3z(dz/dx) - 5y5z - 5xy5(dz/dx) = 2x
+3x2z2 + (2x3z - 5xy5)(dz/dx) - 5y5z = 2x
+(2x3z - 5xy5)(dz/dx) = 2x - 3x2z2 + 5y5z
+(dz/dx) = (2x - 3x2z2 + 5y5z)/(2x3z - 5xy5)
+
+
+
+
+Now, let's do the same for (dz/dy)
+
+
+
+x3z2 - 5xy5z = x2 + y3
+
+2x3z(dz/dy) - 25xy4z - 5xy5(dz/dy) = 3y2
+
+(2x3z - 5xy5)(dz/dy) = 3y2 + 25xy4z
+(dz/dy) = (3y2 + 25xy4z)/(2x3z - 5xy5)
+
+
+
+
+

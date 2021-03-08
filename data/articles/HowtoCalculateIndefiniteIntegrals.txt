@@ -1,0 +1,172 @@
+, This is the same power rule for derivatives, but in reverse. We increase the power by 1, and divide by the new power. Don't forget to add the constant of integration C.{\displaystyle C.}
+
+
+∫xndx=xn+1n+1+C{\displaystyle \int x^{n}{\mathrm {d} }x={\frac {x^{n+1}}{n+1}}+C}
+
+To verify that this power rule holds, differentiate the antiderivative to recover the original function.
+
+The power rule holds for all functions of this form with degree n{\displaystyle n} except when n=−1.{\displaystyle n=-1.} We will see why later.
+ Integration is a linear operator, which means that the integral of a sum is the sum of the integrals, and coefficients can be factored out, like so.
+
+
+∫(axn+bxm)dx=a∫xndx+b∫xmdx{\displaystyle \int (ax^{n}+bx^{m}){\mathrm {d} }x=a\int x^{n}{\mathrm {d} }x+b\int x^{m}{\mathrm {d} }x}
+
+This should be familiar because the derivative is also a linear operator; the derivative of a sum is the sum of the derivatives.
+
+Linearity does not just apply for polynomials. It applies to any integral where the integrand is a sum of two or more terms.
+ This is a polynomial, so using the property of linearity and the power rule, the antiderivative can easily be computed. To find the antiderivative of a constant, remember that x0=1,{\displaystyle x^{0}=1,} so the constant is really just the coefficient of x0.{\displaystyle x^{0}.}
+
+
+∫(x3−2x2+4x+2)dx=14x4−23x3+2x2+2x+C{\displaystyle \int (x^{3}-2x^{2}+4x+2){\mathrm {d} }x={\frac {1}{4}}x^{4}-{\frac {2}{3}}x^{3}+2x^{2}+2x+C}
+
+
+, This may seem like an integral that cannot be done using the power rule, but a moment's glance reveals that we can rewrite x=x1/2,{\displaystyle {\sqrt {x}}=x^{1/2},} separate the fraction into three fractions, and apply linearity and the power rule to find the antiderivative.
+
+
+∫f(x)dx=∫3x2−7x+1xdx=∫(3x2x1/2−7xx1/2+1x1/2)dx=∫(3x3/2−7x1/2+x−1/2)dx=3⋅25x5/2−7⋅23x3/2+2x1/2+C=65x5/2−143x3/2+2x1/2+C{\displaystyle {\begin{aligned}\int f(x){\mathrm {d} }x&=\int {\frac {3x^{2}-7x+1}{\sqrt {x}}}{\mathrm {d} }x\\&=\int \left({\frac {3x^{2}}{x^{1/2}}}-{\frac {7x}{x^{1/2}}}+{\frac {1}{x^{1/2}}}\right){\mathrm {d} }x\\&=\int (3x^{3/2}-7x^{1/2}+x^{-1/2}){\mathrm {d} }x\\&=3\cdot {\frac {2}{5}}x^{5/2}-7\cdot {\frac {2}{3}}x^{3/2}+2x^{1/2}+C\\&={\frac {6}{5}}x^{5/2}-{\frac {14}{3}}x^{3/2}+2x^{1/2}+C\end{aligned}}}
+
+
+, In the following steps, we list commonly encountered functions like the exponential and trigonometric functions. All are widely encountered, especially ones that are listed further up, so knowing what their antiderivatives are is crucial to building up integrating skills. Remember that indefinite integrals have an extra C,{\displaystyle C,} because the derivative of a constant is 0. The integral of the logarithmic function can be found using integration by parts, which we go over later.
+
+
+∫exdx=ex+C{\displaystyle \int e^{x}{\mathrm {d} }x=e^{x}+C}
+
+
+∫axdx=axln⁡a+C{\displaystyle \int a^{x}{\mathrm {d} }x={\frac {a^{x}}{\ln a}}+C}
+
+
+∫ln⁡xdx=xln⁡x−x+C{\displaystyle \int \ln x{\mathrm {d} }x=x\ln x-x+C}
+
+
+∫loga⁡xdx=xln⁡x−xln⁡a+C{\displaystyle \int \log _{a}x{\mathrm {d} }x={\frac {x\ln x-x}{\ln a}}+C}
+
+
+, Previously, we said that the function f(x)=x−1,{\displaystyle f(x)=x^{-1},} or f(x)=1x,{\displaystyle f(x)={\frac {1}{x}},} was an exception to the power rule. The reason is because the antiderivative of this function is the logarithmic function.
+
+
+∫1xdx=ln⁡|x|+C{\displaystyle \int {\frac {1}{x}}{\mathrm {d} }x=\ln |x|+C}
+
+(Sometimes, authors like to put the dx{\displaystyle {\mathrm {d} }x} in the numerator of the fraction, so it reads like ∫dxx.{\displaystyle \int {\frac {{\mathrm {d} }x}{x}}.} Be aware of this notation.)
+
+
+, The sines and cosines are encountered far more often and should definitely be memorized. Integrals three through six can be found through u-substitution, which we will go over. The last four integrals listed below should be familiar from derivatives.
+
+
+∫sin⁡xdx=−cos⁡x+C{\displaystyle \int \sin x{\mathrm {d} }x=-\cos x+C}
+
+
+∫cos⁡xdx=sin⁡x+C{\displaystyle \int \cos x{\mathrm {d} }x=\sin x+C}
+
+
+∫tan⁡xdx=ln⁡|sec⁡x|+C{\displaystyle \int \tan x{\mathrm {d} }x=\ln |\sec x|+C}
+
+
+∫sec⁡xdx=ln⁡|sec⁡x+tan⁡x|+C{\displaystyle \int \sec x{\mathrm {d} }x=\ln |\sec x+\tan x|+C}
+
+
+∫csc⁡xdx=−ln⁡|csc⁡x+cot⁡x|+C{\displaystyle \int \csc x{\mathrm {d} }x=-\ln |\csc x+\cot x|+C}
+
+
+∫cot⁡xdx=ln⁡|sin⁡x|+C{\displaystyle \int \cot x{\mathrm {d} }x=\ln |\sin x|+C}
+
+
+∫sec2⁡xdx=tan⁡x+C{\displaystyle \int \sec ^{2}x{\mathrm {d} }x=\tan x+C}
+
+
+∫csc2⁡xdx=−cot⁡x+C{\displaystyle \int \csc ^{2}x{\mathrm {d} }x=-\cot x+C}
+
+
+∫sec⁡xtan⁡xdx=sec⁡x+C{\displaystyle \int \sec x\tan x{\mathrm {d} }x=\sec x+C}
+
+
+∫csc⁡xcot⁡xdx=−csc⁡x+C{\displaystyle \int \csc x\cot x{\mathrm {d} }x=-\csc x+C}
+
+
+, These should not really be considered an exercise in "memorization." As long as you are familiar with the derivatives, then most of these antiderivatives should be familiar as well.
+
+
+∫1a2−x2dx=sin−1xa+C{\displaystyle \int {\frac {1}{\sqrt {a^{2}-x^{2}}}}{\mathrm {d} }x=\sin ^{-1}{\frac {x}{a}}+C}
+
+
+∫−1a2−x2dx=cos−1xa+C{\displaystyle \int {\frac {-1}{\sqrt {a^{2}-x^{2}}}}{\mathrm {d} }x=\cos ^{-1}{\frac {x}{a}}+C}
+
+
+∫1a2+x2dx=1atan−1xa+C{\displaystyle \int {\frac {1}{a^{2}+x^{2}}}{\mathrm {d} }x={\frac {1}{a}}\tan ^{-1}{\frac {x}{a}}+C}
+
+
+, Hyperbolic functions are not encountered as often as the related trigonometric functions, but they do occur in applications such as special relativity. Below, we list the two integrals that you should know - all others can be looked up in a table.
+
+
+∫sinh⁡xdx=cosh⁡x+C{\displaystyle \int \sinh x{\mathrm {d} }x=\cosh x+C}
+
+
+∫cosh⁡xdx=sinh⁡x+C{\displaystyle \int \cosh x{\mathrm {d} }x=\sinh x+C}
+
+
+, U-substitution is a technique that changes variables with the hope of obtaining an easier integral. As we will see, it is the analogue of the chain rule for derivatives. 
+, What do we do when the exponent has a coefficient in it? We use u-substitution to change variables. It turns out that these kinds of u-subs are the easiest to perform, and they are done so often, the u-sub is often skipped. Nevertheless, we will show the entire process.
+
+
+∫eaxdx{\displaystyle \int e^{ax}{\mathrm {d} }x}
+
+
+, We choose u=ax{\displaystyle u=ax} so that we get a eu{\displaystyle e^{u}} in the integrand, a function whose antiderivative we are familiar with - itself. Then we must replace dx{\displaystyle {\mathrm {d} }x} with du,{\displaystyle {\mathrm {d} }u,} but we need to make sure that we are keeping track of our terms. In this example, du=adx,{\displaystyle {\mathrm {d} }u=a{\mathrm {d} }x,} so we need to divide the whole integral by a{\displaystyle a} to compensate.
+
+
+∫eaxdx=1a∫eudu{\displaystyle \int e^{ax}{\mathrm {d} }x={\frac {1}{a}}\int e^{u}{\mathrm {d} }u}
+
+
+, For indefinite integrals, you must rewrite in terms of the original variable.
+
+
+∫eaxdx=1aeax+C{\displaystyle \int e^{ax}{\mathrm {d} }x={\frac {1}{a}}e^{ax}+C}
+
+
+, We will see that this u-sub is a case where you need to "back-substitute." 
+
+
+∫x2x+3dx{\displaystyle \int x{\sqrt {2x+3}}{\mathrm {d} }x}
+
+
+, We choose u=2x+3{\displaystyle u=2x+3} so that we simplify the square root. Then du=2dx.{\displaystyle {\mathrm {d} }u=2{\mathrm {d} }x.} However, after replacing the dx{\displaystyle {\mathrm {d} }x} with a du,{\displaystyle {\mathrm {d} }u,} we still have an x{\displaystyle x} in the integrand.
+
+
+∫x2x+3dx=12∫xudu{\displaystyle \int x{\sqrt {2x+3}}{\mathrm {d} }x={\frac {1}{2}}\int x{\sqrt {u}}{\mathrm {d} }u}
+
+
+, This is the back-substitution that we were talking about earlier. Our u-sub did not get rid of all the x{\displaystyle x} terms in the integrand, so we need to back-sub to get rid of it. We find that x=u−32.{\displaystyle x={\frac {u-3}{2}}.} After simplifying, we get the following.
+
+
+12∫xudu=14∫(u−3)udu{\displaystyle {\frac {1}{2}}\int x{\sqrt {u}}{\mathrm {d} }u={\frac {1}{4}}\int (u-3){\sqrt {u}}{\mathrm {d} }u}
+
+
+, We were given the problem in terms of x,{\displaystyle x,} so our answer must also be written in terms of x.{\displaystyle x.}
+
+
+14∫(u−3)udu=14∫(u3/2−3u1/2)du=14(25u5/2−3⋅23u3/2)+C=110u5/2−12u3/2+C=110(2x+3)5/2−12(2x+3)3/2+C{\displaystyle {\begin{aligned}{\frac {1}{4}}\int (u-3){\sqrt {u}}{\mathrm {d} }u&={\frac {1}{4}}\int (u^{3/2}-3u^{1/2}){\mathrm {d} }u\\&={\frac {1}{4}}\left({\frac {2}{5}}u^{5/2}-3\cdot {\frac {2}{3}}u^{3/2}\right)+C\\&={\frac {1}{10}}u^{5/2}-{\frac {1}{2}}u^{3/2}+C\\&={\frac {1}{10}}(2x+3)^{5/2}-{\frac {1}{2}}(2x+3)^{3/2}+C\end{aligned}}}
+
+
+, The integration by parts formula is given below. The main goal of integration by parts is to integrate the product of two functions - hence, it is the analogue of the product rule for derivatives. This technique simplifies the integral into one that is hopefully easier to evaluate.
+
+
+∫udv=uv−∫vdu{\displaystyle \int u{\mathrm {d} }v=uv-\int v{\mathrm {d} }u}
+
+
+, We know that the derivative of ln⁡x{\displaystyle \ln x} is 1x,{\displaystyle {\frac {1}{x}},} but not the antiderivative. It turns out that this integral is a simple application of integration by parts. 
+
+
+∫ln⁡xdx{\displaystyle \int \ln x{\mathrm {d} }x}
+
+
+, We choose u=ln⁡x{\displaystyle u=\ln x} because the derivative is algebraic and therefore easier to manipulate. Then dv=dx.{\displaystyle {\mathrm {d} }v={\mathrm {d} }x.} Therefore, du=1xdx{\displaystyle {\mathrm {d} }u={\frac {1}{x}}{\mathrm {d} }x} and v=x.{\displaystyle v=x.} Substituting all of these into the formula, we obtain the following.
+
+
+∫ln⁡xdx=xln⁡x−∫dx{\displaystyle \int \ln x{\mathrm {d} }x=x\ln x-\int {\mathrm {d} }x}
+
+We converted the integral of a logarithm into the integral of 1, which is trivial to evaluate.
+
+
+
+∫ln⁡xdx=xln⁡x−x+C{\displaystyle \int \ln x{\mathrm {d} }x=x\ln x-x+C}
+
+

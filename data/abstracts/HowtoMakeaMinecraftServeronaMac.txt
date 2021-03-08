@@ -1,0 +1,31 @@
+
+Download the Minecraft Server files.
+Create a new folder for the server files.
+Drag the downloaded JAR file into the new folder.
+Rename the file to "minecraft_server.jar.",
+Start the TextEdit application.
+Click the "Format" menu and select "Plain Text.",
+Paste the following commands into the text file.
+Save the file as .start.command in the same folder as the JAR file.
+Open the Terminal.
+Type .chmod a+x in the Terminal window.
+Drag and drop the .start.command file into the Terminal window.
+Press ⏎ Return to run the command.
+Double-click the .start.command file to run it.
+Open the "EULA.txt" file that is created in the folder.
+Change the “eula=false” line to “eula=true.” This will indicate that you have agreed to the terms of service for the Minecraft server software.
+Double-click .start.command again.
+Type /op <username> into the server command line.
+Make changes to the server properties by editing .server.properties.
+Determine the server's local IP address.
+Open Minecraft on another computer on your network.
+Select "Multiplayer" on the second computer.
+Click the "Direct Connect" button.
+Type in the server's local IP address.
+Determine the server's local IP address.
+Open your router's configuration page.
+Open the Port Forwarding section.
+Open TCP port 25565 for your server's IP address.
+Determine your public IP address.
+Enter the server's public IP in the Direct Connect menu on another computer.
+Check your server's public and local IP address on a regular basis.

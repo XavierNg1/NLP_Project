@@ -1,0 +1,18 @@
+ Type an equals (=) sign, the SUM function, and the numbers you are adding surrounded by parenthesis(). For example: =SUM(your numbers here) , or =SUM(C4,C5,C6,C7). This formula will add together all numbers and cells within the parentheses.;
+, If you provide a start and an end cell, separated by a colon (:), you can include large sections of the spreadsheet in your calculation. For example: '=SUM(C4:C7) tells Excel to add the value from C4, the value from C7, and everything in between.
+
+
+You don't have to type out "C4:C7" - you can click and hold on cell C4, and drag your mouse down to highlight all the cells from C4 to C7 to automatically enter the formula values. Add the parenthesis at the end, and you're done. For large columns of numbers, this is a much faster method than clicking on each and every cell individually.
+ Alternately, if you are using Excel 2007 or later, you can have excel perform this functions automatically by selecting a cell next to the desired range and pressing “AutoSum > Sum”.
+
+
+AutoSum is limited to contiguous cell ranges - meaning if you want to skip cells in your calculation it may not work correctly.
+ Since the cell with the function holds both the sum and the function, you have to consider which information you want copied.
+
+
+Copy a cell (“Edit > Copy”), then select another cell and go to “Edit > Paste > Paste Special”. Here you can select whether to paste the cell value (sum result) or formula into the destination cell.
+ The value of your summation cell can be called in other functions in your spreadsheet. Rather than re-adding information or typing out the number value of your previous function, you can reference the cell in other calculations to automatically use the result.
+
+
+For example, if you add all of column C and want to add the result to sum of column D, rather than typing it all out you can refer to the cell containing the summation of column C in your summation formula for column D.
+

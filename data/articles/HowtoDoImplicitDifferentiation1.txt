@@ -1,0 +1,62 @@
+ When trying to differentiate a multivariable equation like x2 + y2 - 5x + 8y + 2xy2 = 19, it can be difficult to know where to start. Luckily, the first step of implicit differentiation is its easiest one. Simply differentiate the x terms and constants on both sides of the equation according to normal (explicit) differentiation rules to start off. Ignore the y terms for now.
+
+
+Let's try our hand at differentiating the simple example equation above. x2 + y2 - 5x + 8y + 2xy2 = 19 has two x terms: x2 and -5x. If we want to differentiate the equation, we'll deal with these first, like this:
+
+
+
+x2 + y2 - 5x + 8y + 2xy2 = 19
+(Bring the "2" exponent in x2 down as a coefficient, remove the x in -5x, and change the 19 to 0)
+2x + y2 - 5 + 8y + 2xy2 = 0
+
+
+
+;
+, As your next step, simply differentiate the y terms the same way as you differentiated the x terms. This time, however, add "(dy/dx)" next to each the same way as you'd add a coefficient. For instance, if you differentiate y2, it becomes 2y(dy/dx). Ignore terms with both x and y for now.
+
+
+In our running example, our equation now looks like this: 2x + y2 - 5 + 8y + 2xy2 = 0. We would perform this next y-differentiating step as follows:
+
+
+
+2x + y2 - 5 + 8y + 2xy2 = 0
+(Bring the "2" exponent in y2 down as a coefficient, remove the y in 8y, and place a "dy/dx" next to each).
+2x + 2y(dy/dx) - 5 + 8(dy/dx) + 2xy2= 0
+
+
+
+
+
+, Dealing with terms that have both x and y in them is a little tricky, but if you know the product and quotient rules for differentiating, you're in the clear. If the x and y terms are multiplied, use the product rule ((f × g)' = f' × g + g × f'), substituting the x term for f and the y term for g.On the other hand, if the x and y terms are divided by each other, use the quotient rule ((f/g)' = (g × f' - g' × f)/g2), substituting the numerator term for f and the denominator term for g.In our example, 2x + 2y(dy/dx) - 5 + 8(dy/dx) + 2xy2 = 0, we only have one term with both x and y — 2xy2. Since the x and y are multiplied by each other, we would use the product rule to differentiate as follows:
+
+
+
+2xy2 = (2x)(y2)— set 2x = f and y2 = g in (f × g)' = f' × g + g' × f
+(f × g)' = (2x)' × (y2) + (2x) × (y2)'
+(f × g)' = (2) × (y2) + (2x) × (2y(dy/dx))
+(f × g)' = 2y2 + 4xy(dy/dx)
+
+
+
+
+
+Adding this back into our main equation, we get 2x + 2y(dy/dx) - 5 + 8(dy/dx) + 2y2 + 4xy(dy/dx) = 0
+
+
+, You're almost there! Now, all you need to do is solve the equation for (dy/dx). This looks difficult, but it's usually not — keep in mind that any two terms a and b that are multiplied by (dy/dx) can be written as (a + b)(dy/dx) due to the distributive property of multiplication.This tactic can make it easy to isolate (dy/dx) — just get all the other terms on the opposite side of the parentheses, then divide them by the terms in parentheses next to (dy/dx).
+
+
+In our example, we might simplify 2x + 2y(dy/dx) - 5 + 8(dy/dx) + 2y2 + 4xy(dy/dx) = 0 as follows:
+
+
+
+2x + 2y(dy/dx) - 5 + 8(dy/dx) + 2y2 + 4xy(dy/dx) = 0
+(2y + 8 + 4xy)(dy/dx) + 2x - 5 + 2y2 = 0
+(2y + 8 + 4xy)(dy/dx) = -2y2 - 2x + 5
+(dy/dx) = (-2y2 - 2x + 5)/(2y + 8 + 4xy)
+(dy/dx) = (-2y2 - 2x + 5)/(2(2xy + y + 4)
+
+
+
+
+

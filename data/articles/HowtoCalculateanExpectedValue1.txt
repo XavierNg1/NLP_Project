@@ -1,0 +1,90 @@
+ Calculating the expected value (EV) of a variety of possibilities is a statistical tool for determining the most likely result over time. To begin, you must be able to identify what specific outcomes are possible. You should either list these or create a table to help define the results.For example, suppose you have a standard deck of 52 playing cards, and you want to find the expected value, over time, of a single card that you select at random. You need to list all possible outcomes, which are:
+
+Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, in each of four different suits.
+
+
+;
+, Some expected value calculations will be based on money, as in stock investments. Others may be self-evident numerical values, which would be the case for many dice games. In some cases, you may need to assign a value to some or all possible outcomes. This might be the case, for example, in a laboratory experiment where you might assign a value of +1 to a positive chemical reaction, a value of -1 to a negative chemical reaction, and a value of 0 if no reaction occurred.In the example of the playing cards, traditional values are Ace = 1, face cards all equal 10, and all other cards have a value equal to the number shown on the card. Assign those values for this example.
+ Probability is the chance that each particular value or outcome may occur. In some situations, like the stock market, for example, probabilities may be affected by some external forces. You would need to be provided with some additional information before you could calculate the probabilities in these examples. In a problem of random chance, such as rolling dice or flipping coins, probability is defined as the percentage of a given outcome divided by the total number of possible outcomes.For example, with a fair coin, the probability of flipping a “Head” is 1/2, because there is one Head, divided by a total of two possible outcomes (Heads or Tails).
+
+In the example with the playing cards, there are 52 cards in the deck, so each individual card has a probability of 1/52. However, recognize that there are four different suits, and there are, for example, multiple ways to draw a value of 10. It may help to make a table of probabilities, as follows:
+
+1 = 4/52
+
+2 = 4/52
+
+3 = 4/52
+
+4 = 4/52
+
+5 = 4/52
+
+6 = 4/52
+
+7 = 4/52
+
+8 = 4/52
+
+9 = 4/52
+
+10 = 16/52
+
+
+
+Check that the sum of all your probabilities adds up to a total of 1. Since your list of outcomes should represent all the possibilities, the sum of probabilities should equal 1. 
+
+
+, Each possible outcome represents a portion of the total expected value for the problem or experiment that you are calculating. To find the partial value due to each outcome, multiply the value of the outcome times its probability.For the playing card example, use the table of probabilities that you just created. Multiply the value of each card times its respective probability. These calculations will look like this:
+
+
+1∗452=452{\displaystyle 1*{\frac {4}{52}}={\frac {4}{52}}}
+
+
+2∗452=852{\displaystyle 2*{\frac {4}{52}}={\frac {8}{52}}}
+
+
+3∗452=1252{\displaystyle 3*{\frac {4}{52}}={\frac {12}{52}}}
+
+
+4∗452=1652{\displaystyle 4*{\frac {4}{52}}={\frac {16}{52}}}
+
+
+5∗452=2052{\displaystyle 5*{\frac {4}{52}}={\frac {20}{52}}}
+
+
+6∗452=2452{\displaystyle 6*{\frac {4}{52}}={\frac {24}{52}}}
+
+
+7∗452=2852{\displaystyle 7*{\frac {4}{52}}={\frac {28}{52}}}
+
+
+8∗452=3252{\displaystyle 8*{\frac {4}{52}}={\frac {32}{52}}}
+
+
+9∗452=3652{\displaystyle 9*{\frac {4}{52}}={\frac {36}{52}}}
+
+
+10∗1652=16052{\displaystyle 10*{\frac {16}{52}}={\frac {160}{52}}}
+
+
+
+
+, The expected value (EV) of a set of outcomes is the sum of the individual products of the value times its probability. Using whatever chart or table you have created to this point, add up the products, and the result will be the expected value for the problem.For the example of the playing cards, the expected value is the sum of the ten separate products. This result will be:
+
+
+EV=4+8+12+16+20+24+28+32+36+16052{\displaystyle {\text{EV}}={\frac {4+8+12+16+20+24+28+32+36+160}{52}}}
+
+
+EV=34052{\displaystyle {\text{EV}}={\frac {340}{52}}}
+
+
+EV=6.538{\displaystyle {\text{EV}}=6.538}
+
+
+
+
+, The EV applies best when you will be performing the described test or experiment over many, many times. For example, EV applies well to gambling situations to describe expected results for thousands of gamblers per day, repeated day after day after day. However, the EV does not very accurately predict one particular outcome on one specific test.For example, when drawing a playing card from a standard deck, on one specific draw, the likelihood of drawing a 2 is equal to the likelihood of drawing a 6 or 7 or 8 or any other numbered card. 
+
+Over many many draws, the theoretical value to expect is 6.538. Obviously, there is no “6.538” card in the deck. But if you were gambling, you would expect to draw a card higher than 6 more often than not.
+
+

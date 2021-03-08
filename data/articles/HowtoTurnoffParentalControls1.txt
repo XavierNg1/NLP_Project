@@ -1,0 +1,25 @@
+ They can limit content such as movies, TV shows, and music by ratings, as well as limiting In-App purchase and access to the iTunes store, camera and FaceTime.;
+, Follow the same procedure for iPhone, iPad or iPod Touch:Tap Settings > General.
+Tap Restrictions.
+Tap Disable Restrictions and enter your passcode.
+ This will allow you to set a new passcode and retain all your data and contacts.Tap Settings > iCloud, and turn off Find My iPhone.
+Now connect your phone to your computer and select your iPhone, iPad, or iPod touch when it appears in iTunes under Devices.
+Select the Summary tab and click Back Up Now.
+On your computer, download a free trial of iBackupBot for iTunes and install it.
+Open iBackup and select the backup of your i-device that you just made.
+Click on System Files > Home Domain.
+Click on Library > Preferences.
+Find the file labeled com.apple.springboard.plist and open it with the iBot built in editor. (You will be prompted to purchase iBot. Press Cancel.)
+Find <key>country. You should see this text ( | indicates a line break): <key>countryCode</key> | <string>us</string> | </dict>
+On the line below </dict>, add ( | indicates a line break): <key>SBParentalControlsPIN</key> | <string>1234</string>
+Save the file.
+Connect your i-device and within the iBackup program, select it and then Restore from Backup. Select the backup you just made.
+When the backup is complete, your i-device will reboot. The Restrictions passcode will have been changed to 1234. Use this code to disable Restrictions as in Step 2 above.
+ If your last backup is from before the restrictions were enabled, then you can restore from backup. Otherwise, you will have to restore as a new device. WARNING: this will delete all data and content on your phone, including songs, videos, contacts, photos, and calendar information.Make sure you have the latest version of iTunes on your computer.
+Connect your device to your computer and select your iPhone, iPad, or iPod touch when it appears in iTunes under Devices.
+Select the Summary tab.
+Select the Restore option.
+When prompted to back up your settings, do not do so, as this will only backup the restrictions you are trying to remove.
+Select the Restore option.
+When the process is complete, the device will restart and display the Apple logo. Keep your device connected until the “Connect to iTunes screen goes away, or you see “iPhone is activated.”
+

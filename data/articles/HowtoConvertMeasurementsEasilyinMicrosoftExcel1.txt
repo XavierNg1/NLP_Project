@@ -1,0 +1,41 @@
+ For the purposes of this example, let's assume that the measurement you want to convert is in column A and you'd like to see the conversion results in column B (but really this method will work for any two columns). To label column A , click on cell A1 and type in the original unit (the one you'd like converted, e.g. inches, meters, or yards). This is also called the “from_unit.”
+
+
+For example: click on cell A1 and type “Inches”. In this example, we will convert 12 (number) inches (from_unit) to feet (to_unit).
+Excel’s convert function converts a “from unit,” into a “to-unit” (the unit you are converting the measurement to).
+Labeling your columns will help you organize your data.;
+, This will be your “to_unit” column. Type in the unit you are converting the measurement to. This is also called the “to_unit”.
+
+
+For example: click on cell B1 and type “Feet”., Type in the original measurement in numbers only. Do not enter in the units.
+
+
+For example: in cell A2, enter “12” (as in 12 inches).,
+
+
+Functions in Excel are not case-sensitive. Typing "=CONVERT(" has the same result as typing "=convert(".
+ Excel's convert function calls this value the "number".
+
+
+For example: "=Convert(A2"
+When you are converting a single measurement, as in the example above, It is also possible to type an actual number (not a cell reference) in this spot. Instead of “=Convert(A2”, you would enter “=Covert(12”.
+
+
+
+For example, your cell may now look like this: "=Convert(A2," or “=Convert(12,”.
+ The “from_unit” is enclosed by a set of quotation marks and is followed by a comma.
+
+
+For example: “=Convert(A2, “in”,” or “=Convert(12, “in”,”.
+Some approved unit abbreviations are "in" "cm" "ft" and "m".
+Excel provides a comprehensive list of unit abbreviations here.
+
+
+
+For example, your cell should look something like: “=Convert(A2, “in”, “ft”)” or “=Convert(12, “in”, “ft”)”.
+This example function will convert the contents of cell A2 from inches to feet.
+ The converted measurement will appear in your cell (in this case, cell B2).
+
+
+For example: B2 will contain “1” (as in 1 foot).If the function returns the “#N/A” error, check the unit abbreviations again. Make sure the abbreviation is correct and that the two units belong to the same group (for example it is not possible to convert mass into length). Please note, unit names and prefixes ARE case-sensitive.
+If the function returns the “#VALUE!” error, this means you have entered the “number” incorrectly. Make sure you have only entered one value or cell reference.

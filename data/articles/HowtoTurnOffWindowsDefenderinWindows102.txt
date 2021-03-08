@@ -1,0 +1,14 @@
+ Type “group policy” into the Cortana search box. The Cortana search box is located at the left side of your desktop beside the Windows icon and is labeled “Search the web and Windows.” As you type, the search results appear above the search box. When you finish typing “group policy,” you will see “Edit group policy/control panel” appear as the best match at the top of the pop-up window.
+
+Click/tap “Edit group policy” to open the “Local Group Policy Editor” window. This window is divided into two panes. In the left pane is a directory tree labeled “Local Computer Policy.” You will see two major directory items: “Computer Configuration” and “User Configuration.”
+The Group Policy Editor is only available in Windows 10 Professional.
+ Under “Computer Configuration,” you will see three sub-directories, one of which is named “Administrative Templates” (if you do not see the three subdirectories, click/tap the arrow sign beside “Computer Configuration”; this will expand the directory tree). Click/tap the arrow sign beside “Administrative Templates” to expand the directory tree.
+
+Locate and expand the “Windows Components” subdirectory. A rather long subdirectory tree appears. Scroll down until you locate the “Windows Defender” folder (the subfolders are listed in alphabetical order).
+ When you do this, the Windows Defender setting options appear on the right pane., Doing so will open the “Turn off Windows Defender” menu in a separate window., On the “Turn off Windows Defender” window, you will see three buttons labeled “Not Configured” (the default setting), “Enabled,” and “Disabled.” Click/tap the button labeled “Enabled” then click/tap the “Apply” button located at the bottom right of the window. Click/tap “OK” to save the setting and close the “Turn off Windows Defender” window.
+
+Note that this may be confusing because, ordinarily, when you want to turn off something, you choose “Disabled.” However, the menu window says “Turn off Windows Defender,” so in this case, when you choose “Enabled,” you are enabling the “Turn off Windows Defender” option.
+ Hold ÿ and press R to open the Run dialogue and enter regedit., Double-click HKEY_LOCAL_MACHINE and navigate to SOFTWARE\Policies\Microsoft\Windows Defender.,
+
+Set the correct value. 1 stands for disabled, 0 for enabled.
+

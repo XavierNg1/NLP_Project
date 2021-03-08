@@ -1,0 +1,8 @@
+ .MOD files are really just MPEG2 files with a different extension. There are two ways to make other programs recognize that these are just MPEGs in disguise.
+
+
+Use the bundled Cyberlink software. After uploading the .MOD files to your computer, open PowerDirector and import them. Drag and drop each of them into the timeline and click the "Produce" button. This will give you the option of exporting your assembled movie as a standard MPEG file. You can also do this with each individual file by placing a single one in the timeline and then exporting.
+Rename file extensions. When exploring your files, change the settings so that you can see the file extensions, then rename the extensions from .MOD to .MPG.;
+, It may or may not work. In some cases, the video will play but the sound will not, or vice versa. Sometimes the player will inform you that you need codecs in order to view the file. Even though you've changed the .MOD files so that they're recognized as the MPEG2 files that they really are, some players aren't ready for MPEG2. If you're still encountering difficulties, proceed to the next step.
+,, For Windows compiled version can be found here: ffmpeg. Ffmpeg is command line tool. To convert files while preserving their quality use the following command from command line: ffmpeg -i file.MOD -sameq file.avi
+

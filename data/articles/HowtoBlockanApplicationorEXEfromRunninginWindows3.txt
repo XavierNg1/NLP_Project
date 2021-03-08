@@ -1,0 +1,14 @@
+
+
+
+Windows Registry Editor Version 5.00 “DisallowRun”=dword:00000001
+“1″=”anyapplication.exe”
+“2″=”anotherapplication.exe”
+
+, Save this as AnyFileName.reg.
+
+
+You have to make sure to end the name of the file in .reg so you can use it. Then you can double-click on the file.
+It may be useful to keep in mind that the registry hack does not work for blocking items that run as services.
+Most malware and spyware may abuse the built-in Windows rundll32 utility to run their services without utilizing an executable. This technique will not work for these kinds of services and applications.
+

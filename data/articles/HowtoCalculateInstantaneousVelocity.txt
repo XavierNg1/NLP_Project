@@ -1,0 +1,109 @@
+ To get an object's instantaneous velocity, first we have to have an equation that tells us its position (in terms of displacement) at a certain point in time. This means the equation must have the variable s on one side by itself and t on the other (but not necessarily by itself), like this:
+s = -1.5t2 + 10t + 4
+
+
+
+In this equation, the variables are:
+
+
+
+
+Displacement = s . The distance the object has traveled from its starting position. For example, if an object goes 10 meters forward and 7 meters backward, its total displacement is 10 - 7 = 3 meters (not 10 + 7 = 17 meters).
+
+Time = t . Self explanatory. Typically measured in seconds.
+
+
+
+;
+, The derivative of an equation is just a different equation that tells you its slope at any given point in time. To find the derivative of your displacement formula, differentiate the function with this general rule for finding derivatives: If y = a*xn, Derivative = a*n*xn-1.This rule is applied to every term on the "t" side of the equation.
+
+
+In other words, start by going through the "t" side of your equation from left to right. Every time you reach a "t", subtract 1 from the exponent and multiply the entire term by the original exponent. Any constant terms (terms which don't contain "t") will disappear because they be multiplied by 0. This process isn't actually as hard as it sounds — let's derive the equation in the step above as an example:
+s = -1.5t2 + 10t + 4
+(2)-1.5t(2-1) + (1)10t1 - 1 + (0)4t0
+-3t1 + 10t0-3t + 10
+
+
+
+, To show that our new equation is a derivative of the first one, we replace "s" with the notation "ds/dt". Technically, this notation means "the derivative of s with respect to t." A simpler way to think of this is just that ds/dt is just the slope of any given point in the first equation. For example, to find the slope of the line made by s = -1.5t2 + 10t + 4 at t = 5, we would just plug "5" into t in its derivative.
+
+
+In our running example, our finished equation should now look like this:
+ds/dt = -3t + 10
+
+
+
+, Now that you have your derivative equation, finding the instantaneous velocity at any point in time is easy. All you need to do is pick a value for t and plug it into your derivative equation. For example, if we want to find the instantaneous velocity at t = 5, we would just substitute "5" for t in the derivative ds/dt = -3 + 10. Then, we'd just solve the equation like this:
+ds/dt = -3t + 10
+ds/dt = -3(5) + 10
+ds/dt = -15 + 10 = -5 meters/second
+
+
+
+Note that we use the label "meters/second" above. Since we're dealing with displacement in terms of meters and time in terms of seconds and velocity in general is just displacement over time, this label is appropriate.
+ In the section above, we mentioned that derivatives are just formulas that let us find the slope at any point for the equation you take the derivative for. In fact, if you represent an object's displacement with a line on a graph, the slope of the line at any given point is equal to the object's instantaneous velocity at that point.
+
+
+To graph an object's displacement, use the x axis to represent time and the y axis to represent displacement. Then, just plot points by plugging values for t into your displacement equation, getting s values for your answers, and marking the t,s (x,y) points on the graph.
+Note that the graph can extend below the x axis. If the line representing your object's motion drops below the x axis, this represents your object moving behind where it started. Generally, your graph won't extend behind the y axis - we don't often measure velocity for objects moving backward in time!
+
+, To find a line's slope at a single point P, we use a trick called "taking a limit." Taking a limit involves taking two points (P, plus Q, a point near it) on the curved line and finding the slope of the line linking them over and over again as the distance between P and Q gets smaller.
+
+
+Let's say that our displacement line contains the points (1,3) and (4,7). In this case, if we want to find the slope at (1,3), we can set (1,3) = P and (4,7) = Q.
+ The slope between P and Q is the difference in y-values for P and Q over the difference in x-values for P and Q. In other words, H = (yQ - yP)/(xQ - xP), where H is the slope between the two points. In our example, the slope between P and Q is:
+H = (yQ - yP)/(xQ - xP)
+H = (7 - 3)/(4 - 1)
+H = (4)/(3) = 1.33
+
+
+, The smaller the distance between P and Q gets, the closer the slope of your tiny line segments will be to the slope at point P. Let's do this a few times for our example equation, using the points (2,4.8), (1.5,3.95), and (1.25,3.49) for Q and our original point of (1,3) for P:
+Q = (2,4.8): H = (4.8 - 3)/(2 - 1)
+H = (1.8)/(1) = 1.8Q = (1.5,3.95): H = (3.95 - 3)/(1.5 - 1)
+H = (.95)/(.5) = 1.9Q = (1.25,3.49): H = (3.49 - 3)/(1.25 - 1)
+H = (.49)/(.25) = 1.96
+
+
+, As Q gets closer and closer to P, H will get closer and closer to the slope at point P. Eventually, at an infinitely small interval, H will equal the slope at P. Because we aren't able to measure or calculate an infinitely small interval, we just estimate the slope at P once it's clear from the points we've tried.
+
+
+In our example, as we moved Q closer to P, we got values of 1.8, 1.9, and 1.96 for H. Since these numbers appear to be approaching 2, we can say that 2 is a good estimate for the slope at P.
+Remember that the slope at a given point on a line is equal to the derivative of the line's equation at that point. Since our line is showing our object's displacement over time and, as we saw in the section above, an object's instantaneous velocity is the derivative of its displacement at a given point, we can also say that 2 meters/second is a good estimate for the instantaneous velocity at t = 1.
+ This is just like our example in the first section, except that we're dealing with a cubic equation rather than a quadratic equation, so we can solve it in the same way.
+
+
+First, we'll take our equation's derivative:
+s = 5t3 - 3t2 + 2t + 9
+s = (3)5t(3 - 1) - (2)3t(2 - 1) + (1)2t(1 - 1) + (0)9t0 - 1
+15t(2) - 6t(1) + 2t(0)15t(2) - 6t + 2
+
+
+Then, we'll plug in our value for t (4):
+s = 15t(2) - 6t + 2
+15(4)(2) - 6(4) + 2
+15(16) - 6(4) + 2
+240 - 24 + 2 = 22 meters/second
+
+
+
+, Then, it's just a matter of finding our H values and making an estimation.
+
+
+First, let's find Q points at t = 2, 1.5, 1.1 and 1.01.
+s = 4t2 - tt = 2: s = 4(2)2 - (2)
+4(4) - 2 = 16 - 2 = 14, so Q = (2,14)t = 1.5: s = 4(1.5)2 - (1.5)
+4(2.25) - 1.5 = 9 - 1.5 = 7.5, so Q = (1.5,7.5)t = 1.1: s = 4(1.1)2 - (1.1)
+4(1.21) - 1.1 = 4.84 - 1.1 = 3.74, so Q = (1.1,3.74)t = 1.01: s = 4(1.01)2 - (1.01)
+4(1.0201) - 1.01 = 4.0804 - 1.01 = 3.0704, so Q = (1.01,3.0704)
+
+
+Next, let's get our H values:
+Q = (2,14): H = (14 - 3)/(2 - 1)
+H = (11)/(1) = 11Q = (1.5,7.5): H = (7.5 - 3)/(1.5 - 1)
+H = (4.5)/(.5) = 9Q = (1.1,3.74): H = (3.74 - 3)/(1.1 - 1)
+H = (.74)/(.1) = 7.3Q = (1.01,3.0704): H = (3.0704 - 3)/(1.01 - 1)
+H = (.0704)/(.01) = 7.04
+
+
+Since our H values seem to be getting very close to 7, we can say that 7 meters/second is a good estimate for the instantaneous velocity at (1,3).
+

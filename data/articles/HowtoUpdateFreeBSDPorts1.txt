@@ -1,0 +1,11 @@
+ Please open the terminal application that you would commonly use. If a GUI is not present on your machine, then move on to the next step.;
+, Please type in "su -" followed by the password to the root account.
+
+
+Only the root user can update, or install things from ports.
+ If this is a new install and you have not updated ports before, type "portsnap fetch extract" and it'll fetch the latest snapshot of ports and extract it to the proper directory.
+
+
+If this is after the first time you've updated ports, as well as to update ports in the future after doing the first update. Type "portsnap fetch update" to update ports.
+To update the applications on the machine, it would be a good idea to install from ports either "port master" or "port-up-grade."
+

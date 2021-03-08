@@ -1,0 +1,5 @@
+ If you are not logged in as a root user, you can switch by typing “$ su –“ in the command line.
+ This is the mount point. In the command line, type “# mkdir –p /mnt/disk”. You can replace “disk” with any folder name you would like.
+ Use the command “# mount –o loop <sample>.iso /mnt/disk/”. Replace <sample> with the filename of the image. If you changed the directory name in the previous step, then be sure to enter the changed name in this step.
+ If image you mount contains a file system, you can browse the files with the following commands: “# cd /mnt/disk” followed by “# ls -1”.
+

@@ -1,0 +1,48 @@
+ Connectors are lines or arrows whose ends automatically “dock” to a gluepoint of an object. Connectors are particularly useful when drawing organization charts, flow diagrams and mindmaps. The connecting lines between the symbols remain intact even after the moving and rearranging of the various drawing blocks.
+, If the type of connector you want is not shown, click on the small black triangle in the right upper part of the Connector toolbar. In the list which appears click on Visible buttons. Here you can activate additional connector types.
+
+
+Connector types fall into one of four groups:
+
+Standard connectors – the line segments run vertically and horizontally. All angles are right angles. The connector does not bend around the objects it binds.
+Line connectors – consist of a line segment and two smaller horizontal or vertical segments at the ends.
+Straight connectors – consist of a single line.
+Curved connectors – are based on Bézier curves.
+ From the context menu choose Connector to change from one connector type to another (as well as some other properties). With the Line menu you can change the appearance of the line (color, arrow style and line style) but not the connector type., As you move the cursor over an object you can see the available connection (glue) points. To connect two shapes move the mouse cursor over a gluepoint, click on it with the left mouse button to establish the first point, and then drag the mouse cursor (left button still pressed) to the other gluepoint and release the mouse button. The ends of the line are now docked and the connection is established.
+, This is useful when the final position of the object is not yet fixed. When you move the object Draw will automatically select the optimal location for the connector ends.
+
+
+As with all other objects, connectors have one or more control points to simplify the construction of the drawing. You can use these points to change the shape, length and proportions of the connector line.
+, Gluepoints can be edited using a separate toolbar. This toolbar is context sensitive, that is it appears automatically when you click on the button Glue Point select the menu command Edit > Glue Points. #The following briefly describes the function of each button on this toolbar.
+ With this button you insert a new gluepoint.
+ If the object is filled you can place a glue point anywhere inside the object. With unfilled objects you can place a glue point only on the outside frame but after inserting it you can then drag it inside the object. Activate the Glue Points button on the Draw toolbar as described above.
+
+The glue points remain visible as long as the button Glue Points is active. They appear as small blue crosses. A selected glue point has a gray square behind the cross. You can move a selected glue point with the mouse or delete it with the Del key.
+
+
+
+You can choose one or more directions for a particular glue point. The directions specify the direction permitted for a connector to join to the glue point.
+ If for example you activate only the button, every connector will be forced to come to the glue point from the left side of the point.
+
+
+In the screenshot is a glue point in the circle with a left entry and one in the square with a right entry. The effect of this is shown in the right drawing after adding a connector between the two glue points.
+ For the example above, the connection inside the circle would change as shown below:
+
+
+If the Glue Point Relative button is active (it is active by default) the glue point will move when you change the size of the object, as shown below:
+
+
+
+
+
+
+If the Glue Point Relative button is deactivated, the remaining buttons on the toolbar, previously grayed out, become active. With these buttons you can decide how a glue point will be placed when the size of the object is changed.
+ The distance of the glue point to the left edge, vertical line through the middle, or the right edge will remain fixed when you change the size of the object. If the width of the object becomes less than the distance the glue point will be attach to the object frame.
+
+
+This example shows what happens when the object width is changed and the glue point is set to have a fixed distance to the left frame.
+
+These buttons determine in a similar manner the vertical position of a glue point when the size of the object is changed.
+ The end and control points will become active and you will see the familiar flashing text cursor (the cursor position is determined by the last used setting). At the same time the Text Formatting toolbar will appear (under the menu bar). This toolbar allows you to set the desired text properties and you can directly input the text., In spite of this a connector has its own object frame – in this case an invisible one. You can picture it easily by imagining a rectangle enclosing the start and end points of the connector (see Figure 14).
+ The exact position of the text can be set in the Text options dialog (Figure 15). This dialog appears when you double-click on text and then choose Text from the pop-up menu or when you single-click on the connector and select Format > Text from the menu bar.
+ In the Text anchor section you can see the possible locations for the text. In the above example the text is anchored at the top left. In the Spacing to borders section at the lower left you can input also negative values of spacing, to position the text outside the frame.

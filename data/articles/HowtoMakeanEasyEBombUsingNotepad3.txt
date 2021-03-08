@@ -1,0 +1,45 @@
+ This E-bomb uses Notepad commands to cause the computer to randomly open programs until the batch file is disabled or the computer crashes. To make this E-bomb, you just need to copy and paste the pre-written commands in this section. However, note that this may not work on all computers.
+, This program randomly opens the programs listed after each "start" indefinitely. You may notice some of these programs have been repeated. Feel free to change the programs listed to whichever ones you would like.
+
+
+
+
+
+
+
+
+
+Note that some of the program names listed above may not be accurate for your specific machine - for instance, some computers won't contain "pinball.exe" You may want to double-check to see if each program exists before executing your E-bomb.
+If in doubt about the name of a specific program, remember that its precise file pathway is also valid. For instance, "iexplore.exe" can also be written as "C:\Program Files\Internet Explorer".
+ Save the file using the ".bat" extension (being sure to select "All files" from the "Save as type:" menu) When you trick the user into opening it, it will begin opening seemingly randomly programs on the computer without stopping.
+
+
+
+
+
+
+
+
+
+For a bit of fun, try replacing one of the 'start *.exe' commands with the path of a notepad file on the person's computer or something like that. Use the following command:
+edit (path to file)
+goto begin
+This will open their file in a DOS-based text editor, making it look like a hacker is reading their personal documents. Try it!
+
+, Even if you don't understand how they work, E-bombs can be great pranks, but you'll be able to get even more enjoyment out of them if you know exactly what's happening when one is run. As an added bonus, once you understand how E-bombs work, you can start writing your own! Here is a list of the commands we used in this article, along with a brief description of each:
+
+
+
+
+
+
+
+
+
+@echo off - Turns command prompt comments off
+cls - Clears the command prompt screen. This just makes the command prompt appear neater.
+goto - Go to whatever flag you specify immediately after "goto".
+ %random% - A windows variable that randomly generates a number between (and including) 0-9.
+ :(number, letter, or word) - A flag. "Goto" commands send the program to whatever flag they specify.
+Note: in our example above, we have 10 flags. If we leave a number out, the program should close when %random% generates that number.
+

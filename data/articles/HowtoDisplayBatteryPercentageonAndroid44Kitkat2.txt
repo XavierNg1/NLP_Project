@@ -1,0 +1,5 @@
+ Go to the Play Store and search “Shell Terminal Emulator.” Select the first app displayed in order to download it.
+ From the App Tray (the collection of all the apps you’ve downloaded onto your Android), search for “Shell Terminal Emulator.” Select it.
+ After you open the app, type in the following command: ADB shell content insert – URL content://settings/system – bind name:s:status_bar_show_battery_percent – bind value:i:1.
+ Type in the following command: adb reboot. Your device will automatically reboot. When it does, the battery percentage will appear!
+

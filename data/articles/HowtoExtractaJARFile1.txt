@@ -1,0 +1,36 @@
+ In Windows 10 “My Computer” became “This PC”.
+
+
+Windows 10: First, click on the File Explorer icon. This icon (Manila file in a blue file holder) is located in the bottom taskbar. Then, select "This PC" from the window's left sidebar.Windows 8: Right-click on a blank area of the canvas. Select "All Apps" from the bottom menu bar. Navigate to the section labeled "Windows System". Double-click on "Computer".Windows 7: Launch the Start menu and select "My Computer".;
+, The "This PC" window will list all of your computer's drives. The Jar file is store in one of these drives. Note the capital letter to the right of the drive's name. You will enter this into the command prompt later.,,, This will reveal the file’s path. It will list every drive and folder you opened to reach the file. It will not list the file’s name.
+,
+
+
+On your keyboard, press the Windows key + R. This will launch a program called "Run". Type "cmd" and press ↵ Enter. The Command Prompt program will open., Remember, this letter was located to the right of drive's name.For example, if the file is stored in “Local Disk (C):”, type “c”.
+ “d” stands for directory. Do not put a space between the drive and “d”.
+
+
+For example: “cd”.
+
+
+
+For example: “cd C:\Program Files\Java\jdk1.7.0_79\bin”.
+, This is the jar file extraction command.
+
+
+“x” is short for “extract”.
+“f” is short for “file”.
+Together, “xf” means you want to extract the file specified in the command line.
+
+
+
+For example: “xf myjarfile.jar”.
+ This will decompile all of the files stored in the Jar file. These files will appear in the same location as the Jar file.
+ If you know the exact file or files you want from the Jar file, there is no need to decompile the entire file. Instead, you can retrieve only the files you want.
+
+
+After you’ve typed “xf myjarfile.jar”, press the spacebar once.
+Enter the name of the file you want to extract. The name must be exactly as it appears in the Jar file.
+If you would like to extract more than one file, press the spacebar and type the file’s name.
+Repeat this process until you’ve listed all of the files you want to extract.
+ This will extract all of the files you listed. These files will appear in the same location as the Jar file.

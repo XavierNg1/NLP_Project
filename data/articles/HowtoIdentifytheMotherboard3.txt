@@ -1,0 +1,8 @@
+ This is a utility that comes installed with all versions of Windows. Open the Run dialog box by selecting it from the Start menu or by pressing the Windows key + R. Type msinfo32 and press Enter.
+ Your BIOS ID will be displayed. You might also get lucky and be able to see your motherboard manufacturer and model in the "BaseBoard Manufacturer" and "BaseBoard Model" entries, but this often is not reported properly.
+ The Windows System Information window should tell you whether you have an Award or American Megatrends Inc. (AMI) BIOS. This will determine how you decode the ID number.
+
+
+Award - The first five digits indicate the chipset, and the following two digits indicate the manufacturer. The last two digits are manufacturer specific. You can use the charts here to identify your motherboard with this ID.
+AMI - The motherboard manufacturer is indicated by the last four digits of the third group of numbers. You can use the chart here to identify the manufacturer with this ID
+

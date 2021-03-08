@@ -1,0 +1,10 @@
+
+Right-click on your desktop.
+Right-click on remove.bat and select Edit.
+Paste the following lines into Notepad, then save and exit:
+taskkill -IM wgatray.exe
+del wgatray.exe
+del wgalogon.old
+
+,
+Double-click on the remove.bat icon.

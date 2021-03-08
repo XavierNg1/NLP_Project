@@ -1,0 +1,95 @@
+ The worst way of doing this is to simply desaturate it (Colours->Desaturate). This uses a perceptual model that does not resemble the colour response of black and white film. Traditional silver-halide black and white films do not behave as the human eye does; they are largely insensitive to red light (which is why it can be developed under a red safelight), and much more sensitive to blue light. Copying this is easy.
+
+
+Bring up the channel mixer (Colours->Components->Channel Mixer).
+Check the "Monochrome" checkbox then play with the red, green and blue sliders until it looks right. To copy the colour response of silver halide black and white film, you want to turn down the red channel to zero (or close), turn the blue channel way up, then adjust the green channel and the red channel to taste. For this shot, 0 red, 50 green, and 100 blue worked well. If you have (for example) red writing on a dark subject, or blue writing on a bright one, you may find that a realistic response curve is not desirable; play with the sliders until it looks right to you.
+
+
+
+
+
+;
+, Old lenses, especially ones shot wide-open, will have spherical aberration that leaves subjects sharp but adding a soft, dreamy haze to the photograph. This effect is simple to mimic with GIMP.
+
+
+In your Layers dialog, duplicate your picture twice.
+
+
+
+
+
+
+Blur the top layer by about 1% of the radius of your photograph; our picture was about 2000 pixels wide, so we used 20 pixels.
+
+
+
+
+
+
+Set the layer mode of the top layer to "Soft light", then merge it down (right click menu, "Merge down") to the layer below. Adjust the opacity of the merged layer until it looks subtle; about 35% worked for our photograph. Merge this layer down to the bottom layer when you are done.
+ Old lenses always had some amount of distortion. Wide-angle lenses had barrel distortion (whereby the center bulged out) and telephoto lenses had pincushion distortion (whereby the corners were sucked outwards).
+The easiest way of doing this is with the lens distortion plugin (Filters->Distorts->Lens Distortion on current versions of GIMP).
+
+
+The settings you care about are "Main" and "Edge". Positive values will simulate the distortion typical to wide-angle lenses, and negative ones will simulate that typical of telephoto lenses. In our case, the photo was taken with a moderate telephoto lens (about 100mm equivalent focal length), so we set "Edge" to -10.
+ Digital cameras have far more shadow detail than any photographic film ever did. To make it look like film, we need to do the same: make dark areas darker, without affecting the brighter parts of the photograph.
+
+
+Duplicate your bottom layer twice, and set the layer mode of the top layer to "Soft light".
+
+
+
+
+
+
+Merge the top layer down to the one below, set the layer mode of the merged layer to "Darken only", adjust opacity to taste (we left it at 100%), then merge that down to the bottom layer.
+ Old lenses, especially when shot wide-open, often had a defect called "falloff" wherein the edges of the photograph were slightly darker than the centre. While technically a defect, if it is done subtly it's a great way to bring attention to the centre of the photograph.
+
+
+Create a new, transparent layer and very loosely paint an area around the edges of the photograph black with your paint tool.
+
+
+
+
+
+
+Blur this layer (Filters->Blur->Gaussian Blur)with a radius of about a fifth of of the horizontal resolution of your photograph. 400 or 500 pixels is fine for an 2000-pixel wide image.
+
+
+
+
+
+
+Adjust the opacity of your layer until it looks subtle; it should be just enough that you won't notice it's there if you don't know it's there. About 30% is a good bet. Then merge your new layer down.
+ Nearly all lenses, even modern ones, will be slightly less sharp in the corners than they in the centre. This is especially so for older lenses, and doubly so for older telephotos and wide-angle lenses. The effect is so subtle that it's barely visible even at big enlargements (and you almost certainly won't see it at the small enlargement used here), but if something's worth doing, it's worth doing right.
+
+
+Duplicate your main layer, then blur the resulting layer. The best way of doing this is with the focus blur plugin; "Gaussian Blur" doesn't quite mimic the defocus effect of a real camera lens. Use a radius of just a few pixels.
+Add a layer mask to this layer (right click, "Add layer mask"). Make sure you initialize it to white (full opacity).
+
+
+
+
+
+
+Turn on displaying of the layer mask (right click, "Show layer mask") and very loosely paint the edges of the photograph.
+
+
+
+
+
+
+Blur the layer mask by about a fifth to a quarter of the horizontal resolution of your photograph.
+
+
+
+
+
+
+Turn off display of the layer mask (right click, "Show layer mask") then merge it down to your bottom layer.
+ This must be the last step, just as the film is the last step in the optical path. This can be defined as small, localised variations of brightness. Modern digital cameras have no visible grain at all in daylight, while every film has visible grain. The easiest way of doing this is with the film grain script. (See How to Install Scripts Into Gimp.)
+
+
+The film grain script works very well at its defaults; only adjust them if you really know what you are doing.
+ We made a couple of tweaks on the final image; a pair of subtle colour tones were added (see How to Retone a Photograph with GIMP) and a final unsharp mask (Filters->Enhance->Unsharp Mask) pass was added to accentuate the fake film grain.
+

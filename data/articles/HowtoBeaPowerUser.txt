@@ -1,0 +1,380 @@
+ You can still tweet, instant message, play mp3 (with mplayer), browse the web (with Lynx or Links2), p2p (amulecmd), torrent (rtorrent), image edit (ImageMagick), read feeds (raggle), chat (irssi), ofm (midnight commander), manage downloads (axel, wget) and everything else. Linux and BSD make it easy to use the command-line, whereas OS X and especially Windows don't.
+
+
+action
+Windows/DOS
+Windows Powershell,
+Mac OS X, Linux, BSD etc.
+
+
+list directory
+dir
+ls
+
+
+clear console
+cls
+clear
+
+
+copy file(s)
+copy
+cp
+
+
+move file(s)
+move
+mv
+
+
+delete file(s)
+del
+rm
+
+
+create directory
+md
+mkdir
+
+
+remove directory
+rd
+rm
+
+
+change current directory
+cd
+cd
+
+
+current directory
+cd, chdir
+pwd
+
+
+search
+find
+grep
+
+
+concatenate
+cat
+cat
+
+
+permissions
+chmod
+chmod
+
+
+display/output text
+echo
+echo
+
+
+add user
+net user
+adduser
+
+
+If you must use a GUI read on to the next step. But the efficiency advantages of the CLI are as follows.
+
+
+If you need to move all folders ending with "photos" this is easy in the command line but difficult and slow in a GUI.
+
+
+
+
+
+
+Command-line completion is also known as tab-completion and can speed things up.
+
+
+
+
+
+
+Pipe command-line output into other commands if needed.
+
+
+
+
+
+
+Shell aliases can be set in Linux.
+
+
+
+
+
+;
+, Most systems use floating window managers where windows aren't automatically aligned and can overlap one another. If you spend a lot of time moving, resizing, maximizing, minimizing, restoring and generally switching windows then a tiling window manager might be for you. A TWM presents multiple windows on one screen aligned in a tile formation. The following is the manifesto of Ion, a dynamic tiling window manager with tabs for each frame."So-called “modern desktop environments” converge on total unusability, and present-day mainstream graphical user interfaces in general are far less usable than they are praised to be. Usability simply does not equal low learning curve, and hiding system details from the user, as the Official Truth seems to be these days."
+
+Key
+Tiling
+function
+
+
+Alt+k
+next tile
+
+
+Alt+j
+previous tile
+
+
+Alt+space
+switch layout
+
+
+, Use the keyboard. Set up key bindings for everything, basic windows operation and browsing . Learn the key bindings. Familiarize yourself with them.
+
+Key
+Operating system
+function
+
+
+Win+e
+Opens My Computer
+in Windows Explorer
+
+
+Win+f
+Find
+
+
+Win+m
+Minimize all windows
+
+
+Win+d
+Toggle minimize
+all windows
+
+
+Win+r
+Open run dialog
+
+
+Ctrl+A
+Select all
+
+
+Ctrl+B
+Bold
+
+
+Ctrl+O
+Open
+
+
+Ctrl+C
+Copy
+
+
+Ctrl+X
+Cut
+
+
+Ctrl+V
+Paste
+
+
+Ctrl+Z
+Undo
+
+
+Ctrl+PgUp
+Next tab
+
+
+Ctrl+PgDn
+Previous tab
+
+
+Alt-tab
+Switch open windows
+
+
+Alt+F4
+Quit app
+
+
+Alt+F5
+Restore window
+
+
+Alt+F7
+Move window
+
+
+Alt+F8
+Resize window
+
+
+Alt+F9
+Minimize window
+
+
+Alt+F10
+Maximize current window
+
+
+.
+
+
+Use application keyboard shortcuts (Vimperatorand other Firefox add-ons are useful for this).
+
+Key
+Browser Function
+
+
+Alt+left arrow
+Back
+
+
+Alt+right arrow
+Forward
+
+
+Alt+home
+Home
+
+
+Ctrl+L
+Location/address bar
+
+
+Ctrl+k
+Search bar
+
+
+Ctrl+T
+New tab
+
+
+Ctrl+W
+Close tab
+
+
+Ctrl+PgUp
+Previous tab
+
+
+Ctrl+PgDn
+Next tab
+
+
+Ctrl+R
+Refresh
+
+
+Ctrl+u
+View source
+
+
+
+
+
+
+
+
+
+, Strokeit (Windows), Opera (Cross platform), gMote (Windows), Easystroke (Linux), Mouse Gestures Redox (Firefox) are all applications.
+ You won't become a programmer, but scripts help to automate common repetitive tasks. In Windows they're sometimes called batch files.
+
+If you need to copy photos until you reach a certain number of megabytes, a script is needed.
+
+
+
+
+
+
+Use browser scripts. Greasemonkey, iMacros and Chickenfoot are some on Firefox. Opera supports user javascript.
+ Also known as Commander-like, Midnight Commander is one for command-line users. Alternatively use something like Directory Opus, as long as you don't use a basic (usually bundled) file manager. Again, it is all about key bindings, so learn the keyboard shortcuts.
+
+Key
+OFM Function
+
+
+F1
+help
+
+
+F2
+user menu/scripting
+
+
+F3
+view
+
+
+F4
+edit
+
+
+F5
+copy
+
+
+F6
+move
+
+
+F7
+new directory
+
+
+F8
+delete
+
+
+F9
+top menu
+
+
+F10
+quit
+
+
+,
+
+In Windows, right-click My Computer, Properties, Advanced, under Performance click Settings, then Adjust for Best Performance.
+
+
+
+
+
+
+In KDE 4+, press Alt+F3, then Configure Window Behaviour, then Desktop Effects then uncheck Enable Desktop Effects.
+ Don't just use the bundled software just because it's bundled, unless it's a conscious decision.
+
+
+Choose a web browser, don't just use the bundled one because it's bundled.
+
+
+
+
+
+
+Organize your audio and images with appropriate software designed for this purpose.
+
+
+
+
+
+
+Don't use a word-processor where a decent plain text editor will do. Use Regular Expressions. Where you don't need to format documents, use plain text.
+
+
+
+
+
+
+Asterisk * matches any number of what's before it, from zero to infinity.
+? matches zero or one.
++ matches one or more.
+
+
+For chatrooms use IRC. For forums use Usenet.
+ In Windows use Task Manager, in Mac OS X use Launchd, in Linux/BSD use cron/anacron.

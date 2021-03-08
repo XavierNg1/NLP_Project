@@ -1,0 +1,36 @@
+
+
+
+Not only it is more complicated, you would also need to know how to solve the 3x3x3 cube and the 4x4x4 in order to be able to solve the professor's cube. Solving the professor's cube involves the same logic and contains many similar algorithms that are used in the 3x3x3 and 4x4x4 cubes.;
+, Note that although the 5x5x5 cube has an additional row, its notation is the same as in the 4x4x4 cube, since the center row will not be turned independently of other rows.
+ Start with locating the white center piece on your scrambled cube. The white side will represent the top of the cube.
+
+
+Similarly to solving the first layer on a 3x3x3 Rubik's Cube, create a 3x3 white area in the center by completing inner edges on other sides and then transferring them to the white side.
+Since this is the first step, you shouldn't be worried about breaking up anything and can freely turn the cube as you please as long as it completes the white center.
+ Because the white center is already completed, you want to make a center on the bottom without destroying the white center.
+
+
+From here, you can start using a simple algorithm R U2 R' for transferring the cross pieces to adjacent sides for such cases.
+ After you have a cross completed, you would need to fill in the rest of the yellow center.
+
+
+In order to transfer the inner corners into their corresponding center, perform the algorithm Rr U Rr' U Rr U2 Rr'. Keep in mind that this algorithm will be used in completing other side centers.
+ First, start with choosing two adjacent side centers.
+
+
+As in the previous step, complete the crosses on the sides by using the algorithm R U2 R' .
+After, apply the algorithm Rr U Rr' U Rr U2 Rr', to transfer all inner corners to their corresponding sides to form a center.
+ After completing the first two adjacent sides, complete the two remaining centers on the cube using the same approach as explained in the previous step.
+ You should have all six 3x3 area centers completed on each side respectively.
+ Most of the edges can be solved using a simple strategy. Locate matching wings on the cube and situate them on opposite edges. After, simply connect them and then substitute the entire edge with a scrambled edge.
+
+
+To connect a wing to its corresponding edge without breaking any of the centers or edges that you have already completed, perform a substitution by using the base algorithm Ll' U L U' Ll for the left side and Rr U L' U' Rr' for the right side.
+Note that you might have to search for a scrambled edge by turning the side to which the completed edge is moved.
+ Using the same approach, complete all the edges except for the last two that remain since there would be no other scrambled edges left for substitution.
+ Eventually you will run out of scrambled edges for substitution and you would have to finish the remaining two edges using algorithms. This algorithm will swap 1 wing on the top with its opposite wing on the top. If they're on the right side do this one Ll' U2 Ll' U2 F2 Ll' F2 Rr U2 Rr' U2 Ll2. If they're on the left side do this one Rr U2 Rr U2 F2 Rr F2 Ll' U2 Ll U2 Rr'2.
+ By now you should have completed all the centers and edges.
+ After completing the previous step, you can see that you have created a 3x3x3 Rubik's Cube structure. Using your previous knowledge, solve the rest of the cube as you would normally solve a 3x3x3 Rubik's Cube.
+ You finally solved the 5x5x5 Rubik's Cube.
+

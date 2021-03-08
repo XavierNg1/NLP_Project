@@ -1,0 +1,21 @@
+ You can remove the Finder icon from your Dock, but this action is not supported by Apple. This could result in odd behavior, and may leave an empty space on the Dock that you can't do anything about. As with anything you do that's not officially supported on a computer, proceed at your own risk.It is not possible to remove the Finder icon without performing this hack.;
+, You can do this using your Finder, or you can press ⌘ Command+⇧ Shift+G and paste "/System/Library/CoreServices/" into the field.
+ This will open the Dock's files.
+ Scroll down until you find "DockMenus.plist". Make a copy of "DockMenus.plist" and place it on your desktop or in your Documents folder as a backup.
+ Make sure that you open it with root access. One of the most popular text editors is the free Text Wrangler.
+ You may have to scroll down a bit to find it.
+ Enter the following code to the "finder-running" section. Make sure you're not inserting it in the middle of a different subsection. Save the file and close the editor when you're finished:<dict>
+    <key>command</key>
+    <integer>1004</integer>
+    <key>name</key>
+    <string>REMOVE_FROM_DOCK</string>
+</dict>
+
+
+
+
+, You can find the Terminal in the Utilities folder in the Applications folder.
+ The Finder icon may leave behind the "Active" glow that appears when you have windows open. Make sure that you have closed all of your Finder windows before proceeding.
+ This will reset your Dock, but the Finder icon will still be there.
+ This previously-unavailable command will now be available, and the Finder icon can be removed from the Dock. It will reappear when you restart your computer, but you can just right-click it again and remove it.
+

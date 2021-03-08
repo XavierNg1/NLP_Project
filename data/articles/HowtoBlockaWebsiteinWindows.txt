@@ -1,0 +1,9 @@
+ In Windows 7, Vista, and XP it should be located in the following directory (or the drive in which windows is installed) C:\WINDOWS\SYSTEM32\DRIVERS\ETC\;
+,, Add the following line of code to the bottom of the file: 127.0.0.1 localhost
+
+, For each website you wish to block add a new line of code: 127.0.0.1 website to block (see the next step for an example).
+, File-> Save-> Yes Overwrite
+
+, Restart the computer.
+ Direct your web browser to the blocked website to ensure the block has been successful.
+

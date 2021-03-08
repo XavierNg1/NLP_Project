@@ -1,0 +1,18 @@
+ Most users will only need dump files to determine what caused a system crash or Blue Screen of Death. BlueScreenView is a freeware utility from NirSoft that can analyze dump files and tell you which driver or other factor caused your crash.
+
+
+The dumps created during a system crash are referred to as "minidumps.";
+, You can download BlueScreenView directly from NirSoft at nirsoft.net/utils/blue_screen_view.html.
+
+
+You can download the program as a standalone, which comes in ZIP format. This will allow you to run it without installing it. Once you finish downloading the ZIP file, right-click it and select "Extract" to create a new folder with the BlueScreenView program.
+ After extracting BlueScreenView from the ZIP file, launch the program inside. You'll be prompted to continue by Windows.
+ When your computer crashes, a file called a "minidump" is created in the Windows directory. These files have a .dmp extension, and BlueScreenView can read them and tell you what happened. Minidump files can be found at C:\Windows\Minidump. If you don't see the files, you may need to enable hidden files:In Windows 10 and 8, click the "View" tab in Windows Explorer and check the "Hidden items" box.
+In Windows 7 and earlier, open Folder Options from the Control Panel, click the "View" tab, and then select "Show hidden files, folders, and drives."
+
+, The quickest way to open .dmp files is to simply drag them into the window. The file will not be moved from its original location. You'll the the lower half of the BlueScreenView window fill with data after dragging the file into the window.
+ You may have to scroll to the right a bit to see it. This column will display the driver that caused the system crash.
+
+
+You can also find the problematic driver highlighted in red in the lower section of the window. Double-click this highlighted entry to see more details, such as the product name, description, and path., Now that you know what driver caused the crash, you can begin troubleshooting it. Start with a web search for "driver name crash" to see if others have experienced your problem.
+

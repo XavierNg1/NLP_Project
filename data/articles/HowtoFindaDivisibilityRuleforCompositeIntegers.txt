@@ -1,0 +1,122 @@
+ A prime number is a number that only has two factors: 1 and the number. A composite number is a number that has more than two factors.Recall that a factor is a number that evenly divides into another number.
+
+For example, 7 is a prime number, since the only numbers that evenly divide into 7 are 1 and 7. The number 12 is composite, since it has six factors: 1, 2, 3, 4, 6, and 12.
+;
+, To  create a factor tree, write the number at the top of a piece of paper. Draw a split branch coming down from the number. Write two factors on either side of the branch. Draw another split branch off any factor that is not prime, and write two factors for it on either side of the branch. Continue this process until all of the factors are prime.
+
+For example, to factor 12, you would write 12 at the top of the paper, and draw a split branch underneath it. On either side of the branch, write the factors 2 and 6. Since 2 is prime, you do not need to factor this number any further. The number 6 can be further divided into the factors 3 and 2. Now you have three prime factors: 2, 3, and 2. These are all prime factors, so your factor tree is done.
+ By looking at your factor tree, you should be able to clearly see whether the original number has more than 2 factors. If it does, it is a composite number.
+
+For example, 12 has more factors than just 12 and 1, so it is a composite number.
+ To do this, begin by dividing the number by 2. Then, divide the number by 3. Continue dividing until you find all the numbers that evenly divide into the composite number.
+
+The divisor and quotient are each factors of the composite number (which is always the dividend in this instance).For example, to find all the factors of the number 16, you would calculate:16÷2=8{\displaystyle 16\div 2=8}16÷4=4{\displaystyle 16\div 4=4}16÷8=2{\displaystyle 16\div 8=2}The numbers 3, 5, 6, 7, and 9-15 do not divide evenly into 16, so you are done finding your factors.
+ It is helpful to list them from smallest to greatest. Remember that factors are all the numbers you evenly divided into the composite number, as well as the quotients of each of those divisions.
+
+For the purposes of creating a divisibility rule, you can exclude the factor of 1, since every integer is divisible by 1. You can also exclude the number, since we are creating a divisibility rule for it. You also do not need to list repeated factors.
+
+For example, the factors of 16 are 2, 4, and 8.
+ The rule states that a number is divisible by any composite number if it is divisible by each of its factors.For example, the divisibility rule for 16 is that any number is divisible by 16 if it is also divisible by 2, 4, and 8.
+ Every digit has a  simple test you can perform to determine whether a larger number is divisible by it.The tests for 2, 4, and 8 are interrelated.
+
+A number is divisible by 2 if the number is even.
+
+For example, 8 is divisible by 2 because it is an even number.
+
+
+
+A number is divisible by 4 if the last two digits are divisible by 4.
+
+For example, 112 is divisible by 4, since 12 is divisible by 4.
+
+
+
+A number is divisible by 8 if the number is divisible by 4 and 2.
+
+For example, 112 is divisible by 8, since it passed the divisibility tests for 4 and 2. (Its last two digits are divisible by 4, and it is an even number.)
+
+
+
+
+, These digits have similar rules for testing their divisibility.
+
+A number is divisible by 3 if the sum of the digits is divisible by 3.
+
+For example, 18 is divisible by 3, because 1+8=9{\displaystyle 1+8=9}, and 9 is divisible by 3.
+
+
+
+A number is divisible by 6 if it is divisible by 2 and 3.
+
+For example, 18 is divisible by 2 and 3, since it passed both divisibility tests for 2 and 3. (It is even, and the sum of its digits is divisible by 3.)
+
+
+
+A number is divisible by 9 if the sum of the digits is divisible by 9.
+
+For example, 27 is divisible by 9, since 2+7=9{\displaystyle 2+7=9}, and 9 is divisible by 9. 
+
+
+
+
+, Note that any number divisible by 10 is also divisible by 5.
+
+A number is divisible by 5 if the last digit is 0 or 5.
+
+For example, 25 is divisible by 5, because the last digit is 5.
+
+
+
+A number is divisible by 10 if the number ends in 0.
+
+For example, 30 is divisible by 10, since it ends in 0.
+ This rule is a little more complicated than the rules for other digits, but it is helpful to know.
+
+A number is divisible by 7 if the number you derive by doubling the last digit, and subtracting from the number made by the other digits, is divisible by 7.
+
+For example, 91 is divisible by 7, since 1 doubled is 2, and 9−2=7{\displaystyle 9-2=7}, and 7 is divisible by 7.
+ Use the divisibility tests to do this quickly. You can also manually complete the calculations using the standard division algorithm.
+
+For example, to determine whether 486 is divisible by 16, you need to test whether 486 is divisible by 2, 4, and 8.
+
+486 is an even number, and therefore divisible by 2.
+
+486 is not divisible by 4, since 4 does not divide evenly into 86.
+
+486 is not divisible by 8, since it does not pass the divisibility tests for 4 and 2.
+ If the larger number is divisible by all factors, it is divisible by the composite number. If any one of the factors does not divide evenly into the larger number, it is not divisible by the composite number.
+
+For example, since neither 4 nor 8 divides evenly into 486, you can tell that 486 is not divisible by 16.
+ Determine whether 525 is divisible by 15 using this rule.
+
+The factors of 15 are 3 and 5. Therefore, a number that is divisible by 15 is also divisible by 3 and 5.
+
+525 is divisible by 3, since the sum of its digits is divisible by 3: 5+2+5=12{\displaystyle 5+2+5=12}; 12÷3=4{\displaystyle 12\div 3=4}.
+
+525 is divisible by 5, since it ends in 5.
+
+Since 525 passes the divisibility test for each factor of 15, you know that 525 is divisible by 15.
+ Determine whether 162 is divisible by 18 using this rule.
+
+The factors of 18 are 2, 3, 6, and 9. Therefore, a number that is divisible by 18 is also divisible by 2, 3, 6, and 9.
+
+162 is divisible by 2, since it is an even number.
+
+162 is divisible by 3, since the sum of its digits is divisible by 3: 1+6+2=9{\displaystyle 1+6+2=9}; 9÷3=3{\displaystyle 9\div 3=3}.
+
+162 is divisible by 6, since it passes the divisibility tests for 2 and 3.
+
+162 is divisible by 9, since the sum of its digits is divisible by 9: 1+6+2=9{\displaystyle 1+6+2=9}; 9÷9=1{\displaystyle 9\div 9=1}.
+
+Since 162 passes the divisibility test for each factor of 18, you know that 162 is divisible by 18.
+ Determine whether 261 is divisible by 21 using this rule.
+
+The factors of 21 are 3 and 7. Therefore, a number that is divisible by 21 is also divisible by 3 and 7.
+
+261 is divisible by 3, since the sum of its digits is divisible by 3: 2+6+1=9{\displaystyle 2+6+1=9}; 9÷3=3{\displaystyle 9\div 3=3}.
+
+261 is not divisible by 7. The last digit (1) doubled is 2. When you subtract 2 from the number made from the remaining digits (26), you get 26−2=24{\displaystyle 26-2=24}. Since 24 is not divisible by 7, 261 is not divisible by 7.
+
+Since 261 does not pass divisibility test for each factor of 21, you know that 261 is not divisible by 21.
+
+

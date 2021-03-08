@@ -1,0 +1,46 @@
+ Press ⊞ Win+R on your keyboard.
+ Type notepad into the Run dialog and click OK.
+ Notepad should look like this.
+
+
+x=msgbox("Your Message Here", Button+Icon, "Your Title Here")
+
+, Replace Button in the code you pasted into Notepad with one of the following:
+
+
+0 - OK
+
+1 - OK and Cancel
+
+2 - Abort, Retry and Ignore
+
+3 - Yes, No and Cancel
+
+4 - Yes and No
+
+5 - Retry and Cancel
+
+
+, Replace Icon in the code that you pasted into Notepad with one of the following:
+
+
+0 - No Icon
+16 - Critical Icon (a.k.a. "X" icon)
+32 - Question Icon (a.k.a. "?" icon)
+48 - Warning Icon (a.k.a. "!" icon)
+64 - Info Icon (a.k.a. "i" icon)
+
+, Replace Your Title Here in the code you pasted into Notepad with what you want the title of the error message to be.
+ Replace Your Message Here in the code you pasted into Notepad with what you want the error message to say.
+, Repeat these steps, starting from Step 3.
+
+
+This error message will display after the previously created one has been closed.
+ Press Ctrl+S on your keyboard.
+,,, Click Save.
+ Double-click the file that was created.
+
+
+
+
+

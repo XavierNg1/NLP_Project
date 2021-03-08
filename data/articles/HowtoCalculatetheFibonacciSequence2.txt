@@ -1,0 +1,23 @@
+ In the formula, xn{\displaystyle x_{n}} = the term in the sequence you are trying to find, n{\displaystyle n} = the position number of the term in the sequence, and ϕ{\displaystyle \phi } = the golden ratio.This is a closed formula, so you will be able to calculate a specific term in the sequence without calculating all the previous ones.
+
+This formula is a simplified formula derived from Binet’s Fibonacci number formula.The formula utilizes the golden ratio (ϕ{\displaystyle \phi }), because the ratio of any two successive numbers in the Fibonacci sequence are very similar to the golden ratio., The n{\displaystyle n} represents whatever term you are looking for in the sequence.
+
+For example, if you are looking for the fifth number in the sequence, plug in 5. Your formula will now look like this: x5{\displaystyle x_{5}}=ϕ5−(1−ϕ)55{\displaystyle {\frac {\phi ^{5}-(1-\phi )^{5}}{\sqrt {5}}}}.
+ You can use 1.618034 as an approximation of the golden ratio.For example, if you are looking for the fifth number in the sequence, the formula will now look like this: x5{\displaystyle x_{5}}=(1.618034)5−(1−1.618034)55{\displaystyle {\frac {(1.618034)^{5}-(1-1.618034)^{5}}{\sqrt {5}}}}.
+ Remember to use the order of operations by completing the calculation in parentheses first: 1−1.618034=−0.618034{\displaystyle 1-1.618034=-0.618034}.
+
+In the example, the equation becomes x5{\displaystyle x_{5}}=(1.618034)5−(−0.618034)55{\displaystyle {\frac {(1.618034)^{5}-(-0.618034)^{5}}{\sqrt {5}}}}.
+ Multiply the two parenthetical numbers in the numerator by the appropriate exponent.
+
+In the example, 1.6180345=11.090170{\displaystyle 1.618034^{5}=11.090170}; −0.6180345=−0.090169{\displaystyle -0.618034^{5}=-0.090169}. So the equation becomes x5=11.090170−(−0.090169)5{\displaystyle x_{5}={\frac {11.090170-(-0.090169)}{\sqrt {5}}}}.
+ Before you divide, you need to subtract the two numbers in the numerator.
+
+In the example, 11.090170−(−0.090169)=11.180339{\displaystyle 11.090170-(-0.090169)=11.180339}, so the equation becomes x5{\displaystyle x_{5}}=11.1803395{\displaystyle {\frac {11.180339}{\sqrt {5}}}}.
+ The square root of 5, rounded, is 2.236067.
+
+In the example problem, 11.1803392.236067=5.000002{\displaystyle {\frac {11.180339}{2.236067}}=5.000002}.
+ Your answer will be a decimal, but it will be very close to a whole number. This whole number represents the number in the Fibonacci sequence.
+
+If you used the complete golden ratio and did no rounding, you would get a whole number. It’s more practical to round, however, which will result in a decimal.In the example, after using a calculator to complete all the calculations, your answer will be approximately 5.000002. Rounding to the nearest whole number, your answer, representing the fifth number in the Fibonacci sequence, is 5.
+
+

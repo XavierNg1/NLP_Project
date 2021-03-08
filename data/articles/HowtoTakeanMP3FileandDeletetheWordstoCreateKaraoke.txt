@@ -1,0 +1,71 @@
+ Audacity is a free audio editor that works on both Windows and macOS. Click the green “Download” button to get the latest version for your operating system, and then save it to your computer.;
+, When the download is complete, double-click the installer and follow the prompts to Install Audacity.
+
+
+Read the help files and familiarize yourself with the program, as the individual instructions are beyond the scope of this article. For more about Audacity, see Use Audacity.
+ Audacity requires a plugin called LAME to save MP3 files. You’ll need this when it comes time to save your karaoke creation.Navigate to http://lame.buanzo.org in a web browser.
+Click to download the latest version of LAME for your operating system (the first option listed under your operating system).
+When prompted, save the file to a location you’ll remember.
+ The process is slightly different depending on your operating system.Windows: Double-click the installer file and follow the prompts to install LAME. Make sure not to change any of the default settings, as they are all required to make the plugin work.
+Mac: Double-click the installer (it ends with .dmg) to mount it, then double-click the mounted “Lame Library v.3.98.2 for Audacity.pkg” file (the version number may be different). Follow the prompts to complete the installation.
+ Now you’ll use Audacity’s Vocal Reduction filter to reduce vocals in the song. If you’re not sure that your MP3 is stereo, try listening to it with headphones. If it’s stereo, you may hear different sounds and volumes in the right and left ear pieces.
+
+
+Importing the song into Audacity is the only surefire way to know whether or not the song is in stereo.
+It's also best to get the highest possible quality you can find—look for 320 kbps files, if possible.
+See How to Download Free Music for tips on finding audio files.
+ Open Audacity, and then:
+
+
+Click to expand the File menu at the top of the screen.
+Navigate to “Import” > “Audio…”
+Locate and double-click your MP3 track to open it.
+ If this MP3 is in stereo, the track will show 2 channels. This means you’ll see 2 long visuals of the song (2 long waveforms) stacked on top of one another. You’ll also see the word “Stereo” in the sidebar just beneath the track name., Before making any final changes, you’ll want to select about 5-10 seconds of the song that has lead vocals so you can preview your changes. Here’s how:
+
+
+Click the mouse in the time bar just above the track to play it from that spot. Find a place in the song where vocals occur for about 5-10 seconds.
+Hover the mouse over the tracks until your cursor appears.
+Click and drag to highlight the part of the song to preview.
+ Now that you have a selection defined to preview, you can test removing the vocals.
+ This effect helps remove vocals that are at the center of the track with other instruments spread around them. Most modern music is mixed this way, though there are exceptions., These settings define how the effect will run on the main vocals.
+
+
+Leave “Action” set to “Vocal Reduction. This ensures that you’re reducing the vocals instead of reducing the music.
+“Strength” should be “1,” which just means “apply this affect at it’s normal strength.” You may need to increase this to “2” later if the vocals are particularly loud.
+ This value will determine the lowest frequency (Hz) to be removed from the track. You may have to come back and adjust these values later, depending on the result.
+
+
+If the vocals you want to remove are very low and have a lot of bass (e.g. Barry White, Leonard Cohen), type “100” into the box.For vocals that are low but less bassy (e.g. Drake, Toni Braxton), start at “100.”
+For most mid-range vocals (e.g. Beyonce, Bruce Springsteen) set this value to “120.”
+For vocals that are very high (e.g., children’s voices, Mariah Carey), set this value to “150.” If you still hear the vocals perfectly after you make the change, you can come back and set this to “200.”
+
+, This is the top frequency of the vocals. Going too high may cut out higher-pitched instruments in the song, but not going high enough may not capture all the vocals. You can always undo your changes and return to this screen to make adjustments.
+
+
+For almost all vocals, setting this value to “7000” should work fine., Note that backup vocals can usually not be removed with this method, as they are often on a different track.
+
+
+Note that if there's reverb on the vocals or other types of processing, the lead vocals will not disappear completely—you may hear a "ghost" vocal in the background. When you're singing over that, it will seem like it's your voice being reverberated!
+
+, If the preview doesn’t sound the way you hoped:
+
+
+If you find that a lot of the bass in the song is missing, try increasing the Low Cut value by 20 Hz until you find a good balance between bass and vocal-removal.
+If deeper parts of the vocals are coming through, try reducing the Low Cut by 20 until a good balance is found.
+Try setting Strength to “2” if adjusting the Low Cut doesn’t work.
+If you’ve changed the parameters and hear no change to the vocals, this song is not mixed in a way that is compatible with this feature.
+ When you’ve found parameters that sound good in the preview, click “OK” to filter the entire song. This may take a few minutes, depending on your computer and the length of the song.
+ Listen to the main vocals—While you may not be able to remove every last trace of the vocals, you should be able to cut much of their sound using this filter as long as vocals are mixed in the center of the track.
+
+
+To undo your changes, click “Edit > “Undo Vocal Reduction and Isolation.”
+
+, Now that you’ve finished creating your instrumental track, it’s time to save it as an MP3 file.,, This is a matter of preference. A higher bit rate MP3 will take up more hard drive space but sound much better. A low bit rate means a smaller file, but it won’t sound as good. Note that since you’re editing a compressed file, you will lose a bit of quality in this process.
+
+
+For a small file that still sounds amazing, set Bit Rate Mode to “Variable” and select “Best Quality.” This option should work great for almost anyone.
+If you’re not worried about file size and need the highest possible quality, set the Bit Rate Mode to “Preset” and Quality to 320kbps. This will give you the best quality file Audacity can make.
+If your goal is the tiniest file possible, set the Bit Rate Mode to “Variable” and choose anything lower than “3” (155-195 kbps).
+ Browse to the folder where you’d like to save the file.
+ Once the file is saved, you’ll be able to play it any application that supports MP3 files.
+

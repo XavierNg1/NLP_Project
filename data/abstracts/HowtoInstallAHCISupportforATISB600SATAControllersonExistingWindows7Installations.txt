@@ -1,0 +1,14 @@
+
+Backup your data because backups are good things.
+Do NOT enable AHCI in the BIOS yet.
+Open Regedit.
+Locate the following registry subkey:  HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci
+
+,
+In the right pane, right-clickStart in the Name column, and then click Modify.
+
+,
+In theValue data box, type 0, and then click OK. (Note: if the value there is already 0 then this solution will not work)  Exit Regedit and reboot your system.
+
+,
+NOW enable AHCI in the BIOS during reboot.

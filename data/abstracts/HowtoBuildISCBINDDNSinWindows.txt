@@ -1,0 +1,19 @@
+
+Install a Perl package.
+Download and install OpenSSL:
+
+
+DownloadOpenSSL code and extract it to a folder on your hard drive.
+Download and prepare the BIND source:
+
+
+Download the BIND source from ISC.
+Build BIND:
+
+
+Open a Visual Studio command prompt and change the directory to the one containing BIND source.cd c:\bind-9.5.0-P2
+
+Change current directory to win32utilscd win32utils
+
+Issue the command:BuildSetup.bat
+Make sure no errors occur.

@@ -1,0 +1,41 @@
+
+Download Visual Basic .NET 2005 edition from http://www.microsoft.com/express/.
+Open Visual basic.
+Learn the basic object types.
+Learn to place an object.
+Start (debug) your program now.
+Close your program.
+
+,
+Back at the program platform double click the button.At the place of the cursor write msgbox("hello world")
+
+,
+Debug your program.
+Lets write another program go to your program platform.
+
+,
+Add a label.
+Go back to your program platform add 2 editboxes rename them (edit_a), (edit_b) and clear the text field, the boxes are the input of your program.
+You probably now know we are making a program that can add 2 numbers.
+Write lab_output.text = ("edit_a.text + edit_b,text").
+
+,
+This will make the program add whatever stands in the editboxes.
+
+,
+If the program is debugged now and you click the add button you get an error.
+
+,
+In order to avoid the error, make use of an if/then else sentence which is where the program is asked if a statement is true if it is then it does something if not then it does something else.
+
+,
+In the Code for the button be fore you write the lab.... You write if edit_a.text=("") or edit_b.text=("") then \newline msgbox("write something to add")\newline else \newline lab_output.text = ("edit_a.text + edis_b,text").
+You made a program that can add 2 numbers.
+Now there is a little something because the edit_a.text is annoying to write all the time.Underneath your dim write a=edit_a.text b= edit_b.text
+
+,
+Go back down to your button code change the edit_a.text and edit_b.text to your newly defined variables a and b.
+
+,
+Debug your program.
+

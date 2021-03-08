@@ -1,0 +1,18 @@
+ Ask your financial advisor or annuity administrator for the terms of your annuity. In order to calculate your annuity payments, you will need the annuity's principal amount, annual interest rate, payment frequency, and number of payments.
+
+Most of this article calculates annuity payments for the most common type of annuities: ordinary annuities that make payments at the end of end of the period. Those with annuities that pay at the beginning of the period will have to use the Excel function to calculate their payments. 
+
+In addition, these calculations assume that the annuity makes payments consistently throughout the term. These calculations will not work for annuities that change interest rates or payment size throughout their lives.;
+, The principal is the present value, or current worth, of the annuity. If you purchased the annuity, this is the lump sum payment that you made to receive the annuity payments over a period of time.The duration is the number of years that the annuity will make payments.
+
+For example, imagine that you paid $150,000 for an annuity. This would be your principal amount. 
+
+The duration is how long the annuity pays out payments. For example, this could be 20 years. 
+
+
+, The period interest rate is the annual percentage rate divided by the number of payments made each year. So, if the payments are made monthly, you would divide by 12, quarterly by 4, semiannually by 2, and if there are annual payments, you would not divide the annual interest rate at all.For example, you would calculate your monthly interest rate by dividing your annual interest rate, r, by 12. So, for the example, imagine that your annual interest rate is 5 percent. This would be expressed as a decimal for the calculation by dividing by 100 to get 0.05 (5/100). 
+
+To get the monthly interest rate, divide this number by 12. So, this would be 0.05/12, which is 0.004167. For ease of calculation, we will round this number to 0.0042. This is the R value that will be later used in the calculation.
+ The total number of payments is calculated by multiplying the payment frequency times the duration of the annuity. So, if your annuity makes monthly payments for 20 years, you will have 240 total payments (12 monthly payments per year*20 years).For the purposes of this article, the duration is represented by the variable t, the payment frequency by n, and the total number of payments by N. So, for the example, N=240. 
+
+

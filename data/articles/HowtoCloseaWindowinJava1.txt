@@ -1,0 +1,38 @@
+, Default close operation is set using the setter method inside the JFrame class setDefaultCloseOperation that determines what happens when the close button is clicked and takes the following parameters:
+
+
+WindowConstants.EXIT_ON_CLOSE - Closes the frame and terminates the execution of the program.
+
+WindowConstants.DISPOSE_ON_CLOSE - Closes the frame and does not necessarily terminate the execution of the program.
+
+WindowConstants.HIDE_ON_CLOSE - Makes the frame appear like it closed by setting its visibility property to false. The difference between HIDE_ON_CLOSE and DISPOSE_ON_CLOSE is that the latter releases all of the resources used by the frame and its components.
+
+WindowConstants.DO_NOTHING_ON_CLOSE - Does nothing when the close button is pressed. Useful if you wish to, for example, display a confirmation dialog before the window is closed. You can do that by adding a WindowListener to the frame and overriding windowClosing method. Example of the custom close operation:
+
+
+
+
+
+frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+frame.addWindowListener(new WindowAdapter() {
+        @Override
+        public void windowClosing(WindowEvent e) {
+                // Ask for confirmation before terminating the program.
+                int option = JOptionPane.showConfirmDialog(
+                        frame, 
+                        "Are you sure you want to close the application?",
+                        "Close Confirmation", 
+                        JOptionPane.YES_NO_OPTION, 
+                        JOptionPane.QUESTION_MESSAGE);
+                if (option == JOptionPane.YES_OPTION) {
+                        System.exit(0);
+                }
+        }
+});
+
+
+
+
+
+
+

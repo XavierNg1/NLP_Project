@@ -1,0 +1,34 @@
+ The connection speed is different with CDNs, so that's why the videos load more slowly. You can watch the videos directly from YouTube, getting a faster loading time, by blocking the IP address ranges used by CDNs. Follow these steps:
+
+
+
+Open the command prompt as an administrator.
+Copy and paste this command into the window: netsh advfirewall firewall add rule name=”YouTubeTweak” dir=in action=block remoteip=173.194.55.0/24,206.111.0.0/16 enable=yes
+
+Hit "Enter" to add the rule.
+Close Command Prompt.
+ The same basic idea can be used to make YouTube videos load faster if you're using Mac OS X. Follow these steps:
+
+
+
+Open Terminal.
+Enter the following command: sudo ipfw add reject src-ip 173.194.55.0/24 in
+
+Hit "Enter."
+Input your admin password.
+Enter this command: sudo ipfw add reject src-ip 206.111.0.0/16 in
+
+Hit "Enter."
+Close Terminal.
+ Follow these steps to make YouTube videos load faster:
+
+
+Open Terminal.
+Enter this command: sudo iptables add reject src-ip 173.194.55.0/24 in
+
+Hit "Enter."
+Enter your admin password.
+Enter this command: sudo iptables add reject src-ip 206.111.0.0/16 in
+
+Close Terminal.
+

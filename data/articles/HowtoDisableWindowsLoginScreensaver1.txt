@@ -1,0 +1,15 @@
+ If you share a computer with one user or more, make sure you are using the administrator account; otherwise, you won't be able to make changes to the system settings.;
+, Find the Start button and click it to bring up the Start menu; the appearance of your Start button will vary depending on your version of Windows, but it should always be in the lower left-hand corner of the screen.
+ If Run isn't listed as a default app, type "Run" into the search bar at the bottom of your Start menu. The pertaining app should appear in the search results.
+ Type "regedt32" without the quotation marks into Run and click OK to bring up the Registry Editor. This program will allow you to make changes to system processes--in this case, the login screensaver values.
+
+
+Your computer may display a warning that reads "Do you want to allow this app to make changes to your PC?" followed by app information for the Registry Editor. If this happens, simply click OK to proceed.
+ You can find this file in the upper left-hand corner of the editor. Click to expand it, then click the folder labeled ".DEFAULT" in the resulting drop-down menu to do the same, followed by "Control Panel". , Scroll through the right-hand side of the screen to find the value labeled ScreenSaveActive, then double-click it.
+
+
+In older versions of Windows, you will have to select a subfolder of "Desktop" labeled "Details" to view the ScreenSaveActive file.
+ This will prevent the screensaver from playing after several minutes of inactivity on the Login screen.
+
+
+You should also find the ScreenSaveTimeOut value and set it to 0, just to ensure that all of the system files corroborate. 

@@ -1,0 +1,82 @@
+ The unit circle is a circle, centered at the origin, with a radius of 1. Recall from conics that the equation is x2+y2=1. This circle can be used to find certain "special" trigonometric ratios as well as aid in graphing. There is also a real number line wrapped around the circle that serves as the input value when evaluating trig functions.;
+, Know that
+
+
+sinθ=opposite/hypotenuse
+cosθ=adjacent/hypotenuse
+tanθ=opposite/adjacent
+cosecθ=1/sinθ
+secθ=1/cosθ
+cotθ=1/tanθ.
+ A radian is another way to measure an angle. One radian is the angle needed so the enclosed arc length is equal to the radius length. Note that it doesn't matter the size or orientation of the circle. You also need to know the number of radians in a full circle (360 degrees). Remember that the circumference of a circle is given by 2πr so there are 2π radius measures in the circumference. Since a radian by definition is the angle where the radius length equals the arc length, there are 2π radians in a full circle.
+ There are 2π radians in a full circle, or 360 degrees. So:
+
+
+2πradian=360degree
+radian=(360/2π)degree
+radian=(180/π)degree
+and
+360degree=2πradian
+degree=(2π/360)radian
+degree=(π/180)radian
+
+, The special angles in radians are π/6, π/3, π/4, π/2, π, and the multiples of all (e.g. 5π/6)
+
+, To derive these, you must look at the unit circle. Recall that there is a real number line wrapped around the unit circle. The point on the number line refers to the number of radians in the angle formed. For instance The point at π/2 on the real number line corresponds with the point on the circle whose radius forms an angle of π/2 with the positive horizontal radius. The trick to finding the trig values of any angle, therefore is to find the coordinates of the point. The hypotenuse is always 1, as that is the radius of the circle, and since any number divided by 1 is itself, and the opposite side equals the y-value, it follows that the sine value is the y-coordinate of the point. The cosine value follows a similar logic. Cos equals the adjacent side divided by the hypotenuse, and again, as the hypotenuse is always 1, and the adjacent side equals the x-coordinate, it follows that the cosine value is the x-coordinate of the point. The tangent is slightly more difficult. The tangent of an angle in a right triangle equals the opposite side divided by the adjacent side. The problem is that there is no constant in the denominator like in the previous examples, so you have to be a bit more creative. Remember that the opposite side equals the y-coordinate and the adjacent side equals the x-coordinate, so by substituting, you should find that the tangent equals y/x. Using this you can find the inverse trig functions by taking the reciprocal of these formulas. To summarize, here are the identities.
+
+
+sinθ=y
+cosθ=x
+tanθ=y/x
+csc=1/y
+sec=1/x
+cot=x/y
+
+, For angles that are multiples of π/2 such as 0, π/2, π, 3π/2, 2π etc. Finding the trig functions is as easy as picturing the angle on the axes. If the terminal side is along the x-axis, the sin will be 0 and the cos will be either 1 or -1 depending on which direction the ray points. Similarly, if the terminal side is along the y-axis, the sin will be either 1 or -1 and the cos will be 0.
+ Start by drawing the angle π/6 on the unit circle. You know how to find the side lengths for special right triangles (30-60-90 and 45-45-90) given one side, and as π/6=30 degrees, this triangle is one of those special cases. So if you recall, the short leg is 1/2 the hypotenuse, so the y-coordinate is 1/2, and the long leg is √3 times the shorter leg, or (√3)/2, so the x-coordinate is (√3)/2. The coordinates of that point are ((√3)/2,1/2) Now use the identities in the previous step to find that:
+
+
+sinπ/6=1/2
+cosπ/6=(√3)/2
+tanπ/6=1/(√3)
+cscπ/6=2
+secπ/6=2/(√3)
+cotπ/6=√3
+
+, So, the point is (1/2, √3/2). Therefore it follows that:
+
+
+sinπ/3=(√3)/2
+cosπ/3=1/2
+tanπ/3=√3
+cscπ/3=2/(√3)
+secπ/3=2
+cotπ/3=1/(√3)
+
+, The ratios for a 45-45-90 triangle are a hypotenuse of √2 and legs of 1, so on the unit circle, the dimensions are as follows:and the trig functions are:
+
+
+sinπ/4=1/(√2)
+cosπ/4=1/(√2)
+tanπ/4=1
+cscπ/4=√2
+secπ/4=√2
+cotπ/4=1
+
+, At this point you have already found the trig values of the three special reference angles, however all of these are in Quadrant I. If you need to find a function of a larger or smaller special angle, first figure out which reference angle is in the same "family" of angles. For instance, the π/3 family consists of 2π/3, 4π/3, and 5π/3. A good general rule for finding the reference angle is to reduce the fraction as much as possible then look at the bottom number.
+
+
+If it is a 3, it is in the π/3 family
+If it is a 6, it is in the π/6 family
+If it is a 2, it is in the π/2 family
+If it stands alone, like π or 0, it is in the π family
+If it is a 4, it is in the π/4 family
+
+, All angles in the same family have the same trig values as the reference angle, but 2 will be positive and two will be negative.
+
+
+If the angle is in Quadrant I, all trig values are positive
+If the angle is in Quadrant II, all trig values are negative except sin and csc.
+If the angle is in Quadrant III, all trig values are negative except tan and cot.
+If the angle is in Quadrant IV, all trig values are negative except for cos and sec.
+

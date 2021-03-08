@@ -1,0 +1,24 @@
+ Keeping your software and operating system up to date will make sure that your system is secure and running at its best. When software is updated, oftentimes the performance of the software can increase. Staying updated and secure will also help keep malicious files from slowing down your computer.
+
+
+Open the Mac App Store and switch to the "Updates" tab. This will check for available updates for your operating system and any applications that you've installed through the App Store.
+On older Macs, click the Apple menu and select Software Update. The program will check the internet for any available updates for your installed applications and your operating system.;
+, While they may not be actively running, unused applications take up storage space. This can be an issue if you are running out of room on your hard drive, as low free space can decrease performance.
+
+
+To uninstall applications, you normally just need to drag them from Finder to the trash can. This will leave behind old files and preferences, however, which can bog down your system. If you are sure you won't need to reinstall the application sometime in the future, use an uninstaller application to completely remove old programs. There are many free and paid applications available to do this.
+ Having too many icons on your screen can negatively impact your computer’s performance as Mac OS X dynamically generates each of the thumbnails and must store the previews in the RAM. The impact may be small, but can be noticeable if you have a large number of icons.
+ If you are using the Dashboard and widgets, you may be eating up your system’s memory. Widgets are mini-programs that are constantly running in the background. Because of this, they are a small but constant drain on your system resources.
+
+
+Disable individual widgets by opening the dashboard and clicking on the - button (Yosemite) or the + button (older operating systems). Click on the x button at the top left of a widget to disable it.
+Disable the entire Dashboard by opening System Preferences, clicking on Mission Control, and setting the Dashboard to "Off".
+For operating systems older than Yosemite (OS X 10.10), you can disable Dashboard through Terminal. Open your Applications folder and then open Utilities. Select Terminal. In the Terminal, run the following commands:defaults write com.apple.dashboard mcx-disabled –boolean YES
+killall Dock
+To return the Dashboard, reenter the same command but change YES to NO.
+ These programs will launch when you boot your mac and may drastically affect your boot time. It's best to only have absolutely necessary applications starting on boot.
+
+
+Open your user preferences. Click the Apple menu in the top-left corner of the screen and click on "System Preferences". In System Preferences, select "Users & Groups". Select your user and navigate to the "Login Items" tab.
+Remove applications. Click on an application that you don't want to launch on boot, and use the – button to remove it from the list. If the list is grayed out, click on the padlock at the bottom-left of the window and enter your username and password.
+

@@ -1,0 +1,91 @@
+
+
+
+H3PO4+(NH4)2MoO4+HNO3→(NH4)3PO4⋅12MoO3+NH4NO3+H2O{\displaystyle {\begin{aligned}&{\mathrm {H} }_{3}{\mathrm {PO} }_{4}+({\mathrm {NH} }_{4})_{2}{\mathrm {MoO} }_{4}+{\mathrm {HNO} }_{3}\\&\to ({\mathrm {NH} }_{4})_{3}{\mathrm {PO} }_{4}\cdot 12\,{\mathrm {MoO} }_{3}+{\mathrm {NH} }_{4}{\mathrm {NO} }_{3}+{\mathrm {H} }_{2}{\mathrm {O} }\end{aligned}}}
+;
+, The number of elements present in the equation determines how many rows will be in the vectors and matrices that we are going to construct. Below, the order we list corresponds to the order of the rows.
+
+
+H{\displaystyle {\mathrm {H} }} – Hydrogen
+
+
+P{\displaystyle {\mathrm {P} }} – Phosphorus
+
+
+O{\displaystyle {\mathrm {O} }} – Oxygen
+
+
+N{\displaystyle {\mathrm {N} }} – Nitrogen
+
+
+Mo{\displaystyle {\mathrm {Mo} }} – Molybdenum
+
+
+, The vector equation consists of column vectors corresponding to each compound in the equation. Each vector has a corresponding coefficient, labeled x1{\displaystyle x_{1}} to x6,{\displaystyle x_{6},} for which we are solving for. Make sure you understand how to count the number of atoms in a molecule. 
+
+
+x1(31400)+x2(80421)+x3(10310)=x4(12140312)+x5(40320)+x6(20100){\displaystyle x_{1}{\begin{pmatrix}3\\1\\4\\0\\0\end{pmatrix}}+x_{2}{\begin{pmatrix}8\\0\\4\\2\\1\end{pmatrix}}+x_{3}{\begin{pmatrix}1\\0\\3\\1\\0\end{pmatrix}}=x_{4}{\begin{pmatrix}12\\1\\40\\3\\12\end{pmatrix}}+x_{5}{\begin{pmatrix}4\\0\\3\\2\\0\end{pmatrix}}+x_{6}{\begin{pmatrix}2\\0\\1\\0\\0\end{pmatrix}}}
+
+
+, There are two major points to consider here. First, recognize that a vector equation like the one above has the same solution set as a linear system with its corresponding augmented matrix. This is a fundamental idea in linear algebra. Second, when the augments are all 0, row-reduction does not change the augments. Therefore, we need not write them at all – row-reducing the coefficient matrix is all that is necessary.
+
+Note that moving everything to the left side causes the elements on the right side to negate.
+
+
+(381−12−4−2100−100443−40−3−1021−3−20010−1200){\displaystyle {\begin{pmatrix}3&8&1&-12&-4&-2\\1&0&0&-1&0&0\\4&4&3&-40&-3&-1\\0&2&1&-3&-2&0\\0&1&0&-12&0&0\end{pmatrix}}}
+
+
+, For such a matrix, it is recommended that you use a calculator, although row-reducing by hand is always an option, albeit slower. 
+
+
+(10000−1/1201000−100100−7/400010−1/1200001−7/4){\displaystyle {\begin{pmatrix}1&0&0&0&0&-1/12\\0&1&0&0&0&-1\\0&0&1&0&0&-7/4\\0&0&0&1&0&-1/12\\0&0&0&0&1&-7/4\end{pmatrix}}}
+
+It is clear that there is a free variable x6{\displaystyle x_{6}} here. Those with sharp minds would've seen this coming, for there are more variables than equations, and hence more columns than rows. This free variable means that x6{\displaystyle x_{6}} can take on any value, and the resulting combination of x1{\displaystyle x_{1}} to x5{\displaystyle x_{5}} would be a valid solution (to our linear system, that is – the chemical equation results in further restrictions in this solution set).
+ Let's set x6=t.{\displaystyle x_{6}=t.} Since for positive values of t,{\displaystyle t,} none of the variables become negative, so we are on the right track.
+
+
+x1=t/12{\displaystyle x_{1}=t/12}
+
+
+x2=t{\displaystyle x_{2}=t}
+
+
+x3=7t/4{\displaystyle x_{3}=7t/4}
+
+
+x4=t/12{\displaystyle x_{4}=t/12}
+
+
+x5=7t/4{\displaystyle x_{5}=7t/4}
+
+
+x6=t{\displaystyle x_{6}=t}
+
+
+, Remember that the coefficients in the chemical equation must be integers. Therefore, set t=12,{\displaystyle t=12,} the least common multiple. From our solution set, it is clear that while there are an infinite number of solutions, as we would expect, it is nonetheless a countably infinite set. 
+
+
+x1=1{\displaystyle x_{1}=1}
+
+
+x2=12{\displaystyle x_{2}=12}
+
+
+x3=21{\displaystyle x_{3}=21}
+
+
+x4=1{\displaystyle x_{4}=1}
+
+
+x5=21{\displaystyle x_{5}=21}
+
+
+x6=12{\displaystyle x_{6}=12}
+
+
+, The equation is now balanced.
+
+
+H3PO4+12(NH4)2MoO4+21HNO3→(NH4)3PO4⋅12MoO3+21NH4NO3+12H2O{\displaystyle {\begin{aligned}&{\mathrm {H} }_{3}{\mathrm {PO} }_{4}+12\,({\mathrm {NH} }_{4})_{2}{\mathrm {MoO} }_{4}+21\,{\mathrm {HNO} }_{3}\\&\to ({\mathrm {NH} }_{4})_{3}{\mathrm {PO} }_{4}\cdot 12\,{\mathrm {MoO} }_{3}+21\,{\mathrm {NH} }_{4}{\mathrm {NO} }_{3}+12\,{\mathrm {H} }_{2}{\mathrm {O} }\end{aligned}}}
+
+

@@ -1,0 +1,123 @@
+ You'll need the following materials to build your robot car. If you're not sure what size each component should be, read over these instructions to get a feel for how they fit together.
+
+
+Two motors
+Two wheels
+Arduino microcontroller board (the Arduino Uno is a good choice for beginners)
+
+Motor driver shield or motor driver circuit (found in remote-controlled toy cars)
+Battery holder and 6 volts of batteries (e.g. four AA batteries)
+Chassis: a sheet of acrylic or plexiglass, about 6.5 x 4.5 inches (16.5 x 11.5cm);
+, Thread each wheel onto one of the motors. Hot glue the motor onto the chassis as follows:
+
+
+Mark two locations near one end of the chassis, opposite each other.
+
+
+
+
+
+
+Glue one motor over each location, on the upper side of the chassis. Make sure the wheel hangs over the edge so it can roll along the ground.
+ Add a dollop of hot glue to the top side of the chassis, between the wheels. Press the battery holder here and let set.
+ Position the motor driver circuit near one side of the chassis, with the wires overhanging the edge.
+ Glue the Arduino onto the chassis, tucked opposite the driver circuit. When positioning it, make sure you have access to the socket for plugging the Arduino into the computer.
+ You'll need four pieces of insulated wire, with each end stripped. Read this section first to find out how each wire is connected, so you can cut each one to the right length. Typically, each wire should be about 5 inches (13cm) long.
+ Solder one wire onto each of the two motor pins.
+
+
+
+Read our guide on soldering electronics first if you don't have much soldering experience.
+ Find the motor pins on the motor driver circuit that are labeled m1 and m2. Solder the other ends of the two wires onto these pins.
+
+
+If your driver does not have these labels, look for a diagram of your motor driver online.
+ Solder the other two wires to the two pins on the second motor. Solder the other ends of these wires onto the driver pins labeled m3 and m4.
+ The battery holder should have two attached wires, one positive (red) and one negative (black). Connect these as follows:
+
+
+Connect the positive wire to the Vin pin on the Arduino
+Connect the negative wire to the Gnd (ground) pin on the Arduino
+
+, The motor driver has two wires as well. Connect these to the Arduino, making contact with the wires from the battery holder:
+
+
+Connect the positive pin on the motor driver circuit to the Vin pin on the Arduino.
+Connect the Gnd pin on the motor driver circuit to the Gnd pin on the Arduino.
+If you have difficulty identifying the Arduino pins, find an online guide specific to your model.
+ The hack in this section allows Arduino to drive the motors directly, without an external motor driver. The diagram shown here represents the IC (integrated circuit) on the motor driver circuit.
+
+
+
+
+
+
+This section requires careful soldering. Work slowly and methodically.
+ These will connect the Arduino and the motor driver circuit.
+ Solder each wire to one pin on the integrated circuit. Take care not to make contact with a second pin. Solder as follows:
+
+
+Solder one wire on to the LEFT pin shown in the IC pin diagram. The LEFT pin is 7th from the top.
+Solder a wire on to the RIGHT pin shown in the IC pin diagram. The RIGHT pin is 6th from the top, just above "left."
+Solder a wire on to the BACKWARD pin shown in the IC pin diagram. The BACKWARD pin is the 10th pin, exactly opposite "left."
+Solder a wire on to the FORWARD pin shown in the IC pin diagram. The FORWARD pin is just above "backward," exactly opposite "right."
+
+, Taking care not to confuse the wires, attach each one to the Arduino as follows:
+
+
+Connect the LEFT wire to pin 5 of the Arduino.
+Connect the RIGHT wire to pin 6.
+Connect the BACKWARD wire to pin 9.
+Connect the Forward wire to pin 10.
+ Examine all your wiring closely. Make sure there are no unintentional connections causing a short.
+ Plug the Arduino circuit into your computer. Open the Arduino software. This allows you to program your car's movements.
+
+
+Arduino software is available for free online.
+ Type the following program into Arduino. Once finished, upload it into your circuit. This code will cause your car to move forward for 5 seconds, take a right turn, and move forward for another 5 seconds:
+
+
+
+
+
+int Fmotor=10;// initialize all the motors
+int Bmotor=9;
+int Rmotor=6;
+int Lmotor=5;
+ 
+void setup() {  // put your setup code here, to run once:
+ pinMode( Fmotor,OUTPUT);// set them as outputs
+ pinMode( Bmotor,OUTPUT);
+ pinMode( Lmotor,OUTPUT);
+ pinMode( Rmotor,OUTPUT);
+ 
+}
+ 
+void loop() {  // put your main code here, to run repeatedly:
+ digitalWrite(Fmotor,HIGH);// code for making the car go straight
+ digitalWrite(Lmotor,HIGH);
+ digitalWrite(Rmotor,LOW);// NEVER SET A MOTOR HIGH ON BOTH PINS
+ digitalWrite(Bmotor,LOW);
+ delay(5000);
+ digitalWrite(Rmotor,HIGH);// Take a right turn
+ digitalWrite(Lmotor,LOW);
+ digitalWrite(Bmotor,LOW);
+ digitalWrite(Fmotor,HIGH);
+ delay(800);
+ digitalWrite(Fmotor,HIGH);// code for making the car go straight
+ digitalWrite(Lmotor,HIGH);
+ digitalWrite(Rmotor,LOW);
+ digitalWrite(Bmotor,LOW);
+ delay(5000);
+}
+
+
+
+
+
+, Set the car on a flat surface. Put in the batteries and watch it go! If your battery holder has a switch, flick it to turn the car on and off.
+
+
+You can add your own switch by connecting the positive wire of the battery holder to the center pin of an SPST (single pole singe throw) switch. Connect the other pin of the switch to the Vin pin on the Arduino.
+ Change the values in the code and upload your new program to change the behavior of your car. Try changing the numbers after "delay," or see what happens when you change a LOW to a HIGH or vice versa. Just make sure never to set both pins of a single motor on HIGH at the same time.
+

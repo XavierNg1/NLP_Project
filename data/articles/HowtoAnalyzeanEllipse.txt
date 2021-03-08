@@ -1,0 +1,58 @@
+ (x−h)2a2+(y−k)2b2=1{\displaystyle {\frac {(x-h)^{2}}{a^{2}}}+{\frac {(y-k)^{2}}{b^{2}}}=1} or  (x−h)2b2+(y−k)2a2=1{\displaystyle {\frac {(x-h)^{2}}{b^{2}}}+{\frac {(y-k)^{2}}{a^{2}}}=1}, where a>b{\displaystyle a>b}.
+, Thus, the Center is at (h,k){\displaystyle (h,k)} at (5,−2){\displaystyle (5,{-2})}.
+
+  a2>b2{\displaystyle a^{2}>b^{2}}, so look to see which is larger of the two denominators and find that 100>64{\displaystyle 100>64}, a2=100{\displaystyle a^{2}=100} and b2=64{\displaystyle b^{2}=64}, so a=10{\displaystyle a=10} and b=8{\displaystyle b=8}.
+
+  Per the KEY, find that the Major Axis = 2a{\displaystyle 2a} and thus = 2∗10=20{\displaystyle 2*10=20}.
+
+  Per the KEY, find that the Minor Axis = 2b{\displaystyle 2b} and thus = 2∗8=16{\displaystyle 2*8=16}.
+
+  Per the KEY, find that the Vertices = (h,k+a){\displaystyle (h,k+a)}, (h,k−a){\displaystyle (h,k-a)} and thus = (5,−2+10){\displaystyle (5,{-2}+10)}, (5,−2−10){\displaystyle (5,{-2}-10)} so the Vertices = (5,8){\displaystyle (5,8)} and (5,−12){\displaystyle (5,{-12})}.
+
+  Per the KEY, find that the Co-Vertices = (h+b,k){\displaystyle (h+b,k)}, (h−b,k){\displaystyle (h-b,k)} and thus = (5+8,−2){\displaystyle (5+8,{-2})}, (5−8,−2){\displaystyle (5-8,{-2})} so the Co-Vertices = (13,−2){\displaystyle (13,{-2})} and (−3,−2){\displaystyle ({-3},{-2})}.
+
+  You now should be able to sketch the graph with pencil and paper, given the above successful completion of finding the elements so far.
+
+  Lastly per the KEY, find that the Foci = (h,k+c){\displaystyle (h,k+c)}, (h,k−c){\displaystyle (h,k-c)} for c{\displaystyle c} of b2+c2=a2{\displaystyle b^{2}+c^{2}=a^{2}}. You know that b2=64{\displaystyle b^{2}=64} and a2=100{\displaystyle a^{2}=100}, so c2=100−64=36{\displaystyle c^{2}=100-64=36} and c=6{\displaystyle c=6}. Therefore the Foci lie at (5,−2+6){\displaystyle (5,{-2}+6)} and (5,−2−6){\displaystyle (5,{-2}-6)}, or otherwise stated, at (5,4){\displaystyle (5,4)} and (5,−8){\displaystyle (5,{-8})}. Congratulations, you've completed all the elements.
+ Open a new workbook and start a new worksheet titled Ellipse.
+
+  Input x into cell A1 and y into cell B1 and Format Cell font red, align center horizontal.
+
+  Select between the A of Column A and the 1 of Row 1 and thus the entire worksheet at upper leftmost corner. Format Cells Number Number Decimal Places 4 and Font 9 or 10.
+
+  Look over your figures to see the extent of the ellipse to guide your x values series. The Minor Axis runs from (−3,2){\displaystyle ({-3},2)} to (13,−2){\displaystyle (13,{-2})} so you want to create a series of x values that range from -3 to 13. Select cell A2 and input -3 and select a cell about 40 cells down, say in A43, and input 13. Do Edit Fill Series Column Linear Trend OK.
+
+  For the y values of the ellipse, you need to restate the ellipse's formula in terms of what y equals all by itself. Switch the y term with the 1 term and arrive at (x−5)264−1=−(y+2)2100{\displaystyle {\frac {(x-5)^{2}}{64}}-1={\frac {-(y+2)^{2}}{100}}}. Multiply both sides by -100 and take the square root to arrive at 100−10064∗(x−5)2=y+2{\displaystyle {\sqrt {100-{\frac {100}{64}}*(x-5)^{2}}}=y+2}. Bring the 2 to the left side to isolate y and arrive finally at 100−10064∗(x−5)2−2=y{\displaystyle {\sqrt {100-{\frac {100}{64}}*(x-5)^{2}}}-2=y}. You can simplify 10064{\displaystyle {\frac {100}{64}}} to 2516{\displaystyle {\frac {25}{16}}} if you like -- Excel doesn't care much either way. Input that formula to B2 as =SQRT(100-(25/16)*(A2-5)^2)-2 where A2 is the X value, and select cell range B2:B43 and Edit Fill Down.
+
+  Notice that almost all the y values are positive. Clearly, you've only taken half the square roots. Copy A2:A43 to A44 and paste and then sort the column from largest values to smallest. That sets up a continuum with the 13 ending at A43 and decreases around back to -3 for the x values. For the y values, copy the formula in cell B43 and insert a minus sign in front of it so that it reads now =-SQRT(100-(25/16)*(A44-5)^2)-2 when you copy and paste it into cell B44 to B85.
+
+  Select A2:B85 and using the Chart Wizard or the Ribbon, select Charts All/Other, Scatter, Smooth Line Scatter and leave the chart on the Ellipse worksheet. Add vertical grid lines and stretch the chart until the grid squares are approximate squares.
+
+  Go to cell B2 and select the formula in the formula bar and copy it and then select cell C2 and type y and paste the formula in after it. Make it bold.
+
+  Go to cell D4 and type in the main formula and format font size 18 bold.
+
+  Copy cells A1:B1 to cells D6:E6 for the x y headers in red.
+
+  Input the Vertices (x,y){\displaystyle (x,y)} pairs in cells D7:E8 and add the title Vertices (along Major Axis) in cell F7.
+
+  Input the Co-Vertices (x,y){\displaystyle (x,y)} pairs in cells D10:E11 and add the title Co-Vertices (along Minor Axis) in cell F10.
+
+  Input the Center (x,y){\displaystyle (x,y)} pair in cells D13:E13 and add the title Center in cell F13.
+
+  Input the Foci (x,y){\displaystyle (x,y)} pairs in cells D15:E16 and add the title Foci in cell F15.
+
+  Select in the Plot Area of the Chart and do menu item Chart Add Data and in response to the data query/ies, respond with the (x,y){\displaystyle (x,y)} pairs you just input. They may not "land correctly" and so require editing in the formula bar -- just edit them until they appear as given above, eg. Series 2 should be =SERIES("Vertices",Ellipse!$D$7:$D$8,Ellipse!$E$7:$E$8,2) and notice how "Vertices" was typed in the title at the beginning of the series description -- do that for each series so that they appear correctly in the Legend.
+
+  Format the Vertices with a thin brown line and Size 8 red markers, or blue ones for the Co-Vertices. Format the Center as a large Light Blue Dot and the Foci as Large Black squares.
+
+  Add data labels with both x and y if you prefer, as the chart above demonstrates, though it gets a bit crowded. Use font size 8 or 9.
+
+  Move the Legend to the top of the Chart.
+
+  Copy the Chart and Data with Grabber and save paste to a Paster worksheet to save your work and then save the workbook.
+
+
+ For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+
+

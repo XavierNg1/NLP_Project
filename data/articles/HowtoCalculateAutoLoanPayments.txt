@@ -1,0 +1,98 @@
+ You might be able to pay a lower price than the sticker or asking price by negotiating with the seller. Once you settle on a price, however, that's your starting point.
+
+ For example, suppose you negotiate a deal to purchase a new car for $19,055.  You have a down payment and your old car to trade-in, and you qualify for a customer cash rebate.  You plan to finance the rest of the cost with an auto loan.
+;
+,  Also find out how much your state charges for tax and title fees.  Add this to the cost of the car. Some states don’t allow a deduction of sales tax on trade-ins; you must pay tax on the total cost.
+
+ For the example, suppose your state charges 7 percent sales tax and an additional $200 for tags and title fees.  
+
+ The sales tax would be $19,055∗.07=$1,335{\displaystyle \$19,055*.07=\$1,335}.
+
+ The cost of the car would now be $20,590 ($19,055+$1,335+$200=$20,590){\displaystyle (\$19,055+\$1,335+\$200=\$20,590)}.
+ It may be the case that you're trading in your old vehicle to help pay for the new one. Once you've settled on a trade-in value with the dealership, deduct that amount from the purchase price of the car.
+
+ The dealer offers you $3,000 for your trade-in.  This brings the cost of the car down to $17,590 ($20,590−$3,000=$17,590){\displaystyle (\$20,590-\$3,000=\$17,590)}.
+  Dealer fees vary depending on your state and whether you are purchasing a new or used car.  Destination fees pay for the cost of delivering a new vehicle from the factory to the car dealership.  Documents fees (also known as “doc” fees or conveyance fees) include loan processing fees and service and handling fees.  Some states have caps on documents fees.The dealer charges you $500 in destination and vehicle preparation fees.  This brings the cost of the car to $18,090 ($17,590+$500=$18,090){\displaystyle (\$17,590+\$500=\$18,090)}.
+  You may qualify for these discounts when purchasing a new car.  Manufacturers and car dealers use them to steer customers away from the competition and ensure brand loyalty.  Research available incentives and rebates ahead of time to potentially save thousands of dollars on a new car.Typical rebates include customer cash for brand loyalty and dealer cash that may be passed along to the customer.
+
+ Common incentives include low annual percentage rate (APR) financing for customers with excellent credit and special lease programs.
+
+ You qualify for a brand loyalty rebate of $1,000.  The cost of the car is now $17,090 ($18,090−$1,000=$17,090){\displaystyle (\$18,090-\$1,000=\$17,090)}.
+ The down payment is the amount of cash that you're putting down to pay for the car.This amount will vary from sale to sale and is based on what you can afford to pay out of pocket immediately. Deduct that amount from the amount to be financed.
+
+ Your down payment is $2,000.  This brings the total cost of the car down to $15,090 ($17,090−$2,000=$15,090){\displaystyle (\$17,090-\$2,000=\$15,090)}.  
+
+ The amount you need to finance, or borrow, is $15,090.
+  Auto loans are what is known as an amortizing loan.  The creditor lends you the principal amount, which is the cost of the car.  You pay the creditor back plus interest.  The principal and interest are paid down (or amortized) in equal payments over the life of the loan.The monthly payments remain the same, but the interest piece of the payment decreases and the principal piece increases over the course of the loan.
+  The term “amortization” means paying down the loan in equal installments.  The formula will tell you how much each payment will be.  The information you need is the amount of the loan, the interest rate per month and the total number of months that you will make a payment.Use the formula A=P∗(r(1+r)n)/((1+r)n−1){\displaystyle A=P*(r(1+r)^{n})/((1+r)^{n}-1)}.
+
+ A = the monthly payment.
+
+ P = the principal
+
+ r = the interest rate per month, which equals the annual interest rate divided by 12
+
+ n = the total number of months
+
+
+,  Using the above example, you need to borrow $15,090 to purchase the car.  This is the principal.  You qualify for an auto loan that lasts 4 years, or 48 months and charges 7 percent annual interest.  You will repay the loan (including principal and interest) in 48 equal payments (once per month).
+
+ Calculate the interest rate per month.  The annual interest rate is 7 percent. Divide this by 12 to get the monthly interest rate.  The monthly interest rate is 0.583 percent (7/12=.5833){\displaystyle (7/12=.5833)}
+
+
+A=15,090∗(.00583(1+.00583)48)/(1+.00583)48−1{\displaystyle A=15,090*(.00583(1+.00583)^{48})/(1+.00583)^{48}-1}.
+
+
+A=15,090∗(.0077/.3218){\displaystyle A=15,090*(.0077/.3218)}.
+
+
+A=15,090∗.02393=361.07{\displaystyle A=15,090*.02393=361.07}  
+
+ Your monthly payment will be $361.07
+
+
+,  Fortunately, Microsoft Excel offers several handy functions that will perform complicated calculations for you.One of those functions, the PMT function, will calculate your monthly payments based on specifics about your loan., You'll not only need your loan information, but you'll also need to modify them slightly to get the correct value.
+
+Multiply the length of the loan in years by 12. You want to calculate monthly payments, not annual payments, so you'll need the total number of months throughout the life of the loan. For example, if the loan is for four years, then the number of months is 4 * 12, or 48.
+
+Since you want to pay off the loan completely, the future value of the loan will be 0. This means that you won't owe any more money at the end of the payment stream.
+ Launch Excel and type these words on the first 4 rows in column A:
+
+Rate
+
+Number of Payments
+
+Present Value
+
+Future Value
+
+
+, Plug the following numbers in column B next to the descriptions:
+
+7.00%
+
+48
+
+15,090
+
+0
+
+
+, Input the formula “=PMT(B1/12,B2,B3,B4)” in a cell below the numbers.
+
+Type “=PMT(“ and click on the cell with 7.00% so “B1” appears after the left parentheses. 
+
+Type “/12,” (including the comma). Remember, you're dividing by 12 because you're calculating the interest rate on a monthly basis and the interest rate you were given is on an annual basis.
+
+Click on the cell with 48 to see “B2” appear. 
+
+Type a comma after “B2” and click on the cell with 15,090 to see “B3” appear.
+
+Type a comma after “B3” and click on the cell with 0 to see “B4” appear.  
+
+Type a right parenthesis at the end to complete the formula. 
+
+
+, Press the “Enter” key and the formula will be replaced with the monthly payment of $361.35.
+  Change any of the variables, such as the finance amount or number of months, to see how the monthly payment changes.
+ If you want to double-check Excel's math or you don't have access to Excel, you can get your loan payment by using one of the many loan payment calculators that are online.

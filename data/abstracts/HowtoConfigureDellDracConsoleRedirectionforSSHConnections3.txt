@@ -1,0 +1,21 @@
+
+Dell DRAC 5 : Configure the bios options:
+
+omconfig chassis biossetup attribute=extserial setting=rad
+omconfig chassis biossetup attribute=fbr setting=9600
+omconfig chassis biossetup attribute=serialcom setting=com2
+omconfig chassis biossetup attribute=crab setting=enabled
+
+,
+Dell DRAC 5 : Change drac settings:
+
+racadm config -g cfgSerial -o cfgSerialBaudRate 115200
+racadm config -g cfgSerial -o cfgSerialConsoleEnable 1
+racadm config -g cfgSerial -o cfgSerialSshEnable 1
+racadm config -g cfgSerial -o cfgSerialHistorySize 2000
+
+,
+Dell DRAC 5 : Edit your grub.conf (now called /boot/grub/menu.lst) to enable two things: 1- grub interaction and 2- kernel messages and rc script output.
+Test your connection to the Inband interface
+
+Now from a remote host, ssh to the Drac IP address or Drac hostname as user "root".

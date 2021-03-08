@@ -1,0 +1,12 @@
+ If you don't see the Go menu, click your desktop background or open a Finder window.
+,, Type or paste the following command and run it:
+
+defaults write com.apple.finder AppleShowAllFiles YES
+
+, Type or paste the following command and run it to restart Finder. Any open Finder windows will close and reopen:
+
+killall Finder
+
+, Any hidden files and folders will now be visible in their locations in Finder. Hidden files and folders are grayed-out compared to regular files., Once you're done, you can hide the files again using Terminal so that they don't appear. Enter the following two commands:defaults write com.apple.finder AppleShowAllFiles NO
+killall Finder
+

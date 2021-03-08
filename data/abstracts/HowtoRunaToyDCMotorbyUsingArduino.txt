@@ -1,0 +1,33 @@
+
+Grab a jumper wire, and connect Digital Pin 3 on your Arduino to a pin of your choice on the breadboard.
+Connect one end (we'll call this End 1) of the 270 ohm resistor on a pin on the same row as the jumper wire that's connected to Digital Pin 3.
+Connect the Base pin (middle pin) of the PN2222 transistor to a pin on the same row as End 2 of the 270 ohm resistor.
+Grab a jumper wire and connect the Collector pin (left) of the PN2222 transistor to the GND (ground) pin on the Arduino.
+
+,
+Connect the Positive (+) end of the 1N4001 Diode to the Emitter pin of the PN2222 Transistor.
+Grab a jumper wire, and connect the 5V pin on the Arduino to a pin on the same row on the breadboard where you connected the Negative (-) end of the 1N4001 Diode.
+
+,
+Grab the DC Motor.
+Your circuit is now complete.
+Open up the Arduino IDE on your computer.
+Declare the output the pin variable for the DC Motor: const int MOTORPIN = 3; (MOTORPIN can also be anything you wish it to be)
+
+
+const int specifies that the variable MOTORPIN is a constant integer.
+
+,
+Go to the setup() function.
+Go to the loop() function.
+Your code is complete.
+
+,
+Save the file to your computer, and verify the sketch.
+Check the black box at the bottom of the Arduino IDE.
+Now, using the USB cable provided with your Arduino Kit, connect your Arduino to a USB port on your computer.
+
+,
+Go back to the Arduino IDE.
+Click on the Upload button (arrow pointing to the right) and upload the sketch to your Arduino.Once your code is uploaded, the DC motor should start spinning at the speed you specified in the code
+

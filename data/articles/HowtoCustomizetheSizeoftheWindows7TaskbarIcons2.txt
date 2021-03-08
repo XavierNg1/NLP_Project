@@ -1,0 +1,13 @@
+ In order to set a custom size for your icons, you will need to make adjustments to the Windows Registry. Be careful when working in the Registry, as modifying or deleting the wrong key can cause Windows to not work.
+
+
+Open the Registry Editor by pressing ⊞ Win+R and typing regedit.
+This will not work if your icons are set to "Always combine, hide labels" (see previous section).
+ In the left frame of the Registry Editor, you will see a navigation tree with a large number of folders. Use the tree to navigate to the following location:
+HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics
+
+
+, In the right frame you will see a list of keys. Look for the one labeled "MinWidth". If the key exists, double-click it. If there is no "MinWidth" key, right-click on blank space in the right frame and select New → String Value.
+ Enter the pixel value for the icon width. The default width for regular icons is 52, and the minimum you can enter is 32. Anything smaller and the icons will not display properly. You can enter values larger than 52, though icons too large will cause problems on the taskbar.
+ In order for the new changes to take effect, you will need to reboot your computer.
+ Windows caches icon images when applications are pinned, so you will need to re-pin any pinned icons for the new size to take effect. Right-click on each pinned icon and select "Unpin". You can then re-pin the program by right-clicking on it in the Start Menu and selecting "Pin to Taskbar".

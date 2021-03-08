@@ -1,0 +1,46 @@
+ Look at the first digit of the number (the one on the left, with the highest place value). Mentally double that digit and write it down. The answer will be the first one or two digits of your final answer.
+
+
+
+Example: Find the double of 872.
+
+The left digit is 8.
+The double of 8 is 16.
+ If the second digit to the right is 5 or greater, you will need to add 1 to the value calculated in the previous step.
+
+
+If the second digit is below 5, you do not need to add anything else to the previous value.
+Doubling any digit between 5 and 9 will result in a two digit number, which makes this step necessary. Doubling and digit between 0 and 4 will result in a single digit number.
+
+Example: The second digit in 872 is 7. Since 7 is greater than 5, you need to add 1 to the sum of the previous place value.
+
+16 + 1 = 17
+This means that your final answer will begin with 17.
+ Return to the second digit and double it. This value will be the next digit in your final answer.
+
+
+If the value calculated in this step is two digits, ignore the digit in the tens place and only write down the digit in the ones place.
+
+Example: The second digit of 872 is 7.
+
+The double of 7 is 14.
+Ignore the tens place (1) and only save the value of the ones place (4) for your final answer.
+This 4 will appear in the middle of your final answer.
+ Continue through the rest of the digits in the same manner, moving from left to right, until you double the final digit in the “ones” place value.
+
+
+
+Example: For this problem, there is only one more place value to work with.
+
+The final digit of 872 is 2. Since 2 is less than 5, you do not need to add anything more to the sum of the middle place value.
+The double of 2 is 4. This will be the final digit in your answer.
+ Write all of the calculated values of each place position side by side. This should be your final answer.
+
+
+
+Example: The first part of the answer is 17. The middle digit is 4. The final digit is 4. When written together, that gives you an answer of 1744.
+
+Therefore, the double of 872 is 1744.
+
+
+

@@ -1,0 +1,24 @@
+ This can provide a template for which fields Gmail will accept for CSV importing.
+
+
+If you are having problems exporting without any contacts, try manually adding a single contact to create an export file.
+If you are importing a CSV from another email service, you can skip to the import method.
+If you want to create CSV file from scratch, a full list of the field headers can be found here.;
+, The first line of the CSV will display the different categories for data entry (e.g. First Name, Last Name, email, etc.). Spreadsheets will separate these categories into different cells, while text editors will list these values on the first line separated by commas.
+
+
+Microsoft Excel or Google Sheets will work for working with a spreadsheet, Notepad or TextEdit will work for working with a plaintext file.
+ Enter information to the related cell or list values in order. If no value is needed for a certain area, the cell can be left blank, or in the case of a text file, filled with a “,”.
+
+
+For example, a First Name, Last Name, Telephone, Email on a text file could be “John,,,john@email.com”.
+Make sure to not to remove any fields or to include a comma in place of a blank field in the case of a text file. Gmail will scan for all fields, so missing fields will cause problems with the import.
+ Changes to the CSV file must be saved before they can be imported into your Gmail account.
+, Enter your username and password and click “Sign in”. You will be redirected to your Google Contacts page.
+ This button is listed in the left panel and will open an import popup window.
+
+
+If you are using the new Contacts preview, this button will be labeled “Contacts”. The preview does not currently support importing contacts and you will be redirected to the old contacts interface and will need to redo this step.
+, Browse for the file you exported or created and click “Open”. The file will be added to the import popup window.
+ After a few moments the import will complete and your contacts will appear listed on your Contacts page.If you find that your contacts did not import correctly (i.e. information imported into the wrong field), you may have removed a field or missed a comma on your CSV file. If you imported many contacts, it may be easier correct the CSV file, delete all imported contacts, and re-import, rather than editing each contact one by one.
+

@@ -1,0 +1,10 @@
+ Users of any "Professional Edition" Windows or Windows Server can skip this step, as they should already have the file installed. Users of Windows 7 or Windows 8 "Home," "Home Premium," or "Starter" editions should follow the instructions here to download a group policy editor before continuing. Unfortunately, Windows XP Home Edition and Windows Vista Home Edition users may not be able to work around this issue, and should try an alternate method instead., Click Start → Search and type GPEdit.msc into the text field. Wait for the GPEdit.msc icon to appear, then click it. The window "Local Group Policy Editor" should appear.
+
+
+On XP Professional, instead go to Start → Run. Type GPEdit.msc and hit enter on your keyboard.
+On some operating systems, you will need to be logged in as an administrator to run this file.
+ In this window, look at the folders on the left sidebar. Choose "User Configuration" → "Administrative Templates" → "System" to reach the screen with the options you need., On the right side of the window, underneath the "Settings" heading, scroll down to find "Prevent access to the registry editor." Double click to open it.
+ If the "Enabled" button is checked, click the radio button for either "Disabled" or "Not Configured," then click "Apply," then "OK."
+
+, In most cases, the registry should be accessible immediately. If not, restart your computer to see if the changes take effect.If there is still an issue, try the script download instead.
+

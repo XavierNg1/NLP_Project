@@ -1,0 +1,20 @@
+ Tab-delimited text is a format for storing data from a spreadsheet as a text file. Each cell is separated by a tab stop, and each record exists on a separate line in the text file. Select all of the text you want to copy to Excel and copy it to your clipboard.;
+, Select the upper-leftmost cell that you want your pasted data to appear in. Your pasted data will fill up the cells below and to the right of your starting cell.
+ In newer versions of Excel, and if your data was properly delimited with tab stops, the cells should fill out appropriately with the correct data. Each tab stop should translate directly into a new cell for the data. If all of your data appears in a single column, there's a good chance Excel's delimiter was changed from tabs to something else, such as a comma. You can change this back to tabs by using the Text to Columns Tool.
+ If your tab-delimited data did not paste correctly, you can use Excel's Text to Columns tool to format it properly. To do this, you'll need to select the entire column that contains all of the data you pasted.You can quickly select the entire column by clicking the letter at the top.
+You can only use Text to Columns on a single column at a time.
+ You'll find this in the Data Tools group in the Data tab.
+
+
+If you're using Office 2003, click the Data menu and select "Text to Columns".
+ This will tell Excel that it will be looking for a specific character to mark cell divisions.
+ If your data is tab-delimited, check the "Tab" box and uncheck any other boxes. You can check different characters if your data was separated by something else. If your data was split by multiple spaces instead of a tab stop, check the "Space" box and the "Treat consecutive delimiters as one" box. Note that this may cause problems if you have spaces in your data that don't indicate a column division.
+ After selecting your delimiter, you'll be able to set the data format for each of the columns that are being created. You can select between "General", "Text", and "Date".
+
+
+Choose "General" for numbers or a mix of numbers and letters.
+Choose "Text" for data that is just text, such as names.
+Choose "Date" for data that is written in a standard date format.
+ Select each column in the frame at the bottom of the window and choose the format. You can also choose not to include that column when converting the text.
+ Once you have formatted each of the columns, click Finish to apply the new delimiter. Your data will be split into columns according to your Text to Column settings.
+

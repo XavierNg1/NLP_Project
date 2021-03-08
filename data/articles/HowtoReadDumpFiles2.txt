@@ -1,0 +1,45 @@
+ Most users won't need to use the Windows Debugger program to open MEMORY.DMP files and examine the code dumped from memory when the system crashed. If you want to learn more about how Windows uses drivers and memory, or if you need to analyze dump files for development, Windows Debugger can give you a lot of information.
+ This program contains the WinDBG program that you'll be using to open the dump files. You can download the WDK installer here.
+ This will start the installer. Proceed through the first few screens leaving them at their defaults.
+ You can deselect all of the other features as they won't be used to open dump files. Deselecting them will save you installation time and hard disk space.
+ This may take a few minutes to complete.
+ You'll need to open an elevated Command Prompt in order to associate .dmp files with WinDBG so that it can analyze them. You'll start Command Prompt in the "system32" folder.
+
+
+Windows 10 and 8 - Right-click the Windows button and select "Command Prompt (Admin)."
+Windows 7 - Open the Start menu and type cmd. Press Ctrl+⇧ Shift+↵ Enter.
+ Enter the following command to move to the correct directory. If you're using Windows 10, you can copy and paste it. Earlier versions will require you to type it out:
+
+
+cd\Program Files (x86)\Windows Kits\8.1\Debuggers\x64\
+
+, Enter the following command to associate WinDBG with .dmp files. Windows 10 users can copy and paste this command:
+
+
+windbg.exe -IA
+If you entered the command correctly, an empty WinDBG window will appear, which you can close.
+ You'll need to configure WinDBG to load the proper files from Microsoft to open .dmp files. You'll do this from within WinDBG.
+
+
+The quickest way to launch the program is to press ⊞ Win and type "windbg."
+
+, This will open a new window.
+ This path will tell WinDBG to download the necessary symbols directly from Microsoft, and to store them at C:\SymCache:SRV*C:\SymCache*http://msdl.microsoft.com/download/symbols
+Your C:\SymCache folder will grow over time as you open more debug files and additional symbols are downloaded from Microsoft.
+ Dump (.dmp) files are generated when your system crashes. By default, you should be able to find the dump file in the C:\Windows\Minidump directory after recovering from a crash. The file may also be C:\Windows\MEMORY.DMP. If you can't find the files, you may have to enable hidden files:
+
+
+In Windows 10 and 8, click the "View" tab in Windows Explorer and check the "Hidden items" box.
+In Windows 7 and earlier, open Folder Options from the Control Panel, click the "View" tab, and then select "Show hidden files, folders, and drives."
+
+, As long as you configured WinDBG properly following the steps above, WinDBG should launch and begin processing the file.
+ The first time you open a dump file, you'll need to wait while the symbols are downloaded from Microsoft. Do not interrupt the WinDBG program as it loads the file.
+
+
+The dump file will load much quicker on subsequent openings since you'll already have the symbols in your C:\SymCache folder.
+You'll know the dump file has finished loading when you see Followup: MachineOwner at the bottom of the file.
+ This is the quickest way to get an idea of what caused the crash. WinDBG will analyze the dump file and report what dirver or process likely caused the problem. You can use this information to do deeper troubleshooting and research.
+ The dump file will return codes for specific bugs encountered during the crash. Look for these directly above the "Probably caused by" line. You'll typically see a two-character code, such as "9F."
+
+
+Visit the Microsoft Bug Check Code Reference. Find the code that matches you BugCode by looking at the last two characters in each entry.

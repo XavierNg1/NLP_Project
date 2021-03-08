@@ -1,0 +1,16 @@
+ Performing a System Restore is the easiest way to uninstall a DirectX update, since there is no official way to uninstall DirectX. You will need to have a restore point from before DirectX is installed, which is typically created during the installation process. Using System Restore will uninstall and revert ANY changes that were made since the restore point was created, so it should be used very soon after installing the DirectX update.
+
+
+Windows 8 – Open the Start screen and type “recovery”. Select “Recovery” from the list of search results. This will open the Recovery window. From there, click the “Open System Restore” link.
+Windows 7 and Vista – Click Start and type “restore” into the Search box. Select “System Restore” from the top of the search results list.
+Windows XP – Click Start and then select All Programs → Accessories → System Tools. Click on System Restore.;
+, You will be presented with a list of available restore points. Compare dates to find one that was created before DirectX was updated. Click the “Scan for affected programs” to ensure that DirectX will be rolled back.
+
+
+Remember, anything that was installed or updated between the point and now will be removed. Any programs that were installed then but are gone now will be reinstalled.
+ Once you’ve chosen your restore point, wait for the restore to be completed. The restore process can take a significant amount of time. The computer will restart during the restore process, and then Windows will load with a message confirming that the restore was successful.
+ Once Windows starts again, open the Run window by pressing Windows key + R, type in “dxdiag”, and press Enter. This will open the DXDiag tool, which will check your system and report the version of DirectX that is installed.
+
+
+The DirectX version will be listed at the bottom of the System Information section on the first tab.
+You must have some version of DirectX installed with Windows. Windows 7 and later cannot have anything less than DirectX 11 installed.

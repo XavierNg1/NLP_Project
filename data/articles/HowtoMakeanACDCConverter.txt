@@ -1,0 +1,17 @@
+ A transformer contains 2 magnetically coupled wire windings. One winding is called the primary. The primary is driven by the main AC supply. The other winding is called the secondary. The secondary serves as the power input to the AC DC converter. This transformer and all of the other items needed to build the AC DC converter are readily available at electronic stores and hobby stores.
+
+
+Size the transformer windings. AC mains provide 120 volts AC. If 120 volts AC were directly converted to a DC voltage, the resulting DC voltage would be far too high a voltage for use by appliances and devices. The primary and secondary windings of the transformer are scaled to each other in order to produce a lower voltage on the secondary winding.
+Choose a secondary winding. The AC output of the secondary winding should be rated as the same voltage of DC that is being created.;
+, This transformer connection has no polarity and may be connected either way.
+ The transformer connections and the connections to the marked inputs of the rectifier package have no polarity and may be connected either way.
+
+
+Build a full wave rectifier. This rectifier can be built up from 4 discrete rectifying diodes, rather than using a rectifier bridge package. The diodes will be marked to show a positive (cathode) end and a negative (anode) end. Connect the 4 diodes into a loop. Connect the cathode of diode 1 to the cathode of diode 2. Connect the anode of diode 2 to the cathode of diode 3. Connect the anode of diode 3 to the anode of diode 4. Connect the cathode of diode 4 to the anode of diode 1.
+Wire the discrete rectifier to the transformer secondary. The transformer secondary should be connected to the cathode of diode 3 and the cathode of diode 4. There is no required polarity for these connections. The positive output of the rectifier is at the point where the cathodes of diodes 1 and 2 join. The negative output of the rectifier is at the point where the anodes of diodes 3 and 4 join.
+ Attach a polarized capacitor across the output connections of the rectifier. The positive terminal of the polarized capacitor must connect to the positive output of the regulator. This capacitor should be sized such that the capacitance in farads (F) is equal to (5 times the current to be supplied by the AC DC converter) divided by (transformer secondary rating times 1.4 times frequency). Frequency varies from country to country, but is typically either 50 Hertz (Hz) or 60 Hertz.
+ Choose a commercially available voltage regulator designed to control the output of the AC DC converter to the desired output voltage. The regulator will be a 3-pin device. The regulator pins will be a common, an input from the smoothing capacitor and an output of the regulator. This regulator output also will be the final output of the completed AC DC converter.
+
+
+Wire the regulator as directed in the manufacturer's data sheet. There probably will be a noise suppression capacitor specified in the regulator manufacturer's data sheet. Acquire and install that capacitor per the manufacturer's data sheet for the regulator.
+

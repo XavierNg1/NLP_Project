@@ -1,0 +1,19 @@
+ This is very important because if you do something wrong, you could ruin your whole site. So get in the habit of using a child theme to store your changes.
+
+
+Log onto your Host and create a new directory under themes and title it MY THEME-child inserting the name of your theme in place of "my theme".
+So if you are using kippis theme it would be kippis-child.;
+,
+
+
+Under the directory you just created make a new file called style.css.
+Copy and paste the following code inside it.
+,
+
+
+Log onto your admin area and go to Administration Panels > Appearance > Themes. You will see your child theme listed there. Click Activate.
+ The code that is causing the continue reading button is inside of content.php. You need to copy this file from the Parent theme into your new child theme.
+ In kippis theme you will find it on line 41. If it changes or if you are using another theme you need to slowly look through content.php (in the child theme)for a line like this <?php $show_the_excerpt = $kippis_is_smartphone;
+
+,,,, The excerpt should be gone and you should view nothing but the entire article on your home page. The continue reading button should also be gone. Now your visitors can see everything!
+

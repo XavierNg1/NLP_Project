@@ -1,0 +1,162 @@
+ By separating variables, we want to ensure that each of the two variables occurs on a different side of the equation. Thus, the first step in solving such an equation is to confirm that you can write function f(x,y)=dydx{\displaystyle f(x,y)={\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}} in terms of two other functions g(x){\displaystyle g(x)} and h(y){\displaystyle h(y)} - in order words, the function is able to be separated. 
+
+ dydx=g(x)h(y){\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}=g(x)h(y)}
+
+Sometimes, the differential equation is given in Pfaffian form, as seen below.
+
+
+P(x,y)dx+Q(x,y)dy=0{\displaystyle P(x,y){\mathrm {d} }x+Q(x,y){\mathrm {d} }y=0}
+
+
+
+Checking that the variables are separable for this equation is a similar process.
+;
+, Multiply by dx{\displaystyle {\mathrm {d} }x} and divide by h(y).{\displaystyle h(y).}
+
+ 1h(y)dy=g(x)dx{\displaystyle {\frac {1}{h(y)}}{\mathrm {d} }y=g(x){\mathrm {d} }x}
+
+
+, Now that you are in this form, you can integrate your equation and solve for y if necessary. Sometimes, it is better to leave your solution in implicit form, as it can be very difficult to solve explicitly for more complicated expressions.
+
+ ∫1h(y)dy=∫g(x)dx{\displaystyle \int {\frac {1}{h(y)}}{\mathrm {d} }y=\int g(x){\mathrm {d} }x}
+
+
+, Solutions to differential equations are not unique, because antiderivatives are not unique. The non-uniqueness of these solutions is seen by the arbitrary constants that come out. For first-order ordinary differential equations, it is often the case that there is one constant. When C{\displaystyle C} is solved for, simply plug the result in to obtain the particular solution given initial conditions.
+
+
+
+dydx=x−5y2{\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}={\frac {x-5}{y^{2}}}}
+
+
+, Get the y{\displaystyle y}'s on one side and the x{\displaystyle x}'s on the other.
+
+
+∫y2dy=∫(x−5)dx{\displaystyle \int y^{2}{\mathrm {d} }y=\int (x-5){\mathrm {d} }x}
+
+
+, Keep in mind that the constant of integration C{\displaystyle C} is arbitrary, so it is only needed on one side. This also means that we don't need to have it under the root. We have thus solved the original equation up to a constant. As this is a first-order equation, we obtained one arbitrary constant, as expected.
+
+
+13y3=x2−5x+Cy3=3x2−15x+Cy=3x2−15x3+C{\displaystyle {\begin{aligned}{\frac {1}{3}}y^{3}&=x^{2}-5x+C\\y^{3}&=3x^{2}-15x+C\\y&={\sqrt{3x^{2}-15x}}+C\end{aligned}}}
+
+
+,
+
+
+dydx=2xy+5y{\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}=2xy+5y}
+
+
+,
+
+
+dydx=y(2x+5)1ydy=(2x+5)dx{\displaystyle {\begin{aligned}{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}&=y(2x+5)\\{\frac {1}{y}}{\mathrm {d} }y&=(2x+5){\mathrm {d} }x\end{aligned}}}
+
+
+, Note that in the last line, eC{\displaystyle e^{C}} is arbitrary, so we can write it as C{\displaystyle C} again.
+
+
+∫1ydy=∫(2x+5)dxln⁡y=x2+5x+Cy=ex2+5x+C=Cex2+5x{\displaystyle {\begin{aligned}\int {\frac {1}{y}}{\mathrm {d} }y&=\int (2x+5){\mathrm {d} }x\\\ln y&=x^{2}+5x+C\\y&=e^{x^{2}+5x+C}\\&=Ce^{x^{2}+5x}\end{aligned}}}
+
+
+, Notice that with this form, the equation is set to 0.
+
+
+sin⁡xcos⁡2ydx+cos⁡xsin⁡2ydy=0{\displaystyle \sin x\cos 2y{\mathrm {d} }x+\cos x\sin 2y{\mathrm {d} }y=0}
+
+
+y(π4)=π2{\displaystyle y\left({\frac {\pi }{4}}\right)={\frac {\pi }{2}}}
+
+
+, Divide each side by cos⁡2y{\displaystyle \cos 2y} and cos⁡x.{\displaystyle \cos x.}
+
+
+tan⁡xdx+tan⁡2ydy=0{\displaystyle \tan x{\mathrm {d} }x+\tan 2y{\mathrm {d} }y=0}
+
+
+, The advantage of a differential equation in Pfaffian form is that the constant of integration is isolated on one side, allowing for easy evaluation.
+
+
+−ln⁡|cos⁡x|−12ln⁡|cos⁡2y|=C{\displaystyle -\ln |\cos x|-{\frac {1}{2}}\ln |\cos 2y|=C}
+
+
+, In order to factor out a 1/2, we can rewrite −ln⁡|cos⁡x|{\displaystyle -\ln |\cos x|} as −12ln⁡|cos2⁡x|.{\displaystyle -{\frac {1}{2}}\ln |\cos ^{2}x|.} Taking advantage of the arbitrary nature of the constant C,{\displaystyle C,} we can get rid of the 1/2 and the natural logarithm as well.
+
+
+12ln⁡|cos2⁡xcos⁡2y|=Ccos2⁡xcos⁡2y=C{\displaystyle {\begin{aligned}{\frac {1}{2}}\ln |\cos ^{2}x\cos 2y|&=C\\\cos ^{2}x\cos 2y&=C\end{aligned}}}
+
+This is the general solution. 
+
+
+,
+
+
+cos2π4cos⁡2(π2)=C−12=C{\displaystyle {\begin{aligned}\cos ^{2}{\frac {\pi }{4}}\cos 2\left({\frac {\pi }{2}}\right)&=C\\-{\frac {1}{2}}&=C\end{aligned}}}
+
+
+, This solution is not unique.
+
+
+cos2⁡xcos⁡2y=−12{\displaystyle \cos ^{2}x\cos 2y=-{\frac {1}{2}}}
+
+
+,
+
+Alison prefers to drink her coffee at 70°C, but it was served to her at 90°C. While waiting in a 20°C room, she measures her drink to be 85°C two minutes after serving. How much longer does she have to wait before drinking her coffee?
+
+
+, This law states that the rate of heat loss of a body is proportional to the difference in temperature between the body and its surroundings. Below, T(t){\displaystyle T(t)} is the temperature of Alison's coffee as a function of time, TE{\displaystyle T_{E}} is the temperature of the environment, and k{\displaystyle k} is a proportionality constant characteristic of the system. The presence of this additional constant means that we need some additional information about the temperature of the coffee besides its initial temperature and the temperature of the environment.
+
+
+dT(t)dt=−k(T(t)−TE){\displaystyle {\frac {{\mathrm {d} }T(t)}{{\mathrm {d} }t}}=-k(T(t)-T_{E})}
+
+
+, 
+
+Separate variables.
+
+
+1T−TEdT=−kdt{\displaystyle {\frac {1}{T-T_{E}}}{\mathrm {d} }T=-k{\mathrm {d} }t}
+
+
+
+Plug in all known values, and integrate. We know that TE=20,{\displaystyle T_{E}=20,} T(t){\displaystyle T(t)} is going from 90 to 85, and t{\displaystyle t} is going from 0 to 2.
+
+
+∫90851T−20dT=−k∫02dt{\displaystyle \int _{90}^{85}{\frac {1}{T-20}}{\mathrm {d} }T=-k\int _{0}^{2}{\mathrm {d} }t}
+
+
+k=12ln7065{\displaystyle k={\frac {1}{2}}\ln {\frac {70}{65}}}
+
+
+
+
+, This time, the final temperature is 70.
+
+Set up the equation. We put a twiddle in the integral because it cannot be the same as a boundary.
+
+
+∫90701T−20dT=−k∫0tdt~{\displaystyle \int _{90}^{70}{\frac {1}{T-20}}{\mathrm {d} }T=-k\int _{0}^{t}{\mathrm {d} }{\tilde {t}}}
+
+
+
+Evaluate the integral.
+
+
+∫90701T−20dT=ln57{\displaystyle \int _{90}^{70}{\frac {1}{T-20}}{\mathrm {d} }T=\ln {\frac {5}{7}}}
+
+
+
+Plug in the value for k{\displaystyle k} and solve for t.{\displaystyle t.}
+
+
+t=ln5712ln7065≈9.08{\displaystyle t={\frac {\ln {\frac {5}{7}}}{{\frac {1}{2}}\ln {\frac {70}{65}}}}\approx 9.08}
+
+
+
+The answer is the time it takes for the coffee to cool after serving. Since Alison has already waited 2 minutes, she must wait an additional 7 minutes before she can drink.
+ After solving for k,{\displaystyle k,} we can obtain the curve that we wanted. As we can see above, the curve asymptotically approaches room temperature, and the point where the temperature is 70°C is shown. Note that since our independent variable is time, the function is only defined for t≥0.{\displaystyle t\geq 0.}
+
+
+T(t)≈20+70e−0.037t{\displaystyle T(t)\approx 20+70e^{-0.037t}}
+
+

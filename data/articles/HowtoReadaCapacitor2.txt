@@ -1,0 +1,48 @@
+ Older capacitors are less predictable, but almost all modern examples use the EIA standard code when the capacitor is too small to write out the capacitance in full. To start, write down the first two digits, then decide what to do next based on your code:If your code starts with exactly two digits followed by a letter (e.g. 44M), the first two digits are the full capacitance code. Skip down to finding units.
+If one of the first two characters is a letter, skip down to letter systems.
+If the first three characters are all numbers, continue to the next step.
+ The three-digit capacitance code works as follows:
+
+
+If the third digit is 0 through 6, add that many zeroes to the end of the number. (For example, 453 → 45 x 103 → 45,000.)
+If the third digit is 8, multiply by 0.01. (e.g. 278 → 27 x 0.01 → 0.27)
+If the third digit is 9, multiply by 0.1. (e.g. 309 → 30 x 0.1 → 3.0)
+
+, The smallest capacitors (made from ceramic, film, or tantalum) use units of picofarads (pF), equal to 10-12 farads. Larger capacitors (the cylindrical aluminum electrolyte type or the double-layer type) use units of microfarads (uF or µF), equal to 10-6 farads.A capacitor may overrule this by adding a unit after it (p for picofarad, n for nanofarad, or u for microfarad). However, if there is only one letter after the code, this is usually the tolerance code, not the unit. (P and N are uncommon tolerance codes, but they do exist.)
+
+, If your code includes a letter as one of the first two characters, there are three possibilities:
+
+
+If the letter is an R, replace it with a decimal point to get the capacitance in pF. For example, 4R1 means a capacitance of 4.1pF.If the letter is p, n, or u, this tells you the units (pico-, nano-, or microfarad). Replace this letter with a decimal point. For example, n61 means 0.61 nF, and 5u2 means 5.2 uF.A code like "1A253" is actually two codes. 1A tells you the voltage, and 253 tells you the capacitance as described above., Ceramic capacitors, which are usually tiny "pancakes" with two pins, typically list the tolerance value as one letter immediately after the three-digit capacitance value. This letter represents the tolerance of the capacitor, meaning how close the actual value of the capacitor can be expected to be to the indicated value of the capacitor. If precision is important in your circuit, translate this code as follows:B = ± 0.1 pF.
+C = ± 0.25 pF.
+D = ± 0.5 pF for capacitors rated below 10 pF, or ± 0.5% for capacitors above 10 pF.
+F = ± 1 pF or ± 1% (same system as D above).
+G = ± 2 pF or ± 2% (see above).
+J = ± 5%.
+K = ± 10%.
+M = ± 20%.
+Z = +80% / -20% (If you see no tolerance listed, assume this as the worst case scenario.)
+
+, Many types of capacitors represent the tolerance with a more detailed three-symbol system. Interpret this as follows:The first symbol shows minimum temperature. Z = 10ºC, Y = -30ºC, X = -55ºC.
+The second symbol shows maximum temperature. 2 = 45ºC, 4 = 65ºC, 5 = 85ºC, 6 = 105ºC, 7 = 125ºC.
+The third symbol shows variation in capacitance across this temperature range. This ranges from the most precise, A = ±1.0%, to the least precise, V = +22.0%/-82%. R, one of the most common symbols, represents a variation of ±15%., You can look up the EIA voltage chart for a full list, but most capacitors use one of the following common codes for maximum voltage (values given for DC capacitors only):0J = 6.3V
+
+1A = 10V
+
+1C = 16V
+
+1E = 25V
+
+1H = 50V
+
+2A = 100V
+
+2D = 200V
+
+2E = 250V
+One letter codes are abbreviations of one of the common values above. If multiple values could apply (such as 1A or 2A), you'll need to work it out from context.
+For an estimate of other, less common codes, look at the first digit. 0 covers values less than ten; 1 goes from ten to 99; 2 goes from 100 to 999; and so on.
+ Old capacitors or capacitors made for specialist use may use different systems. These are not included in this article, but you can use this hints to guide your further research:
+
+
+If the capacitor has one long code beginning with "CM" or "DM," look up the U.S. military capacitor chart.If there is no code but a series of colored bands or dots, look up the capacitor color code.

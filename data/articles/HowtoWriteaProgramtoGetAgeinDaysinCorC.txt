@@ -1,0 +1,14 @@
+ To calculate the age of the program-user in days, you'll first have to know his age in years and months. So, you'll have to ask the user to input is age in years and the remaining months. Try using the cin function in C++ or scanf function in C for this step.;
+, You will have to convert both, the years and months into days.
+
+
+One non-leap year has 365 days. Leap year has an additional day (total = 366 days). For the sake of simplicity of the program, we will take one year as 365 days. Therefore, to convert years into days, the conversion formula is:Days = Years x 365
+
+For an accurate result, you can use 1 year = 365.25 days
+
+
+One month has 30, or 31 or 28 days (in case of February). February can have 29 days, if the year is a leap year. Again, for the sake of simplicity, we take 1 month = 30 days. Therefore, to convert months into days, the conversion formula is:Days = Months x 30
+
+
+, Once the calculation is complete, the result has to be displayed to the user. Try using the cout function in C++ or printf function in C for this step.
+

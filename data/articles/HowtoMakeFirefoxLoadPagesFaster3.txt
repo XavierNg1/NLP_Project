@@ -1,0 +1,11 @@
+ Pipelining allows Firefox to open more than one connection to a server. This will only help if you have a good broadband connection. Even then, this only gives a small speed boost, and can even cause slight slowdowns or errors. The difference in results are probably dependent on the way the web page is structured, so give it a try and see if it helps for your most visited websites., Open a new Firefox tab and enter about:config in the address bar.
+ Search for network.http.pipelining using the bar at the top of the page. This entry should be set to "Status: default" and "Value: false." Double-click that line to change it to "Status: user set" and "Value: true."
+
+, There are quite a few related settings you can change as well. Adjusting most of these is not recommended unless you know what you are doing. Here are a couple you could try:
+
+
+network.http.pipelining.maxrequests was capped at 8 for many years, but now the limit (and the default) is 32. Raising this number could cause errors. Lowering it will reduce speed but free up your bandwidth a little.
+Enabling network.http.pipelining.aggressive doubles down on the tactic: when it works, you'll be even faster, and when it doesn't, you'll be much slower.If you route all your internet use through a proxy, you'll need to enable network.http.proxy.pipelining. (You'll need to do a new search to find this.)
+
+, If pipelining is slowing you down, or causing errors in your web pages, return it to the default "false" position. You can still implement pipelining for secure websites by enabling network.http.pipelining.ssl. Most pipeline-related errors come from proxy servers, which are not an issue with secure connections.Despite the problems with "unsecure" connections, pipelining does not open you up to any security risks.
+

@@ -1,0 +1,13 @@
+ If you receive the ping report ping: cannot resolve example.com: Unknown host, it usually means that the you have misspelled the host name. Try another host name like “example.com”. If that reports “Unknown host,” then the problem is most likely the address of the domain name server.
+ If the problem is the address of the domain name server, ping using the host’s IP address instead of its name (e.g., 192.0.32.10). If this is successful then either the address you are using for the domain name server is incorrect or it is unreachable or down.
+
+
+If you receive the ping report ping: sendto: No route to host, this may mean the address of the gateway is incorrect or that the connection from your computer is not up and running.
+ Ping 127.0.0.1 This is the IP address of your own computer. If this fails, the network configuration or the NIC (Network Interface Card) may be bad. Replace the NIC or add a new one.
+ If you are connected directly to your router, check the cable from your computer to your router, especially if the connection worked previously. If the Ethernet cable came loose, it could be causing the connection to fail.
+
+
+If you are connecting wirelessly, ensure that you are properly connected to the network, and that the correct security password has been entered.
+ Most computer NIC ports have an indicator light that indicates a good connection and one that blinks as data is transferred. As the ping command transmits packets at about 1 per second, you should be able to see the data light blink.
+ Check that the router’s indicator light is lighting up properly (and no faults), including the one that indicates a good connection to your computer. If a fault indicator is on, follow the cable from your computer to the router to make sure it is properly connected, then call your cable or broadband provider if necessary.
+

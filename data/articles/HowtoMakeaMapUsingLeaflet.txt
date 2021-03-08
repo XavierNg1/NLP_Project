@@ -1,0 +1,149 @@
+ If you don't already have a webpage you want to insert the map into, you can use the following HTML5 template; save it as ‘map_page.html’ :
+
+
+
+
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My Leaflet Map</title>
+</head>
+ 
+<body>
+  <!-- Content goes here. -->
+</body>
+</html>
+
+
+;
+, Your webpage will need to include the Leaflet JavaScript file and CSS file. To do this, paste the following line of code into your HTML file, inside the <head></head> area, on a new line below the <title></title>:
+
+
+
+
+<script src="http:</script>
+<link rel="stylesheet" href="http:
+
+
+
+
+, Leaflet will display the map inside an HTML element, so you need to provide one for it. Paste the following line of markup inside the <body></body>:
+
+
+
+
+<div id="map"></div>
+
+
+
+
+, You need to set how large the map will be when it is displayed, and you should use CSS to do this. You can add the following to the document <head></head>:
+
+
+
+
+<style>
+  #map {
+    height: 500px;
+    width: 700px;
+  }
+</style>
+
+
+
+
+, To start writing the JavaScript code that sets up the map, you'll need to add a <script></script> area to the <body></body> after the map container div. Also inside of this, you can create the map object by calling the map() function of the leaflet object, like this:
+
+
+
+
+<script type='text/javascript'>
+  var map = L.map('map');
+</script>
+
+
+
+
+, A Leaflet map's view property is what manages what part of of the map you see. Set your map's view to center on the coordinates (off the coast of central Africa):Note: Unlike the OpenLayers mapping library, Leaflet deals with coordinates in the format .
+
+
+
+
+map.setView(, 2);
+
+
+
+
+, Leaflet maps have layers which are stacked on top of one another, and are what you actually see in a map. There are several types of layers: UI (markers and popups), Raster (tile layers), Vector (shapes), and Other. Tile layers are are the standard 'base' layers, and can come from map providers like Google Maps, MapQuest, or OpenStreetMaps. Each layer has a urlTemplate, which tells Leaflet where the layer information is coming from. You should also provide attribution information to tell visitors where the map tiles are from.
+
+
+
+
+var layer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http:OpenStreetMap</a> contributors'
+});
+layer.addTo(map);
+
+
+
+
+, Markers show the location of a point on a map. In Leaflet, markers are a type of ‘UI layer’, so they can be directly added to maps. Simply copy the following line of code into your <script></script> element:.
+
+
+
+
+var marker = L.marker();
+marker.addTo(map);
+
+
+
+
+, Popups are used to add contextual information to a marker or other layer.
+
+
+
+
+marker.bindPopup('Chad');
+marker.openPopup();
+
+
+
+
+, In Leaflet, a polyline is a line with multiple segments, and is a type of ‘vector layer’.
+
+
+
+
+var polyline = L.polyline([
+  , , ])
+polyline.addTo(map);
+
+
+
+
+, Styles determine what the vector looks like, and include line colour, line style, fill colour, opacity, and so on. Different style options apply to different types of vectors; for instance, a polyline has no area, so the fill options don't apply.
+
+
+
+
+polyline.setStyle({
+  color: 'red'
+});
+
+
+
+
+, Controls let you interact with the map in various ways, or show additional information about the map. A scale control displays how large distances are on the map, which changes when the map is zoomed.
+
+
+
+
+var scale = L.control.scale()
+scale.addTo(map);
+
+
+
+
+,

@@ -1,0 +1,37 @@
+ Any files on your flash drive will be deleted when the Windows installation files are added. Your USB drive will need to have at least 4 GB of storage in order to create the installer., This utility allows you to turn your flash drive into a Windows 10 installation drive. You don't need to be using Windows 10 to use this tool. You can download this tool for free from Microsoft at microsoft.com/en-us/software-download/windows10.
+
+
+Nearly all newer computers are 64-bit, but you can check to determine what version of Windows you are currently running in your System Properties window. Click here for more details.
+You'll need to have administrator access to use this tool.
+ You'll be asked to select what version of Windows 10 you want to download. If you are upgrading from a Home or Starter version of Windows 7 or 8, select "Windows 10 Home". If you are upgrading from a Professional or Ultimate version of Windows 7 or 8, select "Windows 10 Pro". If you aren't upgrading from Windows 7 or 8, select whichever version of Windows you purchased a product key for.
+
+
+Upgrading from Windows 7 or 8 is free until July 2016.
+ This will allow the tool to automatically format your flash drive so that you can boot from it and install the Windows files. Any files already on the flash drive will be deleted, so make sure you've saved anything important.
+ The tool will need to download nearly 4 GB of data, which can take a significant amount of time on slower connections. Click "Finish" after the download is complete.
+ If you're creating this flash drive to install Windows 10 on a computer that is currently running Windows 7 or 8 in order to take advantage of the free upgrade, you must use the Upgrade utility first before performing a clean install. This registers your computer with Microsoft to make up for the fact that you don't have a product key. If you don't upgrade first, you won't be able to activate Windows 10 unless you purchase a product key or reinstall your old version of Windows and try again.
+
+
+Run the Windows 10 Media Creation Tool on the computer that you want to upgrade to Windows 10.
+Select "Upgrade this PC now" and follow the prompts to install Windows 10. You won't lose any of your files. After upgrading to Windows 10, you can use your new flash drive to perform a clean install at any time on that PC.
+ Once your flash drive is ready, you can use it to start installing Windows 10. Make sure that if you're trying to upgrade an older version of Windows, you have a valid Windows 10 product key or have already registered the computer using the free upgrade method in the previous step.
+ The process for this varies a lot depending on the computer that you are using. Traditionally, you would open the BIOS menu and change the order of drives in the BOOT menu. Newer computers use UEFI instead of BIOS, which needs to be accessed in a special way if you're using Windows 8.
+
+
+Reboot your computer and look for the BIOS or BOOT menu key when the manufacturer logo appears. Press this key to open the menu and change your boot order. The setup key is typically F2, F10, F11, or Del. Make sure that the USB drive is listed as the primary boot device.
+If your computer boots directly into Windows 8 without showing the manufacturer logo, open the Charms bar (⊞ Win+C) and select "Settings". Click the "Change PC settings" option and then select "Update and recovery". Select the "Recovery" option and click "Restart now" under "Advanced Startup". In the boot menu, select "Troubleshoot" and then "Advanced options". Click the "UEFI Firmware Settings" to open your UEFI menu. You can then open the BOOT menu and change the order so that the USB drive is the primary drive., You'll see a message on your screen prompting you to press a key to boot from "CD or DVD". This is correct, and will display if you've selected your USB drive as the primary boot device.
+ Before Windows 10 installs, you'll be prompted to select your language and keyboard settings. The language that you install will be your default base language.
+ The installation process will begin.
+ When prompted to enter a product key, click the "Skip" or "Do this later" option. After installation, Windows 10 will automatically check with Microsoft to see if the Windows 10 upgrade was activated for that computer. If you purchased a product key for Windows 10, enter it now.
+ This will allow you to completely format the partition and install a fresh copy of Windows. Installing Windows this way will delete anything that is currently on the drive.
+ If you're replacing an existing version of Windows, select the partition that it was on. It can be difficult to get multiple versions of Windows working together correctly, so it's recommended that you only have one version of Windows installed.
+
+
+You can delete and extend existing partitions to create a new partition for your Windows installation. This will delete any data on the existing partitions.
+It is recommended that you install Windows 10 on a partition at least 20 GB in size.
+ Most of the installation process is hands-off. You will be asked to set a few privacy options. Read each option carefully before moving on to the next screen. You can change these settings later from the Settings menu.
+ After the installation process is complete, you'll be taken to your new Windows 10 desktop. Long-time Windows users will find things in familiar spots, but a lot has changed. Click here for tips on getting the most out of Windows 10.
+
+
+If your screen is stretched or doesn't fit your monitor, you'll need to install drivers from your graphics card manufacturer. The three main manufacturers are Nvidia, AMD, and Intel. Refer to your computer's documentation to determine which company made your graphics card. Windows Update may be able to install these drivers for you, but it has the hardest time with graphics drivers.
+

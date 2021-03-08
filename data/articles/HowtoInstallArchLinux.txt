@@ -1,0 +1,139 @@
+ Arch Linux can be downloaded in ISO format, which allows you to burn it to a blank CD or DVD and install it from the burnt disc.;
+, If you are using Windows 7, 8, or OS X, you can right-click on the ISO and select "Burn disc image". If you are using an older version of Windows, you will need to install a burning program such as ImgBurn.
+
+
+
+Click here for detailed instructions on burning ISO files to DVD.
+You can use the free USBWriter utility to turn a USB drive into an Arch Linux installation drive if the computer you are installing on doesn't have a disc drive.
+ Installing Arch Linux (or any operating system) will erase all of the data on the hard drive partition it is installed on. If you are only using one partition on your computer, Arch Linux will erase all of the data on it.
+
+
+
+Click here for detailed instructions on backing up data.
+ Reboot the computer.
+ On most newer computers, this is F12, though the exact key should be displayed on the screen during boot up. If there is no key to change boot order, press the BIOS Setup key (usually F1, F2, F10, or Del).
+ If you are in the BIOS Setup menu, there is typically a Boot menu that allows you to set the order. You will want to set the drive that contains your Arch Linux installation media as the primary drive.
+ If you don't see this option, or your computer boots to your existing operating system, then you likely did not select the correct boot drive.
+
+
+If you are booting in UEFI Mode, the menu option will read Arch Linux archiso x86_64 UEFI.
+ Arch Linux will attempt to establish a connection to the internet during the boot process. You can test to ensure it worked by pinging a website. For example, enter the following to ping Google: ping -c 3 www.google.com.
+
+
+If you aren't able to establish a connection, ensure that your Ethernet cable is securely connected or you are close enough to your wireless router to get a good signal.
+ For simplicity's sake, this guide will explain how to install Arch Linux from a blank disk without booting two operating systems. Type sgdisk --zap-all /dev/sda and press ↵ Enter. This will erase all of the data on the hard disk, so make sure anything important is backed up first.
+
+
+If you want to install Arch Linux as a second operating system alongside Windows, you will need to install Windows first. The above command will delete everything on the disk, including any Windows installation.
+ Type efivar -l and press ↵ Enter. If the UEFI entries in the results are filled in, then you are using UEFI mode instead of legacy BIOS. This is important when it comes time to make new partitions.
+ The process for both will be explained below.
+ This tool will allow you to create GPT partitions for UEFI systems. You will need to create an extra EFI partition as well. In this example, we will be creating a Root partition, a Home partition, and an EFI partition. If you need to create MBR partitions, skip to the next step.
+
+
+Start cgdisk by typing cgdisk /dev/sda and pressing ↵ Enter.
+Select New and then press ↵ Enter to select the first sector. Type the size you want to make the Root partition (e.g. 20G for 20 gigabytes). Press ↵ Enter two more times to create the Root partition.
+Press ↓ until the remaining free space is selected. Press ↵ Enter to select the first sector. Type in the the size you want to make the Home partition. Make sure to leave about 500 MB for your EFI partition. Press ↵ Enter two more times to create the Home partition.
+Press ↓ until the remaining free space is selected. Press ↵ Enter to select the first sector, and then press ↵ Enter again to select the remaining free space (should be around 500 MB. Press ↵ Enter two more times to create the EFI partition.
+Select Write to write the new partitions to the disk. Type yes and choose Quit to exit cgdisk.
+ These partitions are required if you are using legacy BIOS boot. In this example, we will be creating a Root partition and a Home partition.
+
+
+Start fdisk by typing fdisk /dev/sda and pressing ↵ Enter.
+Type o and press ↵ Enter to create the partition table.
+Create the Root partition:
+
+Type n and press ↵ Enter to create a new partition.
+Press ↵ Enter when prompted to select the partition type.
+Press ↵ Enter when prompted to select the partition number.
+Press ↵ Enter when prompted to select the first sector.
+Type the amount of space you want to create the partition for (e.g. +20G) and press ↵ Enter
+
+
+
+Create the Home partition:
+
+Type n and press ↵ Enter to create a new partition.
+Press ↵ Enter when prompted to select the partition type.
+Press ↵ Enter when prompted to select the partition number.
+Press ↵ Enter when prompted to select the first sector.
+Press ↵ Enter when prompted to select the amount of space you want to create the partition for. This will create the partition with all the remaining free space.
+
+
+Type w and press ↵ Enter to write the changes to the disk.
+ Creating the partitions only allocates space on the disk. You will need to format this space so that Arch Linux can be installed and access the space. The following commands are for the example above, so if you set up your partitions differently, adjust the commands accordingly.
+
+
+Type mkfs.ext4 /dev/sda1 and press ↵ Enter to format the root partition.
+Type mkfs.ext4 /dev/sda2 and press ↵ Enter to format the home partition.
+Type mkfs.fat -F32 /dev/sda3 and press ↵ Enter to format the EFI partition (GPT only).
+ Once your partitions are created and formatted, you'll need to mount them so that Arch Linux can point to them. Again, these instructions are based on the example above, so adjust your commands accordingly.
+
+
+Mount the root partition to /mnt by typing mount /dev/sda1 /mnt and pressing ↵ Enter.
+Create the directory for your home partition after mounting root by typing mkdir /mnt/home and pressing ↵ Enter.
+Mount the home partition in the new directory by typing mount /dev/sda2 /mnt/home.
+Create a directory for the EFI partition (if necessary). Type mkdir /mnt/boot and pres ↵ Enter. Mount the EFI partition to the new directory by typing mount /dev/sda3 /mnt/boot and pressing ↵ Enter.
+ The mirrors are servers that allow you to download packages required to install Arch Linux. it is a good idea to change your primary mirror to the closest physical mirror available.
+ Visit archlinux.org/mirrorlist/ on another computer and use the tool to find the closest mirror to your physical location. Copy the address down. It may help to write down a few mirrors in case one is offline.
+ You can add additional mirrors underneath in the order you want them to try to connect.
+ Type pacstrap -i /mnt base base-devel and press ↵ Enter. This will load the essential files onto the root directory. The process may take a few minutes.
+ This file allows Arch Linux to identify your partition's file systems. Type genfstab -U -p /mnt >> /mnt/etc/fstab and press ↵ Enter.
+ Type arch-chroot /mnt /bin/bash and press ↵ Enter.
+ This file will determine what monetary units and time format to use. Type nano /etc/locale.gen to edit the Locale file.
+
+
+For US users, remove the # in front of the en_US.UTF-8 UTF-8 entry. Users from other countries should remove the # for their specific format.
+Type locale-gen to create the file using the settings in the locale.gen file.
+Type echo LANG=en_US.UTF-8 > /etc/locale.conf to set your language as the system-wide language. Replace en_US.UTF-8 with whatever you chose above.
+Type export LANG=en_US.UTF-8 to finish the location setup.
+ After setting your location information, you'll need to configure your timezone to get the correct time.
+
+
+Type ls /usr/share/zoneinfo/ to view all of the available timezones. There will be directories with subzones available.
+Create a link to your chosen timezone by typing ln -s /usr/share/zoneinfo/Zone/Subzone /etc/localtime. For example, to set the timezone for new York, you would type ln -s /usr/share/zoneinfo/America/New_York /etc/localtime and press ↵ Enter.
+ Arch Linux recommends setting your clock to UTC, which is different than the clock standard used by Windows but less buggy. It won't display in UTC unless your locale displays UTC. To set your clock to UTC, type hwclock --systohc --utc
+
+, This is the name that your computer will display when connected to the network. Replace myhostname in the following commands with whatever you'd like.
+
+
+Type echo myhostname > /etc/hostname and press ↵ Enter
+
+Type nano /etc/hosts and press ↵ Enter to open the hosts file. Add your myhostname to the two localhost.localdomain entries.
+ If you have a wired network connection, enter the following command. If you have a wireless network connection, skip down to the next step.
+
+
+Type ip link and press ↵ Enter to determine the interface name of your network adapter.
+Type systemctl enable dhcpcd@interfacename.service and press ↵ Enter, replacing interfacename with the name you retrieved using ip link.
+ If you have a wireless network, enter in the following commands to enable it.
+
+
+Type ip link and press ↵ Enter to determine the interface name of your network adapter.
+Type pacman -S iw wpa_supplicant and press ↵ Enter to install the necessary software.
+Type pacman -S dialog and press ↵ Enter to install the Wi-Fi menu.
+Type pacman -S wpa_actiond and press ↵ Enter to install the software that allows you to automatically connect to known networks.
+Type systemctl enable netctl-auto@interfacename.service to turn on the auto-connection service for your wireless adapter.
+Next time you reboot, type wifi-menu interfacename to access the wireless menu for your adapter. After you connect to the network for the first time, you will be automatically connected for subsequent boots.Do not enter this now, or you will lose access to your network.
+ Type passwd and press ↵ Enter to set your root password. You will need this password whenever you make changes to the root.
+ This is the software that loads the operating system when the computer start. One of the most popular and easy-to-install bootloaders is GRUB. The procedure varies slightly depending on whether you are using a UEFI or legacy BIOS motherboard.
+
+
+UEFI:
+
+Download Grub: Type pacman -S grub and press ↵ Enter.
+At this point, you'll need to install UEFI Boot Manager. If you do not install EFI Boot Manager, you would face problems while installing boot loader.
+Type pacman -S grub efibootmgr then ↵ Enter.
+Install Grub: Type grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck and press ↵ Enter.
+Type grub-mkconfig -o /boot/grub/grub.cfg and press ↵ Enter.
+
+
+BIOS:
+
+Type pacman -S grub and press ↵ Enter.
+Type grub-install --target=i386-pc --recheck /dev/sda and press ↵ Enter.
+Type grub-mkconfig -o /boot/grub/grub.cfg and press ↵ Enter.
+ Type exit and press ↵ Enter. Then type reboot and press ↵ Enter.
+
+
+Be sure to remove the installation disc before rebooting the computer.
+ Use the root password you created earlier to log in to Arch Linux. If you didn't set a password, you can use the default password root., If you'd prefer to use Linux with a GUI (graphical user interface), you can install a variety of different options. Click here for detailed instructions on installing GNOME, one of the most popular GUIs.
+

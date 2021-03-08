@@ -1,0 +1,76 @@
+ Notice that the term with B{\displaystyle B} in it goes to 0, but A{\displaystyle A} doesn't. Furthermore, multiplying everything by that factor makes sure that we don't get any division by 0 problems.
+
+
+3x−4(x−3)(x+2)=Ax−3+Bx+2{\displaystyle {\frac {3x-4}{(x-3)(x+2)}}={\frac {A}{x-3}}+{\frac {B}{x+2}}}
+
+
+3x−4x+2=A+B(x−3)x+2{\displaystyle {\frac {3x-4}{x+2}}=A+{\frac {B(x-3)}{x+2}}}
+
+
+A=3(3)−4(3)+2=1{\displaystyle A={\frac {3(3)-4}{(3)+2}}=1}
+
+This is a much more efficient method of solving for the coefficients as long as we think about which terms get sent to 0. Technically, when substituting these values, we are taking limits. But since our functions are easy to work with (polynomials), we don't need to worry about tricky discontinuity issues.
+ This solves for B.{\displaystyle B.} Generally, we multiply by the factor and plug in the value of the root. That solves for the coefficient of the fraction whose denominator has that factor.
+
+
+3x−4x−3=A(x+2)x−3+B{\displaystyle {\frac {3x-4}{x-3}}={\frac {A(x+2)}{x-3}}+B}
+
+
+B=3(−2)−4(−2)−3=2{\displaystyle B={\frac {3(-2)-4}{(-2)-3}}=2}
+
+
+,
+
+
+∫3x−4x2−x−6dx=12x2+x+ln⁡|x−3|+2ln⁡|x+2|+c{\displaystyle \int {\frac {3x-4}{x^{2}-x-6}}{\mathrm {d} }x={\frac {1}{2}}x^{2}+x+\ln |x-3|+2\ln |x+2|+c}
+
+
+, We use the previous example of a function whose factors in the denominator have multiplicity 3, but our numerator is a bit different.
+
+
+∫x2−4x+9(x+2)3dx=∫(A(x+2)3+B(x+2)2+Cx+2)dx{\displaystyle \int {\frac {x^{2}-4x+9}{(x+2)^{3}}}{\mathrm {d} }x=\int \left({\frac {A}{(x+2)^{3}}}+{\frac {B}{(x+2)^{2}}}+{\frac {C}{x+2}}\right){\mathrm {d} }x}
+
+
+, This immediately gets us A{\displaystyle A} if we plug in x=−2.{\displaystyle x=-2.}
+
+
+x2−4x+9=A+B(x+2)+C(x+2)2{\displaystyle x^{2}-4x+9=A+B(x+2)+C(x+2)^{2}}
+
+
+A=(−2)2−4(−2)+9=21{\displaystyle A=(-2)^{2}-4(-2)+9=21}
+
+However, we find that B{\displaystyle B} and C{\displaystyle C} cannot be obtained directly. 
+
+
+,
+
+Let's start with where we are.
+
+
+x2−4x+9=A+B(x+2)+C(x+2)2{\displaystyle x^{2}-4x+9=A+B(x+2)+C(x+2)^{2}}
+
+
+
+We see that the largest term containing a B{\displaystyle B} is a term with an x.{\displaystyle x.} If we differentiate both sides, we know by the power rule that all that is left will be a constant. Meanwhile, A{\displaystyle A} goes away because that is already a constant. What does C{\displaystyle C} do? We can do the derivative for C,{\displaystyle C,} or we can recognize that, whatever it is, there will still be an (x+2){\displaystyle (x+2)} in the derivative, so after we plug in x=−2,{\displaystyle x=-2,} the term with C{\displaystyle C} vanishes as well.
+
+
+2x−4=B+2C(x+2){\displaystyle 2x-4=B+2C(x+2)}
+
+
+B=2(−2)−4=−8{\displaystyle B=2(-2)-4=-8}
+
+
+
+
+, Differentiating twice sends both A{\displaystyle A} and B{\displaystyle B} to 0, while only C{\displaystyle C} is left over. Be careful with the coefficient, though. 
+
+
+2=2C→C=1{\displaystyle 2=2C\to C=1}
+
+
+,
+
+
+∫x2−4x+9(x+2)3dx=∫(21(x+2)3+−8(x+2)2+1x+2)dx=−2121(x+2)2+8x+2+ln⁡|x+2|+c{\displaystyle {\begin{aligned}\int {\frac {x^{2}-4x+9}{(x+2)^{3}}}{\mathrm {d} }x&=\int \left({\frac {21}{(x+2)^{3}}}+{\frac {-8}{(x+2)^{2}}}+{\frac {1}{x+2}}\right){\mathrm {d} }x\\&=-{\frac {21}{2}}{\frac {1}{(x+2)^{2}}}+{\frac {8}{x+2}}+\ln |x+2|+c\end{aligned}}}
+
+

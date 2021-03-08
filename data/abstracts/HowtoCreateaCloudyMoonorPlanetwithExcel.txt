@@ -1,0 +1,22 @@
+
+Modified: Open a new Excel workbook and create 3 worksheets named: Data, NEW Chart and Saves unless working from the workbook formerly created, Program Excel to Show Spheroids Visiting Their Home Planet.
+Open and set Preferences from under the Excel menu.
+Warning: Do not access the Chart worksheet as the recalculation time is inordinately high.
+Also, only columns E and F of the Data worksheet will be charted, so the other columnar variables and data aren't needed for this article to succeed.
+Create Defined Name variables (only the pertinent ones will be discussed; the rest may be safely ignored).
+Input variable values in row 4:
+
+
+MODIFIED: A4: input "=Base*12/(VARIABLE*0.35)*PI()"; Insert New Comment and edit in "Original formula =Base*12/(VARIABLE/1)*PI() but now is =Base*12/(VARIABLE*0.35)*PI()".
+MODIFIED: Input the Column Headings across row 5.
+Save the workbook.
+
+,
+Enter the columnar formulas:
+
+
+Cell A6: Input "=IF(ODD(Spheroids)=Spheroids,0,Tip)" and do Insert Comment and edit comment "Original formula =IF(ODD(Spheroids)=Spheroids,0,Tip)".
+Create the Chart.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

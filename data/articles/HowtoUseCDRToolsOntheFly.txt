@@ -1,0 +1,18 @@
+ Check to see if mkisofs and cdrecord are installed:mkisofs --version; cdrecord --version . If you do not get two new lines detailing the versions of both apps, then go and install them.;
+,, The code below is to be pasted as one line and will burn the avi file onto your CD media:mkisofs -V "Volume.Title" -q -J -r Film.Name.DVDRip.XviD-GRoUP.avi | cdrecord dev=9,0,0 driveropts=burnfree gracetime=0 -eject -overburn gracetime=0 tsize=`mkisofs -print-size -q -J -r Film.Name.DVDRip.XviD-GRoUP.avi`s -dao -pad -v -
+
+
+-V means volume title. Otherwise known as the CD name when you insert it into a CD drive. It can contain spaces if the name is encased in the quotes. The title may not be larger than 32 characters.
+-q means quiet. If we do not put this option down, then the cd burning progress display will be flooded with unwanted updates from mkisofs.
+the -J option means to create a Joliet file system (improves windows compatibility).
+the -r option enables the Rock Ridge extensions for the file system (improves Linux compatibility).
+the | (pipe) symbol is the most important part of the operation. The data being created by mkisofs is being fed into cdrecord at the same time data is being written onto the disk.
+
+
+tsize= is another important option. Since this cd is written is -doa mode cdrecord is going to want the track size in sectors. So what we do is: `mkisofs -print-size -q -J -r Film.Name.DVDRip.XviD-GRoUP.avi`s . And of course remember the s and the end.
+
+
+Remember a single dash - and the end of the line of code because this dash tells cdrecord that the file it is writing to is coming from the pipe. It's important to use the same set of options in the main mkisofs call and the one with the -print-size switch because many options (like -J and -r) have a small impact on the size.
+ The volume name, and the full file name which cannot be longer than 64 characters that has to be entered twice.
+ Hit enter and wait about 205 seconds and then the CD should be finished. Label the CD how you want and your burned film is ready to watch on your TV using a compatible player.
+

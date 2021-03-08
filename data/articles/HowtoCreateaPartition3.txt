@@ -1,0 +1,15 @@
+ There is no way to shrink a volume in Windows XP, which means that you can't create a partition out of the free space on your hard drive. You will need to use a partition utility like Partition Wizard or GParted to shrink your existing volume., Use the partition tool you downloaded to resize one of your existing partitions. The amount you can shrink the partition is based on the location of unmovable files, and this amount can be increased by defragmenting your hard drive.
+
+
+See this guide for details on using GParted to change your partition size.
+See this guide for details on using Partition Manager to change your partition size.
+ Once you've resized your old partition, you will have a chunk of unallocated space. You can use this to create your new partition. You can either use all of the available unallocated space or you can set it to a portion of it.
+
+
+You can either create the partition using the partition tool that you downloaded, or you can use Windows Disk Management as described in the first section.
+ Before you can use your new partition, you will need to give it a file system and a label.
+ If you resized your operating system's partition, it could cause Windows to not be able to boot. In order to fix this you will need to perform a repair installation of Windows. You will need the Windows XP installation disc for this process.
+
+
+See this guide for detailed instructions on repairing your Windows XP installation.
+

@@ -1,0 +1,32 @@
+ While you can use third-party tools to make a multi-partition thumb drive, Windows will only ever be able to read from the first partition. You can use the same tools to change which partition is visible, but only one will be visible at a time. There is no way around this in Windows.
+
+There is no way to create multiple partitions on a USB drive using the Disk Management tool. You must use a third-party utility.
+If you plug the USB drive into a Linux or Mac computer, all of the partitions will be visible.;
+, When you partition the drive, you will lose all the data stored on it, so move any important files to your computer's hard drive before beginning.
+ This utility will allow you to create multiple partitions on the USB drive, as well as switch the active partition in Windows.
+
+
+You can download Bootice from majorgeeks.com/files/details/bootice.html
+
+
+, You'll need a program that can open RAR files in order to extract Bootice.
+
+
+7-Zip is a free archive program that can extract RAR files. You can download it from 7-zip.org. Once you've installed 7-Zip, right-click on the downloaded RAR file and select "7-Zip" → "Extract Here."
+The free version of WinRAR rarlabs.com can open RAR files as well, but the program has a trial period.
+ You'll find this in the folder that was created when you extracted the file. You'll likely be prompted by Windows to confirm that you want to run the program.
+ Click the "Destination Disk" menu and select your USB drive. Make sure your computer's hard drive is not selected, or you could lose all of your data. Use the size and the drive letter to determine that you've selected the correct drive.
+ This will open the Partition Manager section of the program.
+ This will open the "Removable disk repartitioning" window.
+, By default, the available space will be split evenly between four partitions. You can appropriate this however you'd like. If you want less than four partitions, set the ones you don't want to "0."
+
+, These labels will help you identify the different partitions. Remember, Windows will only show one partition at a time, so having unique labels can be helpful.
+ At the bottom of the window, you can choose between MBR and GPT table types. MBR is fine if you're just planning on using the partitions for data, or to boot older systems. Select GPT if you want to boot computers with UEFI or want to use the more modern system.
+
+
+If you plan on booting from the GPT USB drive, check the "Create ESP partition" box.
+ You'll be warned that all data will be deleted on the drive. The format process should only take a few moments to complete.
+ Once the format is complete, the first partition will appear in Windows as a removable drive. You can use this partition just like you would a USB drive.
+ Since Windows will only ever show one partition on the USB drive, you can use Bootice to change which partition is displayed. This won't affect any of the data on the partitions, and you can switch whenever you'd like.Select the partition you want to make active in the Partition Manager section of Bootice.
+Click the "Set Accessible" button. After a moment, the active partition will switch and Windows will show the new partition.
+

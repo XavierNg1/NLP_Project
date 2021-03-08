@@ -1,0 +1,56 @@
+ Notepad isn’t any old text-editing program, because when you save it you can add any extension. Command Prompt or CMD is like DOS but it has loads more functionality.
+
+
+So at the Command Prompt to make things easier to use you need to right click at the blue bar at the top and select properties. Under the Tab options you need to make sure QuickEdit Mode is enabled. Click OK. A box will appear to say if you want to apply them or save them. Click on the box saying ‘Save properties for future windows with the same title’. Click OK.;
+, You might think at this point that it is going to ruin my system. It can if you have no idea what you are doing. So to start, you need to know how to navigate between directories.
+
+
+Type CD c:\ then hit ↵ Enter. You will have noticed that you have gone from your documents and settings directory to your C drive's root directory. If you follow the following instructions, you are going to see every file and folder that is in that directory.
+Type DIR and hit ↵ Enter. Now you should see a long list. The rows of text in the last column tells you the names of the directories branching from the root directory (the top) of your C drive or in any other case, the directory you are currently in. If it is a folder, you will see <dir> in the column left of the name column in the same row. If it is as file it will not have <dir> next to it and will have a file extension (*.txt, *.exe, *.docx) at the end of the name.
+ Type MKDIR mybatch. You just ordered windows to make a new directory or folder called mybatch. If you want proof it is there type DIR again and look around. You should see it as a DIR.
+ If you don’t have Internet connection you can skip this part but if you do you need to know it. Ping means to send packets of data around a website and it to return back to you. If it does it means the website is working and is alive.
+
+
+You are going to test the Google search engine as an example. Type PING Google.com then hit ↵ Enter. You should see something saying like ‘Reply from 72.14.207.99: bytes=32 time=117ms TTL=234.’ It might have this about four times. If it says that it cannot ping your Internet connection isn’t working or the website is dead. It will also say how many packets it sent, received and lost. If it lost 0, the website is working 100%.
+ This is easy. Just type something like mspaint.exe and it will open the paint program. It is harder to open a program within a directory and you already did this using the user interface when you opened Command Prompt and Notepad earlier.
+
+
+The way to open a file or program from inside a directory is harder. Assuming you still have notepad open type hello world. Then click File > Save As > Helloworld.txt in mybatch folder in your C directory. Reopen Command Prompt and you will be in your documents and setting folder. Now type cd c:\mybatch, hit ↵ Enter and then type helloworld.txt .You will not normally need to open Command Prompt again but it makes it a little bit more challenging because you don’t normally start in the C directory.
+ To delete a directory you need to use the RMDIR command. For example, RMDIR deleteme basically means "delete the directory named "deleteme". Even though the command is RMDIR, it will work with files as well as sub-directories or folders.
+
+
+A little tip: when using the RMDIR command, navigate to the directory that contains the file or sub-directory you would like to delete, and then type RMDIR * with * being the name of the file or sub-directory you want to delete. Navigate to the C drive then type RMDIR deleteme. Then it will ask if you are sure you want to delete the directory. Type Y for yes and then hit ↵ Enter. You have just deleted the folder called "deleteme".
+ You can use any of these two commands; they are both exactly the same, REN and RENAME so make a directory called "idon’tlikemyname" then type REN idon’tlikemyname mynameisgood. You have just renamed the directory. Now you can delete it.
+ You do not need to buy expensive software for something you can do for free. In Notepad type:
+
+
+
+
+
+
+
+@echo off
+Echo this is a batch file
+Echo I can tell the time
+Echo tell the time
+Time /t
+
+
+
+
+
+You have just told it to echo three sentences. This is writing that will be shown on the screen. @echo off means that you won’t see on the screen the commands because if you did it would say:
+
+
+
+
+Echo hello
+Hello
+
+
+
+
+
+The command time /t tells you the time! You must put "/t" or it will want you to change the time.
+Go to File > Save As > (Save it in your mybatch folder) called Timefirst.bat. Notice that is has been saved as a bat file and not text. Don’t get confused and called it Timefirst.batch because it will not work.
+

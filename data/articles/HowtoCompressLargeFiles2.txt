@@ -1,0 +1,24 @@
+ The built-in compression software on most operating systems will cap out at 4 GB of data in a single ZIP file. If you need to compress a file that's larger than that, you'll need to download and install a third-party compression program.
+
+
+Keep in mind that if you're sharing your compressed files, the recipient will need a program that can open the type of file you create.
+7-Zip is one of the most popular open-source options for Windows. You can download it for free from 7-zip.org/download.html.
+WinRAR is a powerful paid program for Windows and Mac that can perform very efficient compression.
+Archiver is one of the most popular Mac compression programs that allows you to create archives in 7-Zip and RAR format, as well as its own proprietary format.;
+, With their default settings, 7-Zip and WinRAR will typically compress more efficiently than your operating system's built-in compression software. You can increase the compression even more by adjusting some settings.
+
+
+
+7-Zip - Right-click on the file or folder you want to compress and select "7-Zip" → "Add to archive". In the "Add to Archive" menu, you can set your compression options. Note that increasing compression levels can significantly increase the time it takes to compress. For maximum compression, set "Compression level" to "Ultra". Set the "Dictionary size" to a value ten times lower than your available memory. A larger dictionary means better compression, but the memory requirements are ten times the dictionary size. Set "Solid Block size" to "Solid" for the best compression.WinRAR - Right-click on the file or folder you want to compress and select "Add to archive" with the WinRAR logo. Note that increasing compression levels can significantly increase the time it takes to compress. In the General tab, select "Best" from the "Compression method" drop-down menu. Ensure "Dictionary size" is set to "5096 KB". Check the "Create solid archive" box. Click the Advanced tab and then the Compression button. Set "Text compression" to "Auto".
+
+Archiver - Archiver doesn't have as many settings as its Windows counterparts, but you can set the compression level when creating an archive. Note that increasing compression levels can significantly increase the time it takes to compress.
+ One of the benefits of using a third-party compression program is the ability to create a multi-part archive. For example, you could take a 12 GB folder and split it into three smaller files that could each fit onto a DVD. You'll need all of the parts to extract the original files, so make sure you don't lose any of them.
+
+
+
+7-Zip - When in the "Add to Archive" menu, you can use the "Split to volume" drop-down menu to select from a variety of preset sizes. You can also type in a custom size. Each part will be the size you designated, with the last part being whatever is left over.
+
+WinRAR - In the General tab of the "Archive name and parameters" menu, use the "Split to volumes, size" drop-down menu to select the size you want each part to be. You can also type in custom sizes, and use the second drop-down menu to designate the unit (byte, kilobyte, megabyte, etc.). Each part will be the size you designated, with the last part being whatever is left over.
+
+Archiver - Click the "Split" button in the Archiver menu after adding a file. Set the size that you want each part to be. You can then set the compression settings for the file.
+

@@ -1,0 +1,5 @@
+ Always indicate the moving piece, rather than the originating square. Even if there are 2 bishops on the board, it will be obvious that only 1 of them could legally move to the destination square indicated.
+ The move B-QB4 should more effectively be described as B-B4 because it is obviously impossible for that bishop to move to KB4.
+ Always indicate the piece being captured, rather than the destination square. It is common for a piece to be threatened from 2 sources. The opening declaration of the annotation will define the piece performing the capture.
+ Castling is a special move that allows both the king and a rook to move on the same turn in a specific pattern. As this pattern requires the king to move 2 squares, and is the only time the king is allowed to move 2 squares, annotate a castling by annotating the king move. The rook move will be assumed.
+

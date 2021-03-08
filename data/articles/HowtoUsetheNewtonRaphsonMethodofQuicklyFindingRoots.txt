@@ -1,0 +1,25 @@
+, In cell A1, type, "Square" (w/o the quotation marks) and adjust column width to fit the phrase. Select column B and Format Cells Number for 14 decimal places. Expand the column width if need be.
+ In this example, it is 685.
+ In cell A2, type "InitialROOTGuess" (w/o the quotation marks). Since 25^2 = 625, and 30^2 = 900, we will use 25. Please input 25 in cell B2
+
+, Doing so will assign the defined variable name "Square" to cell B1, as well as the defined variable name "InitialROOTGuess" to cell B2.
+
+
+The Newton-Raphson method is that guess X(1) (read X sub 1) = X(0) + f(X(0))/f'(X(0)). In this case, where x^2 = 685, f(x) = x^2 - 685 = 0 and f'(x) = 2x. Therefore, into cell B3, please input the following formula (w/o quotation marks) "=InitialROOTGuess-((InitialROOTGuess^2-Square)/(2*InitialROOTGuess))"
+
+, The formula will be taking each previous guess and using it to get a better current answer by a factor of 2 more significant digits each computation.
+
+
+You should see the correct answer, 26.1725046566048, which is the square root of 685, in cell B6. Please notice how fast the Newton-Raphson method arrived at the correct answer.
+ For simple expressions such as 4x^3, to obtain the derivative, one takes the exponent down and multiplies it as a (combined) coefficient, and reduces the exponent by 1 power, so the derivative of x^n = nx^(n-1) and the derivative of 4x^3 = 12x^2. If there is a constant such as π in the expression as a factor, that is treated as the 4 just was above in 4x^3 -- it remains. If there is a lone x, such as in the expression 4x^3 - x, the derivative of that is 12x^2 - 1, since x^0 = 1. if there is a constant added such as 4x^3 + 10, it is dropped, and the derivative is 12x^2.
+, In the new cell A1, type "Power" (w/o quotation marks). Format cell C1 with a border and red font and input 10 into cell C1.
+ when Power = 10. Therefore, we have (a+10) = a^10, so F(X) = a^10 - a - 10 and F'(x) = 10*a^9 - 1. Our InitialROOTGuess will be 1 since 1+10 = 11 and 1^10 = 1, but 2+10 = 12 and 2^10 = 1024 (which is much too large). We do not know the "square", which is actually a^10 -- not a square -- or sum (a+b) yet. Do not input an InitialROOTGuess yet however. Let's preserve the square root function we made in columns A and B by moving over and working in column C.
+ Select cell C1 and Insert Name Define Powerful for it. You may type "Powerful" into B1 if you so choose. Select cell C3 and input the following formula (w/o quotes): "=InitialGuess+(((InitialGuess)^Powerful)-Powerful-InitialGuess)/(Powerful*(-InitialGuess)^(Powerful-1)". The evaluated result should equal 2. This has modified the derivative in the denominator somewhat by dropping the constant; in this case, that is necessary, along with changing the sign of the InitialGuess in the final term. Call it the Garthwaite method if you please -- it is part of trying to arrive at the base instead of the root.
+,
+
+
+An InitialGuess of -1 will result in the answer -1.24233531640777 and that is also correct in that (-1.24233531640777 + 10) = -1.24233531640777^10 = 8.75766468359223
+
+, You're done!
+
+,,,

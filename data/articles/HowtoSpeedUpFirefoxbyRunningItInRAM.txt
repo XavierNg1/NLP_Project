@@ -1,0 +1,41 @@
+ Double-click on the ZIP file and extract the contents of the archive to the folder "C:\PortableFirefox". You can use a different directory, but you will have to adapt the rest of this article to that directory.;
+, Double-click RAMDisk.exe. This is a self-extracting archive. When asked where to save the extracted files, save them on your Desktop. This creates a directory called __RAMDisk.
+ Inside you will find a ZIP file named Installfiles.zip. Double click this file. Extract the contents of the archive to your Desktop. You should now have a folder on your desktop named INSTALL.
+
+
+
+Open Windows Control Panel (found by clicking Start > Control Panel). Switch the Control Panel to Classic View if it's not already. Now click the icon labeled Add New Hardware'. When the window opens, click Next. Windows will search for new hardware added to your computer. When it's finished, click Yes, I have already connected the hardware, and then click Next. You should now be looking at a long list of hardware available on your computer.
+
+Scroll to the very bottom of the list and select Add a new hardware device and then click Next.
+When the next window comes up, pick the second option, Install the hardware that I manually select from a list (Advanced). Then click Next.
+On the next window, leave the selection "Show All Devices" and click Next.
+On the next window, click the button Have Disk. A small window will pop up asking you to insert the manufacturer's installation disk. Click the Browse button and browse your way to the INSTALL folder that was created on your Desktop.
+Once in that directory, select the RAMDisk.inf file. Click Open. Now that you're back at the pop up window, click OK.
+Back to the main window, click Next. On the Ready to install window, click Next. Windows will throw up a window complaining that the hardware has not passed WHQL testing. Just click Continue Anyway.
+Click Finish. If Windows says anything about restarting your computer, just say No. It's not necessary.
+
+
+
+Back at the Control Panel, click the icon for System. When the window pops up, click the Hardware tab. Then click the Device Manager button.
+
+You're now looking at all the devices installed on your computer. Scroll down the list down until you see RAM Disk. Click the + sign to open this tab. Now right click Ramdisk , and select Properties.
+A new window will open. Click the tab Ram Disk Properties. The options on this page are pretty self explanatory. You can set the drive letter that you want RAMDisk to emulate. In this case, pick B:. You can also set the size of the drive. 32 MB is plenty for Portable Firefox. You can also set the File system. Either file system will work fine.
+Once you have set everything, click OK. Close all windows and the Control Panel. If you open My Computer, you will see you new RAM disk as whatever drive letter you chose. If you double click the drive, you will see that it's empty. If there are any files in there, just delete them.
+ Your RAM disk are completely erased when you shut down Windows. You need two files to copy Firefox back into the RAM disk when Windows starts, and then to save settings, to copy everything from the RAM disk back onto the C drive. The first one copies everything from C:\portablefirefox to B:\firefox. The second one copies everything back from the B drive to the C drive.
+
+
+Open Notepad (usually found at Start > All Programs > Accessories), and type in this line:
+XCOPY C:\portablefirefox\*.* B:\firefox\ /E /Y /C
+
+
+Save the file as C:\portablefirefox\load_firefox.bat. Under Save as type, select All Files.
+
+Click New in Notepad. Create a new file and add this line:
+XCOPY B:\firefox\*.* C:\portablefirefox\ /E /Y
+
+
+Now save this file as C:\portablefirefox\save_firefox.bat. Again, Under Save as type, select All Files.
+ This way the file is run every time Windows starts. You can also create a folder on the Start Menu called Shutdown (certain versions of Windows only), and place a link to the second batch file in that folder. That way everything is copied back to the C drive when Windows shuts down.
+ A command window opens showing you that Windows is copying all the files from C:\portablefirefox to B:\firefox.
+ Right click the file PortableFirefox.exe, and pick Send To > Desktop (Create shortcut). This will place a shortcut to Portable Firefox that you can click to run Firefox.
+

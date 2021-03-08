@@ -1,0 +1,17 @@
+ Computers that come with OS X version 10.7 and later have AirDrop automatically enabled, and can be found in the left menu of any Finder window. You can enable AirDrop on older Macs through the Terminal, which can be found in the Utilities folder of your Applications folder.
+
+
+Enter the following command into the Terminal: defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+
+Press Return and then enter the following command: killall FinderAirDrop will now be available in Finder.
+In order to enable AirDrop on an unsupported Mac, it still needs to have Lion (OS X 10.7) installed.;
+, In order for AirDrop to work, it will need to be open on both Macs. If both computers on running OS X 10.7 or later, they will not need to be on the same network. Older versions will need to be connected to the same network as the other computer.
+
+
+You can open AirDrop by clicking the button in the left menu of any Finder window, or by pressing Command+Shift+R.
+Make sure that AirDrop is open on both Macs.
+ It may take a moment for the other computer to appear in your AirDrop window. When the connection is made, an icon representing the other Mac will show up in your AirDrop window. If the other Mac is not appearing, make sure that it is relatively close to your Mac, or on the same network.
+ Drop the files directly on to the icon of the Mac that you want to transfer to. Click the “Send” button to send the request to the other Mac.
+ Once the first Mac has set files to transfer, a message will appear on the second Mac asking what you would like to do with the files. Click “Save” to save the files to the computer.
+ Once you have confirmed the file transfer, a progress bar will appear and you can monitor the transfer. The “Downloads” icon in your Dock will help you track the transfer.
+ Your newly transferred files will appear in your Downloads folder, which is located in the Home directory.

@@ -1,0 +1,35 @@
+ Omconfig and racadm should be included in those packages.
+
+
+
+ 
+
+
+
+Upgrade your Drac firmware to the latest version.
+
+
+
+
+
+
+
+Install ipmitool
+
+
+
+
+
+
+Set the Dell Drac Password. See setting Dell Drac Passwords
+;
+,
+
+
+
+Two ways to tell your DRAC card version _before_ installing racadm (so you know which racadm to symlink to /usr/bin/racadm ) :
+First way is to use the IPMI version. DRAC4's are version 1.5 and DRAC5's are 2.0.
+Run the command, /opt/bcs/bin/ipmitool mc info |grep IPMI
+On a DRAC4 host= IPMI Version : 1.5
+On a DRAC5 host= IPMI Version : 2.0
+What's nice about ipmitool is that you don't have to have any OpenManage packages installed to use it. But that's not going to work when they release DRAC6 if DRAC6 is IPMI version 2.0 as well.

@@ -1,0 +1,16 @@
+ If your Firefox crashes as soon as you open it, try this method instead. Firefox should open in Safe Mode.If a "Profile Manager" window opens, select your profile, and hold Shift again while clicking Start Firefox or a similar button.
+ If you can't find the Firefox icon, try this instead. Open the Windows Start menu, and type in Run. open the program with that name once it appears on your search.
+
+
+You can also open this by pressing the Windows key + R., The Windows Run box will let you type commands to open Firefox in safe mode. Type one of these commands below exactly as they appear, then hit Enter. Move on to another command if it doesn't work.firefox -safe-mode
+"C:\Program Files\Mozilla Firefox\firefox.exe" -safe-mode
+"C:\Program Files (x86)\Mozilla Firefox\firefox.exe" -safe-mode
+
+, If you use Safe Mode frequently, make life easier by creating a shortcut. Follow these steps to do so:
+
+
+Find "firefox.exe" on your computer.
+Right-click the file and select "Copy," then right click the blank space on your desktop or a folder and select "Paste."
+Right-click the new file and select "Properties."
+In the "Target" field, add a space followed by the words -safe-mode.If the new shortcut does not work, add quotation marks at the beginning and end of the Target field.
+

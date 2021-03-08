@@ -1,0 +1,17 @@
+, and the colon (:) to create a conditional statement. After the question mark (?) you have two statements divided up by the colon (:). The first statement (before the colon) will be executed if the condition is true and the second (after the colon) if the condition is false.
+
+
+For example: (#1)
+This illustrates the short-hand way of creating the following "if" statement:　　x = (numberOne == 1) ? true : false;
+Normal one:　　if(numberOne == 1){　　　　x = true;　　}else{　　　　x = false;　　}
+An even shorter way of writing that would be:　　x = (number == 1);For example: (#2)
+If x is true, then doThis().
+Normal:　　if(x){　　　　doThis();　　}
+Shorthand:　　(x) ? doThis() : 0;
+Even shorter:　　x && doThis()For example: (#3)
+If x is false, then doThis().
+Normal:　　if(!x){　　　　doThis();　　}
+Shorthand:　　(!x) ? doThis() : 0;
+Even shorter:　　x || doThis()
+
+,

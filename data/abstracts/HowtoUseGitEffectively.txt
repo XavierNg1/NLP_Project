@@ -1,0 +1,34 @@
+
+Understand the idea of a repository.
+Understand the idea of the remote origin.
+Understand other key Git terminology.
+Understand Git's first use case: periodic checkpointing through commits.Each git commit creates a checkpoint that you can revert to at a later stage if you discover subsequent problems.
+Understand Git's second use case: working with multiple branches.
+Understanding Git's third use case: collaborating across different devices and users, possibly including a web-based access from the remote origin.
+Appreciate the relationship between the three Git use cases.
+Understand how Git can be used for various combinations of these use cases.
+Understand the "commit often" philosophy in Git.
+Understand the standard workflow for making changes to the Git repository: save, (stage-and-commit), and push.
+Understand the role of staging and committing.
+Understand some more subtleties associated with staging.
+Know how to see the current git status to get a better sense of what to stage and what to commit.
+Add commit messages when committing!,
+Whenever you want your changes to be available in the remote origin and to other collaborators, you should push them.
+Understand how to use git branches to better manage your code changes.
+To create a new branch, with a name that is not currently in use, you can run one of these:
+
+git branch branchName
+
+or
+
+git checkout -b branchName
+
+
+The first of these commands creates a new branch with that name, but does not switch to it.
+Understand what happens to stages and commits when switching between branches using git checkout
+
+Committed changes do not get transferred.
+Appreciate that once you are working in a separate branch, this reduces the barrier to pushing to the remote origin.
+Merge with master (or whatever branch you want to merge into) with caution.
+Understand how git fetch and git pull work.
+Understand how git push works.

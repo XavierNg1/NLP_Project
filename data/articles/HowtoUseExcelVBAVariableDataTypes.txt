@@ -1,0 +1,135 @@
+;
+, When VBA works with data, execution speed is partially a function of the number of bytes that VBA has at its disposal. Thus, the fewer bytes used by data, the faster VBA can access and manipulate the data.
+
+The Decimal data type is rather unusual because you can’t actually declare it. It is a subtype of a variant. You need to use the VBA CDec function to convert a variant to the Decimal data type.
+ The following list contains some examples of assignment expressions that use various variable types. The variable names are to the left of the equals sign. Each statement assigns the value to the right of the equals sign to the variable on the left.
+
+
+
+DataEntered = True
+DateStart = #04/18/2015#
+Interest_Rate = 0.025
+LoanAmount = 2000000.00
+MyNumber = TheNumber * 1.25
+UserName = “Terrence O'Malley”
+x = 10
+x = x + 1
+
+
+
+, If you attempt to use one of these words, you get an error message. For example, although the reserved word Next or True might make a very descriptive variable name, the following instructions generate a syntax error: Next = 64; True = True., If an instruction produces a strange error message, check the VBA Help system to ensure that your variable name doesn’t have a special use in VBA. If the Auto Syntax Check option is turned on you get the error: Compile error: Expected: variable. If Auto Syntax Check is turned off, attempting to execute this statement results in: Compile error: Syntax error. It would be more helpful if the error message were something like Reserved word was used as a variable., For integer calculations, you can use the Integer type which is limited to values less than or equal to 32,767. Otherwise, use the Long data type. Using the Long data type even for values less than 32,767 is recommended, because this data type may be a bit faster than using the Integer type. When dealing with Excel worksheet row numbers, you want to use the Long data type because the number of rows in a worksheet exceeds the maximum value for the Integer data type., Data stored as a Variant changes type, depending on what you do with it.
+
+The following procedure demonstrates how a variable can assume different data types:
+
+Sub VariantDemonstration()
+TheVar = “124”
+TheVar = MyVar / 2
+TheVar = ”Answer: ” & TheVar
+MsgBox TheVar
+End Sub
+In the VariantDemonstration procedure, TheVar starts out as a three-character string. Then this string is divided by two and becomes a numeric data type. Next, TheVar is appended to a string, converting TheVar back to a string. The MsgBox statement displays the final string: Answer: 62.
+
+
+To further demonstrate the potential problems in dealing with Variant data types, try executing this procedure:
+
+Sub VariantDemonstration2()
+TheVar = “124”
+TheVar = TheVar + TheVar
+TheVar = ”Answer: ” & TheVar
+MsgBox TheVar
+End Sub
+The message box displays Answer: 124124. This is probably not what you wanted. When dealing with variants that contain text strings, the + operator performs string concatenation.
+ Here’s a modified version of the previous procedure. This version displays the data type of TheVar at each step.
+
+You see that it starts out as a string, is then converted to a double, and finally ends up as a string again.
+
+Sub VariantDemonstration3()
+TheVar = “124”
+MsgBox TypeName(TheVar)
+TheVar = TheVar / 2
+MsgBox TypeName(TheVar)
+TheVar = “Answer: “ & TheVar
+MsgBox TypeName(TheVar)
+MsgBox TheVar
+End Sub
+
+
+
+, A user-defined data type can ease your work with some types of data.
+
+For example, if your application deals with customer information, you may want to create a user-defined data type named CustomerData:
+
+Type CustomerData
+Company As String
+Contact As String
+RegionCode As Long
+Sales As Double
+End Type
+
+
+
+,, Usually, you define an array. For example:
+
+Dim Customers(1 To 100) As CustomerData
+Each of the 100 elements in this array consists of four components (as specified by the user-defined data type, CustomerData).
+You can refer to a particular component of the record as follows:
+
+Customers(1).Company = “Ace Tools”
+Customers(1).Contact = “Tim Roberts”
+Customers(1).RegionCode = 1
+Customers(1).Sales = 150000.00
+
+
+You can also work with an element in the array as a whole. For example, to copy the information from Customers(1) to Customers(2), use this instruction:
+
+Customers(2) = Customers(1)
+
+
+The preceding example is equivalent to the following instruction block:
+
+Customers(2).Company = Customers(1).Company
+Customers(2).Contact = Customers(1).Contact
+Customers(2).RegionCode = Customers(1).RegionCode
+Customers(2).Sales = Customers(1).Sales
+
+
+
+, You refer to a specific element in the array by using the array name and an index number. For example, you can define an array of 12 string variables so that each variable corresponds to the name of a month. If you name the array MonthNaming, you can refer to the first element of the array as MonthNaming(0), the second element as MonthNaming(1), and so on, up to MonthNaming(11)., You can also specify the number of elements in the array. You do so by specifying the first index number, the keyword To, and the last index number — all inside parentheses.
+
+For example, here’s how to declare an array comprising exactly 100 integers:\
+
+Dim TheArray(1 To 100) As Integer
+
+
+
+,
+
+Therefore, the two statements that follow have the same effect:
+
+Dim TheArray(0 to 100) As Integer
+Dim TheArray(100) As Integer
+In both cases, the array consists of 101 elements.
+ If you would like VBA to assume that 1 is the lower index for all arrays that declare only the upper index, include the following statement before any procedures in your module: Option Base 1, VBA arrays can have up to 60 dimensions, although you’ll rarely need more than three dimensions (a 3-D array).
+The following statement declares a 100-integer array with two dimensions (2-D):
+
+Dim TheArray(1 To 10, 1 To 10) As Integer
+You can think of the preceding array as occupying a 10-x-10 matrix. To refer to a specific element in a 2-D array, you need to specify two index numbers. For example, here’s how you can assign a value to an element in the preceding array:
+TheArray(3, 4) = 125
+
+
+
+,, A dynamic array doesn’t have a preset number of elements.
+
+Dim TheArray() As Integer
+Before you can use a dynamic array in your code, however, you must use the ReDim statement to tell VBA how many elements are in the array. You can use a variable to assign the number of elements in an array.
+Often the value of the variable isn’t known until the procedure is executing. For example, if the variable x contains a number, you can define the array’s size by using this statement:
+
+ReDim TheArray (1 to x)
+
+
+You can use the ReDim statement any number of times, changing the array’s size as often as you need to. When you change an array’s dimensions the existing values are destroyed. If you want to preserve the existing values, use ReDim Preserve. For example:
+
+ReDim Preserve TheArray (1 to z)
+
+
+

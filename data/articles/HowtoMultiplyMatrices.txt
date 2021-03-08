@@ -1,0 +1,47 @@
+ You can only multiply matrices if the number of columns of the first matrix is equal to the number of rows in the second matrix.
+
+
+These matrices can be multiplied because the first matrix, Matrix A, has 3 columns, while the second matrix, Matrix B, has 3 rows.;
+, Create a new blank matrix that will mark the dimensions of the matrix product, the product of the two matrices. The matrix that represents the product of Matrix A and Matrix B will have the same number of rows as the first matrix and the same number of columns as the second matrix. You can draw blank boxes to indicate the number of rows and columns in this matrix.
+
+
+Matrix A has 2 rows, so the matrix product will have 2 rows.
+Matrix B has 2 columns, so the matrix product will have 2 columns.
+The matrix product will have 2 rows and 2 columns.
+ To find a dot product, you need to multiply the first element in the first row by the first element of the first column, the second element of the first row by the second element of the first column, and the third element in the first row by the third element in the first column. Then, add their products to find the dot product. Let's say you've decided to solve for the element in the 2nd row and 2nd column (bottom right) of the matrix product first. Here's how you do it:
+
+
+6 x -5 = -30
+1 x 0 = 0
+-2 x 2 = -4
+-30 + 0 + (-4) = -34
+The dot product is -34 and it belongs on the bottom right of the matrix product.
+
+When you multiply matrices, the dot product will go in the position of the row of the first Matrix and the column of the second matrix. For example, when you found the dot product of the bottom row of Matrix A and the right column of Matrix B, the answer, -34, went in the bottom row and right column of the matrix product.
+ Let's say you want to find the term on the bottom left of the matrix product. To find this term, you simply have to multiply the elements on the bottom row of the first matrix with the elements in the first column of the second matrix and then add them up. Use the same method you used to multiply the first row and column -- find the dot product again.
+
+
+6 x 4 = 24
+1 x (-3) = -3
+(-2) x 1 = -2
+24 + (-3) + (-2) = 19
+The dot product is -19 and it belongs on the bottom left of the matrix product.
+ To find the term on the top left of the matrix product, start by finding the dot product of the top row of Matrix A and the left column of Matrix B. Here's how you do it:
+
+
+2 x 4 = 8
+3 x (-3) = -9
+(-1) x 1 = -1
+8 + (-9) + (-1) = -2
+The dot product is -2 and it belongs on the top left of the matrix product.
+
+To find the term on the top right of the matrix product, just find the dot product of the top row of Matrix A and the right column of Matrix B. Here's how you do it:
+
+
+2 x (-5) = -10
+3 x 0 = 0
+(-1) x 2 = -2
+-10 + 0 + (-2) = -12
+The dot product is -12 and it belongs on the top right of the matrix product.
+ 19 should be in the bottom left, -34 should be on the bottom right, -2 should be on the top left, and -12 should be on the top right.
+

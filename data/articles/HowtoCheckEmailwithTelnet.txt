@@ -1,0 +1,33 @@
+ If you're using Windows, select Start > Run and type "cmd".
+
+
+For Windows Vista, 7, 8, & 10: You need to enable Telnet before attempting to use it. To do so, select Control Panel > Programs and Features > Turn Windows Features On or Off. Check "Telnet Client", then allow for it to configure. Telnet will now be enabled.
+For Mac: Open your Finder window. Select Applications > Utilities > Terminal.
+For Linux: Press Ctrl+Alt+T. Alternatively, you can open your Applications window and select Accessories > Terminal.;
+, Type “telnet emailprovider.com 110” in the command window. Your "emailprovider" is the name of your private email server, this usually comes after the @ sign in your email address.
+
+
+For example, if your email address is "hagrid@mail.comcast.net", you'll type "telnet mail.comcast.net 110" here.
+ Type "USER username" in the command window. Your "username" is what comes before the @ in your email address.
+
+
+For example, if your email address is "hagrid@mail.comcast.net", you'll type "USER hagrid" here.
+You may or may not see what you type at this step.
+ Type "PASS ". This is the password you use to access your email.
+
+
+For example, if your password is "norbert731", you'll type "PASS norbert731" here.
+Again you may or may not see what you type at this step.
+ Type “list”. You will see a numbered list of items that are represented by longer numbers. These labels look like "1 607" and "2 1323403". The first number is the position of the message in your inbox. The second number represents the exact size of the message in octets.One octet equals eight bits., For example, if you want to look at the message labeled "2 1323403", type "retr 2". You can replace the "2" with any other number to view other messages.
+ For example, if you want to delete message "1 607", type "dele 1".
+
+
+Type "List" again and you'll see that the message is now gone.
+ Type ”quit” to disconnect from your email server. Press Alt+F4 to close the application.
+
+
+For Mac: Type "quit" then press ⌘ Cmd+Q
+
+For Linux: Type "quit" then press Ctrl+C
+
+

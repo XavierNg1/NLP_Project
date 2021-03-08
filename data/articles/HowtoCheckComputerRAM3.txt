@@ -1,0 +1,14 @@
+ While you can check the installed RAM using the System Info window, it can be faster to work in the Terminal. You can quickly open the Terminal by pressing Ctrl+Alt+T.
+
+
+This process is for Ubuntu, but should work in other Debian distributions.
+ This will display a small readout about your installed memory.
+ The free -m command will display information about your RAM usage:The Total column will show how much RAM you have installed, in MB. This will be slightly different than the advertised amount on your RAM sticks. For example, 8 GB may be reported as 7997 MB.
+The Used column will show how much of your RAM is currently in use, and the Free column will show how much is available. RAM is meant to be used, so don't be alarmed if the majority of your RAM is in use.
+ There are several reasons that Ubuntu is not displaying all of the RAM that you have installed:
+
+
+If your operating system is 32-bits, Ubuntu will only recognize 4 GB of RAM, even if more is installed.
+Check that your RAM is all the same speed. Mismatched RAM can cause problems.
+Ensure that your RAM is properly seated. If the RAM is not inserted correctly, it won't be recognized by Linux.
+

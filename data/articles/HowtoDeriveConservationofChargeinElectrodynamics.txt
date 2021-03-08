@@ -1,0 +1,58 @@
+ We want to show that charge is locally conserved in this system. That is, any charge initially inside the volume that is found outside of the volume must have passed through the boundary. Below, ρ(r,t){\displaystyle \rho ({\mathbf {r} },t)} is the charge density, the source of the electromagnetic field. 
+
+
+Q=∫VρdV{\displaystyle Q=\int _{V}\rho {\mathrm {d} }V}
+;
+, Recall that current is the time rate of change of charge. Below, J{\displaystyle {\mathbf {J} }} is the current density. Integrating J{\displaystyle {\mathbf {J} }} over the entire surface gives current. However, there is an additional negative sign attached to the expression below, because when charge flows out as described by a positive derivative, it corresponds to a decrease in charge.
+
+
+I=dQdt=−∮SJ⋅dS{\displaystyle I={\frac {{\mathrm {d} }Q}{{\mathrm {d} }t}}=-\oint _{S}{\mathbf {J} }\cdot {\mathrm {d} }{\mathbf {S} }}
+
+
+, 
+
+
+dQdt=ddt∫VρdV=∫V∂ρ∂tdV{\displaystyle {\begin{aligned}{\frac {{\mathrm {d} }Q}{{\mathrm {d} }t}}&={\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{V}\rho {\mathrm {d} }V\\&=\int _{V}{\frac {\partial \rho }{\partial t}}{\mathrm {d} }V\end{aligned}}}
+
+
+, Recall that the divergence theorem states that the flux penetrating a closed surface S{\displaystyle S} bounding a volume V{\displaystyle V} is equal to the divergence of a vector field inside that volume.
+
+
+−∮SJ⋅dS=−∫V(∇⋅J)dV{\displaystyle -\oint _{S}{\mathbf {J} }\cdot {\mathrm {d} }{\mathbf {S} }=-\int _{V}(\nabla \cdot {\mathbf {J} }){\mathrm {d} }V}
+
+
+, We can put the expression under one integral because we are integrating over the same object.
+
+
+∫V∂ρ∂tdV+∫V(∇⋅J)dV=0∫V(∂ρ∂t+∇⋅J)dV=0{\displaystyle {\begin{aligned}\int _{V}{\frac {\partial \rho }{\partial t}}{\mathrm {d} }V+\int _{V}(\nabla \cdot {\mathbf {J} }){\mathrm {d} }V&=0\\\int _{V}\left({\frac {\partial \rho }{\partial t}}+\nabla \cdot {\mathbf {J} }\right){\mathrm {d} }V&=0\end{aligned}}}
+
+
+, Because the only quantity for which the integral is 0, is 0 itself, the expression in the integrand can be set to 0. This leads us to the continuity equation describing local conservation of charge.
+
+
+∂ρ∂t=−∇⋅J{\displaystyle {\frac {\partial \rho }{\partial t}}=-\nabla \cdot {\mathbf {J} }}
+
+
+, We want to show that conservation of charge can be readily derived from Maxwell's equations. Below, we write the Ampere-Maxwell Law in differential form.
+
+
+∇×B=μ0J+μ0ϵ0∂E∂t{\displaystyle \nabla \times {\mathbf {B} }=\mu _{0}{\mathbf {J} }+\mu _{0}\epsilon _{0}{\frac {\partial {\mathbf {E} }}{\partial t}}}
+
+
+, There are two things to recognize here. First, the divergence of a curl is always 0, so the left side vanishes. Second, given well-behaved vector functions (in this case, vector functions on simply-connected domains), partial derivatives commute. In physics and engineering, we almost always deal with continuous, well-behaved functions, so this symmetry of mixed partials holds.
+
+
+∇⋅(∇×B)=μ0∇⋅J+μ0ϵ0∇⋅∂E∂tμ0ϵ0∂∂t(∇⋅E)=−μ0∇⋅J{\displaystyle {\begin{aligned}\nabla \cdot (\nabla \times {\mathbf {B} })&=\mu _{0}\nabla \cdot {\mathbf {J} }+\mu _{0}\epsilon _{0}\nabla \cdot {\frac {\partial {\mathbf {E} }}{\partial t}}\\\mu _{0}\epsilon _{0}{\frac {\partial }{\partial t}}(\nabla \cdot {\mathbf {E} })&=-\mu _{0}\nabla \cdot {\mathbf {J} }\end{aligned}}}
+
+
+, 
+
+
+∇⋅E=ρϵ0{\displaystyle \nabla \cdot {\mathbf {E} }={\frac {\rho }{\epsilon _{0}}}}
+
+By substituting Gauss' Law and simplifying, we recover the continuity equation describing conservation of charge. 
+
+
+∂ρ∂t=−∇⋅J{\displaystyle {\frac {\partial \rho }{\partial t}}=-\nabla \cdot {\mathbf {J} }}
+
+

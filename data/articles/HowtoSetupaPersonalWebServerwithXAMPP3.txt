@@ -1,0 +1,32 @@
+ You should then be shown the XAMPP Control Panel.
+,
+
+
+If you want your web server to be available to other people on an office network, you can click the ‘Unblock’ button. Otherwise, it is best for security reasons to click the ‘Keep Blocking’ buttons.
+There are times when you may click on “Start” to start the Web Server and it does not want to start. This is usually due to another program using the same port as the web server. The most common conflict is with Skype. If your web server will not start and you are running Skype, close Skype ( That doesn't mean delete it!) and try to start the web server again. You could try to restart your computer, too.
+
+
+
+If everything is working properly, you should see the following screen:
+
+, You should now see the following screen in your web browser:
+
+
+From this screen you can administer your web server and any of the other components you have installed. This is the same screen you would see if you clicked on the Admin button next to the Apache application in the XAMPP Control Panel. There are also a few demo applications here that you can use to get you started.
+Have a look at your Status page to see what you might still need to configure by clicking on the Status menu item on the left hand side.
+The system application components are listed in order of importance with a Red, Yellow or Green color indicating the components current status. You will notice that the first item is red, “MySQL Database – Deactivated”. This is because we need to secure the database with a password before the system will allow us to use it with our web server.
+Don’t worry too much about the last three items as few people will ever use these components. If you do need assistance with configuring these items, you can refer to the online documentation provided at Apache Friends.
+ This should open up a new tab in your browser as follows:
+
+
+Again, there is not much to worry about with the last three items. But the first three indicate a lack of password protection, or visibility by the public, of some of the web server components.
+ If you also want to password protect the development directory (http://localhost/) you can do this here as well and click on the ‘Save’ button.
+click the check boxes provided on this page as it will write out your passwords to a file on your PC in the unfortunate event that you forget your login information.
+, Go back to the XAMPP Control Panel window and click on the Admin button next to the MySQL application. You should see a login window for phpMyAdmin as follows:
+
+, If all is working, you should be presented with the phpMyAdmin console.
+ You have just successfully setup you very own Personal Web Service on your PC for performing Web Design tasks locally.
+
+
+At this point, you can Stop the Apache and MySQL applications and rename the file in your xampp directory called ‘htdocs’ to ‘htdocs_default’. You can then create a new, empty directory called ‘htdocs’ for my own Web Design projects.
+

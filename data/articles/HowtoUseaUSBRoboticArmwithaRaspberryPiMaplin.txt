@@ -1,0 +1,56 @@
+ Boot up your pi, login and type "startx". This will open up a graphical session. Open the web browser, and go to "http://sourceforge.net/projects/pyusb/" and download the latest release of PyUSB.
+ Type in "dir" to list all the contents of your home directory. If you need to change directory, type in "cd <nameofdirectory>". Once you have found your downloaded pyusb...tar.gz type in "tar xvf pyusb....tar.gz" replace the "..." with the version number of PyUSB (the filename). This should extract the files., This is also assuming you have python pre-installed on your Pi. The installer will then add the library to python's files., You can now delete the downloaded files. Type "rm -r pyusb...". Your Pi may ask for permission for certain files, just hit "y" to let it carry on. Next delete the .tar.gz file by typing "rm pyusb....tar.gz"., For this part, as you don't need the GUI at all, it's easier to exit the graphic session and use the command line. Type in "clear" then type "sudo nano arm.py", this creates a new file for you to work with. You will need to type in this script, or alternatively, copy and paste.
+
+
+
+
+
+#import the USB and Time librarys into Python
+import usb.core, usb.util, time
+ 
+#Allocate the name 'RoboArm' to the USB device
+RoboArm = usb.core.find(idVendor=0x1267, idProduct=0x000)
+ 
+#Check if the arm is detected and warn if not
+if RoboArm is None:
+    raise ValueError("Arm not found")
+ 
+#Create a variable for duration
+Duration=1
+ 
+#Define a procedure to execute each movement
+def MoveArm(Duration, ArmCmd):
+    #Start the movement
+    RoboArm.ctrl_transfer(0x40,6,0x100,0,ArmCmd,3)
+    #Stop the movement after waiting a specified duration
+    time.sleep(Duration)
+    ArmCmd=RoboArm.ctrl_transfer(0x40,6,0x100,0,ArmCmd,3)
+
+
+
+
+
+, Now you need to give the arm some moves. You can use all of these demo commands or just a select few, add them to the bottom of the file and Control + O to save at the end.
+
+
+
+
+
+MoveArm(1,) #Rotate base anti-clockwise
+MoveArm(1,) #Rotate base clockwise
+MoveArm(1,) #Shoulder up
+MoveArm(1,) #Shoulder down
+MoveArm(1,) #Elbow up
+MoveArm(1,) #Elbow down
+MoveArm(1,) #Wrist up
+MoveArm(1,) # Wrist down
+MoveArm(1,) #Grip open
+MoveArm(1,) #Grip close
+MoveArm(1,) #Light on
+MoveArm(1,) #Light off
+
+
+
+
+
+, Plug in your Robot arm and type "sudo shutdown -r now" this restarts the Pi. After the restart, turn the arm on and run the file by typing "sudo python arm.py".

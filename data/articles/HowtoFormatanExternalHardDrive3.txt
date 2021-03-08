@@ -1,0 +1,9 @@
+ This is a free utility available on all Linux distributions. You can install it by opening the Terminal and typing “sudo apt-get install gparted ntfsprogs”.
+ Linux should mount the drive automatically. You will need to unmount it before you can format. Right click on the disk icon on your desktop and click “Unmount volume.”
+
+, This can be found in System/Administration. Click the drive selection box in the top-right of the window and select the external drive from the list.
+ Right-click the drive in the main window. Select “Format to” and then select the format that you want to make the drive. NTFS can be read in Windows, Fat32 can be read in any operating system, and ext3 is Linux only. (You should unmount the drive before it can be formatted)
+
+
+Fat32 has a file-size limit of 4GB. If you want to transfer larger files, select NTFS.
+

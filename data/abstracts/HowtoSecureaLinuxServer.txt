@@ -1,0 +1,19 @@
+
+Learn to use Linux from the shell (command line).
+Using lsof or a similar tool, find out on which ports your computer is listening for connections:
+ns003:~# lsof -i
+COMMAND PID USER FD TYPE DEVICE SIZE NODE NAME
+named 17829 root 4u IPv6 12689530 UDP *:34327
+named 17829 root 6u IPv4 12689531 UDP *:34329
+named 17829 root 20u IPv4 12689526 UDP ns003.unternet.net:domain
+named 17829 root 21u IPv4 12689527 TCP ns003.unternet.net:domain (LISTEN)
+named 17829 root 22u IPv4 12689528 UDP 209.40.205.146:domain
+named 17829 root 23u IPv4 12689529 TCP 209.40.205.146:domain (LISTEN)
+lighttpd 17841 www-data 4u IPv4 12689564 TCP *:www (LISTEN)
+sshd 17860 root 3u IPv6 12689580 TCP *:ssh (LISTEN)
+sshd 17880 root 3u IPv6 12689629 TCP *:8899 (LISTEN)
+sshd 30435 root 4u IPv6 74368139 TCP 209.40.205.146:8899->dsl-189-130-12-20.prod-infinitum.com.mx:3262 (ESTABLISHED)
+
+,
+If in doubt, hack it out!,
+Don't allow root logins on your primary sshd port 22 (set PermitRootLogin to "no"); many automated tools run brute-force attacks on that.

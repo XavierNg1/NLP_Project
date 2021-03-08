@@ -1,0 +1,30 @@
+ Use the cable that came with the iPod and plug it into a USB port on the computer. If iTunes does not open automatically, open it.
+
+
+This method will only work with iPods and Nanos, not iPod Touches.
+ In the Summary window, check the “Enable disk use” box. Your iPod will be mounted as a removable drive on your computer, allowing you to access the files.
+ In order to see the music files, you will need to enable viewing hidden files on your computer. The method for this varies depending on whether you are using Windows or OS X:
+
+
+Windows:
+
+Click Start and select Computer/My Computer, or click the “This PC” button in your Windows 8 taskbar.
+Click View and select Options. This will open the Folder Options window.
+Click the View tab in the Folder Options window. In the “Hidden files and folders” section, select “Show hidden files, folders, and drives”. Click Apply and then OK.
+
+
+Mac OS X:
+
+Open the Terminal, which can be found in the Utilities subfolder of the Applications folder.
+Enter the command: defaults write com.apple.Finder AppleShowAllFiles TRUE
+
+Press Enter. Close the Terminal.
+ This can be found in the “iPod_Controls” folder in your iPod. You can access this from Computer/My Computer or the Finder.
+ The file names will not be recognizable, but the files themselves will still contain all of the information about the artist, album, year, etc. This information will appear when the songs are loaded back into iTunes. Press Ctrl/Cmd + A to select all of the files.
+ You can place the music wherever you would like on your computer. Copying the files may take several minutes, especially if you have a lot of music. Once you have the music copied, you can add it to your iTunes library.
+ Once you have finished moving your music, hide your files again to prevent important system files from being deleted.
+
+
+To do this in Windows, simply follow the steps above and select the “Don’t show hidden files, folders, and drives” options.
+In OS X, open the Terminal again, type defaults write com.apple.Finder AppleShowAllFiles FALSE and then press Enter.
+

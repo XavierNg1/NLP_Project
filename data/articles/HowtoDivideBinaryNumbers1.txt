@@ -1,0 +1,31 @@
+ If it's been a while since you did long division with ordinary decimal (base ten) numbers, review the basics using the problem 172 ÷ 4. Otherwise, skip ahead to the next step to learn the same process in binary.
+
+
+The dividend is divided by the divisor, and the answer is the quotient.
+Compare the divisor to the first digit in the dividend. If the divisor is the larger number, keep adding digits to the dividend until the divisor is the smaller number. (For example, if calculating 172 ÷ 4, we would compare 4 and 1, note that 4 > 1, and compare 4 to 17 instead.)
+Write the first digit of the quotient above the last dividend digit you were using in the comparison. Comparing 4 and 17, we see that 4 goes into 17 four times, so we write 4 as the first digit of our quotient, above the 7.
+Multiply and subtract to find the remainder. Multiply the quotient digit with the divisor, in this case 4 x 4 = 16. Write the 16 underneath the 17, then subtract 17 - 16 to find the remainder, 1.
+Repeat. Once again, we compare the divisor 4 with the next digit, 1, note that 4 > 1, and "bring down" the next digit of the dividend, to compare 4 with 12 instead. 4 goes into 12 three times with no remainder, so we write 3 as the next digit of the quotient. The answer is 43.;
+, Let's use the example 10101 ÷ 11. Write this as a long division problem, with the 10101 as the dividend and the 11 as the divisor. Leave space above to write the quotient, and below to write your calculations.
+ This works just like a decimal long division problem, but it's actually quite a bit easier in binary. Either you can't divide the number by the divisor (0) or the divisor can go in one time (1):
+
+
+11 > 1, so 11 can't "go into" 1. Write a 0 as the first digit of the quotient (above the first digit of the dividend).
+ Here are the next couple steps to our example:
+
+
+Bring down the next digit of the dividend. 11 > 10. Write a 0 in the quotient.
+Bring down the next digit. 11 < 101. Write a 1 in the quotient.
+ As in decimal long division, we multiply the digit we just found (1) with the divisor (11), and write the result underneath our dividend aligned with the digit we just calculated. In binary, we can shortcut this, since 1 x the divisor always equals the divisor:
+
+
+Write the divisor underneath the dividend. Here, we write 11 aligned underneath the first three digits (101) of the dividend.
+Calculate 101 - 11 to get the remainder, 10. See how to subtract binary numbers if you need a review.
+ Bring down the next digit of the divisor to the remainder to make 100. Since 11 < 100, write a 1 as the next digit of the quotient. Continue the problem as before:
+
+
+Write 11 underneath the 100 and subtract to get 1.
+Bring down the final digit of the dividend to make 11.
+11 = 11, so write a 1 as the final digit of the quotient (the answer).
+There is no remainder, so the problem is complete. The answer is 00111, or simply 111.
+ Sometimes, the result is not an integer. If you still have a remainder after using the final digit, add a ".0" to the dividend and a "." to your quotient, so you can bring down another digit and continue. Repeat until you reach the desired specificity, then round the answer. On paper you can round down by chopping off the last 0, or if the last digit is a 1, drop it and add 1 to the new last digit. In programming, follow one of the standard algorithms for rounding to avoid errors when converting between binary and decimal numbers.Binary division problems often end up with repeating fractional portions, more often than they occur in decimal notation.This is referred to with the more general term "radix point," which applies in any base, since the "decimal point" is only used in the decimal system.

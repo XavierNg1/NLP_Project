@@ -1,0 +1,30 @@
+ Your PSP has a physical switch that enables the wireless adapter. If the switch is turned off, you won't be able to connect to a wireless network.
+
+
+On the PSP-1000 and PSPgo, the switch is along the left side of the handheld, next to the analog nub. move the switch UP to enable the wireless adapter.
+On the PSP-2000 and -3000, the WLAN switch is along the top of the handheld. Move the switch to the RIGHT to enable the wireless adapter.;
+, Most modern networks run WPA2 security, which can cause issues with the PSP. You will need to ensure that your wireless security is configured correctly in order for your PSP to be able to join the network.
+
+
+Open your router configuration page on a computer connected to the network. See this guide for more details. If you have an AirPort router, click here.
+Navigate to the "Wireless" section.
+Change your security type to "WPA-PSK + WPA2-PSK " or "WPA2 Personal TKIP+AES".
+Ensure that MAC address filtering is not turned on, or add your PSP's MAC address to the whitelist if it is.
+ You will need to be running at least version 2.0 or later in order to connect to a wireless network. See this guide for details on updating your PSP without a network connection. The PSP is currently on version 6.60 (final).
+ This can be found at the far left end of of the PSP XMB menu.
+ This is located at the bottom of the Settings menu.
+ This will allow your PSP to connect to a wireless network. Ad-Hoc mode is for connecting directly to another PSP system.
+ This will create a new connection that will be stored on your PSP, allowing you to automatically connect to the same network in the future. The PSP can store up to ten networks.
+ This will scan for any local wireless networks. ensure that you are within range of the wireless router you are attempting to connect to.
+
+
+If you'd rather, you can enter in the name of your network manually. This is useful if your network is not broadcasting its SSID.
+ After the scan is complete, a list of available networks will be displayed. Select the one you want to connect to. The signal strength for each network will be displayed in the list. For best performance, you want a signal strength over 50%.
+ By default, the connection will be named the same as your SSID. You can change this to be more recognizable, such as "Home" or "Office".
+ If you configured your router in the previous steps, you should select "WPA-PSK (AES)". If the access point you are connecting to does not have a password, select "None".
+ After entering in the security type, enter in the password for your wireless connection. Wireless passwords are case-sensitive, so make sure you enter the password correctly. You can find your wireless password on the same page as your router's security settings.
+ This will automatically configure your PSP to get an IP address from the router. Most users can select "Easy" without having to worry. If you want more control over the process, or have a PPPoE connection, select "Custom". You will be asked to enter your IP address manually.
+ A box with the network's SSID will be displayed. You can make changes, but most users can leave this as it. Press Right to continue.
+ You will be shown a list of all of your settings. Make sure everything looks correct, and then press the Right button on the directional pad to continue. Press "X" to save your settings.
+ After saving your settings, you will be given the option to test the connection. Your PSP will attempt to connect to the internet. In the results screen, check the "Internet Connection" entry. If it says "Successful", then your connection was properly configured.If you can't connect to the network or get a DNS error, return to Step 2 and change your network security to WEP or turn it off completely. After changing your security settings, you will need to run through the connection setup process again. Turning your network security off completely should be a last-ditch effort to ensure that your PSP actually works, as it leaves your network undefended.
+

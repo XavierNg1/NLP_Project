@@ -1,0 +1,17 @@
+
+Use this method for more advanced analysis.
+Download the Windows Software Development Kit (WDK).
+Run the sdksetup.exe file.
+Deselect everything except "Debugging Tools for Windows.",
+Wait while the files are downloaded and installed.
+Open the Command Prompt as an administrator.
+Navigate to the debugger's directory.
+Enter the command to associate the dump files.
+Launch WinDBG.
+Click "File" and select "Symbol File Path.",
+Copy and paste the following address.
+Find the dump file that you want to analyze.
+Double-click the dump file.
+Wait while the dump file loads.
+Find the "Probably caused by" line.
+Lookup BugCheck codes.

@@ -1,0 +1,32 @@
+ To find loga(n), you'll need a loga table. Most log tables are for base-10 logarithms, called "common logs."
+
+Example: log10(31.62) requires a base-10 table.
+;
+, Look for the cell value at the following intersections, ignoring all decimal places:
+
+Row labeled with first two digits of n 
+
+Column header with third digit of n
+
+Example: log10(31.62) → row 31, column 6 → cell value 0.4997.
+ Some tables have a smaller set of columns on the right side of the chart. Use these to adjust answer if n has four or more significant digits:
+
+Stay in same row
+
+Find small column header with fourth digit of n
+
+Add this to previous value
+
+Example: log10(31.62) → row 31, small column 2 → cell value 2 → 4997 + 2 = 4999.
+ The log table only tells you the portion of your answer after the decimal point. This is called the "mantissa."
+
+Example: Solution so far is ?.4999
+
+
+, Also called the "characteristic". By trial and error, find integer value of p such that ap<n{\displaystyle a^{p}<n} and ap+1>n{\displaystyle a^{p+1}>n}.
+
+Example: 101=10<31.62{\displaystyle 10^{1}=10<31.62} and 102=100>31.62{\displaystyle 10^{2}=100>31.62}. The "characteristic" is 1. The final answer is 1.4999
+
+Note how easy this is for base-10 logs. Just count the digits left of the decimal and subtract one.
+
+

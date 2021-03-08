@@ -1,0 +1,31 @@
+
+
+Option1. Convert PowerPoint to flash manually. If you have some programming experience, you can do the conversion manually.Option2. Convert PowerPoint to flash with a converter. Some converters are free, some will cost you. The simplest converters are suitable if you have a simple PPT file and do not care about the animations, transitions, audio and other.
+
+
+
+ 
+
+;
+,, Google Blog does not have a native feature for you to insert flash to a blog post directly. You should use some HTML coding to insert it.
+Create a new post or open edit an exciting one
+
+
+
+
+
+Switch to Edit Html pane
+
+
+
+
+
+Insert the flash to blog with the following html coding
+<object type="application/x-shockwave-flash"data=" URL of the uploaded flash file " height="300" width="400" align="middle">
+<param name="movie" value="URL of the uploaded flash file "/>
+<param name="allownetworking" value="internal" />
+<param name="allowScriptAccess" value="never" />
+<param name="enableJSURL" value="false" />
+<param name="enableHREF" value="false" />
+<param name="saveEmbedTags"value="true" />
+</object>Note:" URL of the uploaded flash file" included in the coding should be the URL of the uploaded flash to web with the uploading services.

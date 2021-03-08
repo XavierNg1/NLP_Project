@@ -1,0 +1,27 @@
+
+Press ⊞ Win+R.
+Type secpol.msc and press ↵ Enter.
+Expand the Local Policies folder.
+Click Security Options.
+Find the User Access Control: Admin Approval Mode... entry.
+Double-click the entry.
+
+,
+Select the Enabled radio button.
+
+,
+Click OK.
+
+,
+Press ⊞ Win+R.
+Type regedit and press ↵ Enter.
+
+,
+Expand the directory tree to find the correct entry.
+Double-click the (Default) item.
+Type 0x00000001(1) into the Value data field.
+
+,
+Click OK.
+Restart your computer.
+Try running your app again.

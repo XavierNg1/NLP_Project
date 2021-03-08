@@ -1,0 +1,26 @@
+ This is rather simple. Turn on your IDE and create a new project. Call it what ever you wish. The example will be buttongrid.
+
+
+This name doesn't really matter at all since it's just the file name that it will be given.;
+, Create a new class and name it what you want. The example will be buttongrid. For an Eclipse user you will want to tic the box called public static void main(string[] args), so you won't have to type it when you start.
+
+
+This name is more important than the previous one because it will have to be as single word or else it won't be usable.
+ This brings all of the information you will need to write your code to this code. You'll need to import javax.swing.JFrame, javax.swing.JButton, and java.awt.Gridlayout. These are put before the beginning of the class, somewhere on lines between 1 to 3, the order they're on there doesn't matter.
+ The constructor makes a new instance of the buttongrid class allowing many different button grids to all have separate information. All constructors need to be named the same as their class. Constructors don't need anything before it, but 'public' is often put there for ease of reference. Constructors are often placed as the first method in a class, so it goes right after the class name, it must, however be placed within the class. The buttongrid constructor needs parameters, which are put in brackets after the name of the constructor. The parameters in this example are integers 'x' and 'y'.
+ To make sure it can be referenced outside of the ButtonGrid constructor method you place it out side of that method, but within the class. Most variables are named at the top of the class right before the constructor. To create a new frame you type: JFrame frame = new JFrame();
+Inside the constructor method we need to make sure that all of the buttons are put in the grid layout. To do this we set the layout of frame by typing: frame.setLayout(new GridLayout(x, y));
+Not necessarily mandatory, but to make the frame close when you hit the 'x' button in the top right hand corner we need to add the line: frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+To make the frame a proper size so everything fits we need to run the pack command: frame.pack();
+Lastly for the frame we need to make it so it's visible: frame.setVisible(true);
+
+, So right below the line where you create frame create the buttons: JButtongrid; The two sets of square brackets are there to say that the JButton's in the grid are kept in a two-dimensional format, if there were only one set of square brackets then it would simply be a line of JButton's, which still works, it's just easier to reference which button is being created or interacted with when it's two-dimensional.
+The JButton's have been named, but we still have to say how many buttons there are. You need to add a line of code in the constructor that sets the amount: grid=new JButton;
+Now that it's been determined that there will be a certain number of buttons, each must be created. The easiest way to do this is with two for loops, one for the x-axis, one for the y-axis. Inside the two loops we make a new button, and for ease of reference the example puts text inside each button so we know which button in the two-dimensional array is where. To create a button, inside the loop you need to put grid= new JButton ("("+x+","+y+")");
+
+, Inside the loop we need to put the buttons onto the the frame with a simple command: frame.add(grid);
+
+, In your main class type: new ButtonGrid(3,3); The two threes make is a 3 by 3 grid, and any two positive numbers can be put in there.
+ To do this in eclipse press Ctrl+F11
+
+,

@@ -1,0 +1,76 @@
+;
+, At the end of the quest, you will receive a Soul Crystal.
+ Click on the bottom-right slot, and equip the Soul of a Scholar to switch to the Scholar job; you must be an Arcanist when you try to equip it.
+ Below are several skills that you will definitely be using throughout your time as a Scholar (this list will also include several of the Arcanist class skills, for maximum understanding).
+
+
+Physick: Your basic healing skill, obtained at level 4 and the the most efficient in basic healing. It has a potency of 400 (the same as the White Mages/Conjurer's Cure I). It costs minimal MP, and is used whenever the tank is starting to lose HP.
+Summon I: Obtained at level 4, this skill is used to summon the Arcanist's, Scholar's, and Summoner's first pet. For a Scholar, this pet is Eos. This spell should always be cast AS SOON as you enter any dungeon, or even out in the field! Without your pet, as a Scholar, you're healing will be noticeably less effective!
+Aetherflow: Obtained at level 6. It restores 20% of your MP. Also, at level 8, 20, and 40, you obtain a Trait to give you stacks of Aetherdam, which is required to cast certain spells. (One cast gives max stacks of Aetherflow.)
+Energy Drain: Level 8 skill that drains deals damage to the enemy with a potency of 150, along with giving you 50% of the damage dealt as HP, and a small amount of MP. Usually used when you're running low on MP during intense fights.
+Summon II: Obtained from the level 15 Arcanist quest, this will summon the Arcanist's, Scholar's, and Summoner's second pet. For a Scholar, this pet is Selene. The same rules as with Summon I apply here.
+Resurrection: Level 22 skill. Revives the target in a weakened state (Stats reduced for several minutes).
+Eye for an Eye: Level 34 Arcanist skill. Puts a barrier around the target with an effect of "20% chance that when barrier is struck, the striker will deal 10% less damage for 20s."
+Adloquium: Level 30 Scholar skill, used for healing. It has a potency of 300, but also gives a status effect on the target when casted. It will absorb up to the amount of damage you healed. Ex: If you were to heal someone for 100 HP, the next 100 HP damage they would take would be negated. Also, if the heal is a critical, it will absorb up to double the damage the target would take.
+Succor: Level 35 Scholar healing skill. It has a healing potency of 150 and is an AoE spell. It has the same effect as Adloquium, except without the critical effect. Useful if the party is taking minor damage.
+Leeches: Level 40 Scholar healing skill. It removes one harmful status effect from the target. Ex: Burn, poison, Windburn.
+Sacred Soil: Level 45 Scholar AoE damage prevention spell. It reduces all damage within the effective area by 10%. It also has a 20% chance of making the next Succor cost no MP. Requires a stack of Aetherflow to cast.
+Lustrate: Level 50 Scholar healing skill. It restores 25% of the targets maximum HP. Very helpful for whenever the (main) tank is running extremely low on HP, due to its instant cast time and fast cool-down time (1.0 seconds). Requires a single stack of Aetherflow to cast it (meaning it can be cast three times within the span of several seconds!). It should only be used sparingly, in emergency situations, due to the 1 minute reload time of Aetherflow.
+ These are the more important cross-class skills for when you're running dungeons:
+
+
+Protect: Level 8 Conjurer skill. Decreases physical damage taken. An essential to help reduce the damage taken in a dungeon. (If there is a White Mage, allow them to cast it instead, due to their added Shell effect.)
+Swiftcast: Level 26 Thaumaturge skill. Another essential skill for when you need to cast resurrection, due to it's long cast time. This skill makes the next spell cast instantly, basically negating the cast time.
+ If needed, put a few into Piety for extra MP.
+ The second most important thing to being a Scholar is your pets, and making sure you know how they work. First comes the pets themselves, then the skills.
+
+
+Eos - Summoned using the Summon I skill. She provides more healing then the other pet, and her buffs are revolved around that. She is helpful for when you need extra healing with you (Note: Both pets do have the Embrace healing skill).
+Selene - Summoned using the Summon II skill. She has support skills to boost certain aspects of your party (namely, Skill & Spell speed).
+ Please note, before you can order your pet to use skills, you must use the "Obey" command (Look in your skills if it isn't set to your hotbar, or press R1 if on PS3/4 to switch to the pet hotbar when it is summoned).
+
+
+Eos
+
+Embrace - Healing skill with a potency of 300. It's like psychic, but for your pet. And somewhat weaker.
+Whispering Dawn - Restores the HP of all allies in range (15y) for 21 seconds, with a potency of 100.
+Fey Covenant - Increases the Magic Defense of all allies in range (15y) by 20% for 20 seconds.
+Fey Illumination - Increases the amount of HP everyone heals (when they cast a healing spell.) Within range of the spell (15y) by 20% for 20 seconds.
+
+
+Selene
+
+Embrace - Healing skill with a potency of 300. The exact same skill as what Eos has.
+Silent Dawn - Silences (prevents a target from casting spells) for 1 second.
+Fey Glow - Increases the spell speed for all nearby allies (15y) by 30% for 30 seconds.
+Fey Light - Increases the skill speed for all nearby allies (15y) by 30% for 30 seconds.
+
+Fey Glow and Fey Light cannot be active at the same time.
+ If you don't know how to open the Macros menu, press the Escape button, and move to the right menu; click "User Macros" (If using controller, press the Start button, head to the right-most menu option, and go down to "User Macros".) These are several of the macros that will help you through your journey!
+
+
+To make both you and your pet heal at the same time.
+
+/micon "Physick"
+/ac "Physick" <t>
+/pac "Embrace" <t>
+
+
+For both Swiftcast and Resurrection
+
+/micon "Resurrection"
+/ac "Swiftcast" <wait>
+/ac "Resurrection" <t>
+
+
+For all three of your DoT skills
+
+/micon "Bio"
+/ac "Bio II" <t>
+/wait 3
+/ac "Miasma" <t>
+/wait 3
+/ac "Bio" <t>
+
+
+

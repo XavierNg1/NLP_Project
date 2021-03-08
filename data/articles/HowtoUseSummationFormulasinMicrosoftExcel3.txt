@@ -1,0 +1,6 @@
+ Since SUMIF can interpret non-numeric data, your data tables will need to be set up a little differently from a basic + or SUM function. Create one column with number values and a second column with a conditional value, like “yes” and “no”. For example, a column with 4 rows with values 1-4 and a second column with alternating values of “yes” or “no”.
+ Select a cell and enter “=SUMIF” then enclose the conditions in parentheses. First you must enter a range, then criteria, then a second range to summate. In this case, the criteria the yes/no condition, the range will be the cells containing those criteria, and the summation range is the target values. For example: =SUMIF(C1:C4, yes, B1:B4). This means the column C, which contains the yes/no condition, will add any values from column B where column C reads “yes”.
+
+
+The cell range will vary depending upon your data table.
+

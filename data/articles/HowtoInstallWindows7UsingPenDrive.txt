@@ -1,0 +1,45 @@
+ The easiest way to create an installation USB drive is to use an ISO, or disc image, of your Windows 7 installation disc. If you have your disc, you can create your own ISO in just a few minutes. If you don't have your Windows 7 installation disc, see the next step.
+
+
+Insert the Windows 7 installation disc into your DVD drive.
+Download and install ImgBurn. You can download it for free from imgburn.com. Select "Custom installation" during the setup process and uncheck the boxes for any additional software. You'll have to do this twice.
+Launch ImgBurn and select "Create image file from disc."
+Select your DVD drive and click the folder button to create a file name and choose the location. The ISO file will be several GB in size. Give it a name you can easily recognize, such as "Windows7Install."
+Click the large "Read" button to begin creating the file. This will take a few minutes to complete. You'll be able to find your new ISO file in the location you specified.;
+, If you don't have a Windows 7 installation disc, or you don't want to install ImgBurn, you can download the Windows 7 ISO file directly from Microsoft. You'll need your Windows 7 product key in order to get the download link, which you can find affixed to your computer, with your computer's documentation, or in your purchase confirmation email message.
+
+
+You can use NirSoft's free ProduKey to find your product key. You can get it from nirsoft.net/utils/product_cd_key_viewer.html. Running this small program will display your Windows 7 product key.
+Once you have your product key, visit microsoft.com/en-us/software-download/windows7. Enter your product key and download the ISO file to your computer. This may take a while, depending on your internet speed.
+ Make sure that you've backed up any important files, as anything on the drive will be deleted when you add the ISO.
+ This may not be necessary, but some people have reported that this helps with errors with the creation process.
+
+
+Open your Computer/This PC window. You can find this in the Start menu, or by pressing ⊞ Win+E.
+Right-click on your USB drive and select "Format."
+Select "NTFS" from the "File system" menu and format the drive.
+ This utility allows you to easily turn your USB drive into a Windows installation drive using the ISO file. You can download the program from wudt.codeplex.com. It will need to be installed before you can use it.
+ You'll be asked to select this file on the first screen of WUDT. Browse for the ISO file you created or downloaded from Microsoft.
+ You can also use this tool to create a bootable DVD disc, but this tutorial is for a USB pen drive.
+ If you have more than one USB drive inserted, they will all be listed here. Ensure that your USB drive displays at least 4 GB of storage.
+ It will take several minutes to copy the ISO file onto the USB drive. Do not remove the USB drive until the process has completed.
+ You can use the pen drive you created to install Windows 7 on any PC, but each installation will require its own product key. You will only be able to install the same version (Home, Professional, Ultimate) that you created your ISO for.
+ This key varies by manufacturer, and needs to be pressed when the computer is first booting. This will allow you to change the boot order for your devices so that your computer boots from your pen drive instead of the hard drive. The correct key will be displayed on the same screen as the manufacturer logo when you first boot up the computer. Repeatedly press the key until the menu opens.
+
+
+Common keys include F2, F10, F11, or Del.
+ If you entered the BOOT menu directly, skip to the next step. Otherwise, use your arrow keys in the BIOS menu to open the BOOT section.
+ Rearrange the boot order so that your pen drive comes first. This will ensure that your computer boots from the pen drive before booting from any other drive.
+ You will be prompted to press a key to start Windows Setup.
+ You'll be asked to select your language and region options. Once you've selected these, click "Install now" to begin the installation.
+ This will allow you to format the drive and install a fresh copy of Windows 7. This will delete all of the data on the partition that you choose to install Windows on.
+ Everything on this selected partition will be deleted during the installation. You can delete additional partitions that you don't use anymore and combine their free space by clicking the "Drive options" link. Select the partition you want to delete to turn it into unallocated space.
+ This will take around 20-30 minutes, and you won't be prompted to do anything until it's finished.
+ You'll be asked to create a user account and give the computer a name. Create your user account to proceed.
+
+
+If you are setting up the computer for someone else or prepping it for sale, press Ctrl+⇧ Shift+F3 at this screen. This will start Windows in Audit mode. You can then install any necessary drivers and run the System Preparation Tool. Select "Enter System OOBE" and click "OK" to finish. This will prompt the next person who starts the computer to create a user., You'll be prompted to enter your product key so that Windows can be activated. You'll have up to 30 days to do this, but it's recommended that you enter the product key now.
+ This will ensure that you always have the latest updates available.
+ You'll be prompted to set the current time and date. Many computers will have this automatically correct thanks to the BIOS.
+ This will affect how your computer appears on the network and what other devices can access. Make sure to select "Public network" if you aren't at home or work to help protect your computer.
+ Windows will begin preparing your desktop, which may take a few minutes. Once this is complete, you can begin using Windows 7.

@@ -1,0 +1,115 @@
+ In order to display data in one of Excel’s charts, you must first have a workbook with data entered into it. How you need to enter the data depends on the type of chart you want to create. (For a description of chart types and which chart to use when, see “Choosing the Right Chart.”)
+
+
+Data in rows or columns: Use this arrangement if you plan to create an area, bar, column, line, radar, or surface chart. You’ll want to use one row or column for labels for your data. (You can also use this arrangement for pie or doughnut charts, but only if each row or column represents a separate series of data.)
+A single data series in one row or column, accompanied by a row or column of labels. Use this arrangement if you plan to create a pie or doughnut chart.
+Three data columns, with the first column for ‘’x’’ values, the second for ‘’y’’ values, and the third for size/range values. Use this arrangement if you plan to create a bubble or scatter chart.
+Stock trading data (date, high price, low price, and closing price) in row or column format. Use this arrangement with Excel’s stock chart.;
+, You don’t have to plot every data point on your chart, only those that best support what you’ve created the chart to illustrate.
+
+
+To select a single cell, click it. You can also press the arrow keys on your keyboard to move the selection cursor to the cell you want. (If you select only a single cell, Excel will plot all the cells containing data adjacent to that cell on the chart.)
+To select a range of cells, click the first cell in the range. Drag your cursor to the last cell in the range and release the mouse button. You can also select a range by holding down the SHIFT key or pressing the F8 key and pressing the arrow keys on your keyboard to expand or contract the selection. When you have made your selection, release the SHIFT key or press F8 again.
+To select an entire row or column, click the row or column header (the number or letter label) for that row or column.
+To select the entire worksheet, click the Select All button between the Row 1 and Column A headers in the upper left.
+For more selection options, see http://office.microsoft.com/en-us/excel-help/create-a-chart-HP001233728.aspx#BM1.
+ You choose the chart by clicking one of the option buttons in the Charts group on the Insert tab ribbon.
+
+
+If you know what kind of chart you want to use, select one of the named option buttons (Column, Line, Pie, Bar, Area, Scatter, or Other Charts) and select one of the chart subtypes from the dropdown menu that appears.
+If you don’t know which kind of chart you want to use, select any of the named option buttons and select the “All Chart Types” option at the bottom of the dropdown menu, or click the down arrow button at the lower right corner of the Charts group. Either will display the Insert Chart dialog, from which you can select any of the available chart types. (The chart types are described under “Choosing the Right Chart.”)
+
+, This will display the Design, Layout, and Format tabs in the Excel ribbon menu. The commands under these tabs will let you change the appearance of the chart or any of its elements.
+ Click the Design tab, and select one of the layouts from the Chart Layouts group.
+
+
+If you have reduced the size of the Excel window, you can see the chart layouts in the Quick Layouts gallery. If you don’t see a layout style you like, click the More button to see additional layouts.
+ Click the Design tab, and select one of the styles from the Chart Styles group.
+
+
+If you have reduced the size of the Excel window, you can see the chart styles in the Quick Chart Styles gallery. If you don’t see a style you like, click the More button to see additional styles.
+ If the chart’s size isn’t to your liking, you can adjust its size with the commands in the Size group on the Format tab.
+
+
+Enter a number in the Height spin box or use the up or down arrows at the right of the field to increase or decrease the chart’s height.
+Enter a number in the Width spin box or use the up or down arrows at the right of the field to increase or decrease the chart’s width.
+ Adding a title to the chart makes it look more professional. You add, format, and position the chart title with the option buttons in the Labels group of the Layout tab.
+
+
+Click Chart Title to display the chart positioning and naming options. Select the position option you want to place a dummy title on the chart.
+Select the dummy title and type the title text you want to display.
+Resize the title, if desired, by right-clicking it and entering the point size for the title text in the Size box on the popup menu that appears.
+If you want to remove the chart title altogether, click Chart Title and select None.
+ The Labels group of the Layout tab also has options to control the display and labeling of chart axes and data.
+
+
+To label an axis, click the Axis Titles option button and select one of the options: Primary Horizontal Axis Title, Secondary Horizontal Axis Title (if the chart has secondary axes), Primary Vertical Axis Title, Secondary Vertical Axis Title (if the chart has secondary axes), or Depth Axis Title (if the chart is a 3-D chart). Enter the label in the Axis Title box.
+To remove an axis title, click Axis Title, select the type of axis title you want to remove, and select None. You can also click on the axis title and press the Delete key on your keyboard.
+To label the data, click anywhere in a data series to label the entire series, a specific point within a data series to label only that data point, or anywhere in the chart to label all data points. Click the Data Labels option button and select the desired display option. (The available options depend on the type of chart you’re making.)
+To remove all data labels, click Data Labels and select None. To remove a specific data label, click it and press the Delete key on your keyboard.
+To move the chart legend (created when you create the chart) to another location, click the Legend option button and select its new location from one of the display options. To hide the legend altogether, select None.
+ Excel normally puts the chart on the same worksheet the data it displays is on, which is useful if you want to view or print the chart and data together. If you want to place the chart on its own chart sheet, do the following:
+
+
+Select the chart by clicking on it. You will see the additional Design, Layout, and Format tabs on the ribbon.
+Click the Design tab and select Move Chart from the Location group. This will display the options under “Choose where you want the chart to be placed.”
+If you want to display the chart in its own sheet, select “New sheet.”
+If you want to embed the chart in a different worksheet, select “Object in” and choose the worksheet from the list.
+If you simply wish to move the chart to another location on the worksheet it was created on, click on it and drag it to its new location.
+ Excel automatically gives your chart a name consisting of the word “Chart” plus a number. You will probably want to give the chart a more descriptive name, probably the same name as the title you gave the chart. To give the chart a name, select the chart and do the following:
+
+
+Click the Layout tab and click the Chart Name text box within the Properties group.
+Enter the new name in the text box.
+Press the Enter key on your keyboard.
+ A line chart consists of a series of data points connected by a line. Line charts can be used for short or long increments of time, provided the increments are of equal length.Line graphs show smaller changes better than do bar graphs.
+You can also use a line graph to show changes over time for more than one group.Usually, a different color is used for each group.
+Excel lets you display the lines in a line chart as either 2-dimensional or 3-dimensional. The 2-dimensional chart options allow you to display markers (plotted data points) or stack lines for multiple trends. Markers are best used when you have only a few data points to display, while stacked lines may not display as distinctly as 2-dimensional lines as they would as 3-dimensional lines or areas.
+ Area charts differ in appearance from line charts in that the area below, and sometimes above, the trendline is colored. Different colors are used for different groups, such as blue for publicly traded companies and red for privately owned companies.
+
+
+While line charts can show changes, such as increases or decreases in population, area charts can better show the totals resulting from those changes.
+Area charts work best when you have a few groups to display, as the shading for the area on top may obscure parts of the charts beneath it. The shading can be made transparent, but doing so for a large number of charts can produce a muddy, indistinguishable color. In such cases, area charts need to be stacked correctly so that the chart with the smallest values overall is on top.Excel lets you display areas in an area chart as either 2-dimensional or 3-dimensional. Either type of chart may be stacked (showing peaks and valleys for each dataset) or 100% stacked (showing a graph fully colored in with trendlines dividing the colors).
+ Bar graphs use horizontal or vertical bars to show comparison. In Excel, the term “bar chart” is used for charts that use horizontal bars, while charts that use vertical bars are called “column charts.”
+
+
+Bar graphs that show comparison usually assign a bar to each distinct item in a group, such as types of movies or manufacturers of cars.Bar graphs that compare aspects of continuous data, such as height or weight, usually assign bars to smaller ranges within the overall ranges; these types of bar graphs are called histograms.When using bar graphs to track changes over time, they work better when the changes are significant (large).Excel lets you render bar and column charts with either 2-D or 3-D rectangular bars or columns. For variety, you can also choose to render the bars or columns as cylinders, cones, or pyramids.
+Excel also lets you cluster bars and columns, stack them, or, with 3-D columns, place contrasting color columns in front of each other.
+ Also called an X-Y chart, a scatter chart compares pairs of values against each other to see which value changes, and in which direction.If both values in increase at the same time, they are positively correlated.
+If one value increases while the other decreases, they are negatively correlated.
+If there is no discernible relationship between the values, they are not correlated.
+Excel lets you create scatter charts with no lines, smooth lines, or jagged lines. Use the smooth style version when the values are not ordered by the x-axis or when the x and y values represent separate measurements. Use the jagged line version when the values are ordered by the x-axis Use the smooth line version when the relationship between the x and y values can be described by a mathematical function (such as y = x2).
+Excel also lets you create your scatter chart with or without markers. (The lineless scatter chart is only available with markers.) Use markers when you have only a small number of data points; don’t use markers when you have many data points.
+ The bubble chart is similar to the scatter chart, except that you use it to compare sets of three values, with the third value represented by the size of the bubble.
+
+
+Bubble charts in Excel are most similar to the lineless scatter chart with markers. You may select one of the Bubble Chart options under Other Charts in the Charts group of the Insert tab, choosing bubbles with or without a 3-D effect.
+ Pie charts are circular charts composed of wedges of various sizes; the larger a given wedge is, the greater the part of the whole it represents.
+
+
+Pie charts should be used only when the items represented with each wedge form a meaningful larger group, such as a company composed of several divisions as opposed to unrelated occupations. (In the latter case, a bar or column chart is the better chart to choose.)Each slice in the pie chart should be of a distinguishable width from each of the other slices. In practical terms, this means the pie chart should not have a large number of thin slices.(If this is the case, the groups can be better compared with a bar or column chart. )
+Each slice in a pie chart should represent a unique part of the whole, with no item in the group represented by that slice anything that can be represented by any of the other slices.(You can, however, show a breakdown of any given slice within your Excel pie chart by choosing to represent it as a smaller pie or bar chart.)
+Excel lets you display pie charts as 2-dimensional or 3-dimensional. (The “Pie of Pie” and “Bar of Pie” options are available only for the 2-dimensional pie chart.) You may also display an “exploded” pie chart, where each slice is separate instead of contiguous.
+If you are comparing parts to the whole when you have multiple data series, you may wish to use Excel’s doughnut chart options instead of a pie chart. (The doughnut chart has a hole in the middle; each part is represented by a segment of the doughnut.) The Doughnut Chart options are listed under Other Charts; you may select a doughnut with contiguous segments or one with separated (“exploded”) segments.
+ A surface chart is a kind of topographic map of data, in that it uses colors to represent ranges of data values instead of separate datasets. It is commonly used in scientific and engineering applications, such as evaluating the tensile strength of metals.Excel makes its four surface chart options available under Other Charts.
+
+
+Excel offers two views, a surface (or side) view and a contour (or top) view. The surface view displays a continuing curve with bands of color to represent the data ranges within the curve, giving the overall appearance of a multi-colored tent. The contour view bears a stronger resemblance to a topographic map, showing colored bands bounded by lines that each represent a distinct value.
+For each view, you can choose to show the data ranges as colored bands or only the range boundary lines (wireframe). The wireframe views are harder to read, but may be the better option when you are dealing with very large datasets to save on plotting time., Also called a star chart or spider chart, a radar chart projects values outward from the chart center; the larger the value, the further the projection from the center.Radar charts can be used when line or area charts would be harder to read because of overlapping data ranges.
+
+
+Excel places its radar chart options under Other Charts. You can display a basic radar chart with outlined shapes, a radar chart with outlined shapes and markers, or a chart with the shapes filled in.
+ A stock chart is a specialized form of column chart designed to track the performance of a stock over a period of time. To use a stock chart, your data must include at least the stock’s high and low price and its closing price for each day to be displayed in the chart.
+
+
+Excel displays its stock chart options under Other Charts. The simplest chart option, High-Low-Close, will display a vertical line connecting the high and low price and a square marker somewhere along the line.
+If you have and wish to chart the open price as well as the other three prices, select the Open-High-Low-Close option. The high and low prices will be connected by a vertical line, while the open and close prices will be connected with a thin rectangular strip.
+If you have and wish to chart the trading volume as well as the high, low, and close prices, select the Volume-High-Low-Close option. The high, low, and close prices for a day will be displayed above thicker vertical bars representing the number of shares traded for that day.
+If you have and wish to chart the trading volume and open price as well as the other three prices, select the Volume-Open-High-Low-Close option. This stock chart will display vertical lines to connect high and low prices, rectangular strips to connect open and closing prices, and vertical bars to show trading volume.
+A stock chart can also be used to track some scientific data, such as daily temperature fluctuations.
+ This will display the Design tab, as well as the Format and Layout tabs.
+, Creating a template from a chart stores the formatting and colors used by that chart, and automatically applies them to any new chart created from that template. This can be useful if you plan to create several of the same type of chart to compare side-by-side.
+
+
+Unless you specify a different folder to place it in, your chart template will be saved in the Charts folder. It will be available in both the Insert Chart and Change Chart Type dialog boxes under “Templates.”
+If you prefer not to apply the template colors to a chart created from it, right-click the chart area and select “Reset to Match Style” on the popup menu.

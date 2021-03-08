@@ -1,0 +1,74 @@
+ The cells can contain data or they can be empty, or a combination of both. You don’t have to pick your cells before you create the table if you aren’t sure yet.;
+, To start the table creation process, you will need to insert a table into your spreadsheet.
+
+
+In Excel 2003, click the Data menu and select List.
+In Excel 2007, 2010, and 2013 select either "Table" on the Insert menu ribbon or "Format as Table" in the Styles group on the Home menu ribbon. (The former option applies Excel's default table style, while the other lets you choose a style when you create the table. You can later apply or change the table style by selecting one of the options from the Table Styles group in the Table Tools Design menu ribbon.), If you did not previously select a group of cells, you will need to select the cells now. After you pick your range, a dialog box will appear, either the Create Table dialog (Create List dialog in Excel 2003) or the Format As Table dialog.
+
+
+The "Where is the data for your table?" field displays the absolute reference(s) for the current cell(s) selected. If you want to change this information, you can type in a different cell or range reference.
+ If your table has headers, check the "My table has headers" box. If you don't check this box, the table will display default header names ("Column 1," "Column 2," etc.).
+
+
+You can change a column name by selecting the header and typing in your own name in the formula bar.
+ Move your mouse cursor over the sizing handle at the lower right corner of the table. Your cursor will change to a 2-sided diagonal arrow. Click and hold to “grab” the corner.
+ Drag your cursor inward to reduce the table size, outward to enlarge it. Dragging your cursor adds or reduces the number of rows and columns.
+
+
+Dragging your cursor up toward the column header reduces the number of rows in the table, while dragging your cursor down increases the number of rows.
+Dragging your cursor to the left reduces the number of columns in the table, while dragging it to the right increases the number of columns. A new column header is created when a new column is added.
+ A popup menu appears.
+ Choose one of the Insert submenu options.
+
+
+Select "Insert Columns to the Left" or "Insert Columns to the Right" to insert a new column in the table.
+Select "Insert Rows Above" or "Insert Rows Below" to insert a new row in the table.
+ Choose one of the Delete submenu options.
+
+
+Select "Table Columns" to delete the entire column(s) containing the selected cell(s).
+Select "Table Rows" to delete the entire row(s) containing the selected cell(s)., A dropdown menu will appear.
+ The sort options appear at the top of the dropdown menu.
+
+
+Choose "Sort A to Z" (or "Sort Smallest to Largest" if the data is numeric) to sort items in ascending order.
+Choose "Sort Z to A" (or "Sort Largest to Smallest" if the data is numeric) to sort items in descending order.
+Choose "Sort By Color" and then select "Custom Sort" from the submenu to set up a custom sort. If your data is displayed in multiple colors, you can select one of the colors from this submenu to sort your data by.
+ You can access additional sort options by right-clicking on any cell in a column and selecting "Sort" from the popup menu. In addition to the options above, you can also sort by cell or font color or by cell icon.
+ A dropdown menu will appear.
+ Three sets of filtering options are available: "Filter by Color," "Text Filters," and "Number Filters." (The "Text Filters" option is displayed only when the column entries contain text, while the "Number Filters" option is displayed only when the column entries contain numbers.) Below that is a set of check boxes.
+
+
+The "Filter by Color" option is enabled when the text or numbers are show in multiple colors. Select the color you wish to filter the data by.
+The "Text Filters" option includes the options "Equals," "Does Not Equal," "Greater Than," "Begins With," "Ends With," "Contains," "Does Not Contain," and a "Custom Filter" option.
+The "Number Filters" option includes the options "Equals"," Does Not Equal," "Greater Than," "Greater Than or Equal To," "Less Than," "Less Than or Equal To," "Between," "Top 10," "Above Average," "Below Average," and a "Custom Filter" option.
+The check boxes below these options include a "Select All" and "Blanks" option to display all data meeting the filtering criteria or all rows with blank cells in that column, as well as a listing of each unique data element (such as the same name) in that column. Check or uncheck the combination of boxes that will let your display only those rows with a cell that meets your criteria, such as checking the elements "Smith" and "Jones" to display sales figures for only those 2 individuals.
+Excel 2010 and 2013 offer an additional filtering option: enter text or a number in the Search field and the display will be restricted to only those rows with an item in the column that matches the contents of that field.
+ To restore the original display, select "Clear Filter From " from the dropdown menu. (The actual name of the column is displayed in this option.)
+
+, This displays a popup menu. Select "Table" from the popup menu.
+ A totals row will appear below the last row of the table, displaying a total of all the numeric data in each column.
+ Click the menu on the Totals line for the value you want to adjust. You can choose what function you would like displayed. You can show the Sum, the Average, the Count, and more.
+ If necessary, you'll have to add a blank column first. See "Enlarging and Reducing Table Size" and "Inserting Table Rows and Columns" for the methods to do this.
+ Your formula is automatically copied into all the column's cells, whether above or below the cell you entered the formula in. You can also copy the formula into the column cells manually.
+
+
+You can enter the formula in any row of the spreadsheet beneath the table, but you can't refer to any cells in those rows in the table reference.
+You can type or move the formula into a column that already has data, but to make it a calculated column, you'll need to click the "AutoCorrect Options" button to overwrite the existing data. If you copy the formula, however, you'll have to manually overwrite the data by copying the formula into those cells.
+ After creating the calculated column, you can later go back and create exceptions by typing data other than a formula in any of the cells, deleting the formula from 1 or more cells, or copying a different formula into some of the cells. Any exceptions to the calculated column formula, other than a formula deletion, will be clearly marked., You can pick from a variety of preset color combinations for your table. Click anywhere in the table to select it, and then click the Design tab if it is not already open.
+
+
+Choose from one of the presets available in the Table Styles section. Click the More button on the right side to expand the list and see all the options.
+ Click the More button on the right side of the list of preset styles. Click “New Table Style” at the bottom of the menu. This will open the “New Table Quick Style” window.
+
+
+Give your style a name. If you want to easily access this style again, give it a name that you can remember or that describes the style.
+Choose the element you want to adjust. You will see a list of table elements. Choose the one you want to edit and click the “Format” button.
+Choose your formatting options. You can choose the font style, fill color, and border style from the Format menu. This formatting will be applied to the element you selected.
+ If you are finished working with the data in a separate table, you can revert the table back into the spreadsheet, maintaining the data. Click anywhere in the table to select it.
+
+
+Click the Design tab.
+Click Convert to Range and then click Yes.
+The table formatting will be removed, but the style will remain. You will no longer be able to sort and filter data.
+

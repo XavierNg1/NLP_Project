@@ -1,0 +1,8 @@
+;
+,,, This is the password that was entered when Ubuntu was first installed. Type this in.
+ A window will open similar to figure 1 (right). You need to add the text "user_xattr" to the fourth column of whichever partition your /home folder is on. If /home does not explicitly appear in the second column, then you need to add this property only to the row where the second column is a solitary /. This allows Beagle to index files more thoroughly.
+After having saved /etc/fstab, you need to remount the directories you've changed the settings in the /etc/fstab file. You can do this with the commands "mount -o remount /home", and "mount -o remount /". (where / and /home are the directories where you've changed the configuration). Another way to remount is to just reboot your system.
+, This will open a window which allows you to configure which folders you want to allow Beagle to search through. After you've confirmed this, click OK to close the window, open a terminal window and type beagle-info --status and ensure that the text output contains no errors.
+ To do so, you can open the program BEST (Bleeding Edge Search Tool) and type in the search term. You can open Best either through your menu system (Applications -> Accessories -> Beagle Search) or the Run dialog (simply type best).
+ In order to do this, open the Sessions window (System -> Preferences -> Sessions), go into the Startup programs tab, click the add button and type beagled in the Startup Command box.
+

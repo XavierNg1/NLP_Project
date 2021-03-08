@@ -1,0 +1,64 @@
+ Have ready 2 newly named worksheets in the workbook, one for the DATA, the other for the CHART. Title them so please -- it makes formulas easier to understand later.
+
+Under View, set show row and column headings to On or checked and show gridlines. Show scroll bars and sheet tabs and outline symbols and zero values. Show formula bar by default and show status bar. It is very important to show the formula bar.
+
+
+Into cell A1, type AjRows.
+Into cell B1, type GM (for Golden Mean).
+Into cell C1, type Factor1.
+Into D1, type KEY.
+Into cell E1, type Number. 
+
+, Into cell A2, input 2880 (as the number of adjusted rows in the data-set). In cell B2, input the formula "=(sqrt(5)-1)/2" (without quote marks). This is the Golden Mean or Ratio or Proportion, known since Euclid's time, such that a:b as b:(a+b), and is quadratic and has many special properties, such as phyllotaxis in Nature -- it's used because it maintains in proportion the square of a number to the number such that for the Pythagorean Theorem, a given Pythagorean triplet will grow in constant proportion to itself, and since the sine and cosine functions are Pythagorean functions, it applies to them as well., Into cell D2, input "=36" (w/o quotes). Input 1 into cell E1.,
+
+Into cell A3, type Tip.
+Into cell B3, type Base.
+Into cell C3, type Spheroids.
+Into cell D3, type ShrinkExpand.
+Into cell E3, type PiDivisor.
+Into cell G3, type Lucky.
+Select cells A3:G4 and Insert Name Create in Top Row.
+Into cell A4, input "=B4*12*PI()" -- the empty parentheses for pi are correct. Do Insert Name Define name as Tip for cell A4.
+Into B4, input 1712, which is 2^4 * 107 (where 2^4 means 2 raised to the power of 4).
+Into cell C4, type 32 for now -- the lookup table that is going to be prepared is set to take any number of spheroids up to 64. (Actually 100 but the detail gets hard to see.)
+Into cell D4, type 1 for now. Setting up another plot column set of data with ShrinkExpand set to a different value will insert or surround one circle of spheroids with another one.
+Into cell E4, input 180. Differentiating this variable creates special effects.
+Into cell G4, input the Lucky number 63.
+Select cells A2:G2 and Format Cells Border  thick line Top Bottom Sides Center and format number with 4 decimal places. Do the same for cell range A4:G4.
+ Generally, viewing 4 decimal places will inform one of the differences in the sine and cosine function results.,
+
+Into cell A5, type Base t.
+Into cell B5, type c_.
+Into cell C5, type Cos (for cosine).
+Into cell D5, type Sin (for sine).
+Into cell E5, type Main X.
+Into cell F5, type Main Y.
+Base t is the number of turns and also the total distance in terms of points a particle would travel past. As you will soon see, the total variation in the column values is from +64,540.8795 to -64,540.8795, or +129,081.7590 absolutely. This is over 2881 rows. +129,081.7590/2881= 44.8045 valuation units per chart point. Each decrement is about -44.8201 and 1/44.8201 = .0223 … so the points are very very close together and the accuracy of the graph is very good. Charting 32 spheres over about 2880 rows, there are 2880/32 = 90 points per sphere or spheroid. They are termed spheroids because they are not perfect spheres. But they are pretty close -- how exactly square your chart area is matters quite a bit as well and that can be difficult to get right, as Excel has not provided a parameter for setting it precisely. The c_ in cell B5 stands for constant; you will see that the formulation varies the value of the constant with the number of spheroids the user inputs.
+
+
+Into cell B6, input the formula, "=Base". Do Edit Go To cell range B6:B2886 and do Edit Fill Down.
+Into cell A6, input "=If(odd(Spheroids)=Spheroids,0,Tip)". This formula states that if the number of spheroids input is odd, result=0, else result=Tip (where Tip was defined above as 12*PI()*B4 or 1712). In the case of the result becoming 0, the column will decrement to twice Tip, negatively from 0. The number of spheroids charted will be odd, eg. 31.
+Do Edit Go To cell range A7:A2886 and input "=((A6+(-Tip*2)/(AjRows)))" into cell A7, then do Edit Fill Down. The value in cell A2886 should be decremented to -64,540.8795 if spheroids is even (eg. at 32), else it will equal 2*-64,540.8795. Please see Note 6 in the Tips section regarding differentiating cells A7 and A6 because their formulas are different
+
+,
+
+Do Edit Go To cell range C6:C2886 and input into cell C6 the formula, "=Spheroids/KEY*(cos((ROW()-6)*Number*PI()/PiDivisor*Factor1))" (without the quotation marks, as always). Do Edit Fill Down.
+The KEY number is an other means of warping the output; currently, it's set to 1, non-warping. All it is really doing is applying a fraction to the main cosine function. By taking the cosine of the cell 6 rows up from cell C6, we are taking the cosine of 0 to begin with, then in subsequent rows, take the cosine up to 360 and in cycles then to 2880+6. 2880/360=8. So there are 8 cycles. Number is a variable for getting partial circle effects like animation motion likenesses when a fraction because the next piece, *PI()/PiDivisor. converts from pi radians to degrees and vice versa. Recall that PiDivisor is set to 180 degrees. Multiplying by Factor1=.125 is taking back the 8 by 1/8th.
+Do Edit Go To cell range D6:D2886 and input into cell D6 the following formula: "=Spheroids/KEY*(sin((ROW()-6)*Number*PI()/PiDivisor*Factor1))".
+Do Edit Fill Down. This is the sine or y function in place of the x cosine function just done.
+ Do Edit Go To cell range E6:E2886 and input into cell E6 the following formula: "=((sin(A6/(B6*2))*GM*cos(A6)*GM*(cos(A6/(B6*2)))*GM)+C6)/ShrinkExpand". This is the heart of the Spherical Helix formula and is sin * cos * cos. Do Edit Fill Down., This is sin * sin * cos. Be very careful to match your parentheses exactly as given.
+
+If you are getting an error, it's probably because of a missing parenthesis, so count that the lefts = the rights and look to see that you have them placed exactly as given. If you are getting an undefined name error, it means that "GM" is not properly associated with cell B2 -- go back and Define Name that variable again, without quotation marks. Otherwise, it's ShrinkExpand for cell D4. If either of those cells or any previous cell contains an error value, go back and fix it according to the above instructions.
+ A solution for that contingency has been worked out.
+
+Do Edit Go To cell range I6:I69 and input 1 into cell I6 and then do Edit Fill Series Columns Linear, Day, no trend, Step Value 1 and blank stop value; press OK. That should input the series from 1 to 64 in that cell range.
+Do Edit Go To cell range J6:J69 and input into cell J6 .125 and then do Edit Fill Down. That will input the constant value of .125 in that cell range.
+Do Edit Go To cell range K6:K69 and input "=I6*$K$35/$I$35" and do Edit Fill Down and then input the value .125 in cell K35. Do Edit Go To cell range I6:K69 and Insert Name Define Name Looker.
+Go to Factor1 cell C2. Input the formula, "=Vlookup(Abs(Spheroids),Looker,2)". If that last number is changed from 3 to 2 in the VLookup Formula just given, it will always return .125, otherwise it will adjust for the number of spheroids input the value of Factor1 (so that will no longer be an available variable). Change the font of cell C2 to dark blue italic or something red or something that helps one remember not to change it. If your chart does not look right, try changing this formula to "=Vlookup(Abs(Spheroids),Looker,3)".
+ Do that now for cell C2 until you see the red corner flag and remember to do it for all the other formulas later please. The Abs() Absolute function allows one to input a negative number of spheroids; the effect will be to flip the graph 180 degrees horizontally (from left to right or right to left), as one can tell with an odd number of spheroids.,
+
+Do Edit Go To cell range E6:F2886. Press the Charts button on the Ribbon, All, or Chart Wizard or Insert Chart. Select chart type Scatter Smoothed Line Scatter. Command c copy it and access the new worksheet and command v paste it into the new worksheet. Your chart should look like the example above except for the bronze tinge would be white and the default line might be black and too thick or thin. Adjust the chart size by dragging the bottom right corner until you get a square plot area and a circular ring. Get rid of the Vertical and Horizontal Axes and gridlines via the Chart Layout tab. Clicking on the plot area will give access to the gradient style, etc. Double-clicking on the chart plot line itself will give access to changing that. A value of line thickness = 1 is recommended. Mission accomplished!! Shrink the chart on the original Data worksheet and put it at the bottom of the data. Split the window so that you can see the small chart and the last rows of data.
+Optional: Create a Double "Rainbow" or a ring within a ring, like benzene rings and tightly packed animal cells such as a hornet's stinger. Select D3:D4 and do Edit Copy to H3:H4. Edit ShrinkExpand by adding a 2 to it to become ShrinkExpand2. Insert Name Create Top Row while cell range H3:H4 is still selected. Select cell E6. Select over the formula in the formula bar and command c copy it (do not copy the cell -- copy exactly only the formula itself in the formula bar). Do Edit Go To G6:G2886. Mouse-select in the formula bar and paste the formula just copied. Edit the last ShrinkExpand to make it ShrinkExpand2. Do Edit Fill Down. Select cell F6. Select over the formula in the formula bar and command c Copy it. Do not copy the cell and paste it into the new cell -- that won't work out right. Do Edit Go To cell range H6:H2886. Edit in the formula bar the last ShrinkExpand to become ShrinkExpand2. Press Enter or Return. Do Edit Fill Down. There should be all zeroes because the value in ShrinkExpand2 = 0.
+Select cell G5 and type Second X and in cell H5 type Second Y. Now go to cell H4 and type in 1.5 and go to the original ShrinkExpand in cell D4 and input 2. On the Chart worksheet, select menuitem Chart Add Data and then select back on the Data sheet cells G6:H2886 and hit OK. Somehow it comes out wrong sometimes and one must click on the new chart series in the Chart worksheet and type in G's for E's in the plot series in the formula bar -- then it's OK.
+There should now be two series: 1) =SERIES(,Data!$E$6:$E$2886,Data!$F$6:$F$2886,1) and 2) =SERIES(,Data!$G$6:$G$2886,Data!$H$6:$H$2886,2). They should be just touching with the first series inside the second series. Select a good color for the second series and line thickness should probably be set to 1 for each.
+Well done!! Whether one also adds the 2nd series to their Data worksheet bottom chart is a matter of preference -- generally, it's cleaner to see effects take place on one series at a time quickly in miniature.

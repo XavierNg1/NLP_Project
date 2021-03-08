@@ -1,0 +1,38 @@
+
+
+
+Click on the green X icon on the Dock to make Excel the active application.
+Put on the dock with the yellow dot at top left of the window of any XL workbooks automatically opened.
+Do File New Workbook from the Excel Menu.
+Save the workbook as Circle, or other similar filename, into a logical file folder (if you follow all Xhohx and Christopher G. articles, this is #110, and you may want to create a special folder with an apt name reminiscent of the article name for the folder, beginning with 110 -- in that case, the filename = the article name)(100 for Xhohx, and this is #10 for Christopher G.). That way, you can go into Advanced Editing and make a copy of the text of the entire article for safekeeping by pasting it into Word, under the bolded and linked title.;
+,
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show grid lines and set all boxes below that to auto or checked.
+In Chart, allow show chart names and set data markers on hover and leave the rest unchecked for now.
+In Calculation, make sure Automatically is checked and calculate before save is also checked. Set max change to .001 as goal-seeking is not done in this project. Check save external link values and use 1904 system
+In Error checking, check all the options.
+In Save, select save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+
+
+
+It helps by placing the cursor between the A of Column A and the 1 in Row 1 in the upper leftmost corner and selecting the entire worksheet.
+Format Cells Number Number Custom +0.0000;-0.0000;=0.0000, Font Size 9 to 12.
+Do Format Cells Alignment Text Alignment Horizontal Center.
+
+Select cell range F1:F3 and do Format Cells Font Red, Fill Yellow, since they're input cells.
+,,
+Name the worksheet, Circle Data and Chart;
+Enter to cell D4 the note 'edited chart series' and make it italic and aligned right;
+Select cell range C2:D3, do command and c for copy, click inside the circle in the chart and do command and v, paste. This may come out wrong. Click on the line created and edit the Series Formula in the formula bar until it exactly reads as follows (but w/o quotes):
+"=SERIES("Radius",'Circle Data and Chart'!$C$2:$C$3,'Circle Data and Chart'!$D$2:$D$3,2)"
+Click on the Circle. Its Series Formula should exactly read as follows -- you'll probably have to edit in "Circumference":
+"=SERIES("Circumference",'Circle Data and Chart'!$A$2:$A$362,'Circle Data and Chart'!$B$2:$B$362,1)"
+Check that your chart looks like the one pictured here.
+That's it! You're finished!
+
+,
+You can also tap with the mouse near the outside of the chart, beyond the plotting area, and hold down the Shift Key, and do Edit Copy Picture. Then there are various menu tool formatting options additionally available to you. You would do Shift Key and Paste Picture to a new worksheet called SAVES, or CHARTS, or VIEWS, or something similar.
+
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on that category if it appears in the upper right white portion of this page, or at the bottom left of the page.
+

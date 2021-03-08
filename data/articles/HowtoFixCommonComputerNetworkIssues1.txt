@@ -1,0 +1,47 @@
+ If you recently updated your computer, your network connection settings may have changed. To check these settings, click Start > Control Panel > Network and Internet > Network and Sharing Center > Manage Network Connections. Right-click on the connection and then select “Properties.” When prompted, enter your administrator password or confirmation., Wireless routers generate hotspots—areas near the router that are connected to a specific network. If you cannot connect to a wi-fi network, try the following:
+
+
+Double check that your modem and router are on and properly connected.
+Make sure that your computer’s wi-fi switch is in the on position.
+Diagnose the issue. Click on the “wi-fi” icon (right side of toolbar). Select “Diagnose and Repair.” If there you are notified of an issue, like “unable to clear the DNS cache,” address the problem.
+See if the network adapter is functioning properly. Log in as an administrator. Select Start > Control Panel > System and Maintenance > Device Manager. Click on “Network Adapters,” right-click on your adapter, and then click on “Properties.” Locate the “Device Status” section and see if your Network adapter is functioning correctly. You may need to update the network adapter driver., If your network connection disconnects from time to time, your network adapter may be set to “power-saving” mode. To turn off the mode:
+
+
+Select Start > Control Panel > Network and Internet > Manage Network Connections.
+Right-click on the connection and then select “Properties. You may need to enter an administrator password or submit a confirmation.
+Locate the “Networking” tab and select “configure.
+Open the “Power Management” tab. Uncheck the box next to “Allow the computer to turn off this device to save power.”
+Click “Ok."
+
+, A variety of factors can slow down your internet connection. Correcting for these factors may increase the speed of your network connection. Prior to altering any settings, consider the following:
+
+
+Are your network adapter’s drivers are updated?
+Have installed the latest updates for your computer
+Is your network adapter is compatible with your router’s capacities?
+
+, The autotuning feature automatically resizes TCP windows. Disabling autotuning will limit the size of the TCP window to 65535 and increase the speed of your internet connection.
+
+
+Click “Start.”
+Type “Command Prompt” into the search box. Hit enter to generate a list of results.
+Right-click on “Command Prompt” and select “Run as Administrator.”
+Type the following into the text box: netsh interface tcp set global autotuninglevel=disabled.
+Hit "Enter."
+Restart your Windows computer., This software is designed to prevent a node that can transmit data quickly from overwhelming a node that receives data at a slower rate.
+
+
+Click Start > Control Panel > System and Maintenance > Device Manager.
+RIght-click on the Network Adapter and then select “Properties.”
+Open the “Advanced” tab and select “Flow Control.”
+Locate the “Value” section and click on “RX and Tx Enabled.” Press “Ok.”
+On some computers, “RX and Tx Enabled” may be listed as “Auto” or “Rx/Tx Pause.”, Before you conduct a deep analysis of the issue, make sure that the computer you are trying to connect to is on and that file and printer sharing is enabled on both computers.
+
+
+To turn on "Network Discovery," click Start > Control Panel > Network and Internet > Network and Sharing Center. Expand the “Network Discovery” tab > Turn on Network Discovery > Apply.
+To turn on file sharing, expand the “File Sharing” tab > Turn on File Sharing > Apply.
+To turn on public folder sharing, expand the “Public Folder Sharing” section. Select either “Turn on sharing so anyone with network access can open files” or “Turn on sharing so anyone with network access can open, change, and create files.” Hit “Apply.”
+To turn on printer sharing, expand the “Printer Sharing” tab > Turn on printer sharing > Apply.
+ To override password protected sharing, create identical user accounts for all of the computers in your workgroup. To turn off password protected sharing, click Start > Control Panel > Network and Internet > Network and Sharing Center. Locate “Sharing and Discovery” and expand the subsection “Password Protected Sharing.” Select “Turn off password protected sharing” and hit “Apply.”
+
+, Select Start > Computer > Properties. Locate “Computer name, domain, and workgroup settings” and select “Change Settings.” Find the “Computer Name” tab and choose “Change.” Locate “Member of” and select “Workgroup." If you need to join an existing workgroup, enter in the group name and hit “Ok.” If you need to create a new workgroup, enter in the name and click “Ok.”, If you are repeatedly receiving error messages when trying to access a website, you may need to erase your DNS cache. Open the start menu and type “Command Prompt” in the search bar. Hit enter to receive a list of results. Right-click on the “Command Prompt” result and select “Run as administrator. Enter password or confirmation if requested. Type “ipconflg/flushdns” in the command prompt.

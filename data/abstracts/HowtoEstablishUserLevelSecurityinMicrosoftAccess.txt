@@ -1,0 +1,27 @@
+
+Start Microsoft Access and open your database;
+,
+Start the User-Level Security Wizard by clicking on the Tools menu, point to Security, and then click on User-Level Security Wizard.
+Click Next
+
+By default, Access will create a unique, 4 to 20 character string at random that is case sensitive, and associates an identity to the workgroup, otherwise referred to as a WID.
+Ensure that the "I want to create a shortcut to open my secured database" option is selected, before clicking Next.
+
+,
+Click Next
+
+The wizard then will ask you what objects in your database do you want to secure.
+Click Next
+
+Naturally, you don't want everyone to have Admin rights to a database, but you don't want them to have only read permissions.
+Click Next, once you have the groups you want.
+Enter a password and change the personal ID (PID) for the Administrator account before you add any users to your database.
+Click Next
+
+Now you will need to assign your users to groups.Click Next
+
+,
+Specify the location where you want the unsecured backup to be stored.
+Click Finish.
+The Security Wizard will then tell you that it encrypted the database and that you must exit Access and open the database in the future by using the shortcut on the Windows desktop to the database's WID.
+

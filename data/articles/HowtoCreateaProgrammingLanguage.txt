@@ -1,0 +1,31 @@
+ Compiler writers often use unfamiliar terminology. Read up on compilers before proceeding. Be sure to know everything that you need to know.
+ Is it addressing a domain-specific problem, or is it a general purpose language?,
+
+Are you going to allow direct pointer access or not?
+What are the data types of your language?
+Is it a static or dynamic language?
+What is your memory model? Are you going to use a garbage collector or manual memory management? (If you use a garbage collector, prepare to write one or adapt an existing one to your language.)
+How are going to handle concurrency? Are you going to use a simple threading/locking model or something more complex like Linda or the actor model? (Since nowadays computers have multiple cores.)
+Are there primitive functions embedded in the language or will everything come from a library?
+What is the paradigm or paradigms of you language? Functional? Object-oriented? Prototype (like JavaScript)? Aspect-oriented? Template oriented? Or something entirely new?
+How is your language going to interface with existing libraries and languages (mainly C)? This point is important if you're building a domain-specific language.
+Finally, some of the answers to this questions are going to be answered by the second step and will help you answer the next step.
+ For example, 'they may want to direct a robot to follow a line' or 'they may want to create relatively portable desktop programs in it' or 'they may want to create web applications with it'.,
+
+Be careful to keep your language in the context-free language category or something inside it. Your parser generator and you will appreciate it later on.
+, Meaning that in the interpreted world your user will typically edit your program in an editor, and run it directly on the interpreter; while in the compile world, your user will edit your program, compile it, save the resulting executable somewhere and run it.,
+
+Also, think about how your compiler/interpreter will warn your user about erroneous programs and syntax errors.
+ Have the parser create an AST, then create your object code from the AST using three address code or its big brother SSA, then create a symbol table to define your functions, global variables, etc.
+
+Also, depending on your language, you may also want to create virtual pointer tables or information tables for you classes (in order to support reflection or RTTI).
+,
+
+You want to create programs that stress the burdens of your formal grammar in order to see that your compiler accepts everything that is inside your definition and rejects everything that is outside of it.
+, Along with a garbage collector or other runtime features if you need it.
+
+Specifically, if you write a compiler, you will need the code that the operating system will execute in order to begin running the user code (for example, allocating all global variables).
+
+
+Don't forget to document how you can integrate with existing libraries, languages and how to use the runtime features and/or standard library.
+

@@ -1,0 +1,81 @@
+ Only the computer edition of Minecraft has command blocks. They are not yet available for Minecraft Pocket Edition or Minecraft for gaming consoles.;
+, Command blocks are in-game items that give access to the Minecraft console. They are powerful tools that let you reshape the whole game — but because of this, they are only available in certain circumstances:
+
+
+On a multiplayer server, only the server operators can use command blocks. You'll need to ask an operator to promote you, or host your own server.
+In a single-player world, you'll need to enable cheats if they weren't enabled at world creation. Open the menu and click Open to LAN, check the "Allow Cheats" box, and click Start LAN world. This will only last one play session, but you can repeat it each time you want to add more command blocks.
+ Now that you have console access, you can switch to creative mode. This is the only mode that lets you place and program command blocks. Use the following command to accomplish this:
+
+
+Hit T to open the console (the chat bar), or press / to open it and automatically enter / to the line you are typing.
+Type /gamemode c and hit Enter to enter creative mode.
+Once you're done setting up command blocks, type /gamemode s for survival mode or /gamemode a for adventure mode.
+ Open the console again with T and type this command: /give (yourusername) minecraft:command_block 64 . Instead of (yourusername), type in your full Minecraft username, without parentheses.
+
+
+Your username is case sensitive.
+If nothing happens, you may need to update minecraft to at least version 1.4. Update to the latest version to get access to all commands.
+You can replace the "64" with any number to receive that many blocks. 64 makes a full stack of command blocks.
+ Check your inventory and look for the command blocks you just created. The icon is a brown, patterned box with grey control panels on each side. Move the command blocks to your quick slot and place one on the ground, just as you would any item.
+ Walk up to the command block and right-click to open it, as you would a chest. A window should pop up with a text box.
+
+
+If nothing happens, command blocks might be disabled on your multiplayer server. Someone with access to the server.properties file will need to open that file and set enable-command-block to "true" and op-permission-level to "2" or higher.
+ You can enter just about any command in the command block's text field, then press Done to save it in the block. There's a long list of commands included below, but try summon Sheep for your first experiment.
+
+
+To learn more commands, open the regular console (not the command block) and type /help.
+Unlike the regular console, a command block's text box does not need to start with the / symbol.
+ Connect a trail of redstone dust to the command block, and place a pressure plate on top of the redstone. Walk over the pressure plate to activate the redstone, and a sheep should appear next to the block. This will happen whenever any player or mob activates the redstone.
+
+
+This works just like a regular redstone activation. You can replace the pressure plate with a button, lever, or other activation method of your choice. You can even place the button directly on the command block.
+Anyone can use the command block once it's set up, but only players with the right permissions can change the command.
+ For the most part, command block text works the same as the regular console. If you aren't familiar with the console yet, check out the example section below to get started. If you already know how to use console commands, these are the only extra terms you need to learn:
+
+
+
+@p targets the player nearest to the command block, no matter how far away she is.
+
+@r targets a random player, anywhere on the server.
+
+@a targets every single player on the server, including yourself.
+
+@e targets every "entity" on the server. This includes practically anything that isn't a block, including players, objects, enemies, and animals. Be careful messing with this one.
+You can use these terms wherever you would use a player name or entity name (although these terms still work fine).
+ You can create extra-specific commands by adding modifiers after @p, @r, @a, or @e. These use the at . There are many different arguments and values available. You can look up the full list online, but here are some examples to get you started:
+
+
+A command that includes @rwill affect a random sheep.
+
+@eaffects everyone in creative mode. The "m" argument stands for mode, and "c" stands for creative.
+Use the ! symbol to make the opposite value. For example, @awill affect every player not on team Commando. (Teams only exist on special player-made maps.)
+
+, If you know a command, but aren't sure what you can use it for, press Tab and the game will fill it out for you. Press Tab a second time to scroll through a list of options.
+
+
+For example, go back to your sheep-summoning block and delete the word "Sheep." Press Tab to cycle through a list of possible entities to summon.
+ Save the command tp @p x y z into a command block. Instead of x, y, and z, enter the x-, y-, and z-coordinates of the location you'd like to teleport (for example, /tp @p 0 64 0). When anyone activates this box, the player nearest to the box will vanish and reappear at those coordinates.
+
+
+Press F3 to display coordinates.
+Just like any command, you can replace the "@p" with another term. If you type your username, you'll always be the one teleported, even if someone else activates the block. If you use @r, a random player on the server will be teleported.
+ Assuming you're using Minecraft 1.7 or later, you can make command blocks to summon any entity or block. Here are some examples:
+
+
+A command block with summon Boat stored will add a new boat next to the block every time the block becomes activated. The people of your server will never need to wait for a ferry again.
+To spawn a block instead of an entity, use the setblock command instead of the summon command. setblock minecraft:water 50 70 100 turns the block at the coordinates 50-70-100 into water. If there was already a block there, it disappears.
+ The kill command will permanently destroy an entity. This one is dangerous to use, since a typo could end up destroying the wrong thing (or even your entire world if you use @e). kill @rdestroys a random painting within a 50 block radius of the command block.
+ time set day or time set 0 will set the level of sunlight to the specified amount. Try different values instead of 0 to make it any time you like. Once you're tired of ruling over perpetual sunshine, make a block with toggle downfall or weather rain to start the rain.
+ There are hundreds of commands, which you can find by using /help or searching Minecraft websites. Here are a few more to explore:
+
+
+
+say (message)
+
+give (player) (item) (number of that item)
+
+effect (player) (potion effect)
+gamerule
+testforblock
+

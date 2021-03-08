@@ -1,0 +1,13 @@
+ Use either the shortcut Windows + x (in Windows 8 only) or simply search for it in the list of programs., If “Hosted network supported” says “Yes", then you’re equipped to proceed. Otherwise, you need a hardware upgrade, so this method will not work., Don't leave it blank after the equal signs. This is where you enter your SSID and key, or password.
+
+The SSID is simply the network name. It can be anything you'd like.
+Key is the Wi-Fi password. Make it secure by keeping it at a minimum of eight characters long.
+For example: netsh wlan set hostednetwork mode=allow ssid=T2Lead key=12345678
+
+
+, Before entering this, the network has been made. This command starts the network. After this, type "exit" to close Command Prompt., Navigate to "Change Adapter Settings". You can access Network and Sharing Center by:
+
+Using the Start menu (if you have a system older than Windows 8).
+Search for it.
+Select the network icon on the toolbar and find the option for opening Network and Sharing Center.
+ Then select “Properties”. This may require admin permissions; if it asks for a password, enter it and select "Continue". If you are not an admin or do not know the password, ask the admin for it., Check “Allow other network users to connect through this computer’s Internet Connection”.,

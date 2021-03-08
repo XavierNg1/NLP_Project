@@ -1,0 +1,26 @@
+ This is by far the most complicated part of the process, since rooting is different for every single model of Android. Even the carrier you use can affect your ability to root the device. On some phones, such as the Nexus line, rooting is very easy. On others, it may be impossible. Rooting is required to uninstall apps that came preloaded on your device.
+
+
+See How to Root Android Phones for instructions on rooting several popular devices, as well as tips on finding specific instructions for your device.
+ Once your device is rooted, you can use the Android Debug Bridge (ADB) tool included in the Android SDK to uninstall the app via command line. You can download the Android SDK for free here. You just need the "SDK Tools only" package, not the entire development environment. Download and run the installer for your operating system.
+ Use your standard USB cable to connect your Android device. Install any drivers that you may be prompted to install.
+ If you didn't have this turned on already during the root process, you'll need to enable USB debugging now.Open the Settings app and tap "About phone."
+Tap the "Build number" entry seven times to enable the hidden "Developer options" menu.
+Open the new "Developer options" menu at the bottom of the previous screen.
+Enable "USB debugging."
+
+, ADB runs through the Command Prompt. The best way to launch it is to find it using Windows Explorer first.
+
+
+Navigate to the folder you installed ABD to. By default, it is C:\Users\username\AppData\Local\Android\android-sdk\platform-tools.
+Hold ⇧ Shift and right-click in the folder.
+Select "Open command window here". This will launch the Command Prompt at the current location.
+ Once you're in the Command Prompt, you can tell ADB to retrieve the list of apps installed on your device. Type the following into the Command Prompt:
+
+
+Type adb shell and press ↵ Enter. This will start a dedicated command prompt for your device.
+Type cd system/app and press ↵ Enter. This will open the apps folder on your device.
+Type ls and press ↵ Enter. This will display a list of all of the apps installed on your device.
+ The list of apps will likely be fairly large. Scroll through the list and find the app you want to remove. Note the entire file name of the app.
+ Type rm AppName.apk and press ↵ Enter to remove the app. You can repeat this for any other apps you want to remove.Type reboot and press ↵ Enter after you are finished removing apps to reboot your phone and finish the process.
+

@@ -1,0 +1,29 @@
+ Whenever you wish to find the derivative of the square root of a variable or a function, you can apply a simple pattern. The derivative will always be the derivative of the radicand, divided by double the original square root. Symbolically, this can be shown as:If f(x)=u{\displaystyle f(x)={\sqrt {u}}}, then f′(x)=u′2u{\displaystyle f^{\prime }(x)={\frac {u^{\prime }}{2{\sqrt {u}}}}}
+
+
+, The radicand is the term or function underneath the square root sign. To apply this shortcut, find the derivative of the radicand alone. Consider the following examples:In the function 5x+2{\displaystyle {\sqrt {5x+2}}}, the radicand is (5x+2){\displaystyle (5x+2)}. Its derivative is 5{\displaystyle 5}.
+
+In the function 3x4{\displaystyle {\sqrt {3x^{4}}}}, the radicand is 3x4{\displaystyle 3x^{4}}. Its derivative is 12x3{\displaystyle 12x^{3}}.
+
+In the function sin(x){\displaystyle {\sqrt {sin(x)}}}, the radicand is sin⁡(x){\displaystyle \sin(x)}. Its derivative is cos⁡(x){\displaystyle \cos(x)}.
+ The derivative of a radical function will involve a fraction. The numerator of this fraction is the derivative of the radicand. Thus, for the sample functions above, the first part of the derivative will be as follows:If f(x)=5x+2{\displaystyle f(x)={\sqrt {5x+2}}}, then f′(x)=5denom{\displaystyle f^{\prime }(x)={\frac {5}{\text{denom}}}}
+
+If f(x)=3x4{\displaystyle f(x)={\sqrt {3x^{4}}}}, then f′(x)=12x3denom{\displaystyle f^{\prime }(x)={\frac {12x^{3}}{\text{denom}}}}
+
+If f(x)=sin⁡(x){\displaystyle f(x)={\sqrt {\sin(x)}}}, then f′(x)=cos⁡(x)denom{\displaystyle f^{\prime }(x)={\frac {\cos(x)}{\text{denom}}}}
+
+
+, Using this shortcut, the denominator will be two times the original square root function. Thus, for the three sample functions above, the denominators of the derivatives will be:For f(x)=5x+2{\displaystyle f(x)={\sqrt {5x+2}}}, then f′(x)=num25x+2{\displaystyle f^{\prime }(x)={\frac {\text{num}}{2{\sqrt {5x+2}}}}}
+
+If f(x)=3x4{\displaystyle f(x)={\sqrt {3x^{4}}}}, then f′(x)=num23x4{\displaystyle f^{\prime }(x)={\frac {\text{num}}{2{\sqrt {3x^{4}}}}}}
+
+If f(x)=sin⁡(x){\displaystyle f(x)={\sqrt {\sin(x)}}}, then f′(x)=num2sin⁡(x){\displaystyle f^{\prime }(x)={\frac {\text{num}}{2{\sqrt {\sin(x)}}}}}
+
+
+, Put the two halves of the fraction together, and the result will be the derivative of the original function.For f(x)=5x+2{\displaystyle f(x)={\sqrt {5x+2}}}, then f′(x)=525x+2{\displaystyle f^{\prime }(x)={\frac {5}{2{\sqrt {5x+2}}}}}
+
+If f(x)=3x4{\displaystyle f(x)={\sqrt {3x^{4}}}}, then f′(x)=12x323x4{\displaystyle f^{\prime }(x)={\frac {12x^{3}}{2{\sqrt {3x^{4}}}}}}
+
+If f(x)=sin⁡(x){\displaystyle f(x)={\sqrt {\sin(x)}}}, then f′(x)=cos⁡(x)2sin⁡(x){\displaystyle f^{\prime }(x)={\frac {\cos(x)}{2{\sqrt {\sin(x)}}}}}
+
+

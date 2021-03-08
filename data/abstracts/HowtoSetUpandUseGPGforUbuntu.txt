@@ -1,0 +1,23 @@
+
+Install GPG.
+Install a GUI for GPG.
+An icon for KGPG will be present under Applications → Accessories, to launch KGPG you should click on this icon.
+
+,
+Generate a set of keys.
+Decide if your key will expire, and if so, when.
+Select a key size.
+Select an algorithm.
+After filling out the appropriate fields, click the OK button.
+After you enter your passphrase twice, click on the generate button.
+After your key pair has generated, the window will close.
+
+,
+Note that now your keyring has one set of keys in it (your private key and your public key).
+Send your public key to others via forums, key servers, e-mails, etc.
+After someone sends you encrypted information, copy the information to your clipboard.
+Upload their key to your keyring.
+Now that you have the public key of the individual you wish to send encrypted information to, go to File → Open editor.
+If you have not set the individual's public key to trusted, you will need to click on the options button and put a check mark next to “Allow encryption with untrusted keys”.
+Sign your encrypted message, so that the individual knows that it is in fact coming from you (or someone who has access to your private key and passphrase...which should be only you).
+If you have someone public key, you can verify signed messages they send to you.

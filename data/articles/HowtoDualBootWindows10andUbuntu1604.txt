@@ -1,0 +1,44 @@
+ If you have any important files that you want to make sure do not get deleted, get a hold of some external storage like an external hard drive and copy all of those files over to the external hard drive.
+
+
+
+Open Control Panel (Windows + X -> Control Panel from the desktop in Windows 8+).
+Navigate to Power Options.
+Click "Choose what the power button does".
+Click "Change settings that are currently unavailable".
+Make sure the box that says "Turn on fast startup (Recommended)" at the bottom is not checked.
+
+
+
+Press Windows + I to open the settings charms. Click on Change PC settings at the bottom.
+Go to Update and recovery from left sidebar. Then click Restart now under Advanced startup.
+Now you will be presented with the "Choose an option" screen. Simply select "Troubleshoot" and then "Advanced options".
+In the Advanced options menu, choose "UEFI Firmware settings". Then click on the "Restart" button to reboot your system in UEFI settings.
+Now your PC has been booted into UEFI utility, move to boot on the top menu and here you can see the option to turn off secure boot in Windows 10. Use the arrow key to go to Secure Boot option and then press enter to select it. Use + or – to change its value.
+ You will need to download the most recent version of Ubuntu from the official website.
+
+
+Navigate to http://www.ubuntu.com/download/desktop
+
+Download the most recent version of Ubuntu.
+ Rufus is a free program to create a Live USB, which you will need to install Ubuntu.
+
+
+Open your internet browser and navigate to https://rufus.akeo.ie/
+
+Download and install the newest version of the rufus.exe
+
+,
+
+Open Rufus and select your USB stick in the 'Device' dropdown.
+Click the CD Rom icon next to the 'FreeDOS' dropdown. Then find your downloaded Ubuntu ISO and click 'Open' and then 'Start'.
+Click 'Yes' when it asks to download the Syslinux software.
+Click 'OK' to write in ISO Image mode.
+Confirm that your USB stick is selected and then 'OK' to continue.
+, When give the option choose to "Try Ubuntu". You are now running the ubuntu off the USB, but you will want to continue to install it on your computer.
+ Then click the gParted icon to begin running the program., Click the orange right facing arrow icon. Shrink the partition by at least 25GB so that it has free space after it.
+ This will start the installation wizard for Ubuntu.
+ They are optional and should not affect you installation.
+, This will open a new window where you can choose to add partitions.
+ Decrease the size of this partition so you have enough room to spare enough size for you swap partition. Use as: should be Ext4 journaling file system. The Mount point: should be set to / from the drop down menu and click OK.
+ Set the size to be at least 4GB (4096MB). Change Use as: to swap partition and click OK. Click Install Now to continue.,,,,,

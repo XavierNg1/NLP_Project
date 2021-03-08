@@ -1,0 +1,89 @@
+ Have a large capacity HDD and RAM. Also, realize that all of the information on the drive that your current operating system is installed on (probably your C: drive) will be destroyed during this process. If there's anything you want to keep, you should back up the drive to keep files. To install:
+
+
+Boot from the Windows DVD or USB device.
+Wait for Windows Installation files to load.
+Wait for Windows Setup to finish loading.
+Choose your language and other preferences.
+Choose appropriate action and wait for Windows setup to begin.
+Accept the Windows license terms.
+Choose the type of Windows installation to complete.;
+, While partitioning the drive for installation, choose about 70GB of HDD (Win 10), or the appropriate size for the type of Windows OS you are about to install. Divide the rest into 3 partitions.
+
+
+One consideration is how much you'll game. If you are not an avid gamer or just a casual gamer, you can just divide the rest of HDD after 70GB for Windows in 3 equal parts. However, if you'll play a lot of games, you might want 600 GB or so for that alone; this is because games today take up anywhere between 20GB to 70GB for a single game.
+70 GB for Windows (essential).
+Name one partition Games, one Programs, and one Others. If you are a Gamer like me keep 600 GB drive partition for games and name it Games.
+
+Wait for Windows setup to complete.
+Wait for Windows to prepare your PC for first use.
+Wait for Windows to check your PC's video performance.
+Choose a username, computer name and password.
+Enter your product key. This was given to you at the time of purchase.
+Choose time, date, and zone.
+ Congrats you are finished with installation!, All the drivers you need are provided with your hardware in a CD or DVD, like for motherboard, graphics card, etc. Install all the drivers in your Windows main drive (normally C: drive).
+
+
+Some manufacturers include bloatware, like Acrobat Reader's inclusion of the manual.
+Driver installation is easy. Just follow the instructions. Some of manufacturers include overclocking software. Only install that if needed.
+ This is the first real step to speeding up your system.
+
+
+Windows 10: Go to Settings > System > Apps and Features. From there, remove any unwanted apps.
+
+Windows 7: Go to Settings > Add or Remove Programs and remove any bloatware if you have purchased the system from a vendor (eg: antivirus or other trial ware).
+ This will help your startup time. For example, if you are planning to use another browser like Firefox or Opera, you may remove Internet Explorer from here. If you are using media players like MPC-HC or VLC media player, you can remove media features. You can also remove Windows games like Solitaire and Minesweeper from here.
+
+Go to start and in Windows search. Type Turn Windows features on or off.
+Be very careful what you remove here. Some of the programs listed here are important for your computer.
+To remove a program, just uncheck the tick box of features you want to remove. Then click OK and wait for the prompt from Windows to restart. Click OK to restart for changes to take effect. It is not drastic but the startup times will improve a bit.
+ It's a necessary step. All these are automatic and require minimal effort from the user.
+ Essential software programs are those needed for the secure and smooth operation of system like antivirus and firewall programs, and those for cleaning and de-fragmentation. User software, on the other hand, is anything that you use personally, like browsers Firefox), gaming software (Steam, Uplay), or multimedia software (MPC-HC, VLC, Photoshop, etc)., This is advised because Windows and all programs by default use the main Windows drive partition (C > Program files) for installation of all programs, and that congests the drive. This means that you endure longer load times when you start up, if all of the programs are on that same drive. Windows has to look through every software file at startup, including 100s of GB of other data from installed programs, downloaded data and user created files.
+
+If you created your partition at installation, as described above, no problem. If not, you can create a partition and reinstall old programs even now.
+ Create new folders for each type of program. You might include:
+
+
+Internet (for browsers like Opera, Firefox, Utorrent, and other download managers)
+Multimedia (for Photoshop, GIMP, AutoCA, Autodesk Maya, MPC-HC, VLC, Steam, Uplay, etc)
+Office Utilities (MS office, Libre Office, etc)
+Programming (Qt, Code::Blocks, etc)
+Security (Bitdefender, AVAST, etc)
+Tools & Utilities (WinRAR, Foxit Software, C-Cleaner, 7Zip, ausdiskdefrag, etc)
+Portable (for any portable apps)
+
+, Yes, you guessed it; you will be using this for only downloads from browsers and torrents.
+ During installation software by default use C > Program Files > xyz as the destination, but almost all programs allow the user to change the destination folder. Use your new folders as your destination during installation.
+
+
+This process doesn't add any data to the main drive of Windows, and allows startup and performance to be smoother throughout the system.
+Software like Steam and Uplay can also be installed the same way, but they do need more setup after install. Uplay and Steam by default uses the same folder they're installed on for installing games. Change this in the Settings panel, to move games to the Games drive you created.
+ This will stop the main drive from getting cluttered. All programs with downloads allow users to choose their destination folder easily in the settings. Save videos, audio files, and similar downloads to your Others drive.
+
+Copy and paste any downloaded attachments and files, large or small, to the Others drive. Library items like Video, Music, Pictures, Documents, and Downloads are all part of C drive, so restrain from adding any items to those.
+ Some add-ons to browsers save files directly to library items. One must immediately remove and paste them to other folder. Doing this frequently will avoid fragmenting your C drive.
+ Viruses, malware, and many other malicious programs can install themselves automatically in your system. It is a serious threat not only to your security but also, since these programs run in background, to your processor power and RAM. This can slow down your computer considerably.
+
+
+Some popular antivirus systems are Windows Defender (Windows 8, 8.1, and 10) and Microsoft Security Essentials (Windows 7).
+ If your computer is connected to Internet running Windows XP or another previous Windows operating system, it's better to use Firewall with both inward and outward bound protection. Search online for more firewall options., Following the above steps does not guarantee you stay 100% free of clutter. Windows also saves a lot of unneeded information in its prefetch and temporary folder. This can be cleaned automatically with software like CCleaner.
+
+
+If you have Nvidia Ge Force, you may have to manually remove some old driver installation files. Information on this can be obtained on the net. Alternatively, you can also use Windows Administrative Tools.
+ Defragmentation is also important. However, you can now do it less frequently since you won't be adding any files to the main drive which will also extend the life of your hard drive.
+ For example, if you install security tools like AVAST or Avira security with built-in firewalls, you need to stop Windows Defender, as the antivirus task will be taken by the other security tools. This will free RAM and processor power for other tasks.
+
+
+Do not stop Defender if you are only using specific tools, like only an anti-virus program. Defender is a firewall and malware scanner, so don't stop it if your security program doesn't handle both of those tasks.
+ Be diligent in checking for updates to your Windows operating system.
+ Most software and hardware manufacturers list the system requirements to use their products. Whenever you're planning to do a hardware or software upgrade, always make sure your system has the necessary resources and can handle the upgrade.
+ Cooling your system is tough and depends on lot of things. This small step will allow you to reduce processor temp up to 7 degrees without decreasing performance. To do this:
+
+Go to "Control Panel" and click "System & Security".
+Click "Power Options" and check "Balanced".
+Click on "Change Power settings".
+Then click on "Change Advanced Power settings".
+In the menu double click on "Power Processor Management".
+Double click on "Maximum Processor State" and change from 100% to 98%.
+The above step will not affect performance.
+

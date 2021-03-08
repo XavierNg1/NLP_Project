@@ -1,0 +1,8 @@
+
+If you go into Terminal and run these two commands all the hidden files appear when you open Finder.defaults write com.apple.finder AppleShowAllFiles TRUEkillall Finder
+To get back to hiding hidden files use these commandsdefaults write com.apple.finder AppleShowAllFiles FALSEkillall Finder
+
+, Once there, delete the file named "_volumelocked".
+ Then, restart your iPod. You can do this by holding down the center and menu button for at least 6 seconds.
+ Simply go into "Settings", "Volume Limit". If it asks for a PIN, you did it WRONG. Retry the above procedure.
+

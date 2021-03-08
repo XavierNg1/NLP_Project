@@ -1,0 +1,89 @@
+ Consider a vector space spanned by the column space of X{\displaystyle X} (Col⁡X∈Rm){\displaystyle (\operatorname {Col} X\in {\mathbb {R} }^{m})} and an observable y.{\displaystyle {\mathbf {y} }.} Because y{\displaystyle {\mathbf {y} }} in general is not in Col⁡X,{\displaystyle \operatorname {Col} X,} we wish to find the best approximation y^{\displaystyle {\hat {\mathbf {y} }}} to y,{\displaystyle {\mathbf {y} },} which is in Col⁡X,{\displaystyle \operatorname {Col} X,} called the projection of y.{\displaystyle {\mathbf {y} }.} In other words, we wish to find y^{\displaystyle {\hat {\mathbf {y} }}} that minimizes the distance between vector space Span⁡{Col⁡X}{\displaystyle \operatorname {Span} \{\operatorname {Col} X\}} and y.{\displaystyle {\mathbf {y} }.}
+
+
+y^=ProjCol⁡Xy{\displaystyle {\hat {\mathbf {y} }}=\operatorname {Proj} _{\operatorname {Col} X}{\mathbf {y} }}
+
+If we let X=(x1x2...xp),{\displaystyle X={\begin{pmatrix}{\mathbf {x} }_{1}&{\mathbf {x} }_{2}&...&{\mathbf {x} }_{p}\end{pmatrix}},} then we can write the projection as follows, where the angled brackets signify the inner product.
+
+
+ProjCol⁡Xy=⟨y,x1⟩⟨x1,x1⟩x1+...+⟨y,xp⟩⟨xp,xp⟩xp{\displaystyle \operatorname {Proj} _{\operatorname {Col} X}{\mathbf {y} }={\frac {\langle {\mathbf {y} },{\mathbf {x} }_{1}\rangle }{\langle {\mathbf {x} }_{1},{\mathbf {x} }_{1}\rangle }}{\mathbf {x} }_{1}+\,...\,+{\frac {\langle {\mathbf {y} },{\mathbf {x} }_{p}\rangle }{\langle {\mathbf {x} }_{p},{\mathbf {x} }_{p}\rangle }}{\mathbf {x} }_{p}}
+
+
+
+Obviously, this is not something we want to evaluate. 
+;
+, Now that we have a vector that is in Col⁡X,{\displaystyle \operatorname {Col} X,} we can start to find a β^{\displaystyle {\hat {\boldsymbol {\beta }}}} that yields a consistent solution for the matrix equation below, where β^∈Rn.{\displaystyle {\hat {\boldsymbol {\beta }}}\in {\mathbb {R} }^{n}.}
+
+
+Xβ^=y^{\displaystyle X{\hat {\boldsymbol {\beta }}}={\hat {\mathbf {y} }}}
+
+
+, We can relate y{\displaystyle {\mathbf {y} }} and its projection via z=y−y^,{\displaystyle {\mathbf {z} }={\mathbf {y} }-{\hat {\mathbf {y} }},} where z{\displaystyle {\mathbf {z} }} is the component of y{\displaystyle {\mathbf {y} }} orthogonal to Col⁡X.{\displaystyle \operatorname {Col} X.}
+
+
+y−y^=Col⁡(X)⊥{\displaystyle {\mathbf {y} }-{\hat {\mathbf {y} }}=\operatorname {Col} (X)^{\perp }}
+
+A theorem in linear algebra is that if β{\displaystyle {\boldsymbol {\beta }}} is in the null space of X,{\displaystyle X,} then β{\displaystyle {\boldsymbol {\beta }}} is orthogonal to the row space of X.{\displaystyle X.} This makes sense, because doing the matrix multiplication for any row should send the result to 0, as required of a vector in the null space of X.{\displaystyle X.} 
+
+
+Row⁡(X)⊥=Nul⁡X{\displaystyle \operatorname {Row} (X)^{\perp }=\operatorname {Nul} X}
+
+
+
+Since we can easily transpose X,{\displaystyle X,} we can say that Col⁡(X)⊥=Nul⁡XT.{\displaystyle \operatorname {Col} (X)^{\perp }=\operatorname {Nul} X^{T}.} Therefore, y−y^=Nul⁡XT,{\displaystyle {\mathbf {y} }-{\hat {\mathbf {y} }}=\operatorname {Nul} X^{T},} leading us to the conclusion below.
+
+
+XT(y−y^)=0{\displaystyle X^{T}({\mathbf {y} }-{\hat {\mathbf {y} }})=0}
+
+
+
+
+, Since we are not looking for y^,{\displaystyle {\hat {\mathbf {y} }},} but β^,{\displaystyle {\hat {\boldsymbol {\beta }}},} we substitute this into the homogeneous equation.
+
+
+XT(y−Xβ^)=0XTy−XTXβ^=0{\displaystyle {\begin{aligned}X^{T}({\mathbf {y} }-X{\hat {\boldsymbol {\beta }}})&=0\\X^{T}{\mathbf {y} }-X^{T}X{\hat {\boldsymbol {\beta }}}&=0\end{aligned}}}
+
+
+, Now that we have expressed β^{\displaystyle {\hat {\boldsymbol {\beta }}}} in the quantities that we want, we can evaluate this equation. 
+
+
+β^=(XTX)−1XTy{\displaystyle {\hat {\boldsymbol {\beta }}}=(X^{T}X)^{-1}X^{T}{\mathbf {y} }}
+
+Beware that for this equation to be valid, XTX{\displaystyle X^{T}X} must be invertible. If there are free variables in that expression, then there will be an infinite number of valid trendlines.
+ We want to fit a least-squares linear trendline y=β0x+β1{\displaystyle y=\beta _{0}x+\beta _{1}} to them. 
+
+
+(0,3),(1,4),(2,5),(3,7){\displaystyle (0,3),\,(1,4),\,(2,5),\,(3,7)}
+
+Since we are fitting a linear trendline, we can use the data points to write a system of equations.
+
+
+3=         β14=β0+β15=2β0+β17=3β0+β1{\displaystyle {\begin{aligned}3&=\ \ \ \ \ \ \ \ \ \beta _{1}\\4&=\beta _{0}+\beta _{1}\\5&=2\beta _{0}+\beta _{1}\\7&=3\beta _{0}+\beta _{1}\end{aligned}}}
+
+
+
+
+, The observation vector is simply a column vector consisting of the observations, or the y-values. The elements in the design matrix rely on the coefficients of the equation of the trendline as it pertains to each point. In our case, the first column consists of the coefficients of β0,{\displaystyle \beta _{0},} while the second column consists of the coefficients of β1.{\displaystyle \beta _{1}.}
+
+
+X=(01112131), y=(3457){\displaystyle X={\begin{pmatrix}0&1\\1&1\\2&1\\3&1\end{pmatrix}},\ {\mathbf {y} }={\begin{pmatrix}3\\4\\5\\7\end{pmatrix}}}
+
+
+,
+
+
+β^=(XTX)−1XTy{\displaystyle {\hat {\boldsymbol {\beta }}}=(X^{T}X)^{-1}X^{T}{\mathbf {y} }}
+
+
+,
+
+
+XTX=(14664)(XTX)−1=110(2−3−37)XTy=(4219)(XTX)−1XTy=110(1328){\displaystyle {\begin{aligned}X^{T}X&={\begin{pmatrix}14&6\\6&4\end{pmatrix}}\\(X^{T}X)^{-1}&={\frac {1}{10}}{\begin{pmatrix}2&-3\\-3&7\end{pmatrix}}\\X^{T}{\mathbf {y} }&={\begin{pmatrix}42\\19\end{pmatrix}}\\(X^{T}X)^{-1}X^{T}{\mathbf {y} }&={\frac {1}{10}}{\begin{pmatrix}13\\28\end{pmatrix}}\end{aligned}}}
+
+
+, This is the line of best fit for the observed datapoints. Our intuition checks that this is the correct answer, as we expected the slope to be slightly greater than 1 and the y-intercept to be slightly less than 3, due to the outlier (3,7).{\displaystyle (3,7).}
+
+
+y=1310x+2810{\displaystyle y={\frac {13}{10}}x+{\frac {28}{10}}}
+
+

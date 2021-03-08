@@ -1,0 +1,12 @@
+
+Start.
+Go to Services.
+Go back to IIS Manager.Verify that your application is working.
+Verify that the CGI/ISAPI Restrictions are set.
+Create the Scripts virtual directory
+
+Point it to the directory where the ServletExec_Adapter.dll is located.
+Fix the Handler Mappings.
+Verify the virtual Scripts directory.
+Try to access your app at this time you may get the 403. or 403.18 error.
+Deal with the application pools.

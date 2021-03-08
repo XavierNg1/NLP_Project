@@ -1,0 +1,86 @@
+ You can get it from apachefriends.org/download.html. Make sure to download the correct version for your system (32-bit or 64-bit).
+
+
+This guide will be using version 5.6.3 64-bit as the example. Make sure to change the commands based on the version that you are installing.;
+, Before you can install XAMPP, you'll need to change the permissions for the downloaded file so that it can be executed.
+ Enter the following command and press Enter, entering your password if required:
+
+
+sudo chmod +x xampp-linux-x64-5.6.3-0-installer.run
+You can drag the downloaded file into the Terminal window to automatically enter the file name and location.
+ After changing the permissions, you can run the installer to begin installing XAMPP. Type the following command and press Enter:
+
+
+sudo ./xampp-linux-x64-5.6.3-0-installer.run
+
+, The graphical installer will open to walk you through the rest of the installation process. Most users can leave all of the options at their default settings.You can uncheck the "Learn more about BitNami for XAMPP" if you're not interested in it.
+ You can start XAMPP using the Terminal by entering the following command and pressing Enter. You may be prompted for your password.
+
+
+sudo /opt/lampp/lampp start
+
+, Open your web browser and type in http://localhost/xampp/ in your address bar. If the XAMPP service is running, you'll see the Welcome page. This will help you test that XAMPP is running correctly.
+ If you want XAMPP to run whenever the computer is turned on and logged in, you can add a line to your rc.local file:
+
+
+Open the Terminal, type sudo nano /etc/rc.local and press Enter to open the rc.local file in the editor. You can replace nano with your preferred editor.
+Add /opt/lampp/lampp start to the line before exit 0.
+Save and close the rc.local file.
+ XAMPP installs with no passwords, and it is not recommended that you run it when it is not secured. You can configure all of your security settings by entering the following command. This will take you through a process where you will be given a series of prompts related to various security aspects.
+
+
+sudo /opt/lampp/lampp security
+You will be asked to set a password for XAMPP, set some MySQL security settings, create a MySQL password, phpMyAdmin password, and FTP password.
+Note that this will set your XAMPP username to llamp.
+ XAMPP includes eAccelerator, which is an optimization tool for PHP development. If you want to use it, you'll need to open the /opt/lampp/etc/php.ini file and remove the ; from the beginning of each of the following lines. Restart XAMPP after saving the file:
+
+
+;extension="eaccelerator.so";eaccelerator.shm_size="16";eaccelerator.cache_dir="/opt/lampp/tmp/eaccelerator";eaccelerator.enable="1";eaccelerator.optimizer="1";eaccelerator.check_mtime="1";eaccelerator.debug="0";eaccelerator.filter="";eaccelerator.shm_max="0";eaccelerator.shm_ttl="0";eaccelerator.shm_prune_period="0";eaccelerator.shm_only="0";eaccelerator.compress="1";eaccelerator.compress_level="9"
+
+, If you receive the error message "Cannot restore segment prot after relocation: Permission denied?", there is a conflict with SELinux.
+
+
+Type sudo /usr/sbin/setenforce 0 and press Enter. This should allow you to start XAMPP.
+ If XAMPP is running but no images are appearing when you open it in your web browser, this is because of an issue with Apache and certain Linux systems.
+
+
+Open the /opt/lampp/etc/httpd.conf file.
+Remove the # from #EnableMMAP off and #EnableSendfile off.
+Restart XAMPP. Your images should be appearing now.
+ You can add files to your local XAMPP server by adding them to the following folder. This is the "root" folder for your local XAMPP web server. All files placed in this folder will be accessed by the web server:
+
+
+/opt/lampp/htdocs/
+
+, XAMPP comes with a configuration program that will allow you to change settings through a graphical interface. You can start it by typing the following commands:
+
+
+cd /opt/lampp
+sudo ./manager-linux-x64.run
+
+, After the server is running, you can perform a quick test to ensure that the server is processing PHP correctly.Open your text editor and type the following:
+
+
+
+
+<?php
+ 
+        echo 'Hello world!';
+ 
+?>
+
+
+
+
+
+Save the file as test.php and place it in /opt/lampp/htdocs/
+
+Open your web browser and type http://localhost/test.php. You should see your "Hello world!" text appear.
+ Now that your server is configured, you can start installing tools such as Drupal and Wordpress. See the following articles for detailed instructions:
+
+
+Installing Drupal
+Installing Wordpress
+Creating MySQL Databases
+Using phpMyAdmin
+

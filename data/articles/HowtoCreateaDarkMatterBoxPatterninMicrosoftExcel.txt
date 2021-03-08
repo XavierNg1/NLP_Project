@@ -1,0 +1,53 @@
+
+Please complete those first before attempting this one.;
+, Save the workbook into a logical file folder.
+
+
+
+Enter On=0,Off=1 cell A4 = 1
+Enter Adjuster = 1
+Enter TURNS = 10
+Enter S's Count = 6
+Enter Var = 12
+Enter Divisor = 3,000,000
+Enter top = "=ROUND((-B4*PI())+(Adj),0)"   968321
+NEW: Enter 28.6470945405378 into cell E2 and Format Cell Number Number Custom "(FFF)" 0.000000 with parentheses and quotes. Go to cell AA7 and enter "=D4" and Insert Name Define name FFF to cell $AA$7.
+Enter YN = N for Part-Cycle. Enter <=Y/N: Part-Cycle to cell F4 and move the old note into an Insert New Comment for E4.
+Enter YN = Y for Molecules in cell E5 and Insert Name Define Name Molecules to $E$5. Enter <=Y/N: MOLECULES to cell F5.
+Enter Power = 1
+Enter AAA = -10
+db = 4.5
+All the rest are the same as they were before.
+
+
+
+The formula in A7:A1447 has not changed.
+In B7, check that the formula is "=IF(EVEN(S_COUNT)=S_COUNT,ROUND((-B4*PI())+(Adj),0),0.0000000000001)"
+In B8:B1447, check that the formula is "=((B7+(-TOP*2)/(AdjRows)))*$B$1"
+In cell C7, check that the formula is "=ROUND(-EXP((PI()^2)+(Cc*-(db))),0)+Designer"
+In C8:C1447, the formula is "=C7"
+In D7:D1447, revise the formula to "=X7/IF(Divisor=0,S_COUNT,Divisor)+(IF(COS((ROW()-7)*PI()/180*Factor)<0,ABS(COS((ROW()-7)*PI()/180*Factor))^Power*-1,COS((ROW()-7)*PI()/180*Factor)^Power)*IF(AAA=1,0,1))+IF(AAA=0,0, AB7*IF(MOLECULES="Y",Factor,1))^Power" where AB7 holds Triangle x.
+In E7:E1447, revise the formula to "=Y7/IF(Divisor=0,S_COUNT,Divisor)+(IF(SIN((ROW()-7)*PI()/180*Factor)<0,ABS(SIN((ROW()-7)*PI()/180*Factor))^Power*-1,SIN((ROW()-7)*PI()/180*Factor)^Power)*IF(AAA=1,0,1))+IF(AAA=0,0, AC7*IF(MOLECULES="Y",Factor,1))^Power" where AC7 holds Triangle y.
+In F7:F1447, the formula is "=IF(A7=0,F6,((PI())*((SIN(B7/(C7*2))*GMLL*COS(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+D7)))"
+In G7:G1447, the formula is "=IF(A7=0,G6,((PI())*((SIN(B7/(C7*2))*GMLL*SIN(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+E7)))"
+In H7:H1447, the formula is "=F7*GMLL*Sync1"
+In I7:I1447, the formula is "=G7*GMLL*Sync1"
+In J7:J1447, the formula is "=F7*GMSL*Sync2"
+In K7:K1447, the formula is "=G7*GMSL*Sync2"
+The lookup tables have not changed.
+
+
+
+Select F7:G1447 and with either the Chart Wizard or the Ribbon select A;;/Other Scatter Smoothed Line Scatter. Cut or Copy the chart to the Chart worlsheet. Using Chart Layout, get rid of the Axes, Grid lines and Legend. Format Selection for Data Series 1 as Navy Blue .25 pt Line Weight. Data Series 1 should read in the formula bar as "=SERIES(,Data!$F$7:$F$1447,Data!$G$7:$G$1447,1)".
+Do Chart Add Series and activate the Data sheet and select cell range J7:K1447. Format as Ice Blue from the Color Wheel, which is below a sky blue and a grey blue. Format Line Weight .25
+Do Chart Add Series and activate the Data sheet and select cell range H7:I1447. Format as Magenta from the Color Wheel, which is between a blood red and a dark rose, but comes out as a hot pink. Format Line Weight 1 pt.
+Add Box Lines. Do Insert Picture Shape Line copy and paste into the chart. In will be black but the heads will appear. Drag heads to where they need to be to give illusion of box and hold down Option Key to create next line. Give each line yellow color and yellow Glow. Decided against the blue lines.
+Do Plot Area and Chart Area Fill Black. Here's an example of an attempt made:
+
+
+
+
+
+
+
+

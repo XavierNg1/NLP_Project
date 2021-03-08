@@ -1,0 +1,19 @@
+ For everyday practical purposes, decibels are usually seen as a simple measure of loudness. However, the truth is a little more complex. In physics, decibels are often thought of as a convenient way of expressing the intensity of a sound wave. The larger the amplitude of a given sound wave, the more energy it transmits, the more it moves the air particles in its path, and the more "intense" the sound is.Because of this direct relationship between a sound wave intensity and and its volume in decibels, it's possible to find a decibel value given nothing more than an intensity level for the sound (which is typically measured in watts/square meter)
+
+
+Note that, for ordinary sounds, the intensity value is usually very small. For instance, a sound with an intensity of 5 ×10-5 (or 0.00005) watts/square meter translates to about 80 decibels — about the volume of a blender or food processor.
+To better understand the relationship between intensity measurements and decibels, let's follow along with an example problem. For the purposes of this problem, let's say that we're music producers and we're trying to find the background noise level in our recording studio to improve the sound of our records. After setting up our equipment, we detect a background noise intensity of 1 × 10-11 (0.00000000001) watts/square meter . In the next few steps, we'll use this info to find the decibel level of the background noise in our studio.
+ Once you've found the intensity of your sound, you can simply plug it into the formula 10Log10(I/10-12) (where "I" is your intensity in watts/square meter) to find its decibel value. To begin, divide by 10-12 (0.000000000001). 10-12 represents the intensity of a 0 decibel sound, so by comparing your intensity value to this, you're essentially finding its relationship to this base value.
+
+
+In our example, we'd divide our intensity value, 10-11, by 10-12 to get 10-11/10-12 = 10.
+ To finish solving, all you need to do is take the base 10 logarithm of your answer, then, finally, multiply by 10. This accounts for the fact that decibels are logarithmic units with a base of 10 — in other words, an increase of 10 decibels means that the loudness of the sound has doubled.
+
+
+Our example is easy to solve. Log10(10) = 1. 1 ×10 = 10. Therefore, the background noise in our studio has a loudness of 10 decibels. This is quite quiet, but still detectable with our high-quality recording equipment, so we'll probably need to eliminate the source of the noise for the best recordings
+
+, As noted above, decibels are logarithmic units with a base of 10. For any given decibel value, a noise 10 decibels greater is twice as loud, a noise 20 decibels greater is 4 times as loud, and so on. This makes it easy to describe the huge range of sound intensities that can be picked up by the human ear. The loudest sound the ear can hear without experiencing pain is more than one billion times more intense than the quietest noise it can detect.By using decibels, we avoid having to use huge numbers to describe common sounds — instead, we only need to use three digit numbers at most.
+
+
+Consider this — which is easier to use: 55 decibels or 3 × 10-7 watts/square meter? The two are equivalent, so rather than having to use scientific notation (or a very small decimal), decibels allow for us to use a sort of simple shorthand for easy everyday use.
+

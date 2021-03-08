@@ -1,0 +1,11 @@
+
+First you need to look at what you're trying to work out.
+Once you have these you need to introduce slack variables into the inequalities.
+The constraint should be in the form P=x+y(+z) which you need to rearrange to become 0=P-x-y(-z).
+Once you have your data you need to construct the tableau.
+You then need to put your data into the tableau.
+Now the fun bit.
+At this point you need to draw a line in your tableau so you can write in the first iteration.
+You now need to make all the values in the x column (apart from your pivot line) equal to 0.
+If you still have negative numbers on your top row (not including column l) repeat steps 6-8 until all your top row are positive.
+You read the solution of your simplex problem very simply.

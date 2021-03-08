@@ -1,0 +1,83 @@
+ Divide n by each prime from 2 to ceiling(n{\displaystyle {\sqrt {n}}}).
+ Warning: false positives are possible, even for all values of a.
+
+Choose an integer value for a such that 2 ≤ a ≤ n - 1.
+
+If an (mod n) = a (mod n), then n is likely prime. If this is not true, n is not prime.
+
+Repeat with different values of a to increase confidence in primality
+
+
+, Warning: false positives are possible but rarely for multiple values of a.
+
+Find values for s and d such that n−1=2s∗d{\displaystyle n-1=2^{s}*d}.
+
+Choose an integer value for a such that 2 ≤ a ≤ n - 1.
+
+If ad = +1 (mod n) or -1 (mod n), then n is probably prime. Skip to test result. Otherwise, go to next step.
+
+Square your answer (a2d{\displaystyle a^{2d}}). If this equals -1 (mod n), then n is probably prime. Skip to test result. Otherwise repeat (a4d{\displaystyle a^{4d}} etc.) until a2s−1d{\displaystyle a^{2^{s-1}d}}.
+
+If you ever square a number which is not ±1{\displaystyle \pm 1} (mod n) and end up with +1 (mod n), then n is not prime.  If a2s−1d≠±1{\displaystyle a^{2^{s-1}d}\neq \pm 1} (mod n), then n is not prime.
+
+Test result: If n passes test, repeat with different values of a to increase confidence.
+ By the definition of primality, n is only prime if it cannot be divided evenly by integers 2 or greater. The formula given saves time by removing unnecessary tests (e.g. after testing 3 there is no need to test 9).
+
+Ceiling(x) rounds x to the closest integer ≥ x.
+ The "x mod y" operation (short for "modulo") means "divide x by y and find the remainder."In other words, in modular arithmetic, numbers "wrap around" back to zero upon reaching a certain value, called the modulus. A clock counts in modulo 12: it goes from 10 to 11 to 12, then wraps around back to 1.
+
+Many calculators have a mod button, but see the end of this section for how to solve this by hand for large numbers.
+ All numbers that fail this test are composite (non-prime), but unfortunately numbers that pass this test are only likely primes. If you want to be sure of avoiding false positives, look for n on a list of "Carmichael numbers" (which pass this test every time) and "Fermat pseudoprimes" (which pass this test only for some values of a)., Although tedious to perform by hand, this test is commonly used in software. This can be performed at a practical speed and gives fewer false positives than Fermat's method.A composite number never gives a false positive for more than ¼ of the values of a.If you choose several values of a at random and they all pass this test, you can be fairly confident that n is prime.
+ If you do not have access to a calculator with a mod function, or if your calculator can't display numbers that high, use properties of exponents and modular arithmetic to make the process easier.Here's an example for 350{\displaystyle 3^{50}} mod 50:
+
+Rewrite the expression with more manageable exponents: (325∗325){\displaystyle (3^{25}*3^{25})} mod 50. (You may need to break it down further if calculating by hand).
+
+
+(325∗325){\displaystyle (3^{25}*3^{25})} mod 50 = (325{\displaystyle (3^{25}} mod 50 ∗325{\displaystyle *3^{25}} mod 50) mod 50. (This is a property of modular multiplication.)
+
+
+325{\displaystyle 3^{25}} mod 50 = 43.
+
+
+(325{\displaystyle (3^{25}} mod 50 ∗325{\displaystyle *3^{25}} mod 50) mod 50 = (43∗43){\displaystyle (43*43)} mod 50
+
+
+=1849{\displaystyle =1849} mod 50
+
+
+=49{\displaystyle =49}
+
+
+,  One of the numbers is not prime and the second number is the number that needs to be tested for primality.
+
+ "Prime1" = 35
+
+ Prime2 = 97
+
+
+,  They can't equal each other.
+
+ Data1 = 1
+
+ Data2 = 2
+
+
+,,,,,,
+
+ If step 7 is 0:
+
+ Use a different "prime1" where prime1 is a non-prime
+
+ Use a different prime 1 where prime 1 is an actual prime.  In this case, steps 6 and 7 should equal 0.
+
+ Use different data points for data1 and data2.
+
+
+
+If step 7 is 0 every time, there is an extremely high probability that prime2 is prime.
+
+ Steps 1 though 7 are known to fail in certain cases when the first number is a non-prime number and the second prime is a factor of the non-prime number "prime1".  It works in all scenarios where both numbers are prime.
+
+ The reason why steps 1 though 7 are repeated is because there are a few scenarios where, even if prime1 is not prime and prime2 is not prime, step 7 still works out to be zero, for one or both the numbers.  These circumstances are rare.  By changing prime1 to a different non-prime number, if prime2 is not prime, prime2 will rapidly not equal zero in step 7.  Except for the instance where "prime1" is a factor of prime2, prime numbers will always equal zero in step 7.
+
+

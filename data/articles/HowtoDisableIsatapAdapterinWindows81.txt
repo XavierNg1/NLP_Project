@@ -1,0 +1,14 @@
+ Press Win+PauseBrake to view basic information about your computer. Choose Device Manager in the left side of your screen.;
+,, Right click on the Isatap Adapter and choose uninstall. If there any other Isatap adapters on your computer, repeat the uninstallation procedure., Open the Command Prompt. Press Win+R and type cmd. You will see the Command Prompt appear into your screen. Use these commands:
+
+
+Type cd.. twice to reach c:\> directory.
+Type netsh interface isatap set state disabled.
+Type exit to quit from the Command Prompt.
+, Open the Command Prompt again to view Network Connection. Use these commands:
+
+
+Type cd.. twice to reach c:\> directory.
+Type ipconfig /all to check the Network Connection. You will see no Isatap adapter exists inside your PC.
+Type exit to quit from the Command Prompt.
+

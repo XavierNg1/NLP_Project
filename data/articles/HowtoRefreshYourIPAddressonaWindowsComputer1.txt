@@ -1,0 +1,7 @@
+ While the command prompt is the same no matter which version of Windows you’re using, more recent versions of Windows will need to run it “as administrator” to refresh the IP address. Windows Vista, 7, 8, or newer: Open the Start menu and click “Search” (or tap the magnifying glass icon). Type cmd (don’t press Enter). Right-click on the cmd you just typed and select “Run as Administrator.” If a User Account Control message asks for confirmation, click “Yes.” Windows 98, XP, NT, and 2000: Click the Start button and select “Run” from the menu. Type cmd into the blank and press Enter.;
+, Type ipconfig at the prompt and press Enter. Your IP address will be listed next to “IPV4 address” in most versions of Windows, and next to “IP address” in older versions.
+ Be sure there is a space between ipconfig and /release. Your computer will now “lose” its IP address.
+ Windows 98 users should use ipconfig /renew all. This will refresh your PC’s IP address.
+ Refreshing the IP will almost always change your computer’s IP address to a new one on the same network segment, e.g., 176.58.103.10 to 176.58.103.59, so don’t be alarmed if your new address looks very similar to your old one.
+ You can also exit the screen by typing exit at the command prompt and hitting the Enter key.
+

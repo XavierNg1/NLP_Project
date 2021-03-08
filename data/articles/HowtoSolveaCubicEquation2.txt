@@ -1,0 +1,29 @@
+ While the method described above is convenient because you don't have to learn any new mathematical skills to use it, it won't always be able to help you solve cubics. If your equation in the form ax3 + bx2 + cx + d = 0 has a nonzero value for d, the factoring trick above won't work, so you'll need to use either the method in this section or the one below to solve.
+
+
+For example, let's say we're given the equation 2x3 + 9x2 + 13x = -6. In this case, getting a 0 on the right side of the equals sign requires us to add 6 to both sides. In our new equation, 2x3 + 9x2 + 13x + 6 = 0, d = 6, so we can't use the factoring trick above.
+ As a quick reminder, factors are the numbers that can multiply together to make another number. For example, since you can make 6 by multiplying 6 &time; 1 and 2 × 3, 1, 2, 3, and 6 are the factors of 6.
+
+
+In our example problem, a = 2 and d = 6. The factors of 2 are 1 and 2. The factors of 6 are 1, 2, 3, and 6.
+ The integer solutions to your cubic equation will either be one of the whole numbers in this list or the negative of one of these numbers.
+
+
+In our equation, taking the factors of a (1, 2) over the factors of d (1, 2, 3, 6) gets this list: 1, 1/2, 1/3, 1/6, 2, and 2/3. Next, we add the negatives to the list to make it complete: 1, -1, 1/2, -1/2, 1/3, -1/3, 1/6, -1/6, 2, -2, 2/3, and -2/3. Our cubic equation's integer solutions are somewhere in this list.
+ Once you have your list of values, you can find the integer answers to your cubic equation by quickly plugging each integer in manually and finding which ones equal zero. However, if you don't want to spend the time doing this, there is a slightly quicker method that involves a technique called synthetic division. Basically, you'll want to synthetically divide your integer values by the original a, b, c, and d coefficients in your cubic equation. If you get a remainder of 0, your value is one of the cubic equation's answers.
+
+
+Synthetic division is a complex topic — see the link above for more information. Here's a sample of how to find one of the solutions to our cubic equation with synthetic division:
+
+
+
+-1 | 2 9 13 6
+__| -2-7-6
+__| 2 7 6 0
+
+Since we got a final remainder of 0, we know that one of our cubic's integer solutions is -1.
+
+
+
+
+

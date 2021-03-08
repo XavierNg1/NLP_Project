@@ -1,0 +1,16 @@
+
+Upgrade software and firmware
+
+Upgrade to the latest Dell OpenManage Server Administrator Managed Node package.
+Determine if you have a DRAC4 or DRAC5 card installed.
+Use the omreport command as another method for determining the DRAC version:
+
+
+
+Run the command, omreport chassis info |grep DRAC
+On a DRAC4 host = DRAC4 Version : 1.60
+On a DRAC5 host = DRAC5 Version : 1.32
+It is recommended that you use omreport to determine the DRAC version.
+
+
+

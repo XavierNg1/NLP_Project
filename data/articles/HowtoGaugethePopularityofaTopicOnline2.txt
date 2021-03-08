@@ -1,0 +1,16 @@
+ For most topics that are reasonably popular, there will be an English Wikipedia page.
+ This could be done in many ways:
+
+
+For pageviews from December 2007 to December 2015, use the stats.grok.se tool to get the page view counts for the page by month and by day within each month. This tool only includes desktop pageviews and does not exclude bots.For pageviews from July 2015 onward, you can use the Wikipedia pageviews API (either directly, or by graphing it on Wikipedia, or through Wikipedia Views as discussed below). You can get pageview counts for desktop, mobile-app, and mobile-web. You can also filter the user to user, bot, or spider.To get combined data over all time, you can use Wikipedia Views (that uses stats.grok.se data till June 2015 and API data from July 2015 onward)or Wikipedia Trends (that switched to using the API starting August 2015).,
+The length of the Wikipedia page.
+The number of edits made to the page: Click the "View History" button on the top right to see the edit history.
+The heat of debate in the corresponding Talk page.
+The number of languages it's in (on the page in any language, you can see links in the left sidebar to versions in other languages).
+ Do this for the steps above. For instance, Katy Perry might be compared to Shakira or Taylor Swift.
+
+
+
+In particular, when looking at data using stats.grok.se (prior to data being available through the Wikipedia pageviews API) keep in mind that a lot of traffic could be coming from bots and spiders. For data before July 2015, the official estimate is that about 15% of traffic is from bots and spiders, and the proportion is greater for less trafficked pages. Unlike the case of social media, the goal of these bots is not to boost the status of pages being visited but simply to scrape information.
+One way of determining the prevalence of bots is to look at pageviews API data and measure the number of pageviews by bots and spiders since this data became available, then extrapolate this to earlier times.
+

@@ -1,0 +1,78 @@
+
+
+
+To download Netbeans, go to the Netbeans.org website and press the big orange button on the top right of the page that says Download.
+Since the tip calculator is a relatively simple application, you only need to download Java SE (standard edition). Once you finish downloading the.exe file, run its pop up the NetBeans installer. The standards options in the installer are sufficient for this program, so you can download the standard edition without fear of not having a required components for the program.;
+, You can find it at http://www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html
+
+
+In there you can specify the JDK appropriate for your respective machine.
+
+
+
+Go to the dropdown menu at the top left that says File and select New Project.
+ On the prompt that follows, in the categories, select Java and in the projects select Java application; these are usually highlighted by default. Click Next.
+
+
+Give your project a name. Leave the Dedicated Folder check box unchecked and the Created the Main Class checkbox checked.
+With that, finish up and then you’ve created your project.
+
+
+
+Below the line that reads public static void main(String[] args), create the following variables:
+
+double total;
+int tip;
+double tipRatio;
+double finalTotal;
+
+
+Whether they are in different lines or the same line one after another doesn’t matter.
+These are what they call instance variables. They are basically references for a value will be stored in the memory of the program. The reason you name the instance variables this way is to link them to what you will be using them for. e.i the finalTotal variable is used for the final answer.
+The lack of capitalization in “double” and “int” and the semicolons (;) at the end of the words are important.
+For reference, int are variables that are always whole numbers, i.e 1,2,3… etc, while doubles have decimals in them.
+ At the top of the page, right below the line package (name of the project) and above the @author owner line, type: import java.util.Scanner;
+
+, While it doesn't matter what line of code the object is created, write the line of code right after the instance variables for consistency's sake. Making a scanner is similar to creating other kinds of objects in programming.
+
+
+Its follows the construction as follows: “Class name” “name of object” = “new” “Class name” (“Path”);, excluding the quotations marks.
+In this case it'd be: Scanner ScanNa = new Scanner (System.in);
+
+The keyword “new” and the “System.in” the parenthesis are important. The "new" keyword basically says that this object is new, which probably sounds redundant, but is needed for the scanner to be created. Meanwhile “System.in” is what variable the Scanner objects attached to, in this case System.in would make it so that the variable is something that the user types in.
+
+
+
+System.out.print("Enter total, including tax : $");
+The quotations for the line in parenthesis are important.
+Essentially, this line of code makes word print out on the console once the program is run. In this case the words would be “Enter Total, including Tax: $”.
+The quotations around the sentence in the parenthesis are needed to make sure Java knows that this is a sentence, otherwise it’ll consider it several variables that don’t exist.
+ In the next line of code, you make use of the scanner and one of the variables you created earlier. Look at this line of code:
+
+
+total = ScanNa.nextDouble();
+The "total" is the variable from before, and "ScanNa" is the name of your Scanner object. The phrase "nextDouble();" is a method from the scanner class. Basically its means that the next double type number that is inputted will be read by that scanner.
+In short, the number read by the scanner will be used by the variable Total.
+ Then use the scanner to save a number in the variable named tip, similar to the last two steps. Here it’s some code for reference:
+
+
+System.out.print("Enter % to tip: ");
+tip = ScanNa.nextInt();
+
+,
+
+
+Type tipRation = tip/100.0; to turn the whole number representing the tip percentage into an actual percentage.
+Note that the .0 in 100.0 is required, as in this situation the variable named “tip” is an integer, i.e a whole number. As long as one of the two numbers in the equation has a decimal, the end result will be a double with decimals. If both of the numbers where whole numbers though, it’d cause a computation error.
+ The following equation speaks for itself.
+
+
+finalTotal = total + (total * tipRatio);
+
+, You can use a bit more specialized version of the print method called printf to make it a little more fancy:
+
+
+System.out.printf("Total with %d%% as tip: $%.2f\n", tip, finalTotal);
+The letters preceded by % correspond to the variables that are separated by commands after the printed sentence; they are linked in terns of the order of the variables and the letters. In this case %d is linked to "tip" and %.2f is linked finalTotal. This is so that the console will printout the variables that were scanned or calculated rather than something pre-determined.
+The double % sign after %d its so that the console will actually printout the percentage sign; otherwise it'd cause an error because of the way the printf method works.
+

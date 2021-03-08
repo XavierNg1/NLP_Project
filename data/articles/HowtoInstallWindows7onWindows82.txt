@@ -1,0 +1,47 @@
+ This program allows you to create a virtual hard drive on your computer which you can then install Windows 7 on. You can then boot up Windows 7 in a window while you're running Windows 8.
+
+
+Most users can leave the installation options at their defaults. You can download from Oracle VM VirtualBox virtualbox.org/
+
+Oracle VM VirtualBox is a free program, though there are other options available as well.
+This method is great for getting quick access to Windows 7 without having to reboot, but graphic-intensive programs such as games will not perform well on the virtual machine.
+ When using VirtualBox, you'll be creating a virtual drive out of the free space on your hard drive. You'll want to be able to dedicate at least enough space for the operating system to install and run properly (about 20 GB), more if you want to be able to install programs.
+
+
+Make sure that you are leaving enough space for Windows 8 programs and files as well.
+ This will start the process for installing a new virtual operating system.
+ You will be prompted to give the machine a name and select the operating system.
+
+
+You can name the virtual machine anything, though simply naming it "Windows 7" might be the most convenient.
+Select "Microsoft Windows" as the type.
+Select "Windows 7 (32 bit)" or "Windows 7 (64 bit)" depending on the version you are installing. Your Windows installation disc will say which version it is. You cannot run a virtual 64-bit machine on a 32-bit computer. Click here for details on determine what version computer you have.
+ You can only dedicate RAM from the physical amount installed on your computer. Windows 7 requires 1 GB (1024 MB) of RAM, and it is recommended that you allocate about half of your available RAM for good performance.
+
+
+Don't allocate all of your RAM, or your regular operating system will encounter errors when the virtual machine is running.
+ This will start the process for creating a new virtual drive to install Windows 7 on.
+ If you know you'll need the hard drive image file for other programs, you can choose the appropriate file type, but most users can leave "VDI" selected.
+ The choice is up to you. A fixed size drive will offer improved performance, but the dynamic drive may take up less space on the computer.
+
+
+If you select "Dynamic", you'll still need to set a maximum size.
+ Click the Folder icon next to the drive name to select where you want it saved. This is especially useful if you want to store your virtual machines on a storage drive.
+ Beneath the virtual drive name, you'll see a slider that allows you to set the size or limit. Make sure that you include at least enough space to comfortably install Windows 7 (20 GB).
+ This may take a while, especially if you are creating a large fixed drive.
+ You can install Windows 7 from an ISO file just like you would an installation DVD. Both require a valid Product Key.
+
+
+If you purchased Windows 7 from the Microsoft website, you'll most likely be using an ISO.
+ You'll see the details of the system in the main frame.
+ This will open the Storage menu, where you can select your installation disc or ISO.
+ it will likely say "Empty". You will see the Attributes and Information on the right.
+ Select how you would like to load the installation disc.
+
+
+If you have an installation disc inserted in your computer, select the appropriate "Host Drive". The term "Host" refers to your physical computer.
+If you are installing from an ISO, select "Choose a virtual CD/DVD disk file". This will open a file browser, allowing you to find and select your ISO file.
+ Once you've selected your installation media, you can start the virtual machine and begin installing Windows 7. Select your Windows 7 virtual machine and click "Start". A new window will open mimicking the display of another computer.
+ You will see a message indicating when to press any key on your keyboard.
+ Installation will proceed from this point just as if you were installing it on a physical computer. Click here for detailed instructions on completing the Windows 7 installation.
+ Once you have Windows 7 installed, you can start it at any time by opening VirtualBox, selecting your Windows 7 virtual machine, and clicking Start. You can also right-click on the virtual machine in VirtualBox to create a shortcut on your desktop which allows you to start the machine with a single click.

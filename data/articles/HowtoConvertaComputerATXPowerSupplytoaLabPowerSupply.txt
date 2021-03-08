@@ -1,0 +1,21 @@
+;
+, Also, be sure you are not grounded so that remaining voltage doesn't flow through you to ground.
+,, Some people suggest attaching a 10 ohm resistor between a black and red wire (from the power cables on the output side), however this is only guaranteed to drain the low voltage capacitors on the output - which aren't dangerous to begin with! It could leave the high-voltage capacitors charged, resulting in a potentially dangerous - or even lethal - situation.
+,, If you have wires not listed here (brown, etc), see the Tips.
+The color code for the wires is: Red = +5V, Black = Ground (0V), White = -5V, Yellow = +12V, Blue = -12V, Orange = +3.3V, Purple = +5V Standby (not used), Gray = power is on (output), and Green = PS_ON# (turn DC on by shorting to ground).
+ Use a Dremel to drill the starting holes followed by a hand reamer to enlarge the holes until they are the right size by test fitting the binding posts. Also, drill holes for the power ON LED and a Power switch (optional).
+,
+
+
+Connect one of the red wires to the power resistor, all the remaining red wires to the red binding posts;
+Connect one of the black wires to the other end of the power resistor, one black wire to the cathode (shorter lead) of the LED, one black wire to the DC-On switch, all the remaining black wires to the black binding post;
+Connect the white to the -5V binding post, yellow to the +12V binding post, the blue to the -12V binding post, the gray to a resistor (330 ohm) and attach it to the anode (longer lead) of the LED;
+
+
+Note that some power supplies may have either a gray or brown wire to represent "power good"/"power ok". (Most PSU's have a smaller orange wire that is used for sensing-- 3.3V- and this wire is usually paired at the connector to another orange wire. Make sure this wire is connected to the other orange wires, otherwise your lab power supply won't stay on.) This wire should be connected to either an orange wire (+3.3V) or a red wire (+5V) for the power supply to function. When in doubt, try the lower voltage first (+3.3V). If a power supply is non ATX or AT compliant, it may have its own color scheme. If yours looks different that the pictures shown here, make sure you reference the position of the wires attached to the AT/ATX connector rather than the colors.
+Connect the green wire to the other terminal on the switch.
+Make sure that the soldered ends are insulated in heat shrink tubing.
+Organize the wires with an electrical tape or zip-ties.
+ Inspect for bare wire, and cover it to prevent a short circuit. Put a drop of super-glue to stick the LED to its hole. Put the cover back on.
+ Flip the main cutoff switch on the PSU if there is one. Check to see if the LED light comes on. If it has not, then power up by flipping the switch you placed on the front. Plug in a 12V bulb into the different sockets to see if the PSU works, also check with a digital voltmeter. Make sure you do not short any wires out. It should look good and work like a charm!
+

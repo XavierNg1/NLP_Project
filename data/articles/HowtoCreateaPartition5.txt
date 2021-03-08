@@ -1,0 +1,20 @@
+
+After you type in your password and press enter, you will get a prompt like the one in the image below.
+
+
+
+
+
+
+Type in n.
+You will be prompted to select the partition type. Enter p for creating a primary partition and e for creating an extended partition.
+Next you will be prompted to select the partition number, first sector and last sector. Just press enter and go with the default choice.
+
+
+
+
+
+
+You have successfully created a new partition.
+To create a new partition, there must be enough free space on the disk. To shrink the first partition on the disk /dev/sda by 200MB, use the command sudo resize2fs /dev/sda1 200M. Replace M by G to specify size in gigabytes.
+

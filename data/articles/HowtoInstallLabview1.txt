@@ -1,0 +1,5 @@
+ Use this step in case you installed any previous version or you want to rollback to an older version. Since it involves deleting the license files, it is recommended you keep your old serial key safe or make a backup of the folder in C:\Program Data as it follows from the steps below.;
+, Once the Wizard finishes uninstalling you will be prompted to restart your system. Click Yes if you want to do so now, No if you want to later.
+ Once your system has finished restarting, go to C:\Program Data\ and delete the National Instruments folder there.
+ Make sure you have a backup of it ready, because this is the point in which all files will be gone. Press Win+R and type regedit and press Enter or click Run. Go to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\National Instruments and delete all keys. Then restart your system. If all appears well, you've successfully deleted the program.
+

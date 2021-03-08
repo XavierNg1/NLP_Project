@@ -1,0 +1,31 @@
+
+Create a new windows application using Visual Studio 2005/2008.
+
+,
+Rename Form1 to Start-up form.
+
+,
+Add a checkbox to the StartupForm and rename it to Start-up Check Box.
+
+,
+Import the Microsoft.Win32 namespace using the following statement:
+
+,
+Implement the Start-up Check Box CheckChanged event and write the following code:
+
+
+RegistryKey currentUserRegistry = Registry.CurrentUser;
+RegistryKey runRegistryKey = currentUserRegistry.OpenSubKey
+@"Software\Microsoft\Windows\CurrentVersion\Run", true);
+if (runRegistryKey != null)
+{
+if (StartupToolStripButton.Checked)
+runRegistryKey.SetValue("MyAppName", Application.ExecutablePath);
+else
+runRegistryKey.DeleteValue("MyAppName", false);
+}
+
+In the above code we simply create a new instance of the RegistryKey class named current User Registry and set this instance to look at the Current User logical section of the Registry.
+So we need to check the application startup option from the registry.
+Implement the StartupForm Load event and write the following code in it this event.
+Now compile the application and run the application.

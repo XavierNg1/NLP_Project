@@ -1,0 +1,36 @@
+ If you don’t want to expand externally, but don’t have any extra space inside the computer, you can replace the CD, DVD, or Floppy (AKA Optical Drive). A standard 3.5” internal desktop hard drive is a good way to add lots of space for cheap.
+
+
+Both hard drives and optical drives can utilize either an IDE or SATA interface cable(two alternates to USB). Most hard drives will come bundled with the cables they need, but you may need to purchase them separately as well.
+ Most optical drives utilize a 5.25” expansion bay, which is too large for a 3.5” hard drive. You may need mounting brackets or a 5.25” to 3.5” bay adapter. Consult your manufacturer’s specifications to verify the size of your optical drive first.
+
+
+The expansion bay is the space that holds the drive. Both mounting brackets and bay adapters will allow you to fit your smaller hard drive into the larger space.
+ You want to make sure the computer is completely powered off and unplugged before touching any of the electronic components.
+ You will likely need a screwdriver to open the computer wall. The type of screwdriver will vary depending on manufacturer.
+ Most optical drives are connected via two cables: power and data.
+
+
+The power cable typically has a white tip attached with black, yellow, and red wires.
+The data cable has a wide tip attached to a ribbon cable.
+ Once the screws are removed, the drive should either slide out or release with a latch.
+ Secure the necessary adapter with screws.
+ Slide the drive into the bay and reattach the screws.
+ Reattach the power and data cables.
+ You will need to plug the computer back in to setup the drive.
+ BIOS (Basic Input/Output System) is the software used by the processor to identify its hardware like your newly installed hard drive. Different manufacturers use different software to access and modify the BIOS. Consult the manufacturer’s specifications to confirm exactly how to access the BIOS and the hardware section within.
+
+
+Power on the computer, and press the necessary key during the startup screen.
+Look for a tab named “Hardware”, “Setup” or something similar. Navigate using the keyboard.
+You should see your newly installed hard drive listed. If not, power off the computer and double check the cable connections.
+Look for an option labeled “Auto-detect” and make sure it is enabled.
+Save and Exit. This usually has a specific key bound to it in BIOS. Your computer should restart automatically.
+ The drive needs to formatted into a filesystem that your computer can read before it can be used. If you plan to use any Windows system files you will need to format to NTFS, but for simply storing data a filesystem like xFAT or FAT32 will be fie. The following steps are for Windows 10, but should work for other versions of Windows as well.
+
+
+Press Windows Key + R to bring up the run menu.
+Type diskmgmt.msc and press OK. This launches the disk management tool.
+Right-click the new hard drive in the list and select ‘Format…’
+Select your desired filesystem and press OK. Formatting a disk can take some time depending on the storage size of the disk. Once formatting is complete you can use your new hard drive to store data!
+

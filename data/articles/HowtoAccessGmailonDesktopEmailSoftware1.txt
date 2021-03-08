@@ -1,0 +1,35 @@
+ IMAP refers to Internet Message Access Protocol, which is a protocol email clients use to retrieve messages. Begin by signing into your Gmail account and clicking on Mail. Then select Settings, which can be found in the upper, left-hand corner of your window., This should be the sixth option to the right.
+ Finish by clicking on Save Changes and finally closing your browser. This will allow your Gmail messages to be retrieved by another email client.
+ This will be the first tab on the lefthand side. Note that this and subsequent steps in Method One should work for Microsoft Outlook 2013 and 2016.
+ This is the first screen you should see after selecting the File tab. The Add Account option is near the top.
+ This is the easiest way to link your Gmail account to Microsoft Outlook, as much of the process is automated. After selecting the E-Mail Account bullet, you simply need to enter your name and appropriate email address before typing your Gmail password in twice.
+
+
+You'll see a Configuring message that updates you on where Outlook is in the process.
+If the Auto Account Setup process fails for any reason, fret not. You can then try adding the Gmail account manually, which is detailed next.
+ This is the second bulleted option below E-Mail Account. Click Next after selecting it. Remember that you only need proceed to this step if the Auto Account Setup process didn't work.
+ This is the third option on the Choose Service screen that appears after selecting Manual setup or additional server types. Click Next after selecting "POP or IMAP."
+
+, Once you arrive at the "POP and IMAP" Account Settings screen, you'll be prompted to enter information under three sections: User, Server, and Logon Information.
+
+
+Enter your name and the appropriate email address under the first section.
+Under Server Information, you'll then select IMAP on the Account Type dropdown menu.
+Enter imap.googlemail.com in the text box next to Incoming mail server.
+Enter smtp.googlemail.com in the text box next to Outgoing mail server (SMTP).
+Enter your user name and Gmail password under the Logon Information section. If you wish Outlook to automatically access your Gmail about opening the program, you can also check the box that says Remember Password.
+ Then check the box reading "My outgoing server (SMTP) requires authentication." Finally, select the first bulleted option under that box, the one that says "Use same settings as my incoming mail server."
+
+, This is all in the same dialogue box that was used for the previous step. You'll need to enter some additional information, detailed below.
+
+
+Type 993 in the text box for Incoming server (IMAP).
+Select SSL from the dropdown menu for Incoming server encrypted connection.
+Select TLS from the dropdown menu for the Outgoing server encrypted connection.
+Type 587 in the text box for Outgoing server (SMTP).
+Even though the text box for Outgoing server (SMTP) is listed before the Outgoing server encrypted connection on screen, you should select TLS before typing in 587 as the Outgoing Server (SMTP). Otherwise, the port number (587) will revert to 25 if you select TLS afterward.
+Finally, click OK and close Internet E-mail Settings.
+ Outlook will test the account setting you've entered and show you a "Congratulations!" message when the process has been completed. Once you see that message, you can click Close.
+ Outlook will also have sent you a test message confirming that account's addition was successful. This should conclude the process.
+ To verify that the process was in fact successful, you should see your Gmail account listed in the lefthand column.
+

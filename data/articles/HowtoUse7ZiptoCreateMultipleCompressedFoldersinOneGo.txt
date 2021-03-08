@@ -1,0 +1,19 @@
+ If you let it install in its default setting it should typically be in "C:\Program Files\7-zip\7z.exe.";
+, You won't need to use 7zip's graphical user interface, so no need to run it after installing.
+,,, In our example it is in C:\My Music.
+ Take note of the file extension, which is .bat. Be sure not to set the file type as 'Text Documents' too.
+, Notice that the batch file is at the same directory level as the folders that need to be compressed.
+ DO NOT run as Administrator (option appears in right-click menu) - running as Administrator will compress the files in windows/system32. After you double-click on the bat file, the windows command prompt appears and 7zip begins to do its thing.
+The windows command prompt disappears when all compressed folders are created. You should now see them inside your folder.
+ To do this, highlight them all and click the right mouse button. If you installed 7zip in its default setting, you'll have its menu incorporated in the Windows shell. Navigate to it and click 'Test Archive.'
+
+
+7zip should report that there are no errors in your archive.
+
+
+
+
+
+
+You are done creating multiple compressed folders in one go using 7zip. You can now move them to the external hard drive. You can delete the batch file you created or move it to a different folder.
+

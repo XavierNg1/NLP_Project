@@ -1,0 +1,30 @@
+ There are several ways that you can quickly open this window.
+
+
+Press ⊞ Win+Pause. This will open the System window.
+Open the Start menu and right-click on "Computer." Select "Properties" to open the System window.
+Open the Start menu, select "Settings," then "System," and then click "About" (Windows 10).;
+, This will tell you how much memory is installed and recognized by Windows.
+
+
+Note that the "Usable" amount of memory will be lower than the "Installed" amount. This is because memory manufacturers report size differently than Windows. For example, 8 GB of installed memory may be reported as 7.88 GB of usable memory.
+ If you need more information about the RAM that you have installed, such as the speed or the capacity of each individual module, you can use the Command Prompt.
+
+
+Open the Command Prompt from the Start menu. You can also press ⊞ Win+R and type cmd to start it.Type wmic MEMORYCHIP get BankLabel,DeviceLocator,Capacity,Speed and press ↵ Enter. This will display a few columns.
+The BankLabel column will tell you which slots the RAM chips are installed in. The Capacity column will show how large each module is, expressed in bytes. The DeviceLocator column is another expression of the slot the RAM is installed in. The Speed column will tell you what speed each module is.
+ You can use the Task Manager to check how much RAM your computer is currently using.
+
+
+Press Ctrl+⇧ Shift+Esc to open the Task Manager.
+Click the "Performance" tab. If you don't see this tab, click the "More details" option at the bottom of the window.
+Select the "Memory" option (Windows 8 and later). This will allow you to see your RAM usage.
+Find how much RAM is used and available. In Windows 7, it is referred to as "Physical Memory." RAM is designed to be used, so there's no cause for alarm is the vast majority of it is currently in use.
+ There may be several different reasons why Windows is not showing all of the RAM that you have installed on your computer:
+
+
+If you are running a 32-bit version of Windows, you can only make use of up to 4 GB of RAM. Any RAM over this amount will not be recognized by 32-bit Windows. You can see which version you have at the top of the System window. Upgrading to a 64-bit version of Windows will allow you to access more RAM.
+If your RAM modules are different speeds, they may not be functioning together properly. Use the Command Prompt command in the previous step to determine if all of your RAM is the same speed.
+If one of your RAM modules is failing, it may not be registering in Windows. You can use the free MemTest program to scan your memory modules and check for errors. See How to Test PC RAM with MemTEst86 for detailed instructions.
+If the RAM modules are not supported by your motherboard, they will not be recognized or used by Windows. Check your motherboard's documentation to ensure that any RAM you've added is supported.
+

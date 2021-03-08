@@ -1,0 +1,229 @@
+ This common library allows you to change the color that the text output displays. Add the following code to the top of your program:#include<stdio.h>
+
+
+;
+, This will make it easier to capture keyboard input from the user. Add the library below the stdio.h library:
+
+
+
+
+
+#include<stdio.h>
+#include<conio.h>
+
+
+
+
+, You can use this function to vary the text colors of your output. Colors must be written in all caps, or expressed as a numeral:
+
+
+
+
+
+#include<stdio.h>
+#include<conio.h>
+ 
+main()
+{
+   textcolor(RED); // You could type "4" instead of "RED", but it is not as readable
+}
+
+
+
+
+
+
+
+Color
+Numerical Value
+
+
+BLACK
+0
+
+
+BLUE
+1
+
+
+GREEN
+2
+
+
+CYAN
+3
+
+
+RED
+4
+
+
+MAGENTA
+5
+
+
+BROWN
+6
+
+
+LIGHTGRAY
+7
+
+
+DARKGRAY
+8
+
+
+LIGHTBLUE
+9
+
+
+LIGHTGREEN
+10
+
+
+LIGHTCYAN
+11
+
+
+LIGHTRED
+12
+
+
+LIGHTMAGENTA
+13
+
+
+YELLOW
+14
+
+
+WHITE
+15
+
+
+
+There are more colors than this. The colors available depend on the installed graphics drivers and current mode. Colors must be written in all caps., Include a cprintf function to display some text in your new color. Use a getch function at the end to close the program when the user presses a key.
+
+
+
+
+
+#include<stdio.h>
+#include<conio.h>
+ 
+main()
+{
+   textcolor(RED); // You could type "4" instead of "RED", but it is not as readable
+   cprintf("Hello, World!");
+ 
+   getch();
+   return 0;
+}
+
+
+
+
+, The C graphics library allows you to draw objects, as well as adjust their color. You can get access to the graphics library by including it at the top of your program:
+
+
+
+
+
+#include<graphics.h>
+
+
+
+
+, You can use this library to easily capture a user's input. Add the library below the graphics.h library:
+
+
+
+
+
+#include<graphics.h>
+#include<conio.h>
+
+
+
+
+, You'll need to do this before you begin drawing objects, so that the program has access to the system graphics drivers. This will create an area on the screen that the object will be drawn on.
+
+
+
+
+
+#include<graphics.h>
+#include<conio.h>
+ 
+main()
+{
+   int gd = DETECT, gm;
+   initgraph(&gd, &gm, "C:\\TC\\BGI"); // Change this to the path of your compiler
+}
+
+
+
+
+, Before coding in an object, use the setcolor function to define the color of the object you are about to draw:
+
+#include<graphics.h>
+#include<conio.h>
+ 
+main()
+{
+   int gd = DETECT, gm;
+   initgraph(&gd, &gm, "C:\\TC\\BGI");
+ 
+   setcolor(BLUE); // You can enter "1" instead of "BLUE" to get the same color, but this is not as readable
+}
+
+
+
+
+, For this example, you'll be drawing a rectangle using the rectangle function. You can use any of the graphics.h drawing tools to draw in the color that you set.
+
+
+
+
+
+#include<graphics.h>
+#include<conio.h>
+ 
+main()
+{
+   int gd = DETECT, gm;
+   initgraph(&gd, &gm, "C:\\TC\\BGI");
+ 
+   setcolor(BLUE); 
+   rectangle(50,50,100,100); // These numbers indicate the location of the left-top and right-bottom corners
+}
+
+
+
+
+, Add the getch command and turn off the graphics area as you close the program. Compile it and give it a test run.
+
+
+
+
+
+#include<graphics.h>
+#include<conio.h>
+ 
+main()
+{
+   int gd = DETECT, gm;
+   initgraph(&gd, &gm, "C:\\TC\\BGI");
+ 
+   setcolor(BLUE); 
+   rectangle(50,50,100,100);
+ 
+   getch();
+   closegraph();
+   return 0;
+}
+
+
+
+

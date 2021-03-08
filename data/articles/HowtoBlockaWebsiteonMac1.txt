@@ -1,0 +1,36 @@
+ Power up your computer and wait for it to be completely operation-ready. This might take anywhere from a few seconds to a few minutes. Keep in mind that in order to block websites on your Mac you need to change the computer's hosts file. A hosts file is a computer file that maps the websites you visit and that allows your computer to be identified through various electronic communication methods, such as the Internet. What you're trying to do is, in essence, telling the hosts file to redirect a specific web address so that it no longer reaches your screen. Keep in mind that this method is a bit technical.
+
+
+Go to the Main Applications folder.
+Click Utilities.
+Select the program Terminal from the list.
+
+You can also look for the terminal by accessing spotlight and running a search through it.
+
+;
+, Things can go wrong when you least expect it so making a copy is always a good idea. To make a copy, follow these steps:
+
+
+Type the following on the terminal line: "sudo nano /etc/hosts".
+Hit enter on the terminal command line. This allows you to open up your hosts file in a nano box.
+Input your admin password when prompted.
+
+It might seem as if the letters and symbols you're typing aren't being recorded because the cursor won't move. But they are, in fact, being registered properly.
+ Now that the hosts file is open, several text lines used for mapping purposes will appear.
+
+
+Enter "127.0.0.1" below the last text line.
+Press the space bar.
+Enter the specific IP address of the website you would like to block. For example, "127.0.0.1 www.facebook.com".
+ Many more web addresses can be blocked in this exact fashion. Just remember: avoid using "http" and begin directly with "www".
+ Once you are finished adding web addresses to be blocked, follow the following steps to finish the process.
+
+
+Press and hold the control key and press "O" to save the file.
+Press and hold the control key and press "X" to exit the host file.
+ Your cache is where your computer saves recent information so that it can readily access it at a later date. You might never become aware of your cache as it operates in the background and is hence not visible to you. So to put the changes you made into action, you need to flush your cache to get rid of its past saved history.
+
+
+Type "sudo dscacheutil -flushcache".
+ And Ta-da! It's now time to test your results. Simply open Safari and enter a website you wanted blocked. The screen should come back as blank, or with an error message.
+

@@ -1,0 +1,60 @@
+ The principle of superposition allows us to find the electric field of only one of the plates. In this case, we use a Gaussian pillbox. This pillbox has a face parallel to the plate with area A.{\displaystyle A.} Let's define an areal charge density σ=QA,{\displaystyle \sigma ={\frac {Q}{A}},} with units of charge per unit area. Because the electric field is perpendicular to the surface, only the ends of the pillbox will contribute to it. 
+
+
+∮SE⋅dS=Qϵ0E2A=Qϵ0E=Q2Aϵ0E=σ2ϵ0{\displaystyle {\begin{aligned}\oint _{S}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {S} }&={\frac {Q}{\epsilon _{0}}}\\E2A&={\frac {Q}{\epsilon _{0}}}\\E&={\frac {Q}{2A\epsilon _{0}}}\\E&={\frac {\sigma }{2\epsilon _{0}}}\end{aligned}}}
+
+Since we are dealing with two parallel plates that have charge densities +σ{\displaystyle +\sigma } and −σ,{\displaystyle -\sigma ,} we recognize that when we consider the negatively charged plate only, the electric field points towards it. By the superposition principle, the electric field between the plates is doubled. As we are only interested in the magnitude of the electric field, its direction is ignored. 
+
+
+E=σϵ0{\displaystyle E={\frac {\sigma }{\epsilon _{0}}}}
+
+
+;
+, We assume that the plates are a distance d{\displaystyle d} apart. Then, we recall that the electric field is conservative, so it exhibits path-independence, again allowing for easy evaluation of the integral. Potential is always evaluated from high to low potential - in other words, in the direction of the electric field. Furthermore, when we find potential, we are only interested in finding its magnitude. 
+
+
+V=−∫CE⋅dl=Ed=σϵ0d=QdAϵ0{\displaystyle {\begin{aligned}V&=-\int _{C}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {l} }\\&=Ed\\&={\frac {\sigma }{\epsilon _{0}}}d\\&={\frac {Qd}{A\epsilon _{0}}}\end{aligned}}}
+
+
+, Using the relation C=QV{\displaystyle C={\frac {Q}{V}}} as outlined earlier, we evaluate the capacitance of a parallel-plate capacitor below, where C{\displaystyle C} is found to be independent of both Q{\displaystyle Q} and V.{\displaystyle V.}
+
+
+C=Aϵ0d{\displaystyle C={\frac {A\epsilon _{0}}{d}}}
+
+
+, We use a cylindrical Gaussian surface with radius r{\displaystyle r} between the two cylindrical conductors to determine electric field, where the inner cylinder has radius r1,{\displaystyle r_{1},} the outer cylinder has radius r2,{\displaystyle r_{2},} both cylinders have length L,{\displaystyle L,} and r1<r<r2≪L.{\displaystyle r_{1}<r<r_{2}\ll L.} As before, the electric field is perpendicular to the plates, so the tops of the Gaussian surface do not contribute. Only the side with area A=2πrL{\displaystyle A=2\pi rL} does.
+
+
+∮SE⋅dS=Qϵ0E2πrL=Qϵ0E=Q2πrLϵ0{\displaystyle {\begin{aligned}\oint _{S}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {S} }&={\frac {Q}{\epsilon _{0}}}\\E2\pi rL&={\frac {Q}{\epsilon _{0}}}\\E&={\frac {Q}{2\pi rL\epsilon _{0}}}\end{aligned}}}
+
+The electric field is pointing radially from the center of the cylinders.
+ We are evaluating from r1{\displaystyle r_{1}} to r2.{\displaystyle r_{2}.}
+
+
+V=∫r1r2Q2πrLϵ0dr=Q2πLϵ0∫r1r21rdr=Q2πLϵ0lnr2r1{\displaystyle {\begin{aligned}V&=\int _{r_{1}}^{r_{2}}{\frac {Q}{2\pi rL\epsilon _{0}}}{\mathrm {d} }r\\&={\frac {Q}{2\pi L\epsilon _{0}}}\int _{r_{1}}^{r_{2}}{\frac {1}{r}}{\mathrm {d} }r\\&={\frac {Q}{2\pi L\epsilon _{0}}}\ln {\frac {r_{2}}{r_{1}}}\end{aligned}}}
+
+
+, The charges cancel out, and once again, the capacitance is independent of charge. 
+
+
+C=2πLϵ0lnr2r1{\displaystyle C={\frac {2\pi L\epsilon _{0}}{\ln {\frac {r_{2}}{r_{1}}}}}}
+
+
+, We use a spherical Gaussian surface with radius r{\displaystyle r} between the two spherical conductors to determine electric field, where the inner sphere has radius a,{\displaystyle a,} the outer sphere has radius b,{\displaystyle b,} and a<r<b.{\displaystyle a<r<b.} The area of the Gaussian sphere is 4πr2.{\displaystyle 4\pi r^{2}.}
+
+
+∮SE⋅dS=Qϵ0E4πr2=Qϵ0E=Q4πr2ϵ0{\displaystyle {\begin{aligned}\oint _{S}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {S} }&={\frac {Q}{\epsilon _{0}}}\\E4\pi r^{2}&={\frac {Q}{\epsilon _{0}}}\\E&={\frac {Q}{4\pi r^{2}\epsilon _{0}}}\end{aligned}}}
+
+This is the same electric field as that of a point charge. The field points radially from the center of the spheres.
+ We are integrating from a{\displaystyle a} to b.{\displaystyle b.}
+
+
+V=−∫CE⋅dl=Q4πϵ0∫ab1r2dr=Q4πϵ0(−1b−−1a)=Q4πϵ0(1a−1b){\displaystyle {\begin{aligned}V&=-\int _{C}{\mathbf {E} }\cdot {\mathrm {d} }{\mathbf {l} }\\&={\frac {Q}{4\pi \epsilon _{0}}}\int _{a}^{b}{\frac {1}{r^{2}}}{\mathrm {d} }r\\&={\frac {Q}{4\pi \epsilon _{0}}}\left({\frac {-1}{b}}-{\frac {-1}{a}}\right)\\&={\frac {Q}{4\pi \epsilon _{0}}}\left({\frac {1}{a}}-{\frac {1}{b}}\right)\end{aligned}}}
+
+
+, The expression 1a−1b{\displaystyle {\frac {1}{a}}-{\frac {1}{b}}} can be simplified into b−aab.{\displaystyle {\frac {b-a}{ab}}.}
+
+
+C=4πϵ0(abb−a){\displaystyle C=4\pi \epsilon _{0}\left({\frac {ab}{b-a}}\right)}
+
+

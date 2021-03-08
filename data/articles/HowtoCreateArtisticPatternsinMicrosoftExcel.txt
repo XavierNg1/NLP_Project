@@ -1,0 +1,92 @@
+ Name them Data, Chart (unless you're using Chart Wizard) and Saves. Save the workbook into a folder with a name you can easily remember.;
+,
+
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents.
+In Edit, set all the first options to checked except Automatically Convert Date System. Set Display number of decimal places to blank(as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects. Check Show grid lines and set all boxes below that to auto or checked.
+In Chart, allow show chart names and set data markers on hover and leave the rest unchecked for now.
+In Calculation, Make sure Automatically and calculate before save is checked. Set max change to .000,000,000,000,01 without commas as goal-seeking is done a lot. Check save external link values and use 1904 system
+
+In Error checking, check all the options.
+In Save, select save preview picture with new files and Save Auto-recover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer.
+
+
+
+A1: 1.000 000 007 w/o spaces and Format Cells Number Number Custom "Adjuster" 0.000 000 000 (with quotes and w/o spaces). This number is very sensitive to extremely small changes. The image at top is with setting = 1. Format Cells Fill Light Yellow and Font Orange.
+B1: 8 and Format Cells Number Number Custom "S's Count" 0 (for Spheroids Count originally) and Format Cells Fill Green and Font Black Bold. Insert Name Define name S_COUNT to cell $B$1.
+C1: "GMSL = " w/o quotes and aligned right.
+D1: 0.381 966 011 250 105 w/o spaces between decimals. Insert Name Define name GMSL to cell $D$1.
+G1: .94 and Format Cells Number Number Custom "Sync1 ".0000 and Fill Light Yellow and Border Black bold Outline.
+H1: "<=INPUT=> " w/o quotes. and alignment Horizontal Center.
+I1:  .88 and Format Cells Number Number Custom "Sync2 ".0000 and Fill Light Yellow and Border Black bold Outline.
+
+
+
+A2: 31 and Format Cells Number Number Custom "TURNS "+0;"TURNS "-0 and Format Cells Fill Canary Yellow and Font Blue and Insert Name Define Name TURNS to cell $A$2.
+B2: -50,100 and  Format Cells Number Number Custom "Designer "+0;"Designer"-0;"Zero Tolerated"+0. Insert Name Define name Designer to cell $B$2 and Format Font Italic.
+C2: "GMLL = " w/o quotes and aligned right.
+D2: 0.618 033 988 749 895 w/o spaces between decimals. Insert Name Define name GMLL to cell $D$2.
+F2: Sync1 and Sync2: in red font and aligned right.
+G2: Input the formula w/o quotes "=G1/GMLL" and Insert Name Define name Sync1 to cell $G$2 and Format Cells Fill Color Blue and Font Dark Blue.
+H2: "<=Let Calc=> "
+I2: Input the formula w/o quotes "=I1/GMSL" and Insert Name Define name Sync2 to cell $I$2 and Format Cells Fill Color Blue and Font Dark Blue.
+
+
+
+A3: 1439 and Format Cells Number Number Custom "AdjRows "0 and align right. Insert Name Define Name AdjRows to cell $A$3.
+B3: 12 and Format Cells Number Number Custom "Var" +0.000000;"Var" -0.000000
+
+,
+
+
+A4: -308.100 and Format Cells Number Number Custom "t" +0.0000;"t" -0.0000 and align right.
+B4: Input the formula w/o quotes "=-0.25*PI()/B3" and Format Cells Number Number Custom"Cc" +0.00000000;"Cc" -0.00000000 and align right and Insert Name Define Name Cc to cell $B$4.
+D4: Y and Format Cells font red and Border Double Line Red Outline and here is the image if N is selected:
+E4 Align left the following message in red font: "Input Y or N: If Y and cell B1 Input < 24 and Even, Factor variable will be proportioned"
+E5 Align left the rest of the message: "so that the Spheroids are more spherical in a partial Circle and less elongated/podoid."
+
+,
+
+
+A5: Enter the formula w/o quotes "=VLOOKUP(TURNS,TURNS_LOOKUP,2)" and format italic and align right.
+B5: 4.5 and Format Cells Number Number Custom "db" +0.00000000;"db" -0.00000000 and Insert Name Define name db to cell $B$5.
+C5: Enter the formula w/o quotes "=ABS(Factor/0.25)" and Format Cells Number Number Percent 2 decimal places and align right.
+D5: Enter the formula w/o quotes "=IF(AND(S_COUNT
+
+,
+
+
+Select cell L1 and enter TURNS_LOOKUP
+Enter 1 into cell L2 and Edit Go To cell range L2:L121 and Edit Fill Series Columns Linear Step Value 1 OK.
+Select cell M10 and enter 190. Format font red.
+Select cell range M2:M9 and with M2 the active cell, enter the formula w/o quotes "=M3-70" and Edit Fill Down. Select cell range M11:M121 and with M11 the active cell, enter w/o quotes the formula "=M10+70" and Edit Fill Down.
+Edit Go To cell range L2:M121 and Insert Name Define Name TURNS_LOOKUP to cell range $L$2:$M$121.
+ It can be used with the Designer cell as the following formula: "=VLOOKUP(S_COUNT,SPHEROIDS_COUNT_LOOKER,2)".
+
+
+
+A6: t; B6: c; C6: Cos X; D6: Sin Y; E6: External Ring X; F6: External Ring Y; G6: GMLL x; H6 GMLL y; I6: GMSL x; J6: GMSL y.
+ Format Cells Number Number Custom "top" 0.0000 -- the result should be 969655
+Edit Go To cell range A8:A1447 and with A8 active input w/o quotes the formula "=((A7+(-top*2)/(AdjRows)))*$A$1" and Edit Fill Down. The result  in cell A1446 should be 969655.0068
+Edit Go To cell B7 and enter w/o quotes the formula "=ROUND(-EXP((PI()^2)+(Cc*-(db))),0)+Designer" -- the result should be -76055
+Edit Go To cell range B8:B1447 and enter "=B7" and Edit Fill Down.
+Edit Go To cell range C7:C1447 and enter "=COS((ROW()-7)*Factor*PI()/180)" and Edit Fill Down.
+Edit Go To cell range D7:D1447 and enter "=SIN((ROW()-7)*PI()/180)^2" and Edit Fill Down -- do not miss the fact that it's squared compared to the cosine. It's a nice chart either way.
+Edit Go To cell range E7:E1447 and enter "=PI()*(((SIN(A7/(B7*2))*GMLL*COS(A7)*GMLL*(COS(A7/(B7*2)))*GMLL)+C7))" and Edit Fill Down.
+Edit Go To cell range F7:F1447 and enter "=PI()*((SIN(A7/(B7*2))*GMLL*SIN(A7)*GMLL*(COS(A7/(B7*2)))*GMLL)+D7)" and Edit Fill Down.
+Edit Go To cell range G7:G1447 and enter "=E7*GMLL*Sync1" and Edit Fill Down.
+Edit Go To cell range H7:H1447 and enter "=F7*GMLL*Sync1" and Edit Fill Down.
+Edit Go To cell range I7:I1447 and enter "=E7*GMSL*Sync2" and Edit Fill Down.
+Edit Go To cell range J7:J1447 and enter "=F7*GMSL*Sync2" and Edit Fill Down.
+, Cut or Copy and Paste it to The Chart worksheet A1 cell and hover over the bottom right corner until the cursor becomes the double-headed arrow and expand the chart to about L49. Select the Chart Frame and set it to No line and Fill No Fill. Select the Plot Series and double click it or go to chart Layout and select it from Format Selection and do Line Weigh 1 and Color from the Color Wheel Hot Pink. Click on the Plot Area and do Format Selection at the far left of Chart Layout and set Fill to Gradient Rectangular Centered Black gradient 90% and white for the right selector for the outside edge.
+Edit Go To cell range G7:H1447 back on the Data worksheet and copy it and paste it directly into the chart. It may come out wrong and the series may have to be edited in the formula bar until it reads: "=SERIES(,'Data'!$G$7:$G$1447,'Dara'!$H$7:$H$1447,2)". Double-click on the data-series or Format Selection via the Chart Layout option and set line weight 1 and color sky blue.
+Edit Go To cell range I7:J1447 back on the Data worksheet and copy it and paste it directly into the chart. It may come out wrong and the series may have to be edited in the formula bar until it reads: "=SERIES(,'Data'!$I$7:$I$1447,'Data'!$J$7:$J$1447,3)". Double-click on the data-series or Format Selection via the Chart Layout option and set line weight 1 and color off white Ta Dah! You're done!
+
+, onto the Saves worksheet as both formulas and pasted Values. Hold down the shift key and do command+c Copy the chart and activate the Saves worksheet and Paste Picture. Now you're done.
+ If one is a scientist, one keeps notes, and so one should consider Insert New Comment for every Original formula, so one can easily backtrack in case of blunder. Save the workbook and you're finished!
+
+,,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

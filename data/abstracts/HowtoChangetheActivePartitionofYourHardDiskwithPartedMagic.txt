@@ -1,0 +1,16 @@
+
+We'll need a partitioning tool to change the active partition.
+Download Parted Magic.
+
+,
+Now you'll have to create a bootable media from which we can start Parted Magic.
+You can burn the ISO file to a CD with any CD burning software which is capable of burning image files.
+We'll use a special tool to copy Parted Magic to a USB pen drive, because your pen drive needs to be made bootable.
+For Parted Magic to be able to detect your hard drive, it's important to change your hard drive's controller mode to IDE mode before proceeding.
+Now we've created our bootable media.
+You should see the Parted Magic boot menu.
+Now you should see the Parted Magic desktop, similar to a Windows desktop.
+In the bottom pane, you should see a list of your hard drive's partitions.
+Right-Click the partition you want to set as the active / bootable partition and select "manage flags".
+If your system fails to boot and you want to go back, just return to step 7 and this time, set your old active partition to bootable again with Parted Magic.
+

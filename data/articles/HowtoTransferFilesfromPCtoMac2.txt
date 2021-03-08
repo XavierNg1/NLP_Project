@@ -1,0 +1,8 @@
+ Browse for folders that you want to transfer to the Mac. When you have found one, right-click on it and select Properties from the menu. In the Properties window, click the Sharing tab.
+ Check the “Share this folder” box. You can rename the folder to appear differently when it is opened on the Mac.
+ Take a CAT6 Ethernet cable and plug one end into the Mac and the other into the PC. Make sure that you are plugging the cable into the Ethernet port.
+ Press the Windows key + R to open the Run dialog. Enter “cmd” into the field and press Enter. This will open the command prompt. Type “ipconfig” and press enter to display your PC’s network information. Look for the IP or IPv4 address; it will be 4 sets of digits separated by “.”. For example: 192.168.1.5
+
+, Open Finder, then click Go in the menu bar. Select Connect to Server. A dialog will open, asking for the server address. In the field, type “smb://” followed by the IP address for the PC. Using the above example, the entry would look like “smb://192.168.1.5”. Press connect.
+ You may need the user name and password for your PC in order to connect to it. The server will appear on the desktop and you can browse and copy over any files that you have shared.
+

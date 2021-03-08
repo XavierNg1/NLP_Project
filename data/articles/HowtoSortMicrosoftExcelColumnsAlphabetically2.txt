@@ -1,0 +1,14 @@
+ If you have full names listed in a single column, alphabetizing will only sort by the first name. With these instructions, you can divide the names into two columns first so you can sort by the last name column instead., Place this immediately to the right of the names column.
+ Enter this formula in the top cell of the new column: =LEFT(A1,FIND(" ",A1)) making sure to include the space between the quotation marks. This formula will look in the full name column and copy everything before the space
+
+
+If necessary, replace both instances of A with the letter of the column that has the full names listed.
+Replace both instance of 1 with the number of the row you are typing in.
+ Click the header of this new column and copy-paste the formula you just entered. You should see all the first names appear on their own in this column.
+ Create a new column to the right of the first name column. Copy-paste this formula to populate the column with last names:
+
+
+=RIGHT(A1,LEN(A1)-FIND(" ",A1))
+
+, You may now sort the last name column alphabetically, as described in the method above.
+

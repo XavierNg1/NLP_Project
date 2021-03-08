@@ -1,0 +1,25 @@
+ Many optimization tweaks from the past are now included by default in Firefox. To take advantage of them, update to the latest version. This happens automatically when you check your version number.;
+, These settings can cause bugs and slowdown for some users. You can usually revert them without a problem, but back up the file just in case so you can restore your old preferences:
+
+
+Open a new tab and enter about:support in the address bar.
+Look for "Profile Folder" and click Show Folder next to it (Show in Finder on a Mac).
+Go one level up from the folder that opens. You should see a folder with a string of letters and number, ending in ".default."
+Right-click this folder and choose "Copy," then right-click in a backup location and select "Paste."
+
+, These settings are intended for advanced users, and could cause problems with your add-ons. It's best to change one setting at a time so you can test the effect.
+
+
+You can find tools online to test the speed of your browser precisely.
+ Your browser limits the number of simultaneous connections to a single server. Upping this limit will make a noticeable change to pages with many images or videos, if your bandwidth can handle it. Increasing this too much is considered bad etiquette, and may get you banned from a server, but you have a little wiggle room:
+
+
+Search for network.http.max-persistent-connections-per-server and double-click the Value. Increase this to a maximum of 10.Some users prefer 8 to be on the safe side.
+Search for network.http.max-connections. Set this value to 256, if it isn't already., Firefox displays small animations when opening or closing tabs. This is usually not an issue, but you can avoid some hang-ups if you tend to open or close many tabs at once:Set browser.tab.animate to False.
+Set browser.panorama.animate_zoom to False.
+ Prefetching loads pages before you visit them, guessing which links you'll click on. When working correctly, this should only use idle browser time, and will actually increase load speed. If you have unusually slow load speeds, a buggy prefetch could be the issue. Make the following changes to disable both forms of prefetch, then reverse them if there's no speed up:Change network.dns.disablePrefetch to True.
+Change network.prefetch-next to False.
+Change the value of network.http.speculative-parallel-limit to 0.
+ These functions use your graphics card to speed up certain functions, especially loading videos. However, this can cause slow load times or blurry text, especially with older operating systems or graphics cards. Try watching videos with these settings on and off to see which works best for you:Change webgl.disabled to True or False.
+Visit about:preferences#advanced in a new tab. Check or uncheck "Use hardware acceleration."
+Unlike most setting changes, you may need to restart Firefox for these to take effect.

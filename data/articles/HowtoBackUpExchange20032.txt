@@ -1,0 +1,4 @@
+ Exchange requires special handling because Exchange has access to files and databases at all times. Using backup software that can't handle this can result in skipped files and incorrect backups.
+, Offline backup will stop the Exchange database and services. Online backups can be run while the Exchange server is in use.
+ Full backups back up everything. Incremental or differential backups backup changes in exchange stores, directories or folders and takes less time to run.
+

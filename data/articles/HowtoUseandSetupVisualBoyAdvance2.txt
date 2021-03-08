@@ -1,0 +1,36 @@
+ There is no stable version of VBA for Mac or Linux, but the multi-emulator RetroArch includes the ability to load a stable VBA core (emulator) to play Game Boy Advance games.
+
+
+Mac - Visit buildbot.libretro.com/stable/1.3.6/apple/osx/x86_64/ and download the "RetroArch.dmg" file.
+Linux - Open the Terminal and type sudo add-apt-repository ppa:libretro/stable.
+ In order to play GBA games in RetroArch, you'll need ROM files. ROMs are copies of GBA cartridges that the emulator reads to play the game. Downloading ROMs for games you don't own is illegal in many areas. You can download ROMs from many different locations online. One of the most popular is emuparadise.me
+
+
+Visit emuparadise.me and open the "GBA ROMs" section. You can find a link in the Quick Links section of the main page.
+Browse for the game you want to download. You can also search for specific games.
+Click the "Download Links" link on the game's page. This will scroll down the page. Click the link that is displayed.
+Click the "Click here" link underneath the captcha to bypass it.
+Click the link in the "Direct Download" section. This will begin downloading the ROM file in ZIP format.
+ Placing all of your ROM files into a single, dedicated folder will make it easier to load them all in RetroArch. When RetroArch loads ROMs from a single folder, you'll get an easy-to-navigate list specialized for your emulated system. You can create a "GBA ROMs" folder in your User directory or anywhere else you'd like.
+
+
+You don't need to unzip the ROM files to use them in RetroArch.
+ The process is different depending on whether you're using OS X or Linux:
+
+
+Mac - Double-click the downloaded DMG file to open the installer. Drag the RetroArch application to the Applications folder icon.
+Linux - Open the Terminal and type sudo apt-get update. After running that command, type sudo apt-get install retroarch retroarch-* libretro-* and run it. After confirming, this will download and install RetroArch, which may take a while to complete., After adding RetroArch to your Applications folder, double-click it to start it up. The RetroArch Settings menu will load after a moment.
+
+
+You can search for RetroArch in the Linux dashboard to quickly find it.
+ Before launching a game, you might want to adjust the default controller settings. RetroArch will automatically support most USB gamepads, but you can set which button is assigned to which input.
+
+
+With the default control scheme, X will select and Z will go back.
+Return to the Settings menu and select "Input."
+Choose "User 1 Bind All."
+Follow the prompts to enter the keys or buttons you want to use for each input.
+ This will let you create a new column dedicated to your GBA games.
+ When you're in the ROMs directory, select "<Scan This Directory>". This will add all of your GBA ROMs from that directory to your list of games., Once you've scanned your ROMs folder, you'll see a list of all of your games in the new "Game Boy Advance" category.
+ This will load the game using the VBA-M emulator. You can try the other emulators on the list, such as mGBA, if VBA-M isn't giving you good performance.
+

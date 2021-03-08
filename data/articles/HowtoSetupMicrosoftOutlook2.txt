@@ -1,0 +1,45 @@
+ Yahoo Mail only supports POP mail for external clients unless its mobile. For Outlook, this means you'll need to use POP. With POP, emails read on one client will not show as read in another. This means that your Yahoo web mail inbox and Outlook inbox will not always be in sync.
+
+
+Sign into Yahoo Mail and click the Gear icon in the upper-right.
+Click Settings.
+Click Edit.
+Select POP. This option is located to the right of "Access your Yahoo Mail elsewhere".
+Choose your POP spam option by clicking the drop-down menu. You have three options:
+
+Don't download spam email - Only your Inbox messages will be forwarded to your client.
+Download spam with no special indicators - Spam messages will be delivered but will not be labeled as anything.
+Download spam, but prefix the word "Spam" - Spam messages will be delivered and will be marked as "Spam" in your Outlook inbox.
+
+
+Click Save.
+ Click the Tools menu and select "Accounts or Email Accounts" and then click Add. If you are using Outlook 2010 or 2013, click the File tab and select the Info option. Click "+Add Account".
+
+
+Select "Manually configure server settings or additional server types".
+ Enter in the connection settings so that Outlook can retrieve your Yahoo inbox.
+
+
+Server: pop.mail.yahoo.com
+Port: 995
+Requires SSL: Yes
+
+, Enter the following connection so that you can send mail through your Yahoo address through Outlook.
+
+
+Server: smtp.mail.yahoo.com
+Port: 465 or 587
+Requires SSL: Yes
+Requires Authentication: Yes
+
+, Besides entering server information, you will also need to enter in your account information. This will allow Outlook to sign into Yahoo on your behalf and properly label messages:
+
+
+Full Name or Display Name: This is the name you want to appear when people receive messages from you.
+Email address: Your Yahoo Mail address (yourname@yahoo.com)
+Password: Your Yahoo password., You will need to choose how you want to handle downloading messages. You can either delete the copy on Yahoo when you download to Outlook, or you can leave a copy on Yahoo after you download to Outlook.
+
+
+Messages deleted from the Yahoo server cannot be retrieved.
+ Once you have Yahoo configured, you can start using Outlook to send and receive email messages through your Yahoo account. Start getting your life organized by making the most out of Outlook.
+

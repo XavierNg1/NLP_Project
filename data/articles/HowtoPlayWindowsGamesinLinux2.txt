@@ -1,0 +1,18 @@
+ Whether WINE will run your particular game is heavily dependent on a lot of factors you have no control over. Your best bet is simply to give it a try. Depending on which Linux distribution you're using, WINE may be easy or complex to install. WINE is often bundled in distros. If you didn't get it, go to the WINE site and click the Download button. You may find a ready made package for your specific distribution. If not, you will have to follow the WINE Source Download link and then follow the instructions in the README for how to build the program.
+
+
+Once you have WINE installed, attempting to run a Windows program using this tool isn't difficult. You will need to get it onto your system, either by mounting the disk, or by downloading/copying the software onto your machine. Then, if there is software you need to install, you need to determine which program launches the installation — this is typically INSTALL.EXE or SETUP.EXE. From inside its' directory, type wine program. For example, wine INSTALL.EXE.
+
+
+
+
+
+
+More often than not, the installation program will launch properly, so you may be able to install the software using WINE. Even if it does, don't get excited. Installer programs are very basic and the actual game software is something else. Programs installed inside of WINE are placed in ~/.wine/drive_c/Program Files/. You may get an icon on the desktop. If you start the program by hand, go to the directory containing the game, and type wine program just as you did before. So, if you were trying to get the game Bejeweled running, you might change to ~/.wine/drive_c/Program Files/PopCap Games/Bejeweled, and type wine WinBiz.exe. It either works or doesn't. If it does, great! If not, you can search for tips on how to tweak the game in WINE, or try a different virtual tool. I've seen some impressive results with WINE, including a beautiful HARPOON port and a shaky but functional Flight Simulator. The key is your willingness to pursue tweaks for your installation and the specific game you are trying to run.
+
+
+
+
+
+
+

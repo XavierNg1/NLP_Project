@@ -1,0 +1,232 @@
+ The HEAD version from the Drush project page can be used with all Drupal versions. Drush will be installed to ~/drush. Download with WGET:
+
+
+
+cd ~/
+
+
+
+
+
+
+wget http://ftp.drupal.org/files/projects/drush-All-Versions-HEAD.tar.gz
+
+
+
+Extract the archive:
+
+
+
+tar -xvzf drush-All-Versions-HEAD.tar.gz
+
+
+;
+, Create an alias for Drush in .bash_profile (this can also go in .profile or .bash_aliases )
+
+
+
+echo "alias drush='php ~/drush/drush.php'" >> ~/.bash_profile
+
+
+
+Optionally specify a PHP path (version 5.2 or greater required by Drush)
+
+
+
+echo "alias drush='/usr/local/php5/bin/php ~/drush/drush.php'" >> ~/.bash_profile
+
+
+
+
+,, Drupal will be installed to ~/drupal
+
+
+
+cd ~/
+
+
+
+
+
+
+drush dl drupal
+
+
+
+Make a symlink so the webserver has a constant path to ~/drupal
+
+
+
+ln -s ~/drupal-6.19/ ~/drupal
+
+
+
+
+, For Drupal 6.3+ Before starting the web-based install:
+
+
+
+cp ~/drupal/sites/default/default.settings.php ~/drupal/sites/default/settings.php
+
+
+
+
+
+
+chmod 666 ~/drupal/sites/default/settings.php
+
+
+
+Or for multisite:
+
+
+
+mkdir ~/drupal/sites/example.com
+
+
+
+
+
+
+cp ~/drupal/sites/default/default.settings.php ~/drupal/sites/example.com/settings.php
+
+
+
+
+
+
+chmod 666 ~/drupal/sites/example.com/settings.php
+
+
+
+Visit example.com in a web browser to complete the installation.
+ Show current site information:
+
+
+
+cd ~/drupal
+
+
+
+
+
+
+drush status
+
+
+
+Or for multisite:
+
+
+
+cd ~/drupal/sites/example.com
+
+
+
+
+
+
+drush status
+
+
+
+
+, Download modules
+
+
+
+drush dl views cck og
+
+
+
+Enable modules
+
+
+
+drush en views cck og
+
+
+
+
+
+
+y
+
+
+
+Update Drupal core. For example, 6.18 to 6.19
+
+
+
+cd ~
+
+
+
+
+
+
+drush dl drupal
+
+
+
+
+
+
+rm -r ~/drupal-6.19/sites/
+
+
+
+
+
+
+mv ~/drupal-6.18/sites/ ~/drupal-6.19/
+
+
+
+
+
+
+rm ~/drupal
+
+
+
+
+
+
+ln -s ~/drupal-6.19/ drupal
+
+
+
+Update modules
+
+
+
+drush up
+
+
+
+Check modules status
+
+
+
+drush sm
+
+
+
+Download a theme
+
+
+
+drush dl ablogtheme
+
+
+
+Download a specific version, such as Drupal 5.20
+
+
+
+drush dl drupal-5.20
+
+
+
+

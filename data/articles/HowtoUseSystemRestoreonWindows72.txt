@@ -1,0 +1,35 @@
+ You can manually create System Restore points, which is very useful if you have your system working well and want to have a reference point you can revert back to in case things go wrong.
+ This will open the System Properties window to the System Protection tab.
+ You'll be asked to enter in a brief description to help you identify it later.
+ This will likely take a few minutes.
+
+
+Restore points vary in size, but by default Windows reserves 5% of the hard drive or restore points. Older restore points are deleted automatically to make room for new ones.
+ If you're looking to free up some disk space, or are worried that your system restore points are corrupted, you can delete all of your system restore points.
+
+
+Open the System Protection of the "System Properties" window (see Step 1 of this section).
+Click Configure... and then click Delete to delete all of the system restore points. Note that any space you free up will be used up again when new system restore points are created.
+ Antivirus software may be conflicting with the restore point creation process. If you aren't able to create restore points, disabling your antivirus is the easiest fix to try first.You can usually disable your antivirus by right-clicking on the icon in your System Tray and selecting "Disable" or "Stop".
+ Something in Windows may be causing your problem, and you may be able to get around it by creating the restore point in Safe Mode.
+
+
+To access Safe Mode, reboot your computer and hold F8. Select "Safe Mode" from the Advanced Boot Options menu.
+Follow the steps above to attempt creating a restore point in Safe Mode.
+ If you don't have enough free space on your computer, you won't be able to create restore points. Windows will not create restore points on hard drives smaller than 1 GB.
+
+
+Click Start and select "Computer".
+Right-click the disk that Windows is installed on (usually C:) and select Properties.
+Ensure that you have at least 300 MB of free space on the disk. Ideally you'll want at least 2-3 GB free.
+ This may help fix problems with creating system restore points.
+
+
+Reboot your computer and hold F8. Select "Safe Mode" from the Advanced Boot Options menu.
+Click the Start menu, right-click on Command Prompt, and select "Run as administrator".
+Type net stop winmgmt and press Enter.
+Click Start and select "Computer". Navigate to C:\Windows\System32\wbem and rename repository to repositoryold.
+Reboot your computer to enter Windows normally. Click the Start menu, right-click on Command Prompt, and select "Run as administrator".
+Type net stop winmgmt and press Enter. Then type winmgmt /resetRepository and press Enter.
+Reboot your computer one last time and then try to create a restore point.
+

@@ -1,0 +1,14 @@
+ Muzzle velocity is how fast the bullet travels through the gun barrel when it is fired. It is commonly measured in feet per second (fps, ft/s) or meters per second (m/s).
+
+
+For this example, we’ll assume a muzzle velocity of 2000 feet per second (609.6 m/s).
+ The insides of gun barrels feature spiral grooves, or rifling, that cause the bullet to spin. This spin helps to stabilize the flight of the bullet as it leaves the barrel muzzle and speeds toward its target. Twist rate is specified as a a ratio of 1 spin to a length in either inches or millimeters.For our purposes, we’ll assume a twist rate of 1:10 inches (1:254 mm).
+The smaller the twist rate, the more spin will be imparted to the bullet by the rifling inside the gun barrel. Too much spin can lead to bullets blowing up or actually impairing accuracy for short-range shooting., How you convert depends on whether you’re working with feet and inches or with metric units.If the twist rate is given as 1 per a length in inches and the muzzle velocity is given in feet per second, you multiply the muzzle velocity by 12 to convert it to inches per second.
+For our example muzzle velocity of 2000 feet per second, multiplying by 12 gives 2000 x 12 = 24,000 inches per second.
+If the twist rate is given as 1 per a length in millimeters and the muzzle velocity is given in meters per second (m/s), you multiply the muzzle velocity by 1000 to convert it to millimeters per second (mm/s).
+For the metric measure of 609.6 m/s, multiplying by 1000 gives 609.6 x 1000 = 609,600 mm/s.
+ This will give you the rotation expressed in rotations per second.Dividing the muzzle velocity of 24,000 inches per second by the length of 10 inches gives 24,000 / 10 = 2400 rotations per second.
+Dividing the muzzle velocity of 609,600 mm/s by the length of 254 mm gives 609,600 / 254 = 2400 rotations per second. (As expected, the results are the same whether using feet and inches or their equivalent measures in metric units.)
+
+, There are 60 seconds in a minute, so the bullet will make 60 times as many rotations in a minute as it does in a second.Multiplying 2400 rotations per second times 60 gives 2400 x 60 = 144,000RPM.
+

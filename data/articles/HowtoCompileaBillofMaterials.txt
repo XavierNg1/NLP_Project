@@ -1,0 +1,17 @@
+ You can start to compile a BOM as you go during the early phases of a design, especially if some parts will take a very long time to procure. You will complete the bill of materials as the design and documentation becomes more certain.
+ Be thorough and complete, even if it seems obvious what goes in or you find the job boring., If your company keeps a database of part numbers, try to reuse standard parts such as fasteners, connectors, electrical components and other small, purchased items. Avoid creating multiple part numbers for the same part., Often these specifications will be loaded in a database so that they are associated with the part numbers they describe., Many database programs require you to assign numbers to the items in a BOM, or they may assign item numbers for you.
+
+The item number may also be referred to as BOM ID, and should be a unique identifier.
+If there is an assembly drawing, the item numbers on it should match the item numbers in the database.
+ Be sure the quantity is consistent with the unit of measure in which an item is purchased (each, inch, feet, meters, ounces, etc.)
+
+Some systems allow things to be listed as "bulk items." Examples of bulk items are things like adhesive or thermal compound. Bulk items might specify "as required" for the quantity.
+ The levels represent sub-assemblies inside of higher level assemblies.
+
+When creating multiple levels in your BOM, be sure to do so in a way consistent with your company's conventions.
+Consider the manufacturing process and purchasing process when deciding what is a subassembly. Is the subassembly going to be purchased or handled as a unit? What level of assembly needs to be purchased? What needs to be sold? Are multiple suppliers involved, and if so, what items come from whom?
+
+, The L201 alongside the component in this photo is an example of a reference designator.
+
+Reference designators are used mostly for components on circuit boards, but may occasionally be used for valve manifolds and other similar assemblies. Not all assemblies need reference designators.
+, How this happens, exactly, should depend on your database and document control system. It may show as an attachment to the assembly, or you may add a document to the assembly BOM.

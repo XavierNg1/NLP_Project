@@ -1,0 +1,80 @@
+ and file it within a logical folder such as "wikiHow Articles" or "Microsoft Excel Imagery".
+
+Freeze panes at Q4.
+, You may need to temporarily move the flash reflection out of the way. Put it back when done.
+Go around the entire chart, selecting each series in turn, and set glow to either None or 2 with 50%. No exceptions. Eliminate most red and yellow glow but leave white.
+Set the Fill for the Plot Area to Gradient 11% Black, 16% White, 23% Steel Blue, 41% Steel Blue, 51% White, 54% Mid-dark Grey, 76% White, 83% White, 86% Blood or Maroon Red, 97% Dark Salmon/Flesh Orange-Pink-Red (Burnt Orange).
+Set line weight for Series 1 (Circumference) to 25 and Gradient to 37% Black, 86% Midnight Blue (from the Color Wheel), and 100% White.;
+,
+
+Enter Looker into cell IM1;
+Enter 1 into cell IN1and Format Cells Font Red Bold, Fill Yellow, Border Bold Red Outline;
+Enter 1 into cell IM2 and select cell range IM2:IM11 do Edit Fill Series, accept Step Value 1, OK -- to create a series from 1 to 10.
+Enter 1.007 to cell IN2 and Insert Define Name Key_1 to cell $IN$2; Format Cells Fill Light Blue;
+Enter to cell IN3 the formula, =-Key_1+IN1*2, and Insert Define Name Key_2 to cell $IN$3; Format Cells Fill Sand color;
+Enter to cell IN4 the formula, =Key_1; Copy this formula and paste it to cells IN6, IN8 and IN10.
+Enter to cell IN5 the formula, =Key_2; Copy this formula and paste it to cells IN7, IN9 and IN11.
+Select cell range IM2:IN11 and Insert Define Name Looker to cell range $IM$2:$IN$11.
+,,
+Select cell G16 and input the formula, =VLOOKUP(RANDBETWEEN(1,10),Looker,2)
+Copy cell G16 to cell range H16:IL16.
+Select cell range G2:IL2 and do Edit Replace =$ with =Modifier*$, Replace All, OK.
+ Paste it all to cell E22.
+Select cell range F26:F35 and Insert Define Name Degrees2 to it. Enter Degrees2 to cell F25.
+Select cell range Row 26 and Insert Define Name STARTPTS to it. Enter STARTPTS to cell E26.
+Select cell range E27:E33 and Insert Define Name Peeces to it. Format Cells Number Number Custom "Peeces "0.0000 to cell range E27:E33.
+Enter to cell E34, ENDPT2. Insert Define Name ENDPT2 to cell F34.
+Enter to cell E35, DIFFS. Insert Define Name DIFFS to Row 35.
+Input the formula =(ENDPT2-STARTPTS)/7 to cell F35.
+Input 90 to cell F34 and Format Cells Fill light blue.
+Input the formula =PI()/4 to cell E27 and Format Cells Fill light blue.
+Enter the formula, =G2 to cell G24 and copy it and Edit paste special formulas to cell range H24:IL24. Format Cells Font Color Red Bold for cell range E24:IL24.
+Format Cells Font Color Dark Blue for cell range E23:IL23.
+Format Cells Font Color Dark Blue for cell range E26:IL26.
+Format Cells Font Color Red for cell range E34:IL34.
+Input the formula, =IK1+1, to cell G22
+
+,,
+
+Input Percentage to cell F38. Set cell G38 to .8 for now, but finally to .97 -- don't forget. The reason you want it at .8 now is that it makes it easier to find the series "sticks" that Excel mis-plots off to the right side of the chart, which you need to click on, but can otherwise be very very tiny. In the meantime, you will get some long, out of place iris fibers; do not let that deter you as you will easily fix it later by changing Percentage to .97
+Enter to cell G37 the formula =VLOOKUP(RANDBETWEEN(1,10),Looker,2)*Percentage and copy it and paste it to cell range H37:IL37.
+Insert Name Define Modifier2 to Row 37.
+Edit Replace in cell range G23:IL23 =$ with =Modifier2*$
+
+,
+Be aware that this last process takes a bit of time. -- about 6-8 hours in this author's experience. Also, the line weight is a matter of personal discretion and this author chose to see some space between individual fibers and so chose a line weight of .75 or 1, but bonding of the fibers at the pupil's edge might be improved either with some constant glow or a slightly greater line weight.
+ It includes the following revisions:
+
+ShrinkExpand = 20, X_Offset = 20, Y_Offset = 20, ShrinkExpand2 = 4, X_Offset2 = 20, Y_Offset2 = 20;
+The Vertical Axis Scale has a Minimum of -2 and a Maximum of 42; the Horizontal Axis Scale has a Minimum of -2 and a Maximum of 43; the Chart measures 10.0 by 10.0;
+The Gradient of the Main External Circle has Darker Blue Sky at 3% and 59%, White = 63%, Very Dark Navy Blue = 68%;
+The Fill for the Plot Area Gradient = Very Dark Navy Blue = 16%, White = 18%, Darker Blue Sky (a pickable color) = 25% + 36%; Medium Blue = 47%, Dark Blue = 57%, White = 64% + 83%, Dark Red Blood = 86%, Burnt Orange/Flesh = 97%;
+The workbook was renamed "Model Your Own Iris In XL.3.xlsx"; Row 2 values from G2:IL2 were pasted in per a new data worksheet showing the original photo of an actual eye in large closeup on a worksheet named 'Big Baby Blue', with the following data chit using the variables Expander and XYadj to adjust the standard Cos and Sin row formulas:
+
+
+
+
+
+;
+The Cos formula in cell BB4 of that worksheet is =Expander*COS((ROW()-4)*PI()/180)+XYadj and the Sin formula in bottommost rightmost cell CG364 is =Expander*SIN((ROW()-4)*PI()/180)+XYadj;
+Those columns set up a series of rings;
+30º lines were added via the following data chit:
+
+
+ 30 Degree Lines
+
+
+Those applied to the original data set in columns K:AQ -- here is the image of the Expander and XYadj settings for that portion:
+
+
+
+
+
+Together, the following image was assembled, using the actual iris photo as chart background:
+
+
+
+
+
+Per that image and the data table, Row 2 G2:IL2 values were changed of "Model Your Own Iris In XL.3.xlsx" per pasted in values, as copied from the BB:CG cell range of Big Baby Blue;
+A white triangle and white 5 pt weight line were added from Media Tools to the upper right of the Plot Area to block that portion of the "flesh" showing, and were very carefully placed.

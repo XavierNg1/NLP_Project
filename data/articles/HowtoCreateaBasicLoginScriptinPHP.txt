@@ -1,0 +1,5 @@
+ For the purposes of the code examples below, we will assume the database name to be "test" and the table name to be "members". The database and table can be created through the control panel of your webhost. The "members" table will store the username and the passwords of all the people would be allowed access via this login script. The table should have a unique id field as the primary key, a username field, and a password field.;
+, This is an HTML page containing a form, two text boxes for the user name and password, and a submit button. As long as you have these elements, you may design the layout however you wish.
+ This script will connect to the database, send a query and retrieve the result, check to see if the username and password is correct and send you to the next page depending on the result of the comparison.
+ This script will start your session and display an html message of your choosing.
+ This step is optional as sessions can time out. If you wish to create one, you will need a button or link to initiate the script and a message to confirm the success of logging out.

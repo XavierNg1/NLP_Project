@@ -1,0 +1,54 @@
+ This cone is centered on the z-axis with the apex at the origin, but rotates with respect to the x-axis. In other words, it is rotating laterally, similar to how a beam from a lighthouse rotates. Assume this cone has a height h,{\displaystyle h,} radius a,{\displaystyle a,} mass M,{\displaystyle M,} and constant density σ.{\displaystyle \sigma .}
+
+Most moment of inertia questions are written with answers in terms of M{\displaystyle M} and R{\displaystyle R} (in this example, a{\displaystyle a}), but because a cone also requires a specified height, there will be a term with h{\displaystyle h} in it as well.
+ 
+
+
+I=∫Mr2dm,{\displaystyle I=\int _{M}r^{2}{\mathrm {d} }m,} where r=y2+z2{\displaystyle r={\sqrt {y^{2}+z^{2}}}} is the perpendicular distance from the axis (the cone is rotating about the x-axis) and we are integrating over the mass M.{\displaystyle M.}
+
+
+,
+
+
+σ=MV.{\displaystyle \sigma ={\frac {M}{V}}.} Of course, we know the volume of the cone as 13πa2h,{\displaystyle {\frac {1}{3}}\pi a^{2}h,} so
+
+
+σ=3Mπa2h.{\displaystyle \sigma ={\frac {3M}{\pi a^{2}h}}.}
+
+
+, We face a dilemma here - we are not integrating over a cylinder, but a cone. Instead, notice the relationships between the variables of integration. As z{\displaystyle z} increases, r{\displaystyle r} increases as well. Therefore, there is variable dependency in the integration, and one of the boundaries will no longer be a constant. 
+
+Recall the equation of a cone.
+
+
+z2h2=x2a2+y2b2{\displaystyle {\frac {z^{2}}{h^{2}}}={\frac {x^{2}}{a^{2}}}+{\frac {y^{2}}{b^{2}}}}
+
+
+
+The cone is circular, so b=a.{\displaystyle b=a.} Then, convert to cylindrical coordinates.
+
+
+z2h2=r2a2{\displaystyle {\frac {z^{2}}{h^{2}}}={\frac {r^{2}}{a^{2}}}}
+
+
+
+Solve for either the radius or height. Both cases are completely equivalent, but be careful of the boundaries that result, for they are not the same. We will solve for radius and compute the integral that results. See the tips for computing the integral after solving for height. 
+
+
+r=azh{\displaystyle r={\frac {az}{h}}}
+
+Then, z{\displaystyle z} integrates from 0{\displaystyle 0} to h,{\displaystyle h,} and r{\displaystyle r} goes from 0{\displaystyle 0} to azh.{\displaystyle {\frac {az}{h}}.} Notice that the nature of the object being integrated over introduces variable dependency in the boundaries. In this case, after we integrate the height, the upper boundary of the radius integral is dependent on the z{\displaystyle z} variable.
+ The order of the integrals matters here, owing to the way we calculated our boundaries. Also note constants that factor out.
+
+
+dm=σdV,{\displaystyle {\mathrm {d} }m=\sigma {\mathrm {d} }V,} so therefore,
+
+
+Ix=∫V(y2+z2)3Mπa2hdV=3Mπa2h∫0hdz∫0azhrdr∫02πdθ(r2sin2⁡θ+z2).{\displaystyle {\begin{aligned}I_{x}&=\int _{V}(y^{2}+z^{2}){\frac {3M}{\pi a^{2}h}}{\mathrm {d} }V\\&={\frac {3M}{\pi a^{2}h}}\int _{0}^{h}{\mathrm {d} }z\int _{0}^{\frac {az}{h}}r{\mathrm {d} }r\int _{0}^{2\pi }{\mathrm {d} }\theta (r^{2}\sin ^{2}\theta +z^{2}).\end{aligned}}}
+
+Notice that although cylindrical coordinates do not have as much variable dependency in the integrand as do Cartesian coordinates, that does not mean the dependency goes away. Similar to Cartesian integrals, we will have to manually integrate one at a time. 
+
+
+Ix=3Mπa2h∫0hdz∫0azhrdr(πr2+2πz2)=3Ma2h∫0hdz∫0azhdr(r3+2z2r)=3Ma2h∫0hdz=3Ma2h(a2h2)∫0hdz(a24h2+1)z4=3Mh3(a24h2+1)15h5=35Mh2(a24h2+1)=35Mh2+320Ma2.{\displaystyle {\begin{aligned}I_{x}&={\frac {3M}{\pi a^{2}h}}\int _{0}^{h}{\mathrm {d} }z\int _{0}^{\frac {az}{h}}r{\mathrm {d} }r(\pi r^{2}+2\pi z^{2})\\&={\frac {3M}{a^{2}h}}\int _{0}^{h}{\mathrm {d} }z\int _{0}^{\frac {az}{h}}{\mathrm {d} }r(r^{3}+2z^{2}r)\\&={\frac {3M}{a^{2}h}}\int _{0}^{h}{\mathrm {d} }z\left\\&={\frac {3M}{a^{2}h}}\left({\frac {a^{2}}{h^{2}}}\right)\int _{0}^{h}{\mathrm {d} }z\left({\frac {a^{2}}{4h^{2}}}+1\right)z^{4}\\&={\frac {3M}{h^{3}}}\left({\frac {a^{2}}{4h^{2}}}+1\right){\frac {1}{5}}h^{5}\\&={\frac {3}{5}}Mh^{2}\left({\frac {a^{2}}{4h^{2}}}+1\right)\\&={\frac {3}{5}}Mh^{2}+{\frac {3}{20}}Ma^{2}.\end{aligned}}}
+
+

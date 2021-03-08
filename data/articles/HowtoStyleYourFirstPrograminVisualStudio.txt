@@ -1,0 +1,118 @@
+ If you haven't already, read and complete Create Your First Program in Visual Studio before continuing with this article.;
+, Open Visual Studio and choose your SecondaryDesktop project from the list of recent projects.
+ Once you project has loaded, right click on the white screen in the editor and click "Select Form1". Proceed to the properties section on the right and set WindowState : Maximized. This will cause the window to open in fullscreen mode instead of just a small block.
+ Click on the white screen again to select the list view and navigate to the properties screen on the right. Select BackgroundImage and press on the "..." button. This will open up the Select Resource screen. Click on import and select a image to be used as your "wallpaper". Press OK after selecting your image.
+ After your LoadData() sub, create a new sub like this :
+
+
+
+
+
+Private Sub LoadWallpaper(byval image as Object)
+    Dim bmp As New PictureBox '' Creates a hidden image.
+        bmp.Size = ListView1.Size '' Sets the size of the new image.
+        bmp.Image = image '' Sets the image.
+        bmp.SizeMode = ImageLayout.Stretch '' Stretches the image.
+
+        Dim backbmp As New Bitmap(bmp.Image) '' Creates a new image from the hidden one.
+        bmp.DrawToBitmap(backbmp, ListView1.ClientRectangle) '' Sets the size of the new image.
+
+        ListView1.BackgroundImage = backbmp '' Applies the new wallpaper.
+End Sub
+
+
+
+
+After adding this code, go back to Form1_Load() and add the following line just before End Sub :
+
+
+
+
+ LoadWallpaper(ListView1.BackgroundImage) '' Calls the LoadWallpaper function and passes the image we loaded earlier.
+
+
+
+
+At this stage, run the program and you should see something like in the image above.
+ At this point of the article, you cannot really see the icons as they are just text. Let's change that. Save this image
+
+
+
+
+
+to your computer. Go back to the Designer, go to Toolbox and add an Imagelist to your form. Click on the image list at the bottom and change the following properties :
+
+
+
+ColorDepth : Depth32Bit // Makes the images high quality.
+
+ImageSize : 48, 48 // Sizes the image.
+
+Click on Images and the Images Collection Editor will popup. Click on Add and browse to the image you saved earlier. Click OK to close the Images Collection Editor. Your image is now loaded and ready to be displayed.
+ Click on your "Desktop" area in the editor, go to properties and change LargeImageList : ImageList1. This allows your desktop to access the image you loaded in the previous step. Double click your desktop area to go to the code editor. Modify your LoadData() sub to look like the code below :
+
+
+
+
+
+ Sub LoadData()
+        For Each dr In My.Computer.FileSystem.GetDirectories("desktop2")
+            Dim li As ListViewItem = ListView1.Items.Add(My.Computer.FileSystem.GetDirectoryInfo(dr).Name) '' Allows you to access the newly added item.
+            li.ImageIndex = 0 '' Sets the image of the item to the first image in ImageList1.
+        Next
+        For Each fl In My.Computer.FileSystem.GetFiles("desktop2")
+            Dim li As ListViewItem = ListView1.Items.Add(My.Computer.FileSystem.GetFileInfo(fl).Name) '' Allows you to access the newly added item.
+            li.ImageIndex = 0 '' Sets the image of the item to the first image in ImageList1.
+        Next
+    End Sub
+
+
+
+
+Run your program to see your handy work.
+
+Note : If you cannot read the name of your desktop item, try this. Go back to the Visual Editor and click on your "Desktop" area. Change the following setting : ForeColor : White
+, That is it for styling your first program. Here is the complete source code of the program so far :
+
+
+
+
+
+Public Class Form1
+ 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        LoadWallpaper(ListView1.BackgroundImage) '' Load your wallpaper
+        If Not My.Computer.FileSystem.DirectoryExists("desktop2") Then '' Check if your desktop Directory exists
+            My.Computer.FileSystem.CreateDirectory("desktop2") '' Creates the directory if it doesn't
+        End If
+        LoadData()
+    End Sub
+ 
+    Sub LoadData()
+        For Each dr In My.Computer.FileSystem.GetDirectories("desktop2") '' Get all the folders in your desktop folder.
+            Dim li As ListViewItem = ListView1.Items.Add(My.Computer.FileSystem.GetDirectoryInfo(dr).Name) '' Gives access to and displays the folder on the desktop.
+            li.ImageIndex = 0 '' Sets the image for your new icon.
+        Next
+        For Each fl In My.Computer.FileSystem.GetFiles("desktop2") '' Get all the files in your desktop folder.
+            Dim li As ListViewItem = ListView1.Items.Add(My.Computer.FileSystem.GetFileInfo(fl).Name) '' Gives access to and displays the file on the desktop.
+            li.ImageIndex = 0 '' Sets the image for your new icon.
+        Next
+    End Sub
+ 
+    Sub LoadWallpaper(ByVal image As Object)
+        Dim bmp As New PictureBox '' Creates a hidden image.
+        bmp.Size = ListView1.Size '' Sets the size of the new image.
+        bmp.Image = image '' Sets the image.
+        bmp.SizeMode = ImageLayout.Stretch '' Stretches the image.
+
+        Dim backbmp As New Bitmap(bmp.Image) '' Creates a new image from the hidden one.
+        bmp.DrawToBitmap(backbmp, ListView1.ClientRectangle) '' Sets the size of the new image.
+
+        ListView1.BackgroundImage = backbmp '' Applies the new wallpaper.
+
+    End Sub
+End Class
+
+
+
+

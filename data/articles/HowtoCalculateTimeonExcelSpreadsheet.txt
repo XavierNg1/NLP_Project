@@ -1,0 +1,19 @@
+ Type "In" in cell B1, "Out" in cell C1, "In" again in cell D1, and "Out" again in cell E1. Type "Regular" in cell F1 and "OT" in cell G1.;
+, Type "Mon" in cell A1. Click the Fill Handle in the lower-right corner of cell A1 and drag the formatting down through to cell A8. The abbreviations for the days of the week will appear in column A.
+ Type "Total Hours" in cell E9, "Hourly Rate" in cell E10, and "Total Pay" in cell E11.
+ Enter the following formula in cell F2: =IF((((C2-B2)+(E2-D2))*24)>8,8,((C2-B2)+(E2-D2))*24). Click the Fill Handle in the lower-right corner of cell F2 and drag the formatting down through to cell F8. The time values entered in columns A through E will be converted to integer values and displayed in Column F.
+ Enter the following formula in cell G2: =IF(((C2-B2)+(E2-D2))*24>8,((C2-B2)+(E2-D2))*24-8,0). Click the Fill Handle in the lower-right corner of cell G2 and drag the formatting down through to cell G8. The overtime hour values entered in columns A through E will be converted and displayed as integers in column G.
+ Enter the formula for calculating regular pay in cell F11 "=F10*F9." Enter "=G9*G10" in cell G11 to calculate the amount of overtime pay.
+
+
+Enter "=SUM(F2:F8)"in cell F9 to calculate the number of regular hours worked, and enter "=SUM(G2:G8)" in cell G9 to calculate the number of overtime hours worked. Enter "=F10*1.5" in cell G10 to calculate the overtime pay rate. Enter "=SUM(F11:G11)" in cell H11 to calculate the total gross pay. All the formulas have been entered into the Excel timesheet.
+ Select cells A2 through E8 and right-click on the selected cells. Select Format cells from the pull-down menu and click the Numbers tab. Select Time from the Category menu on the left of the dialogue box and select "1:30PM" from the Type menu located to the right of the Category menu. Click OK. Select cells F11 through H11 and click the Currency button ($) in the Number formatting menu.
+ Select cells A1 through H1. Press and hold the control key and select cells H1 through H10. Continue to hold down the control key and select cells A2 through A8, and cells A9 through E11. With all of the cells selected, click the Fill color button on the toolbar and select "Grey, White Background, 50%." Then click the font color button and select White.
+
+
+Select cells A2 through G8. Press and hold the control key and select cells F9 through G11. Click the Font Color button and click Automatic. Then click the Borders button on the toolbar and select "All Borders." The formatting has been applied.
+ Type "8:00" in cell B2, "11:00" in cell C2 and "12:00" in cell D2. Select cells B2 through D2 and use the Fill Handle in cell D2 to drag the values down through to row 6. Use the Fill Handle in the lower right corner of Cell B2 to drag the formatting through to cell B8.
+
+
+Type "6:00" in cell E2, "4:00" in cell E3 and "4:30" in cell E4. Copy the value in cell E2 and paste it into cells E5 and E6. Enter a value for the pay rate at $12 per hour in cell F10. The total pay in cell H11 should read $530, the overtime pay in cell G11 should read $63, and the regular pay in cell F11 should read $468. Double check the formula entries if the values returned do not match the example. The Excel time sheet spreadsheet is complete.
+

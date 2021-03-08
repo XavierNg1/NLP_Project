@@ -1,0 +1,72 @@
+ It's best you know:
+
+
+Basic Programming Knowledge and C++ knowledge: This tutorial assumes you already have basic programming knowledge and are familiar with C++; although you can, in theory, follow the guide and be successful -- going any further into programming with graphics, controls, etc. will be quite difficult if you don't have a firm grasp on basic programming concepts.
+How To Set Up and Use Your IDE (Integrated Development Environment): This tutorial assumes you have already set up your IDE to work with the SDL and SDL_image libraries. In addition, you should already know how to compile, debug, and execute programs from within your IDE.
+
+
+Warning: All IDE's are different and need to be linked to libraries and include files differently. If you have never worked with external libraries and include files before try reading through the documentation of your preferred IDE for information on how to accomplish this.
+
+;
+, In order to use SDL you will only be including two files at the beginning of your .cpp file: SDL.h and SDL_image.h.
+
+
+Your includes should be before your main() function and should look like the following:
+
+
+Tip: If SDL functions are not defined in your compiler after including SDL.h and SDL_image.h make sure you have told your compiler where to look for them!
+
+
+
+, If you are not used to passing arguments through your main function then the style of the main when using SDL may be new to you. For simplicity's sake this wikiHow will not use these arguments, but they still need to be there to compile correctly.
+
+
+The opening of your main() function should look like the following:
+
+
+Tip: Typically int argc would be the number of strings being passed, and char **argv would be the strings being passed to your main via command line.
+ This project will only be using two primitive data types and two SDL specific data types; we will use one char* that will be set to the path of the image you would like to display (we could also use a string for the image path, but the char* makes this a little more straight forward), one bool which will be used as a sentinel in out event loop later on, one SDL_Event variable for our event loop, and two SDL_Surface variables -- one for our screen, and one for our image.
+
+
+Your variables should be placed within your main() function, and should look like the following:
+
+
+Tip: Make sure imagePath is the exact path to your image in relation to where your .cpp is located.
+ In order to use SDL we must first initialize it. Although it is not necessary to compile, it is standard practice to attempt to initialize SDL and upon failure throw an error and return a value to end the main function. This makes debugging a lot easier and is good programming practice.
+
+
+This is how SDL should be initialized within your main() function:
+
+
+Tip: Writing your error message to a file may be more advantageous in the future as your projects grow in size.
+ In order to display an image we first have to load the image into memory. This is done is SDL using the IMG_Load function. Much like when we initialized SDL we want to attempt to load our image, but upon failure we want to throw an error and return a value to the main function. This time we also want to quit SDL using the SDL_Quit() function since we have previously initialized SDL.
+
+
+Place the following code within your main() function to load your image into memory:
+
+
+Tip: If this results in a failure it is likely your imagePath is incorrect.
+ To set up the screen surface is a little more complicated because there are many options for setting up your screen; you can set this up as full screen, hardware rendered, software rendered, etc. But for this tutorial we will use a simple setup by using the width and height of our previously loaded image and pass the SDL_ANYFORMAT flag to let SDL do the work for us.
+
+
+Much like the previous steps we want to handle a failure by calling SDL_Quit() and returning a value to main, but this time we want to add an extra argument. Since we allocated memory when we set up the image, if the program fails at this point we have to call SDL_FreeSurface to free the memory allocated to image in order to avoid a memory leak.
+Place the following code within your main() function to initializing the SDL surface:
+
+, An event loop is not necessary for displaying an image, but it allows us to keep the image on the screen until we want it to close. In the example here the image will stay on the screen until we press a key on the keyboard.
+
+
+In order to display the image we will first use SDL_BlitSurface to stick the two surfaces and SDL_Flip to display the image.
+This is also where our sentinel value comes into play; we will continue in our loop until the SDL_Quit event is caught (the user closes the window). Once the user closes the window we set the sentinel to false which will meet the condition for the loop to exit.
+The following code for the event loop should be placed within your main() function:
+
+, At this point we have displayed our image and all is well. But if we were to just stop here we would create a memory leak because the memory we allocated for our image was never freed. So we must remember to end our program by freeing the surface and for good measure quit SDL using the SDL_Quit function.
+
+
+Place the following code at the end of your main() function
+
+, Now that we are done with the fun part it's time to see if your code will actually compile and run.
+
+
+There is a chance that you will get build errors; this is likely due to a typo somewhere in the code. If you get a build error double check the code to make sure you didn't miss anything.
+To recap, your entire file should look like this:
+

@@ -1,0 +1,24 @@
+ The Terminal app is located in the Utilities folder, which can be found in your Applications folder. You can also search for Terminal using Spotlight, or quickly access the utilities folder from the Go menu.;
+, You can ping an address using the Terminal using the Ping command. This functions similarly to the Network utility app. Type ping -c # IP address or host name and press ↵ Enter.
+
+
+Replace # with the number of times you want to ping the address. You can usually get all the info you need with 5-10 pings.
+Replace IP address or host name with the address or website that you want to ping. You can ping your own computer by entering 127.0.0.1.
+To view a full explanation of the command and all the available arguments, type in man ping and press ↵ Enter.
+ After sending the ping command, you will see a readout with all the data related to the pin. Interpreting this data can help troubleshoot your network or a server problem.
+
+
+The first line of output describes what the Ping utility is going to do. It will display the address you are pinging along with the size of the data packet you will be sending. For example:ping example.com
+PING example.com (192.0.32.10): 56 data bytes
+
+The ensuing lines of display the results of the ping and any communication received back from the server. This includes the amount of data returned, the amount of times until the packet expired (ttl), and the amount of time that the ping response took, in milliseconds (ms). For example:64 bytes from 192.0.32.10: icmp_seq=0 ttl=240 time=98.767 ms
+64 bytes from 192.0.32.10: icmp_seq=1 ttl=240 time=96.521 ms
+64 bytes from 192.0.32.10: icmp_seq=2 ttl=240 time=95.766 ms
+64 bytes from 192.0.32.10: icmp_seq=3 ttl=240 time=95.638 ms
+64 bytes from 192.0.32.10: icmp_seq=4 ttl=240 time=95.414 ms
+64 bytes from 192.0.32.10: icmp_seq=5 ttl=240 time=93.367 ms
+
+The final lines of output summarize the results. The number of packets transmitted, received, and lost will be shown. Lost packets are indicative of a poorly configured network or bad signal. For example:6 packets transmitted, 6 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 93.367/95.912/98.767/1.599 ms
+
+

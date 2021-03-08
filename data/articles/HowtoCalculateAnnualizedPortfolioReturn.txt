@@ -1,0 +1,51 @@
+ In discussing annualized portfolio returns, there are several key terms that will come up repeatedly and are important for you to understand. These are as follows:
+
+
+Annual Return: Total return earned on an investment over a period of one calendar year, including dividends, interest, and capital gains. Annualized Return: Yearly rate of return which is inferred by extrapolating returns measured over periods either shorter or longer than one calendar year. Average Return: Typical return earned per time period calculated by taking the total return realized over a longer period and spreading it evenly over the (shorter) periods. Compounding Return: A return that includes the results of re-investing interest, dividends, and capital gains. Period: A specific length of time chosen to measure and calculate return, such as daily, monthly, quarterly, or annually.
+Periodic Return: The total return of an investment measured over a specific length of time. ;
+, Compounding returns are growth on the gains that you have already earned. The longer your money compounds, the faster it will grow, and the greater your annualized returns will be. (Think of a snowball rolling downhill, getting bigger faster as it rolls.)Let’s say you invest $100 and earn 100% on it your first year, leaving you with $200 at the end of year one. If you gain just 10% in the second year, you will have earned $20 on your $200 by the end of year two.
+However, if we say you earned just 50% during the first year, you would have $150 at the beginning of the second year. That same 10% gain in year two would earn 15 dollars rather than 20. This is a full 33% less than the 20 dollars you would have made in our first example.
+To further illustrate, let’s say you lost 50% in year one, leaving you with just 50 dollars. You would then need to earn 100% just to get back to even (100% of $50 = $50, and $50 + $50 = $100).
+The size and timing of gains play a huge role when accounting for compound returns and their effect on annualized returns. In other words, annualized returns are not a reliable measure of actual gains or losses. Annualized returns are, however, a good tool to use when comparing various investments against each other.
+ To find the average of many things, such as daily rainfall or weight loss over several months, you can often use a simple average, or arithmetic mean. This is a technique you probably learned in school. However, the simple average does not account for the effect that each periodic return has on the others, or the timing of each return. To accomplish this, we can use a time-weighted geometric return.(Don’t worry, we’ll walk you through this formula!)
+
+
+Using a simple average doesn’t work because all periodic returns are dependent on each other. For example, imagine that you want to tabulate your average return on $100 over the course of two years. You earned 100% in the first year, meaning you had $200 at the end of year one (100% of 100 = 100). You lost 50% during the second, meaning you had $100 at the end of the second year (50% of 200 = 100). This is the same figure you started with at the beginning of year one.
+A simple average (arithmetic mean) would add the two returns together and divide by the number of periods, which in this example is two years. The result would suggest that you earned an average return of 25% per year.However, when you link the two returns, you can see that you actually earned nothing. The years cancel each other out.
+ To start, you must calculate your total return over the full span of time you are assessing. For the purpose of clarity, we’ll use an example where no deposits or withdrawals were made. To calculate your total return, all you need is two numbers: the beginning portfolio value and ending value.
+
+
+Subtract your Beginning Value from your Ending Value.
+Divide this number by your Beginning Value. The resulting number is your Return.
+In the case of a loss in the period under scrutiny, subtract the ending balance from the beginning balance. Then, divide by the beginning balance and consider the result a negative value. (This latter operation is a substitute for needing to add algebraically a negative number.) Do the subtraction first, then the division. This will give you your overall percent of return.
+ The formula for Total Return Rate = (Ending portfolio value- beginning portfolio value)/beginning portfolio value. The formula for Compound Rate of Return = POWER((1 + Total Return Rate),(1/years)) - 1.
+
+
+For example, if the beginning value of the portfolio was $1000 and its ending value was $2500 seven years later, the calculations would be:
+
+Total Return Rate = (2500-1000)/1000 = 1.5.
+Compound Rate of Return= POWER ((1 + 1.5),(1/7))-1 = .1398 = 13.98%.
+ Once you've calculated the total return (as above), plug the result into this equation: Annualized Return=(1+ Return)1/N-1The outcome of this equation will be a number that corresponds to your return each year over the full span of time.
+
+
+In the exponent (the little number outside the parentheses), the “1” represents the unit we are measuring, which is 1 year. If you wish to be more specific, you could use “365” to capture a daily return.
+The “N” represents the number of periods that we are measuring. So, if you are measuring your return over 7 years, you would use the number 7 in the place of "N."
+For example, suppose that over a seven-year period, your portfolio grew in value from $1,000 to $2,500.
+First, calculate your overall return: (2,500-1,000)/1000 = 1.50 (a return of 150%).
+Next, calculate your annualized return: (1 + 1.50)1/7-1 = 0.1399=13.99% annual return. That's all there is to it!
+Use the ordinary mathematical order of operations: do the operations inside the parentheses first, then apply the exponent, then do the subtraction.
+ Now, let's say that you want to find semiannual returns (returns occurring twice a year, every six months) over the course of this seven-year period. The formula stays the same; you only need to adjust the number of periods that you are measuring. Your final result will be a semiannual return.
+
+
+In this case, you will have 14 semiannual periods, two per year over the course of seven years.
+First, calculate your overall return: (2,500-1,000)/1000 = 1.50 (a return of 150%).
+Next, calculate your annualized return: (1 + 1.50)1/14-1 = 6.76%.
+You can convert this into an annual return by simply multiplying by 2: 6.76% x 2 = 13.52%.
+ You can also calculate the annualized equivalent of shorter returns. For example, imagine you only had a six-month return and wanted to know its annualized equivalent. Once again, the formula stays the same.
+
+
+Suppose over a six-month period, your portfolio increases in value from $1,000 to $1,050.
+Start by calculating your overall return: (1,050-1,000)/1,000=.05 (a 5% return over six months).
+Now if you wanted to know what the annualized equivalent would be (assuming a continuation of this rate of return and compounding returns), you would calculate the following: (1+.05)1/.50-1=10.25% annual return.
+No matter how long or short the period of time, if you follow the formula above, you will always be able to convert your performance into an annualized return.
+

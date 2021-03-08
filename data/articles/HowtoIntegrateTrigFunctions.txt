@@ -1,0 +1,302 @@
+ These trig identities may be useful to know.
+
+Pythagorean Identities (PI):
+
+
+sin2⁡(x)+cos2⁡(x)=1{\displaystyle \sin ^{2}(x)+\cos ^{2}(x)=1}
+
+
+sin2⁡(x)=1−cos2⁡(x){\displaystyle \sin ^{2}(x)=1-\cos ^{2}(x)}
+
+
+cos2⁡(x)=1−sin2⁡(x){\displaystyle \cos ^{2}(x)=1-\sin ^{2}(x)}
+
+
+sec2⁡(x)=tan2⁡(x)+1{\displaystyle \sec ^{2}(x)=\tan ^{2}(x)+1}
+
+
+csc2⁡(x)=cot2⁡(x)+1{\displaystyle \csc ^{2}(x)=\cot ^{2}(x)+1}
+
+
+
+Double Angle Identities (DAI):
+
+
+sin⁡(2x)=2sin⁡(x)cos⁡(x){\displaystyle \sin(2x)=2\sin(x)\cos(x)}
+
+
+cos⁡(2x)=cos2⁡(x)−sin2⁡(x){\displaystyle \cos(2x)=\cos ^{2}(x)-\sin ^{2}(x)}
+
+
+cos⁡(2x)=1−sin2⁡(x){\displaystyle \cos(2x)=1-\sin ^{2}(x)}
+
+
+cos2⁡(x)=12(1+cos⁡(2x)){\displaystyle \cos ^{2}(x)={\frac {1}{2}}(1+\cos(2x))}
+
+
+sin2⁡(x)=12(1−cos⁡(2x)){\displaystyle \sin ^{2}(x)={\frac {1}{2}}(1-\cos(2x))}
+
+
+;
+,,,,, This is done to simplify the integrand.
+
+Let u=ln⁡(x){\displaystyle u=\ln(x)}. Then du=1xdx{\displaystyle du={\frac {1}{x}}dx}. This is done to simplify the integrand. 
+
+Substitution yields ∫sin5⁡(u)du{\displaystyle \int \sin ^{5}(u)du}
+
+
+, The goal here is to get a term defined by a trig identity. 
+
+
+∫sin4⁡(u)sin⁡(u)du{\displaystyle \int \sin ^{4}(u)\sin(u)du}
+
+
+∫(sin2⁡(u))2sin⁡(u)du{\displaystyle \int {(\sin ^{2}(u))}^{2}\sin(u)du}
+
+
+, Our goal here is to set up the integrand for another u-sub. Therefore, we want the integrand to consist of a trig function and it's known derivative. 
+
+
+∫(1−cos2⁡(u))2sin⁡(u)du{\displaystyle \int {(1-\cos ^{2}(u))}^{2}\sin(u)du}
+
+
+, 
+
+Let w=cos⁡(u){\displaystyle w=\cos(u)}. Then −dw=sin⁡(u)du{\displaystyle -dw=\sin(u)du}
+
+Substitution yields −∫(1−w2)2dw{\displaystyle -\int {(1-w^{2})}^{2}dw}
+
+
+, Distribute the two binomials. Combine like terms.
+
+
+−∫1−2w2+w4dw{\displaystyle -\int 1-2w^{2}+w^{4}dw}
+
+
+,
+
+
+−+C{\displaystyle -+C}
+
+
+, 
+
+
+w=cos⁡(u){\displaystyle w=\cos(u)} and u=ln⁡(x){\displaystyle u=\ln(x)}
+
+
+−+C{\displaystyle -+C}
+
+
+,,,, This is done to simplify the integrand. 
+
+ Let u=7x{\displaystyle u=7x}. Then 17du=dx{\displaystyle {\frac {1}{7}}du=dx}.
+
+Substitution yields 17∫sin2⁡(u)cos2⁡(u)du{\displaystyle {\frac {1}{7}}\int \sin ^{2}(u)\cos ^{2}(u)du}
+
+
+, The goal here is to get the integrand in terms of one trig function.
+
+
+∫du{\displaystyle \int {}du}
+
+
+, Simplify.
+
+
+128∫(1−cos⁡(2u))(1+cos⁡(2u))du{\displaystyle {\frac {1}{28}}\int {(1-\cos(2u))(1+\cos(2u))}du}
+
+
+128∫1−cos2⁡(2u)du{\displaystyle {\frac {1}{28}}\int {1-\cos ^{2}(2u)}du}
+
+
+, This is done to make the integrand integrable. 
+
+
+128∫1−(12(1+cos⁡(4u)))du{\displaystyle {\frac {1}{28}}\int {1-({\frac {1}{2}}(1+\cos(4u)))}du}
+
+
+, Distribute and combine like terms.
+
+
+128∫12−12cos⁡(4u)du{\displaystyle {\frac {1}{28}}\int {{\frac {1}{2}}-{\frac {1}{2}}\cos(4u)}du}
+
+
+,
+
+
+u=7x{\displaystyle u=7x}
+
+
+128+C{\displaystyle {\frac {1}{28}}+C}
+
+
+,,,,, This is done to simplify the integrand. 
+
+Let u=x2{\displaystyle u={\frac {x}{2}}}. Then 2du=dx{\displaystyle 2du=dx}
+
+Change the bounds of integration since the integral at hand is a definite integral. 
+
+When x=0{\displaystyle x=0}, u=0{\displaystyle u=0}
+
+When x=π{\displaystyle x=\pi }, u=π2{\displaystyle u={\frac {\pi }{2}}}
+
+Substitution yields 2∫0π2cos4⁡(u)du{\displaystyle 2\int _{0}^{\frac {\pi }{2}}\cos ^{4}(u)du}
+
+
+, Get the integrand in to a form such that an identity can be used.
+
+
+2∫0π2(cos2⁡(u))2du{\displaystyle 2\int _{0}^{\frac {\pi }{2}}{(\cos ^{2}(u))}^{2}du}
+
+
+,, Simplify. 
+
+
+2∫0π212(1+cos⁡(2u)+cos2⁡(2u))du{\displaystyle 2\int _{0}^{\frac {\pi }{2}}{\frac {1}{2}}(1+\cos(2u)+\cos ^{2}(2u))du}
+
+
+, This is done to get cos2⁡(2u){\displaystyle \cos ^{2}(2u)} into a term we can integrate. 
+
+
+12∫0π21+2cos⁡(2u)+12(1+2cos⁡(4u))du{\displaystyle {\frac {1}{2}}\int _{0}^{\frac {\pi }{2}}1+2\cos(2u)+{\frac {1}{2}}(1+2\cos(4u))du}
+
+
+, Simplify. 
+
+
+12∫0π232+2cos⁡(2u)+12cos⁡(4u)du{\displaystyle {\frac {1}{2}}\int _{0}^{\frac {\pi }{2}}{\frac {3}{2}}+2\cos(2u)+{\frac {1}{2}}\cos(4u)du}
+
+
+, Since the bounds were converted, don't re-sub.  
+
+
+120π2{\displaystyle {\frac {1}{2}}{}_{0}^{\frac {\pi }{2}}}
+
+
+,
+
+
+=3π8{\displaystyle ={\frac {3\pi }{8}}}
+
+
+,,,,, This is done to simplify the integrand.
+
+ Let u=y{\displaystyle u={\sqrt {y}}}. Then 2du=1ydy{\displaystyle 2du={\frac {1}{\sqrt {y}}}dy}. 
+
+Substitution yields 2∫tan4⁡(u)du{\displaystyle 2\int \tan ^{4}(u)du}
+
+
+, The goal here is to get a term we can replace with a Pythagorean Identity. 
+
+ 2∫tan2⁡(u)tan2⁡(u)du{\displaystyle 2\int \tan ^{2}(u)\tan ^{2}(u)du}
+
+
+, Only substitute one tan2⁡(u){\displaystyle \tan ^{2}(u)}. This is done to get a term and it's derivative in the integrand; this a set up for a u-sub. 
+
+ 2∫(sec2⁡(u)−1)tan2⁡(u)du{\displaystyle 2\int (\sec ^{2}(u)-1)\tan ^{2}(u)du}
+
+
+, Separate the integrand to make anti-differentiation easier. 
+
+ 2∫tan2⁡(u)sec2⁡(u)du−2∫tan2⁡(u)du{\displaystyle 2\int {\tan ^{2}(u)\sec ^{2}(u)}du-2\int {\tan ^{2}(u)}du}
+
+
+, Then dw=sec2⁡(u)du{\displaystyle dw=\sec ^{2}(u)du}
+
+Substitution yields 2∫w2dw+2∫tan2⁡(u)du{\displaystyle 2\int w^{2}dw+2\int \tan ^{2}(u)du} 
+
+
+, 
+
+ ∫w2dw+∫sec2⁡(u)−1du{\displaystyle \int w^{2}dw+\int \sec ^{2}(u)-1du}
+
+
+,
+
+
+u=y{\displaystyle u={\sqrt {y}}}
+
+
+23tan3⁡(y)−2tan⁡(y)−2y+C{\displaystyle {\frac {2}{3}}\tan ^{3}({\sqrt {y}})-2\tan({\sqrt {y}})-2{\sqrt {y}}+C}
+
+
+,,,,, 
+
+Let u=1θ{\displaystyle u={\frac {1}{\theta }}}. Then −du=1θ2{\displaystyle -du={\frac {1}{\theta ^{2}}}}.
+
+Substitution yields −∫sec4⁡(u)tan3⁡(u)du{\displaystyle -\int \sec ^{4}(u)\tan ^{3}(u)du}
+
+
+, Rearrange such that we can replace a term with a Pythagorean Identity. Note, sec⁡(u)tan⁡(u){\displaystyle \sec(u)\tan(u)} is the elementary derivative of sec⁡(u){\displaystyle \sec(u)}.
+
+
+−∫sec3⁡(u)tan2⁡(u)sec⁡(u)tan⁡(u)du{\displaystyle -\int \sec ^{3}(u)\tan ^{2}(u)\sec(u)\tan(u)du}
+
+
+,, Keep sec⁡(u)tan⁡(u){\displaystyle \sec(u)\tan(u)} intact. Remember, we want to have a trig function and it's derivative in the integrand to employ a u-sub. 
+
+
+∫(sec5⁡(u)−sec3⁡(u))sec⁡(u)tan⁡(u)du{\displaystyle \int (\sec ^{5}(u)-\sec ^{3}(u))\sec(u)\tan(u)du}
+
+
+,
+
+Let w=sec⁡(u){\displaystyle w=\sec(u)}. Then dw=sec⁡(u)tan⁡(u)du{\displaystyle dw=\sec(u)\tan(u)du}
+
+Substitution yields −∫(w5−w3)dw{\displaystyle -\int (w^{5}-w^{3})dw}
+
+
+,
+
+
+−+C{\displaystyle -+C}
+
+
+,
+
+
+−+C{\displaystyle -+C}
+
+
+,,,,, 
+
+Let u=t2{\displaystyle u=t^{2}}. Then du2=tdt{\displaystyle {\frac {du}{2}}=tdt}
+
+Substitution yields 12∫sec4⁡(u)du{\displaystyle {\frac {1}{2}}\int \sec ^{4}(u)du}
+
+
+, Rearrange such that we can use a Pythagorean Identity. 
+
+
+12∫sec2⁡(u)sec2⁡(u)du{\displaystyle {\frac {1}{2}}\int \sec ^{2}(u)\sec ^{2}(u)du}
+
+
+, Keep one sec2⁡(u){\displaystyle \sec ^{2}(u)} intact. We will need for a u-sub. 
+
+
+12∫(1+tan2⁡(u))sec2⁡(u)du{\displaystyle {\frac {1}{2}}\int (1+\tan ^{2}(u))\sec ^{2}(u)du}
+
+
+,
+
+ Let w=tan⁡(u){\displaystyle w=\tan(u)}. Then dw=sec2⁡(u){\displaystyle dw=\sec ^{2}(u)}
+
+Substitution yields 12∫1+w2dw{\displaystyle {\frac {1}{2}}\int 1+w^{2}dw}
+
+
+,
+
+
+12+C{\displaystyle {\frac {1}{2}}+C}
+
+
+, 
+
+
+w=tan⁡(u){\displaystyle w=\tan(u)} and u=t2{\displaystyle u=t^{2}}
+
+
+tan⁡(t2)2+tan⁡(t2)6+C{\displaystyle {\frac {\tan(t^{2})}{2}}+{\frac {\tan(t^{2})}{6}}+C}
+
+

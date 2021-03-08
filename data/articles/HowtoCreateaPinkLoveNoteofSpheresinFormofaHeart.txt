@@ -1,0 +1,172 @@
+ Save the workbook in a logical folder.;
+,
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank(as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show gridlines and set all boxes below that to auto or checked.
+In Chart, allow show chart names and set data markers on hover and leave the rest unchecked for now.
+In Calculation, Make sure Automatically and calculate before save is checked. Set max change to .000,000,000,000,01 without commas as goal-seeking is done a lot. Check save external link values and use 1904 system
+In Error checking, check all the options.
+In Save, select save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ Double- click on the right separator line of a column header to make that column automatically adjust for overflowing text.,
+
+A1: On=0,Off=1;
+B1: 1 and Format Cells Number Number Custom "Adjuster" +0.0000000;"Adjuster" -0.0000000;"Don't Set to 0" with the quotation marks and Insert Name Define name Adjuster for cell $B$1 and Format Cells Fill tawny yellow color;
+C1: 36 and Format Cells Number Number Custom "S_COUNT" 0.00 and Format Cells Fill Lawn Green color and Insert Name Define Name name S_Count for cell $C$1, then Format cells Font = Size 14 and Bold;
+D1: Enter (Pool Balls) Divisor;
+E1: 1 and Format Cells Number Number Custom "Power "0.00 and Format Cells Fill Dark Sky Blue color and Insert Name Define name Power for cell $E$1;
+F1: .98 and Format Cells Number Number Custom "Sync1 ".0000 and Format Cells canary yellow color and Insert Name Define name Sync1 for cell $F$1;
+G1: Y and Format Cells Fill Light Orange Color and Insert Name Define Name name C_Candi for cell $G$1;
+H1: C CANDI;
+I1: 0 and Format Cells Number Number Custom +0.0000;-0.0000 and Format Cells Fill Dark Purple color and font White;
+J1: Spiral START Value;
+P1: w/o quotes enter the formula "=I1" and Format Cells Fill Sky Blue color;
+Q1: Spiral START Value.
+
+
+A2: 1 and do Insert Name Defined Name On_0_Off_1;
+B2: 1 and Format Cells Number Number Custom "TURNS" +0.0;"TURNS" -0.0 with the quotation marks and Insert Name Define name TURNS for cell $B$2 and Format Cells Fill canary yellow color and font dark blue;
+C2: 12 and Format Cells Number Number Custom "Var" +0.000000;"Var" -0.000000 and Insert Name Define Name name Var for cell $C$2;
+D2: "=D1460" and Insert Name Define name Divisor for cell $D$2 and select cell D1460 and enter 0 and Insert New Comment "Originally was 27,123,103,497.2739 found by goal seeking" and Format Cells Border Black bold Outline;
+E2: Input the formula "=FFF" w/o quotes (which will cause a #NAME error for quite awhile -- its value = 28 though) and Format Cells Number Number Custom "FFF= "0.000000 and Format Cells Fill Grey color with font Red and DO NOT Insert Name Define name FFF for cell $E$2 and do Insert New Comment and edit in "Original Formula =FFF and value = 28";
+F2: .96 and Format Cells Number Number Custom "Sync2 ".0000 and Format Cells canary yellow color and Insert Name Define name Sync2 for cell $F$2;
+G2: N and Format Cells Fill Medium Orange Color and Insert Name Define Name name A_Candi for cell $G$2;
+H2: A CANDI;
+I2: Enter w/o quotes "=PI()" and Format Cells Number Number Custom +0.0000;-0.0000 and Format Cells Fill Dark Purple color and font White;
+J2: Spiral LAST Value;
+P2: w/o quotes enter the formula "=I2" and Format Cells Fill Sky Blue color;
+Q2: Spiral LAST Value
+
+,
+
+A3: Enter SLANT % and Format Cells Font Red size 14;
+B3: 1439 and Format Cells Number Number Custom "AdjRows" 0.000 with the quotes and space before the number and Insert Name Define name AdjRows to cell $B$3 and Insert New Comment "Orig. Value = 1439 (for 360*4=1440 rows-1). Try 180. Try -180. Try 2879. Trying +2000 results in 17+ Spheroids instead of normal 24. SET THIS TO +24,000 AND SET FACTOR TO -27.5 FOR RESULTING INTERNALIZATION SPIRALS!! Please reset to Orig Value = 1439.";
+C3: 4.5 and Format Cells Number Number Custom "db" +0.00000000;"db" -0.00000000 and Insert Name Define name db for cell $C$3 and Insert New Comment and edit in " Initial Value =+4.5; Input here of -4.5 when cell B1 "S's Count" = 24 results in about 43 spheroids; try +.1010101 when B1=36 will result in about 56 spheroids. Input +2.25 = 45 spheroids when S's COUNT in B1 =(only) 36. Input=9 results in about 24 S's. Input = -9 results in perhaps 80 non-spheroidal sub-cycles. -25 gets sphere-shiftings when B1=36? Set B1 to 8, input -25 here results in 10+(2*.6)=11.2 Spheroids (given a "Y"). If B1=6 and B5=-25, result=6+(2*.8)=7.6 S's. Also try 627.0114975 (Pool Balls GoalSeeker)";
+D3: 0 and Format Cells Number Number Custom "AAA" +.00000000;"AAA" -.00000000 and Insert Name Define name AAA for cell $E$3 AND Insert New Comment and edit in "0 = Circle and 1 = Triangle";
+E3: Y;
+F3: <=Y: Part-Cycle;
+G3: N and Format Cells Fill Medium Orange Color and Insert Name Define Name name N_Candi for cell $G$3;
+H3: N CANDI;
+I3: Enter w/o quotes "=IF(m="Y",-ABS(I2-I1),ABS(I2-I1))" and Format Cells Number Number Custom +0.0000;-0.0000 and Format Cells font Red;
+J3: Spiral RANGE ;
+P3: w/o quotes enter the formula "=IF(m="Y",-ABS(P2-P1),ABS(P2-P1))";
+Q3: Spiral RANGE .
+
+
+A4: 33% and Format Cells Font Red size 14;
+B4:308,100 and Format Cells Number Number Custom "t" +0.0000;"t" -0.0000 and Insert Name Define Name name t for cell $B$4 and Insert New Comment edit in "Orig Value =-308,100.00; Better would (seem) to be = -308160 = 1440*107*2? But I get best hookups at end of cycle being short a little!?? Try +3,081,000; Try +314,000; -309,000; -3081; -30810, 363000,";
+C4: 0 and Format Cells Number Number Custom "FLIP PIC -1 or 0= "+0;"FLIP PIC -1 or 0= "-0 with the quotes and do Insert Name Define name Flip_Pic to cell $C$4;
+D4: .25 and Format Cells Fill Sky Blue color and Font Size 14 and Format Number Number Custom "Factor" +00.000;"Factor" -00.000 with quotes and spaces and Insert Name Define name Factor to cell $D$4 and Insert New Comment and edit in "Orig Value = -.25; now Formulaic. Was .33 which caused a loop at pointed end. .125 is interesting. 1 = spiral that returns.";
+E4: Y and do Insert Name Define Name name Molecules to cell $E$4;
+F4: Enter <=Y: MOLECULES;
+G4: N and Format Cells Fill Medium Orange Color and Insert Name Define name D_Candi to cell $G$4;
+H4: Enter Spirallic YN and Format Cells Fill Turquoise Blue color;
+P4: Enter Y and Format Cells Fill forest green and Font Red and Insert Name Define name m and Insert Name Define Name Shrink_To_End for cell $P$4;
+Q4: Enter Shrink To End (m).
+
+
+G5: Enter N and Insert Name Define name I_CANDI for cell $G$5 and Format Cells Fill Medium Orange;
+H5: I CANDI;
+I5: Y and Format Cells Fill Turquoise Blue color and Insert Name Define name Spirallic_YN to cell $I$5;
+P5 Enter the formula note "=727*2".
+ Select cell range A1:I5 and Format Cells Border Black bold Outline., Center Divider Horizontal and Vertical. Select cell range P1:IP4 and Format Cells Border Black bold Outline., Center Divider Horizontal.Copy cell J5 and paste it to cell range A5: F5. Select cell range A1:A2 and then with the Command Key depressed, also select cell range A3:A4 and Format Cells Border delete Center Divider., A6: Pairs?; B6: t; C6: c; D6: X Circle or Triangle; E6: Y Circle or Triangle; F6: 0 and Format Cells Number Number Custom "External Ring X" with quotes; G6: 0 and Format Cells Number Number Custom "External Ring Y" with quotes; H6: SLANTED X; I6: SLANTED Y., Select V3 and enter Up/Down Y. Select U4 and enter 20. Select V4 and enter 8. Edit Go To cell range U6:U1447 and enter w/o quotes the formula "=$U$4" and Edit Fill Down. Edit Go To cell range V6:V1447 and enter w/o quotes the formula "=$V$4" and Edit Fill Down. Edit Go To cell range U3:V1447 and Format Cells Fill Deep Blue then Font Yellow Border Black bold Outline. Copy T5 and paste to cell range U5:V5.,, Select cell P7 and enter the formula w/o quotes "=IF(Spirallic_YN="Y",P1+0.00001,1)" and Format Cells Font Red. Edit Go To cell range P8:P1447 and with P8 the active high-lighted cell, enter the formula w/o quotes "=IF(AND(Shrink_To_End="Y",ROW()<727),P7-(n)/1440, IF(Spirallic_YN="Y",(n)/1440+P7,1)) and Edit Fill Down.
+
+Select cell Q6 and enter TURNS LOOKUP. Select cell Q7 and enter 1 and Edit Go To cell range Q7:Q1446 and do Edit Fill Series Column Linear Step Value 1 OK. Select cell R7 and enter "=-360-80" w/o quotes. Select cell Q1447 and enter 72. Select cell R1447 and input w/o quotes the formula "=-72*S_COUNT*Factor". Select cell range R8:R1446 and input the formula w/o quotes, "=R7+$Q$1447" and Edit Fill Down. Edit Go To cell range Q7:R1446 and do Insert Name Define name TURNS_LOOKUP for cell range $Q$7:$R$1446. Select cell range Q6:R1447 and Format Dells Border Black bold Border Outline. Select cell range Q1447:R1447 and Format Cells Border Black bold Border Outline Font Red.
+ Select cell T7 and enter "=T8-$Q$1447" w/o quotes. Select cell T1447 and input the formula w/o quotes "=R7-$Q$1447". Select cell range T7:T1446 and input the formula w/o quotes, "=T8-$Q$1447" and Edit Fill Down. Edit Go To cell range S7:T1446 and do Insert Name Define name NEG_TURNS_LOOKUP for cell range $S$7:$T$1447. Select cell range S6:T1447 and Format Dells Border Black bold Border Outline., In cell A1459, enter the formula w/o quotes "=1440/Rrs". Into B1458, enter -440 and Insert Name Define name Adj for cell $B$1458 and do Format Cell Number Number Custom "Adj" +0.0000;"Adj" -0.0000. Into cell B1459 enter the formula note "=ROUND((-B4*PI())+(Adj),0)".,
+
+Select W7 and input w/o commas 0.000,000,000,009 .
+Select W30 and input 1. Edit Go To cell range W7:W30 and do Edit Fill Series Columns Linear accept Step Value OK. The Step Value should be 0.0434782608695655
+Select cell W41 and Edit Go To cell range W30:W41 and do Edit Fill Series Columns Linear Step Value 1 OK. Select cell W42 and enter "=4*PI()" and copy and Paste Special Values.
+Edit Go To cell range W43:W1446 and enter 13 and do Edit Fill Series Columns Linear Step Value 1 OK. Select cell W1447 and enter 10,000.
+Select cell X7 and input -6,363,636. Select cell X32 and enter -186600. Edit Go To cell range X7:X32 and do Edit Fill Series Columns Linear accept Step Value OK. The Step Value should be 251175.47826086
+Select cell range X33:X70 and input the following values: X33: -126,600; X34: -96,600, -76,600, -60,600, -50100, -42600, -35,100, -30.100, -25,200, X42: -22424.7839896401, -21,700, -17,900, -15400, -12,600, -10,300, -8,000, -6,500, -4,800, -3.300, -1,800, -900, 133,1330, 2230, 3130, 4030, 4730, 5430, 6170, 6690, 7340, 7730, 8500, 8770, 9290, 9810, 10,130, X70: 10,490. These were accomplished as a labor of love, so they're as good as can be.
+Edit Go To cell range X71:X1446 and input the formula w/o quotes, "=X70+300" and Edit Fill Down. Select cell X1447 and enter 19,790. These values are less certain.
+Edit Go To cell range W7:X1447 and Insert Name Define name SPHEROIDS_COUNT_LOOKER for cell range $W$7:$X$1447. Select cell range W6:X1447 and Format Cells Border Black bold Outline.
+Select cell C1457 and enter the formula w/o quotes "=VLOOKUP(S_COUNT,SPHEROIDS_COUNT_LOOKER,2)"; Select cell C1458 and enter the formula w/o quotes "=-0.25*PI()/C2" and Format Cells Number Number Custom "Cc" +0.00000000;"Cc" -0.00000000.
+,
+
+It's now time for a very lengthy formula. Please take your time and get it right. Enter, w/o quotes or spaces, into cell A8 the entire formula, "=IF(OR( AND((ROW()-7)>Rrs,(ROW()-7)<=Rrs*2),
+
+,
+When that formula has been correctly entered and 1 is in On_0_Off_1 in cell A2, the spheres will be contiguous but when a 0 has been entered in On_0_Off_1 in cell A2, there will appear pairs of spheres, and there will be 1's in column A from A8:A47, then 0's from A48:A87, and so on, in sets which adjust for sphere count as I recall. Insert New Comment and copy cell A8's formula from the formula bar and edit in "Original formula (paste the entire formula)" and expand the comment cell frame to fit.
+
+
+Edit Go To cell range B8:B1447 and with B8 the active high-lighted cell enter the formula w/o quotes "=((B7+(-TOP*2)/(AdjRows)))*$B$1" and Edit Fill Down. Insert New Comment and edit in "Original formula =((B7+(-TOP*2)/(AdjRows)))*$B$1".
+ Do Insert New Comment and edit in "Original formula "=ROUND(-EXP((PI()^2)+(C1458*-(db))),0)+C1457". The result in the cell should be -17185.
+
+Edit Go To cell range C8:C1447 and with C8 the active high-lighted cell enter the formula w/o quotes "=C7" and Edit Fill Down. Do Insert New Comment and edit in "Original Formula =C7 down to C1447."
+
+,, Select AG7 and enter -1.8138 and then select AG485 and enter 0.00378663883089936, then Edit Go To cell range AG7:AG485 and do Edit Fill Series Column Linear and accept Step Value OK, and the Step Value should be 0.0037866388308978.
+
+Edit Go To cell range AG486:AG487 and enter .001 and Edit Fill Down.
+Select cell AG488 and input 0.00378663883089936 and select cell AG966 and enter 1.8138, then Edit Go To cell range AG488:AG966 and do Edit Fill Series Column Linear accept Step Value OK. Step Value should be 0.00378663883089758
+Copy cell AG966 to AG967.
+Select cell AG1446 and enter -1.8138 and the same value into cell AG1447 too. Edit Go To cell range AG967:AG1446 and do Edit Fill Series Column Linear and accept Step Value OK, and the Step Value should be -0.00757327766179561
+Copy AG6:AG1447 and Paste to AI6.
+Select AJ6 and enter Triangle y. Select AJ7 and input the value -1.57079742797353, then select AJ466 sand input the value 1.57079632679489 and Edit Go To cell range AJ7:AJ466 and do Edit Fill Series Column Linear and accept Step Value OK. The step value should be 0.00655865084502816, then select cell AJ466 and copy it and paste it to cell AJ467.
+Select cell AJ966 and input -1.57079742797353 and Edit Go To cell range AJ467:AJ966 and do Edit Fill Series Column Linear and accept Step Value OK. The step value should be -.00655865084502816
+Select cell AJ967 and enter -1.5707963267949 and Edit Go to cell range AJ967:AJ1447 and Edit Fill Down.
+Select cell AJ1 and type Y ADJ and select cell range AJ1:AK1 and Insert Name Create Names in Left Column Y_ADJ for cell $AK$1, then select cell AK1 and enter the formula w/o quotes "=0.5+ 0.2035".
+Select cell AH6 and enter Triangle y. Edit Go To cell range AH7: AH1447 and with cell AH7 the active high-lighted cell, enter the formula "=AJ7+Y_ADJ" w/o quotes and Edit Fill Down.
+,,
+
+Select Z6 and type Ball#; select AA6 and enter H; select AB6 and enter K; select AC6 and enter X; select AD6 and enter Y; select AE6 and enter Radius and select AF6 and enter FFF.
+Enter the following note into cells AF19:AF12 in Font Red: "Be careful of formulas below!!" Enter into AF14 the note "H= x center of each" and enter into AF15 the note "K= y center of each"
+Enter into AC1 POOL, into AD1 BALL, into AE1 X,Y and into AF1 DETERMINATORS. Format Font size 14 for all of those.
+Enter into AF7 28 and Insert Name Define name FFF for cell $AF$7 and into AF8 enter NOT per GoalSeek. Enter into cell AF17 the value 28.6470945405378 and into AF18 Per GoalSeek. Surround those notes with bold Black Border.
+Edit Got To cell range AF52:AF141 and enter .115 and Edit Fill Down.
+Edit Got To cell range AF142:AF276 and enter .23 and Edit Fill Down.
+Edit Got To cell range AF277:AF456 and enter .345 and Edit Fill Down.
+Edit Got To cell range AF457:AF681 and enter .46 and Edit Fill Down.
+Edit Got To cell range AF682:AF951 and enter .575 and Edit Fill Down.
+Edit Got To cell range AF952:AF1266 and enter .69 and Edit Fill Down.
+Edit Got To cell range AF1267:AF1447 and enter .805 and Edit Fill Down.
+Select Z7 and enter 1; select AA7 and enter 1.5; select AB7 and enter 3. Edit Go To cell range Z7:AB51 and Edit Fill Down.
+Select Z52 and enter 2; select AA52 and enter 1; select AB52 and enter =2+AF52, then Edit Go To cell range Z52:AB96 and Edit Fill Down.
+Select Z97 and enter 3; select AA97 and enter 2; select AB97 and enter =2+AF97, then Edit Go To cell range Z97:AB141 and Edit Fill Down.
+Select Z142 and enter 4; select AA142 and enter 2.5; select AB142 and enter =1+AF142, then Edit Go To cell range Z142:AB186 and Edit Fill Down.
+Select Z187 and enter 5; select AA187 and enter 1.5; select AB187 and enter =1+AF187, then Edit Go To cell range Z187:AB231 and Edit Fill Down.
+Select Z232 and enter 6; select AA232 and enter .5; select AB232 and enter =1+AF232, then Edit Go To cell range Z232:AB276 and Edit Fill Down.
+Select Z277 and enter 7; select AA277 and enter 0; select AB277 and enter =0+AF277, then Edit Go To cell range Z277:AB321 and Edit Fill Down.
+Select Z322 and enter 8; select AA322 and enter 1; select AB322 and enter =0+AF322, then Edit Go To cell range Z322:AB366 and Edit Fill Down.
+Select Z367 and enter 9; select AA367 and enter 2; select AB367 and enter =0+AF367, then Edit Go To cell range Z367:AB411 and Edit Fill Down.
+Select Z412 and enter 10; select AA412 and enter 3; select AB412 and enter =0+AF412, then Edit Go To cell range Z412:AB456 and Edit Fill Down.
+Select Z457 and enter 11; select AA457 and enter 3.5; select AB457 and enter =-1+AF457, then Edit Go To cell range Z457:AB501 and Edit Fill Down.
+Select Z502 and enter 12; select AA502 and enter 2.5; select AB502 and enter =-1+AF502, then Edit Go To cell range Z502:AB546 and Edit Fill Down.
+Select Z547 and enter 13; select AA547 and enter 1.5; select AB547 and enter =-1+AF547, then Edit Go To cell range Z547:AB591 and Edit Fill Down.
+Select Z592 and enter 14; select AA592 and enter .5; select AB592 and enter =-1+AF592, then Edit Go To cell range Z592:AB636 and Edit Fill Down.
+Select Z637 and enter 15; select AA637 and enter -.5; select AB637 and enter =-1+AF637, then Edit Go To cell range Z637:AB681 and Edit Fill Down.
+Select Z682 and enter 16; select AA682 and enter -1; select AB682 and enter =-2+AF682, then Edit Go To cell range Z682:AB726 and Edit Fill Down.
+Select Z727 and enter 17; select AA727 and enter 0; select AB727 and enter =-2+AF727, then Edit Go To cell range Z727:AB771 and Edit Fill Down.
+Select Z772 and enter 18; select AA772 and enter 1; select AB772 and enter =-2+AF772, then Edit Go To cell range Z772:AB816 and Edit Fill Down.
+Select Z817 and enter 19; select AA817 and enter 2; select AB817 and enter =-2+AF817, then Edit Go To cell range Z817:AB861 and Edit Fill Down.
+Select Z862 and enter 20; select AA862 and enter 3; select AB862 and enter =-2+AF862, then Edit Go To cell range Z862:AB906 and Edit Fill Down.
+Select Z907 and enter 21; select AA907 and enter 4; select AB907 and enter =-2+AF907, then Edit Go To cell range Z907:AB951 and Edit Fill Down.
+Select Z952 and enter 22; select AA952 and enter 4.5; select AB952 and enter = -3+AF952, then Edit Go To cell range Z952:AB996 and Edit Fill Down.
+Select Z997 and enter 23; select AA997 and enter 3.5; select AB997 and enter =-3+AF997, then Edit Go To cell range Z997:AB1041 and Edit Fill Down.
+Select Z1042 and enter 24; select AA1042 and enter 2.5; select AB1042 and enter =-3+AF1042, then Edit Go To cell range Z1042:AB1086 and Edit Fill Down.
+Select Z1087 and enter 25; select AA1087 and enter 1.5; select AB1087 and enter =-3+AF1087, then Edit Go To cell range Z1087:AB1131 and Edit Fill Down.
+Select Z1132 and enter 26; select AA1132 and enter .5; select AB1132 and enter =-3+AF1132, then Edit Go To cell range Z1132:AB1176 and Edit Fill Down.
+Select Z1177 and enter 27; select AA1177 and enter -.5; select AB1177 and enter =-3+AF1177, then Edit Go To cell range Z1177:AB1221 and Edit Fill Down.
+Select Z1222 and enter 28; select AA1222 and enter -1.5; select AB1222 and enter =-3+AF1222, then Edit Go To cell range Z1222:AB1266 and Edit Fill Down.
+Select Z1267 and enter 29; select AA1267 and enter 0; select AB1267 and enter = -4 +AF1267, then Edit Go To cell range Z1267:AB1311 and Edit Fill Down.
+Select Z1312 and enter 30; select AA1312 and enter 1; select AB1312 and enter = -4 +AF1312, then Edit Go To cell range Z1312:AB1356 and Edit Fill Down.
+Select Z1357 and enter 31; select AA1357 and enter 2; select AB1357 and enter =-4+AF1357, then Edit Go To cell range Z1357:AB1401 and Edit Fill Down.
+Select Z1402 and enter 32; select AA1402 and enter 3; select AB1402 and enter =-4+AF1402, then Edit Go To cell range Z1402:AB1447 and Edit Fill Down.
+,
+
+Select cell AD3 and enter ADJ Y and select cell AD4 and input the value 0.141592653589793 and Insert Name Define Name ADJ_Y for cell $AD$4.
+Edit Go To cell range AD7:AD1447 and with AD7 the active high-lighted cell input w/o quotes the formula "=(SIN(ROW()-7)*PI()/180*FFF)+AB7+ADJ_Y" then Edit Fill Down, and do Insert New Comment and edit in "Original formula =(SIN(ROW()-7)*PI()/180*FFF)+AB7+ADJ_Y = π".
+Edit Go To cell range AE7:AE1447 and with AE7 the active high-lighted cell, enter the formula w/o quotes "=ROUND(((AC7-AA7)^2+(AD7-AB7)^2)^0.5,4)" and Edit Fill Down, then Do Insert New Comment and edit in "Original formula =ROUND(((AC7-AA7)^2+(AD7-AB7)^2)^0.5,4)". Edit Go To cell range AE7:AE1447 and Insert Name Define name Radius to range $AE$7:$AE$1447.
+Select cell AD1449 and enter Max. Select cell AE1449 and enter the formula "=MAX(RADIUS)" w/o quotes.
+Select cell AD1450 and enter Min. Select cell AE1450 and enter the formula "=MIN(RADIUS)" w/o quotes. (Applies to Pool Balls).
+
+
+Edit Go To cell range E7:E1447 and with E7 the active high-lighted cell enter the formula w/o quotes "=(AD7/IF(Divisor=0,S_COUNT^2,Divisor)+(IF(SIN((ROW()-7)*PI()/180*Factor)<0,(ABS(SIN((ROW()-7)*PI()/180*Factor))^Power)*-1,SIN((ROW()-7)*PI()/180*Factor)^Power)*IF(AAA=1,0,1))+IF(AAA=0,0,AH7*IF(MOLECULES="Y",Factor,1))^Power)" and Insert New Comment and edit in by copying the formula from the expanded formula bar "Original formula =(AD7/IF(Divisor=0,S_COUNT^2,Divisor)+(IF(SIN((ROW()-7)*PI()/180*Factor)<0,(ABS(SIN((ROW()-7)*PI()/180*Factor))^Power)*-1,SIN((ROW()-7)*PI()/180*Factor)^Power)*IF(AAA=1,0,1))+IF(AAA=0,0,AH7*IF(MOLECULES="Y",Factor,1))^Power)"
+Edit Go To cell range F7:F1447 and with F7 the active high-lighted cell enter the formula w/o quotes "=IF(Flip_Pic=-1,-1,1)*((IF(A7=0,F6,((PI())*((SIN(B7/(C7*2))*GMLL*COS(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+D7)))*IF(Spirallic_YN="Y",SPIRALLIC*IF(A7=0,1/SPIRALLIC,1),1)))" and Edit Fill Down, then Do Insert New Comment and edit in" Original formula was =IF(Flip_Pic=-1,-1,1)*((IF(A7=0,F6,((PI())*((SIN(B7/(C7*2))*GMLL*COS(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+D7)))*IF(Spirallic_YN="Y",SPIRALLIC*IF(A7=0,1/SPIRALLIC,1),1))+(IF(N_CANDI="Y",0,0)+IF(D_CANDI="Y",0,0)) which includes extra parts of the worksheet concerning "writing" Candi's name in spheroids, which is an ongoing project."
+
+, The Cos formula evaluates to -.0070 in AF1447 where I'm now storing it, fairly harmlessly. If you guys want the rest of the worksheet, ask, and there'll be made a Part II wikiHOW, about writing out Candi Woz in spheroids via formulas.,, You did it!! If you have errors, see the Warnings section below please. There is not a single error on the sheet that is germane to the Heart Chart or the others to show you. The chart is proof in and of itself.
+ That one was pretty difficult, and there's a whole other third to it.,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

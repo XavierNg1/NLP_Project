@@ -1,0 +1,31 @@
+ MBOX uses a single file format to store e-mails, so it is possible for the file to get over-sized due to the number of mails. Even one bulky e-mail could significantly increase the size of the entire file, or a problem with a single email could make the entire database corrupt or unusable.;
+, The issues related to MBOX are most prominent while importing MBOX files into Apple Mail. Some of the most common errors while importing MBOX files into Apple Mail are as follows:
+
+
+"Some messages could not be imported; the partially imported mailboxes are located in the mailbox named "import" in the mailboxes list."
+"Your Mail Index has been corrupted". This message usually appears after updating to Mavericks OS.
+You might face a situation where Mail messages suddenly go blank.
+ There are several means to tackle such errors. Depending upon the severity of the error, there are different types of fixes, ranging from a simple rebuild to complex recovery operations. The total time taken to fix such issues depends solely upon the level of damage and the number of email messages with the folder.
+ This is the simplest solution to get rid of any unwanted files clustered in the mailbox folders. You can also use this option to rebuild a mailbox to update the list of messages it has. For example, in case of missing or garbled messages you can use this option. In order to rebuild the mailbox:
+
+
+Open the Apple Mail e-mail client.
+Select the folders to be rebuilt
+Click Mailbox -> Rebuild
+Note: Locally stored messages and attachments are discarded, when you rebuild mailboxes for IMAP and Exchange accounts. In addition, the messages and attachments are downloaded again from the server to your Mac. However, your mailbox appears empty until the download is complete.
+ This is the most crucial process, as removal of wrong files can add to your woes. This process recreates the .plist file to show up the email messages. However, it does not guarantee certainty of resolution. In order to restore the preferences:
+
+
+Navigate to the following directory if you are working on any OS above 10.7 (OS X 10.7+)* :~/Library/Containers/com.apple.mail/Data/Library/Preferences. However, for OS X (10.4-10.6), the proper directory is ~/Library/Preferences.
+Drag the file: com.apple.mail.plist to the Desktop.
+The Application will allow creating a new preference file once you re-open Apple Mail.
+ MBOX files use a very simple and robust format to keep emails and can be easily imported on any other platform. You can use the Exporting or Archiving feature to export the mails from Mac OS X. Exporting or Archiving allows you to move data to a user-specified location. This frees up the space and allows you to access mails anytime in future. It is advised to keep the folders together while exporting; however, you can select multiple folders to export. In order to export the mailboxes:
+
+
+Locate the mailbox folder to be imported
+Navigate to the root mailbox folder and locate the mailbox folder by double-clicking the .mbox file
+Launch Apple Mail and click File->Import Mailboxes
+Choose the e-mail client as Apple mail and click Continue
+Locate the mbox file and click Choose
+A confirmation screen pops up informing you about the location of the imported files.
+

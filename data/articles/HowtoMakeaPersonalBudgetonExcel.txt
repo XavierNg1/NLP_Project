@@ -1,0 +1,27 @@
+;
+, Unless you are self-employed, it may be easier to use your take-home pay instead of your gross income.
+ You may want to set up broad categories, such as housing, food, and debt repayment, and then set up sub-categories within them, such as mortgage or rent, utilities, and repairs under the housing category.
+, Name it "Budget" or something similar.
+,
+
+
+Under the word "Income," list all your sources of income for each month, including your paycheck, your spouse's paycheck, any bonuses or commissions you receive, interest or dividends, and any other sources of income.
+Under the list of income, type the words "Total Income."
+
+, The # sign represents the first row of income, and #2 represents the final row of income. "B" is the column you are totaling. It should be for January.
+ The formula will automatically add up your income for each month. Instead of "letter," type the corresponding letter of the column (C, D, E, etc.).
+ Type this next to the column for December. Type the =sum formula into each box in that column to total your entire income for the year.
+, For example, type the word "Housing" in the row under "Expenses" in column A.
+ Include items such as repairs, the cost or rent of your mortgage, utilities, telephone and Internet service, furnishings, and landscaping.
+ The formula will calculate how much you've spent for housing during each month.
+
+
+
+You'll be able to compare your spending with what you would like to spend by looking at the "Total" number compared to the "Estimated." Adjust the "Estimated" number as needed.
+ Use the =sum formula to total the amount of each category and compare it to your estimated amounts.
+ In the next column over, type =sum(B#:B#2), where # is the first row number of the list of expenses and #2 is the final row number of the list of expenses. Repeat in the remaining columns.
+ In column B, type =sum(B#-B#2), where # is the row number of your total income and #2 is the row number of "Total Expenses."
+
+
+The formula will subtract your expenses from your income and allow you to see whether you've spent more than you've earned. Repeat with the remaining columns.
+

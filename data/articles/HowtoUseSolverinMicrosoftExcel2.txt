@@ -1,0 +1,41 @@
+, If it’s not already installed, follow the next steps:
+
+
+Click on the Tools menu and select Add-ins...
+
+In the Add-ins window, enable the checkmark to the left of the Solver add-in, then click OK.
+ We will use it to create a real-world example to solve scheduling issues. When downloaded, open the file in Excel.
+ Click on Tools, and then Solver.
+
+
+The Solver Parameters window opens. This is where you enter the criteria needed to solve the given problem.
+ The goal is to have no shortfall in staffing, so our target cell is B25, and we want to make it equal to the value of 0.
+ Click and hold on cell B5 and drag-select to cell H20.
+ In this example, there are several employees who cannot work certain days of the week, and part-time employees who do not work a normal 40-hour week. Use the constraints listed below:
+
+
+$B$11:$F$11 = 0
+$B$12:$H$12 = 0
+$B$22:$H$22 = $B$23:$H$23
+$B$5:$H$20 = binary (i.e. 1's and 0's only)
+$C$5 = 0
+$D$18:$H$18 = 0
+$D$8 = 0
+$E$5 = 0
+$F$17 = 0
+$F$9 = 0
+$G$14 = 0
+$G$19:$H$19 = 0
+$H$10 = 0
+$I$19:$I$20 <= 24
+$I$5:$I$18 <= 40
+In the constraint window, enter a constraint, then click the Add button. This will add your constraint to the list, and then allow you to enter another
+Continue entering all the constraints, and after you have entered the final one on the list, click the Cancel button return to the main Solver window.
+ Depending on how much memory your computer has and the processor speed, Solver may take a few seconds, or a few minutes.
+
+
+When it’s finished processing, Solver will either return a solution, or alert you that it was not able to do so.
+If Solver is not able to find a solution, you must think through, diagnose, and debug, your problem. First, revert to your original values.
+
+The two quickest fixes are to try different initial values and to add or remove constraints to the problem.
+On the right-hand side of the Solver Results dialog box, Excel presents a series of reports. The Answer, the Sensitivity, and the Limits reports are additional sheets inserted into the current workbook. They contain diagnostic and other information and should be selected when Solver is having trouble finding a solution.

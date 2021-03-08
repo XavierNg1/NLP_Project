@@ -1,0 +1,53 @@
+ Type the following command at the command prompt: vi FunLoop.sh. This will create the file you are going to use as a script file and open it for editing.;
+, Every shell script needs this to tell it what shell to run in. Type #!/bin/bash.
+ You will need one to capture the choice entered by the user and one to set the directory based on the user's choice. Type directory="" and choice=0.
+ It is a straightforward code and it has a name that is case sensitive. Name it menuList. Everything between the opening and closing brackets is any code you wish it to be.
+ It should look like: menuList().
+, It should look like this: clear.
+
+
+
+
+
+
+echo "1. Run ls on my home directory."
+echo "2. Run ls on the root directory."
+echo "3. Run ls on the bin directory."
+echo "4. Exit program."
+
+
+
+
+,,, You should add runLS().
+, ls -la $directory where $directory is the one specified by the menu choice.
+,, while . Where $choice is the input from the user and 4 is the menu item to tell the program to close, -ne is a conditional operator used in bash shell scripting for number evaluation.
+ Type in do.
+ You have four menu items so you will need four if statements and a catch all for values that don't meet the menu items' requirements. Write the if statement as follows:
+
+
+
+
+
+if then
+$directory="~/"
+runLS
+elif then
+$directory="/"
+runLS
+elif then
+$directory="/bin"
+runLS
+elif then
+clear
+echo "Thank you for using list files"
+sleep 3
+exit
+else
+echo "Invalid choice, please try again"
+fi
+done
+
+
+
+
+,, Type in: chmod u+x FunLoop.sh.

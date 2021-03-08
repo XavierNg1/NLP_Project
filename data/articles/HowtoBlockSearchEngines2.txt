@@ -1,0 +1,86 @@
+ The robots meta tag allows programmers to set parameters for bots, or search engine spiders. These tags are used to block bots from indexing and crawling an entire site or just parts of the site. You can also use these tags to block a specific search engine spider from indexing your content. These tags appear in the head of your HTML file.This method is commonly used by programmers that do not have access to a website’s root directory.
+ It is possible to block all bots from indexing a page and or from following a page’s links. This tag is commonly used when a live site is under development. Once the site is complete, it is strongly recommended that you remove this tag. If you do not remove the tag, your page will not be indexed or searchable via search engines.You may block bots from indexing the page and from following any of the links:
+
+
+
+
+<meta name=”robots” content=“noindex, nofollow”>
+
+
+
+
+
+You may block all bots from indexing the page:
+
+
+
+
+<meta name=”robots” content=“noindex”>
+
+
+
+
+
+You may block all bots from following the page’s links:
+
+
+
+
+<meta name=”robots” content=“nofollow”>
+
+
+
+
+
+
+, If you allow the bots to index the page, the page will be indexed; if you prevent the spiders from following the links, the link path from this specific page to other pages will break.Insert the following line of code into your header:
+
+
+
+
+
+
+<meta name=”robots” content=“index, nofollow”>
+
+
+
+
+
+, If you allow the bots to follow the links the link path from this specific page to other pages will remain in tact; if you restrict them from indexing the page, your web page will not appear in the index.Insert the following line of code into your header:
+
+
+
+
+
+
+<meta name=”robots” content=“noindex, follow”>
+
+
+
+
+
+, To hide a single link on a page, embed a rel tag within the <a href> </a> link tag. You may wish to use this tag to block links on other pages that lead to the specific page you want to block.<a href="yourdomain.html" rel="nofollow">Insert Link to Blocked Page</a>
+
+
+
+
+
+, Instead of blocking all bots from your web page, you may wish to prevent one bot from crawling and indexing the page. To accomplish this, replace “‘robot”’ within the meta tag with the name of a specific bot.Examples include: googlebot, googlebot-news, googlebot-image, bingbot, and teoma.<meta name=”bingbot” content=“noindex, nofollow”>
+
+
+
+
+
+, If you want to ensure that your page will be indexed and its links will be followed, you can insert a follow-allow meta “robot” tag into your header.Use the following code:
+
+
+
+
+
+
+<meta name=”robots” content=“index, follow”>
+
+
+
+
+

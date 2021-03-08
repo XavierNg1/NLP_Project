@@ -1,0 +1,12 @@
+ Prior knowledge of UML or ORM will be very useful in the design phase.;
+, Only actual data items are implemented as fields. The following information will help you decide the type of data item:
+
+
+
+Actual data items are those items that can not be inferred from other fields and that are crucial for the class to function. For example, a Circle class will not be able to do its job without having information about its center and its radius. These two are actual data items.
+
+Calculated data items are data items that can be calculated from other fields and need not be stored separately. For example, the area of a Circle class object can be calculated from the radius of that specific Circle object and need not be stored. Another less obvious example is the count of items in an array. This can be calculated by iterating through the array adding one to a counter (although usually, the count is stored for performance enhancement reasons).
+
+Imaginary data items are data items that are not actually stored within the class objects. For example, the contents of a file in a "File" object. Actually, the contents of the file are not stored within the object, but rather, in the file. Whenever they are needed, they are retrieved from the file. Most imaginary data items are actually special types of calculated data items. This type of data items are usually implemented as a property, unless there are some performance or concurrency issues that makes it necessary to keep a copy of the data within the object itself. Another confusing example is when you have an object that has a reference to another object and one of the second object's data items is considered to be a data item in the first. In this case, the data is stored in the second object and so is imaginary in the first.
+ Although this step is easy in many cases, it can be confusing in certain occasions. For example, let's suppose you are designing a "Contact" class that will store the name of the contact as a field. At first, string seems to be the right type for the name field. However, a thorough analysis might reveal that we need to store the first, middle and last name separately. This gives rise to the creation of another data type called "PersonName" to store the name (or, you might use three string fields instead and create a calculated field (property) "Name").
+

@@ -1,0 +1,174 @@
+ Sometimes, you have a large spreadsheet full of formulas, and you want to copy them exactly. Changing everything to absolute cell references (as described in the section on cell references) would be tedious, especially if you just want to change them back again afterward. Use this method to quickly move formulas with relative cell references elsewhere without changing the references.Here's our example spreadsheet, which needs to have column C duplicated to column D:
+
+
+
+Example Spreadsheet
+
+
+Column A
+Column B
+Column C
+Column D
+
+
+row 1
+944
+Frogs
+=A1/2
+
+
+
+row 2
+636
+Toads
+=A2/2
+
+
+
+row 3
+712
+Newts
+=A3/2
+
+
+
+row 4
+690
+Snakes
+=A4/2
+
+
+
+
+If you're just trying to copy the formula in a single cell, skip to the last step ("Try alternate methods") in this section.
+ On most versions of Excel, you can find this by clicking the Home tab at the top of the Excel window, then clicking Find & Select in the "Editing" portion of the tab.You can also use the keyboard shortcut, CTRL F.
+ Enter "=", click "Find All," then enter another character into the "Replace with" box. This will automatically turn all formulas (which always begin with =) into text strings beginning with some other character. Always use a character that you have not used in your spreadsheet. For example, replace it with # or &, or a longer string of characters, such as ##&.
+
+
+
+Example Spreadsheet
+
+
+Column A
+Column B
+Column C
+Column D
+
+
+row 1
+944
+Frogs
+##&A1/2
+
+
+
+row 2
+636
+Toads
+##&A2/2
+
+
+
+row 3
+712
+Newts
+##&A3/2
+
+
+
+row 4
+690
+Snakes
+##&A4/2
+
+
+
+
+Do not use the characters * or ?, since these will make later steps more difficult.
+ You may now select any cells you wish to copy, then paste them into another location. Since they are no longer interpreted as formulas, they will be copied exactly.
+
+
+
+Example Spreadsheet
+
+
+Column A
+Column B
+Column C
+Column D
+
+
+row 1
+944
+Frogs
+##&A1/2
+##&A1/2
+
+
+row 2
+636
+Toads
+##&A2/2
+##&A2/2
+
+
+row 3
+712
+Newts
+##&A3/2
+##&A3/2
+
+
+row 4
+690
+Snakes
+##&A4/2
+##&A4/2
+
+
+, Now that you have the formulas where you want them, use the "Find all" and "Replace with" options to reverse your change. In our example, we'll look for the character string "##&" and replace it with "=" again, so those cells become formulas once again. You can now continue editing your spreadsheet as usual:
+
+
+
+Example Spreadsheet
+
+
+Column A
+Column B
+Column C
+Column D
+
+
+row 1
+944
+Frogs
+=A1/2
+=A1/2
+
+
+row 2
+636
+Toads
+=A2/2
+=A2/2
+
+
+row 3
+712
+Newts
+=A3/2
+=A3/2
+
+
+row 4
+690
+Snakes
+=A4/2
+=A4/2
+
+
+, If the method described above does not work for any reason, or if you are worried about accidentally changing other cell contents with the "Replace all" option, there are a couple other methods you can try:
+
+
+To copy a single cell's formula without changing references, select the cell, then copy the formula shown in the formula bar near the top of the window (not in the cell itself). Press esc to close the formula bar, then paste the formula wherever you need it.Press Ctrl` (usually on the same key as ~) to put the spreadsheet in formula view mode. Copy the formulas and paste them into a text editor such as Notepad or TextEdit. Copy them again, then paste them back into the spreadsheet at the desired location.Press Ctrl` again to switch back to regular viewing mode.
+

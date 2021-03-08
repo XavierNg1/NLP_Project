@@ -1,0 +1,11 @@
+ In order for you to see the scripting in PHP at work, it must be processed within a server environment.This means you have to place your PHP file in your web folder. If you rent space from a server host, then you will need to log into your account and upload your file to a public folder in your server.
+If you are simply testing the file and do not want to purchase server space, then consider using XAMPP. XAMPP works on multiple platforms like Windows, Mac, and Linux. It will simulate a server-like environment on your personal computer.
+ The application lets you host and edit PHP files directly on your computer. This is a good method for testing files that you are working on or building if you don’t want or need to rent server hosting.
+
+
+For Mac users, once your application has downloaded, run the .dmg file. Drag the XAMPP folder over to your Applications folder.
+For Windows users, either click “Run” when downloading or locate the .exe file and open it. Follow the installation steps to finish installing the software.
+Once you have started up XAMPP, you’ll have a few options. Click “Start” for Apache and MySQL. You may be prompted to enter your computer’s password if you have one setup. You can also choose to start FTP if you want to transfer files. But for testing purposes, you only need to start the first two options.
+ Enter the file’s address into your web browser and hit “Enter.” This will execute the PHP file’s scripting.If you use a server host, then this will most likely be your domain name, followed by a forward slash, the public folder the file is in, and finally the file name. For example, “http://www.example.com/test/file.php”
+If you use XAMPP, then you need to enter “http://localhost” and then the file name. For example “http://localhost/file.php”
+

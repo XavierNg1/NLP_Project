@@ -1,0 +1,37 @@
+ Scientists frequently use a set of temperature and pressure values as a sort of convenient "default". These values are called Standard Temperature and Pressure (or STP for short). Vapor pressure problems frequently make reference to STP conditions, so it's handy to have these values memorized. STP values are defined as:Temperature: 273.15 K / 0 C / 32 F
+
+Pressure: 760 mm Hg / 1 atm / 101.325 kilopascals
+
+
+, In our example in Section 1, we saw that the Clausius-Clapeyron equation is very useful for finding the vapor pressures of pure substances. However, not every question will ask you to find P1 or P2 — many will ask you to find a temperature value or even sometimes an ΔHvap value. Luckily, in these cases, getting the right answer is simply a matter of rearranging the equation so that the variable you're solving for is alone on one side of the equals sign.
+
+
+For instance, let's say that we have an unknown liquid with a vapor pressure of 25 torr at 273 K and 150 torr at 325 K and we want to find this liquid's enthalpy of vaporization (ΔHvap). We could solve like this:
+ln(P1/P2) = (ΔHvap/R)((1/T2) - (1/T1))
+(ln(P1/P2))/((1/T2) - (1/T1)) = (ΔHvap/R)
+
+R × (ln(P1/P2))/((1/T2) - (1/T1)) = ΔHvap Now, we plug in our values:
+8.314 J/(K × Mol) × (-1.79)/(-0.00059) = ΔHvap
+
+8.314 J/(K × Mol) × 3,033.90 = ΔHvap = 25,223.83 J/mol
+
+
+, In our Raoult's Law example above, our solute, sugar, doesn't produce any vapor on its own at normal temperatures (think — when was the last time you saw a bowl of sugar evaporate on your counter top?) However, when your solute does evaporate, this will affect your vapor pressure. We account for this by using a modified version of the Raoult's Law equation: Psolution = Σ(PcomponentXcomponent) The sigma (Σ) symbol means that we just need to add up all of the different components' vapor pressures to find our answers.
+
+
+For example, let's say that we have a solution made from two chemicals: benzene and toluene. The total volume of the solution is 120 milliliters (mL); 60 mL of benzene and 60 of toluene. The temperature of the solution is 25 C and the vapor pressures of each of these chemicals at 25 C is 95.1 mm Hg for benzene 28.4 mm Hg for toluene. Given these values, find the vapor pressure of the solution. We can do this as follows, using standard density, molar mass, and vapor pressure values for our two chemicals:
+Mass (benzene): 60 mL = .060 L &times 876.50 kg/1,000 L = 0.053 kg = 53 g
+
+Mass (toluene): .060 L &times 866.90 kg/1,000 L = 0.052 kg = 52 g
+
+Moles (benzene): 53 g × 1 mol/78.11 g = 0.679 mol
+Moles (toluene): 52 g × 1 mol/92.14 g = 0.564 mol
+Total moles: 0.679 + 0.564 = 1.243
+Mole fraction (benzene): 0.679/1.243 = 0.546
+Mole fraction (toluene): 0.564/1.243 = 0.454
+Solve: Psolution = PbenzeneXbenzene + PtolueneXtoluene
+
+Psolution = (95.1 mm Hg)(0.546) + (28.4 mm Hg)(0.454)
+Psolution = 51.92 mm Hg + 12.89 mm Hg = 64.81 mm Hg
+
+

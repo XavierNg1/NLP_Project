@@ -1,0 +1,42 @@
+ To find a vector's components, it's usually necessary to know its magnitude and its direction relative to the horizontal or vertical and to have a working knowledge of trigonometry. Taking a 2-D vector first: set or imagine your vector as the hypotenuse of a right triangle whose other two sides are parallel to the x and y axes. These two sides can be thought of as head-to-tail component vectors that add to create your original vector.
+
+
+The lengths of the two sides are equal to the magnitudes of the x and y components of your vector and may be calculated using trigonometry. If x is the magnitude of the vector, the side adjacent to the vector's angle (relative to the horizontal, vertical, etc.) angle is xcos(θ), while the side opposite is xsin(θ).
+It's also important to note the direction of your components. If the component points in the negative direction of one of your axes, it is given a negative sign. For example, in a 2-D plane, if a component points to the left or downwards, it is given a negative sign.
+For example, let's say that we have a vector with a magnitude of 3 and a direction of 135o relative to the horizontal. With this information, we can determine that its x component is 3cos(135) = -2.12 and its y component is 3sin(135) = 2.12
+
+
+, When you've found the components of all of your vectors, simply add their magnitudes together to find the components of your resultant vector. First, add all the magnitudes of the horizontal components (those parallel to the x-axis) together. Separately, add all the magnitudes of the vertical components (those parallel to the y-axis). If a component has a negative sign (-), its magnitude is subtracted, rather than added. The answers you obtain are the components of your resultant vector.
+
+
+For instance, let's say that our vector from the previous step, <-2.12, 2.12>, is being added to the vector <5.78, -9>. In this case, our resultant vector would be <-2.12+5.78, 2.12-9>, or <3.66, -6.88>.
+ The Pythagorean Theorem, c2=a2+b2, solves for the side lengths of right triangles. Since the triangle formed by our resultant vector and its components is a right triangle, we can use it to find our vector's length and therefore its magnitude. With c as the magnitude of the resultant vector, which you're solving for, set a as the magnitude of its x component and b as the magnitude of its y components. Solve with algebra.
+
+
+To find the magnitude of the vector whose components we found in the previous step, <3.66, -6.88>, let's use the Pythagorean Theorem. Solve as follows:
+
+c2=(3.66)2+(-6.88)2
+
+c2=13.40+47.33
+c=√60.73 = 7.79
+
+
+
+
+, Finally, find the resultant vector's direction. Use the formula θ=tan-1(b/a), where θ is the angle that the resultant makes with the x-axis or the horizontal, b is the magnitude of the y component, and a is the magnitude of the x component.
+
+
+To find the direction of our example vector, let's use θ=tan-1(b/a).
+
+θ=tan-1(-6.88/3.66)
+θ=tan-1(-1.88)
+θ=-61.99o
+
+
+
+
+, As noted above, vectors are defined by their magnitude and direction. Be sure to use the proper units for your vector's magnitude.
+
+
+For example, if our example vector represented a force (in Newtons), then we might write it as "a force of 7.79 N at -61.99o to the horizontal".
+

@@ -1,0 +1,52 @@
+ The standard formula for calculating covariance is Σ(xi−xavg)(yi−yavg)/(n−1){\displaystyle \Sigma (x_{i}-x_{\text{avg}})(y_{i}-y_{\text{avg}})/(n-1)}. To use this formula, you need to understand the meaning of the variables and symbols:Σ{\displaystyle \Sigma } - This symbol is the Greek letter “sigma.” In math functions it means to add up a series of whatever follows it. In this formula, the Σ sign means that you will calculate the values that follow in the numerator of the fraction, and add them all together, before dividing by the denominator.xi{\displaystyle x_{i}} - This variable is read as “x sub i.” The i subscript represents a counter. It means that you will perform the calculation for each value of x that you have in your data set. 
+
+
+xavg{\displaystyle x_{avg}} - The “avg” indicates that x(avg) is the average value of all of your x data points. The average is sometimes also written as an x with a short horizontal line drawn over it. In that style, the variable is read as “x-bar,” but it still means the average of the data set.
+
+
+yi{\displaystyle y_{i}} - This variable is read as “y sub i.” The i subscript represents a counter. It means that you will perform the calculation for each value of y that you have in your data set.
+
+
+yavg{\displaystyle y_{avg}} - The “avg” indicates that y(avg) is the average value of all of your y data points. The average is sometimes also written as a y with a short horizontal line drawn over it. In that style, the variable is read as “y-bar,” but it still means the average of the data set.
+
+
+n{\displaystyle n} - This variable represents the number of items in your data set. Remember that for a covariance problem, a single “item” is comprised of both an x-value and a y-value. The value of n is the number of pairs of data points, not individual numbers.
+;
+, Before you begin working, it is helpful to collect your data. You should make a table that consists of five columns. You should label each column as follows:
+
+
+x{\displaystyle x} - fill this column with the values of your x-data points.
+
+
+y{\displaystyle y} - fill this column with the values of your y-data points. Be careful to align the y-values with the corresponding x-values. In a covariance problem, the order of the data points and the pairings of x and y are important.
+
+
+(xi−xavg){\displaystyle (x_{i}-x_{\text{avg}})} - Leave this column blank in the beginning. You will fill it with data after you calculate the average of the x-data points.
+
+
+(yi−yavg){\displaystyle (y_{i}-y_{\text{avg}})} - Leave this column blank in the beginning. You will fill it with data after you calculate the average of the y-data points.
+
+
+Product{\displaystyle {\text{Product}}} - Leave this final column blank as well. You will fill it as you go along.
+ This sample data set contains 9 numbers. To find the average, add them together and divide the sum by 9. This gives you the result of 1+3+2+5+8+7+12+2+4=44. When you divide by 9, the average is 4.89. This is the value that you will use as x(avg) for the coming calculations., Similarly, the y-column should consist of 9 data points that coincide with the x-data points. Find the average of these. For this sample data set, this will be 8+6+9+4+3+3+2+7+7=49. Divide this sum by 9 to get an average of 5.44. You will use 5.44 as the value of y(avg) for the coming calculations., For each item in the x column, you need to find the difference between that number and the average value. For this sample problem, this means subtracting 4.89 from each x-data point. If the original data point is less than the average, then your result will be negative. If the original data point is greater than the average, then your result will be positive. Make sure that you keep track of the negative signs.For example, the first data point in the x column is 1. The value to enter on the first line of the (xi−xavg){\displaystyle (x_{i}-x_{\text{avg}})} column is 1-4.89, which is -3.89.
+
+Repeat the process for each data point. Therefore, the second line will be 3-4.89, which is -1.89. The third line will be 2-4.89, or -2.89. Continue the process for all the data points. The nine numbers in this column should be -3.89, -1.89, -2.89, 0.11, 3.11, 2.11, 7.11, -2.89, -0.89.
+ In this column, you will perform similar subtractions, using the y-data points and the y average. If the original data point is less than the average, then your result will be negative. If the original data point is greater than the average, then your result will be positive. Make sure that you keep track of the negative signs.For the first line, therefore, your calculation will be 8-5.44, which is 2.56.
+
+The second line will be 6-5.44, which is 0.56.
+
+Continue these subtractions to the end of the data list. When you finish, the nine values in this column should be 2.56, 0.56, 3.56, -1.44, -2.44, -2.44, -3.44, 1.56, 1.56.
+ You will fill in the rows of the final column by multiplying the numbers that you calculated in the two previous columns of (xi−xavg){\displaystyle (x_{i}-x_{\text{avg}})} and (yi−yavg){\displaystyle (y_{i}-y_{\text{avg}})}. Be careful to work row by row, and multiply the two numbers for the corresponding data points. Keep track of any negative signs as you go.On the first row of this data sample, the (xi−xavg){\displaystyle (x_{i}-x_{\text{avg}})} that you calculated is -3.89, and the (yi−yavg){\displaystyle (y_{i}-y_{\text{avg}})} value is 2.56. The product of these two numbers is -3.89*2.56=-9.96.
+
+For the second row, you will multiply the two numbers -1.88*0.56=-1.06.
+
+Continue multiplying row by row to the end of the data set. When you finish, the nine values in this column should be -9.96, -1.06, -10.29, -0.16, -7.59, -5.15, -24.46, -4.51, -1.39.
+ This is where the Σ symbol comes into play. After conducting all the calculations that you have done so far, you will add the results. For this sample data set, you should have nine values in the final column. Add those nine numbers together. Pay careful attention to whether each number is positive or negative.
+
+For this sample data set, the sum should be -64.57. Write this total in the space at the bottom of the column. This represents the value of the numerator of the standard covariance formula.
+ The numerator for the standard covariance formula is the value that you have just completed calculating. The denominator is represented by (n-1), which is just one less than the number of data pairs in your data set.
+
+For this sample problem, there are nine data pairs, so n is 9. The value of (n-1), therefore, is 8.
+ The final step in calculating the covariance is to divide your numerator, Σ(xi−xavg)(yi−yavg){\displaystyle \Sigma (x_{i}-x_{\text{avg}})(y_{i}-y_{\text{avg}})} by your denominator, (n−1){\displaystyle (n-1)}. The quotient is the covariance of your data.For this sample data set, this calculation is -64.57/8, which gives the result of -8.07.
+
+

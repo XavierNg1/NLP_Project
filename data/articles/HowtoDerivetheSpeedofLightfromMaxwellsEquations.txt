@@ -1,0 +1,47 @@
+ In vacuum, charge density ρ=0{\displaystyle \rho =0} and current density J=0.{\displaystyle {\mathbf {J} }=0.}
+
+
+∇⋅E=0∇⋅B=0∇×E=−∂B∂t∇×B=μ0ϵ0∂E∂t{\displaystyle {\begin{aligned}\nabla \cdot {\mathbf {E} }&=0\\\nabla \cdot {\mathbf {B} }&=0\\\nabla \times {\mathbf {E} }&=-{\frac {\partial {\mathbf {B} }}{\partial t}}\\\nabla \times {\mathbf {B} }&=\mu _{0}\epsilon _{0}{\frac {\partial {\mathbf {E} }}{\partial t}}\end{aligned}}}
+
+where μ0{\displaystyle \mu _{0}} is the magnetic permeability constant and ϵ0{\displaystyle \epsilon _{0}} is the electric permittivity constant. The intertwining between the electric and magnetic fields is on full display here.
+;
+, 
+
+
+∇×(∇×E)=∇×−∂B∂t=−∂∂t(∇×B){\displaystyle {\begin{aligned}\nabla \times (\nabla \times {\mathbf {E} })&=\nabla \times -{\frac {\partial {\mathbf {B} }}{\partial t}}\\&=-{\frac {\partial }{\partial t}}(\nabla \times {\mathbf {B} })\end{aligned}}}
+
+Note that partial derivatives commute with each other, given well-behaved functions.
+
+
+Using the BAC-CAB identity ∇×(∇×E)=∇(∇⋅E)−∇2E{\displaystyle \nabla \times (\nabla \times {\mathbf {E} })=\nabla (\nabla \cdot {\mathbf {E} })-\nabla ^{2}{\mathbf {E} }} on the left side and recognizing that ∇⋅E=0,{\displaystyle \nabla \cdot {\mathbf {E} }=0,}
+
+
+∇(∇⋅E)−∇2E=−μ0ϵ0∂2E∂t2∇2E=μ0ϵ0∂2E∂t2.{\displaystyle {\begin{aligned}\nabla (\nabla \cdot {\mathbf {E} })-\nabla ^{2}{\mathbf {E} }&=-\mu _{0}\epsilon _{0}{\frac {\partial ^{2}{\mathbf {E} }}{\partial t^{2}}}\\\nabla ^{2}{\mathbf {E} }&=\mu _{0}\epsilon _{0}{\frac {\partial ^{2}{\mathbf {E} }}{\partial t^{2}}}.\end{aligned}}}
+
+The above equation is the wave equation in three dimensions.
+
+
+
+∂2E∂x2=μ0ϵ0∂2E∂t2.{\displaystyle {\frac {\partial ^{2}E}{\partial x^{2}}}=\mu _{0}\epsilon _{0}{\frac {\partial ^{2}E}{\partial t^{2}}}.}
+
+The general solution to this equation is f(x−vt)+g(x+vt),{\displaystyle f(x-vt)+g(x+vt),} where v{\displaystyle v} is the velocity and λ{\displaystyle \lambda } is the wavelength. Here, f{\displaystyle f} and g{\displaystyle g} are two arbitrary functions that describe a wave propagating in the positive and negative directions, respectively. Since this is quite general, we can opt for the most common solution of just a sinusoidal function traveling in the direction of propagation. So we can write the solution as E=E0sin(2πλ(x−vt)),{\displaystyle E=E_{0}\sin \left({\frac {2\pi }{\lambda }}(x-vt)\right),} where E0{\displaystyle E_{0}} is the amplitude of the electric field (this quantity will cancel out later).
+
+
+
+∂2E∂x2=−E0(2πλ)2sin(2πλ(x−vt))∂2E∂t2=−E0(2πvλ)2sin(2πλ(x−vt)){\displaystyle {\begin{aligned}{\frac {\partial ^{2}E}{\partial x^{2}}}&=-E_{0}\left({\frac {2\pi }{\lambda }}\right)^{2}\sin \left({\frac {2\pi }{\lambda }}(x-vt)\right)\\{\frac {\partial ^{2}E}{\partial t^{2}}}&=-E_{0}\left({\frac {2\pi v}{\lambda }}\right)^{2}\sin \left({\frac {2\pi }{\lambda }}(x-vt)\right)\end{aligned}}}
+
+
+, Note that the sin{\displaystyle \sin } expressions cancel out.
+
+
+−E0(2πλ)2=μ0ϵ01=μ0ϵ0v2{\displaystyle {\begin{aligned}-E_{0}\left({\frac {2\pi }{\lambda }}\right)^{2}&=\mu _{0}\epsilon _{0}\left\\1&=\mu _{0}\epsilon _{0}v^{2}\end{aligned}}}
+
+
+,
+
+
+v=1μ0ϵ0≈3×108 m s−1.{\displaystyle v={\sqrt {\frac {1}{\mu _{0}\epsilon _{0}}}}\approx 3\times 10^{8}{\text{ m s}}^{-1}.}
+
+The expression on the right happens to equal the speed of light. Therefore, light does not only travel at the speed of electromagnetic waves, it is an electromagnetic wave.
+
+

@@ -1,0 +1,243 @@
+ An ansatz is a formal way of saying trial and error - we try the exponential function as a solution to the equation we're working with, because we know that its derivative is proportional to itself. Here, r{\displaystyle r} is yet to be determined.
+
+
+
+anrnerx+an−1rn−1erx+⋯+a1rerx+a0erx=0{\displaystyle a_{n}r^{n}e^{rx}+a_{n-1}r^{n-1}e^{rx}+\cdots +a_{1}re^{rx}+a_{0}e^{rx}=0} 
+
+
+, The resulting equation inside the parentheses is called the characteristic equation of the differential equation with constant coefficients. Using our trial solution, we have converted a differential equation into an algebraic equation. Now, our task is to find the roots of the characteristic equation.
+
+
+anrn+an−1rn−1+⋯+a1r+a0=0{\displaystyle a_{n}r^{n}+a_{n-1}r^{n-1}+\cdots +a_{1}r+a_{0}=0}
+
+Per the fundamental theorem of algebra, every polynomial of order n{\displaystyle n} has at least one and not more than n{\displaystyle n} distinct complex roots. There are therefore three possible scenarios after solving the characteristic equation. 
+
+
+, The existence and uniqueness theorem for homogeneous linear differential equations tells us two very important things. First, such an nth order equation has n{\displaystyle n} linearly independent solutions y1,y2,⋯,yn.{\displaystyle y_{1},\,y_{2},\cdots ,\,y_{n}.} Second, the linear combination of those solutions is also a solution of the equation. Once we have found the roots, we do not need to search for any more solutions. Below, we label the roots rk{\displaystyle r_{k}} and their respective arbitrary constants ck,{\displaystyle c_{k},} where k{\displaystyle k} is going from 1 to n.{\displaystyle n.}
+
+
+y=c1er1x+c2er2x+⋯+cnernx{\displaystyle y=c_{1}e^{r_{1}x}+c_{2}e^{r_{2}x}+\cdots +c_{n}e^{r_{n}x}}
+
+The reason why we do not need to search for more solutions is because solutions to the differential equation form a linearly independent spanning set (basis) in polynomial space with dimension n.{\displaystyle n.} So after finding all the basis elements, every other function in the vector space can be written in terms of the basis elements.
+ We face a dilemma here. The existence and uniqueness theorem tells us that there should be n{\displaystyle n} linearly independent solutions. But we can clearly see that if a root is repeated and we naively present the above equation as the general solution, the functions are linearly dependent, and therefore it cannot be the general solution. Since there must be n{\displaystyle n} linearly independent solutions, we need to find u{\displaystyle u} such that y{\displaystyle y} is the general solution of the differential equation. 
+, To make things simpler for us (because of the repeated use of the product rule), we will consider a second order differential equation only. The constant coefficients are there to make the result turn out nicely.
+
+
+d2dx2uerx−2rddxuerx+r2uerx=0erxd2udx2=0{\displaystyle {\begin{aligned}{\frac {{\mathrm {d} }^{2}}{{\mathrm {d} }x^{2}}}ue^{rx}-2r{\frac {\mathrm {d} }{{\mathrm {d} }x}}ue^{rx}+r^{2}ue^{rx}&=0\\e^{rx}{\frac {{\mathrm {d} }^{2}u}{{\mathrm {d} }x^{2}}}&=0\end{aligned}}}
+
+After factoring out erx{\displaystyle e^{rx}} and simplifying, everything in parentheses vanishes except for the highest ordered derivative. We recognize here that erx{\displaystyle e^{rx}} is never 0, so d2udx2{\displaystyle {\frac {{\mathrm {d} }^{2}u}{{\mathrm {d} }x^{2}}}} must be.
+
+
+
+y=c1+c2x{\displaystyle y=c_{1}+c_{2}x}
+
+In the general nth order equation, it turns out that y=ckxk−1{\displaystyle y=c_{k}x^{k-1}} for k{\displaystyle k} going from 1 to n{\displaystyle n} holds. Multiply it by erx,{\displaystyle e^{rx},} and we have a linearly independent solution. It is easy to verify this by taking the Wronskian and confirming that the determinant does not vanish.
+
+
+|c1erxc2xerxc1rerxc2erx+c2xrerx|≠0{\displaystyle {\begin{vmatrix}c_{1}e^{rx}&c_{2}xe^{rx}\\c_{1}re^{rx}&c_{2}e^{rx}+c_{2}xre^{rx}\end{vmatrix}}\neq 0}
+
+
+
+
+, For second order equations, the solution only differs from the real and distinct roots solution by an extra x,{\displaystyle x,} something that can either be forgotten or be nonintuitive. It is important that you recognize that this method only refers to repeated roots. That is, if a characteristic equation yielded something like (r−3)(r−2)2=0,{\displaystyle (r-3)(r-2)^{2}=0,} the solution to the corresponding differential equation would be y=c1e3x+(c2+c3x)e2x.{\displaystyle y=c_{1}e^{3x}+(c_{2}+c_{3}x)e^{2x}.}
+
+
+y=erx(c1+c2x+⋯+cnxn−1){\displaystyle y=e^{rx}(c_{1}+c_{2}x+\cdots +c_{n}x^{n-1})}
+
+
+, We know that complex roots of polynomials come in conjugate pairs. That is, if r1=α+iβ{\displaystyle r_{1}=\alpha +i\beta } is a root, then so is r2=α−iβ.{\displaystyle r_{2}=\alpha -i\beta .} For sake of demonstration in this part, we will assume a second order differential equation with a characteristic equation that only contains complex roots.
+
+
+y=c1~e(α+iβ)x+c2~e(α−iβ)x{\displaystyle y={\tilde {c_{1}}}e^{(\alpha +i\beta )x}+{\tilde {c_{2}}}e^{(\alpha -i\beta )x}}
+
+While this is an acceptable way to write the solution, there is another, more common way to write it, which highlights the solutions' periodic nature in a clearer fashion.
+ 
+
+
+y=c1~eαxeiβx+c2~eαxe−iβx=eαx(c1~eiβx+c2~e−iβx)=eαx(c1~(cos⁡βx+isin⁡βx)+c2~(cos⁡βx−isin⁡βx))=eαx((c1~+c2~)cos⁡βx+i(c1~−c2~)sin⁡βx){\displaystyle {\begin{aligned}y&={\tilde {c_{1}}}e^{\alpha x}e^{i\beta x}+{\tilde {c_{2}}}e^{\alpha x}e^{-i\beta x}\\&=e^{\alpha x}({\tilde {c_{1}}}e^{i\beta x}+{\tilde {c_{2}}}e^{-i\beta x})\\&=e^{\alpha x}({\tilde {c_{1}}}(\cos \beta x+i\sin \beta x)+{\tilde {c_{2}}}(\cos \beta x-i\sin \beta x))\\&=e^{\alpha x}(({\tilde {c_{1}}}+{\tilde {c_{2}}})\cos \beta x+i({\tilde {c_{1}}}-{\tilde {c_{2}}})\sin \beta x)\end{aligned}}}
+
+
+, c1=c1~+c2~{\displaystyle c_{1}={\tilde {c_{1}}}+{\tilde {c_{2}}}} and c2=i(c1~−c2~){\displaystyle c_{2}=i({\tilde {c_{1}}}-{\tilde {c_{2}}})} are appropriate here. Notice that if the roots of the characteristic equation are purely imaginary, then α=0{\displaystyle \alpha =0} and the solution is periodic with no damping or blowup. As with the repeated roots part, the method outlined in this part only refers to complex roots. If a characteristic equation yielded something like (r−2)(r−4)2(r−(2+i))(r−(2−i))=0,{\displaystyle (r-2)(r-4)^{2}(r-(2+i))(r-(2-i))=0,} then the general solution would be y=c1e2x+(c2+c3x)e4x+e2x(c4cos⁡x+c5sin⁡x).{\displaystyle y=c_{1}e^{2x}+(c_{2}+c_{3}x)e^{4x}+e^{2x}(c_{4}\cos x+c_{5}\sin x).}
+
+
+y=eαx(c1cos⁡βx+c2sin⁡βx){\displaystyle y=e^{\alpha x}(c_{1}\cos \beta x+c_{2}\sin \beta x)}
+
+
+, Although all the parameters in the above equation are real, it may be better in some scenarios to rewrite the solution with a phase factor ϕ.{\displaystyle \phi .}
+
+Multiply the solution by c12+c22c12+c22.{\displaystyle {\frac {\sqrt {c_{1}^{2}+c_{2}^{2}}}{\sqrt {c_{1}^{2}+c_{2}^{2}}}}.}
+
+
+eαxc12+c22(c1c12+c22cos⁡βx+c2c12+c22sin⁡βx){\displaystyle e^{\alpha x}{\sqrt {c_{1}^{2}+c_{2}^{2}}}\left({\frac {c_{1}}{\sqrt {c_{1}^{2}+c_{2}^{2}}}}\cos \beta x+{\frac {c_{2}}{\sqrt {c_{1}^{2}+c_{2}^{2}}}}\sin \beta x\right)}
+
+
+
+Draw a right triangle with angle ϕ,{\displaystyle \phi ,} hypotenuse length c12+c22,{\displaystyle {\sqrt {c_{1}^{2}+c_{2}^{2}}},} opposite side length c1,{\displaystyle c_{1},} and adjacent side length c2.{\displaystyle c_{2}.} Replace the constant c12+c22{\displaystyle {\sqrt {c_{1}^{2}+c_{2}^{2}}}} with a new constant A.{\displaystyle A.} Now we can simplify the quantities in parentheses. The result is that the second arbitrary constant has been replaced with an angle. Because ϕ{\displaystyle \phi } is arbitrary, we can also use the cosine function as well.
+
+
+y=Aeαx(sin⁡ϕcos⁡βx+cos⁡ϕsin⁡βx)=Aeαxsin⁡(βx+ϕ){\displaystyle {\begin{aligned}y&=Ae^{\alpha x}(\sin \phi \cos \beta x+\cos \phi \sin \beta x)\\&=Ae^{\alpha x}\sin(\beta x+\phi )\end{aligned}}}
+
+
+
+
+, 
+
+
+d2ydx2+4dydx+4y=0{\displaystyle {\frac {{\mathrm {d} }^{2}y}{{\mathrm {d} }x^{2}}}+4{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}+4y=0}
+
+
+,
+
+
+r2+4r+4=0{\displaystyle r^{2}+4r+4=0}
+
+
+, r=−2{\displaystyle r=-2} is a double root.
+
+
+(r+2)2=0{\displaystyle (r+2)^{2}=0}
+
+From part 1, the general solution to the differential equation is as follows.
+
+
+y=(c1+c2x)e−2x{\displaystyle y=(c_{1}+c_{2}x)e^{-2x}}
+
+
+
+You can verify that this is a solution by taking derivatives and substituting into the differential equation.
+ When a problem is given with initial conditions, they are asking you to find a particular solution to the differential equation. Notice that this equation is essentially saying to find all functions that are their own second derivatives.
+
+
+d2ydx2−y=0{\displaystyle {\frac {{\mathrm {d} }^{2}y}{{\mathrm {d} }x^{2}}}-y=0}
+
+
+y(0)=1, y′(0)=0{\displaystyle y(0)=1,\ y^{\prime }(0)=0}
+
+
+,
+
+
+r2−1=0{\displaystyle r^{2}-1=0}
+
+
+, After finding these roots, we arrive at the general solution. We still need to find the particular solution satisfying the initial conditions.
+
+
+r=±1{\displaystyle r=\pm 1}
+
+
+y=c1ex+c2e−x{\displaystyle y=c_{1}e^{x}+c_{2}e^{-x}}
+
+
+, Since we are dealing with second order differential equations, we need to have two initial conditions in order for the solution to be unique. Once we have y{\displaystyle y} and its derivative, we can substitute.
+
+
+{y=c1ex+c2e−xy′=c1ex−c2e−x{\displaystyle {\begin{cases}y&=c_{1}e^{x}+c_{2}e^{-x}\\y^{\prime }&=c_{1}e^{x}-c_{2}e^{-x}\end{cases}}}
+
+
+{1=c1+c20=c1−c2{\displaystyle {\begin{cases}1&=c_{1}+c_{2}\\0&=c_{1}-c_{2}\end{cases}}}
+
+
+,
+
+
+c1=12, c2=12{\displaystyle c_{1}={\frac {1}{2}},\ c_{2}={\frac {1}{2}}}
+
+
+, This function is a solution satisfying initial conditions, with the interesting property in that it is equal to its own second derivative. This function is, in fact, the hyperbolic cosine.
+
+
+y=ex+e−x2=cosh⁡x{\displaystyle y={\frac {e^{x}+e^{-x}}{2}}=\cosh x}
+
+
+, This object is resting on a frictionless floor, and the spring follows Hooke's law F=−kx.{\displaystyle F=-kx.}
+
+Newton's second law says that the magnitude of a force is proportional to the object's acceleration F=ma.{\displaystyle F=ma.} When the spring is being pulled to an excited state, i.e. out of equilibrium, the object experiences a restoring force that tends to bring it back to equilibrium. At the instant the spring reaches its equilibrium point, however, the object is traveling at its greatest speed. The spring therefore undergoes an oscillatory motion, and because the floor is frictionless (no damping), it exhibits simple harmonic motion.
+
+Newton's law only indirectly relates the position of an object to the force acting on it through a second derivative, because a=d2xdt2.{\displaystyle a={\frac {{\mathrm {d} }^{2}x}{{\mathrm {d} }t^{2}}}.}
+
+
+, The equation is a second order linear differential equation with constant coefficients. In our system, the forces acting perpendicular to the direction of motion of the object (the weight of the object and the corresponding normal force) cancel out. Therefore, the only force acting on the object when the spring is excited is the restoring force. This means that we equate the two together.
+
+
+F=ma=−kx{\displaystyle F=ma=-kx}
+
+Rewrite acceleration in terms of position and rearrange terms to set the equation to 0.
+
+
+d2xdt2+kmx=0{\displaystyle {\frac {{\mathrm {d} }^{2}x}{{\mathrm {d} }t^{2}}}+{\frac {k}{m}}x=0}
+
+
+
+
+,
+
+Set up the characteristic equation.
+
+
+r2+km=0{\displaystyle r^{2}+{\frac {k}{m}}=0}
+
+
+
+Find the roots of the characteristic equation.
+
+
+r=±kmi{\displaystyle r=\pm {\sqrt {\frac {k}{m}}}i}
+
+
+
+Then, the solution to the differential equation is as follows.
+
+
+x(t)=Acos(kmt+ϕ){\displaystyle x(t)=A\cos \left({\sqrt {\frac {k}{m}}}t+\phi \right)}
+
+
+
+Each of the constants in the solution has physical significance. A{\displaystyle A} is the amplitude of the oscillation, and ϕ{\displaystyle \phi } is the initial phase factor. Without initial conditions, this is as far as we can go.
+ Our analysis will also include a force F=−bv,{\displaystyle F=-bv,} where b{\displaystyle b} is an experimentally determined constant. We recognize that velocity is the rate of change of position. The negative sign signifies that this force is always acting opposite to the direction of motion.
+
+
+ma=−kx−bv{\displaystyle ma=-kx-bv}
+
+Rewrite acceleration and velocity in terms of position and rearrange terms. This is once again a second-order differential equation with constant coefficients.
+
+
+md2xdt2+bdxdt+kx=0{\displaystyle m{\frac {{\mathrm {d} }^{2}x}{{\mathrm {d} }t^{2}}}+b{\frac {{\mathrm {d} }x}{{\mathrm {d} }t}}+kx=0}
+
+
+
+
+,
+
+Set up the characteristic equation.
+
+
+mr2+br+k=0{\displaystyle mr^{2}+br+k=0}
+
+
+
+Find the roots of the characteristic equation. We see that the roots are slightly more complicated than before, with the undamped motion example. We could write out our solution in terms of trigonometric functions, but it is no longer obvious that our roots are even complex anymore. 
+
+
+r=−b±b2−4mk2m{\displaystyle r={\frac {-b\pm {\sqrt {b^{2}-4mk}}}{2m}}}
+
+
+
+We will see that all equations obeying some form of simple harmonic motion must satisfy the equation below. This is a standard form that simplifies the roots of the characteristic equation, aiding in our analysis. One only needs to substitute in β{\displaystyle \beta } (the attenuation, the measure of how quickly the system damps) and ω0{\displaystyle \omega _{0}} (the angular frequency) using the parameters originally defined in the problem and go from there. In our case, we have β=b/2m{\displaystyle \beta =b/2m} and ω02=k/m.{\displaystyle \omega _{0}^{2}=k/m.}
+
+
+d2xdt2+2βdxdt+ω02x=0{\displaystyle {\frac {{\mathrm {d} }^{2}x}{{\mathrm {d} }t^{2}}}+2\beta {\frac {{\mathrm {d} }x}{{\mathrm {d} }t}}+\omega _{0}^{2}x=0}
+
+
+r=−β±β2−ω02{\displaystyle r=-\beta \pm {\sqrt {\beta ^{2}-\omega _{0}^{2}}}}
+
+
+
+Remember that for the solution to be oscillatory in nature, the square root must be imaginary. So the condition for damped harmonic motion is that ω02>β2.{\displaystyle \omega _{0}^{2}>\beta ^{2}.} The general solution will then take on the following form. For some more information on this system, see this article.
+
+
+x(t)=Ae−βtcos(ω02−β2t+ϕ){\displaystyle x(t)=Ae^{-\beta t}\cos \left({\sqrt {\omega _{0}^{2}-\beta ^{2}}}t+\phi \right)}
+
+
+
+

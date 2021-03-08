@@ -1,0 +1,22 @@
+ You'll need to use a connection program called a "client". The client handles the connection between your computer and the OpenVPN server. You can download the client from here. Use the "Installer" download link that matches your version of Windows.
+
+
+You'll need to know if you are running a 32-bit or 64-bit version of Windows. Press ⊞ Win+Pause and look for the "System type" entry.;
+, Run the OpenVPN installer after downloading it. Confirm that you want to run it. Follow the instructions to proceed, and leave all of the settings at their default. All of the necessary services will be installed so that OpenVPN can function properly.
+ Any server that is running OpenVPN should provide you with a set of configuration files. One of the files may be a security certificate. The other file will contain the server information. There may be multiple server configuration files if your VPN service offers multiple servers.You can find these configuration files on your VPN service's Support page. The config files may come packaged in a ZIP file.
+If you can't find the configuration files, you may still be able to connect. See Step 9 of this section.
+ Copy the key and the configuration file(s) to the C:\Program Files\OpenVPN\config folder for OpenVPN. It may be located at C:\Program Files (x86)\OpenVPN\config instead.
+ You must run OpenVPN as an administrator.
+
+
+Make sure OpenVPN isn't already running before starting it this way.
+ You'll see a list of servers based on the files that you copied into the OpenVPN config folder.
+ You'll be prompted to enter your username and password for the server. You received these credentials when you signed up for the VPN service.
+ You'll see a notification appear indicating that you are connected to the VPN server. Your internet traffic will now be sent through the VPN.
+ You may still be able to connect and download the correct files.
+
+
+Start OpenVPN and enter the IP address or hostname of the server.Enter your username and password when prompted.
+Select your profile if prompted.
+Select "Always" when prompted to accept the certificate.
+

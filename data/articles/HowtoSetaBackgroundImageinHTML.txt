@@ -1,0 +1,81 @@
+ On your computer, create and name a folder that you can easily find later.
+
+
+You can name the folder anything you like, but when working with HTML, it's best to get in the habit of naming files and folders with short, single word names.;
+, Put the image you'd like to use as background into the HTML folder.
+
+
+If you aren't too concerned with ensuring your website will run well on older devices with slower internet connections, you should be safe in using a higher resolution image as your background. Simple images with light, repetitive patterns are also a good choice when deciding on a background image so that you can read any text on top of it.
+If you don't have an image, you can download a free background image. If you download an image, put it in the HTML folder you created.
+ Open a text editor, and then create a new file. Save the file as index.html.
+
+
+You can use any text editor you want, even the system text editors provided by Windows, Notepad, and Mac OS X, TextEdit.
+If you want to use a text editor intended for working with HTML, click here to download Atom, a text editor that works on Windows, Mac OS X, and Linux operating systems.
+If you're using TextEdit, before starting to write the HTML file, click the Format menu, and then click Make Plain Text. This setting will make sure the HTML file loads properly in a web browser.
+Word processors, such as Microsoft Word, are not great for writing HTML, because they add invisible characters and formatting that can break an HTML file so that it doesn't display correctly in a web browser.
+ Select and copy the HTML code below, and then paste it into your open index.html file.
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+ 
+<style>
+body {
+        background-image: url(" ");
+} 
+ 
+</style>
+ 
+</head>
+ 
+<body>
+ 
+</body>
+</html>
+
+
+
+
+, In the index.html file, find the line background-image: url(" ");. Move the cursor between the parentheses, and then type the background image file name. Make sure to include the background image file extension.
+
+When you're done, it should look like:background-image: url("background.png");
+
+When you use a filename without a file path or URL, the web browser will look in the web page folder for the named image. If the file is in another folder on your file system, you'll need to add the full path to that file.,, Right-click the index.html file, and then open it in the web browser of your choice.
+
+
+When the browser opens, if you don't see the image, make sure the image file name is spelled correctly in the index.html text editor window.
+When the browser opens, if you see HTML code instead of the background image, your index.html file was saved as a rich text document. You may want to try editing the HTML file in a different text editor.
+ In the text editor window, move the cursor between the <body> </body> tags, and then type Hello world!. Reload the browser window to see the text on top of the background image.
+ HTML code is made up of open and closed tags. The <body> tag is the open body tag, and </body> is the closed body tag. Every open tag on an HTML page needs to have a closing tag for the page to display correctly.
+ Every well-written HTML page should start with <!DOCTYPE html>. This tells a web browser that the HTML file is an HTML file.
+ In the text editor window, move the cursor between the <body> </body> tags, and then type Hello world! . Reload the browser window to see the text on top of the background image.
+ HTML code is made up of open and closed tags. The <body> tag is the open body tag, and </body> is the closed body tag. Every open tag on an HTML page needs to have a closing tag for the page to display correctly.
+ The <title> tag is text that appears in the title bar of your browser window, as well as the text that shows in a browser tab.
+ The <style> tag flags CSS content. Everything between the <style> tags is CSS code.
+ Any text written between the <body> tags will appear as written, unless it's HTML or CSS code.
+ In the text editor window, move the cursor between the <body> </body> tags, and then type "Hello world!". Reload the browser window to see the text on top of the background image.
+ In your index.html code, the CSS code between the <style> tags tells the web browser to add a background image with a specific name to the <body> tag when the web page renders.
+
+
+
+
+
+
+body {
+        background-image: url("background.png");
+}
+
+
+
+
+, CSS styles are made up of two parts, the selector and the declaration.In the example, body is the selector andbackground-image: url("background.png") is the declaration.
+A selector can be any HTML tag.
+Declarations always go between curly braces { }.
+ The CSS declaration is made up of two parts, the property and the value. Between the curly braces,background-image is the property and url("background.png") is the value.The property describes what is being styled and the value describes how the property is styled.
+The property and value are always separated by a colon :.
+CSS declarations always end in semicolons ;.

@@ -1,0 +1,12 @@
+ The hosts file on your computer acts as its own DNS, allowing you to manually assign IP addresses to domain names. This will override any settings on your router.
+
+Windows - The hosts file can be found at C:\WINDOWS\system32\drivers\etc. Right-click on the hosts file, select Open With, and then select Notepad.
+Mac - Open the Terminal and type sudo vi /private/etc/hosts.
+ In order to add a site to your hosts file, you will need to know the IP address.
+
+Open the Command Prompt (Windows) or Terminal (OS X).
+Type ping websiteaddress.com and press ↵ Enter. This will return the IP address for the website.
+ At the bottom of the hosts file, you'll usually see 127.0.0.1 localhost. Add your new IP addresses and hostnames below this line. Follow the same formatting as the localhost line, including the IP address and hostname.
+
+It is usually recommended to add each hostname twice, one with www. and one without. For example, to add Facebook, you would add one line with the IP address followed by www.facebook.com and another line with the same IP address followed by facebook.com.
+ You may need to restart your computer for the changes to take effect.

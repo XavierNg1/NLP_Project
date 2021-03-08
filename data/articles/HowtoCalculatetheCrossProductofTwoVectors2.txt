@@ -1,0 +1,20 @@
+
+
+
+a=Ai+Bj+Ckb=Di+Ej+Fk{\displaystyle {\begin{aligned}{\mathbf {a} }&=A{\mathbf {i} }+B{\mathbf {j} }+C{\mathbf {k} }\\{\mathbf {b} }&=D{\mathbf {i} }+E{\mathbf {j} }+F{\mathbf {k} }\end{aligned}}}
+
+Here, i,j,k{\displaystyle {\mathbf {i} },{\mathbf {j} },{\mathbf {k} }} are unit vectors, and A,B,C,D,E,F{\displaystyle A,B,C,D,E,F} are constants.
+ One of the easiest ways to compute a cross product is to set up the unit vectors with the two vectors in a matrix.
+
+
+a×b=|ijkABCDEF|{\displaystyle {\mathbf {a} }\times {\mathbf {b} }={\begin{vmatrix}{\mathbf {i} }&{\mathbf {j} }&{\mathbf {k} }\\A&B&C\\D&E&F\end{vmatrix}}}
+
+
+, Below, we use cofactor expansion (expansion by minors).
+
+
+a×b=(BF−EC)i−(AF−DC)j+(AE−DB)k{\displaystyle {\mathbf {a} }\times {\mathbf {b} }=(BF-EC){\mathbf {i} }-(AF-DC){\mathbf {j} }+(AE-DB){\mathbf {k} }}
+
+This vector is orthogonal to both a{\displaystyle {\mathbf {a} }} and b.{\displaystyle {\mathbf {b} }.}
+
+

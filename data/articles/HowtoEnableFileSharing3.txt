@@ -1,0 +1,34 @@
+ The first thing you’ll need to do is enable File Sharing.
+
+
+You’ll need to have a local network already set up to use this method.
+ This is where you can change sharing options and security permissions for users on your system.,,, This will give you permission to add a new account to the system.
+ Here’s how to configure the account so it’s used only for sharing:
+
+
+Click the “+” to add a new account.
+Select “Sharing Only” from the “New Account” menu.
+Select “Use separate password” rather than the cloud option.
+Enter a username and password for the account.
+Click “Create User.” When Windows users access the shared folder, they’ll need to use this username and password to log in.
+, A navigation window will appear.,, Here you’ll see options for file sharing protocols.
+, If you will never need to share with a Windows computer on your network, you can skip this step.
+, A list of user accounts and groups will appear.
+ Select the user account you just created, and then select either “Read,” “Read and Write,” or “Write” from the list on the right.
+
+
+Choose “Read & Write” if you want the Windows users to be able to read, edit, and delete items in this folder.Choose “Write” if you want users to be able to use this folder as a “drop box” but not be able to edit or delete files.
+Alternatively, you can leave this on “Read” so nobody else can modify the folder.
+ By default, all users on the network (the “Everyone” group) have Read access. This means they can view files in the shared folder but not make changes. To change this:
+
+
+Click to select “Everyone” in the Users list.
+Choose “Read & Write” from the right panel if you want users on the network to view, edit, and delete files in this folder.
+Select “Write” to use this folder as a “drop box,” so that people can copy files there but not view or modify anything.
+Alternatively, you can leave this on “Read” so nobody else can modify the folder.
+ Now that the folder is shared, any user on your network should be able to locate it in Finder beneath “Shared.”If the folder does not appear under “Shared,” browse the network by double-clicking “All…” and the folders should appear.
+ If you enabled SMB for Windows users, here’s how to locate the address to which they’ll connect:Open System Preferences
+Open the Sharing pane.
+Make note of the IP address that starts with “smb” (e.g. smb://172.1.1.1).
+Windows users will connect to this address in a web browser and log in with the account you created earlier. They’ll be able to view any files shared with that user upon a successful login.
+

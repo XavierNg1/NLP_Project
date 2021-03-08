@@ -1,0 +1,56 @@
+ Use the Run Command (Windows key+R), then type notepad and press Enter. It can also be found in Start menu > Accessories > Notepad.;
+, Include the HTML tags, including the <head> and </head> combination pair as well as the <body> and </body> combination pair. Type all the needed tags to start the page. It should look like this or the below image:
+
+
+
+
+
+<html>
+<head>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+, Add a <script language="javascript"> tag in the head. If you want the script to automatically run when the site loads, don't do a function. If you want to call it, do a function. For this example, we will alert the user.
+
+
+
+
+
+<html>
+<head>
+<script language="javascript">
+alert("Hi there, and welcome.")
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+, Add it a src (stands for "src") property to the script tag and include the complete web address of the file. Make sure to link directly to the Javascript file and not the page's URL where the script is being called from by the other page's creator.
+
+
+
+
+
+<html>
+<head>
+<script type="text/javascript" src="http:
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+, Following the </body> tag, include the </html> tag.
+ Save the page as (anything).html, it will become a web page. Double click on the icon, and watch as your page loads and an alert box comes up.

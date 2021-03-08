@@ -1,0 +1,20 @@
+ The BACKUP DATABASE statement in SQL is broken down into 3 lines:
+
+
+The first line is in the format "BACKUP DATABASE database", where "database" represents the name of the database being backed up.
+The second line, the TO line, tells where the database is to be backed up. It goes directly under the BACKUP DATABASE line, without indenting, and is written in the form TO backup_device , where "backup_device" represents the device on which the backup will be created, and the phrase in brackets specifies up to 64 devices on which backups can be created. (The brackets indicate that specifying additional devices is optional, while the comma indicates that commas separate the names of the backup devices listed.)
+The optional third line, the WITH line, is typically indented and lists the options with which the backup will be created, such as the name of and description for the backup set, whether the backup medium is to be formatted before the backup is created and whether the backup should be created in a compressed format. The line's format is "WITH with_options ", where "with_options" represents the name of an option and "" specifies additional options that go with a particular option. (The brackets indicate that specifying additional options is optional, while the comma indicates that commas separate the names of each option. Also, subsequent options are typically given their own lines to make the code easier to read.);
+, You'll need to know the name of the database to be backed up and the backup device or devices to which the database backup will be written.
+
+
+The database's name goes in the BACKUP DATABASE line; thus, if the database to be backed up where named "Fred," the statement would be written as "BACKUP DATABASE Fred."
+Databases can be backed up to physical devices, such as disk or tape, or to a logical device. If the database is to be backed up to disk, the TO line is written "TO DISK = ," with the pathname to the disk specified after the equal sign. If the database is to be backed up to tape, the TO line is written "TO TAPE = ," with the pathname specified after the equal sign. If the database is to be backed up to a logical device, the word "TO" is followed by the name of the backup device; if the backup device were named "Barney," the format would be "TO Barney." If there is a second device named "Wilma," the TO line would be written "TO Barney, Wilma" or "TO Wilma, Barney."
+
+, Database backups can be compressed or uncompressed, be appended to existing media sets or be placed on new media sets, or given names and descriptions of their contents. All these options can be specified on the WITH line, in any order.
+
+
+Compression options are either "COMPRESSION," to compress the data when the backup is created, or "NO_COMPRESSION," to create the backup without compressing the data.
+Naming the backup set is done with "NAME =," followed by a name of up to 128 characters, without spaces. Describing the backup set is done with "DESCRIPTION =,' followed by a string of up to 255 characters that contains the description.
+If the backup is to be added to an existing media set, this can either be explicitly stated by typing "NOINIT" or not specifying anything. If the backup is to be saved onto a medium for the first time, or all previous backups are to be overwritten, type "FORMAT," optionally followed by a comma and "MEDIANAME=," a comma and "MEDIADESCRIPTION =" if you wish to specify a name of up to 128 characters for the backup medium and a description of up to 255 characters.
+ The BACKUP DATABASE statement may be preceded by other statements, such as the USE statement to define the name of the database to be backed up and the EXEC statement to define the logical device to which the backup will be created.
+

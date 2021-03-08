@@ -1,0 +1,30 @@
+ Double click on Excel (either the green X on the dock or the app title in the folder) and select File New Workbook.
+
+
+In Preferences, in General, set R1C1 to unchecked or Off; in Ribbon, set Ribbon to checked or On; and in View, set Show Formula Bar by default to checked or On.
+Click in the far upper left top corner above the 1 of row 1 and to the left of column A. Doing so will select the entire worksheet. Format the number of cells to decimal places 2, show comma. Format the cells alignment center. Title the worksheet, "Groceries 1503" (for 2015, March) and save the workbook as "Groceries" into an appropriate folder such as 'wikiHow Articles'.;
+, Otherwise, enter the typical quantity you would purchase and the price for that typical quantity.
+
+
+Enter to cell A1 the label, Grocery Item, as applies to the type of food or item you purchased, the tax you paid, etc.
+Enter to cell D1 the date of your first shopping in the current month.
+Format Cells Number Date mm/dd/yy or just mm/dd for cell D1.
+Select the number of columns, starting with column D, that are possible shopping days in a month; for example, if you shop weekly on Tuesdays, there may be 5 Tuesdays in a month, so select D1:H1. If on the other hand, you shop every 10 days, then you only need 3 or 4 columns. Or, if you shop every 3 days, then you need about 10 columns.
+Select the cell range for the columns you entered in the previous step, e.g. select cell range D1:H1 if you shop weekly. Do Edit Fill Series Columns Date Day Step Value = 7 if you shop weekly and create the dates for the month on which you plan to shop. If you do not actually shop on those days, it's OK, just so long as you shop fairly close to one of them.
+Select the cell range containing all the dates but not the typical prices or quantities or type of food and do Format Cells Border, Outline, Center Vertical Bar too, in the color of your choice, in the line weight of your choice.
+With that same cell range selected, Format Cells Number $, decimal places 2.
+ Select columns B:C and do Insert Names Create in Top Row, OK.
+ Enter the formula, =Quantity*Price into cell D2 and possibly E2 and Edit Fill Down to the last item you shopped for in period 1 of the month.
+ Make labels for each of those in column A. In the cells in those rows in columns D:H (or for however many columns of shopping periods you created), format the cells border outline in the color and line weight of your choice.
+, The totals should match.
+ Fill in the Grocery Item label. You may estimate the Quantity and Price if you like or if you know it or can find it on previous receipts.
+,, That will allow you to do data entry the quickest -- per your receipts.
+ You can then sort on this column for your Shopping List, to print out, or take on your portable (or whatever devise you use).
+ "Groceries 2015" or whatever the current year is. Then copy the top worksheet and title it for the next new current month and position it to the far left worksheet tab at the bottom.
+ If these are on a separate receipt and schedule, just create that off to the right by drug name and tie the periods to the top ones with formulas, e.g. =D1. Then create a subtotal, and grab that subtotal for the line AFTER your Grocery TOTAL line, and create a new Total, Groceries & Prescriptions, under the Prescriptions line (under the Grocery TOTAL line). It's a good idea to keep track of your co-pays, as these are deductible from your Income Tax on your Schedule A Form with your Health Insurance deduction, if they rise sufficiently above Adjusted Gross Income (AGI). See the note on this below in Tips.
+ Also, sometimes discounts are entered directly into the cell instead of adjusting the price, if the item is on special that period.
+ In that case, create a line underneath the Subtotals, Total(s) and any Grand Total and enter Period Budget - Groceries in column A, then in the cell below it, Period Budget - Prescriptions and so forth. Then, create further down in column A the lines (Within)/Over Budget- Groceries, (Within)/Over Budget - Prescriptions, etc.
+
+
+Enter your Period Budgets in the appropriate cells, by dividing your total Grocery and prescription Budget by the number of Shopping Periods, then subtract the Actual Expenditures from them to arrive at the (Within)/Over Budget cells. Over to the right, create a linear subtotal for each line, and a Final Net (Within)/Over Budget cell that tells you where you're at, net, month-to-date. Be aware that some people tend to spend a little more when their paycheck arrives, or items go on special at the store, or per their household's needs per shopping period, so be prepared to adjust the straight division  amounts accordingly. However, the monthly budget total should equal your actual monthly budget, regardless of these special considerations -- you just have to revise other periods for the difference(s).
+

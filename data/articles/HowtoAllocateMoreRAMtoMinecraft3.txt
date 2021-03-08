@@ -1,0 +1,33 @@
+ Check the amount of memory (RAM) installed in your system. This will let you know how much RAM you can allocate to Minecraft. See this guide for details on finding out how much RAM you have installed on your server.
+
+
+If you don't have much RAM to work with, you can consider installing more RAM. This is one of the easier computer upgrades to perform.
+ If you are running a 32-bit operating system, you can only allocate 1 GB of RAM to your server. If you are running a 64-bit operating system and have the 64-bit version of Java installed, the only limit is the amount of RAM you have physically installed. To find out if you are running 32-bit or 64-bit Windows, see this guide.
+ This is the folder that contains the Minecraft_server.exe file that you launch to start your Minecraft server.
+ This will create a new text document in the same location as the minecraft_server.exe file. Name the file "Minecraft Server New Launcher" or something similar.
+ Enter the following code into your text document depending on the operating system you are using:Windows
+
+ java -Xmx####M -Xms####M -exe Minecraft_Server.exe -o true
+ PAUSE
+
+OS X
+
+ #!/bin/bash
+ cd "$( dirname "$0" )"
+ java -Xms####M -Xmx####M -exe Minecraft_Server.exe -o true
+
+Linux
+
+ #!/bin/sh
+ BINDIR=$(dirname "$(readlink -fn "$0")")
+ cd "$BINDIR"
+ java -Xms####M -Xmx####M -exe Minecraft_Server.exe -o true
+
+
+Change #### to the value in megabytes that you want to allocate. To allocate 2 GB, type 2048. To allocate 3 GB, type 3072. To allocate 4 GB, type 4096. To allocate 5 GB, type 5120.
+ If you are using windows, save the file as a ".bat" file. Click File and select Save As.... Change the file extension from ".txt" to ".bat". If you are using OS X, save the file as a ".command" file. If you are running Linux, save the file as a ".sh" file.
+
+
+If you cannot see the file extensions in Windows, see this guide to learn how to re-enable them.
+ The file you create will be the new launcher for your Minecraft server. Launching with the .bat, .command, or .sh file will allocate the new amount of RAM to the server.
+

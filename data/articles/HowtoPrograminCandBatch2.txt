@@ -1,0 +1,27 @@
+,, Traditionally, the first program people create simply reads “Hello World!”. When you create a new C++ project, the “Hello World!” program will automatically appear in the file. Erase the existing code and rewrite it for yourself:
+
+
+
+
+
+#include <iostream>
+using namespace std;
+//main () is where program execution begins.
+int main ()
+{
+        cout <<”Hello World”; //prints Hello World
+        return 0;
+}
+
+
+
+
+, The directive “#include” tells the program to include the file “<iostream>” in the current source file. Your C++ programs will not "compile" without this code, The standard C++ library is a collection of common functions and classes., Programmers use comments to annotate their code so that they (or anyone else reading the code) can understand more about what a particular section of code is meant to do. Comments appear in the code text but do not affect the program. In the "Hello world" program, "//main () is where program execution begins" is an example of a single line comment.
+
+
+Single line comments always begin with "//" and stop when the line ends.
+ In C++, functions execute individual tasks. In the “Hello World” program, int main() is the main function. Program execution begins at this line of code. The statements inside the brackets describe the actual function.
+
+
+The statement cout << "Hello World"; generates the words “Hello World” on your screen.
+The statement return 0; terminates, or ends, the main function.

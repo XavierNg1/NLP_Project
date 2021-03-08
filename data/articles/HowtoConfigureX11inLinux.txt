@@ -1,0 +1,119 @@
+ This was likely already done by your distribution's installer. If you do not have it installed, you can build it from source using details on this website (http://www.linuxfromscratch.org/blfs/view/cvs/x/xorg7.html).
+,, This file has the configuration settings in it. They were automatically determined and may be satisfactory. To test this, use "startx" .,,, If the XServer did not start, check the "Device" section. Here is a sample of this, but this will vary from system to system.
+
+Section "Device"
+Identifier "Device"
+Driver "nvidia"
+VendorName "NVidia"
+BoardName "GeForce 6150 LE"
+EndSection
+
+,
+Driver -- What device driver to use for the device, some common ones are vesa (basic, no 3D support), nv (for NVidia cards, no 3D support), and NVidia (for NVidia cards, 3D support, must be downloaded and installed usually).
+VendorName -- Not very important, tells who made the driver.
+BoardName -- Tells what device your graphics card is.
+,
+
+Section "InputDevice"
+Identifier "Mouse"
+Driver "mouse"
+Option "Buttons" "5"
+Option "Device" "/dev/input/mice"
+Option "Name" "ImPS/2 Generic Wheel Mouse"
+Option "Protocol" "explorerps/2"
+Option "Vendor" "Sysp"
+Option "ZAxisMapping" "4 5"
+EndSection
+The above entry controls the mouse. This section is likely to be correctly auto generated correctly.
+The "Driver" entry controls what driver to use. Unless you know otherwise, stick with "mouse".
+Various "Option" entries are provided to edit the protocols and other advanced things about the mouse. You should probably leave these alone.
+
+
+Section "InputDevice"
+Identifier "Keyboard"
+Driver "kbd"
+Option "Protocol" "Standard"
+Option "XkbLayout" "us"
+Option "XkbModel" "microsoftpro"
+Option "XkbRules" "xfree86"
+EndSection
+There are many options here, but you probably only care about "XkbLayout" and the Driver.
+"Option "XkbLayout" " controls the layout of your keyboard. You can specify a code to tell the computer what key you press means what.
+The driver should probably be left alone as kbd driver is able to operate virtually all keyboards, just as the mouse driver can run almost any mouse.
+ Be careful as incorrect settings here can damage the monitor permanently. I advise not to edit this section
+
+Section "Monitor"
+Identifier "Monitor"
+VendorName "VSC"
+Model Name "VIEWSONIC A70"
+UseModes "Modes"
+DisplaySize 310 232
+HorizSync 30.0 - 70.0
+VertRefresh 43.0 - 180.0
+Option "CalcAlgorithm" "XServerPool"
+Option "DPMS"
+EndSection
+Most of the configuration such as MonitorName is self-explanatory. You can also edit the DisplaySize, HorizSync, and VertRefresh settings, but these are the ones that can damage your system so leave them alone.
+ They will be specified in the "Module" entry.
+
+Section "Module"
+Load "dbe"
+Load "type1"
+Load "freetype"
+Load "extmod"
+Load "glx"
+EndSection
+The glx module controls 3D graphics.
+The free type module is vital for fonts.
+ You may want to edit the font paths, these tell the XServer where to look for fonts.
+
+Section "Files"
+InputDevices "/dev/gpmdata"
+InputDevices "/dev/input/mice"
+FontPath "/usr/share/fonts/misc:unscaled"
+FontPath "/usr/share/fonts/local"
+FontPath "/usr/share/fonts/75dpi:unscaled"
+FontPath "/usr/share/fonts/100dpi:unscaled"
+FontPath "/usr/share/fonts/Type1"
+FontPath "/usr/share/fonts/URW"
+FontPath "/usr/share/fonts/Speedo"
+FontPath "/usr/share/fonts/PEX"
+FontPath "/usr/share/fonts/cyrillic"
+FontPath "/usr/share/fonts/latin2/misc:unscaled"
+FontPath "/usr/share/fonts/latin2/75dpi:unscaled"
+FontPath "/usr/share/fonts/latin2/100dpi:unscaled"
+FontPath "/usr/share/fonts/latin2/Type1"
+FontPath "/usr/share/fonts/latin7/75dpi:unscaled"
+FontPath "/usr/share/fonts/baekmuk:unscaled"
+FontPath "/usr/share/fonts/japanese:unscaled"
+FontPath "/usr/share/fonts/kwintv"
+FontPath "/usr/share/fonts/truetype"
+FontPath "/usr/share/fonts/uni:unscaled"
+FontPath "/usr/share/fonts/CID"
+FontPath "/usr/share/fonts/ucs/misc:unscaled"
+FontPath "/usr/share/fonts/ucs/75dpi:unscaled"
+FontPath "/usr/share/fonts/ucs/100dpi:unscaled"
+FontPath "/usr/share/fonts/hellas/misc:unscaled"
+FontPath "/usr/share/fonts/hellas/75dpi:unscaled"
+FontPath "/usr/share/fonts/hellas/100dpi:unscaled"
+FontPath "/usr/share/fonts/hellas/Type1"
+FontPath "/usr/share/fonts/misc/sgi:unscaled"
+FontPath "/usr/share/fonts/xtest"
+FontPath "/opt/kde3/share/fonts"
+EndSection
+Note that fonts are usually autodetected by Xorg -configure, but if they were not you can add a new entry such as "FontPath wherethefontsare" to load them.
+ It controls things such as multiple desktops and tells what devices to use.
+
+Section "ServerLayout"
+Identifier "Layout"
+Screen "Screen" 0 0
+InputDevice "Keyboard" "CoreKeyboard"
+InputDevice "Mouse" "CorePointer"
+Option "Clone" "off"
+Option "Xinerama" "off"
+EndSection
+There are many important options here. They are explained below.
+InputDevice -- Tells XServer to use a created device.
+Option "Clone" -- If multiple monitors or graphics cards are used, this tells whether or not to display the same thing on all of them.
+Option "Xinerama" -- If multiple graphics cards or monitors are used, this tells whether or not to let them behave like separate desktops.
+

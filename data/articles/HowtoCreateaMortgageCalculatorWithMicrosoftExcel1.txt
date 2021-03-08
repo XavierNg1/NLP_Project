@@ -1,0 +1,40 @@
+ If you don't have Excel installed on your computer, you can use Outlook's online Excel extension in its place. You may need to create an Outlook account first.;
+, This will open a new Excel spreadsheet.
+ This will go in the "A" column. To do so, you should first click and drag the divider between columns "A" and "B" to the right at least three spaces so you don't run out of writing room. You will need eight cells total for the following categories:
+
+
+Loan Amount $
+Annual Interest Rate
+Life Loan (in years)
+Number of Payments per Year
+Total Number of Payments
+Payment per Period
+Sum of Payments
+Interest Cost
+
+, These will go in your "B" column, directly to the right of the "Categories" column. You'll need to enter the appropriate values for your mortgage.
+
+
+Your Loan Amount value is the total amount you owe.
+Your Annual Interest Rate value is the percentage of interest that accrues each year.
+Your Life Loan value is the amount of time you have in years to pay off the loan.
+Your Number of Payments per Year value is how many times you make a payment in one year.
+Your Total Number of Payments value is the Life Loan value multiplied by the Payments Per Year value.
+Your Payment per Period value is the amount you pay per payment.
+Your Sum of Payments value covers the total cost of the loan.
+Your Interest Cost value determines the total cost of the interest over the course of the Life Loan value.
+ Since this is your Life Loan value multiplied by your Payments Per Year value, you don't need a formula to calculate this value.
+
+
+For example, if you make a payment a month on a 30-year life loan, you would type in "360" here.
+ To figure out how much you must pay on the mortgage each month, use the following formula: "= -PMT(Interest Rate/Payments per Year,Total Number of Payments,Loan Amount,0)".
+
+
+For the provided screenshot, the formula is "-PMT(B6/B8,B9,B5,0)". If your values are slightly different, input them with the appropriate cell numbers.
+The reason you can put a minus sign in front of PMT is because PMT returns the amount to be deducted from the amount owed.
+ To do this, simply multiply your "payment per period" value by your "total number of payments" value.
+
+
+For example, if you make 360 payments of $600.00, your total cost of the loan would be $216.000.
+ All you need to do here is subtract your initial loan amount from the total cost of your loan that you calculated above. Once you've done that, your mortgage calculator is complete.
+

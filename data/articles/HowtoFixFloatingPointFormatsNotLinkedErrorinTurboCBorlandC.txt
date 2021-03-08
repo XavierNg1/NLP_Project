@@ -1,0 +1,63 @@
+
+
+
+int main() {
+struct STUDENT{
+int rollno;
+char stdname;
+float percentage;
+} *s1;
+printf("\Enter student details: ");
+scanf("%d %s %f",
+&s1->rollno,
+s1->stdname,
+&s1->percentage);
+printf("\nThe entered details are: ");
+printf("Roll: %d, Name: %s, Percentage: %f ",
+s1->rollno,
+s1->stdname,
+s1->percentage);
+getch();
+return 0;
+}
+The above C program is written and compiled in Turbo C. When this program is executed, the compiler displays the following error,Scanf: floating point formats not linked and the program gets terminated abnormally.
+This happens because of the variable *s1, which is a pointer to the structure "STUDENT", in which programmer had defined a "float" variable named "percentage". It means an error was found when the program tried to read a value for float data type using a pointer to structure. When the program is executed, the compiler, displayed a runtime error at the line scanf ("%f", ... %s1->percentage).
+It can happen when we use Borland C/ C++ or TurboC/C ++ as compiler. "Floating point formats not linked" is a Borland runtime error (Borland C or C++, Turbo C or C++). Borland's compilers do not link in the floating-point (f-p) library unless we need it. Therefore, by force we need to add any floating-point (f-p) function when we have "%f" or other floating point (f-p) formats in scanf() or printf() calls.;
+, To do this, a hackish solution could be to define a dummy function somewhere in a source file but don't call it:
+
+
+void dummy(float *a) {
+float b=*a; //perform some floating access
+dummy (&b); //calling a floating point function
+}
+It doesn't have to be in a module with the main program, as long as it's in a module that will be included in the link. Therefore, the above program should be written as follows:
+
+,
+
+
+void dummy(float *a) {
+float b=*a; //perform some floating access
+dummy (&b); //calling a floating point function
+}
+int main(){
+struct STUDENT{
+int rollno;
+char stdname;
+float percentage;
+} *s1;
+printf("\Enter student details: ");
+scanf("%d %s %f",
+&s1->rollno,
+s1->stdname,
+s1->percentage);
+printf("\nThe entered details are: ");
+printf("Roll: %d, Name: %s, Percentage: %f ",
+s1->rollno,
+s1->stdname,
+s1->percentage)
+getch();
+return 0;
+}
+
+In the above program, "dummy" is a user-defined function. You may give any name to this function instead of "dummy". Similarly, "a" and "b" are variable names, which you may change.
+This is because Turbo and Borland C/ C++ compilers sometimes leave out floating point support and use non-floating-point version of printf and scanf to save space on smaller systems. The dummy call to a floating-point function will force the compiler to load the floating-point support and solve the original problem.

@@ -1,0 +1,36 @@
+ Though Linux distributions are well known for being flexible, it's always a good idea to check and see if your computer meets the system requirements before installing a new operating system.
+
+Your computer must have either a DVD drive or USB port.
+
+If you intend on using a USB drive as explained in this article, it must have at least 2GB of space to hold the installer.
+
+
+You'll need at least 10GB of space on your computer.
+2GB of RAM is necessary for a smooth experience using the OS.
+Finally, your computer must use a 64bit processor.;
+, Never underestimate the importance of backing up your data before installing a new OS. If you're not planning on installing Solus along the side of your current operating system, recognize that all of the information you have stored on your hard drive will be erased. Even if you are going to dual boot your current OS with Solus, data loss is still possible.
+
+Most operating systems come with software used to back up your information preinstalled. Try reading How to Back up a Computer for instructions on your device.
+ The installation medium is the device that you're going to load the installer onto. You can use either a CD or USB drive. As mentioned before, your USB must have at least 2GB of space if that's what you intend on using to install Solus., There's a variety of tools you can use to write the ISO file to a USB.
+
+For Linux users, it's recommended that you use Gnome Multi-Writer to write the ISO file to a USB thumb drive, while Windows users should use Rufus.
+Although UNetbootin is a popular choice when it comes to writing an ISO file to a USB stick, UNetbootin will not work for this installation.
+ Here you will be presented with two options: Solus and Solus MATE. The difference is that Solus MATE uses the MATE desktop environment instead of Budgie. If you're trying to run Solus on older hardware or simply prefer the traditional desktop environment that MATE provides, choose the second option.
+
+Below the screenshot and headline, you will find a list of cities from where you can download the disk image. Choose the one that's closest to your location.
+If you have a BitTorrent client, then you also have the option to download the file over a Torrent. This would speed up the download if you have a slower connection.
+ Take the USB drive that you retrieved in the first part. You should plug it into your computer. All of the information on it will be erased, so take this opportunity to back up any important files it may hold.,
+
+For Windows users, click on the Start button or press the Windows key to open the Start menu. Once the menu is open, type in "Rufus". Assuming you downloaded it properly, it should show up in the results list. Click on the application to open it up.
+Ubuntu users can press the super key to open up the Dash. With the dash open, search for "Gnome MultiWrite" and launch the application when it shows up.
+ Creating the LiveUSB can and probably will take a long time, especially if you're doing this on older hardware.
+
+When in Rufus, select your USB thumb drive from the Devices drop down list. Next, check the box labeled "Create a bootable disk using", and then select "ISO image" from the adjacent menu. Click on the drive image logo and browse to the location where you saved the Solos ISO file. Finally, Hit start and then confirm to begin creating the LiveUSB.
+When in Gnome MultiWriter, Ensure that your USB drive is plugged in and hit "Start copying". Once the file browser pops up, navigate to the location that you saved the Solus ISO file and open it up. The copying will start immediately.
+ As mentioned before, writing an ISO file to a USB thumb drive can take some time. Depending on how large the file is and how old your computer is, things can take much longer. Be patient., Once your computer is completely shut off, turn it back on. While the manufacturer's splash screen is being displayed, press the key used to enter the Boot Menu. This key is typically F9, F12, Esc or Del. Here, you can select your USB drive from the list of bootable devices.
+
+If you can't get to the boot menu, then you may need to change the boot order in the BIOS menu.
+ In the first few steps, you will be asked about your location, language, keyboard layout, and time zone. Make these changes based on your information., In the next step, you're required to select where you want Solus to be installed. Choose your hard drive from the drop-down list and select the fashion in which you want to install it., A host name is a unique title used to identify a machine on the network. Your host name can use letters "A" to "Z", 0 to 9 and a hyphen, although it can't start or end with one., Once you have set a hostname for your computer, you will be asked to create one or more accounts who will use your computer. Choose a username, real name, and password for the new user.
+
+Optionally, you can also give the new user administrative privileges. Do this by checking the box below the "Confirm password" field.
+ Finally, you will be presented with a page listing everything you have set up in the installer. Review this list to avoid doing anything unintentional. Once you have done this, press the button labeled "Install" at the bottom of the window., The installation will now begin. Depending on how fast your computer is, this may be a quick process or it might take slightly longer. The installation progress will be displayed at the bottom of the screen., As the very last step, you will be required to restart your computer before you can use your new Solus installation. Power off your computer and remove the installation medium before turning it back on. Once your computer boots up, you will find yourself in the Budgie desktop environment.

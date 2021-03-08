@@ -1,0 +1,48 @@
+ Computing is notorious for having a lot of acronyms and jargon that can be hard to wrap your head around. However, these concepts can be easily learned by most people.
+
+
+
+Upstream: This means away from you and towards the internet and your internet service provider. Your cable modem is connected to a coaxial cable that leaves your house. Think of wherever that goes as upstream.
+
+Downstream: The opposite of upstream. This means information coming down from the internet to your modem.
+
+SNR: Signal to Noise Ratio. Quite simply, this is a number that represents how much signal there is on the line versus noise. Signal is what you want: encoded, understandable information from the internet. Noise is bad and can come from electromagnetic interference (from other electronic devices and radio signals) and thermal noise. Knowing what those two things are isn't too important right now. Just know that you want a better signal and less noise.
+
+Frequency: When you tune your radio or change your TV channel, you are telling the device to listen at a different frequency. Channels are also used to send information destined for the internet over the cable network in pretty much the same way that TVs do.
+
+Headend/CMTS: Where your cable modem and the modem of other people in your town/city connect to. This is a piece of equipment operated by your ISP that manages all the cable modems and connects them to the internet. From here, network engineers can check the health of your modem as well as reboot it remotely and push configuration changes to it.
+
+FEC: Forward error correction. Data doesn't always transmit through cables perfectly, there are often some errors in the bits (1s and 0s). For instance, a 0 might be flipped to a 1 or vice versa. In order to correct those errors, some extra data has to be attached to every codeword that goes out (a codeword is just a fixed chunk of data). If it can fix the error, then everyone's happy. However, sometimes codewords have too many incorrect bits and the error correction algorithm (called Reed-Solomon, if you're interested) can't fix it. If more than 1% of your codewords are uncorrectable, you will start to encounter some issues (especially with VoIP).;
+, Most modern modems do have such a feature to aid people with solving technical problems. For many modems, this is "192.168.100.1". For others, this may differ so contact your ISP or research it in the owners manual that came with your specific modem. (e.g. Many Linksys modems listen at 192.168.1.1). You'll need to enter that into your web browser's address bar. If you're not sure, look up your modem's brand and model number followed by "diagnostics page" to find what address it should be located at. If your modem does not have a web page, you won't be able to follow this article — contact your ISP for help with diagnosing your connection if you're having issues.
+
+
+If you have more than one Internet connection, to get this local IP address, make sure that you are connected to that particular connection before typing in the address into your browser.
+For only some issues, even if your modem is connected to your computer, you can still check your server settings despite the inability to check any other page. However, a more complicated setup may require a visit from a technician.
+ These modems will have the login settings written in the book.
+
+
+For some Linksys modems (especially wireless modems), you can stick pretty much anything in the username box (even gibberish) and place your current network password into the password box.
+ These are all important and if one does not match up with what you expect you may need to dig deeper to figure out why.
+
+
+
+Acquire Downstream Channel: This should say "Locked", "OK" or similar. This means your modem found the frequency with which to receive information from the internet. There should always be at least 1 channel acquired with a DOCSIS 1.1 or 2.0 modem. If you have a DOCSIS 3.0 modem, you should be acquiring up to the maximum your modem supports (8 or 16).
+
+Connectivity State: This should be OK or Operational.
+
+Configuration File: This should show the name of your configuration file. If not, just see if it says "OK" or similar. This file is downloaded from your ISP and tells the modem how it should behave.
+
+Security: This should always say "Enabled" or "BPI+" in all cases.
+ These are classified into two types, upstream and downstream. You'll have some downstream channels and also some upstream channels. Each one has separate power levels and SNR listed for it. Downstream power levels should be between -10 dBmV and 10 dBmV. Ideally, it should be as close to zero as possible. Many line technicians aim for the even more stringent +/-5 dBmV range. As long as it's within these ranges, they should be okay. Many modems are even rated to +/- 15 dBmV. Too low means your signal is weak, and too high means the signal is strong - possibly too strong (and will need to be corrected with an attenuator or splitter).
+Upstream power levels should be between 40 - 50 dBmV. Think of this measurement as how loud your modem has to scream to be heard by the CMTS. If you are transmitting less than 40 dBmV, your upstream SNR will degrade (If you're whispering and the CMTS is shouting at the same time, they'll have trouble hearing). If it's higher than about 50 dBmV, your cable modem may intermittently go offline or have a high number of uncorrectable codeword errors.
+One of the most common causes of upstream power problems is splitters. If possible, your cable modem for your internet should be on the first splitter attached to the line that comes in from your house. Further splitters will degrade the signal quality — TVs can handle it, but you will see more noticeable problems with the internet.
+ Typically, you will only see the downstream SNR value as it can be more accurately measured. Your ISP can see what your upstream SNR would be from their end. With this value, the higher the better. You want this number over 30, although you might not experience any problems 25 or above. There is no real maximum to this number, but it rarely goes higher than 40 dB on most installations because there is inevitably some noise in the line.
+ A lot of the events in here are usually unimportant, however if you have been experiencing internet issues then some of them may be relevant. Look for any thing with a status code of "Critical" or similar, and ignore those that say "Notice". Here are some examples of errors you might encounter.
+
+
+
+No Ranging Response received - T3 time-out: The cable modem's knocking at the door, trying to find your ISP. Alas no one's home or it can't hear them if they are. This is usually indicative of an upstream noise problem, so check your upstream power level to see if it's too high (perhaps > 55). If so, call your ISP for help. SYNC Timing Synchronization failure - Failed to acquire FEC framing: FEC means forward error correction. Possible causes include too much noise, low signal, or a bad cable modem.
+
+Resetting the cable modem due to docsDevResetNow: Normally a reboot issued by your ISP, due to a firmware update, provisioning your modem, or other upstream maintenance. It's not usually something to worry about. If it happens frequently, you should ask your ISP what's going on — there might be an outage in your area they're trying to fix.
+ Wait a few minutes and then plug it back in. Your modem should attempt registration with your internet service provider again. You should see status indicators on the modem to let you know its progress. If it fails to register, it reboots and starts from the beginning. If you continue to experience issues, you'll need to contact your ISP to send out a cable technician to look at your line. It's also possible your modem is faulty and will need to be replaced.
+

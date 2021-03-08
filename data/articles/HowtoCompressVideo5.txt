@@ -1,0 +1,26 @@
+ This method is for compressing .mov files. Open the Inspector by pressing Command + I. This will open a window showing you the basic properties of the movie file.
+ If you want to make the movie smaller, click and drag the corner of the movie to resize it. If you are aiming for a certain size, watch the Current Size readout in the Inspector window to see what dimensions the video is currently showing in.
+
+
+1080p is 1920x1080 pixels.
+720p is 1280x720 pixels.
+ Select Export. In the Export menu, select Movie to QuickTime movie. Click the Options button and then the Video Settings button to set your compression preferences.
+
+
+For greatest compatibility, set the compression type to H.264. This will ensure that the file is playable on most systems and devices.
+Set Frame Rate to Current. This will keep the frame rate the same as the original file, which will ensure smooth playback.
+Key Frames and Data Rate should be set to Automatic. These settings are for advanced users.
+ Adjust the slider in the Compressor section to adjust the final quality. Lower quality will mean a smaller file, but will have more artifacts in the final compression. Best quality will result in very little change in the file size, but will give the highest picture quality.
+
+
+Select “Best quality (Multi-pass)” to produce the highest quality compression. This will result in a much longer encoding process. If time is an issue, run “Faster encode (Single-pass)”, though this will result in a poorer quality final product.
+ Click the Options button and then click Sound Settings. In this window, select AAC as the format to make sure that most devices can play the audio. If the video has music, set Channels to Stereo. If the video does not have music, or does not utilize surround sound, select Mono. Mono will lead to a smaller file size.
+
+
+Set Rate to “48.000”. This will keep the file size down without sacrificing audio quality too much.
+ Set Quality to Normal in the Render Settings section. Encode Strategy should be sent to Average Bit Rate, and Target Bit Rate should be set to 40 kbps.
+
+
+You can adjust these settings as you see fit to change your final compressed video. These settings are optimized for uploading videos to video streaming websites such as YouTube and Vimeo.
+ Check the Prepare for Internet Streaming box in the Options menu. Select Fast Start and press OK.
+

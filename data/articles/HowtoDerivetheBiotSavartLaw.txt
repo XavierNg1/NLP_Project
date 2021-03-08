@@ -1,0 +1,45 @@
+ Gauss' law of magnetism tells us that magnetic fields are always divergence-free, via ∇⋅B=0.{\displaystyle \nabla \cdot {\mathbf {B} }=0.} From vector calculus, we also recognize the identity ∇⋅(∇×F)=0,{\displaystyle \nabla \cdot (\nabla \times {\mathbf {F} })=0,} for any vector field F.{\displaystyle {\mathbf {F} }.} In other words, the divergence of a curl is always zero. Therefore, we can write a divergence-free field in terms of the curl of another vector field, called the vector potential.
+
+
+B=∇×A{\displaystyle {\mathbf {B} }=\nabla \times {\mathbf {A} }}
+;
+, In doing so, we have a certain degree of freedom in how we write this. Potentials are not unique, and in the case of the vector potential, we can arbitrarily add a gradient of a scalar field without affecting the magnetic field, since the curl of a gradient is always zero. This is called a gauge transformation. This means that we can choose a potential that is convenient for us. Here, we will choose the Coulomb gauge, where ∇⋅A=0.{\displaystyle \nabla \cdot {\mathbf {A} }=0.}
+
+
+∇×B=μ0J∇×(∇×A)=μ0J{\displaystyle {\begin{aligned}\nabla \times {\mathbf {B} }=\mu _{0}{\mathbf {J} }\\\nabla \times (\nabla \times {\mathbf {A} })=\mu _{0}{\mathbf {J} }\end{aligned}}}
+
+An identity for simplifying the vector triple product is BAC-CAB. For curls, this is ∇×(∇×A)=∇(∇⋅A)−∇2A.{\displaystyle \nabla \times (\nabla \times {\mathbf {A} })=\nabla (\nabla \cdot {\mathbf {A} })-\nabla ^{2}{\mathbf {A} }.} Now, we remember that we chose ∇⋅A=0.{\displaystyle \nabla \cdot {\mathbf {A} }=0.}
+
+
+∇2A=−μ0J{\displaystyle \nabla ^{2}{\mathbf {A} }=-\mu _{0}{\mathbf {J} }}
+
+
+
+This is Poisson's equation for the vector potential. Though the expression above is actually three equations, we can solve for all three components simultaneously without having to worry about any pesky dependencies.
+ One way to do this is via Fourier transforms. See the article linked for more details. Assuming you transformed correctly, you should obtain the general solution below.
+
+
+A=μ04π∫J(x′)|x−x′|d3x′{\displaystyle {\mathbf {A} }={\frac {\mu _{0}}{4\pi }}\int {\frac {{\mathbf {J} }({\mathbf {x} }^{\prime })}{|{\mathbf {x} }-{\mathbf {x} }^{\prime }|}}{\mathrm {d} }^{3}{\mathbf {x} }^{\prime }}
+
+Notice that this is very similar in form to the solution for the scalar potential, of which a charge density ρ{\displaystyle \rho } associated with a stationary point charge allows us to reduce the solution to Coulomb's law, the law that describes electrostatics. Now, we wish to obtain the Biot-Savart law, the law that describes magnetostatics.
+ Doing so recovers the magnetic field. Note that all the variables with primes in them are dummy variables, so the curl is taken with respect to x,{\displaystyle {\mathbf {x} },} allowing us to put the del operator under the integral.
+
+
+∇×A=μ04π∫∇×(J(x′)|x−x′|)d3x′{\displaystyle \nabla \times {\mathbf {A} }={\frac {\mu _{0}}{4\pi }}\int \nabla \times \left({\frac {{\mathbf {J} }({\mathbf {x} }^{\prime })}{|{\mathbf {x} }-{\mathbf {x} }^{\prime }|}}\right){\mathrm {d} }^{3}{\mathbf {x} }^{\prime }}
+
+
+, Since J(x′){\displaystyle {\mathbf {J} }({\mathbf {x} }^{\prime })} does not depend on x,{\displaystyle {\mathbf {x} },} that term vanishes. Note the chain rule when taking the gradient.
+
+
+B(x)=∇×A=μ04π∫∇(1|x−x′|)×J(x′)d3x′=μ04π∫−(x−x′)|x−x′|3×J(x′)d3x′=μ04π∫J(x′)×(x−x′)|x−x′|3d3x′{\displaystyle {\begin{aligned}{\mathbf {B} }({\mathbf {x} })&=\nabla \times {\mathbf {A} }\\&={\frac {\mu _{0}}{4\pi }}\int \nabla \left({\frac {1}{|{\mathbf {x} }-{\mathbf {x} }^{\prime }|}}\right)\times {\mathbf {J} }({\mathbf {x} }^{\prime }){\mathrm {d} }^{3}{\mathbf {x} }^{\prime }\\&={\frac {\mu _{0}}{4\pi }}\int {\frac {-({\mathbf {x} }-{\mathbf {x} }^{\prime })}{|{\mathbf {x} }-{\mathbf {x} }^{\prime }|^{3}}}\times {\mathbf {J} }({\mathbf {x} }^{\prime }){\mathrm {d} }^{3}{\mathbf {x} }^{\prime }\\&={\frac {\mu _{0}}{4\pi }}\int {\frac {{\mathbf {J} }({\mathbf {x} }^{\prime })\times ({\mathbf {x} }-{\mathbf {x} }^{\prime })}{|{\mathbf {x} }-{\mathbf {x} }^{\prime }|^{3}}}{\mathrm {d} }^{3}{\mathbf {x} }^{\prime }\end{aligned}}}
+
+The above expression is the Biot-Savart law. It takes into account the thickness of the conductor through which the current is going through. Although it appears as an inverse cube law, the presence of the displacement vector x−x′{\displaystyle {\mathbf {x} }-{\mathbf {x} }^{\prime }} in the numerator ensures that the magnetic field falls off as the square of the distance and points in the proper direction.
+
+For an infinitely narrow wire, we can neglect the thickness and replace J(x′)d3x′{\displaystyle {\mathbf {J} }({\mathbf {x} }^{\prime }){\mathrm {d} }^{3}{\mathbf {x} }^{\prime }} with Idl{\displaystyle I{\mathrm {d} }{\mathbf {l} }} and convert the integral to a line integral. Letting r=x−x′{\displaystyle {\mathbf {r} }={\mathbf {x} }-{\mathbf {x} }^{\prime }} be the displacement vector, we recover the familiar form of the Biot-Savart law.
+
+
+B=μ04π∫Idl×r|r|3{\displaystyle {\mathbf {B} }={\frac {\mu _{0}}{4\pi }}\int {\frac {I{\mathrm {d} }{\mathbf {l} }\times {\mathbf {r} }}{|{\mathbf {r} }|^{3}}}}
+
+
+
+

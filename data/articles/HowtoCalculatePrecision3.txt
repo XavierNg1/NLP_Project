@@ -1,0 +1,53 @@
+ For any size data set, the standard deviation is a reliable statistic for reporting precision. There are two formulas for calculating standard deviation, with a very slight difference between them. You will use one formula if your measured data represents an entire population. You will use the second formula if your measured data is from only a sample of the population.Your data represents an entire population if you have collected all the measurements possible from all possible subjects. For example, if you are conducting tests on people with some very rare disease, and you believe that you have tested everyone with that disease, then you have the entire population. The standard deviation formula in this case is:
+
+
+σ=Σ(x−μ)2n{\displaystyle \sigma ={\sqrt {\frac {\Sigma (x-\mu )^{2}}{n}}}}
+
+
+
+A sample set is any group of data less than an entire population. This is actually going to be used more often. The standard deviation formula for a sample set is:
+
+
+σ=Σ(x−μ)2n−1{\displaystyle \sigma ={\sqrt {\frac {\Sigma (x-\mu )^{2}}{n-1}}}}
+
+
+
+Notice that the only difference is in the denominator of the fraction. For an entire population, you will divide by n{\displaystyle n}. For a sample set, you will divide by n−1{\displaystyle n-1}.
+ As with calculating the average deviation, you will begin by finding the mean of the data values.Using the same set of measurements as above, the mean is 12.4.
+ For each data point, subtract the data value from the mean, and square that result. Because you are squaring these variations, whether the difference is positive or negative does not matter. The square of the difference will always be positive.
+
+For the five data values in this sample, these calculations are as follows:
+
+
+(12−12.4)2=(−0.4)2=0.16{\displaystyle (12-12.4)^{2}=(-0.4)^{2}=0.16}
+
+
+(11−12.4)2=(−1.4)2=1.96{\displaystyle (11-12.4)^{2}=(-1.4)^{2}=1.96}
+
+
+(14−12.4)2=1.62=2.56{\displaystyle (14-12.4)^{2}=1.6^{2}=2.56}
+
+
+(13−12.4)2=0.62=0.36{\displaystyle (13-12.4)^{2}=0.6^{2}=0.36}
+
+
+(12−12.4)2=(−0.4)2=0.16{\displaystyle (12-12.4)^{2}=(-0.4)^{2}=0.16}
+
+
+
+
+, The numerator of the standard deviation fraction is the sum of the squared differences between each value and the mean. To find this sum, add together the figures from the previous calculation.For the sample data set, these are:
+
+
+0.16+1.96+2.56+0.36+0.16=5.2{\displaystyle 0.16+1.96+2.56+0.36+0.16=5.2}
+
+
+
+
+, This is the one step that will differ for either a population calculation or a sample set calculation. For a full population, you will divide by n{\displaystyle n}, the number of values. For a sample set, you will divide by n−1{\displaystyle n-1}.This example has only five measurements and is therefore only a sample set. Thus, for the five values being used, divide by (5-1) or 4. The result is 5.2/4=1.3{\displaystyle 5.2/4=1.3}.
+ At this point, the calculation represents what is called the variance of the data set. The standard deviation is the square root of the variance. Use a calculator to find the square root, and the result is the standard deviation.σ=1.3=1.14{\displaystyle \sigma ={\sqrt {1.3}}=1.14}
+
+
+, Using this calculation, the precision of the scale can be represented by giving the mean, plus or minus the standard deviation. For this data, this will be 12.4±1.14. The standard deviation is perhaps the most common measurement of precision. Nevertheless, for clarity, it is still a good idea to use a footnote or parentheses to note that the precision value represents the standard deviation.
+
+

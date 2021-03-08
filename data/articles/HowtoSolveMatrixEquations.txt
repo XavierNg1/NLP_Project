@@ -1,0 +1,52 @@
+ We assume that all matrices are square matrices.
+
+
+(A−AX)−1=X−1B{\displaystyle (A-AX)^{-1}=X^{-1}B}
+;
+, Since A−AX{\displaystyle A-AX} is invertible, so is A(I−X).{\displaystyle A(I-X).} Then both A{\displaystyle A} and I−X{\displaystyle I-X} are invertible. Furthermore, X−1B{\displaystyle X^{-1}B} is invertible because when we take the inverse of both sides, A−AX=(X−1B)−1{\displaystyle A-AX=(X^{-1}B)^{-1}} is well-defined, as A−AX{\displaystyle A-AX} is invertible. Then the inverse of X−1B{\displaystyle X^{-1}B} is invertible, and so is X−1B.{\displaystyle X^{-1}B.} Finally, we can deduce that B{\displaystyle B} is invertible.
+ All that is left is to perform the standard algebraic manipulations, taking care to recognize that matrix multiplication is not commutative. Because of this, the order in which we perform operations matters. For example, in line 5, the way we factor X{\displaystyle X} matters in that it must be on the right side.
+
+
+X(A−AX)−1=BX=B(A−AX)X=BA−BAXBAX+X=BA(I+BA)X=BAX=(I+BA)−1BA{\displaystyle {\begin{aligned}X(A-AX)^{-1}&=B\\X&=B(A-AX)\\X&=BA-BAX\\BAX+X&=BA\\(I+BA)X&=BA\\X&=(I+BA)^{-1}BA\end{aligned}}}
+
+Notice that in the last line, we had to assume that I+BA{\displaystyle I+BA} is invertible. This is inevitable with equations like these. We can deduce invertibility for certain expressions, but others must be assumed for the solution to be defined.
+ 
+
+Suppose that M=(ABCD),{\displaystyle M={\begin{pmatrix}A&B\\C&D\end{pmatrix}},} where A,B,C,{\displaystyle A,\,B,\,C,} and D{\displaystyle D} are square matrices, and A{\displaystyle A} and D{\displaystyle D} are invertible. Find M−1.{\displaystyle M^{-1}.}
+
+
+, Then, we need to find E,F,G,{\displaystyle E,\,F,\,G,} and H{\displaystyle H} in terms of A,B,C,{\displaystyle A,\,B,\,C,} and D.{\displaystyle D.}
+
+
+M−1=(EFGH){\displaystyle M^{-1}={\begin{pmatrix}E&F\\G&H\end{pmatrix}}}
+
+Then, (ABCD)(EFGH)=(I00I).{\displaystyle {\begin{pmatrix}A&B\\C&D\end{pmatrix}}{\begin{pmatrix}E&F\\G&H\end{pmatrix}}={\begin{pmatrix}I&0\\0&I\end{pmatrix}}.}
+
+
+,
+
+
+{AE+BG=IAF+BH=0CE+DG=0CF+DH=I{\displaystyle {\begin{cases}AE+BG&=I\\AF+BH&=0\\CE+DG&=0\\CF+DH&=I\end{cases}}}
+
+
+,
+
+
+AF=−BHF=−A−1BH{\displaystyle {\begin{aligned}AF&=-BH\\F&=-A^{-1}BH\end{aligned}}}
+
+
+−CA−1BH+DH=I(D−CA−1B)H=IH=(D−CA−1B)−1F=−A−1B(D−CA−1B)−1{\displaystyle {\begin{aligned}-CA^{-1}BH+DH&=I\\(D-CA^{-1}B)H&=I\\H&=(D-CA^{-1}B)^{-1}\\F&=-A^{-1}B(D-CA^{-1}B)^{-1}\end{aligned}}}
+
+
+CE=−DGG=−D−1CE{\displaystyle {\begin{aligned}CE&=-DG\\G&=-D^{-1}CE\end{aligned}}}
+
+
+AE−BD−1CE=I(A−BD−1C)E=IE=(A−BD−1C)−1G=−D−1C(A−BD−1C)−1{\displaystyle {\begin{aligned}AE-BD^{-1}CE&=I\\(A-BD^{-1}C)E&=I\\E&=(A-BD^{-1}C)^{-1}\\G&=-D^{-1}C(A-BD^{-1}C)^{-1}\end{aligned}}}
+
+
+, The matrices found above are the elements of M−1.{\displaystyle M^{-1}.}
+
+
+((A−BD−1C)−1−A−1B(D−CA−1B)−1−D−1C(A−BD−1C)−1(D−CA−1B)−1){\displaystyle {\begin{pmatrix}(A-BD^{-1}C)^{-1}&-A^{-1}B(D-CA^{-1}B)^{-1}\\-D^{-1}C(A-BD^{-1}C)^{-1}&(D-CA^{-1}B)^{-1}\end{pmatrix}}}
+
+

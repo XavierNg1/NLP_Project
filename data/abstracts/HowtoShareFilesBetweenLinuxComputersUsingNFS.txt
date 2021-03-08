@@ -1,0 +1,23 @@
+
+Use NFS (Network File System) to share files between Linux computers on a local network.
+Understand how NFS works.
+Open the terminal on the server computer.
+Type .sudo apt-get install nfs-kernel-server nfs-common portmap and press ↵ Enter.
+After installation, type .dpkg-reconfigure portmap.
+Type .sudo /etc/init.d/portmap restart to restart the portmap service.
+Make a dummy directory that will be used to share the data.
+Type pico /etc/fstab and press ↵ Enter.
+Add .sharedpath dummypath none bind 0 0 to the end of the file.
+Open the ./etc/exports file.
+Use the .sudo /etc/init.d/nfs-kernel-server restart command to restart the NFS server.Open the terminal on the client computer.
+Type .sudo apt-get install portmap nfs-common and press ↵ Enter to install the NFS client files.
+
+,
+Create the directory that the shared files will be mounted in.
+Type .pico /etc/fstab to open the /etc/fstab file.
+
+,
+Add .serverIP:sharedDirectory nfs rsize=8192,wsize=8192,timeo=14,intr to the end of the file.
+Type .sudo /etc/init.d/portmap restart to restart portmap and use the new settings.
+Test the drive by manually mounting it before restarting.
+Repeat this process for each connecting computer.

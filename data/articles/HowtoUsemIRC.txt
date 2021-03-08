@@ -1,0 +1,50 @@
+ Visit the mIRC homepage and click "Download mIRC." As of version 7.36, mIRC is available for Windows XP, Vista, Windows 7, and Windows 8.
+
+
+If you are using an older version of Windows, try downloading version 6.35 instead.;
+, Once the file is downloaded, open it and install mIRC by following the easy steps on the installation wizard. The installation process usually does not take longer than a few minutes.
+
+
+Select the "Full" installation type if you have not downloaded mIRC before.
+ When the installation is complete, check the boxes next to "Start mIRC" and "mIRC Help." Having the help file open might come in handy during your first session, in case you get stuck trying to do something that is not explained in this guide.
+ One of the windows that opens will be called "About mIRC" and will ask you to register or continue. mIRC is free to use for 30 days, after which you will need to pay a one-time fee of $20 to register the software. For now, just click Continue to try it out. Follow the instructions in the next section to get started chatting.
+ Each time you open mIRC and click past the screen asking you to register, you'll be taken to a screen that asks for your information. Type in the name you would like other people to see in the "Nickname" box, as well as an "Alternative" name that will be used in case someone is already using your nickname when you join a chat channel. In older versions, the "Full Name" and "Email Address" are also required, although almost no one uses their real information.In version 7.36, these fields do not appear to be mandatory.
+ Click Connect and you'll be taken to a list of Chat channels. Select one of them and click Join to be taken to that channel. You could also type the name of a channel into the text field and click the Join button to the right of that field.
+
+
+If you get an error message when trying to join a chat channel, see the troubleshooting section below.
+If you accidentally closed this window, you can join a channel by using the Commands menu at the top of the screen.
+ First, make sure you are connected to the same network as the people you're trying to chat with. Open the options menu by pressing Alt O on the keyboard, then select a server in the same network as your friends. Each network appears as a folder with a name like "Usenet" or "DALnet," and has a list of servers underneath it. Select any server in the network your friends are using, then click OK. Now you can join the chat channel as described above.
+ Type in the text field at the bottom of the chat window, and hit "enter" or "return" on your keyboard to submit your chat message.
+ The list of names on the right side of a chat window tell you everyone who is currently in the channel. Double click one of the names to open a private chat between just the two of you.
+
+
+You can also right-click a user name to select from a list of options, including starting a private chat ("Query") or looking at the user's profile ("Info").
+ To join another channel, click Commands at the top of the MIRC window, and select Join channel. Type in the name of the channel you wish to join, and click OK to open a new chat window.
+
+
+Alternatively, return to the main mIRC window and type in "/join" followed by the name of your channel. Include the # symbol at the beginning of your channel name.
+ mIRC comes with a list of popular channels, which you can view by clicking Tools → Channels List or by pressing Alt L. Choose a network from the drop-down menu under "File," then click Get List. Once this list has loaded, you can return to the same screen and search for different topics in that network using the "Text" field.
+ Many online communities have their own IRC chat, and will list the network and channel name on their forum or website. You can also search through large databases of channel names at sites such as Netsplit and SearchIRC.
+ In the main mIRC screen, simply type in "/join #" followed by the name of a channel you wish to create, such as "/join #wikihow". If the channel doesn't already exist in your network, it will be created.
+
+
+You can also use commands to make your channel private and invite select users to join you.
+ If you type in anything beginning with a "/" in mIRC chat, the program will interpret it as a command instead of normal text. You've already learned about /join, but try exploring other options as well, or just learn a few useful ones:/invite Jack #wikihow will send a message to the user Jack asking him to visit channel #wikihow.
+
+/me dances for joy will print the message "(your nickname) dances for joy," without the usual colon (:) that separates your name from the chat message.
+
+/ignore spammer will block you from seeing all messages from anyone with the nickname "spammer."
+
+/help followed by the name of any command (such as /help ignore) will tell you more about how to use the command.
+ If you can't connect to any channels, click the Tools menu at the top of the screen and select Options. Alternatively, use the keyboard command Alt O. Once the window is open, follow the instructions below to solve your issue.
+ According to mIRC Help, the most common way to solve a connection issue is to connect to a different server. Click "Servers" on the left of the options menu, underneath "Connect." Select any server on the list, preferably one located near your geographic location. Select "OK" to switch to that server.
+
+
+The servers are organized in different folders, such as "EFnet" and "DALnet." Each folder has its own collection of channels. If you're trying to join a specific channel, you'll need to know which network its own.
+ If you can't use any of the servers, you may be using the wrong "port," or entrance to the server. Select the server you wish to connect to and click "Edit" to change this. Most servers use port 6667, while servers in the DALnet network usually use port 7000 instead.Enter this number in the "ports" field and click "OK."
+
+, Click on "Identd" on the left of the options menu, underneath "Connect." Make sure the "Enable Identd server" box is checked, so you can identify yourself to the IRC network of servers.
+ Choose "Options" from the categories list and tick the box next to "Connect on startup." This will help you connect easily next time you try to use mIRC. You can also tick the box that says "Reconnect on disconnection" so you don't have to reconnect manually every time you lose your connection on mIRC.
+ If you still can't connect, or if you encounter a more specific problem, read the mIRC help file that was downloaded with the program. You can also take a look at the extensive mIRC frequently asked questions webpage, or download it for off-line use.
+

@@ -1,0 +1,75 @@
+ In a quadratic equation, one or more variables is squared (x2{\displaystyle x^{2}} or y2{\displaystyle y^{2}}), and there are no higher powers. The lines these equations represent are curved, so they can intersect a straight line at 0, 1, or 2 points. This section will teach you how to find the 0, 1, or 2 solutions to your problem.
+
+Expand equations with parentheses to check whether they're quadratics. For example, y=(x+3)(x){\displaystyle y=(x+3)(x)} is quadratic, since it expands into y=x2+3x.{\displaystyle y=x^{2}+3x.}
+
+Equations for a circle or ellipse have both an x2{\displaystyle x^{2}} and a y2{\displaystyle y^{2}} term.If you're having trouble with these special cases, see the Tips section below.
+ If necessary, rewrite each equation so y is alone on one side.
+
+
+Example: Find the intersection of x2+2x−y=−1{\displaystyle x^{2}+2x-y=-1} and y=x+7{\displaystyle y=x+7}.
+
+Rewrite the quadratic equation in terms of y:
+
+
+y=x2+2x+1{\displaystyle y=x^{2}+2x+1} and y=x+7{\displaystyle y=x+7}.
+
+This example has one quadratic equation and one linear equation. Problems with two quadratic equations are solved in a similar way.
+ Once you've set both equations equal to y, you know the two sides without a y are equal to each other.
+
+
+Example: y=x2+2x+1{\displaystyle y=x^{2}+2x+1} and y=x+7{\displaystyle y=x+7}
+
+
+x2+2x+1=x+7{\displaystyle x^{2}+2x+1=x+7}
+
+
+, Use standard algebraic techniques to get all the terms on one side. This will set the problem up so we can solve it in the next step.
+
+
+Example: x2+2x+1=x+7{\displaystyle x^{2}+2x+1=x+7}
+
+Subtract x from each side:
+
+
+x2+x+1=7{\displaystyle x^{2}+x+1=7}
+
+Subtract 7 from each side:
+
+
+x2+x−6=0{\displaystyle x^{2}+x-6=0}
+
+
+, Once you've set one side equal to zero, there are three ways to solve a quadratic equation. Different people find different methods easier. You can read about the quadratic formula or "completing the square", or follow along with this example of the factoring method:
+
+
+Example: x2+x−6=0{\displaystyle x^{2}+x-6=0}
+
+The goal of factoring is to find the two factors that multiply together to make this equation. Starting with the first term, we know x2{\displaystyle x^{2}} can divide into x, and x. Write down (x    )(x    ) = 0 to show this.
+
+The last term is -6. List each pair of factors that multiply to make negative six: −6∗1{\displaystyle -6*1}, −3∗2{\displaystyle -3*2}, −2∗3{\displaystyle -2*3}, and −1∗6{\displaystyle -1*6}.
+
+The middle term is x (which you could write as 1x). Add each pair of factors together until you get 1 as an answer. The correct pair of factors is −2∗3{\displaystyle -2*3}, since −2+3=1{\displaystyle -2+3=1}.
+
+Fill out the gaps in your answer with this pair of factors: (x−2)(x+3)=0{\displaystyle (x-2)(x+3)=0}.
+ If you work too quickly, you might find one solution to the problem and not realize there's a second one. Here's how to find the two x-values for lines that intersect at two points:
+
+
+Example (factoring): We ended up with the equation (x−2)(x+3)=0{\displaystyle (x-2)(x+3)=0}. If either of the factors in parentheses equal 0, the equation is true. One solution is x−2=0{\displaystyle x-2=0} → x=2{\displaystyle x=2}. The other solution is x+3=0{\displaystyle x+3=0} → x=−3{\displaystyle x=-3}.
+
+
+Example (quadratic equation or complete the square): If you used one of these methods to solve your equation, a square root will show up. For example, our equation becomes x=(−1+25)/2{\displaystyle x=(-1+{\sqrt {25}})/2}. Remember that a square root can simplify to two different solutions: 25=5∗5{\displaystyle {\sqrt {25}}=5*5}, and 25=(−5)∗(−5){\displaystyle {\sqrt {25}}=(-5)*(-5)}. Write two equations, one for each possibility, and solve for x in each one.
+ Two lines that barely touch only have one intersection, and two lines that never touch have zero. Here's how to recognize these:
+
+One solution: The problems factor into two identical factors ((x-1)(x-1) = 0). When plugged into the quadratic formula, the square root term is 0{\displaystyle {\sqrt {0}}}. You only need to solve one equation.
+
+No real solution: There are no factors that satisfy the requirements (summing to the middle term). When plugged into the quadratic formula, you get a negative number under the square root sign (such as −2{\displaystyle {\sqrt {-2}}}). Write "no solution" as your answer.
+ Once you have the x-value of your intersection, plug it back into one of the equations you started with. Solve for y to find the y-value. If you have a second x-value, repeat for this as well.
+
+
+Example: We found two solutions, x=2{\displaystyle x=2} and x=−3{\displaystyle x=-3}. One of our lines has the equation y=x+7{\displaystyle y=x+7}. Plug in y=2+7{\displaystyle y=2+7} and y=−3+7{\displaystyle y=-3+7}, then solve each equation to find that y=9{\displaystyle y=9} and y=4{\displaystyle y=4}.
+ Now write your answer in coordinate form, with the x-value and y-value of the intersection points. If you have two answers, make sure you match the correct x-value to each y-value.
+
+
+Example: When we plugged in x=2{\displaystyle x=2}, we got y=9{\displaystyle y=9}, so one intersection is at (2, 9). The same process for our second solution tells us another intersection lies at (-3, 4).
+
+

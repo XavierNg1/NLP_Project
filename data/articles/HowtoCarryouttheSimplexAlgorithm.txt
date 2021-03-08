@@ -1,0 +1,15 @@
+ Do you already have the function you are maximising/minimising and the constraint inequalities?
+, Slack variables turn inequalities into equations and usually use the letters s onwards (though you can use any letter you like), for example:
+
+2y+4x<=8 becomes 2y+4x+s=8
+6y+2x<=28 becomes 6y+2x+t=28
+
+, for example:
+
+P=2x+2y becomes 0=P-2x-2y
+
+, This is constructed as follows:, Your first row will be what you are maximising, the rows below the constraints. If you have that letter in wat goes in that row the number goes into that column. If the letter is not there put a 0., Pick a column, any column, so long as the top number is negative (please note that you can't use l) For the sake of the example I'm going to use x, but if you're bored you can use y just to be different (if you have a lot of columns to choose from I'd recommend starting at the left, makes life easier).
+
+For each row (for which the number in your chosen column is positive) divide the number in the l column by the number in your chosen column.
+For the row which gave the smallest value, ring the number in your chosen column. (In my example it would be 4) This number is called the pivot.
+ Leave a line for equation 4 and divide (2) by the pivot (in this case 4) then write that into the space for (5), You do this by combining appropriate multiples of the pivot with the original equation for each line. For example (4)=(1)+0.5(2) Once you have done this your tableau should look like this:, Once this is the case you have completed your simplex problem., Ignore the slack variables. The last (l) column (of the final iteration) contains the values for the function (P) and non-zero variables.

@@ -1,0 +1,17 @@
+
+
+
+Go to the contour homepage and download the current Contour2 Firmware V2.16
+Download Firmware V2.16 -> you get the file "ContourRoam2.bin"
+Rename the file to "ContourRoam.bin"
+Plug the ContourROAM1 camera into your computer using a USB cable. Check to see that the Record slider is not in the forward (or ON) position. Once connected, the Battery LED on the ContourROAM1 will turn red and the camera will appear as an external USB device on your computer.
+On your computer, navigate to the camera which is mounted as an external storage device.
+Copy the ContourROAM.bin file that you downloaded and renamed in Step 2 to the camera's microSD card. Do not put it in any subfolders on the camera's microSD card.
+On the microSD card of the camera will be a file called FW_RTC.txt. The file may be hidden and you may need to enable the ability to view hidden files in your computer's settings. Open the FW_RTC.txt file with a text editor application.
+Near the top of the file is a line of text that reads `UPDATE_FW:N'. Change the `N' to a `Y' so it appears as `UPDATE_FW:Y' and save the file. This will instruct your camera to update the firmware when it next starts up.
+Unplug the camera from your computer.
+Press and release the Status Button. The camera will beep and the Memory and Battery LEDs will flash while the update is in progress. When the update is completed the camera will beep again and turn off.
+If the camera keeps beeping after pressing the Status Button, just format the SD Card once again, holding the format button with a clip for 15 seconds.
+That's it, now you have all Roam2 functions on your Roam1 including 720p with 60 FPS.
+If you want, open the StoryTeller App on your PC and check if a Contour Roam2 will be recognized under "Devices".
+

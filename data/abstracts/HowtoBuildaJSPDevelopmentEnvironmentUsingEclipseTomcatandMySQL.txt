@@ -1,0 +1,17 @@
+
+Download appropriate version of JDK according to your operating system from Oracle.
+Once the download is completed, double click the file to install JDK.
+Download appropriate version of Tomcat from http://tomcat.apache.org/download-70.cgi, and follow the steps of “Apache Tomcat Setup Wizard” to install it.
+
+,
+Create an environment variable, CATALINA_HOME.Start the Tomcat server from the bin folder of Tomcat installation directory by double clicking the “startup.bat” file.
+Download appropriate version of Eclipse from http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/indigosr2.
+Now you need to install “Sysdeo Tomcat plug-in” for the integration of Tomcat with Eclipse.
+Select a JDK as default JRE for Eclipse in its preference window: Windows -> Preferences -> Java -> Installed JREs.
+By testing a simple JSP program to verify the correctness of previous installations and configurations.
+Download MySQL Installer for Windows from http://dev.mysql.com/downloads/
+Run the downloaded msi file, and then follow the steps of MySQL installer wizard to install it.
+
+,
+After installation finished, you need to visit http://dev.mysql.com/downloads/connector/j/ to download a mysql-connector for establishing the connection between Tomcat and MySQL database.
+Test the connection to MySQL database.

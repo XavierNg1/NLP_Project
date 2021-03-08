@@ -1,0 +1,190 @@
+ Create an HTML page with some buttons and content. A sample page is given below. If you do not know how to write basic HTML, read How to Create a Simple Web Page With HTML first.
+
+
+Here's the page:
+
+
+
+
+<html>
+  <head>
+    <title>My first dynamic web page!</title>
+  </head>
+  <body>
+    <button id="button_1">Click Me!</button>
+    <div id="div_1">Content 1</div>
+    <button id="button_2">Click Me Too!</button>
+    <div id="div_2">Content 2</div>
+  </body>
+</html>
+
+
+
+
+
+You should see a page like this:
+
+
+
+
+
+;
+, Create a file; let's name it "dynamic.js", put this in the same folder as your web page HTML. Here's the sample script with an explanation:
+
+
+
+
+
+
+// the "function" keyword creates a block
+// of code that can be executed by name
+//
+// event is a "parameter" that will be "passed"
+// to this function later, meaning that the
+// function block will have access to it
+//
+// "event" holds information about the event
+// that triggered this function, more on that later
+function click1(event){
+}
+ 
+function click2(event){
+}
+
+
+
+
+
+, Now that you've created your script, you'll want to add a script tag in your HTML. Adding this tag allows your page to run the code you'll place in your script. Here's the new HTML:
+
+
+
+
+
+
+<html>
+  <head>
+    <script src="dynamic.js"></script>
+    <!-- we want to make sure our page is aware of the script we created above -->
+    <title>My first dynamic web page!</title>
+  </head>
+  <body>
+    <button id="button_1">Click Me!</button>
+    <div id="div_1">Content 1</div>
+    <button id="button_2">Click Me Too!</button>
+    <div id="div_2">Content 2</div>
+  </body>
+</html>
+
+
+
+
+
+, JavaScript is an event-driven language; it is built around responding to user events, and taking actions based on those events. In JavaScript, you add "event handlers" to different parts of the page, and these "handlers" are triggered by user actions, which then triggers your code. You can add event handlers in two ways:
+
+
+
+Using HTML
+
+You can add event handlers using event attributes on the HTML elements. In this case, we want to add click events. Notice that the events reference the function names above.
+
+
+
+
+
+<html>
+  <head>
+    <script src="dynamic.js"></script>
+    <title>My first dynamic web page!</title>
+  </head>
+  <body>
+    <!-- the onclick event is mapped the functions above -->
+    <!-- notice how we use "pass" event to the function -->
+    <button id="button_1" onclick="click1(event)">Click Me!</button>
+    <div id="div_1">Content 1</div>
+    <button id="button_2" onclick="click2(event)">Click Me Too!</button>
+    <div id="div_2">Content 2</div>
+  </body>
+</html>
+
+
+
+
+
+
+
+Using JavaScript
+
+Adding events in JavaScript is recommended. Adding events in HTML tends to mix the code with your layout, which is not a good practice. Here's the changes required to add those events:
+
+
+
+
+
+function click1(event){
+}
+ 
+function click2(event){
+}
+ 
+// just pass the name of the function
+document.getElementById("button_1").onclick = click1;
+document.getElementById("button_2").onclick = click2;
+
+
+
+
+
+, Once you have handlers set, you'll want to respond to these user actions. Generally, you'll want to output some sort of content to the user based on the actions they've taken. To do this, we'll have to add a few things to our function definition:
+
+
+
+
+
+
+function click1(event){
+  // var declares a new object, like event, that we can use
+  // notice that "div_1" corresponds to the id property of
+  // the div in the html above
+  // el will refer to the content in the div above
+  var el = document.getElementById("div_1");
+  // innerText is a property of html elements
+  // which holds the text that the user sees
+  // text must be surrounded by quotes
+  el.innerText = "You clicked my button!";
+}
+ 
+function click2(event){
+  // event.target gets the element which triggered this function
+  event.target.innerText = "You clicked me!";
+  var el = document.getElementById("div_2");
+  el.innerText = "You clicked my button too!";
+}
+
+
+
+
+
+These functions will change the text you see in those divs we created earlier.
+
+Here's the expected result of clicking the first button:
+
+
+
+
+
+And then the second:
+
+
+
+
+
+, There are a couple things that could go wrong while you follow the steps in this article. Here are a few of those and what to do if you encounter them:
+
+
+Your web page doesn't display properly. Make sure that your page is valid HTML. There are websites which can check this for you and let you know where there may be errors.
+Your code isn't doing anything. You'll need to "debug" issues in the JavaScript scripts. For Google Chrome, press ++to bring up the console, which should alert any errors to you. From here, you'll need to search these errors on StackOverflow or some other site to get assistance. The shortcut is for Internet Explorer.
+Sometimes this just means that you've made a simple misspelling. Be sure to check for these before you dig too deep.
+You also may need to Enable JavaScript first.
+This may also happen in some browsers because the content must be "served" to the browser to be rendered correctly. If you can't debug the issue, then you may have to set up a web server like IIS to host the site locally. This is out of the scope of this article.
+

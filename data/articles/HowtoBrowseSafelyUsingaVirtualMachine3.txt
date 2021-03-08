@@ -1,0 +1,12 @@
+ Type xterm in the dialogue box. Type sudo su to become root., The following message appears:
+
+
+
+No partition table or unknown signature on partition table. Do you wish to start with a zero table ?
+Type y to start with a zero table.
+ Choose , , 128.00, , navigate to , explicitly enter type 82, Linux swap (you may have to scroll to find it). Choose to write the partition table to the disk., Remember the name of the partition - it will probably be hda1.,, Yes, it is 83, not 82 as before. Choose to write the partition table to the disk., Remember the name of the partition - it will probably be hda2.,, You may have to select Esc during VMware player boot to access boot options. It cannot boot off the partitions you just created, since there is nothing on them., Type xterm in the dialogue box. Type sudo su to become root.
+
+While su, type mkswap /dev/hda1.
+While su, type swapon /dev/hda1.
+Type dsl-hdinstall to install the OS to the partition. Make sure you select the Linux partition, not the Linux swap.
+ Choose y to journalized ext3 filesystem if your machine is reasonably new. Choose y to give up your last chance to abort. Choose y to install a bootloader. Choose g to install grub., Choose y to reboot.,

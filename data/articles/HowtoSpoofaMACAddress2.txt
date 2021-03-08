@@ -1,0 +1,11 @@
+ On your dock, locate the Applications app. It usually looks like a folder with a circled letter A. Click on it to launch it.
+ Once you've opened the Applications app, scroll down until you find Utilities. Click on it.
+ From with the Utilities folder, scroll down until you reach the app called Terminal. The app's icon is a black square. Click on Terminal.
+ Once you've opened Terminal, click on the new window, and enter the following command: sudo ifconfig en0 ether xx:xx:xx:xx:xx:xx. Note that the 12 X characters need to be replaced with actual values. You can make up a combination of your choice, as long as you only use letters A to F and numbers. You might want to follow the format below with your own combination.
+
+
+An example combination might be: sudo ifconfig en0 ether d4:33:a3:ed:f2:12
+If the above command doesn't work, try the following: sudo ifconfig en1 Wi-Fi xx:xx:xx:xx:xx:xx (replace Xs with your own combination).
+ Then, enter your password to register the new address.
+ After having entered your new MAC Address, type in the following: ifconfig en0 |grep ether. This action will confirm your change of address.
+

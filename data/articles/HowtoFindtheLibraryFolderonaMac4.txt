@@ -1,0 +1,6 @@
+ Open Applications → Utilities &rarr Terminal. From here you can show the Library in any version of Mac OS X from 10.7 onward. This method is most commonly used in 10.7 Lion and 10.8 Mountain Lion, which do not have access to the other permanent solution above.
+ Type chflags nohidden ~/Library into the Terminal window, exactly as it appears., This command should take effect as soon as you hit Enter to submit the command. Visit your Home folder ("Home" in the Finder's Go menu) and look for Library.
+
+
+If you change your mind, return to Terminal and enter chflags hidden ~/Library to hide it again.
+

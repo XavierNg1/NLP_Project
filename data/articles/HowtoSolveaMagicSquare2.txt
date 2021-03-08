@@ -1,0 +1,60 @@
+ Everyone knows that an even number is divisible by 2, but in magic squares, there are different methodologies for solving singly and doubly even squares.
+
+
+A singly even square has a number of boxes per side that is divisible by 2, but not 4.The smallest possible singly even magic square is 6x6, since 2x2 magic squares can’t be made.
+ Use the same method as you would with odd magic squares: the magic constant = / 2, where n = the number of boxes per side. So, in the example of a 6x6 square:
+
+
+sum = / 2
+sum = / 2
+sum = (6 * 37) / 2
+sum = 222 / 2
+The magic constant for a 6x6 square is 222/2, or 111.
+All rows, columns, and diagonals must add up to this number.
+ Label them A (top left), C (top right), D (bottom left) and B (bottom right). To figure out how large each square should be, simply divide the number of boxes in each row or column by half.
+
+
+So, for a 6x6 square, each quadrant would be 3x3 boxes.
+ Quadrant A gets for the quarter of numbers; Quadrant B the second quarter; Quadrant C the third quarter, and Quadrant D the final quarter of the total number range for the 6x6 magic square.
+
+
+In the example of a 6x6 square, Quadrant A would be solved with the numbers from 1-9; Quadrant B with 10-18; Quadrant C with 19-27; and Quadrant D with 28-36.
+ Quadrant A will be simple to fill out, as it starts with the number 1, as magic squares usually do. Quadrants B-D, however, will start with strange numbers — 10, 19, and 28, respectively, in our example.
+
+
+Treat the first number of each quadrant as though it is the number one. Place it in the center box on the top row of each quadrant.
+Treat each quadrant like its own magic square. Even if a box is available in an adjacent quadrant, ignore it and jump to the “exception” rule that fits your situation.
+ You have to swap some boxes between the top left and bottom left quadrants to finish your magic square. We’ll call those swapped areas Highlight A and Highlight D.
+
+
+Using a pencil, mark all the squares in the top row until you read the median box position of Quadrant A. So, in a 6x6 square, you would only mark Box 1 (which would have the number 8 in it), but in a 10x10 square, you would mark Boxes 1 and 2 (which would have the numbers 17 and 24 in them, respectively).
+Mark out a square using the boxes you just marked as the top row. If you only marked one box, your square is just that one box. We’ll call this area Highlight A-1.
+So, in a 10x10 magic square, Highlight A-1 would consist of Boxes 1 and 2 in Rows 1 and 2, creating a 2x2 square in the top left of the quadrant.
+In the row directly below Highlight A-1, skip the number in the first column, then mark as many boxes across as you marked in Highlight A-1. We’ll call this middle row Highlight A-2.
+Highlight A-3 is a box identical to A-1, but placed in the bottom left corner of the quadrant.
+Highlight A-1, A-2, and A-3 together comprise Highlight A.
+Repeat this process in Quadrant D, creating an identical highlighted area called Highlight D.
+ Once you’ve done this, all the rows, columns, and diagonals in your magic square should add up to the magic constant you calculated.
+ In addition to the swap for quadrants A & D mentioned above, you also need to do a swap for quadrants C & B. Highlight columns from the right side of the square toward the left one less than the number of columns highlighted for highlight A-1. Swap the values in quadrant C with the values in quadrant B for those columns, using the same one-to-one method.
+
+Here are two images of a 14x14 Magic Square before and after doing both swaps. Quadrant A swap area is highlighted blue, Quadrant D swap area is highlighted green, Quadrant C swap area is highlighted yellow, and Quadrant B swap area is highlighted orange.
+
+
+14x14 Magic Square before making swaps (steps 6, 7, & 8)
+
+
+
+
+
+
+
+14x14 Magic Square after making swaps (steps 6, 7, & 8)
+
+
+
+
+
+
+
+
+

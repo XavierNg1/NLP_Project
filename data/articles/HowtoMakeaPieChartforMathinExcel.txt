@@ -1,0 +1,10 @@
+ It would be helpful if it added up to 100%. This article will provide example data and you can substitute in your own. Above is a picture of the finished example.
+ Double click on Excel (either the green X on the dock or the app title in the folder) and select File New Workbook., In General, set R1C1 to unchecked or Off; in Ribbon, set Ribbon to checked or On; and in View, set Show Formula Bar by Default to checked or On.,,,, Then Hit OK.,,,, Center., The $ signs in "$P$20" make hat an "absolute reference" that does not change automatically as you copy and paste the formula to other cells.
+
+"Relative references" (those without dollar signs) do change automatically. Recommended: investigate the results of the next step in each cell to learn the difference between relative and absolute references.
+,,,, The pie chart will appear with the top right area showing 18% of the chart for Camels; the next right area will be 10% for Elephants and the area next clockwise down will be 10% for Hippos, and the next (largest area on the boom) will be 35% for Monkeys. You have successfully created the pie chart you wanted., Hover the mouse over the corners or edges until the mouse cursor turns into a double-headed arrow and then pull to expand or push to shrink the chart to that it looks good beside your data, and will print out nicely if you are opting to print your work.,, There is a way to substitute the categories for the category numbers given beside the series colors in the chart legend:
+
+Click inside the chart right on one of the chart sections itself and notice up in the formula bar that the following formula appears =SERIES(,,Sheet1!$N$12:$N$19,1).
+If you modify it to read =SERIES(,{"Camels","Elephants", "Hippopotami","Monkeys","Rhinoceri","Spiders","Tigers","Lions"},Sheet1!$N$12:$N$19,1), then the category names will be substituted for the automatic category list-numbers. This is an array. Yes it's a pain but each category must be in quotes w/ no spaces, separated by commas and the whole in braces.
+You may want to resize the legend a bit to correct for formatting problems.
+

@@ -1,0 +1,37 @@
+ Vista and 7 users can just type "notepad", without quotes, into the start menu and hit enter.;
+, If you don't wish to have your name used, write "ANON" in the box below
+set/p "name=>"
+cls
+echo Do you wish to complete a survey?
+set/p "cho=>"
+if %cho%==yes goto :QUIZ
+if %cho%==y goto :QUIZ
+if %cho%==Y goto :QUIZ
+if %cho%==no goto :END
+if %cho%==n goto :END
+if %cho%==N goto :END
+cls
+ :QUIZ
+echo Q1:How old are you?
+set/p "age=>"
+cls
+echo Q2:What is your favorite colour?
+set/p "colour=>"
+cls
+echo Q3:What is your favorite games console?
+set/p "console=>"
+cls
+echo Q4:What is your favorite game?
+set/p "game=>"
+goto :THANKS
+ :THANKS
+echo Thank you for completing the survey!
+echo A file will be created with your answers
+echo If you don't want your survey to be saved, close the window. Otherwise, hit any key to create the file.
+pause >nul
+For /L %%n in (1,1,1) do echo Name:%name% Q1:%age%. Q2:%colour%. Q3:%console%. Q4:%game%. Survey filled out at %date% %time% >> %name%%%n.txt
+
+,
+Type "anything.bat" into file name and click "Save"
+
+,,

@@ -1,0 +1,29 @@
+ Duplicate data doesn't mean that all of the fields are identical. For example, a customer that was entered into the database twice may have two different IDs and potentially different spellings. On the other hand, if the name is common it could be two different customers. You'll need to compare the data available and check each result carefully to determine what is and isn't duplicate.;
+, It is recommended that you create a new backup before making big changes. This way you can restore the database if you accidentally delete the wrong entries.
+
+
+Click the File menu and select "Save As" or "Save & Publish".
+Click "Backup Database" in the Advanced section. Follow the prompts to backup your database.
+ In order to avoid data conflicts, try to ensure that no other users will be adding data to the database. This isn't required, but can save you some headache later if things go wrong.
+
+
+Set your database to Exclusive mode if you can. This will prevent any changes from being made by other users. Click the File menu and select "Options", then select "Client Settings". In the "Default open mode" section, select "Exclusive". If you don't have many people using the database, you generally don't need to worry about this.
+ The Query tool can find entries that contain duplicate content. The process for starting the wizard varies depending on the version of Access you are using:2013/2010 - Click the "Create" tab and then click "Query Wizard".
+2007 - Click the "Insert" or "Create" tab and select "Query Wizard".
+2003 - Open the Database window and select the "Queries" tab. Click the "New" button.
+ This query compares fields to find duplicate entries.
+ All of the tables in your database will be listed. Select the table you want to check for duplicates.
+
+
+For most duplicate checking, you'll want to keep the "Tables" view selected.
+ Select all of the fields that you want to compare for duplicate data. Include enough fields to make a judgment. Duplicates are only returned if the fields match character for character. You can use expressions to find partial matches.Avoid using general fields. Avoid using fields like the date or location to reduce clutter when comparing entries.
+Without enough fields to make a distinction between records, or with fields that are too general, you'll get a lot of duplicate results.
+ An additional field or two can help you decide if the data is actually duplicate. For example, an Order ID field will help you determine if the same name twice are separate entries. Include at least one field to help make this distinction and prevent accidental data loss.
+ You'll be prompted to give the query a name. Click "Finish" to see the results.
+ Any potential duplicates based on your criteria will be displayed. Go through each of the results and use the knowledge you have about your company to decide if the entry is a duplicate. Make absolutely sure that a record is a duplicate before you remove it.
+
+
+If you can't decide, recreate the query with an additional field to help you make your decision.
+ Right-click on the left column and select "Delete Record" to remove a duplicate. You can select multiple records to delete them all at once.You may want to merge some data from one of the duplicate records into the record you plan to keep.
+Make sure to not delete all of the records that appear on the duplicate result list, or you won't have an original record left.
+

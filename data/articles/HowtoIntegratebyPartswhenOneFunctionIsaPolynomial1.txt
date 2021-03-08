@@ -1,0 +1,25 @@
+ The integrand is a product of two functions: x2{\displaystyle x^{2}} and sin⁡x.{\displaystyle \sin x.}
+
+
+∫x2sin⁡xdx{\displaystyle \int x^{2}\sin x{\mathrm {d} }x}
+;
+, Differentiate u{\displaystyle u} to find du=2xdx{\displaystyle {\mathrm {d} }u=2x{\mathrm {d} }x} and integrate dv{\displaystyle {\mathrm {d} }v} to get v=−cos⁡x.{\displaystyle v=-\cos x.} We can drop the constant of integration from finding v{\displaystyle v} because it will eventually drop out in the end. Then we just plug all of these into the formula.
+
+
+∫x2sin⁡xdx=−x2cos⁡x+∫2xcos⁡xdx{\displaystyle \int x^{2}\sin x{\mathrm {d} }x=-x^{2}\cos x+\int 2x\cos x{\mathrm {d} }x}
+
+Notice that the second integral is positive because of the −cos⁡x.{\displaystyle -\cos x.}
+
+
+, Notice that we need to use integration by parts on the second integral. So we will have to choose a new u{\displaystyle u} and dv.{\displaystyle {\mathrm {d} }v.} We then find that du=2dx{\displaystyle {\mathrm {d} }u=2{\mathrm {d} }x} and v=sin⁡x.{\displaystyle v=\sin x.} Plug these into the formula. Make sure to keep track that these new variables apply only to the second integral.
+
+
+∫x2sin⁡xdx=−x2cos⁡x+2xsin⁡x−∫2sin⁡xdx{\displaystyle \int x^{2}\sin x{\mathrm {d} }x=-x^{2}\cos x+2x\sin x-\int 2\sin x{\mathrm {d} }x}
+
+We now see that the integral on the right is something that we can directly evaluate.
+ The antiderivative of sin⁡x{\displaystyle \sin x} is −cos⁡x.{\displaystyle -\cos x.} Make sure to add the constant of integration C.{\displaystyle C.}
+
+
+∫x2sin⁡xdx=−x2cos⁡x+2xsin⁡x+2cos⁡x+C{\displaystyle \int x^{2}\sin x{\mathrm {d} }x=-x^{2}\cos x+2x\sin x+2\cos x+C}
+
+

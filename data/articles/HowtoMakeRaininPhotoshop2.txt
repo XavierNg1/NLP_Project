@@ -1,0 +1,29 @@
+ Use the new layer icon in the Layers menu, or the File → New → Layer command. Using Edit → Fill, change the Use setting of this layer to Black and name it "Rain," then click OK.
+
+
+If you changed the default layer characteristics, make sure this layer is set to Mode "Normal" and Opacity 100%.
+This method works best in Photoshop CS 6, CC, and CC14. In earlier versions, some menu options may be in different locations. Also, the motion blur effect in earlier versions produces wonky results in the edges of the photo. You can get around this by extending the canvas space around the image before you begin, then cropping it back after you're finished., In the top menu, use Filter → Add Noise to add a scatter of white dots to the rain layer. In the dialog menu that opens, set the amount to 25% (for moderate rain), change the distribution to "Gaussian" (for a less uniform, more natural appearance), and check the "monochromatic" box. Click OK.
+
+
+See the Tips section below for an alternative to this step if you don't like the end result of this method.
+ The white dots are probably quite small, so let's make them more visible. Open the scale menu with the top menu: Edit → Transform → Scale. Set the width (W) to about 400% and the height (W) to the same value. The white dots should now be more visible.
+
+
+You can clink the link icon between the W and H values to automatically link the two together, so they change proportional to each other.
+ The blend mode option is in the Layers panel, most likely set to "Normal." Change this to "Screen" and the original image should be visible underneath the white proto-rain.
+ With the Rain layer selected, click the icon that looks like a little downward arrow and a series of horizontal lines, located in the top right of the Layers panel. Select Convert to Smart Object from the drop-down menu. This will let you edit the rain layer non-destructively, meaning your changes can easily be reversed or altered., Select Filter → Blur → Motion Blur. In the dialog menu that appears, set the angle of the rain to whatever you like. Set the "distance" value to 50 pixels – this is a good starting point, but if you dislike the result, you can undo it and try a different value. Click OK and wait a few seconds for photoshop to apply the blur effect.
+
+
+The distance value determines how far the white dots get stretched to form rain streaks. Larger photos may look better with larger distance values.
+ This will let you alter the brightness and contrast of the rain layer, which also has the effect or reducing or increasing the apparent amount of the rain. Begin by holding down Alt (Mac: ⌥ Option) and clicking the round New Adjustment Layer icon at the bottom of the Layers panel. A dialog box should appear when you click the icon. Check the box "Use Previous Layer to Create Clipping Mask" so these adjustments only apply to the rain layer, not to the original photo.
+
+
+Alternatively, click Image → Adjustments → Levels, then right-click (One-button Mac: Ctrl-click) the layer and select Create Clipping Mask.
+ If the Properties panel isn't open already, open it using Windows → Properties in the top menu.If there is no graph on the panel, select the adjustment view icon at the top of the panel (a spiky graph icon).Now adjust the sliders underneath the graph to alter the appearance of the rain. Move the black slider slowly to the right to make the rain darker, and move the white slider slowly to the left to add more contrast.
+
+
+Try setting black to 75 and white to 115, or play around with it to find a setting you like.In Photoshop CS5 or earlier, look for the Adjustments panel instead.
+ If you're happy with the rain's appearance, save your picture and congratulate yourself. Otherwise, the motion blur settings and level adjustment settings you've already tried out can be further tinkered with to your heart's content.
+
+
+If you dislike how the rain is all slanted exactly the same direction, try using these commands: Filter → Distort → ripple (size large, amount 10%) and/or Filter → Blur → Gaussian Blur (radius 0.5 pixels).

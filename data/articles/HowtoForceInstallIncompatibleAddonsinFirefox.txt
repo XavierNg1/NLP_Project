@@ -1,0 +1,8 @@
+ Make note of the version number listed here, you will need it later on. In this example, it is Firefox 22 (22.0).;
+, You can do this by typing "about:config" in the address bar and hitting Enter. You will be prompted with a warning about being careful. Click "I'll be careful, I promise!".
+ To do this, right click in the body of the preferences. A menu will be displayed. Click New->Boolean. A boolean value just means one that is either true or false.
+
+
+Note: If this key already exists, you can right-click on it and click "Toggle" so that it says "false" under "Value".
+ This follows the format of "extensions.checkCompatibility" followed by the version number. In Firefox 6, for example, the preference name would be "extensions.checkCompatibility.6.0". Enter it and click OK.
+ This will disable the Firefox compatibility checking.

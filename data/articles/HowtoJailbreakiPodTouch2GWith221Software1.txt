@@ -1,0 +1,20 @@
+ It can be found on TysiPhoneHelp.com;
+,,,, You will be asked to put your ipod in DFU mode. To do this hold down the power button and the home button for 10 seconds, then release the power button while you keep holding the home button for 8 more seconds. When asked to enter some commands copy and paste the commands below in the window. When it asks, you will need to type "go" and "/exit".
+
+
+arm7_stop
+mw 0x9000000 0xe59f3014
+mw 0x9000004 0xe3a02a02
+mw 0x9000008 0xe1c320b0
+mw 0x900000c 0xe3e02000
+mw 0x9000010 0xe2833c9d
+mw 0x9000014 0xe58326c0
+mw 0x9000018 0xeafffffe
+mw 0x900001c 0x2200f300
+arm7_go
+arm7_stop
+/exit
+
+, Then hold the shift key down and click restore. A window will pop up asking you to select firmware. Select the firmware bundle (customFW.ipsw) from the jailbreak folder. Wait for iTunes to install the firmware (if you get any errors while restoring you will need to run the "jailbreak.bat" file again).
+, The jailbreaking process is complete. Open iTunes and set up your iPod.
+

@@ -1,0 +1,12 @@
+ One should acquire the necessary equipment only after giving due consideration to the available infrastructure. For those choosing to install a wired network larger than 15 to 20 devices, the requirement demands the hiring of a consultant for all wiring and installation based issues. However, in the case of installation of a wireless network, the need would be to have one or more wireless access points. But then again be it either type of infrastructure, the requirement would be to possess round-the-clock Internet connectivity through the chosen Internet Service Provider.;
+, The need in this case is to identify the IP addressing scheme and then progressively assign IP addresses to servers on the network. Servers with static IP addresses are easy to find on the network using DNS services. Please pay attention private networks typically use a "192.168.0.n" range, wherein "n" is considered as the host address for each individual device. Once done, assign a subnet mask of "255.255.255.0" for this range. Please note Windows Vista and Windows 7 provide automatic IP addressing scheme for each device automatically, all based on the fact what the OS determines via the prevailing network discovery processes.
+ For doing so:
+
+
+Click Start
+Right-click ‘Computer’ and click ‘Properties’
+Click the ‘Change Settings’ button and change the workgroup name.
+Once done, you can leave the default workgroup name, which would be ‘MSHOME’ on Windows Vista and Windows 7, but then in case if you have Windows XP or an older OS on your PC, the default should be changed to ‘WORKGROUP’ or ‘MSHOME’.
+ If you can see all the other attached computers and printers, you are done.
+If otherwise, check the network interface configuration, make all necessary corrections and retest.
+

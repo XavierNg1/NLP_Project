@@ -1,0 +1,70 @@
+;
+, You will only need a small screwdriver and a cutter, to install the entire S-BUS G4 system., There are three methods of connecting one device to the S-BUS network:
+
+Cascading Train DIN-Rail. (Not all devices)
+Using the conventional S-BUS ports. (All devices)
+Using the 4D connector to join lines. (Not all devices)
+
+,
+
+Note that left hand side of the device has a male connector, and the right hand side has female connector.
+
+
+ 
+
+
+
+
+
+
+
+This is all along the side with the traditional S-BUS connection port for extra flexibility for wiring and connection.
+All these ports, the Train Male and Female + the traditional ports are actually looped in the device, meaning where ever the wire is connected it will be looped to the other port.
+
+
+
+
+
+
+
+
+
+
+
+Of course, the female connector can be reached from far devices, not only cascading on a rail, and that is done using the 4D connector show Figure 7.
+
+
+
+This means that you can use a normal CAT5 cable that has 4 pairs, where you need only two pairs and the others stays as extras.
+, Different terminologies used worldwide to the same concept.
+ As shown, it has three ports for N, which are only looped neutral connector for extra flexibility when installing, and one port for power phase line in. The power going in the Dimmer is distributed to the output channels. This fact leads to the measurements required before connecting lighting circuits to Dimmers.
+ There are types available:
+
+One channel Dimmer, Handles up to 12 Amps load - around 2600 Watts. (1ch12amps)
+Two channels Dimmer, each handles up to 6 Amps load - around 1320 Watts (2ch6amps)
+Four channels Dimmer, each handles up to 3 Amps load - around 660 Watts (4ch3amps)
+Six Channels Dimmer, each handles up to 2 Amps load - around 440 Watts (6ch2amps)
+Eight Channels Dimmer, each handles up to 1.5 Amps load - around 330 Watts (6ch2amps)
+Twelve channels Dimmer, each handles up to 1 Amps load - around 220 Watts(12ch1amps)
+
+,
+Dimmers Input load handling.
+Electrical breaker load handling.
+ Refer to your electrical circuit installer and bulb supplier to determine how much each circuit load before connecting.
+
+
+Since it is distributed load, it means that all the channels loads will be on the one electrical wire that is used in the input L port of the Dimmer, reviewing all S-BUS G4 Dimmers, all load supply would be 12 amps in sum.
+Usually, a 1.5 to 2.0 mm electrical wire is enough and okay for this kind of load.
+Another thing to consider is the breaker that is used in the main electrical DB should be able to handle 12 amps or more. Refer to the electrical installer to determine the breakers and other fixture specifications in accordance to the load that will be installed.
+,,,
+
+The Relay is a Pass-Through device, whatever is in, it will be out.
+
+
+
+
+
+
+In the figure above, it shows different types of Relay related control. For the lighting no need for the Neutral connection, you just need to connect the main line through the relay, and the relay will handle it ON/OFF.
+Since it is a pass through device, you can connect any kind of Switching control device like, Dry contact application that would open a motor gate for example.
+

@@ -1,0 +1,31 @@
+ Before continuing, install your favorite softwares, tweak your system settings, delete unwanted documents, and so on. You might even want to go as far as re-installing your entire system to get a clean start. Here is a short list of what to do before remastering.
+
+
+Install favorite programs
+Uninstall unwanted programs
+Remove all personal documents, pictures, music, etc.
+Change default username and password
+Clear browser's history/cache
+Update/upgrade softwares;
+, This remastering program is no longer supported, but it is still completely functional and works like a charm. In short, search for remastersys_3.0.4-2_all.deb in this website. Then download and install the deb package. This article will provides more precise instructions on how to do that.
+ First, right-click the ubiquity entry and click Mark for Installation. Then mark all additional required dependencies to be installed as well. Next, mark ubiquity-frontend-gtk and it's additional dependencies to be installed as well. This is the installer you will use when installing your system to someone else's machine. Optionally, you can download a slideshow to be displayed during the installation.
+ After Synaptic completes the installation, search your applications for Install RELEASE. If the software is present, you are ready to continue on to the next step.
+ Navigate to /etc/lightdm/ and check if there is a file called lightdm.conf. If not, open your text editor, like gedit or mousepad, and create a empty file there. Name it lightdm.conf.
+ You will be required to provide an administrative password. Then click Customize. In this section you can do the following:
+
+
+Change the splash image
+Change the Grub image (boot manager)
+Change the Plymouth theme (boot animation)
+Select user settings
+Configure Remastersys settings
+
+, If you want your system to contain any personal documents and software settings, click the Backup option. If you want your system to resemble a Linux distribution, select the Distribution option. Depending on the size of your system and the speed of your computer, this process will take a minimum of 10 minutes.
+
+
+
+
+This article will guide you in creating a bootable USB stick.
+
+This article will guide you in creating a bootable CD/DVD.
+

@@ -1,0 +1,38 @@
+ The "anchor" element <a></a> defines a place on the page that you can link to. Anything inside the <a> and </a> tags, typically text or an image, can be the destination of the link.
+ Although it is valid HTML to leave the anchor element empty, some browsers will fail to find it if there's nothing between the <a> and </a> tags.Simply type in the text you would like to link to:
+
+
+<a>My Lasagna Recipe</a>
+The a tag does not typically change the style of the text.In this example, "My Lasagna Recipe" will appear as ordinary text.
+ The id attribute gives the anchor a unique identifier so you can link to it. Place it inside the <a> tag as follows:
+
+
+<a id="anchor-name-1">My Lasagna Recipe</a>
+
+, The example above used "anchor-name-1," but it's best to give your anchors a descriptive value, such as "lasagna" in this case. This value must be unique to this id. If another id in the same document has the same value, the browser cannot identify the single anchor you're trying to link to.
+
+
+In HTML4, the value must begin with a letter. Can use letters, digits, hyphens, underscores, colons, and periods.In HTML5, you can use any character except for spaces.Be careful with your cases. "Polish" and "polish" are considered the same value, and should not appear in the same document., You don't need to use the <a> tag every time you want to create an anchor. The id attribute can actually go into any HTML element.All modern browsers (going back quite a while) should be able to interpret this. Here are a few examples:
+
+
+Anchor in a header: <h2 id="biblio">Bibliography</h2>
+Anchor in an image: <img id="logo" src="/images/logo.png" />
+Anchor in a paragraph: <p id="introparagraph">(introductory paragraph)</p>
+Remember that each id can only appear once per page.
+ This is similar to any link, using the <a href=" "> </a> format. However, instead of a URL as the value of the href attribute, use the # symbol followed by the anchor value. To link to the lasagna recipe in the example above, you would type:
+
+
+<a href="#lasagna">Click here to see my lasagna recipe.</a>
+Use exactly the same case as you did when creating the anchor. Some browsers will not recognize "#Lasagna" as a link to "lasagna.", You can also link to your anchor from any other website. Just include the URL followed by # and the anchor value. Here are a couple examples:
+
+
+Linking from another page in the same domain:
+<a href="recipes.html#lasagna">Go to my recipes page to see my lasagna recipe.</a>
+Linking from anywhere:
+<a href="http:Check out my friend's site with a lasagna recipe.</a>
+
+, As with an ordinary URL, you can link to an anchor using an image:
+
+
+<a href="#lasagna"><img src="chickenlasagna.png" /></a>
+

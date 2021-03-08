@@ -1,0 +1,7 @@
+ I recommend the interactive prompt while you're practicing it. To open IDLE, go to the Start Menu > Python (version number, mine is 2.6) > IDLE (Python GUI).
+ To do this, we write a variable name, like foo, followed by an equal sign for assignment, a left bracket, then a series of values separated by commas, and finally a right bracket. Example: foo = . This is called a list.
+ Write foo2 = . This runs a for loop which goes through each item in another list, string, dictionary, tuple, or other data type. The item before the for loop puts that item inside our new list. Press enter.
+ Type: print foo2. If you have python 3.0, type print(foo2). Press enter, and the list should look like: . Now, if you're thinking, "Why would I do that? I could've just done foo2 = foo!", then you're right. But list comprehension gets way better. Read the following and you will soon see how powerful and useful list comprehension can be.
+ Retype the foo2 line, and add the following to the end: if len(item) > 5. It should look like: foo2 = . What everything to the right of the if statement does is check if the number of letters in the item, (John, John2, Did I mention John), is greater than 5. If it isn't, then it doesn't add it to foo2. Len() just checks the length of a datatype. Len(foo) would be 3 because it has 3 items in it. So, foo2 = , right? (Remember, John and John2 are 4 letters long, which is less than 5.);
+, Type print foo2, and your result should be . You can use if statements at the end to make sure you get the right value!
+

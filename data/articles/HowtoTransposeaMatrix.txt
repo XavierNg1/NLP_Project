@@ -1,0 +1,62 @@
+ You can transpose any matrix, regardless of how many rows and columns it has. Square matrices, with an equal number of rows and columns, are most commonly transposed, so we'll use a simple square matrix as an example:matrix A =
+1  2  3
+4  5  6
+7  8  9;
+, Rewrite row one of the matrix as a column:
+
+
+transpose of matrix A = AT
+
+first column of AT:
+1
+2
+3
+
+, The second row of the original matrix becomes the second column of its transpose. Repeat this pattern until you have turned every row into a column:
+
+
+
+AT =
+1  4  7
+2  5  8
+3  6  9
+
+, The transposition is exactly the same for a non-square matrix. You rewrite the first row as the first column, the second row as the second column, and so forth. Here's an example with color-coding to show you where the elements end up:
+
+
+matrix Z =4  7  2  13  9  8  6
+
+matrix ZT =4  37  92  81  6
+
+
+, The concept is pretty simple, but it's good to be able to describe it in mathematics. No jargon is required beyond basic matrix notation:
+
+
+If matrix B is an m x n matrix (m rows and n columns), the transposed matrix BT is an n x m matrix (n rows and m columns).For each element bxy (xth row, yth column) in B, the matrix BT has an equal element at byx (yth row, xth column).
+ If you switch them again, you're back where you started.
+ In a square matrix, transposition "flips" the matrix over the main diagonal. In other words, the elements in a diagonal line from element a11 to the bottom right corner will remain the same. Each other elements will move across the diagonal and end up at the same distance from the diagonal, on the opposite side.
+
+
+If you can't visualize this, draw a 4x4 matrix on a piece of paper. Now fold is over the main diagonal. See how elements a14 and a41 touch? They trade places in the transpose, as does each other pair that touches when folded.
+ A symmetric matrix is symmetric across the main diagonal. If we use the "flip" or "fold" description above, we can immediately see that nothing changes. All the element pairs that trade places were already identical.In fact, this is the standard way to define a symmetric matrix. If matrix A = AT, then matrix A is symmetric.
+ Complex matrices have elements with a real and imaginary component. While you can take an ordinary transpose of these matrices, most practical calculations involve the conjugate transpose instead.Matrix C =
+2+i     3-2i
+0+i     5+0i
+
+
+, The complex conjugate changes the sign of the imaginary components, without altering the real components. Perform this operation for all elements of the matrix.
+
+
+complex conjugate of C =
+2-i     3+2i
+0-i     5-0i
+
+
+, Take an ordinary transposition of the result. The matrix you end up with is the conjugate transpose of the original matrix.
+
+
+conjugate transpose of C = CH =
+2-i        0-i
+3+2i     5-0i
+
+

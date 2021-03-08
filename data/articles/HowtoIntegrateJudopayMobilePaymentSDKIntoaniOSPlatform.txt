@@ -1,0 +1,10 @@
+ In case you do not, open an account. This account will give you access to the Judopay dashboard from where you can download the development tools and SDKs.;
+, Click on 'Get Started'. Ensure to provide your name and email address. Once you have completed filling in your details, on submission, you will be sent a temporary password in your email ID.
+ After filling in these details, you will be immediately asked to change your password. You will be asked to accept Judopay's terms and conditions ensure that you do so.
+ Click on the 'Get Started' tab and input the name of your application and click on 'Add'. This will generate your sandbox API secret and API token.
+, Two Judopay frameworks must be added to the project's framework directory. They are Judopay.framework (this includes all the codes used to make the SDK function) and Judopay.bundle (this contains all design assets (like icon images etc.)). In the unzipped SDK folder, open your 'Framework' Directory and drag and drop Judopay.framework and Judopay.bundle into your Xcode projects frameworks directory.
+ Generate a link to the SDK within your App Delegate code. Following is a diagram illustrating on how to do this. First, you need to open AppDelegate.m and at the top of the file add this:#import <JudoPay/JudoPay.h>
+
+, You should add the following if you want to use the sandbox for testing, 'didFinishLaunching With Options' ; And below this, you also need to mention the secret and the token ;
+
+,

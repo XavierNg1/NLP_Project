@@ -1,0 +1,61 @@
+ It is possible that the cable you are using is defective. In some cases, using an uncertified charging cable can result in reduced functionality., It is possible that the USB port you are using is defective. Try both different ports and buses on the computer.
+
+
+If you are using a desktop (tower) PC with both front and rear USB ports, you can often use one set even if the other is malfunctioning, since they are usually connected to a different bus.
+If you have both USB 2.0 and USB 3.0 ports, they usually utilize separate USB chips and will function separately.
+If you are using a USB hub, try using a root port on the computer instead. This will tell you whether the hub or the computer bus is at the heart of the problem.
+ If the iPod battery is completely depleted, it may not be detected until it is charged enough to power on.
+
+
+Connect the iPod to a wall charger for a faster charge than via USB.
+ In iTunes, open the “Help” menu and select “Check for Updates”.
+
+
+You may need to hit Ctrl+B to make the menu bar appear.
+You can also download the latest version of iTunes from https://www.apple.com/itunes/download/.
+Later versions of iTunes may utilize a newer version of the Apple Mobile Device Driver.
+ Open Windows Settings and Select “Update and Security”. Click “Check for Updates” to receive the latest updates to your operating system.
+
+
+Updates to Windows may include updates to USB chips or other relevant software.
+On older versions of Windows, look for Windows Update in the Control Panel.
+ Plug the USB cable that you use to charge the iPod into one of the USB ports on the computer. If an alert box appears on your iPod or computer saying “Trust This Computer”, choose “Yes”.
+Make sure that the USB cable is firmly plugged into both the iPod and the computer.
+ Hit ⊞ Win+S and enter “Device Manager” into the search field. Select “Device Manager” from the results.
+ Click the arrow next to the list item to expand. This is located at the bottom of the list and you should see “Apple Mobile Device Driver” displayed in the expanded list. If you do not see Apple Mobile Device Driver listed here, try disconnecting and reconnect your device. If you still do not see it, check for an “Apple” device listed in “Imaging Devices” or “Portable Devices” and proceed to the manual update steps.
+ You may see a down arrow, an exclamation/question mark, or no icon at all.
+
+
+If you see a down arrow icon, right-click the “Apple Mobile Device Driver” and select “Enable”.
+If you see an exclamation/question mark, proceed to the manual update steps.
+If you see no icon then try restarting the Apple Mobile Device Service.
+ A window will appear prompting you how to update.
+ This will take you to another page with more options.
+ This is located at the bottom of the page and will take you a new page with browsing options.
+ This is located in the lower right, just below the list of hardware.
+ This is located in the bottom right corner of the “Browse” popup window.
+ The most common filepath for this is: “C:\Program Files\Common Files\Apple\Mobile Device Support\Drivers”.
+
+
+On newer 64-bit operating systems, the likely filepath is “C:\Program Files (x86)\Common Files\Apple\Mobile Device Support\Drivers”.
+ Once selected, click “Open” to return to the “Have Disk” page with the full filepath displayed.
+
+
+If you do not see the file listed here, then you may be in the wrong folder location. Double check your filepath.
+ Click “Next”, then “Finish” as prompted. Windows will now install/update the driver.
+ Once the download is complete your device will appear in iTunes.
+
+
+If you still do not see your device, try restarting the Apple Mobile Device Service.
+ Click the red ‘X” in the upper right corner.
+ If you still have the device manager open, the listing for the Apple Mobile Device Driver will disappear.
+ This will open up the Windows “Run” command.
+ This will open up the Windows Services console.
+ All services appear on the right in descending alphabetical order.
+ This menu is located about halfway down the “General” tab.
+ This button is located below the dropdown menu. After a moment the Service Status will display “Stopped”.
+ This button is located to the left of “Stop”. After a moment the Service Status will display “Running”.
+ This will save your settings and close the window.
+ This ensures that your changes will take effect.
+ Once booted into the OS, connecting the device will launch iTunes automatically and appear listed in the software.It is possible that you may need to launch iTunes manually, but the device should still successfully appear listed among your devices in iTunes.
+

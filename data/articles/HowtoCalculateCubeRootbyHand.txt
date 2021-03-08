@@ -1,0 +1,105 @@
+ Solving the cube root of a number is going to look like solving a long division problem, with a few special differences. The first step is to set up the problem in the proper format.Write down the number whose cube root you want to find. Write the digits in groups of three, using the decimal point as your starting place. For this example, you will find the cube root of 10. Write this as 10. 000 000. The extra 0s are to allow precision in the solution.
+
+Draw a cube root radical sign over the number. This serves the same purpose as the long division bar line. The only difference is the shape of the symbol.
+
+Place a decimal point above the bar line, directly above the decimal point in the original number.
+;
+, You will use these in the computations. These cubes are as follows:
+
+
+13=1∗1∗1=1{\displaystyle 1^{3}=1*1*1=1}
+
+
+23=2∗2∗2=8{\displaystyle 2^{3}=2*2*2=8}
+
+
+33=3∗3∗3=27{\displaystyle 3^{3}=3*3*3=27}
+
+
+43=4∗4∗4=64{\displaystyle 4^{3}=4*4*4=64}
+
+
+53=5∗5∗5=125{\displaystyle 5^{3}=5*5*5=125}
+
+
+63=6∗6∗6=216{\displaystyle 6^{3}=6*6*6=216}
+
+
+73=7∗7∗7=343{\displaystyle 7^{3}=7*7*7=343}
+
+
+83=8∗8∗8=512{\displaystyle 8^{3}=8*8*8=512}
+
+
+93=9∗9∗9=729{\displaystyle 9^{3}=9*9*9=729}
+
+
+103=10∗10∗10=1000{\displaystyle 10^{3}=10*10*10=1000}
+
+
+, Select a number that, when cubed, gives the largest possible result less than the first set of three numbers.In this example, the first set of three numbers is 10. Find the largest perfect cube that is less than 10. That number is 8, and its cube root is 2. 
+
+Write the number 2 above the radical bar line, over the number 10. Write the value of 23{\displaystyle 2^{3}}, which is 8, underneath the number 10, draw a line and subtract, just as you would in long division. The result is a 2.
+
+After the subtraction, you have the first digit of your solution. You need to decide if this one digit is a precise enough result. In most cases, it will not be. You can check by cubing the single digit and decide if that is close enough to the result you wanted. Here, because 23{\displaystyle 2^{3}} is only 8, not very close to 10, you should continue.
+ Copy down the next group of three numbers into the remainder, and draw a small vertical line to the left of the resulting number. This will be the base number for finding the next digit in the solution of your cube root. In this example, this should be the number 2000, which is formed from the remainder 2 of the prior subtraction, with the group of three 0s that you pull down.To the left of the vertical line, you will be solving the next divisor, as the sum of three separate numbers. Draw the spaces for these numbers by making three blank underlines, with plus symbols between them. 
+
+
+, For the first part of the divisor, write down three hundred times the square of whatever is on top of the radical sign. In this case, the number on top is 2, 2^2 is 4, and 4*300=1200. So write 1200 in the first space. The divisor for this step of the solution will be 1200, plus something that you will find next., Find the next digit of your solution by selecting what you can multiply by the divisor, 1200-something, to then subtract from the remainder of 2000. This can only be 1, since 2 times 1200 would be 2400, which is greater than 2000. Write the number 1 in the next space above the radical sign., The divisor for this step of the solution is made up of three parts. The first part is the 1200 that you already have. You need to add two more terms to that to complete the divisor.Now calculate 3 times 10 times each of the two digits that are in your solution above the radical sign. For this sample problem, that means 3*10*2*1, which is 60. Add this to the 1200 that you already have to make 1260.
+
+Finally, add the square of the last digit. For this example, that is a 1, and 1^2 is still 1. The total divisor is, therefore 1200+60+1, or 1261. Write this to the left of the vertical line.
+ Complete this round of the solution by multiplying the last digit of your solution - in this case, the number 1 - times the divisor you just calculated, 1261. 1*1261 =1261. Write this under the 2000, and subtract, to give 739.
+ After you complete the subtraction portion of each step, you need to consider whether your answer is precise enough. For the cube root of 10, after the first subtraction, your cube root was just 2, which is not very precise. Now, after a second round, the solution is 2.1.You can check the precision of this result by cubing 2.1*2.1*2.1. The result is 9.261. 
+
+If you believe your result is precise enough, you can quit. If you want a more precise answer, then you need to proceed with another round.
+ In this case, for more practice and a more precise answer, repeat the steps for another round, as follows:Drop down the next group of three digits. In this case, these are three 0s, which will follow the 739 remainder to give 739,000.
+
+Begin the divisor with 300 times the square of the number currently above the radical line. This is 300∗212{\displaystyle 300*21^{2}}, which is 132,300.
+
+Select the next digit of your solution so that you can multiply it by 132,300 and have less than the 739,000 of your remainder. A good choice would be 5, since 5*132,300=661,500. Write the digit 5 in the next space above the radical line.
+
+Find 3 times the prior number above the radical line, 21, times the last digit you just wrote, 5, times 10. This gives 3∗21∗5∗10=3,150{\displaystyle 3*21*5*10=3,150}.
+
+Finally, square the last digit. This is 52=25.{\displaystyle 5^{2}=25.}
+
+Add the parts of your divisor to get 132,300+3,150+25=135,475.
+ After you have calculated the divisor for this next round and you have expanded your solution by one more digit, proceed as follows:
+
+Multiply the divisor by the last digit of your solution. 135475*5=677,375.
+
+Subtract. 739,000-677,375=61,625.
+
+Consider whether the solution of 2.15 is precise enough. Cube it to get 2.15∗2.15∗2.15=9.94{\displaystyle 2.15*2.15*2.15=9.94}.
+ The result above the radical is the cube root, accurate at this point to three significant figures. In this example, the cube root of 10 is 2.15. Verify that by calculating 2.15^3=9.94, which approximates 10. If you need greater accuracy, simply continue the process as long as you desire.
+ If you are asked for a cube root of nearly any number, begin by selecting a perfect cube that is as near as possible, without exceeding your target number.
+
+For example, if you want to find the cube root of 600, recall (or use a table of cube numbers) that 83=512{\displaystyle 8^{3}=512} and 93=729{\displaystyle 9^{3}=729}. Therefore, the solution for the cube root of 600 must be something between 8 and 9. You will use the numbers 512 and 729 as upper and lower boundaries for your solution.
+ The first digit came from your knowledge of certain cube numbers. For the next digit, estimate some number between 0 and 9 based on where your target number falls between the two boundary numbers.
+
+In the working example, the target of 600 falls about halfway between the boundary numbers of 512 and 729. So, select 5 for your next digit.
+ Try multiplying out the estimate that you are currently working with to see how close you get to the target number.
+
+In this example, multiply 8.5∗8.5∗8.5=614.1.{\displaystyle 8.5*8.5*8.5=614.1.}
+
+
+, After cubing your last estimate, check where the result falls in comparison to your target number. If the result is over the target, you will need to drop your estimate by one or more. If the result is below the target, you may need to adjust upward until you exceed the target.
+
+For example, in this problem, 8.53{\displaystyle 8.5^{3}} is greater than the target of 600. So you should reduce the estimate to 8.4. Cube this number and compare to your target. You will find that 8.4∗8.4∗8.4=592.7{\displaystyle 8.4*8.4*8.4=592.7}. This is now lower than your target. Therefore, you know that the cube root of 600 must be at least 8.4 but less than 8.5.
+ You will continue this process of estimating digits from 0 to 9 until your answer is as precise as you want it to be. For each round of estimating, begin by noting how where your latest calculation falls between the boundary numbers.
+
+In this working example, your last round of calculations shows that 8.43=592.7{\displaystyle 8.4^{3}=592.7}, while 8.53=614.1{\displaystyle 8.5^{3}=614.1}. The target of 600 is slightly closer to 592 than it is to 614. So for your next guess, begin by choosing a number slightly less than halfway between 0 and 9. A good guess would be 4, for a cube root estimate of 8.44.
+ As many times as necessary, cube your estimate and see how it compares to your target. You want to find the numbers that are just below and just above the target number.
+
+For this working example, begin by finding that 8.44∗8.44∗8.44=601.2{\displaystyle 8.44*8.44*8.44=601.2}. This is just barely above the target, so drop down and test 8.43. This will give you 8.43∗8.43∗8.43=599.07{\displaystyle 8.43*8.43*8.43=599.07}. Therefore, you know that the cube root of 600 is something more than 8.43 and less than 8.44.
+ Continue the steps of estimating, comparing and re-estimating as long as necessary, until your solution is as precise as you desire. Notice that with each decimal place, your target numbers will be getting closer and closer to the actual number.
+
+For the example of the cube root of 600, when you used two decimal places, 8.43, you were away from the target by less than 1. If you continue to a third decimal place, you would find that 8.4343=599.93{\displaystyle 8.434^{3}=599.93}, less than 0.1 from the true answer.
+ To understand why this algorithm works for finding cube roots, you first need to recall what the cubic expansion looks like for a binomial. You probably learned this in Algebra or Algebra II in high school (and, if you’re like most people, probably forgot it soon after). Select two variables A{\displaystyle A} and B{\displaystyle B} to represent single digit numbers. Then create the binomial of (10A+B){\displaystyle (10A+B)} to represent a two digit number.Using the term 10A{\displaystyle 10A} is what creates a two digit number. Whatever digit you select for A{\displaystyle A}, 10A{\displaystyle 10A} will put that digit into the tens column. For example, if A{\displaystyle A} is 2 and B{\displaystyle B} is 6, then (10A+B){\displaystyle (10A+B)} becomes 26., We are working backward here, by creating the cube first, to then see why the solution for cube roots works. We need to find the value of (10A+B)3{\displaystyle (10A+B)^{3}}. You do this by multiplying out (10A+B)∗(10A+B)∗(10A+B){\displaystyle (10A+B)*(10A+B)*(10A+B)}. This is too lengthy to show right here, but the end result is 1000A3+300A2B+30AB2+B3{\displaystyle 1000A^{3}+300A^{2}B+30AB^{2}+B^{3}}.For more about expanding the binomial to get this result, you can see Multiply Binomials. For a more advanced, shortcut version, read Calculate (x+y)^n with Pascal's Triangle.
+ Notice that the method for calculating the cube root works like long division. In long division, you find two factors that multiply together to give the product of the number you begin with. In the calculation here, the number you are solving for (the number that winds up on top of the radical sign) is the cube root. That means that it represents the (10A+B) term. The actual A and B are irrelevant for now, as long as you just recognize the relationship to the answer., When you look at the expanded polynomial, you can see why the cube root algorithm works. Recognize that the divisor of each step of the algorithm is the sum of four terms that you need to calculate and add together. These terms come about as follows:The first term contains a multiple of 1000. You first a number that could be cubed and stay within the range for the long division for the first digit. This provides the term 1000A^3 in the binomial expansion.
+
+The second term of the binomial expansion has the coefficient of 300. (This actually comes from 3∗102{\displaystyle 3*10^{2}}.) Recall that in the cube root calculation, the first digit in each step is multiplied by 300.
+
+The second digit in each step of the cube root calculation comes from the third term of the binomial expansion. In the binomial expansion, you can see the term 30AB^2.
+
+The final digit of each step is the term B^3.
+ As you perform the long division algorithm, each step that you complete provides more precision for your answer. For example, the sample problem worked in this article is to find the cube root of 10. In the first step, the solution is just 2, because 23{\displaystyle 2^{3}} is close, but less than 10. In fact, 23=8{\displaystyle 2^{3}=8}. After a second round, you get the solution of 2.1. When you work this out, 2.13=9.261{\displaystyle 2.1^{3}=9.261}, which is much closer to the desired value of 10. After a third round, you have 2.15, which gives 2.153=9.94{\displaystyle 2.15^{3}=9.94}. You can keep working in groups of three digits to get as precise an answer as you need.

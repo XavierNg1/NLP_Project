@@ -1,0 +1,37 @@
+ If you do not already have a Git program, go to https://git-scm.com/downloads and choose and installer for the platform you are using.
+
+
+If you are setting up git for the first time you also need to clone or import/create a repository before contributing to it.;
+, Enter “cd <path_to_project_folder>” in the command line and hit ↵ Enter, where <path_to_project_folder> is the directory chain that leads to where you cloned or created your project folder.
+
+
+You can drag and drop the folder into the Git command window to automatically fill out the directory path.
+ Enter “git pull origin master” into the command line and hit ↵ Enter. A message will appear letting you know that repository is up to date.
+
+
+Master is the default branch on a project.
+ Open your web browser and enter your repository’s unique github URL.
+ This is located in the upper left of the page and will open a list of other branches and a text box.
+ This will create a new branch off the master branch using whatever name you entered into the text box.
+
+
+You can also create a branch from the command line. Enter “git checkout branch -b <branch_name>” and hit ↵ Enter, where <branch_name> is whatever you want your branch to be called.You can now use “git commit” and “git push” to safely make changes to your branch without affecting the main project. Making a pull request will allow others to review and discuss your changes before merging them back into the main branch., Click the Pencil icon to edit a file on the repository. Once edits are made, enter a commit message and click “Commit” from the window below the editing area.
+
+
+You can also make commits from the command line. This is useful when making changes to files locally rather than on the git website. Enter “git commit -m <message>” into the command line and hit ↵ Enter after making changes to a file. <Message> should be a brief description of the changes you made.
+Commit message text can be anything, but something here is required.
+ This is located along the top menu bar on your repository page.
+
+
+A Pull Request is a Git feature used to present changes made on independent branches for review by collaborators before being merged into the main project.
+ This will display the changes you made compared with the original content on the master branch.
+ Once you are satisfied with the state of your changes, this is the green button in the upper left, by the branch dropdown.
+ Use these fields to help identify and briefly describe the change you are making to other collaborators.
+ This will create the pull request with the entered name and description.
+ This button appears in the lower right once the pull request has been successfully created.
+
+
+You can also use “git merge <branch_name>” in the command line to perform the same action.
+ A notification will appear informing you that the pull request was successfully merged back into the master branch. Since your branch is no longer necessary, you will be prompted to delete it.If you have any merge conflicts, you will be notified and unable to proceed with the merge. You will need to go back and re-pull from the master branch to make your own branch up to date with any changes, then create a new pull request.
+ This will appear in the notification next to the purple branch icon. Deleting merged and outdated branches is a good way to keep a project organized and easy to manage.
+

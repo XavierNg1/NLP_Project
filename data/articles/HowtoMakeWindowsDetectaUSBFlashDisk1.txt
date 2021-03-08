@@ -1,0 +1,15 @@
+ Unplug the device and wait five seconds, then plug the device back in. This will cause Windows to attempt to re-read the device if it was unplugged for a period of time.If the device is plugged into a USB hub that does not feature an external power supply, try plugging the device in without the hub. A USB hub may not have enough power to process the device. If the device features an external power source, the hub may need to be replaced.;
+, If your computer is not able to recognize the USB device in its current port, you can try another port on your computer or try it on another computer.
+
+
+Plug-in your device into another port will cause Windows to attempt to initiate the installation process.
+If your computer is not able to recognize the device, try plugging the USB flash disk into another computer to ensure the device is not corrupted.
+USB ports that are part of a group will share one power source. Plugging your USB flash disk next to a device that draws a lot of power such as a USB-connected hard drive or a USB-connected printer may cause your USB flash disk to improperly function.
+ Open the Device Manager program by pressing ⊞ Win+R to bring up the run command. Type in “devmgmt.msc” and press ↵ Enter. You will see a list of connected devices. Locate the name of your USB flash disk, right-click on it and choose “Uninstall” to uninstall the device from your computer. Restart your computer and attempt to reinstall the USB flash disk and its drivers.
+
+
+Your device may show an exclamation point next to it indicating that the installation process of the drivers has failed. Attempt to reinstall the drivers to your device once the corrupt driver is uninstalled and your computer has been restarted.
+ Disk Manager is a diagnostic tool in Windows that monitors the activity of all connected storage solutions. To run Disk Manager, bring up the run command by pressing ⊞ Win+R and enter in “diskmgmt.msc” and press ↵ Enter. The diagnostic tool will open in a new window showing a list of drives. Look for your USB flash disk to see if it appears and check for the following signs.Check to see if the device appears in the Disk Manager but not in the Windows explorer. If it does not appear in either, this may indicate a problem with the USB port. Make sure there is enough power for the USB device to work, otherwise try a different USB port.
+Check the partition status next to your USB flash disk. If its status does not show healthy and with a drive letter, this shows signs of corruption on the flash disk and will need to be repaired or formatted.
+ If the storage device is corrupted, you will need to search online for a data recovery tool or alternatively you can format the drive by right clicking on the USB flash disk in either the Disk Manager or on File Explorer and click on “Format” to delete all data on the drive and allow the storage to become usable.
+

@@ -1,0 +1,28 @@
+ Before you can purchase and install an SSL certificate, you will need to generate a CSR on your server. This file contains your server and public key information, and is required to generate the private key. You can create a CSR in IIS 8 with just a few clicks of the mouse:Open the Server Manager.
+Click Tools and select Internet Information Services (IIS) Manager.
+Select the workstation you are installing the certificate on under the Connections list.
+Open the Server Certificates tool.
+Click the Create Certificate Request link in the upper-right corner, under the Actions list.
+Fill in the information in the Request Certificate wizard. You will need to enter your two-digit country code, the state or province, city or town name, full company name, section name (i.e. IT or Marketing), and the common name (typically the domain name).
+Leave the “Cryptographic service provider” set to default.
+Set “Bit length” to “2048”.
+Name the certificate request file. The file name doesn't matter, as long as you can find it amongst your files.
+ There are several services online that offer SSL certificates. Make sure to only order from a reputable service, since you and your customer’s security is at stake. Popular services include DigiCert, Symantec, GlobalSign, and more. The best service for you will vary depending on your needs (multiple certificates, enterprise solutions, etc.).
+
+You will need to upload your CSR file to the certificate service when you order it. This will be used to generate the certificate for your server. Some providers will have you copy the contents of the CSR file, while others will have you upload the file itself.
+ You will need to download the Intermediate Certificates from the service that you purchased your certificates from. You will receive your Primary Certificate via email or through the customer area of the website.
+
+Rename the Primary Certificate to “yoursitename.cer”.
+ From here, click the “Complete Certificate Request” link underneath the “Create Certificate Request” link you clicked to generate a CSR., Once you’ve located it on your computer, you’ll need to apply a “Friendly name” to it, which is the quick name for identifying the certificate on your server. Store the certificate in the “Personal” store. Click OK to install the certificate.
+
+Your certificate should appear on the list. If it does not, ensure that you are using the same server that you generated the CSR on.
+ Now that the certificate has been installed, you’ll need to bind it to the website that you want to protect. Expand the “Sites” folder in the Connections list, and then click on the website.
+
+Click the Bindings link in the Actions list.
+Click the Add button in the Site Bindings window that appears.
+Select “https” from the “Type” dropdown menu, and select your installed certificate from the “SSL certificate” dropdown menu.
+Press OK and then Close.
+ Find the Intermediate Certificates that you downloaded from the certificate provider. Some providers provide more than one certificate that needs to be installed, while others only have one. Copy these certificates to a dedicated folder on your server. Once the certificates have been copied to the server, double-click it to open the Certificate Details.
+Click the General tab. Click the “Install Certificate” button at the bottom of the window.
+Select “Place all certificates in the following store” and then browse for the Local store. It can be found by checking the “Show physical stores” box, selecting Intermediate Certificates, and then clicking Local Computer.
+ In order to start distributing certificates, you’ll need to restart your IIS server. To restart IIS, click Start and then select Run. Type “IISREset” and then press Enter. The Command Prompt will appear and display the status of the IIS restart., Use various web browsers to test that your certificate is working properly. Connect to your website using “https://” to force the SSL connection. You should see the padlock icon in your address bar, usually with a green background.

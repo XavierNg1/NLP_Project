@@ -1,0 +1,100 @@
+ Reversing a string means to switch the ordering of the characters in a string. For example, the reverse of the string "Hello!" is "!olleH". There are many ways to reverse a string in Java.
+ Create a StringBuffer object that takes in the string that you want to reverse as a parameter. Use the StringBuffer's reverse() method and then retrieve the newly reversed string by using the toString() method.
+
+
+
+
+
+
+public class StringManipulation {
+    public static void main(String[] args) {
+        String str = "Hello!";
+        StringBuffer buffer = new StringBuffer(str);
+        String reversedStr = buffer.reverse().toString();
+        System.out.println("The reverse of the string \""
+                + str + "\" is \"" + reversedStr + "\".");
+    }
+}
+
+
+
+
+
+, Create a new StringBuffer object initialized with the length of the string that you wish to reverse as the parameter. Then use a for loop to iterate through the string, starting from the last character in the string and ending at the first character in the string. At each iteration, append the character at that index to the StringBuffer. Retrieve the newly reversed string by using the toString() method.
+
+
+
+
+
+
+public class StringManipulation {
+    public static void main(String[] args) {
+        String str = "Hello!";
+        StringBuffer buffer = new StringBuffer(str.length());
+        for (int i = str.length() - 1; i >= 0; i--) {
+            buffer.append(str.charAt(i));
+        }
+        String reversedStr = buffer.toString();
+        System.out.println("The reverse of the string \""
+                + str + "\" is \"" + reversedStr + "\".");
+    }
+}
+
+
+
+
+
+, In the recursive function, the base case / condition is if the string is null or if the length of the string is less than or equal to none. Otherwise, the reverse() method is called again with the string minus the first character, and the first character is tacked on at the end. So if we passed in the string "Hello!", the first reverse() call after that will have the parameter "ello!".
+
+
+
+
+
+
+public class StringManipulation {
+    public static void main(String[] args) {
+        String str = "Hello!";
+        String reversedStr = reverse(str);
+        System.out.println("The reverse of the string \""
+                + str + "\" is \"" + reversedStr + "\".");
+    }
+ 
+    private static String reverse(String str) {
+        if (str == null || str.length() <= 1)
+            return str;
+        return reverse(str.substring(1)) + str.charAt(0);
+    }
+}
+
+
+
+
+
+, characters. First convert the string to an array of characters by using the toCharArray() method on the string. Get the index of the last character in the array, which is equal to the length of the array minus one. Then iterate through the array, swapping the ith character and the indexOfLastChar - ith character at each iteration. Finally, convert the character array back to a string.
+
+
+
+
+
+
+public class StringManipulation {
+    public static void main(String[] args) {
+        String str = "Hello!";
+        char[] charArray = str.toCharArray();
+        int indexOfLastChar = charArray.length - 1;
+        for (int i = 0; i < charArray.length/2; i++) {
+            char temp = charArray;
+            charArray= charArray;
+            charArray= temp;
+        }
+        String reversedStr = new String(charArray);
+        System.out.println("The reverse of the string \""
+                + str + "\" is \"" + reversedStr + "\".");
+    }
+}
+
+
+
+
+
+, Here is the output that results from any one of these methods for string reversal.

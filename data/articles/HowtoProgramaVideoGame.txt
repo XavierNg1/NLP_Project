@@ -1,0 +1,35 @@
+ Few game developers reinvent the wheel and write their own game engine from scratch, especially for their first game. If you want to dive right in, but still have plenty of opportunities for programming, using a game engine is a good option. An engine typically includes higher-level tools for altering 3D models, scripting events, and other common game applications, but will still provide plenty of hands-on programming opportunities.
+
+
+Popular programming-heavy examples include Unity, UDK, Unreal Engine 4, and CryENGINE.;
+, A framework is a step below a game engine, but still provides a set of tools and APIs (application program interfaces) to save you time and streamline your coding projects. Consider this the minimum level of software to use for your first gaming project, and even then you should feel comfortable introducing yourself as a programmer, or have a deep interest in the behind-the-scenes work on game engines. Depending on the exact framework and/or game engine you are using, you may want to do some of the work in additional, specialized APIs, such as the popular OpenGL for creating 3D graphics.
+
+
+Polycode, Turbulenz, and MonoGame are example of frameworks created with both 2D and 3D games in mind., An Integrated Development Environment is a general-purpose compiler and collection of source files that makes complex programming projects easier to build.An IDE will make programming a game much more convenient, especially if it comes with built-in ways to interact with graphics and audio systems.
+
+
+Visual Studio and Eclipse are two examples, but there are many others. Look for an IDE based around a language you are familiar with.
+ Most of the tools above are based in a popular programming language, so following the accompanying tutorials will give you a great start. While you can create a game in almost any sufficiently powerful programming language, the most common languages are C++ or C# for all devices, Flash ActionScript or HTML5 for browsers, and Java or Objective C for mobile devices. These are good options if you are aiming to eventually get hired by an existing game studio, but plenty of independent games are created using Python, Ruby, or JavaScript.
+ Flesh out the concept of the game as much as you can before you begin, including the genre, mood, and type of gameplay. If you start programming before the concept is clear, you'll likely have to tear apart and rewrite a significant amount of work. This will probably happen anyway, but a solid plan will keep these events to a minimum.
+
+
+All but the most experimental games have a progress arc, so this is a good place to start the planning. Progress typically happens through one or more of the following: discovering more about the plot and characters, making decisions that affect the storyline, gaining new abilities or higher stats, exploring new areas, or solving harder and harder puzzles.
+ Collect or create all the textures, sprites, sounds, and models you will need for your game. There are quite a few collections of free game assets, so do some searching. If you are making a 2D game and don't have an artist to help out, you could create your own pixel art.
+ The script tells the engine what to do and when to do it. If you used an open source engine, chances are that it already has a scripting language, and probably tutorials that will teach you how to use it. If you build your own engine then you will have to create your own scripting language. Either way, you'll need these major components at minimum:
+
+A constantly running game loop that checks for user input, processes the result, processes other events, calculates what needs to be displayed, and sends this to the graphics card. This should run at least 30 times per second.
+"Active listener" scripts that check for events and respond when they occur. For example, one script can watch for a player interacting with a door, then run the "open" animation and make the doorway non-collidable. Another script can watch for a weapon hitbox contacting the door, and run the "blow apart" animation instead.
+ Level design — which may involve a literal "level 1," an area the player can explore, or the next round of a fighting game — will test some skills unrelated to programming. Start with a simple level showcasing typical gameplay, following this basic guideline for genres that involve traveling through environments:
+
+
+Create the basic outline of the area.
+Decide on the basic path the player will most often take through the area. Add challenges and benefits (items) along this path. Space them close together for adrenaline and excitement, or farther apart for a more relaxed atmosphere.
+Start adding graphical elements. Place light sources along the main path to encourage players to follow it, and keep the side paths or less important areas dim.
+Match the gameplay, style, and setting. For example, a suspenseful horror game thrives on stretches of empty exploration punctuated by surprise attacks. A never-ending barrage of enemies overwhelms the player with adrenaline instead, while combat that requires careful tactical planning can distract the player from the emotional atmosphere.
+ Now you get to see what all your hard work has turned into. Test each level while you are polishing it, and many times after it is "finished." Make a conscious attempt to play the game in ways you didn't intend, such as playing through more difficult areas first. Better yet, find playtesters to get fresh eyes on the game, and ask for as much feedback as possible.
+
+
+Watch someone play without giving them advice, unless it's basic tutorial information that hasn't been added to the game yet. Frustrating mistakes and points where the player gets "stuck" are signs that you need to include more guidance.
+Once the game (or at least a level) is fairly complete, try to find strangers or acquaintances to help playtest. Friends tend to be more optimistic, which is great for providing encouragement but not as helpful for predicting how players will react.
+ If you finish the project, you may want to release it for free or put it up for sale, but make sure you read the terms and conditions for any game engines or software you used. Whether or not you complete the game as you envisioned it, you may want to "cannibalize" some assets and ideas for a different or more ambitious project, or take the lessons you learned and start all over again!
+

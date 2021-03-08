@@ -1,0 +1,18 @@
+ Here is an example scenario:
+
+
+This example shows us a simple network configuration. We have a headquarters with a server farm. This is also where the network management system is located on the network. We also have two remote sites. Each site has users, and it is connected through an MPLS virtual private network:
+In this situation, let’s say that a syslog message comes into you main router at headquarters, identifying an internet issue. It tells you that the connection to “Site A” is down. Your NMS is showing green for that connection.
+
+What should you do?
+
+;
+, Where is this data being pulled from? It is possible that your remote site is actually fine. Should you trust a syslog message? Or should you collect polling data into your NMS? Using your NMS, poll “Site A” to see if the router or switch is down.
+,, This is known as checking an adjacent interface:
+
+, Often times, you can trace a problem back to a recent change if the issue is not a WAN problem. This can be a misconfiguration on a router, switch or other network device. If you have taken proper backup steps, it shouldn’t be a problem to revert those changes.
+
+
+These few critical steps are helpful to track down a network fault. In the case of it being the MPLS, you have problems on your node. Otherwise, start checking for network configuration changes on your network right away.
+ Having your tools properly configured is a big step toward being prepared for a problem.
+

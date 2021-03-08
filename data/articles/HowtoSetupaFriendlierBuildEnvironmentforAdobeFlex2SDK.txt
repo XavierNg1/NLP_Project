@@ -1,0 +1,142 @@
+
+Log in, or sign up for an 'account' if you don't have one. You can't download it without the account.
+Download the 'Flex SDK'.;
+,
+
+
+Go to the Flex 2 SDK Documentation page.
+Download the 'Documentation ZIP file' at the bottom of the list.
+
+Download a JEdit installer/package for your operating system
+
+,
+
+
+Follow the prompts and instructions.
+
+
+
+Make a folder somewhere, like 'C:\Flex' and unzip/extract all the files in your 'flex_sdk_2.zip' to it.
+Make another folder in the same place and and unzip/extract all the files in 'flex201_documentation.zip' to it.
+Make a shortcut to your (wherever you put it)\flex201_documentation\langref\index.html on the desktop. This will make most of the online documents from the Adobe web site into a quick local access to your hard drive.
+Add (wherever you put it)\bin from the Flex SDK folder to the system PATH (System Properties->Advanced->Environment Variables for Windows 2000, XP, Vista). This will make it so any command line can find the 'mxmlc' compiler. (The compiler tools will find the libraries, etc. based on that path. More on this later.)
+Go to the (wherever you put it)/player/debug folder
+Install Flash Player 9.
+
+
+
+Go to Plugins->Plugin Manager..., pick the 'Install Tab'.
+Wait for the list to be populated from the internet.
+Check Console.
+Check ErrorList.
+Check Project Viewer.
+Check BufferTabs.
+Click the 'Install' button, and tell it 'yes' to any 'dependencies' that it calls out.
+
+If you have problems, press the 'Download Options...' button, click the 'Update Mirrors' button in the window that pops up and choose a mirror site to get your download from, then try again.
+
+
+Restart JEdit.
+
+
+
+Go to Plugins->Console->Console.
+
+Click on the little down-arrow under the 'JE' icon (upper-left) and pick 'Dock at bottom'.
+
+
+Go to Plugins->ErrorList->ErrorList.
+
+Click on the little down-arrow under the 'JE' icon (upper-left) and pick 'Dock at bottom'.
+
+
+Go to Plugins->Project Viewer->Show Project Viewer.
+
+Click on the little down-arrow under the 'JE' icon (upper-left) and pick 'Dock at left'.
+
+
+Go to Plugins, Check 'Buffer Tabs'.
+Go to Utilities->File System Browser.
+
+Click on the little down-arrow under the 'JE' icon (upper-left) and pick 'Dock at left'.
+
+
+
+Go to 'Plugins->Plugin Options...', Expand the tree if it isn't already.
+Pick 'BufferTabs'.
+
+Check 'Enable BufferTabs by default'.
+Set Location of BufferTabs: Top.
+
+
+Expand 'Console'.
+
+Pick 'Error Patterns' to set up a pattern for the mxmlc compiler. This will cause errors and warnings in the build output to pop up in the 'Error' window where you can click and navigate directly to the offending source code.
+Click on the '+' icon on the bottom of the window to add a new pattern.
+Type 'mxmlc' in the pop-up and press OK.
+Highlight mxmlc in the list.
+To 'Error Regexp:', copy/paste this verbatim: (.*)(\d+): col: (\d+) Error: (.*)
+To 'Warning Regexp:', copy/paste this: (.*)(\d+): col: (\d+) Warning: (.*)
+Leave 'Extra lines regexp:' blank.
+To 'Filename:', copy/paste this: $1
+To 'Line Number:', copy/paste this: $2
+To 'Error Message:', copy/paste this: $4
+
+Make sure to use $4, and not $3. The third regex glob is the 'col:' field from the error/warning.
+
+
+
+Click on the 'Console' button on the bottom of the JEdit window.
+Make sure the drop-down on top of the console pane says 'System'.
+Type mxmlc.
+
+It should blurt something about 'mxmlc -help'. That tells you that the environment is set up correctly. If it isn't, double-check the path, and as necessary restart the machine.
+Under Windows, you need to type 'cd D://' (with two slashes) in the JEdit command shell instead of 'D:' in the command window to change drives, and that's the big, odd difference between this command line window and a normal command line shell.
+
+
+Change directory to the folder you extracted Flex SDK into.
+Go to the samples sub-folder.
+Pick a project, any project. Maybe the 'photoviewer' one.
+Invoke the build.bat or build.sh, according to your OS.
+Run the swf file, or open the html file associated with it.
+
+
+
+Go to 'Macros->Record Macro...'
+Name it 'Build'.
+Go to the command, press 'Enter' and invoke the build script.
+Go to 'Macros->Stop Recording'.
+Review the 'macro', save the result.
+Repeat the same steps and make a 'Run' batch.
+Go to 'Utilities->Global Options'.
+Pick the 'Shortcuts' item.
+Pick 'Macros' from the Drop-Down that says 'Built-In-Commands'
+Assign your favorite build and run keystrokes to build/run.
+If you're a windows user, while you're at it, go back to 'Built-In-Commands' and track down 'Go to Next Buffer', 'Go To Previous Buffer' and 'Close', and assign them to Ctrl-Tab, Ctrl-Shift-Tab and Ctrl-F4, respectively.
+
+
+
+Copy the build.bat or build.sh file you ran to dbuild.bat or dbuild.sh (chmod it executable, as applicable).
+Open your dbuild and add -compiler.debug to the command line.
+Run dbuild.
+Type fdb PhotoViewer.swf (or whatever project output that you picked). You should see something about "Set breakpoints and then type 'continue' to resume the session."
+From here, you need to reference gdb manuals and articles for how to use the debugger, if you're not familiar with gdb. There are ways to invoke gdb that will automatically set up a debug environment and set breakpoints and that sort of thing. All well beyond the scope of this document.
+Type help to get a list of commands.
+Type info to get a list of things that info can give.
+Type list (some file) to see some of a file.
+Set a breakpoint on some likely function ('b someFunc')
+Type c to continue running
+Type print somevar to examine a variable, or print *somevar to see all of its contents.
+When you're done, close the Flash player and enter 'q' to quit the debugger.
+
+
+
+Do a few web searches for 'Flex 2 sample code'. Download and review simpler examples to make learning a little (or a lot) easier.
+Find something you're interested in doing and do it. Track down and look at things that others have done that are similar to get ideas.
+
+
+
+Find an interesting enough example and tear its guts out.
+Make an AS3 class like all the others in the examples from scratch, and add properties, methods and ultimately features to it until it does something interesting.
+Experiment.
+

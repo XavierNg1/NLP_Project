@@ -1,0 +1,16 @@
+ If you are unable to locate the file, try using the Search option. Click the "Start menu" and enter the file name into the Search field. In Windows 8, start typing the file name when you are at your Start screen.
+ Remove (uncheck) all the attributes of the file or folder.
+ You will need to relocate this later when forcibly deleting it in the Command Prompt.
+ You can do this by clicking on Start and typing “cmd” into the Search field without the quotation marks.
+ Leave the Command Prompt window open, but proceed to close all other open programs.
+ You can do this by either pressing Ctrl+Alt+Del and selecting "Task Manager" from the menu or by going to the Start menu, pressing "Run," and then entering "TASKMGR.EXE."
+
+, Find the process named “explorer.exe”. Select it and click on "End Process." Minimize, but do not close, Task Manager.
+ Here you may forcibly delete a file or a folder through employing a basic command line tool. While both files and folders can be deleted in basically the same way, there are subtle differences in the command you will use.
+ This will be in your command prompt.
+ In the Command Prompt window, enter cd My Documents after Your User Name.
+ After "My documents," enter the Delete command followed by the name of the file you wish to delete. For example, "del unwanted file.exe."
+
+, The final command should look as follows: C:\Documents and Settings\Your User Name\My Documents>del unwantedfile.exe, If you are seeking to delete a folder rather than a file, use the "RMDIR /S /Q" command instead of the "del" command. This will look something like this: C:\Documents and Settings\Your User Name>rmdir /s /q "C:\Documents and Settings\Your User Name\My Documents\unwanted folder", This will bring you back to Task Manager where you can click File, select New Task and then enter "EXPLORER.EXE" to restart the Windows interface.
+ The file should now be deleted but you can check by searching for it by going to Start and then entering it into the search bar.
+

@@ -1,0 +1,40 @@
+ You can either click and drag to select the column that you want to sort, or you can click one of the cells in the column to make it active and let Excel select the data automatically.
+
+
+All of your data in the column will need to be formatted in the same way in order to sort (i.e. text, numbers, dates).;
+, These can be found in the Data tab in the "Sort & Filter" section. To do quick sorts, you will be using the "AZ↓" and "AZ↑" buttons.
+ If you are sorting numbers, you can sort from lowest to highest ("AZ↓") or highest to lowest ("AZ↑"). If you are sorting text, you can sort in ascending alphanumeric order ("AZ↓") or descending alphanumeric order ("AZ↑"). If you are sorting dates or times, you can sort from earlier to later ("AZ↓") or later to earlier ("AZ↑").
+
+
+If there is another column of data next to the one you are sorting, you will be asked if you want to include that data in the sort. The sort will still be the column you originally selected, but associated columns of data will be sorted along with it.
+ If you are running into errors when you try to sort, the most likely culprit is formatting problems with the data.
+
+
+If you are sorting numbers, make sure that all of the cells are formatted as numbers and not text. Numbers can be accidentally imported as text from certain accounting programs.
+If you are sorting text, errors can arise from leading spaces or bad formatting.
+If you are sorting dates or times, troubles usually stem from the formatting of your data. In order for Excel to sort successfully by date, you need to ensure that all of the data is stored as a date.
+ Let's say you have a spreadsheet with a list of customer names as well as the city that they are located in. To make your life easier, you want to sort first alphabetically by city, and then sort each customer alphabetically within each city. Creating a custom sort can do just that.
+ This can be found in the "Sort & Filter" section of the Data tab. The Sort window will open, allowing you to create a custom sort with multiple criteria.
+
+
+If your columns have headers in the first cell, such as "City" and "Name", make sure to check the "My data has headers" box in the upper-left corner of the sort window.
+ Click the "Sort by" menu to choose the column that you want. In this example, you would first be sorting by city, so select the appropriate column from the menu.
+
+
+Keep "Sort on" set to "Values".
+Set the order to either "A to Z" or "Z to A" depending on how you want to sort.
+ Click the "Add Level" button. This will add a rule underneath the first one. Select the second column (The Name column in our example) and then select the sort order (for ease of reading, choose the same order as your first rule).
+ Your list will be sorted according to your rules. You should see the cities listed alphabetically, and then the customer names sorted alphabetically within each city.
+
+
+This example is a simple one and only includes two columns. You can, however, make your sort as complex as you would like, and include many columns., You can either click and drag to select the column that you want to sort, or you can click one of the cells in the column to make it active and let Excel select the data automatically.
+ The Sort button can be found in the Data tab in the "Sort & Filter" section. This will open the Sort window. If you have another column of data next to the one you are sorting, you will be asked if you want to include that data in the sort.
+ This will allow you to choose the first color you want to sort by.
+ In the "Order" column, you can use the drop down menu to choose which color you want to put first or last in the sort. You can only choose colors that are present in the column.
+
+
+There is no default order for color sorting. You will need to define the order yourself.
+ You will need to add another rule for each color in the column you are sorting. Click the "Add Level" to add another rule to the sort. Choose the next color that you want to sort by, and then the order that you want to sort.
+
+
+Make sure that each order is the same for each rule. For example, if you are sorting from top to bottom, make sure the "Order" section for each rule says "On Top".

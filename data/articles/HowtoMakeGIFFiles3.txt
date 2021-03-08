@@ -1,0 +1,33 @@
+ If you’d like to create an animated GIF from scratch and are comfortable using GIMP, this method will work for you. Install Gimp if you’ve not yet done so, then launch the software.
+ If you are more comfortable visualizing inches, choose “in” from the list and type your desired image size.
+Next to “Fill with,” choose a color to use for the background of your GIF. There are two boxes beneath the side tool bar filled with colors—selecting “Foreground color” will use the color of the front square as the image color, and “Background color” will use the rear square color.
+Click “OK” to create your image.
+, Click the small square piece of paper at the bottom left corner of the Layers box to open the New Layer dialog.
+
+
+Type a name for your layer next to “Layer name” so you can easily switch between layers later.
+To ensure a seamless animation, set the color to “Transparent,” then click “OK.”
+
+, If you want to draw on this later, click the paintbrush icon in the sidebar, select a color, and draw your picture. To insert text, click the “A” on the sidebar, then click somewhere to begin typing.
+
+
+Anything you put in this layer will be animated together. In other words, if you type some text and draw an image on this layer, these two elements will be in the same frame of the animation.
+After you’re done putting images or text on this layer, look at the layers dialog and notice the “Opacity” option. To make a layer less opaque, slide the knob down until you see your desired results.
+ This step can be repeated for as many different layers as you’d like in your animation. Give this new layer a name that’s unique from the last layer, then click “OK.”
+
+, Open the Filters menu and select “Animation,” then “Playback.” You will see a preview of your animation, which GIMP creates from each of your layers.
+ Open the File menu and click “Export,” then select “GIF image.” Make sure the box is checked next to “As animation.”
+
+
+If you want the animation to loop continuously, put a check next to “Loop Forever.”
+Next to “Delay between frames where unspecified,” enter the time (in milliseconds) you’d like each frame to display. By default, it’s 100 (which is why your preview looked rather fast). Change it to something larger, like 300 or 600, then click “Export.”
+
+, If you don’t want each of your layers to appear for the same amount of time, you can edit the duration of each layer independently.
+
+
+Right-click one of the layer names in the layers dialog and select “Edit layer attributes.”
+Next to the layer name, type the duration (in milliseconds) directly, without a space, like this: LAYERNAME(200ms)
+
+Click “OK to save that layer, and modify any additional layers in the same way.
+ In the Filters menu, click “Animation” and select “Playback” to see how your changes have modified the animation. When you’re ready to save the image, click “File” then “Export,” and choose “GIF image” once more. Give your animation a name and click “Save” to finish.
+

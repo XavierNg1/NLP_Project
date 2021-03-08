@@ -1,0 +1,25 @@
+ Remember the FlashVideoCapture.pl script is not limited to video captures of videos in CNN Videos, MSNBC Videos or Bing Videos. I would encourage you to experiment with the script and try to capture embedded *.flv videos on other web sites., You can tell the video has completely loaded by the grey bar at the bottom of the flash video, which will usually indicate the load and completion of the video. Once the grey bar load cycle is complete and 100% of the video has been loaded it's now time to capture the video stored in your web browsers cache.,
+
+
+Type/Copy/Paste: cd /home/"your_user_name"/Videos
+
+this will change you into your Videos directory, make sure you are in the Videos directory and you have the FlashVideoCapture.pl script in this directory.
+
+
+
+Type/Copy/Paste: ./FlashVideoCapture.pl
+
+this command will execute the FlashVideoCapture.pl script and capture the *.flv video files to your /home/"your_user_name"/Videos directory.
+ In order to view the video you can use the VLC mediaplayer to view the captured *.flv file.
+ Make sure you are in the /home/"your_user_name"/Videos directory before running the following commands.
+
+
+Type/Copy/Paste: cd /home/"your_user_name"/Videos
+
+Type/Copy/Paste: vlc foundflash1.flv.
+or
+
+Type/Copy/Paste: vlc *.flv
+
+this will playback all *.flv video files stored in your /home/"your_user_home"/Videos directory.
+ So that you can view the captured *.flv video over and over again using the VLC media player without loading it from your FireFox web browser.

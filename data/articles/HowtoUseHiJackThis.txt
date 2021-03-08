@@ -1,0 +1,45 @@
+ HiJackThis is a free tool that is available from a variety of download sites. To avoid downloading adware along with HiJackThis, try to download from a trusted site such as BleepingComputer or SourceForge. Once you've downloaded it, run the setup file to install HiJackThis.;
+, When you first run HiJackThis, you will be greeted by a menu. You can ignore all of these options for now, and click the button at the bottom to proceed to the main program window. Check the "Do not show this window..." box to prevent the menu from showing up in the future.
+ HiJackThis should be correctly configured by default, but it's always good to check to be on the safe side. Click Config... and ensure that the following boxes are checked in the Main section:
+
+
+Make backups before fixing items
+Confirm fixing & ignoring of items (safe mode)
+Ignore non-standard but safe domains in IE (e.g. msn.com, microsoft.com)
+Include list of running process in log files.
+Click Back after confirming these are checked.
+ On the main HiJackThis screen, click the Scan button to begin scanning your system, Scanning should only take a few moments. When the scan is complete, a list of all the programs and services that trigger HiJackThis will be displayed.
+
+
+Just because something is listed does NOT mean that it is a bad item. In most cases, the majority of the items on the list will come from programs that you installed and want to keep.
+ If you are working with a technical support professional or are posting on a technical support forum, it can helpful to have the log to give to the people helping you. Click Save log, and then select a location to save the log file. Pick somewhere you'll remember.
+ If you want more details on what an item does or how it functions, select it from the list and click Info on selected item.... This will open a new window with a description of the item.
+
+
+The window will display some basic information about how to deal with the item if it is infected, but this does not apply to every item on the list.
+ After examining the list, check any items that you are absolutely sure are infected or malicious. After checking all the items you want to remove, click Fix checked. A backup will be made and the item(s) will be removed., If you accidentally removed an item from the list that you actually want or need, you can restore it as long as backups were left enabled. You can open the Config menu by clicking Config.
+ Click Backups at the top of the window to open it. You will see a list of available backups.
+ Check the box next to each entry that you want to restore to your system.
+ Click Restore after selecting all of the items you want to restore. They will appear again in your next scan.
+ If you're sure you're not going to need a backup anymore, check it and click Delete. Be careful when doing this, as there is no way to restore the item once its backup has been deleted.
+ If you want to see a list of all the programs that are starting with your computer, you can quickly generate one in HiJackThis. It will be displayed as a text file, making it easy to copy and paste on a tech help forum or email. Click Config... to open the menu.
+ Click Misc Tools at the top of the window to open it. You will see a list of tools built-in to HiJackThis.
+ Generate a list of your Startup items by clicking Generate StartupList log. A window will appear outlining the process, and you will be asked if you want to continue. Click Yes.
+
+
+When Notepad opens, you may be notified that the file does not exist. Confirm that you want to create a new file.
+ After the log opens, save the file so that you can access it later. Make sure you save it somewhere that you can remember such as your Documents folder or on your desktop.
+ HiJackThis includes a process manager tool that acts like an enhanced version of the Windows Task manager. This will let you terminate offending programs without having to open a new window. You can open the Config menu by clicking Config.
+ Click Misc Tools at the top of the window to open it. You will see a list of tools built-in to HiJackThis.
+ Click Open process manager in the "System tools" section. The window will change, and you will see a list of all the processes currently running on your system.
+ Determine if any of the processes listed are suspicious or infected by checking where they are installed and what they are running. Select the process you want to end by clicking it. If you want to select multiple processes, hold the Ctrl key while clicking each process.
+
+
+This list does not update automatically. If you want to end a process that has started after the list was loaded, click Refresh to update the list.
+ Once you've selected the processes you would like to end, click Kill process. The process will be forced to close.
+ If you've removed a bunch of adware from your system, chances are there are programs in your "Add/Remove Programs" or "Programs and Features" list that don't exist anymore. This can lead to a cluttered list of programs. HiJackThis contains a tool that allows you to remove these nonexistent programs. You can open the Config menu by clicking Config.
+ Click Misc Tools at the top of the window to open it. You will see a list of tools built-in to HiJackThis.
+ Click Open Uninstall Manager... in the "System tools" section. This will open a list of all the programs currently displayed when you go to uninstall a program in the Control Panel.
+ Select the program that you have removed through other methods. Unlike the process manager, you can only select one program at a time. The details of the program are displayed when you select it.
+ Click Delete this entry if you're sure you want to remove it. Make sure to try uninstalling through the Control Panel first.
+

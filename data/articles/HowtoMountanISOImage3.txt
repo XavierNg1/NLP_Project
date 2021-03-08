@@ -1,0 +1,14 @@
+ Mac OS X supports ISO files natively without the need for any third-party software. Most ISO files will mount by simply double-clicking them. The disc image will then appear on your desktop as if you had inserted a disc.
+ If your ISO file does not mount when you double click it, you can use the Disk Utility program. The Disk Utility can be found in the Applications/Utilities/ directory.
+
+
+Click File, then Open Disk Image… Navigate to your image file, and select Open.
+The ISO file will now appear on your desktop as if you had inserted a disc.
+This method works for other disc image filetypes, such as DMG and IMG.
+ If you are more comfortable working with the command line, you can mount a disc image through the Terminal.
+
+
+Type “hdiutil mount <sample>.iso” into the terminal and press Enter.
+After processing the file, your ISO image will appear mounted on your desktop.
+This method also works for other disc image filetypes, such as DMG and IMG.
+

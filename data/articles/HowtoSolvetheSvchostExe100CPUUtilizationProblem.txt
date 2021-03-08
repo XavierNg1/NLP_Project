@@ -1,0 +1,6 @@
+ The 100% svchost.exe problem is almost always caused by a problem with the Windows Update service attempting to update Internet Explorer. By installing the latest update manually, Windows Update will see that it has been updated and will not use 100% of the CPU.Perform a Google search for “Cumulative+Security+Update+for+Internet+Explorer”. Choose the link to the latest Update. The latest one may not be the link at the top of the list.
+Make sure you download the latest update available. The problem resurfaces after each update, so you’ll need the latest one.;
+, There will be different files available for different versions on Internet Explorer. To check which version of Internet Explorer you are using, click the Help menu or Gear icon and select “About Internet Explorer”.
+ Internet Explorer will be updated, which will fix the way Windows Update looks for available updates. You may need to reboot your computer after updating Internet Explorer to restart Windows Update.You will need to perform this whenever an Internet Explorer update is released.
+The problem can be prevented by turning off Windows Update, but this is not recommended because it will leave other aspects of your system vulnerable to attacks.
+

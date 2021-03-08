@@ -1,0 +1,16 @@
+ Tri Roman is a combination of two simple ciphers: Tri Code and the Caesar Cipher. Depending on your preference, you can apply the Tri Code transformation first and then the Caesar Cipher, or vice versa.
+
+
+Generally, when applying a cipher to encode a message, you should apply the cipher completely to the entire message before applying a new cipher.
+ Just as you would normally, take letters in segments of three from the start of your message to its end, then write each segment in reverse. Since you'll be using two ciphers, it's best to write down these transformations to prevent mistakes.
+
+
+For the purpose of providing a guided example for Tri Roman, the phrase, "Caesar's a genius" will be used. In Tri Code, this would be, "Eac ras ga's ine su."
+
+, Now that your message is in Tri Code, you can move on to your next cipher. Caesar Cipher, also called a shift cipher, replaces letters in your message with a new letter a fixed number of positions away in the alphabet. Imagine the alphabet from A - Z laid out before you, from left to right. A left shift of three, then, would replace D's in your original message with an B's, J's with H's, and so on.You can choose to shift either to the left or right as many positions as you desire. If you reach the beginning of the alphabet, continue shifting from the end and vice versa. Therefore, with left shift three A becomes Y, and with right shift three Z becomes B.
+Basic shift ciphers should only shift letters in a single direction. When using the Caesar Cipher, you should never shift both left and right at the same time.
+Using a Caesar Cipher with a left shift of three on the Tri Coded message "Eac ras ga's ine su" (Caesar's a genius) gives you the Tri Roman coded message "Cya pyq ey'q glc qs.", You may find it easiest to write out messages in Tri Code before applying the Caesar Cipher. Alternatively, you may have an easier time doing Caesar Cipher first, and then Tri Code. Experiment with both ways to find what works best for you. An example of Tri Roman code with the Caesar Cipher first, then Tri code, with a left shift of three, would look like:
+
+
+Caesar's a genius → Aycqyp'q y eclgsq (Caesar Cipher) → Cya pyq ey'q glc qs (Tri Code)
+

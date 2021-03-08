@@ -1,0 +1,150 @@
+
+
+
+
+Type/Copy/Paste: file /sbin/init
+
+Note the bit version of your Ubuntu Linux operating system architecture it will display whether it is 32-bit or 64-bit.
+
+;
+, To do this, you will have to run the Java version command from terminal.
+
+
+Open up a terminal and enter the following command:
+
+
+Type/Copy/Paste: java -version
+
+
+If you have OpenJDK installed on your system it may look like this:
+
+java version "1.7.0_15"
+OpenJDK Runtime Environment (IcedTea6 1.10pre) (6b15~pre1-0lucid1)
+OpenJDK 64-Bit Server VM (build 19.0-b09, mixed mode)
+
+
+If you have OpenJDK installed on your system, you have the wrong vendor version of Java installed for this exercise.
+ This will prevent system conflicts and confusion between different vendor versions of Java. For example, if you have the OpenJDK/JRE installed on your system, you can remove it by typing the following at the command line:
+
+
+
+Type/Copy/Paste: sudo apt-get purge openjdk-\*
+
+This command will completely remove OpenJDK/JRE from your system
+
+
+
+Type/Copy/Paste: sudo mkdir -p /usr/local/java
+
+This command will create a directory to hold your Oracle Java JDK and JRE binaries.
+ Make sure you select the correct compressed binaries for your system architecture 32-bit or 64-bit (which end in tar.gz).
+
+
+For example, if you are on Ubuntu Linux 32-bit operating system download 32-bit Oracle Java binaries.
+For example, if you are on Ubuntu Linux 64-bit operating system download 64-bit Oracle Java binaries.
+Optional, Download the Oracle Java JDK/JRE Documentation
+
+Select jdk-7u40-apidocs.zip
+
+
+
+Important Information: 64-bit Oracle Java binaries do not work on 32-bit Ubuntu Linux operating systems, you will receive multiple system error messages, if you attempt to install 64-bit Oracle Java on 32-bit Ubuntu Linux.
+ In most cases, the Oracle Java binaries are downloaded to: /home/"your_user_name"/Downloads.
+
+
+
+32-bit Oracle Java on 32-bit Ubuntu Linux installation instructions:
+
+
+Type/Copy/Paste: cd /home/"your_user_name"/Downloads
+
+Type/Copy/Paste: sudo cp -r jre-8u73-linux-i586.tar.gz /usr/local/java
+
+Type/Copy/Paste: cd /usr/local/java
+
+
+
+64-bit Oracle Java on 64-bit Ubuntu Linux installation instructions:
+
+
+Type/Copy/Paste: cd /home/"your_user_name"/Downloads
+
+Type/Copy/Paste: sudo cp -r jre-8u73-linux-x64.tar.gz /usr/local/java
+
+Type/Copy/Paste: cd /usr/local/java
+
+
+
+, Make sure to do this as root in order to make them executable for all users on your system. To open a root terminal type sudo -s you will be prompted for your logon password.
+
+
+
+32-bit Oracle Java on 32-bit Ubuntu Linux installation instructions:
+
+
+Type/Copy/Paste: sudo chmod a+x jre-8u73-linux-i586.tar.gz
+
+
+
+64-bit Oracle Java on 64-bit Ubuntu Linux installation instructions:
+
+
+Type/Copy/Paste: sudo chmod a+x jre-8u73-linux-x64.tar.gz
+
+
+
+,, At this point, you should have an uncompressed binary directory in /usr/local/java for the Java JDK/JRE listed as:
+
+
+
+Type/Copy/Paste: ls -a
+jre1.8.0_73
+
+, Use nano, gedit or any other text editor, as root, open up /etc/profile.
+
+
+
+Type/Copy/Paste: sudo gedit /etc/profile
+or
+
+Type/Copy/Paste: sudo nano /etc/profile
+
+,,, This will tell the system that the new Oracle Java version is available for use.
+
+
+
+Type/Copy/Paste: sudo update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jre1.8.0_73/bin/java" 1
+
+this command notifies the system that Oracle Java JRE is available for use
+
+
+
+Type/Copy/Paste: sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/jre1.8.0_73/bin/javaws" 1
+
+this command notifies the system that Oracle Java Web start is available for use
+
+
+
+,
+
+
+
+Type/Copy/Paste: sudo update-alternatives --set java /usr/local/java/jre1.8.0_73/bin/java
+
+This command will set the Java runtime environment for the system
+
+
+
+Type/Copy/Paste: sudo update-alternatives --set javaws /usr/local/java/jre1.8.0_73/bin/javaws
+
+this command will set Java Web start for the system
+
+
+
+, /etc/profile
+Note your system-wide PATH /etc/profile file will reload after reboot of your Ubuntu Linux system
+
+, Run the following commands and note the version of Java:
+
+,,, Now reboot your Ubuntu Linux system. Afterwards, your system will be fully configured for running Java programs.
+

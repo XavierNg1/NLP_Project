@@ -1,0 +1,36 @@
+ Before starting, you can read simple programming articles of wikiHow about C++:
+
+How to Learn C++ Programming
+
+How to Create a Simple Program in C++
+
+How to Write Standard Code in C++
+;
+,
+
+
+
+
+
+
+include<windows.h>
+include<wchar.h>
+int main (void)
+{
+SYSTEMTIME time;
+while (true)
+{
+GetLocalTime(&time);
+wprintf(L"The Local time: %02d:%02d:%02d\n", time.wHour, time.wMinute, time.wSecond);
+Sleep(1000);
+system("cls");
+}
+return 0;
+}
+
+
+
+
+
+,, It should give you your time!
+

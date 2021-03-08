@@ -1,0 +1,4 @@
+ After "SQL," which stands for Standard Query Language, enter "select name from names."
+
+, After "SQL," enter "delete from names where name='Alan';." Note that capitalization is important here, so this will delete all of the rows named "Alan." After "SQL," enter "commit.", Now that you have deleted all rows with the example name "Alan," you can insert one back by entering "insert into name values ('Alan');." After "SQL," enter "commit" to create your new row.
+ Once you have completed the above steps, you can check to make sure you no longer have duplicate records by entering "select * from names."

@@ -1,0 +1,12 @@
+ As an example, lets look at the stardate from the last method, 61390.71. The base date is 2005 = 58000.00
+
+, Ignore the hundreds and tens (and units and decimals). In this example, you get 61000.
+ 61000-58000 = 3000. 3000/1000 = 3. 2005 + 3 = 2008. This is the year.
+ A year that divides by four but not 100 is a leap year. A year that divides by four and 100 but not 400 is not a leap year. A year that divides by four, 100 and 400 (e.g. 2000) is a leap year. 2008 will divide by four but not 100, so it is a leap year.
+ Ignore the thousands and anything higher. You get 390.71.
+ When you multiply 390.71 by 366, you get 142,999.86.
+ 142,999.86/1000 = 142.99986. Round up to 143.
+ You get 144.
+ This number will be the month. Remember to add one to the month number if it's a leap year (and after February). The largest month number that goes into 144 is 121, so the month is May.
+ 144-121 = 23. So your date is 23 May 2008. That's correct, it's the day you started with.
+

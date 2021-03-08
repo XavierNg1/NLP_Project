@@ -1,0 +1,2 @@
+ After "SQL," enter "select * from names;" to see your rows.
+ After "SQL'" enter "delete from names a where rowid > (select min(rowid) from names b where b.name=a.name and b.age=a.age);" to delete the duplicate records., Once you have completed the above steps, enter "select * from names;" and then "commit" in order to check that you have deleted the duplicate records successfully.

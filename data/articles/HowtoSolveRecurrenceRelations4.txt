@@ -1,0 +1,9 @@
+ So let's try it on the different example shown whose first terms are 1, 4, 13, 46, 157, .
+ This is found by replacing each an in the recurrence by xn and dividing by x(n-k) leaving a monic polynomial of degree k and a nonzero constant term.
+ In this case, the characteristic has degree 2 so we can use the quadratic formula to find its roots.
+ The ci are any constants and the base of the exponents are the roots to the characteristic found above. This can be verified by induction.
+
+
+If the characteristic has a multiple root, this step is modified slightly. If r is a root of multiplicity m, use (c1rn + c2nrn + c3n2rn + ... + cmnm-1rn) instead of simply (c1rn). For example, the sequence starting 5, 0, -4, 16, 144, 640, 2240, ... satisfies the recursive relationship an = 6an-1 - 12an-2 + 8an-3. The characteristic polynomial has a triple root of 2 and the closed form formula an = 5*2n - 7*n*2n + 2*n2*2n.
+ As with the polynomial example, this is done by creating a linear system of equations from the initial terms. Since this example has two unknowns, we need two terms. Any two will do, so take the 0th and 1st to avoid having to raise an irrational number to a high power.
+,

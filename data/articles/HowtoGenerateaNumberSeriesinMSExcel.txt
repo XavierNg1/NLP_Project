@@ -1,0 +1,39 @@
+ Microsoft Excel is a spreadsheet developed by Microsoft for Microsoft Windows, Mac OS X, and iOS. It features calculation, graphing tools, pivot tables, and a macro programming language called Visual Basic for Applications. It is part of the Microsoft Office package.
+
+
+Once you have downloaded Excel, go to the Start Button. And then go to Microsoft office. Select Microsoft Excel.Click on Excel. Double-click on “blank workbook” to open it. Or, if you already have an Excel spreadsheet filled with data, open the spreadsheet.;
+, A cell is one of the individual blocks that make up an Excel spreadsheet.
+
+
+Type the number that you want to start the series with in that cell and hit enter. By way of example, type “1.” This is called a “value” in Excel terminology.Now, write the first few numbers of your series in adjacent cells. You could write them in the vertical columns or horizontally in a row., For example, if you want cells to increase by the same increment (say by “1”), then type two numbers with that increment. Thus, you would type “1” in the first cell and “2” in the cell beneath it.
+
+
+If you want the number series to increase by increments of 2, you would type 2 and then 4.
+If you want the series to use more complicated increments (say, “2, 4, 8, 16”) type the first three numbers so it doesn’t assume you are asking it for increments of 2.
+ To do so, hold your cursor in the top left of the first cell, and drag it down to the last cell with a number in it (in the first example, the cell with the “2” in it.)Do this without letting your finger off the cursor. This will highlight the 2 (or 3) numbers that you have already typed into the cells.
+Remember that, in Excel, cells form vertical columns but horizontal rows. You can create the number series vertically down a column, or horizontally across a row.
+ The square will appear in the bottom right of the last cell you typed a number in (in the first example, the cell with the “2.")
+
+
+The little black square will turn into a small black plus sign in the bottom right corner of that cell. This is called the fill handle. The key to creating a number series in MS Excel is the fill handle.
+When you look at the individual cell, notice the green or black border around the cell. That means you are working in the active cell., Drag the cursor down the vertical column. Excel will automatically create a number series for as long as you drag your cursor.
+
+
+Use the same process with a number series in a horizontal row. But drag your cursor horizontally. Remember, by default, Excel uses a linear growth pattern to determine these values.
+If you already have a sequence of numbers and you just want to add to it, select the last two in the sequence and drag the fill handle to the new selection, and it will continue the list.
+ Put your cursor in the cell at A1. This means the block that is located where Column A meets Row 1.
+
+
+In A1, type =ROW(). This formula should generate the first number in your series. Select the fill handle on the bottom right of the A1 cell, and drag down or across to create the number series.
+If you want to find the number of any cell, you can put your cursor in it, and type =ROW(C10), replacing C10 with the coordinates of that cell. Hit enter.
+ This will open a shortcut menu that allows you to perform other functions with the number series.
+
+
+To fill the series in increasing order, drag down or to the right. To fill in decreasing order, drag up or to the left.
+In the shortcut menu, you can choose such options as fill series to populate the numbers or copy series.
+ This same trick also allows you to count up by days. To make this work, type a date in any recognizable format in any one cell.
+
+
+Drag the fill handle to the adjacent cells, and it will add the days as you go.
+You can skip days, for example, showing every other day or every third day, as long as the sequence is repetitive.
+

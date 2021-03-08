@@ -1,0 +1,69 @@
+ This test determines whether the series uk{\displaystyle u_{k}} is divergent or not, where k∈Z.{\displaystyle k\in {\mathbb {Z} }.}
+
+If limk→∞uk≠0,{\displaystyle \lim _{k\to \infty }u_{k}\neq 0,} then uk{\displaystyle u_{k}} diverges.
+
+The inverse is not true. If the limit of a series is 0, that does not imply that the series converges. We must do further checks.
+;
+, Geometric series are series of the form rk,{\displaystyle r^{k},} where r{\displaystyle r} is the ratio between two adjacent numbers in the series. These series are very easy to recognize and determine the convergence of.
+
+If |r|<1,{\displaystyle |r|<1,} then rk{\displaystyle r^{k}} converges.
+
+If |r|≥1,{\displaystyle |r|\geq 1,} then rk{\displaystyle r^{k}} diverges.
+
+If r=−1,{\displaystyle r=-1,} then the test is inconclusive. Use the alternating series test.
+
+For convergent geometric series, you can find the sum of the series as 11−r.{\displaystyle {\frac {1}{1-r}}.}
+
+
+, P-series are series of the form 1kp.{\displaystyle {\frac {1}{k^{p}}}.} They are sometimes called "hyperharmonic" series for the way they generalize the harmonic series, of which p=1.{\displaystyle p=1.}
+
+If p>1,{\displaystyle p>1,} then the series converges.
+
+If 0<p≤1,{\displaystyle 0<p\leq 1,} then the series diverges. Beware the less than or equals sign.
+
+It is well-known that the harmonic series diverges, albeit very slowly, since p=1{\displaystyle p=1} just barely fulfills the second criteria. On the other hand, series such as 6k2{\displaystyle {\frac {6}{k^{2}}}} converge.
+ This test works best when f{\displaystyle f} is easy to integrate. Note that f{\displaystyle f} must be decreasing, or the series automatically diverges.
+
+Given a decreasing, continuous function f{\displaystyle f} where uk=f(k){\displaystyle u_{k}=f(k)} for all k≥a,{\displaystyle k\geq a,} then uk{\displaystyle u_{k}} and ∫a∞f(x)dx{\displaystyle \int _{a}^{\infty }f(x){\mathrm {d} }x} both converge or both diverge.
+
+In other words, we can construct a continuous function out of a discrete series, where the terms between the series and the function are equal to one another. Then, we can simply evaluate the integral to check for divergence. If it is divergent, then the series is divergent as well.
+
+Going back to the harmonic series, this series can be represented by the function f(x)=1x.{\displaystyle f(x)={\frac {1}{x}}.} Since ∫1∞1xdx=ln⁡(∞)−ln⁡(1)=∞{\displaystyle \int _{1}^{\infty }{\frac {1}{x}}{\mathrm {d} }x=\ln(\infty )-\ln(1)=\infty } (because the logarithmic function is unbounded), the integral test is yet another way of showing the divergence of this series.
+ These series usually contain a (−1)k{\displaystyle (-1)^{k}} term in it. All other tests in this article pertain to series with all positive terms.
+
+If ak>0{\displaystyle a_{k}>0} for a sufficiently large k,{\displaystyle k,} then ak{\displaystyle a_{k}} converges if the following two conditions hold.
+
+
+ak≥ak+1{\displaystyle a_{k}\geq a_{k+1}}
+
+
+limk→∞ak=0{\displaystyle \lim _{k\to \infty }a_{k}=0}
+
+
+
+Put more simply, if you have an alternating series, ignore the signs and check if each term is less than the previous term. Then check if the limit of the series goes to 0.
+
+It is useful to note that series that converge via the alternating series test, but diverge when the (−1)k{\displaystyle (-1)^{k}} is removed, are deemed conditionally convergent. The alternating harmonic series (−1)k−1k{\displaystyle {\frac {(-1)^{k-1}}{k}}} is one such example, whose sum is ln⁡2.{\displaystyle \ln 2.}
+
+
+, This test is useful for expressions with factorials or powers in them. Given an infinite series uk,{\displaystyle u_{k},} find uk+1{\displaystyle u_{k+1}} and compute uk+1uk.{\displaystyle {\frac {u_{k+1}}{u_{k}}}.} Now let ρ=limk→∞uk+1uk.{\displaystyle \rho =\lim _{k\to \infty }{\frac {u_{k+1}}{u_{k}}}.}
+
+The series converges if ρ<1,{\displaystyle \rho <1,} diverges if ρ>1{\displaystyle \rho >1} or ρ=±∞,{\displaystyle \rho =\pm \infty ,} and is inconclusive if ρ=1.{\displaystyle \rho =1.}
+
+The root test is a variant of the ratio test, where ρ=limk→∞ukk.{\displaystyle \rho =\lim _{k\to \infty }{\sqrt{u_{k}}}.} The same criteria from the ratio test are used for the root test.
+ This test involves choosing a sufficient series bk{\displaystyle b_{k}} for which you know the convergence/divergence of, and compares it to a series ak{\displaystyle a_{k}} through a limit. This test is often used in evaluating the convergence of series defined by rational expressions.
+
+Let ρ=limk→∞akbk.{\displaystyle \rho =\lim _{k\to \infty }{\frac {a_{k}}{b_{k}}}.} Then the series both converge if ρ{\displaystyle \rho } is finite, or both diverge if ρ=±∞.{\displaystyle \rho =\pm \infty .}
+
+For example, if you were given a series 1k3+2k+1,{\displaystyle {\frac {1}{k^{3}+2k+1}},} then it makes sense to compare it to 1k3,{\displaystyle {\frac {1}{k^{3}}},} as the highest-ordered term increases/falls off the quickest, and you know the latter is convergent via the p-series test.
+ This test is generally cumbersome, so use it as a last resort. Given two positive term series ak{\displaystyle a_{k}} and bk,{\displaystyle b_{k},} and the kth term of a{\displaystyle a} is less than the kth term of b,{\displaystyle b,} then the following are true.
+
+If the bigger series bk{\displaystyle b_{k}} converges, then the smaller series ak{\displaystyle a_{k}} converges as well, since bk>ak.{\displaystyle b_{k}>a_{k}.}
+
+If the smaller series ak{\displaystyle a_{k}} diverges, then the bigger series bk{\displaystyle b_{k}} diverges as well, since ak<bk.{\displaystyle a_{k}<b_{k}.}
+
+For example, say we have the series 1k−1.{\displaystyle {\frac {1}{{\sqrt {k}}-1}}.} We can compare this to 1k,{\displaystyle {\frac {1}{\sqrt {k}}},} because we can discard the constant terms without affecting the series' convergence/divergence. Because we know that 1k{\displaystyle {\frac {1}{\sqrt {k}}}} is divergent per the p-series test, and because 1k<1k−1,{\displaystyle {\frac {1}{\sqrt {k}}}<{\frac {1}{{\sqrt {k}}-1}},} then it follows that 1k−1{\displaystyle {\frac {1}{{\sqrt {k}}-1}}} also diverges.
+
+In this test, it is very important to recognize which series contains the larger or smaller terms. For example, if the smaller series ak{\displaystyle a_{k}} converges, that does not mean that the bigger series bk{\displaystyle b_{k}} converges as well.
+
+

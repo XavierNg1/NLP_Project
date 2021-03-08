@@ -1,0 +1,20 @@
+ To open this in Windows, press the ‘Windows key’ and ‘r.’ This will bring up the ‘Run’ dialog box. Enter ‘cmd’ and hit ‘Ok.'
+
+
+The terminal window will now open, ready for you to input your commands.
+
+
+
+
+
+;
+, For example, if you wanted to create a new repository called ‘New project’ in the ‘Documents’ folder, the command would be: svnadmin create C:\Users\Jessica\Documents\New_Project
+
+, You will see a new folder called ‘New Project.’
+
+, Do not delete or modify any of these files.
+ This is done using the ‘SVN Checkout’ command, followed by the URL of your repository and the location of the repository you just created on your computer. In this example, the command is: svn checkout http://127.0.0.1:9880/New-Project C:\Users\Jessica\Documents\New_Project Hit ‘Enter.’
+
+
+,, When you have finished modifying your files, you will need to commit your changes back to the repository. To perform a commit, use the ‘svn commit’ command followed by “--message” and an appropriate log message, and finally, the location of your working copy. In this example, the command would be: svn commit --message “added Readme file” C:\Users\Jessica\Documents\New_Project Hit ‘Enter.’ Your changes have now been committed to the repository!
+

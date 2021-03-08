@@ -1,0 +1,8 @@
+ Boot from live cd-it needs to have gparted on it.it should detect that you have linux installed and will use the swap space.
+ this dismounts swap so you can increase the size of it.
+ So in my case i have 4gb ram and 4gb swap. I need 8gb swap. So i reduce the partition next to swap by 4gb. the unallocated (greyed out) space should be next to the partition. (This may be done by booting through CD ROM and un-mounting the partitions). Now click on the partition (the bar at the top of gparted) and select resize. Include your unallocated space. click swapon-restart.
+
+Warnings!!!
+always have backups-not just when you are changing the system
+-dont delete the swap partition- it is harder (at least for me) to create a new one so that everything works.
+

@@ -1,0 +1,17 @@
+ In between the <head> and </head> tags of your HTML document, insert the following JavaScript code:function blinktext() {
+  var f = document.getElementById('announcement');
+  setInterval(function() {
+    f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+  }, 1000);
+}
+
+, The code above defined a function and named it "blinktext." In order to use this function in your HTML, change the <body> tag to <body onload="blinktext();">.
+ This script only affects elements with the id "announcement." Place your blinking text inside any element and give it that id. For example, type <p id="announcement">Blinking text here.</p> or <div id="announcement">Blinking text here.</div>.
+
+
+You can rename this anything you like. Just make sure to use the same word in the script and the element id.
+ The number "1000" in the script sets the delay between blinks. This is in microseconds, so a value of 1000 makes the text blink once per second.Change this to a lower number to speed up the blinking, or a higher number to slow it down.
+
+
+The actual delay probably won't match this value perfectly. It tends to be slightly shorter, but can take longer if your browser is busy with other requests.
+

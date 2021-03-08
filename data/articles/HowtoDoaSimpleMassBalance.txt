@@ -1,0 +1,90 @@
+ A material balance is accounting for all materials entering and exiting a system.;
+, A mass flow rate is how much unit of mass is flowing through a process per unit of time.
+ A mass fraction is (mass of a substance)/(total mass). This can also be called weight percent, wt%.
+ A mass ratio is how much of a substance in a system relative to another substance.
+ A flow chart is a drawn representation of the system you are working with.
+ A degrees of freedom analysis is meant to make sure the problem is solvable. The user needs to compare the number of unknown variables to the number of independent equations they can use.
+
+
+The degrees of freedom equation is given by:
+
+, Try to understand what the author is asking us to find. For example, your question might be:
+
+
+Strawberries contain about 15 wt% sugar and 85 wt% water. To make strawberry jam, crushed strawberries and sugar are mixed in a 45:55 mass ratio, and the mixture is heated to evaporate water until the residue contains one-third water by mass.
+
+Draw and label a flowchart of this process
+Do the degree-of-freedom analysis and show that the system has zero degrees of freedom (i.e. the number of unknown process variables equals the number of equations relating them). If you have too many unknowns, think about what you might have forgotten to do.
+Calculate how many pounds of strawberries are needed to make a pound of jam.
+ Write down what is know from the problem description.
+
+
+
+Knowns:
+
+Mass fraction of the solid (sugar) in the strawberries is 0.15 and mass fraction of water in the strawberries is 0.85.
+The mass fraction of sugar in 1.00lb of jam is 0.667 (lb Suagr)/(lb Jam) and the mass fraction of water is 0.333 (lb water)/(lb Jam)
+
+You know this because we are told that the jam is heated until (1/3) of the mass of the jam is water.
+
+
+The mass of strawberry to mass of sugar ratio is 45:55 ratio.
+
+
+
+Draw the mixer.
+Draw stream 1 entering the mixer: m1 (lb of strawberries)
+
+0.85 (lb water)/(lb Jam)
+0.15 (lb Suagr)/(lb Jam)
+
+
+Draw stream 2 entering the mixer: m2 (lb of sugar)
+Draw stream 3 leaving the mixer: m3
+(1/3) lb of water left
+So, 0.333 (lb water)/(lb Jam)
+0.667 (lb Suagr)/(lb Jam)
+
+
+Draw Stream 4 coming out of the mixer: m4 (lb of evaporated water)
+
+Stream 4 is the excess water that is evaporated.
+
+
+
+
+Unknowns:
+
+m1 (mass of strawberries), m2 (mass of sugar), m3 (mass of evaporated water)
+Therefore, nunknowns = 3
+
+
+
+Independent Equations:
+
+The mass balance equation for water and sugar, the mass ratio of sugar to strawberries.
+nind.eqns = 3
+
+
+Plug in these numbers into the degrees of freedom equation.
+Therefore there are no degrees of freedom and the problem is solvable.
+ In this case, you are asked to calculate how many pounds of strawberry is needed for 1lb of jam.
+
+
+
+You know the above ratio. You can solve for m1.
+
+
+
+Here you need to realize that we know that amount of sugar in stream 1 and stream 3.
+,
+
+
+You must realize that you know the flow rate out of stream 3.
+
+
+
+You have to realize that you know what m1 is in terms of m2
+
+
+,,,

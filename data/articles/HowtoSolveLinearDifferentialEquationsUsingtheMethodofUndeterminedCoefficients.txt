@@ -1,0 +1,124 @@
+ The complementary function, as mentioned, is the solution to the corresponding homogeneous differential equation. All solutions to these types of differential equations will contain exponentials of the form erx,{\displaystyle e^{rx},} where r{\displaystyle r} is the (in general) complex root of the characteristic equation. If the root contains an imaginary component, then the solution in terms of real arguments will also contain cosines and sines, per Euler's formula.
+ If we can write out a linear combination involving a finite number of linearly independent derivatives, then we can use the method of undetermined coefficients to solve the inhomogeneous differential equation. Otherwise, we must use variation of parameters.
+
+In practice, functions of the form a,xn,sin⁡ax,{\displaystyle a,\,x^{n},\,\sin ax,} and cos⁡ax{\displaystyle \cos ax} (where a{\displaystyle a} is a constant) have a finite number of linearly independent derivatives, while functions such as 1xn,tan⁡x,{\displaystyle {\frac {1}{x^{n}}},\,\tan x,} and sin⁡(e−x){\displaystyle \sin(e^{-x})} contain an infinite number of linearly independent derivatives.
+ From here, there are three possible scenarios.
+
+None of the terms are the same.
+
+The particular solution yp{\displaystyle y_{p}} will then only consist of a linear combination of the terms of Q(x){\displaystyle Q(x)} and their linearly independent derivatives. 
+
+
+
+
+Q(x){\displaystyle Q(x)} contains a term h(x){\displaystyle h(x)} that is xn{\displaystyle x^{n}} times a term in yc,{\displaystyle y_{c},} where n{\displaystyle n} is 0 or a positive integer, but this term originated from a distinct root of the characteristic equation. 
+
+In this case, yp{\displaystyle y_{p}} will consist of a term xn+1h(x),{\displaystyle x^{n+1}h(x),} its linearly independent derivatives, as well as the other terms of Q(x){\displaystyle Q(x)} and their linearly independent derivatives. The only thing changed from the previous scenario is what to do with the "duplicate" term.
+
+
+
+
+Q(x){\displaystyle Q(x)} contains a term h(x){\displaystyle h(x)} that is xn{\displaystyle x^{n}} times a term in yc,{\displaystyle y_{c},} but this term originated from a repeated root of the characteristic equation. 
+
+
+yp{\displaystyle y_{p}} is identical to the previous two scenarios, except yp{\displaystyle y_{p}} will consist of a term xn+sh(x){\displaystyle x^{n+s}h(x)} (where s{\displaystyle s} denotes the root's multiplicity) and its linearly independent derivatives, as well as the other distinct terms of Q(x){\displaystyle Q(x)} and their linearly independent derivatives. 
+
+
+
+
+, The coefficients in this linear combination are why this method is called the method of undetermined coefficients. If in the process of finding the linearly independent derivatives, terms that are in yc{\displaystyle y_{c}} show up, you can disregard them in yp,{\displaystyle y_{p},} as the arbitrary constants in yc{\displaystyle y_{c}} take care of those terms for you.
+ Evaluate the derivatives. 
+, In general, this will be a system of linear equations. But typically, many of these are trivial, as terms will immediately evaluate to 0. 
+, After going through one of the scenarios and determining the coefficients, the sum y=yc+yp{\displaystyle y=y_{c}+y_{p}} denotes the general solution. This is easy to prove. If yp{\displaystyle y_{p}} is a particular solution to the inhomogeneous equation, then adding yp{\displaystyle y_{p}} with yc{\displaystyle y_{c}} doesn't affect Q(x).{\displaystyle Q(x).}
+
+Initial conditions works the same way as with any other differential equation. After finding the general solution, simply plug in initial conditions and solve for the constants. It is important, however, to recognize the difference between the particular solution yp{\displaystyle y_{p}} that came about from Q(x),{\displaystyle Q(x),} and the particular solution that follows after using the initial conditions to solve for the arbitrary constants, as they refer to different things. 
+
+
+, This is an inhomogeneous linear second order differential equation with a Q(x){\displaystyle Q(x)} consisting of terms with finitely many linearly independent derivatives, meaning that the method of undetermined coefficients is ideal for solving this equation.
+
+
+d2ydx2−3dydx+2y=xe−x{\displaystyle {\frac {{\mathrm {d} }^{2}y}{{\mathrm {d} }x^{2}}}-3{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}+2y=xe^{-x}}
+
+
+, The complementary solution is the general solution to the corresponding homogeneous equation, where we set the right side to 0. In this example, there are no double roots.
+
+
+yc=c1e2x+c2ex{\displaystyle y_{c}=c_{1}e^{2x}+c_{2}e^{x}}
+
+
+, First, we check to see if any terms in Q(x){\displaystyle Q(x)} are xn{\displaystyle x^{n}} times a term in yc,{\displaystyle y_{c},} up to multiplicative constants. As none of the terms are the same, yp{\displaystyle y_{p}} will only consist of a linear combination of Q(x){\displaystyle Q(x)} and its linearly independent derivatives.
+
+
+yp=Axe−x+Be−x{\displaystyle y_{p}=Axe^{-x}+Be^{-x}}
+
+
+, Substitute these into the differential equation.
+
+
+dypdx=(A−B)e−x−Axe−x{\displaystyle {\frac {{\mathrm {d} }y_{p}}{{\mathrm {d} }x}}=(A-B)e^{-x}-Axe^{-x}}
+
+
+d2ypdx2=(−2A+B)e−x+Axex{\displaystyle {\frac {{\mathrm {d} }^{2}y_{p}}{{\mathrm {d} }x^{2}}}=(-2A+B)e^{-x}+Axe^{x}}
+
+
+(−5A+6B)e−x+6Axe−x=xe−x{\displaystyle (-5A+6B)e^{-x}+6Axe^{-x}=xe^{-x}}
+
+
+, We can immediately see that A=16.{\displaystyle A={\frac {1}{6}}.} Plugging into the other equation −5A+6B=0{\displaystyle -5A+6B=0} nets us B=536.{\displaystyle B={\frac {5}{36}}.}
+, Notice that these coefficients resulted in a slightly nonintuitive answer, which reflects the importance of including the derivatives of Q(x){\displaystyle Q(x)} in yp{\displaystyle y_{p}} while using this method.
+
+
+yp=16xe−x+536e−x{\displaystyle y_{p}={\frac {1}{6}}xe^{-x}+{\frac {5}{36}}e^{-x}}
+
+
+, Combine yp{\displaystyle y_{p}} with yc.{\displaystyle y_{c}.}
+
+
+y=c1e2x+c2ex+16xe−x+536e−x{\displaystyle y=c_{1}e^{2x}+c_{2}e^{x}+{\frac {1}{6}}xe^{-x}+{\frac {5}{36}}e^{-x}}
+
+
+, 
+
+
+d2ydx2+dydx=x+sin⁡2x{\displaystyle {\frac {{\mathrm {d} }^{2}y}{{\mathrm {d} }x^{2}}}+{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}=x+\sin 2x}
+
+
+,
+
+
+yc=c1+c2e−x{\displaystyle y_{c}=c_{1}+c_{2}e^{-x}}
+
+
+, We see that x{\displaystyle x} is x1{\displaystyle x^{1}} times the term c1.{\displaystyle c_{1}.} Therefore, yp{\displaystyle y_{p}} will consist of x2{\displaystyle x^{2}} and its linearly independent derivatives, as well as sin⁡2x{\displaystyle \sin 2x} and cos⁡2x.{\displaystyle \cos 2x.} Remember, when constructing the linear combination, we disregard all multiplicative constants.
+
+
+yp=Ax2+Bx+C+Dsin⁡2x+Ecos⁡2x{\displaystyle y_{p}=Ax^{2}+Bx+C+D\sin 2x+E\cos 2x}
+
+
+, Substitute these into the differential equation.
+
+
+dypdx=2Ax+B+2Dcos⁡2x−2Esin⁡2x{\displaystyle {\frac {{\mathrm {d} }y_{p}}{{\mathrm {d} }x}}=2Ax+B+2D\cos 2x-2E\sin 2x}
+
+
+d2ypdx2=2A−4Dsin⁡2x−4Ecos⁡2x{\displaystyle {\frac {{\mathrm {d} }^{2}y_{p}}{{\mathrm {d} }x^{2}}}=2A-4D\sin 2x-4E\cos 2x}
+
+
+(2A+B)+2Ax+(−4D−2E)sin⁡2x+(−4E+2D)cos⁡2x=x+sin⁡2x{\displaystyle (2A+B)+2Ax+(-4D-2E)\sin 2x+(-4E+2D)\cos 2x=x+\sin 2x}
+
+
+, We can immediately see that A=12{\displaystyle A={\frac {1}{2}}} and 2A+B=0,{\displaystyle 2A+B=0,} so B=−1.{\displaystyle B=-1.} C{\displaystyle C} is not even present, so C=0.{\displaystyle C=0.} Furthermore, since D{\displaystyle D} and E{\displaystyle E} are coupled, they can be solved on their own.
+
+
+2D−4E=0−4D−2E=1{\displaystyle {\begin{aligned}2D&-4E=0\\-4D&-2E=1\end{aligned}}}
+
+
+D=−15, E=−110{\displaystyle D=-{\frac {1}{5}},\ E=-{\frac {1}{10}}}
+
+
+,
+
+
+y=c1+c2e−x+12x2−x−15sin⁡2x−110cos⁡2x{\displaystyle y=c_{1}+c_{2}e^{-x}+{\frac {1}{2}}x^{2}-x-{\frac {1}{5}}\sin 2x-{\frac {1}{10}}\cos 2x}
+
+

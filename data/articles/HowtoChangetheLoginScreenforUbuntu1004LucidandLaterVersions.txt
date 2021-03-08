@@ -1,0 +1,10 @@
+ Before you can change the screen, you need to decide on a picture. You can use one of the predefined Ubuntu images (they're not bad, actually), or use any picture you wish. If you're going to use one of Ubuntu's images, skip step 3.
+ You need root privileges to change these settings. If you're an administrator on your system, you can run on the command line sudo su root and provide your password to login as root.
+ First, place the picture in your Pictures folder. Then open a command line and type cp /home/(your user name)/Pictures/(full name of the picture file) /usr/share/backgrounds/(full name of the picture file). This places the image in the backgrounds folder, and makes it readily available to you in the wallpaper menu.
+ Type cp /usr/share/applications/gnome-appearance-properties.desktop /usr/share/gdm/autostart/LoginWindow. Everything in this folder is run when the login screen is displayed, including the desktop properties for the login screen.
+ Run chmod 444 /usr/share/gdm/autostart/LoginWindow/gnome-appearance-properties.desktop. This allows all users to read the link.
+ Run chmod 444 /usr/share/backgrounds/(full name of the picture file). This allows all users to read the image file.
+ When the login screen appears, the desktop properties window should also appear.
+ If it doesn't appear in the desktops, click on add, and navigate to /usr/share/backgrounds, and find your image.
+ What's cool about being able to do this is you can change other settings, too. If you want the login screen to use your window borders and controls, you can change those settings.
+, Now that you've changed the settings, you need to delete the link so the options don't appear every time you boot up. Run sudo rm /usr/share/gdm/autostart/LoginWindow/gnome-appearance-properties.desktop.

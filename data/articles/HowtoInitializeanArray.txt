@@ -1,0 +1,26 @@
+ Do you want to read in sixteen pupil's names? Use five duplicates? Arrays make it so that you don't have repetitive code because you'll be setting several data values into a single variable, instead of assigning each individual data value an individual variable, which in turn makes for efficient coding.,, Two-dimensional arrays are best suited for "tables of data", which are of the same type e.g. measurement conversions may be best suited to be stored in a two-dimensional array called "conversions." You could think of it like a graph that has a "Y-axis" and an "X-axis"., A single element contains one data item and the index is a number that refers to an array element e.g. "Steve" could be an element written in the second index.
+ With one-dimensional arrays, only the top boundary needs to be mentioned when you declare it. In that sense, you'll need to mention that, for example, you want to read in '8' data values, which are names of car manufacturers for an example. Therefore, you will need an array of '7' because the array's index starts at '0'i.e. 0, 1, 2, 3, 4, 5, 6, 7 are eight individual values., This can be done in the same statement that it has been declared in, and the elements can be assigned one at a time.  This is an example in "Pascal code":
+
+Var Car: array of string=('Honda', 'Bentley', 'Mercedes-Benz', 'Peugeot', 'BMW', 'Renault', 'Toyota', 'Nissan');   **this declares the array index**
+
+Car:= 'Honda'; **this assigns the array element**
+Car:= 'Bentley'; 
+Car:= 'Mercedes-Benz'; 
+Car:= 'Peugeot';
+.. and so on and so fourth.
+ This is another example, this time in "Visual Basic 2005 code" for a "console application":
+
+Dim Car() As String = {"Honda", "Bentley", "Mercedes-Benz", "Peugeot", "BMW", "Renault", "Toyota", "Nissan"}**declares the array elements as alphabetical characters**
+
+Dim Index as Integer**declares the array index as a 'whole number'
+For Index = 0 to 7**start of the conditional loop, also states the size of the array**
+Next
+For Index = 7 to 0 Step -1
+
+Console.Writeline(Name(Index))
+
+
+Next
+
+
+

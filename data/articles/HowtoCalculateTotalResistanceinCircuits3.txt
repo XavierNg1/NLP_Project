@@ -1,0 +1,15 @@
+ A combination circuit has some components linked together in series (one after the other), and others in parallel (on different branches). Look for areas of your diagram that simplify to a single series or parallel section. Circle each one to help you keep track of them.
+
+For example, a circuit has a 1 Ω resistor and a 1.5 Ω resistor connected in series. After the second resistor, the circuit splits into two parallel branches, one with a 5 Ω resistor and the other with a 3 Ω resistor.Circle the two parallel branches to separate them from the rest of the circuit.
+ Use the parallel resistance formula 1RT=1R1+1R2+1R3+...1Rn{\displaystyle {\frac {1}{R_{T}}}={\frac {1}{R_{1}}}+{\frac {1}{R_{2}}}+{\frac {1}{R_{3}}}+...{\frac {1}{R_{n}}}} to find the total resistance of a single parallel section of the circuit.
+
+The example circuit has two branches with resistance R1 = 5 Ω and R2 = 3 Ω.1Rparallel=15+13{\displaystyle {\frac {1}{R_{parallel}}}={\frac {1}{5}}+{\frac {1}{3}}}1Rparallel=315+515=3+515=815{\displaystyle {\frac {1}{R_{parallel}}}={\frac {3}{15}}+{\frac {5}{15}}={\frac {3+5}{15}}={\frac {8}{15}}}Rparallel=158=1.875{\displaystyle R_{parallel}={\frac {15}{8}}=1.875}Ω
+
+
+, Once you've found the total resistance of a parallel section, you can cross out that whole section on your diagram. Treat that area as a single wire with resistance equal to the value you found.
+
+In the example above, you can ignore the two branches and treat them as one resistor with resistance 1.875Ω.
+ Once you've replaced each parallel section with a single resistance, your diagram should be a single loop: a series circuit. The total resistance of a series circuit is equal to the sum of all individual resistances, so just add them up to get your answer.
+
+The simplified diagram has a 1 Ω resistor, 1.5 Ω resistor, and the section with 1.875 Ω you just calculated. These are all connected in series, so RT=1+1.5+1.875=4.375{\displaystyle R_{T}=1+1.5+1.875=4.375}Ω.
+ If you do not know the resistance in one component of your circuit, look for ways to calculate it. If you know the voltage V and current I across that component, find its resistance using Ohm's Law: R = V / I.

@@ -1,0 +1,52 @@
+ This method uses a process similar to long division to find an exact square root digit-by-digit. Though it's not essential, you may find that it's easiest to perform this process if you visually organize your workspace and your number into workable chunks. First, draw a vertical line separating your work area into two sections, then draw a shorter horizontal line near the top of the right section to divide the right section into a small upper section and a larger lower section. Next, separate your number's digits into pairs, starting from the decimal point. For instance, following this rule, 79,520,789,182.47897 becomes "7 95 20 78 91 82. 47 89 70". Write your number at the top of the left space.
+
+
+As an example, let's try calculating the square root of 780.14. Draw two lines to divide your workspace as above and write "7 80. 14" at the top of the left space. It's O.K. that the leftmost chunk is a lone number, rather than a pair of numbers. You will write your answer (the square root of 780.14.) in the top right space.
+ Start with the leftmost "chunk" of your number, whether this is a pair or a single number. Find the largest perfect square that's less than or equal to this chunk, then take the square root of this perfect square. This number is n. Write n in the top right space and write the square of n in the bottom right quadrant.
+
+
+In our example, the leftmost "chunk" is the number 7. Since we know that 22 = 4 ≤ 7 < 32 = 9, we can say that n = 2 because it's the largest integer whose square is less than or equal to 7. Write 2 in the top right quadrant. This is the first digit of our answer. Write 4 (the square of 2) in the bottom right quadrant. This number will be important in the next step.
+ As with long division, the next step is to subtract the square we just found from the chunk we just analyzed. Write this number underneath the first chunk and subtract, writing your answer underneath.
+
+
+In our example, we would write 4 below 7, then subtract. This gives us an answer of 3.
+ Move the next "chunk" in the number whose square root you're solving for down next to the subtracted value you just found. Next multiply the number in the top right quadrant by two and write it in the bottom right quadrant. Next to the number you just wrote down, set aside space for a multiplication problem you'll do in the next step by writing '"_×_="'.
+
+
+In our example, the next pair in our number is "80". Write "80" next to the 3 in the left quadrant. Next, multiply the number in the top right by two. This number is 2, so 2 × 2 = 4. Write "'4"' in the bottom right quadrant, followed by _×_=.
+ You must fill each blank space you've just written in the right quadrant with the same integer. This integer must be the largest integer that allows the result of the multiplication problem in the right quadrant to be lower than or equal to the current number on the left.
+
+
+In our example, filling in the blank spaces with 8, gives us 4(8) × 8 = 48 × 8 = 384. This is greater than 380. Therefore, 8 is too big, but 7 will probably work. Write 7 in the blank spaces and solve: 4(7) × 7 = 329. 7 checks out because 329 is less than 380. Write 7 in the top right quadrant. This is the second digit in the square root of 780.14.
+ Continue with the long-division style chain of subtraction. Take the result of the multiplication problem in the right quadrant and subtract it from the current number on the left, writing your answer below.
+
+
+In our example, we would subtract 329 from 380, which gives us 51.
+ Drop the next chunk of the number you're finding the square root of down. When you reach the decimal point in your number, write a decimal point in your answer in the top right quadrant. Then, multiply the number in the top right by 2 and write it next to the blank multiplication problem ("_ × _") as above.
+
+
+In our example, since we are now encountering the decimal point in 780.14, write a decimal point after our current answer the top right. Next, drop the next pair (14) down in the left quadrant. Two times the number on the top right (27) is 54, so write "54 _×_=" in the bottom right quadrant.
+ Find the biggest digit to fill in the blanks on the right that gives an answer lesser than or equal to the current number on the left. Then, solve the problem.
+
+
+In our example, 549 × 9 = 4941, which is lower than or equal to the number on the left (5114). 549 × 10 = 5490, which is too high, so 9 is our answer. Write 9 as the next digit in the top right quadrant and subtract the result of the multiplication from the number on the left: 5114 minus 4941 is 173.
+ For added accuracy, continue repeating this process to find the hundredth, thousandth, etc. places in your answer. Proceed through this cycle until you find your answer to the desired decimal place.
+ Because a square's area is L2 where L is the length of one of its sides, therefore, by trying to find the square root of your number, you are trying to calculate the length L of the side of that square.
+ Assign the variable A as the first digit of L (the square root we are trying to calculate). B will be its second digit, C its third, and so on.
+ Assign the variable Sato the first pair of digits in S (your starting value), Sb the second pair of digits, etc.
+ This method of finding a square root is essentially a long division problem that divides your starting number by its square root, thus giving its square root as an answer. Just like in a long division problem, in which you are only interested by the next one digit at a time, here, you are interested by the next two digits at a time (which correspond to the next digit at a time for the square root).
+ The first digit A in our answer is then the biggest integer where the square does not exceed Sa (meaning A so that A² ≤ Sa < (A+1)²). In our example, Sa = 7, and 2² ≤ 7 < 3², so A = 2.
+
+
+Note that, for instance, if you wanted to divide 88962 by 7 via long division, the first step would be similar: you would be looking at the first digit of 88962 (8) and you would want the biggest digit that, when multiplied by 7, is lower than or equal to 8. Essentially, you're finding d so that 7×d ≤ 8 < 7×(d+1). In this case, d would be equal to 1.
+ Your answer, the square root of your starting number, is L, which describes the length of a square with area S (your starting number). Your values for A,B,C, represent the digits in the the value L. Another way of saying this is that, for a two-digit answer, 10A + B = L, while for a three-digit answer, 100A +10B + C = L, and so on.
+
+
+In our example, (10A+B)² = L2 = S = 100A² + 2×10A×B + B². Remember that 10A+B represents our answer L with B in the units position and A in the tens position. For instance, with A=1 and B=2, 10A+B is simply the number 12. (10A+B)² is the area of the whole square, while 100A² the area of the biggest square inside, B² is the area of the smallest square, and 10A×B is the area of each of the two remaining rectangles. By performing this long, convoluted process, we find the area of the entire square by adding up the areas of the squares and rectangles inside it.
+ Drop one pair (Sb) of digits from S. Sa Sb is nearly the total area of the square, which you just subtracted the area of the bigger internal square from. The remainder is can be though of as the number N1, which we obtained in step 4 (N1 =380 in our example). N1 is equal to 2×10A×B + B² (area of the two rectangles plus area of the small square).
+ In our example, you already know N1 (380) and A (2), so you need to find B. B is most likely not going to be an integer, so you must actually find the biggest integer B so that (2×10A + B) × B ≤ N1. So, you have: N1 < (2×10A + (B+1)) × (B+1).)
+
+, To solve this equation, multiply A by 2, shift it in the position of the tens (which is equivalent to multiplying by 10), place B in the position of the units, and multiply the resulting number by B. In other words, solve (2×10A + B) × B. This is exactly what you do when you write "N_×_=" (with N=2×A) in the bottom right quadrant in step 4. In step 5, you find the biggest integer B that fits on the underscore so that (2×10A + B) × B ≤ N1.
+ This gives you the area S-(10A+B)² not yet accounted for (and which will be used to calculate the next digits in a similar fashion).
+ Drop the next pair (Sc) from S to obtain N2 on the left, and look for the biggest C so you have (2×10×(10A+B)+C) × C ≤ N2 (equivalent to writing two times the two-digit number "A B" followed by "_×_=" . Look for the biggest digit that fits in the blanks that gives an answer that is less than or equal to N2, as before.
+

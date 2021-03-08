@@ -1,0 +1,15 @@
+
+Consider your network is having Aggregation, Core, Access, Network Processor engine, and Route reflector Routers;
+,
+Assume that All the L3 Layer connectivity is established between all these devices.
+Assume that you have 2 Route Reflector name RR1 and RR2 in your network.
+
+,
+Assume that you have 22 Aggregation Routers (AG1 to AG22).
+
+,
+Assume that you have 4 network processor engine (NPE1 to NPE4).
+In both of your Route Reflectors configure all your Aggregation, Network Processor engine routers as your bgp neighbors.
+
+,
+Now log in to each devices other than route reflectors (AGG,NPE) and make bgp neighbor as the Route Reflector.

@@ -1,0 +1,47 @@
+ Making a website (or web app) can take a lot of time and effort, so spending time planning what you want to do, which will reduce how long it takes and improve the quality of the finished product, makes a lot of sense.
+Begin your planning by deciding on the purpose of the website, and who it's for - think about the kinds of people who will visit it, then deciding what content it will need to have, and finally how you'd like to structure it (what content goes where, and on which pages).;
+,, This will run the install script which will first gather the information it needs from you and then setup all the database tables. I recommend using the standard installation profile, not the minimal one. Once finished, your website will be ready to use!
+
+, Located above the pages, the administrative dashboard allows you to add content, add users, configure the structure, modify the appearance, install modules, and more.
+ Modules for Drupal are special PHP plugins that add extra functionality to the CMS, such as webforms and image manipulation. Installing modules is very easy in Drupal. Just click on Add Modules in the Modules section of the administrative dashboard. Unlike other CMSs, there is usually one module per feature that is always free and well supported instead of several different modules to choose from that may or may not cost money and be what you need. Visit www.drupal.org to find modules.
+
+
+
+Views, probably the most commonly-installed module, allows you to create complex lists, grids, or tables of any of your content (or users or comments).
+
+Drupal Commerce is a e-commerce module which allows you to sell products and services through a Drupal website, and it handles product creation, shopping cart management, and ordering. It replaced the trusty Ubercart module.
+
+Lightbox and Colorbox modules allow you to create complex image galleries.
+Both WYSIWYG and CKeditor modules replace the plain text editor with a rich-text, WYSIWYG editor.
+
+Webforms allows you to create forms such as a contact form or a contest submission.
+Many, many more modules exist for pretty much any task.
+ The theme is the component that determines the look and structure of the web pages. You can build your own theme starting from a base theme such as Zen or Omega, or you can use a mostly finished theme such as Danland or Corporate Clean. Either way, you're encouraged to modify the CSS and PHP files of the theme to achieve the exact design you're looking for. www.drupal.org has many free themes available for download. Theme marketplaces provide polished, ready-to-use themes for around $30 to $70.
+ Before actually adding your content, create the content types, views, menus, and taxonomies your website will depend on.
+
+
+The 'Content-Types' component lets you define the structure of each type of content, such as whether or not an image should accompany the text or if users can post comments. Chances are, you will not get it right the first time. Don't worry, changing the content-type updates any content of that type.
+The 'Blocks' section lets you define what content blocks go in what regions of the webpage, such as footer, sidebar, etc.
+'Taxonomies' act as tools for creating lists of categories, sections, tags and the like, and they can also build complex structure trees for, as an example, a product catalog or music library.
+
+
+
+'Nodes' are pieces of content, defined by the Content Types.
+'Menus' provide the means for navigation to the static content, such as pages for About Us, Contact, etc, and to any Views that list the dynamic content.
+'Views' is the module for creating tables, slideshows, and lists of other nodes in the website for creating "splash" pages that link to your content. Not all websites need views, only ones with content that is frequently added like blog posts or products. Configuring the views can be quit complex: there are fields to add, filters for selecting what content to display, settings to control the content display, a 'paging' feature for creating multiple pages of content within one view, and more. Drupal beginners are advised to read through the Views documentation.
+Existing views can be cloned. For example, if you have a view for a page that displays blog posts, it can be cloned and the filter can be updated to only displays news articles.
+ This is where some forward thinking is needed. For instance, should two content types be created, one for local news and one for national news in this example, or should there just be one general news content type paired with a taxonomy that lists both types? The answer to that depends on more deciding factors: will one have different fields than the other, such as a field for location? Should different user types (admin, author, editor) be able to create one and not the other? Could different news types be added in the future, such as global news or community news? These are questions that will have to be addressed. Some does and don'ts:
+
+
+Do use taxonomy terms over creating multiple content types, when possible.
+Don't attempt to make a view of views. If you find yourself needing this, you're approaching it wrong. Taxonomy terms can be organized into a hierarchy, which should be able to help in a situation like this.
+Do search for modules out there that will do all this hard work for you. For example, the Calendar module can create views that turn into full-featured calendars which would be nearly impossible to do on your own. And the Station module creates content types and views to build a radio station website, complete with playlists and schedules. There are such things as 'Profiles' that can be installed that can perform similar tasks.
+ Once the structure has been configured (or at least created) you can add the content, or write new content.
+
+
+You can create menu links to the content or you can rely on them being displayed in the views.
+You can name your own URL aliases for the content, making them easier to link to.
+Some content types, such as Ubercart product classes, have special fields such as SKU numbers and prices.
+ Thorough testing, editing, and polishing is a must before releasing the website to the public. Make sure that permission levels are where you need them (like not letting anonymous users modify pages) and test the website in several different browsers and platforms.
+ Once everything is ready, make the Drupal website live by connecting it to a domain name and spreading the word, just like any other website.
+

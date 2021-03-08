@@ -1,0 +1,3 @@
+ After "SQL," enter "select rowid, name from names;."
+
+, After "SQL," enter "delete from names a where rowid > (select min(rowid) from names b where b.name=a.name);" to delete duplicate records., After you have completed the above, commands check to see if you still have duplicate records by entering "select rowid,name from names;" and then "commit."

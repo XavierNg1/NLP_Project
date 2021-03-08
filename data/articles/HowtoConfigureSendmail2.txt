@@ -1,0 +1,9 @@
+, In our example, we will use yourdomain.com., Establish two machines as primary and secondary name servers for your domain. Knowledge of how to do this is assumed; otherwise, read the O'Reilly book "DNS and BIND", 4th Edition is highly recommended. Familiarize yourself with BIND before continuing., MX records are explained in the O'Reilly Sendmail book; the 2nd edition gives an overview in § 15.3 and describes how to configure them in § 21.3, whereas the third edition explains everything about them in § 9.3. You have two options for MX records:, In this configuration, your MX records would look like this:
+
+yourdomain.com. IN MX 10 yourmailserver.yourdomain.com.
+
+
+Otherwise, you will need to find another machine to queue mail for your domain when you are not connected. Be sure to get the machine owners' approval first. That machine must be configured to allow relaying to your domain. If it is running Sendmail, this can be as simple as adding your domain to the relay-domains file on that machine. You would then point your MX records at that machine. For example:
+yourdomain.com. IN MX 10 yourmailserver.yourdomain.com.
+yourdomain.com. IN MX 20 othermailserver.otherdomain.com.
+ As you register, inform the registry of the two name servers, and then the domain will point to your server.

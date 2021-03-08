@@ -1,0 +1,19 @@
+ Although you could try to make your website respond to all devices in all conditions, this is probably a waste of time and money.;
+, Start with a design approach for mobile devices. To achieve this, use simple HTML and CSS with less of Javascript, since there are many mobile devices which don't support Javascript.
+
+
+Add viewport meta tag using the code as shown: <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+, Progressive enhancement uses web technologies in a layered fashion enabling everyone to access the basic content and functionality of a web page, using any browser or Internet connection, while also providing an enhanced version of the page to those with more advanced browser software or greater bandwidth. Now you have a basic website that will work fine for all devices.
+
+
+
+Use frameworks: Javascript Frameworks: Modernizr, jQuery Mobile, Polyfills.
+Use mobile validators or emulators for validating and checking your website design.
+ With so many browsers available, it is very important to make a website that loads evenly on all the browsers.
+
+
+Use Modernizr and Polyfill for identical rendering on different web-browsers.
+Modernizr is a feature detecting JS .We can add fallbacks for features unavailable.The image show code snippet for detecting canvas support .
+ As IE versions below IE8 do not recognize new HTML5 elements, use HTML5SHIV.js which includes all the new elements.
+

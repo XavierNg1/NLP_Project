@@ -1,0 +1,125 @@
+ Go to File, New. The New Image properties box will open. Set the settings as follows:
+
+
+Image Dimensions: Units: Pixels, Width: 640, Height: 480, Resolution: 100.000, Pixels/inch
+Image characteristics: Raster Background, Color depth: RGB - 8 bits/channel, Color: Transparent (checked);
+,, Click on File, Save. Give your file a name, and make sure the save as file type is a .psp image.
+
+
+
+Make sure you have the correct pallets open within the program workspace.
+View, Palettes. Make sure the check-marks are next to these three options: Layers, Materials, and Tool Options.(see image). If you do not have a check-mark next to those options, click on the option and it will open the pallet. Please note that you will have to repeat these steps for each.
+ The top box shown in white sets the color for the Background and Fill properties. The bottom box shown in black sets the color for the Foreground and Stroke properties.
+
+
+Set your color boxes in the materials pallet to the colors shown. To do this simply click on the color box, and select the color tab from the material choices. The below image shows us choosing the color black, and to set the color we click OK.
+ Locate the null button that sits under the background and fill color box. Click it one time. You should now see the null icon in the color choice box.
+ On the left side of your workspace you will see the main tools. Choose the Preset Shapes tool as shown in the image.
+
+
+When your choose your preset shape tool, the shape tool options will load above in your workspace.
+Click on the noted area in the tool options, and select the Corel Heart shape. (some versions of Paint Shop Pro do not have a heart shape, please choose another shape to practice with)
+
+Set the settings as shown: Anti-alias: checked, Create as vector: checked, Width: 0.00
+
+, Place your preset shape tool cursor onto your canvas. Practice using this tool so that you can get placement and size to your liking. To clear the canvas and try again, go to Edit, Undo.
+
+
+In the image you will see a black heart shape. This is correct, as color does not matter at this point.
+ Tool-tip note: Currently the preset shape is in a vector layer format. In most cases when you want to add an effect to an object within a layer it should be in the raster layer format. Why? If you try to add an effect or plug-in option to a vector layer, Paint Shop Pro, will post a pop up alert by default, to remind you the vector must be converted to a raster layer before you can continue. This is normal, and it is not an error.
+
+
+Look at the layers pallet. This pallet is one of the most important pallets in your program. You must keep it neat and tidy.
+The layer pallets shows that you have a raster 1 layer that is blank, and a vector 1 layer that contains the heart.
+Click on the + sign next to the vector layer, you will see the sub layer that contains the actual heart. See the layers pallet image.
+In the layers pallet, right click one time on the vector layer. From the list of choices, you will choose "Convert to Raster Layer". The layer will now be called Raster 2. Re-name the raster 2 layer to heart by double clicking the text.
+ It is good to get in the habit of periodically saving your work in case the program crashes. To do so, click File, Save.
+ Make sure the heart layer is the active layer. You will know it is the active layer because it will have a lighter shade of gray as the layer pallet - layer background color.
+
+
+Go to Effects, 3D Effects, Cutout
+The Cutout properties box will open (see image below). Set the settings as shown. (please feel free to choose your own colors)
+Make sure you place a check mark in the "Preview on Image" so that you can see your choices in real-time on the canvas.
+Make sure you have "Fill interior with color" or you will only end up with a shaded heart.
+Click on the color boxes in the Cutout properties box to choose your colors or enter my color choices into the HTML section of the color choices. Click OK
+Your heart should now look similar to the sample heart.
+ To create the country whimsical look, you need to give the heart a gritty dirty look.
+
+
+Select your heart. You want to do this because you will be adding texture along with other settings. The selection will help us by preventing these new additions from escaping your heart area.
+In the main tools, select your Magic Wand tool as shown.
+The magic wand tool options will open above. Set the magic wand tools to these settings. Mode: Add, Match Mode: RGB, Tolerance: 0, Contiguous: checked, Feather: 0. Anti-alias: checked
+Click anywhere outside of the heart. Click down one time with your magic wand tool but do not click anywhere within the heart—you must click in a transparent spot.
+You will now see you have marching ants (dashes) moving on the outside of your heart, and within the canvas wall. The green areas show the areas that are selected. You will not see the green in your canvas this was added to highlight the areas only.
+ It is good to get in the habit of periodically saving your work in case the program crashes. To do so, click File, Save.
+ In the main menu of Paint Shop Pro, go to Selections, and choose Invert. You will now see the heart has the marching ants around it.
+ Crop in by 1 pixel.
+
+
+Go to Selections, Modify, Contract
+The modify selections properties box will open. Set the settings to the following. Preview on image: Checked, Number of Pixels: 1
+You have just set your selection so that it sits in 1 pixel. You are going to add to this heart, and the selections will prevent our new additions from going outside of the heart.
+
+
+
+Add a new raster layer. In the main menu of Paint Shop Pro, go to Layers, New Raster Layer. In the new raster layer properties box, simply give this layer the name shading 1
+
+Layer Check Point-the image demonstrates what the layers pallet should now look like. Make sure the new layer named Shading 1 is your active layer. NOTE: You should still have your marching ants around your heart.
+
+In the main toolbar, select your Airbrush Tool.
+The Air Brush tool options should have opened above. Set the airbrush settings to the following. Default Brush, Shape: circle, Size: 148, Hardness: 30, Step: 25, Density: 15, Thickness: 100, Rotation: 0, Opacity: 40, Blend Mode: Normal. Choose the first default brush by clicking the noted area shown below. (you can alter these settings to fit your needs)
+
+
+,
+
+
+Click on the top Foreground and Stroke properties color box. In the color tab, set the HTML color to #6b3742
+Place your Airbrush cursor so that it just sits on the marching ants line. Draw around the edge of the heart. This will put a dusty look all around the heart. Here are the results for going around the heart twice.
+ It is good to get in the habit of periodically saving your work in case the program crashes. To do so, click File, Save.
+ You should still have your heart selected with the marching ants. You will now blur your airbrush.
+
+
+Make sure the Shading 1 layer is active.
+In the main menu of Paint Shop Pro, go to Adjust, Blur, Gaussian Blur.
+The Gaussian Blur properties box will open. Set the settings as shown below or choose your own. Preview on Image: Checked, Radius: 1. Click OK
+
+, Add a new layer (Go to layers, new raster layer, and name this layer Shading 2). Now add another layer of the airbrush effect.
+
+
+Choose your airbrush tool, and this time change your color to a color that is a tad darker. The example color choice is #5e2e38. Make sure Shading 2 is your active layer.
+Using the same technique as you did for shading 1, go ahead and do the same with the new darker color. (feel free to try different density, hardness, or opacity settings)
+Time to blur this layer. Go to Adjust, Blur, Gaussian Blur. Use a manual blur setting of 0.50. This time you can set the radius to 0.50 to 1.00 (note that you must manually type in the 0.50)
+
+, You have already made a few new layers, so you should be able to do this easily.
+
+
+Go to Layers, New Raster Layer, and name this layer Highlight.
+Select your Airbrush, but this time set your size down to 86.
+Set your Foreground and Stroke properties color box to White (or a very light version of the lightest color in your heart)
+Place your brush/cursor where you want to see some highlights and brush lightly in two areas.
+Set a high blur radius that looks best with our heart. Go to Adjust, Blur, Gaussian Blur, and set the radius to 20.00 (or whichever you prefer) Here is what your Layer Pallet should now look like
+Go to Selections, Select None.
+ It is good to get in the habit of periodically saving your work in case the program crashes. To do so, click File, Save.
+ The best thing about Paint Shop Pro is that you can work in layers. Because we have this layer option we can easily add different layer blends to give us a new graphic look.
+
+
+In each layer, you will see an eye icon. That is called the Visibility Toggle. If you click on that eye icon, you will see the layer is now hidden in the canvas. To open that layer again you simply click the eye icon. To continue with the next steps we must toggle the highlight and shading 2 layers closed.
+Go ahead and click on the eye icon next to the Highlight Layer, and the Shading 2 Layer. Stand on the layer named Shading 1 to make that your active layer.Please note you are not looking on the layer itself, but rather the pallet features towards the top.
+
+In the layers pallet window you will see the word "Normal". If you click on that arrow next to Normal, you will be presented with several choices. These choices are are called "Layer Blends".
+Set your shading 1 layer to have a special layer blend.
+Choose the option "Overlay" as shown, and you will see that this layer blend option gave your shading 1 a new look.
+Open up Shading 2 by clicking on the eye icon. Make sure Shading 2 is the active layer. Set that layer to Multiply. You will see this really made that layer dark! This is okay, because you have to still set your opacity levels for each layer, and the next steps will show how to do this.
+ Stand on the layer named Shading 1. In the layer pallet, you will see the #100. If you click on that you will see you can set down the opacity of the current active layer. Set your shading layers as follow: Set Shading 1 to 69, Set Shading 2 to 26
+
+
+Open the Highlight layer. If you want to try different layer blends and opacity levels go right ahead.
+ It is good to get in the habit of periodically saving your work in case the program crashes. To do so, click File, Save.
+ Quick talk on Tubes- Picture Tubes or also known as PSP Tubes, are extremely popular in the PSP community. Picture tubes are best explained as a stamper that never runs out of ink. Most tubes have a transparent background so that you can place the picture tube on any color background or any layer, and not have to see a color background with that graphic. Save your heart so that you can use it over and over again in the future. You will never have to re-make this heart again unless you want to.
+
+
+Go to the main menu in Paint Shop Pro, and choose Window and then choose Duplicate. You will now have a carbon copy of your work. You do not want to confuse your original with the duplicate. You can safely close your original work or minimize it.
+Merge your layers on our duplicate work. Go to Layers, Merge, Merge all Visible. You will see in your layer pallet that you have one layer named Merged.
+To get rid of all the extra transparent space around our heart you can safely crop your work by following these simple steps: Go to Edit, Copy, Go to Edit again and this time choose Paste as a New IMAGE.
+Go to File, Export, Picture Tube. Give your tube a name, and click save. You have just saved your tube, and it is ready to be used later. You can find your new heart tube by choosing the picture tube tool, and choose the heart from the picture tube options list.
+

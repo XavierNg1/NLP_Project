@@ -1,0 +1,35 @@
+
+Open a new Excel workbook and create 4 worksheets named: Data, Goal Lookup, Chart and Saves.
+Open Preferences.
+Create the Defined Name variables:
+
+In the cell range A1:I1, input the following Variable Names: A1: AjRows; B1: GM (for Golden Mean); C1: Factor1; D1: Factor2; E1: Number; F1: NewDate1; G1: GMSL (for Golden Mean Short Leg); H1: KEY; I1: KEY2_
+Select cell range A1:I2 and Insert Name Create (Create Names in) Top Row.
+Create the vlookup tables
+
+Select cell R8 and enter LOOKER2.
+Input variable values in row 4:
+
+A4: input "=Base*12/(VARIABLE/1)*PI()"; Insert New Comment and edit in "Original formula =Base*12/(VARIABLE/1)*PI()".
+Input the Column Headings across row 5.
+Enter the columnar formulas:
+
+Cell A6: Input "=IF(ODD(Spheroids)=Spheroids,0,Tip)" and do Insert Comment and edit comment "Original formula =IF(ODD(Spheroids)=Spheroids,0,Tip)".
+Create the LOOKER vlookup table
+
+Edit Go To cell range  O6:O2886 and with O6 the active cell, enter 1.
+Create the vlookup table SpreadLOOKER
+
+Select cell U5 and input 1.Activate Worksheet Goal Lookup.
+Input the Column Headings.
+Create table Goal_looker_Eggbasket
+
+Edit Go To cell range A2:C101 and Insert Name Define  Goal_Looker_Eggbasket  to cell range $A$2:$C$101.
+Create the Chart
+
+Activate Data worksheet and Edit Go To under Main X and Main Y cell range E6:F2886.
+The way in which the top 3-part image was formed was to make three images setting ShrinkExpand2 to 1.2, 1.0 and 2.0 while using the RandBetween data then current (it changes with each new sheet calculation).
+In terms of a diabetic measuring their blood glucose level, it would be unusual (except perhaps in a hospital context) to take 24 daily readings, but these could be 3 readings per day over 8 days at contiguous hours of the clock.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

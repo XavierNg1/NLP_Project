@@ -1,0 +1,60 @@
+ language and a computer, all made out of redstone). Once you have those, these next few steps will be on modifying them to be able to work with the internet. This project will also discuss creation of a router.;
+, Well, it should be a 10 line or more (5 inputs, 2 inputs to each output), with no override. Now, feed another bus over that first bus and those will later be used in the programming language.
+
+
+Each of those output lines in the BCD should be an input in your internet, and you will have another, small input station for it too.
+
+
+
+
+
+
+That separate input station should be a large wall with 3x3, the top and bottom rows of levers and the middle row of buttons.
+
+
+
+
+
+
+The display can be either torch or piston. This should be at minimum 3x3 for an extremely small internet.
+ In that CPU you need to have your commands pre-made so that they will follow through to the display from the BCD.
+ A time station is simply a GIANT splitters, and if you need more, make more splitter. Use piston repeaters instead of normal diodes for extending the signal.
+ This router will be the medium between the internet and your I/O/Computer. A router must have an IP address (I suggest 6 digit), an I/O station and a mirror cell. The IP address is simple, have the 6 line IP bus, but only put torches on inverters for setting the IP address, and then for turning it off, make it turn them all either on or off. Either way, its an Infi or Null value, meaning nothing, or the router is off.
+ Also, a multiplexer for each line should be coming in from all the sites, and a shift so that the sites don't override. Also, have each line hooked up to and gates, so that when they are all on, it will give an overload message saying that the activity should cool down.
+
+
+A mirror cell is like a ping. You can check if they are working or not. This should NOT have a toggle on it like the other I/O cells should.
+
+
+
+
+
+
+There you have it. Now, just to make the servers and server space.
+
+
+First, for the small kind of internet, with 4 bytes of server space, have it set up in a fashion so that the signal going in or out goes through 4 inverters. The first of those 4 is the toggle, just like the toggle on the router, and next one is a check, which is fed into an and gate for an overload warning, like in the router. the third one is to be able to tap the signal out to an inverse checker, basically, a site check to ping if it's up or not, and the 4th one is a stabilizer.
+
+
+
+
+
+
+To put something onto a server, you have to go and make an application on it, out of redstone for example, like an adder or another clock or something like that.
+
+
+
+
+
+
+For an upload, make it like the I/O cells of a router, and those feed off and into the application, and the same for downloading, as in it downloads a bit, or however much information is being downloaded and then store it off to the hard-drive.
+
+
+
+
+
+
+Now, you know how to make it, make routers and put things on the internet. This is a prototyping version, and it is still being developed to make better, thank you.
+
+
+

@@ -1,0 +1,7 @@
+ This is the default text editor for TXT and other text files on a Mac.
+ This option will only appear in OS X 10.7 (Lion) and later.If you're using an earlier version of OS X, Click "File" → "Save As" and then select "PDF" as the file type.
+ Click Save to create the new PDF file.
+ Some users have reported problems with creating PDFs with TextEdit, where sometimes the resulting PDF would be blank. Deleting a few system files seems to fix the problem:Click the "Go" menu in finder and select "Go to Folder". Enter ~/Library/Preferences and press ⏎ Return.
+Delete any com.apple.TextEdit.plist files. There may be multiple .plist files associated with TextEdit.
+Restart TextEdit and try to create the PDF file. It should work properly now.
+

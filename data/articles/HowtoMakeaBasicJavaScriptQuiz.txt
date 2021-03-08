@@ -1,0 +1,238 @@
+ You will need a text editing program to write your code in. You can write it in a notepad document but you will probably want an editor designed for programming such as Notepad++ (Windows), Atom (Mac) or Notepadqq (Linux). However any basic text editor does work.;
+, You will need two files: one in HTML that is read by the browser and one in JavaScript that is the game.
+ Because you only need two files, you don't need any sort of complex filing system. As long as the two files are in the same level of the same folder it will work. So save both of your files in the same place.
+
+
+To save as html add a .html extension. Us a .js extension for the JavaScript file.Set up code in your files. The JavaScript file requires no setting up but the HTML does. In your HTML document add the following code:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Page Name</title>
+                <script src="quiz.js"></script>
+        </head>
+        <body>
+ 
+        </body>
+</html>
+
+
+
+
+
+
+This is the basic set up for almost any page in HTML.
+
+
+<!DOCTYPE html> defines the code as HTML to the browser.
+
+<html> tells the browser that everything in that section is written in HTML unless specified otherwise.
+
+<head> is a section that holds information about the page such as the title.
+
+<title> is the name that shows up in search results and the name on the tab.
+
+<script scr="quiz.js"> is linking the JavaScript file to the HTML file.
+
+<body> holds everything that is visible on the page itself.
+ First you will create a function called start. The rest of your game code will go in this function. This is so you can start your game using a button on your HTML page. The following code creates this function:
+
+
+
+
+
+
+
+var start = function(){
+ 
+}
+
+
+
+
+
+This code creates a variable(var) named 'start':var start. This variable is a function.
+
+A variable is a key word that has a bit of data assigned to it, in this case a function.
+A function is a section of code that can be 'called'. When it is called it runs the code inside its {}. This is so that you don't have to write out the same thing more than once.
+ These variables will/do contain data such as: the score, the question, and the user input. They go inside the start function's {}.
+
+
+
+
+
+
+
+var correct = 0;
+var incorrect = 0;
+var question = "none";
+var input = "none";
+var answer = "none";
+
+
+
+
+
+
+correct: This is how many questions the user has answered correctly.
+
+incorrect: This is how many questions the user has answered incorrectly.
+
+question: This is the question that the user will be given, it will change for each new question.
+
+input:This will hold the user's answer or their 'input'.
+
+answer: This will hold the correct answer to the question.
+Note: when you use a variable you don't need to write var, you do this only when making the variable.
+ The ask function asks the user the var question through a prompt. A prompt is a pop-up box that requires the user to type their answer into the box.
+
+
+
+
+
+
+
+var ask = function(){ 
+                input = prompt(question);
+};
+
+
+
+
+
+Ask is a variable which is a function.
+The function sets the variable input to the response of the prompt containing the variable question.
+So in summary: The function asks the user a question in a prompt. The users response is then set to the variable input. So input is the answer that the user put.
+ The score function reacts to whether the users input is correct or not. It then responds appropriately.
+
+
+
+
+
+
+
+var score = function(){ 
+        if(input == answer){ 
+                correct = correct+1;
+                alert("correct");
+        }else{
+                incorrect = incorrect+1;
+                alert("incorrect");
+        }
+};
+
+
+
+
+
+The variable score is a function.
+
+if the variable input is equal to the variable answer(this is correct) the variable correct it equal to itself plus one.
+And it gives the user an alert that reads: 'correct'.
+
+else the variable incorrect is equal to itself plus one.
+And it gives the user an alert that reads: 'incorrect'.
+In summary: this function checks if the users input is the same as the answer, meaning it is correct. If there is a match then the amount correct goes up one and it alerts the user that their answer was correct. If there wasn't a watch the amount of incorrect goes up one and it alerts the user their answer was incorrect.
+ This will make writing up the next bit easier.
+
+
+
+
+
+
+
+var lazy = function(){
+        ask();
+        score();
+};
+
+
+
+
+
+The variable lazy is a function.
+When run it calls two functions: ask(); and score();.
+In summary: This function just calls two other functions. It means when you want to call both 'ask' and 'score,' you don't have to call them separately; you can just call 'lazy'.
+ This could say anything. This code is a basic welcome. You don't need to have a welcome but it can be nice for the user.
+
+
+
+
+
+
+alert("welcome to my quiz, you will be answering 10 questions.");
+
+
+
+
+
+, The following code demonstrates how.
+
+
+
+
+
+
+
+question = "What is the matrix?";
+answer = "There is no spoon";
+
+
+
+
+
+The single = assigns the thing on the right to the variable on the left. This means that the variable question now holds the text(string)"What is the matrix?". And the variable answer holds the text(string) "There is no spoon".
+ This function calls the functions 'ask' and 'score'.
+
+
+
+
+
+
+
+lazy();
+
+
+
+
+
+The function 'ask' asks the user the question and saves the users input to the variable input. The function 'score' checks if the users input matches the variable answer and changes the variables 'correct' and 'incorrect' appropriately.
+ First change the variable 'question' to your new question. Then change the variable 'answer' to the correct answer to your new question. Then run the function ask.
+ This could involve telling them there score or the percentage of questions they got right.
+
+How many they got correct:
+
+
+
+
+alert("Well done, you got " + correct + " out of 10");
+
+
+
+
+
+, At the very beginning you created a function named 'start'. You want to make the quiz start on the click of a play button. In the HTML body tag add the following code.
+
+
+
+
+
+
+
+<button onClick="start()">play</button>
+
+
+
+
+
+This adds a button to your page with the word 'start' on it. When the user clicks on it it will run the function 'start'. This function contains the code of the game.
+ Using the
+tag you can add plane text to your web page. You could warn the user that the answers are case sensitive or tell them to have a nice day. Fell free to add whatever you want to.
+ Does it work how you expect?
+
+, You could add more questions or messages, edit the HTML to make the page look nicer.
+

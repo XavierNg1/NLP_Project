@@ -1,0 +1,25 @@
+ Choose the gnome edition.;
+, If this is your first time using VirtualBox, the left section should be blank. Click on the new button in the top left corner.
+ In the type field, Linux should be selected. In the version field, choose "Fedora" if you have downloaded the 32 bit ISO or "Fedora 64" if you have downloaded the 64 bit ISO. Click on the next button.
+ The recommended memory size for Fedora is 1GB or 1024MB. However, you may allocate more RAM to it. You can also change the RAM settings after the installation. Afterwards, click on the next button.
+ Notice the recommended size for VirtualBox is 8GB and the recommended size for Fedora is 10GB. It would be better to go with Fedora's recommendation or higher than it so you'd have enough space for the installation and other programs you might want to add later on. Click on the create button.
+, Click the next button.
+ Slide the sidebar to the right until it reaches 10GB or you can manually type 10 in the textbox. Click the create button.
+
+
+After initializing the creation of the VDI, you should see a progress bar that looks like the screenshot below. Then your virtual hard disk will be created.
+, Click on start.
+
+
+The second screenshot below shows what it might look like.
+,, For the next windows, select "Basic Storage devices", then click on the next button.
+,, Make your root password then click next. Select "Use All Space" and leave the LVM checkbox then click next.
+, This can take a little while to be completed.
+, Enter the same information as step 3 but change the name to something that's not exactly identical to step 3's name. Press next to select 1GB or more of RAM. As for the Hard drive, select "choose existing virtual hard drive file" and select your previously created fedora 17 VDI then click on the create button.
+ Click on Forward
+
+, Click on the checkbox that says add to administrator groups. When you're done inserting all the information, click on the forward button.
+ Check the radio button that has the words "Synchronize date and time over the network" this option automatically adjusts your time setting to your area's. Click on the forward button.
+ The next step is log-in with your normal user name and password from step 22.
+ As it can be quite confusing, you may want to refer to the video shown below. Enjoy your Fedora Installation in VirtualBox! You may remove the first Fedora that contains only the ISO files now.
+

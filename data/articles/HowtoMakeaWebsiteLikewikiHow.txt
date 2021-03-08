@@ -1,0 +1,11 @@
+ You need to have a clear aim and goal for your site. Is it a recipe or cooking tips site? Is it just open, like wikiHow? Make sure you have a clear goal in mind or your site will end up a mess. Don't download or write anything until you've done this.;
+, Write them all down on paper or in a word processor document. If you have your rules outlined before you begin, you can avoid disallowed posts by setting your rules out straight.
+ You'll need one that supports MySQL or PostgreSQL (depending on your wiki software) and the scripting language your software is written in (like PHP or Python). You'll also want some way of uploading files (like FTP), and SSH and/or cPanel (or another control panel) is a brilliant extra feature to have.
+ Connect to your host via FTP and either upload the tar.gz file (if you have control panel or SSH) or the unzipped contents (if you have no way of unzipping it when it's online).
+ If you're in a control panel, go to the file manager option (if you have one) and select the 'tarball' (the .tar.gz file). Select the 'unzip' option and then delete the tarball. If you're in SSH, type 'cd' and the directory where your tarball is (you can use the Tab key to auto-complete names of files and folders). Then type 'tar -xvzf <your_tarball_name>.tar.gz'. Then you can type 'rm <your_tarball_name>.tar.gz' to delete the tarball.
+ Usually, when you unzip the tarball, it'll make a folder for the wiki itself, so if you want you can rename it or move it around - maybe even to your root website folder (so going to example.com will head straight to your wiki). Usually at this stage you'll be sent to a set-up or install page.
+ Most (if not all) wikis will have an installer or setup script. Type in all the values (like your wiki's name, the admin account details, etc.) and start the installation. Your software will make all the necessary changes to files.
+ If you want to add a logo or some front page information, do that now.
+ Make sure they're in a clear place.
+ Submit your site to search engines and add some of your own content. It's no fun if you don't take part yourself.
+

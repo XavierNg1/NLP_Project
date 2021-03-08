@@ -1,0 +1,117 @@
+ Below, ϵ0{\displaystyle \epsilon _{0}} and μ0{\displaystyle \mu _{0}} are the electric and magnetic constants, respectively (we are working in SI units).
+
+
+∇⋅E=ρϵ0∇⋅B=0∇×E=−∂B∂t∇×B=μ0J+μ0ϵ0∂E∂t{\displaystyle {\begin{aligned}\nabla \cdot {\mathbf {E} }&={\frac {\rho }{\epsilon _{0}}}\\\nabla \cdot {\mathbf {B} }&=0\\\nabla \times {\mathbf {E} }&=-{\frac {\partial {\mathbf {B} }}{\partial t}}\\\nabla \times {\mathbf {B} }&=\mu _{0}{\mathbf {J} }+\mu _{0}\epsilon _{0}{\frac {\partial {\mathbf {E} }}{\partial t}}\end{aligned}}}
+;
+, From Gauss' Law of Magnetism, we see that magnetic fields are divergenceless via ∇⋅B=0.{\displaystyle \nabla \cdot {\mathbf {B} }=0.} In vector calculus, a theorem is that the divergence of a curl is always zero. Therefore, we can rewrite B{\displaystyle {\mathbf {B} }} in terms of a magnetic potential A.{\displaystyle {\mathbf {A} }.}
+
+
+B=∇×A{\displaystyle {\mathbf {B} }=\nabla \times {\mathbf {A} }}
+
+From here, we see that magnetic potential is a vector potential. This definition automatically satisfies Gauss' Law of Magnetism through the aforementioned vector identity ∇⋅(∇×F)=0.{\displaystyle \nabla \cdot (\nabla \times {\mathbf {F} })=0.}
+
+
+, Recall back in electrostatics that E{\displaystyle {\mathbf {E} }} was a conservative field (i.e. ∇×E=0{\displaystyle \nabla \times {\mathbf {E} }=0}), which allowed us to write it in terms of a scalar potential E=−∇ϕ.{\displaystyle {\mathbf {E} }=-\nabla \phi .} In electrodynamics, E{\displaystyle {\mathbf {E} }} is no longer conservative, due to the presence of a changing B{\displaystyle {\mathbf {B} }} field induced by moving charged particles. However, substituting B=∇×A{\displaystyle {\mathbf {B} }=\nabla \times {\mathbf {A} }} into Faraday's Law returns an equation which we can take the scalar gradient of. By doing so, our potential definition automatically satisfies another of Maxwell's equations.
+
+
+∇×E=−∂∂t(∇×A)∇×E=∇×−∂A∂t∇×(E+∂A∂t)=0{\displaystyle {\begin{aligned}\nabla &\times {\mathbf {E} }=-{\frac {\partial }{\partial t}}(\nabla \times {\mathbf {A} })\\\nabla &\times {\mathbf {E} }=\nabla \times -{\frac {\partial {\mathbf {A} }}{\partial t}}\\\nabla &\times \left({\mathbf {E} }+{\frac {\partial {\mathbf {A} }}{\partial t}}\right)=0\end{aligned}}}
+
+Now, we can write the quantity in parentheses in terms of a scalar potential.
+
+
+E+∂A∂t=−∇ϕ{\displaystyle {\mathbf {E} }+{\frac {\partial {\mathbf {A} }}{\partial t}}=-\nabla \phi }
+
+
+
+Solve for E{\displaystyle {\mathbf {E} }} to obtain the electric field in terms of potentials. 
+
+
+E=−∇ϕ−∂A∂t{\displaystyle {\mathbf {E} }=-\nabla \phi -{\frac {\partial {\mathbf {A} }}{\partial t}}}
+
+
+
+
+, Now that we are done with the two homogeneous equations, we can work our way with the other two.
+
+
+∇⋅(−∇ϕ−∂A∂t)=ρϵ0−∇2ϕ−∂∂t(∇⋅A)=ρϵ0{\displaystyle {\begin{aligned}\nabla \cdot \left(-\nabla \phi -{\frac {\partial {\mathbf {A} }}{\partial t}}\right)&={\frac {\rho }{\epsilon _{0}}}\\-\nabla ^{2}\phi -{\frac {\partial }{\partial t}}(\nabla \cdot {\mathbf {A} })&={\frac {\rho }{\epsilon _{0}}}\end{aligned}}}
+
+
+,
+
+
+∇×(∇×A)=μ0J+μ0ϵ0∂∂t(−∇ϕ−∂A∂t){\displaystyle \nabla \times (\nabla \times {\mathbf {A} })=\mu _{0}{\mathbf {J} }+\mu _{0}\epsilon _{0}{\frac {\partial }{\partial t}}\left(-\nabla \phi -{\frac {\partial {\mathbf {A} }}{\partial t}}\right)}
+
+Make use of the BAC-CAB identity. For the vector calculus form, it reads as ∇×(∇×F)=∇(∇⋅F)−∇2F.{\displaystyle \nabla \times (\nabla \times {\mathbf {F} })=\nabla (\nabla \cdot {\mathbf {F} })-\nabla ^{2}{\mathbf {F} }.}
+
+
+∇(∇⋅A)−∇2A=μ0J−μ0ϵ0∇(∂ϕ∂t)−μ0ϵ0∂2A∂t2{\displaystyle \nabla (\nabla \cdot {\mathbf {A} })-\nabla ^{2}{\mathbf {A} }=\mu _{0}{\mathbf {J} }-\mu _{0}\epsilon _{0}\nabla \left({\frac {\partial \phi }{\partial t}}\right)-\mu _{0}\epsilon _{0}{\frac {\partial ^{2}{\mathbf {A} }}{\partial t^{2}}}}
+
+
+
+Rearrange so that the Laplacian and the gradient terms are together.
+
+
+(μ0ϵ0∂2A∂t2−∇2A)+∇(∇⋅A+μ0ϵ0∂ϕ∂t)=μ0J{\displaystyle \left(\mu _{0}\epsilon _{0}{\frac {\partial ^{2}{\mathbf {A} }}{\partial t^{2}}}-\nabla ^{2}{\mathbf {A} }\right)+\nabla \left(\nabla \cdot {\mathbf {A} }+\mu _{0}\epsilon _{0}{\frac {\partial \phi }{\partial t}}\right)=\mu _{0}{\mathbf {J} }}
+
+
+
+Through rewriting Gauss' Law and the Ampere-Maxwell Law in terms of potentials, we have reduced Maxwell's equations from four equations to two. Furthermore, we have reduced the number of components to just four - the scalar potential and the three components of the vector potential. 
+
+However, no one ever encounters Maxwell's equations written like this. 
+
+
+, It turns out that A{\displaystyle {\mathbf {A} }} and ϕ{\displaystyle \phi } are not uniquely defined, since an appropriate change in these quantities results in the same E{\displaystyle {\mathbf {E} }} and B{\displaystyle {\mathbf {B} }} fields. These changes in the potentials are called gauge transformations. In this section, we outline two of the most common gauge transformations that greatly simplify Maxwell's equations.
+ Let's label the changes as α{\displaystyle {\boldsymbol {\alpha }}} and β.{\displaystyle \beta .}
+
+
+A→A+αϕ→ϕ+β{\displaystyle {\begin{aligned}{\mathbf {A} }&\to {\mathbf {A} }+{\boldsymbol {\alpha }}\\\phi &\to \phi +\beta \end{aligned}}}
+
+If the vector potentials give the same B,{\displaystyle {\mathbf {B} },} then ∇×α=0.{\displaystyle \nabla \times {\boldsymbol {\alpha }}=0.} Then, we can write α{\displaystyle {\boldsymbol {\alpha }}} in terms of a scalar χ.{\displaystyle \chi .}
+
+
+α=∇χ{\displaystyle {\boldsymbol {\alpha }}=\nabla \chi }
+
+
+
+Similarly, if both potentials give the same E,{\displaystyle {\mathbf {E} },} then ∇β+∂α∂t=0.{\displaystyle \nabla \beta +{\frac {\partial {\boldsymbol {\alpha }}}{\partial t}}=0.}
+
+
+∇(β+∂χ∂t)=0{\displaystyle \nabla \left(\beta +{\frac {\partial \chi }{\partial t}}\right)=0}
+
+
+
+Solving for β{\displaystyle \beta } by integrating both sides adds a constant that depends on time. However, this constant does not affect the gradient of χ,{\displaystyle \chi ,} so we can neglect it.
+
+
+β=−∂χ∂t{\displaystyle \beta =-{\frac {\partial \chi }{\partial t}}}
+
+
+
+
+, By manipulating these transformations in an appropriate manner, we can change the divergence of A{\displaystyle {\mathbf {A} }} to simplify Maxwell's equations by choosing a χ{\displaystyle \chi } that satisfies the conditions we want.
+
+
+A→A+∇χϕ→ϕ−∂χ∂t{\displaystyle {\begin{aligned}{\mathbf {A} }&\to {\mathbf {A} }+\nabla \chi \\\phi &\to \phi -{\frac {\partial \chi }{\partial t}}\end{aligned}}}
+
+
+, Set ∇⋅A=0.{\displaystyle \nabla \cdot {\mathbf {A} }=0.}
+
+
+∇2ϕ=−ρϵ0{\displaystyle \nabla ^{2}\phi =-{\frac {\rho }{\epsilon _{0}}}} 
+
+
+(μ0ϵ0∂2A∂t2−∇2A)+μ0ϵ0∇(∂ϕ∂t)=μ0J{\displaystyle \left(\mu _{0}\epsilon _{0}{\frac {\partial ^{2}{\mathbf {A} }}{\partial t^{2}}}-\nabla ^{2}{\mathbf {A} }\right)+\mu _{0}\epsilon _{0}\nabla \left({\frac {\partial \phi }{\partial t}}\right)=\mu _{0}{\mathbf {J} }}
+
+This is the Coulomb gauge, which reduces the scalar potential equation to Poisson's equation, but results in a rather complicated vector potential equation.
+ Set ∇⋅A=−μ0ϵ0∂ϕ∂t.{\displaystyle \nabla \cdot {\mathbf {A} }=-\mu _{0}\epsilon _{0}{\frac {\partial \phi }{\partial t}}.}
+
+
+μ0ϵ0∂2ϕ∂t2−∇2ϕ=ρϵ0{\displaystyle \mu _{0}\epsilon _{0}{\frac {\partial ^{2}\phi }{\partial t^{2}}}-\nabla ^{2}\phi ={\frac {\rho }{\epsilon _{0}}}}
+
+
+μ0ϵ0∂2A∂t2−∇2A=μ0J{\displaystyle \mu _{0}\epsilon _{0}{\frac {\partial ^{2}{\mathbf {A} }}{\partial t^{2}}}-\nabla ^{2}{\mathbf {A} }=\mu _{0}{\mathbf {J} }}
+
+This is the Lorenz gauge, which results in manifest Lorentz covariance. The two potential equations are now in the same form of the inhomogeneous wave equation. 
+
+

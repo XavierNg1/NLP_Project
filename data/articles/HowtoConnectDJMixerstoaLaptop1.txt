@@ -1,0 +1,14 @@
+ Plug your mixer/controller into a power outlet if required. Note that not all mixers/controllers require an external power source, and may run off your computer's power supply. Make sure your laptop is charged, or plugged in as well.
+
+
+It is always recommended to use a power conditioner - if present - to minimize signal noise. Always use a surge protector.;
+,
+Always use your computers provided USB ports, as a lot of data can bottleneck if you attempt to chain too many devices on the same USB port.
+Use USB 3.0 if possible, as the data transfer rates are much higher, and glitches are less likely.
+ In the "Audio Device" tab (or similar), be sure to select the USB Audio Codec, whatever it may be called. Usually it is named something you will recognize immediately. 
+
+
+If you do not see a USB option, go to: System Preferences > Sound > Input (scroll down) > click the USB Audio Codec option > close System Preferences. Your device should now show up inside your DJ Software. If not, try closing your software and reopening it.
+ To use this, repeat the steps above, but set the "Output" device to USB as well as the "Input." This way, your computer will not have to process the audio on its own chip, but instead utilizes the mixers built in sound card; freeing up system resources. It will also be able to communicate directly with your controller.
+ Remember, setup on Mac is usually as simple as plug-and-play, so if something does not immediately work, check to make sure your computer is listening to the proper input. Again, it may be necessary to set your computer and software to listen to the USB codec.
+

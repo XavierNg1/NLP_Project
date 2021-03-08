@@ -1,0 +1,5 @@
+ This class will hold all of your GUI components, such as buttons and text fields.;
+, A good start could be a central panel with BorderLayout with another panel at the bottom (BorderLayout.South). This second panel may have the FlowLayout and contain several buttons, check boxes and other similar controls. Finally, place the big JTextArea into the center of the central component. You will be able to use its getText() and setText() methods to do some text-based interaction with the user.
+ This constructor must create all panels and components you plan, place them properly into each other and add the final panel the "holds all" to you frame (myFrame.getContentPane().add(myLargePanel, BorderLayout.Center).
+ In this method, create an instance of your frame, set the initial size and location (use .setSize(x,y) and .setLocation(width, height) ) and make it to appear on the screen by calling .setVisible(true).
+

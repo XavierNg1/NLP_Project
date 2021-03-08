@@ -1,0 +1,10 @@
+ You will be using the “apt-get” command, which is the general command for manipulating installed programs. When uninstalling programs, you may be asked for the administrator password.
+
+
+The password will not be displayed when you type it. Press Enter after typing the password.
+ To see a list of all the installed packages on your computer, enter the following command. Note the names of the packages that you wish to uninstall.:dpkg --list
+
+, In the terminal enter the following command, replacing <programname> with the name of the program that you want to completely remove:sudo apt-get --purge remove <programname>
+
+, If you’d like to remove the program but keep the configuration files, enter the following command:sudo apt-get remove <programname>
+

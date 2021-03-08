@@ -1,0 +1,60 @@
+ Higher-level speed calculations can get confusing because mathematicians and scientists use different definitions for "speed" and "velocity". A velocity has two components: a magnitude and a direction. The magnitude is equal to the object's speed. A change in the direction will cause a change in the velocity, but not in the speed.
+
+
+For example, let's say that there are two cars moving in opposite directions. Both cars' speedometers read 50 km/hr, so they both have the same speed. However, since they are moving apart from each other, we say that one car has a velocity of -50 km/hr and one has a velocity of 50 km/hr.
+ Objects can have velocities with a negative magnitude (if they are moving in a negative direction relative to something else). However, there's no such thing as a negative speed, so in these cases the absolute value of the magnitude gives the object's speed.
+
+
+For this reason, in the example problem above, both cars have a speed of 50 km/hr.
+ If you have a function s(t) that gives you the position of an object with regards to time, the derivative of s(t) will give you its velocity with regards to time. Just plug a time value into this equation for the variable t (or whatever the time value is) to get the velocity at this given time. From here, finding the speed is easy.
+
+
+For example, let's say that an object's position in meters is given with the equation 3t2 + t - 4 where t = time in seconds. We want to know what the speed of the object is at t = 4 seconds. In this case, we can solve like this:
+
+
+
+3t2 + t - 4
+s'(t) = 2 × 3t + 1
+s'(t) = 6t + 1
+
+
+
+
+Now, we plug in t = 4:
+
+
+
+s'(t) = 6(4) + 1 = 24 + 1 = 25 meters/second. This is technically a velocity measurement, but since it's positive and direction is not mentioned in the problem, we can essentially use it for speed.
+ Acceleration is a way of measuring the change in an object's velocity over time. This topic is a little too complex to explain fully in this article. However, it's useful to note that when you have a function a(t) that gives acceleration with regards to time, the integral of a(t) will give you velocity with regards to time. Note that it's helpful to know the object's initial velocity so that you can define the constant that results from an indefinite integral.
+
+
+For example, let's say that an object has a constant acceleration (in m/s2 given by a(t) = -30.Let's also say that it has an initial velocity of 10 m/s. We need to find its speed at t = 12 s. In this case, we can solve like this:
+
+
+
+a(t) = -30
+v(t)= ∫ a(t)dt = ∫ -30dt = -30t + C
+
+
+
+
+To find C, we'll solve v(t) for t = 0. Remember that the object's initial velocity is 10 m/s.
+
+
+
+v(0) = 10 = -30(0) + C
+10 = C, so v(t) = -30t + 10
+
+
+
+
+Now, we can just plug in t = 12 seconds.
+
+
+
+v(12) = -30(12) + 10 = -360 + 10 = -350. Since speed is the absolute value of velocity, the object's speed is 350 meters/second.
+
+
+
+
+

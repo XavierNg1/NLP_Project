@@ -1,0 +1,17 @@
+ This is the object you will drag and drop. For the example, I used the Earth. Also, raise the FPS from 12 to 24.;
+, Select the object by using the Selection Tool or click on the frame the object is one. Press F8 to convert the object to a Symbol. Call it however you want, but make sure it's a Movie Clip and that the Registration is centered.
+ Pick the Selection Tool and select the Movie Clip. On the bottom menu you will find a box called "Instance Name" under the "Movie Clip" Drop-down Menu. Instance Name is a name of a Movie Clip the code (ActionScript) will use to know that this is the object you're talking about. So the Instance Name should be really what you just drew, and only in lowercase letters.
+ Create a new Layer using the New Layer button on the bottom of the timeline. Click on the empty keyframe. After it's selected, press F9. This will bring up the ActionScript menu. There, copy and paste the following code:
+
+
+INSTANCENAME.onPress = function(){
+StartDrag(this,true)
+}
+INSTANCENAME.onRelease = function(){
+this.stopDrag();
+}
+
+Make sure to replace INSTANCENAME with your Movie Clip's Instance name!
+
+
+

@@ -1,0 +1,4 @@
+ Your machine will need to be connected to the network to download packages. Packages can be installed using the 'yum' command.
+
+CentOS and Red Hat based distros call the Apache server 'httpd' rather than Apache. This can be confusing at times to new people, but it is the same application/server. You should search for Apache using the command 'yum search httpd' . This will probably show you a lot of results, however some of these things are modules or addons. The main one to look for looks like 'httpd.i386' or similar. Now you can install it with 'yum install httpd.i386';
+, PHP comes with many modules, this means a 'yum search php' will show a lot more items. The main one to install is php.i386 (like the httpd) unless you run a 64bit OS in which case you will see the difference in name in the search.

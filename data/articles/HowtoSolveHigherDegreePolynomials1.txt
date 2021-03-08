@@ -1,0 +1,22 @@
+ If every term in the polynomial has a common factor, factor it out to simplify the problem. This is not possible with all polynomials, but it's a good approach to check first.
+
+
+Example 1: Solve for x in the polynomial 2x3+12x2+16x=0{\displaystyle 2x^{3}+12x^{2}+16x=0}.Each term is divisible by 2x, so factor it out:(2x)(x2)+(2x)(6x)+(2x)(8)=0{\displaystyle (2x)(x^{2})+(2x)(6x)+(2x)(8)=0}=(2x)(x2+6x+8){\displaystyle =(2x)(x^{2}+6x+8)}Now solve the quadratic equation using the quadratic formula or factoring:(2x)(x+4)(x+2)=0{\displaystyle (2x)(x+4)(x+2)=0}The solutions are at 2x = 0, x+4=0, and x+2=0.The solutions are x=0, x=-4, and x=-2.
+;
+, You likely already know how to solve second degree polynomials, in the form ax2+bx+c{\displaystyle ax^{2}+bx+c}. You can solve some higher-degree polynomials the same way, if they're in the form ax2n+bxn+c{\displaystyle ax^{2n}+bx^{n}+c}.Here are a couple examples:
+
+
+Example 2: 3x4+4x2−4=0{\displaystyle 3x^{4}+4x^{2}-4=0}Let a=x2{\displaystyle a=x^{2}}:3a2+4a−4=0{\displaystyle 3a^{2}+4a-4=0}Solve the quadratic using any method:(3a−2)(a+2)=0{\displaystyle (3a-2)(a+2)=0} so a = -2 or a = 2/3Substitute x2{\displaystyle x^{2}} for a: x2=−2{\displaystyle x^{2}=-2} or x2=2/3{\displaystyle x^{2}=2/3}x = ±√(2/3). The other equation, x2=−2{\displaystyle x^{2}=-2}, has no real solution. (If using complex numbers, solve as x = ±i√2).
+
+
+Example 3: x5+7x3−9x=0{\displaystyle x^{5}+7x^{3}-9x=0} does not follow this pattern, but notice you can factor out an x:(x)(x4+7x2−9)=0{\displaystyle (x)(x^{4}+7x^{2}-9)=0}You can now treat x4+7x2−9{\displaystyle x^{4}+7x^{2}-9} as a quadratic, as shown in example 2.
+ These special cases look difficult to factor, but have properties which make the problem much easier:
+
+
+Sum of cubes: A polynomial in the form a3+b3{\displaystyle a^{3}+b^{3}} factors to (a+b)(a2−ab+b2){\displaystyle (a+b)(a^{2}-ab+b^{2})}.Difference of cubes: A polynomial in the form a3−b3{\displaystyle a^{3}-b^{3}} factors to (a−b)(a2+ab+b2){\displaystyle (a-b)(a^{2}+ab+b^{2})}.Note that the quadratic portion of the result is not factorable.Note that x6{\displaystyle x^{6}}, x9{\displaystyle x^{9}}, and x to any power divisible by 3 all fit these patterns.
+ Polynomials that do not look like the examples above may not have any obvious factors. But before you try the methods below, try looking for a two-term factor (such as "x+3"). Grouping terms in different orders and factoring out part of the polynomial may help you find one.This is not always a feasible approach, so don't spend too much time trying if no common factor seems likely.
+
+
+Example 4: −3x3−x2+6x+2=0{\displaystyle -3x^{3}-x^{2}+6x+2=0}This has no obvious factor, but you can factor the first two terms and see what happens:(−x2)(3x+1)+6x+2=0{\displaystyle (-x^{2})(3x+1)+6x+2=0}Now factor the last two terms (6x+2), aiming for a common factor:(−x2)(3x+1)+(2)(3x+1)=0{\displaystyle (-x^{2})(3x+1)+(2)(3x+1)=0}Now rewrite this using the common factor, 3x+1:(3x+1)(−x2+2)=0{\displaystyle (3x+1)(-x^{2}+2)=0}
+
+

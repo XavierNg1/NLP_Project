@@ -1,0 +1,21 @@
+ An ad filter is a URL that the ad-blocking extension looks for when deciding what to block. Both AdBlock and Adblock Plus allow you to write your own filters, so you can catch ads that slipped through the built-in filters, or block non-ad content that annoys you.
+
+
+A full tutorial is available here, but the instructions below may be easier to follow for beginners.
+ If there's one specific image, video, or other web page element that you want to block, all you need is the associated web address. Right click that element and click "Copy Image URL" or "Copy Video URL." For other types of content, you can discover the address by using the "Block ad" command, described in their respective sections. This should open a pop-up window where you can select an element and find out the address.
+
+
+For example, if you add the filter http://www.website.com/top-banner/image-of-clowns.jpg, only that specific image will be blocked. If you visit the same page later and it displays "image-of-puppies.jpg" instead, you will see that image.
+ Replacing part of the URL with the asterisk symbol * (Shift 8 on most English keyboards) will block all elements that contain anything where that asterisk is located. Here are a few examples:
+
+
+
+http://www.website.com/top-banner/* will block anything that website.com stores in its "top banner" folder, hopefully preventing you from seeing anything in that ad frame. (Note that not all websites use addresses that are this obvious.)
+
+http://www.website.com/*/image-of-clowns.jpg will block the image "image-of-clowns.jpg" on all website.com pages.
+
+http://www.website.com/* will block all content on website.com. If a website you tried to remove ads from is now a blank page, you probably used an * in the wrong place.
+ Many addresses include strings of seemingly random letters and numbers that identify the specific ad, the size, or other features. Delete these and replace them with a single * symbol.
+ This is often the cause of using an * in the wrong place, but if the useful content and advertisement have very similar addresses, you may want to use one of these techniques:The ^ symbol at the end of a filter will restrict the filter to addresses that end there or follow with a "separator character." For example the filter website.com/ad^ will block "website.com/ad/anything-here" or "website.com/ad?=send-malware-yes" but it will not block "website.com/adventures-of-tintin".
+Add the | symbol (the vertical pipe, usually above the enter key) to the beginning or end of a filter to only block addresses that begin or end at that point. For example, the filter swf will block all addresses that contain "swf" (all Flash videos, but a lot of other content as well). "|swf" will only block addresses that start with "swf" (not a useful filter). "swf|" will only block addresses that end with "swf" (Flash videos only).
+

@@ -1,0 +1,6 @@
+ Internal APIs such as Bluetooth toggle and brightness control APIs often break when Android is updated. To avoid bugs and potential compatibility issues, it's best to avoid them.;
+, You can no longer manipulate system settings without specific permission from the user. Future releases of Android will require you to issue an “Intent to launch the appropriate Settings configuration screen,” allowing the user to change the settings themselves.
+ Layouts with view hierarchies of more than 10 deep or 30 broad can causes crashes.
+ Applications that assume a user has a certain hardware feature can cause compatibility issues. If your application is designed specifically for a certain hardware feature such as a physical keyboard, it should be equally as useful to users without that specific hardware feature.
+ Issues with automatic reorientation is often due to applications assuming the screen can only rotate when a physically keyboard is exposed. You should ensure your apps could be reoriented on any hardware and at any time. Also, apps that require shaking motions and other physical gestures requiring the device’s accelerometer may interfere with reorientation.
+

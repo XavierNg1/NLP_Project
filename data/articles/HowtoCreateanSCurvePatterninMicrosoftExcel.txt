@@ -1,0 +1,51 @@
+ However, a basic understanding of design principles, such as what happens to a curve when one adds to it versus when one multiplies to it, would be helpful -- so starting fresh might be a good idea too. Here, a basic adjustment is added to the Garthwaite Curve. That adjustment is a little complicated but the user is encouraged to substitute their own values and observe the effects of so doing.;
+, Open Preferences in the Excel menu. Recommended Settings: Set General to R1C1 Off and Show the 10 Most Recent Documents; Edit - set all the Top options to checked except Automatically Convert Date System. Display number of decimal places = blank (for integers preferred), Preserve display of dates and set 30 for 21st century cutoff; View - show Formula Bar and Status Bar, hover for comments and all of Objects, Show grid lines and all boxes below that auto or checked; Chart - show chart names and data markers on hover. Leave rest unchecked for now; Calculation -- Automatically and calculate before save, max change .000,000,000,000,01 w/o commas if you do goal-seeking a lot and save external link values and use 1904 system; Error checking - check all; Save - save preview picture with new files and Save Autorecover after 5 minutes; Ribbon -- all checked except Hide group titles and Developer.
+ Insert  Name Define Name AROWS to cell $A$2.
+Enter FACTORY into cell C1 and -.25 into cell C2. Insert  Name Define Name FACTORY to cell $C$2.
+Enter GM into cell D1 and  w/o spaces 0.618 033 988 749 895 into cell D2. Insert  Name Define Name GM to cell $D$2.
+Enter Adj1 into cell G1 and  0 into cell G2.
+Enter Adj2 into cell H1 and  0 into cell H2.
+Command-Select cells A2, C2, D2, G2 and H2 and Format Cells Border Black Outline. Select cell range A1:H2 and align horizontal center.
+
+
+
+Enter Base t into cell A3.
+Enter c into cell B3.
+Enter cos into cell C3.
+Enter sin into cell D3.
+Enter x into cell E3.
+Enter y into cell F3.
+Enter AdjX into cell G3.
+Enter AdjY into cell H3.
+Select A3:H3 and align center and Font underline single underline.
+
+
+
+Enter "=ROUND((308100*PI())+(190),0)" w/o quotes into cell A4. Format Cell Number Number Custom "tip" 0 including quotes. Insert Name Define Name tip to cell $A$4.
+Edit Go To cell range A5:A1444 and with A5 active, enter w/o quotes the formula "=((A4+(-tip*2)/(AROWS)))" into A5 and Edit Fill Down.
+Select cell AAB4 and enter -25822 into it. Edit Go To cell range B5:B1444 and with B5 active, enter "=B4" w/o quotes  into it and then Edit Fill Down.
+Edit Go To cell range C4:C1444 and with C4 active, enter w/o quotes the formula into it, "=COS((ROW()-4)*PI()/180*FACTORY)". Factory Note: .25*1440 = 360, one full circle/cycle.
+Edit Go To cell range D4:D1444 and with D4 active, enter w/o quotes the formula into it, "=SIN(ROW()-4)*PI()/180*FACTORY)".
+NEW: Edit Go To cell range E4:E1444 and with E4 active, enter w/o quotes the formula into it, "=((SIN(A4/(B4*2))*GM*COS(A4)*GM*(COS(A4/(B4*2)))*GM)+C4)+AdjX1" and Edit Fill Down. This is not the previous double whammy.
+NEW: Edit Go To cell range F4:F1444 and with F4 active, enter w/o quotes the formula into it, "=((SIN(A4/(B4*2))*GM*SIN(A4)*GM*(COS(A4/(B4*2)))*GM)+D4)+AdjY1" and Edit Fill Down,
+NEW: Edit Go To cell range G4:G1444 and enter "=SIN((C4+D4)*PI()/180)*IF(C4<0,1,-1)" as entered to G4, the do Edit Fill Down.
+NEW: Edit Go To cell range H4:H1444 and enter "=COS((C4+D4)*PI()/180)*IF(C4<0,1,-1)" as entered to H4, the do Edit Fill Down.
+In the above two formulas, reverse the final two 1 and negative 1's to reverse the direction of the S-curve. Make a copy of each formula and copy it it to G and H 1446 and 1447 with a note in I1446 and I1447 "Reverse S Direction".
+
+
+
+Edit Go To cell range E4:F1444 and, using either the Chart Wizard or the Ribbon, select Chart, All/Other, Scatter - Smooth Line Scatter. If not using Chart Wizard, a small chart should appear atop the data. Copy or Cut and Paste the Chart to the Chart worksheet you create anew now, into cell A1, and expand the chart by hovering over the lower right corner until the cursor becomes the double-headed arrow allowing one to pull  down and to the right the chart, expanding it. Using Chart Layout, Select Data Series 1 and Format Selection Line Weight 1. Then select the Plot Area and format Fill grey. Then format Chart Area sky blue fill. Insert Picture WordArt  whatever text you feel is appropriate, and format it by clicking on the Home Ribbon tab and using the edit tools.
+To get rid of the annoying vertical line, Edit Clear Contents from E1084:F1086 and E364:F367 (this works at least when the S is in forward-facing position).
+Hold down the shift key and copy picture to the Saves worksheet to be created anew, along with the formulas and pasted values from the top rows of the Data worksheet.
+
+
+
+
+
+
+
+It would be a good idea to Insert New Comment on the original values and formulas of the Data worksheet so that renormalization is a few steps away. Done!
+
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

@@ -1,0 +1,45 @@
+
+
+
+Use an anonymous P2P-friendly VPN provider like Anonine,VPNTunnel,BoxPN,etc.;
+,
+
+
+Also consider using DNScryptfor an extra layer of security.
+ Note the IP address. You need the IP address that comes from your VPN provider.
+
+
+
+Select "Tools" at the top.
+Select "Options" at the bottom of the menu.
+ At the top left of the options Menu, make sure "Mode" is selected.
+
+
+Click the "Advanced User" proficiency mode.
+Click "Save" in the bottom left of the Options window.
+
+
+
+Click the arrow to expand the "Connection" menu.
+Select "Advanced Network Settings".
+ Look for the IP address that you noted in the first step. In the example provided, the VPN IP is attached to "eth6".
+ Enter the Interface value from the previous step.
+ At the bottom of the window, (you may have to scroll), check mark "Enforce IP bindings even when interfaces are not available...".
+
+
+Click "Save" in the bottom left of the Options window.
+ Mouse-over the routing icon. You should see your VPN ip address and "Force=yes".
+ Use an opensource torrent like Linux to test.
+
+
+
+Disconnect your VPN.
+Watch for your traffic to stop.
+The binding address will change to 127.0.0.1 (localhost).
+
+
+
+Reconnect your VPN.
+Note that the VPN IP has changed but the binding adapts. Since the eth6 interface is active.
+Watch the traffic re-start and the routing icon to go green.
+

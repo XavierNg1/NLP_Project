@@ -1,0 +1,10 @@
+ IMAP refers to Internet Message Access Protocol, which is a protocol email clients use to retrieve messages. Begin by signing into your Gmail account and clicking on Mail. Then select Settings, which can be found in the upper, left-hand corner of your window., This should be the sixth option to the right.
+ Finish by clicking on Save Changes and finally closing your browser. This will allow your Gmail messages to be retrieved by another email client.
+ Open Thunderbird and select Accounts under the Tools menu., You'll find this located under the Account Actions dropdown menu at the bottom of the Accounts window.
+ Upon clicking Continue, Thunderbird should set the account up automatically. If the process fails, click Manual Setup and proceed with the bulleted alternative instructions below.
+
+
+For Manual Setup, find and select the account you've created on the sidebar. Then click on Server Settings.
+Enter imap.gmail.com as your Server Name and type 993 as your port number. The username should be your Gmail address in its entirety. Choose SSL/TLS under the dropdown menu for Connection Security, and finally select Normal Password under the dropdown menu for Authentication Method.
+ Click OK when finished, and you can check that everything went according to plan by attempting to check your Gmail account via Thunderbird.
+

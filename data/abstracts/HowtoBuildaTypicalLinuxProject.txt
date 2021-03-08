@@ -1,0 +1,10 @@
+
+If the project has no explicit releases, you may need to pull the source code directly from its CVS or SVN repository.
+Look into the files README and INSTALL that should be at the top folder in the downloaded project.
+Some projects provide the build script as a shell script (usually named build.sh).
+Search for the file called configure which also must be present in a project top folder.
+Search for the file called makefile which may be initially present or appear after you run configure.
+If there is no configure nor makefile in the project tree, it may be an ant - powered project with the build.xml file instead.
+If ant doesn't work either, or the project is C or C++, try running ./autogen.sh to create the configure and makefile files.
+After you succeeded to compile the makefile - based project, try make install to place the project files into appropriate locations (to install the project).
+After the installation succeeds, try to type the short project name.

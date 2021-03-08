@@ -1,0 +1,10 @@
+ You want 2 "id"s surrounding each column, to avoid layout issues.
+
+
+Name the first id with the column purpose, like "sidebar". You will put all CSS for the column content here.
+Name the second id with the column purpose plus "wrapper", like "sidebar-wrapper". You will put all CSS for column layout here. This id will surround the other id. (So in your HTML, you'll have something like div id='sidebar-wrapper' inside < > immediately followed by div id='sidebar' (again in < >) followed by CONTENT and /div inside < > (repeated twice).
+,,
+
+
+If you want more than 2 columns, you'll need to start off with a 2-column structure, then break those columns further. For example, if you want 3 columns, you'll start with a main column and a side column then put 2 columns within the main column, with one floating right and one floating left.
+

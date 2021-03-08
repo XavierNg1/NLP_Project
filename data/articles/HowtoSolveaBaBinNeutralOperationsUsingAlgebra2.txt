@@ -1,0 +1,22 @@
+
+
+Enter into cell A2 ab/a = (a^b)/a
+Enter into cell A3 b = a^(b-1)
+Enter into cell A4 b^(1/(b-1)) = a; a has now been isolated and defined in terms of b and 1 but b may not = 1 lest division by 0 result in the denominator.
+The simple algebra is complete.;
+, Enter in cell C1 ="a=b^(1/(b-1))"
+Enter into cell F1 the word "Var b" for variable b.
+Enter into cell F2 the value 10.
+Do MenuCommand Insert Name DefineName "Var" to cell F2.
+Enter into cell C2 the formula, without quotes, "=Var^(1/(Var-1))"
+Copy the value in cell C2 and do Edit Paste Special Value into cell C3.
+The value you obtain should be 1.29154966501488
+
+, that a*b = a^b:
+
+Enter a*b into cell F3
+Enter the formula, without quotes, "=C2*Var" into cell F4.
+Enter a^b into cell F5
+Enter the formula, without quotes, "=C2^Var" into cell F6.
+Enter the formula, without quotes, "=F4-F6" into F7. The result should be 0. Done, because C2*Var = C2^Var, and the difference in F7 is 0!
+

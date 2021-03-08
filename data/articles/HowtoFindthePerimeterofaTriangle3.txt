@@ -1,0 +1,23 @@
+ The Law of Cosines allows you to solve any triangle when you know two side lengths and measurement of the angle between them. It works on any triangle, and is a very useful formula. The Law of Cosines states that for any triangle with sides a, b, and c, with opposite angles A, B, and C: c2 = a2 + b2 - 2ab cos(C)., The first side that you know should be labeled a, and the angle opposite it is A. The second side that you know should be labeled b; the angle opposite it is B. The angle that you know should be labeled C, and the third side, the one you need to solve in order to find the perimeter of the triangle, is side c.
+
+
+For example, imagine a triangle with side lengths 10 and 12, and an angle between them of 97°. We will assign variables as follows: a = 10, b = 12, C = 97°.
+ Then find the cosine of C using the cos function on your calculator, or an online cosine calculator.Multiply cos(C) by 2ab and subtract the product from the sum of a2 + b2. The result is c2. Find the square root of this value and you have the length of side c.
+Using our example triangle:
+
+
+
+c2 = 102 + 122 - 2 × 10 × 12 × cos(97).
+
+c2 = 100 + 144 – (240 × -0.12187) (Round the cosine to 5 decimal places.)
+c2 = 244 – (-29.25)
+
+c2 = 244 + 29.25 (Carry the minus symbol through when cos(C) is negative!)
+c2 = 273.25
+c = 16.53
+
+, Recall that Perimeter P = a + b + c, so all you need to do is add the length you just calculated for side c to the values you already had for a and b.
+
+
+In our example: 10 + 12 + 16.53 = 38.53, the perimeter of our triangle!
+

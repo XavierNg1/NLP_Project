@@ -1,0 +1,41 @@
+
+Download the latest version of TortoiseSVN - http://www.wandisco.com/subversion/download#tortoise
+
+
+
+ 
+
+
+It comes in 32-bit and 64-bit flavours, get the one that matches your system.
+Double click the installer file.
+
+,
+Click the Run button.
+
+,
+You'll see the welcome screen, which will confirm the version of Tortoise that you're about to install.
+Read the End-User License Agreement.
+The Custom Setup screen lets you deselect various elements of the install.
+Click Install.
+
+,
+Hey presto!,
+To work with a Subversion repository we first need to download a local copy (called a working copy) of either the full or part of the repository.
+Open Windows explorer, go to the new directory and right click within the folder space.
+You'll now see the progress of the checkout.
+Next, it's time to make a change.
+We'll now make a change to a file.
+You'll notice that once saved, 'system.txt' now has a different icon overlaid, showing an exclamation mark in a red circle to denote that it has been changed.
+
+
+
+
+
+,
+Having tested the change, it's time to add it to the repository.
+You'll be prompted for a message to associate with the changes you've made.
+The outcome of the commit will appear in a dialog window.
+Next we'll add something new to the repository.
+The added elements should now appear in Explorer with the 'added' overlay icon.
+It's always good practice to leave a note, whenever you do a commit.You'll get a log of the commit, confirming that your new files are now part of the new repository revision.
+That's all there is to using Subversion with the TortoiseSVN client.

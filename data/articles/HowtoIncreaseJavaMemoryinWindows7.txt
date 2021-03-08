@@ -1,0 +1,17 @@
+ Click on "Start" button. Then click on "Control Panel.";
+, In the left side of Control Panel click on "Programs." Please click on the "Programs" written with green color, not the "Uninstall a program," which is in blue color.
+ In the next dialog click on "Java," usually at the bottom of the other Programs; "Java Control Panel" dialog pop-up opens.
+ Inside the Java tab, click on "View" button. It opens the "Java Runtime Environment Settings"
+
+, In the "Runtime Parameters" column change the value, or if it is blank decide for the new value, of the Java memory.
+ To modify the parameter, double click in the "Runtime Parameters" column and,
+
+
+type -Xms512m - that assigns 512MB memory for the Java.
+type -Xms1024m - that assigns 1GB memory for the Java.
+type -Xms2048m - that assigns 2GB memory for the Java.
+type -Xms3072m - that assigns 3GB memory for the Java, and so on.
+Please note, it begins with a minus sign and ends to an m.
+Also note, there is no blank space between characters.
+ Click on "OK" button on the "Java Runtime Environment Settings" to close it.
+ "Apply" button in the "Java Control Panel" has been enabled now. You should click on "Apply" to finalise the new Java memory. Then click on the "OK" button.

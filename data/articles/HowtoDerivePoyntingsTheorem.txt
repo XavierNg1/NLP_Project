@@ -1,0 +1,101 @@
+ The electric and magnetic fields both store energy in the fields themselves. This energy can be described via energy densities ue=12ϵ0E2{\displaystyle u_{e}={\frac {1}{2}}\epsilon _{0}E^{2}} and um=12μ0B2,{\displaystyle u_{m}={\frac {1}{2\mu _{0}}}B^{2},} where density here refers to energy per unit volume.
+
+We can obtain the total energy by integrating over the entire volume. The expression below is the sum of the work required to assemble a static charge distribution against their Coulombic repulsion, and the work required to generate currents against the back emf. 
+
+
+Uem=∫V(ue+um)dV=∫V(12ϵ0E2+12μ0B2)dV{\displaystyle U_{em}=\int _{V}(u_{e}+u_{m}){\mathrm {d} }V=\int _{V}\left({\frac {1}{2}}\epsilon _{0}E^{2}+{\frac {1}{2\mu _{0}}}B^{2}\right){\mathrm {d} }V}
+
+
+
+While this may describe energy in the field, the energy is not located at any particular location. Rather, it is distributed throughout the volume being integrated over.
+
+Keep in mind that uppercase U{\displaystyle U} is used for energy, while lowercase u{\displaystyle u} denotes energy density. This difference will be seen when converting Poynting's theorem into differential form in step 10.
+;
+, We will assume a charge and current setup that generates fields E{\displaystyle {\mathbf {E} }} and B{\displaystyle {\mathbf {B} }} at time t.{\displaystyle t.} However, since we are dealing with electrodynamics, our charge will move a distance dl,{\displaystyle {\mathrm {d} }{\mathbf {l} },} representing an arbitrary infinitesimal direction. Therefore, the electromagnetic force will do work on the charge, though keep in mind that magnetic forces do no work.
+
+
+dW=F⋅dl=q(E+v×B)⋅vdt=qE⋅vdt{\displaystyle {\begin{aligned}{\mathrm {d} }W={\mathbf {F} }\cdot {\mathrm {d} }{\mathbf {l} }&=q({\mathbf {E} }+{\mathbf {v} }\times {\mathbf {B} })\cdot {\mathbf {v} }{\mathrm {d} }t\\&=q{\mathbf {E} }\cdot {\mathbf {v} }{\mathrm {d} }t\end{aligned}}}
+
+
+, We know that q=ρV{\displaystyle q=\rho V} and J=ρv,{\displaystyle {\mathbf {J} }=\rho {\mathbf {v} },} so we can rewrite the right side as below.
+
+
+dWdt=∫V(E⋅J)dV{\displaystyle {\frac {{\mathrm {d} }W}{{\mathrm {d} }t}}=\int _{V}({\mathbf {E} }\cdot {\mathbf {J} }){\mathrm {d} }V}
+
+
+, We can get rid of J{\displaystyle {\mathbf {J} }} by invoking the Ampere-Maxwell law. 
+
+
+∇×B=μ0J+μ0ϵ0∂E∂tJ=1μ0(∇×B)−ϵ0E⋅∂E∂t{\displaystyle {\begin{aligned}\nabla \times {\mathbf {B} }&=\mu _{0}{\mathbf {J} }+\mu _{0}\epsilon _{0}{\frac {\partial {\mathbf {E} }}{\partial t}}\\{\mathbf {J} }&={\frac {1}{\mu _{0}}}(\nabla \times {\mathbf {B} })-\epsilon _{0}{\mathbf {E} }\cdot {\frac {\partial {\mathbf {E} }}{\partial t}}\end{aligned}}}
+
+
+E⋅J=E⋅=1μ0(E⋅(∇×B))−ϵ0E⋅∂E∂t{\displaystyle {\begin{aligned}{\mathbf {E} }\cdot {\mathbf {J} }&={\mathbf {E} }\cdot \left\\&={\frac {1}{\mu _{0}}}({\mathbf {E} }\cdot (\nabla \times {\mathbf {B} }))-\epsilon _{0}{\mathbf {E} }\cdot {\frac {\partial {\mathbf {E} }}{\partial t}}\end{aligned}}}
+
+
+, This apparent complication is solved when we invoke Faraday’s law ∇×E=−∂B∂t.{\displaystyle \nabla \times {\mathbf {E} }=-{\frac {\partial {\mathbf {B} }}{\partial t}}.}
+
+
+∇⋅(E×B)=B⋅(∇×E)−E⋅(∇×B){\displaystyle \nabla \cdot ({\mathbf {E} }\times {\mathbf {B} })={\mathbf {B} }\cdot (\nabla \times {\mathbf {E} })-{\mathbf {E} }\cdot (\nabla \times {\mathbf {B} })}
+
+
+E⋅(∇×B)=−B⋅∂B∂t−∇⋅(E×B){\displaystyle {\mathbf {E} }\cdot (\nabla \times {\mathbf {B} })=-{\mathbf {B} }\cdot {\frac {\partial {\mathbf {B} }}{\partial t}}-\nabla \cdot ({\mathbf {E} }\times {\mathbf {B} })}
+
+
+, The extra ½ factor stems from the recognition of the product rule. Confirm this by taking the derivative of B⋅B.{\displaystyle {\mathbf {B} }\cdot {\mathbf {B} }.}
+
+
+B⋅∂B∂t=∂∂t(12B2){\displaystyle {\mathbf {B} }\cdot {\frac {\partial {\mathbf {B} }}{\partial t}}={\frac {\partial }{\partial t}}\left({\frac {1}{2}}B^{2}\right)}
+
+
+E⋅∂E∂t=∂∂t(12E2){\displaystyle {\mathbf {E} }\cdot {\frac {\partial {\mathbf {E} }}{\partial t}}={\frac {\partial }{\partial t}}\left({\frac {1}{2}}E^{2}\right)}
+
+
+, Rewrite the equation in terms of power by integrating the right side over volume V.{\displaystyle V.} In the second line of the second bullet point, we invoke the divergence theorem to convert the second integral into a surface integral, and we recall the expression for the total energy from step 1.
+
+
+E⋅J=−∂∂t(12ϵ0E2+12μ0B2)−1μ0∇⋅(E×B){\displaystyle {\mathbf {E} }\cdot {\mathbf {J} }=-{\frac {\partial }{\partial t}}\left({\frac {1}{2}}\epsilon _{0}E^{2}+{\frac {1}{2\mu _{0}}}B^{2}\right)-{\frac {1}{\mu _{0}}}\nabla \cdot ({\mathbf {E} }\times {\mathbf {B} })}
+
+
+dWdt=−ddt∫VdV−1μ0∫V∇⋅(E×B)dV=−dUemdt−1μ0∮S(E×B)⋅n^dA{\displaystyle {\begin{aligned}{\frac {{\mathrm {d} }W}{{\mathrm {d} }t}}&=-{\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{V}\left{\mathrm {d} }V-{\frac {1}{\mu _{0}}}\int _{V}\nabla \cdot ({\mathbf {E} }\times {\mathbf {B} }){\mathrm {d} }V\\&=-{\frac {{\mathrm {d} }U_{em}}{{\mathrm {d} }t}}-{\frac {1}{\mu _{0}}}\oint _{S}({\mathbf {E} }\times {\mathbf {B} })\cdot {\hat {\mathbf {n} }}{\mathrm {d} }A\end{aligned}}}
+
+
+, The above equation is obviously a bit complicated, so to simplify things a bit, we introduce the Poynting vector S.{\displaystyle {\mathbf {S} }.} This vector describes the energy per unit time, per unit area, transported by the field - in other words, it is the energy flux density. A simple example of how it works is that it points in the same direction as the direction of propagation of an electromagnetic wave. 
+
+
+S=E×Bμ0{\displaystyle {\mathbf {S} }={\frac {{\mathbf {E} }\times {\mathbf {B} }}{\mu _{0}}}}
+
+
+, The below equation is Poynting's theorem in integral form. It states that the work done on the charge distribution by the electromagnetic field (the left side) is equal to the decrease in energy stored in the field (first term on the right), minus the energy that flowed out through the surface that bounds volume V{\displaystyle V} (second term on the right).
+
+
+dWdt=−dUemdt−∮SS⋅n^dA{\displaystyle {\frac {{\mathrm {d} }W}{{\mathrm {d} }t}}=-{\frac {{\mathrm {d} }U_{em}}{{\mathrm {d} }t}}-\oint _{S}{\mathbf {S} }\cdot {\hat {\mathbf {n} }}{\mathrm {d} }A}
+
+
+, While this will not be as practical for calculations, it allows us to see conservation of energy more explicitly.
+
+First, we recognize that work done on the charges will increase their mechanical energy, so we define mechanical energy density umech{\displaystyle u_{mech}} in dWdt=ddt∫VumechdV.{\displaystyle {\frac {{\mathrm {d} }W}{{\mathrm {d} }t}}={\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{V}u_{mech}{\mathrm {d} }V.}
+
+Now, we recall the energy density of the fields below.
+
+
+uem=12ϵ0E2+12μ0B2{\displaystyle u_{em}={\frac {1}{2}}\epsilon _{0}E^{2}+{\frac {1}{2\mu _{0}}}B^{2}}
+
+
+
+Substitute these into Poynting's theorem, and invoke the divergence theorem to convert the surface integral into a volume integral.
+
+
+ddt∫V(umech+uem)dV=−∫V(∇⋅S)dV{\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }t}}\int _{V}(u_{mech}+u_{em}){\mathrm {d} }V=-\int _{V}(\nabla \cdot {\mathbf {S} }){\text{d}}V}
+
+
+
+Now, we can put the integrands under a single integral and obtain Poynting's theorem in differential form.
+
+
+∂∂t(umech+uem)=−∇⋅S{\displaystyle {\frac {\partial }{\partial t}}(u_{mech}+u_{em})=-\nabla \cdot {\mathbf {S} }}
+
+
+
+Note that Poynting's theorem in this form is similar to the expression for conservation of charge.
+
+

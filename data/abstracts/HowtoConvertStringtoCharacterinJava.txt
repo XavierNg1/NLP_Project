@@ -1,0 +1,31 @@
+
+Open the IDE.
+Copy and paste the following code:
+
+
+
+
+
+class Convert {
+public static void main(String[] args)
+{
+try
+{
+String str = "kjv;afa54f65a4f55a45f413a";
+char ch = str.charAt(0);
+System.out.println(ch);
+}
+catch(NullPointerException e)
+{
+System.out.println("Invalid String for conversion to Character");
+}
+}
+}
+
+
+
+
+
+,
+Run the program.
+Understand what the program does.

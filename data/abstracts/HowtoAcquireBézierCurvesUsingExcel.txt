@@ -1,0 +1,128 @@
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+;
+,
+Open a new Excel workbook and prepare 2 worksheets:
+
+Either click on the green "X" icon, or double-click on Excel in the Microsoft Office folder in your Applications folder by opening a Finder window, in order to start Excel;
+Using the File menu or the icon, Open a new workbook;
+Save the workbook as "Bezier Curves" into a logical folder, such as "wikiHow Articles" or "MS XL Imagery";
+Create via the + button at the bottom or access the second worksheet tab and double-click edit-name it "Saves" -- this will be used to Paste Values and Charts to which you wish to keep and remember, while still having the top worksheet tab for doing the main work on -- if you were to copy and paste, the formula results would change with varying inputs on the top worksheet from the Defined Named Variables, which are global;
+Double-click on the first leftmost worksheet tab and edit-name it "3 Curves" (w/o quotes).
+
+,
+Set the Preferences, under the Excel menu:
+
+Be mindful that these settings will affect your future XL work;
+General - Set Show this number of recent documents to 15; set Sheets in new workbook to 3; this editor works with Body Font, in a font size of 12; set your preferred file path/ location;
+View - Check Show formula bar by default; check Indicators only, and comments on hover for Comments; show All for objects; Show row and column headings, Show outline symbols, Show zero values, Show horizontal scroll bar, Show vertical scroll bar, Show sheet tabs;
+Edit - Check all; Display 0 number of decimal places; set Interpret as 21st century for two-digit years before 30; Uncheck Automatically convert date system;
+AutoCorrect - Check all
+Chart - In Chart Screen Tips, check Show chart names on hover, and check Show data marker values on hover; leave the rest unchecked;
+Calculation - Automatically checked; Limit iteration to 100 Maximum iterations with a maximum change of 0.0001, unless goal seeking, then .000 000 000 000 01 (w/o spaces); check Save external link values;
+Error checking - Check all and this editor uses dark green or red to flag errors;
+Save - Check all; set to 5 minutes;
+Compatibility - check Check documents for compatibility
+Ribbon - All checked, except Hide group titles is unchecked.
+
+,
+Fill in the worksheet's Column Headers and Defined Name Variables
+
+Enter label t into cell A1;
+Enter label Psub0_X into cell B1;
+Enter label Psub0_Y into cell C1;
+Enter label Psub1_X into cell D1;
+Enter label Psub1_Y into cell E1;
+Enter label Psub2_X into cell F1;
+Enter label Psub2_Y into cell G1;
+Enter label Psub3_X into cell H1;
+Enter label Psub3_Y into cell I1;
+Select columns $A:$I and Insert Name Create in Top Row -- those columns are now Defined Name Variables using the various labels for Points 1 to 3 for both X and Y, plus an interpolation point called t;
+Select Row $1 and do Format Alignment Center and Font Bold;
+(the dollar symbol just means that those variable names or formatting will always pertain to that column or row, absolutely);
+Enter label Interpolater: (with colon and a trailing space) to cell K1 and Format Cells Alignment Right -- this is my own method of adjusting the curves inwards and outwards by a basic overall ratio;
+Enter a 1 to cell L1, Format Fill Canary Yellow (for input) and Font Underline;
+Insert Name Define name Interpolater to cell $L$1;
+Select columns $A:$O and Format Cells Number Custom +0.0000;-0.0000;=0.0000
+
+,
+Start filling in the facts and formulas about the Linear Bézier Curve:
+
+Linear Bézier curves
+Note: "P0" and "P1", etc. simply stand for Points 0 and 1.
+Create the Linear Bézier Curve Chart
+
+Select cell range N11:O13;
+Select Chart from the Ribbon and select Scatter, Smoothed Line Scatter -- a chart should appear on your worksheet;
+Move the chart by selecting inside the border and place its upper left corner at the upper left of cell N2; Resize the chart by hovering over the lower right corner until the cursor changes to a double-headed arrow, then grab the corner and fit the corner to the lower right corner of cell P9;
+Click on the line in the chart and edit the data series in the formula bar so that it reads as follows, "=SERIES("Bézier Line",Sheet1!$N$11:$N$13,Sheet1!$O$11:$O$13,1);
+Click on the chart line and do menu Format Data Series to bring that dialog box;
+Set Marker Fill to Red; Set Marker Style to Circle, 7 pts;
+Click inside the border of the chart area, but not on any object, and do Chart Source Data;
+Click on the Series Add button and for Name, enter B(t) Marker (or Initial Interpolation);
+Click on the middle Data Marker and do Menu Format Data Series -- Marker Style, Round, 10 pt, then do Marker Fill Red; OK;
+Click on Chart Layout in the Ribbon and set Axes, Vertical Axis, Axes Options, Number, Uncheck Linked to Source and set Number to 0.00; OK;
+Do it again but this time set Line to 3 pt;
+Do the same last two steps for the Horizontal axis;
+Choose the icon Axis Titles and, by using the Text option and going Home on the Ribbon and coming back, set both titles at 18 Point font in black, with the vertical axis Vertical (text orientation);
+Click on the Legend, then Home, and then the Bold icon.
+Familiarize yourself with the basic facts of the Quadratic Bézier Curve:
+
+A quadratic Bézier curve is the path traced by the function b(t), given points P0, P1 and P2.
+Enter the Quadratic Chart data:
+
+Enter to cell N32 X;
+Enter to cell O32 Y;
+Enter to cell M33 P0;
+Enter to cell M34 P1i;
+Enter to cell M35 P2;
+Enter to cell M36 t;
+Enter to cell M37 Interpolater: ;
+Enter to cell N33 "=B35" w/o quotes;
+Enter to cell N34 "=D40*Interpolater" w/o quotes;
+Enter to cell N35 "=F40" w/o quotes;
+Enter to cell N36 "=A35" w/o quotes;
+Enter to cell N37 "=Interpolater" w/o quotes;
+Enter to cell O33 "=C35" w/o quotes;
+Enter to cell O34 "=E40*Interpolater" w/o quotes;
+Enter to cell O35 "=G40" w/o quotes;
+Select cell range M33:O35 and Format Cells Border Black Bold Outline Top Bottom and Sides but not the Middle bar.
+Create the Quadratic Curve Chart:
+
+Select cell range N13:O15 and use the Chart item on the Ribbon, or Chart Wizard, or whatever to select Charts - All, Scatter, Smoothed Line Scatter; at this Point, a chart should appear atop your worksheet;
+Select inside the border but not on any chart object and do menu item Chart Source Data;
+For Series#1, title it P0, P1i, P2; set X-series to $N$33:$N$35 and set Y-series to $033:$O$35;
+Hit OK and go back to the same dialog box via Chart Source Data;
+For Series#2, title it P0, B(t)i, P2; set X-series to $N$39:$N$41 and set Y-series to $039:$O$41;
+These steps may not turn out right: Check by clicking on the first data series that its formula in the formula bar reads,
+"=SERIES("P0, P1i, P2", Sheet1!$N$33:$N$35,Sheet1!$O$33:$O$35,1)"
+and that the formula in the formula bar for the second data series reads,
+"=SERIES("P0, B(t)i, P2",Sheet1!$N$39:$N$41,Sheet1!$O$39:$O$41,2)", w/o quotes.
+Familiarize yourself with the basic facts of the Cubic Bézier Curve:
+
+Four points P0, P1, P2 and P3 in the plane or in a higher dimensional space define a cubic Bézier curve.
+Enter the Chart data section:
+
+Enter t into cell M70;
+Enter Pt# into cell N70 -- (not done in the image below);
+Enter X into cell O70;
+Enter Y into cell P70;
+Select cell range M70:O70 and Format Cells Font Bold Size 18;
+Enter to cell M72 the formula, "=t"; copy that formula and paste it to cells M77 and M83;
+Enter P0 and make 0 a subscript in cell N71.
+Create the Bézier Cubic Curve Chart:
+
+Select cell range O71:P74 and create a new Chart via the Chart option on the Ribbon or from the toolbar or menu; select All, Scatter, Smoothed Line Scatter ... and a chart should appear atop your worksheet with a curve on it.

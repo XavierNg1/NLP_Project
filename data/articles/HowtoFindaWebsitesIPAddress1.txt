@@ -1,0 +1,16 @@
+ You can use the command prompt to quickly find the public IP address of any website. Note that this can only find the web-facing IP address of the site. The actual IP address of the server might be masked by a VPN or content distribution service.
+
+
+In Windows 7 and earlier, you can open the Command Prompt from the Start menu. In Windows 8 and 10, right-click on the Start button and select "Command Prompt". In any versions of Windows, you can press ⊞ Win+R and type cmd to open the Command Prompt.;
+, The PING command will send a packet of data to the website you specify and return the IP address.
+
+
+Type ping sitename.com and press ↵ Enter. Replace sitename.com with the site you want to find the IP address for. You don't need to include the www. part of the address.
+ After performing the PING command, four packets will be sent to the website. The IP address will be listed next to each result.
+ If you're after the actual IP of a website that's protected by a proxy, you may have some luck if the website has been poorly configured. Note that if the proxy or content distribution network has been properly configured, it's not possible for you to find the actual IP address. Try the following addresses to see if they aren't properly hidden:
+
+
+ping ftp.sitename.com
+ping cpanel.sitename.com
+ping mail.sitename.com
+

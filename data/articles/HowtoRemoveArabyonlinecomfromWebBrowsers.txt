@@ -1,0 +1,67 @@
+ AdwCleaner is a free anti-malware tool that can find and remove many different infections. You can download it for free here. If you are having difficulties using your browser, try downloading the program on another computer and then transferring it via USB drive.;
+, When you first start AdwCleaner, Windows will likely warn you that it is an unknown program. Proceed with running AdwCleaner. AdwCleaner will download a few files before it begins.
+
+
+If Windows SmartScreen prevents you from starting the program, click "More info" and then select "Run anyway".
+ AdwCleaner will begin scanning for malware infections. The scanning process will likely take around 15 minutes.
+ This will remove any infected files that AdwCleaner found during the scan. You will be prompted to save any open documents, as AdwCleaner will close any open programs to help remove infected files.
+ After AdwCleaner is finished removing infected files, reboot your computer and move on to the next section.
+ Arabyonline will modify some or all of your browser shortcuts to include a link to the Arabyonline homepage. This will force your browser to load this page every time you use the shortcut. You'll need to manually remove the links from every shortcut that you use. Browser shortcuts are often located in the Start menu, on the desktop, and in the taskbar. Make sure you locate shortcuts for all of the browsers that you use.
+ This should open the Properties window to the Shortcut tab.
+
+
+If you're trying to open the Properties window for a taskbar shortcut, right-click the taskbar shortcut and then right-click the program name to see the "Properties" option.
+ This is the location of the program that the shortcut points to in order to open the program.
+ If the shortcut is infected, you'll see "http://arabyonline.com" at the end of the Target field. Remove the entire address from the field, but don't touch the actual program location or the shortcut won't work.
+ Check your desktop, taskbar, and Start menu or screen. Forgetting even one shortcut can undo the whole process when you accidentally use it.
+ This is one of the most comprehensive antimalware programs available, and it is free for home users. You can download it from malwarebytes.org. Run the installer after downloading it to install the program. You don't need to enable the premium trial during installation.
+
+
+Malwarebytes Antimalware can run alongside your regular antivirus software.
+ When you first start the program, you'll be prompted to check for updates. Make sure to download these updates before proceeding with the scan.
+ Click the "Scan Now" on the main window to begin scanning your computer. You can also click the "Scan" tab, select "Threat Scan", and then click the "Scan Now". The scanning process will take about 20-30 minutes.
+
+
+If you haven't updated yet, you'll be prompted to again before the scan begins.
+ After the scan has completed, you'll see a list of infected objects found. Click the "Quarantine All" and then "Apply Actions" to quarantine all of the infected files so that they can no longer affect your computer.
+ Malwarebytes Antimalware may need to reboot to finish the removal. Even if you aren't prompted to, it's generally good practice to reboot after a malware scan.
+ After rebooting, run a scan again with AdwCleaner and again with Antimalware. Lingering files may still cause problems, and a second scan by both programs can help ensure that the infection stays gone.
+ This is a malware scanner that you can use for free for thirty days. You'll just be using it for the removal of Arabyonline, so you don't need to worry about the thirty day trial. You can download it from surfright.nl/en/hitmanpro.
+ On the second screen, select "No, I only want to perform a one-time scan to check this computer". This option will not install the HitmanPro files to your computer.
+ HitmanPro will begin scanning your computer immediately. The scanning process will likely take less than five minutes. Click "Next" after the scan is complete.
+ This will start your thirty day trial and remove any files that were found during the scan.
+ Even if you don't use Internet Explorer, it's still a good idea to reset it since Windows relies on it a lot. Resetting Internet Explorer will remove any malicious extensions and reset your home page and settings.
+
+
+Click the Tools menu or Gear button and select "Internet options".
+Click the "Advanced" tab and click Reset....
+Confirm that you want to reset Internet Explorer. You'll need to restart Internet Explorer after resetting it.
+ If you have Chrome installed as your browser, you'll need to reset it to remove all traces of Arabyonline.
+
+
+Click the Chrome Menu button (☰) and select Settings.
+Click the "Show advanced settings" link and scroll to the bottom.
+Click the Reset settings button. Confirm that you want to reset Chrome.
+ If Firefox is your primary browser, it may need to be reset. This will remove any extensions and reset your settings.
+
+
+Click the Firefox Menu button (☰) and click the "?" button at the bottom of the menu.
+Select "Troubleshooting Information". You can also type about:support into the URL box to access this page.
+Click Refresh Firefox... and then confirm that you want to reset Firefox.
+ If you are using a different web browser, you'll need to reset it as well. Most browsers have a similar process to one of the three steps above. Refer to the browser's support website if you need instructions on resetting the browser., If you've performed all of the steps in each of the sections above and Arabyonline is still appearing, you'll need to use this section to reset your DNS. This section is not required for everyone; most users will see their systems back to normal at the end of the previous section., This is a network utility developed by Bleeping Computer, a major antimalware community. You can download it from here. Select the EXE version and download it to your desktop.
+ Right-click on the downloaded EXE file and select "Run as administrator". If Windows SmartScreen blocks it, select "More info" and then click "Run anyway".
+ Enter the following script into the main console of Zoek. This script will reset your DNS settings:
+
+
+createsrpoint;
+autoclean;
+emptyalltemp;
+ipconfig /flushdns;b
+
+, The process will likely take a few minutes to complete. You'll be asked to reboot once the script has finished running., When you download a free program, it will often come bundled with additional software. If you select an "Express" or "Default" installation, or don't pay attention to each screen, you'll often be giving consent to install this additional software that you didn't want. Always select a "Custom" installation and read each screen carefully. You'll almost always be given the option to opt out if you read each installation screen.
+ Freeware programs are often scooped up by larger download sites and then packaged with their own installer. These installers bundle additional software with the program you want. While these are usually the first sites that come up in a Google search, you'll be better off finding the website of the actual developer. You'll often be able to get an installer that doesn't come bundled with anything else. This also allows the developer to better track their downloads, which supports their development.
+
+
+Another benefit of downloading directly from the developer is that you'll be getting the latest version of the program. Large download sites often have out-of-date versions of the software available, since many smaller programs update quite frequently.
+ If you download a lot of programs, it's a good idea to run regular scans with the tools outlined in the sections above. These programs will keep your browsers running smoothly and prevent infections from taking root.
+

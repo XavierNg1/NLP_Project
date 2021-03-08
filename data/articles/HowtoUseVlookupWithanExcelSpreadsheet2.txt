@@ -1,0 +1,24 @@
+
+
+
+This will be a cell number, such as F3. It refers to the location of your search.
+You will enter your Vlookup code here. Whatever search you do here must be from the first column of your spreadsheet.
+It is helpful to place this a few spaces away from the rest of your completed spreadsheet, so that you don’t mix it up with your other data.
+
+
+
+The first number will be the one on the top left corner of your spreadsheet, and the second number will be on the bottom right corner of your data.
+Using the example of a teacher with a class list, imagine you have two columns. The first has the names of all the students, and the second has their GPA. If you have 30 students starting in A2, then the first column lists from A2-A31. The second column with grades goes from B2-B31. Therefore, the table array is A2:B31.
+Be careful not to include your table headers. This means that you don’t include the name of each column, such as “student names,” and “GPA” in your table array. These would probably be A1 and B1 on your spreadsheet.
+
+
+
+For Vlookup to work, you must use the number of the column, not the name. So even though you are searching for your students’ GPA, you would put “2” as the column index number because the GPA is listed in the second column.
+Don’t use the letter for this, only the number representing the column. Vlookup will not recognize “B” as the correct column, only “2.”
+You may have to literally count the number of columns to the right to find the column index number if you are working with a very large spreadsheet.
+
+
+
+If you want an exact number, not one that is rounded or from a neighboring box, then you must put “FALSE” in your Vlookup function.
+If you want an estimated number that is rounded or borrowed from a neighboring cell, then you can put “TRUE.”
+If you aren’t sure which you need, it is typically safe to put “FALSE” so that you get an exact answer from your search in your spreadsheet.

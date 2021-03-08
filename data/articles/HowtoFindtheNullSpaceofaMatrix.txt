@@ -1,0 +1,35 @@
+ Below, your matrix is 3×5.{\displaystyle 3\times 5.}
+
+
+A=(−36−11−71−223−12−458−4){\displaystyle A={\begin{pmatrix}-3&6&-1&1&-7\\1&-2&2&3&-1\\2&-4&5&8&-4\end{pmatrix}}}
+;
+, For large matrices, you can usually use a calculator. Recognize that row-reduction here does not change the augment of the matrix because the augment is 0.
+
+
+(1−20−130012−200000){\displaystyle {\begin{pmatrix}1&-2&0&-1&3\\0&0&1&2&-2\\0&0&0&0&0\end{pmatrix}}}
+
+We can clearly see that the pivots - the leading coefficients - rest in columns 1 and 3. That means that x1{\displaystyle x_{1}} and x3{\displaystyle x_{3}} have their identifying equations. The result is that x2,x4,x5{\displaystyle x_{2},x_{4},x_{5}} are all free variables.
+
+
+
+x1−2x2−x4+3x5=0x3+2x4−2x5=0{\displaystyle {\begin{aligned}x_{1}-2x_{2}-x_{4}+3x_{5}&=0\\x_{3}+2x_{4}-2x_{5}&=0\end{aligned}}}
+
+
+,
+
+Let x2=r,x4=s,x5=t.{\displaystyle x_{2}=r,x_{4}=s,x_{5}=t.} Then x1=2r+s−3t{\displaystyle x_{1}=2r+s-3t} and x3=−2s+2t.{\displaystyle x_{3}=-2s+2t.}
+
+
+x=(2r+s−3tr−2s+2tst){\displaystyle {\mathbf {x} }={\begin{pmatrix}2r+s-3t\\r\\-2s+2t\\s\\t\end{pmatrix}}}
+
+
+, The weights will be the free variables. Because they can be anything, you can write the solution as a span.
+
+
+Nul⁡A=Span{(21000),(10−210),(−30201)}{\displaystyle \operatorname {Nul} A=\operatorname {Span} \left\{{\begin{pmatrix}2\\1\\0\\0\\0\end{pmatrix}},{\begin{pmatrix}1\\0\\-2\\1\\0\end{pmatrix}},{\begin{pmatrix}-3\\0\\2\\0\\1\end{pmatrix}}\right\}}
+
+This null space is said to have dimension 3, for there are three basis vectors in this set, and is a subset of R5,{\displaystyle {\mathbb {R} }^{5},} for the number of entries in each vector.
+
+Notice that the basis vectors do not have much in common with the rows of A{\displaystyle A} at first, but a quick check by taking the inner product of any of the rows of A{\displaystyle A} with any of the basis vectors of Nul⁡A{\displaystyle \operatorname {Nul} A} confirms that they are orthogonal.
+
+

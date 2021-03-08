@@ -1,0 +1,66 @@
+ So Total bits = Tb = 8.
+
+Sub-net mask can be 0, 128, 192, 224, 240, 248, 252, 254 and 255.
+
+
+
+ 
+
+
+Below table gives you the "Number of bits used for subnetting"(n) to their corresponding subnet mask.
+
+
+
+
+
+
+For subnet mask 255 is default, so it'll not consider for subnet masking.
+For example:
+Let, IP address = 210.1.1.100 and Sub-net mask = 255.255.255.224
+Total bits = Tb = 8
+Number of bits used for subnetting = n = 3
+(as subnet mask = 224 and its corresponding "No. of bits used for Subnetting" is 3 from above table)
+
+
+
+
+;
+, Tb = m+n.
+
+
+Number of bits left for host = m = Tb - n = 8 - 3 = 5
+
+
+
+
+
+
+
+, Number of host per subnet = 2m - 2.
+
+
+Number of subnets = 2n = 23 = 8
+Value of last bit used for subnet masking = Δ = 2m = 25 = 32
+
+
+
+
+
+
+
+,
+
+
+The 8 subnets (as calculated in previous step) are shown above.
+Each of them has 32 addresses.
+
+
+
+Here the taken IP address is 210.1.1.100 . 210.1.1.100 comes in 210.1.1.96 - 210.1.1.127 subnet (see the previous step table). So 210.1.1.96 is network address and 210.1.1.127 is broadcast address for the taken IP address i.e. 210.1.1.100 .
+
+
+
+
+
+
+

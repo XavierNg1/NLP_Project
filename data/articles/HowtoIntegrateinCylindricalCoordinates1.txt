@@ -1,0 +1,28 @@
+ Coordinate conversions exist from Cartesian to cylindrical and from spherical to cylindrical. Below is a list of conversions from Cartesian to cylindrical. Above is a diagram with point P{\displaystyle P} described in cylindrical coordinates.
+
+
+x=rcos⁡θy=rsin⁡θz=zr2=x2+y2{\displaystyle {\begin{aligned}x&=r\cos \theta \\y&=r\sin \theta \\z&=z\\r^{2}&=x^{2}+y^{2}\end{aligned}}}
+
+
+, We are dealing with volume integrals in three dimensions, so we will use a volume differential dV{\displaystyle {\mathrm {d} }V} and integrate over a volume V.{\displaystyle V.}
+
+
+∫VdV{\displaystyle \int _{V}{\mathrm {d} }V}
+
+Most of the time, you will have an expression in the integrand. If so, make sure that it is in cylindrical coordinates.
+ 
+
+
+dV=rdrdθdz{\displaystyle {\mathrm {d} }V=r{\mathrm {d} }r{\mathrm {d} }\theta {\mathrm {d} }z}
+
+Those familiar with polar coordinates will understand that the area element dA=rdrdθ.{\displaystyle {\mathrm {d} }A=r{\mathrm {d} }r{\mathrm {d} }\theta .} This extra r stems from the fact that the side of the differential polar rectangle facing the angle has a side length of rdθ{\displaystyle r{\mathrm {d} }\theta } to scale to units of distance.
+ Choose a coordinate system that allows for the easiest integration. 
+
+As with polar coordinates, the range of θ{\displaystyle \theta } is ,{\displaystyle ,} unless there are applications to integrating over more than the whole object. 
+
+
+, Once everything is set up in cylindrical coordinates, simply integrate using any means possible and evaluate.
+
+To save space in this article (and in your calculations) for the moment of inertia of a cone, it is useful to recognize the integral ∫02πsin2⁡θdθ=π.{\displaystyle \int _{0}^{2\pi }\sin ^{2}\theta {\mathrm {d} }\theta =\pi .}
+
+

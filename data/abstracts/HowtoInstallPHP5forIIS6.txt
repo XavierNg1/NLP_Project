@@ -1,0 +1,50 @@
+
+First you must install IIS 6.0.
+On Windows XP, Go to your control panel > add remove programs.
+IIS 6.0 is now installed.
+Once Downloaded extract the first file you downloaded and place the files in "C:\php".
+Rename C:\php\php.ini-recommended to C:\php\php.ini and then COPY it to C:\Windows
+
+,Open both the php.ini file you have now and uncomment cgi.force_redirect in php.ini and set it to 0
+
+,
+Find SMTP = localhost and make sure it is un-commented.
+Change session.save_path as "session.save_path=C:\php\sessions" and make the directory C:\php\sessions
+
+,
+Set the line "extension_dir" as "extension_dir = "C:\PHP\ext".
+
+,
+Uncomment all of the following items.
+Now copy all of those DLL files in C:\php\ext to C:\windows\system32 or add "C:\PHP;" to your Windows path.
+Type the following information into the appropriate text boxes, and then click OK.
+
+Request path: *.php
+
+
+
+
+
+
+Module: FastCGImodule
+
+
+
+
+
+
+Executable: C:\php\php-cgi.exe
+
+
+
+
+
+
+Name: FastCGI
+
+
+
+
+
+
+Click OK, and then click Yes.

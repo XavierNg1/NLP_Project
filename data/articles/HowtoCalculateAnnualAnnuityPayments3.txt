@@ -1,0 +1,33 @@
+ Open the program and start a blank worksheet to begin. You can also use another spreadsheet program, like Google Sheets or Numbers, but the specific formula names and inputs might be slightly different.
+
+You should use this method to calculate payments if your annuity is one that makes payments at the beginning of each period (for example the first of the month). 
+
+
+, The PMT is one of several formulas you could use to calculate annuity payments, but is the easiest to use. Start by typing "=PMT(" into an empty cell of your choosing. You will then be prompted by the program to input your variables as follows: =PMT(rate, nper, pv, ,). The inputs mean the following:
+
+rate is your period interest rate. This is like the monthly interest rate, R, from the calculating by hand method. 
+
+nper is the number of payments made over the life of the annuity. This is like the total number of payments, N, from the calculating by hand method.
+
+pv is the principal of the annuity. This is like the variable P from the calculating by hand method.
+
+Don't worry about the last two prompts, just put a 0 (zero) into each place., Input your annuity information into the function. For example, imagine an annuity that has a principal value of $150,000, a monthly interest rate of 0.42 percent (from an annual rate of 5 percent), and a number of payments totaling 240 (20 years of monthly payments). For this example, the completed function would look like this: =PMT(0.0042,240,-150000,0,0).
+
+Make the value for pv a negative number. This represents a payment that you made so it should be negative.Remember that the monthly interest rate should be input as a decimal. To get this number, divide the stated monthly interest rate by 100, for example 0.42/100 is 0.0042. 
+
+Remember to close the parentheses at the end.
+
+Don't place a comma in your pv value. The program will misread this.
+
+The example calculation returns a monthly payment of $993.25. 
+
+Note that this number is slightly different than the result calculated by hand in the other method, despite using the same annuity terms for each calculation. This is due to the rounding of figures in the by hand method; the Excel function makes calculations using more decimal places. 
+
+The actual payment made by the annuity may differ slightly from both of these calculations, depending on the accuracy of the calculation used by the payer. 
+
+
+, The prompt at the end of the function if asking for the type of annuity payment. For ordinary annuities, the payment is made at the end of the period (end of the month in this case). This is represented by placing a 0 in the function. However, you can also compute your payment amounts if the payments are made at the beginning of a period by changing the value in the input to 1.So for the example, this would be: =PMT(0.0042, 240,-150000,0,1)
+
+This gives a slightly lower payment amount in the example ($989.10). 
+
+

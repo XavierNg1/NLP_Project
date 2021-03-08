@@ -1,0 +1,17 @@
+
+Start Kali Linux and login, preferably as root.
+Plugin your injection-capable wireless adapter (unless your computer card supports it).
+
+,
+Disconnect from all wireless networks, open a Terminal, and type airmon-ng.
+Type airmon-ng start followed by the interface of your wireless card.
+Type airodump-ng followed by the name of the new monitor interface, which is probably mon0.
+
+,
+Review the Airodump results.
+Copy the BSSID of the target network.
+Wait.
+Leave airodump-ng running and open a second terminal.
+Hit ↵ Enter.
+Open a new Terminal.
+Wait for aircrack-ng to launch into the process of cracking the password.

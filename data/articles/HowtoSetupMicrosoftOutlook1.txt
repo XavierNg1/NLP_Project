@@ -1,0 +1,35 @@
+ IMAP allows two-way communication from your email client and is less prone to message loss. IMAP is also better for checking email on multiple devices, which is becoming more and more common. Messages read in your Outlook client will be marked as read in your Gmail inbox as well, and vice versa.
+
+
+Sign into Gmail and click the Gear icon in the upper-right corner.
+Click Settings.
+Click the "Forwarding and POP/IMAP" tab.
+Select the "Enable IMAP" radio button.
+Click "Save Changes".;
+, Click the Tools menu and select "Accounts or Email Accounts" and then click Add. If you are using Outlook 2010 or 2013, click the File tab and select the Info option. Click "+Add Account".
+
+
+Select "Manually configure server settings or additional server types".
+ You will need to enter the following information in order to successfully connect to your Gmail account and receive email:
+
+
+Server: imap.gmail.com
+Port: 993
+Requires SSL: Yes
+
+, You will need to enter the following information to successfully connect to your Gmail account and send email:
+
+
+Server: smtp.gmail.com
+Port: 465 or 587
+Requires SSL: Yes
+Requires authentication: Yes
+Use same settings as incoming mail server.
+ Besides entering server information, you will also need to enter in your account information. This will allow Outlook to sign into Gmail on your behalf and properly label messages:
+
+
+Full Name or Display Name: This is the name you want to appear when people receive messages from you.
+Account Name or User Name: Your Gmail address (yourname@gmail.com)
+Email address: Your Gmail address again.
+Password: Your Gmail password.
+ Once you have Gmail configured, you can start using Outlook to send and receive email messages through your Gmail account. Start getting your life organized by making the most out of Outlook.

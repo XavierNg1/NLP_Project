@@ -1,0 +1,53 @@
+
+
+
+If the same NMS fails to manage other devices, proceed to Step 2.
+If the same NMS can manage other devices, go to Step 4.;
+,
+
+
+If the NMS version matches the host version, go to Step 4.
+If the NMS version does not match the host version, use a matched NMS version. Then, proceed to Step 3.
+
+
+
+If the fault is rectified, go to Step 12.
+If the fault persists, proceed to Step 4.
+ A If the device can ping the NMS, go to Step 8. B If the device cannot ping the NMS, proceed to Step 5.
+
+
+
+If there is a route from the device to the NMS server, check the upstream link to ensure that the device can communicate with the NMS. Then, go to Step 7.
+If there is not a route from the device to the NMS server, run the IP route-static command to add a static route to the NMS server. Then, proceed to Step 6.
+
+
+
+If the fault is rectified, go to Step 12.
+If there is not a route from the device to the NMS server, check the upstream link to ensure that the device can communicate with the NMS. Then, proceed to Step 7.
+
+
+
+If the fault is rectified, go to Step 12.
+If the fault persists, proceed to Step 8.
+ Make sure that configurations are correct. Then, check whether the fault is rectified.
+
+
+If the fault is rectified, go to Step 12.
+If the fault persists, proceed to Step 9.
+
+
+
+Run the display snmp-agent community read command to check whether the read community name of the device is the same as that of the NMS. If they are inconsistent, run the snmp-agent community read command to modify the read community name of the device to be the same as that of the NMS.
+Run the display snmp-agent community write command to check whether the write community name of the device is the same as that of the NMS. If they are inconsistent, run the snmp-agent community write command to modify the write community name of the device to be the same as that of the NMS.
+Run the display snmp-agent target-host command to check whether the IP address of the NMS server is included in the target host list for traps. If the IP address of the NMS server is not included in the target host list for traps, run the snmp-agent target-host command to add the NMS server to the target host list for traps.
+Run the display snmp-agent trap enable command to check whether traps can be sent to the NMS from the device. If it is disable, run the snmp-agent trap enable command to enable trap sending from the device to the NMS.
+ Then, check whether the IP address of the MA5600T/ MA5603T is the same as that configured on the NMS.
+
+
+If the MA5600T/MA5603T is the same as that configured on the NMS, go to Step 11.
+If the MA5600T/MA5603T is different from that configured on the NMS, in the VLAN. interface mode or the MEth mode, run the undo IP address command to delete the incorrect IP address and then run the IP address command to re-configure the IP address to enable the IP address of the MA5600T/MA5603T to be the same as that configured on the NMS. Then, proceed to Step 10.
+
+
+
+If the fault persists, process to Step 11.
+,

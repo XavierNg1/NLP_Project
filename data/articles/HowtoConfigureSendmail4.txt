@@ -1,0 +1,17 @@
+ If the above virtual user table text file is located at sourcefile, and you are using the DBM database type, then use the command:
+
+makemap dbm /etc/mail/virtusertable < sourcefile
+Note: if you built Sendmail with NEWDB instead of NDBM, then use hash instead of dbm in the above line.
+This creates one or more non-text files (typically /etc/mail/virtusertable.dir and /etc/mail/virtusertable.pag, or /etc/mail/virtusertable.db), but does not actually change /etc/mail/virtusertable itself, so this is the recommended location for sourcefile.
+If you would like to reverse-map local users for out-bound mail, you will need to add support for the generics table to your .mc file:
+
+FEATURE(`genericstable', `dbm /etc/mail/genericstable')dnl
+GENERICS_DOMAIN_FILE(`/etc/mail/generics-domains')dnl
+
+
+And you will need to create /etc/mail/genericstable which is like /etc/mail/virtusertable above except the columns are reversed:
+
+jschmoe joe@yourdomain.com
+
+
+

@@ -1,0 +1,32 @@
+ The generic formula for wind load is F = A x P x Cd where F is the force or wind load, A is the projected area of the object, P is the wind pressure, and Cd is the drag coefficient.This equation is useful for estimating the wind load on a specific object, but does not meet building code requirements for planning new construction.
+ This is the area of the two-dimensional face that the wind is hitting.For a full analysis, you will repeat the calculation for each face of the building. For example, if a building has a west face with an area of 20m2, use that value for A to calculate the wind load on the west face.
+
+The formula to calculate area depends on the shape of the face. For a flat wall, use the formula Area = length x height. Approximate the area of a column face with Area = diameter x height.
+
+For SI calculations, measure A in square meters (m2).
+
+For imperial calculations, measure A in square feet (ft2).
+ The simple formula for wind pressure P in imperial units (pounds per square foot) is P=0.00256V2{\displaystyle P=0.00256V^{2}}, where V is the speed of the wind in miles per hour (mph).To find the pressure in SI units (Newtons per square meter), instead use P=0.613V2{\displaystyle P=0.613V^{2}}, and measure V in meters per second.This formula is based on the American Society of Civil Engineers code. The 0.00256 coefficient is the result of a calculation based on typical values for air density and gravitational acceleration.Engineers use a more accurate formula to take into account factor such as the surrounding terrain and type of construction. You can look up one formula in ASCE code 7-05, or use the UBC formula below.
+
+If you're not sure what the wind speed is, look up the peak wind speed in your area using the Electronic Industries Association (EIA) standard. For example, most of the U.S. is in Zone A with 86.6 mph wind, but coastal areas might lie in Zone B (100 mph) or Zone C (111.8 mph).
+ Drag is the force that air exerts on the building, affected by the building's shape, the roughness of its surface, and several other factors. Engineers typically measure drag directly using experiments, but for a rough estimate you can look up a typical drag coefficient for the shape you are measuring. For example:The standard drag coefficient for a long cylinder tube is 1.2 and for a short cylinder is 0.8. These apply to antenna tubes found on many buildings.
+
+ The standard coefficient for a flat plate such as the face of a building is 2.0 for a long flat plate or 1.4 for a shorter flat plate.
+
+ The drag coefficient has no units. 
+
+
+, Using the values determined above, you can now calculate wind load with the equation F = A x P x Cd.
+
+
+ Start by estimating the projected area. In this case, A=dw=(3ft)(0.5in)(1ft/12in)=0.125ft2{\displaystyle A=dw=(3ft)(0.5in)(1ft/12in)=0.125ft^{2}}
+
+ Calculate the wind pressure: P=0.00256V2=0.00256(702)=12.5psf{\displaystyle P=0.00256V^{2}=0.00256(70^{2})=12.5psf}.
+
+ For a short cylinder the coefficient of drag is 0.8.
+
+ Plugging into the equation: F=APCd=(0.125ft2)(12.5psf)(0.8)=1.25lbs.{\displaystyle F=APCd=(0.125ft^{2})(12.5psf)(0.8)=1.25lbs.}
+
+ 1.25 lbs is the amount of wind load on the antenna. 
+
+

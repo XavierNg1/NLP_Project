@@ -1,0 +1,30 @@
+ The quickest way to open Disk Management is to click the Start menu, type diskmgmt.msc, and press ↵ Enter.
+ You can only create partitions from unallocated or free space on a drive. Newly-installed drives are typically all unallocated space.
+
+
+Note that Windows 7 supports a maximum of four primary partitions on a single hard drive. Primary partitions act as independent hard drives, and can have operating systems installed on them. After the third primary partition, the fourth partition created will be an "extended" primary partition. This extended partition can then hold up to 128 "logical drives". Logical drives can be formatted for regular use, but cannot load operating systems., This will open the New Volume wizard.
+ The total amount of available space will be displayed. By default, it should be set to create the maximum size.
+ This is what will be used for the drive's file system. By default, Windows will select the next available drive letter for your system.
+ There really isn't any reason to select FAT or FAT32 as the file system unless you are using the drive for legacy programs like MS-DOS. For regular Windows use or for sharing the drive on a network, select "NTFS".
+
+
+If you're planning on installing another operating system on this drive later, you can select "Do not format this volume", as the operating system installation process will take care of that.
+ You should only uncheck this if you suspect that your hard drive is suffering from errors.
+ Review your formatting choices and then click Finish. Wait while the drive is formatted. Depending on the size, this could take a little while.
+
+
+If you get a message "The operation selected will convert the disk to dynamic... are you sure you want to continue?", click No. This will likely keep Windows from booting properly.
+ Once the format is complete, a window will open displaying the contents of your new volume. It will be empty for now, but you can start putting files on it immediately.
+
+
+
+Click here for some guides on installing an operating system on your new partition.
+
+Click here for instructions on setting up the new partition as a network drive.
+ Windows will create your new partition as a logical drive if you already have three primary partitions on the disk. Logical drives can be used for storage and for installing applications, but they cannot be used to boot an operating system.
+
+
+The only way around this is to remove one of your existing primary partitions, or to purchase another physical hard drive.
+Most Recovery partitions installed by your computer's manufacturer will take up one of the primary partition slots.
+ Unfortunately the only way to fix this is to reinstall Windows 7. Click here for instructions. If you have data that you need to recovery, click here.
+ If you already have three primary partitions on your drive, and you have a logical partition to the right of the unallocated space, you won't be able to create a partition from that unallocated space. You will need to shrink the logical partition in order to create a new partition in the unallocated space.

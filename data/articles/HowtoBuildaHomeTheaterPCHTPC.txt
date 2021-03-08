@@ -1,0 +1,126 @@
+ Do you want to use this HTPC as a stereo as well? Will it store your MP3 collection and act as a server? What other users can you dedicate to it?;
+, While almost any modern PC will work, specific component technologies will help your HTPC handle smooth recording and playback of video.
+TV Tuner cards. Hauppauge has made their name a standard for TV tuners and other multimedia cards. The Hauppauge PVR-150 (a single TV tuner card) is more widely supported in third-party software than any other card. Multiple PVR-150 cards may be installed in one PC and recognized with any TV recording application without any customization. The same is true for the dual TV tuner card from Hauppauge, know as the PVR-500.
+
+
+
+
+
+
+Memory. Almost any DDR memory is suitable for up to two TV tuners. For three or more TV tuners, DDR-400 or higher bandwidth memory with a CAS latency of 2 is recommended, and for DDR2, a CAS of 4 is recommended. Avoid DDR3 modules until the latency numbers are improved. Recording multiple streams of video while playing another requires decently low latency memory.
+
+
+
+
+
+
+Case. You may buy a case specifically designed for HTPC systems, or use a standard ATX case. There is a lot of flexibility here depending upon where you plan to keep the system, and how much cooling you'll need. If you're opting to keep this in a central location such as a living room or den, you might want to focus on keeping the system quiet and dust-free. This is always a balancing act when higher performance components are utilized. Pick a case with more airflow and ventilation than you need for your components so that you'll be able to lower the fan speeds once its built.
+, Since this system will be powered on all of the time, one of our priorities is to minimize the time it's sitting idle while fully powered on. Not only does this conserve energy, but it also prolongs the life of your hardware. Inside of your system's BIOS configuration utility, you will want to set a timeout for a system standby mode. Some PCs will have additional controls for powering down components after so much idle time, while others will need to rely upon the operating system's settings to do this. Also, avoid using a suspend mode, as many operating systems have difficulty recovering from it.
+ Ubuntu is one of the easiest and most popular distributions for MythTV since it already includes many of the individual components you'd need with other distributions. Feel free to choose a distribution that suits your need and expertise, but this guide will focus on Ubuntu 7.04 (Feisty Fawn):
+Download a LiveCD ISO image from a mirror site listed on ubuntu.org. An ISO image is an image of an optical disc that is ready to be burned onto a CD or DVD.
+
+
+
+
+
+
+Burn the ISO to a spare CD using CD burning software such as Nero.
+
+
+
+
+
+
+Boot your new HTPC to the installer CD.
+
+
+
+
+
+
+Select the "Start or install Ubuntu" option or let this screen time out to select it automatically.
+
+
+
+
+
+
+Double click on the "Install" icon once Ubuntu Live CD has loaded the desktop.
+
+
+
+
+
+
+Select your language.
+
+
+
+
+
+
+Select your location.
+
+
+
+
+
+
+Select your keyboard layout.
+
+
+
+
+
+
+Select manual partitioning scheme, and partition your drive(s) accordingly. This step assumes you have one large drive. For multiple drives, feel free to partition as necessary.
+
+
+
+
+
+
+Create a root partition. For simplicity, this is where the system will boot, where Ubuntu will be installed, and where all applications and user data will be saved. At least 10GB is recommended for this partition, but feel free to select a larger size depending upon your needs. Make sure the type is set to the default "ext3", then type in a forward slash "/" for the mount point.
+
+
+
+
+
+
+Create a swap partition. This should roughly be close to the same size as your physical RAM on the system, but anything less than that amount may hinder system performance. Anything double that amount is most likely overkill. Select "swap" as the type, and no mount point is allowed.
+
+
+
+
+
+
+Create a partition in which to save your recorded video. The default type of "ext3" will work, but the "jfs" or "xfs" journaling file system types will speed up the time it takes to delete recordings. JFS will delete any file in 1 second or less, even if it's as large as 10GB. XFS will delete files quickly, but not quite as fast as JFS. The advantage of XFS is performance, but at an increased CPU overhead. Since an HTPC is not a dual-purpose PC with other applications running at the same time it is recording video, XFS is a good choice. Note that Ubuntu 7.04's installer may have issues with correctly calculating partition sizes for "jfs" and "xfs". For now, create a smaller sized partition, then "grow" it to use remaining free space once Ubuntu is installed. This is another worthwhile advantage of XFS over EXT2 or EXT3.
+
+
+
+
+
+
+Select a user name and the default account to log into Ubuntu. Note that the name "mythtv" is a reserved account. Also, user names must start with a lowercase character, and cannot contain special characters. Next, create a password, and then select a name for the system.
+
+
+
+
+
+
+Review the settings on the next window, then click on "Install".
+
+
+
+
+
+
+Reboot your system when prompted to do so.
+
+
+
+
+
+
+Install updates when prompted. Ubuntu should show a balloon-style message for updates in the top right of the desktop. Click on it and update everything listed. You will notice warnings regarding validated packages, but most of these should be from trusted sources. Review the list for yourself and de-select any you don't want if you're familiar with Linux packages. Otherwise, install all of the updates.
+,,,,

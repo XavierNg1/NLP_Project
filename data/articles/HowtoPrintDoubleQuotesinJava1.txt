@@ -1,0 +1,17 @@
+ As you know, the double quote symbol " has special meaning in Java (displaying text). Whenever you want to ignore one of these meanings, use the escape character \ (backlash). This character tells the compiler that the next character is part of an alternate instruction.
+
+
+Make sure you are hitting the backslash key, not the forward slash. The backslash key is next to the } key on most English keyboards.;
+, These two characters together are called an escape sequence. Each escape sequence has a special meaning. In this case, \" just means "insert a double quote symbol here,", without interpreting it as the beginning or end of text.
+
+
+You will need to use this sequence for each individual double quote you want to display.
+ The escape sequence does not affect the rest of your code. There is no need to type anything else to return to normal programming.
+ One common mistake is to leave out the plain old " mark in your program. Remember that \" is just for display, and does not remove the need to encase your display text in quotation marks. Here's an example:
+
+
+1. The string for displaying "Hello" is \"Hello\"
+
+2. To instruct the compiler to print this text, we wrap it in quotes: "\"Hello\"".
+3. Here's what this looks like in a complete line of code:
+

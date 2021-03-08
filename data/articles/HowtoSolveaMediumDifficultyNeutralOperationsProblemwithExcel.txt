@@ -1,0 +1,17 @@
+ Save the workbook into a logical file folder.;
+, The Goal Seeking Preferences will be important. Open Preferences in the Excel menu. Recommended Settings: Set General to R1C1 Off and Show the 10 Most Recent Documents; Edit - set all the Top options to checked except Automatically Convert Date System. Display number of decimal places = blank (for integers preferred), Preserve display of dates and set 30 for 21st century cutoff; View - show Formula Bar and Status Bar, hover for comments and all of Objects, Show gridlines and all boxes below that auto or checked; Chart - show chart names and data markers on hover. Leave rest unchecked for now; Calculation -- Automatically and calculate before save, Limit iteration checked, max iterations 100, max change .000 000 000 000 01 w/o spaces as this problem involves precise goal seeking; save external link values and use 1904 date system; Error checking - check all; Save - save preview picture with new files and Save Autorecover after 5 minutes; Ribbon -- all checked except Hide group titles and Developer.
+ Taking then a+b-b=ab-b and simplifying the left while factoring b out on the right, leaves a =  b(a-1). Dividing both sides by (a-1) and simplifying leaves a/(a-1) =b, Since ab = c, it's also true that a^2/(a-1) = c. Because a could have been subtracted first instead of b, and because addition and multiplication are both commutative, it's also true that b/(b-1) = a and b^2/(b-1) = c as well. Neither a nor b then may equal 1 lest division by 0 result in the denominator.
+ Do Format Cells Number Number Decimal Places 15 OK and Format Cells Font Size  9 or 10 or whatever you're comfortable viewing. Select columns B:G and set column width to 20.17. Select column A and set column width to 4.
+ B1: a; C1: b:z; D1: Result c; E1: Goal; F1: 0 (which would appear with many trailing zeroes).
+ B2: 5; D2: (w/o quotes) "=B2^2/(B2-1)"; E2: "=2*PI()"; F2: "=E2-D2" w/o quotes.
+ Select cell F2 and go to menuitem Tools Goal Seek, Accept F2, hit tab twice and enter To value: 0, then enter By changing cell: and click on cell B2, OK. After a moment, B2's value should change to 5.03537698500395 and F2 should equal 0. Now the a value for arriving at 2π via Neutral Operations is known, and b remains to be determined. But b = a/(a-1) whereas c = a^2/(a-1).
+ Do Edit Go To cell range F3: F51 and do Edit Fill Down.
+ D4: "=B4^2/(B4-1)"; E4: " "=D4".
+ w/o quotes: A5: c; B5: "=B4"; C5: "=B5/(B5-1)"; D5: "=B5+C5" E5: "=B5*C5".
+ Copy cell range B4:E5 and Paste it to the following alternate cells:  B6, B8, B10. B12, B14, B16, B18, B20, B22. Select cell range B4:E23 and copy it and paste it to cell B24. Select cell range B48:E49 and copy it to cell B50.
+, Go to cell A55 and paste it and do menuitem Data Sort Sort by Columns: Column A; Sort on: Values; Order: A to Z; Color/Icon is blank, OK. Select row 56 and do Insert Row and type b and delete b from the a,b found in cell A55.
+,,, Done.
+ In Tips. you'll learn how to change it to take other numbers. Save the workbook.
+
+For more art charts and graphs, you might also want to click on Category:Algebra, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

@@ -1,0 +1,26 @@
+
+
+
+Editing the code will not affect editing notes in the Evernote software.
+,, This will give the site permission to review, create and update notes, tags, and notebooks.The site is well-regarded on the Internet, so these permissions are safe.
+
+
+You can revoke this access at any time by going to your Authorized Applications settings on Evernote.com. Just click “revoke access” next to “ENML Editor.”
+
+,,,,, Evernote allows the use of many HTML tags as well as in-line CSS style sheets.Use the the Evernote Markup Language developer’s guide to learn which elements are allowed.
+ Now that you’re editing the HTML, you can set a new solid color or a background image.
+
+
+Find the <en-note> tag.
+After “en-note”, hit space and type style=”background:#95DEFF;”>.
+The line should now read: <en-note style=”background:#95DEFF;”>.
+To use an image instead of a solid color, add this after en-note instead: style=”background-image:url(‘yourURL’);”>.
+The line should now read: <en-note style=”background-image:url(‘yourURL’);”> where “yourURL” is the full path to the image.
+ You’ll want to see what your note will look like before you save your changes. The preview will appear in new browser window in the online version of Evernote.
+ If you are satisfied with your changes, save your work.
+
+
+If the changes are accepted, you’ll see “Your note has been saved! Click here to check the results in Evernote.”
+If there are any errors in your code, you’ll see a message that says “There is an error in your ENML code.” You’ll need to fix the errors before you can save the note.
+ This will sync and save the changes you made online with the local version of your note.
+

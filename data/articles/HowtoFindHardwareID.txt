@@ -1,0 +1,28 @@
+ This utility lists all of your connected hardware, and will display devices that are not working correctly. There are a couple of different ways to open the Device Manager.Any version of Windows - Press ⊞ Win+R and type devmgmt.msc. This will launch the Device Manager.
+
+Any version of Windows - Open the Control Panel and switch the view to either Large or Small icons using the drop-down menu in the upper-right. Select "Device Manager".
+
+Windows 8.1 - Right-click on the Start button and select "Device Manager".;
+, You can do this for any of your "Unknown devices" or other devices with errors to help you track down the correct drivers.
+
+
+Devices with errors will have a small "!" icon.
+You can expand categories by clicking the "+".
+ This will display a Property drop-down menu and a Value frame.
+ This will display several entries in the Value frame. These are the device's Hardware IDs. You can use these IDs to help identify the device and find the correct drivers for it. See the next section for details., The top ID in the list is usually the main one, and should have the most characters. Right-click on this ID and copy it to your clipboard.
+ This will usually display what the device is, which can be very useful for determining what the malfunctioning hardware is., This will return results that contain the driver files for your piece of hardware. You can also use the information you found in the previous step to download the correct driver from the manufacturer's support page.
+ You don't have to worry about deciphering the whole thing, but there are two aspects that can help you identify the product if a Google search fails. The VEN_XXXX is a code that indicates the manufacturer (vendor). The DEV_XXXX is the specific model of hardware (device). Below are some of the more common VEN_XXXX codes:
+
+
+Intel – 8086
+ATI/AMD – 1002/1022
+NVIDIA – 10DE
+Broadcom – 14E4
+Atheros – 168C
+Realtek – 10EC
+Creative – 1102
+Logitech – 046D
+
+, You can use the Vendor and Device IDs you extracted above to search the database at pcidatabase.com. Enter the four-digit Vendor ID (VEN_XXXX) into the Vendor Search field, or the four-digit Device ID (DEV_XXXX) into the appropriate field and click the "Search" button.The database is extensive but does not contain every piece of hardware. There's a chance that your search won't return results.
+The database is deigned for PCI slot hardware, including graphics cards, sound cards, and network adapters.
+

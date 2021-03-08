@@ -1,0 +1,5 @@
+ This process is the one associated with Windows Explorer, and keeps users from deleting files that are in use. Ending the process will allow you to delete the file through the command prompt. Open the Task Manager by holding down the "Control," "Alt," and "Delete" keys. Click the "Processes" tab and select the one reading "explorer.exe." Click the "End Process" button.;
+, To open the command prompt, click "Start" and then "Run." Type "cmd" into the window and click "Run." In the command prompt window, you can use the "cd" (change directory) command to navigate to the file's location. For example, you could type: "cd C: \ Documents and Settings \ My Documents \ filename." You should, of course, use the directory in which your locked file is located.
+ To do this, use the "del" command. Type "del filename," substituting your locked file's name for the "filename" portion of the command.
+ To do this, open the Task Manager again and click on "File", and then "New Task." Type "explorer.exe" into the window and click "OK." You can also restart your computer to relaunch the Explorer process.
+

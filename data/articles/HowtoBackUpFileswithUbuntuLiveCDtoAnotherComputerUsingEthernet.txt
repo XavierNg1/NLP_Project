@@ -1,0 +1,16 @@
+ To do that, you need to download the image file from Ubuntu official website and burn it to a blank CD, or write to USB flash drive using WinImage or a similar program.;
+, Probably, you would need to adjust the computer's BIOS settings to make it load from CD/USB. Don't worry, "trying Ubuntu" does not affect the files stored on a computer.
+ Don't forget to set a password, or you might not be able to login as this user.
+, Use the following terminal commands: //will add them a bit later
+
+, If your computer has a working Internet connection, connect and use the following terminal command: sudo apt-get install samba . Otherwise, go to (for Ubuntu 12.04.1) to download the samba package, and use the following terminal commands: 1) to change the working directory: cd /home//Downloads ; 2) to get the list of files inside this directory and find out the package filename: ls ; 3) to install the samba package: sudo dpkg -i ,
+
+
+Connect two computers using Ethernet wire
+Check the ip and netmask of the second computer (using ipconfig or ifconfig command)
+setup the first computer with the same netmask and ip address as the start of this range. Network Connections -> Wired -> Edit -> IPv4 Settings -> Manual -> 169.254.1.1 , 255.255.0.0
+
+, Use the following terminal command to open smb.conf: sudo gedit /etc/samba/smb.conf. Insert the following lines somewhere near the : comment = shared read only = No path = /media/force user=admin guest OK = yes. Then, restart the smbd service: sudo service smbd restart
+
+, That's all! Now you're able to backup your files.
+

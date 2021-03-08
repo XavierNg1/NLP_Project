@@ -1,0 +1,10 @@
+ It doesn't have to be anything fancy - just blobs will do for the Game of Life. It may also be possible to render the Game of Life as text characters on a terminal.
+
+
+The Game of Life is a two-dimensional grid of cells, each of which can either be ON or OFF.
+Every timestep (normally called a 'generation'), every cell in the grid is checked, and it is turned ON or OFF depending on the rules of the CA. The rules of the Game of Life will be explained later.
+This yields a new configuration of the CA. The process then repeats, such that the configuration of the CA keeps changing after every timestep. The result is surprisingly complex, and the shifting patterns of cells are often compared to the behaviour of single-celled organisms.
+ The easiest way to model this is as a two-dimensional array. You can use any datatype you want, although since the Game of Life's cells have only two states, you only need a boolean datatype (ie. TRUE for ON, FALSE for OFF)., For example, if you have 100x100 cells, and you want the grid on screen to stretch from screen coordinates (0,0) to (600, 600), then the cell at index should be placed at position (x*6, y*6). You can represent the cells however you like: for example, filled blue blobs for ON cells, white blobs for OFF cells.,,
+If an ON cell has fewer than 2 cells surrounding it as described above, it becomes OFF.
+If an ON cell has more than 3 cells surrounding it, it becomes OFF.
+,, However, you won't see anything unless you provide an initial generation of ON cells for it to work from, since OFF cells don't do anything by themselves in the Game of Life. A suggestion for that is made below., For example, how about 'all cells with one ON cell next to them become ON'?

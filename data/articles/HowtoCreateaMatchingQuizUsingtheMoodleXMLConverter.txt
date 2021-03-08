@@ -1,0 +1,14 @@
+ Text editors such as Textpad and Programmer's notepad usually include options to display line numbers, visible spaces and to enable automatic word wrapping. The required file format is displayed on the Moodle XML converter web site. See below.;
+,
+
+
+Note that the first word in the file is 'matching', followed by an indexed main question and then the indexed subordinate-questions with a matching answer.
+There must be only one space between the index number and the question.
+Each subordinate question is prefixed with the phrase 'match:'.
+All key phrases must be in lowercase.
+ The actual file contents are reproduced here. Feel free to copy and paste these contents and experiment with the XML converter.
+, In the sample, indexed numbers in the format 1., 2.-- were used, so the suitable parser option will be: ^(\d+)\s*(.+) - if choices are like 1. 2. 3. or 1) 2) 3)
+
+, If it does, then your conversion worked.
+ If you have followed the steps outlined in this article, then import the XML to a quiz on a Moodle web site using Moodle XML format.
+

@@ -1,0 +1,55 @@
+ 'Yum' (Yellowdog Update Modified) is a package manager that will install all the required dependencies of mediawiki . Navigate to Applications->System Tools-->Terminal and become root. Then install mediawiki. Yum would also install php-mysql, php-pgsql, php, httpd because they are dependencies.
+
+
+su
+yum install mediawiki;
+,
+
+Apache (httpd) requires mailcap, but yum doesn't detect apache's needs and therefore you have to install it manually.
+yum install mailcap
+
+, For running mediawiki you also require a database server. The database server is not defined as a dependency for mediawiki because the database server can be either MySQL or PostgreSQL, and it does not have to be on the same computer. For installing mysql use:
+
+
+yum install mysql-server mysql
+
+and if you prefer PostgreSQL, type the following command:
+
+yum install postgresql-server postgresql
+
+, Start the web server (httpd) and database server (mysql or postgresql) for them to function.
+
+
+service mysqld start/service postgresql start
+service httpd start
+
+,,, So run
+
+
+cp -a /var/www/wiki /var/www/html
+
+to copy the template directory to /var/www/html. After running the command your wiki configuration files are being copied to /var/www/html/wiki and wiki pages are stored in database server.
+ You can make them accessible by copying them to the wiki directory:
+cp -a /usr/share/mediawiki/skins /var/www/html/wiki
+
+
+or create a soft link to the skins directory.
+
+
+ln -s /usr/share/mediawiki/skins /var/www/html/wiki/skins
+
+, If you are accessing that page for the first time, it would ask you to setup the wiki. Follow http://localhost/wiki/config/index.php which should take you to the setup page.
+ Going with the default options will not do any harm. Choose either MySQL or PostgreSQL as your database server. It is highly recommended to use the superuser account and enter the username of the database superuser account and password. The default superuser account for MySQL is root and that of PostgreSQL is postgres. Also provide a suitable database prefix.
+
+
+(Note: under Fedora 13 this step will fail due to write permissions on the config directory. hint: for SELinux cd /var/www/html/wiki; chcon -t httpd_sys_content_rw_t config. Also initialize the wikidb as described in https://www.mediawiki.org/wiki/Manual:Installing_MediaWiki#MySQL .),,
+mv /var/www/html/wiki/config/LocalSettings.php /var/www/html/wiki
+
+
+,
+
+
+rm -fr /var/www/html/wiki/config
+
+, Enjoy and have fun!
+

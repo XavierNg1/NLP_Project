@@ -1,0 +1,33 @@
+ Make sure iTunes is completely closed before proceeding so that the changes you make take effect.;
+, Error 3194 most often appears when you are trying to update or restore your iOS device through iTunes, and iTunes cannot connect to the Apple verification servers. This is common if you have jailbroken your device in the past or are trying to downgrade iOS.
+
+
+Windows - Navigate to C:\Windows\System32\drivers\etc and double-click the hosts file. Select "Notepad" from the list of available programs.
+Mac - Open the Terminal from the Utilities folder, type sudo nano /etc/hosts, and press ⏎ Return. This will open the hosts file in a text editor.
+ You'll be looking for an Apple address at the bottom. A standard hosts file will not have any lines without a # at the front.
+ This redirects the signature verification process to the Cydia servers.It is the presence or lack of this redirection that is causing the error. What you do next depends on whether or not you can find this line:
+
+
+If you have 74.208.105.171 gs.apple.com at the bottom of the file, add a # to the front.
+If you don't have the line, add 74.208.105.171 gs.apple.com to the bottom of the hosts file.
+ This should allow your iPhone to make the connection properly.Windows - Click the File menu and select "Save."
+Mac - Press Ctrl+O to save and Ctrl+X to quit.
+ In many cases, the changes you made to your hosts file should allow you to proceed.
+
+
+Note: If you're trying to downgrade to a previous version, it may not be possible with the version of the firmware you have downloaded. Try a normal restore using the firmware downloaded directly through iTunes.
+ This may be necessary if iTunes is still not able to connect. You will be prompted to restore your iPhone, which will erase all of the data on it:
+
+
+Connect the iOS device to your computer and turn it completely off.
+Press and hold the Power and Home buttons for 10 seconds.
+After 10 seconds, release the Power button but continue holding the Home button. You'll see a message in iTunes prompting you to restore the iPhone.
+ If you can't get the update process to work even after changing your hosts file, you can try remotely erasing your iOS device using iCloud. The device you're trying to erase will need to have internet access and "Find My iPhone" enabled. You'll be able to restore the device from any iCloud or iTunes backup after erasing it.
+
+
+You can access your iCloud account from any computer by visiting icloud.com. Log in with the Apple ID associated with your iOS device.
+ This will open a map with your registered iOS devices.
+ Click the "All Devices" menu and select the iOS device you want to restore.
+ After confirming, the iOS device will begin automatically resetting to factory settings. This may take a while to complete.
+ Start the iOS device setup process as if it were a new phone. You'll be given the choice to choose a backup from iCloud or iTunes, or you can proceed with a fresh install.
+

@@ -1,0 +1,12 @@
+ If you are running a simple program with all of the files in the same directory, you will probably not need to do this. However, if you are running a more complex program with files in multiple directories, you will need to tell the computer where to look for these files.
+
+
+
+Windows: Type java -version into the command prompt and press ↵ Enter. Based off the version of Java displayed on the first line, type in set path=%path%;C:\Program Files\Java\jdk1.5.0_09\bin to the command prompt and press ↵ Enter. Substitute jdk1.5.0_09 with whatever version of Java you have installed.
+
+Be sure you are entering in this command while in the directory containing your Java project.
+
+
+
+Mac: Type /usr/libexec/java_home -v 1.7 into the terminal and press ↵ Enter to ensure Java is installed on your system. Then, type echo export "JAVA_HOME=\$(/usr/libexec/java_home)" >> ~/.bash_profile into the terminal and press ↵ Enter. Restart the terminal afterwards.
+

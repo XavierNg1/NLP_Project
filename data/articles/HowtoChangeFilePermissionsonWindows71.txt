@@ -1,0 +1,29 @@
+ If you aren't logged in as an administrator, you'll only be able to change permissions for your own user account. In order to change permissions for other accounts on the computer, you'll need to be logged in with an account with administrator privileges.
+
+
+If you are not logged in as an administrator, you won't be able to access most of the permissions settings.;
+, You can change the permissions for any file or folder. Changing the permissions for a folder will change the permissions for all of the files and folders inside.
+
+
+You won't be able to change permissions for files that are currently in use. Make sure that you close any programs currently using the file or folder that you are attempting to change permissions for.
+ This will open the file or folder's Properties window.
+ This will display a list of groups and users that currently have permissions for the object.
+
+
+If you don't have a "Security" tab, you are likely trying to change the permissions for a file stored on a USB drive. If your USB drive is formatted with the FAT32 file system, you can't set permissions for the object. The disk must be using the NTFS file system.
+ This will allow you to change the permissions for that file or folder for any user on the computer.
+ If you want to add a new user to the list of user with permissions for that file, click the "Add" button to begin.Click "Advanced" and then "Find Now" to find all of the users and groups on that computer.
+Select the user you want to add to the permissions list and click "OK." They'll be added to the "Group or user names" list.
+ The available permissions will be displayed in the "Permissions for User" list.
+ Each permission in the list has an "Allow" and "Deny" box. Check what permissions you want to give to or restrict from the user:Full control - User can read, write, change, or delete the file.
+Modify - User can read, write, and change the file.
+Read & execute - User can read or run the selected file.
+List folder contents - User can view the files in the selected folder.
+Read - User can open the file.
+Write - User can edit the file or create new files.
+ If you aren't able to change any of the permissions, you may have to adjust some settings:Click the "Advanced" button in the Security tab.
+Select your user and click "Change Permissions/Edit."
+Uncheck "Include inheritable permissions from this object's parent."
+Save your changes. You should now be able to check the permissions boxes.
+ The changes that you make will be saved and applied to the user. If you were changing permissions for yourself, the changes will take place immediately.
+

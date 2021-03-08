@@ -1,0 +1,15 @@
+ A website's written address is used for easy access by visitors, because its numerical (IP) address may change on a regular basis. When you enter the website's written address, your browser contacts a DNS server to find the current numerical address for the site. Your "hosts" file allows you to override the results of a DNS lookup. You can block websites using the "hosts" file by redirecting a website address to a blank page on your local computer.
+ You'll need to use the Terminal utility to access the "hosts" file. You can find the Terminal in the Utilities folder.
+ Enter your administrator password when prompted. You need administrator access in order to edit the "hosts" file. This command will open the "hosts" file in a text editor.
+ You can add a new line for each website that you want to block
+
+, This will tell your computer that the following website should be redirected to 127.0.0.1, which is a local blank page.
+ You don't need to include the http:// part of the address. For example, to block YouTube type the following:
+
+
+127.0.0.1 www.youtube.com
+
+, You can reroute as many websites as you'd like to 127.0.0.1 by creating new lines for each. Make sure that each line starts with 127.0.0.1.
+ Your changes will be saved and the file editor will be closed.
+ This will clear the DNS cache and make the new rules take effect. You may need to enter your administrator password.
+ Anyone that knows the administrator password can make changes to the "hosts" file. Make sure that each user logs into the Mac with a standard account, and that only you know the administrator password.

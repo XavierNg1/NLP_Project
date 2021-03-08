@@ -1,0 +1,14 @@
+ To find the IP of an email sent to you, you can investigate the message's headers—that stuff that looks like a keyboard exploded on the message.
+ Open a message. From the View menu, select the option that lets you view all or extended headers, and your To/From section will blossom with new information.
+
+
+On a Mac, click View > Message > All Headers
+On a PC, on Options, click the dialogue box launcher > Message Options dialogue box (Properties) > Internet Headers
+Next to the Received section you will see something like "from..... and an IP address as described above. Select one of those, and copy it to the clipboard. In this case, we'll select 66.220.155.163, and copy it. We can see that it says Received from mx-out.facebook.com, so we'll do a test to see if that's accurate.
+ This is described above. Only this time, instead of doing a ping on a known address, we're going to run a whois check.
+
+
+In your terminal window, by the flashing cursor, type whois 66.220.155.163, and press Enter. The information will be sent out to a database, queried, and then returned with the registration information for that IP address.
+In this case, we can verify that the message was sent through Facebook. Notice we also have the domain registrar's full address.
+ You may not want to use the terminal, or perhaps it's not loaded on your computer. Instead, you can try using an Internet lookup, such as ip-lookup, which gives you much the same information as a whois lookup, and in many cases, much more.
+

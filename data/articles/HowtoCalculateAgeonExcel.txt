@@ -1,0 +1,18 @@
+ It doesn't have to have this label, but this is the column that will identify each person you are calculating the birthday for.;
+, This column will contain each birthday as a separate line.
+
+
+You don't need to use this for birthdays specifically. You can use any starting point, such as "Shipping Date," "Purchased Date," etc.
+ Make sure each birthday is entered using the same format. If you're in the US, use MM/DD/YYYY. If you're elsewhere, use DD/MM/YYYY. Excel should automatically detect that you are entering dates, and will format the data accordingly.
+
+
+If the data is being auto-formatted as something else, highlight the cells and click the drop-down menu in the "Numbers" section of the Home tab. Select "Short Date" from the list of options.
+ This column will display the age for each entry after you enter the formula.
+ This is where you'll be entering the formula to calculate birthdays.
+ Type the following formula, which assumes that the first birthday is listed in cell B2:=DATEDIF(B2,TODAY(),"Y")
+
+=DATEDIF() is a function that calculates the difference between two dates. (B2,TODAY(),"Y") tells DATEDIF to calculate the difference between the date in cell B2 (the first birthday listed) and the current date (TODAY()). It outputs the calculation in years ("Y"). If you'd rather see the age in days or months, use "D" or "M" instead.
+ This will apply the same formula to each line, adjusting it accordingly so that the correct birthday is calculated.
+ If the formula is displaying something like #VALUE! or #NAME?, then there is likely an error somewhere in the formula. Make sure that the syntax is exactly correct, and that you are pointing to the correct cells in the spreadsheet. Note that the DATEDIF() formula does not work for dates before 01/01/1900.
+ If you want a more detailed age, you can have Excel calculate the exact age in years, months, and days. This uses the same basic formula as detailed above, but with more arguments so that you get the exact age:=DATEDIF(B2,TODAY(),"Y")&" Years, "&DATEDIF(B2,TODAY(),"YM")&" Months, "&DATEDIF(B2,TODAY(),"MD")&" Days"
+

@@ -1,0 +1,16 @@
+ The cell must be on the same row as the first line of data in the column with the spaces.
+
+For example, if you want to remove spaces from column C, and C’s first row of data is in row 2 (C2), click the second cell in your blank column (e.g. E2, F2, G2, etc).
+, For example, if you want to remove all of the spaces from the C column, click the first box (e.g. C2) in the column that isn’t the title.
+
+If you clicked cell C2, the formula should now look like this: =Substitute(C2 .
+ The cell should now look like this: =Substitute(C2,., There’s a space between the two sets of quotes—this is important.
+
+The formula should now look like this: =Substitute(C2," ",.
+ This time, there’s NO space between the sets of quotes.
+
+The formula should now look like this: =Substitute(C2,” “,””).
+ You will now see the contents of the selected cell (C2, in this example) without spaces in the new column.
+
+For example, if C2 said w ww . wikih ow .com, your new cell will say www.wikihow.com.
+ The cell should now be highlighted., The data from each corresponding cell will now appear in your new column without spaces., Your new space-free data is now in place.

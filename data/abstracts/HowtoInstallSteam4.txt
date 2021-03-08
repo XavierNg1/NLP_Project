@@ -1,0 +1,11 @@
+
+Open Software Sources.
+Select "Additional repositories" and then click "Add".
+
+,
+Paste .deb http://repo.steampowered.com/steam/ precise steam into the address bar.
+
+,
+Open the Terminal and type .sudo apt-get update.
+Type .wget -O - http://repo.steampowered.com/steam/signature.gpg .
+Open the Software Center and follow the instructions for the Ubuntu installation.

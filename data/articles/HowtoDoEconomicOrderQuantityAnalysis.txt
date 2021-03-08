@@ -1,0 +1,69 @@
+ Save the workbook into a logically named file folder.;
+, Or if an in-house production run is used instead of making a purchase, then substitute for P the setup costs (for example, the labor costs to adjust machines)., Open Preferences in the Excel menu. Recommended Settings: Set General to R1C1 Off and to Show - 10 Most Recent Documents; Edit - set all the Top options to checked except Automatically Convert Date System. Display number of decimal places = blank (for integers preferred). Preserve display of dates, and set 30 for 21st century cutoff; View - show Formula Bar and Status Bar, hover for comments and all of Objects; show gridlines and set all boxes below that auto or checked; Chart - show chart names and data markers on hover. Leave the rest unchecked for now; Calculation -- Automatically and calculate before save, Limit iteration checked, max iterations 100, max change .000,000,000,000,01 w/o commas as this problem may come to involve precise goal seeking and save external link values and use 1904 date system; Error checking - check all; Save - save preview picture with new files and Save Autorecover after 5 minutes; Ribbon -- all checked except Hide group titles and Developer., Inventory in Units
+
+A3: A
+
+B3: Annual Quantity Used in Units
+
+A4: A/E
+
+B4: Number of Purchase Orders
+
+A5: S
+
+B5: Annual Cost of Carrying 1Unit of Stk 1 Yr
+
+A6: S(E/2)
+
+B6: Annual Carrying Cost
+
+A7: P(A/E)
+
+B7: Enter an = and then the string concatenation formula "Annual Pchs Order Cost @ "&TEXT(P_,"$0.00")&"/PO"
+
+A8: C
+
+B8: Total Annual Cost
+
+Select cell H13 and enter 26.042 962 129 9847 (without spaces) and Insert Name Define Name P_ for cell $H$13. Format Cell Fill Yellow, Border Black bold Outline. Font Bold.
+Select cell I13 and enter P_ an = and then Purchase Order Cost
+
+Select H14 and enter the formula an = and then the formula SQRT((2*A_*P_)/S_). There will be an error -- it will be fixed shortly. Insert Name Define name EOQ for cell $H$14.
+Select I14 and enter EOQ an = and then SQRT(2AP/S)
+
+Select H15 and enter an = and then the formula A_/EOQ
+
+Select I15 and enter PO's/Yr an = and then A/EOQ
+
+
+,
+
+In cell C1, enter an = and then the formula L1/100. Select cell range D1:J1 and with D1 active, enter an = and then the formula C1*2 and Edit Fill Right. Select cell K1 and enter an = and then the formula L1*.8 and select cell L1 and enter an = and then the formula A_
+
+Select cell range C2:L2 and with C2 active, enter an = and then the formula C1/2 and Edit Fill Right.
+Select cell C3 and enter 3000 and Insert Name Define Name A_ to cell $C$3 and Format Cell Fill Yellow and Border Black bold Outline. Select cell range D3:L3 and enter an = and then the formula A_.
+Select cell range C4:L4 and enter an = and then the formula C3/C1 and Edit Fill Right.
+Select cell C5 and enter 2.5 and Format Cells Fill yellow and Border Black bold Outline and Insert Name Define name S_ to cell $C$5. Select cell range D5:L5 and with D5 active, enter an = and then the formula S_.
+Select cell range C6:L6 and enter an = and the formula C5*C2 and Edit Fill Right.
+Select cell range C7:L7 and enter an = and then the formula P_*C4 and Edit Fill Right. Format Cells Border Black Bottom Single Underline.
+Select cell range C8:L8 and enter an = and then the formula C6+C7 and Edit Fill Right. Format Cells Border Black Bottom Double Underline.
+
+
+In cells B10 to B13, enter this note: The Annual PO Cost may also be ... B11: thought of as a SETUP CHARGE ... B12: for a PRODUCTION RUN! In which case ... B13: the EOQ is the Economic Run size.
+
+Copy cell range C6:L6 and Paste Special Values Transpose to cell D12 so that the row of data is now a column of data.
+Copy cell range C7:L7 and Paste Special Values Transpose to cell E12 so that the row of data is now a column of data.
+Select cell range F12:F21 and with F12 active enter an = and the formula D12+E12,
+
+,,
+
+Insert a column between the top Order Sizes of 240 and 480 and Edit Copy F1:F8 into the top of this new column and change the top number, the E (Economic Order Quantity), to an = and then the formula EOQ and Format Cells for this cell and the one beneath it Number Number Decimal Places 0. It should have an E=250 and a Total C of $625.02
+Insert a rows in the lower table between 240 and 480, In the leftmost cell, enter an = and then the formula EOQ and Format Cells Number Number Decimal Places 0, Proceed right to column D and enter an = and input the formula S*C16/2; proceed right to column E and input the formula P_*(A_/EOQ); proceed right and copy the formula from the above cell to the current cell.
+Select cell ranges with the EOQ data and Format Cells Font Blue or Red or Bold, etc.
+, Copy or Cut this chart and paste it into cell A1 of the EOQ Chart worksheet and pull it open via using the double-headed hover-arrow at the bottom right of the chart, clicking and expanding the chart, In Chart Layout I added Axis Titles and a Chart Title, then via menu item Insert Picture WordArt, a text box was inserted and made a note about the EOQ and Purchase Orders.The axis were scaled so that the major units crossed at the EOQ point of 250 units and $625, The main Total Cost Line was made bright red and another curve's color was changed as well to olive green.,, Change the formula in H37 in the EOQ formula to read an = and then the formula SQRT((2*A_*SetupCosts)/S_) and change the label in cell I37 to read EOQ and an = and then SQRT(2ASetupCosts/S). Change the label in cell A30 from P(A/E) to sc(A/E) and move right 1 cell and change the description from ="Annual Pchs Order Cost @ "&TEXT(P_,"$0.00")&"/PO" to an = and then the formula "Setup Cost @"&TEXT(SetupCosts,"$0.00")&"/Production Run". Then Edit Go To cell range C30:L30 and change the formula from "=P_*C4" to an = and then the formula SetupCosts*C4 and Edit Fill Right. (Replace the single right hand black border line in cell L(n).) Copy and transpose via Paste Special Values Transpose the Setup Costs in cell range C30:L30 to the column in the lower tier of the report at E34.
+
+Change the Heading of column E in the lower tier from "P(A/E); Annual Pchs Order" to sc(A/E); Setup Costs: and down a cell to an = and then the formula "Cost @ "&TEXT(SetupCosts,"$0.00")&"/Production Run"; widen the column to fit. Change cell C38 to be an = and then H37. Change cell G24 to be = and H37. Change cell D39 to be = and S*C39/2. Check to make sure that the EOQ data matches the formula result in column H. Change cell H38 to be = and then A_/H37 and the label in cell I38 to read Production Runsz an = and then A/EOQ. Set C3 to = and C26 and Format Cells Fill Sky Blue. Set C5 to = and then C28 and Format Cells Fill Sky Blue. Change C26 to 1000 units and change C28 to 5. Select cell H39 and enter 24 and select cell H40 and enter = and then H39-H38. Select cell I39 and enter Contract: semi-monthly production runs. With H40 the active cell, do Tools, Goal Seek, H40, 0, by changing cell C28. Select row 28 and Format Cells Number Number Decimal Places 2. Copy and Paste Special Values Transpose again for C29:L29 to D35 and C30:L30 to E35. Copy C24:L24 and Paste Special Values Transpose to C35.
+ If not, I'm not sure why not, so check through the logic of all this. For one thing, the annual usage or sales could be quite different and we have not changed that variable name everywhere it occurs. And the carrying costs would be higher, given profit expectations in a special order situation., 33.3 PO's is quite a high number of PO's to be sending out -- in fact, it's ridiculous. The new ways of doing business work better and are vastly more profitable., and change cell I37 to read ERS an = and then without quotes "SQRT(2ASetupCosts/S)}}". If deciding to make a new chart, make sure the title reads Economic Run Size instead of EOQ.
+ The increasing use of automated machine tools, which are set up and controlled by computer programs, has reduced setup time enormously. It is now much easier to switch from the production of one item to another. This phenomenon has led toward lower production runs and lower optimal inventory sizes."(1),,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

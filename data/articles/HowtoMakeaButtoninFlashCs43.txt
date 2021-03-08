@@ -1,0 +1,20 @@
+ Type the name "myButton" into the Name field of the Properties panel.
+ Input the following code into the Actions window:
+
+
+function set up Events() {
+// associate events with event handlers
+myButton.addEventListener(MouseEvent.CLICK, clickButtonHandler);
+myButton.addEventListener(MouseEvent.MOUSE_OVER, hoverButtonHandler);
+}
+setupEvents();
+function clickButtonHandler(e:MouseEvent) {
+trace("Clicked Button!");
+}
+function hoverButtonHandler(e:MouseEvent) {
+trace("Hovered Over Button!");
+}
+
+, Your application will then appear in the Flash Player window.
+ The Output window will display text such as "Hovered Over Button!" or "Clicked Button!" depending on the actions that you took.
+

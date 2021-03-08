@@ -1,0 +1,8 @@
+ Prepare and save your CSS file with the ".css" file type.;
+,, The URL might look like www.yoursite.com/stylesheet.css.
+
+
+It's good form to remove the main domain name from the link (URL). Therefore a URL of "http://mysite.com/css/default.css" would be shortened to "/css/default.css". You must include that leading slash ("/"). This is called a relative path.
+ Find the </head> tag in your HTML file, and create an empty line just above the tag. Add <LINK rel=stylesheet type="text/css" href="www.yoursite.com/stylesheet.css"> to that empty line, changing "www.your..." to the link to your CSS file.
+, If it doesn't, you may need to go back and look for any corrections or adjustments you need to make.
+

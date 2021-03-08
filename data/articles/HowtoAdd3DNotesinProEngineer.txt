@@ -1,0 +1,24 @@
+ Go to Tools, Environment. Make sure that 3D Notes is checked and Notes as Names is unchecked.
+
+
+You can control both of these options in your config.pro (under Tools, Options) by adding the following lines to your configuration. You can type them into the Options box or use Find to locate them.
+
+model_notes_as_labels no
+model_note_display yes
+
+;
+,, Go to Edit, Setup... and choose Notes.
+, Note_0).
+ Note that attaching a note to a component (part) while in an assembly does not save the note to that part, even though the note will appear in that part in the assembly model tree.
+
+
+
+Use Insert, From File if you'd like to retrieve note text from a text file on your disk.
+ Leaving it unchecked gives you more options for placing the note.
+
+
+
+If Place Note Flat to Screen is not checked, you must select a datum plane to which the note will be parallel and two directions to orient the note text. Follow the text prompts at the bottom of your screen.
+If Place Note Flat to Screen is checked, or once you have specified the orientation as above, place the note just as you would place it in a drawing. Choose Leader or No Leader and select attachment and location points as appropriate.
+, Right click on the name. Then choose Properties to re-enter the note dialog. If the note contains a parameter (see tips) you can edit the value of the parameter by choosing Value rather than Properties.
+

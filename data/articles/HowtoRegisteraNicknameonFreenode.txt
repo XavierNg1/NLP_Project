@@ -1,0 +1,33 @@
+ Open your favorite IRC client and type:
+
+
+/server chat.freenode.net;
+, This user name should consist only of the letters from A-Z, the numbers from 0-9 and certain symbols such as "_" and "-". It may have a maximum of 16 characters. You can do
+
+ /nick NewNick 
+
+to switch to a new nickname.
+ Type the following command and replace "your_password" with a password that will be easy to remember, and replace "your_email_address" with your email address.
+
+
+/msg nickserv register your_password your_email_address
+
+, After you register, you will not be able to identify to NickServ until you have verified your registration. To do this, check your email for an account verification code.
+
+
+
+Press the Enter key to fully confirm.
+ If you would like to register an alternate nickname, first switch to the alternate nickname that you want while you are identified as the main one, then group your nicks together with this command:
+
+
+/nick NewNick
+/msg nickserv group
+
+, Each time you connect, you should sign in, or "identify" yourself, using the following command:
+
+
+/msg nickserv identify Your-Nick Your-Password
+
+Your-Nick is your account-name which is usually the same as your nickname
+SASL is the recommended way to identify, if your client supports it. It identifies you before you fully connect to the network and hence makes sure you're cloaked while you join channels.
+

@@ -1,0 +1,61 @@
+ Write down all the information you have concerning the two vectors. We'll assume you only have the vector's definition in terms of its dimensional coordinates (also called components).If you already know a vector's length (its magnitude), you'll be able to skip some of the steps below.
+
+Example: The two-dimensional vector u→{\displaystyle {\overrightarrow {u}}} = (2,2). Vector v→{\displaystyle {\overrightarrow {v}}} = (0,3). These can also be written as u→{\displaystyle {\overrightarrow {u}}} = 2i + 2j and v→{\displaystyle {\overrightarrow {v}}} = 0i + 3j = 3j.
+
+While our example uses two-dimensional vectors, the instructions below cover vectors with any number of components.
+;
+, To find the angle θ between two vectors, start with the formula for finding that angle's cosine. You can learn about this formula below, or just write it down:cosθ = (u→{\displaystyle {\overrightarrow {u}}} • v→{\displaystyle {\overrightarrow {v}}}) / (||u→{\displaystyle {\overrightarrow {u}}}|| ||v→{\displaystyle {\overrightarrow {v}}}||)
+
+
+||u→{\displaystyle {\overrightarrow {u}}}|| means "the length of vector u→{\displaystyle {\overrightarrow {u}}}."
+
+
+u→{\displaystyle {\overrightarrow {u}}} • v→{\displaystyle {\overrightarrow {v}}} is the dot product (scalar product) of the two vectors, explained below.
+ Picture a right triangle drawn from the vector's x-component, its y-component, and the vector itself. The vector forms the hypotenuse of the triangle, so to find its length we use the Pythagorean theorem. As it turns out, this formula is easily extended to vectors with any number of components.||u||2 = u12 + u22. If a vector has more than two components, simply continue adding +u32 + u42 + ...
+
+Therefore, for a two-dimensional vector, ||u|| = √(u12 + u22).
+
+In our example, ||u→{\displaystyle {\overrightarrow {u}}}|| = √(22 + 22) = √(8) = 2√2. ||v→{\displaystyle {\overrightarrow {v}}}|| = √(02 + 32) = √(9) = 3.
+ You have probably already learned this method of multiplying vectors, also called the scalar product.To calculate the dot product in terms of the vectors' components, multiply the components in each direction together, then add all the results.For computer graphics programs, see Tips before you continue.
+
+In mathematical terms, u→{\displaystyle {\overrightarrow {u}}} • v→{\displaystyle {\overrightarrow {v}}} = u1v1 + u2v2, where u = (u1, u2). If your vector has more than two components, simply continue to add + u3v3 + u4v4...
+
+In our example, u→{\displaystyle {\overrightarrow {u}}} • v→{\displaystyle {\overrightarrow {v}}} = u1v1 + u2v2 = (2)(0) + (2)(3) = 0 + 6 = 6. This is the dot product of vector u→{\displaystyle {\overrightarrow {u}}} and v→{\displaystyle {\overrightarrow {v}}}.
+ Remember, cosθ = (u→{\displaystyle {\overrightarrow {u}}} • v→{\displaystyle {\overrightarrow {v}}}) / (||u→{\displaystyle {\overrightarrow {u}}}|| ||v→{\displaystyle {\overrightarrow {v}}} ||). Now you know both the dot product and the lengths of each vector. Enter these into this formula to calculate the cosine of the angle.
+
+In our example, cosθ = 6 / (2√2 * 3) = 1 / √2 = √2 / 2.
+ You can use the arccos or cos-1 function on your calculator to find the angle θ from a known cos θ value. For some results, you may be able to work out the angle based on the unit circle.
+
+In our example, cosθ = √2 / 2. Enter "arccos(√2 / 2)" in your calculator to get the angle. Alternatively, find the angle θ on the unit circle where cosθ = √2 / 2. This is true for θ = π/4 or 45º.
+
+Putting it all together, the final formula is: angle θ = arccosine((u→{\displaystyle {\overrightarrow {u}}} • v→{\displaystyle {\overrightarrow {v}}}) / (||u→{\displaystyle {\overrightarrow {u}}}|| ||v→{\displaystyle {\overrightarrow {v}}} ||))
+
+
+, This formula was not derived from existing rules. Instead, it was created as a definition of two vectors' dot product and the angle between them.However, this decision was not arbitrary. With a look back to basic geometry, we can see why this formula results in intuitive and useful definitions.
+
+The examples below use two-dimensional vectors because these are the most intuitive to use. Vectors with three or more components have properties defined with the very similar, general case formula.
+ Take an ordinary triangle, with angle θ between sides a and b, and opposite side c. The Law of Cosines states that c2 = a2 + b2 -2abcos(θ). This is derived fairly easily from basic geometry.
+ Sketch a pair of 2D vectors on paper, vectors a→{\displaystyle {\overrightarrow {a}}} and b→{\displaystyle {\overrightarrow {b}}}, with angle θ between them. Draw a third vector between them to make a triangle. In other words, draw vector c→{\displaystyle {\overrightarrow {c}}} such that b→{\displaystyle {\overrightarrow {b}}} + c→{\displaystyle {\overrightarrow {c}}} = a→{\displaystyle {\overrightarrow {a}}}. This vector c→{\displaystyle {\overrightarrow {c}}} = a→{\displaystyle {\overrightarrow {a}}} - b→{\displaystyle {\overrightarrow {b}}}., Insert the length of our "vector triangle" sides into the Law of Cosines:
+
+
+||(a - b)||2 = ||a||2 + ||b||2 - 2||a|| ||b||cos(θ)
+
+
+, Remember, a dot product is the magnification of one vector projected onto another. A vector's dot product with itself doesn't require any projection, since there is no difference in direction.This means that a→{\displaystyle {\overrightarrow {a}}} • a→{\displaystyle {\overrightarrow {a}}} = ||a||2. Use this fact to rewrite the equation:
+
+(a→{\displaystyle {\overrightarrow {a}}} - b→{\displaystyle {\overrightarrow {b}}}) • (a→{\displaystyle {\overrightarrow {a}}} - b→{\displaystyle {\overrightarrow {b}}}) = a→{\displaystyle {\overrightarrow {a}}} • a→{\displaystyle {\overrightarrow {a}}} + b→{\displaystyle {\overrightarrow {b}}} • b→{\displaystyle {\overrightarrow {b}}} - 2||a|| ||b||cos(θ)
+
+
+, Expand the left side of the formula, then simplify to reach the formula used to find angles.
+
+
+a→{\displaystyle {\overrightarrow {a}}} • a→{\displaystyle {\overrightarrow {a}}} - a→{\displaystyle {\overrightarrow {a}}} • b→{\displaystyle {\overrightarrow {b}}} - b→{\displaystyle {\overrightarrow {b}}} • a→{\displaystyle {\overrightarrow {a}}} + b→{\displaystyle {\overrightarrow {b}}} • b→{\displaystyle {\overrightarrow {b}}} = a→{\displaystyle {\overrightarrow {a}}} • a→{\displaystyle {\overrightarrow {a}}} + b→{\displaystyle {\overrightarrow {b}}} • b→{\displaystyle {\overrightarrow {b}}} - 2||a|| ||b||cos(θ)
+
+- a→{\displaystyle {\overrightarrow {a}}} • b→{\displaystyle {\overrightarrow {b}}} - b→{\displaystyle {\overrightarrow {b}}} • a→{\displaystyle {\overrightarrow {a}}} = -2||a|| ||b||cos(θ)
+
+-2(a→{\displaystyle {\overrightarrow {a}}} • b→{\displaystyle {\overrightarrow {b}}}) = -2||a|| ||b||cos(θ)
+
+
+a→{\displaystyle {\overrightarrow {a}}} • b→{\displaystyle {\overrightarrow {b}}} = ||a|| ||b||cos(θ)
+
+

@@ -1,0 +1,9 @@
+ Be careful not to break the clips that connect the switches to each other.
+, Connect the next resistor in the chain to pin 8 (two resistor leads are connected to pin 8) and pin 7. The third resistor will connect to pin 7 and pin 6 and so on until resistor 9 is connected to pin 1 and pin 0. Do not connect anything to the common pin (C) yet.
+ Do not be surprised if you have strange readings. They are most often caused by accidental shorts. Remove these shorts with desoldering braid if they are caused by solder bridges.,, Test and correct errors. Keep aside., 100 ohm, 1000 ohm, 10k ohm, 100k ohm, 1 M ohm, and 10 M ohm. Nine resistors per switch. Test, correct if needed and keep aside.,, Solder the wire from pin 0 of the 1 ohm switch to the Common pin of the 10 ohm switch. Test the value of these 2-decade switch by connecting your ohmmeter to the common pin of the 1 ohm switch and the wire coming off from pin 0 on the 10 ohm switch. If readings are correct, keep snapping one additional switch into the ganged switches, soldering pin 0 to the common pin.
+
+
+As shown in the pictures below, the first 5 decades are soldered as mentioned. The last 3 decades are soldered on a small Vero board. The board was then soldered to the switches. For some people it could be an easier way to build this device. Smaller resistors are much simpler to solder directly to the switches. Switches with PCB holes at their terminals instead of the pins would also make life easier.
+Finally there should be 8 switches ganged to each other with pin 0 of the previous switch connected to common pin.
+Test the whole circuit and make corrections if needed.
+

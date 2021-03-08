@@ -1,0 +1,15 @@
+;
+,, (In mIRC 6.3+ it is now an image of a scroll.)
+
+,,, Say "/help remote identifiers" for the help page that has a great list of them.
+
+
+
+Type on *:, in the text area section of the Remotes window. That will make your script execute whatever the level (voice, halfop, operator, etc) of the user calling you for the script is.
+Type TEXT: right next to it. TEXT will specify that the script will look in text queries. You could have replaced it with ACTION for /me commands. There are also Join, Connect, Part, Kick, Ban, Op, Dope, and many many others.
+Type !pie*: next to that. That will specify the script to look for the word !pie followed with anything next to it (!pie hello will trigger the script as well as !pie face or simply !pie). The asterisk is a wildcard input, that tells the script to accept anything in it's place.
+Type #: to activate the script in every channels you are in. You could also specify a certain channel (I.E. #wikihow:). You can substitute the # with a ? so it only responds to private messages (PM's) instead. Or use the wildcard input (Asterisk *) so it'll work for both.
+Type msg # $nick just gave $$2 a pie! to send a message on the channel where the query has been executed. You should now have a full script in your script.ini file.
+ When they type !pie (With someone's name) it should display the following sentence, replacing $nick with the name of the person who said "!pie" and $$1 with whatever they say after !pie as well. Example:
+
+,,,,

@@ -1,0 +1,38 @@
+
+Open a new Microsoft Excel workbook and name three worksheets in it: "Data", "Chart" and "Saves".
+MODIFIED and NEW: On the Data sheet, enter the following Defined Variable Names in Row 1, (without quotation marks): A1: "AdjRows", B1: "GMLL", C1: "Factor", D1: "N", E1: "Multer1", F1: "Multer2", G1: "p", H1: "NUM", I1: "SPHEROIDS2", J1: "Factor2", K1: "SHRINK2", M1: "SHRINK3",
+MODIFIED: Select range A1:M2 and Align Center.
+MODIFIED: In Row 2 enter the following Defined Variable values and formulas (w/o quotes): A2: 2880, B2: "=-(1-SQRT(5))/2", C2: "=IF(ISNA(VLOOKUP(SPHEROIDS, LOOKER,2)),0.125,VLOOKUP(SPHEROIDS,LOOKER,3))", D2: 1,E2: .5, F2:.5, G2:1, H2: 1, I2:16, J2: .125, K2:.95.
+NEW: In Row 3, enter: A3: BASE, B3: 1712, C3: SPHEROIDS, D3: 31.25, E3: TIP, F3: "=25680*2*6*PI()/15", G3: SHRINK, H3: 1.
+MODIFIED/NEW: Across Row 4, into columns A:N please type the following Column Headers (without quotes): A4: "Base t", B4: "c", C4: "cos", D4: "sin", E4: "SQR CHART x", F4: "SQR CHART y", G4: "x of p", H4: "y of p", I4: "COS2", J4: "SIN2", K4: "OUTRING X", L4: "OUTRING Y", M4: "INRING X", N4: "INRING Y".
+MODIFIED: In cell B5, enter w/o quotes "=(BASE*24/SPHEROIDS)".
+MODIFIED: Select cell A5 and Insert Name Define "Top" for cell $A$5.
+MODIFIED: Select cell range A6:A2887 and with cell A6 as the highlighted active cell, input the formula, "=(A5+(-top*2)/(AdjRows))" and do Edit Fill Down.
+MODIFIED:Select cell range C5:C2887 and with C5 as the highlighted active cell, enter the formula, "=SPHEROIDS/36*COS((ROW()-5)*PI()/180*Factor)".
+MODIFIED: Select cell range D5:D2887 and with D5 as the highlighted active cell, enter the formula, "=SPHEROIDS/36*SIN((ROW()-5)*PI()/180*Factor)".
+MODIFIED: Select cell range E5:E2887 and with E5 the active cell, enter the formula w/o quotes "=((SIN(A5/(B5*2))*GMLL*SHRINK*COS(A5)*GMLL*SHRINK*(COS(A5/(B5*2)))*SHRINK*GMLL)+G5*SHRINK)^(N-0)".
+MODIFIED: Select cell range F5:F2887 and with F5 the hi-lighted active cell, enter the formula w/o quotes "=((SIN(A5/(B5*2))*SHRINK*GMLL*SIN(A5)*SHRINK*GMLL*(COS(A5/(B5*2)))*SHRINK*GMLL)+H5*SHRINK)^(N-0)", then do Edit Fill Down.
+MODIFIED: We'll now be following the little note in cell G1: "0,P to P,P then P,P to P,0, then P,0 to 0,0, then 0,0 to 0,P.",
+NEW: Enter to cell O1 w/o quotes "SpheroidSurroundRows".
+MODIFIED: Enter 0 into cell G5.
+MODIFIED Select cell range G586:G1161 and with cell G586 as the hi-lighted active cell, enter the formula, "=p".
+MODIFIED: Select cell range G1162:G1746 and with cell G1162 as the highlighted active cell, enter the formula "=-p/(SpheroidSurroundRows*SPHEROIDS/5)+G1161" and do Edit Fill Down.
+NEW: Select cell range G1747:G2330 and with cell G1747 active, enter "=0" and Edit Fill Down.
+NEW: COS2 -- Edit Go To cell range I5:i2887 and with I5 the active cell, enter the formula w/o quotes, "=SPHEROIDS2/36*COS((ROW()-5)*PI()/180*Factor2)" and Edit Fill Down.
+NEW: SIN2 -- Edit Go To cell range J5:J2887 and with J5 the active cell, enter the formula w/o quotes, "=SPHEROIDS2/36*SIN((ROW()-5)*PI()/180*Factor2)" and Edit Fill Down.
+NEW: OUTRING X -- Edit Go To cell range K5:K2887 and with K5 the active cell, enter the formula w/o quotes, "=0.5+((SIN(A5/(B5*2))*GMLL*SHRINK2*COS(A5)*GMLL*SHRINK2*(COS(A5/(B5*2)))*SHRINK2*GMLL)+I5*SHRINK2)^(N-0)" and Edit Fill Down.
+NEW: OUTRING Y -- Edit Go To cell range L5:L2887 and with L5 the active cell, enter the formula w/o quotes, "=0.5+((SIN(A5/(B5*2))*SHRINK2*GMLL*SIN(A5)*SHRINK2*GMLL*(COS(A5/(B5*2)))*SHRINK2*GMLL)+J5*SHRINK2)^(N-0)" and Edit Fill Down.
+NEW: INRING X -- Edit Go To cell range M5:M2887 and with M5 the active cell, enter the formula w/o quotes, "=0.5+((SIN(A5/(B5*2))*GMLL*SHRINK3*COS(A5)*GMLL*SHRINK3*(COS(A5/(B5*2)))*SHRINK3*GMLL)+I5*SHRINK3)^(N-0)" and Edit Fill Down.
+NEW: INRING Y -- Edit Go To cell range N5:N2887 and with N5 the active cell, enter the formula w/o quotes, "=0.5+((SIN(A5/(B5*2))*SHRINK3*GMLL*SIN(A5)*SHRINK3*GMLL*(COS(A5/(B5*2)))*SHRINK3*GMLL)+J5*SHRINK3)^(N-0)" and Edit Fill Down.
+MODIFIED: Select cell Q4 and type LOOKER.
+NEW: It's always a good idea to Insert New Comment and input the original formulas and values of the cells as you'll probably tend to experiment and change them.
+NEW: Create the Chart.
+Original mosaic from the slideshow:
+
+,
+Version done as I wrote the article (the one at top of the article was done before I wrote the article -- this is a 3rd version):
+
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

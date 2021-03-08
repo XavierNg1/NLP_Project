@@ -1,0 +1,36 @@
+
+Open a new Excel workbook and create 3 worksheets: Heart Data, Heart Chart (unless you use Chart Wizard) and Heart Saves.
+Set Your Preferences: Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+Click between the 1 and the A in the far upper left corner to select the entire worksheet and set Format Cells Alignment Horizontal Centered and Font Size 9 or 10 or so and Number Number Decimal Places 4 (at least)(it often takes at least 6 or 8 to get really good rounding to the spheres via goal-seeking).
+Start entering values, formulas, Defined Names and special formatting in Row 1.
+Enter values, formulas, Defined Names and special formatting in Row 2.
+Enter values, formulas, Defined Names and special formatting in Row 3.
+Enter values, formulas, Defined Names and special formatting in Row 4.
+Enter values, formulas, Defined Names and special formatting in Row 5.
+Finish formatting variables, etc.
+Enter Column Headings.
+Select U3 and enter L/R X.Select A9 and do Freeze Frames under the Window Menu.
+Select cell P6 and enter SPIRALLIC.
+Select cell S6 and enter NEG TURNS LOOKUP Select cell S7 and enter -1440 and Edit Go To cell range Q7:Q1447 and do Edit Fill Series Column Linear Step Value 1 OK.
+Select cell A1458 and input 40 and Insert Define Name Rrs to cell $A$1458.
+Select W6 and enter SPHEROIDS COUNT LOOKER.Save the workbook.
+Select cell A7 and enter the formula w/o quotes "=On_0_Off_1".
+AND((ROW()-7)>Rrs*4,(ROW()-7)<=Rrs*5), AND((ROW()-7)>Rrs*7,(ROW()-7)<=Rrs*8), AND((ROW()-7)>Rrs*10,(ROW()-7<=Rrs*11), AND((ROW()-7)>Rrs*13,(ROW()-7<=Rrs*14), AND((ROW()-7)>Rrs*16,(ROW()-7<=Rrs*17), AND((ROW()-7)>Rrs*19,(ROW()-7<=Rrs*20), AND((ROW()-7)>Rrs*22,(ROW()-7<=Rrs*23), AND((ROW()-7)>Rrs*25,(ROW()-7<=Rrs*26), AND((ROW()-7)>Rrs*28,(ROW()-7<=Rrs*29), AND((ROW()-7)>Rrs*31,(ROW()-7<=Rrs*32), AND((ROW()-7)>Rrs*34,(ROW()-7<=Rrs*35), AND((ROW()-7)>Rrs*37,(ROW()-7<=Rrs*38), AND((ROW()-7)>Rrs*40,(ROW()-7)<=Rrs*41)),0,1)+On_0_Off_1"
+
+If A8 returns a 1 when A2 contains 0, and A8 returns a 2 when cell A2 = 1, Edit Go To cell range A8:A1447 and Edit Fill Down.
+Into B7, enter the formula w/o quotes and w/o spaces between the zeroes "=IF(EVEN(S_COUNT)=S_COUNT,ROUND((-t*PI())+(Adj),0),0.000 000 000 0001)"; Insert New comment and edit in "Original formula =IF(EVEN(S_COUNT)=S_COUNT,ROUND((-t*PI())+(Adj),0),0.0000000000001)" and Format Cells fill Lt. Purple color.
+Select cell C7 and input the formula w/o quotes "=ROUND(-EXP((PI()^2)+(C1458*-(db))),0)+C1457" and Insert new Comment and edit in "Original formula =ROUND(-EXP((PI()^2)+(C1458*-(db))),0)+C1457".
+Here is a picture of the upper variables section and two rows of data (yours may not match exactly and that's OK but the numbers should match qhwn the data input is finished -- the formatting can differ):
+,
+Select cell AG6 and enter Triangle x.Save the workbook.
+Here is a picture of what the Lookup Tables section looks like roughly from column P to AJ -- again, the formatting need not match exactly but the numbers do need to match (except some test values or saved formulas that show up as errors or that aren't here mentioned):
+,
+Edit Go To Y7:Y1446 and with Y7 the active high-lighted cell, enter -1.5 and Edit Fill Down.Save the workbook.
+Edit Go To cell range AC7:AC1447 and with AC7 as the active high-lighted cell, enter w/o quotes the formula "=(COS(ROW()-7)*PI()/180*FFF)+AA7+Y7" and Insert Comment and edit in "Original formula =(COS(ROW()-7)*PI()/180*FFF)+AA7+Y7".
+Edit Go To cell range D7:D1447 and with D7 the active high-lighted cell enter the formula w/o quotes "=(AC7/IF(Divisor=0,S_COUNT^2,Divisor)+(IF(COS((ROW()-7)*PI()/180*Factor)<0,(ABS(COS((ROW()-7)*PI()/180*Factor))^Power)*-1,COS((ROW()-7)*PI()/180*Factor)^Power)*IF(AAA=1,0,1))+IF(AAA=0,0,AG7*IF(MOLECULES="Y",Factor,1))^Power)" and Edit Fill Down and then Insert New Comment and edit in "Original formula =(AC7/IF(Divisor=0,S_COUNT^2,Divisor)+(IF(COS((ROW()-7)*PI()/180*Factor)<0,(ABS(COS((ROW()-7)*PI()/180*Factor))^Power)*-1,COS((ROW()-7)*PI()/180*Factor)^Power)*IF(AAA=1,0,1))+IF(AAA=0,0,AG7*IF(MOLECULES="Y",Factor,1))^Power)" by copying it from within the cell in the formula bar, which has a pull-down arrow at the far right, and expand comment frame to fit.
+Edit Go To cell range G7:G1447 and with G7 the active high-lighted cell enter the formula w/o quotes "=IF(Flip_Pic=-1,-1,1)*((IF(A7=0,G6,((PI())*((SIN(B7/(C7*2))*GMLL*SIN(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+E7)))*IF(Spirallic_YN="Y",SPIRALLIC*IF(A7=0,1/SPIRALLIC,1),1)))" and Edit Fill Down, then Insert New Comment and edit in "Original Formula =IF(Flip_Pic=-1,-1,1)*((IF(A1446=0,G1445,((PI())*((SIN(B1446/(C1446*2))*GMLL*SIN(B1446)*GMLL*(COS(B1446/(C1446*2)))*GMLL)+E1446)))*IF(Spirallic_YN="Y",SPIRALLIC*IF(A1446=0,1/SPIRALLIC,1),1))+(IF(N_CANDI="Y",0,0)+IF(D_CANDI="Y",0,0))) as stored in G1447 where it evaluates to 0.Create the chart in the usual way (see Related wikiHows at bottom for previous articles).
+That's it!,
+That was a real labor of love.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

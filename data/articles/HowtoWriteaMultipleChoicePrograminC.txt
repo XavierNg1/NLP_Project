@@ -1,0 +1,59 @@
+;
+,
+
+
+In the wizard that shows up next check the box that says empty project.
+,,
+
+A function prototype will make a readily available function header which will be usable for underneath the programs main function, this is required for a void function to work.
+Be sure to use a ‘&’ for the int variable, this will make the variable easier to move to each function.
+
+
+Again be sure to write a ‘&’ for the correct variable in the function.
+
+
+This header starts with "int main()" with brackets underneath the code to where the code for the main function will be.
+
+
+Be sure to add the integer variable correct to equal 0 so that the program can understand how to use the integer variable correctly.
+
+
+For instance you can type a cout function saying the question's name..
+You will also use these cout functions for each answer that the user can use.
+
+
+A "cin" function will let the user write down what the character for the choices in the multiple choice program.
+
+
+To call a function you write down the functions name aswell as the parameters for example "functionname(answer)".
+Be sure to write down the correct variables to put into the function so you do not switch them around.
+
+
+
+Be sure to use a switch structure that compares the answer character that the user wrote for there answer.
+Use breaks in each case to not let the program keep going through the switch structure.
+Also be sure to increment the number correct on correct answers so the program knows if the user got the question right.
+,
+
+Be sure to add the new function prototype for the next question under the first questions function prototype, this will make it so you can write the next questions function right underneath the function for the last question.
+
+
+
+
+
+
+
+Be sure to add the end function in the main function so that you can send the program to the function.
+Make the quiz display how many answers that the user has gotten correct, as well as writing down the percentage that the person has gotten right. Also make sure to use a double integer if you want to make the percentage have a decimal.
+
+
+
+
+
+
+
+If you want to stop the program from exiting immediately type in “cin.ignore();” two times before the “return 0;” command so that you can exit the program by just hitting enter.
+
+
+If it does not work be sure to look for any errors in the code, Visual Studio Express will show incorrect code with a red square on the scroll line and also by underlining the incorrect code.
+

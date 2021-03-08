@@ -1,0 +1,11 @@
+'the Windows key + R, type gpedit.msc, and press Enter. If the Local Group Policy Editor doesn't load, use the previous method.
+ Expand the folder to open the following location: Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\.
+
+
+If you want to disable history deleting for just a specific user instead of all users, log into that user's account and select the User Configuration folder instead of Computer Configuration.
+ You can find this in the left frame after expanding the Internet Explorer folder.
+ Select the "Enabled" option and then click Apply.
+ You'll notice that the Delete... button and the "Delete browsing history on exit" box have been grayed out, and there is a message on the bottom informing the user that "Some settings are managed by your system administrator".
+
+
+All users on the computer will be affected. You can return to normal by opening the Local Group Policy Editor and changing "Prevent access to Delete Browsing History" back to "Not configured" or "Disabled".

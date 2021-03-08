@@ -1,0 +1,51 @@
+ This article assumes that the input is in FASTA format, with a single sequence per file. The following steps also assume that all nucleotides are ATGC bases., For FASTA format:
+
+Discard the first line of the file.
+Remove all remaining newlines and other trailing whitespace.
+
+
+
+
+
+def init(sequence):
+    with open(argv) as input:
+        sequence = "".join(])
+    return sequence
+
+
+
+
+,
+
+
+
+
+complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
+
+
+
+
+, Reverse the resulting vector.
+
+
+
+
+def reverse_complement(seq):
+    bases = for base in seq]
+    bases = reversed(bases)
+    return bases
+
+
+
+
+,
+
+
+
+
+result = reverse_complement(seq)
+print ''.join(result)
+
+
+
+

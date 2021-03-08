@@ -1,0 +1,11 @@
+
+Right-click on the desktop and select Run Program.
+Create partitions on your 500 MB virtual disk by typing cfdisk /dev/hda.
+When a screen appears navigate with the arrow keys.
+A warning appears confirm that you want to write.Use the down arrow key to highlight the remaining free space.
+Choose , , nnn.00, , then navigate to , explicitly enter type 83, Linux (you may have to scroll to find it).
+When a warning appears confirm that you want to write.Navigate to .
+Exit xterm and reboot, using the disk image off the CDROM.
+Right-click on the desktop and select Run → Program.
+Choose n to multiple users.
+Reply n to the question about whether you have windows installed on /dev/hda1.Enter a password each for users root and dsl and you should be done.

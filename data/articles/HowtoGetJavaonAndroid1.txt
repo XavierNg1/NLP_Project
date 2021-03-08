@@ -1,0 +1,39 @@
+ Since this method requires to copy file to system directory (which is not possible without root access), you will need to have root access on your phone. Gaining root access is referred to as "rooting" your phone. The process varies from device to device, but this guide will let you know how for the majority of Android devices.Note: A Java emulator will not let you view websites built with Java, it will only let you run JAR files. If you want to view websites built with Java, see the next section.;
+, There are several different Java emulators available, all with strengths and weaknesses. Different emulators will work better for different devices, so it's recommended that you download a couple different emulators. These emulators are not available on the Google Play Store; the APK files will need to be downloaded from the developers' website. Some of the more popular emulators include:
+
+
+phoneME
+JBED
+JBlend
+Netmite
+
+, Download the "phoneMe Feature" APK file from the developer's website. You will also need to download the OpenIntents File Manager APK. Copy both APK files to the root directory of your Android device.
+
+
+Run the APK files to install them onto your device.
+Download JADGen on your computer, and then use it to create a JAD file for any JAR files you want to run.
+Copy both the JAR and JAD files into the same folder on your device. Make sure that the JAR file doesn't have any spaces in the filename.
+Run the file by using phoneMe and selecting the file on your device.
+ Download the JBED archive file and unzip it on your computer. Copy the APK file to the root directory on your phone, and use ADB to push the libjbedvm.so to the /system/lib directory. Run the APK file to install it on your device.
+
+
+You can push the libjbedvm.so file by using ADB and entering adb push /filelocation/libjbedvm.so /system/lib.
+Copy any JAR files you want to run to their own directory on your phone.
+Launch JBED and tap the "Menu" button. Navigate to the location of your JAR files and then select the JAR file you want to run.
+ Download the JBlend archive file and extract the contents. Copy the files onto your phone's storage. Install the Root Explorer application. Open Root Explorer and tap the "r/w" button in the upper corner. Copy the following files to the destination specified:
+
+
+ibDxDrmJava.so – /system/lib
+libjbmidpdy.so – /system/lib
+libjbmidp.so – /system/lib
+javax.obex.jar – /system/framework
+MetaMidpPlayer.apk – /system/app
+MidpPlayer.apk – /system/app
+Copy the JAR files that you want to run to your phone's storage. Use JBlend to select the files to load them.
+ Download the latest release from the Netmite website. Copy the APK file to your phone and then run it to install Netmite.
+
+
+Convert JAR/JAD files to APK files using the converter found on the Netmite website.
+Copy the converted APK file onto your phone and run it to install. Repeat this for all the JAR files that you want to run.
+Open Netmite on your phone and use it to select any of your installed JAR files.
+

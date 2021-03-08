@@ -1,0 +1,87 @@
+ In order to make the recommended changes, you need to access your blog's source code. Some blogging platforms, like WordPress, provide a built-in source code editor. If your blogging platform does not, you can edit your site's html files through Google Chrome's Developer Tool, or with the following standard method:Download the html file to your computer.
+Open the html file with a text editor.
+Make the changes to the html file.
+Save the files to your computer and then upload them back to your site., When a search engine "spider" crawls and indexes your blog, it compares the words in your content to the words contained within HTML tags. You can improve your ranking by making sure that these words match.Google recommends that every page of your blog should have a unique, descriptive HTML title tag (a distinct page title) within its header tag. The title should succinctly and accurately describe the page’s content. For example:
+
+
+
+
+
+<html>
+<head>
+<title>How to Get Your Blog to Appear at the Top of Searches</title>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+Each page within your site should have a unique HTML title tag. Do not use generic page titles, like “Page 1” or “Blog 5/16.” Do not name your home page, “Home Page.”
+This title will also appear as the first line of a search result for your site. As a result, both search engines and users assess the relevance of your blog post based on the contents of your title tag., Underneath the first line of a search result, you will often see a brief description of the page. Search engines either pull this "snippet" directly from the page’s content or use a summary contained within a HTML meta “description” tag. The HTML meta “description” tag is placed inside the HTML header tag. According to Google, the contents of this tag allows bots to determine if your page is relevant to the user’s inquiry. For example:
+
+
+
+
+
+<html>
+<head>
+<title>How to Get Your Blog to Appear at the Top of Searches</title>
+<meta name=“description” content=“In How to Get Your Blog to Appear at the Top of Searches, we will discuss Search Engine Optimization (SEO) strategies.</meta>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+Compose an individual “description” for each page of your site.
+The summary should be between one sentence and one paragraph long.
+Make sure your summary accurately describes the page.
+Thoughtfully integrate keywords and key phrases in your meta tag “description.”, Anchor text is the hyperlinked text users click on to follow a link. By writing brief, detailed anchor text for each link, you will assist search engines and users in determining what the linked-to-page is about. For example:
+
+
+
+
+
+<html>
+<head>
+<title>How to Get Your Blog to Appear at the Top of Searches</title>
+<meta name=“description” content=“In <i>How to Get Your Blog to Appear at the Top of Searches</i>, we will discuss Search Engine Optimization (SEO) strategies.</meta>
+</head>
+<body>
+<p>Last week we discussed <a href=“https://www.wikihow.com/Block-Search-Engines”>how to block search engines</a>, this week we are going to learn about techniques to make your blog appear at the top of searches.</p> 
+</body>
+</html>
+
+
+
+
+
+Produce anchor text that is descriptive, brief, and relevant to the linked page. Avoid simple anchor text, like “click here” or “blog.”
+Google suggests that you should write anchor text for internal and external links. The search engine also encourages web masters to format their anchor text so that is stands out from standard content., Every image on your blog can have a separate filename and alt text. Alt text is a description of the image that appears when a search engine does not support the image file or when users are engaging with your site via screen reader. (Screen readers allow blind and visually impaired individuals to read websites). Google claims that assigning descriptive file names and alt text to each image can aid an image search engines in its understanding of the picture. For example:
+
+
+
+
+
+<html>
+<head>
+<title>How to Get Your Blog to Appear at the Top of Searches</title>
+<meta name=“description” content=“In <i>How to Get Your Blog to Appear at the Top of Searches</i>, we will discuss Search Engine Optimization (SEO) strategies.</meta>
+</head>
+<body>
+<p>Last week we discussed <a href=“https://www.wikihow.com/Block-Search-Engines”>how to block search engines</a>, this week we are going to learn about techniques to make your blog appear at the top of searches.</p> 
+<img src=“blog-top-searches_banner.jpeg” alt=“Make Your Blog a Top Result”> 
+</body>
+</html>
+
+
+
+
+
+The image’s filename and alt text should be short, yet descriptive. Do not use stock filenames and alt text, like “<img src=“banner.jpeg” alt=“Banner 5/16”>.”

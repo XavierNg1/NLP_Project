@@ -1,0 +1,15 @@
+ It is as follows:
+
+
+Yi = a + b1Xi + b2Xi2 + b3Xi3 + … + bkXik + ei
+Variable A: Constant.
+Variable bj: The coefficient for the independent variable to the j'th power.
+Variable ei: Random error term.;
+, The data file can be found in the link provided below.
+ The Curve Estimation dialog box opens.
+
+
+
+Note: The dependent variable weight is predicted using the independent variable age.
+,,, The best fitting cubic polynomial is given by the follow equation: Yi = 0.052 – 0.017 Xi + 0.010 Xi2 – 0.001 Xi3 + ei (where Yi is weight and Xi is age). Multiple regression can find the line of best fit for polynomials consisting of two or more variables. If X is the dependent variable, use the Transform and Compute options of the Data Editor to create new variables X2 = X*X, X3 = X*X2, X4 = X*X3, etc., then use these new variables (X, X2, X3, X4, etc.) as a set of independent variables for a multiple regression analysis.
+

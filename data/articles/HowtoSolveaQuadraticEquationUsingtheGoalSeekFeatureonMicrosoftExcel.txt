@@ -1,0 +1,48 @@
+
+
+
+This procedure can be applied to Microsoft Excel 2013 or earlier versions of Microsoft Excel as long as it has the Goal Seek feature.;
+,
+
+
+For this example, we will use a quadratic equation of the form ax^2+bx+c=0. To do this, we will need to rearrange the equation so that the right hand side is equal to zero.
+
+
+
+For a quadratic with an order of 2, the expected possibilities are two roots or no roots.
+
+
+
+You can do this by simply picking the cells you want to use. For this example, we will use four cells in total. We have arbitrarily chosen the block between A1 and B2.
+
+
+
+“X-Value” will be a guess for the root, or solution, to the equation. “Equ=0” will be your equation set equal to zero.
+
+
+
+Put in a guess for the solution to the quadratic equation. Remember, we do not know the solution so we must guess! Since we are looking for the higher (or more positive root), it is best to guess a double digit positive number.We will choose positive 10 as a guess.Press Enter.
+
+
+
+Enter by putting “=” and put equation in by selecting X-value (A2 Cell) guess as variable. Press Enter.
+,,,
+
+
+This was the purpose of re-arranging our equation to equal to zero.
+
+
+
+Excel will compute the solution by changing this guess until the input equation is equal to zero.
+
+
+
+The “Goal Seek Status” window will appear. As you can see, Equ=0 converges to a small value that is close to zero, while the solution can be found under the “X-Value” header as 3.
+
+
+
+This time, we will choose negative 10 to capture the lower root in Excel's solution process.
+
+
+
+Equ =0 should converge to a small value that is close to zero, while the solution can be found under the “X-Value” header as -1.

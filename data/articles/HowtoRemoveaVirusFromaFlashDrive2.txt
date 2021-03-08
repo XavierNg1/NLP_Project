@@ -1,0 +1,12 @@
+ Originally, when you inserted a USB drive into a port, the USB drive automatically opened. If your USB drive was infected, this process executed a file called autorun.inf, which housed the autorun virus. As a result, when the USB drive automatically opened, it would activate the autorun virus. USB devices are no longer opened automatically with Windows XP, Windows 7, Windows 8, and Windows 10, which in turn means that the autorun.inf file is no longer executed automatically. This measure protects your computer from the virus., If you are concerned about the integrity of your pen drive, scan your drive for viruses before use. Click Start > My Computer. Right-click on the removable drive and select “Scan for Viruses.” If a virus is detected, follow the provided instructions to remove it.
+
+
+If you are using Windows RT 8.1 or newer, your computer is equipped with Windows Defender. To scan for viruses, open Windows Defender. Click Settings > Advanced. Check the box next to “Scan removable drives.” Every time you run a full scan, your USB drive will be checked for viruses.Some anti-malware software will automatically scan your USB drive every time it is inserted into your computer’s port.If your Windows computer is not equipped with anti-virus software, download a reputable program., To rid your portable drive of the virus, you need to delete the autorun.inf file and restart your computer.
+
+
+Click Start > Run.
+Key in “Cmd” and hit ↵ Enter.
+In the Command Prompt Window, type in the letter associated with your drive followed by ↵ Enter.
+Type attrib -r -h -s autorun.inf and hit ↵ Enter.
+Type del autorun.inf and then press enter ↵ Enter.
+Restart your computer to complete the process.

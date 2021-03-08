@@ -1,0 +1,20 @@
+ Windows XP can't scan or fix a bad sector if that sector is being used by an open program or file.Windows XP uses a system utility called Chkdsk to scan for and fix bad sectors.;
+, Double-click My Computer to open it.
+ In the Explorer window, in the sidebar, right-click the hard drive you'd like to check for bad sectors, and then click Properties.
+
+
+The C: drive is often the hard drive.
+,, In the Check Disk dialog box, you can have Check Disk fix file system errors it finds and recover bad sectors.
+
+
+If you'd only like to scan for and fix bad hard drive sectors, make sure that Automatically fix file system errors is unchecked.
+ Windows will start checking your hard drive for bad sectors and will fix any that it finds.
+
+
+If you have any open files or programs at this point, you'll get an error message asking if you'd like to schedule the disk check when you restart your computer. If you click Yes, it will restart your computer and perform the disk check.
+ When it's done, Chkdsk will create a brief report.
+
+
+Chkdsk code 0 means no errors were found and code 1 means that errors were found and fixed.
+If the check disk process failed to fix the bad sectors, your hard drive may be failing and you may want to backup your drive to a new one. for help on backing up your hard drive.
+

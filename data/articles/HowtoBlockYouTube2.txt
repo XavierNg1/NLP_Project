@@ -1,0 +1,10 @@
+ If you just have a single computer on your network, you can edit the hosts file to block access to YouTube (and any other site). This is really only effective if you have a single computer, as it needs to be done for each computer on the network. If you have lots of devices, see the next section. The hosts file is located in different places for Windows and OS X:
+
+
+Windows - Find the hosts file in C:\Windows\System32\drivers\etc. Right-click it and select "Open With" and then "Notepad."
+Mac - Open the Terminal from the Utilities folder. Type sudo /bin/cp /etc/hosts /etc/hosts-original and press ⏎ Return. Then type sudo nano /etc/hosts/ and press ⏎ Return. This will open the hosts file in a text editor.
+ You'll be adding each site you want to block to the bottom of the hosts file. Create a new line to block YouTube.
+ This will block YouTube.
+ This will block the mobile site, preventing circumvention of the block.
+ Once you've added the YouTube sites to the list, you can save and close the file. Your changes will take place as soon as your restart your browser.If you're using a Mac, press Ctrl+O to save your file and then Ctrl+X to exit. Then type sudo dscacheutil –flush cache to reset your DNS cache.
+

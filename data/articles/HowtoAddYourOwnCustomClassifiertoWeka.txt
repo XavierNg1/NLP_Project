@@ -1,0 +1,24 @@
+
+
+
+Download and install Weka from http://www.cs.waikato.ac.nz/ml/weka/downloading.html
+
+Download and install Java Development Kit from http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+Download Apache Ant from http://ant.apache.org/bindownload.cgi in zip format. Extract this zip using some extractor software such as WinRAR into some drive other than the main disk partition.(eg:any other drive than C drive);
+, In Windows 7, these can be edited from Control Panel > System And Security > System > Advanced System Settings > Environment Variables > System variables.
+
+
+Add/Edit variable %JAVA_HOME% as your Java directory. For example: %JAVA_HOME%=C:\Program Files\Java\jdk1.6.0_23
+Add/Edit variable %ANT_HOME% as your Ant directory. eg: %ANT_HOME%=D:\ant\apache-ant-1.9.4
+Add/Edit variable %PATH% to point to the binaries of Ant and Java. eg:%PATH%=C:\Program Files\Java\jdk1.6.0_23\bin;D:\ant\apache-ant-1.9.4\bin
+
+, This can be done by first copying weka-src.jar into a new folder. Then navigate to this location using windows command prompt. Now type the command "jar xf weka-src.jar" without the quotes in the command prompt.
+ eg: Navigate to src/main/java/weka/classifiers/rules/ and add your custom classifier (say SampleClassifier.java) to this directory. For simplicity you can start off by copying and existing classifier in that directory such as ZeroR.java and then renaming the file name as SampleClassifier.java. Make sure you replace all occurrences of the word "ZeroR" with "SampleClassifier" within the copied java file. Now you can modify the new classifier. Make sure to read weka.wikispaces.com/Writing+your+own+Classifier for more information regarding the protocols a new classifier must follow.
+ The first modification allows your classifier to appear in the Weka graphical user interface. The second modification is optional and is used to allow dynamic detection of custom classifiers not present in the first properties file.
+
+
+Make a new entry in src/main/java/weka/gui/GenericObjectEditor.props for the new classifier. eg:just above the line for ZeroR classifier enter the line " weka.classifiers.rules.SampleClassifier,\" without the quotes.
+Make sure that src/java/weka/gui/GenericPropertiesCreator.props has the entry "UseDynamic=true" already set. If not set it.
+ For that, navigate to the location of previously extracted file with command prompt and enter the command "ant". Wait until you get "build successful" message. Now give the command "ant exe jar". Note that all these commands should be given without the quotes. If the build is again successful you can copy the newly created weka.jar from the "dist" folder into directory where Weka was installed (replacing the existing copy of weka.jar in that location
+

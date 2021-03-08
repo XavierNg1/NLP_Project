@@ -1,0 +1,44 @@
+ You should know how tags work and of the src and href attributes.;
+, You will find that there are very many properties. However, it is not necessary to learn them all.
+
+
+Some good basic CSS properties to know are color and font-family.
+ All properties need a value. For the color property, for example, you might put the red value.
+ It is used within an element like href or src. To use it, within the quotation marks after the equal sign, put the CSS attribute, a colon, and then the value of the property. This is known as a CSS rule.
+ Inline CSS can add unnecessary clutter to an HTML document. However, it is a great way to get introduced to how CSS works.
+ It should allow you to create HTML and CSS files.
+
+
+If you don't have a special program installed, you can use Notepad or another text editor. Simply save your file both as a text file and a CSS file.
+ You should open this with an HTML editor as well, if you have one installed.
+
+
+HTML editors allow you to edit HTML and CSS at the same time.
+ This will let you write CSS without the need for a separate file.
+ To make your code more legible, always put the second curly brace on its own line.
+ Each line must end with a semicolon (;). To make your code legible, each rule should start on its own line and each line should be indented.
+
+
+It is very important to note that this styling will affect all elements of the selected type on the page. More specific styling will be covered in the next section.
+ Open your HTML file as well.
+ This will allow you to link a separate CSS file to your HTML document. Your link tag needs three attributes: rel, type, and href.
+
+
+
+rel means "relationship" and tells the browser what the relationship is to the HTML document. Here it should have a value of "stylesheet".
+
+type tells what type of media is being linked to. Here it should have a value of "text/css"
+
+
+href here is used similarly to how it is used in an <a> element, but here it must link to a CSS file. If the CSS file is located in the same folder as the HTML file, only the file name needs to be written within the quotation marks.
+ Add a class attribute to these elements and set them equal to a class name of your choice. This will give your elements the same styling.
+ Type the class name in your CSS file with a period (.) preceding it (i.e. .class).
+ Id's are created in CSS using a pound symbol (#) rather than a period.
+
+
+Id's are more specific than classes, so an id will override any class styling if it has an attribute with a different value than the class.
+ It is an official website aimed at teaching web development skills. The w3 has plenty of references listed for HTML and CSS, as well as other web languages.
+ Sites like CSS tricks.com specifically are aimed at teaching CSS and web design skills. Finding reputable sources will help you on your learning journey.
+ Their experience and know-how can teach you valuable knowledge and skills.
+ Viewing the CSS of well-developed websites can show you ways to design parts of websites. Copying it down as practice and fiddling with the code can help you learn how to use different CSS attributes.
+

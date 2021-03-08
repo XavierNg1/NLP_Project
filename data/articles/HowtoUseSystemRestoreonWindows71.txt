@@ -1,0 +1,47 @@
+ Whenever a change is made to your computer, Windows will create a System Restore point. The is essentially a snapshot of your computer before the change was made (program installation or uninstallation, driver update, etc.). If something goes wrong because of the change you made, you can use the System Restore point to roll your system back without losing your files.
+
+
+While a system restore shouldn't affect your personal files, it never hurts to have a recent backup in case something goes wrong. Click here for tips on quickly backing up your important files.
+If your computer will not boot into Windows, see the troubleshooting section.;
+, This is recommended if you recently changed your Windows password, as the restore process may revert your password change. Click here for instructions on creating a password reset disk.
+ Select "System Restore" from the list of search results.
+ Windows will suggest a restore point, which will usually be the most recent one. If you need to select an older restore point, click Next >.
+
+
+Check the "Show more restore points" box to see all the available restore points. There may not be many to choose from, as Windows automatically deletes older restore points to save space.
+Each restore point will have a short description of what occurred to cause the restore point to be created.
+ This will show you all of the programs and drivers that will be uninstalled or reinstalled by performing the restore with that restore point.
+
+
+Any programs installed after the restore point was created will be uninstalled, while any programs uninstalled after the restore point was created will be reinstalled.
+ Before proceeding with the system restore, review the changes one last time. Click Finish to begin the restore process.
+ After confirming that you want to restore, the computer will reboot and the restore process will begin. This will likely take a few minutes.
+ Once the restore is complete, Windows will boot and a message will appear indicating that the restore was successful. Test your computer to see if the restore fixed your problem. If it didn't you can try restoring to an earlier restore point.If the System Restore made things worse, or you want to go back to how your computer was, you can undo the most recent restore by launching the System Restore tool again and selecting "Undo System Restore".
+ In order to use System Restore, it must be enabled for your computer. If System Restore isn't starting, check to make sure that it's turned on.
+
+
+Click the Start menu, right-click on Computer, and select "Properties".
+Click the "System protection" link, and then select the drive you are trying to run System Restore on.
+Click Configure... and then ensure that "Turn on system protection" is enabled., You can run the System Restore tool from the Command Prompt if something has gone wrong and you can't start Windows normally.
+
+
+Reboot your computer and hold the F8 key. This will open the Advanced Boot Options menu.
+Select "Safe Mode with Command Prompt" from the Advanced Boot Options menu. Windows will load essential files and then take you to the Command Prompt.
+Type rstrui.exe and press Enter. This will start the System Restore utility. Follow the instructions in the section above to restore your computer. When performing a system restore from Safe Mode, you won't be able to undo it.
+ A failing hard drive could be causing System Restore to malfunction. Check Disk can potentially repair these issues.
+
+
+Click Start, right-click on Command Prompt, and select "Run as administrator".
+Type chkdisk /r and press Enter.
+Confirm that you want to reboot your computer. Check Disk will run before Windows starts and scan for errors. It will attempt to fix any errors that it finds.
+ Viruses may infect your restore points, or disable System Restore from starting. Removing these viruses will be the only way to get System Restore working again, short of reinstalling Windows completely.
+
+
+
+Click here for detailed instructions on removing viruses.
+ If all else fails, reinstalling Windows may be the only way to fix your problems. If you have your important files backed up already, the reinstallation process will likely go faster than you think, and will typically improve your computer's performance.
+
+
+
+Click here for detail instructions on reinstalling Windows 7.
+

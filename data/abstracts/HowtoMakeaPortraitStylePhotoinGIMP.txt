@@ -1,0 +1,24 @@
+
+Open the photo in The GIMP.
+,
+Use the Free Select tool (Tools -> Selection tools -> Free select, or hit F) to select the eyes of the subject (or in this example, subjects).
+Feather the selection (Select -> Feather).
+Invert the selection (Select -> Invert).
+Run the diffusion filter (Script-Fu -> Photo -> Diffusion filter; if you don't have this, then you haven't installed the Diffusion Filter script as per the Things You'll Need section).
+Bring up the Layers dialog (Dialogs -> Layers).
+Decompose the image (Filters -> Colors -> Decompose, use the "RGB" option).
+On this new image, bring up the Layers dialog.Merge the layers until you're left with one layer.Select the entire black and white image and copy it to the clipboard (Ctrl+A then Ctrl+C).
+Go back to the original image window (the one you ran the diffusion filter on earlier).
+Duplicate the BW1 layer (right click, "Duplicate layer").
+Save the gradients in the images to the right and open them in the GIMP.
+Select the BW1 layer in the Layers dialog by clicking it.
+On the right hand side, select the BW1Tone.png as your sample.
+Select the BW2 layer, make it visible and turn off the visibility of the other layers (using the "eye" icon again).
+Select the BW1 layer again and make it visible.
+Select the bottom layer (which if you have done everything right, should be called "blur" if you haven't renamed it).
+Boost the brightness and saturation of the bottom layer by going to Tools -> Color Tools -> Hue/Saturation.
+Make the BW1 layer visible again.
+Select the BW2 layer and make it visible.Optionally, select the bottom layer and adjust the saturation until it looks right to you.
+Merge down the BW1 layer, then the BW2 layer.
+Roughly select the subject of the photo using the Free Select tool.
+Blur the background by using the Gaussian Blur filter (Filters -> Blur -> Gaussian Blur).Admire the finished result!

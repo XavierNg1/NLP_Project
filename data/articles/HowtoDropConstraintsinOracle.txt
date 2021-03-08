@@ -1,0 +1,22 @@
+'||table_name||' drop constraint '||constraint_name||';' from all_constraints where table_name='GAMES';
+
+alter table PRODUSER.GAMES drop constraint SYS_C006443;
+alter table PRODUSER.GAMES drop constraint PK_GAMES;
+
+
+
+, The following queries will create the SQL necessary to do this.
+
+
+SQL > select 'alter table '||owner||'.'||table_name||' disable constraint '||constraint_name||';' from all_constraints where table_name='GAMES';
+
+alter table SITE.GAMES disable constraint SYS_C006443;
+alter table SITE.GAMES disable constraint PK_GAMES;
+
+
+SQL > select 'alter table '||owner||'.'||table_name||' enable constraint '||constraint_name||';' from all_constraints where table_name='GAMES';
+
+alter table SITE.GAMES enable constraint SYS_C006443;
+alter table SITE.GAMES enable constraint PK_GAMES;
+
+;

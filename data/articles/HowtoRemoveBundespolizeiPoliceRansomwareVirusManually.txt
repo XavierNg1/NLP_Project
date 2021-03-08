@@ -1,0 +1,26 @@
+ If your computer isn’t working properly enough to run its own restart, force one by hitting the restart button (if you have one) or by turning the power button off and then back on.;
+, This will open an Advanced Options menu. Tapping the key several times will increase your odds of sending the command at the right moment.
+Note that if you hit F8 too soon on certain operating systems, you may get a keyboard error message and have to restart the computer; if you hit it too late, Windows will simply open normally and you’ll have to try again.
+ When you log in, you will see a command window (cmd.exe). This will allow you to modify the computer while still in safe mode.
+ (Do not type the quotation marks.) Only do this step if you already know or could easily recognize executable files associated with the virus.
+
+
+Go to the Processes tab to find and end all processes associated with the virus. Simply click on the process and hit End Process at the bottom right-hand corner of the window. If you aren’t sure whether or not a process is associated with the virus, don’t end it.
+
+
+
+
+
+
+Close the Task Manager. This will take you back to the command window.
+ (Again, do not type the quotation marks.) This will open the Registry Editor.
+ The full directory is “HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon.”
+
+,, A dialogue box should pop up that gives you the value name (Shell) and the value data (C:\Documents and Settings\YOUR USERNAME\desktop\VIRUS INFO.exe).
+ (Again, do not type the quotation marks.) This restores the default value.
+ (Ex. “contacts.exe,” “jashla.exe,” “mahmud.exe,” etc.) Make sure that Keys, Values, and Data are all checked in the Find options.
+ Hit Find Next to find a registry key containing your virus info, then right-click the name and choose Delete. Do this until there are no more registry keys associated with this virus.
+ You should now be back at the command window.
+ (Again, do not type the quotation marks.) This will restart your computer in normal mode.
+,,,,,, When the virus reappears after reboot, you know where the virus is hiding
+

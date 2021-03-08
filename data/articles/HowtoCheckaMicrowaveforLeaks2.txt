@@ -1,0 +1,19 @@
+ Some WiFi networks use roughly the same frequency as microwave ovens (about 2.4 GHz), so the oven's shielding should block the WiFi too.To test whether the oven can do this as intended, you'll need a laptop that fits inside your microwave, plus a second device that can connect to your home WiFi network.
+
+
+The instructions below assume you are using two computers, but you can use WiFi-enabled phones instead if you know how to use them to ping each other.
+ If you're not sure how to change your WiFi frequency, access your router settings and look for the "802.11 mode" info (usually under advanced settings):802.11b or 802.11g means you are on a 2.4 GHz network. Continue to the next step.
+802.11a or 802.11ac means you are on a 5 GHz network. Some routers give you the option to switch to another standard. If your router does not have this option, this test won't work.
+802.11n can operate on either frequency. Look for the frequency setting and set it to 2.4GHz. If the router produces two WiFi networks, one of these is 2.4Ghz.
+ Remove the whole electric plug from the wall socket rather than simply turning off the switch. You'll be putting your computer inside the microwave, and the last thing you want is to accidentally turn the oven on.
+ Turn your laptop on and connect to the local WiFI connection. Check the energy saver or display settings so the computer won't go to sleep while it's in the microwave.
+ You'll need this to send a signal to your laptop. Here's how to find it:
+
+
+Windows: Open Control Panel. Go to Network and Sharing... → View network connections → select your WiFi connection → click the chevron to expand (if necessary) → View status of this connection → Details. Look for the number next to "IPv4."Mac: Open System Preferences. Click Network. Select WiFi on the left and find your IP address on the right.
+ Do not turn the microwave on! You're just testing whether the microwave's shielding can block the WiFi signal.
+ Open Command Prompt (on Windows) or Terminal (on Mac). Type ping, then a space, then your computer's IP address. For example, type ping 192.168.86.150.
+ If the ping is answered, the computer has successfully returned the signal through the microwave door. This means your microwave is leaking. If the packets time out, the microwave has blocked the signal from returning. This is not a guarantee that your microwave isn't leaking (since the microwave in operation produces much more powerful waves), but it is a good sign.
+
+
+Microwaves are legally allowed to leak a certain, safe amount. If your router is in the same room as your microwave or on the other side of a wall, a working ping doesn't necessarily mean a dangerous leak. As a rough estimate, a router with a strong signal strength (-40 dBm) should be at least 20 feet (6m) from the microwave (based on US and Canada regulations).

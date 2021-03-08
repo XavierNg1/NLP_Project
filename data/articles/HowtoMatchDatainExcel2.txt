@@ -1,0 +1,10 @@
+, If you want to highlight records in only one list, you'll probably want to highlight the records unique to that list; that is, records that don't match records in the other list. If you want to highlight records in both lists, you'll want to highlight records that do match each other. For the purposes of this example, we'll assume the first list takes up cells G3 through G14 and the second list takes up cells L3 through L14.
+ If you wish to highlight matching items in both lists, you'll have to select the lists one at a time and apply the comparison formula (described in the next step) to each list.
+ To do this, you'll have to access the Conditional Formatting dialog in your version of Excel. In Excel 2003, you do so by selecting Conditional Formatting from the Format menu, while in Excel 2007 and 2010, you click the Conditional Formatting button in the Styles group of the Home ribbon. Select the rule type as "Formula" and enter your formula in the Edit the Rule Description field.
+
+
+If you want to highlight records unique to the first list, the formula would be "=COUNTIF($L$3:$L$14,G3=0)", with the range of cells of the second list rendered as absolute values and the reference to the first cell of the first list as a relative value. (Don't enter the close quotes.)
+If you want to highlight records unique to the second list, the formula would be "=COUNTIF($G$3:$G$14,L3=0)", with the range of cells of the first list rendered as absolute values and the reference to the first cell of the second list as a relative value. (Don't enter the close quotes.)
+If you want to highlight the records in each list that are found in the other list, you'll need two formulas, one for the first list and one for the second. The formula for the first list is "=COUNTIF($L$3:$L$14,G3>0)", while the formula for the second list is COUNTIF($G$3:$G$14,L3>0)". As noted previously, you select the first list to apply its formula and then select the second list to apply its formula.
+Apply whatever formatting you want to highlight the records being flagged. Click OK to close the dialog.
+

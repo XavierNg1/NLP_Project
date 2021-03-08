@@ -1,0 +1,30 @@
+ TeamSpeak is free to anyone using it for non-profit use, such as gaming groups. You can run the server software on your own machine or hosted server for up to 32 people, or you can run it on a dedicated hosted server for up to 512 people. If you need a server larger than this, you will need to rent one from TeamSpeak.
+
+
+You can find the server software on the Downloads page of the TeamSpeak website. Make sure to download the correct version for the operating system you are installing the server on. The files will be downloaded as an archive.
+You will need to accept the license agreement before you can proceed with the download.
+ The file that you downloaded is an archive that contains multiple files. Extract the archive so that you can use the files contained within. Extract it somewhere that is easy to access, such as your desktop.
+ Run the application in the extracted folder. You will see several files and folders get created, and then a window will appear with several important pieces of information. You will see your server admin username, password, and privilege key.
+
+
+Copy each of these values to a blank Notepad document. You can click the button next to each one to copy to the clipboard.
+At this point, the server is already running. You will need to connect to the server in order to configure it.
+ Open up your TeamSpeak client. Open the Connect menu and enter localhost into the address bar. Change your nickname to whatever you'd like, and make sure the server password field is empty. Click the Connect button.
+ When you first connect to your server, you will be prompted for the privilege key that you copied into Notepad. This will allow you to change the configuration of the server and grant permissions to other users. After entering the key, a server administrator icon will appear next to your name on the users list.
+ Right-click on the server name at the top of the channel list. Select "Edit Virtual Server" from the menu that appears. A window will open, allowing you to customize your server. You have a variety of options to help make your server feel more like "yours".
+
+
+In the Server Name field, enter in the name for your server. Usually this will be based off of your gaming group's name.
+Set a password for your server in the Password field. This can help make sure that only people you permit can access your server. Use your forums or private messages to distribute the password to people whom you you want connecting.
+In the Welcome Message field, you can write a short message that will be displayed to users every time they connect. Use it to link to your team's latest news post or important forum thread.
+ Click the ▼ More button at the bottom of the "Manage Virtual Server" window to see a variety of deeper configuration options. These will allow you to fine tune how your server works. The most important is the Hosts tab.
+
+
+In the Host tab, you can set a banner image for your server that all of your users will see. You can also create a Host button that will appear in the upper-right corner. Many servers use this button to direct users to the team's website.
+ If your group has a variety of interests, you may want to create multiple channels to help keep people on topic for the game at hand. For example, if your group primarily plays two games, you can create a channel for each game, as well as a general "lounge" channel. When people are playing, they can move to the appropriate channel, and when they're relaxing between games, they can use the lounge and not bother people who are playing.
+
+
+To create channels, right-click on the server name in the channel tree and click "Create Channel". You can set a channel name, a description, a password, as well as how permanent the channel is and where it should be sorted.
+You can create sub-channels within channels, which can be especially useful for large groups.
+The Permissions tab allows you to set what level permissions people need in order to perform various actions.
+ While most clients should be able to connect to your server, opening a few ports can make sure the most people possible can connect without issue. Access your router settings, and open the following ports: UDP 9987 & TCP 30033. UDP 9987 helps allow incoming connections, while TCP 30033 allows for easier file transferring between users., You can give your teammates your server's IP address so that they can connect, but this IP address is liable to change sometime in the future. It's also not very easy to remember. You can use services such as DynDNS to assign a hostname to your IP address, which will automatically forward people even when your IP address changes.

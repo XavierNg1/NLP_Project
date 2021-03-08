@@ -1,0 +1,55 @@
+;
+,
+In Edit, set all the first options to checked except Automatically Convert Date System. Set Display "Number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for Comments of all Objects. Check Show grid lines and set all boxes below that to auto or checked.
+In Chart, allow Show chart names and set Data markers on hover and leave the rest unchecked for now.
+In Calculation, make sure Automatically is checked and Calculate before save is also checked. Set max change to .001 as goal-seeking is not done in this project. Check Save external link values and Use 1904 system
+
+In Error checking, check all the options.
+In Save, select Save preview picture with new files and Save Auto-recover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer.
+ It helps by placing the cursor between the A of Column A and the 1 in Row 1 in the upper leftmost corner and selecting the entire worksheet. Format Cells Number Number Decimal Places 4, Font Size 9 to 12., Select cell A8 and Insert Name Define Name Top to cell $A$8.
+Into cell A2, enter BtmRow
+Into cell B2, enter "=ROW(Bottom)", w/o quotes. Select cell A1448 and Insert Name Define Name Bottom to cell $A$1448.
+Into cell A3, enter RowTotal
+Into cell B3, enter "=B2-B1", w/o quotes.
+Into cell A4, enter Parabolas. Set font size 18.
+Into cell B4, enter 20 for now and  format fill yellow and format font bold, size 16.
+Into cell A5, enter RowsPerP (for Rows per Parabola)
+Into cell B5, enter "=B3/B4" w.o quotes.
+Select cell range A1:B5 and Insert Name Create Names in Left Column, OK.
+Into cell D1, enter Differentiator
+Into cell E1, enter 2 and make bold and formula fill yellow (for input). Do Insert Name Define Name Differentiator for cell $E$1, OK.
+Align cell range C2:C5 Left. Into cell C2, enter "Note: The objective of this project was to move right and flip a parabola constantly up and down" w/o quotes. Into cell C3 enter "while at the same time letting there be an underlying growth pattern in y values,with "dieoffs"." w/o external quotes. Into cell C4, enter "20 parabolas were chosen as that number would provide 2 peaks and 2 valleys per year over 5 years.", w/o quotes. Into cell C5, enter "Goal seeking was done to prevent negative population. Data was then inspected for 0 population." w/o quotes.
+
+Select cell range A6:K7 and make font blue-purple or dark blue and align center, underline, font size 12. Select H6:I7 and make font red and size 14.
+Select C7:H1448 and do Insert Name Create Names in Top Row, OK.
+Select H7 and type x=Years.
+Select H6:I and input CHARTING in both cells. and make font size 14
+Select J and enter Ck Formula
+
+,
+Select cell B8 and enter "=Top" and format fill light rose. Edit Go To cell range B9:B1448 and enter w/o quotes "=A9+MAX($B$8:B8)" and Edit Fill Down.
+Into cell C8, enter 2 and format fill yellow for input. Edit Go To C9:C1448 and enter to C9 w/o quotes "=IF(B9<>B8,-C8,C8)" and Edit Fill Down. This has the effect of turning the coefficient a from positive to negative alternatively, and reversing the direction of the parabolas,
+Edit Go To cell range D8:D1448 and enter to D8 without quotes the formula "=-(x_Low+a*x_High)".
+Edit Go To cell range E8:E1448 and enter to E8 without quotes the formula "=x_Low*x_High".
+Enter to cell F8 .5 and format fill yellow for input. Edit Go To cell range F9:F1448 and enter to F9 w/o quotes the formula "=IF(B9=ODD(B9),F8,IF(B9=B8,F8,G8))" and Edit Fill Down. This has the effect that, if the parabola Count number happens to be odd, keep the x-Low value as it was from the cell above, or if  the Parabola count stays equal, otherwise, if it changes, get the last value from x_High. This provides curve continuity. Format Fill light rose cell F9.
+Enter to cell G8 2.05 ( a little above the Goal Seek value) and format fill yellow for input. Edit Go To cell range G9:G1448 and enter to G9 w/o quotes the formula "=IF(B9=ODD(B9),G8,IF(B9=B8,G8,G8+Differentiator))" and Edit Fill Down. This has the effect that, if the parabola Count number happens to be odd, keep the x-High value as it was from the cell above, or if  the Parabola count stays equal, otherwise, if it changes, get the last value from x_High and add Differentiator to it. This provides curve spread continuity. Format Fill light rose cell G9.
+Enter to cell H9 0, format fill canary yellow and Insert Name Define Name Tip to cell $H$8. Enter to cell H1448 5, format fill canary yellow and Insert Name Define Name Base to cell $H$1448. Edit Go To cell range H9:H1447 and enter to cell H9 without quotes the formula "=(Base-Tip)/1440+H8" and Edit Fill Down. Formula FIll H9 light rose. And so are provided evenly incremented x values over 5 years of the 1440 rows of data divided into 20 parabolas.
+Edit Go To cell range I8:I1448 and enter into I8 without quotes the formula, "=(a*x-x_Low)*(x-x_High)" and Edit Fill Down. This is the solution form of the equation expressed for y=f(x).
+Edit Go To cell range J8:J1448 and enter into J8 without quotes the formula, "=(a*(x^2))+(b*x)+(c_)" and Edit Fill Down. This is the quadratic form of the equation expressed for y=f(x). This y in column J should equal the y in column I. There is a possible error in the c_ value, as it should be times x_high perhaps, or a, I forget, but then x_high would need to be divided elsewhere by itself.
+Edit Go To cell range K8:K1448 and enter to K8 without quotes the formula, "=IF(J8<0,J8,0)". Go to K1449 and enter "=SUM(K8:K1448)" and format cells border bold black outline. Go to cell K1450 and enter "=0-K1449" -- this is your Goal Seeking cell that should go to 0, and the cell to change is either H8 or C8. Add the right-aligned note in cell J1450 w/o quotes "Goal seeking was done with the change cell being the the x_High value:"
+
+, Cut and paste the chart to the Chart worksheet and adjust its length outwards to fill the window by grabbing the lower right corner when the cursor becomes a double headed arrow. Using Chart Layout, make the vertical axis scale from -199 to 600 and the horizontal axis scale from 0 to 5 with the major unit being .5
+Create the horizontal axis titles and color them red and increase the font size.
+Format the Chart Area Line Dark Red-Purple, 5 pt. Use that same color in the Chart Title. here's another example like the one at the top of this article:
+
+
+
+
+
+
+You may add beveling if you like to the Chart Area of 16 pts Width and Height, with a Surface of Powder.
+
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

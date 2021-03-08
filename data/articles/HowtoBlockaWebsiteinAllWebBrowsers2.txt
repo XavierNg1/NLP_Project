@@ -1,0 +1,14 @@
+ To do so, click the magnifying glass icon in the top-right side of your Mac's screen., This will prompt Terminal to appear at the top of the search results.,, Doing so will run the command. This command opens the "hosts" file in a text editor inside of the Terminal window., This is the password you use to log into your Mac.
+
+Terminal won't display the password characters as you type them.
+ To do so, press the ↓ key until the cursor is below the last line of text on the page., This is what will return an error page in your web browser when someone tries to visit the blocked site., The cursor will move to the right.
+
+Don't press ⏎ Return yet.
+ For example, if you wanted to block Google, you would type www.google.com., This will tell your computer to redirect the website to your loopback address instead.
+
+You can add as many sites as you want to block, one per line, using the same number (127.0.0.1) as before.
+ This is the command to exit the hosts file in the text editor. It will prompt you if you'd like to save your changes., It will then ask you what filename you'd like to save it as. You want to overwrite the original hosts file, so don't change the filename., This will save your changes to the original hosts file. This exits the text editor and returns you to the main Terminal window. The website you added will now be unreachable in any web browser on the computer.
+
+To unblock a site, simply open the hosts file again and delete the lines that you added. Make sure you save your changes after removing the lines you added or the sites will still be blocked.
+
+

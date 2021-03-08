@@ -1,0 +1,17 @@
+ This file allows you to reroute certain websites to a local address, effectively blocking them. This will affect all users on the computer. Editing the hosts file is only really effective when there are just a few sites you want to block.
+
+
+Windows - Navigate to C:\Windows\System32\drivers\etc and double-click the hosts file. If prompted to select a program to open it in, select "Notepad."
+macOS - Open the Terminal program from the Utilities folder. Type sudo nano /etc/hosts and enter your password when prompted. This will open it in an editor.
+ You'll be adding websites you want to block to new lines at the end of the file.
+ For example, if you want to block Facebook, type 127.0.0.1 www.facebook.com.
+ You can continue adding new lines to the file, each with a new site to block. Make sure to include 127.0.0.1 for each line.
+
+
+You'll want to block the mobile versions of sites too. For example, if you blocked Facebook earlier, you'll also want to block m.facebook.com.
+ Once you're finished editing the file, you'll need to save the changes:
+
+
+Windows - Press Ctrl+S or select "Save" from the File menu.
+macOS - Press Ctrl+X and select "Yes" when prompted to save. Use the same filename to overwrite the original.
+ After changing the hosts file, you can try loading the website in any browser and it will redirect to a blank page. This will work for all users on that computer, and will also work in Private Browsing.

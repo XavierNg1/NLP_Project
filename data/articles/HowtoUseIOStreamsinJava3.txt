@@ -1,0 +1,148 @@
+ You can add throws IOException declaration to the method signature to avoid adding the catch block to the try-with-resources block.
+
+
+
+
+public static void main(String[] args) {
+ 
+}
+
+
+
+
+, Try-with-resources block will automatically close streams for us.
+
+
+
+
+public static void main(String[] args) {
+  try () {
+ 
+  }
+}
+
+
+
+
+, In the constructor of the created input stream, create FileOutputStream and specify an arbitrary file name inside its constructor. In this article, we will name it file.txt.
+
+
+
+
+public static void main(String[] args) {
+  try (DataOutputStream out = new DataOutputStream(new FileOutputStream("file.txt"))) {
+ 
+  }
+}
+
+
+
+
+, In the constructor of the created input stream, create a FileInputStream and specify file name from the previous step inside its constructor. In this article, we named it file.txt.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      DataOutputStream out = new DataOutputStream(new FileOutputStream("file.txt"));
+      DataInputStream in = new DataInputStream(new FileInputStream("file.txt"))
+  ) {
+ 
+  }
+}
+
+
+
+
+, In the body of the try-with-resources block, write String, boolean, int and other primitive data to the output stream.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      DataOutputStream out = new DataOutputStream(new FileOutputStream("file.txt"));
+      DataInputStream in = new DataInputStream(new FileInputStream("file.txt"))
+  ) {
+    out.writeUTF("wikiHow is a great place to learn");
+    out.writeBoolean(true);
+    out.writeInt(10430);
+    out.writeDouble(20.9d);
+    out.writeFloat(23.10f);
+  }
+}
+
+
+
+
+, Read the data in the same order as it has been written and print it to the console.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      DataOutputStream out = new DataOutputStream(new FileOutputStream("file.txt"));
+      DataInputStream in = new DataInputStream(new FileInputStream("file.txt"))
+  ) {
+    out.writeUTF("wikiHow is a great place to learn");
+    out.writeBoolean(true);
+    out.writeInt(10430);
+    out.writeDouble(20.9d);
+    out.writeFloat(23.10f);
+ 
+    System.out.println(in.readUTF());
+    System.out.println(in.readBoolean());
+    System.out.println(in.readInt());
+    System.out.println(in.readDouble());
+    System.out.println(in.readFloat());
+  }
+}
+
+
+
+
+, Add a catch block to the try-with-resources block, catch IOException and, in case of an error, print the stack trace to the console.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      DataOutputStream out = new DataOutputStream(new FileOutputStream("file.txt"));
+      DataInputStream in = new DataInputStream(new FileInputStream("file.txt"))
+  ) {
+    out.writeUTF("wikiHow is a great place to learn");
+    out.writeBoolean(true);
+    out.writeInt(10430);
+    out.writeDouble(20.9d);
+    out.writeFloat(23.10f);
+ 
+    System.out.println(in.readUTF());
+    System.out.println(in.readBoolean());
+    System.out.println(in.readInt());
+    System.out.println(in.readDouble());
+    System.out.println(in.readFloat());
+  } catch (IOException e) {
+    e.printStackTrace();
+  }
+}
+
+
+
+
+, Data is written to the file.txt and then read and printed to the console.
+
+
+
+
+wikiHow is a great place to learn
+true
+10430
+20.9
+23.1
+
+
+
+

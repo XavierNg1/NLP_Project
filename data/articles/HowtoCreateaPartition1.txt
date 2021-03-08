@@ -1,0 +1,15 @@
+ Open the Run dialog box from the Start menu or by pressing ⊞ Win+R. Type diskmgmt.msc and press ↵ Enter. This will open a window that allows you to manage all of the volumes and drives installed in your system.On Windows 8 or higher, press ⊞ Win+X or right click on the Start button, and then choose Disk Management.;
+, Partitions are created from unallocated space or free space on your hard drive. You can create more unallocated space by shrinking an existing volume. This will remove the available storage space from that volume and turn it into unallocated space.
+
+
+Right-click a volume and select "Shrink Volume..." to begin the volume shrinking process. You will be able to choose how much of the free space you want to remove from the volume to turn into unallocated space.
+You won't be able to turn all of the available storage into unallocated space because some of that available storage is reserved for unmovable files. You can increase the space you can reclaim by defragmenting the drive first.
+If you want to merge two blocks of unallocated space together, you will need to use a tool like GParted or Partition Manager.
+ Right-click on the unallocated space and select "New Simple Volume". This will open a wizard that will walk you through the steps to create the new partition.
+
+
+Set the size. The first thing you will be asked is how big you want the partition to be. By default, it will be set to the same size as the entire block of unallocated space, but you can choose to make it smaller if you wish. Any unused space will remain unallocated.
+Assign a drive letter. All partitions need a drive letter, which allows them to have addresses for files located on the partition. You can choose any letter that you'd like as long as you don't already have a drive using that letter. Avoid using A: and B: as these are older drive letters reserved for floppy disk drives.
+ Ensure that the volume is set to be formatted, otherwise you cannot use it to store files. If you are using the volume to store files for Windows, set the file system to NTFS. Enter a name for the volume in the "Volume label" field.Check the "Perform a quick format" box unless you are worried that the disk is damaged.
+If you are going to be using the volume to install an operating system on, you don't have to worry about formatting it now.
+

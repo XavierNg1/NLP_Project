@@ -1,0 +1,142 @@
+ Give it an arbitrary name and write something in it, such as I love wikiHow!. In this article, we will name it file.txt.
+ You can add throws IOException declaration to the method signature to avoid adding the catch block to the try-with-resources block.
+
+
+
+
+public static void main(String[] args) {
+ 
+}
+
+
+
+
+, Try-with-resources block will automatically close streams for us.
+
+
+
+
+public static void main(String[] args) {
+  try () {
+ 
+  }
+}
+
+
+
+
+, In the constructor of the created input stream, specify the name of the text file previously created. In this article, we called it file.txt.
+
+
+
+
+public static void main(String[] args) {
+  try (FileInputStream in = new FileInputStream("file.txt")) {
+ 
+  }
+}
+
+
+
+
+
+The former is a byte stream, the latter is a character stream.
+ In the constructor of the created output stream, specify another arbitrary text file name. In this article, we will name it file-copy.txt.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      FileInputStream in = new FileInputStream("file.txt");
+      FileOutputStream out = new FileOutputStream("file-copy.txt")
+  ) {
+ 
+  }
+}
+
+
+
+
+
+If you created FileInputStream, you need to create FileOutputStream. The same goes for the FileReader and FileWriter.
+ This variable will be used for temporary storage of read byte or character.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      FileInputStream in = new FileInputStream("file.txt");
+      FileOutputStream out = new FileOutputStream("file-copy.txt")
+  ) {
+    int data;
+  }
+}
+
+
+
+
+, Create a while loop in which the data is read into the previously created int variable until it reads the number -1. In other words, it reads data from the file until it reaches the end of the file.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      FileInputStream in = new FileInputStream("file.txt");
+      FileOutputStream out = new FileOutputStream("file-copy.txt")
+  ) {
+    int data;
+    while ((data = in.read()) != -1) {
+ 
+    }
+  }
+}
+
+
+
+
+, In the body of the while loop, write the read data to the output stream.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      FileInputStream in = new FileInputStream("file.txt");
+      FileOutputStream out = new FileOutputStream("file-copy.txt")
+  ) {
+    int data;
+    while ((data = in.read()) != -1) {
+      out.write(data);
+    }
+  }
+}
+
+
+
+
+, Add a catch block to the try-with-resources block, catch IOException and, in case of an error, print the stack trace to the console.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      FileInputStream in = new FileInputStream("file.txt");
+      FileOutputStream out = new FileOutputStream("file-copy.txt")
+  ) {
+    int data;
+    while ((data = in.read()) != -1) {
+      out.write(data);
+    }
+  } catch (IOException e) {
+    e.printStackTrace();
+  }
+}
+
+
+
+
+, Contents of the file.txt are copied to the file-copy.txt which, if it doesn't exist yet, is created.

@@ -1,0 +1,57 @@
+ When sharing internet through your network, it will require a slightly different layout than a standard network. The basic layout is as follows:Connect the computer that is sharing the connection (the "host") to the broadband modem via Ethernet or 4G hotspot via USB. If you are connecting a modem to the host computer via Ethernet, it will need two Ethernet ports (one to connect to the modem, and the other to connect to the hub or router).
+Connect the host computer to the WAN port of a wired hub or wireless router using an Ethernet cable.
+Connect the other computers to the hub or router using Ethernet or a wireless signal. Note that the connecting computers don't need any special settings, and can be running any operating system.
+If you're just connecting two computers, connect them directly via Ethernet.;
+, You can quickly open this window by pressing the Windows key + R and typing ncpa.cpl.
+ This could be your modem or your USB hotspot. Make sure that you are only performing these steps on the adapter that is actually connected to the internet, not the adapter that will be connecting the host to the rest of the network.
+, Click Apply to save your changes.
+
+
+At this point, you can turn your host computer into a wireless access point if you have an unused wireless adapter. Click here for instructions.
+ This is important if the other computers need to access email, FTP, or other special services. Check the box for each service that you want to enable.
+ Now that the host computer is set up, you'll need to configure the router to allow it to pass the connection through. Click here for detailed instructions on opening the router's configuration page.
+
+
+If you're using a hub or switch, you won't need to perform any additional configuration.
+ The exact wording will vary from model to model.
+ Again, the wording will vary slightly depending on your exact router.
+ Your host and router have been configured, and now it's time to connect your other devices.
+
+
+If connecting via Ethernet, connect each additional computer to the LAN ports on the router or hub.
+If connecting wirelessly, connect to the router as if you were connecting to any wireless network.
+ This is typically the case if you only have one network adapter installed. You must have at least two different network adapters installed to use internet connection sharing.
+ This is typically caused by the computer not getting a correct IP address.
+
+
+Make sure that you only have internet connection sharing enabled on the host computer, and only on the adapter that's connected to the internet. All of the other computers on the network should not have internet connection sharing enabled.
+Open the Network Connections window on the computer that cannot get an internet connection. (the Windows key + R and then type ncpa.cpl).
+Right-click on the network adapter and select Properties.
+Select "Internet Protocol Version 4 (TCP/IPv4)" and click Properties.
+Select "Obtain IP address automatically". Repeat for "Internet Protocol Version 6 (TCP/IPv6)".
+ Bridging your two network adapters may help solve this problem.
+
+
+Open the Network Connections window on the host computer (the Windows key + R and then type ncpa.cpl).
+Select the two adapters that you want to bridge. This should be the adapter that is connected to the internet and the adapter that is connected to the rest of the network. Hold Ctrl and click each one to select them.
+Right-click on one of the two selected networks and select "Bridge Connections". Click Yes when prompted.
+Reboot the other computer and try connecting again., (null)" message. This can be caused by a problem with the internet sharing services in Windows.
+
+
+Press the Windows key + R and type services.msc. Press Enter to open the Services window.
+Find each of the following services:
+
+Application Layer Gateway Service
+Network Connections
+Network Location Awareness (NLA)
+Plug And Play
+Remote Access Auto Connection Manager
+Remote Access Connection Manager
+Remote Procedure Call (RPC)
+Telephony
+Windows Firewall
+
+
+Double-click each service and set the "Startup Type" to "Automatic".
+Reboot the computer after setting each service and try the connection again.
+

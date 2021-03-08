@@ -1,0 +1,78 @@
+ This is a Lagrange multiplier problem, because we wish to optimize a function subject to a constraint. In optimization problems, we typically set the derivatives to 0 and go from there. But in this case, we cannot do that, since the max value of x3y{\displaystyle x^{3}y} may not lie on the ellipse.
+
+Clearly, f(x,y)=x3y{\displaystyle f(x,y)=x^{3}y} and g(x,y)=3x2+y2=6.{\displaystyle g(x,y)=3x^{2}+y^{2}=6.}
+;
+, Setting it to 0 gets us a system of two equations with three variables.
+
+
+∇f+λ∇g=0{\displaystyle \nabla f+\lambda \nabla g=0}
+
+
+{3x2y+λ6x=0x3+λ2y=0{\displaystyle {\begin{cases}3x^{2}y+\lambda 6x&=0\\x^{3}+\lambda 2y&=0\end{cases}}}
+
+
+, Since we are not concerned with it, we need to cancel it out. Here, we multiply the first equation by y{\displaystyle y} and the second equation by 3x.{\displaystyle 3x.}
+
+
+{3x2y2+λ6xy=03x4+λ6xy=0{\displaystyle {\begin{cases}3x^{2}y^{2}+\lambda 6xy&=0\\3x^{4}+\lambda 6xy&=0\end{cases}}}
+
+
+3x2y2−3x4=0x2(y2−x2)=0{\displaystyle {\begin{aligned}3x^{2}y^{2}-3x^{4}&=0\\x^{2}(y^{2}-x^{2})&=0\end{aligned}}}
+
+
+, In the above equation, we see that when x≠0, y2−x2=0.{\displaystyle x\neq 0,\ y^{2}-x^{2}=0.} This gets us the relation below.
+
+
+y=x{\displaystyle y=x}
+
+
+, Now that we have derived this useful relation, we can finally find values for x{\displaystyle x} and y.{\displaystyle y.}
+
+
+g=3x2+x2=6x=y=±32{\displaystyle {\begin{aligned}g&=3x^{2}+x^{2}=6\\x&=y=\pm {\sqrt {\frac {3}{2}}}\end{aligned}}}
+
+
+, We have found the maximum value of the function x3y{\displaystyle x^{3}y} on the ellipse 3x2+y2=6.{\displaystyle 3x^{2}+y^{2}=6.}
+
+
+x3y=94{\displaystyle x^{3}y={\frac {9}{4}}}
+
+
+, Recall the distance as x2+y2+z2.{\displaystyle {\sqrt {x^{2}+y^{2}+z^{2}}}.} This is the function that we are trying to optimize, with the constraint function as x2yz−1=0.{\displaystyle x^{2}yz-1=0.} This is a somewhat difficult expression to work with, however. In this case, we can remove the square root and optimize x2+y2+z2{\displaystyle x^{2}+y^{2}+z^{2}} instead, since we are working in the same domain (only positive numbers), so the numbers will turn out to be the same. We just have to remember that the function to be optimized is the expression with the square root. 
+
+
+L(x,y,z;λ)=(x2+y2+z2)+λ(x2yz−1){\displaystyle {\mathcal {L}}(x,y,z;\lambda )=(x^{2}+y^{2}+z^{2})+\lambda (x^{2}yz-1)}
+
+
+,
+
+
+{∂L∂x=2x+λ2xyz=0∂L∂y=2y+λx2z=0∂L∂z=2z+λx2y=0{\displaystyle {\begin{cases}{\frac {\partial {\mathcal {L}}}{\partial x}}=2x+\lambda 2xyz&=0\\{\frac {\partial {\mathcal {L}}}{\partial y}}=2y+\lambda x^{2}z&=0\\{\frac {\partial {\mathcal {L}}}{\partial z}}=2z+\lambda x^{2}y&=0\end{cases}}}
+
+
+, Here, multiply the first equation by x,{\displaystyle x,} the second equation by 2y,{\displaystyle 2y,} and the third equation by 2z.{\displaystyle 2z.}
+
+
+{2x2+λ2x2yz=04y2+λ2x2yz=04z2+λ2x2yz=0{\displaystyle {\begin{cases}2x^{2}+\lambda 2x^{2}yz&=0\\4y^{2}+\lambda 2x^{2}yz&=0\\4z^{2}+\lambda 2x^{2}yz&=0\end{cases}}}
+
+
+, Let's use y,{\displaystyle y,} though x{\displaystyle x} and z{\displaystyle z} are fine too.
+
+
+x2=2y2=2z2{\displaystyle x^{2}=2y^{2}=2z^{2}}
+
+The equation above gives us all the information we need to optimize the distance now. 
+
+
+, Since we know y=z,{\displaystyle y=z,} we can write the constraint function in terms of just y{\displaystyle y} and solve for it.
+
+
+(2y2)(y)(y)=1y=2−1/4{\displaystyle {\begin{aligned}(2y^{2})(y)(y)&=1\\y&=2^{-1/4}\end{aligned}}}
+
+
+, Remember, even though we were optimizing the square of the distance, we are still looking for the actual distance.
+
+
+x2+y2+z2=2y2+y2+y2=4y2=2⋅2−1/4=23/4{\displaystyle {\begin{aligned}{\sqrt {x^{2}+y^{2}+z^{2}}}&={\sqrt {2y^{2}+y^{2}+y^{2}}}\\&={\sqrt {4y^{2}}}\\&=2\cdot 2^{-1/4}\\&=2^{3/4}\end{aligned}}}
+
+

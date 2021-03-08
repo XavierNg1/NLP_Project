@@ -1,0 +1,20 @@
+ Safari includes a suite of development tools that are very similar to Firebug. These tools need to be enabled to use them.;
+, This will show Safari's advanced options.
+ This will enable the Develop menu. It will appear next to the Bookmarks menu.
+ The Web Inspector is very similar to Firebug. You can open it from the Develop menu. You can also press ⌘ Command+⌥ Option+I.
+ These include stylesheets, HTML files, scripts, images, and more. This is the default view for Web Inspector.
+
+
+The navigation bar on the left side will display all of the folders of content from the current page. Use these folders to quickly navigate to the resources you need.
+Selected resources are displayed in the main frame. You can view the code for websites and other files here. You can also make changes to the code, which will show live on the website. These changes will only be in effect for as long as you have the site open.
+Input debugging commands and inspect JavaScript objects using the console.
+The right sidebar breaks down the details for the current selection. Changes made here will be displayed live on the website.
+ The timelines will show when resources are called as the page is used. You can also check network requests and view JavaScript events.
+
+
+You can see the three different timelines along the top of the Timelines window. Each of the lines represents a different timeline category.
+The left frame displays the different events that are occurring on the timeline. Each entry's timeline activity will be displayed in the main window.
+ The Debugger option provides the same debugger tools that you can find in Firebug. Use the debugger to track down and solve problems with your JavaScript code. You can set breakpoints on your code so that the page pauses at specific spots. This lets you to troubleshoot JavaScript issues on your page or learn how JavaScript works in action.
+ Many people use Firebug to change their current user agent. This is the identifier that tells web pages what browser and OS you are using. This is useful for loading mobile sites on your desktop, or seeing how a site looks using Internet Explorer in Windows.Click the Develop menu and select "User Agent".
+Select your desired user agent from the list of options. You can add a custom user agent by selecting "Other" and then entering the code for it.
+

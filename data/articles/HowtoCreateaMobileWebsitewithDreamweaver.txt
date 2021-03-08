@@ -1,0 +1,30 @@
+ You will then see a "New Document" Window. On the left hand side, you want to pick the option "page from sample" then in the next column, choose "mobile Starters", then "jQuery Mobile (CDN)";
+, Once you open the jQuery Mobile (CDN) file, you will see a page that looks similar to this:
+
+
+Although this technically is a one page document, each header represents a different "page". For example, "Page One" is the home page for the mobile website, "Page Two" could be the about us page, "Page Three" could be your services page and so on.
+ These steps can be pretty tricky if you are unfamiliar with basic HTML. To create the content, I like to work in "split view" on Dreamweaver. How to get to that mode is if you look at the left hand corner of Dreamweaver, below the file menu, you will see four options "code, split, design, and live" like this:
+
+
+Choose the highlighted option "split", and you will see a view of code and the actual site side-by-side. Let's take a look at the code for a second.
+ There is (div data-role="page" id="page"), which means that it is the beginning of a new page. Note that each page is associated with a number 'div data-role="page" id="page2"' is the second page, 'div data-role="page" id="page3"' is the third page and so on
+'div data-role="header"' is the header area, and you put your header information between the two "h1"and "/h1" tags., 'div data-role="Content"' is the beginning of the content section. This is where you put the actual content of each page. Note that in the first page there is:
+
+
+and if you look at the actual web page, you see that the first page has a list of links. 'ul data-role="listview"' means that you want a list of links in the content area.When adding any menu items or 'data-role="listview"', make sure you link the correct text with the correct pages. For example if page two is "About Us", page three is "Our Service", and Page four is "Contact Us" then you want to put:
+
+
+
+
+
+
+Now to edit content, simple put your text in between the 'div data-role="content"' and '/div' tags. For example:
+
+
+
+
+
+
+
+, To edit the footer, simply put your text in place of the "Page Footer" text., Remember where you switched into "split mode?" right in that area, there is a button that says "live". Click on that, and you will see what your website will look like on a phone!
+

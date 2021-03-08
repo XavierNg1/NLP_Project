@@ -1,0 +1,89 @@
+ Open the case and remove its main hard drive (the one containing the OS partition).;
+,, Open the case and connect the infected drive.
+ Make absolutely sure that it boots into the clean OS, not from the infected drive! Most PCs have a boot choice menu which can be accessed via the F11 or ESC key soon after power on.
+ Once the clean computer's OS has booted, you are going to want to clean out temp files from the infected drive, in order to make it easier to search. But first, you want to see all files, even hidden and system files. Go to "Control Panel" -> "Folder Options", and click on the "View" tab at the top of the "Folder Options" window. You are going to want to change the following options:
+
+
+Turn ON: Put a check in check box to display the contents of System Folders
+Turn ON: Select to show hidden files and folders
+Turn OFF: Uncheck hide extensions for known file types.
+Turn OFF: Uncheck hide protected operating system files (Recommended)
+
+, It's probably going to be E: or F:, depending on the number of hard drives, partitions, and CD/DVD drives you have in your clean computer. Let's assume that we're dealing with the F: drive for this article.
+ Once your temporary files folders have been cleared, there are a lot fewer files to search through. This should make the next few steps a bit less tiresome. Some of the following locations may not exist, some may be in slightly different places. It's important that you find and clear the cache for all of your browsers (IE/Netscape/Firefox/Opera) and that you clear it for every single user! Check the following folders and delete their contents, but not the directories themselves.
+
+
+F:\TEMP
+F:\Windows\TEMP or F:\WINNT\Temp (Only NT4 and Windows 2000 use "WinNT")
+F:\WINNT\Profiles\UserName\Local Settings\Temp
+F:\WINNT\Profiles\UserName\Local Settings\Temporary Internet Files
+F:\WINNT\Profiles\UserName\Local Settings\Application Data\Mozilla\Firefox\Profiles\SomeRandomName.default\Cache
+F:\Documents and Settings\UserName\Local Settings\Temp
+F:\Documents and Settings\UserName\Local Settings\Temporary Internet Files
+F:\Documents and Settings\UserName\Local Settings\Application Data\Mozilla\Firefox\Profiles\SomeRandomName.default\Cache
+
+,, If you can back up the whole entire drive,you should . Otherwise, you should be able to get away with just the "Documents and Settings" folder ("Profiles" under NT4) and maybe a few of the folders for your computer games, (some games do store their saved games,their maps , high scores, etc in their program folder).
+ This will hopefully find some things on the infected F: drive and remove them.
+
+
+Download and install both Spybot Search and Destroy and Lavasoft Adaware. It is important that you use both of these utilities, as they will often find more malware together.
+Update definition files when prompted.
+Scan your machine (this could take a while).
+Remove any spyware that is found.
+Make sure you have an antivirus program installed and up-to-date. Perform a full scan in your system and remove any viruses, trojans, and worms the program finds.
+ Also copy the installers for these programs to the "F:\Cleaners" folder. You may need them any time later.
+ If you see a little animated dog, you may want to turn him off, because he makes searching a lot more annoying. The search options you will want to use for the searches we will perform are "Search for All files and folders" with the following "Advanced Options" turned ON:
+
+
+
+
+Search system folders
+Search hidden files and folders
+Search your subfolders
+
+
+
+, Simply enter "*.exe" : "asterisk period exe", and specify "within the last week." You may want to try searching for "past month" also , depending upon how long your computer has been infected.
+
+
+Run the search. Let it run until it completes.
+Examine the files that it has found. Some of them you may recognize, especially if you have recently installed certain programs. For example, if you recently upgraded or installed Lavasoft Ad-Aware, you may see"F:\Program Files\Lavasoft\Ad-Aware SE Personal\Ad-Aware.exe" in these lists. Ignore this type of file. The kind of file you're looking for is usually in F:\Windows\system32, less than 100KB in its size , and has a funny name like "lkaljya.exe"
+Any files you find should be moved into a temporary directory until you can verify that they are legit. For example, you can create a folder "F:\quarantine" and move them into a subfolder "F:\quarantine\Windows\system32" in there.
+Some malicious files are also sneakily hidden in the F:\Windows\system32\drivers directory they will also have funny names like "lkaljya.sys".
+Any files you find should be moved into a temporary directory until you can verify that they are legit. For example, you can create a folder "F:\quarantine" and move them to a subfolder "F:\quarantine\Windows\system32\drivers" in there.
+If you have an on-access anti-virus program, it may actually start complaining that it found a trojan the second you select the suspect file. If it does, then don't bother quarantining it, just let the antivirus remove it.
+Pay particular attention to *.exe files with either random or pretentious names. Pretentious names try to appear important by being very close to actual real useful programs. For example, a useful program is "svchost.exe", while a suspect program could be "scvhost.exe"
+Another good way of identifying good products and bad is by right-clicking the executable and clicking "Properties", then by choosing the "Version" tab (if there is one available). If the file is digitally signed by any company , it will have a "Company Name" property on this certain tab, for example "Microsoft Corporation" or "Apple Computer Inc" or "Logitech", etc. These files are probably safe and secure and good. If the file is not signed, then you should investigate further, and more.
+When in doubt, go to google and type the full name of the suspect executable: "scvhost.exe", for example. Examine the search results. Often you will see links like "scvhost.exe, good or bad?" or "What does this file do?" and you can see whether or not it is a necessary file or a dangerous trojan.
+Pay particular attention to any *.exe files you find in F:\windows\system32 and (especially) anywhere in F:\Documents and Settings. There really shouldn't be many/any executables in the "Documents and Settings" folder.
+,, Pay close and lots attention and don't screw up.
+
+
+Go to Start->Run and type "regedit" and press enter.
+Load the "SOFTWARE" hive from the infected computer and remove any bad "run on login" entries.
+
+Select HKEY_LOCAL_MACHINE by left-clicking it.
+Go to the File menu and click on "Load Hive".
+Navigate to F:\Windows\System32\Config and load the file named "SOFTWARE".
+It will ask you for a key name. So type "INFECTED_SOFTWARE" and press enter.
+Click the plus sign on the side of HKEY_LOCAL_MACHINE to reveal the key of "INFECTED_SOFTWARE".
+Navigate to HKEY_LOCAL_MACHINE\INFECTED_SOFTWARE\Microsoft\Windows\CurrentVersion\Run.
+Back it up!!!!!! Right-click on "Run" and choose "Export Data" and save this file "INFECTED_SOFTWARE,RUN.reg" in the folder of quarantine . Note that if you need to restore this backup thing later on, while the infected computer is still running, you'll have to open the reg file in a text editor and slightly change the key path. HKEY_LOCAL_MACHINE\INFECTED_SOFTWARE would need to be changed to HKEY_LOCAL_MACHINE\SOFTWARE, for example. If you merely want to immediately restore this reg file while running on the computer that is clean, you don't have to edit this file; just be 100% sure that the hive is still currently loaded and double-click the reg file so you can re-insert its keys/values into the places that are appropriate.
+In the right pane you should see a list of lots of # entries. Some of these may include programs such as Java Update, AOL Instant Messenger, MSN Messenger / Windows Live Messenger, ICQ, Trillian, nVidia / ATI drivers, Sound drivers, Keyboard / Mouse drivers, Antivirus, Firewall software, etc.
+ If you determine that something is bad, grab the EXE file pointed to by the key and throw it into the folder for quarantine, and delete the key. You can always restore it later using the registry backup.
+
+
+
+
+Perform the same steps in "RunOnce" and "RunOnceEx", right next to the "Run" key. They may or may not have entries in them.
+When you are done, it is important that you click on the "INFECTED_SOFTWARE" and then go to the File menu and choose "Unload Hive".
+Load the "DEFAULT" hive from the infected computer (F:\Windows\System32\Config\DEFAULT) and remove any bad "run on login" entries. Use the same steps as in the "SOFTWARE" step. Note: the "DEFAULT" hive may not even have a "Run" key. If that's the case, skip it. Be sure to unload "INFECTED_DEFAULT" when you're done.
+Load each user's hive from the infected drive. You will find the hive at F:\Documents and Settings\UserName\NTUSER.DAT -- load it as "INFECTED_USERNAME" and then go through its "Run/RunOnce/RunOnceEx" keys for bad entries. You know the drill by now, right? Be sure to unload each hive when you're done.
+ Otherwise, you need to power down your clean PC and remove the cleaned drive from the case.
+
+
+
+If your PC absolutely refuses to boot at this point, you may have no choice but to wipe the drive clean and reinstall Windows. Make sure you have everything backed up and all your reinstall CDs and license keys handy before you do this.
+ If there's any spyware left on your PC, it's probably in a weakened state at this point and may succumb now. Also run your currently installed anti-virus program, or try running your anti-virus program from the "Cleaners" folder; it may or may not work.
+ However, if performance is unacceptable, you may have no choice but to reinstall. Some malware is so persistent that it's less effort to simply start over with a clean slate.
+

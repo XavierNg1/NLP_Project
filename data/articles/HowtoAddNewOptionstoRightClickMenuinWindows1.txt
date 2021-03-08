@@ -1,0 +1,17 @@
+ Click on the Windows icon on the bottom left corner of the screen to bring up the programs tab. Type in “Run” and hit enter to bring up the program to the list.;
+, Double-click on the “Run” icon to bring up the program, and type in “regedit” to open up the registry editing tool for Microsoft Windows.
+ This folder contains all of the applications, shortcuts and other options that are present in your right-click context menu. There are different “ContextMenuHandlers” folders present in the registry, and you’ll want to select that one that meets your needs:If you wish to add options to the right-click menu for files, navigate to HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\.
+If you wish to add options to the right-click menu for folders, navigate to HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\.
+If you wish to add options to the right-click menu for desktop, navigate to HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers.
+ Right-click on the ContextMenuHandlers folder, move the cursor over to “New,” and click on “Key.” A sub-key will be created under the default name of “New Key #1.”
+
+
+Rename the new key to the name of the application or pathway you wish to add to the right-click context menu. For instance, if you wish to add a shortcut to the Command Prompt in the right-click menu, enter the name of the sub-key as “Command Prompt.” You can name the sub-key whatever you want, it does not affect the application or the process.
+ To change the value of the sub-key, double-click on the “Default” value inside the sub-key that you have created. In order for the computer to recognize the application, you must add the path to the executable (.exe) file of the application to the Default value.
+
+
+To find the path of a file or folder, right-click on the address bar of the window in which the file or folder is located. Left-click on “Copy address” and paste it in Notepad to view the address. You can also directly paste the pathway as the Default Value of the key.
+Make sure that you add the path of the file, application, or folder correctly into the value of the Default key. For instance, if you are adding Command Prompt to your right-click menu, enter the path “C:\Windows\system32\cmd.exe” as the value of the Default key.
+Make sure that you do not interfere or edit the values of any other keys other than ContextMenuhandlers. Editing or deleting the wrong folders or keys could corrupt the operating system.
+ Go to your desktop (or a folder or file if that’s the registry value you changed) and right-click to view and confirm that the new option has been added to the right-click context menu.
+

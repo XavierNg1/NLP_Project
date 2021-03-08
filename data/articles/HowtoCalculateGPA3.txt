@@ -1,0 +1,15 @@
+ In the A column, type in the names or numbers of the subjects you're taking. In the B column, type in the letter grades you want to factor into your GPA.
+ To complete this step, you will have to decide if your school uses a weighted or unweighted GPA scale.
+
+
+The common 4-point GPA scale is as follows: A = 4 points, B = 3 points, C = 2 points, D = 1 point, and F = 0 points. If your school uses a weighted GPA scale, they allot 5 points for upper level classes. Ask an administrator, teacher, or registrar for this information. You can also look on your report card or final grade sheets.
+Add .3 for each plus value or subtract .3 for each minus value. For example, B+ = 3.3, B = 3.0, B- = 2.7.
+, This will indicate to the program that it will be calculating a sum (adding) equation.
+ The equation you will use to calculate your GPA will be determined by how many grades you have, but the basic format is =SUM(C1:C6)/6.
+
+
+C1 is the cell number (C- column, 1-row) of the first grade in your column.
+The number on the right side of the colon should be the cell number of the final grade on your list.
+The number after the slash should be the total number of courses that you are calculating. In this case, 6 courses are being calculated. If you have 10 courses listed, you will replace the 6 with a 10.
+ You should be greeted with a single number in the D column, which is your final calculated GPA.
+

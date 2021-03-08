@@ -1,0 +1,199 @@
+
+
+
+A=(abcd){\displaystyle A=\left({\begin{matrix}a&b\\c&d\end{matrix}}\right)}
+;
+,
+
+
+ad{\displaystyle ad}
+
+
+,
+
+
+bc{\displaystyle bc}
+
+
+,
+
+
+detA=ad−bc{\displaystyle \det A=ad-bc}
+
+The formula above is the determinant of a general 2x2 matrix. It is highly useful to memorize.
+
+
+
+B=(4692){\displaystyle B=\left({\begin{matrix}4&6\\9&2\end{matrix}}\right)}
+
+
+,
+
+
+(4)(2)=8{\displaystyle (4)(2)=8}
+
+
+,
+
+
+(9)(6)=54{\displaystyle (9)(6)=54}
+
+
+,
+
+
+detB=8−54=−46.{\displaystyle \det B=8-54=-46.}
+
+
+, Also called expansion by minors, this process involves taking a row or column of numbers, multiplying them by the determinant of the "minor" matrix (the matrix formed by omitting the row and column of the number that you are multiplying the minor with), and summing the results. The exact way on why this process works stems from the formal definition of the determinant, which is extremely awkward to phrase. 
+
+While the above discussion sounds complicated, the process is really not. Let's see how cofactor expansion works. 
+
+
+, Look out for 0's and 1's, as they will make calculating the determinant slightly easier.
+
+
+A=(abcdefghi){\displaystyle A={\begin{pmatrix}a&b&c\\d&e&f\\g&h&i\end{pmatrix}}}
+
+
+, While not an actual matrix, this sign matrix tells us what sign to assign to the product.
+
+
+(+−+−+−+−+){\displaystyle {\begin{pmatrix}+&-&+\\-&+&-\\+&-&+\end{pmatrix}}}
+
+Sign matrices do not just apply to 3x3 matrices - they apply to any number of dimensions, and the same checkerboard pattern holds.
+ While any would suffice, this row or column ideally should have some 0's for ease of calculation. The reason is that during the cofactor expansion, 0 multiplied by the determinant of any minor matrix is 0, and thus does not contribute to the determinant of the matrix. This will make calculations much easier. If there are no 0's, the next easiest number to avoid arithmetic mistakes would be 1. 
+
+Let's choose the second row (def).{\displaystyle {\begin{pmatrix}d&e&f\end{pmatrix}}.} The corresponding sign matrix will be (−+−).{\displaystyle {\begin{pmatrix}-&+&-\end{pmatrix}}.}
+
+
+, The minor matrix is the smaller matrix created by omitting the row and column of the number. The result is a matrix with its dimension reduced by 1, hence the term "minor."
+
+In our example, we chose the second row. Notice that the sign matrix says that d{\displaystyle d} must have a negative sign when doing the multiplication.
+
+
+−d|bchi|{\displaystyle -d{\begin{vmatrix}b&c\\h&i\end{vmatrix}}}
+
+Here, |bchi|{\displaystyle {\begin{vmatrix}b&c\\h&i\end{vmatrix}}} is the minor matrix of d.{\displaystyle d.} Compare this matrix to the original matrix - we have omitted all of the elements in the row and column of d.{\displaystyle d.} 
+
+
+, 
+
+The corresponding sign for entry e{\displaystyle e} is positive. 
+
+
+e|acgi|{\displaystyle e{\begin{vmatrix}a&c\\g&i\end{vmatrix}}}
+
+
+, 
+
+The corresponding sign for entry f{\displaystyle f} is negative.
+
+
+−f|abgh|{\displaystyle -f{\begin{vmatrix}a&b\\g&h\end{vmatrix}}}
+
+
+, With practice, you will proceed immediately to this step and evaluate. 
+
+
+detA=−d|bchi|+e|acgi|−f|abgh|{\displaystyle \det A=-d{\begin{vmatrix}b&c\\h&i\end{vmatrix}}+e{\begin{vmatrix}a&c\\g&i\end{vmatrix}}-f{\begin{vmatrix}a&b\\g&h\end{vmatrix}}}
+
+
+,
+
+
+B=(345910298){\displaystyle B={\begin{pmatrix}3&4&5\\9&1&0\\2&9&8\end{pmatrix}}}
+
+
+,
+
+The second row has a 0 and a 1. Use this row.
+ Pay attention to signs.
+
+Notice that the third entry in our chosen row is a 0. There is no need to calculate the determinant of its minor. 
+
+
+detB=−9|4598|+1|3528|{\displaystyle \det B=-9{\begin{vmatrix}4&5\\9&8\end{vmatrix}}+1{\begin{vmatrix}3&5\\2&8\end{vmatrix}}}
+
+
+,
+
+
+|4598|=(4)(8)−(9)(5)=−13|3528|=(3)(8)−(2)(5)=14{\displaystyle {\begin{aligned}{\begin{vmatrix}4&5\\9&8\end{vmatrix}}&=(4)(8)-(9)(5)=-13\\{\begin{vmatrix}3&5\\2&8\end{vmatrix}}&=(3)(8)-(2)(5)=14\end{aligned}}}
+
+
+,
+
+
+detB=−9(−13)+1(14)=131.{\displaystyle \det B=-9(-13)+1(14)=131.}
+
+
+, We want to verify that this process works by obtaining the same value for the determinant.
+ Pay attention to signs.
+
+The second entry in our column is a 0, so don't calculate the determinant of its minor!
+
+
+detB=5|9129|+8|3491|{\displaystyle \det B=5{\begin{vmatrix}9&1\\2&9\end{vmatrix}}+8{\begin{vmatrix}3&4\\9&1\end{vmatrix}}}
+
+
+,
+
+
+|9129|=(9)(9)−(2)(1)=79|3491|=(3)(1)−(9)(4)=−33{\displaystyle {\begin{aligned}{\begin{vmatrix}9&1\\2&9\end{vmatrix}}&=(9)(9)-(2)(1)=79\\{\begin{vmatrix}3&4\\9&1\end{vmatrix}}&=(3)(1)-(9)(4)=-33\end{aligned}}}
+
+
+,
+
+
+detB=5(79)+8(−33)=131.{\displaystyle \det B=5(79)+8(-33)=131.}
+
+The determinant obtained in Example 2 is the same as in Example 1. Notice the slightly more difficult arithmetic in Example 2, however. This reflects our choice of row/column, with such numbers as 5 and 8 multiplying by inconveniently large determinants.
+ Look for rows or columns that are nearly the same as each other, or not quite a linear combination of the others.
+ Column reduction applies here because the determinant does not prefer either. 
+
+Beware that row/column reduction may change the determinant of a matrix. For example, replacing a column with a multiple of itself causes the determinant to change by that multiple, so multiplying by the reciprocal is needed to compensate. Swapping any two rows or columns will negate the determinant.
+ The same process used to find the determinant of a 3x3 matrix also generalizes to higher dimensions. However, this process is long-winded and inefficient for hand calculations - even a 4x4 matrix requires 3x3 minors, which requires 2x2 minors as well. However, textbook problems that ask you to find the determinant of higher dimension matrices may have the properties outlined in step 1 of the section. Therefore, if you are clever with your reduction process, you may obtain a matrix that is easy to calculate the determinant of. 
+,
+
+
+B=(27−586622414−1014341−1){\displaystyle B={\begin{pmatrix}2&7&-5&8\\6&6&2&2\\4&14&-10&14\\3&4&1&-1\end{pmatrix}}} 
+
+If we are naive about calculating the determinant of this matrix, we would simply choose any row or column (most likely the first row) and expand by minors twice. However, notice that the third row is almost a multiple of the first row, and the fourth row is almost a multiple of the second row. 
+
+
+, Perform the row operations R3→R3−2R1{\displaystyle R_{3}\to R_{3}-2R_{1}} and R4→2R4−R2.{\displaystyle R_{4}\to 2R_{4}-R_{2}.}
+
+
+detB=12|27−586622000−2020−4|{\displaystyle \det B={\frac {1}{2}}{\begin{vmatrix}2&7&-5&8\\6&6&2&2\\0&0&0&-2\\0&2&0&-4\end{vmatrix}}} 
+
+While row-reducing, we replaced row 4 with twice itself, minus a linear combination of the other rows (here, just row 2). The determinant of the matrix then doubles, and thus, we must multiply by a half to compensate. 
+
+
+, The entries in rows 2-4 can all be divided by 2. By factoring out a 2 from each row, the determinant of the matrix is halved, so write a factor of 2 on the outside to compensate. Since we divided three rows by 2, there will be a factor of 8.
+
+
+detB=12(8)|27−583311000−1010−2|{\displaystyle \det B={\frac {1}{2}}(8){\begin{vmatrix}2&7&-5&8\\3&3&1&1\\0&0&0&-1\\0&1&0&-2\end{vmatrix}}} 
+
+
+, Our row-reduction has allowed us to "climb down the steps" to a more manageable matrix. Pay attention to the sign. 
+
+
+detB=(4)(−(−1))|27−5331010|{\displaystyle \det B=(4)(-(-1)){\begin{vmatrix}2&7&-5\\3&3&1\\0&1&0\end{vmatrix}}} 
+
+
+, 
+
+
+detB=4(−1)|2−531|{\displaystyle \det B=4(-1){\begin{vmatrix}2&-5\\3&1\end{vmatrix}}}
+
+
+,
+
+
+|2−531|=17,{\displaystyle {\begin{vmatrix}2&-5\\3&1\end{vmatrix}}=17,} so
+
+
+detB=4(−17)=−68.{\displaystyle \det B=4(-17)=-68.}
+
+

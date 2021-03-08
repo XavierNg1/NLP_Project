@@ -1,0 +1,12 @@
+ You'll still have to somehow determine the correct order, but knowing exactly which digits appear in that row is a great start.
+
+
+Triangular numbers: 3 in 2 cells, 6 in 3, 10 in 4, 15 in 5, 21 in 6, 28 in 7, 36 in 8, and 45 in 9.
+Triangular numbers plus one: 4 in 2, 7 in 3, 11 in 4, 16 in 5, 22 in 6, 29 in 7, and 37 in 8.
+45 minus triangular numbers: 45 in 9, 44 in 8, 42 in 7, 39 in 6, 35 in 5, 30 in 4, 24 in 3, and 17 in 2
+44 minus triangular numbers: 43 in 8, 41 in 7, 38 in 6, 34 in 5, 29 in 4, 23 in 3, and 16 in 2.;
+, For example, suppose a 23 in 3 intersects a 28 in 7. The 23 in 3 can only be 6 + 8 + 9. The 28 in 7 can only be 1 + 2 + 3 + 4 + 5 + 6 + 7. The only digit in common is a 6, so that must be in the intersection.
+ The triangular numbers are again critical for this step. For example, there are several ways to get 27 in 4, but none of them can use a 1 or a 2 (since the maximum for the other 3 digits is 7 + 8 + 9 = 24) and all need a 9 (since 5 + 6 + 7 + 8 = 26).
+ For example, if the above 27 in 4 crossed a 7 in 3, we could conclude that the cell in the intersection contained a 4. That also implies that the 27 is 4 + 6 + 8 + 9.
+, Although you might not be able to say much about a 20 in 5 initially, once you learn that that row contains a 9, then it looks like a 11 in 4 and therefore must be 20 = 1 + 2 + 3 + 5 + 9.
+

@@ -1,0 +1,109 @@
+,
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show gridlines and set all boxes below that to auto or checked.
+In Chart, allow Show chart names and set Data markers on hover and leave the rest unchecked for now.
+In Calculation, Make sure Automatically and Calculate before save are checked. Set max change to .000,000,000,000,01 without commas as goal-seeking is done a lot. Check Save external link values and Use 1904 system
+
+In Error checking, check all the options.
+In Save, select Save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ Edit Go To cell range A1:H2912 and Format Cells Number Number Decimal Places 4, Font Size 9 or 10,, Insert New Comment "This controls the ring size." Format cell Fill yellow, Border red bold outline.
+Select cell range A1:E2 and Insert Name Create Names in Top Row, OK.
+F2: "=2^6*3*PI()*103" w/o quotes, which equates to Tip's value.
+A3:: Tip
+B3: Base
+C3: Spheroids
+D3: ShrinkExpand
+E3 103 and Format Cell Number Number Decimal Places 0. Format cell Fill yellow, border red bold outline. Insert New Comment "Primes that work up to 107 are: (1),13,17,(29),(31),43,47,(59),(61),73,77, (89),(91),103,107 and -1 turns the other way … as does 107, with parentheticals having only half the turns or so ...823 and 827 are good, as are 1037, 4813.  This is the pattern: 13, 17 + 30 = 43,47 + 30 = 73, 77 + 30 = 103, 107 ... 13, 17 - 30 = -17, -13 which are both good!! So ±13±30n or ±17±30n, n={0,1,2,3,...}. Other primes and non-primes yield interesting results, but they're not spheres."
+F3: Prime
+Select cell range E3:F3 and Insert Name Create Names in Right Column, OK.
+A4: "=2^6*3*PI()*Prime" w/o quotes
+B4: "=2^4*Prime" w/o quotes
+C4: 24 and Format Cell Fill Light sky blue.
+D4: .5 and Format Cell Fill yellow
+Select cell range A3:D4 and Insert Name Create Names in Top Row, OK.
+
+Command + Select cell range A1:H1, A3:D3, A5:H5, E4:H4 and F3:H3 and Format Cell Fill White Font Electric Purple Bold. Select cell range A5LH5 and Format Cells underline. Select cell range C4, E2:E3, F2, E4:H5 and Format Cell Font Size 14.
+
+Edit Go To cell range A7:A2886 and enter to A7 w/o quotes the formula "=((A6+(-Tip*2)/(AjRows)))" and Edit Fill Down. The bottom entry should match the top one, except that it's negative.
+B6: "=(Base*24/Spheroids)" w/o quotes and Format cell Fill light rose.
+Edit Go To cell range B7:B2886 and enter to B7 w/o quotes the formula "=A6" and Edit Fill Down.
+Edit Go To cell range C6:C2886 and enter to C6 w/o quotes the formula "=Thickness*Spheroids/KEY*(COS((ROW()-6)*PI()/180*Factor1))" and Edit Fill Down.
+Edit Go To cell range D6:D2886 and enter to D6 w/o quotes the formula "=Thickness*Spheroids/KEY*(SIN((ROW()-6)*PI()/180*Factor1))" and Edit Fill Down.
+Edit Go To cell range E6:E2886 and enter to E6 w/o quotes the formula "=((SIN(A6/(B6*2))*GM*COS(A6)*GM*(COS(A6/(B6*2)))*GM)+C6)/ShrinkExpand" and Edit Fill Down.
+Edit Go To cell range F6:F2886 and enter to F6 w/o quotes the formula "=((SIN(A6/(B6*2))*GM*SIN(A6)*GM*(COS(A6/(B6*2)))*GM)+D6)/ShrinkExpand" and Edit Fill Down.
+The results in C2886:F2886 should match C6:F6.
+ Edit Go To cell range K6:K2180 and enter 1 into cell K6. Do Edit Fill Series Column Linear Step Value = 1, OK. Edit Go To cell range L6:L180 and enter .125 into L6 and Edit Fill Down. Edit Go To cell range M5:M180 and enter 0 to cell M5. Do Edit Fill Series Column Linear Step Value =   0.004166667, OK. Edit Go To cell range K6:M180 and Insert Name Define Name LOOKER to cell range $K$6:$M$180. Format Border red bold outline..
+Enter LOOKER2 into cell O5. Edit Go To cell range O6:O29 and enter 1 into cell O6. Do Edit Fill Series Column Linear Step Value = 1, OK. Edit Go To cell range P6:P29 and enter the following values from top to bottom: P6: 24, 16, 8, 4, =PI(), =PI(), =PI(), 2 from P13 to P21 and 1 from P22 to P29 via Edit Fill Down. Edit Go To cell range O6:P29 and Insert Name Define Name LOOKER2 to cell range $O$6:$P$29. Format Fill yellow and Border red bold outline.
+ Select All/Other, and scroll down to  Scatter Smooth Lined Scatter. If in Chart Wizard, a new Chart sheet will open for you, otherwise, a Chart will land atop the data to cut or copy and paste to the Chart worksheet's upper left hand corner. Hover over the lower right corner until the cursor become a double-headed arrow, then grab the corner and pull it down and to the right to form a square. Click in the Plot Area and select Chart Layout from the Ribbon and get rid of the axes, grid lines and legend. Resize the chart to be 5.55" x 5.55" and drag it to the center of the page. Select Chart Layout Series 1 and choose Line Color blue, Weight 1. Here's the chart:
+
+
+
+
+
+
+, Select All/Other, and scroll down to  Scatter Smooth Lined Scatter. If in Chart Wizard, a new Chart sheet will open for you, otherwise, a Chart will land atop the data. Move it to the right and format the scales as follows. Horizontal Minimum=.65, Maximum=1.35, Major Unit = .35, Vertical axis crosses at .65. Vertical: Minimum = -1.25, Maximum=.625, Major unit=.075, Horizontal Axis crosses at 0.0 I realize this cuts a shade off the top and that's pertinent. The spheroids should appear as fairly good spheres once you size the graph to be W= 4.92" x L = 5.5". Select Chart Layout Series 1 and choose Line Color blue, Weight 1. Here's the chart:
+
+
+
+
+
+
+, To create the Method2 spreadsheet, do menuitem Edit Move or Copy Sheet, with the Create a copy box checked, before sheet Chart and after sheet Data, to the same workbook, make a copy of the Data worksheet just done and title it Data (2) if not done so automatically. I may refer to this worksheet as the Method2 worksheet, instead of Data(2) -- both terms refer to the same sheet., Done away with are Thickness and KEY.
+Sin: Edit Go To cell range D6:D2886 and enter to D6 w/o quotes the formula "=(SIN((ROW()-6)*PI()/180*Factor1))" and Edit Fill Down. Done away with are Thickness and KEY.
+The results in C2886:F2886 should match C6:F6.
+ Here is a picture:
+
+B1: Change GM to GM=Other
+B2: Enter .75 (a lucky guess on my part but .8 works, and .1 does not).
+A4: Enter "=Base*12*PI()" w/o quotes
+B4: Enter "=16*103"w/o quotes
+F3: Delete the word Prime. Copy F3 and paste it to D1:E2, then to E3.
+Command Select A1:F1, F2, A3:F3, E3:H3, A5:H5 and Format Font red. Select A5:H5 and Format underline. Command + Select F2, E4:H5 and do Font Size 14.
+G1: Enter 2880, the number of rows (approx).
+H1: Enter "=Spheroids" w/o quotes
+G2: Enter Rows/Sphere
+H2: Enter "=G1/H1" w/o quotes
+
+,
+Copy G6 and paste it to cell range G6:H2886.
+Select cell G2887 and enter w/o quotes "=SUM(G6:G2886)" and copy it and paste it to H2887. My results are 0 and 0 and yours should be too, though there are plenty of individual differences in the cells above. However, a MAX() formula informs one that the largest difference is .0251 for x and .025 for y.
+ Select All/Other, and scroll down to  Scatter Smooth Lined Scatter. If in Chart Wizard, a new Chart sheet will open for you, otherwise, a Chart will land atop the data to cut or copy and paste to the Chart worksheet's upper left hand corner. Hover over the lower right corner until the cursor become a double-headed arrow, then grab the corner and pull it down and to the right to form a square. Click in the Plot Area and select Chart Layout from the Ribbon and get rid of the axes, grid lines and legend. Resize the chart to be 5.55" x 5.55" and drag it to the center of the page. Select Chart Layout Series 1 and choose Line Color red, Weight 1. Here's the chart:
+
+
+
+
+
+
+, Select All/Other, and scroll down to  Scatter Smooth Lined Scatter. If in Chart Wizard, a new Chart sheet will open for you, otherwise, a Chart will land atop the data. Move it to the right and format the scales as follows. Horizontal Minimum=.65, Maximum=1.35, Major Unit = .35, Vertical axis crosses at .65. Vertical: Minimum = -1.25, Maximum=.625, Major unit=.075, Horizontal Axis crosses at 0.0 I realize this cuts a shade off the top and that's pertinent. The spheroids should appear as fairly good spheres once you size the graph to be W= 4.92" x L = 5.5". Select Chart Layout Series 1 and choose Line Color red, Weight 1. Here's the chart:
+
+
+
+
+
+
+, In cell G45, enter "=SUM(E6:E45)-SUM('Data (2)'!E6:E45)". Copy it and paste it to cell H45 and select G45:H45 and Format Cell Border Border red outline.
+Copy E6:H45 and paste it to E46. Select E86 and paste it again. Select E126 and paste again.
+Command+Select cell range E46:F85, G85:H85 and Format Fill yellow and Border red bold outline. Command+Select cell range E86:F125, G125:H125 and Format Fill light blue and border red bold outline.
+Copy E6:H125 and paste to E127 and repeat this process until you've reached down to cell H2885, grabbing larger and larger chunks done to copy and paste as your go, bearing in mind that at 1445, you're at the midpoint. Outline the final row in bold red.
+F2887, aligned right: TOTAL DIFFERENCE. Enter to G2887 "=SUM(G6:G2886)" and copy and paste to to H2887. Totals = 0 and 0.
+Re-split the window above Total Difference, with room for 24 row entries beneath it. Do not freeze panes.
+E2888: Sphere Number
+F2888: Sphere Subsection
+H2888, aligned right, bold red text: THE PATTERN:
+E2889: Enter 1 and Format Cell Number Number Custom "00)" with quotes.
+E2892 and every 3rd cell below it until Sphere 8 is reached: Enter "=E2889+1" and copy this to every third cell beneath it.
+F2889: Enter 1 and Format Cell Custom as above, "00)". F2890: Enter 2. F2891: Enter 3. These are the the 3 sections of each sphere. Copy F2889 and Paste Special Format to cell range F2890:F2891. Copy F2889:F2891 and paste it 7 times beneath itself so that the first 8 spheres have their beginning, middle and end separated.
+G2889: Enter "=G45" by entering = and then locating the subtotal in the upper window in cell G45 and clicking on it. Do this for each such subtotal, separated by 40 rows, so you cannot just fill down.
+Observe THE PATTERN that emerges and how the the spheres are directionally shifted in terms of x and y back and forth.
+
+Do menu item Tools Goal seek Set Cell I2891 To Value 0 By changing cell, and then click over to worksheet Data (2) cell B2 and select it, so you have 'Data (2)'!$B$2 as the By changing cell response, and click OK.
+Relocate to THE PATTERN at worksheet Data cell H2888 and notice that ALL the Y's have gone to zero, and perhaps all the X's as well. I've seen both occur.
+Check the all the charts and observe the differences in roundness, spread, etc.
+It may just be that 0.778674031976484 is a better overall factor to use than the Golden Mean.
+See below for the final charts.
+ So the result is a circle.,, Suffice it to say that it multiplies the sine by the cosine and again by a cosine, or the sine by the sine and then by the cosine, of various values -- be they constants or variables. Now the sine of an angle, given r=the hypotenuse, is y/r, and the cosine of an angle is x/r. If we let r=1, then sine = just the distance up the y axis and the cosine = just the distance along the horizontal x axis., At first, x is longer than y is tall. Then, at 45 degrees, both are equal. Then at 60 degrees, the roles are the exact reverse of what they were at 30 degrees and y is now taller than x is short by exactly the amount that x was longer than y at 30 degrees. So, therefore, in a circle, if the sine is long, the cosine is short and vice versa, or they're even. It's also possible that they measure 1 or 0, but those are the maximum and minimum values for a unit circle of radius r = the hypotenuse = 1.,, Then the sine times the cosine produces a rectangle, the diagonal of which is the radius! I get it! I'm a genius!" ... it's not quite that simple, and yet it is also exactly that simple at the same time. It's just that the sine times the cosine do not define the endpoint of that diagonal when multiplied together, any more than 4*6 = 24 says anything about the point {4, 6} at the corner of the rectangle. Seems unfair, I know! I can sympathize, believe me. But you are a genius perhaps if you can agree that their multiplication as their values change produces the sequence (0, .25, .50, .25, 0, -.25, -.50, -.25, 0, .25, .50, .25, 0, -.25, -.50. -.25, 0)!!!, Because at 45 degrees, the sine and cosine = 1/2 the square root of .5, or .7071, and so there are 4 occurrences of .50 (2 positive and 2 negative), because there are 4 places on the circle where the sine and cosine are equidistant from the x and y axes. The .25's occur at each 15 degrees and there are 8 of those, two on either side of a .50. Then, there are 5 zeros: at 0 degrees, 90 degrees, 180, 270 and 360 degrees. Of course there are a lot of other values in between the 0 and the .25 and the .50, etc, etc., but that is the main way to understand it. This is then a "half-curve", relatively speaking., But if they are MULTIPLIED, they will equal at most .50 and at least, -.50,,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

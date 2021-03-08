@@ -1,0 +1,86 @@
+ But Excel only accepts x values first in the left most column, then however many dependent y variable columns one wants. However, Excel allows one to reverse the columns when charted, so that it all works out for cases like this one in which x is the dependent variable. We will be using tricks like taking the standard formula for a line, y = mx + b, and standing it on its head to become x = mP +b where P=y; we can do so because the dependent and independent variable have exchanged roles. Open the Excel workbook from the previous article, How to Find and Analyze Demand Function Curve and access the Demand Curves worksheet, or open a new workbook and create the worksheet afresh.
+ Here's a picture of what all the beginning Column Headings look like:
+
+Into cell B1, enter Factor in font red, aligned center. Into cell C1, enter 1 and Format Cell Fill Yellow, aligned center, Insert Name Define Name Factor to cell $C$1.
+Into cell C2, enter 5 STRAIGHT LINE DEMAND CURVES, aligned left. Insert New Comment: "X = ap + b where p=Y. This is inverse of the normal linear function and means that Demand is a function of Price, where price is graphed in the normal y vertical axis, i.e. f(y) = Dx. The b is the x intercept, not the y intercept. Slope a is Rise/Fall in Price P=Y over Run in Units Demanded, X, but this is multiplied by y=p to produce units x after adding in the x intercept b. The x-intercept embodies all non-price related info about Unit Demand because it occurs where Price = 0 and the Supply of Unit Demand is at a maximum."
+Into cell A3, enter Y = p and copy this and paste it to cell B3. p = price.
+Into cell B2, enter Factored and do Format Cells for cell range B2:B3 Border black bold outline, aligned center.
+Select Row 3 and align center. Select C3:G3 and Format Font blue.
+Into cell C3, enter X1=-4p+120
+Into cell D3, enter X2=-20p+100
+Into cell E3, enter X3=-4p+100
+Into cell F3, enter X4=-.3p+8
+Into cell G3, enter X5=-10/3p+100
+
+,
+
+Copy cells B2:B3 and paste them to cells H2:H3.
+Enter to I2 2 Pressured DEMAND CURVES and Insert New Comment: "The 'pressures' that create the curves are discussed in the TIPS section of the wikiHow article, 'How to Recognize a Demand Curve Among Standard Types', and are the same factors that shift demand inwards and downwards, price-wise."
+Into cell I3, enter X6=50/(p-10)
+Into cell J3, enter X7=100/(p-15)
+
+,
+
+Copy cells H2:H3 and paste them to cells K2:K3.
+Enter to L2 4 Pressured DEMAND CURVES WITH MINIMUM SUPPLY and Insert New Comment: "The 'pressures' that create the curves are discussed in the TIPS section of the wikiHow article, 'How to Recognize a Demand Curve Among Standard Types', and are the same factors that shift demand inwards and downwards, price-wise. For this group of curves, three also have a minimum Supply of Unit Demand, i.e. X8, X10 and X11. Raising p to the power of an increasing price, especially when it's in the denominator, has the effect of heightening vertical price sensitivity, making it more steep per not much change in units demanded at certain particular levels of overall demand."
+Into cell L3, enter X8=100*(0.9^p)
+Into cell M3, enter X9=80*(.85^p)
+Into cell N3, enter X10=60/sqrt(p+1)
+Into cell O3, enter X11=60/sqrt(p+1)^.5
+
+,
+Into cell range B4:B74, enter into cell B4 the formula w/o quotes "=A4*Factor" and do Edit Fill Down.
+Into cell range C4:C74, enter into cell C4 the formula w/o quotes "=IF(-4*p+120>0,-4*p+120,0)" and do Edit Fill Down.
+Into cell range D4:D74, enter into cell D4 the formula w/o quotes "=IF(100-20*p>0,100-20*p,0)" and do Edit Fill Down.
+Into cell range E4:E74, enter into cell E4 the formula w/o quotes "=IF(-4*p+100>0,-4*p+100,0)" and do Edit Fill Down.
+Into cell range F4:F74, enter into cell F4 the formula w/o quotes "=IF(-0.3*p+8>0,-0.3*p+8,0)" and do Edit Fill Down.
+Into cell range G4:G74, enter into cell G4 the formula w/o quotes "=IF(-10/3*p+100>0,-10/3*p+100,0)" and do Edit Fill Down.
+Locate the first zero in each of the 5 Demand Curve columns, C:G, and delete all the zeroes beneath it by doing Edit Clear Contents on the selected cell ranges. Leave the first zero as it indicates where the y-intercept of price p is, approximately.
+Into cell range H4:H74, enter into cell H4 the formula w/o quotes "=B4" and do Edit Fill Down.
+Into cell range I4:I74, enter into cell I4 the formula w/o quotes "=IF(50/(p-10)>0,50/(p-10),0)" and do Edit Fill Down.
+Into cell range J4:J74, enter into cell J4 the formula w/o quotes "=IF(100/(p-15)>0,100/(p-15),0)" and do Edit Fill Down.
+Locate the top zero in each of the 2 Demand Curve columns, I:J, and delete all the zeroes and error values beneath it by doing Edit Clear Contents on the selected cell ranges.
+Into cell range K4:K74, enter into cell K4 the formula w/o quotes "=B4" and do Edit Fill Down.
+Into cell range L4:L74, enter into cell L4 the formula w/o quotes "=100*(0.9^p)" and do Edit Fill Down.
+Into cell range M4:M74, enter into cell M4 the formula w/o quotes "=80*(0.85^p)" and do Edit Fill Down.
+Into cell range N4:N74, enter into cell N4 the formula w/o quotes "=60/SQRT(p+1)" and do Edit Fill Down.
+Into cell range O4:O74, enter into cell O4 the formula w/o quotes "=60/SQRT(p+1)^0.5" and do Edit Fill Down.
+Should you change the factor, the formulas will need to be re-copied and the zeroes and error values eliminated again.
+, These will come out with Y=price on the x-axis bottom and Units Demanded or Sold along the vertical axis, which is the opposite of normal for Economics.
+Click on one series, and do menu item Chart Source Data, and exchange the column values for the X and Y values. For example, for Series X1=-4p+120, the X-values need to end up reading as "='Demand Curves'!$C$4:$C$74" (w/o quotes) and the Y-values need to read as "='Demand Curves'!$B$4:$B$74" after exchanging C's and B's. Do this for all the series listed at left, X1 to X5. Show empty cells as Gaps.
+Do Chart Layout and fill in the Chart Titles and Vertical and Horizontal Axes Labels as per the picture above.
+Repeat the above process for the other two Demand Function Curve Types.
+Copy a picture with the shift key depressed of the top 8 rows or so of the data section of the worksheet and all of each chart and paste picture with the shift key of them to the Saves worksheet.
+
+
+Copy cells B2:B3 and paste them to cells B80:B81.
+Into cell C80, enter Multi-Variable Demand Function Curve and Insert New Comment: "The 'pressures' that create this curve are discussed in the TIPS section of the wikiHow article, 'How to Recognize a Demand Curve Among Standard Types', and are the same factors that shift demand inwards and downwards, price-wise. For this curve, X12, it also has a minimum Supply of Unit Demand. Raising p to the power of an increasing price, especially when it's in the denominator, has the effect of heightening vertical price sensitivity, making it more steep per not much change in units demanded at certain particular levels of overall demand. This product's curve has an x intercept at about 130 units sold/demanded for $0 price which means this product can be sold in very small price units for relatively large quantities."
+Into cell C81, enter X12=60/SQRT(p+3)+95*(0.86^p)
+
+,
+Edit Go To cell range C82:C152 and enter to C82 the formula w/o quotes "=60/SQRT(p+3)+95*(0.86^p)" and Edit Fill Down.
+ These will come out with Y=price on the x-axis bottom and Units Demanded or Sold along the vertical axis, which is the opposite of normal for Economics.
+Click on the series, and do menu item Chart Source Data, and exchange the column values for the X and Y values. For example, for Series X12=60/SQRT(p+3)+95*(0.86^p), the X-values need to end up reading as "='Demand Curves'!$C$82:$C$152" (w/o quotes) and the Y-values need to read as "='Demand Curves'!$B$82:$B$152" after exchanging C's and B's. Show empty cells as Gaps.
+Do Chart Layout and fill in the Chart Titles and Vertical and Horizontal Axes Labels as per the picture above.
+Copy a picture with the shift key depressed of the top 8 rows or so of the data section of the 4th Demand Curve type and all of the chart and paste picture with the shift key of them to the Saves worksheet.
+
+
+Copy cells B2:B3 and paste them to cells B158:B159. Edit factored to read UNfactored.
+Enter to cell C158 Quadratic Demand Function With Outward Sloping Curve and Insert New Comment: "The 'pressures' that create this curve are discussed in the TIPS section of the wikiHow article, 'How to Recognize a Demand Curve Among Standard Types', and are the same factors that shift demand outwards and upwards, price-wise. For this curve, X13, it also has a minimum Supply of Unit Demand. Raising - decimal p to the power of an increasing price, especially when it's in the denominator, has the effect of desensitizing vertical price adjustments, making it less steep per not much change in units demanded at certain particular levels of overall demand. This product's curve has an x intercept at about 600 units sold/demanded for $0 price which means this product can be sold in very small price units for relatively large quantities."
+Enter to cell C159 X13=-.01p^2-.03p+600
+
+,, These will come out with Y=price on the x-axis bottom and Units Demanded or Sold along the vertical axis, which is the opposite of normal for Economics.
+Click on the series, and do menu item Chart Source Data, and exchange the column values for the X and Y values. For example, for Series X13=-.01p^2-.03p+600, the X-values need to end up reading as "='Demand Curves'!$C$160:$C$230" (w/o quotes) and the Y-values need to read as "='Demand Curves'!$B$160:$B$230" after exchanging C's and B's. Show empty cells as Gaps.
+Do Chart Layout and fill in the Chart Titles and Vertical and Horizontal Axes Labels as per the picture above.
+Copy a picture with the shift key depressed of the top 8 rows or so of the data section of the 5th Demand Curve type and all of the chart and paste picture with the shift key of them to the Saves worksheet.
+Final Image:
+
+
+
+
+
+
+
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

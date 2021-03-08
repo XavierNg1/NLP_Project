@@ -1,0 +1,19 @@
+ All we want is it to beep. If there is a beep, then it's not dead, but has problems. There is no need to complicate the situation further with various cards in the system. We do not need any cards or memory in the system to hear a beep. All we need is the CPU inserted and a working speaker connected to the board. *The orientation of the speaker does not make a difference.;
+,, It is of course very important to determine that the speaker works before hand if possible and that it is hooked up correctly. If beeps are heard at any time, reinsert the RAM. If long beeps that repeat forever are heard, the RAM is most likely either bad or at least incompatible with the board. If there is a long beep is followed by a few short beeps, then reinsert the Video Card. If the same beeps are heard, make sure the video card is in all the way or try another card. Nirvana is reached when only the short, single POST beep is heard. At this point the board should be running normally.
+
+
+
+
+Check the jumper settings. If the bus runs at 100Mhz, 133Mhz, etc. try a slower bus speed to see if that produces a beep. Try the "auto" setting if applicable rather than specifying a particular bus speed. Set the multiplier to a slower speed such as 2.5.
+Check the voltage settings for Socket 7 CPUs.
+Check the CPU for bent or broken pins or damaged contacts.
+Reset the CPU. Take the CPU out and reinsert it, making sure it seats well.
+Try another CPU if possible. At this point, we just want a beep. It is unlikely that the CPU is bad, but if another one is handy, try that to see if a beep is heard.
+If the board is an ATX design, remove AC power from the power supply, unhook the power supply cable from the board, reinsert it and apply AC power to the power supply again.
+At this point, if the system is in a case, take the board out and try it on a test bench setup, anti-static bag on top of case, etc. to check for grounding problems.
+If possible, try a different Power Supply. Even if the power supply runs and the fan spins, etc. it could still have a problem.
+If the board is still dead, if possible, try another mainboard. Does it work with the same CPU, Power Supply, etc?
+If none of the above produce a beep, we have hit a wall. There is little else to try to the board may in fact be DOA.
+
+
+

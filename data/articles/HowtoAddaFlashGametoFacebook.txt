@@ -1,0 +1,25 @@
+ You should be familiar with navigating Facebook and using Facebook markup language (FBML) already, if you plan to use its Developer site.;
+, Go to https://developers.facebook.com/apps In the upper right corner it should say "Register as a Developer."
+
+, You will need to fill out 3 sections: terms and conditions, information about yourself and your integration page. The integration page will allow you to build how you want to interact with the Facebook website.
+ Click the option to "Set up New Application."
+
+, This will include everything from its name to its appearance on Facebook to applicable websites associated with the game. Click the "Submit" button when you are done.
+
+
+One of the important things you must specify in this section is the "Callback URL." This is your website where the game is hosted. You will need to work with the Callback URL server to link it to Facebook later on.
+ It should include all of the information you just typed.
+ You must do this in order to be part of Facebook's application/product directory.
+, This is located at https://developers.facebook.com/preferredmarketingdevelopers/resources/.
+, Uncompress the PHP (4 and 5) Client Library.
+ You will need to insert several lines of code in order for the Facebook flash game to work properly. The following items should be included:
+
+
+Instruct the site not to display errors.
+Include the facebook.php file you just downloaded from the Resource Center.
+Create a new Facebook class. This should include your API key and secret values.
+Make the user sign into their Facebook account.
+Add your first Facebook markup language tag. Add "fb:name" to add the name of the user.
+Add the FBML tag for a flash movie. This is "fb:swf." Specify your flash attributes in these lines of code as well.
+ You may need to return to your Callback URL to fix errors.
+

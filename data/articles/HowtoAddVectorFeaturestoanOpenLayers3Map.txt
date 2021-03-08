@@ -1,0 +1,124 @@
+ Simply copy the following line of code into your <script></script> element:.
+
+
+
+
+var point_feature = new ol.Feature({ });
+
+
+;
+, To tell OpenLayers where to place the point, you need to create a geometry and give it a set of coordinates, which is an array in the form of . The following code creates this and set's the point's geometry:
+
+
+
+
+var point_geom = new ol.geom.Point(
+  );
+point_feature.setGeometry(point_geom);
+
+
+
+
+, Line strings are straight lines broken into segments. We create them just like points, but we provide a pair of coordinates for each point of the line string:
+
+
+
+
+var linestring_feature = new ol.Feature({
+  geometry: new ol.geom.LineString(
+    , , ]
+  )
+});
+
+
+
+
+, To add the features to the map, you need to add them to a source, which you add to a vector layer, which you can then add to the map:
+
+
+
+
+var vector_layer = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    features: })
+})
+map.addLayer(vector_layer);
+
+
+
+
+, We start by putting the features we want to transform together into an array that we can iterative through.
+
+
+
+
+var features = [
+  point_feature, 
+  linestring_feature
+];
+
+
+
+
+, In OpenLayers, we can use the transform() function on the geometry object of each feature. Put this transform code into a function that we can call later:
+
+
+
+
+function transform_geometry(element) {
+    var current_projection = new ol.proj.Projection({code: "EPSG:4326"});
+    var new_projection = tile_layer.getSource().getProjection();
+ 
+    element.getGeometry().transform(current_projection, new_projection);
+  );
+}
+
+
+
+
+, Now simply iterate through the array.
+
+
+
+
+features.forEach(transform_geometry);
+
+
+
+
+, Create a fill style object and a semi-transparent red colour, and a stroke (line) style that is a solid red line:
+
+
+
+
+var fill = new ol.style.Fill({
+  color: });
+ 
+var stroke = new ol.style.Stroke({
+  color: ,
+  width: 1
+});
+
+
+
+
+, The OpenLayers style object is quite powerful, but we're only going to set the fill and stroke for now:
+
+
+
+
+var style = new ol.style.Style({
+  image: new ol.style.Circle({
+    fill: fill,
+    stroke: stroke,
+    radius: 8
+  }),
+  fill: fill,
+  stroke: stroke
+});
+vector_layer.setStyle(style);
+
+
+
+
+,

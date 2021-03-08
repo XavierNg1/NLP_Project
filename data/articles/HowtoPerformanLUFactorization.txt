@@ -1,0 +1,91 @@
+ Fundamentally, a system of equations can be written in terms of a matrix equation Ax=b,{\displaystyle A{\mathbf {x} }={\mathbf {b} },} where matrix A{\displaystyle A} acts on a vector x{\displaystyle {\mathbf {x} }} to output another vector b.{\displaystyle {\mathbf {b} }.} It is often the case that we wish to know x,{\displaystyle {\mathbf {x} },} and this is no exception. In LU factorization, we will see that we can define the relation A=LU,{\displaystyle A=LU,} where L{\displaystyle L} and U{\displaystyle U} are both triangular matrices.
+
+
+(241−113325)x=(217){\displaystyle {\begin{pmatrix}2&4&1\\-1&1&3\\3&2&5\end{pmatrix}}{\mathbf {x} }={\begin{pmatrix}2\\1\\7\end{pmatrix}}}
+;
+, The row-echelon form will become our matrix U.{\displaystyle U.}
+
+
+R2→2R2+R1, R3→2R3−3R1{\displaystyle R_{2}\to 2R_{2}+R_{1},\ R_{3}\to 2R_{3}-3R_{1}}
+
+
+(2410670−87){\displaystyle {\begin{pmatrix}2&4&1\\0&6&7\\0&-8&7\end{pmatrix}}}
+
+
+
+
+R3→3R3+4R2{\displaystyle R_{3}\to 3R_{3}+4R_{2}}
+
+
+(2410670049)=U{\displaystyle {\begin{pmatrix}2&4&1\\0&6&7\\0&0&49\end{pmatrix}}=U}
+
+
+
+The matrix is in row-echelon form now. 
+
+
+, This step may be a bit tricky at first, but we are essentially constructing a matrix by going backwards. 
+
+Let's look at the most recent row reduction R3→3R3+4R2.{\displaystyle R_{3}\to 3R_{3}+4R_{2}.} We found the new row 3 by replacing it with a linear combination of the old rows of the matrix. Now, we wish to find the old row 3, so simply solve.
+
+
+R3old→R3−4R23{\displaystyle R_{3}^{\text{old}}\to {\frac {R_{3}-4R_{2}}{3}}}
+
+
+
+This undoes the second row-reduction. Now, we put it in matrix form. Let's call this matrix S2.{\displaystyle S_{2}.} The column vector to the right simply clarifies what we are doing - this matrix we are constructing is a linear transformation that does the same thing as what we just wrote above. Observe that, since we didn't do anything to the top two rows, the resulting elements for the two rows in this matrix are the same as in the identity matrix. Only the third row changes.
+
+
+(1000100−4/31/3)(R1R2R3){\displaystyle {\begin{pmatrix}1&0&0\\0&1&0\\0&-4/3&1/3\end{pmatrix}}{\begin{pmatrix}R_{1}\\R_{2}\\R_{3}\end{pmatrix}}}
+
+
+
+Construct the matrix that undoes the first row-reduction. Similarly, we are solving for the old row 2 and 3. We'll call this matrix S1.{\displaystyle S_{1}.}
+
+
+R2old=R2−R12{\displaystyle R_{2}^{\text{old}}={\frac {R_{2}-R_{1}}{2}}}
+
+
+R3old=R3+3R12{\displaystyle R_{3}^{\text{old}}={\frac {R_{3}+3R_{1}}{2}}}
+
+
+S1=(100−1/21/203/201/2){\displaystyle S_{1}={\begin{pmatrix}1&0&0\\-1/2&1/2&0\\3/2&0&1/2\end{pmatrix}}}
+
+
+
+Multiply the S{\displaystyle S} matrices in the order that we found them. This means that S2S1=L.{\displaystyle S_{2}S_{1}=L.} If you did the multiplication correctly, you should get a lower triangular matrix.
+
+
+L=(100−1/21/203/2−4/61/6){\displaystyle L={\begin{pmatrix}1&0&0\\-1/2&1/2&0\\3/2&-4/6&1/6\end{pmatrix}}}
+
+
+
+
+, Now that we have both matrices, we can see below that L{\displaystyle L} acting on the vector Ux{\displaystyle U{\mathbf {x} }} outputs b.{\displaystyle {\mathbf {b} }.} 
+
+
+L(Ux)=b{\displaystyle L(U{\mathbf {x} })={\mathbf {b} }}
+
+Since Ux{\displaystyle U{\mathbf {x} }} is a vector, let y=Ux.{\displaystyle {\mathbf {y} }=U{\mathbf {x} }.} Then, we see that Ly=b.{\displaystyle L{\mathbf {y} }={\mathbf {b} }.} The goal here is to first solve for y,{\displaystyle {\mathbf {y} },} then plug into Ux=y{\displaystyle U{\mathbf {x} }={\mathbf {y} }} to solve for x.{\displaystyle {\mathbf {x} }.}
+
+
+, Because we are dealing with triangular matrices, back-substitution is the way to go. 
+
+
+Ly=(y1−12y1+12y232y1−23y2+16y3)=(217){\displaystyle L{\mathbf {y} }={\begin{pmatrix}y_{1}\\-{\frac {1}{2}}y_{1}+{\frac {1}{2}}y_{2}\\{\frac {3}{2}}y_{1}-{\frac {2}{3}}y_{2}+{\frac {1}{6}}y_{3}\end{pmatrix}}={\begin{pmatrix}2\\1\\7\end{pmatrix}}}
+
+
+y=(2440){\displaystyle {\mathbf {y} }={\begin{pmatrix}2\\4\\40\end{pmatrix}}}
+
+
+, This will again involve back-substitution, because U{\displaystyle U} is triangular.
+
+
+Ux=(2x1+4x2+x36x2+7x349x3)=(2440){\displaystyle U{\mathbf {x} }={\begin{pmatrix}2x_{1}+4x_{2}+x_{3}\\6x_{2}+7x_{3}\\49x_{3}\end{pmatrix}}={\begin{pmatrix}2\\4\\40\end{pmatrix}}}
+
+
+x=(57/49−2/740/49){\displaystyle {\mathbf {x} }={\begin{pmatrix}57/49\\-2/7\\40/49\end{pmatrix}}}
+
+Although this method may not seem very efficient to you (and indeed, LU factorization for systems of three equations is no better than row-reduction), computers are well-equipped to perform back-substitution, so the results really show as the number of equations goes up.
+
+

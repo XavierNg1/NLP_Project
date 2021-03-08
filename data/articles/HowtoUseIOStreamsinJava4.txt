@@ -1,0 +1,344 @@
+ Create a class that implements Serializable interface. Name the class however you'd like, but in this article we will name it WikiHowian.
+
+
+
+
+public class WikiHowian implements Serializable {
+ 
+}
+
+
+
+
+, Since WikiHowian class represents a person, we will create two String variables for first and last name and an int variable for age.
+
+
+
+
+public class WikiHowian implements Serializable {
+  private String firstName, lastName;
+  private int age;
+}
+
+
+
+
+, The constructor will contain firstName, secondName and age parameters, corresponding to the private variable types.
+
+
+
+
+public class WikiHowian implements Serializable {
+  private String firstName, lastName;
+  private int age;
+ 
+  public WikiHowian(String firstName, String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+}
+
+
+
+
+, Overriding toString will, later on, allow us to print the object to the console easily.
+
+
+
+
+public class WikiHowian implements Serializable {
+  private String firstName, lastName;
+  private int age;
+ 
+  public WikiHowian(String firstName, String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+ 
+  @Override
+  public String toString() {
+    return firstName + " " + lastName + ", " + age;
+  }
+}
+
+
+
+
+, You can add throws IOException, ClassNotFoundException declaration to the method signature to avoid adding the catch block to the try-with-resources block.
+
+
+
+
+public class WikiHowian implements Serializable {
+  private String firstName, lastName;
+  private int age;
+ 
+  public WikiHowian(String firstName, String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+ 
+  @Override
+  public String toString() {
+    return firstName + " " + lastName + ", " + age;
+  }
+ 
+  public static void main(String[] args) {
+ 
+  }
+}
+
+
+
+
+, Try-with-resources block will automatically close streams for us.
+
+
+
+
+public class WikiHowian implements Serializable {
+ 
+  private String firstName, lastName;
+  private int age;
+ 
+  public WikiHowian(String firstName, String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+ 
+  @Override
+  public String toString() {
+    return firstName + " " + lastName + ", " + age;
+  }
+ 
+  public static void main(String[] args) {
+    try () {
+ 
+    }
+  }
+}
+
+
+
+
+, In the constructor of the created input stream, create FileOutputStream and specify an arbitrary file name inside its constructor. In this article, we will name it file.txt.
+
+
+
+
+public class WikiHowian implements Serializable {
+ 
+  private String firstName, lastName;
+  private int age;
+ 
+  public WikiHowian(String firstName, String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+ 
+  @Override
+  public String toString() {
+    return firstName + " " + lastName + ", " + age;
+  }
+ 
+  public static void main(String[] args) {
+    try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("file.txt"))) {
+ 
+    }
+  }
+}
+
+
+
+
+, In the constructor of the created input stream, create a FileInputStream and specify file name from the previous step inside its constructor. In this article, we named it file.txt.
+
+
+
+
+public class WikiHowian implements Serializable {
+ 
+  private String firstName, lastName;
+  private int age;
+ 
+  public WikiHowian(String firstName, String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+ 
+  @Override
+  public String toString() {
+    return firstName + " " + lastName + ", " + age;
+  }
+ 
+  public static void main(String[] args) {
+    try (
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("file.txt"));
+        ObjectInputStream in = new ObjectInputStream(new FileInputStream("file.txt"))
+    ) {
+    }
+  }
+}
+
+
+
+
+, Choose first name, last name and age arbitrarily.
+
+
+
+
+public class WikiHowian implements Serializable {
+ 
+  private String firstName, lastName;
+  private int age;
+ 
+  public WikiHowian(String firstName, String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+ 
+  @Override
+  public String toString() {
+    return firstName + " " + lastName + ", " + age;
+  }
+ 
+  public static void main(String[] args) {
+    try (
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("file.txt"));
+        ObjectInputStream in = new ObjectInputStream(new FileInputStream("file.txt"))
+    ) {
+      WikiHowian wikiHowian = new WikiHowian("John", "Doe", 23);
+    }
+  }
+}
+
+
+
+
+, Exactly, you can write the complete object to the output stream. The object, as it implements Serializable interface, is serialized into ones and zeroes, and stored in the file.
+
+
+
+
+public class WikiHowian implements Serializable {
+ 
+  private String firstName, lastName;
+  private int age;
+ 
+  public WikiHowian(String firstName, String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+ 
+  @Override
+  public String toString() {
+    return firstName + " " + lastName + ", " + age;
+  }
+ 
+  public static void main(String[] args) {
+    try (
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("file.txt"));
+        ObjectInputStream in = new ObjectInputStream(new FileInputStream("file.txt"))
+    ) {
+      WikiHowian wikiHowian = new WikiHowian("John", "Doe", 23);
+      out.writeObject(wikiHowian);
+    }
+  }
+}
+
+
+
+
+, Same way the object was written to a file, we read it from the file and, thanks to overriding toString method, easily print it to the console.
+
+
+
+
+public class WikiHowian implements Serializable {
+ 
+  private String firstName, lastName;
+  private int age;
+ 
+  public WikiHowian(String firstName, String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+ 
+  @Override
+  public String toString() {
+    return firstName + " " + lastName + ", " + age;
+  }
+ 
+  public static void main(String[] args) {
+    try (
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("file.txt"));
+        ObjectInputStream in = new ObjectInputStream(new FileInputStream("file.txt"))
+    ) {
+      WikiHowian wikiHowian = new WikiHowian("John", "Doe", 23);
+      out.writeObject(wikiHowian);
+      System.out.println(in.readObject());
+    }
+  }
+}
+
+
+
+
+, Add a catch block to the try-with-resources block, catch IOException and ClassNotFoundException. In case of an error, print the stack trace to the console.
+
+
+
+
+public class WikiHowian implements Serializable {
+ 
+  private String firstName, lastName;
+  private int age;
+ 
+  public WikiHowian(String firstName, String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+ 
+  @Override
+  public String toString() {
+    return firstName + " " + lastName + ", " + age;
+  }
+ 
+  public static void main(String[] args) {
+    try (
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("file.txt"));
+        ObjectInputStream in = new ObjectInputStream(new FileInputStream("file.txt"))
+    ) {
+      WikiHowian wikiHowian = new WikiHowian("John", "Doe", 23);
+      out.writeObject(wikiHowian);
+      System.out.println(in.readObject());
+    } catch (IOException | ClassNotFoundException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+
+
+
+, Object is transformed (serialized) into ones and zeroes, and written to a file. Afterwards, ones and zeroes are read and constructed back into an object.
+
+
+
+
+John Doe, 23
+
+
+
+

@@ -1,0 +1,64 @@
+ When boosting in the x{\displaystyle x} direction, the y{\displaystyle y} and z{\displaystyle z} components remain unaffected.
+
+
+ct′=γ(ct−βx)x′=γ(x−βct){\displaystyle {\begin{aligned}ct^{\prime }&=\gamma (ct-\beta x)\\x^{\prime }&=\gamma (x-\beta ct)\end{aligned}}}
+
+Here, β=vc{\displaystyle \beta ={\frac {v}{c}}} and γ=11−v2c2,{\displaystyle \gamma ={\frac {1}{\sqrt {1-{\frac {v^{2}}{c^{2}}}}}},} the Lorentz factor. The choice of variables with the scaling of the time dimension to units of distance allows for the symmetry of spacetime to shine.
+
+However, there are minus signs in the transformations given. For sake of consistency with the final answer, we will use the inverse Lorentz transformations. The only differences are the swapping of the prime symbols and the change in sign - boosting back to the coordinate frame is akin to boosting in the negative direction.
+
+
+ct=γ(ct′+βx′)x=γ(x′+βct′){\displaystyle {\begin{aligned}ct&=\gamma (ct^{\prime }+\beta x^{\prime })\\x&=\gamma (x^{\prime }+\beta ct^{\prime })\end{aligned}}}
+;
+, It is important to understand that these transformations hold with (infinitesimal) changes in position dx{\displaystyle {\mathrm {d} }x} and time cdt,{\displaystyle c{\mathrm {d} }t,} something that is guaranteed by the linearity of the transformations. 
+
+
+dx=γ(dx′+β1cdt′)cdt=γ(cdt′+β1dx′){\displaystyle {\begin{aligned}{\mathrm {d} }x&=\gamma ({\mathrm {d} }x^{\prime }+\beta _{1}c{\mathrm {d} }t^{\prime })\\c{\mathrm {d} }t&=\gamma (c{\mathrm {d} }t^{\prime }+\beta _{1}{\mathrm {d} }x^{\prime })\end{aligned}}}
+
+Here, β1{\displaystyle \beta _{1}} is the relative velocity between the laboratory and moving frames.
+
+It should be obvious to you that space and time exhibit symmetries from these equations.
+ Divide dx{\displaystyle {\mathrm {d} }x} by cdt,{\displaystyle c{\mathrm {d} }t,} and note that γ{\displaystyle \gamma } cancels out.
+
+
+dxcdt=dx′+β1cdt′cdt′+β1dx′{\displaystyle {\frac {{\mathrm {d} }x}{c{\mathrm {d} }t}}={\frac {{\mathrm {d} }x^{\prime }+\beta _{1}c{\mathrm {d} }t^{\prime }}{c{\mathrm {d} }t^{\prime }+\beta _{1}{\mathrm {d} }x^{\prime }}}}
+
+
+, Divide the fraction on the right by cdt′.{\displaystyle c{\mathrm {d} }t^{\prime }.}
+
+
+dxcdt=dx′cdt′+β11+β1dx′cdt′{\displaystyle {\frac {{\mathrm {d} }x}{c{\mathrm {d} }t}}={\frac {{\frac {{\mathrm {d} }x^{\prime }}{c{\mathrm {d} }t^{\prime }}}+\beta _{1}}{1+\beta _{1}{\frac {{\mathrm {d} }x^{\prime }}{c{\mathrm {d} }t^{\prime }}}}}}
+
+Here, dxcdt=β3{\displaystyle {\frac {{\mathrm {d} }x}{c{\mathrm {d} }t}}=\beta _{3}} is the velocity of the object as measured from the laboratory frame, while dx′cdt′=β2{\displaystyle {\frac {{\mathrm {d} }x^{\prime }}{c{\mathrm {d} }t^{\prime }}}=\beta _{2}} is the velocity of the object as measured from the moving frame (where the object was emitted from). 
+
+
+, The word "addition" is somewhat misplaced here, as the addition is clearly nonlinear. Below, we write it in dimensionless form.
+
+
+β3=β1+β21+β1β2{\displaystyle \beta _{3}={\frac {\beta _{1}+\beta _{2}}{1+\beta _{1}\beta _{2}}}}
+
+In terms of dimensional velocities, the formula reads v3=v1+v21+v1v2c2.{\displaystyle v_{3}={\frac {v_{1}+v_{2}}{1+{\frac {v_{1}v_{2}}{c^{2}}}}}.} From the c2{\displaystyle c^{2}} factor, we can confirm that velocities much less than the speed of light reduce to the familiar velocity addition v3=v1+v2.{\displaystyle v_{3}=v_{1}+v_{2}.}
+
+
+, β1=34,β2=34.{\displaystyle \beta _{1}={\frac {3}{4}},\beta _{2}={\frac {3}{4}}.} 
+,
+
+
+β3=34+341+(34)(34)=642516=96100{\displaystyle \beta _{3}={\frac {{\frac {3}{4}}+{\frac {3}{4}}}{1+\left({\frac {3}{4}}\right)\left({\frac {3}{4}}\right)}}={\frac {\frac {6}{4}}{\frac {25}{16}}}={\frac {96}{100}}}
+
+Two velocities moving at 3/4ths the speed of light nonlinearly add up to 0.96c, and so relativity saves itself. Of course, with the check that special relativity ensures all velocities are less than the speed of light comes the check that Galilean relativity incorrectly adds velocities.
+
+
+Set β2=1,{\displaystyle \beta _{2}=1,} and let β1{\displaystyle \beta _{1}} be the relative speed between laboratory frame and moving frame. The scenario describes a photon emitted from and moving in the direction of the moving frame, where β3{\displaystyle \beta _{3}} is the velocity of the photon in the laboratory frame. 
+
+
+, Note the domain of β{\displaystyle \beta } is (−1,1).{\displaystyle (-1,1).}
+
+
+β3=β1+11+(β1)(1)=1.{\displaystyle \beta _{3}={\frac {\beta _{1}+1}{1+(\beta _{1})(1)}}=1.}
+
+Thus, the speed of light is shown to be invariant, at any relative velocity between the laboratory frame and the moving frame.
+
+Note that an inertial reference frame moving at the speed of light is undefined.
+
+

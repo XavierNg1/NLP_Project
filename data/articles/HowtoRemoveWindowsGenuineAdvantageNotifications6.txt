@@ -1,0 +1,29 @@
+ Type "system32" (without quotes), and click OK.
+Find system32 manually by clicking Start, My Computer, (C:) (or whatever your drive letter is), WINDOWS, then system32.
+ In system32, go to Tools, then Folder options. Click on the tab, View, and uncheck "Hide extensions for known file types" if it is not already.
+ The files are in alphabetical order, which makes it easier to locate the specific file.
+ Rename it "WgaLogon.dll.bak" (without quotes).
+
+
+
+Right click on a blank space in system32 and select New, then Text Document.
+Leave the text document empty and label it "WgaLogon.dll" (without quotes). Press Enter (on your keyboard).
+You may get a warning from the above step that says, "If you change a file name extension, the file may become unusable. Are you sure you want to change it?" Click Yes on this warning.
+
+
+
+Find WgaTray.exe in system32 and delete it.
+You will then have 5 seconds to find WgaTray.exe in the Task Manager.
+Note that if you remove the files mentioned above while you are in Safe Mode, the next step is unnecessary.
+ You can do this three different ways:
+
+
+Press Ctrl, Shift, and Esc simultaneously.
+Press Ctrl, Alt, and Delete simultaneously.
+Right click the Taskbar and select Task Manager.
+ Click on End Process.
+
+
+Note that if you take longer, do not panic! All that will happen is that WgaTray.exe will keep reappearing in the processes list (i.e. you won't be able to delete it as required). To remove the notifications after this, return to system32. You will find two files:WgaLogon.dll.bak (the one you renamed) and an Application Extension (0KB) called WgaLogon.dll. Delete the Application Extension, rename WgaLogon.dll.bak to WgaLogon.dll and repeat the process at a greater speed, from deleting WgaTray.exe from system32.
+ All the notification messages should be gone.
+

@@ -1,0 +1,28 @@
+
+Click on the “Tools” menu.
+Select “Options”.
+Click on “General” Tab.
+Deselect the checkmark beside “Automatically log on to Windows Messenger”.
+Click “Ok”.
+
+Click on the “Tools” menu.
+Select “Options”.
+Click on the “Other” Tab.
+Deselect the checkmark beside “Enable instant messaging in Microsoft Outlook”.
+Click “Ok”.
+
+Choose “Run”.
+Type REGEDIT in the “Open” box.
+Click to expand the directory “HKEY_LOCAL_MACHINE”.
+Click to expand the directory labeled “Software”.
+Click to expand the directory labeled “Microsoft”.
+Click to expand the directory labeled “Outlook Express”.
+Right click on the “Outlook Express” directory.
+Choose “New”.
+Choose “DWORD”.
+Type Hide Messenger as the new name.
+Right Click on the “Hide Messenger” file you just created.
+Choose “Modify”.
+Type 2 in “Value” box.
+Click “Ok”.
+

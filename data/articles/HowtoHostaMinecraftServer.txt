@@ -1,0 +1,77 @@
+ If you plan to use your computer as a server for Minecraft, you'll need to have a fast CPU and sufficient RAM to handle the number of people you anticipate logging on to your server to play. This is especially true if you plan to use the computer to play the game yourself as well as function as a server for others.
+ You'll need a fast upload and download speed to allow players to interact with one another in real time.
+ The software that enables you to use your computer as a Minecraft server requires Java to run. The most current version, as of when this article was originally written, is Java 7.
+
+Windows computers do not usually come with Java pre-installed. You can install a current version of Java from http://www.java.com/en/download/manual.jsp. Java is available in 32-bit and 64-bit versions. You can run 32-bit Java on a 64-bit computer, particularly if you're using an older browser that only supports 32-bit Java, but you can't run 64-bit Java on a PC with 32-bit architecture.
+
+
+
+
+
+
+Macintosh computers, in contrast, usually come with Java pre-installed and update it automatically. If your Mac doesn't have a current version of Java installed, you can get it from the same source as the Windows version.
+ This is primarily a housekeeping chore to make sure you know where the application was installed if you need to access it directly. Give the folder a meaningful name such as "MinecraftServer."
+
+
+You may want to place the folder in the root directory of your hard drive, which for most computers is "C:\" or in your Desktop folder.
+
+
+
+
+
+;
+, Which file format you download depends on whether your computer runs Windows or MacOS.
+
+For a Windows system, download Minecraft_Server.exe and save it to the folder you created in the previous step. This file is available from Minecraft.net.
+
+
+
+
+
+
+For a Macintosh, download minecraft_server.jar and save it to the folder you created in the previous step. This file is also available from the Minecraft website.
+
+
+For the Windows executable, double-click the file to run it. You'll see an interface window and a series of messages.
+
+
+
+
+
+
+For the Macintosh .jar file, create a command file by opening TextEdit and choosing Make Plain Text from the Format menu. Copy the instruction "#!/bin/bash cd "$(dirname "$0")" exec java -Xmx1G -Xms1G -jar minecraft_server.jar" (without the quotes). Save the file in the same folder as the .jar file, using the .command extension and a descriptive name such as "start" or "startserver." Then, open Terminal and type "chmod a+x ," (including the space, but not the quotes), and drag the .command file into the terminal window and press the Enter key. You then double-click the .command file, which in turn runs the .jar file.
+
+
+
+
+
+
+At this point, with either the executable or the jar file, you may see some "missing file" warnings. These are for files that don't yet exist but will be created when the program runs for the first time. Once you see the word "Done" after the last "Preparing spawn area" message, enter "stop" in the text field. Press Enter.
+ You do this by accessing the Server.Properties file, using either Notepad in Windows or TextEdit in MacOS. Once you have configured the settings the way you wish, save your changes.
+
+
+Leave the game mode setting at "0" if you want to play Minecraft in survival mode, where players have to gather food and other resources while risking injury from enemies. To play in creative mode, where players take no damage and can place and destroy blocks instantly, set the game mode to "1."
+
+
+
+
+
+
+To adjust how severe the survival mode setting is, change the value of the difficulty setting. A value of "0" is Peaceful, where there are no enemy mobs; a value of "1" is Easy, where the mobs exist as a minor threat; a value of "2" makes the mobs a moderate threat; while a value of "3" is Hard, where the mobs are a major threat.
+
+
+
+
+
+
+You can learn about the other settings and what they control from the Minecraft wiki.
+ You need to enable your fellow players to have access to the server in order to play Minecraft, but you need to prevent other people from invading the game.
+
+First, enable the white list in the Server.Properties file by changing the White-List setting value to "True." Then, edit the White-List file, adding your username and the username of each player you want to allow access to your server. Press Enter after each username.
+ Administrators, or moderators, can issue commands from chat mode while the game is running to add or block players or otherwise change the game. You assign administrator privileges by entering usernames into the Ops or Admin (for older versions of Minecraft) list the same way as for the white list. You'll want to enter your own username to the Ops list, along with the username of someone you trust to assist you.
+ You'll have to set up the router to forward port 25565 (TCP) to the Minecraft server. The exact instructions vary according to the brand and model of your router; a list of routers with instructions for port forwarding can be found at http://portforward.com/english/routers/port_forwarding/.
+ You'll need to provide this address for anyone outside your immediate network to connect to your Minecraft server. You can find your public IP address by doing an Internet search with an argument such as "what is my IP."
+
+
+The last two steps are necessary only if you play Minecraft with players who are in a different physical location than you and your server are. For a LAN party or game room at a science fiction convention, where all the players will be in the same room, you won't need to know your public IP or port forward your router.
+

@@ -1,0 +1,18 @@
+ You will need a 1 GB USB drive and your home computer. Downloading and installing the Tor Browser may not be possible on a computer that is blocked by Sonicwall, so you'll probably need to do it at home and then bring the USB drive to the blocked computer.
+ Visit torproject.org.
+
+
+Tor is an encryption protocol that masks all of your network traffic when using the Tor Browser. This makes it difficult, if not impossible, for Sonicwall to detect which websites you are visiting. This is the most sure-fire way for bypassing Sonicwall.
+ The Tor Browser is a modified Firefox browser that connects directly to the Tor network.
+
+
+Make sure to download the correct version for the computer you will be using Tor on.
+ Format it if necessary so that there's enough room for the browser on the drive.
+ Select your USB drive as the destination for the installer.
+ Insert the USB drive and open it up.
+ A Firefox window should open with the message "Congratulations! This browser is configured to use Tor".
+ Make sure to visit the sites using the Tor Browser only. The Tor Browser does not affect the internet connections of any other programs on the computer.
+
+
+While data in the Tor network is encrypted, it cannot encrypt data leaving the Tor network. That means that any secure transactions that you need to make are just as vulnerable as they are on the regular internet. Only give out personal information to sites with SSL enabled. You will see https:// instead of http:// and your browser address field will display a security lock.
+

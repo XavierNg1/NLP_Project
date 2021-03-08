@@ -1,0 +1,83 @@
+
+Try connecting with a different device.
+Try a different browser.
+Power cycle your modem and router.
+Connect your computer to your router via Ethernet.
+Open Start
+
+
+
+
+
+.
+Type command prompt into Start.
+Click
+
+
+
+
+
+Command Prompt.
+Type in ipconfig /flushdns and press ↵ Enter.
+Restart your web browser.
+Open Spotlight
+
+
+
+
+
+.You can also press ⌘ Command+Space to open Spotlight.
+Type terminal into Spotlight.
+Click
+
+
+
+
+
+Terminal.
+Type this command into Terminal:
+
+sudo killall -HUP mDNSResponder;say DNS cache has been flushed
+
+and press ⏎ Return.
+Restart your web browser.
+Open your computer's Network Settings.
+Look for extra connections.
+Select an extra connection.
+Remove the connection.
+Try visiting a webpage.
+Click your current connection's name.
+Click Change settings of this connection.
+Click the "Internet Protocol Version 4 (TCP/IPv4)" result.
+Click Properties.
+Check the "Use the following DNS server addresses" circle.
+Enter a preferred DNS address.
+Enter an alternate DNS address.
+Click OK.
+Click Close.
+Restart your computer.
+Open the Apple menu
+
+
+
+
+
+.
+Click System Preferences.
+Click Network.
+Click your current Wi-Fi network.
+Click Advanced.
+Click the DNS tab.
+Click +.
+Enter a DNS server address.
+Click the Hardware tab.
+Click the "Configure" box, then click Manually.
+Click the "MTU" box, then click Custom.
+Type 1453 into the text field.
+Click OK.
+Click Apply.
+Restart your computer.
+Find your router's "Reset" button.
+Press and hold the "Reset" button.
+Connect to your network.
+Try accessing the website you were having trouble with.

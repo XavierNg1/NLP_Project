@@ -1,0 +1,37 @@
+ Since you cannot access an Android TV’s storage memory via a computer, you need to root it remotely. Android Root lets you do just that by accessing your Android TV using your home Wi-Fi connection.
+
+
+Create a new browser tab on your computer and open this link: https://www.sendspace.com/file/y6weis. Click the “Download” button found on the page to save the file locally to your computer.;
+, The application will be saved onto your computer inside a compressed ZIP folder. Right-click on the downloaded file and select “Extract to” to extract all the contents of the Zip file to a new folder.
+ Double-click on the newly created folder to open and view the contents of the application you downloaded. Inside, you should find another folder called “Root Unlocker”.
+ Use the Android TV’s remote control and open its settings. Inside, select “About Device” and choose “Status” from the available choices.
+
+
+All the network details of your Android TV will be displayed on the screen, including its IP address.
+ Go back to your computer and click the Start/Orb button on the desktop.
+
+
+Type ‘”cmd” on the text area field on the Start menu and press the Enter key on your keyboard to open the Command Prompt application.
+ On the Command Prompt window, type in “cd” followed by the address of the extracted Root Unlocker folder on your computer (i.e., C:\Desktop\Android_Root_1.0\Root Unlocker).
+
+
+You should type something like this command on the Command Prompt window:
+
+“cd C:\Desktop\Android_Root_1.0\ICS Root Unlocker 1.0”
+
+
+
+, Next, after successfully typing the command and accessing the Android Root folder inside the Command Prompt window, type the following lines on the Command Prompt: “files\adb connect “IP Address of your TV.”
+
+
+You should type something like this command on the Command Prompt window:
+
+“files\adb connect 192.168.1.100:1111”, where the IP address is the one you got from your TV in step 1.
+
+
+After typing in the command, a message should appear on the Command Prompt window telling you that it has successfully connected to the TV. If it doesn’t, repeat step 3 and make sure that you’re inside the Root Unlocker folder.
+ Go back to the extracted folder and double-click the “Root_Unlocker” file application inside.
+
+
+Wait for a few moments while the program tries to root your Android TV. A notification message will appear on your computer once the rooting is successful.
+

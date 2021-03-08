@@ -1,0 +1,72 @@
+ You can use inline style attributes to change the style of a single element on your page. This can be useful for one or two quick changes to the style, but is not recommended for widespread use. For comprehensive style changes, use the previous method., You can use inline style attributes to change the text color of any of your elements. For example, if you want to change the text color of a specific header, find it in your file:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<h1>This is the header you want to change</h1>
+ 
+</body>
+</html>
+
+
+
+
+, Type style="" inside the opening tag for the element you want to change:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<h1 style="">This is the header you want to change</h1>
+ 
+</body>
+</html>
+
+
+
+
+, For example:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<h1 style="color:">This is the header you want to change</h1>
+ 
+</body>
+</html>
+
+
+
+
+, There are three ways you can express a color. You can type the name of the color, you can enter the RGB value, or you can enter the hex value. For example, to change the color to yellow, you could type yellow;, rgb(255,255,0);, or #FFFF00;:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<h1 style="color:#FFFF00;">This header is now yellow</h1>
+ 
+</body>
+</html>
+
+
+
+

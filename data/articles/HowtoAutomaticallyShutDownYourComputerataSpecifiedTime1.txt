@@ -1,0 +1,9 @@
+ This option is available in Windows 7 and Windows 8. In Windows 7, click Start → Control Panel → System and Security → Administrative Tools → Task Scheduler. In Windows 8, press the ⊞ Win key, type "schedule tasks", and select "Schedule tasks" from the search results.;
+, This option is available in the Actions menu on the right side of the window. You will need to give the task a name and description. Name it something easy to remember, such as "Shutdown Timer". Click Next > to continue.
+ Select the "Daily" option on the "Task Trigger" page and click Next >. Choose the time you want your computer to shut down each night. Leave the "Recur ever: X days" setting to "1". Click Next >.
+ This option will be on the "Action" screen and should be automatically selected. Click the Next > button to proceed.
+ When Windows shuts down, it actually runs a shutdown program. In the "Program/script" field, type C:\Windows\System32\shutdown.exe.
+
+
+In the "Arguments" filed, type /s. Click Next >.
+ In the Summary screen, review your settings to make sure that you have selected the correct day. Click the Finish button to save the task. Your computer will now shut down at that specified time each day.

@@ -1,0 +1,6 @@
+;
+,, Beside this field there is a button that says "Test firewall and router settings".
+ Unless the page says "Your router and Soulseek client is configured correctly.", you can improve your configuration.
+ This is a basic problem with using a router. To briefly describe this issue, when you are connected to your ISP through either your cable or DSL modem, you are given 1 IP (Internet Protocol) address. If you have a router, you have the ability to connect multiple computers to the internet using that one 1 IP address (ex: 69.48.100.5). Now when an incoming connection request arrives for a given port, in this case 2234, the router doesn't know which computer to send the request to (even if you only have 1 computer!), because it could be any of the computer connected to the router. So to fix this problem you need to set up port forwarding to on your router.
+ See the website PortForward.com for information on assigning a static IP address. If you only have 1 computer connected to the router, chances are it receives the same internal IP address each time it connects. (Ex: 192.168.0.1), so you can skip this step.
+ For each router this is explained in detail at PortForward. Pick your router and go through the steps that they list.

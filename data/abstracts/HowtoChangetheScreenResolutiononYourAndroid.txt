@@ -1,0 +1,30 @@
+
+Open your Android's Settings.
+Scroll to the bottom of the Settings menu.
+Select About Device.
+Scroll to the bottom of the About Device menu.
+Tap Build Number seven times.
+Tap the "Back" button.
+Select Developer Options.
+Select USB Debugging.
+Tap OK when prompted.
+Open the Android Studio website.
+Click Download Android Studio.
+Check the "terms and conditions" box.
+Click Download Android Studio.
+Wait for your download to finish.
+Double-click the setup icon.
+Follow the setup wizard instructions.
+Wait for the Android SDK to finish installing.
+Click Finish when the setup is complete.
+Follow the on-screen instructions.
+Click Finish again.
+Connect your Android to your computer.
+Open your computer's command console.
+Type "adb shell dumpsys display | grep mBaseDisplayInfo" into your command console.
+
+,
+Press Enter or Return.
+Locate your Android device's current DPI.
+Type "adb shell wm density DPI && adb reboot" into your command console.
+Press Enter or Return.

@@ -1,0 +1,10 @@
+ Select cell H2 and do Tools Goal Seek Set cell H2,  To Value (input) 0, by changing, and click on cell B2. 1.4210854715202E-14 is as close as it gets when it provides the answer for b.r B2 of 0.598413420602149; now a = 9 we know and we know the neutral radius.
+ Enter in E3 the formula "=9/(9-1)" without quotes because b = a/(a-1). The answer is 1.125
+
+, In cell F3, enter the formula w/o quotes "=E3*D3", which is the product of a*b and also = 10.125, so it's proved that a+b = a*b = c. In cell G3, input the formula, "=C3".
+ In cell A4, under a.r, enter the formula without quotes, "=SQRT(D4/PI())", i.e. find the radius of a by taking πR^2 = a and changing it to R = SQRT(a/π). The answer  = 1.69256875064327
+
+,, Finally, in cell H8, enter the formula w/o quotes "=D8-E8" and Format Cells Number Number Decimal Places 15.
+ Save the workbook in a logical file folder. The problem of creating two circles that have the same result whether their areas are added or multiplied together has been solved in the case where one circle's area = 9 sq. units.
+
+

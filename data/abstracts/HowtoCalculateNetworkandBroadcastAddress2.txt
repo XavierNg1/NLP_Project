@@ -1,0 +1,7 @@
+
+In CIDR, you have a IP address followed by bit-length prefix separated by slash(/).
+Total bits = Tb = 8.
+From the previous step, you got the "Number of bits used for subnetting"(n) and you know the "Tb", then you can get "Number of bits left for host"(m) = Tb - n as total bits is the summation of number of bits used for subnetting and number bits left for host i.e.
+Now you have to calculate "Number of subnets" = 2n and "Value of last bit used for subnet masking"(Δ) = 2m.
+Now you can find previously calculated number of subnets by separating subnets each having "Value of last bit used for subnet masking" or Δ addresses.
+Now you have to find that your IP address is in which subnet, that subnet's first address is network address and last address is broadcast address.

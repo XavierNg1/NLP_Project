@@ -1,0 +1,32 @@
+ Note that using the HTML marquee tag is outdated and strongly discouraged in web design. HTML files can be opened with a simple text editor If you are starting from scratch, open a text file and enter this sample code:
+
+
+
+.<marquee style=”background-color:#000080;”direction=”right” loop=”20” width=”75%”>This is a scrolling marquee</marquee>
+
+
+, You can change the background of your marquee by specifying a hexadecimal (hex) value, or a RGB (Red Green Blue) value after the "background-color:" part of the code. The default value listed in the sample code, #000080, is navy blue.
+
+
+For example:.<marquee style=”background-color:#000080;”></marquee>
+
+A full list of colors and their values can be found online., Change the “direction” attribute in the code to any of the following: right, left, up or down.
+
+
+For example:.<marquee direction=”right”</marquee>
+
+
+, The “loop” attribute controls how many times the marquee should loop. If you want it to run continuously, leave out this attribute entirely.
+
+
+An example with the attribute omitted could be:.<marquee style=”background-color:#000080;”direction=”right” width=”75%”>This is a scrolling marquee</marquee>
+
+
+, The text inside the <marquee> tag and the </marquee> tag will be the scrolling text of your marquee. Write whatever you want your marquee to say here.
+
+
+For example:.<marquee>Watch this text scroll by!</marquee>
+
+
+, Drag and drop the file to your browser to open. Your scrolling marquee will display on the page.
+

@@ -1,0 +1,28 @@
+ On your Windows screen, navigate your cursor to the lower-right side of the screen to open the Start menu and go to Search.
+
+
+On the Search bar, type “Run” then hit Enter.
+You can also go to Run by pressing the Windows key + R on your keyboard.;
+, Type “regedit” on the Run dialog box and press “OK”.
+ Click “Yes” on Account User Control to allow Registry Editor to make changes to your computer.
+ This contains different files and folders because this is the location of the root of the error.
+
+
+From HKEY_CURRENT_USER, open the “Software” folder then “Microsoft.” After that, click “Windows NT” then “Current Version,” and finally, the “Windows” folder.
+ This is on the left pane of this registry location. Use this Command Prompt:
+
+
+Open the Command Prompt by typing it on the search bar and allowing administrative privileges.
+On the CMD, type this next to C:\Windows\System32:
+
+\takeown F:\ “HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows” /A /R
+
+
+Press Enter when you’re done.
+ This is the cause of the error message during shutdown.
+, You can now close the Registry Editor and restart your computer. When you shut down, check if the error message still appears. If it doesn’t, then you were successful in removing the cause of the error.
+
+
+If you still see the error message, try the next method.
+If you cannot locate “Load” in the Registry, try the next method.
+

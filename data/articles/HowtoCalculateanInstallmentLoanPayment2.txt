@@ -1,0 +1,19 @@
+, This is part of any method used to calculate a payment for an installment loan. You will need to know the total amount financed or principal, the number of payments and the interest rate. Write these down or enter them into cells in Excel to use later.
+ The cell you click on in Excel does not matter unless you want the information in a certain place. This is based on user preference.
+ In the cell where you want the payment listed, type the = sign or click the fx button in Excel. The fx button is on the top part of the screen below the primary toolbar unless you have customized Excel., If you click the fx, enter PMT into the search box and select the PMT function. It will bring up a dialog box to enter the information. You can also choose to enter the data by hand into the equation “=PMT(Rate, Nper, Present Value, Future Value, Type)”. Clicking the fx button is preferred if you need help remembering the formula.
+ After you clicked fx and selected PMT, you then enter the information into this dialog box.
+
+
+
+Rate is the monthly interest rate changed and it is 0.67% in our example. This is the annual rate of 8%, listed as the APR in loan paperwork or documentation, divided by 12 (8%/12=0.67%). This will also need to be expressed as a decimal by dividing the number by 100, so it will be 0.67/100, or 0.0067, when used in the equation.
+
+Nper is the number of periods in the loan. So if it is a 3 year loan paid monthly that is 36 payments (12 x 3 = 36).
+
+Pv is the present value of the loan or the amount you are borrowing, we will assume $3,500 again.
+
+Fv is the future value of the loan after 5 years. Typically, if you plan on paying off the full value, this is entered as a 0. There are very few cases where you would not enter a "0" in this box. A lease is an exception where Fv is the residual value of the asset.
+
+Type you can leave this blank in most cases, but it is used to change the calculation if you make the payment at the beginning or end of the period.
+If you were to type this into the Excel cell without using the fx dialog box, the syntax is =PMT(Rate,Nper,PV,FV,Type). In this case “=PMT(0.0067,36,3500,0)”.
+ It comes out as a negative number since you are paying money versus receiving it. If you want to switch the sign to positive number enter -$3,500 instead of $3,500 for the PV.
+

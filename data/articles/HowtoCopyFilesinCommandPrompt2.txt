@@ -1,0 +1,42 @@
+ The copy command is best used when copying a single file. To use the basic copy command, you'd type copy source destination. For example, to copy the file Example.txt from C:\Users\desktop to D:\backup, enter the following:copy C:\Users\desktop\Example.txt D:\backup\Example.txt
+
+
+
+
+
+You need to enter the file name for the copied file as well. You can use this to change the name of the copied file if you'd like.
+To copy a file from your current working directory, just type the filename for the source part of the command. For example, If performing the command above while already in the C:\Users\desktop folder, the command would look like copy Example.txt D:\backup\Example.txt
+;
+, Use the *.* wildcard to copy all of the files from a folder at once. For example, to copy all of the files from the C:\Users\desktop\ folder to D:\backup, enter the following:
+
+
+
+
+
+copy C:\Users\desktop\*.* D:\backup
+
+
+
+
+
+The copy command will not copy hidden files. Use the xcopy or robocopy command instead for hidden files.
+You can copy all of the files from your current working location by typing *.* as the source. In the above example, if already in the C:\Users\desktop\ folder, type copy *.* D:\backup.
+ If your source or target location or file has a space in the name, you'll need to surround it in quotation marks. For example, to copy all of the files from C:\Users\My Documents to D:\2015 Backup, enter the following:
+
+
+
+
+
+copy "C:\Users\My Documents\*.*" "D:\2015 Backup"
+
+
+
+
+, One of the "hidden" functions of the copy command is its ability to join multiple files together. This is most useful with plain text files. The content from the first and second text files in the following command will be combined, in order, into the new file:copy file1.txt+file2.txt newFile.txt
+
+
+
+
+
+This command assumes that file1.txt and file2.txt are located in the current directory. You'll need to add the path to the beginning of each file name for files in other locations.
+

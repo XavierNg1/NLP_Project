@@ -1,0 +1,50 @@
+ Grease shines and dust can sparkle; at high resolution, today's digital cameras can show every last speck and fingerprint. Soft light makes dirt stand out less, but the sharpness you want for everything else will show the dirt too.Use a soft, clean, low-lint cloth such as a cotton terry towel. Rubbing alcohol leaves no residue and is safe for most non-plastic modern surfaces (Rubbing Alcohol may damage plastics, and can cause clear plastic to become foggy), but very dilute soapy water is gentler to some. Spot test an inconspicuous area first if in doubt.;
+, An overcast day is best. If it's a nice day, head for "open shade": an area shaded from the sun but open to much of the sky. These areas are more plentiful in the morning and evening; at midday, you'd have to get under something. You want nice, soft, diffuse light; what you don't want is the sun directly facing into your setup.
+You can also work inside close to a big unshaded window that the sun isn't shining on directly. This is dimmer; you'll need a longer exposure and the tripod later., Find a solid object to prop up the paper behind your subject; in the example photos, you can see a handy patio umbrella post sitting there.
+ This will permit you to use the smaller apertures (and consequent long shutter speeds) needed for product photography. If you don't have a tripod, stack up some random objects you have kicking around until you're at a good working height., Get your camera at the right angle to the product: a roughly corner-on isometric view.or edge-on oblique viewgives a three-dimensional appearance generally more appealing than a face-on orthographic viewGet your camera at the right distance from the product, too: generally "far enough" (and zoomed in) because a flat undistorted perspective is generally more useful than a perhaps-artistically distorted close-up one.Products, like anything else, will look weird if you try to take photographs from too close to your subject.If possible, try to get at least half a meter away.
+You might find that your zoom lens will only focus to closer distances at shorter focal lengths; make your own experiments here, because this may dictate your working distance.
+
+
+Make sure your flash is turned off. Subjects lit by direct, on-camera flash look eBay-tastic,with harsh untamed highlights in many places and harsh shadows in others.
+Set your white balance. If you have a "shade" or "cloudy" setting, you want to use this. The sky, which lights the shade, is bluish-white. Otherwise, use the "sun" setting. If you're a raw-shooting headbanger you don't have to bother with this, although it'll give your favourite raw conversion software a starting point.
+Set your ISO as low as you can. For product photographs shot from a tripod you don't need the faster shutter speeds that higher ISOs permit, and lower ISOs means less noise (meaning smoother original pictures) and that less or no noise reduction needs to be applied (meaning sharper smooth pictures).
+
+Set your camera to aperture priority mode. All digital SLRs and some compact cameras have it. If you're using a compact camera without an aperture-priority mode, you might want to try the "macro" mode.
+ Product photography often requires small apertures (larger f/ numbers) for a lot of depth of field, but at some point the image (including the parts of it outside of the plane of perfect focus) will be softer because of diffraction effects.
+Your optimal aperture will depend on many factors (including your lens, your focal length, your working distance and even your sensor size), so experiment. Start at f/11 on a digital SLR or the smallest aperture on a compact camera, and try the neighbouring few apertures, and zoom in on your LCD when you play the images back. Use the aperture that seems the sharpest all over. If you have to choose between not having enough depth of field and having a slightly softer image due to diffraction, then choose the latter; diffraction is modest all over and relatively easy to correct in software to some degree, whereas defocus gets more severe as one moves away from the plane of focus and is a complex phenomenon that is close-to-impossible to correct., The white piece of paper will often confuse a camera's meter; the camera will see it as a bright thing that needs to be exposed to grey, rather than left white. Use your exposure compensation; a whole stop of over-exposure is a good place to start. Ideally, you want to keep the paper bright, but not overexpose it all the way to 255 white.
+ For the kind of exposure times you'll be using, and the act of pushing the shutter button can cause noticeable camera shake (especially on cheaper tripods). Turning on the self-timer will give that motion a little time to damp. If you have a selectable self-timer length, try setting it to 2 or 5 seconds., If you're happy with the results, then go on to post-processing., The GNU Image Manipulation Program is a piece of open source software that can be downloaded for free. It's not as sophisticated as Photoshop in every way, but it's free, and plenty good for simple post-processing jobs like you're going to do here.
+,
+
+Go to Colors -> Levels, which will bring up the levels dialog. Click on the "white point" eye-dropper (the rightmost of the three near the bottom right of the dialog).
+
+
+
+
+
+Click on the darkest part of the background that should be white, but isn't. Then hit "OK".
+
+
+
+
+
+This will make your background pure white (at the cost of bringing out a little noise).
+ You probably have a lot of unnecessary empty areas in your photo (and probably some of the background behind the white paper, too). Bring up GIMP's crop tool (Tools -> Transform Tools -> Crop, or press Shift+C), and click-and-drag a selection around the area you want to crop. Hit the Enter key when you're done to crop the photograph.
+ This means dust and marks on your subject, and possibly marks on your white paper background as well. But clean your monitor first; anyone who's spent any time in a photo editor knows well the frustration of wondering why their clone tool isn't working, and it turning out to be dust on their screen!
+
+Marks on the white background are obviously easy to correct; use the paintbrush or pencil tool with the foreground colour set to white.
+
+
+
+
+
+Use the Clone tool (press C) or Heal tool (press H) to paint out dust on your subject. The Heal tool usually works better; experiment with this. With the tool active, select an area of similar or identical colour and texture, hold down Ctrl, and click somewhere in that area. Then click (and drag, if necessary) on the specks of dust.
+ You might find that there's a yellow or blue cast to grey objects (especially after the earlier step to bring the background back to white; this has the effect of shifting the colour balance of the whole photograph away from the colour of the area you clicked on). There are two ways of fixing this:
+
+The Hue-Saturation tool can often be used to very good effect. Go to Colors -> Hue-Saturation, and click the selector next to the colour (R, Y, M, B, etc) to which the photo is shifted, then turn down the "Saturation" slider until it looks right (it can look weird if you turn the saturation down too far; playing with the "Overlap" slider might help here). Hit "OK".
+
+
+
+
+
+If that doesn't work, you might want to try the colour balance (Colors -> Color Balance) and play with the sliders until it looks right.
+ For example, if you've shot at a very small aperture, your photo will almost certainly benefit from a little sharpening to make up for the softening caused by diffraction (Filters -> Enhance -> Unsharp Mask, use a radius of about 1 and "Amount" set to somewhere between 0.5 and 1).

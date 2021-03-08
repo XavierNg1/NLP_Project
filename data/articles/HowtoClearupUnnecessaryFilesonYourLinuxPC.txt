@@ -1,0 +1,7 @@
+ You could also use a package manager such as Synaptic or Adept Manager if your distribution has it in its repositories. It's a KDE application, so you'll probably have to install some dependencies if you use a different desktop environment. A package manager will make the dependencies a lot easier to handle.;
+, If you only want to get rid of files in your home directory, then run it as a regular user. However, if you would like to use it to delete files from anywhere in the file system, then run it as root (kdesu kleansweep or sudo kleansweep).
+ Review the files that kleansweep reports are unnecessary, even when not running it as root., The "Orphaned Files" option will search for files which are installed, but not registered in your distribution's installed files database. Only Debian- and Fedora-based systems are supported (this is an OK for anyone running Ubuntu), and you can customize which folders not to search, etc .
+ This will take a while if you've given it a large directory to sort through. You could lock your session and go do something else for a while, or you could renice kleansweep so that you can do something else on your computer while it runs in the background.
+ For example, if you have several empty directories in ~/.program/ and you don't even use that program anymore, then it is probably safe to remove them.
+, This isn't pointless, as the files aren't scattered about the drive anymore, and the backup is compressed.
+ Some files are necessary. Delete downloads or browser files, but leave most intact.

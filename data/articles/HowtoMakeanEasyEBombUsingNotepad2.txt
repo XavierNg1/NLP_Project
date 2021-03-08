@@ -1,0 +1,45 @@
+ Like the trick above, this requires you to write a few simple commands in Notepad. However, its effect is different - instead of opening a series of program windows, this trick creates a series of error messages which allow you to fool the user into thinking his or her computer is experiencing an error or being hacked.
+ Type this command (including the parentheses and and quotation marks), adding an appropriate error message and error title. This command opens a Windows error dialog box with your specified message in the body of the dialog and your specified title as the dialogue's header. To make your prank believable, try to use error messages and titles that sound like real ones. For instance, try "Terminal Error" as your error title and "Critical fault detected at C://Users/Windows/system32" as your error message.
+
+
+
+
+
+
+
+
+
+You might also want to go in a "hacking" direction by using a message like, "I have total access to your system. Prepare to be hacked." This never actually happens in the event of actual hacking, so this will work best on people who don't know much about computers.
+The "5+16" in the command above tells the computer to create a dialog box with a critical icon and two buttons - "Retry" and "Cancel." By changing the numbers, you can custom-create different error boxes. Simply swap out any of the single-digit numbers below for 5 and any of the double digit numbers below for 16:
+
+0 (OK Button)
+1 (OK and Cancel Buttons)
+2 (Abort, Retry and Ignore Buttons)
+3 (Yes, No, and Cancel Buttons)
+4 (Yes and No Buttons)
+5 (Retry and Cancel Button﻿s)
+16 (Critical Icon)
+32 (Help Icon)
+48 (Warning Icon)
+64 (Information Icon)
+
+
+
+, Repeat the above command as many times as you'd like with as many different error messages as you'd like. The messages will appear in sequence - in other words, once a user exits one, the next will appear. You can easily take advantage of this fact to create a long string of error messages that seem to grow in urgency!
+
+
+
+
+
+
+
+
+, When you've entered all the error messages you would like, save your file. Select File > Save As..., then give your file a name ending in ".vba". Be sure to select "All files" from the "Save as type:" dropdown menu. Now, all you've got to do is trick someone into opening your E-bomb - the exact same tricks as in Method 1 will work just as well here.
+
+
+
+
+
+
+
+

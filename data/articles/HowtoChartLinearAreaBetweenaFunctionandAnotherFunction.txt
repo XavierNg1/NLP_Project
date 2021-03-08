@@ -1,0 +1,73 @@
+ Otherwise, create a new workbook with 3 worksheets: Data, Chart (unless using Chart Wizard) and Saves.;
+,
+In Edit, set all the first options to checked except Automatically Convert Date System . Set Display number of decimal places to blank (as integers are preferred). Preserve the display of dates and set 30 for 21st century cutoff.
+In View, click on show Formula Bar and Status Bar and hover for comments of all Objects . Check Show grid lines and set all boxes below that to auto or checked.
+In Chart, allow Show chart names and set Data markers on hover and leave the rest unchecked for now.
+In Calculation, make sure Automatically is checked and Calculate before save is also checked. Set max change to .000 000 000 000 01 (without spaces) as goal-seeking is done in this project. Check Save external link values and Use 1904 system
+
+In Error checking, check all the options.
+In Save, select Save preview picture with new files and Save Autorecover after 5 minutes
+In Ribbon, keep all of them checked except Hide group titles and Developer .
+ Select columns A:D and Format Cells Number Number Custom +0.0000;-0.0000;=0.0000, Font Size 9 or 10. Select columns F:G and set decimal places 0. Select columns H:J and set decimal places to 8.
+
+Select row 1 and make Font bold.
+Into cell A1, enter x, color blue.
+Into cell B1, enter eg. y=x^3; y=3x^2 and make the eg. y=x^3 blue font bold and the y=3x^2 black font bold by selecting over them in the formula bar and using the Text Color Tool.
+Into cell C1, enter Function f and do Font color blue.
+Into cell D1, enter Function g and do Font color black.
+Select cell range F1:J1 and make font color blue.
+Into cell F1, enter f ... (for Function f(x)).
+Into cell G1, enter g ... (for Function g(x)) and Format Cell font color red for cell range G1:G4.
+Into cell H1, enter From a.
+Into cell H2, enter "=-2*PI()" w/o quotes and format font red and format fill canary yellow for input.
+Into cell I1, enter To b.
+Into cell I2, enter "=A362" w/o quotes. This is the end of the x Range of values.
+Into cell J1, enter Increment.
+Into cell J2, enter 0.06981317 and Insert Name Define Name Increment to cell $J$2 and format fill canary yellow for input.
+REVISED: Into cell J3, type the note, Per PAUSED Goal Seeking, and in cell J4 type the note, On I2 = 6.2831853. In cell J5, type By changing cell $J$2.
+REVISED: DO NOT Go To cell A362 and input w/o quotes "=-A2".
+If you are copying from the previous worksheet, you may want to cut and paste for the next few steps.
+Into cell E2, enter Coefficient. Into cell E3, enter (Power Term). Into cell E4, enter Power. Into cell E5, enter Constant.
+Format Fill cell range F2:F5 canary yellow for input.
+Input 1 into cell F2 and Insert Name Define Name F_Coefficient to cell $F$2.
+Input (x-1) into cell F3 and Insert Name Define Name F_PowerTerm to cell $F$3.
+Input 3 into cell F4 and Insert Name Define Name F_Power to cell $F$4.
+Input 10 into cell F5 and Insert Name Define Name F_Constant to cell $F$5.
+Input 1 into cell G2 and Insert Name Define Name g_Coefficient to cell $G$2.
+Input 3x into cell G3 and Insert Name Define Name g_PowerTerm to cell $G$3.
+Input 2 into cell G4 and Insert Name Define Name g_Power to cell $G$4.
+Input 10 into cell G5 and Insert Name Define Name g_Constant to cell $G$5.
+Enter TEXT: into cell E6.
+Input ="("&TEXT(F_Coefficient,"0.####")&"*"&F_PowerTerm&"^"&TEXT(F_Power,"0.####")&" + "&TEXT(F_Constant,"0.####")&")"&" - "& "("&TEXT(g_Coefficient,"0.####")&"*"&g_PowerTerm&"^"&TEXT(g_Power,"0.####")&" + "&TEXT(g_Constant,"0.####")&")", including all quotation marks into cell F6.
+Enter Paste Text: into cell E7. Copy the value in cell F6 and do Paste Special Value into cell F7; this will be the title for your Chart.
+ You can Define Name for H2 later if you wish.
+Into cell A3, input "=A2" w/o quotes.
+REVISED: Edit Go To cell range A4:A362 (recalling that cell I2 uses cell A362) and enter into cell A4 the formula w/o quotes "=IF(A3=A2,A3+Increment,A3)" and Edit Fill Down. Format Fill Color Light Rose. Edit Go To cell range A2:A362 and Insert Name Define Name x to cell range $A$2:$A$362. Approximately 360 rows are being used because graduation to trigonometric functions is anticipated.
+Edit Go To cell range B2:B362 and input to cell B2 the formula w/o quotes "=IF(A1<>A2,Function_f,Function_g)". Copy cell B2 and Edit Go To cell range B2:B362 and Paste Special Formulas. If instead you err and Edit Fill Down and you are working from the former worksheet, you will need to go through the sorter process to get the font colors correct.
+Edit Go To cell range C2:C362 and input to cell C2 the formula w/o quotes "=F_Coefficient*(x-1)^F_Power+F_Constant" and Edit Fill Down. Insert Name Define Name Function_f to cell range $C$2:C$362. Be careful to put in the (x-1) term.
+Edit Go To cell range D2:D362 and input to cell D2 the formula w/o quotes "=g_Coefficient*3*x^g_Power+g_Constant" and Edit Fill Down. Insert Name Define Name Function_g to cell range $D$2:D$362. Be careful to put in the 3*x term without parentheses.
+If you have copied from the previous worksheet, you may ignore the next few sorting steps.
+Select columns L:M and Format column width .35"
+Edit Go To cell range M1:M362 and input 1 into cell M1 and do Edit Fill Series Column Linear Step Value 1, OK.
+Edit Go To cell range L1:L362 and enter to cell L1 the following formula w/o quotes, "=IF(ODD(ROW())=ROW(),0,1)", and Edit Fill Down. Copy this cell range and do Paste Special Values right back over it.
+Select rows 1:362 and do menu item Data Sort, and at the next to the bottom under Column when you click in its space, will be a zero -- select it because we are going to sort all the odd rows to the top \because the g(x)'s are in the odd rows in column B, and we want to format all those bold black font. Click on the plus button at the bottom left of the Sort dialog box to bring up the Then by sort line. Click in the Column column and Then By Row and select the very bottommost 1 -- meaning we want to otherwise keep the rows in their original order after the preliminary sort. Click OK. Order should be Smallest to Largest in both cases.
+The g(x)'s in column B end below where in column M the last odd number, 361, appears. Select B2:B181 and Format Font black bold. Your nice sheet is a total wreck with errors all over the place, right?? Let's fix that.
+Select rows 1:362 and do menu item Data Sort. See the little Minus symbol at the bottom left? We want to subtract out the top first sort by odd numbered rows, so select that line and then hit the Minus button. Order should still be Smallest to Largest on the remaining sort of the original row order. Close eyes. But hit OK first. Et voilá! Everything is cool.
+ Edit Go To cell range O3:O362 and enter to O3 the formula "=SQRT((A3-A2)^2+(B3-B2)^2)" w/o quotes and do Edit Fill Down. Enter to cell O363 "=SUM(O3:O362)" and Format Cell border dark blue bold outline. Enter to cell M363 Total Arc Length and Format Align right cell range N363:N365. Enter Limit a to Limit b / 361 to cell M364. Enter "=A364" to cell O364. Enter Arc Length Area to cell M365 and enter "=O363*O364" to cell O365. Enter to cell A363 "=A362-A2" and enter Limit a to Limit b to cell B363. Enter "=A363/361" to cell A364 and enter to cell B364 Limit a to Limit b / 361. Enter to cell A365 "=2*A364" and enter to cell B365 TIMES 2. Enter to A366 "=A362-A361" to cell A366 and enter to cell B366 =A362-A361 with a leading space to disable the formula. Enter to cell A368 "=Increment" and enter to cell B368 Increment.
+ We may help the chart fill the space a bit by making the line a little weightier than normal, but not so much as to badly distort the results really.
+Edit Go To cell range A2:B362 and using either Chart Wizard or the Charts option on the Ribbon, select Charts, All/Other, Scatter, Smooth Line Scatter. There's probably sufficient space to work with the chart that appears on the Data worksheet, or you can copy or cut it to a separate Charts worksheet.
+Go to Paste Text in cell F6 and get the Chart Title; copy it. Select Chart Layout and select Chart Title and wand over the default text and paste in the text you copied previously. You may need to play with it a bit as far as location and font size, etc. to get it just how you prefer. Other than that, the assignment is almost complete. Do Chart Layout Current Selection Series 1 Format Selection. Make Line Weight 8 pt (or not -- it's up to you; 1 is fine if the increment is right for the range.) -- (it's a matter of whether you're after some artistic effect or the strict mathematical depiction; below in Tips I give the strict mathematical depiction for the example function and derivative).
+ Select cell range C366:C368 and do Edit Fill Series Column Linear Step Value 1, OK. These are the 4 Limits to take. Next, go to cell D365 and input Limits and select D366:D369 and Insert Name Define Name Limits to cell range $D$366:$D$369. Input to cell D366 "=A2", input to cell D367, "=A362", input to cell D368 "=A2", input to cell D369, "=A362". Go to cell E364 and enter Integration and go to cell E365 and enter Formulas. Copy these two cells to G364:G365 and make Font red bold.
+Input to cell E366 the formula w/o quotes, "=F_Coefficient*(Limits-1)^(F_Power+1)/(F_Power+1)+(F_Constant*Limits)".
+Copy the formula in cell E366 to cell E367 and then copy it, with a leading space before it to disable it, to cells G366 and G367, so that it is easily legible and verifiable as the integral of the function f(x). Make the text in cell G367 read " less =F_Coefficient*(Limits-1)^(F_Power+1)/(F_Power+1)+(F_Constant*Limits)"
+Input to cell E368 the formula w/o quotes, "=g_Coefficient*3*Limits^(g_Power+1)/(g_Power+1)+(g_Constant*Limits)".
+Copy the formula in cell E368 to cell E369 and then copy it, with a leading space before it to disable it, to cells G368 and G369, so that it is easily legible and verifiable as the integral of the function g(x). Make the text in cell G368 read "LESS: =g_Coefficient*3*Limits^(g_Power+1)/(g_Power+1)+(g_Constant*Limits)" and made the text in cell G369 read " less =g_Coefficient*3*Limits^(g_Power+1)/(g_Power+1)+(g_Constant*Limits)"
+Enter to cell F367 the formula w/o quotes "=E366-E367", to take the difference between the two limits.
+Enter to cell F369 the formula w/o quotes "=-(E368-E369)", to take the difference between the two limits.
+Enter TOTAL AREA BY INTEGRATION: S (f(x) - S g(x) to cell E370 and the note 'where "S" is the symbol for integration.' to cell E371. Format font red bold and align right.
+Enter the formula w/o quotes "=F367-F369", as subtracts S g(x) from S f(x) to cell F370. Format Cell Border red bold outline. The result obtained for the integrated area was 1,004.77
+
+, Then again, just below that, make another copy bu this time do Copy Picture and Paste Picture with the shift key held down, or Paste Special Values -- either way, and then a copied and pasted picture of the chart. Be fastidious and methodical about your work and pay attention to details. Save the workbook every so often, just in case. Maintain a good backup system. Do Insert New Comment on original variable values and formulas by copying them from the formula bar so you can easily get back to where you started without having to dump the file and start over completely.
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

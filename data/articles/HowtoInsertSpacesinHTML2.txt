@@ -1,0 +1,16 @@
+ Normally, HTML will only display one space between words, no matter how many times you press the space bar. To force an extra space to show up, type &nbsp; or &#160;.This displays a character called a "non-breaking space," which will always appear.
+
+
+This is called a non-breaking space because it prevents a line break at its location. If you overuse this character, browsers will have trouble inserting line breaks in a tidy, readable way., There are several other character entities that tell the browser to display white space. Different browsers may display these in slightly different ways, but unlike &nbsp;, these shouldn't affect your line breaks:&ensp; — named after the "N" block of a printing press, the en space is about the width of two normal spaces
+
+&emsp; — the em space, roughly four normal spaces
+
+, One way to indent a paragraph is to insert several non-breaking spaces in a row: &nbsp;&nbsp;&nbsp;&nbsp;. This works as an HTML-only solution, but it's discouraged if you have access to CSS instead (described in a separate step).
+
+
+If you have a paragraph with a complicated arrangement of text, use the pre tag instead.
+ CSS paddings or margins give direct display instructions to the browser, so the result is more consistent. It's not hard to add this even if you don't know CSS and do not have a style sheet. Here's an example that shifts the entire paragraph to the right:In the <head></head> section of your HTML document, insert the following code:<style>p.indent{ padding-left: 1.8em }</style>
+"p.indent" defines a type of paragraph (p tag) named "indent" (you can use any name). The rest of the code adds blank space "padding" to the left of these paragraphs.
+Now return to the body of your HTML document. Any time you want to indent a paragraph, place it inside these tags:<p class="indent"></p>
+
+To adjust the amount of indentation, change the "1.8" number in the CSS code. Keep the "em" after it, which is a measure of length related to the font size.

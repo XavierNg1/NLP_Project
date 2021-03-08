@@ -1,0 +1,15 @@
+
+Restart your computer.
+Log into an administrator's account.
+
+,
+Open Services.msc.
+Stop the Background Intelligent Transfer Service service.
+Stop the Windows Update service.
+Open the Run dialog.
+Type %windir%\SoftwareDistribution and click OK.
+
+,
+Delete everything in the folder that opens.
+Restart services previously stopped.
+Download the updates again.

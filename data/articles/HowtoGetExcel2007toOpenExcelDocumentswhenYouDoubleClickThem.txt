@@ -1,0 +1,80 @@
+
+
+
+
+ 
+
+
+Go into "Excel Options" by clicking on the Office symbol on the upper-left hand corner of Excel, and select "Excel Options" which is a button on the bottom of the menu.
+
+
+
+
+
+
+Click on "Advanced" in the menu on the left.
+
+
+
+
+
+
+Scroll down to the "General" header.
+
+
+
+
+
+
+Ensure that "Ignore other applications that use Dynamic Data Exchange (DDE)" is unchecked.
+
+
+
+
+
+
+Exit Excel, and attempt to open an attachment by clicking on it.
+
+
+
+
+
+;
+, Use if method 1 fails.
+
+Exit Excel.
+
+
+
+
+
+
+Do you have Adobe PDFMaker installed on your machine? If so, it may be conflicting with Excel.
+
+
+
+
+
+
+Try going to your XLStart fold (probably C:\Program Files\Microsoft Office\Office12\XLSTART) and checking for the file "PDFMaker.XLA".
+
+
+
+
+
+
+If it exists, create a sub-folder (call it whatever you like) and move the file into that folder.
+
+
+
+
+
+
+Re-attempt opening an Excel document by by double-clicking it.
+
+
+
+
+
+
+

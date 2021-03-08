@@ -1,0 +1,51 @@
+ Double click on the NetBeans icon on your desktop to open NetBeans. If NetBeans is not on your desktop, locate it in your computer's application list. If you have not installed NetBeans then follow the directions above to install it.
+ Go to the top left corner and click on the New Project icon. Alternatively, click on the “File” tab on the top left corner and click on “New Project”.
+ Once you have clicked on the new project icon, a pop up appears.
+
+
+Under Categories: select "Java".
+Under Projects: select "Java Application". (These should be selected by default.)
+Click Next.
+
+
+
+In the project name section, type Balloon.
+Make sure the "Create Main Class" box is checked. This auto-generates a main method, which you need to use to run the program (we will discuss more in the next step). Do not check the "Use Dedicated Folder for Storing Libraries" box.
+Press Finish to create the new project. Now you are ready to write the project's code.
+ Before beginning this step, delete the grey comment sections. In order to create the balloon object, you must first create its parameters, also known as the instance variables. Variables are addresses that store your data, and methods can be thought of as “functions” that can be called to perform tasks. (The main method is a special one that is run automatically when the “Run” button is pressed on Netbeans or on other IDEs.).
+
+
+In the body of the main method, public static void main(String[] args), type private String name; and on the next line type private int altitude.
+
+String and int are examples of data types. A "String" is used for variables that store text while an "int" is used to store integer numbers.
+The "private" modifier simply makes sure that no objects outside your file can access the variables used with it.
+Remember, it is very important that you include a semicolon (;) at the end of the code statements that you add for this program or it will not work. (Note that the semicolon is only used at the end of a statement, not necessarily the end of a line. The lines you will be adding for this program are complete statements, though you will later run into statements spread out over multiple lines.)
+
+, Return to the main method public static void main(String[] args) and after, within the brace ({), create your balloon object by typing:
+
+
+Type Balloon myBalloon = new Balloon(); as shown above.
+This constructs a Balloon object that has variables you can access by typing myBalloon.<variable name>.
+ Parameters, or arguments, are necessary to construct your object. You will use the instance variables that you defined before for this step.
+
+
+As hinted by their names, the String will hold the name of the balloon and the int will hold the altitude of the balloon (in inches). Press ↵ Enter on your keyboard and type: myBalloon.name = “Balloon”;. This code assigns the value "Balloon" to your balloon's name variable. If you want to name your balloon differently, you can replace "Balloon" with any name you'd like (make sure that you keep the quotes around the name, though, because those let the compiler know that your value is a String and not a variable name).
+Press ↵ Enter again and then type: myBalloon.altitude = 100;. Once again, you can replace 100 with any integer number. More advanced objects will usually contain safeguards to prevent values that do not make sense (such as negative altitudes).
+ :
+
+
+Press ↵ Enter and type System.out.println("Your balloon name is: " + myBalloon.name);
+
+Press ↵ Enter and then type the next line: System.out.println("Your balloon altitude is: " + myBalloon.altitude + " inches");
+
+The System.out.println() method takes a String and prints your statement to the screen in a new line (hence the “ln”, or "line" in the method name.)
+Note that the ‘+’ in the code serves to join, or concatenate, the two Strings. In the second print statement, the '+' converts the altitude (an int) into a String so it can join it with the other Strings and print it.
+ Click the Run icon at the top of your screen. It looks like a green “play” symbol:
+
+, The results should be printed in the output console directly below the editing window, and your output should look like the above image (but with the name and altitude identical to the values you entered).
+
+
+You may be given an error message popup. If you are, something went wrong along the way. Make sure that your statements match those in the pictures throughout the above instructions because one typo can make the entire program stop working. Make sure to include semicolons!
+If no results/incorrect results are printed, but the output says "build successful", you probably did not add the print statements properly. Go back to to that step and follow those instructions again.
+If your output came out as shown above with no error messages, congratulations on creating your balloon object!
+

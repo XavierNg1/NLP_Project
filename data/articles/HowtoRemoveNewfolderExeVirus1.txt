@@ -1,0 +1,23 @@
+ Go to "Start" and search "cmd" without quotation marks. Click "Run." This will cause a black window to appear.;
+, These will delete the preliminary stages of the virus.taskkill /f /t /im “New Folder.exe”
+taskkill /f /t /im “SCVVHSOT.exe”
+taskkill /f /t /im “SCVHSOT.exe”
+taskkill /f /t /im “scvhosts.exe”
+taskkill /f /t /im “hinhem.scr”
+taskkill /f /t /im “blastclnnn.exe”
+
+, Because one of the symptoms of the Newfolder.exe virus is disabling things like Task Manager and Regedit, you will need to reenable them after you delete the virus. You can do this by entering the following commands one by one:reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 0 /f
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 0 /f
+reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableRegistryTools /t REG_DWORD /d 0 /
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableRegistryTools /t REG_DWORD /d 0 /f
+
+, To do this, go to the "Start Menu" and select "Control Panel." From here, go to "Appearance and Personalization" and then "Folder Options." Select "View Tab," "Advanced Settings," and finally "Show Hidden Files, Folders, and Drives. Click "OK."
+
+, These will delete the rest of the virus.C:\WINDOWS\SCVVHSOT.exe
+C:\WINDOWS\SCVHSOT.exe
+C:\WINDOWS\hinhem.scr
+C:\WINDOWS\system32\SCVHSOT.exe
+C:\WINDOWS\system32\blastclnnn.exe
+C:\WINDOWS\system32\autorun.ini
+C:\Documents and Settings\All Users\Documents\SCVHSOT.exe
+

@@ -1,0 +1,15 @@
+ You will need Chrome for the developer tools included in the program. This will allow you to scan the website for all the links it contains, potentially allowing you to find the download link you need without completing the survey.
+
+
+Extracting links only works if the link to the download or site you need is on the same page as the survey.
+ Select Inspect element. This will open the developer tools.
+ This is located on the far end of the tabs at the top of the developer frame.
+ Copy and paste the following code into the console and then press Enter:
+urls = $$('a'); for (url in urls) console.log ( urls.href );
+
+
+, After running the command, you will be presented with a list of all of the links on that website. If the download or page you need is on the site, you will be able to access it by clicking the correct link.
+
+
+Links ending in .css or .js are not download links, but links to other elements for the website. These can be ignored.
+

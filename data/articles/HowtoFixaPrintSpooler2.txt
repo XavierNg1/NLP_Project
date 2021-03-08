@@ -1,0 +1,27 @@
+ This will often fix the problem on its own. It is also a requirement before continuing to the steps below.Open the Services window (Windows key + R, type services.msc, press enter).
+Select Print Spooler and click the Stop icon, if it is not stopped already.
+Navigate to C:\Windows\system32\spool\PRINTERS and open this file. You may need to show hidden files and/or enter an administrator's password.
+Delete all contents inside the folder. Do not delete the PRINTERS folder itself. Note that this will remove all current print jobs, so make sure no one on your network is using the printer.
+Return to the Services window, select Print Spooler, and click Start.
+ Your printer driver may be corrupted, causing the spooler problems when it tries to handle faulty data from the printer. Try updating your drivers first. If this doesn't solve the problem, continue to the next step.
+ Your printer software may be corrupted. This quick process will remove it so you can start again with a fresh installation:Unplug your printer or disconnect from a wireless printer.
+Search for "Devices and Printers" in the search bar, then click to open it.
+Right-click the icon for the printer that's failing to print. Click "Delete" on the drop-down menu.
+ The driver must be uninstalled separately. Leave your Devices and Printers window open, and make these changes:
+
+
+Left-click any other printer icon, then click Print Server Properties on the top menu bar.
+In the Properties window, click the Drivers tab.
+Select the driver for the deleted printer, then click Remove.
+If you choose "Remove driver and driver package," the installation package will be deleted as well. Only do this if you know where to find a new installation package for that driver.
+ Plug your printer back in and follow the onscreen instructions to reinstall the printer. If you deleted the driver package, you will also need to download a replacement. Look for this on the printer manufacturer's website.
+ If your printer or driver keep reappearing, or fail to uninstall, this tool can sometimes do the trick. It is only available for Windows 7 Pro/Ultimate/Enterprise and Windows 8 Pro/Enterprise. Use it as follows:Navigate to Start → Administrative Tools → Print Management, and log in with an administrator password. If you can't find this, try Start → Control Panel → System & Security → Administrative Tools → Print Management.
+In the left pane, click the arrow next to Print Servers to expand the list.
+Click the arrow next to your computer (marked Local).
+ Find the printer you're having trouble with in the right pane, right-click it, and select "Delete."
+
+
+Click Drivers in the left pane. Right-click each driver used by that printer, and select "Delete" to uninstall it. (You will not be able to uninstall it if another printer is using it.)
+Alternatively, right-click the driver and select "Remove Driver Package." This will uninstall the driver and delete the installation package. This is sometimes necessary, but you will not be able to reinstall the driver until you download a new installation package.
+Connect to the printer to reinstall it. Download a new driver if you removed the driver package.
+

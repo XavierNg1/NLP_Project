@@ -1,0 +1,114 @@
+
+Start a new single-player game in Minecraft.
+Once the game has started, press Esc to open the menu.
+
+,
+Click "Open to LAN".
+
+,
+Click the "Mode" button to select the game mode for other players.
+Click the "Allow Cheats" button to allow other players to use cheats.
+
+,
+Click "Start LAN World".
+
+,
+Note the address.
+Start Minecraft on the other computer(s).
+Click "Multiplayer".
+
+,
+Wait for the network scan to complete.
+
+,
+Select your game and click "Join Server".
+
+,
+Add the server manually if you can't discover it.
+Visit the Java download site.
+Find your Java directory.
+Right-click on Computer/My Computer/This PC.
+Visit the Minecraft website.
+Download .Minecraft_Server.exe.
+
+,
+Create a Minecraft server folder.
+Move the .Minecraft_Server.exe file to the new folder.
+
+,
+Run the EXE file to create the server.
+Open the .eula.txt file.
+
+,
+Find the .eula=false line.
+Right-click in the server folder and select New → Text Document.
+
+,
+Enter the following to create a server batch:
+
+
+
+
+
+@echo off
+title run-minecraft
+java -Xms1G -Xmx2G -jar minecraft_server.exe
+pause
+
+
+
+
+
+
+-Xms1G -Xmx2G denotes the initial and maximum memory allotment for the server (1 GB and 2 GB, respectively).
+Save the file as a ".bat" file.
+
+,
+Run the batch file to start your server.
+
+,
+Find your computer's IP address.
+Visit the Minecraft website.
+Download .minecraft_server.jar.
+
+,
+Create a Minecraft server folder.
+Move the .minecraft_server.jar file to the new folder.
+
+,
+Open your Minecraft server folder.
+
+,
+Create a new text file with TextEdit.
+Save the file as "start.command".
+Open the Terminal in the Utilities folder.
+Type .chmod a+x into the Terminal, then drag and drop the start.command file into the Terminal window.
+Press Return to save the changes to the file.
+
+,
+Double-click the command file to start your server.
+Open the .eula.txt file.
+
+,
+Find the .eula=false line.
+Find your computer's IP address.
+Enter your router's address into a web browser.
+Log in with your administrator account.
+Open the Port Forwarding section.
+Add a new service or rule.
+Name the service "minecraft" or "minecraft_server".
+
+,
+Set the protocol to "TCP".
+
+,
+Set the External Starting Port and External Ending Port to "25565".
+Set the Internal IP Address to the IP address of your server computer.
+
+,
+Click "Apply" or "Save".
+Set your operator privileges.
+Setup your whitelist.
+Obtain your external IP address.
+Distribute your address.
+Join your own server.

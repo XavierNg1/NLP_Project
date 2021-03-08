@@ -1,0 +1,70 @@
+ Openlayers provides a CSS file that sets the appearance of controls really nicely, so we should import that first.
+
+
+
+
+<link href="http://openlayers.org/en/v3.12.1/css/ol.css"
+  rel="stylesheet">
+
+
+;
+, Once the CSS file is imported, you'll see that the map already has 2 controls; zoom in and out buttons, and an ‘i’ button for showing map attributions. We'll also add 2 controls of our own, which don't require any configuring (their default settings are fine).
+
+
+
+
+var fullscreen_control = new ol.control.FullScreen();
+map.addControl(fullscreen_control);
+ 
+var zoom_slider_control = new ol.control.ZoomSlider();
+map.addControl(zoom_slider_control);
+
+
+
+
+, Interactions let us 'interact' with an OpenLayers map in way such as panning and zooming using a mouse. They are invisible, and an OpenLayers map will already have several interactions when you create it! One interaction that is sometimes a bother 'zooms the map when you use your mouse wheel'. To remove it, iterate through the interactions and remove any that have the same type as ‘MouseWheelZoom’.
+
+
+
+
+var interactions = map.getInteractions();
+ 
+function remove_interaction(interaction, index, array) {
+  var is_mouseWheelZoom = interaction instanceof ol.interaction.MouseWheelZoom;
+ 
+  if (is_mouseWheelZoom) {
+    map.removeInteraction(interaction);
+  }
+}
+ 
+interactions.forEach(remove_interaction);
+
+
+
+
+, Overlays are elements that can be positioned in a specific location on the map. They can be used to add information to a map feature or a location, like adding a popup that displays the name of a country. Overlays are powerful because OpenLayers can use any most HTML elements as overlays. Also note that if you'd like to add interactivity - such as the popup only appearing when you click something - that must be added separately.
+
+
+
+
+<div id="popup" class="popup">Chad</div>
+
+
+
+
+
+
+
+
+var popup = new ol.Overlay({
+  element: document.getElementById('popup')
+});
+popup.setPosition(point_feature.getGeometry().getCoordinates());
+popup.setPositioning('bottom-center');
+popup.setOffset();
+map.addOverlay(popup);
+
+
+
+
+,

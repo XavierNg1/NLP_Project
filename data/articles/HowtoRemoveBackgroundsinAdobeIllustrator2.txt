@@ -1,0 +1,40 @@
+
+
+
+For example, if the image is a solid black star on a checkerboard background, you can use the Magic Wand tool to get rid of the background.
+If your image has many colors, such as a photograph, use the Pen tool instead.
+ This panel is where you’ll define which areas of the image will be selected when you click the Magic Wand on your object.
+ With this option selected, clicking an object with the Magic Wand tool will select everything in your image that matches the fill color of where you clicked.
+
+
+For example, clicking the Magic Wand tool on a pink triangle on a purple background will select only the pink triangle. If there are multiple pink shapes on the purple background, all pink shapes will be selected.
+Additionally, if there are more than one object in the image that matches this color, all of them will be selected when you click the color anywhere on the image.
+ Stroke Color refers to the color of the line surrounding an object, whereas Fill Color is the area inside of the line. If you use Stroke Color as your parameter, you will click the line around the object to define the color, not the inside of the object.
+
+
+For example, if you are stripping the background from a red circle that has a blue outline, use “Stroke Color” so the blue line will be included in your selection.
+When you click the Magic Wand tool on a certain color line with this parameter chosen, all objects with that line color around them will be selected.
+ The tolerance number affects how flexible (or tolerant) the tool should be when matching all of the colors to the area where you click the Magic Wand tool.
+
+
+The default is 32px, which means clicking a single color will select everything that matches that color, plus extremely slight variations of that color (within 32 px).If the object has a gradient, you can increase the tolerance to additional colors to be selected.
+For most objects, the default is fine.
+ This will select all lines that are the same thickness as the one you select.
+ A lower number indicates a more precise match. Meaning, if you click a 10px line with a tolerance of 0, the tool will only select lines that are exactly 10px.
+
+
+The default is set to 5px, which is likely not specific enough for thinner lines. If you find that the default option is selecting more lines than you’d like it to, change the tolerance to 0.
+ Click once on the object in the foreground to select it based on the criteria specified in the Magic Wand settings. Once you’ve clicked the object, a dotted outline will appear around the selection.
+
+
+If the selected area isn’t what you were expecting, press ⌘ Cmd+⇧ Shift+A (Mac) or Ctrl+⇧ Shift+A (Windows) to deselect. Then, return to the Magic Wand panel to adjust the parameters and try again.
+ This action will select both the foreground object and the background at the same time.
+, Press Y to select the Magic Wand tool (no need to launch the panel this time), click the white background once, then press Del.
+ Click “File,” then “Save as,” then choose “Illustrator EPS (*.EPS)” from the File Format drop-down. Type a name for your file, then click “Save.”
+
+, Unless you’re using a vivid photo, saving as a GIF is the best option.
+
+
+Click “File,” then “Save for web”. Choose “GIF” as the preset, and place a check in the “transparency” box if your background is transparent. Click “Save,” enter a filename and location for your image, then click “Save” once more.
+If your image contains more colors than the GIF’s maximum of 256 (for example, a photograph), choose “PNG-24” instead of GIF. This will save your file as a .PNG file, which is widely compatible with most internet applications. Place a check next to “Transparency” if you have a transparent background. Click “Save,” choose a save location, then click “Save” once more.
+

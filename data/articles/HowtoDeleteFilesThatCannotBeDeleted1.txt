@@ -1,0 +1,46 @@
+ The most common reason that a file cannot be deleted is because a program is still using the file. Try closing all of your open programs and attempt to delete the file again.
+
+
+If the file still can't be deleted, read on.;
+, If you can't delete a file because it is in use by another program, the quickest way to delete it is by using the Command Prompt.
+
+
+Press the Windows key + R and type cmd to open the Command Prompt.
+ You can see the path to the file in the Explorer window. Type cd C:\path\to\file and press Enter. Replace C: with the actual drive letter and path\to\file with the address of the folder.
+ Make note of the exact filename and extension of the file you want to delete.
+ You will be forcing Windows Explorer to close.
+ Click the End task button. This will close your desktop, leaving just the Command Prompt and any other open windows.
+ This will attempt to delete the file that you specify. Make sure to include the full name and extension.
+ Sometimes, deleting the folder will allow you to delete the file that it contains. Keep in mind that deleting a folder will delete all of its contents. Type rmdir /s directoryName and press Enter., If your file still cannot be deleted, you may need to boot into Safe Mode. This will load only the essential processes, hopefully allowing you to delete your file.
+
+
+Reboot your computer and rapidly hit F8 until the Advanced Startup menu appears.
+Select Safe Mode with Command Prompt from the menu. Windows will load its essential files and then take you directly to the Command Prompt.
+Follow the steps above to navigate to your file and try deleting it again.
+ Sometimes odd characters can cause problems with deleting the file. Using the file's "short name", or DOS-compatible name, may help.
+
+
+Navigate to the file's directory and type dir /x.
+Note the short name of the file (i.e FILENA~1.XYZ).
+Type del FILENA~1.XYZ and press Enter.
+ This is a lite operating system, usually Linux, that you boot from a disc. Using a Linux Live CD will allow you to access all of your files without booting into Windows, meaning no Windows processes will be locking them.
+
+
+
+Click here for instructions on downloading, creating, and booting a Linux Live CD.
+After booting into the Linux environment, you'll be able to access the hard drive and delete any file that you weren't able to delete before. Always be careful when deleting system files.
+ If you are receiving an error message stating that your disk may be corrupted, the corruption could be causing your file to be undeletable. If this is the case, you'll need to try repairing the disk before you can delete the file.
+
+
+Open the Command Prompt, type chkdsk /r and press Enter.
+Reboot your computer if prompted and allow your disk to be scanned. The chkdsk process may take several hours to complete. It will attempt to automatically fix any errors it comes across, but the presence of errors likely indicates that your disk will be failing in the near future.
+ Sometimes files are created that you don't have the permission to delete. In order to remove these files, you'll need to take ownership of the file.
+
+
+Boot into Safe Mode.
+Right-click on the file or folder you want to delete.
+Click the Security tab.
+Click Advanced and then Owner.
+Check the box next to your user name for "Full Control".
+Click Apply and then try deleting the file or folder again.
+

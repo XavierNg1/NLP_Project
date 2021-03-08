@@ -1,0 +1,8 @@
+, If you want to find three modes, select a range of three cells. If you select fewer cells than the number of modes you wish to find, you will see only that many modes.
+ The MODE.MULT function's format is "=MODE.MULT(Cx:Dy)," where C and D represent the letter of the column of the first and last cell in the range, and x and y represent the number of the first and last row in the range. (As with the MODE function, you'll most usually enter data in cells of the same column and use the same column letter for the first and last cell of the range, or in cells of the same row and use the same row number for the first and last cell of the range.)
+
+
+MODE.MULT can also be used by specifying individual cells or constants within the parentheses, but either option should be used with only very small data sets that you don't plan to change.
+ If you set your spreadsheet for manual calculation press F9 to see the result.
+ For a data set of 2,1,3,4,3,2,1,7,1,2,3,8 entered in cells 1 through 12 of Column A, the formula =MODE.MULT(A1:A12) will return 1, 2 and 3 as the modes, as each appears three times in the data set.
+,

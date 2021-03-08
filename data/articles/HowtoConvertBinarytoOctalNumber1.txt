@@ -1,0 +1,118 @@
+ Binary numbers are simply strings of 1's and 0's, such as 101001, 001, or even just 1. If you see this kind of string it is usually binary. However, some books and teachers further denote binary numbers through a subscript "2", such as 10012, which prevents confusion with the number "one thousand and one."
+
+This subscript denotes the "base" of the number. Binary is a base-two system, octal is base-eight.
+;
+, There are two different binary numbers and only eight octal. Since 23=8,{\displaystyle 2^{3}=8,} you'll need three binary numbers to designate each octal number. Start from the right to make your groups. For example, the binary number 101001 would break down to 101 001.
+ The binary number 10011011 has eight digits, which, though not a multiple of three, can still convert to octal. Just add extra zeros to your front group until it has three places. For example:
+
+
+Original Binary: 10011011
+
+
+Grouping: 10 011 011
+
+
+Adding Zeros for Groups of Three: 010 011 011, Each of the three binary numbers in a set stands for a place in the octal number system. The first number is for a 4, the second a 2, and the third a 1. To keep things straight, write these numbers underneath your sets of three binary numbers. For example:
+
+010 011 011421 421 421
+
+001421
+
+110 010 001421 421 421
+
+Note, if you're looking for a shortcut, you can skip this step and just compare your sets of binary numbers to this octal conversion chart.
+ If there is a one above the "4," then your octal number has a 4 in it. If there is a 0 above the one's place, the octal number does not have a one in it, so leave a blank, zero, or dash. As seen in an example:
+
+
+Problem:
+
+Convert 1010100112 to octal.
+
+
+
+
+Separate into threes:
+
+ 101 010 011
+
+
+
+
+Add placeholders:
+
+101 010 011421 421 421
+
+
+
+
+Mark each places:
+
+101 010 011421 421 421401 020 021, Once you know what places are in the octal number, simply add up each set of three individually. So, for 101, which turns into 4, 0, and 1, you end up with 5 (4+0+1=5{\displaystyle 4+0+1=5}). Continuing the example above:
+
+
+Problem:
+
+Convert 1010100112 to octal.
+
+
+
+
+Separate, add placeholders, and mark each place:
+
+101 010 011421 421 421401 020 021
+
+
+
+
+Add up each set of three:
+
+
+(4+0+1)(0+2+0)(0+2+1)=5,2,3{\displaystyle (4+0+1)(0+2+0)(0+2+1)=5,2,3}
+
+
+
+
+, Splitting up the binary number was just to make solving easier -- the original number was one lone string. So, now that you've converted, put everything back together to get your final answer. That's all it takes.
+
+
+Problem:
+
+Convert 1010100112 to octal.
+
+
+
+
+Separate, add placeholders, mark places, and add totals:
+
+101 010 011    5 — 2  —  3
+
+
+
+
+Put converted numbers back together:
+
+523
+
+
+
+
+, There is technically no way to know if 523 refers to a octal number or a normal base-ten number without proper notation. To ensure that your teacher knows you've been doing the work well, place a subscript 8, referring to octal as a base-8 system, on your answer.
+
+
+Problem:
+
+Convert 1010100112 to octal.
+
+
+
+
+Conversion:
+
+523.
+
+
+
+
+Final Answer:
+
+5238

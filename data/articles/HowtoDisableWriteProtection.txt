@@ -1,0 +1,82 @@
+ Many USB drives and SD cards will have a physical lock switch that turns on write protection. Check to make sure that the drive does not have this lock enabled.
+
+If your lock mechanism has been broken, see Fix a Broken Lock on SD Cards for a guide on fixing it.;
+, You may get a write protection error if there is no more space on the drive. You can see the amount of free space on the drive by selecting it in the Computer/This PC window. If your drive does have free space, the file you're trying to copy to it may still be too large.
+ Sometimes the file that you're trying to copy is actually the one that's write-protected, not your USB drive. The error will be a little different, but looks pretty similar. You can change your file's attributes by doing the following:
+
+
+Windows - Right-click the file and select "Properties." Uncheck the "Read-only" box and click "Apply."
+Mac - Control-click the file and select "Get Info." Expand "Sharing & Permissions" and set the "Privilege" column to "Read & Write" for your user name.
+ Whenever you plug a USB drive in, especially one that's been plugged into another computer, you should scan it for viruses. Many virus scanners can be configured to scan USB drives automatically when they're connected, or you can right-click on the drive and select "Scan with Antivirus."
+
+, If every drive you insert in your computer becomes write protected, you may have a virus or malware infection.Run an antivirus scan on your entire computer using your antivirus program.
+Download and run Malwarebytes Anti-Malware. You can download it for free from malwarebytes.org.
+See Remove Malware for more detailed virus removal instructions.
+ This is a free, open-source program designed to find problems with USB drives and Windows USB drivers. You can download UsbFix for free from fosshub.com/UsbFix.html.
+
+
+Click "Research" after launching UsbFix.
+Click "Clean" after the scan has completed.
+Test your USB drives again.
+ If your USB drive or SD card is stuck in Read Only mode, you may be able to fix its attributes using the Command Prompt.
+
+
+Press Start.
+Go to Accessories.
+Right-click Command Prompt, then choose "Run as Administrator".
+ This will launch the DiskPart utility in a separate Command Prompt window. You will likely be prompted by Windows to start it.
+ This will display a list of the drives connected to your computer., All of the partitions connected to your computer will be displayed, including your internal hard drives. There are several columns of information you can use to identify the USB drive:
+
+
+The Ltr column displays the associated drive letter for each partition. Not all partitions will have letters, such as recovery partitions.
+If you've given the USB drive a name before, it will be listed in the Label column.
+Look for Removable in the Type column.
+The Size column can help you differentiate between two similar USB drives.
+ Replace X with the number from the first column in the list for the USB drive or SD card you want to perform commands for. For example, if the USB drive is Disk 5, you'd type select disk 5.
+ This will change your USB's properties so that it is no longer read-only.
+ DiskPart will close, and you can try manipulating files on your USB drive again. You may have to eject and then reinsert the drive to get it working. If the Command Prompt didn't work, try the next method., If performing the DiskPart commands did not fix your USB drive, or every drive you connect becomes read-only, you may need to edit your Windows registry. The registry controls how Windows runs, so be very careful to only perform the actions described in this article.
+
+
+To open the Registry Editor, press ⊞ Win+R and type regedit. If you're not an administrator, you'll be prompted for the administrator password.
+ Expand and collapse the entries on the left to navigate to the following location:
+
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies
+If you don't have a StorageDevicePolicies folder in the Control folder, right-click in the folder and select "New" → "Key." Name it StorageDevicePolicies and then open it.
+ This will open the Edit window.
+
+
+If you don't have a WriteProtect entry because you just created StorageDevicePolicies, right-click in the folder and select "New" → "DWORD (32-bit) value." Name it WriteProtect and then save it. Double-click it to open the Edit window.
+ This will disable write protection for all of your USB drives.
+ The card or drive should now be writeable.
+ If you've tried everything above and still can't remove the write protection, you may need to format the drive. This will delete all of the data on the drive, but may get it working again.
+ You won't be able to properly format the write-protected drive unless you are in Safe Mode:Reboot your computer and hold F8. Select "Safe Mode with Networking" from the list of startup options.
+See Start Windows in Safe Mode if you're having difficulties booting into Safe Mode.
+ This windows displays all of the drives connected to your computer.
+
+
+You can open this window from the Start menu, or by pressing ⊞ Win+E.
+ This will open the Format window for the USB drive.
+ This will make the drive compatible with the most computers and devices.
+
+
+Select "exFAT" if the drive is larger than 32 GB.
+Select "NTFS" if the drive is only going to be used in Windows.
+ Windows will begin formatting the drive, which may take a while to complete.
+ After formatting, see if you can read and write to the drive. If the problem is not fixed, the drive itself may be damaged., Your drive's permissions may have become corrupted. You can fix these using Disk Utility. You can find Disk Utility in the Utilities folder.
+ The Disk Utility window should list your hard drive, CD drive, and any attached devices. Select the write-protected device.
+ After confirming, OS X will begin scanning your drive and attempt to fix any problems. This may take a while to complete.
+
+
+If you're using older versions of OS X, click the "First Aid" tab and then click the "Repair Permissions" button.
+ If the drive is in NTFS format, you won't be able to write to it. Formatting it will allow you to use it, but will erase all of the data on the drive.
+ Open the Disk Utility app from your Utilities folder. Your USB drive will be listed in the left frame.
+ There are several options you can pick from, depending on what you'll be doing with the drive:
+
+
+Select "OS X Extended (Journaled)" if you're only going to be using the drive on Mac computers.
+Select "FAT" if you plan on using the drive on other operating systems and devices.
+Select "exFAT" if the drive is larger than 32 GB and you want to use it in Windows as well.
+ OS X will begin formatting the drive, which may take a while to complete. All of the data on the drive will be deleted.
+ If you still can't write to the drive, it may be malfunctioning and will need to be replaced.
+

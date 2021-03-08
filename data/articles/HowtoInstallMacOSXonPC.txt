@@ -1,0 +1,30 @@
+ Be mindful that the minimum requirements of the operating system should be met in order for it to work.;
+,, This will allow you to boot into the installation menu of OS X. There are several boot loader apps you can use over the Internet, one of which is iBoot.
+
+
+You can create a boot disk either on CD or a flash drive.
+, Do this so that the computer will boot from the CD/DVD drive first.
+ It is usually under the Peripherals or Configurations tab. Set it to “AHCI”.
+
+
+Note that the location of this setting will vary depending on the type of BIOS your motherboard has.
+ Insert the boot disk and restart the computer.
+, Once the boot disk loads, remove it from the drive and replace it with the OS X retail DVD.
+, Once the name of the DVD appears on the boot loader screen, press Enter and the language screen will appear.
+ After selecting your language, create a hard disk partition. Go to Utilities > Disk Utility. Select the hard drive and click “Partition.”
+
+, Choose “Mac OS Extended (journaled)” for the format.
+,,, Once the installation finishes, replace the boot disk into the drive and reboot your computer.
+ The partition you’ve just created and installed the OS X in will now be displayed on the boot loader screen. Select the partition and OS X will start.
+ This tool allows you to start your computer without having to use any boot loader.
+ Open Multibeast and enable the following settings under Installation Type:
+
+
+UserDSDT
+System Utilities
+Advanced Options > Kexts > Audio > LegacyHDA > ALC889
+Advanced Options > Kexts > Graphics > NVEnabler
+Advanced Options > Kexts > Network > RealtekR1000SL
+Advanced Options > Patched Kernels > 10.3.1 Supported Kernel
+
+, After setting up Multibeast, restart your computer and you can now begin using OS X on a PC.

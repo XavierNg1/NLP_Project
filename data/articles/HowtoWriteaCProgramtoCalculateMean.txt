@@ -1,0 +1,60 @@
+ You can download the software from the Visual Studio website
+
+, The specific software version that you requested will start downloading on clicking.
+ After installing Visual Studio, select new project and follow the steps to create an empty project. Now you can start writing the code in compiler.
+ The first step to make this program is to plan how the program will work. If the numbers that will be calculated are long, then double data type can be used to save numbers.
+
+Double data type will help to keep decimal point if needed, whereas int data type will disregard digits after decimal.
+ The first line of code will start with include<iostream> following the namespace statement. This two line enable program to input numbers and output result as well.
+ Function is a method that includes different statements that will be executed to find the output of the program.
+
+
+At the end of the main function, you need to include the return statement that is return 0. This line will help to stop your program. Inside your main function, write your detailed code.
+ In the main function declare variables that will be used for calculation.
+
+
+Variable data will be used to know total number of inputs and i will be used for keep track of for loop. Also declare sum, average and array of sized 100.
+This array numcan hold up to 100 numbers to calculate mean.
+ Using for loop, ask the user to enter numbers that will be calculated.
+For example, if the sum of the inputs = 50, and the total number of inputs = 10, the mean = 50 / 10 = 5
+So, the formula to calculate the mean, or the average, is: Mean = Sum of all inputs / Total Number of inputs.
+ You can also use a while loop.
+
+
+Adding one with i, will count the entered number from 1 instead of 0
+To find sum of all inputs, add numbers while user enter each number.
+ Using formula and code given in previous step, get all the information from the user, and then calculate average or mean using the formula. Average = sum / data;
+
+, It will look something like this:
+
+
+
+
+
+#include <iostream>
+using namespace std;
+ 
+int main(){
+ 
+        int data, i;
+        double num, sum = 0.0, average;
+        cout << "Enter total numbers of data: ";
+        cin >> data;
+ 
+        for (i = 0; i<data; i++)
+        {
+                cout << i + 1 << ". Enter number: ";
+                cin >> num;
+                sum = sum + num;
+        }
+        average = sum / data;
+        cout << "Average/Mean = " << average<<endl;
+        return 0;
+}
+
+
+
+
+
+, Once the program has calculated the average or mean, display it to the user. Use cout statement to output the calculated result.
+

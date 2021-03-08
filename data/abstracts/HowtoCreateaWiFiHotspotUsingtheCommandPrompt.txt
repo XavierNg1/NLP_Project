@@ -1,0 +1,51 @@
+
+Open Start
+
+
+
+ 
+
+.
+Type command prompt into Start.
+Right-click
+
+
+
+
+
+Command Prompt.
+Click Run as administrator.
+Click Yes when prompted.
+Type NETSH WLAN show drivers and press ↵ Enter.
+Look for "Yes" next to "Hosted network supported".
+Type the following code into Command Prompt:
+
+
+
+
+netsh wlan set hostednetwork mode=allow ssid=NETWORKNAME key=PASSWORD
+
+
+
+
+and press ↵ Enter.
+Type NETSH WLAN start hostednetwork and press ↵ Enter.
+Exit Command Prompt.
+Open Start
+
+
+
+
+
+and type in control panel.
+Click Control Panel.
+Click Network and Internet.
+Click Network & Sharing Center.
+Click Change adapter settings.
+Right-click your current connection's name.
+Click Properties.
+Click the Sharing tab.
+Check the "Allow other network users to connect..." box.
+Click the box below the "Home networking connection" heading.
+Click your hotspot's name.
+Click OK.

@@ -1,0 +1,37 @@
+
+For those of you who have finished the article, Create a Lemniscate Spheroid Curve and Acquire a Ring of Sinewave Spheres in Excel, you'll find this workbook is largely a process of combining the two by inserting 3 new columns and adding a lookup table -- look for MODIFIED or NEW notes to the Acquire a Ring of Sinewave Spheres in Excel article after doing a SAVE AS of that workbook under an appropriate new name for this project.
+Set Your Preferences: Open Preferences in the Excel menu and follow the directions below for each tab/icon.
+It helps placing the cursor at cell A16 and doing Freeze Panes.
+MODIFIED: Enter the upper Defined Name Variables Section (here's a picture AFTER insertion of three new columns at C:E which you are to ignore for now):
+
+
+A1: Aligned left, enter Sinewave Spheres in a Lemniscate Curve and Format Font Apple Chancery or something fancy and nice?,
+MODIFIED: Enter the column heading of rows 4 and 5:
+
+
+Modified: A5: Lem Cos (for Lemniscate Cosine formula)
+Modified: B5: Lem Sin
+C5: Indicator
+D5: Randy
+E5: t: 0 to nπ
+F5: z1_
+G5: Adj_x1
+H5: Adj_y1
+I4 and J4: Charting
+I5: x: No z
+J5: y: With z
+Command+Select cells F1:F3 and I3 and Format Fill yellow.
+NEW: Place the cursor in the column headers for C, D and E (that is, Edit Go To C:E) and Insert Columns.
+NEW: Enter the Thickness Looker lookup table.
+MODIFIED: Enter the column formulas:
+
+
+Modified: Lem Cos: Edit Go To cell range A6:A17285 and enter into A6 w/o quotes the following formula, "=Thickness/2*C6*COS(D6*PI()/180*Adjustment)" and Edit Fill Down.
+Create the Chart.
+
+
+Above is the image to be created.
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

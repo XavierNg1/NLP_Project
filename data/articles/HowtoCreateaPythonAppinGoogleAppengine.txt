@@ -1,0 +1,80 @@
+ Download and install Python 2.7 for your platform, if you haven’t done so already (as of this writing, only 2.5 and 2.7 versions are supported) . Then, download and install the GAE API from here. MSI setups are available for windows platform. For Linux, you can just unzip into a local folder like ‘~/programs/’. The zip file will create a subdir called ‘google_appengine’. Practically, the only two Python scripts you are ever going to need to develop a GAE app are: dev_appserver.py and appcfg.py;
+, Register your subdomain on GAE by visiting https://appengine.google.com. Once you register your app there, you will get a subdomain called http://your-app-id.appspot.com. There are also options for redirecting your custom domain such as www.mydomain.com to your app subdomain.
+ This is as simple as creating a folder on your machine such as ~/source/foo in linux or C:\source\foo in windows. Then just create a text file named app.yaml with below contents inside this folder.
+#application: your-app-id
+
+
+#version:1
+
+
+#runtime: python27
+
+
+#api_version: 1
+
+
+#threadsafe: true
+
+
+#handlers:
+
+
+#- url: /.*
+
+
+#script: helloworld.application
+
+
+Note that your-app-id is the name that you just registered for yourself, make sure that it is typed correctly. version parameter refers to the version of your app, while api_version is the version of GAE SDK used to run this app. The line “script: helloworld.application” indicates that this wsgi handler will be invoked for your app.
+ This is as simple as creating a Python file named “helloworld.py” in the same folder as above, and add below contents to it.
+
+#import webapp2
+
+
+#class MainPage(webapp2.RequestHandler):
+
+
+#def get(self):
+
+
+#self.response.headers= 'text/plain'
+
+
+#self.response.write('Hello, World!')
+
+
+#application =webapp2.WSGIApplication([
+
+
+#('/', MainPage),
+
+
+], debug=True)
+
+
+, To test your app, open up your terminal and change directory to your GAE installation folder (alternatively, add the GAE installation folder to your PATH/$PATH environment variable to avoid doing this each time), and then type the below command
+
+python dev_appserver.py ~/source/foo
+
+OR on Windows:
+
+python dev_appserver.py C:\source\foo
+
+
+, Want to host this app on GAE and check it out? Just fire up your terminal as described above and issue this command:
+
+python appcfg.py update ~/source/foo
+
+or on Windows:
+
+python appcfg.py update C:\source\foo
+
+
+Test your app: The above command should host your app on your appspot subdomain (it will ask for your Google username/password before doing so). Once the app is successfully hosted, you can check it out by visiting http://your-app-id.appspot.com.
+ Now that you have a working app, you can actually visit the official reference to read more about:
+
+
+webapp2: The Python web framework used to handle requests and generate responses.
+Datastore: The big data storage feature that GAE provides your app to store its data. Quotas and Limits: Learn about the various limits that google sets for your app to access resources (Don’t worry, they are enough to suffice a small to medium scale app).
+App caching: Learn how to take advantage of various caching mechanisms in GAE to speed up your app.
+

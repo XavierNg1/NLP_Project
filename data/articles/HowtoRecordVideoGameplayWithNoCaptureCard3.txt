@@ -1,0 +1,14 @@
+ There are a variety of different screen capture solutions available, and different ones will suit different needs. Research all of the available options to see which one will give you the best performance. Some of the most popular options include:
+
+
+FRAPS - This is one of the oldest video capture programs designed specifically for gaming. It has a low impact on your system performance and gives you several options for customizing your recording.
+Nvidia ShadowPlay - This is a screen capture feature for Nvidia graphics cards. If you have a supported card, you can use the Nvidia Experience program to launch it. Because ShadowPlay is built-in to Nvidia cards, there is very little performance impact when using it.
+Open Broadcast Software (OBS) - This is a free software program designed for broadcasting live gaming, but it can also record gameplay as well. This guide will assume you are using OBS, as it is the free option.
+ Most screen capture programs allow you to configure your quality settings before you start recording. The higher the quality, the larger the final file will be. In OBS, click the "Settings" button.Click the "Encoding" tab. Enter 1000 into the Max Bitrate field.
+Check the "Use CBR" box and set the Quality Balance to 10.
+Check the "Use Custom Buffer Size" box and set the Buffer Size field to 0.
+Click the "Broadcast Settings" tab and select "File Output Only". This will just record the video to your computer.
+ having a recording hotkey will make it easy to start and stop recording. In OBS, right-click the "Sources" box and select "Add" → "Game capture". Select the "Use Hotkey" option and then choose the key you want to use. <ake sure it's not a key that you will be using in-game., Once your recording software is configured and running, you can start playing your game. Get to the point that you want to start recording.
+ Your game will begin recording to your computer. Depending on your quality settings, you may or may not notice a decrease in the game's performance once you start recording. High quality recordings wil start to take up a lot of space on the computer.
+ When you are done recording, press the hotkey again. The recording will stop and the file will be written on your hard drive. By default, the videos will appear in the "OBS" folder in your "Videos" folder.
+

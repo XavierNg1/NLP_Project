@@ -1,0 +1,83 @@
+ There are a variety of rootkit scanners available that can help identify and remove rootkits. these scanners are not guaranteed to work, so you'll want to have multiple different scanners on hand to find any infections. The following scanners are general-purpose rootkit scanners, and you should download all of them on a non-infected computer and copy them to a USB drive:RKill - bleepingcomputer.com/download/rkill/ (This program will stop most malicious process from running, allowing you to proceed with the removal. Select the "iExplore.exe" version when downloading.)
+TDSSKiller by Kaspersky - usa.kaspersky.com/downloads/TDSSKiller
+
+Malwarebytes Antimalware Free Version - malwarebytes.org
+
+RogueKiller - adlice.com/softwares/roguekiller/
+;
+, Safe Mode only allows essential processes to run, making it an essential tool for removing rootkits. There are several methods for booting into Safe Mode, depending on your version of Windows:
+
+
+Any version of Windows - Press ⊞ Win+R and type msconfig. Click the Boot tab, and check the "Safe boot" box in the "Boot options" section. Reboot your computer and it will automatically boot into Safe Mode. This is the easiest way to get to Safe Mode in Windows 8/8.1.
+Windows 7 and older - Reboot your computer and rapidly strike the F8 key. This will load the Advanced Boot Options menu, where you can select "Safe Mode with Networking". This method is not possible on newer Windows 8 and 8.1 computers, as the boot too fast.
+ This tool will scan for rootkits and trojans. There are a few settings changes that you will need to make in order to perform the scan.Click the "Change Parameters" link on the main TDSSKiller screen.
+Check the "Detect TDLFS file system" box and click "OK".
+Click "Start scan" to begin scanning with TDSSKiller. The scan is usually fairly quick.
+Click "Continue" to remove the detected infections. You will be prompted to reboot your computer after the removal is complete.
+ After running TDSSKiller, reboot your computer into Safe Mode again. If you used the msconfig method of starting in Safe Mode, you will automatically boot back into it.
+
+
+Run the iExplore.exe file to start RKill. This version is usually necessary because many rootkits prevent rkill.exe from running.
+Wait for RKill to finish finding and terminating processes. This may take a few minutes.
+
+Do not reboot your computer after Rkill finishes. All of the programs that RKill stopped will restart when the computer reboots. Once you see the RKill log, move on to the next step to continue the cleaning process.
+ Malwarebytes Antimalware is designed to detect a wide variety of malware that your virus scanner may have missed, including rootkits.
+
+
+During installation, keep the "Enable free trial..." box checked.
+Run Malwarebytes Antimalware and click the "Update Now" button to download the latest rootkits databases.
+Click the "Fix Now" button to begin performing a scan. The scanning process will likely take around 30 minutes to complete.
+Click "Quarantine All" and then "Apply Actions" to quarantine any infected files.
+ This is a powerful registry and boot record scanning program that can find things that slipped through the cracks of the other scanners.If you aren't able to start RogueKiller, rename the program to winlogon.exe and try again.
+Click "More info" and then "Run anyway" if prompted by Windows.
+Wait for the pre-scan to complete as RogueKiller starts. This may take a few moments. Update the program if prompted.
+Click the Scan button to begin the scanning process. This will take several minutes to complete.
+Click the Delete button to remove checked entries. RogueKiller will automatically check what it considers the most dangerous results. You can also click through each of the results tab and check anything else that you feel is suspicious. If you aren't sure about something, look it up using your favorite search engine before deleting it.
+ If your rootkit scanners are finding rootkits but are unable to remove them, you may need to download an anti-rootkit program that specifically targets that rootkit. These are often available for free from various security companies, and are too numerous to list here. Use the results from your rootkit scans to search the web for tools designed to combat your specific infections.
+ The BitDefender RescueDisk is a free utility designed to find and detect rootkits by booting into a special operating system before Windows loads. This is one of the most effective ways to identify rootkits that scanners miss, as many mask themselves once Windows has started. The RescueDisk ISO file will allow you to create a bootable CD that you can use to load the RescueDisk operating system
+
+
+You can download the ISO file from download.bitdefender.com/rescue_cd/. Download the file labeled BitDefenderRescueCD_v2.0.0_5_10_2010.iso. The file is fairly large, and may take a while to download depending on your connection speed.
+ The ISO file will fit onto either a blank DVD or CD. Insert the blank disc into your burner drive and burn the ISO file to the disk. The process for burning ISO files varies depending on your version of Windows:Windows 7 and 8 - Right-click on the ISO file and select "Burn to disc". If you have another disc burning program installed, select "Open with" and then "Windows Disc Image Burner". Select the correct drive from the drop-down menu in Windows Disc Image Burner and then click Burn to burn the disc.
+Windows Vista and older. Download and install a free disc burning program such as ImgBurn. If installing ImgBurn, read each installation screen carefully so that you don't install any extra unwanted software. Once you've installed ImgBurn, start the program and select "Write image file to disc". Browse for the RescueDisk ISO file and then click the Burn button to begin burning the disc.
+ Once you've finished burning the disc, make sure the disc is still inserted and reboot the computer. For many computers, the RescueDisk boot menu will load automatically. If your computer loads Windows as it normally would, you'll need to switch your boot order in the BIOS menu.
+
+
+Reboot your computer and hit the BIOS key when the manufacturer's logo appears. This is usually F2, F10, or Del, though your computer may be different. Some computers allow you to open directly to the boot menu with a special key. Open the Boot menu and select your disc drive as the primary boot device. Save your changes and reboot your computer.
+Windows 8 - Entering the BIOS is different for computers that came installed with Windows 8 or 8.1. Open the Charms bar (⊞ Win+C) and click "Settings". Click the "Change PC settings" button and then select "Update and recovery". Click "Recovery", and then click the "Restart Now" button at the bottom of the screen. Once the special boot menu appears, select "Troubleshoot", and then "Advanced options". Click the "UEFI Firmware Settings" button and then click "Restart". This will load your UEFI (new version of BIOS) menu, where you can select the "Boot" option and then change your boot order.
+ It's highly recommended that you download any updates, as this will help ensure that RescueDisk can detect the most rootkits possible. The update process may take a few minutes to complete.
+ This will usually take around 15-20 minutes, more if you have very large drives.
+ Once the scan is complete, a summary of any infections found will be displayed. Click the drop-down menu next to each one and select "Disinfect". Click the "Fix Issues" button, and the infections will be removed.
+ Click the small power button at the bottom of the desktop and then select "Restart". Remove your burned disc from the computer to boot normally, or change your boot order back sot hat the hard drive is the primary boot device., If you can't remove the rootkits with your scanners or with RescueDisk, your best is to wipe your drive clean and reinstall Windows. For some rootkits, this is really the only way to get rid of them without hours of tedious and technical work. Generally speaking, if you've already spent a couple hours trying scanners and manual removal methods, you're probably better off just wiping it clean and starting over.
+ You'll be wiping the hard drive clean with no possibility of recovery, so make sure that you have all of your important files securely backed up. You can use an external hard drive, blank DVDs, or a cloud storage service to backup your data. Click here for detailed instructions on quickly backing up your most important files.
+ DBAN is a utility that will completely wipe your drive. This is an important tool when reformatting due to rootkits, as they may survive a simple reformat during Windows installation. You can download DBAN for free from dban.org. Follow Step 2 from the previous section for instructions on burning your downloaded ISO file to a blank disc.DBAN will remove any recovery partitions from your hard drive, so you'll need an actual Windows installation disc for your version to reinstall after wiping. Contact your computer manufacturer for an installation disc if your computer did not come with one.
+ It is very easy to accidentally erase the wrong disk in DBAN, so make sure that all of the disks and drives you don't want erased are detached from your computer.
+ Most computers will start DBAN automatically, but you may have to adjust your boot order if you switched it back after the last section. Follow Step 3 of the previous section for instructions on booting from your burned DBAN disc.
+ This will start DBAN in Interactive Mode, which will allow you to adjust settings.
+ Ideally you'll only have one drive to select from since you've detached any drives you don't want to erase. Pressing Space will select the drive.
+ There is no coming back from this, so make absolutely sure that you have the correct drive selected and that you have all of the files you need backed up.
+ This will take multiple hours to complete, so you can probably leave and come back the next day. The reason it takes so long is that DBAN overwrites every sector of your hard drive multiple times with random data, which overwrites everything that was stored on it originally. This prevents any of the data from being recovered, and should help eliminate all traces of any rootkits.
+ Once you've wiped your computer, you can begin re-installing Windows on your computer. The process is a little different for each version of Windows. Refer to the following guides for the different installation processes:
+
+
+Windows 8
+Windows 7
+Windows Vista
+Windows XP
+
+, Most routers have a firewall function that prevents ports from being accessed by unknown processes. This is an essential element of online security, and if you're connected directly to your modem you should consider a software firewall or purchasing a router.
+ Your antivirus program is your first line of defense against rootkits and other infections. You don't need to pay big money for an antivirus program; some of the most powerful and effective programs are free. Popular antivirus programs include:
+
+
+Windows Defender
+BitDefender
+avast!
+AVG
+
+, This is an extra layer of security in newer versions of Windows that adds an extra prompt before unknown programs are installed. This gives you one last chance to deny permission to a potential rootkit installer before it has access to your system kernel.
+
+
+Many people disable UAC as it can be a bit of a nuisance if you're constantly making changes to your system. Regardless, it's a good idea to keep it enabled to help prevent accidental rootkit installation. Click here for instructions on accessing UAC and changing the settings.
+ When you download free programs from the internet, they will often come packaged with additional software. This additional software isn't always dangerous, but this is one of the most popular methods for installing rootkits and other malware. Carefully read each screen when installing unknown programs, and never select the "Express" installation option.
+ Another common rootkit attack vector are malicious hardware drivers. For example, an infected keyboard driver may install a hidden keylogger rootkit. Only download drivers directly through Windows Update or from the manufacturer's website. Click here for instructions on properly finding and updating your drivers.
+

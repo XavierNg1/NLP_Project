@@ -1,0 +1,53 @@
+ Most problems involve three characteristics of a circuit: resistance R, voltage V, and current I. Ohm's Law tells you that they are related in a simple way: V = IR. If you get stuck at any point and don't have enough information for the steps below, look for a chance to use Ohm's Law:
+
+If you know any two of these values, use Ohm's Law to solve for the third. For example, if you know the resistance and voltage of a circuit, rearrange V = IR to I = V / R, and plug in the known values to solve for I, the current.
+
+Always use values form the same part of the circuit. If you are trying to solve for the resistance of a single resistor, you will need to know the voltage and current for that resistor. Do not use the voltage for the whole circuit.
+;
+, In a series circuit, all of the current passes through every resistor in turn. This means each resistor contributes its full resistance to the circuit. If you know each individual resistance value, just add them together to find the total resistance of the circuit.Example 1: A series circuit has two resistors. One resistor R1 has 3Ω (ohms) of resistance, and the second resistor R2 has 6Ω of resistance. Find the total resistance.The total resistance of the circuit is equivalent to the sum of the two individual resistances:Rtotal=R1+R2=3+6=9{\displaystyle R_{total}=R_{1}+R_{2}=3+6=9}Ω.
+
+On a circuit diagram, a resistor looks like a zig-zag in the wire.
+ The voltage drop across the total circuit is determined by the voltage source, typically a battery. This is often labeled on your circuit diagram, next to two or more parallel lines of different length.The voltage drops across each component of the series circuit add up to the total voltage drop across the circuit.Example 2: A series circuit is powered by a 9 volt battery and has two resistors R1 and R2. The voltage drop across R1 is 5V. What is the voltage drop across R2?Vtotal=V1+V2{\displaystyle V_{total}=V_{1}+V_{2}}9=5+V2{\displaystyle 9=5+V_{2}}V2=9−5=4{\displaystyle V_{2}=9-5=4} volts.
+
+Old-fashioned textbooks may use E to represent voltage instead of V. You may also see ΔV, meaning "change in voltage." The symbol Δ is the Greek letter delta, and means "change."
+
+
+, Electrical charge flows constantly around the circuit, creating the current. A series circuit only has one path for this flow, so the current is the same at all points on the circuit. (There are no branches to split the current.) As long as you know the voltage and resistance at any point on the circuit (or for the circuit as a whole), you can use Ohm's Law to find the current: I = V / R.
+
+
+Example 3: A series circuit plugged into a 220V source is connected to several light bulbs. You measure the voltage drop across a light bulb with resistance 100 Ω and get a result of 80V. How much current flows through this circuit?You know the values of V and R for the light bulb, so you can use Ohm's Law to solve for the current:I = 80V / 100Ω = 0.8 A (amps)Because the current is the same anywhere on a series circuit, the answer is 0.8 amps.Be careful: you cannot use the circuit's total voltage drop 220V. Ohm's Law only works if you use values for the same portion of the circuit, and this problem does not tell you the total resistance of the circuit.
+ Some tough problems require you to calculate the values of multiple components before you can solve for the whole circuit. It may help to fill out a "VIR" chart as you go, with a separate row for each component and the whole circuit. Here's an example for a circuit with three components A, B, and C:
+
+
+{\displaystyle {\begin{bmatrix}&{\underline {\mathbf {V} }}&{\underline {\mathbf {I} }}&{\underline {\mathbf {R} }}\\{\mathbf {A} }:&V_{a}&I_{a}&R_{a}\\{\mathbf {B} }:&V_{b}&I_{b}&R_{b}\\{\mathbf {C} }:&V_{c}&I_{c}&R_{c}\\{\mathbf {Total} }:&V_{total}&I_{total}&R_{total}\end{bmatrix}}}
+
+Fill out the chart with all values provided in the problem.
+
+Ohm's Law works with values in the same row. For example, Vb=IbRb{\displaystyle V_{b}=I_{b}R_{b}}. Use this to complete any rows that have 2 out of 3 cells filled.
+
+Use the properties of series circuits to fill blank spaces in columns:
+
+
+Rtotal=Ra+Rb+Rc{\displaystyle R_{total}=R_{a}+R_{b}+R{c}}
+
+
+Vtotal=Va+Vb+Vc{\displaystyle V_{total}=V_{a}+V_{b}+V{c}}
+
+
+Itotal=Ia=Ib=Ic{\displaystyle I_{total}=I_{a}=I_{b}=I_{c}}
+
+
+
+
+, Power is a measurement of how quickly the circuit draws electrical energy from the battery or outlet. Power and energy are useful quantities to know if you are trying to power another device with the electrical circuit, or if you are calculating your electricity bill. In the classroom, however, you do not need to find the power and energy unless the problem asks you to. If the problem only tells you to fill out a circuit diagram, use the method above to find resistance, voltage, and current.
+ Power in an electrical circuit depends on two quantities: current and voltage. A higher current (faster electrical charge) transfers electrical energy more quickly, increasing power. A higher voltage means each unit of charge transfers more energy as it moves, also increasing power. You can sum up both relationships in one formula: P = VI.All the formulas in this section work for the circuit as a whole, or for individual components. Just make sure to use quantities that refer to the same portion of the circuit.
+ To find the power dissipated across a resistor, use the formula P=I2R{\displaystyle P=I^{2}R}, or the formula P=V2R{\displaystyle P={\frac {V^{2}}{R}}}. You can derive both these formulas by combining P=VI and Ohm's Law:We know V = IR from Ohm's Law, so we can replace V with IR in other equations:P=VI{\displaystyle P=VI} → P=(IR)(I)=I2R{\displaystyle P=(IR)(I)=I^{2}R}
+
+Rearrange Ohm's Law to I = V / R and use the same trick:P=VI{\displaystyle P=VI} → P=(V)(VR)=V2R{\displaystyle P=(V)({\frac {V}{R}})={\frac {V^{2}}{R}}}
+
+
+, The longer a circuit is on, the more energy it consumes. Multiply power and time together to find energy.
+
+The equations above give you a power result in watts. Multiply by seconds to get an energy result in Joules.
+
+

@@ -1,0 +1,48 @@
+
+Basic Format
+
+
+The Basic format of HTML is:<html>
+<head>
+</head>
+<body>
+</body>
+</html>
+;
+,
+The first <html> tag tells the browser that this is the start of the HTML document.
+Tags
+
+
+HTML documents consist of tags.
+The tags for an ordered list are similar, but the opening and closing tag are <ol> and </ol>
+Code such as this...
+<ul><li>One<li>Two<li>Three</ul><br>
+is rendered by the browser like this...
+One
+Two
+Three
+
+
+Note that these are only the very basic HTML tags.
+DOCTYPE
+
+
+A DOCTYPE declaration is a statement at the very beginning of the document (before the <html> tag) that tells a browser what version of HTML to expect.
+Most pages will work fine without a Doctype but it is a good idea to have one.
+The Encapsulation Rule
+
+
+All (X)HTML(referring to both XHTML and HTML) tags must be closed.
+The Head
+
+
+The head of the document(information between the <head> and </head> tags) is not viewable by the visitor of the page(except the title).
+Comments
+
+
+HTML comments, <!---...--->, are bits of information we put into the code for developer uses.
+Informational Structure and Styling
+
+
+Michio Kaku once said that our most advanced computer has the intelligence of a retarded cockroach.

@@ -1,0 +1,14 @@
+ If you are trying to burn the BIN file to a CD or DVD, you will also need the CUE file to go with it. If you have the BIN file but can’t find the CUE file, you can create one.;
+, Open Notepad and enter the following lines:
+
+FILE "filename.bin" BINARY
+TRACK 01 MODE1/2352
+INDEX 01 00:00:00
+
+
+Change filename.bin to the name of the BIN file you are trying to burn. Keep the quotation marks.
+Save the file to the same folder as the BIN file. The CUE file should be named exactly the same as the BIN file, except with the .CUE extension. Click File → Save As. Click the "Save as type" drop-down menu and select "All Files". Give the file a .CUE extension.
+ As BIN is an outdated format, only older programs fully support it, especially when it comes to multitrack BIN files. Popular programs include CDRWIN, Alcohol 120%, and Nero.
+ Depending on the program, you may need to load the CUE file or it may ask for the BIN file. Once the image file is loaded, you should see a readout showing how much space the image will take on the disc.
+ Once you've verified that the image has loaded correctly, insert a blank disc and start burning. The time it takes to burn will depend on the size of the image, your burner’s speed, and your computer’s performance.
+ Once the burn is complete, test the disc by inserting it into the device you burned it for. Ensure that everything loads correctly, and that any tracks are in the right spot.

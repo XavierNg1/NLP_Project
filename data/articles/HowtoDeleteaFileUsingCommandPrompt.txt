@@ -1,0 +1,51 @@
+ If you know where the file is, you can navigate to it by simply opening the appropriate folder. For example, if you're trying to delete a picture or a text file, you will likely want to look in the default "Documents" folder, which typically holds those file types.
+
+
+If you don't know where your file is, type its name into the Start search bar, right-click the file when it pops up, and click Open file location to go directly to the file.;
+, Doing so will make the deletion process easier as you won't have to change the deletion location from within Command Prompt.
+
+
+The exception to this rule is if you're trying to delete a file from the "System32" folder, which is Windows' system files folder. If that's the case, leave your file there.
+ This will prompt a drop-down menu.
+ It's at the bottom of the drop-down menu.
+ The file's extension is listed near the top of the "General" tab in the "Properties" window, to the right of the "Type of file:" text. You'll need to know your file's extension in order to delete it using Command Prompt. Common extensions include the following:
+
+
+
+.txt - Text files (files made in Notepad).
+
+.docx - Microsoft Word files.
+
+.jpg or .png - Picture files.
+
+.mov, .wmv, .mp4 - Video files.
+
+.mp3, .wav - Sound files.
+
+.exe - Executable files (e.g., a setup file).
+
+.lnk - Shortcut files. Deleting a shortcut will not remove the attached program from your computer.
+ Once you know the file extension, you're ready to open and use Command Prompt.
+ In this case, you'll want to avoid the "Administrator" (or "Admin") version of Command Prompt unless you're deleting a file in the "System32" folder. You can open Command Prompt in a variety of ways depending on your version of Windows:
+
+
+Hold down ⊞ Win and press X, then click Command Prompt above the Start button.
+Right-click the Start button in the bottom-left corner of the screen, then click Command Prompt in the pop-up window.
+Type "Command Prompt" into the Start menu search bar (for Windows 8, hover your mouse in the top-right corner of the screen and click the magnifying glass), then click the "Command Prompt" icon when it appears.
+Open the "Run" app from the Start menu, type in "cmd", and click OK.
+ Doing so will change the location (or "directory") in Command Prompt to your desktop.
+
+
+There are other ways you can change the Command Prompt directory if need be.
+Opening Command Prompt in "Administrator" mode will change the directory to the "System32" file. For this reason, do not open Command Prompt in "Administrator" unless your file is in the "System32" folder.
+ Replace "filename.filetype" with your file's actual name and extension.
+
+
+For example, a picture file named "icecream" would become icecream.png, a text file named "notes" would become notes.txt, and so on.
+For files with spaces in their names, place quotation marks around the entire file name: "I like turtles.jpg" instead of I_like_turtles.jpg or similar.
+To delete all files on your desktop that share the same extension (e.g., all text files), type *.filetype where "filetype" is the extension (e.g., *.txt).
+ You will see a new, blank line appear in Command Prompt. Your file is now gone.
+
+
+Since the "del" command removes files directly from your hard drive, you won't need to delete the file again from the Recycling Bin.
+

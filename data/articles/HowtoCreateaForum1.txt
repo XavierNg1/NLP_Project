@@ -1,0 +1,14 @@
+ Many services provide a place to host your BBS, and generally offer guaranteed uptime, easy setup, domain names, and customer support. Many forum hosting providers now include a service that automates forum installation of 2 of the more popular forum software applications, SimpleMachines and phpBB (if so, follow your hosts instructions to install and then skip to the login portion of the instructions below).;
+, Consider free open source software that's very well supported, both in terms of development and community support.
+ You will need this to upload your PHP content to your host.
+ Set this up on your host through the control panel of your domain.
+ Go to example.com/forumdirectory/install.php to install and configure your forums.
+
+
+
+Follow the instructions on install.php.
+After finishing installation, go to the CHMOD settings of config.php and change them to 644 (if you are using phpBB 2).
+ Delete the install and contrib directories.
+
+Login and go to the admin panel to customize your forum.
+

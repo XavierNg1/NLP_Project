@@ -1,0 +1,41 @@
+ You need to be on the YouTube page to do this, you cannot be watching the video on another website.;
+, It is located below the video, next to a small icon of a sideways "V." This will open up the share/embed box underneath the video.
+ After you click "Share" a link will appear to the video, and above the link will be three words "Share," "Embed," and "Email." Click embed to bring up a code for embedding the video.
+ In a small text box, you will see a code for the video. This code will begin with the phrase "<iframe width" and end with "</iframe>." Copy this code by pressing the "Cntl" and "C" keys simultaneously or right-clicking on the highlighted code and choosing "Copy."
+
+
+The code will look something like this: <iframe width="560" height="315" src="https:</iframe>
+
+, HTML is a type of code used to build websites, and the embed code on YouTube is designed insert into the code to display the video without any changes. Many blogging websites let you insert the video directly into the post as well without changing your website's code.
+
+
+
+Website HTML: Go to your site's "customize" page and click on "Edit Source Code," or "View HTML." This allows you to permanently embed a video on your site.
+
+Blog Posts: Begin a new post. In the toolbar above the post, click on "HTML." This will display the code of your post, but will keep your website's code intact.
+ Since any words your typed will be displayed in the HTML, you can use the text to determine where in the page your video will go. For example, if I wrote a post that says "Check out my new video:" those exact words will appear somewhere in the HTML code.
+
+
+Coding full websites with HTML is very difficult and requires a lot of code, so finding the exact location for your video may take some time. Luckily, no changes are permanent, so you can always move the video later if it is not where you want it., Once you've found where you want the video, click in between the surrounding code and hit the space bar. Almost all code begins with a "<" and ends with a ">". Be sure to put your embed code outside of a pre-existing line of code.
+
+
+Wordpress Blog Example: Check out <b>my video here:</b>_____<!--more--> would read as "Check out my video here: (EMBEDDED VIDEO) Click to Read More."
+
+, You can either right-click and choose "Paste" or press the "Ctrl" and "V" keys simultaneously.
+ Click "Save changes" or publish post and make sure the video is where you want it to be.
+ If you only want to post the video to Facebook, Twitter, Pintrest, or Tumblr, you can simply click on the appropriate icon in the "Share" window below the video. YouTube will prompt you to log into your social media account and automatically embed the video for you.
+ Underneath the embed code on the "Embed" page are the words "Show More." These settings let you change the size and settings of your video, and it will automatically update the code for you.
+
+
+You can prevent other people from embedding, disable the titles, or disable YouTube from advertising other videos by unchecking the boxes.
+"Enable Privacy-Enhanced Mode" will prevent YouTube from collecting user data from your website unless a viewer clicks on the video.
+ If you only want to embed the second half of a video, you can set it to start at any point you want when a viewer clicks on the video. Simply add "#t=" followed by the minutes and seconds, right after the YouTube Link. If I want to start a video 1 minute, 12 seconds in, I would add "#t=1m12s."
+
+
+
+Example: <iframe allowfullscreen="" frameborder="0" height="315" src="https:</iframe>, This means the video will start as soon as someone opens your page or website. Add the phrase "&autoplay==1" right after the video ID, which is the string of numbers and letters after "https://www.youtube.com/embed/." or "https://www.youtube.com/v/."
+
+
+This may occur twice in the embed code, so make sure you add it twice.
+
+Example: <object height="350" width="425"><param name="movie" value="https:<embed height="350" src="https:</embed></object>

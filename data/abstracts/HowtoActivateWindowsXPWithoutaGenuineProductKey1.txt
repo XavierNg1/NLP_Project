@@ -1,0 +1,20 @@
+
+Hold down ⊞ Win and tap R. This will open the "Run" program from which you can access your PC's registry.
+,Type "regedit" into the Run field.
+Press ↵ Enter.
+Review the options tree on the left side of your screen.
+Expand the "HKEY_LOCAL_MACHINE" folder.
+Expand the "SOFTWARE" folder.Expand the "Microsoft" folder.Expand the "Windows NT" folder.Expand the "CurrentVersion" folder.
+Click the "WPA Events" folder.Right-click the "OOBETimer" entry.Click Modify.
+Select the "OOBETimer" contents.
+Tap Delete.
+Type in new numbers.
+Click OK once you're done.Exit the Registry Editor tool.
+Open the Run tool again.
+Type "%systemroot%\system32\oobe\msoobe.exe /a" into the Run window.Click OK.
+Select the telephone option.Click Next.
+Click Change Product Key.
+Enter a Windows XP product key.
+Click Update.Click Back.
+Check the "Activate Windows over the Internet" option.
+Follow the on-screen instructions.

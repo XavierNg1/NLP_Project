@@ -1,0 +1,26 @@
+ This is useful because conditional formatting is best understood by testing it on data you already have. While you can apply conditional formatting to empty cells, it is easiest to see if the formatting works by using pre-existing data.;
+, Conditional formatting allows you to change font style, underline, and color. Using conditional formatting, you can also apply strike-through as well as borders and shading to the cells. However, you cannot change the font or the font size of the contents in the cell.
+ In Excel 2007 this can be found under "Home" > "Styles" > "Conditional Formatting".
+ For this example, two conditions are used to see how each one plays off the other. Excel allows up to three conditions per cell. If you need only one condition, skip the next step.
+,, If it is based on other cells, change the first drop-down to “Formula Is." For “Formula Is" directions, go to the next step. For “Cell Value Is" directions, do the following:
+
+
+Select what kind of argument works best using the second drop-down box. For conditions between a low setting and a high setting, select “between" or “not between." For conditions using a single value, use the other arguments. This example will use a single value using the “greater than" argument.
+Determine what value(s) should be applied to the argument. For this example, we are using the “greater than" argument and cell B5 as the value. To select a cell, click the button in the text field. This will minimize the conditional formatting box.
+ After selecting “Formula Is," all the drop-downs disappear and you are left with a text field. This means you can type in any formula you want using Excel’s formulas. For the most part, you want to stick to simple formulas and avoid text or text strings. Keep in mind that the formula is based on the current cell. For an example, think like this: C5 (current cell) = B5>=B6. This means that C5 will change formatting when B5 is greater than or equal to B6. This example can actually be used in “Cell Value Is," but you get the idea. To select a cell in the worksheet, click the button in the text field. This will minimize the conditional formatting box.
+
+
+For example: Imagine you have a spreadsheet with all the days of the current month listed down in Column A; you need to enter data in this worksheet everyday; and you would like the entire row associated with today's date to light up in some way. Try this: (1) Highlight your entire table of data, (2) Select conditional formatting as explained above, (3) Select "Formula Is" and (4) Enter something like =$A3=TODAY() where Column A contains your dates and Row 3 is your first row of data (after your headings). Note that you want the dollar sign in front of the A but not in front of the 3. (5) Select your formats. , You will notice that it automatically places dollar signs ($) before the row and column designations. This makes that cell reference non-transferable. This means if you were to apply the same conditional formatting to other cells through copy/paste, they will all reference the original cell. To turn this off, simply click in the text field and delete the dollar signs. If you do not want to set a condition using a cell in your sheet, simply type the value into the text field. You can even enter text, depending on the arguments. For example, don’t use “greater than" as the argument and “John Smith" in the text field. You can’t be greater than John Smith...well, you could, but - oh, never mind. In this example, the whole condition, if you were going to say it out loud, would read something like this: “When this cell’s value is greater than the value in cell B5, then..."
+
+, Keep in mind that you want to offset the cell from the rest of the sheet, especially if you have lots of data. But you also want to make it look professional. For this example, we want the font to become bold and white and the shading to become red. To begin, click “Format..."
+
+, Then click “Border" and make any changes there. This example does not make border changes. Then click “Patterns" and make changes there. At whatever point you are finished making the formatting changes, click "OK."
+
+, Make changes as needed until the formatting appears the way you would like.
+ You will notice in the example that the second condition also includes a small formula (=B5*.90). This takes the value of B5, multiplies it by 0.9 (aka 90 percent) and applies formatting if the value is less than that.
+ One of two things will happen:
+
+
+No changes will appear. This means that the conditions are not met, so no formatting was applied.
+One of the formats you selected appears because one of the conditions has been met.
+

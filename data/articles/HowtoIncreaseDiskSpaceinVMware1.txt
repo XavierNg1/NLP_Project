@@ -1,0 +1,8 @@
+ In order to increase the disk size in VMware, you must make sure that your virtual machine is powered off and that it has no snapshots. To determine whether it has snapshots, check "Information" under the "Summary" tab for the virtual machine.;
+, Do this within VMware.
+ You will find this under the column entitled "Hardware."
+
+, On the right-hand side of the window under "Disk Provisioning," set the new "Provisioned Size" of your disk. Some layouts will instead have a drop down menu entitled "Utilities." From here select "Expand." Generally, the disk will be anywhere from 30 to 40GB at this stage, so try resizing it to 45 to 55GB at first.,, While you have expanded the size of your disk, there are a few more steps you must take within the operating system. To rescan your disk, go to "Disk Management" and select "Rescan Disks."
+
+, Now that you have expanded and rescanned your disk, you will see the "Unallocated Space" that we have just created. We must now assign this space to your operating system's drive. To do this, right-click on the unallocated space and select "Expand Volume." This will prompt a simple wizard that will allow you to determine what to do with this newly created space. Assign it to your virtual disk.
+

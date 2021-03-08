@@ -1,0 +1,87 @@
+ Comments are designated by the tags <!-- and -->. You can insert quick comments to remind you what is happening with the code.
+
+
+
+
+<html>
+<head>
+<title>Comment test</title>
+</head>
+<body>
+<!-- This code makes a paragraph -->
+<p>This is the website</p>
+</body>
+</html>
+
+
+
+
+
+Make sure there are no spaces in the comment tags. For example < !-- will not activate the comment function. Inside the tags, you can have as many spaces as you'd like.;
+, Your comments can span multiple lines, which is useful for explaining complex code, or for blocking off large pieces of code.
+
+
+
+
+<html>
+<head>
+<title>Comment test</title>
+</head>
+<body>
+<!-- 
+Your comment can be as long as you need it to be.
+Everything within the comment tags is kept from
+affecting the code on the page.
+-->
+<p>This is the website</p>
+</body>
+</html>
+
+
+
+
+, If you're trying to track down a bug or want to keep code from running on the page, you can use the comment function to quickly block it off. That way, you can easily restore the code by deleting the comment tag.
+
+
+
+
+<html>
+<head>
+<title>Comment test</title>
+</head>
+<body>
+<p>Check out these images</p>
+ 
+<img src="/images/image1.jpg">
+<!-- Hiding this image for now
+<img src="/images/image2.jpg">
+-->
+</body>
+</html>
+
+
+
+
+, If you are programming in JavaScript or VBScript, you can use the comment function to hide the script on browsers that don't support it. Insert the comment at the start of the script, and end it with  to ensure that the script works on browsers that do support it.
+
+
+
+
+<html>
+<head>
+<title>VBScript</title>
+</head>
+<body>
+<script language="vbscript" type="text/vbscript">
+<!--
+document.write("Hello World!")
+
+</script>
+</body>
+</html>
+
+
+
+
+The // in the end tag will prevent the script from executing the comment function if scripts are supported by the browser.
+

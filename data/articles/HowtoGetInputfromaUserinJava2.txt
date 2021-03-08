@@ -1,0 +1,117 @@
+ An InputMismatchException is thrown when the user enters data that doesn't match with the requested type. For example, if the user enters a String when an int is asked for, the program will throw an InputMismatchException and exit. There are several ways to handle this exception and resolve this problem so that your program can be foolproof.
+
+
+
+
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+ 
+public class ScannerExample {
+    public static void main(String[] args) {
+        // Initiate a new Scanner
+        Scanner userInputScanner = new Scanner(System.in);
+ 
+        // Testing nextLine();
+        System.out.print("\nWhat is your name? ");
+        String name = userInputScanner.nextLine();
+ 
+        // Testing nextInt();
+        boolean validInput = false;
+        int numberOfCats = 0;
+        while (!validInput) {
+            System.out.print("How many cats do you have? ");
+            try {
+                numberOfCats = userInputScanner.nextInt();
+                validInput = true;
+            } catch (InputMismatchException e) {
+                validInput = false;
+                userInputScanner.nextLine();
+            }
+        }
+ 
+        // Testing nextDouble();
+        validInput = false;
+        double moneyInWallet = 0.0;
+        while (!validInput) {
+            System.out.print("How much money is in your wallet? $");
+            try {
+                moneyInWallet = userInputScanner.nextDouble();
+                userInputScanner.nextLine();
+                validInput = true;
+            } catch (InputMismatchException e) {
+                validInput = false;
+                userInputScanner.nextLine();
+            }
+        }
+ 
+        System.out.println("\nHello " + name + "! You have " + numberOfCats
+                + (numberOfCats > 1 ? " cats" : "cat")
+                + " and $" + moneyInWallet + " in your wallet.\n");
+    }
+}
+
+
+
+
+
+Note that we have to import java.util.InputMismatchException in order to use the InputMismatchException class.
+We are using a while loop to ask the user the same question until the user enters the correct input.
+Adding userInputScanner.nextLine(); in the catch part of the try-catch ensures that the Scanner acknowledges the "enter" key press from the user and functions as a way to clear the input buffer.
+ This way, we can ensure that everything that the Scanner returns is a String object and won't create any exceptions. Then, to convert the strings to integers or doubles, we can use the Integer and Double wrapper classes.
+
+
+
+
+import java.util.Scanner;
+ 
+public class ScannerExample {
+    public static void main(String[] args) {
+        // Initiate a new Scanner
+        Scanner userInputScanner = new Scanner(System.in);
+ 
+        // Testing nextLine();
+        System.out.print("\nWhat is your name? ");
+        String name = userInputScanner.nextLine();
+ 
+        // Testing nextInt();
+        boolean validInput = false;
+        int numberOfCats = 0;
+        while (!validInput) {
+            System.out.print("How many cats do you have? ");
+            String input = userInputScanner.nextLine();
+            try {
+                numberOfCats = Integer.parseInt(input);
+                validInput = true;
+            } catch (NumberFormatException e) {
+                validInput = false;
+            }
+        }
+ 
+        // Testing nextDouble();
+        validInput = false;
+        double moneyInWallet = 0.0;
+        while (!validInput) {
+            System.out.print("How much money is in your wallet? $");
+            String input = userInputScanner.nextLine();
+            try {
+                moneyInWallet = Double.parseDouble(input);
+                validInput = true;
+            } catch (NumberFormatException e) {
+                validInput = false;
+            }
+        }
+ 
+        System.out.println("\nHello " + name + "! You have " + numberOfCats
+                + (numberOfCats > 1 ? " cats" : "cat")
+                + " and $" + moneyInWallet + " in your wallet.\n");
+    }
+}
+
+
+
+
+
+Note that here we did not have to import the NumberFormatException class because it is part of the java.lang package, which means that it comes built in.
+We also did not have to clear the buffer using userInputScanner.nextLine(); in the catch part of the try-catch.
+

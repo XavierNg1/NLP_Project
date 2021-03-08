@@ -1,0 +1,19 @@
+ When you are setting up a smart TV or other device, you may be told to input a subnet mask. This number is specific to your local network. For best results, follow the instructions above to find the subnet mask on your computer. The same number should work well for your device as well.
+
+
+If your device still won't connect, leave the information open on your computer. Refer to it while changing settings on the device.
+If you can't find the information on a computer, try entering 255.255.255.0. This is the most common subnet mask for home networks.
+ If the device still won't go online, check the IP address. This should be in the same screen where you can set the subnet mask. Compare it to the IP address of your computer, visible wherever you found your computer's subnet mask. Copy your computer's IP address, except for the final number or numbers after the last period. Choose any higher number instead, as long as it is 254 or below. Add at least 10, since nearby numbers are more likely to be used by additional devices on your network.
+
+
+For example, if your computer's IP address is 192.168.1.3, set your device's IP address to 192.168.1.100.
+If you can't find your computer's IP address, check your router for a printed label, or search online for your router's brand and "IP address." Change the final group of numbers.
+If you can't find any information, try 192.168.1.100, or 192.168.0.100, or 192.168.10.100, or 192.168.2.100.
+ This should be set to the same Gateway value as your computer, which is also your router's IP address. This will almost always be the same as the device's IP address, except with a 1 instead of the final group of numbers.
+
+
+For example, if any device on your network has an IP address of 192.168.1.3, set the Gateway to 192.168.1.1.
+In any internet browser, type http:// followed by this value. If you have the correct gateway, you should reach information about your router.
+ Use the same DNS setting as your computer, or the same value as you entered under Gateway. Alternatively, search online for "public DNS" for more options.
+ If your device still won't connect with these settings, contact technical support at the company that made the device.
+

@@ -1,0 +1,43 @@
+ The editor should be a plain text editor, such as Notepad on Windows or TextEdit on Mac. This method is best suited for small sites, as you will be manually entering in each page.;
+, Paste the following into your text document. Basic sitemaps are XML files that are submitted to search engines in order for them to be able to read your site easier. By using this format, you can quickly list all of the pages on your site:
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+ 
+<url>
+<loc>http://www.example.com/</loc>
+</url>
+<url>
+<loc>http://www.example.com/page1</loc>
+<lastmod>YYYY-MM-DD</lastmod>
+<changefreq>always/hourly/daily/weekly/monthly/yearly/never</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>http://www.example.com/page2</loc>
+</url>
+<url>
+<loc>http://www.example.com/page3</loc>
+</url>
+ 
+</urlset>
+
+
+
+
+
+, Visit your site in a browser and go through each link, copying the URLs from your browser’s address bar and pasting them into the template. If you have more pages than space in the template, simply copy a “<url>” section to the bottom as many times as you need.
+ In the first entry of the example, you will see several tags that can be added to each URL, these are optional but may make crawling your page easier for the bots.
+
+
+The <lastmod> tag is the date that your page was last modified.
+The <changefreq> tag shows about how often your page is updated. Always means that it is updated every time a user views it, while Never means that it is archived.
+The <priority> tag allows you to rank the importance of each page on your site in relation to the other pages. This value can range from 0.0 to 1.0. The default priority for all pages is 0.5.
+ Click File and select Save As. Use the “Save as type” menu and select All Files. Change the file extension from “.txt” to “.xml” and save the file as “sitemap.xml”.
+ Once your sitemap file is complete, you need to place it in the root folder of your web server. This is the lowest directory on your web server. The final URL for your sitemap should be www.example.com/sitemap.xml
+
+, All of the major search engines allow webmasters to submit the URL for the file to their web crawlers. Log into the Webmaster Tools for the search engine that you want to submit to and navigate to the Sitemap section. Paste the URL for your sitemap into the field.
+

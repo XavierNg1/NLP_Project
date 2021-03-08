@@ -1,0 +1,24 @@
+ For example:
+
+<span style="(css)">Text</span>
+
+Almost any HTML tag can include "style," such as
+
+p
+
+or
+
+div
+
+What goes in between the quotes is the CSS part.;
+,, For example:
+
+<span style="font-family:times, georgia, serif;">Text</span>
+
+will cause "Text" to use the Times font. If times is not available, Georgia will be used. If neither Times nor Georgia are available, a generic serif font will be used.
+ You can use any valid HTML color name in the place of "red." You can also use a hex code. For example:
+
+<span style="font:#FFFFFF;">Text</span>
+
+will cause "Text" to be white.
+

@@ -1,0 +1,68 @@
+ Before you can purchase and install an SSL certificate, you will need to generate a CSR on your server. This file contains your server and public key information, and is required to generate the private key. You can generate a CSR directly from the Apache command line:
+
+Start the OpenSSL utility. This can usually be found at /usr/local/ssl/bin/
+Create a key pair by entering the following command:
+
+
+
+ openssl genrsa –des3 –out www.mydomain.com.key 2048
+
+
+
+
+
+Create a passphrase. This passphrase will need to be entered whenever you interact with your keys.
+Start the CSR generation process. Enter the following command when prompted to create the CSR file:
+
+
+
+openssl req –new –key www.mydomain.com.key –out www.mydomain.com.csr
+
+
+
+
+
+Fill out the requested information. You will need to enter your two-digit country code, the state or province, city or town name, full company name, section name (i.e. IT or Marketing), and the common name (typically the domain name).
+Create the CSR file. Once the information has been entered, run the following command to generate the CSR file on your server:openssl req -noout -text -in www.mydomain.com.csr
+
+
+
+
+;
+, There are several services online that offer SSL certificates. Make sure to only order from a reputable service, since you and your customer’s security is at stake. Popular services include DigiCert, Symantec, GlobalSign, and more. The best service for you will vary depending on your needs (multiple certificates, enterprise solutions, etc.).
+
+You will need to upload your CSR file to the certificate service when you order it. This will be used to generate the certificate for your server.
+ You will need to download the Intermediate Certificates from the service that you purchased your certificates from. You will receive your Primary Certificate via email or through the customer area of the website. Your key should look similar to this:
+
+
+
+-----BEGIN CERTIFICATE-----
+ 
+-----END CERTIFICATE-----
+
+
+
+
+
+If the certificates are in a text file, you will need to change it to a .CRT file before uploading it
+Check the keys that you download. There should be 5 dashes “-” on either side of the BEGIN CERTIFICATE and END CERTIFICATE lines. Also ensure that there are no extra spaces or line breaks inserted into the key.
+ The certificates should be put in a folder dedicated to certificates and key files. An example location would be /usr/local/ssl/crt/. All of your certificates need to be in the same folder., Some versions of Apache have an “ssl.conf” file for the SSL certificates. Only edit one of the two if you have both. Add the following lines to the Virtual Host section:SSLCertificateFile /usr/local/ssl/crt/primary.crt
+SSLCertificateKeyFile /usr/local/ssl/private/private.key
+SSLCertificateChainFile /usr/local/ssl/crt/intermediate.crt
+
+
+
+
+
+Save the changes to the file once you are finished. Re-upload the file if necessary.
+ Once the file has been changed, you can start using your SSL certificate by restarting your server. Most versions can be restarted by entering the following commands:
+
+
+
+apachectlp stop
+apachectl startssl
+
+
+
+
+, Use various web browsers to test that your certificate is working properly. Connect to your website using “https://” to force the SSL connection. You should see the padlock icon in your address bar, usually with a green background.

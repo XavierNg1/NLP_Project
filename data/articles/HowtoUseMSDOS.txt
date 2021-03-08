@@ -1,0 +1,108 @@
+ If you're using a Windows computer, you'll need to start the command prompt manually. For most computers, it should be located under 'Accessories' in the Start menu. It can also be accessed by typing "<windows button>" and "R". Then type in "cmd" without the quotes and you should be in DOS, also known as a Command Prompt.;
+, This is called the command prompt, and it also serves the useful purpose of showing what directory you're currently in. At the end of this prompt, you type commands (think verbs) followed by arguments (think nouns -- when the verb needs a noun, that is), then press enter. Here are some sample commands:
+
+
+
+C:\GAMES>ping nosound
+
+
+
+
+
+
+
+C:\MY DOCUMENTS>edit essay.txt
+
+
+
+
+
+
+
+, Use the dir command to list the contents of your hard disk or the directory (or "folder") that you're in. Depending on where you are, you might get something like this:
+
+
+. DIR
+.. DIR
+DOS DIR
+GAMES DIR
+WINDOWS DIR
+AUTOEXEC .BAT
+ESSAY .TXT
+
+, For example, typing the name of a directory after dir will give you the contents of that directory instead, and /p is useful for very long lists because it will stop and wait for you to press a key every time it reaches the end of the screen. /p can also be used in most other commands that print on the screen.
+ cd C:\GAMES\GRAPE). If the directory is a subdirectory of the directory you're currently in, like if you were already in GAMES in the previous example, you could also just type cd GRAPE. Here, ' cd ' is the command and the directory is the argument. The command prompt also shows the name of your current directory. So, typing
+
+
+C:\> CD C:\GAMES\GRAPE
+
+
+
+
+
+
+Would change the command prompt to C:\GAMES\GRAPE>
+
+
+
+
+
+
+
+, For example, if I wanted to start the game Mortar Mayhem, I would navigate to the directory it's in:
+
+
+C:\> cd games\mortar
+
+
+
+
+
+
+Then type the name of the EXE file, without the extension.
+
+
+
+C:\GAMES\MORTAR> mortar
+
+
+
+
+
+
+And now the game would run.
+ The things in are only examples.
+
+
+del - Deletes a file. Does not remove directories, but does clear their contents.
+
+
+
+
+
+
+
+move - Moves a file or folder
+
+
+
+
+
+
+
+md - Creates a subdirectory
+
+
+
+
+
+
+
+rmdir - Removes a directory.
+
+
+
+
+
+
+

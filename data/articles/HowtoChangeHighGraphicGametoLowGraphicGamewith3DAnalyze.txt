@@ -1,0 +1,31 @@
+ This tool can be used for older games and video cards (pre-2003). It can lower the graphical effects of a game to help you run it better, and it can emulate DirectX features so that you can run a game that your graphics card technically does not support. Note that this program will not work with most cards made by Nvidia and AMD/ATI, which is the vast majority of the market. This program is designed for 3DFX, Voodoo, PowerVR, and ATI cards made before 2003.;
+, You can download this tool for free from here. To install the program, extract the files into a folder where you can easily access them, such as your Desktop or Documents folder.
+ A window will appear with a bunch of checkboxes. This is the 3D Analyze interface, and you can use it to make adjustments to your game before playing.
+ Click the "SELECT" button and browse for the EXE file for your game. You can usually find this is the games folder in the Program Files directory.
+ There are a variety of options you can toggle in the Performance section before launching your game. Disabling features may make the game run better, but they can also cause significant problems and stability issues. Games aren't designed to use the features, so the chances of encountering a problem are high.
+
+
+Remember, this will only be effective on games made in the early 2000s and earlier. Newer games will not benefit from this program, and will likely crash upon startup.
+Most Windows games will use the "DirectX 8.1 and 9.0 Options" section. Older games will use the "OpenGL Options" section.
+ Select "disable textures" to turn off all textures in your game. Be prepared for a very ugly game, as textures are what give the 3D models details. Everything will appear flat when you force textures off. This will result in one of the biggest performance gains if it works with your game.
+
+
+If you want to use textures, but still want a performance increase, select "force small texture (32x32)". This will load basic textures, but they will be much smaller than normal.
+ Dynamic lighting is a popular way to make games appear more realistic, but it can have a dramatic impact on your framerate. Disabling lighting can help you get a newer game running on an older system. Again, this will not work on all games.
+ After adjusting a few settings, try playing the game by clicking the "RUN" button. If the game crashes or doesn't work like it should, go back to the Performance section in 3D Analyze and try some different settings. It will take a lot of trial and error before you find a combination that works well for your game and your system.
+ 3D Analyze can trick your games into thinking you're running a more advanced graphics card. Some of the graphics card computations are then handled by your CPU instead. This can be good if you have a very old computer and want to run a slightly less old game.
+
+
+This is a very finicky process, and will likely not work for many game.
+ There are many versions of DirectX, and if your card is old it may not support newer versions. You can determine which version your game requires by checking its system requirements.
+ You can use 3D Analyze to move to the version of DirectX immediately following yours. For example, if you have DirectX 7, you can emulate DirectX 8, but not 8.1 or 9.
+
+
+DirectX 7 - Check "emulate HW TnL caps", "emulate bump map caps", and "emulate cube maps".
+DirectX 8 - Check "emulate other DX8.1 caps", "emulate pixel shader caps", and "skip pixel shader version 1.1".
+DirectX 8.1 - Check "skip pixel shader version 1.4".
+DirectX 9 - Check "skip pixel shader version 2.0".
+ Test the game to see if your DirectX emulation is allowing the game to run. If you get an error message about an unsupported video card, read on.
+ The game you are trying to run may give you a message about your video card being unsupported. If this is the case, you can use 3D Analyze to change your graphics card's hardware ID information so that the game thinks a different card is installed.Look for the "VendorID" and "DeviceID" fields in 3D Analyze. Find a card listed to the right that is compatible with the game you want to play. Enter the ID numbers listed below the card into the corresponding fields to change what your computer reports as the installed graphics card.
+If you need to switch back to your actual hardware ID information, enter "0" into both fields.
+

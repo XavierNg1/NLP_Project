@@ -1,0 +1,47 @@
+ These are the two mail email "protocols", or methods of delivery. These enable you to download your email messages from Gmail's servers into Outlook.
+
+
+IMAP is considered superior to POP in nearly every way. It allows Gmail and Outlook to stay in sync by marking read and unread messages across both. Any organization you perform on one side (putting a message into a folder in Outlook) will be reflected on the other side (that message will be labeled with that folder's name in Gmail).
+IMAP is essential if you check your messages across multiple devices, such as on your computer and your cell phone.
+POP has a tendency to lose messages or create duplicates. IMAP is much more stable.;
+, You will need to enable IMAP in your Gmail settings before syncing with Outlook.
+
+
+Make sure you are using the Standard View. If you see the message "You are currently viewing Gmail in basic HTML" at the top of the Gmail window, you'll need to switch to Standard View by clicking the link.
+ This will open your Gmail Settings menu.
+, Click Save Changes.
+ Select "Account Settings" → "Account Settings...".
+
+
+If you are using Outlook 2003, click the Tools menu and select "Accounts" or "Email Accounts".
+ This can be found in the Email tab.
+ You will be prompted for your name, which will be your displayed name, your email address, and your password. Enter your Gmail address into the E-Mail Address field, and enter your Google account password into the Password fields.
+
+
+If you are using Two-Factor authentication for your Google account, you will need to create an application specific password to use instead of your Google account password. Click here for detailed instructions on creating an application-specific password. You'll only need to enter it once.
+If you are a Google Apps for Business user, use the email address with your domain. The rest of the process should be the same.
+ As long as your email address and address are correct, Outlook should be able to connect automatically with your Gmail account.
+ After your account is connected, you'll see your email address appear in the left navigation frame, with all of your labels underneath. Outlook will begin downloading the email messages from your account, which may take a little while., When you connect your Gmail account, your Google Contacts are not automatically added to Outlook. You'll need to export your contacts from Gmail and then import that file into Outlook.
+
+
+Log into the Gmail website.
+Click the "Gmail" menu and switch to "Contacts".
+Click the "More" button and select "Export...".
+Select which groups you want to export. By default, all contacts will be exported.
+Select "Outlook CSV" as the format.
+Save the file to your computer.
+ Now that you've exported your contacts, you can import them into Outlook.
+,,,,, You can choose to replace duplicates with the Gmail contact information (best when Gmail is the more up-to-date source), create duplicates which you can then combine or delete later, or to not import duplicate items at all (best when Outlook is the more up-to-date source)., Now that the contacts are imported, you can use them just like any other Outlook contact. Be aware that Outlook contacts and Gmail contacts aren't linked, so any changes made on one will not be reflected in the other until you do another export/import.
+ There are several things that could be causing this problem.
+
+
+Ensure that you have access to the Gmail website, and that IMAP is enabled in your Gmail settings.
+Double-check that your Gmail address and password have been entered correctly into the Outlook account settings.
+Gmail does not allow email messages that have .exe files as attachments. There is also a 25 MB size limit for attachments.
+ If you accidentally made changes to the port settings when adding your account, it may be causing problems when you try to send or receive messages.Click the File tab and select "Account Settings" → "Account Settings...".
+Double-click your Gmail account.
+Check the "Incoming mail server" and "Outgoing mail server" fields. Incoming should read imap.gmail.com while Outgoing should read smtp.gmail.com.
+Click the More Settings... button and then the Advanced tab.
+"Incoming server" should be set to 993 and using "SSL".
+"Outgoing server" should be set to 587 and using "TLS". If 587 isn't working, try 465 with "SSL" or 25 with "SSL".
+

@@ -1,0 +1,21 @@
+
+Start Visual Studio Express and start a new project from the file menu.
+In the new project window choose select visual C++ on the right and choose win32 console application on the right.
+Add a new .cpp file by going into project and selecting add new item.
+
+,
+Start the file by writing “#include <iostream>” and “using namespace std;” at the top of the file.
+
+,
+Add a void function prototype for the end of the program that will take an integer for the number correct.
+Add an int function prototype with two parameters, one for a character so that you can send the answer to the function and one for integers so that you can keep track of the amount that the user has right.
+Write down the main function header for the programs main code.
+Write the variables for the integer and character for use with the programs main function.
+Write down what you want the answers for the quiz to be using “cout” functions.
+Write a “cin” line so that the user can type in their answers.
+Write down a call for the answer function.
+Start writing the new function for the question that the user has answered.Return the number correct to the main program.
+Repeat the question adding process until you have the desired amount of questions for the quiz.
+Start writing the function for the end of the program.
+Go back to the main function and add “return 0;” to end the program.
+Be sure to test the program to make sure it works.

@@ -1,0 +1,22 @@
+ Most home routers cannot block access to encrypted (https://) websites. You can determine if a site is encrypted by looking for a padlock icon to the left of the site's address. If the sites you are trying to block are encrypted, see the next section instead.;
+, If the sites you want to block aren't encrypted, you can usually block them using your router's built-in tools. To access these, open the router's configuration page in a web browser on a computer that's connected to your network. Common router addresses include:
+
+
+Linksys - http://192.168.1.1
+
+D-Link/Netgear - http://192.168.0.1
+
+Belkin - http://192.168.2.1
+
+ASUS - http://192.168.50.1/
+
+AT&T U-verse - http://192.168.1.254
+
+Comcast - http://10.0.0.1
+
+
+, If you never changed this information, enter in the default administrator account information. For many routers, this is usually "admin" or blank for the username, and "admin" or blank for the password. Check your router's documentation if you don't know the default login information.
+ The location of this will vary depending on your router. You may find this in the "Firewall" menu, or in the "Security" section., Enter each URL that you want to block on your connected devices. Remember, you won't be able to block https:// addresses, which makes this method increasingly less useful. For full protection, see the next section.
+ Click the "Save" or "Apply" button to save your settings. Your router will apply the settings and reboot, which may take about a minute.
+ After saving your settings, try visiting the sites you added to your blocked list. If you can still access the sites, they are likely encrypted and you'll need to use a service like OpenDNS (see the next section).
+

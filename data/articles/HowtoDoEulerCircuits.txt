@@ -1,0 +1,17 @@
+(Circuits)
+
+
+A graph has an Euler circuit if and only if the graph is connected and all vertices have even degrees.;
+,(Paths)
+
+
+If a graph has exactly one vertex of odd degree, then it does not have an Euler path.
+If a graph has more than two vertices of odd degree, then it does not have an Euler path.
+If a connected graph has exactly two vertices of odd degree, then it has an Euler path. Any such path must start at one of the odd-degree vertices and end at the other one.,(finding an Euler circuit or path) A "bridge" on a graph is an edge whose removal disconnects a previously connected part of the graph. Fleury's algorithm can be summarized by the statement: "don't cross a bridge till you have to".
+
+
+
+Take the given graph and add edges by duplicating existing ones, until you arrive at a graph that is connected and has all even degree vertices. This process of adding edges to a graph so as to make all degrees even is called Eulerizing the graph.
+You then want to find an Euler circuit on the eulerized graph.
+Create a path on the original graph by "squeezing" this Euler circuit from the eulerized graph onto the original graph by reusing an edge of the original graph each time the circuit on the eulerized graph uses an added edge.
+

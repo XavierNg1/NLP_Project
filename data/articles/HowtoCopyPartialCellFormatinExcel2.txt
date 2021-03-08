@@ -1,0 +1,28 @@
+ On the File ribbon, click New and then click the Blank workbook (use the keyboard shortcut Ctrl+N)., The name should match with the cell style name that will be deleted from your original workbook. For these steps, we will call this workbook Fix.xlsx.
+
+On the Home ribbon, click Cell Styles, and right click the name Normal, and then click the Duplicate menu item (on the keyboard Alt+H+J, then arrow keys to select the style, ⇧ Shift+F10, arrow keys to select Duplicate, and ↵ Enter to execute). Specify the name from the cell style in Fix.xlsx and click the OK button.
+
+
+On the View ribbon click Switch Windows and select Fix.xlsx (use the keyboard shortcut Ctrl+F6 to cycle through open workbooks).
+Select a cell with the cell style applied and click Copy on the Home ribbon (use the keyboard shortcut Ctrl+C).
+
+
+Use Switch Windows on the View ribbon (Ctrl+F6 on the keyboard) to go back to Book1.xlsx.
+On the Home ribbon click Paste (use the keyboard shortcut Ctrl+V); alternatively, use Paste Special (Format) from the paste dropdown (use keyboard shortcut Ctrl+Alt+V).
+
+
+Use Switch Windows on the View ribbon (Ctrl+F6 on the keyboard) to go back to Fix.xlsx.
+On the Home ribbon click Find & Select and choose the Find command (use the keyboard shortcut Ctrl+F). From the Find and Replace dialog click the Format button and leave the Find what field empty.
+Select “Choose Format From Cell…” in the Find Format dialog, or using the dropdown menu next to the format button. Back in the Find and Replace dialog, make sure to find the format within the workbook, rather than within the sheet (if the Within field is not shown, click the Options button), and click Find All. Leave the Find and Replace dialog open while completing the remaining steps.
+
+
+Use Switch Windows on the View ribbon (Ctrl+F6 on the keyboard) to go back to Book1.xlsx.
+On the Home ribbon click Copy (Ctrl+C on the keyboard).
+
+
+Use Switch Windows on the View ribbon (Ctrl+F6 on the keyboard) to go back to Fix.xlsx.
+On the Home ribbon click Paste (Ctrl+V on the keyboard); alternatively use Paste Special (Format) from the Paste dropdown (Ctrl+Alt+V on the keyboard).
+ Clicking each result listed at the bottom of the dialog will select a cell with the format matching the cell style that will be deleted. When a paste has been performed on all results, click Close in the Find and Replace dialog., You will want to be sure that you found all cells that apply the cell style before continuing with this step; see the warning indicated further on in the article. Now that there are no longer any cells applying the style; all of the pasting has given the format without relying on the cell style; the style can be deleted.
+
+On the Home ribbon click Cell Styles, right click the name of the cell style, and then click the Delete menu item (on the keyboard Alt+H+J, arrow keys to select the style, ⇧ Shift+F10, arrow keys to select Delete, and ↵ Enter to execute).
+

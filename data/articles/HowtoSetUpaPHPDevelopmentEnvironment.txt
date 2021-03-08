@@ -1,0 +1,56 @@
+ This step is ignored by many people but for a fast and bug free development this step is the most important one. There are variety of PHP IDEs to choose from :
+
+
+Atom (Windows, Mac Linux)
+Sublime text (Windows, Mac, Linux)
+NetBeans (Windows, Mac, Linux)
+PhpStorm (Windows, Mac, Linux) (proprietary)
+Eclipse (Windows, Mac, Linux)
+Notepad++ (Windows only)
+Coda (Mac only)
+And many more....;
+, Choose from the list of software given below:
+
+
+LAMP : For Linux
+WAMP: For Windows
+MAMP: For Mac OS X
+AAMPS : For Mac OS X, Windows and Linux
+XAMP : For Mac OS X, Windows and Linux
+
+, Make sure you install both Apache and MySQL. Installing services like Mail Server, Bitnam, Tomcat etc. are optional and are not recommended for beginners.
+ You maybe prompted by your Firewall software. Make sure you allow Apache on your firewall. To check everything is setup and running just open your preferred web browser and enter "localhost" as the URL. If everything is fine, the welcome page will be displayed.
+ If your application uses database then you can take advantage of MySQL which is pre-loaded in the stack.
+
+
+Go to "localhost/phpmyadmin" to have a look of your Database Management System.
+There is always a default user with root permission. Username:"root" Password:"".
+You can create a new user with custom permissions.
+You can create and manage database from phpmyadmin.
+ Follow the steps and bingo! You will run you will run your first application
+
+
+Go to www or htdocs in you installation directory.
+Create a file named test.php
+Open file with your preferred text editor
+Enter:
+
+
+
+<?php echo "hello world"; ?>
+
+
+
+
+Save the file and open your browser
+Go to: localhost/test.php
+
+, You can download from a variety of Open Source projects and copy it to your local development. Here are list of few:
+
+
+Wordpress: Blogging.
+Elgg: Social Networking.
+Drupal: Content management system.
+Joomla: Content management system.
+And many more...
+

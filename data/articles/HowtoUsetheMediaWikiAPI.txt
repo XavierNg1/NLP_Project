@@ -1,0 +1,16 @@
+ It is located at 'api.php' in the same directory as the usual index.php.
+Example: https://www.wikihow.com/api.php.
+ The MediaWiki offers data output in the form of JSON, JSONFM, PHP (serialized format), PHPFM, WDDX, WDDXFM, XML, XMLFM, YAML, YAMLFM, and RAWFM. The formats suffixed "FM" are pretty-print in HTML.
+ The MediaWiki API supports the following actions:
+
+
+help - See the help screen
+login - Login to MediaWiki
+opensearch - Implement the opensearch protocol. (Not all MediaWiki installations have this).
+feedwatchlist - Return a watchlist feed.
+query - Has a variety of options. See the MediaWiki API documentation for them.
+ Besides the standard actions, MediaWiki supports different queries and lists, such as listing pages that contain a link to another article, number of recent changes diffs, contributions, etc.
+ The GET method may also work.
+, The edit token is used to determine edit collisions and avoid overriding another edit already done (This is used in rollback as well.). Keep in mind it is easier for things to go awry if you are acting with the user interface of the wiki. Be mindful of any regexes you use to make sure that they will only do the intended result.
+ The results will be sent to you in an HTTP response, which can be read by many parsers. Take extra care of the format you choose. Make sure you use the appropriate parser for that format. It is usually a good practice to explicitly state the format to MediaWiki even if it has a default format that you want to use.
+

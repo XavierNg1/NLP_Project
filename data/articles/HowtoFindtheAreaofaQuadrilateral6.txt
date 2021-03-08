@@ -1,0 +1,33 @@
+ Does your quadrilateral not fall into any of the tidy categories above (for instance, does it have sides with all different lengths and zero parallel sets of sides?) Believe it or not, there are formulas you can use to figure out the area of any quadrilateral, regardless of its shape. In this section, you will find how to use the most common one. Note that this formula requires knowledge of trigonometry (once again, here is our basic trig guide.
+
+
+First, you must find lengths of each of the quadrilateral's four sides. For the purposes of this article, we will label them a, b, c and d. Sides a and c are opposite from each other and sides b and d are opposite each other.
+
+Example: If you have an oddly-shaped quadrilateral that doesn't fit in any of the categories above, first, measure its four sides. Let's say that they have lengths of 12, 9, 5, and 14 inches. In the steps below, you'll use this information to find the shape's area.
+ Continue by finding two of the opposite angles. For the purposes of this section, we'll use angle A between sides a and d, and angle C between sides b and c. However, you can also do this with the two other opposite angles.
+
+
+
+Example: Let's say that in your quadrilateral, A is equal to 80 degrees and C is equal to 110 degrees. In the next step, you'll use these values to find the total area.
+ Imagine that there is a straight line from the corner between a and b to the corner between c and d. This line would split the quadrilateral into two triangles. Since the area of a triangle is absinC, where C is the angle between sides a and b, you can use this formula twice (once for each of your imaginary triangles) to get the total area of the quadrilateral. In other words, for any quadrilateral:
+
+
+
+Area = 0.5 Side 1 × Side 4 × sin(Side 1&4 angle) + 0.5 × Side 2 × Side 3 × sin (Side 2&3 angle) or
+Area = 0.5 a × d × sin A + 0.5 × b × c × sin C
+
+Example: You already have the sides and angles you need, so let's solve:
+
+
+
+= 0.5 (12 × 14) × sin (80) + 0.5 × (9 × 5) × sin (110)
+= 84 × sin (80) + 22.5 × sin (110)
+= 84 × 0.984 + 22.5 × 0.939
+= 82.66 + 21.13 = 103.79 square inches
+
+
+
+
+
+Note that if you're trying to find the area of a parallelogram, in which the opposite angles are equal, the equation reduces to Area = 0.5*(ad + bc) * sin A.
+

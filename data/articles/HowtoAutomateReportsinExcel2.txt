@@ -1,0 +1,21 @@
+ PivotTables are designed to summarize data to let you compare numbers and identify trends. Your PivotTable should be connected to data elsewhere in your spreadsheet or imported from a database.
+ Your script must perform the functions listed below. Each function will be described followed by the code given in brackets to implement it. When you write the actual code, write it in a single block, substitute your own names for the example names, and do not include the brackets that enclose the entire example.
+
+
+Open the spreadsheet in read-only mode. Refresh the data and save the report, in this example as a PDF with a date stamp. If your output document is to be in a different format, substitute the correct extension for that format for ".pdf".
+Close the spreadsheet without saving it, then close Excel. Use ".xlsx" in place of ".xls" in the spreadsheet suffix if your spreadsheet was saved in Excel 2007 and later XML-based format.
+ This is necessary for the Visual Basic script to be run automatically. Without the batch script, the VB script must be run manually.
+
+
+Your script would be in this format, substitution your own folder and filename for those given here, and omitting the brackets: , Your script must perform the functions described below. Each function will be followed by code given in brackets to implement it. When you write the actual code, write it in a single block, substitute your own names for the example names, and do not include the enclosing brackets.
+
+
+Check to see that the output file exists. If the output file's format is not a PDF, substitute the correct file format for ".pdf" where given.
+If the output file/report exists, email it to the people who need it. If the output file/report doesn't exist at the specified location, have the procedure send you a message that delivery failed. , You have to verify the Desktop folder's existence for both a 32-bit and a 64-bit system. If you don't do this, Excel and your spreadsheet have to be opened manually.
+
+
+32-bit system location: c:\windows\system32\config\systemprofile
+64-bit system location: c:\windows\syswow64\config\systemprofile
+
+, The batch scripts should be run sequentially on an ongoing basis, regardless of whether someone is using the computer or not. Privilege should be set to the highest setting possible.
+

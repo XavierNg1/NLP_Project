@@ -1,0 +1,23 @@
+ Or, go ahead and write the comment. Now think, "Why am I writing this comment? What do I want another programmer to know about this code, which is not already apparent from the code itself?"
+,
+
+
+For example, if you were about to add a comment saying, "Updates the maintenance schedule for the moving van" to a subroutine named updmaint, try calling it updateMaintenanceSchedule() and put it in a class named MovingVan. Better yet, use a word more specific than "update": calculateMaintenanceSchedule(), setMaintenanceSchedule(), etc., depending on what the subroutine actually does.
+A subroutine that returns a Boolean value should nearly always be named as the verb phrase that would follow the word "if" in a sentence. For example, isOutOfDate() or needsNewSchedule(). Then, in an if statement, you can simply write, if (van.needsNewSchedule()) { whatever(); }
+
+
+,
+
+
+If you want to indicate that the variable must be treated in a certain, special way or that some of its values have special meanings, then define a new class and make the variable an object. For example, if you have an integer to represent "number of messages posted" but you use a -1 to mean "user registration is pending approval", it's probably time to define a User class, and have distinct variables for numMessagesPosted and isPendingApproval. Defining a class and making the variable into an object is particularly important if your comment was of the form, "Whenever you modify this variable, also be sure to..."
+
+,
+The main information that a person needs to know about most subroutines is: what set-up is required and what a caller can expect on exit from the subroutine (sometimes called the "contract" fulfilled by the subroutine). The unit test performs the necessary set-up and passes the subroutines the correct parameters. The assertions at the end of the test tell what the subroutine guarantees to its caller. Just like a comment, the unit test defines the programming contract. Unlike a comment, the unit test is executable, and will fire automatically if anyone ever modifies the code in a way that violates the contract., Then, the code to call the smaller subroutines will spell out exactly what happens and in what sequence, at a high level. But unlike a comment, this narrative is guaranteed to match the way the code really works., For example, you might use a fairly complicated expression to determine the nearest gas station to a given moving van. Just move this to a subroutine named nearestGasStation. It's OK if the subroutine is only one line long. The code is now much clearer. It's also easier to write a unit test for, and it's easier to re-use that expression for some other purpose., They should explicitly represent the different situations that the variable must be adjusted for. Make these ensure that each is always handled correctly.
+
+
+For example, to remove the comment from this statement:
+    index--; // adjust for zero-based indexing
+define two classes, OneBasedIndex and ZeroBasedIndex, and initialize index to be of the appropriate class. In C++, you can define a conversion between these classes so that the code that uses indices never needs to care whether it's zero-based or one-based.
+The code is now more readable because it doesn't contain ad hoc tweaks to indices inside tricky if statements sprinkled throughout the code. It is also less likely to contain bugs, easier to test, and explicitly represents the reason for adjusting the indices.
+ If searching for a way to make the code readable on its own really turns up no way to communicate what needs to be said, then, OK, write a comment. Comments are not always a sign of poor code; there's no need to be dogmatic about it.
+

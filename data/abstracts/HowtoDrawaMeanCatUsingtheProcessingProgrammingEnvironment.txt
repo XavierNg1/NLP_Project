@@ -1,0 +1,54 @@
+
+Open a new file.
+Define window attributes.To begin, we must specify how large we would like the cat image window to be.
+After specifying the window size, we may specify other window attributes, such as overall image quality and background color.
+Define colors that you will use for the cat.
+Here, the color data type can be defined as any name desired, then assigned an RGB or grayscale color number set or number.
+Draw the ears using four triangles.
+First, we choose the color we’d like the main part of the ears to be filled with.
+Then, we specify the x and y coordinates for the points in the triangles that form the ear shapes:
+
+
+triangle(50, 50, 50, 90, 90, 60);
+triangle(150, 50, 150, 90, 110, 60);
+
+,
+Next, we choose another color to fill the inside of the ears with:
+
+
+fill(earsnose);
+
+,
+And last, we specify the x and y coordinates for the points forming the triangles for the inner ear:
+
+
+triangle(55, 55, 55, 95, 95, 65);
+triangle(145, 55, 145, 95, 105, 65);
+
+,
+Since the triangle function takes three sets of x and y coordinates for the window in which we are drawing the cat, we type those numbers in the order that we want the triangle’s points drawn.
+Draw the head in the center of the window.
+Here we are using another fill color for the circle we will draw to create the cat’s head.
+The next step in our drawing is to make the mean cat fangs.
+Essentially, we are drawing three long, skinny triangles to jut downward from the mouth area.
+Because we want the fangs to be partially covered by the cat’s nose area, we draw the nose area after we draw the fangs.
+Here, we choose a fill color and draw two matching ellipses over the fangs at the specified coordinates.
+Here, we choose a fill color for the nose, drawing a small triangle in the center of the cat’s face.
+Next, we place the eyes.
+Now, to draw the mean eyebrows, we type the following code:
+
+
+strokeWeight(12);
+line(90, 80, 70, 65);
+line(110, 80, 130, 65);
+
+,
+Since we would like the eyebrows to be thick and menacing, we want to use a line function, and we want the line drawn to be very thick.
+The last part of the cat to draw is his whiskers.
+Notice that we must change the strokeWeight so that the lines aren’t drawn 12 pixels wide, as they were drawn for the eyebrows!,
+Now that we’ve completed the cat drawing, it’s time to compile the program and run it.
+It is a good idea, when creating your own drawings, to periodically check the progress of the drawing by saving and running the program throughout the programming process.
+
+,
+Enjoy the mean cat and be glad your own cat is very nice.
+

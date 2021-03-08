@@ -1,0 +1,51 @@
+ A problem with having the expansion attached to space bar is that you often will think up a good abbreviation, but can't use it because it is a "proper" word and it can expand unexpectedly into something different. An example would be a simple, logical system for abbreviation for days of the week/months of the year. Use the first three letter. Except words like Mar (March), Jan (January), Wed (Wednesday), Sun (Sunday) etc will spoil the system.
+ If your abbreviation for "march" is "mar" typing "mar" will give you "march" but typing "Mar" will expand to "March", unless at the beginning of a sentence, in which case it will always expand to "March".)
+
+
+Note: The QuickCorrect file is attached to the Language of the document in "Tools>Settings". This means that you can create many different "libraries" of QC abbreviations, and use the same abbreviation for different expanded functions, simply by changing the Language.
+ In WordPerfect, unlike MS Word, it is possible to remove the expansion from the space bar and assign it to a key of your choice. To accomplish this you will need to know about (a) macros and (b) keyboard maps. A macro is in effect a "mini program" created by the user to do repetitive or difficult tasks simply. A keyboard map is an on-screen text listing of what each keystroke/ combination (eg F12, Shift F10, Ctrl H etc) has attached to it, if anything. To view the keyboard map (you are able to have as many different maps as you wish):
+
+
+Click on "Settings" (as above).
+Choose "Keyboards". Select your desired keyboard and click on "Edit".
+On the left is the list of keystrokes, on the right are the Category/Features, as well as various tabs. By use these tabs you can (a) assign a function/feature to a key combination (b) assign text/keystroke (c) assign a program or (d) assign a macro to the key combination.
+ Press Ctrl F10. Assign a name to the macro.
+ When you are finished press Ctrl F10 again.
+
+
+To execute or run the macro, press Alt F10 and type the macro name and hit Enter.
+ Before you start, ensure that in the QuickCorrect function the "Replace Words as You Type" box is NOT checked. (This means that you can type the abbreviation as often as you like without it expanding.)
+
+, Press Ctrl F10. Name the macro (for example, "expand")
+
+, Check the "Replace Words as You Type Button".
+ Hit the space bar (this will cause your abbreviation to expand).
+, (This is because you are no longer using the space bar to expand the abbreviation.)
+
+,, This should result in your abbreviation expanding to "calculation" (or whatever).
+ Select your macro. It should read something like this:
+
+
+Application (WordPerfect; "WordPerfect"; Default!; "EN")
+QuickCorrect (State: On!)
+Type (Text: " ")
+
+QuickCorrect (State: Off!)
+DeleteCharPrevious ()
+
+
+Note: At the end of the first line the expression "EN" will vary, depending upon what version of WordPerfect you are using.
+
+
+, Using this macro doesn't make much sense if it takes more keystrokes to execute than it saves typing, so it will be assigned to a single key. Choosing which key is pretty important as choosing a "bad" key will make your hands work unnecessarily hard. This key will have an existing function attached to it, but you can re-assign it to a different combination (for example, the "Alt" keystroke). This "good" key can actually vary on different keyboards, as not all keyboards have exactly the same layout.
+
+
+Note: Previously we created a button with the "QuickCorrect" function in the menu bar. You should now do the same with the "Keyboard" function.
+ Click on your Keyboard button. Choose your keyboard map and click on edit.
+,, Return to your document.
+
+
+
+Important Note. Very Important. For the third time, very important. If you use WordPerfect's spelling checker you MUST select the Option "Prompt Before Auto Replacement" prior to using the spell checker for the first time. Failure to do this will result in any abbreviations in the text of the document being expanded. The good news is that this option is a "set and forget" and only needs to be done once. That is - Until you (a) reinstall WordPerfect or (b) move to a different computer with WP installed.
+Note: Your QC abbreviations are stored in a file with the extension *.uwl (User Word List) which, along with any of your template files (*.wpt) are all you need to copy to bring all these functions with you.
+

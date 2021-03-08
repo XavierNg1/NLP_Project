@@ -1,0 +1,28 @@
+ You can also open the Charms bar (swipe in from the right side of your touchscreen or move your mouse to the upper-right corner of the window), and then select "Search".
+
+
+If you're on the Start screen, you can just start typing your search; no need to open the Search tool.;
+, This will open the System Protection tab of the "System Properties" window.
+, Make sure to add enough detail so that you'll be able to remember why the restore point was created. Include recently-installed programs or any changes that you have made, or are about to make, to the system.
+ Your computer will begin creating a restore point, which may take a minute or more. Once the restore point is created, click Close.
+ Once your restore point has been created, you'll be able to use it when you perform a system restore. In the System Protection tab of the "System Properties" window, click System Restore... to open the System Restore utility. You should see your newly-created restore point in the list of available restore points. The "Type" column will say "Manual" for all of the restore points you have created yourself., A bad driver or malware may be preventing system restore from creating new restore points. You may be able to get it working in Safe Mode.Open the Charms bar, select "Settings", and then "Change PC settings".
+Select "Update and recovery", and then "Recovery".
+Click Restart now. Your computer will reboot and the "Advanced startup" menu will appear.
+Click "Troubleshoot" → "Advanced options" → "Startup Settings" → Restart.
+Press F4 after the computer reboots into the "Startup Settings" menu. This will load Safe Mode. Attempt to create a restore points using the same method as above.
+ By default, your Windows installation will have system protection enabled. If your C: drive has had system protection disabled, you won't be able to create a restore point.Follow the steps above to open the System Protection tab of the "System Properties" window.
+Select your Windows drive (usually C:) from the list of available drives in the "Protection Settings" section.
+Click Configure... and ensure "Turn on system protection" is enabled.
+ You will need free space on your hard drive in order to create restore points. In the Configuration window for system protection (see the previous step), you'll find a slider that adjusts how much disk space should be allotted for restore points, as well as the current usage.
+
+
+If your current usage is the same as your max usage, you won't be able to create new restore points until you delete old ones. Click the Delete button to delete all of the old restore points.
+If your hard drive doesn't have any free space available, you won't be able to create new restore points. Uninstall old programs you don't use any more, clear out your Downloads folder, and run the Disk Cleanup utility to free up space. Generally, you'll want at least 15-25% free space available at all times.
+ This is a bit of a specific fix, but this utility and driver has been known to prevent the creation of system restore points. You can uninstall the utility and driver from the Programs and Features menu in the Control Panel., Windows 8 includes a Refresh feature which allows you to restore your system files without affecting your personal files. This may get the system restore service working again.
+
+
+Refreshing your system reinstalls Windows with your existing personal files and settings. It also maintains the apps you installed from the Windows store, but it may delete other programs.Open the Charms bar, select "Settings", and then "Change PC settings".
+Select "Update and recovery", and then "Recovery".
+Click the Get started button in the "Refresh your PC..." section.
+Insert your Windows 8 installation disc if prompted.
+

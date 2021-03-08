@@ -1,0 +1,8 @@
+ While there are some rather simple click and click programs using this tools, the simplest way is to use command line, both in Windows and in Linux. In linux you need to open a terminal (console) window.;
+, First try a few sites, for example "ping google.com". You may use www., or not.
+,, Again open the command line (Start - run or cmd, or terminal in Linux) and type: "tracert google.com" in Windows or "traceroute google.com" in Linux.
+ You will see the addresses of the nodes through which your signal is traveling, and the TIMES it spends at each one of them.
+,, First "tracer(ou)t(e)" it on its' own. Let's say "tracert ftp://myftpthingy.net". Note down (or save to a text file) your results. You will be able to see about 10-30 nodes through which your connection travels. The times spent at any one of them will be much less then a second (1 millisecond is 1 thousandth of the second). Normally from about 30ms to may be 200ms. There are some different possible numbers here, do not worry much.
+ WHILE DOING THIS - "tracer(ou)t(e)" the address again. If you are experiencing speed or connection problems - you will see some very different numbers of the milliseconds for the same nodes. Some of this numbers will run into few seconds. Some nodes will pretend to be stupid and keep on asking "what's that my dear?", -you will see a few ***.**ms values next to them. Very often after this nodes - the connection breaks.
+,, More often then not, you will have to reset the connection, - close the browser, open again.
+ As the address use the address of the node that increased request time many fold, or kept on issuing reset requests. For example: "ping P15-3.CLPPVA-LCR-02.verizon-gni.net".

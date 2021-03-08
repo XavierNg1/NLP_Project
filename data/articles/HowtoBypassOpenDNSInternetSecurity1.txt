@@ -1,0 +1,45 @@
+ Press ↵ Enter.
+
+
+OpenDNS changes the DNS settings on your router to redirect your requests. When you change the DNS settings on your operating system, the changes override any DNS settings on your router, effectively bypassing OpenDNS. This will not work if your router has been configured to block all DNS requests except OpenDNS on Port 53.;
+, Select "Properties".
+
+
+If you can't access this because you don't have administrator rights, click here
+
+
+, Click the Properties button.
+ This will allow you to set alternate DNS addresses, which are servers that translate website addresses so that you can connect in a browser. Usually your DNS servers are set by your service provider, but OpenDNS overrides this in your router and uses its own servers.
+ There are several DNS servers that are publicly available. If you have difficulty connecting to one, try another. Make sure to enter both the Primary and Secondary addresses.
+
+
+ DNS Provider 
+ Primary DNS 
+ Secondary DNS 
+
+
+Google
+8.8.8.8
+8.8.4.4
+
+
+Level3
+209.244.0.3
+209.244.0.4
+
+
+FreeDNS
+37.235.1.174
+37.235.1.177
+
+
+ViperDNS
+208.76.50.50
+208.76.51.51
+
+
+, Once you change your DNS settings, you should be able to connect to the blocked website. Changing your DNS settings in Windows will overwrite any DNS settings in your router.
+
+
+If you aren't able to connect, try another public DNS provider.
+

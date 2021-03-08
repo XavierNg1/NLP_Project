@@ -1,0 +1,46 @@
+ There are hundreds of characters that you can add to your MUGEN game. Character packs come in ZIP or RAR format. You can download these characters from a variety of different fan sites, including:
+
+
+MugenArchive.com
+MugenCharacters.org
+MugenFreeForAll.com;
+, If its a ZIP file, you can just double-click it to see its contents. If it is a RAR file, you'll need a program like WinRAR or 7-Zip to open the file.
+ Extract the ZIP or RAR file so that you can access the folder inside. You can use the Extract button that appears when you open the file, or you can right-click on it and select "Extract files".
+ The most important thing to look for when examining your new character files is the character's DEF file. This file must have the same name as the folder that contains it. For example, if the folder name is "LINK_3D", the DEF file must be named "LINK_3D.def".
+
+
+If the new character folder has multiple DEF files in it, just make sure that the base one matches the folder name. For example, LINK_3D may have multiple DEF files for the different versions. As long as the "LINK_3D.def" file matches the folder name, you should be OK.
+ MUGEN can be installed anywhere, so open the folder that you extracted your MUGEN files into after you downloaded it. If you don't remember where it is, perform a search on your computer for "mugen".
+ You'll find the char folder inside you mugen folder. Drag the newly-extracted character folder into this folder.
+ This contains the files that control the MUGEN emulator.
+ Right-click on the file and select "Open with". Choose Notepad from the list of programs.
+ This is the list of all of the character files that have been added to your game.
+ The name you type here needs to match the folder you added to your chars folder, which also needs to match the name of the character's DEF file. For example, if your new character's folder is named LINK_3D, type LINK_3D in the section.
+
+
+If your character came with multiple versions, add the base DEF file to the end of the folder name. For example, if your LINK_3D character came with multiple versions, type LINK_3D/LINK_3D.def instead of LINK_3D. This will tell MUGEN to load the base DEF file, which will process the rest of the versions
+There may be lots of comments in your "select.def" file. These are indicated by ; at the start of the line. Make sure that you enter the characters on lines that don't start with ;.
+ You can set the "order" of the character, which determines where it will appear in Arcade Mode. For example, by default the Arcade Mode pits you against six Order 1 opponents, one Order 2 opponent, and one Order 3 opponent. You can set the order of a character from 1 to 10. The game will randomly draw from all characters with the same order when determining a match-up.Add , order=# to the end of the character's entry in the "select.def" file. For example, to set LINK_3D as Order 3, type LINK_3D, order=3
+
+
+, Stages can usually be downloaded from the same places that you find character files. Like the character files, stages typically come in ZIP or RAR format.
+ Double-click the ZIP file or open the RAR file to see the contents. Stages come with a DEF and an SFF file. There may also be an MP3 file if a soundtrack is included.
+ You'll find this folder in your mugen folder.
+
+
+Move the MP3 file into the sound folder if the stage came with one.
+ You'll be adding the stage to your Stage Select screen, as well as assigning it to characters for Arcade Mode.
+
+
+The "select.def" file is located in the data folder.
+ This is where all of your downloaded stages are added.
+ Start a new line beneath the existing stages and type stages/stageName.def.
+ If you want a certain character to always appear on a certain stage when encountered in Arcade Mode, you can add it to their character entry in the section.
+
+
+Add a comma to the end of the character entry plus the path to the stage name. For example, to set LINK_3D to always appear on the Castle.def stage, you would type LINK_3D, stages/Castle.def.
+Add the order of the character at the end of the entry. For example, LINK_3D, stages/Castle.def, order=3
+
+
+, Once you've added your characters and set the stages, you can save the file. Your new characters will appear when you start MUGEN.
+

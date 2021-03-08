@@ -1,0 +1,30 @@
+
+Open Terminal.
+Verify your current settings.Click the Apple logo at the top left of your screen.Click Restart.
+Press and hold ⌘ Command + R immediately after restarting.
+Click Utilities.Click Terminal.Type in csrutil disable.Press ↵ Enter.
+Click on the Apple logo.Click Restart.
+Open Terminal.
+Copy and paste the following code into the window:
+
+
+
+
+
+
+sudo /usr/libexec/PlistBuddy -c "set ':JustASlide:mainDuration' 10" /System/Library/PrivateFrameworks/Slideshows.framework/Versions/A/Resources/Content/EffectDescriptions.plist
+
+
+
+
+
+You can replace the "10" in the code with any number of seconds you wish.
+
+,
+Press ↵ Enter.
+Type in the first code to confirm your changes.
+Press ↵ Enter.Click the Apple logo at the top left of your screen.Click Restart.
+Press and hold ⌘ Command + R immediately after restarting.
+Click Utilities.Click Terminal.Type in csrutil enable.Press ↵ Enter.
+Click on the Apple logo.
+Click Restart.

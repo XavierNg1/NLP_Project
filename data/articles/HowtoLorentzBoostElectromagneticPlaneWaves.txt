@@ -1,0 +1,84 @@
+ The magnitude of the two fields only differ by a constant via the relationship |E|=c|B|.{\displaystyle |{\mathbf {E} }|=c|{\mathbf {B} }|.} We also know that the two fields and the direction of propagation must be orthogonal to each other via B=1ck^×E,{\displaystyle {\mathbf {B} }={\frac {1}{c}}{\hat {\mathbf {k} }}\times {\mathbf {E} },} where k^{\displaystyle {\hat {\mathbf {k} }}} points in the direction of propagation - in our case, the z direction. Both of these insights suggests that the magnetic field can be written like so.
+
+
+cBy=E0sin⁡(k(z−ct)){\displaystyle cB_{y}=E_{0}\sin(k(z-ct))}
+;
+, Since we are boosting in one direction only, we can ignore the other two dimensions perpendicular to the direction of propagation.
+
+
+ct′=γ(ct−βz){\displaystyle ct^{\prime }=\gamma (ct-\beta z)}
+
+
+z′=γ(z−βct){\displaystyle z^{\prime }=\gamma (z-\beta ct)}
+
+
+, These transformations can be derived by transforming the Faraday tensor. You may be familiar with boosting in the x direction - in the case of the z direction, all that is needed is to perform a cyclic permutation of the components in the transformations, as the coordinate system can be arbitrarily chosen. Of special note here is the intricacy with which the two fields are related under a Lorentz boost.
+
+
+Electric fields
+
+
+Ez′=Ez{\displaystyle E_{z}^{\prime }=E_{z}}
+
+
+Ex′=γ(Ex−βcBy){\displaystyle E_{x}^{\prime }=\gamma (E_{x}-\beta cB_{y})}
+
+
+Ey′=γ(Ey+βcBx){\displaystyle E_{y}^{\prime }=\gamma (E_{y}+\beta cB_{x})}
+
+
+
+
+Magnetic fields
+
+
+cBz′=cBz{\displaystyle cB_{z}^{\prime }=cB_{z}}
+
+
+cBx′=γ(cBx+βEy){\displaystyle cB_{x}^{\prime }=\gamma (cB_{x}+\beta E_{y})}
+
+
+cBy′=γ(cBy−βEx){\displaystyle cB_{y}^{\prime }=\gamma (cB_{y}-\beta E_{x})}
+
+
+
+
+, The first step to writing an expression for the boosted electric field is to simply write Ex′.{\displaystyle E_{x}^{\prime }.}
+
+
+Ex′=γ(Ex−βcBy)=γ=γ(1−β)E0sin⁡(k(z−ct)){\displaystyle {\begin{aligned}E_{x}^{\prime }&=\gamma (E_{x}-\beta cB_{y})\\&=\gamma \\&=\gamma (1-\beta )E_{0}\sin(k(z-ct))\end{aligned}}}
+
+
+, While the above electric field is true, it is incomplete, as we want to write all quantities in terms of the boosted frame. This step requires that you write the Lorentz transformations from step 2 in inverse form. 
+
+
+ct=γ(ct′+βz′){\displaystyle ct=\gamma (ct^{\prime }+\beta z^{\prime })}
+
+
+z=γ(z′+βct′){\displaystyle z=\gamma (z^{\prime }+\beta ct^{\prime })}
+
+
+z−ct=γ(z′+βct′)−γ(ct′+βz′)=γ(z′+βct′−ct′−βz′)=γ(z′(1−β)+ct′(1−β))=γ(1−β)(z′−ct′){\displaystyle {\begin{aligned}z-ct&=\gamma (z^{\prime }+\beta ct^{\prime })-\gamma (ct^{\prime }+\beta z^{\prime })\\&=\gamma (z^{\prime }+\beta ct^{\prime }-ct^{\prime }-\beta z^{\prime })\\&=\gamma (z^{\prime }(1-\beta )+ct^{\prime }(1-\beta ))\\&=\gamma (1-\beta )(z^{\prime }-ct^{\prime })\end{aligned}}}
+
+
+, By the relationships established in step 1, the magnitude of the quantity below is also equal to the magnetic field cBy′.{\displaystyle cB_{y}^{\prime }.}
+
+
+Ex′=γ(1−β)E0sin⁡{\displaystyle E_{x}^{\prime }=\gamma (1-\beta )E_{0}\sin}
+
+
+, The quantity γ(1−β){\displaystyle \gamma (1-\beta )} can be simplified to the reciprocal of the Doppler factor. We make use of the relation γ=11−β2{\displaystyle \gamma ={\frac {1}{\sqrt {1-\beta ^{2}}}}} below.
+
+
+γ(1−β)=1−β1−β2=1−β1−β1+β1−β1κ=1−β1+β{\displaystyle {\begin{aligned}\gamma (1-\beta )&={\frac {1-\beta }{\sqrt {1-\beta ^{2}}}}\\&={\frac {{\sqrt {1-\beta }}{\sqrt {1-\beta }}}{{\sqrt {1+\beta }}{\sqrt {1-\beta }}}}\\{\frac {1}{\kappa }}&={\sqrt {\frac {1-\beta }{1+\beta }}}\end{aligned}}}
+
+Above, κ=1+β1−β{\displaystyle \kappa ={\sqrt {\frac {1+\beta }{1-\beta }}}} (note the sign changes) is the Doppler factor - the factor by which the wavelength as detected by an observer changes with respect to the source. This makes intuitive sense in the problem outlined in this article, as we were dealing with plane waves, so it is not a surprise that the Doppler factor should come up. The boosted electric and magnetic fields can therefore be written as such.
+
+
+Ex′=cBy′=1κE0sin(kκ(z′−ct′)){\displaystyle E_{x}^{\prime }=cB_{y}^{\prime }={\frac {1}{\kappa }}E_{0}\sin \left({\frac {k}{\kappa }}(z^{\prime }-ct^{\prime })\right)}
+
+
+
+We see clearly now how the electric and magnetic fields transform - the amplitudes become smaller (decreased intensity) and the frequencies become smaller, corresponding to longer wavelengths (redshifting). 
+
+

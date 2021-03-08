@@ -1,0 +1,12 @@
+
+Press "Windows+R".
+Type "gpedit.msc" & press 'Enter' key.
+In the right side pane, Click Computer Configuration ---> Windows Settings ---> Security Settings ---> Local Policies ---> Security Options.
+Locate “Interactive logon: Message text for users attempting to log on”.
+Double-click “Interactive logon: Message text for users attempting to log on”.
+In this step, Double-click "Interactive logon: Message title for users attempting to log on".
+Now, you've edited both the policy files.
+In order to apply these policy, Press "Window+R".
+Type "gpupdate" & press 'Enter' key.
+In a couple of seconds it'll prompt in the same command prompt window & will be automatically closed by itself.
+Turn off or restart your computer system now & if everything went fine, It'll display your message & title here.

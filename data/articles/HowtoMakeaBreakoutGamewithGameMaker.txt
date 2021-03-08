@@ -1,0 +1,30 @@
+;
+,
+A sprite called spr_ball.
+A sprite called spr_wall.
+A sprite called spr_wall_break with a different color than the normal wall.
+ e.g. obj_paddle for spr_paddle.
+
+
+
+Left key pressed: Move left with a speed of 5.
+Right key pressed: Move right with a speed of 5.
+Any key released: Move nowhere with a speed of 0.
+Collision with wall: move nowhere with a speed of 0.
+Check the solid box.
+
+
+
+Check the solid box.
+
+
+
+In the create event: Move up, top right and top left with a speed of 4.
+In collision with wall: Bounce off solid objects.
+Collision with wall break: Bounce off solid objects. Set the score to 10 and check the relative box. Destroy other.
+Collision with bat: Bounce off solid objects.
+
+
+
+Collision with ball: Destroy self.
+

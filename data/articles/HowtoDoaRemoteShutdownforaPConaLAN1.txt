@@ -1,0 +1,19 @@
+ First you'll need to ensure that the computer you want to remotely shutdown is set up to be remotely accessed and that both computers are a part of the same local area network (LAN). Search for services.msc and click enter to check or adjust these settings. Go to "Console" then right click "remote registry" and click "start".
+
+
+If you need help in setting up the LAN, or connecting both computers to it then check out Create-a-Local-Area-Network-(LAN) or Configure-Your-PC-to-a-Local-Area-Network.;
+, You must have administrator-level access on the target computer in order to shut it down remotely. If you are denied access to a computer you own it is likely because you lack sufficient local privileges. Read Find or Change My Computer's Administrator for more details on adjusting these privileges on the target computer.
+ The name this computer uses for local networks will be found under the tab "Computer name, domain, and workgroup settings".
+
+
+Alternately, find and take note of your target computer's IP address by referring to Find the IP Address of Your PC.,
+
+
+Click on the "Start" button
+Select "Run" to access the prompt.
+ An example of the correct code is .shutdown -m \\computername where "computername" is replaced by the name of computer you wish to shutdown (or the IP address).
+
+
+Other codes exist as well: to learn about them type .shutdown /? in the command prompt.
+For example, .shutdown –m \\worklaptop –c “The computer will restart, please save all work.” –t 60 will cause the computer with name "worklaptop" to begin a 60-second countdown before it shuts down and to display the message "The computer will restart, please save all work." on the screen.
+

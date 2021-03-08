@@ -1,0 +1,42 @@
+ Once Clonezilla Live loads, it will automatically boot using the default mode options.If you want other modes, use the up or down arrow keys to navigate to different menu options, and then press Enter.
+ On the Choose language screen, use the up or down arrow keys to select your language, and then press the Enter key.
+ On the Configuring console-data screen, select the Don’t touch keymap menu option, and then press the Enter key.
+
+
+Clonezilla’s default keyboard layout is the US keyboard. If you’re using another keyboard layout, choose the Select keymap from arch list or Select keymap from full list options.
+ On the Start Clonezilla screen, choose the Start Clonezilla option, and then press the Enter key.
+ Move the cursor to the device-image option, and then press the spacebar to select it. An asterisk is added to show it’s selected. Press the Enter key.
+
+
+This option will clone the hard disk as an image on another drive instead of on a partition.
+ Move the cursor to the local_dev option, and then press the spacebar to select it. An asterisk is added to show it’s selected. Press the Enter key.
+
+
+This option will let your clone the hard disk to an internal or external hard disk.
+ Move the cursor to the sdb1 8G_ext4 option, and then press the space to select it. An asterisk is added to show it’s selected. Press the Enter key.
+
+
+This option will clone the disk to the first partition on the second internal or external disk.
+ Move the cursor to the / Top_directory_in_the_local_device option, and then press the spacebar to select it. Press the Enter key. Review the disk usage report, and then press the Enter key to continue.
+ Move the cursor to the Beginner option, and then press the spacebar to select it. An asterisk is added to show it’s selected. Press the Enter key.
+
+
+Expert mode options aren’t covered in this article., Move the cursor to the save disk option, and then press the spacebar to select it. Press the Enter key.
+ In the Input a name field, type a meaningful name for the saved image, and then press the Enter key.
+
+It’s usually helpful to include the date in the saved disk image name.
+ Move the cursor to the name of the disk you’d like to clone, and then press the spacebar to select it. Press the Enter key.
+
+
+It’s important that you know the name of the drive that you want to clone. If you don’t know, it’s better to Cancel the process, check the disk name, and restart the process from the beginning.
+ Choose the Skip checking/repairing file system option, press the spacebar to select it, and then press the Enter key.
+
+
+If you’re worried that the source drive is damaged or corrupted, choose the -fscj-src-part option to complete an interactive file system check before cloning the disk.
+ Choose the Yes, check the saved image option, press the space to select it, and then press the Enter key.
+ This is the final step before starting the cloning process. If you’re not sure you’d like to continue, type N, and then press the Enter key. If you want to clone the hard disk, type Y, and then press the Enter key.
+
+
+If you choose to continue, Clonezilla begins the cloning process.
+ When the hard disk cloning is completed, type 2, and then press the Enter key to start exiting Clonezilla. On the Choose mode screen, choose the Poweroff option, press the spacebar, and then press the Enter key. Before the computer finishes powering down, Clonezilla will prompt you to remove the CD/DVD or USB drive. Do so, and then press the Enter key. Your computer will power off.
+

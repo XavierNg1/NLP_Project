@@ -1,0 +1,906 @@
+ Create a class and name it however you want. In this article, it will be named NetworkAppExample.
+
+
+
+
+public class NetworkAppExample {
+ 
+}
+
+
+;
+, Create a main method and declare it might throw exceptions of Exception type and any subclass of it - all exceptions. This is considered a bad practice, but is acceptable for barebone examples.
+
+
+
+
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+ 
+    }
+}
+
+
+
+
+, This example will use local host address and an arbitrary port number. Port number needs to be in a range from 0 to 65535 (inclusive). However, port numbers to avoid range from 0 to 1023 (inclusive) because they are reserved system ports.
+
+
+
+
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+    }
+}
+
+
+
+
+, Server is bound to the address and port and listens for incoming connections. In Java, ServerSocket represents server-side endpoint and its function is accepting new connections. ServerSocket does not have streams for reading and sending data because it does not represent connection between a server and a client.
+
+
+
+
+import java.net.InetAddress;
+import java.net.ServerSocket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+    }
+}
+
+
+
+
+, For logging purposes, print to the console that server has been started.
+
+
+
+
+import java.net.InetAddress;
+import java.net.ServerSocket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+    }
+}
+
+
+
+
+, Client is bound to the address and port of a server and listens for packets (messages) after connection is established. In Java, Socket represents either a client-side endpoint connected to the server or a connection (from server) to client and is used to communicate with the party on the other end.
+
+
+
+
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+    }
+}
+
+
+
+
+, For logging purposes, print to the console that connection has been attempted.
+
+
+
+
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+    }
+}
+
+
+
+
+, Clients will never connect unless server listens for and accepts, in other words establishes, connections. In Java, connections are established using accept() method of ServerSocket class. The method will block execution until a client connects.
+
+
+
+
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+    }
+}
+
+
+
+
+, For logging purposes, print to the console that connection between server and client has been established.
+
+
+
+
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+    }
+}
+
+
+
+
+, Communication is done over streams and, in this application, raw streams of (connection from) server (to client) and client need to be chained to either data or object streams. Remember, both parties need to use the same stream type.
+
+
+Data streams
+
+
+
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        DataOutputStream clientOut = new DataOutputStream(client.getOutputStream());
+        DataInputStream clientIn = new DataInputStream(client.getInputStream());
+        DataOutputStream serverOut = new DataOutputStream(connection.getOutputStream());
+        DataInputStream serverIn = new DataInputStream(connection.getInputStream());
+    }
+}
+
+
+
+
+
+
+Object streams
+When multiple object streams are used, input streams have to be initialized in the same order as output streams because ObjectOutputStream sends a header to the other party and ObjectInputStream blocks execution until it reads the header.
+
+
+
+
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        ObjectOutputStream clientOut = new ObjectOutputStream(client.getOutputStream());
+        ObjectOutputStream serverOut = new ObjectOutputStream(connection.getOutputStream());
+        ObjectInputStream clientIn = new ObjectInputStream(client.getInputStream());
+        ObjectInputStream serverIn = new ObjectInputStream(connection.getInputStream());
+    }
+}
+
+
+
+
+Order as specified in the code above might be easier to remember - first initialize output streams then input streams in the same order. However, another order for initialization of object streams is the following:
+
+
+
+
+ObjectOutputStream clientOut = new ObjectOutputStream(client.getOutputStream());
+ObjectInputStream serverIn = new ObjectInputStream(connection.getInputStream());
+ObjectOutputStream serverOut = new ObjectOutputStream(connection.getOutputStream());
+ObjectInputStream clientIn = new ObjectInputStream(client.getInputStream());
+
+
+
+
+
+
+, For logging purposes, print to the console that communication is ready.
+
+
+
+
+// code omitted
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        // code omitted
+        System.out.println("Communication is ready.");
+    }
+}
+
+
+
+
+, In this application, Hello World text will be sent to the server either as bytefor data streams and String for object streams.
+
+
+Data streams
+Using data streams, serialization is done by converting objects into primitive data types or a String. In this case, String is converted to byte[] instead of written using writeBytes() method to show how it would be done with other objects, such as images or other files.
+
+
+
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        DataOutputStream clientOut = new DataOutputStream(client.getOutputStream());
+        DataInputStream clientIn = new DataInputStream(client.getInputStream());
+        DataOutputStream serverOut = new DataOutputStream(connection.getOutputStream());
+        DataInputStream serverIn = new DataInputStream(connection.getInputStream());
+        System.out.println("Communication is ready.");
+ 
+        byte[] messageOut = "Hello World".getBytes();
+    }
+}
+
+
+
+
+
+
+Object streams
+
+
+
+
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        ObjectOutputStream clientOut = new ObjectOutputStream(client.getOutputStream());
+        ObjectOutputStream serverOut = new ObjectOutputStream(connection.getOutputStream());
+        ObjectInputStream clientIn = new ObjectInputStream(client.getInputStream());
+        ObjectInputStream serverIn = new ObjectInputStream(connection.getInputStream());
+        System.out.println("Communication is ready.");
+ 
+        String messageOut = "Hello World";
+    }
+}
+
+
+
+
+
+
+, Write data to the output stream and flush the stream to ensure the data has been written entirely.
+
+
+Data streams
+Length of a message needs to be sent first so the other party knows how many bytes it needs to read. After the length is sent as a primitive integer type, bytes can be sent.
+
+
+
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        DataOutputStream clientOut = new DataOutputStream(client.getOutputStream());
+        DataInputStream clientIn = new DataInputStream(client.getInputStream());
+        DataOutputStream serverOut = new DataOutputStream(connection.getOutputStream());
+        DataInputStream serverIn = new DataInputStream(connection.getInputStream());
+        System.out.println("Communication is ready.");
+ 
+        byte[] messageOut = "Hello World".getBytes();
+        clientOut.writeInt(messageOut.length);
+        clientOut.write(messageOut);
+        clientOut.flush();
+    }
+}
+
+
+
+
+
+
+Object streams
+
+
+
+
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        ObjectOutputStream clientOut = new ObjectOutputStream(client.getOutputStream());
+        ObjectOutputStream serverOut = new ObjectOutputStream(connection.getOutputStream());
+        ObjectInputStream clientIn = new ObjectInputStream(client.getInputStream());
+        ObjectInputStream serverIn = new ObjectInputStream(connection.getInputStream());
+        System.out.println("Communication is ready.");
+ 
+        String messageOut = "Hello World";
+        clientOut.writeObject(messageOut);
+        clientOut.flush();
+    }
+}
+
+
+
+
+
+
+, For logging purposes, print to the console that message has been sent.
+
+
+Data streams
+
+
+
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        DataOutputStream clientOut = new DataOutputStream(client.getOutputStream());
+        DataInputStream clientIn = new DataInputStream(client.getInputStream());
+        DataOutputStream serverOut = new DataOutputStream(connection.getOutputStream());
+        DataInputStream serverIn = new DataInputStream(connection.getInputStream());
+        System.out.println("Communication is ready.");
+ 
+        byte[] messageOut = "Hello World".getBytes();
+        clientOut.writeInt(messageOut.length);
+        clientOut.write(messageOut);
+        clientOut.flush();
+        System.out.println("Message sent to server: " + new String(messageOut));
+    }
+}
+
+
+
+
+
+
+Object streams
+
+
+
+
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        ObjectOutputStream clientOut = new ObjectOutputStream(client.getOutputStream());
+        ObjectOutputStream serverOut = new ObjectOutputStream(connection.getOutputStream());
+        ObjectInputStream clientIn = new ObjectInputStream(client.getInputStream());
+        ObjectInputStream serverIn = new ObjectInputStream(connection.getInputStream());
+        System.out.println("Communication is ready.");
+ 
+        String messageOut = "Hello World";
+        clientOut.writeObject(messageOut);
+        clientOut.flush();
+        System.out.println("Message sent to server: " + messageOut);
+    }
+}
+
+
+
+
+
+
+, Read data from the input stream and convert it. Since we know exactly the type of sent data, we will either create a String from byte[] or cast Object to String without checking, depending on the stream used.
+
+
+Data streams
+As length was sent first and bytes afterward, reading has to be done in the same order. In case length is zero, there is nothing to read. Object is deserialized when bytes are converted back into an instance, in this case, of String.
+
+
+
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        DataOutputStream clientOut = new DataOutputStream(client.getOutputStream());
+        DataInputStream clientIn = new DataInputStream(client.getInputStream());
+        DataOutputStream serverOut = new DataOutputStream(connection.getOutputStream());
+        DataInputStream serverIn = new DataInputStream(connection.getInputStream());
+        System.out.println("Communication is ready.");
+ 
+        byte[] messageOut = "Hello World".getBytes();
+        clientOut.writeInt(messageOut.length);
+        clientOut.write(messageOut);
+        clientOut.flush();
+        System.out.println("Message sent to server: " + new String(messageOut));
+ 
+        int length = serverIn.readInt();
+        if (length > 0) {
+            byte;
+            serverIn.readFully(messageIn, 0, messageIn.length);
+        }
+    }
+}
+
+
+
+
+
+
+Object streams
+
+
+
+
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        ObjectOutputStream clientOut = new ObjectOutputStream(client.getOutputStream());
+        ObjectOutputStream serverOut = new ObjectOutputStream(connection.getOutputStream());
+        ObjectInputStream clientIn = new ObjectInputStream(client.getInputStream());
+        ObjectInputStream serverIn = new ObjectInputStream(connection.getInputStream());
+        System.out.println("Communication is ready.");
+ 
+        String messageOut = "Hello World";
+        clientOut.writeObject(messageOut);
+        clientOut.flush();
+        System.out.println("Message sent to server: " + messageOut);
+ 
+        String messageIn = (String) serverIn.readObject();
+    }
+}
+
+
+
+
+
+
+, For logging purposes, print to the console that message has been received and print its content.
+
+
+Data streams
+
+
+
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        DataOutputStream clientOut = new DataOutputStream(client.getOutputStream());
+        DataInputStream clientIn = new DataInputStream(client.getInputStream());
+        DataOutputStream serverOut = new DataOutputStream(connection.getOutputStream());
+        DataInputStream serverIn = new DataInputStream(connection.getInputStream());
+        System.out.println("Communication is ready.");
+ 
+        byte[] messageOut = "Hello World".getBytes();
+        clientOut.writeInt(messageOut.length);
+        clientOut.write(messageOut);
+        clientOut.flush();
+        System.out.println("Message sent to server: " + new String(messageOut));
+ 
+        int length = serverIn.readInt();
+        if (length > 0) {
+            byte;
+            serverIn.readFully(messageIn, 0, messageIn.length);
+            System.out.println("Message received from client: " + new String(messageIn));
+        }
+    }
+}
+
+
+
+
+
+
+Object streams
+
+
+
+
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        ObjectOutputStream clientOut = new ObjectOutputStream(client.getOutputStream());
+        ObjectOutputStream serverOut = new ObjectOutputStream(connection.getOutputStream());
+        ObjectInputStream clientIn = new ObjectInputStream(client.getInputStream());
+        ObjectInputStream serverIn = new ObjectInputStream(connection.getInputStream());
+        System.out.println("Communication is ready.");
+ 
+        String messageOut = "Hello World";
+        clientOut.writeObject(messageOut);
+        clientOut.flush();
+        System.out.println("Message sent to server: " + messageOut);
+ 
+        String messageIn = (String) serverIn.readObject();
+        System.out.println("Message received from client: " + messageIn);
+    }
+}
+
+
+
+
+
+
+, Connection is disconnected when one party closes its streams. In Java, by closing the output stream, associated socket and input stream are closed, as well. Once a party on the other end finds out connection is dead, it needs to close its output stream, as well, to prevent memory leaks.
+
+
+
+
+// code omitted
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        // code omitted
+        System.out.println("Communication is ready.");
+ 
+        // code omitted
+ 
+        clientOut.close();
+        serverOut.close();
+    }
+}
+
+
+
+
+, For logging purposes, print to the console connections have been disconnected.
+
+
+
+
+// code omitted
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        // code omitted
+        System.out.println("Communication is ready.");
+ 
+        // code omitted
+ 
+        clientOut.close();
+        serverOut.close();
+        System.out.println("Connections closed.");
+    }
+}
+
+
+
+
+, Connections are disconnected, but server is still up and running. As ServerSocket is not associated with any stream, it needs to be explicitly closed by calling close() method.
+
+
+
+
+// code omitted
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        // code omitted
+        System.out.println("Communication is ready.");
+ 
+        // code omitted
+ 
+        clientOut.close();
+        serverOut.close();
+        System.out.println("Connections closed.");
+        server.close();
+    }
+}
+
+
+
+
+, For logging purposes, print to the console server has been terminated.
+
+
+
+
+// code omitted
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+ 
+public class NetworkAppExample {
+    public static void main(String[] args) throws Exception {
+        String host = "localhost";
+        int port = 10430;
+ 
+        ServerSocket server = new ServerSocket(port, 50, InetAddress.getByName(host));
+        System.out.println("Server started.");
+        Socket client = new Socket(host, port);
+        System.out.println("Connecting to server...");
+        Socket connection = server.accept();
+        System.out.println("Connection established.");
+ 
+        // code omitted
+        System.out.println("Communication is ready.");
+ 
+        // code omitted
+ 
+        clientOut.close();
+        serverOut.close();
+        System.out.println("Connections closed.");
+        server.close();
+        System.out.println("Server terminated.");
+    }
+}
+
+
+
+
+, Logging enabled us to know if the application was successful or not. Expected output:
+
+
+
+
+Server started.
+Connecting to server...
+Connection established.
+Communication is ready.
+Message sent to server: Hello World
+Message received from client: Hello World
+Connections closed.
+Server terminated.
+
+
+
+
+In case your output is not like the one above, which is unlikely to happen, there are a few solutions:
+
+If the output stops at the line Connection established. and object streams are used, flush each ObjectOutputStream immediately after initialization because headers, for some reason, were not sent.
+If the output prints java.net.BindException: Address already in use, choose a different port number because the one specified is already used.
+

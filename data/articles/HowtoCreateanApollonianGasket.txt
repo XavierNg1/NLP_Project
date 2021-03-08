@@ -1,0 +1,57 @@
+ The following terms are used in the instructions below:
+
+
+Apollonian Gasket: One of several names for a type of fractal composed of a series of circles nested inside one large circle and tangent to all others nearby. These are also called "Soddy Circles" or "Kissing Circles".
+Radius of a circle: The distance from the center point of a circle to its edge. Usually assigned the variable r.
+Curvature of a circle: The positive or negative inverse of the radius, or ±1/r. Curvature is positive when dealing with the outer curvature of the circle and negative for the inner curvature.
+Tangent: A term applied to lines, planes, and shapes that intersect at one infinitely small point. In Apollonian Gaskets, this refers to the fact that each circle touches each nearby circle at only one point. Note that there is no intersection - tangent shapes do not overlap.;
+, Descartes's Theorem is a formula that is useful for calculating the sizes of the circles in an Apollonian Gasket. If we define the curvatures (1/r) of any three circles as a, b, and c, respectively, the Theorem states that the curvature of the circle (or circles) tangent to all three, which we will define as d, is: d = a + b + c ± 2 (sqrt (a × b + b × c + c × a )).
+
+
+For our purposes, we'll generally only use the answer we obtain by putting a plus sign in front of the square root ( in other words, ... + 2 (sqrt(...)). For now, it's enough to know that the subtraction form of the equation has its uses in other related tasks.
+ In the steps below, we'll make our own simple Apollonian Gasket. It's possible to draw Apollonian Gaskets by hand or on the computer. In either case, you'll want to be able to draw perfectly round circles. This is fairly important. Since every circle in an Apollonian Gasket is perfectly tangent to the circles next to it, circles that are even slightly misshapen can "throw off" your final product.
+
+
+If drawing the Gasket on a computer, you'll need a program that allows you to easily draw circles of a fixed radius from a central point. Gfig, a vector-drawing extension for the free image editing program GIMP, can be used, as can a wide variety of other drawing programs (see the materials section for relevant links). You will also probably need a calculator application and either a word processor document or a physical notepad for taking notes on curvatures and radii.
+For drawing the Gasket by hand, you'll need a calculator (scientific or graphing suggested), a pencil, compass, ruler (preferably a scale with millimeter markings, graph paper, and a notepad for note taking.
+ Your first task is easy - just draw one big, perfectly round circle. The bigger the circle is, the more complex your Gasket can be, so try to make a circle as large as your paper allows or as large as you can easily see in one window on your drawing program.
+ Next, draw another circle inside the first that's smaller than the original, but still fairly large. The exact size of the second circle is up to you - there is no correct size. However, for our purposes, let's draw our second circle so that it reaches exactly halfway across our large outer circle. In other words, let's draw our second circle so that its central point is the midpoint of the large circle's radius.
+
+
+Remember that in Apollonian Gaskets, all circles that touch are tangent to each other. If you're using a compass to draw your circles by hand, recreate this effect by putting the sharp point of the compass at the midpoint of the large outer circle's radius, adjusting your pencil so that it just touches the edge of the large circle, then drawing your smaller inner circle.
+ Next, let's draw another circle across from our first one. This circle should be tangent to both the large outer circle and the smaller inner circle, which means that your two inner circles will touch at the exact midpoint of the large outer circle.
+ Let's stop drawing for a moment. Now that we have three circles in our Gasket, we can use Descartes's Theorem to find the radius of the next circle we'll draw. Remember that Descartes's Theorem is d = a + b + c ± 2 (sqrt (a × b + b × c + c × a )), where a, b, and c are the curvatures of your three tangent circles and d is the curvature of the circle tangent to all three. So, to find the radius of our next circle, let's find the curvature of each of the circles we have so far so that we can find the curvature of the next circle, then convert this to its radius.
+
+
+Let's define the radius of our outer circle as 1. Because the other circles are inside this one, we're dealing with its interior curvature (rather than its exterior curvature), and, consequently, we know its curvature is negative. - 1/r = -1/1 = -1. The big circle's curvature is -1.
+The smaller circles' radii are half as large as the big circle's, or, in other words, 1/2. Since these circles are touching each other and the large circle with their outside edge, we're dealing with their exterior curvature, so their curvatures are positive. 1/(1/2) = 2. The smaller circles' curvatures are both 2.
+Now, we know that a = -1, b = 2, and c = 2 for our Descartes's Theorem equation. Let's solve for d:
+
+d = a + b + c ± 2 (sqrt (a × b + b × c + c × a ))
+d = -1 + 2 + 2 ± 2 (sqrt (-1 × 2 + 2 × 2 + 2 × -1 ))
+d = -1 + 2 + 2 ± 2 (sqrt (-2 + 4 + -2 ))
+d = -1 + 2 + 2 ± 0
+d = -1 + 2 + 2
+d = 3. The curvature of our next circle is 3. Since 3 = 1/r, the radius of our next circle is 1/3.
+ Use the radius value you just found to draw your next two circles. Remember that these will be tangent to the circles whose curvatures you used for a, b, and c in Descartes's Theorem. In other words, they will be tangent to both the original and second circles. For these circles to be tangent to all three circles, you'll need to draw them in the open spaces in the top and bottom of the area inside your large original circle.
+
+
+Remember that these circles' radii will be equal to 1/3. Measure 1/3 back from the edge of the outer circle, then draw your new circle. It should be tangent to all three of the surrounding circles.
+ Because they are fractals, Apollonian Gaskets are infinitely complex. This means you can add smaller and smaller circles to your heart's content. You're limited only be the precision of your tools (or, if you're using a computer, the ability of your drawing program to "zoom in"). Each circle, no matter how small, should be tangent to three other circles. To draw each subsequent circle in your Gasket, plug the curvatures of the three circles it will be tangent to into Descartes's Theorem. Then, use your answer (which will be the radius of your new circle) to draw your new circle accurately.
+
+
+Note that the Gasket we've chosen to draw is symmetrical, so the radius of one circle is the same as the corresponding circle "across from it". However, know that not every Apollonian Gasket is symmetrical.
+Let's tackle one more example. Let's say that, after drawing our last set of circles, we now want to draw the circles that are tangent to our third set, our second set, and our large outer circle. The curvatures of these circles are 3, 2, and -1, respectively. Let's plug these numbers into Descartes's Theorem, setting a = -1, b = 2, and c = 3:
+
+d = a + b + c ± 2 (sqrt (a × b + b × c + c × a ))
+d = -1 + 2 + 3 ± 2 (sqrt (-1 × 2 + 2 × 3 + 3 × -1 ))
+d = -1 + 2 + 3 ± 2 (sqrt (-2 + 6 + -3))
+d = -1 + 2 + 3 ± 2 (sqrt (1))
+d = -1 + 2 + 3 ± 2
+d = 2, 6. We have two answers! However, because we know that our new circle will be smaller than any of the circles it is tangent to, only a curvature of 6 (and therefore a radius of 1/6) makes sense.
+Our other answer, 2, actually refers to the hypothetical circle on the other side of the tangent point of our second and third circles. This circle is tangent to both of these circles and to the large outer circle, but it would intersect the circles we've already drawn, so we can disregard it.
+ All Apollonian Gaskets start the same - with a large exterior circle that acts as the edge of the fractal. However, there's no reason that your second circle necessarily has to have 1/2 the radius of the first - we just chose to do this above because it's simple and easy to understand. For fun, try starting a new Gasket with a second circle of a different size - this will lead to exciting new avenues of exploration.
+
+
+After drawing your second circle (regardless of its size), your next act should be to draw one or more circles that are tangent both to it and to the large outer circle - there's no right way to do this, either. After this, you can use Descartes's Theorem to determine the radii of any subsequent circles, as shown above.
+

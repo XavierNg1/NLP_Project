@@ -1,0 +1,21 @@
+
+Separate your number's digits into pairs.
+Find the largest integer n whose square is lesser than or equal to the leftmost number (or pair).
+Subtract the number you just calculated from the leftmost pair.
+Drop down the next pair.
+Fill in the blank spaces in the right quadrant.
+Subtract the number you just calculated from the current number on the left.
+Repeat step 4.
+Repeat step 5 and 6.
+To continue to calculate digits, drop a pair of zeros on the left, and repeat steps 4, 5 and 6.
+Consider the number you are calculating the square root of as the area S of a square.
+Specify letter variables for each digit of your answer.
+Specify letter variables for each "chunk" of your starting number.
+Understand this method's connection to long division.
+Find the biggest number whose square is less than or equal to Sa.
+Visualize the square whose area you are beginning to solve.
+Subtract A² from Sa.
+Look for N1 = 2×10A×B + B², also written as N1 = (2×10A + B) × B.
+Solve.
+Subtract the area (2×10A + B) × B from the total area.
+To calculate the next digit C, repeat the process.

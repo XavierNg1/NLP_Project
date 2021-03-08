@@ -1,0 +1,29 @@
+ You'll need these to transfer some files from one place to the other in your computer. You should be on the basic Finder entry screen, and you'll see "Users" (such as you name), a "Hard Drive," and a "Systems" option.
+
+
+Make sure Photo Booth is not open., Click on "System" → "Library" → "Compositions" to get there. You should see many different compositions, some which work with Photo Booth and some that don't.
+
+
+If you are having trouble finding the Composition Folder, use the search bar in the top corner of Finder.
+ Click on "Users," or click on your profile (this is the name used to sign into your computer, such as JSmith) in the other Finder window. Click on "Library" once you've found your account. This is the library of you user account, whereas the other one is the library of your entire computer.
+ You'll be transferring the compositions (effects) from the System folder to the personal library. If there is already a compositions folder here, move on to the next step. If not, click "File" → "New Folder" and name it "Compositions"., Not all of these effects will be perfect for Photo Booth, but many users have already posted the best effects to copy. At minimum, try bringing over:
+
+
+ASCII Art, Blue Print, Blur, City Lights, Color Controls, Color Invert, Compound Eye, Concert, Crystallize, Dot Screen, Exposure Adjust, Gamma Adjust, Kaleidoscope, Line Overlay, Line Screen, Monochrome, Neon, Pixelate, Pointillize, Posterize, Sharpen, Tracer, Zoom Blur, If you do not have one, you can download TextWrangler for free online, which let you edit the compositions into Photo Booth effects. Don't get intimidated by this process if you don't know coding -- all you have to do is delete 5 lines.
+ Click on "File" → "Open," then find your compositions (Blue, City Lights, Neon, etc.). Remember to look in your new folder, found by "User" &rarr, "Library" → "Composition."
+
+
+You can also right click on the effect you want to edit, like "ASCII Art" and choose TextWrangler after clicking "Open With..."
+
+, The coding in these effects includes some lines that prevent Photo Booth from accessing them. Find the following lines, usually near the top, and simply erase them all. When you're done, hit save.
+
+
+<key>excludedHosts</key>
+<array><bre><string>com.apple.PhotoBooth</string>
+<string>com.apple.iChat</string>
+</array>
+Only try one effect at a time, making sure you've got it right before moving on.
+ After you've deleted the lines, you're ready to use your effect. Open Photo Booth to see the effect and start using it.
+
+
+Some effects can cause Photo Booth to crash unexpectedly, though this is rare. If you notice Photo Booth crashing, simply delete the effect file that is causing the problem, and try again.

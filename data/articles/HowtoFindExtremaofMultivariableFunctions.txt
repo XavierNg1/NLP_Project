@@ -1,0 +1,135 @@
+ f{\displaystyle f} is a twice-differentiable function of two variables x{\displaystyle x} and y.{\displaystyle y.} In this article, we wish to find the maximum and minimum values of f{\displaystyle f} on the domain |x|≤1, |y|≤2.{\displaystyle |x|\leq 1,\ |y|\leq 2.} This is a rectangular domain where the boundaries are inclusive to the domain.
+
+
+f(x,y)=x3+x2y−2y3+6y{\displaystyle f(x,y)=x^{3}+x^{2}y-2y^{3}+6y}
+;
+, Recall that in two dimensions, the gradient ∇f=(∂f∂x,∂f∂y).{\displaystyle \nabla f=\left({\frac {\partial f}{\partial x}},{\frac {\partial f}{\partial y}}\right).}
+
+
+∂f∂x=3x2+2xy=0{\displaystyle {\frac {\partial f}{\partial x}}=3x^{2}+2xy=0}
+
+
+∂f∂y=x2−6y2+6=0{\displaystyle {\frac {\partial f}{\partial y}}=x^{2}-6y^{2}+6=0}
+
+
+, Generally, we will need to work with both components of the gradient to do this.
+
+Let's start with the first component to find values of x.{\displaystyle x.} We can immediately factor out an x,{\displaystyle x,} which gets us x=0.{\displaystyle x=0.}  The quantity in parentheses can also be 0, but that only gets x{\displaystyle x} in terms of y.{\displaystyle y.}
+
+
+3x2+2xy=0x(3x+2y)=0x=0{\displaystyle {\begin{aligned}3x^{2}+2xy&=0\\x(3x+2y)&=0\\x&=0\end{aligned}}}
+
+
+3x+2y=0x=−23y{\displaystyle {\begin{aligned}3&x+2y=0\\&x=-{\frac {2}{3}}y\end{aligned}}}
+
+
+
+Next, we move to the second component to find corresponding values of y{\displaystyle y} for the two values of x.{\displaystyle x.}
+
+
+x=0:{\displaystyle x=0:}
+
+
+6=6y2y=±1{\displaystyle {\begin{aligned}6&=6y^{2}\\y&=\pm 1\end{aligned}}}
+
+
+
+
+x=−23y:{\displaystyle x=-{\frac {2}{3}}y:}
+
+
+49y2−6y2+6=0(6−49)y2=6y2=2725y=±335{\displaystyle {\begin{aligned}{\frac {4}{9}}y^{2}-6y^{2}+6&=0\\\left(6-{\frac {4}{9}}\right)y^{2}&=6\\y^{2}&={\frac {27}{25}}\\y&=\pm {\frac {3{\sqrt {3}}}{5}}\end{aligned}}}
+
+
+
+
+
+We've found all possible values for y.{\displaystyle y.} Substituting y{\displaystyle y} only for the values that we got using the relation x=−23y,{\displaystyle x=-{\frac {2}{3}}y,} we obtain x=∓235{\displaystyle x=\mp {\frac {2{\sqrt {3}}}{5}}} (note the signs). 
+
+Therefore, the four critical points are (0,±1), (∓235,±335).{\displaystyle (0,\pm 1),\ \left(\mp {\frac {2{\sqrt {3}}}{5}},\pm {\frac {3{\sqrt {3}}}{5}}\right).} These are only candidates for extrema, however.
+ This matrix is a square matrix of second derivatives. In two dimensions, the matrix is as below.
+
+
+H=(∂2f∂x2∂2f∂x∂y∂2f∂y∂x∂2f∂y2){\displaystyle H={\begin{pmatrix}{\dfrac {\partial ^{2}f}{\partial x^{2}}}&{\dfrac {\partial ^{2}f}{\partial x\partial y}}\\{\dfrac {\partial ^{2}f}{\partial y\partial x}}&{\dfrac {\partial ^{2}f}{\partial y^{2}}}\end{pmatrix}}}
+
+
+, Note that Clairaut's theorem guarantees that mixed partials commute (for continuous functions), so in two dimensions, the off-diagonal elements of the Hessian are the same. See the tips for another reason why this must be true.
+
+
+∂2f∂x2=6x+2y{\displaystyle {\frac {\partial ^{2}f}{\partial x^{2}}}=6x+2y}
+
+
+∂2f∂x∂y=∂2f∂y∂x=2x{\displaystyle {\frac {\partial ^{2}f}{\partial x\partial y}}={\frac {\partial ^{2}f}{\partial y\partial x}}=2x}
+
+
+∂2f∂y2=−12y{\displaystyle {\frac {\partial ^{2}f}{\partial y^{2}}}=-12y}
+
+
+H=(6x+2y2x2x−12y){\displaystyle H={\begin{pmatrix}6x+2y&2x\\2x&-12y\end{pmatrix}}}
+
+
+, If detH>0{\displaystyle \det H>0} (positive definite), then the point is either a maximum or a minimum. From an intuitive perspective, second partial derivatives of both components have the same sign. On the other hand, if detH<0{\displaystyle \det H<0} (negative definite), then the point is a saddle. Second partial derivatives of the components have opposite signs, so the point is not an extremum. Finally, if detH=0{\displaystyle \det H=0} (indefinite), then the second derivative test is inconclusive, and the point could be any of the three. See the tips for why this is the case. 
+
+Let's substitute in the (0,±1){\displaystyle (0,\pm 1)} critical points. Since we are only interested in the sign of the determinant, and not the values of the elements themselves, we can clearly see that both points results in a negative determinant. This means that (0,±1){\displaystyle (0,\pm 1)} are both saddle points. We do not need to go further for these two points.
+
+
+|±200∓12|<0{\displaystyle {\begin{vmatrix}\pm 2&0\\0&\mp 12\end{vmatrix}}<0}
+
+
+
+Now let's check the (∓235,±335){\displaystyle \left(\mp {\frac {2{\sqrt {3}}}{5}},\pm {\frac {3{\sqrt {3}}}{5}}\right)} points.
+
+
+|−635−435−435−3635|=35(216−16)>0{\displaystyle {\begin{aligned}{\begin{vmatrix}-{\frac {6{\sqrt {3}}}{5}}&-{\frac {4{\sqrt {3}}}{5}}\\-{\frac {4{\sqrt {3}}}{5}}&-{\frac {36{\sqrt {3}}}{5}}\end{vmatrix}}&={\frac {\sqrt {3}}{5}}(216-16)\\&>0\end{aligned}}}
+
+
+|6354354353635|=35(216−16)>0{\displaystyle {\begin{aligned}{\begin{vmatrix}{\frac {6{\sqrt {3}}}{5}}&{\frac {4{\sqrt {3}}}{5}}\\{\frac {4{\sqrt {3}}}{5}}&{\frac {36{\sqrt {3}}}{5}}\end{vmatrix}}&={\frac {\sqrt {3}}{5}}(216-16)\\&>0\end{aligned}}}
+
+
+
+Both of these points have positive Hessians.
+ For candidate extrema, we still have to figure out whether the points are maxima or minima. In that case, we check the trace - the sum of the diagonal elements of H{\displaystyle H}. If tr⁡H>0,{\displaystyle \operatorname {tr} H>0,} then the point is a local minimum. If tr⁡H<0,{\displaystyle \operatorname {tr} H<0,} then the point is a local maximum.
+
+From above, we can clearly see that tr⁡H(−235,335)<0,{\displaystyle \operatorname {tr} H\left(-{\frac {2{\sqrt {3}}}{5}},{\frac {3{\sqrt {3}}}{5}}\right)<0,} and therefore, (−235,335){\displaystyle \left(-{\frac {2{\sqrt {3}}}{5}},{\frac {3{\sqrt {3}}}{5}}\right)} is a local maximum.
+
+Similarly, tr⁡H(235,−335)>0,{\displaystyle \operatorname {tr} H\left({\frac {2{\sqrt {3}}}{5}},-{\frac {3{\sqrt {3}}}{5}}\right)>0,} so (235,−335){\displaystyle \left({\frac {2{\sqrt {3}}}{5}},-{\frac {3{\sqrt {3}}}{5}}\right)} is a local minimum.
+ For open domains, this step is not needed. However, since our domain is closed, extrema can occur on the boundaries. Although this becomes a single-variable extrema test, it is a tedious process for even the simplest type of domain - a rectangular domain - and for more complex domains, it can get quite complicated. The reason is because we need to take four derivatives corresponding to each side of the rectangle, set all of them to 0, and solve for variables. 
+
+Let's check the right side of the rectangle first, corresponding to (1,y).{\displaystyle (1,y).}
+
+
+f(1,y)=−2y3+7y+1dfdy=−6y2+7=0{\displaystyle {\begin{aligned}f(1,y)&=-2y^{3}+7y+1\\{\frac {{\mathrm {d} }f}{{\mathrm {d} }y}}&=-6y^{2}+7=0\end{aligned}}}
+
+
+y=±76{\displaystyle y=\pm {\sqrt {\frac {7}{6}}}}
+
+The critical points are therefore (1,±76).{\displaystyle \left(1,\pm {\sqrt {\frac {7}{6}}}\right).} Doing single-variable second derivative tests on both of these points, we find that (1,76){\displaystyle \left(1,{\sqrt {\frac {7}{6}}}\right)} is a local maximum and (1,−76){\displaystyle \left(1,-{\sqrt {\frac {7}{6}}}\right)} is a local minimum.
+
+
+
+The other three sides are done in the same fashion. In doing so, we net the critical points below. Beware that you must discard all points found outside the domain.
+
+
+(0,2),{\displaystyle (0,2),} local minimum
+
+
+(−1,76),{\displaystyle \left(-1,{\sqrt {\frac {7}{6}}}\right),} local maximum
+
+
+(−1,−76),{\displaystyle \left(-1,-{\sqrt {\frac {7}{6}}}\right),} local minimum
+
+
+(0,−2),{\displaystyle (0,-2),} local maximum
+
+
+
+
+, The four corners of the rectangular boundary must also be considered, just as how the two endpoints of a domain in single-variable calculus must be considered. Every extrema inside the domain and on the boundary of the domain, with the addition of the four corners, must be plugged into the function to determine global extrema. Below, we list the locations of the global maximum and minimum. They have values of f≈±6.041,{\displaystyle f\approx \pm 6.041,} respectively. Notice that neither of these global extrema were located inside the domain, but on the boundaries, which demonstrates the importance of identifying closed vs. open domains.
+
+Global maximum: (1,76){\displaystyle \left(1,{\sqrt {\frac {7}{6}}}\right)}
+
+Global minimum: (−1,−76){\displaystyle \left(-1,-{\sqrt {\frac {7}{6}}}\right)}
+
+Above is a visualization of the function that we were working with. We can clearly see the locations of the saddle points and the global extrema labeled in red, as well as the critical points inside the domain and on the boundaries.
+
+

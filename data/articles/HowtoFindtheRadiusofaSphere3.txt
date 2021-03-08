@@ -1,0 +1,25 @@
+ One way to think of the radius of a sphere is as the distance between the point at the center of the sphere and any point on the surface of the sphere. Because this is true, if you know the coordinates of the point at the center of the sphere and of any point on the surface, you can find the radius of the sphere simply by calculating the distance between the two points with a variant of the basic distance formula. To begin, find the coordinates of the sphere's center point. Note that because spheres are three-dimensional, this will be an (x,y,z) point rather than an (x,y) point.
+
+
+This process is easier to understand by following along with an example. For our purposes, let's say that we have a sphere centered around the (x,y,z) point (4, -1, 12). In the next few steps, we'll use this point to help find the radius.
+ Next, you'll need to find the (x,y,z) coordinates of a point on the surface of the sphere. This can be any point on the surface of the sphere. Because the points on the surface of a sphere are equidistant from the center point by definition, any point will work for determining the radius.
+
+
+For the purposes of our example problem, let's say that we know that the point (3, 3, 0) lies on the surface of the sphere. By calculating the distance between this point and the center point, we can find the radius.
+ Now that you know the center of the sphere and a point on the surface, calculating the distance between the two will find the radius. Use the three-dimensional distance formula d = √((x2 - x1)2 + (y2 - y1)2 + (z2 - z1)2), where d equals distance, (x1,y1,z1) equals the coordinates of the center point, and (x2,y2,z2) equals the coordinates of the point on the surface to find the distance between the two points.
+
+
+In our example, we would plug in (4, -1, 12) for (x1,y1,z1) and (3, 3, 0) for (x2,y2,z2), solving as follows:
+
+d = √((x2 - x1)2 + (y2 - y1)2 + (z2 - z1)2)
+d = √((3 - 4)2 + (3 - -1)2 + (0 - 12)2)
+d = √((-1)2 + (4)2 + (-12)2)
+d = √(1 + 16 + 144)
+d = √(161)
+
+d = 12.69. This is the radius of our sphere.
+ In a sphere, every point on the surface of the sphere is the same distance from the center point. If we take the three-dimensional distance formula above and replace the "d" variable with the "r" variable for radius, we get a form of the equation that can can find the radius given any center point (x1,y1,z1) and any corresponding surface point (x2,y2,z2).
+
+
+By squaring both sides of this equation, we get r2 = (x2 - x1)2 + (y2 - y1)2 + (z2 - z1)2. Note that this is essentially equal to the basic sphere equation r2 = x2 + y2 + z2 which assumes a center point of (0,0,0).
+

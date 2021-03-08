@@ -1,0 +1,47 @@
+ Phi as two roots, since quadratically its roots are determined by (1±sqrt(5))/2. In the previous article, "How to Start Working with Continued Fractions", we looked at the Continued Fraction for one root, 1.61803398874989, namely and found out it is the most irrational of all the irrational numbers, in that it converges the most slowly, due to the 1's in its Continued Fraction being the least possible divisors. Now you'll derive the Continued Fraction for the other root, -0.618033988749895, i.e. (1-(sqrt(5))/2.
+
+Copy the mostly-outlined cell range A2:P23 and paste it to P28;
+Select cell range H30:H47 and do Edit Clear Contents;
+Enter to cell B30 the formula, '="-618033989/1 000 000 000"', omitting the external semi-quotes and spaces between the zeroes but keeping the internal quote marks;
+Adjust column width for column B and any other columns that need adjusting;
+Do the Tricky Part for cells G30:G47 to H30:H47. Here are your check values:
+
+-0.618033989
+2.61803399046414
+1.61803398426194
+1.61803400049951
+1.618033957989
+1.61803406928298
+1.61803377791157
+1.61803454073199
+1.61803254364331
+1.61803777209691
+1.61802408387945
+1.61805992045296
+1.61796610151831
+1.6182117393544
+1.61756876542705
+1.61925287673592
+1.61484917966145
+1.62641511622512
+
+
+
+,,
+
+Copy cell A4 and paste it to cell Q3;
+Select cell range Q3:Q49 and do Edit Fill Series, with Step Value 1, Columns, etc. as defaults, OK;
+Enter to cell R2 the label PHI, root 2, and enter to cell S2 the formula =(1-sqrt(5))/2, then select R2:S2 and Format Cells Font Red, Bold and Fill Canary Yellow;
+Format Cells for column Q Number 15 digits and adjust column width to 1.67";
+Enter -1 into cell R3 and enter 2 into cell R4;
+Select cell range R5:R49 and with R5 as the active cell, enter 1, and then do Edit Fill Down;
+Enter to cell T48 the message, This formula is different
+And enter to cell T49 the message, from this formula.
+Enter to cell S49 the formula, =R48+1/R49 and Format Cells Fill Canary Yellow;
+Enter to cell S48 the formula, =R47+1/S49
+Copy cell S48 and select range S47:S4 and Paste;
+Select cell S4 and Format Cells Font Bold, Dark Blue;
+Select cell S3 and enter the formula, =S2-S4, and do Format Cells Number Custom "Difference = "0.000000
+Having done everything correctly, you should have 0.000 000 000 000 000 difference between the answers in cells S2 and S4!
+You did it! You proved that, even though the other formulated spreadsheet method does not converge, the answer that it arrives at is correct, as far as it goes that is.
+

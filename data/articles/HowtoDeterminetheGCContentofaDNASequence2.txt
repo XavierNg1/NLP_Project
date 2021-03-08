@@ -1,0 +1,46 @@
+ This article assumes that the input is in FASTA format, with a single sequence per file., For FASTA format:
+
+Discard the first line of the file.
+Remove all remaining newlines and other trailing whitespace.
+
+
+
+
+
+def init(sequence):
+    with open(argv) as input:
+        sequence = "".join(])
+    return sequence
+
+
+
+
+, Iterate through the data and increment your counter as you encounter any guanine or cytosine nucleotides.
+
+
+
+
+def GCcontent(sequence):
+    GCcount = 0
+    for letter in sequence:
+        if letter == "G" or letter == "C":
+            GCcount += 1
+    return GCcount
+
+
+
+
+,
+
+
+
+
+def main():
+    script, input = argv
+    sequence = ""
+    sequence = init(sequence)
+    print "%.2f" % (float(GCcontent(sequence)) / len(sequence))
+
+
+
+

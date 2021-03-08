@@ -1,0 +1,29 @@
+
+Open the Start menu on the computer you want to be able to shut down remotely.
+Type .services.msc while the Start menu is open and press ↵ Enter.
+Find "Remote Registry" in the list of services.
+Right-click "Remote Registry" and select "Properties.",
+Select "Automatic" from the "Startup type" menu.
+Click the Start button again and type "firewall.",
+Click "Allow and app or feature through Windows Firewall.",
+Click the "Change settings" button.
+Check the "Windows Management Instrumentation" box.
+Open the Command Prompt on your computer.
+Type .shutdown /i and press ↵ Enter.
+Click the "Add" button.
+Enter in the computer name.
+Set your shutdown options.
+Click "OK" to shut down the remote computers.
+Prepare the remote computer for remote shutdown.
+Find the remote computer's IP address.
+Open the Terminal on the Linux computer.
+Install Samba.
+Run the remote shutdown command.
+Open the Terminal on another Mac on your network.
+Type .ssh username@ipaddress.
+Enter your user password for the remote Mac when prompted.
+Type .sudo /sbin/shutdown now and press ⏎ Return.
+Click anywhere on your blank desktop.
+Press .Alt+F4 while logged in remotely.
+Select "Shut down" from the drop down menu.
+Click "OK" to shut down the computer.

@@ -1,0 +1,55 @@
+ Regular expressions are normally used for one of the following:
+
+
+Check if a string has a certain pattern within it
+Validate a string against a pattern
+Replace a specific pattern with another pattern
+Split a string using a pattern delimiter
+Find all occurrences of a certain pattern within a string
+Extract pattern pieces/groups from a string (like in syntax checking/highlighting);
+, Visit an online library of regular expressions, The setting you need to decide are:
+
+
+Case sensitivity of matching
+Whether you want to ignore any white spaces within the regular expression while matching or not
+Whether the matching is multi-line or not (this changes the meaning of ^ and $ to match to the beginning and end of lines and not only the beginning and end of the whole string)
+The direction of the matching process (left-to-right or right-to-left)
+Whether . will match any character including or not including new line
+Whether to compile the regular expression to the assembly (slow start up, fast processing) or not (the contrary)
+Whether to ignore culture variance/change or not
+Whether to use ECMA Script compliant mode or not
+Whether to capture every group (any sub-expression within parenthesis) or only groups that are named
+
+,, This depends on your choice in step 1. You have the following choices:
+
+
+Is Match() - if you only need to check whether a match was found or not
+Match() - if you want to get the first match found. Calling this method again will get the next match and so on.
+Matches() - if you want to retrieve all matches of the pattern in one call
+Split() - if you want to split the string at the matches of the pattern
+Replace() - if you want to replace the matches of the pattern with another pattern or string
+
+, Static methods do not require the creation of a Regex object but they do not keep the status of matching between calls. According to your choice, follow the following steps:
+
+
+For static versions of the methods:
+
+Declare an appropriate reference to hold the results of the operation if necessary. Here is a list of the methods and the type of results they return:
+
+Is Match() - bool
+Match() - Match
+Matches() - Match Collection
+Replace() - string
+Split() - string[]
+
+
+Call the appropriate method from the Regex class passing it the regular expression, the string, the options, and the replacement pattern in case of Replace() and assign the result to the reference you declared in the previous step.
+
+
+For instance versions of the methods:
+
+Create a Regex object passing the regular expression you created, and the matching options to the constructor.
+Declare an appropriate result reference to hold the results obtained (like step 1 in the static version of the method)
+Call the method you choose from the regex object passing it the string to be matched and assign the result to the reference created in the previous step.
+ Usual uses of results are listed below in the "Common Uses of Regex Methods Results" section
+

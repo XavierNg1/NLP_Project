@@ -1,0 +1,29 @@
+ (Ex. Microsoft Visual C++);
+, In Visual C++ it's done by pressing File->New->Project->Empty Project.
+ Right click Source Files and add a new item, select cpp file.
+, Always end a line of code with ';' to let the program know that the line is finished.
+ This is where your code is going to go inside.
+ by typing "cout << "Hello World!" << endl;" The 'cout' command tells the console to output something, in this case its the "Hello World!" text. The 'endl;' at the end tells the program to start whatever code you have next on a new line.
+ This is done by making the program close on user input. Type "cin.get();" and then "return 0". This asks for an unspecified user input to end the program. 'cin' is the command used for user input. 'return 0' is to end the program without any errors.
+
+
+
+
+
+
+             // the complete program follows:
+             #include <iostream>
+             using namespace std;
+             int main ( int argc, char** argv ) // standard form ignore for now
+             {
+ 
+                cout << "Hello World!" << endl;
+ 
+                cin.get();
+                return 0;
+             }
+
+
+
+
+

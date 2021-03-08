@@ -1,0 +1,15 @@
+ Note which is the EMV* (greatest value).;
+, These may be given to you, or you may need to calculate them. If you need to calculate them, look at the type of experiment being done as this will lead you into how to calculate the probabilities. Is it a binomial experiment? Or a Poisson experiment?
+
+, You can use a decision tree, but it is less time-consuming to construct a chart with the following headings for each experiment outcome (Ik):
+
+
+sj - state of nature options
+P(sj) - probability of each state of nature
+P(Ik|sj) - the likelihood probability of I for each s value
+P(sj and Ik) - joint probability. Calculate as P(sj) X P(Ik|sj). The total of this column equals P(Ik)
+P(sj|Ik) - posterior probability. Calculate as P(sj and Ik) / P(Ik)
+
+, Note which is the largest value (EMV').
+ Use the formula EVSI = EMV' - EMV*.
+

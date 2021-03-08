@@ -1,0 +1,47 @@
+
+
+
+/24 = 254 hosts
+/25 = 126 hosts
+/26 = 64 hosts
+/27 = 32 hosts
+/28 = 16 hosts
+/29 = 6 hosts
+/30 = 2 hosts;
+,
+
+
+Subnet A - 66
+Subnet C - 22
+Subnet B - 10
+Subnet D - 2
+
+,
+
+
+Allocate the First highest subnet
+
+Assign 192.168.10.20 mask /25 for subnet A to satisfy there need for 66 hosts. The last octet of the subnet mask will be 1000000 (255.255.255.128)
+
+
+Assign the next highest subnet
+
+Assign 192.168.10.128 the mask /27 for subnet C; the last octet of the subnet mask will be 11100000 (255.255.255.224)
+
+
+Assign the next highest subnet
+
+Assign 192.168.10.160 the mask /28 for subnet B; the last octet of the subnet mask will be 11110000 (255.255.255.240)
+
+
+Assign the last subnet
+
+Assign 192.168.10.176 the mask /30 for subnet D; the last octet of the subnet mask will be 11111100 (255.255.255.252).
+
+
+
+Subnet A = 192.168.10.0/25 ~126 hosts (needed 66)
+Subnet C = 192.168.10.128/27 ~ 30 hosts (needed 22)
+Subnet B = 192.168.10.160/28 ~ 14 hosts (needed 10)
+Subnet D = 192.168.10.176/30 ~ 2 hosts (needed 2)
+

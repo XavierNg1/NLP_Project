@@ -1,0 +1,7 @@
+;
+, (including edge finder)
+
+,, Make sure the machine is using the WFO that the program will be using. If not, switch to MDI mode, type in G54, or G55, or G54.1P15, what ever the program will be using. Hit Cycle Start. Using an edge finder, pick up the X0. position the programmer had previously established. Go to your WFO page and add the machines absolute X value to the value currently in the WFO's X registry. Do the same for the Y axis.
+ Manually move the Z axis down until the tool's tip is near the Z0. position the programmer had previously established. Get a piece of 0.001" shim stock and hold it between the part and the tip of the tool. Carefully and lower the Z axis in 0.0001" increments until the shim stock can be pulled with a slight drag. Go to your tool length offset page and enter the machine's absolute Z value plus -0.001 in the tools registry. Repeat procedure to additional tools. Note: -0.001 is added for the shim stock's thickness.
+,, Be careful and read every block programmed and watch each movement the machine makes ready to stop the machine in case there are any programming errors. (You could also run the program 5" or whatever above the part to make sure every thing is good and use Dry Run if you feel it necessary.)
+

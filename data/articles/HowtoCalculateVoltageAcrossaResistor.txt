@@ -1,0 +1,77 @@
+ Let’s think about current by using an analogy: imagine you pour a bag of corn kernels into a bowl. Each corn kernel is an electron, and the stream of kernels flowing into the bowl is the current.When talking about the flow, you describe it by saying how many kernels are flowing each second. When talking about a current, you measure it in amperes (amps), or a certain (very large) number of electrons flowing per second.;
+, Electrons have a "negative" electrical charge. This means they attract (or flow toward) objects with a positive charge, and repel (or flow away from) objects with a negative charge. Since they're all negative, electrons are always trying to push away from other electrons, spreading out wherever they can.
+ Voltage measures the difference in electrical charge between two points. The greater the difference, the more energetically the two sides attract each other. Here's an example with an everyday battery:
+
+
+Inside a battery, chemical reactions happen that produces a buildup of electrons. The electrons go to the negative end, while the positive end stays mostly empty. (These are called the negative and positive terminals.) The longer this goes on, the larger the voltage between the two ends.
+When you connect a wire between the negative and positive ends, the electrons at the negative end suddenly have somewhere to go. They shoot toward the positive end, creating a current. The larger the voltage, the more electrons move to the positive end each second.
+ Resistance is exactly what it sounds like. The more resistance something has, the harder it is for the electrons to push through. This slows the current, since fewer electrons can push through each second.
+
+
+A resistor is anything in the circuit that adds resistance. You can buy an actual "resistor" at an electronics store, but in a circuits problem it might represent a light bulb or anything else with resistance.
+ There's a very simple relationship between current, voltage, and resistance. Write this down or memorize it; you'll use it often when solving circuit problems:
+
+
+Current = voltage divided by resistance
+This is usually written: I = V / R
+
+Think about what happens when you increase V (voltage) or R (resistance). Does this match what you learned in the explanations above?
+
+, A series circuit is easy to identify. It's just one loop of wire, with everything arranged in a row. The current flows around the entire loop, going through each resistor or element in order.
+
+
+The current is always the same at any point along the circuit.When calculating voltage, it doesn't matter where the resistor is on the circuit. You can pick up the resistors and move them around, and you'll still have the same voltage across each one.
+We'll use an example circuit with three resistors in series: R1, R2, and R3. This is powered by a 12 volt battery. We'll find the voltage across each one.
+ Add together all resistance values on the circuit. The answer is the total resistance of the series circuit.
+
+
+For example, the three resistors R1, R2, and R3 have resistances of 2 Ω (ohms), 3 Ω, and 5 Ω respectively. The total resistance is 2 + 3 + 5 = 10 ohms.
+ Use Ohm's Law to find the current of the entire circuit. Remember, the current is the same anywhere on a series circuit. Once we calculate the current this way, we can use it for all our calculations.
+
+
+Ohm's Law says that the current I = V / R. The voltage across the whole circuit is 12 volts, and the total resistance is 10 ohms. The answer is I = 12 / 10 = 1.2 amperes.
+ With basic algebra, we can change Ohm's Law to solve for voltage instead of current:
+
+
+I = V / R
+
+IR = VR / R
+
+IR = V
+V = IR
+
+, We know the resistance, we know the current, and we have our equation. Plug in the numbers and solve. Here's our example problem solved for all three resistors:
+
+
+Voltage across R1 = V1 = (1.2A)(2Ω) = 2.4 volts.
+Voltage across R2 = V2 = (1.2A)(3Ω) = 3.6 volts.
+Voltage across R3 = V3 = (1.2A)(5Ω) = 6.0 volts.
+ In a series circuit, the sum of all your answers must equal the total voltage.Add up every voltage you calculated and see if you get the voltage of the entire circuit. If you didn't, go back and check for mistakes.
+
+
+In our example, 2.4 + 3.6 + 6.0 = 12 volts, the voltage across the whole circuit.
+If your answer is slightly off (for instance, 11.97 instead of 12), you probably rounded a number at some point. Your answer is still correct.
+Remember, voltage measures the differences in charge, or numbers of electrons. Imagine counting the number of new electrons you see as you travel along the circuit. If you count them correctly, you're going to end up with the total change in electrons from the beginning to the end.
+ Imagine a wire leaving one end of a battery, then splitting into two separate wires. These two wires run parallel to each other, then join up again before they reach the other end of the battery. If there's a resistor on the left wire and a resistor on the right wire, those two resistors are connected "in parallel."You can have any number of wires in a parallel circuit. These instructions will still work for a circuit that splits into one hundred wires and comes back together.
+ In a parallel circuit, the current flows across each path available to it. Current will flow through the wire on the left, cross the left resistor, and reach the other end. At the same time, current will flow through the wire on the right, cross the right resistor, and reach the end. No part of the current doubles back or flows through two parallel resistors.
+ If you know the voltage across the whole circuit, the answer is surprisingly easy. Each parallel wire has the same voltage as the entire circuit.Let's say a circuit with two parallel resistors is powered by a 6 volt battery. The voltage across the left resistor is 6 volts, and the voltage across the right resistor is 6 volts. It doesn't even matter how much resistance there is. To understand why, think back to the series circuits described above:
+
+
+Remember that adding voltage drops in a series circuit always results in the total voltage across the circuit.
+Think of each path the current takes as a series circuit. The same holds true for this: if you count up all the voltage drops, you'll end up with the total voltage.
+Since the current through each of the two wires only passes through one resistor, the voltage across that resistor must equal the total voltage.
+ If the problem doesn't tell you what the total voltage of the circuit is, you'll need to complete a few more steps. Start by finding the total current passing through the circuit. In a parallel circuit, the total current is equal to the sum of the current running through each parallel path.In mathematical terms: Itotal = I1 + I2 + I3...
+If you're having trouble understanding this, imagine a water pipe split into two paths. The total amount of water flow is just the amount of water flow in each pipe, added together.
+ Resistors are not as effective in a parallel circuit, because they only block the current going along one wire. In fact, the more wires there are, the easier it is for the current to find a way through. To find the total resistance, solve for Rtotal in this equation:
+
+
+
+1 / Rtotal = 1 / R1 + 1 / R2 + 1 / R3 ...
+For example, a circuit has a 2 ohm and a 4 ohm resistor in parallel. 1 / Rtotal = 1/2 + 1/4 = 3/4 → 1 = (3/4)Rtotal → Rtotal = 1/(3/4) = 4/3 = ~1.33 ohms.
+ Remember, once we find the total voltage of the circuit, we have found the voltage across any one of the parallel wires. Solve for the whole circuit using Ohm's law. Here's an example:
+
+
+A circuit has 5 amperes of current running through it. The total resistance is 1.33 ohms.
+According to Ohm's Law, I = V / R, therefore V = IR
+V = (5A)(1.33Ω) = 6.65 volts.
+

@@ -1,0 +1,19 @@
+ If you have a list of data in Word, you can convert it to a table format in Word and then quickly copy that table into Excel. If your data is already in table format, skip down to the next step.
+
+
+Select all of the text that you want to convert into a table.
+Click the Insert tab and then click the Table button.
+Select "Convert Text to Table".
+Enter the number of lines per record in the the "Number of columns" field. If you have a blank line between each record, add one to the total.
+Click    OK   .
+ Word will generate a table based on your settings. Double-check it to ensure that everything is where it should be.
+ This will show up when you're hovering the mouse over the table. Clicking this will select all of the data in the table.
+ You can also click the "Copy" button in the Home tab.
+ Once the data has been copied, you can open Excel. If you want to put the data in an existing spreadsheet, load it up. Place your cursor in the cell that you want the upper-left cell of the table to appear.
+ The individual cells from the Word table will be placed into separate cells in the Excel spreadsheet.
+ Depending on the type of data you are importing, you may have some additional formatting you need to do. For example, if you are importing addresses the city, state abbreviation, and zip code may be all in the same cell. You can have Excel split these up automatically.Click the column heading of the column you want to split to select the whole column.
+Select the "Data" tab and click the "Text to Columns" button.
+Click Next > and then select the "Comma" in the Delimiters field. If you are using the above example, this will separate the city from the state abbreviation and zip code.
+Click Finish to save the changes.
+Select the column that still needs to be split and repeat the process, selecting "Space" instead of "Comma" as the delimiter. This will separate the state abbreviation from the zip code.
+

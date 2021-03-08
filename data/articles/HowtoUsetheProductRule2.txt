@@ -1,0 +1,74 @@
+ Some problems may require you to find the derivative of a product of three different functions. An example of this might appear as follows:
+
+
+f(x)=x2exsin⁡x{\displaystyle f(x)=x^{2}e^{x}\sin x}
+
+
+, A revised version of the product rule can be found to apply to three factors. In short, consider breaking your original function of three factors into two parts:f(x)=uvw{\displaystyle f(x)=uvw}    (the variables u{\displaystyle u}, v{\displaystyle v} and w{\displaystyle w} here represent not variables but separate functions)
+
+
+f(x)=(u)(vw){\displaystyle f(x)=(u)(vw)}     (written this way, the original equation of three functions appears to have two functions -- u{\displaystyle u} and vw{\displaystyle vw})
+
+Apply the product rule to this first stage, so you will get:
+
+
+f′(x)=u′(vw)+u(vw)′{\displaystyle f^{\prime }(x)=u^{\prime }(vw)+u(vw)^{\prime }}
+
+
+
+Now you need to apply the product rule a second time to break out the derivative of (vw){\displaystyle (vw)}:
+
+
+f′(x)=u′(vw)+u(vw)′{\displaystyle f^{\prime }(x)=u^{\prime }(vw)+u(vw)^{\prime }}
+
+
+f′(x)=u′(vw)+u{\displaystyle f^{\prime }(x)=u^{\prime }(vw)+u}
+
+
+f′(x)=u′vw+uv′w+uvw′{\displaystyle f^{\prime }(x)=u^{\prime }vw+uv^{\prime }w+uvw^{\prime }}
+
+
+
+
+, As with the two-factor product rule, the first step in finding the derivative of the function is to define the separate functions that make up the whole. For clarity, you should write them out with individual variables. (Remember that these variables do not represent individual terms but are taking the place of full functions.)Work with the example given above, f(x)=x2exsin⁡x{\displaystyle f(x)=x^{2}e^{x}\sin x}. This can be broken into its three factors as follows:
+
+
+u=x2{\displaystyle u=x^{2}}
+
+
+v=ex{\displaystyle v=e^{x}}
+
+
+w=sin⁡x{\displaystyle w=\sin x}
+
+
+
+
+, Write them out separately as well.Continuing with the given example, the derivatives are:
+
+
+u′=2x{\displaystyle u^{\prime }=2x}
+
+
+v′=ex{\displaystyle v^{\prime }=e^{x}}  (remember that the derivative of the exponential function is itself)
+
+
+w′=cos⁡x{\displaystyle w^{\prime }=\cos x}
+
+
+
+
+, Apply the revised product rule for three factors and put the pieces together.Continue working with the given example:
+
+
+f′(x)=u′vw+uv′w+uvw′{\displaystyle f^{\prime }(x)=u^{\prime }vw+uv^{\prime }w+uvw^{\prime }}
+
+
+f′(x)=2xexsin⁡x+x2exsin⁡x+x2excos⁡x{\displaystyle f^{\prime }(x)=2xe^{x}\sin x+x^{2}e^{x}\sin x+x^{2}e^{x}\cos x}
+
+
+
+
+, In this case, the only term that exists throughout the result is ex{\displaystyle e^{x}}, so simplifying doesn’t help very much. Just leave the final derivative as it is:f′(x)=2xexsin⁡x+x2exsin⁡x+x2excos⁡x{\displaystyle f^{\prime }(x)=2xe^{x}\sin x+x^{2}e^{x}\sin x+x^{2}e^{x}\cos x}
+
+

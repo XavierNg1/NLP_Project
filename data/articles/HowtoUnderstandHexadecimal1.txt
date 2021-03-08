@@ -1,0 +1,46 @@
+ Just like the decimal number system uses ten different symbols to denote values from Zero to Nine, the hexadecimal number system uses sixteen different symbols to denote values from Zero to Fifteen. Any number can be written in either system. Here's how to start counting in hexadecimal:
+
+
+zero through fifteen: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+sixteen through thirty-two: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 1A, 1B, 1C, 1D, 1E, 1F, 20;
+, The ten symbols used in the decimal number system form the base of the decimal number system. Similarly, the sixteen symbols used in the hexadecimal number system form the base of the hexadecimal number system. Whenever it's unclear which base is being used, subscript numbers are added to show the base. For example, 10010 is "100 in base 10" and 10016 is "100 in base 16" (which equals 409610).
+
+
+Another term for "base" is "radix" (pluralized "radixes" or "radices").
+ We can understand long numbers written in base 10 without even pausing to think, but that's only because we've had a lot of practice. We know automatically that "583410" means 5x103 + 8x102 + 3x101 + 4x100. Each digit in a multi-digit number has its own place value. Here are the place values in decimal, from right to left:
+
+
+10010 = 1
+10110 = 1010
+
+102 = 10x10 = 100
+103 = 10x10x10 = 1000
+104 = 10x10x10x10 = 10000
+105 = 10x10x10x10x10 = 100000 & so on.
+ Since hexadecimal is base sixteen, the place values are based on powers of sixteen, not powers of ten. Here are the powers of sixteen, written in decimal.
+
+
+16010 = 1
+
+16110 = 1610
+
+162=16x16=256
+
+163=16x16x16=4096
+
+164=16x16x16x16=65536
+
+165=16x16x16x16x16=1048576 & so on.
+If we write these in hexadecimal, these would instead be written as 1016, 100, 1000, etc.
+ Converting between two bases is a good way to become familiar with how each system works. Here's how to convert from any number in hexadecimal to the same number written in decimal:
+
+
+Write out your hexadecimal number: 15B3016
+
+Write each digit out as a decimal multiplication problem, using the place value in the chart above: 15B30 = (1 x 6553610) + (5 x 409610) + (B x 25610) + (3 x 1610) + (0 x 1)
+
+Convert non-decimal symbols into decimal numbers. In our example, B = 1110, so that digit can be converted to 1110 x 25610
+
+Solve the problem. Use a calculator or work it out by hand, and you'll get the answer in decimal. 15B30 = 65536 + 20480 + 2816 + 48 + 0 = 8888010
+
+

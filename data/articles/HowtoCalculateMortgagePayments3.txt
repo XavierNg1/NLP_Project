@@ -1,0 +1,17 @@
+ An amortization schedule will tell you exactly how your monthly mortgage payments will be split between paying off principal and interest and what your balance will be at the end of each month. Start by inputting the basics of your loan information in the top left of a spreadsheet program. For example, in cell A1, write out "annual interest rate." Then, input your annual interest rate as a percentage in the next cell over, B1. Continue down to cell A2 for the loan duration in years, inputting the amount in column B as before. Do the same for payment per year and loan principal in cells A3 and A4, respectively., Skip a line under your loan information. Then, place the following words across the spreadsheet, in row 6 from columns A to E:
+
+Payment number.
+
+Payment amount.
+
+Principal payment.
+
+Interest payment.
+
+Loan balance., Directly under the column headers you just created, start filling out your loan information. Under payment number, place a 1. Then, under payment amount, type in "=pmt(B1/B3,B2*B3,B4)". This is the payment function. Under principal payment, type "=ppmt(B1/B3,A7,B2*B3,B4)". This is the principal payment function and it shows the amount of the principal paid down each month. Under interest payment, type "=ipmt(B1/B3,A7,B2*B3,B4)". This is the interest payment function and it shows the amount of interest paid down each month. Finally, under loan balance, type "=(B4+C7)".
+
+Cell A7 should contain your first payment number, 1. 
+
+Cell C7 should contain the payment amount., Select the range from cell A7 to E7. Then, drag the calculations down to the last payment. At this point, the loan balance in column E should be $0. Remember that your number of payments is calculated by multiplying the number of annual payments by the loan duration in years.If your loan payment numbers don't update down the amortization schedule. Type "=(A7+1)" into cell A8 (payment 2) and drag that down to the end of your schedule. The rest of the numbers will then update.
+
+

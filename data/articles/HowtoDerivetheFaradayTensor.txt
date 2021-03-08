@@ -1,0 +1,164 @@
+ The Lorentz force is the result of observations in the 19th century that describe the way electric and magnetic fields exert forces on charged particles. While it may seem innocuous at first, the relation is actually a relativistic one, if formulated as such. Below, we write the force in terms of change of momentum.
+
+
+dpdt=q(E+v×B){\displaystyle {\frac {{\mathrm {d} }{\mathbf {p} }}{{\mathrm {d} }t}}=q({\mathbf {E} }+{\mathbf {v} }\times {\mathbf {B} })}
+
+A central tenet of special relativity is that the conservation laws in Newtonian mechanics also apply to the upgraded 4-vectors. This implies that the above relation holds for 4-momentum pμ{\displaystyle p^{\mu }} and 4-velocity vμ.{\displaystyle v^{\mu }.} Meanwhile, charge q{\displaystyle q} is an invariant. 
+;
+, Because power is defined as work per unit time, and magnetic fields do no work, the Lorentz force can be written as F=qE.{\displaystyle {\mathbf {F} }=q{\mathbf {E} }.} The usefulness of this relation will be seen later.
+
+
+P=dEdt=F⋅v=qE⋅v{\displaystyle {\begin{aligned}P={\frac {{\mathrm {d} }E}{{\mathrm {d} }t}}&={\mathbf {F} }\cdot {\mathbf {v} }\\&=q{\mathbf {E} }\cdot {\mathbf {v} }\end{aligned}}}
+
+Do not be confused by E{\displaystyle E} in this context, which stands for energy, not electric field. 
+
+
+, The Lorentz force, while true, is not very useful in its current state. The reason why this is the case is because coordinate time is not invariant in Minkowski space. We need to reformulate the Lorentz force in terms of proper time, for proper time is invariant. 
+
+
+dt=γdτ,γ=11−v2c2{\displaystyle {\mathrm {d} }t=\gamma {\mathrm {d} }\tau ,\gamma ={\frac {1}{\sqrt {1-{\frac {v^{2}}{c^{2}}}}}}}
+
+When derivatives are taken with respect to these variables, the relation is ddt=1γddτ.{\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }t}}={\frac {1}{\gamma }}{\frac {\mathrm {d} }{{\mathrm {d} }\tau }}.} Therefore, in order to convert to proper time, we must multiply by γ.{\displaystyle \gamma .}
+
+
+, The result is simply an extra γ{\displaystyle \gamma } factor on the right side.
+
+
+dEdτ=γq(E⋅v){\displaystyle {\frac {{\mathrm {d} }E}{{\mathrm {d} }\tau }}=\gamma q({\mathbf {E} }\cdot {\mathbf {v} })}
+
+
+dpdτ=γq(E+v×B){\displaystyle {\frac {{\mathrm {d} }{\mathbf {p} }}{{\mathrm {d} }\tau }}=\gamma q({\mathbf {E} }+{\mathbf {v} }\times {\mathbf {B} })}
+
+
+, This form is similar in appearance to a matrix equation, in which a matrix acting on a vector outputs another vector. We can rewrite it like this because the above two equations describe everything we need to know about the matrix. Recognize the 4-momentum and 4-velocity in component form below.
+
+
+ddτ(E/cpxpypz)=γq(F00F01F02F03F10F11F12F13F20F21F22F23F30F31F32F33)(1vxvyvz){\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }\tau }}{\begin{pmatrix}E/c\\p_{x}\\p_{y}\\p_{z}\end{pmatrix}}=\gamma q{\begin{pmatrix}F^{0}{}_{0}&F^{0}{}_{1}&F^{0}{}_{2}&F^{0}{}_{3}\\F^{1}{}_{0}&F^{1}{}_{1}&F^{1}{}_{2}&F^{1}{}_{3}\\F^{2}{}_{0}&F^{2}{}_{1}&F^{2}{}_{2}&F^{2}{}_{3}\\F^{3}{}_{0}&F^{3}{}_{1}&F^{3}{}_{2}&F^{3}{}_{3}\end{pmatrix}}{\begin{pmatrix}1\\v_{x}\\v_{y}\\v_{z}\end{pmatrix}}}
+
+The matrix above is the Faraday tensor Fμν,{\displaystyle F^{\mu }{}_{\nu },} written out in its component form. (Don’t worry about the placement of the indices for now.) From here, it is clear that we need to find these components such that they satisfy dEdτ=γq(E⋅v){\displaystyle {\frac {{\mathrm {d} }E}{{\mathrm {d} }\tau }}=\gamma q({\mathbf {E} }\cdot {\mathbf {v} })} and dpdτ=γq(E+v×B).{\displaystyle {\frac {{\mathrm {d} }{\mathbf {p} }}{{\mathrm {d} }\tau }}=\gamma q({\mathbf {E} }+{\mathbf {v} }\times {\mathbf {B} }).}
+
+
+, It is easy to do this one equation at a time.
+
+
+ddτ(E/c)=γq(F00+F01vx+F02vy+F03vz)=γqc(E⋅v){\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }\tau }}(E/c)=\gamma q(F^{0}{}_{0}+F^{0}{}_{1}v_{x}+F^{0}{}_{2}v_{y}+F^{0}{}_{3}v_{z})={\frac {\gamma q}{c}}({\mathbf {E} }\cdot {\mathbf {v} })}
+
+Here, the answer is trivial. F00=0,F01=Ex/c,F02=Ey/c,F03=Ez/c{\displaystyle F^{0}{}_{0}=0,F^{0}{}_{1}=E_{x}/c,F^{0}{}_{2}=E_{y}/c,F^{0}{}_{3}=E_{z}/c}
+
+
+
+
+dpxdτ=γq(F10+F11vx+F12vy+F13vz){\displaystyle {\frac {{\mathrm {d} }p_{x}}{{\mathrm {d} }\tau }}=\gamma q(F^{1}{}_{0}+F^{1}{}_{1}v_{x}+F^{1}{}_{2}v_{y}+F^{1}{}_{3}v_{z})}
+
+Here, the answer is slightly less obvious, because we need to incorporate the B{\displaystyle {\mathbf {B} }} field as well. Since this is the x{\displaystyle x} component of the force, we have to look for fields that generate forces in that direction. We know E{\displaystyle {\mathbf {E} }} fields generate forces parallel to them, while a moving charged particle in a B{\displaystyle {\mathbf {B} }} field generates a force in the direction orthogonal to both v{\displaystyle {\mathbf {v} }} and B.{\displaystyle {\mathbf {B} }.}
+
+Of course, a particle moving in the x{\displaystyle x} direction cannot possibly generate a force in that same direction, given how B{\displaystyle {\mathbf {B} }} fields interact with them, so that term is 0.
+
+Therefore, F10=Ex/c,F11=0,F12=Bz,F13=−By.{\displaystyle F^{1}{}_{0}=E_{x}/c,F^{1}{}_{1}=0,F^{1}{}_{2}=B_{z},F^{1}{}_{3}=-B_{y}.}
+
+
+
+We can proceed to derive the last two rows of the tensor in the same manner. The important part is the antisymmetry exhibited in the lower-right 3x3 partition of the tensor, which stems from the cross product in the Lorentz force. In doing so, the diagonal elements of the tensor get sent to 0. The last two rows are as follows.
+
+
+F20=Ey/c,F21=−Bz,F22=0,F23=Bx{\displaystyle F^{2}{}_{0}=E_{y}/c,F^{2}{}_{1}=-B_{z},F^{2}{}_{2}=0,F^{2}{}_{3}=B_{x}}
+
+
+F30=Ez/c,F31=By,F32=−Bx,F33=0{\displaystyle F^{3}{}_{0}=E_{z}/c,F^{3}{}_{1}=B_{y},F^{3}{}_{2}=-B_{x},F^{3}{}_{3}=0}
+
+
+
+
+, This tensor, also called the electromagnetic tensor, describes the electromagnetic field in spacetime. Two fields, previously thought of as separate, shown to be interconnected via Maxwell’s equations, are finally united by special relativity into a single mathematical object. The tensor shown below is in mixed-variant form because of how we have derived it from the Lorentz force.  
+
+
+Fμν=(0Ex/cEy/cEz/cEx/c0Bz−ByEy/c−Bz0BxEz/cBy−Bx0){\displaystyle F^{\mu }{}_{\nu }={\begin{pmatrix}0&E_{x}/c&E_{y}/c&E_{z}/c\\E_{x}/c&0&B_{z}&-B_{y}\\E_{y}/c&-B_{z}&0&B_{x}\\E_{z}/c&B_{y}&-B_{x}&0\end{pmatrix}}}
+
+
+, Index notation allows these quantities to be described more compactly and in a coordinate-independent manner.
+
+
+dpαdτ=qFαβvβ{\displaystyle {\frac {{\mathrm {d} }p^{\alpha }}{{\mathrm {d} }\tau }}=qF^{\alpha }{}_{\beta }v^{\beta }}
+
+
+pα′=Λα′βpβ{\displaystyle p^{\alpha \prime }=\Lambda ^{\alpha \prime }{}_{\beta }p^{\beta }}
+
+
+vβ′=Λβ′δvδ{\displaystyle v^{\beta \prime }=\Lambda ^{\beta \prime }{}_{\delta }v^{\delta }}
+
+Above, Λ{\displaystyle \Lambda } is the Lorentz transformation tensor. For a boost in the x{\displaystyle x} direction, it can be written as below. Λ−1,{\displaystyle \Lambda ^{-1},} of course, has positive γβ{\displaystyle \gamma \beta } on the off-diagonal. 
+
+
+Λ=(γ−γβ00−γβγ0000100001){\displaystyle \Lambda ={\begin{pmatrix}\gamma &-\gamma \beta &0&0\\-\gamma \beta &\gamma &0&0\\0&0&1&0\\0&0&0&1\end{pmatrix}}}
+
+
+
+
+, The laws are physics are the same in every inertial reference frame, so the equations are of a similar form. The power of writing the above relations in the covariant form stems from the fact that the Lorentz transformation is a linear transformation.
+
+
+dpα′dτ=qFα′β′vβ′{\displaystyle {\frac {{\mathrm {d} }p^{\alpha \prime }}{{\mathrm {d} }\tau }}=qF^{\alpha \prime }{}_{\beta \prime }v^{\beta \prime }}
+
+
+, Then left-multiply each side by the inverse Lorentz tensor Λ−1.{\displaystyle \Lambda ^{-1}.} 
+
+
+(Λ−1)μα′ddτΛα′βpβ=q(Λ−1)μα′Fα′β′Λβ′δvδ{\displaystyle (\Lambda ^{-1})^{\mu }{}_{\alpha \prime }{\frac {\mathrm {d} }{{\mathrm {d} }\tau }}\Lambda ^{\alpha \prime }{}_{\beta }p^{\beta }=q(\Lambda ^{-1})^{\mu }{}_{\alpha \prime }F^{\alpha \prime }{}_{\beta \prime }\Lambda ^{\beta \prime }{}_{\delta }v^{\delta }}
+
+
+, Because the Lorentz tensor can be treated as a constant, it can be inserted inside the derivative operator. Observe that (Λ−1)αβ′Λβ′σ=δασ,{\displaystyle (\Lambda ^{-1})^{\alpha }{}_{\beta \prime }\Lambda ^{\beta \prime }{}_{\sigma }=\delta ^{\alpha }{}_{\sigma },} where δ{\displaystyle \delta } is the Kronecker delta (not to be confused by the index below, which only represents numbers).
+
+
+ddτ(Λ−1)μα′Λα′βpβ=q(Λ−1)μα′Fα′β′Λβ′δvδddτδμβpβ=q(Λ−1)μα′Fα′β′Λβ′δvδ{\displaystyle {\begin{aligned}{\frac {\mathrm {d} }{{\mathrm {d} }\tau }}(\Lambda ^{-1})^{\mu }{}_{\alpha \prime }\Lambda ^{\alpha \prime }{}_{\beta }p^{\beta }&=q(\Lambda ^{-1})^{\mu }{}_{\alpha \prime }F^{\alpha \prime }{}_{\beta \prime }\Lambda ^{\beta \prime }{}_{\delta }v^{\delta }\\{\frac {\mathrm {d} }{{\mathrm {d} }\tau }}\delta ^{\mu }{}_{\beta }p^{\beta }&=q(\Lambda ^{-1})^{\mu }{}_{\alpha \prime }F^{\alpha \prime }{}_{\beta \prime }\Lambda ^{\beta \prime }{}_{\delta }v^{\delta }\end{aligned}}}
+
+When the Kronecker delta acts on a vector, the same vector is outputted. The only difference is that here, the β{\displaystyle \beta } index is contracted.
+
+
+dpμdτ=q(Λ−1)μα′Fα′β′Λβ′δvδ{\displaystyle {\frac {{\mathrm {d} }p^{\mu }}{{\mathrm {d} }\tau }}=q(\Lambda ^{-1})^{\mu }{}_{\alpha \prime }F^{\alpha \prime }{}_{\beta \prime }\Lambda ^{\beta \prime }{}_{\delta }v^{\delta }}
+
+
+, Notice that on the right-hand side, (Λ−1)μα′Fα′β′Λβ′δ{\displaystyle (\Lambda ^{-1})^{\mu }{}_{\alpha \prime }F^{\alpha \prime }{}_{\beta \prime }\Lambda ^{\beta \prime }{}_{\delta }} describes the Faraday tensor in the coordinate frame Fμλ,{\displaystyle F^{\mu }{}_{\lambda },} so that dpμdτ=qFμλvλ{\displaystyle {\frac {{\mathrm {d} }p^{\mu }}{{\mathrm {d} }\tau }}=qF^{\mu }{}_{\lambda }v^{\lambda }} (where we originally started).
+
+Therefore, (Λ−1)μα′Fα′β′Λβ′δ=Fμδ.{\displaystyle (\Lambda ^{-1})^{\mu }{}_{\alpha \prime }F^{\alpha \prime }{}_{\beta \prime }\Lambda ^{\beta \prime }{}_{\delta }=F^{\mu }{}_{\delta }.} However, this tells us how to boost from the moving frame to the coordinate frame. To perform the inverse operation, simply switch the Lorentz tensors by left-multiplying by Λ{\displaystyle \Lambda } and right-multiplying by Λ−1.{\displaystyle \Lambda ^{-1}.} The below equation gives us the relation that we want.
+
+
+Fα′β′=Λα′αFαβ(Λ−1)ββ′{\displaystyle F^{\alpha \prime }{}_{\beta \prime }=\Lambda ^{\alpha \prime }{}_{\alpha }F^{\alpha }{}_{\beta }(\Lambda ^{-1})^{\beta }{}_{\beta \prime }}
+
+Those familiar with linear algebra will recognize this expression to be similar in form to a change of basis.
+ Below, we boost in the +x{\displaystyle +x} direction. Remember that in the process of evaluating, all the diagonal elements of the tensor must be 0.
+
+
+(0Excγ(Eyc−βBz)γ(Ezc+βBy)Exc0γ(−βEyc+Bz)γ(−βEzc−By)γ(Eyc−βBz)γ(βEyc−Bz)0Bxγ(Ezc+βBy)γ(βEzc+By)−Bx0){\displaystyle {\begin{pmatrix}0&{\frac {E_{x}}{c}}&\gamma ({\frac {E_{y}}{c}}-\beta B_{z})&\gamma ({\frac {E_{z}}{c}}+\beta B_{y})\\{\frac {E_{x}}{c}}&0&\gamma (-\beta {\frac {E_{y}}{c}}+B_{z})&\gamma (-\beta {\frac {E_{z}}{c}}-B_{y})\\\gamma ({\frac {E_{y}}{c}}-\beta B_{z})&\gamma (\beta {\frac {E_{y}}{c}}-B_{z})&0&B_{x}\\\gamma ({\frac {E_{z}}{c}}+\beta B_{y})&\gamma (\beta {\frac {E_{z}}{c}}+B_{y})&-B_{x}&0\end{pmatrix}}}
+
+
+, There are two things of note here. First, from the above tensor, we see that the components of both fields parallel to the direction of motion remain unchanged. Second, and more importantly, the transformations for components perpendicular to the direction of motion show that a field that is zero in one reference frame may not be in another. In general, this will be the case (especially with electromagnetic waves, which cannot exist without mutual induction), so special relativity tells us that these two fields are really just two aspects of the same electromagnetic field. 
+
+
+Electric fields (note that we have multiplied by c{\displaystyle c} to both sides)
+
+
+Ex′=Ex{\displaystyle E_{x}^{\prime }=E_{x}}
+
+
+Ey′=γ(Ey−βcBz){\displaystyle E_{y}^{\prime }=\gamma (E_{y}-\beta cB_{z})}
+
+
+Ez′=γ(Ez+βcBy){\displaystyle E_{z}^{\prime }=\gamma (E_{z}+\beta cB_{y})}
+
+
+
+
+Magnetic fields
+
+
+cBx′=cBx{\displaystyle cB_{x}^{\prime }=cB_{x}}
+
+
+cBy′=γ(cBy+βEz){\displaystyle cB_{y}^{\prime }=\gamma (cB_{y}+\beta E_{z})}
+
+
+cBz′=γ(cBz−βEy){\displaystyle cB_{z}^{\prime }=\gamma (cB_{z}-\beta E_{y})}
+
+
+
+

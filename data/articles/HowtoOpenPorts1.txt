@@ -1,0 +1,16 @@
+ Most programs will function fine without opening ports, but occasionally you may need to in order to increase performance or simply get it to work. The ports you need to open are different for every program, so check the support documentation to figure out which ports need to be opened.;
+, If your computer is connected to a router, it is most likely using the router's firewall to protect ports. If you want to open ports, you will need to open your router's configuration page. You can access your router from any computer attached to your network.
+
+
+Type in the router's address into your web browser's address bar. The address is typically 192.168.1.1 or 192.168.0.1. You can find your specific router's address by opening the command prompt, typing ipconfig and looking for the Default Gateway.
+You will be asked for a username and password. The default username is typically "admin" and the password is usually "password" or "admin". You can find the login information for your specific router by searching the model online.
+If you are having difficulty accessing the router, press the reset button on the back of the router and wait 30 seconds, then turn it back on. This will reset the settings to default. You can then use the login information printed on the router itself or look up the defaults online.
+ The location of this option will vary from router to router, but it is typically located in the Advanced menu. It is sometimes called the "Forwarding" section or the "Applications and Gaming" section, and may be under the "NAT" menu.
+ This process will vary depending on your router, but generally you will be entering the same information. You may need to click "Add Custom Service" or "Create Rule" in order to make a new entry. You will need several different pieces of information to open ports.
+
+
+IP Address - This is the IP address of the device that you want to forward ports for. For example, if you want to forward ports for your laptop, you will need its IP. See this guide for instructions on finding your IP for a PC, and this guide for finding the IP address for a Mac.
+Starting port and ending port - This is the range of ports you are opening. Some programs will require a range of ports, while other will require a single port. If you are only opening one port, enter the same number for the Starting and Ending ports. If you have the option to set the Internal Port range, use the same numbers.
+Protocol - You have a choice between TCP and UDP. The one required will typically be given to you by the program that you are unblocking ports for, but if you are unsure choose the "Both" or "TCP/UDP" option.
+ Once you've entered in all the information you need, click the Save or Apply button. Your router will save the changes, which may take a few moments. After its done, the ports you specified will now be open for the IP address that you entered.
+

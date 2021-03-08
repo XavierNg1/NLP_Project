@@ -1,0 +1,39 @@
+ If you don't have access to any administrator accounts on the computer, you can use a Windows installation disc as a workaround. This requires the same version disc for the version of Windows you are trying to access. The disc doesn't have to be the one that came with the computer.If you have an ISO copy of the Windows installation disc, you can burn it to a blank DVD or put it on a bootable USB drive. See Install Windows 7 Using Pen Drive for more detailed instructions on creating a bootable USB drive with Windows installation files.
+ You'll be using the installation disc to access the administrator controls to change users' passwords.
+ This needs to be done before the Windows logo appears, and the process varies slightly depending on what version of Windows the computer is running:
+
+
+Windows 7 and earlier - Press the BIOS, SEUP, or BOOT key as the computer is starting up. The key varies by manufacturer, and will be displayed on the boot-up logo screen. Common keys include: F2, F10, F11, and Del. Once you've opened the BIOS or SETUP menu, select the BOOT or BOOT ORDER option.
+Windows 8 and later - Open the Start menu or Screen and right-click the Power button. Hold ⇧ Shift and click "Restart." Choose the "Troubleshoot" option, then "Advanced options." Select the "UEFI Firmware Settings" option from the menu. Open the BOOT menu.
+ The exact process will vary, but generally you'll just reassign the numbers so that the computer boots from the disc or USB drive before the hard drive. Some BIOS software refers to this as the "Boot Order" and you will often see a menu option to "Change Boot Order". Don't be surprised if you find that that the CD drive is already set as the first drive in the order. If this is the case, you don't need to change anything in the BIOS, SETUP or BOOT sequence.
+ Press a key to launch the Windows Setup program and let the files load. This may take a minute or so.
+ You can usually just leave these at their default settings.
+ This can be found on the same screen as the "Install now" button.
+ There will usually only be one option on this list.
+ This will open the Command Prompt in a new window.
+ The following commands will allow you to access the Command Prompt from the Windows Login screen. This will allow you to change the password of any account. Enter the following commands, in order:
+
+
+
+cd\ ↵ Enter
+
+
+cd windows\system32 ↵ Enter
+
+
+ren utilman.exe utilman.exe.bak ↵ Enter
+
+
+copy cmd.exe utilman.exe ↵ Enter
+
+
+, Now that you've made your necessary changes, you can reboot the computer and start changing passwords. Take out the disc or drive before rebooting so that the computer boots normally.
+ This would normally launch the Accessibility Manager, but since you made the changes to the system files, Command Prompt will launch instead.
+
+
+Press Alt+Tab ↹ if nothing appears right away. It may be hidden behind the login screen.
+ A list of accounts on the computer will be displayed. Administrators are listed in the left column, regular accounts in the middle, and guest accounts on the right.
+ Replace username with the account you want to gain access to.
+ Type a new password when prompted and again to confirm. You may want to consider completely erasing the password by simply pressing ↵ Enter on each line, as this may be less suspicious than creating a password the user doesn't recognize later.
+ The new password will take effect immediately, so you can switch back to the Windows Login screen and use the password to access the account.
+

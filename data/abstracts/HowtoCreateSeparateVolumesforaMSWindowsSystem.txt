@@ -1,0 +1,36 @@
+
+Print this out and make notes as you complete each step.
+,
+Plan.
+Defragment.
+Defragment again.
+Run chkdsk /r at the command line.
+Backup.
+Get the partition manager.
+Backup.Shutdown MS windows and boot the GParted CD.Reduce the size of the current partition (volume) leaving a little free space maybe 1 GB.
+Shutdown GParted.chkdsk,Restart Windows.Wait much less than last time chkdsk ran since now it's only doing part of the disk.Restart GParted CD.
+Create extended partition.
+Create new partitions (volumes).
+Shutdown GParted.Assign drive letters and format volumes.Cut & paste files to new locations.
+Defrag C:.
+Shutdown Windows.
+Resize C: leaving 2 to 8 GB free and 4 to 8 GB away from the extended partition.
+Create primary partition for swap space using the space between C: and the extended partition.
+Shutdown GParted.
+chkdsk C: again, I know this is a pain.Boot and wait even less time than before.Assign a drive letter to the paging partition and format it.
+Add new paging file.
+Set old paging space on C: to 0.
+The resulting volume a.k.a.
+
+,                                               
+
+           
+
+ C: boot 
+ paging 
+  file 
+ browser 
+ cache  
+        your files       
+           
+,I will get back to this after I check if there is already an article describing this.

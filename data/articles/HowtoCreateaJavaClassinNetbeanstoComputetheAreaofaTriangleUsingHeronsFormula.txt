@@ -1,0 +1,165 @@
+,, Under categories select Java and under projects select Java Application. Then click Next. 
+, The one here is named "Heron". Then click Finish.
+
+You can choose any file destination for this project.
+
+
+ By default the Projects tab will be open. With the projects tab open, select the "+" (or drop down icon) to the right of your "Heron" project within the Projects tab.
+
+ You will then see two more items, the Source Packages and Libraries.
+
+ Click the + to open the Source Packages (or drop down icon).
+
+ Right click , select New > Java Class.
+ Remember that it must start with an uppercase letter.
+
+ Click Finish. You are now ready to write the code.
+
+
+ It is good to make them private and you will also want to give them a type of double so that you can get decimals for more accuracy.
+
+ Give your instance variables each their own unique name. Make it something literal, for example, mine was side1, side2, side3.
+
+ Insert the instance variables under the bracket after Heron.
+
+ private double side1;
+
+ private double side2;
+
+ private double side3;
+
+
+
+
+,
+
+ Under the instance variables, create a comment section listing the parameters.
+
+ To make a long comment, type /** and then hit ↵ Enter. This will create a multi-line comment.
+
+ Type the parameters in this space.
+
+ Create a triangle, given the lengths of the side:
+
+  @param side1 length of a side
+
+  @param side2 length of another side
+
+  @param side3 length of the other side
+
+
+
+
+,
+
+ Create a public constructor so that when you create an object in your tester class, it will have the 3 parameters you established earlier.
+
+ Your constructors parameters should all be set to type double.
+
+ It should read:  public Heron(double side1, double side2, double side3) {
+
+ Now create “this” statements to link to the parameters. Type these after the bracket and then close the bracket.
+  
+
+ Create a mutator method that uses Heron's formula.
+
+ Set the method to public and give it a type double.
+
+ Give the method a name of your choosing, like getArea. Make sure to use camel case meaning the first word is lowercase and the second is uppercase.
+
+ It should read:  public double getArea( ) {
+
+ You need a variable that calculates half of the perimeter. To do this, give it a type double and a name, like "halfPerim". Set it equal to a formula that would return half of the perimeter of a triangle. In this case,  halfPerim = (side1 + side2 + side3) / 2
+
+ Now you need to create the formula that actually gives us the area and uses Heron's formula. You will also give this a type double and set area equal to the formula.
+
+ Heron's formula: Area=(s∗(s−a)∗(s−b)∗(s−c)){\displaystyle {\text{Area}}={\sqrt {(s*(s-a)*(s-b)*(s-c))}}} where s{\displaystyle s} is equal to half the perimeter, and a{\displaystyle a}, b{\displaystyle b}, and c{\displaystyle c} are the side lengths.
+
+ double area = Math.sqrt(halfPerim *(halfPerim - side1) * (halfPerim - side2) * (halfPerim - side3));
+
+ The last step is to create a return statement. Use return area and then close your bracket.
+
+
+ Create a public string to return the lengths of each side of the triangle:
+
+ public String toString( ) {
+
+
+
+ Make sure the S in string is capitalized and then after the brackets insert your return statement:
+
+  return side1 + ", " + side2 + ", " + side3
+
+
+
+ Then close your bracket and your class is now complete!  
+
+
+, It will be your Main Class that will run the file.
+
+ Create a tester class to show that your Heron class is properly functioning.
+
+ To create another Java Class, you can repeat the same steps in Part 1 of this tutorial; the only difference is that when in the "New Java Application" window, you will check Create a Main Class and name your new class HeronTester, because your files can’t have the same name. This class will be saved in the same folder as your 'Heron" class.
+
+ Click Finish and now you can write the tester code.
+
+
+ Before you start the code, you should import the swing class in order to be able to input data and easily change it.
+
+ The swing class is: import javax.swing.JOptionPane
+
+ This needs to be placed at the very top above public class HeronTest
+
+ If you are unsure where to put this line of code, you can put it on the very first line above all of your other code.
+ By default, when you created a new java class and checked the box to create the main class, NetBeans will automatically generate the code necessary to consider it the "main" class. If you don't see the code, you can follow these instructions.
+
+
+
+
+
+ To create a main method, after the bracket type: public static void main(String args) {
+
+ This makes it the first method that will be read and in this case, it is the only method to be read.
+
+
+ Insert statements to get the lengths of the sides from the user and store them in side1, side2, and side3.  This is where we will use the swing class to create boxes to input information.
+
+ Type the following lines of code below to create input boxes when you run the program.
+
+ String input = JOptionPane.showInputDialog("Enter length of side 1 ");
+
+ double side1 = Double.parseDouble(input);
+
+ vString input2 = JOptionPane.showInputDialog("Enter length of side 2 ");
+
+ double side2 = Double.parseDouble(input2);
+
+ vString input3 = JOptionPane.showInputDialog("Enter length of side 3 ");
+
+ double side3 = Double.parseDouble(input3);
+
+
+
+
+,  
+
+ To do this, Type the name of the object with a capital, the name of this version of the object (can be any name you want) to make it look like the line below:
+
+ Heron heron = new Heron(side1, side2, side3);
+
+
+
+ To get the line to print we need to use a System.out.println statement:
+
+ System.out.println("A triangle with sides of " + heron.toString() + "...\n...has area of " + heron.getArea( ));
+
+
+
+
+, 
+
+ Click the green arrow at the top. (Or right click anywhere in the code and hit Run). A box should pop up saying “Enter length of side 1”. Enter a number and repeat the process for sides 2 and 3.
+
+ You should then get an output stating “A triangle with sides of x, x, x… ...has area of x”.  
+
+

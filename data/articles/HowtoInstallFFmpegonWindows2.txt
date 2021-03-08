@@ -1,0 +1,15 @@
+ Select Properties from the right-click menu. In the System window, click on the “Advanced system settings” link in the left frame.
+ It will be located at the bottom of the window.
+ This is located in the first frame in the Environmental Variables window. Click the Edit button.
+
+
+In the “Variable value” field, enter ;c:\ffmpeg\bin after anything that's already written there. If you copied it to a different drive, change the drive letter.
+Click OK to save your changes. If anything is entered incorrectly in this screen, it could cause Windows to be unable to boot properly.
+If there is no PATH entry in the "User variables" setting, click the New button and create one. Enter PATH for the variable name.
+This method will enable FFmpeg for the current user. Other Windows users will not be able to run it from the command line. To enable it for everyone, enter ;c:\ffmpeg\bin in the PATH entry in "System variables". Be very careful not to delete anything that is already in this variable.
+ Enter the command “ffmpeg –version”. If the command prompt returns the version information for FFmpeg, then the installation was successful, and FFmpeg can be accessed from any folder in the command prompt.
+
+
+If you receive a “libstdc++ -6 is missing” error, you may need to install the Microsoft Visual C++ Redistributable Package, which is available for free from Microsoft.
+ You can do a variety of media conversion processes using FFmpeg. You will be using the command line to perform FFmpeg commands.
+

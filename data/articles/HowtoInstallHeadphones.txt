@@ -1,0 +1,125 @@
+ Headphones is a tool that allows you to automatically download the latest albums and songs from your favorite artists as soon as they become available. This allows you to fill out your music library without any interaction on your part; new songs from your favorite or wish listed artists will just show up.
+
+
+It is illegal in most areas to download music that you do not own.
+Headphones is not a downloader, it simply automatically searches for and sends new downloads to your Usenet reader or Torrent client. That program will then handle the actual downloading process.
+ Headphones can download from two different sources: Usenet or torrents. Usenet requires a monthly fee, but is very fast and secure. Torrents don't require a fee, but it is highly recommended that you connect through a VPN subscription service to avoid receiving threatening legal letters or legal action.
+
+
+
+Click here if you plan on using Usenet with Headphones. This is the recommended way to use Headphones.
+
+Click here if you want to use torrent files with Headphones.
+ Download SABnzbd for free from sabnzbd.org/. This is a free, open-source newsgroup downloader that will pull files from Usenet posts and download them to your computer. It is designed to be highly automated, so that once it's configured you won't need to interact with it again. SABnzbd will download NZB files, which are the Usenet equivalents of torrents.
+
+
+When properly configured, Headphones will search for new tracks and then push the downloads to SABnzbd. SABnzbd will then download the NZB files to your system and extract the contents.
+If you'd prefer to use a torrent client instead of a Usenet client, click here.;
+, The installation process varies depending on your operating system:
+
+
+
+Windows - Run the installer file that you downloaded. During the installation process, indicate whether or not you want SABnzbd to start when Windows starts (this is recommended if you want the process to be fully automated). Also indicate that you want to associate NZB file with SABnzbd.
+
+Mac - Double-click the DMG file that you downloaded. Drag SABnzbd from the window that appears into your Applications folder. Double-click it in the Applications folder to start it. To add it to your system startup process, open the "System Preferences" menu, select "Accounts", select your account, and then drag SABnzbd into the "Login Items" field.
+
+Linux (Ubuntu/Debian) - Open the Terminal and type sudo add-apt-repository ppa:jcfp/ppa. Then type sudo apt-get update to load the new repository into your list of available packages. Type sudo apt-get install sabnzbdplus to install SABnzbd, and then type sabnzbdplus to start it.
+ When starting SABnzbd for the first time after installation, it may take a little while for the browser to appear. SABnzbd is run through your default web browser, and all configuration is done through the web-style interface.
+ After launching for the first time, yo will be prompted to select your preferred language and theme. Select whichever theme you'd like.
+ You can select if you want SABnzbd accessible by other computers on the network, or just the computer it was installed on. You can also set a password, which is recommended if you plan on remotely accessing the service.
+ You will need to enter the Usenet server address and port of the service you are subscribed to, your username and password, the number of connections your server allows, and you will need to indicate if it supports SSL (encryption).
+
+
+All of this information will be available on your Usenet service's account page. Click here for instructions on setting up a Usenet account.
+Click Test Server to check that the information you entered is correct.
+ These services are no longer active.
+ This will occur automatically after you finish the configuration wizard. Bookmark the webpage that opens after a moment, as this will be your SABnzbd configuration page.
+ You can make adjustments here if you'd like downloaded files to be stored somewhere other than the default locations.
+ Copy and paste this key into a text document for now so that you have easy access to it later, you'll need it to configure Headphones.That's it for now with SABnzbd, you can close the browser window and SABnzbd will continue running in the background. Click here to move on to installing and configuring Headphones.
+ This is typically caused by an issue with your Usenet credentials. Make sure that you've entered in the correct provider, authentication information, and retention amount. Also ensure that you have SSL enabled if your provider supports it.
+ SABnzbd does not get along well with firewalls, and this is usually what's causing connection problems.
+
+
+Add SABnzbd to your firewall's exceptions list, or "whitelist". Click here for instructions.
+If you are using Windows 7, download and install this Microsoft optional update.
+Some antivirus programs will interfere with SABnzbd. Try disabling your antivirus to see if the problem is fixed. If it is, you'll need to add an exception for SABnzbd or try a different antivirus program.
+ Occasionally SABnzbd won't be able to repair a file after downloading it. This can cause the process to freeze, holding up the rest of your download queue. You'll need to manually kill the repair process so that SABnzbd can continue downloading.
+
+
+Open your operating system's process manager.
+
+Find and kill the "par2" process. This is SABnzbd's repair process.
+Manually extract the file. Since the repair process has failed, SABnzbd will mark it as "Failed" and move on. You will need to manually extract the file using WinRAR or 7-Zip.
+ This is one of the lightest and fastest torrent clients available, but these steps should work essentially the same regardless of the client you are using. For the sake of simplicity, this guide will only reference uTorrent.
+
+
+
+Click here for instructions on installing uTorrent.
+ Since you'll want the process to be as automated as possible, you'll want to take a few moments to ensure that uTorrent's settings are set to maximize speed and eliminate the need for you to interfere.
+
+
+
+Click here for a guide on configuring uTorrent effectively.
+ Headphones will automatically add torrents for uTorrent to then download, so there are a few settings you'll need to adjust in order to make this process seamless. First, open the Preferences window from the "Options" menu.Select the "General" tab and check "Start uTorrent when Windows Starts". THis will ensure that uTorrent is open and ready to immediately begin downloading anything Headphones finds.
+Click the "Directories" tab and check the "Automatically load .torrents from:" box, and then specify a folder on your computer that will store new torrents loaded from Headphones. This folder will be referred to by Headphones as your "Black Hole" folder, so make a note of it. Any torrent added to this folder will automatically begin downloading in uTorrent.
+While still in the directories tab, you can set your completed download to be moved to specific folders.
+ That's it for your torrent client configuration, and now you're ready to install Headphones. Make sure that your torrent client is connecting through a VPN for added security.
+ You will need the Python if you are using Headphones in Windows. OS X and Linux come with Python pre-installed.
+
+
+You can download Python for free at python.org/downloads/windows/. Download Python 2.7.9; Python 3 is not compatible with Headphones.
+ The download process varies depending on your operating system:
+
+
+
+Windows - Visit github.com/rembo10/headphones/zipball/master to download the ZIP file containing Headphones. Double-click the ZIP file to open it. Drag the folder inside onto your C: drive. This is where Headphones will be installed to. You can rename the folder to "Headphones" if you want. Double-click Headphones.py to start Headphones in your web browser.
+
+Mac - Open the Terminal (found in the Utilities folder) and type xcode-select --install to install Git. Type mkdir /Applications/Headphones to create the installation folder, and then type cd /Applications/Headphones to open it. Finally, type git clone https://github.com/rembo10/headphones.git Headphones to install Headphones. Using this method ensures that you always have the latest version. Type python Headphones.py to start Headphones in your web browser.
+
+Linux (Ubuntu/Debian) - Open your Terminal and type sudo apt-get install git-core to install Git. Type cd /opt and then git clone https://github.com/rembo10/headphones.git to download Headphones. Type cd headphones and then python Headphones.py to start Headphones in your web browser.
+ This requires a little extra work, but is recommended if you want a truly automated system.
+
+
+
+Windows - Right-click on Headphones.py and select "Create shortcut". Press ⊞ Win+R to open the Run box and type shell:startup to open your Startup folder. Drag your newly-created shortcut into this folder.
+
+Mac - Open Automator, which can be found in your Applications folder. Select "Application" as the document type. Enable the Library using the button in the upper-left corner of the window. Select "Utilities" from the Library, and then "Run Apple". Paste the following code into the right frame, replacing adminpassword with the Mac's administrator password: do shell script "python /Applications/Headphones/Headphones.py" password "adminpassword" with administrator privileges. Click "Run" to test it, and Headphones should open. Close Automator and save the new document as "Headphones". Ensure that "Where" is set to "Applications", and that "File Format" is "Application". Open "System Preferences", select "Accounts", select your account, and then drag the new Headphones Automator file into the "Login Items" field.
+ After launching Headphones, you'll be greeted with a web interface. Click the Gear button in the upper-right corner to open the Settings page. Make sure to click the "Save Changes" button at the bottom of each tab when you're finished making changes.
+ This will let you configure Headphone's connection to either SABnzbd (Usenet) or your torrent client.
+
+
+Usenet - Select the "SABnzbd" option at the top of the Usenet section. Enter your SABnzbd information, including the API that you copied to a text document earlier. The "SABnzbd Host" field should read "0.0.0.0:8080" unless you made changes during SABnzbd configuration. For the "SABnzbd Category", enter "music". Enter your Usenet provider's Retention into the last field.
+Torrents - Select "Black Hole" option at the top of the Torrents section. Enter your Black Hole directory (the directory that uTorrent is loading torrents from). Select your minimum seeder option (10 is usually a good number), and decide if you want to continue seeding files after the download has been completed.
+ This is where you will set the search engines that Headphones will use to find new content for you.
+
+
+NZBs (Usenet) - Select the search protocols you want to use. Newznab is the most popular, as some of the others have been closed down. You can also use the Headphones Indexer. After selecting Newznab, you'll need to enter your provider's web address and API Key. Note that not all search providers are free. You can find the API key on your search provider's site in the API/RSS section.
+Torrents - Select the torrent trackers you want to add. When selecting one, make sure that the tracker still works, as they tend to get shut down and switch domains often.
+ The settings on this tab determine the quality of files that Headphones searches for, as well as what it does with the files once they've been downloaded. A lot of the settings here are going to be up to your personal preferences.
+
+
+The "Quality" side lets you dictate whether Headphones should look for lossless files or not. Lossless files are larger but don't suffer from any audio compression. You can also specify a preferred bitrate.
+The Post-Processing side allows you to automatically sort and rename completed files, download album art, fix metadata information for the songs, and delete extra files like playlists.
+ Once you've adjusted your settings, you can import your library into Headphones. This will allow Headphones to find new music by artists in your collection.
+
+
+Click the "Manage" tab on the main Headphones screen.
+Select the "Scan Music Library" option.
+Check the "Automatically scan library" and "auto-add new artists" box.
+Click "Save changes and scan", and Headphones will begin scanning your computer for existing music tracks.
+ After scanning your library, albums will be added to the "Wanted" tab based on what is currently on your computer. You can uncheck albums that you don't want to download, or mark them as already downloaded if you got them from another source.
+ Now that Headphones and your download service are configured, all you have to do is wait for your library to fill. Any time that new content from the artists in your library becomes available through your search sources, Headphones will automatically find it and set it to download., This is typically caused by problems with your search provider settings.
+
+
+Make sure that you've entered the server information correctly in the "Search providers" tab of Settings.
+Ensure that you have provided the correct credentials to use that search provider.
+This error is sometimes not actually an error, and is simply an indicator that no results were found for the search. This is most common with KickAssTorrents.
+ This is usually cause by authentication issues, or a problem with your Black Hole directory.
+
+
+Ensure that all of your APIs have been entered correctly, both in Headphones and SABnzbd.
+Ensure that the Black Hole directory in Headphones matches the Watch directory in your torrent client.
+Ensure that your downloader is checking for new downloads regularly.
+ The most common cause for this error is a large library that is getting scanned too often. When your database is being scanned, it locks the database, which isn't a problem for smaller or medium-sized libraries. If you have tons of tracks however, the scan could be taking too long and causing other functions to lock.Open the "Manage" tab from the Headphones main page.
+Increase the scanning interval until you no longer receive the error message.
+

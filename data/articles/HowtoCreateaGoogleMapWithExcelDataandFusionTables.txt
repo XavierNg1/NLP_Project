@@ -1,0 +1,26 @@
+ There are several formats that could be used, but we're going to use a Comma Separated Value (.csv) spreadsheet like Excel to organize our data. You can put any kind of information that might be useful into this .csv file, but be sure to include the full address in one field. Download the sample address.csv file suggested in the "Sources and Citations" below. Below is an example of what a row of data would look like:
+Joe's Diner, 1 Main St Lakewood NY 14750, 800-123-4567;
+, Open a web browser and go to https://www.google.com/fusiontables. If you have a Google account, use that to sign in. If you don't have a Google account then you'll have to create one.
+ What you will do first is click the gray "New Table" button that is on the left of the screen. This will bring up a drop-down menu where you will then select "Import Table".
+ In this window, you'll be given options as to where you will import from. "From This Computer" will be selected, which is what you want, and you'll then click the "Choose File" button. This will allow you to browse through your computer and select the address.csv (or whatever .csv file you wish to use) to upload to the fusion tables site. Once you've selected it, click the "Next" button on the bottom right.
+ Once finished, you'll see a preview of the data and all the columns in the spreadsheet. There will be a check box above each column, columns that will be imported will have a check mark. If your spreadsheet had a header row for column names, it should have known this and selected that row as the header. Click the "Next" button.
+ You can leave these settings as they are. Click on the "Finish" button on the bottom right to create the fusion table.
+
+
+When the import has finished you'll see a table view of your data. Any column that is able to be translated into a map location will be highlighted in yellow and will have a small globe icon next to it when the mouse is over that field. For our address.csv file, the address column is highlighted. If you click that globe, it will translate the address to a Latitude/Longitude location. But we don't have to do that, later the fusion table will do it for us!
+If your data does not have a column highlighted in yellow, that means that the Fusion Tables weren't able to automatically pick a column that specified a location. To do this, click the Edit menu, then select Edit Columns. From here you will click on the column that holds your location data. After clicking, on the right you will see a drop down list labeled Type. Select Location from the drop down list, then click Save in the bottom left of this screen. After this, your column should be highlighted yellow.
+, On the right of the screen there is a share button; click it. You'll see that this table is set to private, so you will have to change it to Unlisted or Public in order to have it viewed in your website. It is recommended that you select "Unlisted" – this means you can share the data – but people can't search for and find it on the FusionTables site. After selecting "Unlisted", click the X in the top right to close this screen.
+ There is a new version and we need to see the old Classic version to map it. Click on Help, Back to Classic Look. This is so easy, it's almost wrong. In the Menu there are options for File, View, Edit, Visualize, Merge. Click "Visualize" and then select "Map".
+
+
+Your address data is now automatically translated into a map location and a map marker is placed on a Google Map for each valid location!
+
+, This will display a text box with automatically generated html code for you to place on your web page. Also notice that if you click a marker, all the information for that record shows up in a nice message window.
+ Click the Visualize menu and select "Table"; you'll see the rows that were not translated are still highlighted in yellow. Click the globe icon next to the address and you'll be able to manually search for and select a matching location.
+ The image here shows the final product, or you can visit: http://www.chautauquahomes.us/wikihow/FusionTables/ to see the live example.
+
+
+If you feel like it, you can click on the "Configure Info Window" or "Configure Styles" links in order to customize the look and feel of the map markers and the message display window.
+ If your map marker wasn't placed where you thought it should be, you are able to manually search the map for the exact location! Visualize your fusion data as a Table, move your mouse cursor over the column that is used as the map location and you will see an image that resembles a globe. Click it.
+ You will see a red marker for where the current location is set.
+ You will see green markers show on the map telling you where Google thinks your location is.

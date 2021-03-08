@@ -1,0 +1,7 @@
+ Make sure the parameter Type is set to "Length" and you check the box in the Categories list for Walls.;
+, For example, the limiting height on a wall using 20 gauge 4” metal studs spaced 16" on center is 17'-3". Walls taller than their limiting height may buckle, causing an unsafe condition.
+ This is the real trick in the current release of Revit. The average height of a wall segment can be calculated by dividing the area of the segment by the length, but this is affected by openings and edited profiles.
+ Create a calculated value named Height, which is a function of "Area / Length." Create another calculated value named Height Check, which is a function of "Height – Limiting Ht"
+
+, The resulting wall segments in the schedule are the ones that exceed the limiting height in the type parameters.
+

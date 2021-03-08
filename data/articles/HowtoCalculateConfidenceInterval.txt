@@ -1,0 +1,20 @@
+ Let's say you're working with the following situation: The average weight of a male student in ABC University is 180 lbs. You'll be testing how accurately you will be able to predict the weight of male students in ABC university within a given confidence interval.;
+, This is what you will use to gather data for testing your hypothesis. Let's say you've randomly selected 1,000 male students.
+ Choose a sample statistic (e.g., sample mean, sample standard deviation) that you want to use to estimate your chosen population parameter. A population parameter is a value that represents a particular population characteristic. Here's how you can find your sample mean and sample standard deviation:
+
+
+To calculate the sample mean of the data, just add up all of the weights of the 1,000 men you selected and divide the result by 1000, the number of men. This should have given you the average weight of 180 lbs.
+To calculate the sample standard deviation, you will have to find the mean, or the average of the data. Next, you'll have to find the variance of the data, or the average of the squared differences from the mean. Once you find this number, just take its square root. Let's say the standard deviation here is 30 lbs. (Note that this information can sometimes be provided for you during a statistics problem.)
+
+, The most commonly used confidence levels are 90 percent, 95 percent and 99 percent. This may also be provided for you in the course of a problem. Let's say you've chosen 95%.
+ You can find the margin of error by using the following formula: Za/2 * σ/√(n). Za/2 = the confidence coefficient, where a = confidence level, σ = standard deviation, and n = sample size. This is another way of saying that you should multiply the critical value by the standard error. Here's how you can solve this formula by breaking it into parts:
+
+
+To find the critical value, or Za/2: Here, the confidence level is 95%. Convert the percentage to a decimal, .95, and divide it by 2 to get .475. Then, check out the z table to find the corresponding value that goes with .475. You'll see that the closest value is 1.96, at the intersection of row 1.9 and the column of .06.
+To find the standard error, take the standard deviation, 30, and divide it by the square root of the sample size, 1,000. You get 30/31.6, or .95 lbs.
+Multiply 1.96 by .95 (your critical value by your standard error) to get 1.86, your margin of error.
+ To state the confidence interval, you just have to take the mean, or the average (180), and write it next to ± and the margin of error. The answer is: 180 ± 1.86. You can find the upper and lower bounds of the confidence interval by adding and subtracting the margin of error from the mean. So, your lower bound is 180 - 1.86, or 178.14, and your upper bound is 180 + 1.86, or 181.86.
+
+
+You can also use this handy formula in finding the confidence interval: x̅ ± Za/2 * σ/√(n). Here, x̅ represents the mean.
+

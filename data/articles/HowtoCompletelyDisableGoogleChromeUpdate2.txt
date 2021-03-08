@@ -1,0 +1,20 @@
+ You'll be making changes to the system registry to prevent Chrome from checking for updates.
+
+
+Press ⊞ Win+R and type regedit to start the Registry Editor.
+ This will display options for software installed on your computer.
+ This will display a list of companies that have programs installed on your computer.
+ There will likely be just a couple folders here, including Microsoft.
+ Name the new key "Google."
+
+, Name the new key "Update."
+
+, Name the new DWORD "UpdateDefault."
+
+, This will open a new window.
+ Click "OK" to save it., Chrome will no longer automatically download and install updates.
+ It is highly recommended that you manually apply updates as they become available to help protect your computer's security. To check for updates, open the Chrome menu and select "Help" → "About Google Chrome." If updates are available, you'll be prompted to install them.
+
+
+You can re-enable automatic updates by going back into the Registry Editor and removing the DWORD you created.
+

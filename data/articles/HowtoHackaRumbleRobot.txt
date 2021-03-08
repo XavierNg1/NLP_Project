@@ -1,0 +1,66 @@
+ Typically, they take four AA batteries.
+
+On the back are some switches. There is "off/on" and also "A/B" to determine which team the robot is on. Push the "on" switch. If the bot is working, it should say its name. Put the cover and the batteries off to the side for now.
+
+
+
+
+;
+, On the "neck" of the robot (between the head and body) there is a little screw that can be taken off with a small phillips head screwdriver. Put the screw aside. There is a small lip in the front of the head that is a little tricky, but should come loose after a little light twisting and turning.
+ Using a small screwdriver, pry back the tabs keeping the board down, and pop the board out. You should now have just the naked board.
+
+You should see the black micro processor that makes the bot move backward and forward. This is what we'll be hacking and wiring into.
+
+
+
+
+
+These are the pin outs on the board where you'll need to connect new wires. The main pins we're concerned with are the four that operate the drive motors. They are connected to the "H-Bridge" that will allow us to trigger the motors to rotate forward or reverse by applying a positive voltage to one of two wires for each motor. There is one for forward and one for reverse on each motor. They are connected as follows:
+
+
+
+
+
+Pin 1.0 Left motor FORWARD
+Pin 1.1 Left motor REVERSE
+Pin 1.2 Right motor FORWARD
+Pin 1.3 Right motor REVERSE
+
+
+
+, In this photo we see the ground wire which is connected to the pin labeled in the photo on the white connector and the other four wires soldered in place.
+, The video demonstrates how everything is put together. Make your wires at least 5" in length to make it easier to mount everything up.
+
+The schematic shown in this article assumes that there will be one sensor on the front of the bot. The video below shows how you can make both the arms sense obstacles, but this will require an extra bump switch (connected to Pin 3 and the ground wire) as described in the video section. The code will also need to be changed accordingly.
+
+
+
+
+
+If you mount everything on top of the chassis where the head used to be and mount the bump switch on the front, use a micro switch and glue on some pieces of wire from a paper clip as whiskers. The whiskers on the switch should extend left and right the same width as the robot. Add one more whisker pointing down close to the floor. These will help the bot avoid anything that might not return an echo from the PING sensor. Make sure the PING sensor points towards the front and is at 90 degrees to the floor. The LED connected to pin 13 blinks each time the PING scans and it can mounted anywhere you like. The power switch is optional and simply goes in line on the positive battery lead.
+
+
+
+
+
+When connecting the motherboard to the microcontroller, you may need to make a notch so that the wires don't get pinched when you put the robot back together.
+
+
+
+
+
+The battery can be held in place by a small piece of velcro or some EPS foam. Solder the negative lead of the 9-volt battery to the auxiliary battery input. Be sure to place the jumper onto "extension power" not "USB."
+
+
+
+
+
+If you want to be able to use the "on/off" switch, connect the white wire to the back of the switch. The power should go to the switch, run back into the white wire, and feed the Arduino power when you turn it on.
+
+
+
+
+
+The PING sensor can go anywhere on the front of the robot. In this example, the sensor has been glued into the faceplate of the robot. Cut out the "eye-holes" on the faceplate and then just add glue around the "eyes" of the sensor to keep the plate sturdy. The ribbon cable that connected to the head of the robot has been stripped down to three leads (instead of the original four) and soldered to the three leads on the PING sensor. The other end connects to the Arduino as specified in the schematic.
+ Refer to the schematic once again for help.
+, Connect the USB cable to your computer and plug the other end into the Arduino's USB port. Set your robot on a riser so the wheels don't touch anything and power up the Arduino. Copy the code and paste it into a new window in the Arduino software. Save the sketch as "rumblebot ping bump" and upload it. After it's uploaded, power down the Arduino, disconnect the USB cable, set the bot on the floor and power up the Arduino. It should start to drive forward with the LED blinking. As it gets within 30 centimeter (11.8 in) of an object, it should turn away and keep driving forward. If it hits an object and triggers the bump switch, it should stop, reverse its direction and turn, then proceed forward.

@@ -1,0 +1,72 @@
+ If a single solid background color is not your thing, try experimenting with this animated, color-changing background. As of HTML 5, background colors should be defined by CSS (Cascading Style Sheets). If you've never set a background color with CSS, see Setting a Solid Background Color before trying this method.
+ You'll have to add 2 different properties, as different browsers require different code.
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    -webkit-animation: colorchange 60s infinite; 
+    animation: colorchange 60s infinite;
+    }
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+-webkit-animation is the property required for Chromium-based browsers (Chrome, Opera, Safari). animation is the standard for all other browsers.
+
+colorchange is what you'll call the animation in this example.
+
+60s is the duration (60 seconds) of the animation/transition. Make sure to set it for both the webkit and standard syntax.
+
+infinite tells the animation to repeat forever. If you'd rather the colors loop one time and then stop at the last color, you can leave this part out.
+ Now you'll use the @keyframes rule to set the background colors through which you'll cycle, as well as the length of time each color will appear on the page. Again, you'll need separate entries for the different sets of browsers.<!DOCTYPE html>
+<html>
+<head>
+<style>
+ 
+body {
+    -webkit-animation: colorchange 60s infinite; 
+    animation: colorchange 60s infinite;
+}
+ 
+ 
+@-webkit-keyframes colorchange {
+ 
+     0%  {background: #33FFF3;}
+    25%  {background: #78281F;}
+    50%  {background: #117A65;}
+    75%  {background: #DC7633;}
+    100% {background: #9B59B6;}
+}
+ 
+ 
+@keyframes colorchange {
+     0%  {background: #33FFF3;}
+    25%  {background: #78281F;}
+    50%  {background: #117A65;}
+    75%  {background: #DC7633;}
+    100% {background: #9B59B6;}
+}   
+ 
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+Note that the two rules (@-webkit-keyframes and @keyframes have the same background colors and percentages. You'll want these to stay uniform so the experience is the same on all browsers.
+The percentages (0%, 25%, etc) are of the total animation length (60s). When the page loads, the background will be the color set at 0% (#33FFF3). Once the animation has played for 25% of of 60 seconds, the background will turn to #78281F, and so on.
+You can modify the times and colors to fit your desired outcome.
+

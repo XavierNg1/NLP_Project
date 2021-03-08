@@ -1,0 +1,39 @@
+ This has a chip on it that contains the encryption key and uses it to encrypt the data on the drive. This is faster and more secure than the software alternative. Hardware encrypted drive have until recently been very expensive, but now several are available for not much more than a standard drive.
+
+
+If you already have a drive and would like to encrypt it there is a very powerful free software solution called TrueCrypt. The software is slightly slower and less secure (because the encryption is done by the PCs processor so the encryption key and data are transferred to the PCs memory where it is available later on to hackers.
+
+
+
+
+
+
+A problem with software flash drives is that they need admin rights on the host PC to work; thus, they cannot be used in public locations such as schools or internet cafes. We get around this problem by installing a “viewer” called TCExplorer. This does not need admin rights and lets you view as well as read and write files TrueCrypt encrypted files on public PCs:
+
+
+
+
+
+;
+,, The main TrueCrypt window should appear.
+,,, The main TrueCrypt window should appear.
+ The TrueCrypt Volume Creation Wizard window will appear. Choose: "Create an Encrypted file container," and Choose: "standard TrueCrypt volume." As the option is selected by default, you can just click Next.
+ The standard Windows file selector should appear (while the window of the TrueCrypt Volume Creation Wizard remains open in the background).
+ In the file name box, click any name you like, e.g. "secure." This will be the name of the file that contains your encrypted data (also called a “container”). TrueCrypt will create this file for you. Do not choose an existing file or it will be overwritten.
+, Leave the defaults and click next.
+ Then click next.
+ Type in and confirm a password with case changes and a combination of letters and numbers. Then click next.
+
+
+Volume format leave as FAT or change to NTFS for volumes larger than 2GB
+
+
+
+
+
+
+
+,, You now have a secure container on your USB flash drive. Navigate to your USB flash drive, TrueCrypt folder and click on truecrypt.exe. In the top menu, go to tools, then traveler disk setup.
+,,, Then click on close.
+ Unzip this file and copy TCexplorer.exe to the root of your USB drive. Now you have a working encrypted drive. You can copy to and from it directly when you have admin rights on the host computer and you can do the same by clicking on TCExplorer when you do not have admin rights.
+

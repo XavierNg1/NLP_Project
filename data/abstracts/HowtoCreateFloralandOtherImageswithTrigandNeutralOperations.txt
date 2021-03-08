@@ -1,0 +1,16 @@
+
+Open a new Excel workbook and create 3 worksheets: C.Data, Chrys Chart and Saves.
+Set Preferences: Open Preferences in the Excel menu.
+Select the entire worksheet by selecting between the 1 of row 1 and the A of column A in the upper and left most corner of the C.Data worksheet.
+Enter the Defined Name Variables and headers of row 1.
+Enter the column headings.
+Enter the formulas.
+Into cell B3 enter w/o quotes the formula "=IF(ISERR(A3/(A3-1)),0,A3/(A3-1))" and do Insert New Comment and edit in "B3: The formula in this cell, "=A3/(A3-1)" is a Neutral Operation in that when Y= X/(X-1), then X + Y = X * Y, as does this cell =A3/(A3-1), similarly.
+ Edit Go To cell range C3:C363 and with C3 the active cell, enter the formula w/o quotes "=(SIN(CFactor*A3/(2*B3)*Converter)*COS(A3*CFactor*Converter))+COS((ROW()-3)*PI()/180)" and Edit Fill Down and Errors are on purpose and Do Insert New Comment and edit in "C3: This formula, =(SIN(CFactor*A3/(2*B3)*Converter)*COS(A3*CFactor*Converter)) +COS((ROW()-3)*PI()/180) looks a lot more wicked than it really is.
+ Edit Go To cell range D3:D363 and with D3 the active cell, enter the formula w/o quotes "=(SIN(CFactor*A3/(2*B3)*Converter)*SIN(A3*CFactor*Converter))+SIN((ROW()-3)*PI()/180)" and Edit Fill Down and the errors are on purpose and do Insert New Comment and edit in "D3: This formula works pretty much like the one in D3, except that it's using 3 SIN() functions together instead of SIN*COS+COS of cell C3.
+That is all that's needed to produce the chart shown above, There are two more columns, however, for adventurous types.
+Edit Go To cell range F3:F3633 and with F3 the active cell, enter w/o quotes the formula "=COS(D3)" and Edit Fill Down.
+ Create the Chart.
+Make use of helper articles when proceeding through this tutorial:
+
+See the Related wikiHows below and the article How to Do the Sub Steps of Neutral Operations for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation relating to Neutral Operations.

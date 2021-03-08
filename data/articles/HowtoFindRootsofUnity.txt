@@ -1,0 +1,50 @@
+ Finding roots of unity means that we find all numbers in the complex plane such that, when raised to the third power, yield 1. When we consider the equation x3−1=0,{\displaystyle x^{3}-1=0,} we know that one of the zeroes is 1. But from the fundamental theorem of algebra, we know that every polynomial of degree n{\displaystyle n} has n{\displaystyle n} complex roots. As this is a cubic equation, there are three roots, and two of them are in the complex plane. We can no longer restrict ourselves to dealing with just the real numbers in finding these two remaining roots.
+
+
+z3=1{\displaystyle z^{3}=1}
+;
+, 
+
+We know that a complex number can be written as z=reiθ.{\displaystyle z=re^{i\theta }.} But recall from polar coordinates that numbers written in polar form are not uniquely defined. Adding any multiple of 2π{\displaystyle 2\pi } will give the same number as well. Below, the symbols k∈Z{\displaystyle k\in {\mathbb {Z} }} mean that k{\displaystyle k} is any integer.
+
+
+z=rei(θ+2πk),  k∈Z{\displaystyle z=re^{i(\theta +2\pi k)},\ \ k\in {\mathbb {Z} }}
+
+
+
+Raise z{\displaystyle z} to the one-third power. Since we want to avoid making our function multivalued, we must restrict the domain of the argument to θ:[0,2π).{\displaystyle \theta :[0,2\pi ).} Therefore, k=0,1,2.{\displaystyle k=0,1,2.} In general, the mth roots are found by substituting k=0,1,⋯,m−1.{\displaystyle k=0,1,\cdots ,m-1.}
+
+
+z1/3=r1/3ei(θ+2πk3){\displaystyle z^{1/3}=r^{1/3}e^{i\left({\frac {\theta +2\pi k}{3}}\right)}}
+
+
+
+
+, Since we are finding roots of unity, r=1{\displaystyle r=1} and θ=0.{\displaystyle \theta =0.} In other words, all of the roots lie on the unit circle.
+
+
+11/3=ei2πk/3=cos2πk3+isin2πk3, k=0,1,2{\displaystyle 1^{1/3}=e^{i2\pi k/3}=\cos {\frac {2\pi k}{3}}+i\sin {\frac {2\pi k}{3}},\ k=0,1,2}
+
+
+, When the roots are plotted on the complex plane, they form an equilateral triangle, where one of the vertices is on the point z=1.{\displaystyle z=1.} Additionally, the complex roots come in conjugate pairs. 
+
+
+11/3=1,−12+32i,−12−32i{\displaystyle 1^{1/3}=1,-{\frac {1}{2}}+{\frac {\sqrt {3}}{2}}i,-{\frac {1}{2}}-{\frac {\sqrt {3}}{2}}i}
+
+
+, The plot above is a complex plot of the function z3−1.{\displaystyle z^{3}-1.} The brightness starts from black and gets brighter as the magnitude increases. The hue starts from red and goes across the color wheel, corresponding to the angle going from 0{\displaystyle 0} to 2π.{\displaystyle 2\pi .} (More precisely, for every π/3,{\displaystyle \pi /3,} the color goes from red, yellow, green, cyan, blue, magenta, to red again.)
+
+As a starting point in interpreting, we see that on the real axis, the function maps the origin to -1. This is represented on the plot by cyan, as eiπ=−1,{\displaystyle e^{i\pi }=-1,} and the increasing brightness to the left means that the function is getting smaller and smaller. Meanwhile, the real axis is red for x>1,{\displaystyle x>1,} and gets brighter as well. We can clearly see the zeroes as three black dots which form an equilateral triangle.
+ As with the third roots, we know that the equation x5−1=0{\displaystyle x^{5}-1=0} has one root, 1, in the reals. Per the fundamental theorem of algebra, there are four other roots, and these roots must be complex. 
+,
+
+
+z1/5=r1/5ei(θ+2πk5){\displaystyle z^{1/5}=r^{1/5}e^{i\left({\frac {\theta +2\pi k}{5}}\right)}}
+
+
+, It is fine to leave answers in polar form. As we can see above, the zeros of the function z5−1{\displaystyle z^{5}-1} form a regular pentagon, and the complex roots form conjugate pairs, just as with the third roots of unity.
+
+
+11/5=ei2πk/5, k=0,1,2,3,4=1,ei2π/5,ei4π/5,ei6π/5,ei8π/5{\displaystyle {\begin{aligned}1^{1/5}&=e^{i2\pi k/5},\ k=0,1,2,3,4\\&=1,e^{i2\pi /5},e^{i4\pi /5},e^{i6\pi /5},e^{i8\pi /5}\end{aligned}}}
+
+

@@ -1,0 +1,21 @@
+ Unlike finding a single average, where we used a one-column list of numbers, to find a weighted average we need two sets of numbers. For the purpose of this example, we’ll assume the items are shipments of tonic, dealing with a number of cases and the price per case.
+
+
+For this example, we’ll include column labels. Enter the label “Price Per Case” in cell A1 and “Number of Cases” in cell B1.
+The first shipment was for 10 cases at $20 per case. Enter “$20” in cell A2 and “10” in cell B2.
+Demand for tonic increased, so the second shipment was for 40 cases. However, due to demand, the price of tonic went up to $30 per case. Enter “$30” in cell A3 and “40” in cell B3.
+Because the price went up, demand for tonic went down, so the third shipment was for only 20 cases. With the lower demand, the price per case went down to $25. Enter “$25” in cell A4 and “20” in cell B4.
+ Unlike figuring a single average, Excel doesn’t have a single function to figure a weighted average. Instead you’ll use two functions:
+
+
+SUMPRODUCT. The SUMPRODUCT function multiplies the numbers in each row together and adds them to the product of the numbers in each of the other rows. You specify the range of each column; since the values are in cells A2 to A4 and B2 to B4, you’d write this as “=SUMPRODUCT(A2:A4,B2:B4)”. The result is the total dollar value of all three shipments.
+SUM. The SUM function adds the numbers in a single row or column. Because we want to find an average for the price of a case of tonic, we’ll sum up the number of cases that were sold in all three shipments. If you wrote this part of the formula separately, it would read “=SUM(B2:B4)”.
+
+
+Since an average is determined by dividing a sum of all numbers by the number of numbers, we can combine the two functions into a single formula, written as “=SUMPRODUCT(A2:A4,B2:B4)/ SUM(B2:B4)”.
+ The average per-case price is the total value of the shipment divided by the total number of cases that were sold.
+
+The total value of the shipments is 20 x 10 + 30 x 40 + 25 x 20, or 200 + 1200 + 500, or $1900.
+The total number of cases sold is 10 + 40 + 20, or 70.
+The average per case price is 1900 / 70 = $27.14.
+

@@ -1,0 +1,22 @@
+
+Open Start
+
+
+
+
+
+.
+Type regedit into the Start window.
+Click regedit.
+Click Yes when prompted.
+Navigate to the Explorer folder.
+Click Edit.
+Select New, then click Key.
+Type Shell Icons into the key's name, then press ↵ Enter.
+Click the Edit tab.
+Select New, then click String Value.
+Type in 29, then press ↵ Enter.
+Double-click the 29 string value.
+Type %windir%\System32\shell32.dll,-50 into the Value data field.
+Click OK.
+Restart your computer.

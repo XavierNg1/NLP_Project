@@ -1,0 +1,65 @@
+ You can access the Control Panel from the Start menu, or by pressing the Windows key + X if you are using Windows 8. You will need to be logged in as an Administrator.;
+, Depending on the way Control Panel is configured, you may see a link labeled "Uninstall a program", an "Add/Remove Programs" icon, or a "Programs and Features" icon. Opening this will display a list of your currently installed programs.
+
+
+The list of installed programs may take a while to load.
+ Browse the list of installed programs and look for Conduit and other related programs. Depending on how Conduit was installed, there may be one or more programs that need to be removed, including "Search Protect by conduit", "Conduit Toolbar", "BrotherSoft Extreme Toolbar", and more.
+
+
+Don't worry too much if you can't find every program. By following all of the parts of this guide, you will render any remaining programs unable to function.
+ Select the program you want to delete and click the Uninstall or Remove button at the top of the list. This will start the uninstallation process for the program.
+
+
+Repeat this for any other programs you need to remove from the list.
+If the program isn't listed in Programs and Features, go directly to your program files and look for "XTab" or any program that might be installed without your notice. There should be a file named uninstall.exe. Double-click on that and It should uninstall the program.
+ You will be resetting Internet Explorer, which will disable all toolbars and add-ons, and reset all settings to default.
+ Click the Gear icon and select "Internet options", or click the Tools menu if there is no Gear icon.
+ Click the "Reset..." button. This will open the "Reset Internet Explorer Settings" window, which will show you what will be deleted and reset. Make sure to check the "Delete personal settings" box to reset your home page and search engines to default. you will not lose your bookmarks.
+ Once Internet Explorer resets, you will need to restart Internet Explorer.
+ You will be resetting Firefox, which will disable all toolbars and add-ons, and reset all settings to default.
+ Hover your mouse over "Help", and select "Troubleshooting Information". This will open a new tab in your Firefox browser.
+ Click "Reset Firefox" again in the confirmation window that appears. Firefox will close and reset. All add-ons and extensions will be removed, and your homepage will be reset. you will not lose your bookmarks.
+ You will be manually removing Conduit extensions, resetting your search engines, and changing you home page.
+ This is located in the upper-right corner of the Chrome window, and looks like three horizontal bars. Hover over Tools and select Extensions. This will open a new tab in the Chrome browser with a list of your installed Extensions.
+ Look for "Conduit Apps" and any other extensions that you don't recognize. Click the trashcan icon next to each entry in order to delete it.
+ This will open the Settings page, where you can adjust Chrome settings. Click the "Manage search engines..." button to open a list of all the search engines that have been installed into Chrome.
+ Click the "X" icon next to the Conduit search engine to remove it. Remove any other search engines that you don't recognize.
+
+
+Set Google or any other search engine that you prefer to default by hovering over it and click the "Make default" button.
+ Return to the Settings menu. Find the "On startup" section, and click the "Set pages" link. This will allow you to set what pages you want to appear when Chrome starts.
+ AdwCleaner is a free program that will target any malware installed into your browser. It should only be downloaded from the developer's website to ensure that you don't download a fake program.
+
+
+AdwCleaner is a small program, and doesn't need to be installed in order to run.
+Close any browser windows before running AdwCleaner.
+Run the scan. This may take several minutes to complete.
+Check the report. Once the scan is complete, you will be shown a report of all the programs and registry entries that will be removed. If you don't see anything on it you need to keep, click the "Delete" button.
+Reboot your computer.
+ This is another free program that will scan your computer and remove malware. It is important to run multiple programs, as none of them are perfect. Unlike AdwCleaner, Anti-Malware will need to be installed before you can run it. Only download this program directly from the developers, do NOT download it from sites such as Download.com or Softpedia.
+
+
+Scan your computer. This scan can take several minutes. You don't necessarily need to run the full scan.
+Remove any results. Make sure all the results that appear are checked, and then click the "Remove Selected" button to delete them.
+ HitmanPro is another free anti-malware program that you can use to scan your computer. Install it and select "Activate free license" during the installation process.
+
+
+Scan your computer. Remove any files that appear in the results., You can open the Registry Editor by pressing the Windows key + R and typing regedit. Be careful when using the Registry Editor, as changing the wrong thing can disrupt your copy of Windows., There will be a variety of registry keys that you will need to find. Use the directory in the left pane to navigate to each of the following keys:
+
+
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Active Setup\Installed Components\random
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\run\random
+HKEY_CURRENT_USER\Software\Microsoft\Installer\Products\5ATIUYW62OUOMNBX256 “(Default)”=”1?
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall\“UninstallString” =
+“‘%AppData%\\.exe” -u
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall\“ShortcutPath” =
+“‘C:\Documents and Settings\All Users\Application Data\5ATIUYW62OUOMNBX256.exe” -u’”
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce “5ATIUYW62OUOMNBX256”
+= “‘C:\Documents and Settings\All Users\Application Data\5ATIUYW62OUOMNBX256.exe’
+
+
+
+
+, Right-click on each entry to delete it. Once you are finished deleting each entry, reset your computer to finish the process. Once Windows resets, Conduit should be completely gone.

@@ -1,0 +1,9 @@
+
+If you do want the browser plugin, sudo apt-get install openjdk-6-jre icedtea6-plugin
+
+If you're working on a server without graphics, and want an environment just for running server applications (e.g. Tomcat or Glassfish), sudo apt-get install --no-install-recommends openjdk-6-jre-headless
+
+If you need the full JDK (for writing Java programs): sudo apt-get install openjdk-6-jdk
+
+
+apt-get automatically takes care of the dependencies and lists the changes for confirmation.

@@ -1,0 +1,252 @@
+ A complex number is a number that can be written in the form a+bi,{\displaystyle a+bi,} where i=−1.{\displaystyle i={\sqrt {-1}}.} The most important part of this number is what i{\displaystyle i} is. It is not found on the real number line at all. 
+
+Some examples of complex numbers are listed below. Notice that the number 3 is a complex number. It just has an imaginary component equal to 0, because 0i=0.{\displaystyle 0i=0.}
+
+
+2+3i{\displaystyle 2+3i}
+
+
+4−i{\displaystyle 4-i}
+
+
+3{\displaystyle 3}
+
+
+
+By convention, complex numbers are denoted using the variables z{\displaystyle z} and w,{\displaystyle w,} similar to x{\displaystyle x} and y{\displaystyle y} denoting some real numbers. So we say that z=a+bi.{\displaystyle z=a+bi.} Some authors may say z=x+iy.{\displaystyle z=x+iy.}
+
+As we can see, now we have a solution to the equation x2+1=0.{\displaystyle x^{2}+1=0.} After using the quadratic formula, we have x=±i.{\displaystyle x=\pm i.}
+;
+, We said that i=−1.{\displaystyle i={\sqrt {-1}}.} Then i2=−1.{\displaystyle i^{2}=-1.} If we multiply that with i{\displaystyle i} again, we get i3=−i.{\displaystyle i^{3}=-i.} Multiply i2{\displaystyle i^{2}} with itself and we get i4=1.{\displaystyle i^{4}=1.} This underscores a strange property of the imaginary unit. It takes four cycles to get to 1 (a positive number), whereas a number on the real number line -1 takes just two. 
+, A real number is a number that you are already familiar with; it exists on the real number line. A purely imaginary number is a number that is some multiple of i.{\displaystyle i.} The key concept to note here is that none of these purely imaginary numbers lie on the real number line. Instead, they lie on the imaginary number line.
+
+Below are some examples of real numbers.
+
+
+6{\displaystyle 6}
+
+
+145231{\displaystyle {\frac {145}{231}}}
+
+
+π{\displaystyle \pi }
+
+
+
+Below are some examples of imaginary numbers.
+
+
+2i{\displaystyle 2i}
+
+
+(3+5)i{\displaystyle ({\sqrt {3}}+{\sqrt {5}})i}
+
+
+
+What do all five of these numbers have in common? They are all part of the field known as the complex numbers. 
+
+The number 0 is notable for being both real and imaginary. 
+
+
+, In order to facilitate the imaginary numbers, we must draw a separate axis. This vertical axis is called the imaginary axis, denoted by the Im{\displaystyle {\mathrm {Im} }} in the graph above. Similarly, the real number line that you are familiar with is the horizontal line, denoted by Re.{\displaystyle {\mathrm {Re} }.} Our real number line has now been extended into the two-dimensional complex plane, sometimes called an Argand diagram.
+
+As we can see, the number a+bi{\displaystyle a+bi} can be represented on the complex plane by drawing an arrow from the origin to that point. 
+
+A complex number can also be thought of as the coordinates on a plane, though it is extremely important to understand that we are not dealing with the real xy-plane. It just looks the same because both are two-dimensional.
+
+Perhaps one of the most nonintuitive part of understanding complex numbers is that every number system that we have dealt with – integers, rationals, reals – are deemed to be "ordered." For example, it makes sense to think of 6 as being greater than 4. But in the complex plane, it is meaningless to compare if 4+i{\displaystyle 4+i} is greater than 3+2i.{\displaystyle 3+2i.} In other words, the complex numbers are an unordered field. 
+
+
+, By definition, every complex number can be written in the form z=a+bi.{\displaystyle z=a+bi.} We know that i=−1,{\displaystyle i={\sqrt {-1}},} so what do a{\displaystyle a} and b{\displaystyle b} represent?
+
+
+a{\displaystyle a} is called the real part of the complex number. We denote this by saying that Re⁡z=a.{\displaystyle \operatorname {Re} z=a.}
+
+
+b{\displaystyle b} is called the imaginary part of the complex number. We denote this by saying that Im⁡z=b.{\displaystyle \operatorname {Im} z=b.}
+
+
+(Important!) Both the real and imaginary parts are real numbers. So when someone refers to the imaginary part of some complex number w=c+di,{\displaystyle w=c+di,} they always refer to the real number d,{\displaystyle d,} not di.{\displaystyle di.} Certainly, di{\displaystyle di} is an imaginary number. But it is not the imaginary part of the complex number w.{\displaystyle w.}
+
+As a basic exercise, find the real and imaginary parts of the complex numbers given in step 1 of this part.
+ The complex conjugate z¯=a−bi{\displaystyle {\bar {z}}=a-bi} is defined as z{\displaystyle z} but with the sign of the imaginary part reversed. Conjugates are very useful in a number of scenarios. You may already be familiar with the fact that complex solutions to polynomial equations come in conjugate pairs. That is, if z0{\displaystyle z_{0}} is a solution, then z0¯{\displaystyle {\bar {z_{0}}}} must also be one as well.
+
+What is the significance of conjugates on the complex plane? They are the reflection over the real axis. As seen in the diagram above, the complex number z=x+iy{\displaystyle z=x+iy} has a real part x{\displaystyle x} and an imaginary part y.{\displaystyle y.} Its conjugate z¯=x−iy{\displaystyle {\bar {z}}=x-iy} has the same real part x{\displaystyle x} but a negated imaginary part −y.{\displaystyle -y.}
+
+
+, Because complex numbers are defined such that they consist of two components, it makes sense to them of them as two-dimensional. From this perspective, it makes more sense to make analogies using functions of two real variables, instead of just one, even though most complex functions are functions of one complex variable.
+ Now that we know what complex numbers are all about, let's do some arithmetic with them. Complex numbers are similar to vectors in this sense, because we add and subtract their components. 
+
+Let's say that we wanted to add two complex numbers z=a+bi{\displaystyle z=a+bi} and w=c+di.{\displaystyle w=c+di.} Then adding these two complex numbers is as simple as adding the real and imaginary components separately. All we do is to add the real parts, add the imaginary parts, and sum them up.
+
+
+z+w=(a+c)+(b+d)i{\displaystyle z+w=(a+c)+(b+d)i}
+
+
+
+The same idea works for subtraction as well.
+
+
+z−w=(a−c)+(b−d)i{\displaystyle z-w=(a-c)+(b-d)i}
+
+
+
+Multiplication is similar to FOILing from algebra.
+
+
+zw=(a+bi)(c+di)=(ac−bd)+(bc+ad)i{\displaystyle zw=(a+bi)(c+di)=(ac-bd)+(bc+ad)i}
+
+
+
+Division is similar to rationalizing the denominator from algebra as well. We multiply the numerator and the denominator by the conjugate of the denominator.
+
+
+zw=a+bic+di=(a+bi)(c−di)(c+di)(c−di)=ac+bdc2+d2+bc−adc2+d2i{\displaystyle {\frac {z}{w}}={\frac {a+bi}{c+di}}={\frac {(a+bi)(c-di)}{(c+di)(c-di)}}={\frac {ac+bd}{c^{2}+d^{2}}}+{\frac {bc-ad}{c^{2}+d^{2}}}i}
+
+
+
+The point of showing these steps is not to derive formulas to memorize, even though they do work. The point is to show that the operations of addition, subtraction, multiplication, and division of two complex numbers all must output another complex number that can be written in the form z=x+iy.{\displaystyle z=x+iy.} Adding two complex numbers gives another complex number, dividing two complex numbers also gives another complex number, etc.
+
+While messy, the above substeps were shown so that we are confident that the arithmetic of complex numbers is consistent with the way that we have defined them.
+ You are familiar with the commutative and associative properties of real numbers. Such properties extend into the complex numbers as well.
+
+Adding two complex numbers is commutative, because we are adding the real components separately, and we know that addition of real numbers is commutative.
+
+
+z+w=w+z{\displaystyle z+w=w+z}
+
+
+
+Adding two complex numbers is associative, for a similar reason.
+
+
+(z+w)+v=z+(w+v){\displaystyle (z+w)+v=z+(w+v)}
+
+
+
+There exists an additive identity of the complex number system. This identity is called 0.
+
+
+z+0=z{\displaystyle z+0=z}
+
+
+
+There exists an additive inverse of a complex number. The sum of a complex number with its additive inverse is 0.
+
+
+z+(−z)=0{\displaystyle z+(-z)=0}
+
+
+
+
+, 
+
+The commutative property holds for multiplication.
+
+
+zw=wz{\displaystyle zw=wz}
+
+
+
+The associative property holds for multiplication as well.
+
+
+(zw)v=z(wv){\displaystyle (zw)v=z(wv)}
+
+
+
+The distributive property holds for complex numbers.
+
+
+z(w+v)=zw+zv{\displaystyle z(w+v)=zw+zv}
+
+
+
+There exists a multiplicative identity of the complex number system. This identity is called 1.
+
+
+z(1)=z{\displaystyle z(1)=z}
+
+
+
+There exists an multiplicative inverse of a complex number. The product of a complex number with its multiplicative inverse is 1.
+
+
+z1z=1{\displaystyle z{\frac {1}{z}}=1}
+
+
+
+Why bother showing these properties? We need to make sure that the complex numbers are "self-sufficient." That is, they satisfy most of the properties of real numbers we are all familiar with, with one additional caveat foreign to the real number system: i2=−1,{\displaystyle i^{2}=-1,} which is what makes the complex numbers unique. The properties that have been laid out in the last two steps are needed to call the complex numbers a "field." For example, if there is no such thing as a multiplicative inverse of a complex number, then we cannot define what division is.
+
+Although a rigorous concept of a field is beyond the scope of this article, basically, the idea is that the properties shown above must be true in order for things in the complex plane to work out for all complex numbers, just like the field of real numbers. Luckily, these concepts are all intuitive in the reals, so they can easily be extended to the complex numbers.
+ On the real coordinate plane, coordinates can either be rectangular or polar. In the Cartesian system, any point can be labeled with a horizontal and a vertical component. In the polar system, a point is labeled with the distance from the origin (the magnitude) and the angle from the polar axis. Such coordinate transformations are given below.
+
+
+x=rcos⁡θ{\displaystyle x=r\cos \theta }
+
+
+y=rsin⁡θ{\displaystyle y=r\sin \theta }
+
+Looking at the diagram above, the complex number z{\displaystyle z} has two pieces of information defining it: r{\displaystyle r} and ϕ.{\displaystyle \phi .} r{\displaystyle r} is called the modulus of the number, while ϕ{\displaystyle \phi } is called the argument.
+ Substituting, we have the expression below.
+
+
+z=r(cos⁡θ+isin⁡θ){\displaystyle z=r(\cos \theta +i\sin \theta )}
+
+This is the complex number in polar form. We have its magnitude r=x2+y2{\displaystyle r={\sqrt {x^{2}+y^{2}}}} on the outside. Inside the parentheses, we have the trigonometric components, related to the Cartesian coordinates by θ=tan−1yx.{\displaystyle \theta =\tan ^{-1}{\frac {y}{x}}.}
+
+Sometimes, the expression inside the parentheses is written as cis⁡θ,{\displaystyle \operatorname {cis} \theta ,} which is an abbreviation for "cosine plus i sine."
+
+
+, Euler's formula eiθ=cos⁡θ+isin⁡θ{\displaystyle e^{i\theta }=\cos \theta +i\sin \theta } is one of the most useful relations in complex analysis because it fundamentally links exponentiation to trigonometry. The next part of this article gives a visualization of the complex exponential function, while the classic series derivation is given in the tips.
+
+
+z=reiθ{\displaystyle z=re^{i\theta }}
+
+Right now, you may ask, how can any complex number be represented as some number times an exponential? The reason is that because complex exponentials are rotations in the complex plane, the eiθ{\displaystyle e^{i\theta }} term gives us the information about the angle. 
+
+
+, We know that on the complex plane, the conjugate is simply a reflection over the real axis. That means that the cos⁡θ{\displaystyle \cos \theta } part is unchanged, but the sin⁡θ{\displaystyle \sin \theta } changes sign.
+
+
+z¯=r(cos⁡θ−isin⁡θ){\displaystyle {\bar {z}}=r(\cos \theta -i\sin \theta )}
+
+When we compact the notation using Euler's formula, we find that the sign of the exponent is negated.
+
+
+z¯=re−iθ{\displaystyle {\bar {z}}=re^{-i\theta }}
+
+
+
+
+, Recall from part 2 that, while addition and subtraction in Cartesian coordinates were straightforward, the other arithmetic operations were quite clumsy. In polar coordinates, however, they are made much easier.
+
+To multiply two complex numbers is to multiply their moduli and add their arguments. We can do this because of the properties of exponents. 
+
+
+z1z2=(r1eiθ1)(r2eiθ2)=r1r2ei(θ1+θ2){\displaystyle z_{1}z_{2}=(r_{1}e^{i\theta _{1}})(r_{2}e^{i\theta _{2}})=r_{1}r_{2}e^{i(\theta _{1}+\theta _{2})}}
+
+
+
+To divide two complex numbers is to divide their moduli and subtract their arguments.
+
+
+z1z2=r1eiθ1r2eiθ2=r1r2ei(θ1−θ2){\displaystyle {\frac {z_{1}}{z_{2}}}={\frac {r_{1}e^{i\theta _{1}}}{r_{2}e^{i\theta _{2}}}}={\frac {r_{1}}{r_{2}}}e^{i(\theta _{1}-\theta _{2})}}
+
+
+
+Geometrically speaking, this makes complex numbers a lot easier to grasp, and simplifies pretty much everything associated with complex numbers in general.
+ Complex functions require four dimensions to fully visualize their behavior, because a complex number is made up of two real parts. However, we can skirt past this obstacle by using hue and brightness as our parameters.
+
+The brightness is the absolute value (modulus) of the output of the function. The plot of the exponential function below defines black to be 0.
+
+The hue is the angle (argument) of the output of the function. One convention is to define red as the angle θ=0.{\displaystyle \theta =0.} Then, in increments of π3,{\displaystyle {\frac {\pi }{3}},} the color goes from yellow, green, cyan, blue, magenta, to red again, across the color wheel. 
+
+
+, The complex plot of the exponential function gives insights into how it can possibly be related to the trigonometric functions. 
+
+When we restrict ourselves to the real axis, the brightness goes from dark (near 0) in the negatives, to light in the positives, as expected.
+
+When we restrict ourselves to the imaginary axis, however, the brightness stays the same, but the hue changes periodically, with a period of 2π.{\displaystyle 2\pi .} This means that the complex exponential eiθ{\displaystyle e^{i\theta }} is periodic in the imaginary direction. This is to be expected from Euler's formula, because the trigonometric functions cos⁡θ{\displaystyle \cos \theta } and sin⁡θ{\displaystyle \sin \theta } are periodic with periods of 2π{\displaystyle 2\pi } each as well.
+
+

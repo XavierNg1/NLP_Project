@@ -1,0 +1,47 @@
+ In the default layout this should appear automatically as the biggest window displayed.;
+, Afterwards, select layout and then "Default".
+
+
+
+This is typically done in the form of x=and y=Remember to use the dot operator when multiplying or dividing vectors and matrices. Otherwise errors will occur.
+ In order to accomplish this, two commands must be used.
+
+
+The first is the mesh function. By using this, the result will be a wireframe mesh graph.
+The other is the surf function. When using surf, the result will be a 3-D surface plot.
+
+
+
+
+
+
+
+The command will be formatted as follows: =meshgrid(x,y).
+In the workspace window you will see that the variables xx and yy have been defined.
+
+
+
+Use the relationship you know exists between x and y. This is likely to be a function or formula.
+e.g., zz=xx.^2-yy.^2
+
+
+,
+
+From the z components in the matrix "zz", the surf command will create a 3-D shaded surface.
+This is the point in which you will relate xx, yy, and zz together.
+The actual command line will be in the format of surf(xx,yy,zz) .
+, There is a toolbar at the top of the window where the new plot has appeared. This toolbar contains many options and features that can be used to manipulate your 3-D plot.
+
+Some of these options include:
+
+Inserting a label for the x, y, or z axis
+Inserting a legend to help readers
+Rotating the plot in it's 3-D space
+Inserting a light source to show the effects of shadows
+
+
+A list of complex surface properties can be found at http://www.mathworks.com/help/matlab/examples/changing-surface-properties.html
+
+
+, This is done by using the command line shading interp.
+

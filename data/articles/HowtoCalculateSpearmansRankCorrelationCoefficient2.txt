@@ -1,0 +1,44 @@
+ This will organize the information you need to calculate Spearman's Rank Correlation Coefficient. You will need:
+
+6 Columns, with headers as shown below.
+As many rows as you have pairs of data.
+, Give the lowest number a rank of 1, the next lowest number a rank of 2, and so on.
+
+
+
+
+
+
+
+
+
+If two (or more) pieces of data in one column are the same, find the mean of the ranks as if those pieces of data had been ranked normally, then rank the data with this mean.
+In the example at right, there are two 5s that would otherwise have ranks of 2 and 3. Since there are two 5s, take the mean of their ranks. The mean of 2 and 3 is 2.5, so assign the rank 2.5 to both 5s.
+ That is, if one is ranked 1 and the other 3 the difference would be 2. (The sign doesn't matter, since the next step is to square this number.)
+
+,, This value is Σd2.
+
+
+
+
+
+
+If there were ties in any of previous steps, use the standard Spearman's Rank Correlation Coefficient formula instead:
+
+
+
+
+
+
+, It can vary between -1 and 1.
+
+Close to -1 - Negative correlation.
+Close to 0 - No linear correlation.
+Close to 1 - Positive correlation.
+Remember to divide by the exact total of results, then half it. After, divide it by Σd2.
+
+
+
+
+
+

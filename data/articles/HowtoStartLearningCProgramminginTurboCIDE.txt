@@ -1,0 +1,95 @@
+
+
+Turbo C++ may not work in Windows Vista and Windows 7. You may have to run it through another program called DosBox.
+
+
+
+ 
+
+
+Install the software DOSBox version 0.74
+
+
+
+
+
+
+Create a folder,for example "Turbo" (C:\Turbo\):
+
+
+
+
+
+
+Download and extract TC into the Turbo folder (c:\Turbo\):
+
+
+
+
+
+
+Run the DOSBox 0.74 from the icon located on the desktop:
+
+
+
+
+
+
+Type the following commands at the command prompt :
+mount d c:\Turbo\ Now you should get a message which says: Drive D is mounted as a local directory c:\Turbo\
+
+
+
+
+
+
+Type d: to shift to d:
+
+
+
+
+
+
+Next follow the commands below:
+
+
+cd tc
+cd bin
+tc or tc.exe
+In the Turbo C++ go to Options>Directories> Change the source of TC to the source directory ( i.e. virtual D: refers to original c:\Turbo\ . So make the path change to something like D:\TC\include and D:\TC\lib respectively )
+
+
+
+
+
+
+You can save yourself some time by having DOSBox automatically mount your folders and start TurboC++:
+For DOSBox versions older then 0.74 browse into program installation folder and open the dosbox.conf file in any text editor. For version 0.73 go to Start Menu and click on “Configuration” and then “Edit Configuration“. Then scroll down to the very end, and add the lines which you want to automatically execute when DOSBox starts.;
+,, Congratulate yourself, you're starting to learn C programming in Turbo C++ IDE!
+
+, It is case sensitive, modular and structured., These are predefined words reserved by the language. Each keyword has a specific function. We cannot use keywords for any other purpose.
+
+There are 32 keywords in C language.
+
+
+
+
+
+
+Every keyword is case sensitive.
+A keyword cannot be an identifier, variable or a function.
+Examples of keywords : void, if, else, do.
+ Variables are names given to certain memory blocks where the program will store certain values. To use a variable, the programmer will have to declare it first., Given below are the 4 most common and important data types and on the right hand side is their format-specifier.
+
+
+int --> %d
+float --> %f
+char --> %c
+double --> %f (Yes, float & double have the same format specifier)
+Strings are a part of char but the format specifier for strings is %s
+
+,,, ASCII is used occasionally in C programming.
+,, Read books related to C programming.
+
+Remember, you cannot master any language without determination and hard work.
+

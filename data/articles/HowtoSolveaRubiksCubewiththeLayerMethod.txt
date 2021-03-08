@@ -1,0 +1,244 @@
+ There are three types of piece on the Rubik's cube, based on their position in the cube:
+
+
+
+
+
+
+
+
+
+
+Center pieces are located in the center of each face, surrounded by eight other pieces. They have only one visible face, and do not move.
+
+Corner pieces are located at the corners of the cube. Each one has three visible faces.
+
+Edge pieces are located between the corner pieces. Each one has two visible faces.
+
+Note — Pieces can never switch to a different type. A corner piece will always be at a corner.;
+, The Rubik's cube has six faces (sides), each with a different color center. For example, the "red face" is the face with a red center, even if the other red pieces are somewhere else. However, it's often more useful to talk about the faces based on where they are in relation to the face you're looking at. Here are the terms this guide will use:
+
+
+
+
+
+
+
+
+
+
+F (Front) — Hold the cube up at eye level. You're looking directly at the Front face.
+
+B (Back) — The face directly opposite you (not visible).
+
+U (Upper) — Facing up, toward the ceiling
+
+D (Down) — Facing down, toward the floor
+
+R (Right) — Facing to your right
+
+L (Left) — Facing to your left
+
+, The terms "clockwise" and "counterclockwise" always assume you are looking directly at the face you are working on. With this in mind, a one-letter instruction (such as L) means to rotate that face clockwise 90º (one quarter turn). One letter plus an apostrophe (such as L') means to rotate that face counterclockwise 90º. Here are a few examples:
+
+
+
+
+
+
+
+
+
+
+F' tells you to rotate the Front face counterclockwise.
+
+R tells you to rotate the Right face clockwise. This means rotating the Right face away from you. (To see why this is true, start turning the Front face clockwise, then move the cube so this becomes the Right face.)
+
+L tells you to rotate the Left face clockwise. This means rotating the Left face toward you.
+
+U' tells you to rotate the Upper face counterclockwise, from the ceiling's perspective. This means rotating it toward you.
+
+B instructs you to rotate the back face clockwise, from the back wall's perspective. Be careful not to get confused, as this looks like counterclockwise from the Front perspective.
+ The number "2" after an instruction means you have to turn the face 180º instead of 90º. For example, D2 means rotate the down face 180º (two quarter turns).
+
+
+
+
+
+
+
+
+
+There's no need to specify clockwise or counterclockwise for these turns. Either way you'll end up in the same position.
+ The instructions will also refer to a specific pieces on the Rubik's cube. To do this, it lists each face the pieces is a part of.Here are a few examples:
+
+
+
+
+
+
+
+
+
+
+BD = the edge piece that belongs to the Back and Down faces.
+
+UFR = The corner piece with one square each on the Upper, Front, and right faces.
+Note — if the instructions are referring to a square (a single colored sticker), the first letter tells you which face the square is found on. For example:
+
+The LFD square → Find the corner piece that is part of the Left, Front, and Down faces. On this piece, identify the square on the Left face (since this is the first letter).
+ It will stay in this position until noted otherwise. The goal of this section is to put the white edge pieces around the white center, so it forms a '+ sign' or cross on the white face.
+
+
+These instructions assume you have a standard Rubik's cube, with the white face opposite the yellow face. If you have an older Rubik's cube, these instructions will be difficult to follow.
+Do not move the white center off of the Upper face. This is the most common mistake in this section.
+ There are so many possible starting configurations that it is not possible to give a step-by-step method for this process, but this process should help you get there:
+
+
+
+
+
+
+
+
+
+If there's a white edge square in the bottom row of the R or L face, rotate that face once to bring the white square to the middle row. Continue to the next bullet point.
+If there's a white edge square in the middle row of the R or L face, rotate either the F or B side, whichever is next to the white square. Rotate until the white square is in the Down face. Continue to the next bullet point.
+If there's a white edge square on the Down face, rotate the Down face until the white square is directly opposite an empty (non-white) edge space in the Upper face. Turn the entire cube so that "empty space" is located at UF (Upper face, next to Front face). Rotate F2 (forward 180º) to bring the white square into that UF position.
+Repeat for each white edge square, until they are all on the upper face.
+ Take a look at the upper edge pieces on the F, R, B, and L faces. You want each one to extend down to a center of the same color. For example, if the edge square FU (front face, next to upper face) is orange, then the F center square should also be orange. Here's how to accomplish this for all four of these faces:
+
+
+
+
+
+
+
+
+
+Rotate the U face until at least two of these faces have matching center and upper edge. (If all four match, skip the rest of this step.)
+Turn the whole cube so one of the incorrect edges is on the F face (and the white cross is still on the U face).
+Rotate F2 and confirm that one white edge is now on the D face. Check the other color on the same piece (position FD). For this example, this square is red.
+Rotate the D face until the red square is directly beneath the red center.
+Rotate the red face 180º degrees. The white edge should return to the U face.
+Check the D face for a new white edge square. Again, look for the other color attached to the same piece. For this example, this is green.
+Rotate the D face until the green square is directly beneath the green center.
+Rotate the green face 180º. The white cross should now be back on the U face. The F, R, B, and L faces should all have a matching center piece and upper edge.
+ This gets tricky, so read these instructions carefully. By the end of this step, your white face should have a white corner in addition to the white center and edges.
+
+
+
+
+
+
+
+
+
+Find a corner piece on the D face that includes white. The corner piece should have squares of three colors, which this article will call white, X, and Y. (At this point, the white face may not necessarily be on the D face.)
+Rotate the D face until the white/X/Y corner piece is between the X and Y faces. (Remember, the "X face" is the face with X as its center piece.)
+Turn the entire cube so the white/X/Y corner piece is in the DFR position, but don't worry about the exact position of each color on this piece. The F and R center squares should match the colors X and Y. Note that the Upper face is still white.
+From here there are three possibilities for the corner piece:
+
+If the white square is on the Front face (FRD position), apply F D F'.
+If the white square is on the Right face (RFD position), apply R' D' R.
+If the white square is on the Down face (DFR position), apply F D2 F' D' F D F'.
+ Use the same process to bring the three other white corners to the white face. At the end of this step, you should have a completely white Upper face. The F, R, B, and L faces should all have an upper row of three squares that match the center color.
+
+
+Sometimes, a white corner happens to already be in the U (white) face, but in the wrong position, so the other two squares do not match the center on the same face. If this happens, turn the cube so that corner is in the UFR position, then apply F D F'. Now the white square is in the D face, and you can move it to the right position as described above.
+ The white face is still in the Upper position, and the incomplete yellow face is in the Down position. Check the D face and find an edge piece that does not have any yellow on it. Make a note of the two colors on this edge piece:
+
+
+The color on the D face is color X.
+The other color on the same piece is color Y.
+This must be an edge piece. Do not start with a corner piece.
+ Turn the entire cube on its vertical axis (as a globe would spin). Stop when the face with a center square of color X is the new Front face.
+
+
+The U and D faces should stay the same during this movement.
+ Rotate the D face in either direction, until the X/Y edge piece is in the DB position. X should be on the D face, and Y should be on the B face.
+ The exact move necessary depends on where the center with color Y is located:
+
+
+
+
+
+
+
+
+
+If color Y matches the center of the R face, apply F D F' D' R' D' R.
+If color Y matches the center of the L face, apply F' D' F D L D L'.
+ Find a new edge piece on the D face with no yellow squares. (If you can't find one, go to the next step.) Repeat the above steps in this section to move it to the correct position. Once you're finished, the F, R, B, and L faces should each have matching top and middle rows.
+ Make sure you've checked all four edge pieces on the D face. Each one has two colored squares, and both squares must not be yellow for the steps in this section to work. If none of the edge pieces match this description (and the top two layers aren't finished yet), make the following adjustments:
+
+
+Pick an edge piece that does contain yellow.
+Rotate the whole cube so this edge piece is in the FR position. The white face should still be on top. (Do not change any faces; just turn the entire cube.)
+Apply F D F' D' R' D' R.
+Now you should have a non-yellow edge piece on the D face. Go back to the start of this section and repeat the instructions for that edge piece.
+ The cube will remain in this position until the cube is solved.
+ Note the number of yellow edges on the U face. (Remember, corners are not edge pieces). From here there are four possibilities:
+
+
+
+
+
+
+
+
+
+If there are exactly two opposite yellow edges on the U face: Rotate the U face until the two edges are in the UL and UR positions. Apply B L U L' U' B'.
+If there are exactly two adjacent yellow pieces, UF and UR (like an arrow pointing to back left): Apply B U L U' L' B'.
+If there are no yellow edges: Apply either one of the above move sequences. This should bring two yellow edges to the top. Use one of the sequences above again, depending on where the edges are located.
+If there are four edges: You're done creating the yellow cross. Go to the next step.
+ Turn the whole cube until the blue face is in Front, and the yellow face is still the Upper face. Move the yellow corners in place as follows:
+
+
+Rotate the U face until the UFR corner piece does not have yellow on the Upper face.
+There are two possibilities for the corner:
+
+If this corner piece has yellow on the F face, apply F D F' D' F D F' D'.
+If this piece has yellow on the R face, apply D F D' F' D F D' F'.
+
+
+
+Note: At this point, the cube is going to look screwed up. Don't worry. It will fix itself later.
+ Keeping blue as your Front face, rotate the U face to bring another corner to the UFR position. Repeat the step above to move the yellow to the Upper face. Repeat until the entire Upper face is yellow.
+ For example, if the F face has a blue center, rotate the U face until the square above the blue center is also blue. You must have exactly one edge pieces that matches the center, not two or three.
+
+
+
+
+
+
+
+
+
+
+If all four edge pieces line up with the matching center: line them up and skip down to "Complete the Cube."
+
+If this is not possible: apply R2 D' R' L F2 L' R U2 D R2 and try again.
+ Once you've lined up exactly 1 of the 4 edge pieces, adjust the cube as follows:
+
+
+
+
+
+
+
+
+
+Turn the cube so this matching edge is on the Left face.
+Check whether square FU matches the R center:
+
+If it does, apply R2 D' R' L F2 L' R U2 D R2 and move on to the next step. The cube should now be finished except for the corners.
+If it doesn't, apply U2 and turn the whole cube as though it were a globe, so the F face becomes the R face. Apply R2 D' R' L F2 L' R U2 D R2.
+ Now we only have the corners to go:
+
+
+If you have a corner in the correct position, move down to the next bullet point. If none of the corners are in the correct position, apply L2 B2 L' F' L B2 L' F L'. Repeat until you have a corner in the correct position.
+Rotate the cube so the correct corner is in the FUR position, and the FUR square matches the F center color.
+Apply L2 B2 L' F' L B2 L' F L' .
+If the cube is not complete, apply L2 B2 L' F' L B2 L' F L' an additional time. You have now solved the Rubik's cube!
+

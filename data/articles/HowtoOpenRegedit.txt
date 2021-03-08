@@ -1,0 +1,36 @@
+ You can also press ⊞ Win+R in any version. If you can't open the Start menu, see the next section.Windows 8 - Open the Start screen and type run, or find Run in the All Apps list.
+
+Windows 8.1 - Right-click the Start button and select "Run".
+
+Windows 10 - Right-click on the Start button logo and select "Run".;
+, This will start the Registry Editor.
+
+
+Depending on your computer's security settings, you may be prompted to confirm that you want to start the Registry Editor.
+Access to the Registry Editor requires administrator permissions.
+ Use the menu on the left side of the Registry Editor to find the keys you need. Many folders will contain multiple levels of subfolders. Keys in each folder will be displayed in the right frame.
+ When you double-click a key in the right frame, a window will appear allowing you to edit the values. You should only edit keys if you know what you are doing or are following qualified instruction. Modifying keys will change how your system runs, and could cause Windows to malfunction.
+
+
+
+Click here for more tips on safely editing the registry.
+ There are several ways that you can open the Command Prompt, which allows you to open it if something is preventing you from using one way:Click the Start menu and select Command Prompt. If you're using Windows 8.1, right-click the Start button and select Command Prompt. If you're using Windows 8, you can find the Command Prompt in the All Apps list on the Start screen.
+Press ⊞ Win+R, type cmd, and press ↵ Enter.
+Press Ctrl+⇧ Shift+Esc to open the Task Manager. Click the "File" menu, hold Ctrl, and click "Run new task".
+ You can do this from any location in the Command Prompt. The Registry Editor will open in a separate window. You may be asked to confirm that you want to open it.
+ The folder tree on the left will allow you to find the key that you need. Expand the folders to see additional subfolders. Selecting a folder will display any keys it contains in the right frame.
+ When you find a key in the right frame that you want to edit, double-click it to open it. Be careful when making changes, as changing the wrong thing can cause Windows to malfunction.
+
+
+
+Click here for more tips on safely editing the registry.
+ If the Registry Editor will not start, there may be a problem with your system settings. This is typically caused by a virus or malware infection. You can make a change to allow access to the Registry Editor again, but it is highly recommended that you take steps to remove any infections as well.
+
+
+See Step 1 in the previous section for instructions on opening the Command Prompt.
+You can also boot into "Safe Mode with Command Prompt" if you are having trouble opening the Command Prompt in Windows. Click here for instructions on booting into Safe Mode.
+ You'll be using the Command Prompt to delete a specific registry key that is blocking the Registry Editor from opening. Enter the following command and press ↵ Enter:reg delete "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\regedit.exe"
+
+, Use either of the above two methods to launch the Registry Editor.
+ There's a very good chance that the reason your Registry Editor was blocked is because you have a virus or other malware infection. This could have come from an illegally downloaded game or program, from an email attachment, or bundled along with another program. Click here for detailed instructions on removing virus and malware infections. For really bad cases, you may be better off completely reinstalling Windows.
+

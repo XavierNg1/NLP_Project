@@ -1,0 +1,137 @@
+ Give it an arbitrary name and write something in it, such as I love wikiHow!. In this article, we will name it file.txt., You can add throws IOException declaration to the method signature to avoid adding the catch block to the try-with-resources block.
+
+
+
+
+public static void main(String[] args) {
+ 
+}
+
+
+
+
+, Try-with-resources block will automatically close streams for us.
+
+
+
+
+public static void main(String[] args) {
+  try () {
+ 
+  }
+}
+
+
+
+
+, In the constructor of the created input stream, create a FileReader and specify the name of the text file previously created inside its constructor. In this article, we called it file.txt.
+
+
+
+
+public static void main(String[] args) {
+  try (BufferedReader in = new BufferedReader(new FileReader("file.txt"))) {
+ 
+  }
+}
+
+
+
+
+, In the constructor of the created output stream, create a FileWriter and specify another arbitrary text file name in its constructor. In this article, we will name it file-copy.txt.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      BufferedReader in = new BufferedReader(new FileReader("file.txt"));
+      BufferedWriter out = new BufferedWriter(new FileWriter("file-copy.txt"))
+  ) {
+ 
+  }
+}
+
+
+
+
+, This variable will be used for temporary storage of read lines.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      BufferedReader in = new BufferedReader(new FileReader("file.txt"));
+      BufferedWriter out = new BufferedWriter(new FileWriter("file-copy.txt"))
+  ) {
+    String line;
+  }
+}
+
+
+
+
+, Create a while loop in which the lines are read into the previously created String variable until it reads null. In other words, it reads data from the file until it reaches the end of the file.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      BufferedReader in = new BufferedReader(new FileReader("file.txt"));
+      BufferedWriter out = new BufferedWriter(new FileWriter("file-copy.txt"))
+  ) {
+    String line;
+    while ((line = in.readLine()) != null) {
+ 
+    }
+  }
+}
+
+
+
+
+, In the body of the while loop, write the read lines to the output stream and append the line separator at the end of each line. BufferedReader reads lines, but omits the line separator.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      BufferedReader in = new BufferedReader(new FileReader("file.txt"));
+      BufferedWriter out = new BufferedWriter(new FileWriter("file-copy.txt"))
+  ) {
+    String line;
+    while ((line = in.readLine()) != null) {
+      out.write(line + System.lineSeparator());
+    }
+  }
+}
+
+
+
+
+, Add a catch block to the try-with-resources block, catch IOException and, in case of an error, print the stack trace to the console.
+
+
+
+
+public static void main(String[] args) {
+  try (
+      BufferedReader in = new BufferedReader(new FileReader("file.txt"));
+      BufferedWriter out = new BufferedWriter(new FileWriter("file-copy.txt"))
+  ) {
+    String line;
+    while ((line = in.readLine()) != null) {
+      out.write(line + System.lineSeparator());
+    }
+  } catch (IOException e) {
+    e.printStackTrace();
+  }
+}
+
+
+
+
+, Contents of the file.txt are copied to the file-copy.txt which, if it doesn't exist yet, is created.

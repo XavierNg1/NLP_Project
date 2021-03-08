@@ -1,0 +1,35 @@
+;
+, Unlike on Mac, there is no self-extracting installer for Windows. Windows users will need to install a number of developer tools to use webkit. All necessary tools and specifications can be downloaded here
+
+, Open your HTML file and reference your CSS style sheet with the following code:.<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+
+You can write the CSS reference before creating the CSS file, but you must be sure that the CSS filename matches the one in your code (in this example, “mystyle.css").
+Your HTML and CSS code will remain separate, but run together when you load your HTML file., Your code might look something like:.<div class="marquee">Scrolling text goes here.</div>
+
+
+div is an HTML element that defines the area on the page that will contain components of the code, in this case your scrolling marquee.
+ “Go to File > Save As…” Append your HTML file with a .html extension.
+ The shorthand syntax for creating a scrolling marquee with CSS is : “-webkit-marquee: ”. The webkit tag is necessary because the CSS module that contains the marquee class is part of the Webkit CSS specification.will define which direct the marquee scrolls
+measures the pixel distance between each step of the scroll
+is the number of times the marquee will run
+can determine a simple scroll or bouncing text
+is how fast the text moves.
+ Set the values in the brackets (remove the brackets, since they are just a placeholder). This will tell your marquee how to act on the page. Your code might look like:.-webkit-marquee: auto medium infinite scroll normal;
+
+
+The ‘auto’ direction uses the default right-to-left, ‘medium’ sets a default interval of 6 pixels, ‘infinite’ sets the marquee to run an unlimited number of times, ‘scroll’ sets the style to a linear movement, and ‘normal’ is a default setting for scrolling speed.
+ Add .overflow-x: -webkit-marquee; to a new line in your code. This will make the text scroll continuously along instead of stopping at the edge of the div.’overflow-x’ specifies what to do with text that exceeds the limit of the space on the x-axis.
+'-webkit-marquee' is directing the overflow command towards the marquee module in webkit.
+Your full code might look like:.-webkit-marquee: auto medium infinite scroll normal;
+overflow-x: -webkit-marquee;
+
+
+, “Go to File > Save As…” Append your CSS file with a .css extension.
+ Drag and drop the file to your browser to open. Your scrolling marquee will display on the page.
+
+
+Use a webkit supported browser, like Chrome or Safari to make sure the marquee displays as expected.
+

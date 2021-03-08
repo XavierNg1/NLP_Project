@@ -1,0 +1,64 @@
+ The Polygon constructor function needs an array of coordinate arrays; define this array in a variable first so that you can use it later. Simply copy the following line of code into your <script></script> element:.
+
+
+
+
+
+var coordinates = , , , ];
+var polygon_feature = new ol.Feature({
+  geometry: new ol.geom.Polygon(
+    )
+});
+
+
+;
+, To add the polygon to the map, you need to add it to a source, which you add to a vector layer, which you can then add to the map:
+
+
+
+
+var vector_layer = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    features: })
+})
+map.addLayer(vector_layer);
+
+
+
+
+,
+
+
+
+
+var current_projection = new ol.proj.Projection({code: "EPSG:4326"});
+var new_projection = tile_layer.getSource().getProjection();
+polygon_feature.getGeometry().transform(current_projection, new_projection);
+
+
+
+
+, The sphere should be the size of the Earth (should have a radius of 6.3m meters). Technically, the sphere has a radius is equal to the semi-major axis of the WGS84 ellipsoid.
+
+
+
+
+var sphere = new ol.Sphere(6378137);
+
+
+
+
+, Because the method provides a value in square metres, divide by a million to get square kilometres.
+
+
+
+
+var area_m = sphere.geodesicArea(coordinates);
+var area_km = area_m / 1000 / 1000;
+console.log('area: ', area_km, 'km²');
+// CONSOLE: area:  2317133.7166773956 km²
+
+
+
+
+, We know that it's correct because it appears to be approximately the same size as Algeria, which has an area of 2,381,741 km² (from Wikipedia).

@@ -1,0 +1,45 @@
+
+Gather your components.
+Flip the battery pack over so that the flat back is facing up.
+Align the two servos on the end of the battery pack.
+Affix the servos with your tape or glue.
+Affix the breadboard perpendicularly on the open space on the battery pack.
+Attach the Arduino microcontroller to the tops of the servos.
+Put the wheels on the servos.
+Attach the caster to the bottom of the breadboard.
+Break off two 3-pin headers.
+Insert the two headers into pins 1-3 and 6-8 on row E of the breadboard.
+Connect the servo cables to the headers, with the black cable on the left side (pins 1 and 6).
+Connect red jumper wires from pins C2 and C7 to red (positive) rail pins.
+Connect black jumper wires from pins B1 and B6 to blue (ground) rail pins.
+Connect white jumper wires from pins 12 and 13 on the Arduino to A3 and A8.
+Attach the sensor to the front of the breadboard.
+Connect a black jumper wire from pin I14 to the first available blue rail pin on the left of the sensor.
+Connect a red jumper wire from pin I17 to the first available red rail pin to the right of the sensor.
+Connect white jumper wires from pin I15 to pin 9 on the Arduino, and from I16 to pin 8.
+Flip the robot on its side so that you can see the batteries in the pack.
+Connect a red wire to the second spring from the left on the bottom.
+Connect a black wire to the last spring on the bottom-right.
+Connect the red and black wires to the far-right red and blue pins on back of the breadboard.
+Connect a black wire from the GND pin on the Arduino to the back blue rail.
+Connect a black wire from the back blue rail to the front blue rail at pin 29 for each.
+Connect a red wire from the front red rail at pin 30 to the 5V pin on the Arduino.
+Insert the push button switch in the gap between rows on pins 24-26.
+Connect a red wire from H24 to the red rail in the next available pin to the right of the sensor.
+Use the resistor to connect H26 to the blue rail.
+Connect a white wire from G26 to pin 2 on the Arduino.
+Download and extract the Arduino IDE.
+Connect the battery pack to the Arduino.
+Plug the Arduino into your computer via USB.
+Press .⊞ Win+R and type devmgmt.msc.
+Right-click on the "Unknown device" in the "Other devices" section and select "Update Driver Software.",
+Select "Browse my computer for driver software.",
+Click "Browse" then navigate to the folder that you extracted earlier.
+Select the "drivers" folder and click "OK." Confirm that you want to proceed if you're warned about unknown software.
+
+,
+Start the Arduino IDE by double-clicking the arduino.exe file in the IDE folder.
+Paste the following code to make your robot go straight.
+Build and upload the program.
+Add the kill switch functionality.
+Upload and test your code.

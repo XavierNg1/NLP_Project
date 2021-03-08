@@ -1,0 +1,19 @@
+ This does not involve any bit of scripting, but in order to activate all of the data store API, you must first enable the API access. To do this, go to the Develop tab, and click on "Games". This should direct you to all of the current game places you own. Find your game, and click on the gear. There should appear a dropdown menu, and simply press "Configure". Check the box enabled "Enable Studio Access to API Services", and save. You should now have access to the complete API.;
+, Use the Data Store API to call for the data store, as we will need to reference it. To start, open a script on ROBLOX, and name a variable that we would like to use to call for the reference.
+
+
+
+
+
+
+local datastore = game:GetService("DataStoreService"):GetDataStore("name")
+
+
+
+
+
+, You've successfully called the datastore with the variable "datastore". Now, whenever you need to retrieve the datastore, you can simply name it by its variable.
+
+
+Please note that if a data store has not been created yet, it will automatically create a new one.
+

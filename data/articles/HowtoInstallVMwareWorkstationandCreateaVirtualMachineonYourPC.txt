@@ -1,0 +1,69 @@
+ Click here for a list of the requirements.
+
+
+Quick overview:
+
+Operating System: Windows or Linux 64-bit
+CPU:
+
+To run 32-bit virtual machines: 64-bit; 1.3 GHz or higher
+To run 64-bit virtual machines: the above requirements along with VT-x support if you have an Intel processor (make sure that it is enabled in the BIOS), or the above requirements along with long mode support if you have an AMD processor.
+
+
+RAM: 1 GB is minimum, but 2 GB is recommended
+GPU: at least a 16 or 32 bit display adapter (you probably have a 32-bit display adapter). If you want Windows Aero graphics to work in Windows virtual machines, then you should have either an NVIDIA GeForce 8800GT graphics card or newer or an ATI Radeon HD 2600 graphics or newer.
+HDD space: 3.5 GB is required to install the program alone, but virtual machines will take up even more space.
+
+;
+, Click here to open the log-in page, and either enter the log-in details of an account and click the Log In button, or click Register to create a new account.
+
+
+You might be able to find the log-in details of a public account on this website.
+ Once you have logged into an account, click here to open the download page for VMware Workstation and download it.
+ Double-click the file that you downloaded. If the User Account Control or Open File - Security Warning dialog appears, click Yes or Run respectively.
+,,, To install it into a directory other than the default one, click Change... and browse to the desired directory. After deciding on where to install VMware Workstation, click Next >.
+
+
+If you install VMware Workstation on a network drive, you cannot run it when the network drive is inaccessible.
+, This information is used to help improve the program. Click Next > after you have made your decision.
+ Choices include the Desktop and the Start menu. Deselect any shortcuts you do not want the installer to create and then click Next >.
+ If you want to change any options, click < Back to return to them, change them, then click Next > until you reach this screen again once you've finished. Once you are ready to begin installing VMware Workstation, click Continue.
+ Type a license key and click Enter >.
+ Click the Finish button once setup completes its operations.
+ Double-click the file that you downloaded. If the User Account Control or Open File - Security Warning dialog appears, click Yes or Run respectively.
+,,, Deselect components of VMware Workstation that you do not want to install, and select components to include them in the installation.
+ To install it into a directory other than the default one, click Change... and browse to the desired directory. After deciding on where to install VMware Workstation, click Next >.
+
+
+If you install VMware Workstation on a network drive, you cannot run it when the network drive is inaccessible.
+ Click Change... and select the desired directory to change this setting, or leave the setting as is for the default virtual machine folder.
+ This option can usually be left alone.
+, This information is used to help improve the program. Click Next > after you have made your decision.
+ Choices include the Desktop and the Start menu. Deselect any shortcuts you do not want the installer to create and then click Next >.
+ If you want to change any options, click < Back to return to them, change them, then click Next > until you reach this screen again once you've finished. Once you are ready to begin installing VMware Workstation, click Continue.
+ Type a license key and click Enter >.
+ Click the Finish button once setup completes its operations.
+,
+Choose File > New Virtual Machine to begin creating your virtual machine.
+, Click Installer disc then select a disc drive if you have a physical setup disc inserted into your computer. If you have an ISO file (copy of a physical disc), click Installer disc image file (iso) then select it. Click Next > after choosing your options.
+
+
+If VMware cannot recognize which operating system the disc/ISO file is supposed to install, you may have to select it manually after performing this step.
+If VMware Workstation recognizes that the installation media you chose is for Windows XP or later, you might be asked to enter the product key (optional), username (required), and password (optional), and select the version of Windows to install (some Windows setup discs enable you to select one out of several versions of the operating system to install). After providing the information and selecting the version of Windows to be installed, click Next >.
+
+VMware Workstation asks for this information because Easy Install (automatic installation) is supported for Windows XP and later. If you want to skip Easy Install, scroll down to the Tips section before performing Step 6.
+
+
+If the selected installation media installs a support Linux distro (such as Ubuntu), you might be asked to enter your name, username, and password. After providing the information, click Next >.
+
+VMware Workstation asks for this information because Easy Install (automatic installation) is supported for the operating system. If you want to skip Easy Install, scroll down to the Tips section before performing Step 6.
+ If you want to change the directory that the virtual machine is to be installed in, click Browse... and select it, or edit the path manually. Click Next > after choosing your options.
+
+
+
+The amount of space that you give to the virtual hard disk will not be immediately allocated. The space taken up by the virtual hard drive's file on your actual hard drive equals the total size of the files written to it. For example, if you create a 100 GB virtual HDD, its file will take up no space on your real HDD, but if you install an operating system that takes up 5 GB of space in the virtual HDD, the file's size will increase to 5 GB.
+,,
+
+
+When you start the virtual machine, you might receive an error. Click I copied it if this happens.
+

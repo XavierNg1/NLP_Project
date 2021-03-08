@@ -1,0 +1,14 @@
+ You will first need to download the Minecraft server that your PEX is compatible with. For example, PEX Version 1.8 would be compatible with Minecraft Server Version 1.8.;
+, You will need either a Bukkit or Spigot Minecraft server. You may need to reload the server after you have added the plugin.
+ Now you've created a group. In this article, the group will be called "member".
+ Enter "/pex group member add (permissions node)" in the chat menu. For example, if you want to allow a group to enter the command "/suicide", you would enter "/pex group member add essentials.suicide", and the group would then have permission to enter "/suicide".
+
+
+To remove a permission, enter "/pex group member remove (permission node)".
+ Enter "/pex default group member (world)". If the world is not set, the default rank in every world will be Member.
+ Enter "/pex group new setparent member" in the chat menu.
+
+
+Know what parents are. Parents are commands passed down from higher-ranked groups. For example, if Group 1 has permission to use "/help", "/suicide", and "/kill", and you set Group 2's parent to Group 1, Group 2 could use the same commands. If you enable a command for Group 1, both Group 2 and Group 1 will have the new command. However, if you give Group 2 a new command, only Group 2 will get that command.
+ To change someone's group, enter '/pex user (username) group set member".
+

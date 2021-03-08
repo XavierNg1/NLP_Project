@@ -1,0 +1,18 @@
+ Find your Notepad program, using the search bar if necessary. Right click it and select Run as administrator. You will need to enter an administrator password in order to block sites for the entire computer.;
+, You can use this file to tell your computer that a website is actually a device connecting to your computer, preventing it from working as usual. Click File → Open in Notepad, then find and open the hosts file at Computer → C: → Windows → System32 → drivers → etc → hosts.If you can't find "Windows," look for "WINNT," "WINNT35," or "WTSRV" instead.
+If you found the "etc" folder, but don't see a "hosts" file, click Show all files at the bottom right of the Notepad "open file" screen.
+ If you accidentally delete or alter an important line in this document, your computer could fail to load any web pages. Create a backup Notepad file on your desktop or another obvious location, copy-paste the entire contents of the "hosts" document into it, and save it as "hosts file backup" or a similar name.
+
+
+If you accidentally alter the wrong part of the hosts file and something goes wrong, just copy the information back from your hosts backup, and paste it back into the actual hosts document, replacing all the old text.
+ Close your backup file, and return to the actual hosts file. Look for the word "localhost." This is usually at the bottom of the document, where something similar to "127.0.0.1 localhost" or "::1 localhost" is written. Click at the end of this line to start typing.
+ First, hit "enter" or "return" on your keyboard to start a new line. On this line, type "127.0.0.1" followed by a space, then type the URL of the website you want to block, such as "www.facebook.com".
+
+
+Include the "www." in the website name, but do not include "http://"., You can block as many websites as you like. Make sure to put each one on a separate line, using "127.0.0.1" followed by a space before you enter the website URL.
+ Navigate to File → Save in the Notepad menu, and save the file with the same name. Click OK if any warnings show up, and do not save it to another folder even if prompted to.
+
+
+If you cannot save your file, try disabling Norton, McAfee, or other antivirus protection software, since these could be blocking you. Activate them again after you are finished saving the document.
+ You might need to restart your browser before you notice any changes, or clear your cache in the browser's preferences. However, even if you do neither of these, you should notice that the websites you listed are blocked within a few minutes.
+

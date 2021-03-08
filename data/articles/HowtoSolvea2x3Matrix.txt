@@ -1,0 +1,58 @@
+ Linear equations have distinct components. The variable is the symbol (usually a letter like x or y) for a number you do not yet know. The constant is a number that remains consistent. The coefficient is a number before a variable, which is used to multiply it.
+
+
+For example, in the linear equation 2x + 4y = 8, x and y are variables. The constant is 8. The numbers 2 and 4 are coefficients.;
+, A system of equations with two variables can be written as follows:
+ax + by = p
+cx + dy = q
+Any of the constants (p, q) can be zero, with the exception that each equation must have at least one variable (x, y) in it.
+ When you have a linear system, you can use a matrix to rewrite it, then use the algebraic properties of that matrix to solve it. To rewrite a linear system, you use A to represent the coefficients matrix, C to represent the constants matrix, and X to represent the unknown matrix.
+
+
+The linear system above, for example, can be rewritten as a matrix equation as follows: A x X = C.
+ An augmented matrix is a matrix obtained by appending columns of two matrices. If you have two matrices, A and C, which looks like this:
+You can create an augmented matrix by putting them together. The augmented matrix would look like this:
+
+
+For example, consider the following linear system:
+2x + 4y = 8
+x + y = 2
+Your augmented matrix would be a 2x3 matrix that looks like this:
+
+, You can perform certain operations on a matrix to transform it while keeping it equivalent to the original. These are called elementary operations. To solve a 2x3 matrix, for example, you use elementary row operations to transform the matrix into a triangular one. Elementary operations include:
+
+
+swapping two rows.
+multiplying a row by a number different from zero.
+multiplying one row and then adding to another row.
+ You want to produce zero in your second row, so multiply in a way that lets you do that.
+
+
+For example, say you have a matrix that looks like this:
+You can keep the first row and use it to produce zero in the second row. To do that, first multiply the second row by two, as follows:
+
+, In order to get to zero for the first row, you may need to multiply again, using the same principle.
+
+
+In the example above, multiply the second row by -1, as follows:
+When you complete the multiplication, your new matrix looks like this:
+
+, Next, add the first and second rows to produce zero in the first column of the second row.
+
+
+In the example above, add the two rows together as follows:
+
+, At this point, you have a triangular matrix. You can use that matrix to get a new linear system. The first column corresponds to the unknown x, and the second column corresponds to the unknown y. The third column corresponds to the free member of an equation.
+
+
+For the example above, your new system would therefore look like this:
+
+, Using your new system, determine which variable can be determined easily, and solve for it.
+
+
+In the example above, you’ll want to “backsolve” – moving from the last equation to the first when solving for your unknowns. The second equation gives you an easy solution for y; since the x has been removed, you can see that y = 2.
+ Once you’ve determined one of the variables, you can substitute its value into the other equation to solve for the other variable.
+
+
+In the example above, replace the y with a 2 in the first equation to solve for x as follows:
+

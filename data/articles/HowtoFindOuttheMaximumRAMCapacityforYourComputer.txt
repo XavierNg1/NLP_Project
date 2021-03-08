@@ -1,0 +1,28 @@
+ The Windows operating system has a maximum amount of RAM that it will recognize. If you have more RAM installed than is allowed, the extra RAM will not be used. This limit is determined by whether Windows is 32-bit or 64-bit.
+
+
+See this guide for details on checking your copy of Windows. Generally you can see whether Windows is 32- or 64-bit from the System Properties window (⊞ Win+Pause)
+32-bit can support up to 4 GB (for all versions) of RAM
+64-bit can support up to 128 GB (Windows 10 Home) to 2 TB (Windows 10 Education, Enterprise, Pro) of RAM;
+, The amount of RAM your Mac can support depends on the model you are using. Many Macs have differing amounts of supported memory. Check your Mac's documentation for exact numbers. Some of the more popular models include:iMac (27-inch, Late 2013) - 32 GB
+
+iMac (2009-Late 2012) - 16 GB
+
+iMac (2006-2009) - 4 GB
+
+
+, A 32-bit Linux installation may only support up to 4 GB, but if it has the PAE kernel enabled (most newer distributions do), then a 32-bit system can support up to 64 GB of RAM. A 64-bit Linux system can theoretically support up to 17 billion GB of RAM, though most cap out at 1 TB (Intel) or 256 TB (AMD64).To determine the exact amount your system can support, open the Terminal by pressing Ctrl+Alt+T. Type sudo dmidecode -t 16. You will be asked for the administrator password. Look for the Maximum Capacity: entry.
+ Even if your operating system supports a ton of RAM, you are still limited by what your motherboard can support. If you don't have access to your motherboard documentation, you will need to identify the motherboard and look up the specifications online.
+
+
+You will most likely need to open your computer case and note the motherboard's model number.
+ Near the beginning of your motherboard's documentation, you should be able to find a specifications chart or page. Look for the maximum amount of RAM or System Memory that can be installed. You will also see the number of available slots on your motherboard.
+
+
+RAM needs to be installed in pairs. If your motherboard supports 16 GB of RAM and has four slots, you can install four 4 GB sticks or two 8 GB sticks to reach your maximum.
+ If you are uncomfortable opening your computer or reading through your motherboard documentation, there are several tools available online that can scan your system and report how much memory you can have, as well as the type and speeds supported.
+
+
+You can find these scanners on major memory manufacturers' and retailer's websites, such as Crucial or MrMemory.
+ After you determine how much RAM your system can support, you can install your new RAM. Make sure that if you are adding new RAM to existing RAM that the clock speed matches the original RAM. See this guide for detailed instructions for installing new RAM.
+

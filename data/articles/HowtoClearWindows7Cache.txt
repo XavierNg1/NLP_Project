@@ -1,0 +1,62 @@
+ You have probably noticed that the longer your computer or laptop runs, it gradually slows down due to idle processes. This may eventually force you to restart the computer. You can create a shortcut on your desktop to free up unused RAM and speed up your computer without the need of restarting. You can run this shortcut any time your computer starts to slow down.
+
+
+Right-click anywhere on the desktop and select New → Shortcut.;
+, A window will appear asking you to locate the shortcut you have created. You will need to know if your copy of Windows is 32-bit or 64-bit. Copy and paste one of the following lines depending on your version and then click Next:
+
+
+32-bit: %windir%\system32\rundll32.exe advapi32.dll,ProcessIdleTasks
+For 64bit, type in: %windir%\SysWOW64\rundll32.exe advapi32.dll,ProcessIdleTasks
+
+, After you have pressed the Next Button, the window will ask you to type in the shortcut name, you can assign any name you want.
+
+
+When you're done, press Finish.
+ Now that you have successfully created the shortcut, every time your computer's performance slows up, open the shortcut to clear the unused RAM.
+
+
+The shortcut examines your current processes and ends any unused ones that are taking up your free memory.
+ If you are experiencing connection issues, your DNS cache may be corrupt or out of date. Manually flushing it is a quick process, and can solve a lot of your connection woes.
+
+
+Click Start (the Window icon at the bottom left of your screen) and then type "command prompt" in the search bar.
+Right-Click on the Command Prompt and then click "Run as Administrator". Running the Command prompt as Administrator is important since we will be deleting cache that can be found in the system folders.
+ To flush the DNS cache, type ipconfig /flushdns and press ↵ Enter
+
+
+You will see a message saying Successfully flushed the DNS Resolver Cache if you have entered it correctly. Close the Command Prompt.
+ If you are still having difficulty loading web sites, then the problem may lie elsewhere. See this guide for more information on troubleshooting network connectivity problems.
+ Disk Cleanup is a system tool that is installed automatically with Windows. It enables you to not only clean junk files and temp data from drives, but also remove the thumbnail cache. It lets you select the drive from where you want to clean the thumbnail cache files.
+
+
+Click Start and search "Disk Cleanup". A small window will appear, showing you that the disk cleanup is calculating useless files that can be deleted. Simply wait until it's finished.
+Your thumbnail cache is all of the preloaded thumbnails that windows uses as previews for your folders. If you have a lot of files, the thumbnail cache can take up a fair chunk of space.
+ After the scan, a new window will appear with the list of files that can be deleted. You will see the names and the file size in that category.
+
+
+Look for the Thumbnails entry and then tick the box.
+You can also include the Windows Error Report and Temporary Files to free up more space.
+ After ticking the files you wanted to remove, including the thumbnail cache, confirm the process in the next step by clicking OK and then 'Delete Files'.
+
+
+Congratulations, you have deleted the unwanted files, giving you more disk space and better computer performance.
+ The thumbnail cache and temporary files folders will grow quickly, so it pays to clean them out regularly. Do this again at least once a month to maintain your computer's performance.
+ Click the Gear icon in the upper-right corner, hover over Safety, and select "Delete browsing history". You can also press Ctrl+⇧ Shift+Del to open this window.
+
+
+Check the "Temporary Internet Files" box. Make sure to uncheck any boxes for data you want to preserve.
+Click the Delete button.
+ Click the Firefox button in the upper-left corner of the window. Hover over History, and select "Clear Recent History". You can also press Ctrl+⇧ Shift+Del to open this window.
+
+
+Expand the Details section and check the Cache box.
+Set the "Time range to clear" to "Everything".
+Click the Clear Now button.
+ You can clear Chrome's cache from the Settings menu. To access it, click the Chrome menu button (☰) in the upper-right corner of the window and select Settings. This will open the Settings page in a new tab.
+
+
+Click the "Show advanced settings" link at the bottom of the page.
+Find the Privacy section and click the Clear browsing data button. You can also jump directly to this window anytime by pressing Ctrl+⇧ Shift+Del
+
+Check the "Empty the cache" box and then click Clear browsing data.
+

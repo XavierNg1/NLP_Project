@@ -1,0 +1,33 @@
+
+Open a new Excel workbook and create 3 worksheets: EOQ Data, EOQ Chart and Saves.
+Please see "Things You'll Need" at the bottom of this article, because the formula for EOQ = sqrt((2AP)/S) where "sqrt" means find the square root, A = the Annual Quantity used of sold in units, P = Cost of placing a Purchase Order and S = Annual cost of carrying one unit of stock (in inventory for one year).
+Set Preferences.
+Begin the EOQ Data worksheet by entering the formula abbreviations and descriptions in columns A and B, and 3 in H and I:
+
+A1: E
+
+B1: (Economic) Order Size
+
+A2: E/2
+
+B2: Avg.
+Create the main Data Table.
+Enter the Production Run Note.
+Complete the Static Summary Table (does NOT automatically update):
+
+In cell C10 enter E, in C11 enter: Order Size, D10: S(E/2), D11: Annual Carrying Cost, E10: P(A.E) Annual Pchs Order, E11 with quotes: an = and then the formula " Cost @ "&TEXT(P,"$0.00")&"/PO", F10: C, F11: Total Annual Cost
+
+Copy cell range C1:L1 and Paste Special Values Transpose to cell C12 so that the row of data is now a column of data.As an alternative to Step 7, reference via formula each cell just transposed, so that the lower summary will automatically update.
+Insert the EOQ answer into the tables.Create the EOQ Chart.
+Select cell range C10:F21 and with the Chart Wizard or the Ribbon select Charts All/Other and scroll down to Scattered Smoothed Line Scattered and a small chart should appear on the data page.Select on EOQ Data the entire Data block and Format Cells Border Black bold Outline and holding down the shift key, Copy Picture, activate the Saves worksheet and Paste Picture, Select the the Chart on the EOQ Charts worksheet and click within the chart area and with the shift key depressed Edit Copy Picture and activate the Saves worksheet and Paste Picture below the data.
+It is possible and recommended to copy the EOQ data of A1:L21 and paste it down to an area below it two rows at A24 and Insert Name Define name SetupCosts to cell H36 where the old yellow-filled Purchase Order Cost is, enter 50, and move right a cell and change the label to Setup Costs.
+If the lower tier report matches the upper tier for the new lower report, you're done!,
+If preferred, copy the values from C1:L1 and Paste Special Values Transpose to C12; also copy the values from C6:L6 and Paste Special Values Transpose to D12;and also copy the values from C7:L7 and Paste Special Values Transpose to E12.
+Lastly change the last line of the note in cell B36 to read the ERS is the Economic Run Size.
+"Incidentally, in various machine shops, the high cost of setup time has historically been a critical factor that tends to boost the size of production runs and the optimal size of inventory.
+Basic Assumptions of the EOQ Model:
+
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Do Cost Volume Profit Analysis for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

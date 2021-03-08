@@ -1,0 +1,103 @@
+ A fraction is written correctly when there is no radical in the denominator. If the denominator contains a square root or other radical, you must multiply both the top and bottom by a number that can get rid of that radical. Note that the numerator can contain a radical. Don't worry about the numerator.
+
+
+{\displaystyle }
+
+We can see that there is a 7{\displaystyle {\sqrt {7}}} in the denominator. 
+;
+, A fraction with a monomial term in the denominator is the easiest to rationalize. Both the top and bottom of the fraction must be multiplied by the same term, because what you are really doing is multiplying by 1.
+
+
+7327⋅77{\displaystyle {\frac {7{\sqrt {3}}}{2{\sqrt {7}}}}\cdot {\frac {\sqrt {7}}{\sqrt {7}}}}
+
+
+, The fraction has now been rationalized.
+
+
+7327⋅77=72114=212{\displaystyle {\frac {7{\sqrt {3}}}{2{\sqrt {7}}}}\cdot {\frac {\sqrt {7}}{\sqrt {7}}}={\frac {7{\sqrt {21}}}{14}}={\frac {\sqrt {21}}{2}}}
+
+
+, If your fraction contains a sum of two terms in the denominator, at least one of which is irrational, then you cannot multiply the fraction by it in the numerator and denominator.
+
+
+42+2{\displaystyle {\frac {4}{2+{\sqrt {2}}}}}
+
+To see why this is the case, write an arbitrary fraction 1a+b,{\displaystyle {\frac {1}{a+b}},} where a{\displaystyle a} and b{\displaystyle b} are irrational. Then the expression (a+b)(a+b)=a2+2ab+b2{\displaystyle (a+b)(a+b)=a^{2}+2ab+b^{2}} contains a cross-term 2ab.{\displaystyle 2ab.} If at least one of a{\displaystyle a} and b{\displaystyle b} is irrational, then the cross-term will contain a radical.
+
+Let's see how this works with our example.
+
+
+42+2⋅2+22+2=4(2+2)4+42+2{\displaystyle {\frac {4}{2+{\sqrt {2}}}}\cdot {\frac {2+{\sqrt {2}}}{2+{\sqrt {2}}}}={\frac {4(2+{\sqrt {2}})}{4+4{\sqrt {2}}+2}}}
+
+
+
+As you can see, there's no way we can get rid of the 42{\displaystyle 4{\sqrt {2}}} in the denominator after doing this.
+ The conjugate of an expression is the same expression with the sign reversed. For example, the conjugate of 2+2{\displaystyle 2+{\sqrt {2}}} is 2−2.{\displaystyle 2-{\sqrt {2}}.}
+
+
+42+2⋅2−22−2{\displaystyle {\frac {4}{2+{\sqrt {2}}}}\cdot {\frac {2-{\sqrt {2}}}{2-{\sqrt {2}}}}}
+
+Why does the conjugate work? Going back to our arbitrary fraction 1a+b,{\displaystyle {\frac {1}{a+b}},} multiplying by the conjugate in the numerator and denominator results in the denominator being (a+b)(a−b)=a2−b2.{\displaystyle (a+b)(a-b)=a^{2}-b^{2}.} The key here is that there are no cross-terms. Since both of these terms are being squared, any square roots will be eliminated.
+
+
+
+42+2⋅2−22−2=4(2−2)4−2=4−22{\displaystyle {\frac {4}{2+{\sqrt {2}}}}\cdot {\frac {2-{\sqrt {2}}}{2-{\sqrt {2}}}}={\frac {4(2-{\sqrt {2}})}{4-2}}=4-2{\sqrt {2}}}
+
+
+, If you are asked to write the reciprocal of a set of terms containing a radical, you will need to rationalize before simplifying. Use the method for monomial or binomial denominators, depending on whichever applies to the problem.
+
+
+2−3{\displaystyle 2-{\sqrt {3}}}
+
+
+, A reciprocal is created when you invert the fraction. Our expression 2−3{\displaystyle 2-{\sqrt {3}}} is actually a fraction. It's just being divided by 1.
+
+
+12−3{\displaystyle {\frac {1}{2-{\sqrt {3}}}}}
+
+
+, Remember, you're actually multiplying by 1, so you have to multiply both the numerator and denominator. Our example is a binomial, so multiply the top and bottom by the conjugate.
+
+
+12−3⋅2+32+3{\displaystyle {\frac {1}{2-{\sqrt {3}}}}\cdot {\frac {2+{\sqrt {3}}}{2+{\sqrt {3}}}}}
+
+
+,
+
+
+12−3⋅2+32+3=2+34−3=2+3{\displaystyle {\frac {1}{2-{\sqrt {3}}}}\cdot {\frac {2+{\sqrt {3}}}{2+{\sqrt {3}}}}={\frac {2+{\sqrt {3}}}{4-3}}=2+{\sqrt {3}}}
+
+Do not be thrown off by the fact that the reciprocal is the conjugate. This is just a coincidence. 
+
+
+, You can also expect to face cube roots in the denominator at some point, though they are rarer. This method also generalizes to roots of any index.
+
+
+333{\displaystyle {\frac {3}{\sqrt{3}}}}
+
+
+, Finding an expression that will rationalize the denominator here will be a bit different because we cannot simply multiply by the radical.
+
+
+331/3{\displaystyle {\frac {3}{3^{1/3}}}}
+
+
+, In our case, we are dealing with a cube root, so multiply by 32/332/3.{\displaystyle {\frac {3^{2/3}}{3^{2/3}}}.} Remember that exponents turn a multiplication problem into an addition problem by the property abac=ab+c.{\displaystyle a^{b}a^{c}=a^{b+c}.}
+
+
+331/3⋅32/332/3{\displaystyle {\frac {3}{3^{1/3}}}\cdot {\frac {3^{2/3}}{3^{2/3}}}} 
+
+This can generalize to nth roots in the denominator. If we have 1a1/n,{\displaystyle {\frac {1}{a^{1/n}}},} we multiply the top and bottom by a1−1n.{\displaystyle a^{1-{\frac {1}{n}}}.} This will make the exponent in the denominator 1.
+
+
+
+331/3⋅32/332/3=32/3{\displaystyle {\frac {3}{3^{1/3}}}\cdot {\frac {3^{2/3}}{3^{2/3}}}=3^{2/3}}
+
+If you need to write it in radical form, factor out the 1/3.{\displaystyle 1/3.}
+
+
+32/3=(32)1/3=93{\displaystyle 3^{2/3}=(3^{2})^{1/3}={\sqrt{9}}}
+
+
+
+

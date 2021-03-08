@@ -1,0 +1,8 @@
+ It should be a simple image, so that it's instantly recognizable.;
+, It must be called exactly this, or the browser won't recognize it. An easy way to do this is to use the Dynamic Drive FavIcon Generator. Another way is to use a free image editor GIMP and save the 16x16 image in ICO format.
+, You should put it in the <head> section of the code, and make sure the path to the icon is correct, relative to the web page. Code follows (assuming both .html and .ico are in the same top directory):
+
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+,

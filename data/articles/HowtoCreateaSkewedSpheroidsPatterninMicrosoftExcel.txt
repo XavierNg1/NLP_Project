@@ -1,0 +1,80 @@
+;
+, At first, it was thought one might save a lot of time if one had read this article - "Create a Pink Love Note of Spheres in Form of a Heart", because there is a section that was introduced with that article that gets used again here. But, as it turns out, there have been changes in the interim.
+ The formulas for A1 and A2 are the same. Adjuster = 1.
+Enter -61 for TURNS into cell B2.
+The result in cell B5 now shows -81,152 and the formula is "=IF(TURNS>0,VLOOKUP(TURNS,TURNS_LOOKUP,2),VLOOKUP(TURNS, TURNS_LOOKUP_NEG,2))" which is the same I believe.
+Enter 26 for S's Count into cell C1. (although 28 will appear.)
+The result in cell C2 = 2230 for Designer and the formula has not changed from "=VLOOKUP(S_COUNT,SPHEROIDS_COUNT_LOOKER,2)"
+The formula for Var, cell C3, has been overwritten with the value 25.
+The formula for Cc is unchanged and the result is -.03141593
+db is unchanged at 4.5
+GMSL and GMLL are unchanged.
+The formula for top is unchanged at "=ROUND((-B4*PI())+(Adj),0)" and the result is 886771.
+AAA is unchanged at 1.00244189810508
+Enter 27.5 for Divisor into cell E3.
+Enter Y into YN in cell E4.
+The formula for Factor is unchanged at "=IF(E4="Y",IF(ODD(S_COUNT)=S_COUNT,-S_COUNT*0.01,S_COUNT*0.01),-0.25)" and the result  is +.26
+Enter 0 for Power into cell F2.
+Cells H1 and J1 are unchanged at .92 and .96 respectively and the formulas for Sync1 and Sync2 are the same.
+
+B7'S formula has not changed from "=IF(EVEN(S_COUNT)=S_COUNT,ROUND((-B4*PI())+(Adj),0),TOP)"
+B8:B1447's formulas have not changed from "=((B7+(-TOP*2)/(AdjRows)))*$B$1"
+C7's formula has not changed from "=ROUND(-EXP((PI()^2)+(Cc*-(db))),0)+Designer"
+Edit Go To cell range D7:D1447 and with D7 active, enter the formula w/o quotes, "=X7/Divisor+COS((ROW()-7)*PI()/180*Factor)" and Edit Fill Down.
+Edit Go To cell range E7:E1447 and with E7 active, enter the formula w/o quotes, "=Y7/Divisor+SIN((ROW()-7)*PI()/180*Factor)" and Edit Fill Down.
+Cell range F7:F1447's formulae remain the same as "=IF(A7=0,F6,((PI())*((SIN(B7/(C7*2))*GMLL*COS(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+D7)))"
+Cell range G7:G1447's formulae remain the same as "=IF(A7=0,G6,((PI())*((SIN(B7/(C7*2))*GMLL*SIN(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+E7)))"
+Cell range H7:H1447's formulae remain the same as "=F7*GMLL*Sync1"
+Cell range I7:I1447's formulae remain the same as "=G7*GMLL*Sync1"
+Cell range J7:J1447's formulae remain the same as "=F7*GMSL*Sync2"
+Cell range K7:K1447's formulae remain the same as "=G7*GMSL*Sync2"
+
+, The worksheet does not contain a Defined Variable Name of TT either. No need for you to enter it. Probably part of some approach to a problem that was solved in another way., TURNS_LOOKUP is now in cells $M$2:$N$1441. TURNS_LOOKUP_NEG is in cells $O$2:$P$1442 and runs in column O from -1440 to 0 and in column P from -104192 to 412 (an increment of 72). SPHEROIDS_COUNT_LOOKER is in cells $R$2:$S$1441 and increments by 251175.5 from a base value of -6,363,636 in column S, and from 0 to 1 in cells R2:R25 and then increments by 1 to  a value of 1416 in cell R1446 and then 10,000 in cell R1447., Select cell AA7 and input the value 28.6470945405378. In cell W1, enter "Pool Ball Process:" . In cell V2, enter the note "1) Figure out H, K's per Grid Analysis or previous values;", In cell V3, enter the note "2) Figure out if FFF variable changes -- it adjusts rows up-Y a little -- best ball fit;". In cell V4, enter the note "3) Fill down formulas for X, Y and Radius -- R must = .50000!!" and in cell X5 enter the title "POOL BALL X,Y Determinators:" and Format Cell Font Bold. Edit Go To cell range X7:X1446 and with X7 active enter the formula "=(COS(ROW()-7)*PI()/180*FFF)+V7". Edit Go To cell range Y7:Y1446 and with Y7 active enter the formula "=(COS(ROW()-7)*PI()/180*FFF)+W7". Then read the rest of this section and realize there may be changes in the interim which need updating, but that basically you have now the same info., Enter into cell AA7 28.6470945405378 and Insert Name Define name FFF to cell $AA$7. Enter Per Goal Seeking in cell AA8 and select cell range AA7:AA8 and Format Cells Border Black bold Outline. Enter the notes "Be careful of formulas below" in cell range AA10:AA12. Enter H=x center of each into cell AA14 and K=y center of each into cell AA15.
+
+Enter .115 into cell range AA52:AA141 via Edit Fill Down.
+Enter .230 into cell range AA142:AA276 via Edit Fill Down.
+Enter .345 into cell range AA277:AA456 via Edit Fill Down.
+Enter .460 into cell range AA457:AA681 via Edit Fill Down.
+Enter .575 into cell range AA682:AA951 via Edit Fill Down.
+Enter .690 into cell range AA952:AA1266 via Edit Fill Down.
+Enter .805 into cell range AA1267:AA1446 via Edit Fill Down.
+Enter .5 into cell range Z7:Z1446 via Edit Fill Down.
+Enter "=(SIN(ROW()-7)*PI()/180*FFF)+W7" into cell range Y7:Y1447 via Edit Fill Down.
+Enter "=(COS(ROW()-7)*PI()/180*FFF)+V7" into cell range X7:X1447 via Edit Fill Down.
+It will help speed things up to build upon larger and larger sequences already done above by copying them below as one goes. Enter 1 into the following cells, each 45 cells apart, in column AB: AB52, 97, 142, 187, 232, 277, 322, 267, 412, 457, 502, 547, 592, 637, 682, 727, 772, 817, 862, 907, 952, 997, 1042, 1087, 1132, 1177, 1222, 1267, 1312, 1357, 1402.
+Enter 1 into cell U7 and Edit Go To cell range U8:U1446 and with U8 active enter the formula without quotes, "=IF(AB8=1,1+U7,U7)". This will build the balls to 32.
+Enter 1.5 into cell V7 and 3 into cell W7 and Edit Fill Down to cell range V7:W51.
+Enter 1 into cell V52 and 2.12 into cell W52 and Edit Fill Down to cell range V52:W96.
+Enter 2 into cell V97 and 2.12 into cell W97 and Edit Fill Down to cell range V97:W141.
+Enter 2.5 into cell V142 and  1.23 into cell W142 and Edit Fill Down to cell range V142:W186.
+Enter 1.5 into cell V187 and  1.23 into cell W187 and Edit Fill Down to cell range V187:W231.
+Enter 0.5 into cell V232 and  1.23 into cell W232 and Edit Fill Down to cell range V232:W276.
+Enter 0.0 into cell V277 and  .345 into cell W277 and Edit Fill Down to cell range V277:W321.
+Enter 1.0 into cell V322 and  .345 into cell W322 and Edit Fill Down to cell range V322:W366.
+Enter 2.0 into cell V367 and  .345 into cell W367 and Edit Fill Down to cell range V367:W411.
+Enter 3.0 into cell V412 and  .345 into cell W412 and Edit Fill Down to cell range V412:W456.
+Enter 3.5 into cell V457 and   -.54 into cell W457 and Edit Fill Down to cell range V457:W501.
+Enter 2.5 into cell V502 and   -.54 into cell W502 and Edit Fill Down to cell range V502:W546.
+Enter 1.5 into cell V547 and   -.54 into cell W547 and Edit Fill Down to cell range V547:W591.
+Enter 0.5 into cell V592 and   -.54 into cell W592 and Edit Fill Down to cell range V592:W636.
+Enter -.5 into cell V637 and   -.54 into cell W637 and Edit Fill Down to cell range V637:W681.
+Enter -1 into cell V682 and -1.425 into cell W682 and Edit Fill Down to cell range V682:W726.
+Enter 0.0 into cell V727 and -1.425 into cell W727 and Edit Fill Down to cell range V727:W771.
+Enter 1.0 into cell V772 and -1.425 into cell W772 and Edit Fill Down to cell range V772:W816.
+Enter 2.0 into cell V817 and -1.425 into cell W817 and Edit Fill Down to cell range V817:W861.
+Enter 3 to cell V862 and -1.425 to cell W862 and Edit Fill Down to range V862:W906.
+Enter 4 to cell V907 and -1.425 to cell W907 and Edit Fill Down to range V907:W951.
+Enter 4.5 to cell V952 and -2.31 to cell W952 and Edit Fill Down to range V952:W996.
+Enter 3.5 to cell V997 and -2.31 to cell W997 and Edit Fill Down to range V997:W1041.
+Enter 2.5 to cell V1042 and -2.31 to cell W1042 and Edit Fill Down to range V1042:W1086.
+Enter 1.5 to cell V1087 and -2.31 to cell W1087 and Edit Fill Down to range V1087:W1131.
+Enter .5 to cell V1132 and -2.31 to cell W1132 and Edit Fill Down to range V1132:W1176.
+Enter -.5 to cell V1177 and -2.31 to cell W1177 and Edit Fill Down to range V1177:W1221.
+Enter -1.5 to cell V1222 and -2.31 to cell W1222 and Edit Fill Down to range V1222:W1266.
+Enter 0 to cell V1267 and -3.195 to cell W1267 and Edit Fill Down to range V1267:W1311.
+Enter 1 to cell V1312 and -3.195 to cell W1312 and Edit Fill Down to range V1312:W1356.
+Enter 2 to cell V1357 and -3.195 to cell W1357 and Edit Fill Down to range V1357:W1401.
+Enter 3 to cell V1402 and -3.195 to cell W1402 and Edit Fill Down to range V1402:W1446.
+ It's a project I'm working on. 15 balls and a cue ball times 2 makes 2 games simultaneously. Adequate for a pool shark on a holiday break.,,,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

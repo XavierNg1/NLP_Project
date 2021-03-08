@@ -1,0 +1,9 @@
+ This is generally given for a specific test as part of the tests intrinsic characteristic. It is equal to the percentage of positives among all tested persons with the disease or characteristic of interest. For this example, suppose the test has a sensitivity of 95%, or 0.95.;
+, For our example, we have 1-0.95 = 0.05.
+ For our example, we have 0.05 x 0.95 = 0.0475.
+ Suppose 30 positive cases were in the data set. For our example, we have 0.0475/30 = 0.001583.
+ In our example, it would be sqrt(0.001583) = 0.03979, or approximately 0.04 or 4%. This is the standard error of the sensitivity.
+ For our example, we have 0.04 x 1.96 = 0.08. (Note that 1.96 is the normal distribution value for 95% confidence interval found in statistical tables. The corresponding normal distribution value for a more stringent 99% confidence interval is 2.58, and for a less stringent 90% confidence interval is 1.64.)
+
+, In this example, the confidence interval ranges from 0.95-0.08 to 0.95+0.08, or 0.87 to 1.03.
+

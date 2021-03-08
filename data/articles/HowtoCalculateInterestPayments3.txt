@@ -1,0 +1,53 @@
+ Fill separate boxes with the amount of the loan, the length you have to pay, and the interest, and Excel can calculate your monthly payments for you. For the remainder of the section, you can use the following example loan:
+
+You take out a $100,000 home loan. You have 30 years to pay it off at 4.5% annual interest rate.
+ You need to tell Excel that you're paying a debt. To to so, write the principal with a negative number, without the $ sign.
+
+
+-100,000 = Principal
+
+
+, You can leave it in years, if you want, but your answer would spit out yearly interest payments, not monthly. Since most loans are paid monthly, simply multiple the number of years by 12 to get your total number of payments. Write this down in another box.
+
+
+-100,000 = Principal
+
+
+360 = Number of Payments
+
+
+, In this example, your interest rate is annual, meaning it is calculated at the end of the year. However, you're paying monthly, meaning you need to know what your monthly interest rate is. Since 4.5% is for 12-months of interest, simply divide by 12 to get one month's worth of interest. Be sure to convert the percentage to a decimal when you're done.
+
+
+-100,000 = Principal
+
+
+360 = Number of Payments
+
+
+4.5%12=.375%={\displaystyle {\frac {4.5\%}{12}}=.375\%=}.00375{\displaystyle .00375} = Monthly interest.
+ Excel already knows the equation for calculating monthly payments, with interest. You just have to give it the information it needs to make the calculation. Click on an empty box, then ;locate the function bar. It is located right above the spreadsheet and labeled "fx." Click inside of it and write "=PMT("
+
+Do not include the quotation marks.
+
+If you're Excel savvy, you can set up Excel to accept the payment values for you.
+ Place the values needed to calculate the payment in the parenthesis, separated by commas. In this case, you'll enter (Interest rate,number of periods,principal ,0).
+
+Using the example above, the full entry should read: "=PMT(0.00375,360,-100000,0)" 
+
+The last number is a zero. The zero indicates you will have a balance of $0 at the end of your 360 payments.
+
+Make sure you remember to close the parenthesis off.
+ If you've entered the function correctly, you should see your total monthly payment in =PMT cell of the spreadsheet.
+
+In this case, you'll see the number $506.69. That will be your monthly payment.
+
+If you see "#NUM!" or some other output that doesn't make sense to you in cell, you've entered something incorrectly. Double check the text in the function bar and try again.
+ To figure out the total amount you will pay over the life of your loan, all you have to do is multiply the payment amount by the total number of payments.
+
+In the example, you'd multiply $506.69 by 360 to get $182,408. This is the total amount you'll pay over the loan's term.
+ If you want to know how much interest you'll pay over the term of the loan, this is just a matter of subtraction. Subtract the principal from the total amount you'll pay.
+
+In the example you'd subtract $100,000 from $182,408. You end up with $82,408. This is your total interest paid. 
+
+

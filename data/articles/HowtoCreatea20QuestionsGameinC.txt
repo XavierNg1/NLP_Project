@@ -1,0 +1,96 @@
+
+
+You can find a detailed guide to setup at How to Install and Setup Visual Studio Express 2013.;
+,,,,,
+
+
+For example: 20 Questions Game.
+ Right-click Source Files on the right side of the screen under the solution explorer box. Then hover add and click New File.
+
+
+Source Files -> Add -> New File
+
+,
+
+
+For example: "Main.cpp" because this will be our main source file. This naming scheme is especially important in larger scale programs that require more than one file.
+
+
+
+Type: #include<iostream>
+
+This includes a file in the C++ library that allows console manipulation.
+
+
+Type: using namespace std;
+
+This means you’re using a standard (std) namespace.
+
+
+Type: int main(){ }
+
+This is the main function that the program will run. Everything runs through this.
+In between the curly braces { }, press enter a few times. Everything goes in between the curly braces. Note: The green colored words are comments. These are for you (the interpreter) to make better sense of the code.
+
+
+
+Within the main function brackets,(int main()), create the following variables:
+
+int max = 100;
+int min = 0;
+char ans;
+int num = 0;
+int guess;
+
+int numGuess = 0;
+
+Note that some variables are declared with values, while others are not. This is because those variables are required by the program to be predefined. This is determined by how they're used.
+
+
+
+Type: cout << “Think of a number between 1 and 100.” << endl;
+
+This prompts the user for their number, giving them an idea of what is required of them.
+ This will control all of the game logic.
+
+Type: do{ }while(num == 0 && numGuess < 20);
+
+
+
+
+
+
+Press ↵ Enter a few times between the braces. Note: num == 0 && numGuess < 20 basically means the loop will continue until num equals 0 AND numGuess is less than 20.
+
+
+
+Understand the logic of the loop:
+
+The user will enter Y or N, based on their number.
+If their number is greater than or equal to guess, numGuess increments by 1 and the program makes a guess.
+
+If the guess is correct, the program breaks out of the loop and the computer wins.
+If the guess is incorrect, min = guess; effectively cutting the range of values in half and starting the loop over again.
+
+
+If their number is not greater than or equal to guess, numGuess increments by 1 and max = guess; cutting the range of values in half and starting the loop over again.
+The program will go through these guesses and checks until it narrows the users number down to a single number or it reaches its 20 question limit.
+
+
+Save and run the program. At this point, it should do everything it's intended to do, excluding the concluding message. If the program suddenly closes when it guesses your number or when it fails to guess your number, that's normal. We will fix this in the next few steps.
+ This will be the concluding lines of code that handle whether or not the player wins.
+
+
+Understand the logic of the concluding message:
+
+If the numGuess equals 20 and num equals 0, the computer could not guess you number.
+
+Note that the value of num will never change if the users number is never guessed.
+
+
+If the users number is guessed correctly, the computer will output your number and a little victory smiley face.
+
+Note the lines system("pause"); and return 0;
+
+system("pause") simply pauses the program, allowing the user to read the message.
+return 0; exists because it is good practice to return a value in the main function; even if the value is irrelevant.

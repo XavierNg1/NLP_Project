@@ -1,0 +1,19 @@
+
+Make sure you have all the requirements ready, you will need them.
+Decide what CPU the OS is compatible with.
+Decide what you want to use as storage (CD, DVD, USB, HDD).
+Download the Windows 7 AIK from this link: http://www.microsoft.com/en-us/download/details.aspx?id=5753
+
+,
+Install it and then turn off your User Account Control (UAC) in the control panel.
+Find and open the Deployment Tools Command Prompt in the start menu.
+
+,
+Set up the image file.
+Mount the image.
+Add anything you want to it, the mount point is your specified mount point.Type move PathOfImageFile PathOfImageFolder/ISO/sources/boot.wim
+
+,
+When that is done, type the following command to create a CD image.
+Test your image in virtualbox, vmware or even for real.
+

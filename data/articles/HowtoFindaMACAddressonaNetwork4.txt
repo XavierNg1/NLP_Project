@@ -1,0 +1,5 @@
+  The arp-scan utility makes it very easy to discover all the IP-to-MAC address pairs on a subnet.,, The arp-scan utility has many available options, but the simplest method is to issue the command with a subnet parameter.  This will build an arp table of all network accessible hosts and print the output to the console.
+
+
+sudo arp-scan 192.168.1.0/24
+

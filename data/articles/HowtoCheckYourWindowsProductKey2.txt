@@ -1,0 +1,18 @@
+ If your computer has crashed and isn't booting, you can use a Linux live boot disk to attempt to pull the files you need off of your malfunctioning hard drive. You'll need a thumb drive with at least 1 GB of space as well as a second computer to create the disk on and retrieve the key with. Creating the Linux live boot disk will erase any data on your thumb drive.
+
+
+Download UNetbootin. This utility will allow you to quickly create a bootable drive containing Ubuntu Live. UNetbootin is available for free from Sourceforge.
+Run UNetbootin. Select "Ubuntu" from the "Select Distribution", and the latest Live version for the "Select Version" menu. If you have a 64-bit machine, select the x64 version.
+Select "USB Drive" from the "Type" menu, and then select your USB flash drive's letter from the "Drive" menu. Click OK to start the process.
+Wait for the disk to be created. UNetbootin will download the Ubuntu files and then copy everything to disk, making it bootable in the process. This process may take some time, especially if you have a slow internet connection.
+ Insert the newly-created USB boot disk into the malfunctioning computer and set it to boot from the USB drive. You can change the boot order in the BIOS menu. See this guide for details on changing to boot order so that the computer boots from the thumb drive instead of the hard drive.
+ When the computer boots from the flash drive, you will see the UNetbootin menu. Select "Default" from the boot options menu and wait for the Ubuntu desktop to load.
+ Once you have booted into Ubuntu, open the file browser and navigate to C:\Windows\System32\. Find the config folder and copy it to the USB drive. This folder is typically no larger than 300 MB.
+
+
+When you copy the config folder to the USB drive, recreate the original folder structure, without the Windows folder. For example, if your USB drive is E:, create the folders E:\Windows\System32\ and copy the config folder into that.
+ Shut down the broken computer and move the USB drive back to the working computer. Download ProduKey. Right-click on ProduKey application icon and select "Run as Administrator" (see previous section).
+ On the ProduKey main screen, click File → Select Source. Select "Load the product keys from external Windows directory", and then select the Windows folder you created on the USB drive. Your Windows Product Key will then be listed on the ProduKey main screen.
+
+
+The Windows Product key is 25 characters, separated into five groups of five characters each.

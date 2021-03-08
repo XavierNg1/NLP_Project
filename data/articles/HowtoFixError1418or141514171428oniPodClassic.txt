@@ -1,0 +1,51 @@
+ When trying to sync iPod, change iPod settings, or restore iPod from within iTunes you may see one of the following error messages:
+
+
+"The iPod "Customer's iPod" cannot be updated. An unknown error occurred (-50)"
+"The disk could not be read from or written to"
+"The iPod "Customer's iPod" could not be restored. An unknown error occurred (1418);
+,, Following the steps below to re-register several .dll files mentioned below may resolve this issue. Before proceeding however, try to restore the iPod using the latest version of iTunes. If you are unable to restore it or the symptom reappears, then follow the steps below:
+
+
+Disconnect the iPod from the computer and close iTunes.
+Highlight all of the following 10 lines of text that begin with regsvr32 and then choose Copy from the Edit menu of your web browser:
+
+regsvr32 /s softpub.dll
+regsvr32 /s wintrust.dll
+regsvr32 /s dssenh.dll
+regsvr32 /s rsaenh.dll
+regsvr32 /s gpkcsp.dll
+regsvr32 /s sccbase.dll
+regsvr32 /s slbcsp.dll
+regsvr32 /s mssip32.dll
+regsvr32 /s cryptdlg.dll
+regsvr32 /s initpki.dll
+
+
+Open the Notepad program by navigating to: Start > All Programs > Accessories > Notepad
+In Notepad, choose Paste from the Edit menu. Note: make sure that the text that appears in Notepad is the same as what is shown above (except the numbering of the steps).
+From the File menu, choose "Save As". You will probably need to select 'All Files' from the drop down box labeled 'Save As Type:' below "File name:' or it will save as a text file.
+In the File name: field type appleipod.bat and save the file to the Desktop.
+Close Notepad and locate the appleipod.bat file. It should appear on the Desktop with the icon shown below: (image unavailable. the icon will be a white box with a blue border on top, and a gear with a peg in it inside the box.)
+Double-click the file and you will see a black window appear on the screen for about a minute. Wait until the window automatically disappears and proceed to the next step.
+The appleipod.bat file can be deleted at this time.
+Open iTunes and connect the iPod.
+When the iPod appears in iTunes, restore the iPod and re-synchronize your content.
+Note: Because some malware may not register in the .dll files, make sure you have the most recent updates to your anti-virus software and then do a full scan of your files.
+ This symptom may also be caused by software applications which change the appearance of Windows XP. Try deleting or removing any third-party Windows OS skins, Windows themes, or desktop mods that are installed to resolve the iTunes Error -50 issue when syncing your iPod to Windows XP. "
+
+, If this fails, you will need to reset your iPod differently.
+
+
+Enter the task manager (ctrl-alt-delete will usually do it) and select "processes"
+Right click on the "My Computer" icon on the desktop.
+Select "Manage" from the menu.
+Select "Disk Management".
+Find the volume that is your iPod. be careful not to select the wrong one. The 80 gig iPod will have a capacity around 74.31 gigabytes, and the 160 should be similarly lower. If you are not sure, make sure. do not proceed until you are completely sure that you know which is the iPod and that you have it selected. Windows couldn't detect a file system the first time i did this, though my iPod was completely corrupt by that point. it now shows it as fat32.
+When you are sure you have the iPod selected, right click on the selection (the name under the "Volume" heading is where to right click) and select "format"
+Select "quick format" at the bottom, and make sure it is formatting it as "NTFS", and then proceed.
+After it is finished, it should open a window of iPod as a disk drive. close this window.
+Open iTunes.
+It should detect iPod and tell you that you need to restore. It may not work for you; if upon finishing, you see either error 1418 or 1415, try restoring and updating one more time if it doesn't work for you.
+ With some luck, when it's done, you will be at the setup screen for the iPod, and it should be fixed. Happy listening.
+

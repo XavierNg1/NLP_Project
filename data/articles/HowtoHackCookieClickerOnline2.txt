@@ -1,0 +1,24 @@
+ If the Cookie Engine program above doesn't give you the level of precise control you'd like over your Cookie Clicker game, you can also edit your save data manually, though this requires a little more time and effort. To begin, open a game of Cookie Clicker and save your game. You can use a game that's in progress or a completely new game — it doesn't matter.
+
+
+When you get your save code, copy it to the clipboard or a blank word document.
+Before you begin, note that this method can require some basic coding knowledge.
+ Now we're going to start tampering with the code manually. To get the code into a form we can work with, we'll need to edit it slightly. First, delete the "%21END%21" segment from your code. This should be at the very end of the string.
+ Next, you'll want to find every place where "%3D" occurs in your code and replace each segment with an equals sign (=). Note that it's possible for "%3D" not to appear in your code at all. This is OK — in this case, simply proceed to the next step.
+
+
+Don't waste time reading through the indecipherable code for each "%3D". Instead, simply use a word processor's "find text" function to locate all of the instances of "%3D" instantly. On Windows PCs, the shortcut for the find text command is Ctrl+F; on Macs, it is Command+F.
+ This is where things get a little tricky. Cookie Clicker's save code is written in a base 64 format which makes it basically impossible to work with except for certain computer programs. For this code to be useful for our purposes, it has to be translated to a more workable form. Use an online base 64 decoder to change your save code into workable text. One excellent decoder is the Base64 Decode and Encode tool, which has a beginner-friendly format.
+
+
+You'll want to use the UTF-8 format for decoding your save code. This is the default option at the decoder listed above.
+ After decoding, your base 64 save code should now be a long string of numbers separated by vertical lines and semicolons. Each number corresponds to a specific quantity in the game — for instance, one is the number of cookies you have, one is the number of grandmas you have, one corresponds to the upgrades you've purchased, and so on. By modifying this code, you can custom-tune your game experience.
+
+
+The process for modifying this code is actually fairly complex. While the process is too involved to explain at great length in this article, an excellent guide is available at the Cookie Clicker wiki's "Cheating" page (under "Save Editing").
+ When you've finished making your modifications, you'll need to convert your save code back into a format the game can read. To do this, use an online base 64 encoding program; most of the same programs that you may have used to decode your information will offer the option to re-encode it. After your data has been re-encoded, don't forget to replace every equals sign with a "%3D" and end the string of code with "%21END%21".
+
+
+If you used the base64decode.org program recommended above, all you need to do is click on the "Encode" button at the top of the screen to call up the appropriate tool.
+ Finally, open a game of Cookie Clicker and use the "Import Save" menu option to import your modified code. If you've done everything correctly, a new game should load with your changes in place. Have fun!
+

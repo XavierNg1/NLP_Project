@@ -1,0 +1,15 @@
+;
+, When you do this for the first time, you will be shown a wizard.
+ At this point you should put in the specific name or IP address of the server that you want to monitor. Also, you will need to enter authentication credentials for the server in question.
+
+
+WMI Monitor is now going to ask you what you want to analyze. It comes with a pre-packaged set of monitors. You can also visit thwack to access user-created application monitors, or customize your own by browsing WMI counters. For the purposes of this tutorial, let’s go ahead and make our own.
+ Expand out total processes, and then grab a couple of these (for example, Handle Count and Thread Count). Hit Next.
+ You can expand out your processes for more detail.
+, You can also change your data query if you want right below that. At the bottom of this screen, you also have the option to set your thresholds. This will allow you to be a bit more detailed on the data that comes in.
+ Also note that in the main Settings screen, you are able to change the name of your group of processes.
+
+
+
+There are also a few more things to note that don’t necessarily fit into the above steps. In the Settings page you are able to go out and grab already saved processes by clicking on the Select on Monitor button.
+There is also an “Import from thwack” button at the bottom right. From there you’ll see a list of user-created monitors that you can import. You are also able to share out your own monitors by simply using the Share button at the lower right hand of the Settings window, which is great if you’re active in the Thwack community.

@@ -1,0 +1,75 @@
+ In order to start logging follow these steps:
+Open the registry editor (Start – Run – type ‘regedit’ (without quotation marks) and confirm OK)
+
+
+
+
+
+
+Find the key HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Setup\LogLevel and set the value to 0x0000FFFF hexadecimal
+
+
+
+
+
+
+Exit the registry editor
+
+
+
+
+
+
+
+, Say for instance (C:\ess_nt32_ENU.msi /lvx* install.log)
+
+
+
+
+
+
+This will create an installation log with useful information in case of failure of an installation process. Finally, locate the log files install.log and C:\Windows\setupapi.log and send those files using the online form at http://www.eset.eu/support/form.
+ In order to start logging follow these steps:
+Open the registry editor (Start – Run – type ‘regedit’ (without quotation marks) and confirm OK)
+
+
+
+ 
+
+
+Find the key HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Setup\LogLevel and set the value to 0x00007070 hexadecimal (just write 00007070)
+
+
+
+
+
+
+Exit the registry editor
+
+
+
+
+
+
+Restart OS Windows
+
+
+
+
+
+;
+, Say for instance (e.g. C:\ess_nt32_ENU.msi /lvx* install.log)
+
+
+
+
+
+
+This will create installation logs with useful information after the installation error. Finally, locate the log files install.log, C:\Windows\Inf\setupapi.dev.log and C:\Windows\Inf\setupapi.app.log and send those files using the online form at http://www.eset.eu/support/form.
+
+
+
+
+
+
+

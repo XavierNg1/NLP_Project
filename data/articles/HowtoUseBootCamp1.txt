@@ -1,0 +1,17 @@
+;
+,, This document has important information about selecting the correct options for your Windows installation and is not available once you reboot into your Boot Camp partition.
+
+
+,
+
+,
+
+
+NTFS partitions are required for Windows Vista and Windows 7 installations. You will not be able to transfer files to this partition when you are in OS X.
+FAT partitions allow you to read and write files to the partition from within OS X. However, they have a maximum size of 32 GB. Windows XP can be installed on either NTFS or FAT partitions.
+
+
+
+If the "The disk cannot be partitioned because verification failed" dialog appears, repair your main drive with Disk Utility, reboot, and retry partitioning with Boot Camp Assistant.
+If a repair and reboot doesn't work, make sure that you have a backup of all your personal information and files, reboot from your Mac OS X installation disc, and erase the disk using Disk Utility. Restore from your backup and try to repartition  with Boot Camp Assistant again.
+

@@ -1,0 +1,4 @@
+ This can be found in the Utilities section of your Application folder.
+ The normal ifconfig command will result in a lot of data displayed that is not necessary and a little confusing. The following command will remove most of the unnecessary stuff and display your internal IP address:ifconfig | grep "inet " | grep -v 127.0.0.1This command removes the 127.0.0.1 entry, which will always appear regardless of the machine you are using. This is the feedback loop, and can be ignored when looking for the IP address.
+ Your IP address will be displayed next to the “inet” entry.
+

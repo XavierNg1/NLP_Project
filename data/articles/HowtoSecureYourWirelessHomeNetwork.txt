@@ -1,0 +1,35 @@
+
+
+
+
+To find your Gateway IP Address and connect to it in Windows
+
+Click Start > Run > type 'cmd' > Click 'Enter'
+Once the Command Prompt window opens, type 'ipconfig /all' and hit 'Enter'
+Locate the line labeled 'Gateway' and make note of the number that follows. It will look similar to '192.168.1.1'
+Open Internet Explorer (or your favorite browser)
+Enter the Gateway IP Address into the address bar and click 'Enter
+
+
+
+To find your Gateway IP Address and connect to it on a Mac
+
+Open your Finder and run 'Terminal' inside of Applications > Utilities
+Once the terminal window opens, type 'ipconfig -a' and hit 'Enter'
+Locate the line labeled 'Gateway' and make note of the number that follows. It will look similar to '192.168.1.1'
+Open Safari (or your favorite browser)
+Enter the Gateway IP Address into the address bar and click 'Enter'
+
+;
+, Using 128-bit encryption or higher makes your Wireless Network more secure. WEP and WPA are entirely different encryption schemes. WEP has been proven insecure and can be cracked in a few minutes using free utilities that can be downloaded from the Internet. Using at least WPA is recommended, because it is much more secure, but is sometimes a bit harder to set up correctly than WEP is, and isn't completely secure.Some older access points or wireless cards do not support WPA2. If you have one of these, it is recommended that you purchase a newer one that supports WPA2, depending on how important you consider your security. However, WPA2 still uses static Pre-Shared Key, which is easy to capture and break. You have an option to use a very long network password (at least 10 alphanumeric characters) or use a RADIUS server and the WPA2-Enterprise mode that uses username/password combination and generates a temporary session encryption key. As it might be challenging to configure your own authentication server, you might want to use a commercial Virtual RADIUS server., Anybody who gains access to the router configuration settings can disable the security you have set up. If you forget the password, most routers have a hardware reset that will restore all of the settings to factory defaults. The best option is to use a random sequence of the maximum length of characters - you only have to type that once, so it is not a big thing. When you connect to the router via LAN cable while setting it up, you can copy and paste the password onto the router and onto your local setting, so you never need to type it again.
+
+
+
+Use a secure password. Don't use easily guessed passwords for your WPA2 or router access passwords, such as "ABC123", "Password", or a string of numbers in order. Use something hard to guess that contains both upper and lowercase letters as well as numbers. Special characters such as !@#$% are not supported by some routers. The longer the key, the better, although the WPA2 key has a minimum and maximum length. Try to make a little mental effort -- good passwords might be hard to remember, but they are harder to crack.
+If you use a weak key then even WPA and WPA2 can be easily cracked within a day using a combination of special precomputed tables and dictionary attacks. The best way to generate a secure key is to use an offline random number generator or write the entire alphabet in uppercase and lowercase and numbers 0-9 on separate pieces of paper, mix the paper up and randomly pick up pieces and return them, mixing them up again each time; each character you pull out becomes a character in your key. You can also try throwing a pair of dice and using the resulting numbers as your password.
+ A default SSID indicates to hackers that the network was set up by a novice and that other options (such as the password) are also left as the default. Use a name you can remember and identify, as the SSID has no influence on the security of your network (not even if you choose not to broadcast it).
+ A MAC (not to be confused with the computer model 'Mac') address is a code unique to every wireless networking card in existence. MAC Address filtering will register the hardware MAC Address of your networked devices, and only allow devices with known MAC Addresses to connect to your network. However, hackers can clone MAC addresses and still enter your network, so MAC address filtering should not be used in place of proper WPA2 encryption.
+ Do not disable the 'SSID Broadcast' feature of your Access Point or router. This seems counter-intuitive, but it is actually a bad idea.Although this would make your network invisible to your neighbors, any determined hacker can still sniff out your SSID; and you are implicitly forcing your computer to shout out your SSID anywhere you are, while it is trying to connect to it. Anyone could then impersonate your router with that SSID, and get your credentials that way.
+ The first router worm brute forces its way into the router in this manner. Most default usernames are set to Admin. It isn't hard for a virus/worm to crack the password if the username is known. The good thing is that routers normally have this disabled by default. Be sure to confirm that it is disabled when you first set up your router and periodically thereafter. If you need to update your router setting remotely, only set up access for the time you are going to be connected.
+ Finally, change the setting that allows administrating the router through a wireless connection to 'off' (meaning that you need to connect with a LAN cable for administration). This disables any wireless hacking into the router.
+

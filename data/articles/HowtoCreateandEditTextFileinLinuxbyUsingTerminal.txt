@@ -1,0 +1,51 @@
+ To do so, click Menu, then find the Terminal app--which resembles a black box with a white ">_" in it--and click on it. You'll typically find Terminal in a bar on the left side of the Menu window.
+
+
+You can also click the search bar at the top of the Menu window and then type in terminal to search for it.;
+, Terminal opens to your home directory, but the ls command displays every folder in your current directory. To create a text file in one of these directories, you'll need to change the current directory.
+ Any directory name listed beneath the ls command (e.g., "Desktop") is a place to which you can navigate., You'll replace "directory" with your preferred directory's name. This command changes Terminal's focus from the current directory to the one you name.
+
+
+For example, you would type cd Desktop to shift Terminal's command location to the Desktop directory.
+If you want to create a text file in a specific folder within your selected directory, you'll place a "/" after the directory and then type in the folder's name. For example: for a folder named "Misc" in the Documents directory, you'd type cd Documents/Misc.
+ Doing so will run your command, thereby shifting Terminal's target directory from your home directory to the one you specified., You can create a simple text file quickly, or you can use either Vim or Emacs to create and edit an advanced file. Now that you're in the directory in which you wish to place your text file, it's time to proceed with actually creating it., You'll replace "filename" with your preferred text file name (e.g., "sample").
+
+For example: when creating a file named "kitty", you'd type cat > kitty.txt.
+ Doing so will create a new text file with the specified name in your current directory. Your cursor will appear on a blank line in Terminal., You can simply type as you typically would for any other text document. To save the current line of text and jump to the next line, you'll press ↵ Enter.
+
+If you have the text file's directory open, you can also simply double-click the text file when it appears to perform this step.
+ This key command will save your work and return you to the Terminal command line, allowing you to continue entering commands., You'll replace "filename" with the text file's name. This command will locate your file, thus ensuring that it was safely created in your directory.For example: to open a file named "textfile", you would type ls -l textfile.txt.
+The letters in this code are lowercase "L", not uppercase "i".
+ Doing so should display the time, date, and name of your file on the following line, thus indicating that it was created and saved in your selected directory., The "vi" part of this command selects the Vim text editor as the program to use. You'll replace "filename" with the name you wish to assign to your new file.
+
+
+For a file named "tamins", for example, you'd type vi tamins.txt.
+If your current directory has a file by the same name, this command will instead open that file.
+ This will create your new file and open it in the Vim editor. You should see a blank Terminal window with a tilde (~) on each line, as well as your text file's name at the bottom of the window., Doing so will place your document in "Insert" mode, wherein you can enter text as needed.
+
+You should see -- INSERT -- pop up at the bottom of the window when you press the I key.
+ You can simply type as you typically would for any other text document. To save the current line of text and jump to the next line, you'll press ↵ Enter.
+ It's typically in the upper-left corner of your computer's keyboard. This key will place Vim in "Command" mode.
+
+
+You should see a cursor appear at the bottom of the window.
+ This command will save your document as it currently is., Doing so will quit out of Vim and return you to Terminal's main interface. Your text file is now in your specified directory.
+
+You can check for the text file by typing ls into Terminal and pressing ↵ Enter and then looking for the file's name.
+You can also type :wq to save and quit in one command.
+ Just as you did to create the file, you'll type vi filename.txt to open the file. This time when you open the file, you should see any saved changes that you made.
+ You'll replace "filename" with your preferred name for the text file.
+ As long as your text file's name isn't a duplicate of an existing text file in your current directory, this command will open a new text file in the Emacs editor.
+
+
+For example: a file named "newfile" would require you to type emacs newfile.txt.
+If you entered an existing text file name, this command will instead open the file in question.
+ Emacs comes complete with tons of powerful commands that let you navigate around a document, look up related or help information, manipulate text, and understand your code. These commands fall into two types: Control commands and Meta commands.
+
+
+
+Control commands are written like this: C-<letter>. To execute a Control command, you'll hold down the Ctrl key and press the specified letter key at the same time (e.g., Ctrl and A).
+
+Meta (or Escape) commands are written like so: M-<letter> or ESC <letter>. The "M" refers to a computer's Alt key or Esc key, since not all computers have the Alt key.
+A command written like C-a b (or M-a b) will require you to hold Ctrl (or Alt or Esc) while pressing the first key (e.g., a, then release both keys and immediately press the second key (e.g., b).
+ You can simply type as you typically would for any other text document. To save the current line of text and jump to the next line, you'll press ↵ Enter.,, This will exit the Emacs text editor and return you to your directory in Terminal. Your text file should now be saved under your selected name in this directory., To do so, simply type emacs filename.txt into Terminal. As long as you're in the same directory as is the file, doing this will open your text file in Emacs, at which point you may resume editing it if you please.

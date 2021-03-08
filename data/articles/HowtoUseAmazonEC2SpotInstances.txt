@@ -1,0 +1,137 @@
+ Obviously, spot instances should not be relied on to stay up for as long as you need. With that said, it is possible to use spot instances for long-lived processes.
+
+Long-lived spot instances are spot instances that you expect to keep around for a long time. If such an instance gets terminated, you are interested in spinning replacement instances. This could involve waiting for the price to go back down, using a different instance type or availability zone, or switching to an on-demand instance.
+Spot instances used for temporary workloads (which may be periodic, or one-off) can be spun up at times when the spot market is good, and terminated once their use is over.;
+,
+
+Programmatic spot instances may be used to execute predefined workloads or run predefined applications.
+Spot instances may also be used for manual testing and development.
+
+
+Spot instances that serve frontend applications need to be used with considerable care.
+For spot instances that serve backends, handling interruptions or launch failures isn't that time-sensitive but it's still important to have a strategy (executed automatically or manually) to deal both with failure to create the instance and interruption of the instance.
+ A spot request is:open if the request has been made but it has not yet been fulfilled. A spot request is open immediately after it is first made. Moreover, persistent requests become open as soon as the associated spot instance is interrupted (terminated by Amazon).
+
+active after it has been fulfilled by Amazon, i.e., after an associated spot instance has been created.
+
+failed if it was rejected by Amazon due to bad parameters.
+
+canceled if it was canceled by the user or if the request expired (i.e., the timeout set by the user for request fulfillment is over).
+
+closed if the instance was interrupted by Amazon and it was not initially specified to be persistent.
+ In each spot market, there is a spot price.
+At the time a spot request is made, the request includes the availability zone, instance type, operating system, a bid price (that we can think of as the maximum spot price the user is willing to bid), plus some other options discussed later on this page. None of these can be changed after the spot request has been fulfilled. The only change the user can make to the spot request is to cancel it (terminating the instance automatically cancels the spot request).
+If the bid price is less than the spot price for that availability zone, instance type, and operating system, the bid is rejected and the user is not charged any money.
+If the bid price is equal to or exceeds the spot price, the spot request is fulfilled subject to capacity being available.
+If the bid price exceeds the spot price and capacity is not available, then, to make way for that instance, other spot instances start getting terminated, starting with those with the lowest bid price. Terminations initiated by Amazon are also called spot instance interruptions, to more easily distinguish them from user-initiated termination. Each termination occurs two minutes after the termination notice is sent to the instance, to give the instance being terminated sufficient time to shut down gracefully (see the later discussion of spot instance termination notices). While the instances are getting terminated, there may be other changes to spot capacity (for instance, some other users may terminate their own instances, freeing up capacity). As soon as enough instances are terminated to allow for capacity to create a new spot instance, and the new spot price is still not greater than the user's bid price, the user's request is fulfilled.
+The upshot is that if only one new bid request is coming in, and the bid price is greater than the current spot price, then, even if capacity is full, one spot instance at the current spot price will be terminated and the user's spot request will be fulfilled. However, if a bid requests more than one spot instance, or many different users are bidding for new instances in the same market, the dynamics can get complicated.
+In general, spot requests are fulfilled within a few minutes of the request being made. For some instance types, it may take a fairly long time (hours or even days) for spot instance requests to be fulfilled. Moreover, if requesting a lot of spot instances, they may not all get fulfilled at once, particularly if capacity is close to full.
+ After a spot request has been fulfilled and the instance has started, it is billed in discrete units of hours.
+
+At every completion of an integer number of hours from the instance creation, the instance is charged for an hour at the current spot price, assuming it is less than or equal to the bid price.
+If the user terminates a spot instance, the user is still charged the full amount for the current hour of usage despite using it only partially during that hour.
+If the instance gets interrupted by Amazon for price or capacity reasons, the user is not charged for the hour during which the termination occurred. Thus, by choosing a bid price very close to the current spot price, users may be able to get workloads executed by spot instances for free (provided the instance takes under an hour to execute the workload).
+Spot instances may be interrupted by Amazon for reasons other than price and (overall) capacity, such as for data center upgrades or maintenance, without advance notice to the user.
+
+
+Bid prices cannot be higher than ten times the on-demand price. This is to prevent extreme spikes. Previously, when bid prices did not have this limit, the spot instance prices went up to $999/hour in one region.Although Amazon does not officially announce minimum spot prices, it is likely that it sets a floor on the spot prices by instance types, that accurately reflects the marginal cost of keeping the instance running. Even if it does not, there are definitely floors in practice on the spot price, perhaps due to some users who always have need for instances at a sufficiently low price.
+ In particular, the t2.micro instance, a small instance type that is ideal if you just want an instance for basic testing, is not available as a spot instance. However, this instance is available for free in the AWS Free Tier.,
+
+
+Higher bids insulate you against interruption of your instances, and reduce the pressure on you to develop better interruption management strategies.
+Lower bids help you cap the maximum amount you are willing to pay for instances, thereby providing a better upper bound on your instance costs.
+If all price spikes were brief, then high bids would be the better strategy, because the high bid would help you survive the price spike without having to pay more on average. In fact, if the spike is very brief, you may not have to pay anything at all because you only pay the price that is charged at the completion of an integer number of hours after your spot request is fulfilled.
+If, on the other hand, price spikes generally tended to persist, it would make sense to bid only as high as you are willing to pay for persistently#* In practice, the situation is mixed: most price spikes are brief, but sometimes price spikes can last several hours. This is what makes it hard to come up with an optimal bidding strategy.
+What you would ideally like to do is describe your bid not just in terms of the maximum price you will pay, but also in terms of how long you will be willing to keep a bid at the maximum price. This can help get the best of both worlds: bid high enough that your instances aren't interrupted, but if the price actually stays that high for a nontrivial length of time, then gracefully save your work, terminate the instance, and transition to a different way of executing the workload. Unfortunately, Amazon does not itself support such strategies, so you will need to use the API to write code to execute this sort of strategy, or use a third-party service that handles graceful workload transitioning.
+ Amazon defines four types of bidding strategies.Low bid strategy: Here the bid price is somewhere between the spot price and the effective hourly price for reservations (i.e., somewhere between 10% and 66% of the on-demand price). Low bid strategies guarantee low overall spend without the need for additional monitoring. However, they expose your instances to frequent interruption, so they need more monitoring to make sure the workloads do get executed. When using a low bid strategy for mission-critical workloads, it's particularly important to complement it with a good interruption management strategy.
+
+Mid-range bid strategy: Here, the bid price is somewhere between the effective hourly price for reservations and the on-demand price. Unlike low bid strategies, where you are guaranteed that at no time are you paying an unreasonable price, mid-range bidding strategies could mean that there are times when you are paying a higher price than you might be willing to sustainably pay. In exchange, you deal with fewer interruptions. Mid-range bidding strategies make sense for long-lived spot instances.
+
+On-demand bid strategy: Here the bid price is close to the on-demand price of the instance. This strategy is often paired with the interruption management strategy where, if the spot instance price comes close to the on-demand price, the user switches to an on-demand instance to execute the same workload, and then switches back to a spot instance once the price is low again. On-demand bid strategies are guaranteed to be at most as expensive as on-demand instances at any given time, while on average being substantially cheaper.
+
+High bid strategy (also known as convenience bidding): Here the bid price is substantially greater than the on-demand price. High bid strategies make sense for long-lived spot instances serving front ends, or for short-lived instances executing mission-critical workloads that need to be executed quickly even at the cost of possibly paying a higher price. High bid strategies might also allow one to obtain spot capacity when on-demand capacity is unavailable. High bid strategies for long-lived instances need to be combined with some monitoring so that persistently high prices can be detected and responded to.
+ You can mix and match bidding strategies even for different instances doing the same work. For instance, if you generally need three instances to serve a frontend load, but can do with two (at the cost of higher latency) you can choose a mix with one reserved instance, one spot instance with a high bid price, and one spot instance with a lower bid price. That way, if spot prices rise, you end up with less capacity but still have enough to maintain uptime. In terms of economics concepts, your distribution of bid prices is determined by your individual demand curve as a consumer of spot instances., To recreate the instance, a new spot request must be submitted.
+A persistent spot request is a spot request that is automatically resubmitted after the instance is terminated.
+ Rather, the spot service finds the availability zone with the lowest price for the requested configuration, provided it is less than the bid price. Note that the currently lowest-priced availability zone may not remain the lowest-priced throughout the lifetime of the spot instance. The rest of this page does not deal with EC2 Classic because it is a deprecated platform.
+Default VPC: The spot service uses the availability zone for the specified subnet. If no subnet is specified, an availability zone is selected, but it may not be the lowest-priced availability zone.
+Nondefault VPC: The spot services uses the availability zone for the specified subnet.
+
+
+The instances in the launch group are created only if all of them can be created. If the price or capacity are not enough to create all instances, then none of the instances is created and the user is not charged any money.
+If any of the spot instances is interrupted (i.e., terminated by Amazon) then Amazon automatically triggers the termination of all instances in the launch group. However, user-initiated termination of any instance does not cause the remaining instances to be terminated.
+Note that launch groups differ from availability zone groups. For availability zone groups, multiple spot instances are requested together but any one of them getting interrupted does not initiate termination of the others.
+
+
+
+The autoscaling group can include instances across multiple availability zones. This helps safeguard not only against hardware and network failures but also against spot market price fluctuations in one availability zone.
+A single autoscaling group can either be comprised entirely of spot instances or comprised entirely of on-demand instances. However, multiple autoscaling groups (as well as instances outside of autoscaling groups) can be attached to the same load balancer, so it is possible to mix and match spot instances and on-demand instances to handle the same production workload.
+The general wisdom with autoscaling groups is to scale up (also known as "scale out" in AWS lingo) quickly and scale down (also known as "scale in" in AWS lingo) slowly. This is for multiple reasons. First, since billing is by hour, frequently deleting and restarting spot instances is financially wasteful. Since multiple spikes often occur close in time, it's better to wait a bit before scaling capacity down. Second, not only is it financially wasteful, it also means more possible downtime or poor performance if not enough capacity is available right when the load starts increasing.A slight variant of the above idea of having a few on-demand instances and an autoscaling group of spot instances is to have two autoscaling groups: one for on-demand instances and one for spot instances. The autoscaling group of on-demand instances has a minimum number of instances equal to the number of reservations, and the autoscaling group of spot instances is intended to handle variability in traffic. Further, the autoscaling group of on-demand instances has a very hard-to-trigger scale-out policy: it can scale out, but only in dire circumstances (i.e., when the load goes really high, which will usually happen if the spot market has no available additional instances to handle the load). The additional instances created in the on-demand autoscaling groups would not be covered by reservations, and would therefore cost more.
+Amazon's termination policy for autoscaling groups is designed to give you the maximum cost savings while accounting for availability: it terminates the spot instance in the availability zone with the maximum capacity, with the oldest launch configuration, and that is closest to completing its billable hour. The savings can be significant if instances are frequently being created and terminated.It is also possible to customize the termination policy.
+ These are a new offering from Amazon (announced in May 2015) where you can ask for a spot fleet with multiple instance types.When requesting a spot fleet, you specify a configuration where you describe the different configurations (instance type, operating system, etc.) that you are interested in, along with a numerical weight associated with each. For instance, you may be okay with using the m4.2xlarge instance type or the m4.4xlarge instance type, but you consider one m4.4xlarge as equivalent to two m4.2xlarge's. You can specify this by setting a weight of 1 for m4.2xlarge and 2 for m4.4xlarge. Note that the weights are defined by you and therefore do not necessarily conform to the ratios of hardware specs, though in practice they'll often be pretty similar. You also specify a capacity that you want, and a global maximum bid price per unit.
+Amazon offers two spot fleet allocation strategies. The lowestPrice strategy picks a single configuration and as many instances of that as needed, and it picks the configuration with the lower price. For instance, suppose you need 11 units of capacity, and you have set a weight of 1 for m4.2xlarge and 2 for m4.4xlarge. The lowestPrice strategy will either give you 11 m4.2xlarge instances or 6 m4.4xlarge instances, whichever is cheaper. The other strategy, called the diversified strategy, allocates equal shares of the overall capacity to the different instance types, which in this case would mean 6 m4.2xlarge instances and 3 m4.4xlarge instances. Note that in both cases, Amazon limits the maximum amount you pay per unit to your global maximum big price.
+The spot fleet also launches replacement instances if a particular instance gets terminated, with the type of replacement instance being launched dependent on the strategy used.
+
+
+Although autoscaling groups were originally designed to handle variable traffic capacity, it is possible to have an autoscaling group of fixed size one. The advantage of placing your spot instance in such an autoscaling group is that Amazon will automatically spin up the instance again if it gets interrupted for price, capacity, or other reasons.It is possible to have persistent storage so that, when the new spot instance is spun up, it retrieves data from wherever the previous spot instance checkpointed it.
+One key challenge with using autoscaling groups this way is that any custom actions you do upon launch (or revival) must be placed in the user-data of the script and cannot be run through separate scripts. This additional automation usually requires additional investment and may be worthwhile only after you have ironed out other process details.
+Using autoscaling groups in conjunction with CloudFormation can be helpful for handling upgrades or changes to your configuration.
+ The purpose of looking at spot instance pricing history is not to be able to accurately predict future prices, but to get a sense of the uncertainty, variability and comparison in prices.
+
+
+
+One useful measure is the average instance price over a reasonably long time horizon. This is the rate you pay for long-lived spot instances where you bid sufficiently high that your instance is uninterrupted. However, also keep in mind that new spikes can occur in spot markets that have so far been free of spikes.
+Another useful measure is the peak value of spot price. This is the price above which you would need to have bid to have a long-lived spot instance running continuously.
+For spot instances used to execute temporary workloads with a flexible time schedule, first identify the time taken to execute the workload. Then identify the minimum, average, and maximum of the total price you'd pay for the spot instance over time periods of that length. The maximum represents the worst-case scenario (i.e., the scenario if you bid for the instance at the worst possible time) while the minimum represents the best scenario.
+In the Amazon EC2 Console, you can access Spot Instance Pricing History for a variable time window, ranging from 1 day to 3 months. Make sure to view the history over 3 months so that you have a clearer idea of more long-term trends in prices.
+
+
+Amazon's spot instance pricing history chart allows you to examine spot instance pricing histories for the same configuration across all availability zones in a region.
+You might find some "rogue" availability zones, where the spot instance prices are either consistently higher or subject to substantially more sustained price variation.
+Another useful piece of information you can get by looking at multiple availability zones is to see how the price spikes correlate across availability zones. If price spikes generally occur at different times in different availability zones, you can obtain a fairly robust architecture by splitting your spot instances across availability zones. If, on the other hand, the price spikes in different availability zones occur at the same time, then all your spot instances can go down together.
+
+
+For reserved and on-demand instances, price scales linearly by size within an instance class. This is not necessarily true for spot instances, although it often approximates the truth for small instances with stable prices.
+The ratios of spot prices across different instance classes may also be different from the ratios of on-demand prices.
+In general, prices are more volatile for larger instances because the smaller number of instances makes prices more sensitive to individual bids. Moreover, for larger instance types, fluctuations in price tend to last longer than minor blips. Note that this reverses a trend seen in the early years of AWS, where larger instances had very stable prices (mostly because very few people were aware of their existence) and smaller instances had more price fluctuations.
+Prices tend to be most stable for the M instance class, somewhat less stable for the C instance class, and least stable for the R instance class.
+Older generation instances, such as the m2 instances, tend to be quite cheap and less volatile if still available on the spot market. The m2 instance type is hard for people to switch to quickly because it does not support the new virtualization used by EC2 (called hvm) but only supports the old virtualization (pv). Therefore, people who use hvm AMIs cannot switch to m2 instances when spot prices surge for their preferred instance types. If your architecture can handle switching to m2 instances, consider using those as they can save you a lot of money and reduce the volatility of your instances.
+Amazon's Spot Bid Advisor provides advice on average price savings and likelihood of being outbid, broken down by instance class, and separately for each region. This can be a useful reference to consult in addition to examining spot instance pricing history and trends manually.,
+
+Amazon generally limits the number of spot instance requests for each instance class that a given user can make, to avoid new users inadvertently disrupting the spot market by demanding a large number of instances. Despite this, it is possible for a single user to disrupt spot markets.
+In general, the more the number of instances you are requesting, the more you have to be concerned about your own effect on the spot market.
+For larger instance types, the total number of instances on the market tends to be smaller. Therefore, it is easier to disrupt the market by placing a few bids. In fact, even the total capacity is often smaller. For instance, the m4.10xlarge instance is 20 times the size of the m4.large instance, but the number of instances of this type available in the spot market is less than 1/20 of the number of instances of the m4.large type.
+If all the instances you are requesting are of the same instance type and in the same availability zone, you are more likely to affect the price than if your instance requests are spread across availability zones.
+
+
+Make scripts that combine the creation of the spot instance with installing the relevant applications on them so that they can be ready to execute your workload or connect to your frontend immediately upon launch. This is particularly important for short-lived spot instances, but can also be important for long-lived spot instances because a spot instance can be interrupted any time and may therefore need to be recreated.
+If the spot instances serve a frontend, add the step connecting them to the frontend load balancer in the launch script. Do any health checks and load testing prior to connecting with the load balancer.
+
+
+If using your custom applications, consider creating a custom AMI that has your application pre-installed. The main downside is that this AMI needs to be kept up-to-date every time you update your application, and also updated for bug fixes to other packages.
+Instead of installing packages from their source repositories, consider storing the packages in a S3 location in the region where you are creating your instances, so your download process is faster. Also, consider pre-building any jars or executables and directly downloading these pre-built jars to your spot instances.
+
+
+Run these scripts from an EC2 instance in the same region to minimize connectivity issues. If the script is run daily, put it in the cron job for that day.
+Terminate the spot instances after the workload is completed and after all logs and records have been saved outside of the spot instances.
+Terminate the spot instances if they become unresponsive.
+If the process is expected to be short-lived, terminate the spot instances after a certain time limit, even if the process is not completed. Alternatively, send a notification to a human to take a look at why the process is taking so long.
+Have a notification or fallback plan for other errors associated with the spot instances, e.g., failure to launch, or premature termination of the spot instances.
+ Amazon offers two-minute spot instance termination notices.These notices can be detected by monitoring an endpoint on the spot instance itself. You can use this information to gracefully disconnect the instance from the load balancer and then gracefully shut down and checkpoint the instance.,,
+
+Rather than having custom scripts running from your own instance to launch and terminate, use AWS autoscaling groups, launch configurations, user data scripts, and CloudFormation.
+
+
+In your online EC2 console, you can get a breakdown of instance costs by region, availability zone, instance type, and purchase option. In particular, you can filter to only see costs for spot instances and group by instance type and region to see how much your spot instances cost.
+Set up a billing alert in your root account to start sending your data to Amazon CloudWatch. Then set up billing alerts to alert yourself to huge cost spikes. Note that CloudWatch does not break down costs by purchase option (it only reports overall EC2 costs) but it can still help catch huge cost spikes due to price spikes in spot instances.
+
+
+Check if you have open or active requests that you aren't aware of or didn't intend to have.
+Check if you have EC2 instances that you don't think you should have.
+Check if you have a surfeit of EBS volumes not associated with any EC2 instance.
+Check the spot instance pricing history for the EC2 instance types where you regularly use spot instances.
+
+
+You can have the spot instance information written out to S3, and install Python scripts in AWS Lambda to automatically detect new S3 files, compare with old S3 files, and detect whether instances have been terminated, and whether their prices exceed specific thresholds or have risen sharply.
+Amazon is lagged by about 3 hours in writing out the data to S3, so you will not get immediately notified of events this way. It is most useful for identify sustained price increased in spot prices that you can then act upon at leisure by switching over the instance type. It is ideal in cases where you have long-lived instances that you have set a high bid price for because you are averse to interruption, but you still want to be notified if the price has been persistently high for a while so that you can transition to a different instance type or availability zone
+
+, They're a startup that helps companies monitor their cloud costs., This company is now owned by Amazon. It helps companies run mission-critical workloads on spot instances by predicting price spikes, using multiple availability zones, and switching to on-demand instances automatically when spot prices are high.

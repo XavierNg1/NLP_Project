@@ -1,0 +1,11 @@
+ Popular Linux distros include Ubuntu, Fedora and Debian.;
+, Let's assume you chose Ubuntu.
+ It can be found in the Ubuntu package manager., Use UCK to customize an existing Ubuntu distro (Edubuntu, Ubuntu GNOME, etc.) into your own personal distro.
+
+
+Select the language packs and desktops for your distro.
+Select the Ubuntu distro that you plan to customize.
+Enter the name of your new distro when prompted and select manual customization. This will launch a terminal window.
+Generate a hybrid ISO image that you can burn onto a CD or a USB. UCK will unpack the ISO and download the selected language packs. Choose the option to manually customize the distro.
+Use the apt-get package manager to uninstall the default software packages and install your preferences. One popular customization is using apt-get install ubuntu-restricted-extras to install plugins to handle multimedia in various formats.
+Close the terminal window and select the "Continue Building" in the UCK wizard. The utility will build your new custom Ubuntu distro and highlight the new ISO image.

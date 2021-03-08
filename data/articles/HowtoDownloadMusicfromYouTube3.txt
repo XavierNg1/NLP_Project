@@ -1,0 +1,16 @@
+ This program is an open-source YouTube downloader, and is completely free. It requires using the command line, but you won't have to deal with any ads.
+
+Visit rg3.github.io/youtube-dl/ in your browser.
+ The process for downloading and/or installing the program varies depending on your operating system:Windows - Click the "Download" button and then click the "Windows exe" link. Place the downloaded "youtube-dl.exe" file into your User folder (i.e. C:\Users\username).
+Mac - Open the Terminal from the Utilities folder. Enter the following command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)". This will install Homebrew, allowing you to install youtube-dl. Type brew install youtube-dl and run the command to install youtube-dl.
+ This software will convert the audio from the video into MP3 format. The process is a little different for Windows and Mac:
+
+Windows - Visit ffmpeg.org/download.html and click the Windows icon. Click the "Windows Builds" link, then download the 32-bit or 64-bit installer. Double-click the downloaded ZIP file and then click "Extract." Open the extracted folder, then open the "bin" folder. Move the three EXE files to the same location as "youtube-dl.exe."
+Mac - Open the Terminal and type brew install ffmpeg. This will automatically download and install FFmpeg using Homebrew, which you installed in the previous step.
+ You'll be copying the address of the video, so make sure you've loaded the video's page., Highlight the address in the browser's address bar, then right-click the selection and click "Copy.", You'll be using the command line to interact with youtube-dl. You can find the Command Prompt by opening the start menu or screen and typing cmd. If you're using a Mac, the Terminal can be found in the Utilities folder.
+
+When you start the Command Prompt in Windows, you should start in your User folder. This should be the same location that you moved the "youtube-dl.exe" file to after downloading it.
+ Type youtube-dl and press Space. Don't run the command yet., Type --extract-audio --audio-format mp3 and press Space., Press Ctrl/⌘ Command+V to paste the copied video URL.
+
+The entire command should look like youtube-dl --extract-audio --audio-format mp3 videoURL.
+ Press ↵ Enter/⏎ Return to run the command. youtube-dl will begin automatically downloading the video, and then FFmpeg will extract the audio and convert it to MP3 format., You'll be able to find the MP3 file in your User directory. You can double-click it to pay it in your default media player.

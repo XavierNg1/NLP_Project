@@ -1,0 +1,43 @@
+
+Install Ubuntu server.
+Install subversion.
+Create a new (empty) repository.
+Configure web access to the repository.
+Enable the LDAP authentication module.
+Configure permissions.
+Restart the Apache web server.Test access to the repository.
+Install trac.
+Configure trac
+
+sudo vim /etc/apache2/httpd.conf
+
+Insert the following snippet:-
+
+
+
+
+<location trac>
+  SetHandler mod_python
+  PythonInterpreter main_interpreter
+  PythonHandler trac.web.modpython_frontend
+  PythonOption TracEnv /trac
+  #PythonOption TracUriRoot /trac
+ 
+  AuthName "Enter your domain username and password"
+  AuthType Basic
+  AuthBasicProvider ldap
+  AuthLDAPBindDN "CN=YOUR_USER,OU=OU=YOUR_OU,DC=YOUR_DC,DC=YOUR_DC"
+  AuthLDAPBindPassword "YOUR_PASSWORD"
+  AuthLDAPURL "ldap://YOUR_AD_SERVER:389/ou=YOUR_OU,dc=YOUR_DC,dc=YOUR_DC?samAccountName?",
+Update permissions.
+Configure an admin user for trac.
+Restart apache web server
+
+sudo /etc/init.d/apache2 restart
+
+,Test the trac installation.
+Mount a remote system as a backup location.
+Create a full backup script.
+Create an incremental backup script.
+Schedule the backup scripts.
+Test restoring your backup!

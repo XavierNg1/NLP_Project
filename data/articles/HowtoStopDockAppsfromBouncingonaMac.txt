@@ -1,0 +1,12 @@
+ This is the small magnifying glass located in the top-right corner of your Mac's screen.;
+,, It should be located near or at the top of the results that appear.
+ Alternatively, you can copy and paste it into Terminal by clicking and dragging your mouse over the text below, hitting ⌘+C on your keyboard, then clicking in the Terminal window and hitting ⌘+V. The syntax to enter is as follows:
+
+
+defaults write com.apple.dock no-bouncing -bool TRUE
+
+, Doing so will run the command in Terminal, which tells your computer never to animate when they have notifications.
+
+
+To reverse this command, enter defaults write com.apple.dock no-bouncing -bool FALSE into Terminal at any time and hit ⏎ Return on your keyboard.
+

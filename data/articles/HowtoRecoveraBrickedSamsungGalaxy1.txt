@@ -1,0 +1,50 @@
+ You can download the Odin files by going to this website, and clicking on “Copy to my files.”
+
+
+Samsung Galaxy basically has two types of bricks: soft brick and hard brick. Soft brick is temporary, which means your device can still be brought back to its normal state. It is often caused by invalid or corrupted firmware installation, flashing bad scripts, and attempts to root the device. A hard brick is harder to fix, and your device cannot boot at at all.;
+, To unzip and extract the firmware, right-click on the zip file. From the context menu, click on “Extract here.”
+
+, This will run Odin.
+ The Odin window is under “Option” on your PC.
+
+
+In case other options are also selected, click on the check box beside each of these options to remove them from the selection.
+ Afterwards, choose the “VRALEC” bootchain file with the “.tar.md5” extension.
+ To do this, simultaneously press the Volume Down button (the bottom button on the left side of your device), the Home button (middle button at the bottom section of your screen) and the Power button (on the right side of your device).
+
+
+Press on these buttons until a warning message is displayed on your screen.
+Press the Volume Up (the top button on the left side of your device) to continue to Download mode.
+ Use a USB cable to connect your devices. After successfully connecting them, an “Added” message will appear on the Odin window on your PC.
+
+
+If the message doesn’t appear, check if your Samsung Galaxy and PC are indeed connected.
+ This will flash the VRALEC bootchain. Wait until a “Pass!” message is displayed on the Odin window on your PC before you continue.
+ Close Odin by clicking on the “X” at the corner of the Odin window (this is the “Close window” button), and then restart it by double-clicking on the “Odin” icon on your desktop.
+ Extract it from “stock.vzw_root66.7z” from the Odin window into a separate folder on your PC. You can do this by dragging “stock.vzw_root66.tar” from the source (stock.vzw_root66.7z) to a new folder on your desktop.
+ Afterwards, load the “stock.vzw_root66.tar” file on your PC by clicking on it.
+ Select the following options under the “Options” drop-down menu: Auto Reboot, F. Reset Time, and Nand Erase All.
+ This will begin the flashing process. Wait for it to finish, and as soon as the process is complete, a green “PASS” message will be displayed.
+
+
+Don’t unplug the device or interrupt the flashing procedure under any condition.
+ Do this by removing the battery and re-inserting it into your Samsung Galaxy.
+ Upon holding these three buttons for 10 seconds, the Samsung Galaxy welcome screen and a menu with green and blue letters will appear (also known as the Recovery menu).
+ In the Recovery menu screen, use the Volume buttons to scroll up or down, and the Power button to select.
+
+
+Don’t panic when you see error messages. They’re expected and simply imply that the debricking of your soft-bricked Samsung Galaxy is being done correctly. The following error messages could be displayed on the screen while performing the above step:
+
+E:failed to mount/data (Invalid argument)
+E:Can’t mount/data/fota/ipth-muc.prop
+E:failed to mount /data (Invalid argument)
+E:Can’t mount /data/fota/ipth-muc.prop
+E:failed to mount /data (Invalid argument)
+E:Can’t mount /data/fota/ipth-muc.prop
+
+
+
+, Do so with the help of the Power button. This will bring you to the next screen.
+ Simply look for “Wipe cache partition,” and select it using the Power button.
+ Your device will then be rebooted automatically. Wait for a few minutes, and you will have your Samsung Galaxy debricked.
+

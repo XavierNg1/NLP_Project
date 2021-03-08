@@ -1,0 +1,332 @@
+ You may use a simple word processor such as Notepad to write this code, but you will not get the added benefits of error warnings or automatic formatting of the code for readability.
+ These statements tell the computer that your program will use two pre-existing libraries that are already built-in to C++. The iostream library contains code for input and output to the console. The string library contains code for creating and manipulating text strings. Including these libraries makes your programming life easier because you are taking advantage of the resources already available to you.
+
+
+
+
+#include<iostream>
+#include<string>
+
+
+
+
+, The text you type should appear on a new line. This text will inform the computer that you are using some abbreviated conventions for certain text that will appear later. For example, later on in this process, instead of typing “std::cout”, you will only have to type “cout”. Do not type the comments (statements that follow two forward slashes) as you proceed with this process.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+//new text appears below this line
+using namespace std;
+
+
+
+
+, This program will only have one function, the main function, which is a part of every C++ program. The right curly brace will automatically appear on most text editors after you type the left one. The same is true of all symbols with an "opening" and "closing" case (such as parenthesis, "()", brackets, "[]", and curly braces, "{}"). All of the code you type within the main function is automatically indented to indicate its placement and improve readability. Make sure the rest of the code you type is within these two curly braces.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+//new text begins here
+int main()
+{
+ 
+}
+//new text ends here
+
+
+
+
+, Within the curly braces of the main function, type the new text shown below. This text establishes "str", "length", and "isPalindrome" as variables which store a text string, integer, and Boolean value respectively. The variable “str” will store the word that may or may not be a palindrome. The variable “length” will store the number of letters in the word. The variable “isPalindrome” will store whether or not the word is a palindrome. For the purpose of this program, we first assume the word is a palindrome, and then examine it to see if it is not a palindrome. If it is not a palindrome, we will change the value of “isPalindrome” to false.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+int main()
+{
+//new text begins here
+    string str;
+    int length;
+    bool isPalindrome = true;
+//new text ends here
+}
+
+
+
+
+,  This text will inform the user to enter a word.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+int main()
+{
+    string str;
+    int length;
+    bool isPalindrome = true;
+ 
+//new text begins here
+    cout << "Enter a word: ";
+//new text ends here
+}
+
+
+
+
+,  This text will take input from the user and put it in the variable “str” you created earlier.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+int main()
+{
+    string str;
+    int length;
+    bool isPalindrome = true;
+ 
+    cout << "Enter a word: ";
+ 
+//new text begins here
+    getline(cin, str);
+//new text ends here
+}
+
+
+
+
+, The length of the word is needed so the computer knows when to stop looking through the letters in the word.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+int main()
+{
+    string str;
+    int length;
+    bool isPalindrome = true;
+ 
+    cout << "Enter a word: ";
+ 
+    getline(cin, str);
+ 
+//new  text begins here
+    length = str.length();
+//new text ends here
+}
+
+
+
+
+,  Put as simply as possible, this text creates a loop that will examine each letter with its corresponding mirror letter to see if they match. Since the number of examinations is half the size of the word, we divide the length by 2 in the code. When you type the left curly brace, the right one should automatically appear again. The next line of code should be typed within these new curly braces.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+int main()
+{
+    string str;
+    int length;
+    bool isPalindrome = true;
+ 
+    cout << "Enter a word: ";
+ 
+    getline(cin, str);
+ 
+    length = str.length();
+ 
+//new text begins here
+    for (int i = 0; i < (length / 2); i++)
+    {
+    }
+//new text ends here
+}
+
+
+
+
+,  This statement carries out comparisons. A given letter, denoted “i", is compared with the letter in its mirrored position in the word. For example, in the word “madam”, the two m’s will be compared, then the two a’s, and so on.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+int main()
+{
+    string str;
+    int length;
+    bool isPalindrome = true;
+ 
+    cout << "Enter a word: ";
+ 
+    getline(cin, str);
+ 
+    length = str.length();
+ 
+    for (int i = 0; i < (length / 2); i++)
+    {
+//new text begins here
+        if (str!= str)
+            isPalindrome = false;
+//new text ends here
+    }
+}
+
+
+
+
+,  If the word in question is a palindrome, the variable “isPalindrome” will still be true. Otherwise, it will be false. This “cout” statement displays the "true" instance to the user.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+int main()
+{
+    string str;
+    int length;
+    bool isPalindrome = true;
+ 
+    cout << "Enter a word: ";
+ 
+    getline(cin, str);
+ 
+    length = str.length();
+ 
+    for (int i = 0; i < (length / 2); i++)
+    {
+        if (str!= str)
+            isPalindrome = false;
+    }
+ 
+//new text begins here
+    if (isPalindrome == true)
+        cout << str << " is a palindrome" << endl;
+//new text ends here
+}
+
+
+
+
+, If the word in question is not a palindrome, the variable “isPalindrome” will have a new value of “false” and the “else” statement will execute, displaying this fact to the user.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+int main()
+{
+    string str;
+    int length;
+    bool isPalindrome = true;
+ 
+    cout << "Enter a word: ";
+ 
+    getline(cin, str);
+ 
+    length = str.length();
+ 
+    for (int i = 0; i < (length / 2); i++)
+    {
+        if (str!= str)
+            isPalindrome = false;
+    }
+ 
+    if (isPalindrome == true)
+        cout << str << " is a palindrome" << endl;
+ 
+//new text begins here
+    else
+        cout << str << " is not a palindrome" << endl;
+//new text ends here
+}
+
+
+
+
+,  This statement tells the computer that the program executed correctly. Make sure the final curly brace from the main function appears after this statement. If you are using a standard text editor, the indentation and spacing will happen automatically within the curly braces and this will be less likely to be a potential problem.
+
+
+
+
+#include<iostream>
+#include<string>
+ 
+using namespace std;
+ 
+int main()
+{
+    string str;
+    int length;
+    bool isPalindrome = true;
+ 
+    cout << "Enter a word: ";
+ 
+    getline(cin, str);
+ 
+    length = str.length();
+ 
+    for (int i = 0; i < (length / 2); i++)
+    {
+        if (str!= str)
+            isPalindrome = false;
+    }
+ 
+    if (isPalindrome == true)
+        cout << str << " is a palindrome" << endl;
+ 
+    else
+        cout << str << " is not a palindrome" << endl;
+ 
+//new text begins here
+    return 0;
+//new text ends here
+}
+
+
+
+
+, You may run your code on your software to see that it works. How this is carried out will vary depending on your software.

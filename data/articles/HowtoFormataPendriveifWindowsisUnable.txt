@@ -1,0 +1,41 @@
+ This is a Windows utility that allows you to manage all of your connected disks. Your drive should appear in this utility, even if it isn't formatted properly.
+
+
+Press the Windows key + R and type diskmgmt.msc. This will launch the Disk Management Utility.
+Look for your USB drive in the list of connected drives. If your USB drive is listed, it may not be formatted correctly. Click here for instructions on trying to format it. If your USB drive is not listed, read on for some troubleshooting tips.;
+, Before continuing, the quickest troubleshooting method you can try is plugging the USB drive into another USB port on your computer. Be sure to try a port directly on the computer, not a USB hub.
+
+
+If the drive works in another USB port, the first one you tried is likely dead. There's not much you can do about this short of replacing your motherboard. Just try to avoid using that port in the future.
+ If the drive still does not appear when plugged into another computer, there's a good chance that the drive is dead. You may need to replace it.
+
+If the drive appears when plugged into another computer, there may be an issue with the drivers on your computer. See the next section for instructions on dealing with driver issues.
+ This will open the Device Manager.
+ This will list all of your connected disk drives, including hard drives and USB drives.
+ This will remove the drivers for the USB drive from your system.
+ Windows will attempt to automatically install the drivers.
+ If you see a yellow exclamation icon next to any of your devices, it means there is a problem with the drivers. If this yellow exclamation mark is on your Universal Serial Bus controllers, your computer's USB drivers are acting up.
+
+
+Right-click on the non-working device and select "Update Driver Software". Follow the prompts to reinstall the drivers., This will launch the Disk Management Utility.
+ You will be able to see all of the partitions for each drive in the bottom frame of Disk Management.
+ This will open the Format tool.
+ This will allow the USB drive to be read by the most devices possible, including Windows, OS X, Linux, and most game consoles.
+ The formatting process will take longer, but Windows may be able to correct errors on the drive.
+ This may take a while, but if the format is successful, the drive should appear in Windows. If the format process doesn't work, try the next section.
+
+
+Formatting will delete all of the data on the USB drive.
+ You can start the Command Prompt from the Start menu, or by pressing the Windows key + R and typing cmd.
+ You may be prompted for administrator access. The prompt will change to DISKPART>.
+ This will list all of your connected disks.
+ Replace # with the number associated with your USB drive.
+ This will check the disk for errors.
+ This will create a new partition on the disk.
+ this will make the newly-created partition the active partition on the USB drive.
+ This will format the new partition using the FAT32 file system, which is compatible with most devices and computers.
+
+
+The format process will likely take a while to finish.
+ This will close the DISKPART utility.If your USB drive will still not show up in Windows after using the DISKPART utility, or you receive errors when trying to format, your USB drive is most likely damaged and no longer functional.
+

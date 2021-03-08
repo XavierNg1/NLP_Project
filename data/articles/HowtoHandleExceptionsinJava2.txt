@@ -1,0 +1,78 @@
+ Create a class and name it however you want and inside the class create the main method.
+
+
+
+
+public class HandleExceptionExample {
+    public static void main(String[] args) {
+ 
+    }
+}
+
+
+
+
+, Create try-catch block and add parenthesis to the try statement.
+
+
+
+
+public class HandleExceptionExample {
+    public static void main(String[] args) {
+        try () {
+ 
+        } catch () {
+ 
+        }
+    }
+}
+
+
+
+
+, Instantiate FileReader and File as its parameter in the try statement. In the catch statement, add IOException and inside the block, print stack trace to the console.
+
+
+
+
+public class HandleExceptionExample {
+    public static void main(String[] args) {
+        try (FileReader reader = new FileReader(new File("filename"))) {
+            // code omitted
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+
+, Using try-with-resources automatically releases the resources back to the operating system. Think of it as an automatic finally block. If exception is thrown while reading the file, reader.close() will be automatically called.
+
+The equivalent using try-catch-finally:
+
+
+
+
+FileReader reader = null;
+try {
+    reader = new FileReader(new File("filename"));
+    // code omitted
+} catch (IOException e) {
+    e.printStackTrace();
+} finally {
+    if (reader != null) {
+        try {
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+
+
+

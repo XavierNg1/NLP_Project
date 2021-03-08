@@ -1,0 +1,29 @@
+ It is the best practice, especially if you're new to digital editing, to always save a copy of your image before working on it. This allows you to experiment and edit without worrying about making a mistake. While you can also click "Undo," this gets much harder if you're trying multiple things at once, like cropping, tinting, sharpening, etc.
+
+
+Click "File" → "Save As," or simply press Ctrl+Shift+S (Windows) or Cmmd+Shift+S.
+At the bottom of the "Save As" menu, click "Save as a Copy."
+
+, The last thing you want to do is experiment color, contrast, saturation, etc. and not have the ability to fix it when you go too far. While you should always save a separate copy of an image before editing, Adjustment masks let you keep tinkering with these setting at any point in the future, including turning them on/off, without using "Undo."
+
+
+Click "Window" in the top bar.
+Select "Adjustments."
+Choose your adjustment, from Brightness/Contrast to Gradient Maps. Note how a new layer is created.
+Delete, re-order, or change the opacity of your layers at any time, or double-click to change the settings., Camera Raw opens a new copy of your picture with sliders for color temperature, contrast, light control, clarity, saturation, and cropping. This allows you to make quick, basic changes with real-time sliders and effects. It will appear automatically when the picture is open if you set it properly:
+
+
+Click on "Photoshop" in the upper left corner.
+Click on "Preferences" → "File Handling"
+Under "File Compatability," check "Prefer Adobe Camera Raw for Supported Raw Files."
+Click on "Camera Raw Preferences" and set JPEG and TIFF Handling to "Automatically Open all Supported.", Say, for example, you know that most of your images are a bit too dark, and they all could use an extra 10 points of Brightness. Instead of manually editing each photo, you can teach Photoshop to do it for you on many pictures at once. For learning's sake, say you want to add 10 points Brightness to 15 images:
+
+
+Click "Window" &Rarr; "Action" to bring up the Actions menu.
+Click "New Action" in the bottom of the menu and name it after whatever you're doing. The button looks like a sticky note.
+Click on "Image" → "Adjustments" → "Brightness/Contrast" and add your 10 points Brightness like normal.
+Click the square "Stop" button in the actions menu to end the recording.
+Click "File" → "Automate" → "Batch" from the top bar.
+Under "Play," select the action you just made (it will be whatever you titled it).
+Select "Choose..." and select the photos you want to edit.
+Check the boxes "Suppress File Open Option Dialogs" and "Suppress Color Profile Warnings" and hit OK to edit your images all at once once.

@@ -1,0 +1,31 @@
+ This tool will, among its many features, allow you to shrink one of your existing volumes so that you can use that space to create a new partition. For example, if you have a drive with 200 GB of free space, you can shrink it so that the extra space is available to create a new 100 GB partition while leaving 100 GB of free space on the original volume. If you are creating partitions on a newly-installed drive, click here.
+
+
+The quickest way to open Disk Management is to click the Start menu, type diskmgmt.msc, and press ↵ Enter.
+You can also open the Control Panel, select "System and Security" and then "Administrative Tools", double-click "Computer Management", and then select "Disk Management".;
+, When selecting a volume to shrink, keep in mind that it's always a good idea to keep about 20% free space on each of your volumes. This is especially important for the volume containing Windows 7.
+
+
+For example, if you have a volume on your computer that is 100 GB in size and has 30% of its space free, you'll only be able to shrink it by 10 GB if you want to keep 20% free on the original volume. This may not be worth creating a new partition, so you'll want to pick another volume to shrink.
+ You can right-click the volume in the list at the top or in the diagram in the lower portion.
+ The space is measured in megabytes (MB), where one gigabyte (GB) is equal to 1024 MB. Keep in mind the 20% guideline. Click the Shrink button when you're satisfied.
+
+
+Note that you may not be able to select all of the available space, as Windows allocates some of this for unmovable files. This can cause problems if these files are located in the "middle" of the free space, because you will only be able to shrink from the "right side" of the unmovable block. This can significantly reduce the amount of space available for shrinking, and then only way around it is by using special tools.
+If you get a "Convert to Dynamic disks?" prompt, do not accept. Dynamic disks can cause Windows to not boot. You will need to use a partition tool to shrink your volume.
+ Shrinking the volume will create "Unallocated" space equal to the amount it was shrunk by. This space cannot be used until it is turned into a volume and formatted. See the next section for details., This is usually caused because the Disk Defragmenter service has been disabled.
+
+
+Click the Start menu, type services.msc, and press ↵ Enter.
+Double-click "Disk Defragmenter" in the list of services.
+Change "Startup Type" to "Manual".
+Reopen Disk Management
+
+, If you aren't satisfied with the amount you shrunk the volume, or you change your mind, you can add it back to the original volume as free space. You can only do this before you format it; if it's been formatted it will need to be deleted first.
+
+
+Right-click on the original volume to the left of the newly-created unallocated space in the drive diagram.
+Select "Extend Volume". Follow the prompts to add the space back. Usually your unallocated space will be automatically selected, but you may need to manually select it if there are multiple options available for extending the volume.
+ This is caused by unmovable files preventing you from shrinking the drive. You can try defragmenting the hard drive to see if Windows can move them, otherwise you'll need to use a partition tool like GParted or Partition Magic to create your partition.
+ Advertised space is not the same as space available, as hard drive manufacturers use a different definition of a gigabyte than Windows does. For example, a hard drive advertised as 500 GB will actually be about 465 GB in Windows.
+

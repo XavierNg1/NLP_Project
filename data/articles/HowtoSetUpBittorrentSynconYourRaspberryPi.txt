@@ -1,0 +1,93 @@
+
+
+
+To ensure that BitTorrent Sync will be compatible with your version of Raspbian, a command will be typed into the command prompt window to serve this function. Type the below command with no edit.
+sudo apt-get -y update && sudo apt-get -y upgrade
+Wait until the download and installation is complete before proceeding onto the next step.;
+,
+
+The first step to setting up your Raspberry Pi BitTorrent Sync server is to download the necessary software to your Raspberry Pi so that it can be installed.
+First off, you want to select where we will be extracting the BitTorrent Sync files. Type the exact command below to do so:
+
+cd /home/pi
+
+
+
+
+
+
+Once you are within this directory by typing up this command, type this next line. This line will go to the BitTorrent Sync website and download the latest ARM release. Note that it is important that the ARM version of the Linux packages available is downloaded, for this is the version that is compatible with the Raspberry pi. You can do this by typing the command below:
+
+wget "https://download-cdn.getsync.com/stable/linux-arm/BitTorrent-Sync_arm.tar.gz"
+
+
+
+
+
+
+Wait until the download is complete before moving onto the next step.
+
+
+
+Extract the BitTorrent-Sync_arm.tar.gz file (which is what you downloaded earlier) by typing in the command below:
+tar xzf BitTorrent-Sync_arm.tar.gz
+
+, To be able to specify information that BitTorrent Sync needs to properly run your server, you need to figure out your IP address. You can do so by typing the command below. The character following 'hostname' is a capital 'i'.
+
+
+
+
+
+
+hostname -I
+Once you have run the command, you'll see output appear on your screen with numbers and dots. This is your IP address.
+Take note of this IP address, as you will need it later in the article.
+
+
+
+To start BitTorrent, type the command below without edit.
+./btsync --webui.listen 0.0.0.0:8888
+
+,
+
+
+Start by opening up a web browser (Internet Explorer, Firefox, Google Chrome, etc.).
+Once you have your web browser open, type the link below, substituting <IP> with your own IP address that you got earlier.
+http::8888
+You should arrive at a screen that will prompt you to create a Username and Password for your BitTorrent Sync software. Enter in the credentials as you wish, then press the 'Continue' button.
+
+
+
+Type into the the 'Username' box what you want your name to be for file-sharing. Note that this does not need to be the same username as entered in the step prior.
+After reading the terms and conditions, remember to accept them and click upon the 'Continue' button.
+After clicking the Continue button, enter in the credentials for your BitTorrent Sync Identity to load up the webpage you'll use for File management.
+
+
+These instructions vary from device to device. This step assumes you are using a Windows Operating System
+In your browser, navigate to https://www.getsync.com/
+
+Click upon the 'Free Download' button to begin your download.
+Once the download is complete, execute the file and select the options you want, but make sure to select the option that prompts you to open BitTorrent Sync after install. Once again, you'll be prompted to create a username to connect with. Choose a different one than the one you used for your Raspberry Pi.
+You should now have two instances of BitTorrent Sync Running: One in your browser and one in a window via the earlier download.
+
+
+
+In the browser, navigate to the top right corner and click upon the 'Add Folder' button and press continue on the next window.
+Next, navigate to where you'll be storing your files on your Raspberry pi. In this guide, it is assumed to be in the '/home/pi/BTSync' Folder (where you can replace 'BTSync' with any name of your choosing). This will require navigating to the '/home/pi' directory first, and then creating a 'BTSync' folder by using the 'New Folder' option below.
+Following that, click the 'Read & Write' option on the next window, then close out of that same window. Your BitTorrent Sync tab should still be open afterwords.
+You should also see that a new folder has been added to BitTorrent Sync with no peers.
+
+
+
+In the browser window for BitTorrent Sync, hover your mouse underneath the Gear present in the top-righthand corner of the corner. You should see a clickable option to select 'Options' for your new folder. Note that this is not the gear icon, but rather, the icon is three dots aligned vertically. Click upon this option, then click the 'Copy Read & Write' key in the following drop-down menu.
+Copy the key that appears to your clipboard by following the on-screen instructions.
+
+
+
+Navigating to your device's BitTorrent Sync window, click upon the 'Options' Icon in the top-right hand corner. Then, select 'Manual Connection' for the following drop-down window.
+A prompt should appear requesting a key. Paste the key you copied earlier in your browser into this field and click the 'Next' Button.
+Select where on this device you wish to sync your files. If you pick an already existing folder, everything in that folder and all sub-folders will begin syncing to your Raspberry Pi. It is recommended you create a new Folder for the specific purpose of syncing.
+
+
+To sync files between your Raspberry Pi and your device, you need to simply take the file you wish to sync in question, and put in the appropriate folder (which is the same folder you created/selected earlier when creating a folder in BitTorrent Sync). In this guide, that folder was 'BTSync'. Once you do this, the other device will copy the folder to it's respective folder. Keep in mind that if you delete a file on either device from their folder, that your second device will delete them as well if you have syncing enabled (which it is by default).
+

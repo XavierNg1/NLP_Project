@@ -1,0 +1,76 @@
+
+
+
+Place the base material on the mill. Then, place the stock material on top of the base plate so that the entire bottom surface is in contact with the base plate.
+This is to make sure that the end-mill doesn’t come in contact with the mill table.;
+,
+
+Place the material and the base plate near the center of the table in the X and Y directions.
+
+
+
+Use the tools and materials listed in "Things You'll Need."
+
+,
+
+With your laptop, use your CAD to create the G-Code for your part.
+Save this file as a number and load the G-Code for the program onto a floppy disk.
+Insert this floppy disk into the floppy disk slot at the rear of the mill.
+
+
+If your G-Code is accurate, you shouldn’t have problems viewing the part.
+On the main menu, click ‘PROG IN/OUT’
+Then, enter the number of the file that you saved onto your floppy disk.
+
+
+Select ‘PROG’ from the home menu.
+Then select ‘VIEW’. You should see the part in 2-D on your screen.
+
+
+Here is a good RPM and feed-rate calculator.
+These values will depend on the material that you are using. When you obtain these values, adjust the meters on the top portion of the mill accordingly.
+
+Screw the End-Mill onto the bottom of the Spindle until hand-tight.
+Take the ¾” wrench and tighten the top of the spindle until it is snug.
+
+
+Take a quick look around the table to see if anything is on it that shouldn’t be there.
+Make sure your clamps are not in the way of the end-mill.
+Check to see that your Z-axis is above the part, and not touching it.
+ Turn the Mill on by turning the dial on the top left hand corner of the mill.,
+This takes you to the position display, which tells you where you are in relation to the zero point.
+Using the X and Y position wheels, move the end mill to the center of your stock material.
+Hit ‘X’ and then ‘ABS SET’.
+Press ‘Y’ and again ‘ABS SET’. This tells the mill that your zero point in where your end mill is when pressing those buttons.
+
+
+From the main menu, hit ‘RUN’. Then hit ‘START’, and choose event 1.
+Press the ‘GO’ button and the table will move so that the end mill is in the correct position.
+
+At the instant that the end mill contacts the material, use the hand that is not on the Z-axis to hit ‘Z’ and then ‘ABS SET’ to set this as the point where Z = 0.
+
+At this point, Lock the position of the Z-Axis using the lever under the Z-axis handle.
+If the end-mill is too deep into the material, it could get stuck and possibly snap. .05” is a safe depth.
+
+Is the end mill .05” deep into the material?
+
+,
+
+Press the ‘GO’ button.
+At this instant, the mill will begin traveling along the path specified in the G-Code, cutting up all the aluminum in its way.
+
+
+Otherwise, chunks of aluminum can get stuck in the teeth of the end mill.
+If that happens, the end mill will not cut effectively and may get stuck.
+
+
+After the table has stopped moving, release the locking lever located under the Z-axis handle and raise the Z-axis.
+
+
+Repeat the steps until you reach the depth you are trying to get to. This means that you choose the same event, and lower the Z-axis no more than .05” deeper than the previous pass. After the mill completes that pass, raise the Z-axis and repeat.
+
+
+Do this until part is complete.
+Choose a different event, and let the mill cut it out using the procedure mentioned above.
+When all the events have been completed, you should have your part cut out exactly how you designed it.
+

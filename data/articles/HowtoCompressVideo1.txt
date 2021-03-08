@@ -1,0 +1,12 @@
+ Video is typically filmed with 24 or 30 frames per second. That means that every second, 24 or 30 still images are displayed to give the illusion of movement. Because the images are so closely linked, not everything in the image moves from frame to frame. Compression stores the changes in the frames as opposed to storing entire frames.;
+, There are several key terms that you will come across constantly as you start compressing more videos. Learning these terms will help you make sense of the options you have while compressing a video.
+
+
+Codec – This is a method that your computer uses to decide on the amount of change that occurs between frames.
+Keyframe – This is a reference frame. The codec will determine a keyframe every few frames. This is the base frame for the next few frames of change. Your keyframe interval will have a large impact on the size of your finished file. Lots of keyframes will make the file large but higher quality. Infrequent keyframes will leave lots of artifacts.
+Artifacts - These are blocky pieces of image that are the result of the keyframe not being updated correctly. The lower the quality of the compression, the more artifacts that will appear.
+Bit/data rate - This is the amount of data that each second of video uses. Typically, this is measured in kilobits per second. Bit rates can be either Constant or Variable. A constant bit rate stays the same throughout the video, which can lead to larger video files. A variable bit rate changes depending on the amount of action on the screen, which will lead to smaller files.
+Variable bit rates can decrease quality if the bit rate does not change dynamically enough with the video. Experiment with both bit rates to find a balance between size and acceptable quality.
+Frame rate – this is the number of frames per second. Videos are typically shot in 24 or 30 frames per second. Keep the compressed copy’s frame rate the same otherwise playback will be affected and audio may not sync properly.
+Resolution – This is the size of the outputted video. It is measured in pixels, width x height.
+

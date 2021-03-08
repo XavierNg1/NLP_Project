@@ -1,0 +1,13 @@
+ When you check these, you’ll be able to get the following information:
+
+
+The location of the host’s subnet.
+The subnet’s broadcast address.
+The subnet valid host’s range that is used to set up hosts.;
+, After you’ve gotten the subnet, it’s important to understand that the broadcast address is not a valid host address. Therefore, you cannot assign it to a host configuration. When you learn what the subnet and broadcast addresses are, it’ll be easier for you to find out the host address. That’s because the real host range consists of numbers between the broadcast address and the subnet address.
+ Find out the number of subnets by using the following formula: 2ⁿ. The n component is the number of subnet bits in the mask. A bit is the smallest entity of data in a computer. It has a single binary value, which is either 0 or 1. In computer terminology, 0 means off while 1 means on. For subnets, the bit is 1, which also means it on.
+ Find out the amount of hosts by using the following formula: 2ⁿ - 2. The n component is the number of host bits in the mask. For host, the bit is 0, which means it’s off.
+ You will need to find the number of sub-networks as well as the hosts for each network. After you get this information, you will need to use the same formula, which is 2ⁿ - 2.
+ The best way to create sub-networks is to memorize Class C masks. The default subnet mask is 255.255.255.0. There are other subnet masks that make up Class C. You will find these masks not only on the Internet, but in computer networking books.
+ Perform this step after you’ve determined your networks and hosts. For example, if you want to create eight sub-networks. Each of them demands ten hosts. The Class C mask you would use is 255.255.255.240. This is because the binary for 240 is 11110000. Remember, the subnet bit is 1, while the host bit is 0. Therefore, in 240, there are four bits for the subnet and four bits for the host. Using the formula, 2ⁿ - 2, you will get 14 subnets and 14 hosts.
+

@@ -1,0 +1,132 @@
+ If you don't already have a webpage you want to insert the map into, you can use the following HTML5 template; save it as ‘map_page.html’ :
+
+
+
+
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My Leaflet Map</title>
+</head>
+ 
+<body>
+  <!-- Content goes here. -->
+</body>
+</html>
+
+
+;
+, To do this, paste the following line of code into your HTML file, inside the <body></body> area, on a new line, just before the closing </body> tag:
+
+
+
+
+<script async defer
+  src="https:
+</script>
+
+
+
+
+, To use Google Maps JS API - just like any other Google API - you'll need an API key, which is like a passcode. You then need to insert your new key into the URL from the step above where it says (remove the square brackets).To get your own key, see Get a Key/Authentication page., Google Maps will display the map inside an HTML element, so you need to provide one for it. Paste the following line of markup inside the <body></body>:
+
+
+
+
+<div id="map"></div>
+
+
+
+
+, You need to set how large the map will be when it is displayed, and you should use CSS to do this. You can add the following to the document <head></head>:
+
+
+
+
+<style>
+  #map {
+    height: 500px;
+    width: 700px;
+  }
+</style>
+
+
+
+
+, To start writing the JavaScript code that sets up the map, you'll need to add a <script></script> area to the <body></body> after the map container div. Also inside of this, you can create the map object by calling the Map() function of the google.maps object. You'll also need to pass the function the map container html element, like this:
+
+
+
+
+<script type='text/javascript'>
+  var map;
+  function initMap() {
+    // Create the map object.
+    map = new google.maps.Map(document.getElementById('map'));
+  }
+</script>
+
+
+
+
+, The map's zoom and center properties determine the area that the map covers by default when the map is loaded. These are just the map's default values; the map's current zoom and center can be changed later if you enable those controls - we'll get to that later.Note: You need to simply copy the following lines of code into your <script></script> element (from the previous step), and make sure it is inside the initMap() function, before the closing ‘}’:
+
+
+
+
+map.setZoom(2);
+map.setCenter({lat: 0, lng: 0});
+
+
+
+
+, Markers show the location of a point on a map. In Leaflet, markers are a type of ‘overlay’, so they can be directly added to maps. By default, a marker appears as a red pin, which is a standard image that you can change.
+
+
+
+
+var marker = new google.maps.Marker();
+ 
+var coordinates = {lat: 20, lng: 20};
+marker.setPosition(coordinates);
+marker.setMap(map);
+marker.setTitle('Chad');
+
+
+
+
+, Just like the marker, a polyline is a type of overlay, but it is used for a different purpose. A polyline is simply a line with multiple segments. You define it by providing the coordinates of the points that the line segments will be between. The coordinates needs to be an array of coordinate point objects.
+One of the great features of Google Maps’ polylines is that they can be ‘geodesic’, which means they can curve to match the shape of the Earth! You can set that as an option later on.
+
+
+
+
+var coordinates = [
+  {lat: 20, lng: 10},
+  {lat: 10, lng: 20},
+  {lat: 20, lng: 30}
+];
+var polyline = new google.maps.Polyline();
+polyline.setPath(coordinates); // Using the array we defined above
+polyline.setMap(map);
+
+
+
+
+, Each overlay in Google Maps has options that you can set, that determine what the overlay looks like. You could set the options of the marker (from the steps above) to make it look unique, but below are options to set for the polyline you just created:
+
+
+
+
+polyline.setOptions({
+  strokeColor: '#FF0000', // Bright red
+  strokeOpacity: 1.0, // Fully opaque (not translucent)
+  strokeWeight: 2 // Thickness of 2 pixels
+});
+
+
+
+
+,

@@ -1,0 +1,213 @@
+
+
+
+In either case, the spreadsheet called Untitled1 appears on our screen.;
+,
+
+
+Make A1 the active cell. (Click in cell A1)
+Type Check Number, then press the Tab key (The cursor moves to B1)
+Type Paid To then press Tab. (The cursor moves to C1.)
+Type Description then press Tab.
+Type Deposit then press Tab.
+Type Withdrawal then press Tab.
+Type Balance then press Enter.
+
+
+
+Insert a Date column in the first column.
+Select column A. (Click on the "A" at the top of the column. The column turns black.)
+Click Insert > Columns. (The cell contents in columns "A" through "F" shift to the right and becomes columns "B" through "G". Column "A" cells are empty.)
+Select A1.
+Type Date then press Enter.
+
+
+
+Center The Column Labels.
+Use An Icon From The Formatting Toolbar.
+Select cells A1 through G1 by dragging the mouse from cell A1 to cell G1 (Click on A1 and without releasing the click, move the cursor over B1, C1 etc until the cursor is in cell G1. Release the click)
+On the Formatting toolbar, click the Align Center Horizontally icon. (The column labels become centered)
+Select “Bold” And “Light Blue” For The Column Labels.
+While the cells are still selected, move to the left and click the Bold, , icon.
+Move to the right to the Font Color icon. and pick Light Blue. (At the "Font Color", icon, click and hold the click until a choice of colors appears. Select the "blue" square). Press Enter.
+
+
+
+Enter An Initial Balance.
+Select A2.
+Enter a date, 07/12/07. (type 07/12/07)
+Select G2.
+Enter 5000.
+
+
+
+The Deposit, Withdrawal and Balance columns will contain dollars with a $ appearing in front of the numbers. All three columns can be formatted at the same time.
+
+
+Use Drag to select columns “E” through “G”. Click on E. (The cursor is at the top of column “E”) Press and hold down the left mouse button. Move the mouse pointer to G by moving the mouse. Release the mouse button. (Columns “E”, “F”, and “G” are highlighted)
+
+, (The three columns will show the $ when they have numbers in them.)
+
+
+Use Format From The Main Menu
+
+This method is more complex than using the icon.
+
+Select columns E through G.
+Click Format > Cells... (The "Format Cells" dialog box appears.)
+Click the Numbers tab.
+In the Category box, click Currency.
+In the Options section, make sure that Decimal places is set to 2, Leading zeros is set to 1, and both check boxes are checked.
+Click OK.
+
+
+
+In the Date column, click on A3, then enter 07/18/07. Press Tab.
+Enter a check number of 104 then press Tab.
+Enter Energetic Electric then press Tab.
+Enter Monthly electricity bill then press Tab.
+Press Tab again.
+In the Withdrawal column, enter 250, then press Enter.
+
+
+
+In the Paid To column Energetic Electric is cut off. In the Description column Monthly electric bill extends into the Deposit column.
+
+
+Use either of the following two methods to adjust column width.
+
+Use "Optimal Width"
+Select column C. (Click on "C".)
+Click Format > Column > Optimal Width... (The “Optimal Column Width” window appears)
+Click OK.
+Repeat steps 1-3 for column D.
+
+
+
+Place your pointer over the column dividing line between the letters C and D.
+When your pointer changes to , click the left mouse button and drag.
+
+Size the column like you want it and release the left mouse button.
+Enter Current Balance.
+
+
+The current balance is defined as the previous balance plus any deposits, minus any withdrawals. In equation form it looks like:
+Current Balance = Previous Balance + Deposits – Withdrawals
+In the spreadsheet, the formula is written as =G2+E3-F3.
+
+
+Click on cell G3.
+On your keyboard, press the = key.
+Click on cell G2, then press the + key.
+Click on cell E3, then press the – key.
+Click on cell F3, then press Enter. ($4,750 appears in G3)
+
+,
+
+
+Enter a check on row 4 for an amount bigger than your balance.
+Click on A4 (The Date column) Enter the date 07/20/07. Press Tab.
+Enter a check number of 206 then press Tab.
+Enter Fast Cars, Inc. (Do not press Tab)
+Click on D4 that is in the Description column, enter New Car.
+Click on F4 that is in the Withdrawal column, enter 7000.
+
+
+
+Drag-to-Copy is a quick way to copy the contents of one cell to a neighboring cell or into a series of neighboring cells.
+
+
+Select G3.
+
+Look at the black frame around the cell and notice the little black box on the bottom right corner .
+Put the cursor over the little box. When you see a , click and drag it down to cell G4. ("-$2,250.00" appears in cell G4)
+
+When you copy formulas, the cells referenced in the formula will change. Click on cell G3 and look at the Input Line that is just above the columns. You will see the formula =G2+E3+F3. Click G4 and you'll see the formula =G3+E4+F4.
+All spreadsheet programs use relative addressing. The program does not store the actual cell address; rather, it stores something like the following in G3:
+
+
+Cell G3 equals (=) one cell up (G2) plus (+) two cells to the left (E3) minus (–) one cell to the left (F3).
+
+The program stores something like the following in G4:
+
+Cell G4 equals (=) one cell up (G3) plus (+) two cells to the left (E4) minus (–) one cell to the left (F4).
+
+
+
+You forgot to enter an earlier deposit. Enter that deposit now.
+
+
+Click on the 4 that is to the left of 07/20/07. Keep the cursor on the 4, then do a Right-click, then click Insert Rows. (Row 4 cell contents shift to Row 5; Row 4 has empty cells.)
+Click A4, enter 07/19/07.
+Click D4, enter Paycheck.
+Click E4, enter 20,000. (Wouldn't that be great!)
+
+Drag-to-Copy the formula from G3 down to G5. (Put the cursor over the box at the bottom right corner of "G3". When you see , click on it and drag it down to cell "G5".) ($17,750.00 appears in cell G5)
+
+
+
+,
+
+
+Click Format > Sheet... > Rename... (The “Rename Sheet” window appears)
+In the “Name” box, type Checking then click OK. (At the bottom of the screen “Checking” appears in place of “Sheet1”
+Click File > Save As... In the “Save in:” pull-down menu, select My Documents
+In the “File name:” box, type Check Register and click Save.
+ Borders can be used to separate data, mark certain cells or anything else you want. They are typically used to draw attention or separate. Add some borders to the check register worksheet:
+
+
+Select A Block Of Cells.
+
+Use either of the following two methods:
+
+Use Drag To Select A Block Of Cells.
+In A1, click and hold the click, then move the cursor onto G25.
+
+
+Use The Shift Key To Select A Block Of Cells.
+
+Click A1. Press and hold down the Shift key then click G25.
+
+
+
+Click Format > Cells...
+
+Click on the Borders tab. Find the User-defined box. Notice that there are four boxes created by inward facing triangles.
+
+Click to the left of the top left box . (Toward the middle of the box side.) (1)
+Click between the top two boxes. (Toward the middle of the box sides.) (2)
+Click to the right of the top right box. (3)
+
+
+You should have 3 vertical lines. Click OK.
+Select A1:G1. (Click "A1". Drag copy to "G1".)
+
+Click the Borders, , icon on the Formatting Toolbar.
+
+Click on the second box from the left on the second row.
+Add A Background Color.
+Click Format > Cells...
+Click the Background tab.
+Click on Gray 20%. (Use tool tips to find it.)
+Click the Borders tab.
+
+Click on the bottom horizontal line in the User-defined box.
+Click the 2.5 pt line weight in the Style box.
+Click OK.
+
+
+
+A column(s) can be hidden so that the column(s) is not seen on the screen. Hidden column(s) will not appear in a printout. If any cell in the hidden column is used by a formula, the formula will still use hidden columns to produce the correct answer.
+At the top of the columns, a missing letter(s) tells what column(s) is hidden. (If you see columns A followed by column C, column B is hidden.)
+
+,
+
+
+Select the column(s) that you want to hide.
+Click Format > Column > Hide.
+
+
+
+Select the columns on both side of the hidden column (If column “B” is hidden, select columns A and C so that both columns are highlighted)
+Right-click > Show. (Column “B” will appear)
+

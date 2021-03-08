@@ -1,0 +1,20 @@
+
+Boot up Ubuntu Linux.Go to Application, then select Accessories and choose Terminal
+
+,
+Enter the following command: “sudo apt-get install vsftpd” (without quotation marks).
+Open the FTP server configuration file.
+In the file browser, click the “File System” icon.
+
+,
+Click on the “etc” folder.
+
+,
+Double-click the “vsftpd.conf” icon.
+
+,
+Alter anonymous access.
+Rename the FTP welcome banner.
+Click on Save and close the file.
+To restart the FTP service, type the following command: “sudo /etc/init.d/vsftpd restart” (without quotation marks).
+Place files on the FTP server.

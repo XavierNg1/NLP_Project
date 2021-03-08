@@ -1,0 +1,22 @@
+ This varies widely between distributions however most have it under the equivalent of Applications> Accessories.;
+,
+
+
+The cd command is used to change directories. It operates under the syntax of cd directory with directory being the directory you wish to enter.
+The pwd command prints the directory you are currently in.
+The ls command lists the files in the current directory or the directory you specify, e.g. ls / would list the files and folders in the root of the filesystem.
+The tilde(~) symbol stands for your home directory. In the example of the user "me" it stands for /home/me.
+
+
+
+The cp command copies the specified file to the specified location. For example, cp file1 /file2 copies file1 to the root directory under the name file2. The cp command can also be used to copy directories by using cp -r directory /directory.
+The mv command can be used to both move and rename files. For example, mv file1 / moves file1 to the root directory while mv file1 file2 renames file1 to file2.
+The rm command is used to remove files. rm -r can be used to remove all files in the specified directory.
+The rmdir command is used to remove directories. It can only be used on empty directories.
+
+
+
+The user "root" is the administrator of a Linux system.
+The su command is used to switch users. For example, su user1 switches to user1.
+The sudo command, if installed, is used to run a command as another user. When left with no options it is used to run a command as root. For example, sudo -u user command runs the command command as the user user.
+

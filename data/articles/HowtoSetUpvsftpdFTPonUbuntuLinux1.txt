@@ -1,0 +1,14 @@
+
+
+Open up a command line and type sudo apt-get install vsftpd. You will be required to type in the root password and after that, just follow the instructions vsftpd gives you in order to install it.;
+, There are several possible ways to do that. You can manipulate the configurations file using the windows or using the command line. See the vsftpd.conf file for all compiled-in defaults.
+
+Open the vsftpd.conf configuration file with a text editor. The file is located in the etc directory.
+
+If you are going to use windows, get to the file browser and type /etc in the location bar. Next scroll down and double click on a file named vsftpd.conf
+
+If you prefer using the command line, then you can do a similar thing. Open up a terminal and type cp vsftpd.conf.sample vsftpd.conf after changing to the vsftpd directory.Replace the file's content with the text contained in the file /etc/vsftpd.conf example configuration file.
+
+The default compiled-in settings are fairly paranoid. This sample file loosens things up a bit, to make the ftp daemon more usable.
+This example file is not an exhaustive list of vsftpd's options.
+ It also helps keep you more organized., This applies to other services (such as email), vsftpd can run either from an inetd or as a standalone daemon started from an initscript. To run in the standalone mode, enable the listen option in the configuration file by adding listen=YES or changing the value to YES if the option is already added and have the default value NO.,

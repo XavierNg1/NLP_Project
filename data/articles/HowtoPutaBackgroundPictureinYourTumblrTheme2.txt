@@ -1,0 +1,37 @@
+ It's located at https://www.tumblr.com/. If you're signed in on your browser, this will take you to your Tumblr home page.
+
+
+If you aren't signed into Tumblr, enter your email address and password, then click Sign in.
+ This person-shaped button is in the top-right corner of the page.
+ It will be beneath the "TUMBLRS" heading about halfway down the profile drop-down menu.
+ This option is in the upper-right side of the page, just below the Drafts and Posts sections.
+ It's to the right of the "Website Theme" heading that's below your profile picture.
+ This link is below your theme's name at the top of the "Edit themes" sidebar.
+ It's in the top-left side of the "Edit HTML" bar.
+ Doing so will open a window in which you can search for the line of code you'll need to edit.
+ This tag is present in all Tumblr themes that contain a customizable background image.If your selected theme's HTML doesn't contain a "body {" tag, you can't change its background image.
+ This is directly below the "body {" tag; you'll add in your image's URL here between the ":" and the ";" at the end of the line.
+ The URL tag should be written as follows: url().
+
+
+In practice, this whole line will say background: url(www.website.com/image.jpg);. Keep in mind that there is a space between the "background:" part and the "url" part.
+ Your selected URL must end in a picture file extension such as .jpg or .png. The easiest way to get a photo's URL to display in this format is to right-click (or two-finger click) the photo, click Open image in new tab, and copy the URL from there.
+
+
+If you want to use an original photo, you can upload it to a service like Photobucket or Imgur.
+ It's the green button in the top-right side of the "Edit HTML sidebar. You should see your selected image displayed
+
+, If your image is skewed or it abruptly cuts off, enter the following three lines of code below the "background" tag:
+
+
+
+background-attachment: fixed; - This will keep your image in one place.
+
+background-repeat: no-repeat; - You can also change no-repeat to say repeat if you want your image to repeat as users scroll down.
+
+background-position:center; - You can also use right or left instead of center.
+You can also add a line that says background-size: cover to make your image fill the entire background.
+ It's the blue button left of Update Preview at the top of the "Edit HTML" sidebar.
+ It's in the top-left side of the page.
+ You'll see this option in the top-left corner of the "Edit theme" sidebar. Your Tumblr theme now has a background image.
+

@@ -1,0 +1,11 @@
+ Make sure that the subtitle file has the exact same name as the video file. For example, if the video file is called “MyMovie.mp4”, the subtitle file should be called “MyMovie” plus the extension, which should be .srt or .ssa. Both of these files should be in the same location on your computer.
+ This is a free, open-source program that can be downloaded directly from the developer. It is a lightweight video editing program that can quickly add subtitles to your video.
+ Find the Subtitler filter for download on the VirtualDub website. This filter will add the subtitles to the video stream while it is being encoded.
+
+
+Install the filter by opening VirtualDub, clicking the Video menu, and selecting Filters. Click the Add button and then the Load button. Browse for the “subtitler.vdf” file that you downloaded and press Open.
+ If your subtitles are in the .srt format, they will need to be converted to .ssa in order to be read by VirtualDub. Use an SRT-to-SSA converter that can be found online. There are several free options. If your subtitle file is already .ssa, you don’t need to do anything.
+ Click the Video menu in VirtualDub and ensure that “Full Processing Mode” is selected. Then, click the File menu and then select Open Video File. Browse for the video file that you want to add subtitles to.
+ Once the video has been loaded, click the Video menu and select Filters. Click the Add button and select Subtitler from the list. Press OK and you will be asked to load the .ssa file. Browse for it on your computer and press OK.
+ Click the Video menu and then select Compression. Select the codec that matches your file type. XviD Mpeg-4 will be one of the most common codecs that you will use.
+ Click File and then select “Save As .avi”. Save the video wherever you would like on your computer. Once you click Save, the encoding process will begin. This could take a significant amount of time, depending on your system.

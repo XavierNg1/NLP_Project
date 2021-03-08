@@ -1,0 +1,31 @@
+, Recommended are 1.7.10 and 1.6.4.
+
+
+You must have already run Minecraft once with the target version (loading world is not necessary). If you haven't already, do it now.
+,, Click Play.
+,
+
+,,,,
+
+
+In Windows XP, Vista or 7, Click Start > All Programs > Accessories > Run and type "%AppData%" without quotes. There should be a folder named ".minecraft" (with full stop at the start). Open it. Find and open the folder called "mods". This should be empty. Move your mod file into it.
+In Windows 8, Search for "Run" and do the same as above
+In Windows 8.1 and 10, right-click the Start button, click Run and do the same as above.
+, The loading process will take considerably longer: This is normal.
+ Your mod should be listed in the list: If it isn't check that you've done everything correctly. If you have then check the Minecraft Forum thread/website for any special installation instructions or problems. Try using a different version of the mod.
+,, Check if there is any bug or conflict (only when 2 or more mods). If there is a bug then report it. If there is a conflict, move to the next section of this guide.
+, This means one is trying to use data that is also used by the other.
+
+
+
+If MC crashes, then find the report by accessing your /mods/ folder again. This time, go to the folder called "crash-reports" and find the .txt file. If it contains something like "Mod is trying to use XXX but it is used by Another Mod" then you have a conflict.
+If MC does not crash, but during gameplay, you find a strange out-of place block (like Iron Bars in the middle of the underground with nothing around), then probably you have a conflict.
+ To solve, either you can use a tool like "MCPatcher," in which case you can refer to the instructions given or you can fiddle around with configs manually:
+
+
+Access your /mods/ folder again. This time, go into the folder "configs" and find the files for your conflicting mods.
+There will normally be a section with block/item names and some numbers; if there isn't ask for help.
+Find two numbers which are exactly the same. If there aren't any then you don't have a conflict.
+Change one of the numbers so that it does not conflict with anything and save.
+It is solved! Yippee!
+

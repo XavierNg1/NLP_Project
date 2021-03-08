@@ -1,0 +1,26 @@
+ "C:\Downloads"). This may be on either OS or on a separate drive/partition.;
+, C:\Torrents\7 and C:\Torrents\XP) and one to keep an original copy just in case (ie. C:\Torrents\Orig). Continue with the rest of the steps, repeating twice, starting with Windows 7 if applicable.
+ It is an auto-scripting program that makes setting rules and actions for certain files a breeze. You can find it here:
+
+,,, C:\users\YOURNAME\Downloads)
+
+, Click the + button.
+ Check the box Recursive. From the drop-down menu choose "Extension" "is" and type "torrent" in the blank field without the quotes. Under Do the following select "Copy file" to folder and browse to your "C:\Torrents\7" folder you created earlier. Finally check the Overwrite box to stop duplicate .torrent files just in case. Hit OK
+
+, Only this time, make another copy for Windows XP to use., Choose Recursive, "Extension" "is" "torrent", "Copy file" to folder and browse to your "C:\Torrents\XP" folder you created earlier. Overwrite. Hit OK
+
+, Name it "Copy original .torrents" with all the same settings.
+ Name it "Delete .torrents", "recursive", "extension is torrent", only now under Do the following choose "Send file to Recycling Bin". Hit OK.
+ Order them with "Copy Windows 7 .torrents" on top using the up and down arrows, followed by Copy XP, Copy Orig, and lastly "Delete torrent" on the bottom.
+ Belvedere will sort your .torrents the instant you download one, but now we must tell uTorrent to monitor the torrent folder you made that corresponds with what OS your in now (ie. 7)
+
+, Now check "Automatically load .torrents from:" and browse to the folder you made for the OS you're currently in (ie. C:\Torrents\7) and check "Delete loaded .torrents". Leave everything else unchecked and hit OK.
+
+
+This setup requires uTorrent to start with Windows and be open when you download your .torrents, which can be changed under Options/Preferences/General.
+ Go back into Belvedere and enable each rule, making sure delete torrents is last on the list. Test your setup by downloading a .torrent file. If all goes well, it should immediately disappear from your default download location and copies should be in all three Torrent folders, then just as quickly the .torrent in your "7" folder will disappear too, leaving a copy in the other OS's Torrent folder and in Orig. Open uTorrent and you will see it is already downloading.
+
+
+
+Belvedere and uTorrent starting with both versions of windows, with uTorrent looking in its respective OS's Torrent folder, will push any .torrents you may have downloaded in XP into Windows 7's queue and vice versa, automatically loading them and continuing the download/seeding exactly as it was before when you switch OS's.
+ The Orig folder is where you can go to get copies if you need them, while the rest stay empty.

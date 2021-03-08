@@ -1,0 +1,10 @@
+ Go to this link: http://developer.android.com/sdk/index.html#Other to download, install, and extract the appropriate Android SDK.Note that this method will only work if you have previously enabled USB debugging in the Android device's Developer menu. It also requires that you have previously allowed your Android device to connect to your computer via ADB. This method will only work if you have done these things previously before being locked out.
+ Connect your phone to your computer via USB.
+ This is the folder that ADB has been installed to. This is usually the "Tools" folder in the SDK installation directory. Use Windows Explorer to navigate to this folder.
+ Select "Open command window here." This will launch the Command Prompt.
+ Type adb shell rm /data/system/gesture.key into the command line and press ↵ Enter.
+ After typing the command, unplug your phone and restart to hopefully see no pattern lock on your phone. You should have full access.
+
+
+Be sure to set a new lock immediately after gaining access. Your old password will be restored when the phone reboots unless you set a new one.
+

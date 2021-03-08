@@ -1,0 +1,58 @@
+ In your ASP Website project click Tools->NuGet Package Manager->Package Manager Console and type Install-Package SynChat. This will import the SynChat class library from NuGet along with it's dependency library.
+ Right click your project and click Add->New Item.. and select Web Form. Name this new web form "ChatService.aspx". Now double click the file and remove all the lines of code except the first line., Replace the www.example.com string with your website address.
+
+
+
+
+using System;
+using Syn.Automation.Chat;
+namespace Automated_Live_Chat_Demo
+{
+    public partial class ChatService : System.Web.UI.Page
+    {
+        private static readonly ChatAgent Agent;
+        static ChatService()
+        {
+            Agent = new ChatAgent
+            {
+                ServiceUrl = "http://www.example.com/ChatService.aspx",
+                ResourceUrl = "http://www.example.com/Assistant",
+                Name = "Maya",
+                Title = "Syn Web Assistant",
+                Intro = "Hi I am Maya, I am here to answer your questions.",
+                InputText = "What can I help you with?",
+                Footer = "Syn",
+                FooterLink = "http://www.example.com",
+                RestartId = "restart",
+                PackageFileName = "Package.txt"
+            };
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Agent.Process(Request, Response);
+        }
+    }
+}
+
+
+
+
+, Once you have created the folder add the image files required to give your agent a Female avatar. These images can be found in the GitHub example project cited below., Google "Syn Chatbot Studio" and download the program. Select File->New->Project and fill in the details required. Make sure you select Syn Web Assistant as the project template.For more details on working with SIML, google "Synthetic Intelligence Markup Language", and check the Quick Start tutorial on the official website., By default Syn Chatbot Studio will save the file with the extension .simlpk which stands for SIML Package however if this file is to be referenced from a URL its mimetype should be accessible therefore change the extension to .txt as shown in the image above., Right click the Assistant folder and select Add->Existing Item.. and select the Package.txt file., To do so paste the following coding just above the </form> tag element in your Master Page's HTML code and change www.example.com with your website address.
+
+
+
+
+        <script type="text/javascript">
+            (function () {
+                var scriptElement = document.createElement('script');
+                scriptElement.type = 'text/javascript';
+                scriptElement.async = true;
+                scriptElement.src = 'http://www.example.com/ChatService.aspx?Get=Script'; 
+                (document.getElementsByTagName('head')|| document.getElementsByTagName('body')).appendChild(scriptElement);
+            })();
+        </script>
+
+
+
+
+,,

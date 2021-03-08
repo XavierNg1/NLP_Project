@@ -1,0 +1,25 @@
+
+Create a new Excel workbook with 3 worksheets: Data01, Saves and Chart (unless you are working with Chart Wizard).
+Set Your Preferences.
+It helps by placing the cursor at cell A16 and doing Freeze Panes.
+Enter the upper Defined Name Variables Section (here's a picture):
+
+Select cell range A1:F3 and Format Fill white.
+Enter the column heading of rows 4 and 5
+
+A5: Adj Cos; B5: Adj Sin
+C5: Indicator; D5: Indicator2 (These two columns, esp.
+Enter the column formulas
+
+Edit Go To A6:A17285 and enter to A6 "=17*COS((ROW()-6)*0.25/12*PI()/180)" w/o quotes and Edit Fill Down.
+NEW: Enter the D_Looker vlookup table:
+
+NEW: Edit Go To cell range Y1:Y19 and enter 1 to Y1 and do Edit Fill Series Columns Linear Step Value = 1, OK.
+NEW: Z1: Enter "=Avg01x" and AA1 enter "=Avg01y" and copy Z1:AA1 and paste to Z2:AA4.
+It is much faster to have a mini-chart of columns Q and R with red line, weight 1, on the DATA01 worksheet than to wait the 5 minutes for the actual chart to generate.
+Create the chart
+
+Edit Go To cell range K6:L17286 and using the Chart Wizard or Chart Ribbon select Charts All/Other, Scatter, Smooth Line Scatter.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

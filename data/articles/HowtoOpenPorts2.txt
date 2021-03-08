@@ -1,0 +1,12 @@
+ Windows Firewall is a software firewall that acts in conjunction with your router's hardware firewall. Windows Firewall is especially important if you have multiple devices on the same network, as it helps prevent the spread of viruses between computers on a local network.
+
+
+In Windows Vista/7, click the Start menu and select Control Panel.
+In Windows 8, press ⊞ Win+X and select Control Panel.
+ This can be found towards the end of the list of Control Panel options. If you are in Category View, select System and Security and then click Windows Firewall.
+ This can be found in the left navigation pane. If you are not logged in as the Administrator, you will be asked for the password. This will open the "Windows Firewall with Advanced Security" window.
+ This is located in the left navigation pane. You will see a list of all your allowed programs (if you have any). Click "New Rule" in the left pane.
+ This will allow you to open ports instead of trying to find a specific program. Click Next > to continue.
+ Unlike most routers, you will need to choose between TCP or UDP to create the rule. Check your program's support documentation to ensure that you are using the correct protocol.
+ Make sure the "Specific local ports" option is selected, and then type the ports you need to open into the field. You can open multiple individual ports by separating them with a comma, and you can denote a range of ports by using a dash between the two ends of the range. Click Next > to continue.
+ In the Action section, make sure that the connection is allowed. In the Profile section, check the network profiles that you want the rule to apply to (Domain, Private, and Public). In the Name section, name the new rule so that you can easily identify it later. Click the Finish button to end the wizard and open the port(s).

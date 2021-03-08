@@ -1,0 +1,23 @@
+ This is the website for the company who provides you with internet connectivity and email services. Note that this method works for people who use the email address assigned by your ISP and won’t be helpful for web-based email users (like Hotmail or Gmail).
+
+
+For example, if you use an email address provided by Comcast Xfinity (for example, yourname@comcast.net), go to http://www.xfinity.com. Centurylink users would visit http://www.centurylink.com.
+There’s a chance your ISP doesn’t provide email addresses to its users. Their website should tell you either way.;
+, Most ISP websites have these links prominently displayed.
+ In the search results, look for links that say something like “Setting up email software.
+
+”
+
+If there’s no general “email software” link, click on one that’s more specific, like “Setting up Outlook” or “Setting up Mac Mail.” Any help files that explain how to set up email will contain the incoming mail server.
+Xfinity users can click the “Internet” link, then “Email and Web Browsing.” In the search results, click “Using Email Client Programs with Comcast Email.”
+
+, If you check mail on multiple devices (like a smartphone and a computer), use IMAP. If you only check your mail on one computer or phone, use POP3.
+
+
+While almost all ISPs offer POP3, many don’t support IMAP. Centurylink, for example, only supports POP3 for home users.
+If your goal is to receive messages addressed to your ISP-provided email address in a web-based email app like Gmail or Outlook, use POP3. Most ISPs have limits on how large your mailbox can be at any given time and POP3 keeps your mailbox clear by deleting the copy on your ISP’s server.
+ Most ISPs use the standard POP3 port (110) for incoming mail. If your ISP supports Secure POP, the port number is usually 995. For ISPs that support Secure IMAP, the port is usually 993.
+
+
+For example, Comcast Xfinity’s POP3 server is mail.comcast.net, and the port is 110. If your mail software supports it, you can also use the Secure POP protocol by changing the port to 995.Comcast Xfinity also provides IMAP in both regular and secure forms. The server is imap.comcast.net and the port is 143 (or 993 f you want to use Secure IMAP).
+

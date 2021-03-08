@@ -1,0 +1,15 @@
+ You can use compilers on the internet if you can't download one.;
+, Brainf**k converts letters and symbols into their ASCII value, and stores them in this form. You'll need to be able to look up the values for letters while you are programming.
+ Imagine a ribbon of paper, divided into squares. The ribbon is one square wide, but an infinite number of squares long. In each square, you can put a number. Now imagine that you have a pointer (e.g. a pencil) that can point to ONE of the squares. Brainf**k can move the pointer back and forth along the ribbon, change the value in the square that the pointer is pointing to, and go around in loops.
+ The pointer is pointing to a particular square. < moves the pointer to the square before the current one. > moves it to the square after.
+ + increments (adds one to) the value of the current square. - decrements (subtracts one from) the value of the current square.
+ A full stop . is the output command. This reads the number in the current square, then outputs the corresponding ASCII character (this is why you need the ASCII table).
+ A comma , is the input command. This will ask you to input a string of characters. It will take the first character and store it's ASCII value in the current square, overwriting any value already there.
+ Otherwise, it will continue to the next instruction. When the program encounters a ], it will skip back to the corresponding [ Loops can be nested (placed one inside the other).
+ If you understand the instructions above, you should be able to figure out how it works. It will print Hello World! on the screen.   ++++++++>+>+>->>+<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.
+ There are many derivatives of brainf**k. Some of them add new features. Others simply replace the instructions with different words.
+
+
+Ook! is a simple derivative of brainf**k. It doesn't change any instructions, it just replaces them with ooks. Here's the translation: < = Ook? Ook.   > = Ook. Ook?   + = Ook. Ook.   - = Ook! Ook!   . = Ook! Ook.   , = Ook. Ook!   = Ook? Ook!      Ook! was designed to be read by orangutans (as a joke).
+Blub is another simple derivative. It's exactly the same as Ook!, just swap the word Ook for the word Blub e.g. [ = Blub? Blub!      As Ook! was designed for orangutans, Blub was designed for fish.
+

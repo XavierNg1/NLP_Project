@@ -1,0 +1,44 @@
+
+Make sure that you have superuser privileges on your Ubuntu box; and an Internet connection - preferably a fast one.
+You need to install chroot on Ubuntu.
+Either repartition existing partitions, or create a new partition from free Hard Disk space.
+Format the new partition(s) using a File System of your choice (for /home, /, /boot and /var it is preferable to use ext2, ext3 or reiser2).Create a new folder, /mnt/gentoo and one for each of the separate partitions that you created.
+Mount your new partitions on here:
+
+sudo mount /dev/sda5 /mnt/gentoo
+sudo mount /dev/sda6 /mnt/gentoo/home
+
+
+
+
+where here, sda5 and 6 are the partitions containing your prospective root and home directories respectively.
+
+
+
+,
+Check that your date is correct (type date).
+Open a web browsing program of your choice, and navigate to here.Move it to the Gentoo folder mv stage3*.bz2* /mnt/gentoo.
+Move yourself there (cd /mnt/gentoo) and check the tarball through md5: md5sum -c stage3*.md5.
+Extract the tarball!,
+You now have a few basic programs installed on the Gentoo partition; next, you need to install Portage: Gentoo's package management system which allows you to have complete control over what is on your system.
+At this stage, you may want to set some compile flags.
+Want to optimise your download?,
+Before you immerse yourself in your new system, you need to make sure that you have a few vital settings copied over from Ubuntu as it is.
+Now you can chroot!,
+Congratulations!,
+Next, you need to compile the most vital component of any operating system: its kernel.
+Remember installing portage earlier?,For the sake of clarity, at this stage I'll assume that you want to install the latest kernel (2.6) rather than 2.4.
+Now we must set our USE flags.
+Every flag you want to add is simply a word.To choose your USE flags, check out the Gentoo USE Flags documentation to see what flags you might want to include.Once you have chosen what flags to use, navigate to /etc/make.conf and put in the flags you want.
+Let's now set up your timezone.Now that we have our timezone set up, it is time to actually download our kernel sources and configure the kernel.Run (# emerge gentoo-sources) to download your kernel sources.
+This next step can be tricky for first timers.
+Run
+
+cd /usr/src/linux
+make menuconfig
+
+,
+This will bring up the kernel configuration menu.Select any network drivers you may need, such as ethernet drivers or wireless drivers (or both).Choose your processor type and family.
+Once you've finished, type ( make && make modules_install) to start compiling the kernel and kernel modules.make -j2 && make modules_install,
+Now we need to copy your kernel image to /boot.
+Now let's configure your kernel modules.

@@ -1,0 +1,112 @@
+
+The below script is how to SELECT data from a table using mySQLi Prepared Statements.
+
+
+
+$name = $_GET;
+ 
+if ($stmt = $mysqli->prepare("SELECT password FROM tbl_users WHERE name=?")) {
+ 
+    // Bind a variable to the parameter as a string. 
+    $stmt->bind_param("s", $name);
+ 
+    // Execute the statement.
+    $stmt->execute();
+ 
+    // Get the variables from the query.
+    $stmt->bind_result($pass);
+ 
+    // Fetch the data.
+    $stmt->fetch();
+ 
+    // Display the data.
+    printf("Password for user %s is %s\n", $name, $pass);
+ 
+    // Close the prepared statement.
+    $stmt->close();
+ 
+}
+
+
+
+
+
+Note: The variable $mysqli is the mySQLi Connection Object.
+
+The below script is how to INSERT data into a table using mySQLi Prepared Statements.
+
+
+
+$name = $_GET;
+$password = $_GET;
+ 
+if ($stmt = $mysqli->prepare("INSERT INTO tbl_users (name, password) VALUES (?, ?)")) {
+ 
+    // Bind the variables to the parameter as strings. 
+    $stmt->bind_param("ss", $name, $password);
+ 
+    // Execute the statement.
+    $stmt->execute();
+ 
+    // Close the prepared statement.
+    $stmt->close();
+ 
+}
+
+
+
+
+
+Note: The variable $mysqli is the mySQLi Connection Object.
+
+The below script is how to UPDATE data in a table using mySQLi Prepared Statements.
+
+
+
+$name = $_GET;
+$password = $_GET;
+ 
+if ($stmt = $mysqli->prepare("UPDATE tbl_users SET password = ? WHERE name = ?")) {
+ 
+    // Bind the variables to the parameter as strings. 
+    $stmt->bind_param("ss", $password, $name);
+ 
+    // Execute the statement.
+    $stmt->execute();
+ 
+    // Close the prepared statement.
+    $stmt->close();
+ 
+}
+
+
+
+
+
+Note: The variable $mysqli is the mySQLi Connection Object.
+
+The below script is how to DELETE data from a table using mySQLi Prepared Statements.
+
+
+
+$name = $_GET;
+$password = $_GET;
+ 
+if ($stmt = $mysqli->prepare("DELETE FROM tbl_users WHERE name = ?")) {
+ 
+    // Bind the variable to the parameter as a string. 
+    $stmt->bind_param("s", $name);
+ 
+    // Execute the statement.
+    $stmt->execute();
+ 
+    // Close the prepared statement.
+    $stmt->close();
+ 
+}
+
+
+
+
+
+Note: The variable $mysqli is the mySQLi Connection Object.

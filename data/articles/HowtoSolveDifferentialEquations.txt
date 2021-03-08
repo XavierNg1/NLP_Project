@@ -1,0 +1,524 @@
+ In this section, we discuss the methods of solving the linear first-order differential equation both in general and in the special cases where certain terms are set to 0. We let y=y(x),{\displaystyle y=y(x),} p(x),{\displaystyle p(x),} and q(x){\displaystyle q(x)} be functions of x.{\displaystyle x.}
+dydx+p(x)y=q(x){\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}+p(x)y=q(x)}
+p(x)=0.{\displaystyle p(x)=0.} By the fundamental theorem of calculus, the integral of a derivative of a function is the function itself. We can then simply integrate to obtain our answer. Remember that evaluating an indefinite integral introduces an arbitrary constant. 
+
+
+
+y(x)=∫q(x)dx{\displaystyle y(x)=\int q(x){\mathrm {d} }x}
+
+
+q(x)=0.{\displaystyle q(x)=0.} We use the technique of separation of variables. Separation of variables intuitively puts each variable on different sides of the equation. For example, we move all y{\displaystyle y} terms to one side and the x{\displaystyle x} terms to the other. We may treat the dx{\displaystyle {\mathrm {d} }x} and dy{\displaystyle {\mathrm {d} }y} in the derivative as quantities that are able to be moved around, but keep in mind that this is merely a shorthand for a manipulation that takes advantage of the chain rule. The exact nature of these objects, called differentials, are outside the scope of this article.
+
+
+First, we get each variable on opposite sides of the equation.
+
+
+1ydy=−p(x)dx{\displaystyle {\frac {1}{y}}{\mathrm {d} }y=-p(x){\mathrm {d} }x}
+
+
+
+Integrate both sides. The integration introduces an arbitrary constant on both sides, but we may consolidate them on the right side.
+
+
+ln⁡y=∫−p(x)dx{\displaystyle \ln y=\int -p(x){\mathrm {d} }x}
+
+
+y(x)=e−∫p(x)dx{\displaystyle y(x)=e^{-\int p(x){\mathrm {d} }x}}
+
+
+
+
+Example 1.1. In the last step, we take advantage of the exponent law ea+b=eaeb{\displaystyle e^{a+b}=e^{a}e^{b}} and replace eC{\displaystyle e^{C}} with C{\displaystyle C} because it is again an arbitrary constant.
+
+
+dydx−2ysin⁡x=0{\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}-2y\sin x=0}
+
+
+12ydy=sin⁡xdx12ln⁡y=−cos⁡x+Cln⁡y=−2cos⁡x+Cy(x)=Ce−2cos⁡x{\displaystyle {\begin{aligned}{\frac {1}{2y}}{\mathrm {d} }y&=\sin x{\mathrm {d} }x\\{\frac {1}{2}}\ln y&=-\cos x+C\\\ln y&=-2\cos x+C\\y(x)&=Ce^{-2\cos x}\end{aligned}}}
+
+
+
+
+p(x)≠0, q(x)≠0.{\displaystyle p(x)\neq 0,\ q(x)\neq 0.} To solve the general case, we introduce an integrating factor μ(x),{\displaystyle \mu (x),} a function of x{\displaystyle x} that makes the equation easier to solve by bringing the left side under a common derivative.
+
+
+Multiply both sides by μ(x).{\displaystyle \mu (x).}
+
+
+μdydx+μpy=μq{\displaystyle \mu {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}+\mu py=\mu q}
+
+
+
+In order to bring the left side under a common derivative, we must have the following.
+
+
+ddx(μy)=dμdxy+μdydx=μdydx+μpy{\displaystyle {\frac {\mathrm {d} }{{\mathrm {d} }x}}(\mu y)={\frac {{\mathrm {d} }\mu }{{\mathrm {d} }x}}y+\mu {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}=\mu {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}+\mu py}
+
+
+
+The latter equation implies that dμdx=μp,{\displaystyle {\frac {{\mathrm {d} }\mu }{{\mathrm {d} }x}}=\mu p,} which has the following solution. This is the integrating factor that solves every linear first-order equation. We may now proceed to derive a formula that solves this equation in terms of μ,{\displaystyle \mu ,} but it is more instructive to simply do the calculations. 
+
+
+μ(x)=e∫p(x)dx{\displaystyle \mu (x)=e^{\int p(x){\mathrm {d} }x}}
+
+
+
+
+Example 1.2. This example also introduces the notion of finding a particular solution to the differential equation given initial conditions.
+
+
+tdydt+2y=t2,y(2)=3{\displaystyle t{\frac {{\mathrm {d} }y}{{\mathrm {d} }t}}+2y=t^{2},\quad y(2)=3}
+
+
+dydt+2ty=t{\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }t}}+{\frac {2}{t}}y=t}
+
+
+μ(x)=e∫p(t)dt=e2ln⁡t=t2{\displaystyle \mu (x)=e^{\int p(t){\mathrm {d} }t}=e^{2\ln t}=t^{2}}
+
+
+ddt(t2y)=t3t2y=14t4+Cy(t)=14t2+Ct2{\displaystyle {\begin{aligned}{\frac {\mathrm {d} }{{\mathrm {d} }t}}(t^{2}y)&=t^{3}\\t^{2}y&={\frac {1}{4}}t^{4}+C\\y(t)&={\frac {1}{4}}t^{2}+{\frac {C}{t^{2}}}\end{aligned}}}
+
+
+3=y(2)=1+C4,C=8{\displaystyle 3=y(2)=1+{\frac {C}{4}},\quad C=8}
+
+
+y(t)=14t2+8t2{\displaystyle y(t)={\frac {1}{4}}t^{2}+{\frac {8}{t^{2}}}}
+
+
+
+
+
+
+This is an MIT OpenCourseWare video on solving linear first-order equations.
+ In this section, we discuss the methods of solving certain nonlinear first-order differential equations. There is no general solution in closed form, but certain equations are able to be solved using the techniques below. 
+dydx=f(x,y){\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}=f(x,y)}
+dydx=h(x)g(y).{\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}=h(x)g(y).} If the function f(x,y)=h(x)g(y){\displaystyle f(x,y)=h(x)g(y)} can be separated into functions of one variable each, then the equation is said to be separable. We then proceed with the same method as before.
+
+
+∫dyh(y)=∫g(x)dx{\displaystyle \int {\frac {{\mathrm {d} }y}{h(y)}}=\int g(x){\mathrm {d} }x}
+
+
+Example 1.3.
+
+
+dydx=x3y(1+x4){\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}={\frac {x^{3}}{y(1+x^{4})}}}
+
+
+∫ydy=∫x31+x4dx12y2=14ln⁡(1+x4)+Cy(x)=12ln⁡(1+x4)+C{\displaystyle {\begin{aligned}\int y{\mathrm {d} }y&=\int {\frac {x^{3}}{1+x^{4}}}{\mathrm {d} }x\\{\frac {1}{2}}y^{2}&={\frac {1}{4}}\ln(1+x^{4})+C\\y(x)&={\frac {1}{2}}\ln(1+x^{4})+C\end{aligned}}}
+
+
+
+
+dydx=g(x,y)h(x,y).{\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}={\frac {g(x,y)}{h(x,y)}}.} Let g(x,y){\displaystyle g(x,y)} and h(x,y){\displaystyle h(x,y)} be functions of x{\displaystyle x} and y.{\displaystyle y.} Then a homogeneous differential equation is an equation where g{\displaystyle g} and h{\displaystyle h} are homogeneous functions of the same degree. That is to say, the function satisfies the property g(αx,αy)=αkg(x,y),{\displaystyle g(\alpha x,\alpha y)=\alpha ^{k}g(x,y),} where k{\displaystyle k} is called the degree of homogeneity. Every homogeneous differential equation can be converted into a separable equation through a sufficient change of variables, either v=y/x{\displaystyle v=y/x} or v=x/y.{\displaystyle v=x/y.}
+
+
+
+Example 1.4. The above discussion regarding homogeneity may be somewhat arcane. Let us see how this applies through an example.
+
+
+dydx=y3−x3y2x{\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}={\frac {y^{3}-x^{3}}{y^{2}x}}}
+
+We first observe that this is a nonlinear equation in y.{\displaystyle y.} We also see that this equation cannot be separated. However, it is a homogeneous differential equation because both the top and bottom are homogeneous of degree 3. Therefore, we can make the change of variables v=y/x.{\displaystyle v=y/x.}
+
+
+dydx=yx−x2y2=v−1v2{\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}={\frac {y}{x}}-{\frac {x^{2}}{y^{2}}}=v-{\frac {1}{v^{2}}}}
+
+
+y=vx,dydx=dvdxx+v{\displaystyle y=vx,\quad {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}={\frac {{\mathrm {d} }v}{{\mathrm {d} }x}}x+v}
+
+
+dvdxx=−1v2.{\displaystyle {\frac {{\mathrm {d} }v}{{\mathrm {d} }x}}x=-{\frac {1}{v^{2}}}.} This is now a separable equation in v.{\displaystyle v.}
+
+
+v(x)=−3ln⁡x+C3{\displaystyle v(x)={\sqrt{-3\ln x+C}}}
+
+
+y(x)=x−3ln⁡x+C3{\displaystyle y(x)=x{\sqrt{-3\ln x+C}}}
+
+
+
+
+dydx=p(x)y+q(x)yn.{\displaystyle {\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}=p(x)y+q(x)y^{n}.} This is the Bernoulli differential equation, a particular example of a nonlinear first-order equation with solutions that can be written in terms of elementary functions. 
+
+
+Multiply by (1−n)y−n.{\displaystyle (1-n)y^{-n}.} 
+
+
+(1−n)y−ndydx=p(x)(1−n)y1−n+(1−n)q(x){\displaystyle (1-n)y^{-n}{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}=p(x)(1-n)y^{1-n}+(1-n)q(x)}
+
+
+
+Use the chain rule on the left side to convert the equation into a linear equation in y1−n,{\displaystyle y^{1-n},} which can then be solved using the previous techniques.
+
+
+dy1−ndx=p(x)(1−n)y1−n+(1−n)q(x){\displaystyle {\frac {{\mathrm {d} }y^{1-n}}{{\mathrm {d} }x}}=p(x)(1-n)y^{1-n}+(1-n)q(x)}
+
+
+
+
+M(x,y)+N(x,y)dydx=0.{\displaystyle M(x,y)+N(x,y){\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}=0.} Here, we discuss exact equations. We wish to find a function φ(x,y),{\displaystyle \varphi (x,y),} called the potential function, such that dφdx=0.{\displaystyle {\frac {{\mathrm {d} }\varphi }{{\mathrm {d} }x}}=0.}
+
+
+To fulfill this condition, we have the following total derivative. The total derivative allows for additional variable dependencies. To calculate the total derivative of φ{\displaystyle \varphi } with respect to x,{\displaystyle x,} we allow for the possibility that y{\displaystyle y} may also depend on x.{\displaystyle x.}
+
+
+dφdx=∂φ∂x+∂φ∂ydydx{\displaystyle {\frac {{\mathrm {d} }\varphi }{{\mathrm {d} }x}}={\frac {\partial \varphi }{\partial x}}+{\frac {\partial \varphi }{\partial y}}{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}}
+
+
+
+Comparing terms, we have M(x,y)=∂φ∂x{\displaystyle M(x,y)={\frac {\partial \varphi }{\partial x}}} and N(x,y)=∂φ∂y.{\displaystyle N(x,y)={\frac {\partial \varphi }{\partial y}}.} It is a standard result from multivariable calculus that mixed derivatives for smooth functions are equal to each other. This is sometimes known as Clairaut's theorem. The differential equation is then exact if the following condition holds.
+
+
+∂M∂y=∂N∂x{\displaystyle {\frac {\partial M}{\partial y}}={\frac {\partial N}{\partial x}}}
+
+
+
+The method of solving exact equations is similar to finding potential functions in multivariable calculus, which we go into very shortly.  We first integrate M{\displaystyle M} with respect to x.{\displaystyle x.} Because M{\displaystyle M} is a function of both x{\displaystyle x} and y,{\displaystyle y,} the integration can only partially recover φ,{\displaystyle \varphi ,} which the term φ~{\displaystyle {\tilde {\varphi }}} is intended to remind the reader of. There is also an integration constant that is a function of y.{\displaystyle y.}
+
+
+φ(x,y)=∫M(x,y)dx=φ~(x,y)+c(y){\displaystyle \varphi (x,y)=\int M(x,y){\mathrm {d} }x={\tilde {\varphi }}(x,y)+c(y)}
+
+
+
+We then take the partial derivative of our result with respect to y,{\displaystyle y,} compare terms with N(x,y),{\displaystyle N(x,y),} and integrate to obtain c(y).{\displaystyle c(y).} We can also start by integrating N{\displaystyle N} first and then taking the partial derivative of our result with respect to x{\displaystyle x} to solve for the arbitrary function d(x).{\displaystyle d(x).} Either method is fine, and usually, the simpler function to integrate is chosen.
+
+
+N(x,y)=∂φ∂y=∂φ~∂y+dcdy{\displaystyle N(x,y)={\frac {\partial \varphi }{\partial y}}={\frac {\partial {\tilde {\varphi }}}{\partial y}}+{\frac {{\mathrm {d} }c}{{\mathrm {d} }y}}}
+
+
+
+
+Example 1.5. We can check that the equation below is exact by doing the partial derivatives.
+
+
+3x2+y2+2xydydx=0{\displaystyle 3x^{2}+y^{2}+2xy{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}=0}
+
+
+φ=∫(3x2+y2)dx=x3+xy2+c(y)∂φ∂y=N(x,y)=2xy+dcdy{\displaystyle {\begin{aligned}\varphi &=\int (3x^{2}+y^{2}){\mathrm {d} }x=x^{3}+xy^{2}+c(y)\\{\frac {\partial \varphi }{\partial y}}&=N(x,y)=2xy+{\frac {{\mathrm {d} }c}{{\mathrm {d} }y}}\end{aligned}}}
+
+
+dcdy=0,c(y)=C{\displaystyle {\frac {{\mathrm {d} }c}{{\mathrm {d} }y}}=0,\quad c(y)=C}
+
+
+x3+xy2=C{\displaystyle x^{3}+xy^{2}=C}
+
+
+
+If our differential equation is not exact, then there are certain instances where we can find an integrating factor that makes it exact. However, these equations are even harder to find applications of in the sciences, and integrating factors, though guaranteed to exist, are not at all guaranteed to easily be found. As such, we will not go into them here.
+ These equations are some of the most important to solve because of their widespread applicability. Here, homogeneous does not refer to homogeneous functions, but the fact that the equation is set to 0. We will see in the next section on how to solve the corresponding inhomogeneous differential equations. Below, a{\displaystyle a} and b{\displaystyle b} are constants.
+d2ydx2+adydx+by=0{\displaystyle {\frac {{\mathrm {d} }^{2}y}{{\mathrm {d} }x^{2}}}+a{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}+by=0}
+Characteristic equation. This differential equation is notable because we can solve it very easily if we make some observations about what properties its solutions must have. This equation tells us that y{\displaystyle y} and its derivatives are all proportional to each other. From our previous examples in dealing with first-order equations, we know that only the exponential function has this property. Therefore, we will put forth an ansatz – an educated guess – on what the solution will be. 
+
+
+This ansatz is the exponential function erx,{\displaystyle e^{rx},} where r{\displaystyle r} is a constant to be determined. Substituting into the equation, we have the following.
+
+
+erx(r2+ar+b)=0{\displaystyle e^{rx}(r^{2}+ar+b)=0}
+
+
+
+This equation tells us that an exponential function multiplied by a polynomial must equal 0. We know that the exponential function cannot be 0 anywhere. The polynomial being set to 0 is deemed the characteristic equation. We have effectively converted a differential equation problem into an algebraic equation problem – a problem that is much easier to solve.
+
+
+r2+ar+b=0{\displaystyle r^{2}+ar+b=0}
+
+
+r±=−a±a2−4b2{\displaystyle r_{\pm }={\frac {-a\pm {\sqrt {a^{2}-4b}}}{2}}}
+
+
+
+We obtain two roots. Because this differential equation is a linear equation, the general solution consists of a linear combination of the individual solutions. Because this is a second-order equation, we know that this is the general solution. There are no others to be found. A more rigorous justification is contained in the existence and uniqueness theorems found in the literature.
+
+A useful way to check if two solutions are linearly independent is by way of the Wronskian. The Wronskian W{\displaystyle W} is the determinant of a matrix whose columns are the functions and their successive derivatives going down the rows. A theorem in linear algebra is that the functions in the Wronskian matrix are linearly dependent if the Wronskian vanishes. In this part, we can check if two solutions are linearly independent by making sure that the Wronskian does not vanish. The Wronskian will become important in solving inhomogeneous differential equations with constant coefficients via the variation of parameters.
+
+
+W=|y1y2y1′y2′|{\displaystyle W={\begin{vmatrix}y_{1}&y_{2}\\y_{1}'&y_{2}'\end{vmatrix}}}
+
+
+
+In terms of linear algebra, the solution set of this differential equation spans a vector space with dimension equal to the order of the differential equation. The solutions form a basis and are therefore linearly independent of one another. This is possible because the function y(x){\displaystyle y(x)} is being acted on by a linear operator. The derivative is a linear operator because it maps the space of differentiable functions to the space of all functions. The reason why this is a homogeneous equation is because, for any linear operator L,{\displaystyle L,} we are looking for solutions of the equation L=0.{\displaystyle L=0.}
+
+
+We now proceed to go over two of the three cases. The repeated roots case will have to wait until the section on reduction of order.Two real and distinct roots. If r±{\displaystyle r_{\pm }} are both real and are distinct, then the solution to the differential equation is given below.
+
+
+
+y(x)=c1er+x+c2er−x{\displaystyle y(x)=c_{1}e^{r_{+}x}+c_{2}e^{r_{-}x}}
+
+
+Two complex roots. It is a corollary of the fundamental theorem of algebra that solutions to polynomial equations with real coefficients contain roots that are real or come in conjugate pairs. Hence if r=α+iβ{\displaystyle r=\alpha +i\beta } is complex and is a root of the characteristic equation, then r∗=α−iβ{\displaystyle r^{*}=\alpha -i\beta } is a root as well. We can then write out the solution as c1e(α+iβ)x+c2e(α−iβ)x,{\displaystyle c_{1}e^{(\alpha +i\beta )x}+c_{2}e^{(\alpha -i\beta )x},} but this solution is complex and is undesirable as an answer for a real differential equation.
+
+
+We can instead make use of Euler's formula eix=cos⁡x+isin⁡x{\displaystyle e^{ix}=\cos x+i\sin x} to write out the solution in terms of trigonometric functions. 
+
+
+eαx(c1cos⁡βx+ic1sin⁡βx+c2cos⁡βx−ic2sin⁡βx){\displaystyle e^{\alpha x}(c_{1}\cos \beta x+ic_{1}\sin \beta x+c_{2}\cos \beta x-ic_{2}\sin \beta x)}
+
+
+
+We now replace the constant c1+c2{\displaystyle c_{1}+c_{2}} with c1{\displaystyle c_{1}} and replace i(c1−c2){\displaystyle i(c_{1}-c_{2})} with c2.{\displaystyle c_{2}.} This yields the solution below.
+
+
+y(x)=eαx(c1cos⁡βx+c2sin⁡βx){\displaystyle y(x)=e^{\alpha x}(c_{1}\cos \beta x+c_{2}\sin \beta x)}
+
+
+
+There is yet another way to write out this solution in terms of an amplitude and phase, which is typically more useful in physical applications. See the main article for details on this calculation.
+
+
+Example 2.1. Find the solution to the differential equation below given initial conditions. To do so, we must use our solution as well as its derivative and substitute initial conditions in both results to solve for the arbitrary constants.
+
+
+d2xdt2+3dxdt+10x=0,x(0)=1, x′(0)=−1{\displaystyle {\frac {{\mathrm {d} }^{2}x}{{\mathrm {d} }t^{2}}}+3{\frac {{\mathrm {d} }x}{{\mathrm {d} }t}}+10x=0,\quad x(0)=1,\ x'(0)=-1}
+
+
+r2+3r+10=0,r±=−3±9−402=−32±312i{\displaystyle r^{2}+3r+10=0,\quad r_{\pm }={\frac {-3\pm {\sqrt {9-40}}}{2}}=-{\frac {3}{2}}\pm {\frac {\sqrt {31}}{2}}i}
+
+
+x(t)=e−3t/2(c1cos312t+c2sin312t){\displaystyle x(t)=e^{-3t/2}\left(c_{1}\cos {\frac {\sqrt {31}}{2}}t+c_{2}\sin {\frac {\sqrt {31}}{2}}t\right)}
+
+
+x(0)=1=c1{\displaystyle x(0)=1=c_{1}}
+
+
+x′(t)=−32e−3t/2(c1cos312t+c2sin312t)+e−3t/2(−312c1sin312t+312c2cos312t){\displaystyle {\begin{aligned}x'(t)&=-{\frac {3}{2}}e^{-3t/2}\left(c_{1}\cos {\frac {\sqrt {31}}{2}}t+c_{2}\sin {\frac {\sqrt {31}}{2}}t\right)\\&+e^{-3t/2}\left(-{\frac {\sqrt {31}}{2}}c_{1}\sin {\frac {\sqrt {31}}{2}}t+{\frac {\sqrt {31}}{2}}c_{2}\cos {\frac {\sqrt {31}}{2}}t\right)\end{aligned}}}
+
+
+x′(0)=−1=−32c1+312c2,c2=131{\displaystyle x'(0)=-1=-{\frac {3}{2}}c_{1}+{\frac {\sqrt {31}}{2}}c_{2},\quad c_{2}={\frac {1}{\sqrt {31}}}}
+
+
+x(t)=e−3t/2(cos312t+131sin312t){\displaystyle x(t)=e^{-3t/2}\left(\cos {\frac {\sqrt {31}}{2}}t+{\frac {1}{\sqrt {31}}}\sin {\frac {\sqrt {31}}{2}}t\right)}
+
+
+
+
+
+
+This is an MIT OpenCourseWare video on solving homogeneous linear second-order equations with constant coefficients.
+ Reduction of order is a method in solving differential equations when one linearly independent solution is known. The method works by reducing the order of the equation by one, allowing for the equation to be solved using the techniques outlined in the previous part. Let y1(x){\displaystyle y_{1}(x)} be the known solution. The basic idea of reduction of order is to look for a solution of the following form, where v(x){\displaystyle v(x)} is a function to be determined, substitute into the differential equation, and solve for v(x).{\displaystyle v(x).} We will see how reduction of order can be applied in finding the solution to the differential equation with constant coefficients with repeated roots.
+y(x)=v(x)y1(x){\displaystyle y(x)=v(x)y_{1}(x)}
+Repeated roots to the homogeneous differential equation with constant coefficients. Recall that a second-order equation should have two linearly independent solutions. If the characteristic equation yields a repeating root, then the solution set fails to span the space because the solutions are linearly dependent. We must then use reduction of order to find the second linearly independent solution.
+
+
+Let r{\displaystyle r} denote the repeated root of the characteristic equation. We assume the second solution as y(x)=erxv(x){\displaystyle y(x)=e^{rx}v(x)} and substitute this into the differential equation. We find that most of the terms, save the term with the second derivative of v,{\displaystyle v,} cancel. 
+
+
+v″(x)erx=0{\displaystyle v''(x)e^{rx}=0}
+
+
+
+
+Example 2.2. Suppose we were working with the equation below, which has the repeated root r=−4.{\displaystyle r=-4.} Our substitution then fortuitously cancels most of the terms.
+
+
+d2ydx2+8dydx+16y=0{\displaystyle {\frac {{\mathrm {d} }^{2}y}{{\mathrm {d} }x^{2}}}+8{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}+16y=0}
+
+
+y=v(x)e−4xy′=v′(x)e−4x−4v(x)e−4xy″=v″(x)e−4x−8v′(x)e−4x+16v(x)e−4x{\displaystyle {\begin{aligned}y&=v(x)e^{-4x}\\y'&=v'(x)e^{-4x}-4v(x)e^{-4x}\\y''&=v''(x)e^{-4x}-8v'(x)e^{-4x}+16v(x)e^{-4x}\end{aligned}}}
+
+
+v″e−4x−8v′e−4x+16ve−4x+8v′e−4x−32ve−4x+16ve−4x=0{\displaystyle {\begin{aligned}v''e^{-4x}&-{\cancel {8v'e^{-4x}}}+{\cancel {16ve^{-4x}}}\\&+{\cancel {8v'e^{-4x}}}-{\cancel {32ve^{-4x}}}+{\cancel {16ve^{-4x}}}=0\end{aligned}}}
+
+
+
+Much like our ansatz for the differential equation with constant coefficients, only the second derivative can be 0 here. Integrating twice leads to the desired expression for v.{\displaystyle v.}
+
+
+v(x)=c1+c2x{\displaystyle v(x)=c_{1}+c_{2}x}
+
+
+
+The general solution to the differential equation with constant coefficients given repeated roots in its characteristic equation can then be written like so. As a handy way of remembering, one merely multiply the second term with an x{\displaystyle x} to achieve linear independence. Because this set is linearly independent, we have found all the solutions to this equation, and are done.
+
+
+y(x)=(c1+c2x)erx{\displaystyle y(x)=(c_{1}+c_{2}x)e^{rx}}
+
+
+
+
+d2ydx2+p(x)dydx+q(x)y=0.{\displaystyle {\frac {{\mathrm {d} }^{2}y}{{\mathrm {d} }x^{2}}}+p(x){\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}+q(x)y=0.} Reduction of order applies if we know a solution y1(x){\displaystyle y_{1}(x)} to this equation, whether found by chance or given in a problem.
+
+
+We look for a solution of the form y(x)=v(x)y1(x){\displaystyle y(x)=v(x)y_{1}(x)} and proceed to substitute this into the equation.
+
+
+v″y1+2v′y1′+p(x)v′y1+v(y1″+p(x)y1′+q(x))=0{\displaystyle v''y_{1}+2v'y_{1}'+p(x)v'y_{1}+v(y_{1}''+p(x)y_{1}'+q(x))=0}
+
+
+
+Because y1{\displaystyle y_{1}} is already a solution to the differential equation, the terms with v{\displaystyle v} all vanish. What remains is a linear, first-order equation. To see this more clearly, make the change of variables w(x)=v′(x).{\displaystyle w(x)=v'(x).}
+
+
+y1w′+(2y1′+p(x)y1)w=0{\displaystyle y_{1}w'+(2y_{1}'+p(x)y_{1})w=0}
+
+
+w(x)=exp(∫(2y1′(x)y1(x)+p(x))dx){\displaystyle w(x)=\exp \left(\int \left({\frac {2y_{1}'(x)}{y_{1}(x)}}+p(x)\right){\mathrm {d} }x\right)}
+
+
+v(x)=∫w(x)dx{\displaystyle v(x)=\int w(x){\mathrm {d} }x}
+
+
+
+If the integrals can be done, then one would obtain the general solution in terms of elementary functions. If not, then the solution can be left in integral form.
+ The Euler-Cauchy equation is a specific example of a second-order differential equation with variable coefficients that contain exact solutions. This equation is seen in some applications, such as when solving Laplace's equation in spherical coordinates.
+x2d2ydx2+axdydx+by=0{\displaystyle x^{2}{\frac {{\mathrm {d} }^{2}y}{{\mathrm {d} }x^{2}}}+ax{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}+by=0}
+Characteristic equation. The structure of this differential equation is such that each term is multiplied by a power term whose degree is equal to the order of the derivative.
+
+
+This suggests that we try the ansatz y(x)=xn,{\displaystyle y(x)=x^{n},} where n{\displaystyle n} is yet to be determined, in a similar manner as trying the exponential function in dealing with the linear differential equation with constant coefficients. After differentiating and substituting, we obtain the following.
+
+
+xn(n2+(a−1)n+b)=0{\displaystyle x^{n}(n^{2}+(a-1)n+b)=0}
+
+
+
+Here, we must assume that x≠0{\displaystyle x\neq 0} in order for us to use the characteristic equation. The point x=0{\displaystyle x=0} is called a regular singular point of the differential equation, a property that becomes important when solving differential equations using power series. This equation has two roots, which may be real and distinct, repeated, or complex conjugates.
+
+
+n±=1−a±(a−1)2−4b2{\displaystyle n_{\pm }={\frac {1-a\pm {\sqrt {(a-1)^{2}-4b}}}{2}}}
+
+
+
+
+Two real and distinct roots. If n±{\displaystyle n_{\pm }} are both real and are distinct, then the solution to the differential equation is given below.
+
+
+
+y(x)=c1xn++c2xn−{\displaystyle y(x)=c_{1}x^{n_{+}}+c_{2}x^{n_{-}}}
+
+
+Two complex roots. If n±=α±βi{\displaystyle n_{\pm }=\alpha \pm \beta i} are the roots to the characteristic equation, then we obtain a complex function as our solution.
+
+
+To convert this into a real function, we make the change of variables x=et,{\displaystyle x=e^{t},} implying t=ln⁡x,{\displaystyle t=\ln x,} and use Euler's formula. A similar process is conducted as before in reassigning arbitrary constants.
+
+
+y(t)=eαt(c1eβit+c2e−βit){\displaystyle y(t)=e^{\alpha t}(c_{1}e^{\beta it}+c_{2}e^{-\beta it})}
+
+
+
+The general solution can then be written as follows.
+
+
+y(x)=xα(c1cos⁡(βln⁡x)+c2sin⁡(βln⁡x)){\displaystyle y(x)=x^{\alpha }(c_{1}\cos(\beta \ln x)+c_{2}\sin(\beta \ln x))}
+
+
+
+
+Repeated roots. To obtain the second linearly independent solution, we must use reduction of order again. 
+
+
+There is much algebra involved, but the concept remains the same: we substitute y=v(x)y1{\displaystyle y=v(x)y_{1}} into the equation, where y1{\displaystyle y_{1}} is the first solution. Terms will cancel, and we are left with the following equation.
+
+
+v″+1xv′=0{\displaystyle v''+{\frac {1}{x}}v'=0}
+
+
+
+This is a linear first-order equation in v′(x).{\displaystyle v'(x).} Its solution is v(x)=c1+c2ln⁡x.{\displaystyle v(x)=c_{1}+c_{2}\ln x.} Our answer can therefore be written as follows. An easy way to remember this solution is that the second linearly independent solution merely needs an extra ln⁡x{\displaystyle \ln x} term.
+
+y(x)=xn(c1+c2ln⁡x){\displaystyle y(x)=x^{n}(c_{1}+c_{2}\ln x)}
+
+
+
+, The inhomogeneous case deals with the equation L=f(x),{\displaystyle L=f(x),} where f(x){\displaystyle f(x)} is called the source term. According to the theory of differential equations, the general solution to this equation is the superposition of the particular solution yp(x){\displaystyle y_{p}(x)} and the complementary solution yc(x).{\displaystyle y_{c}(x).} The particular solution here, confusingly, refers not to a solution given initial conditions, but rather the solution that exists as a result of the inhomogeneous term. The complementary solution refers to the solution of the corresponding homogeneous differential equation by setting f(x)=0.{\displaystyle f(x)=0.} We may show that the general solution is a superposition of these two solutions by writing L=L+L=f(x){\displaystyle L=L+L=f(x)} and noting that because L=0,{\displaystyle L=0,} this superposition is indeed the general solution.
+d2ydx2+adydx+by=f(x){\displaystyle {\frac {{\mathrm {d} }^{2}y}{{\mathrm {d} }x^{2}}}+a{\frac {{\mathrm {d} }y}{{\mathrm {d} }x}}+by=f(x)}
+Method of undetermined coefficients. The method of undetermined coefficients is a method that works when the source term is some combination of exponential, trigonometric, hyperbolic, or power terms. These terms are the only terms that have a finitely many number of linearly independent derivatives. In this section, we concentrate on finding the particular solution. 
+
+
+Compare the terms in f(x){\displaystyle f(x)} with the terms in yc,{\displaystyle y_{c},} disregarding multiplicative constants. There are three cases. 
+
+
+None of the terms are the same. The particular solution yp{\displaystyle y_{p}} will then consist of a linear combination of the terms in yp{\displaystyle y_{p}} and their linearly independent derivatives.
+
+
+f(x){\displaystyle f(x)} contains a term h(x){\displaystyle h(x)} that is xn{\displaystyle x^{n}} times a term in yc,{\displaystyle y_{c},} where n{\displaystyle n} is 0 or a positive integer, but this term originated from a distinct root of the characteristic equation. In this case, yp{\displaystyle y_{p}} will consist of a linear combination of xn+1h(x),{\displaystyle x^{n+1}h(x),} its linearly independent derivatives, as well as the other terms of f(x){\displaystyle f(x)} and their linearly independent derivatives.
+
+
+f(x){\displaystyle f(x)} contains a term h(x){\displaystyle h(x)} that is xn{\displaystyle x^{n}} times a term in yc,{\displaystyle y_{c},} where n{\displaystyle n} is 0 or a positive integer, but this term originated from a repeated root of the characteristic equation. In this case, yp{\displaystyle y_{p}} will consist of a linear combination of xn+sh(x){\displaystyle x^{n+s}h(x)} (where s{\displaystyle s} is the multiplicity of the root) and its linearly independent derivatives, as well as the other terms of f(x){\displaystyle f(x)} and their linearly independent derivatives.
+
+
+
+Write out yp{\displaystyle y_{p}} as a linear combination of the aforementioned terms. The coefficients in this linear combination refer to the namesake of "undetermined coefficients." If terms that are in yc{\displaystyle y_{c}} appear, they may be discarded because of the presence of the arbitrary constants in yc.{\displaystyle y_{c}.} Once written out, substitute yp{\displaystyle y_{p}} into the equation and equate like terms.
+
+Solve for the coefficients. In general, one encounters a system of algebraic equations at this point, but this system is usually not too difficult to solve. Once found, yp{\displaystyle y_{p}} is found, and we are done.
+
+
+Example 2.3. The following differential equation is an inhomogeneous differential equation with a source term that contains a finitely many number of linearly independent derivatives. Hence we may use the method of undetermined coefficients to find its particular solution.
+
+
+d2ydt2+6y=2e3t−cos⁡5t{\displaystyle {\frac {{\mathrm {d} }^{2}y}{{\mathrm {d} }t^{2}}}+6y=2e^{3t}-\cos 5t}
+
+
+yc(t)=c1cos6t+c2sin6t{\displaystyle y_{c}(t)=c_{1}\cos {\sqrt {6}}t+c_{2}\sin {\sqrt {6}}t}
+
+
+yp(t)=Ae3t+Bcos⁡5t+Csin⁡5t{\displaystyle y_{p}(t)=Ae^{3t}+B\cos 5t+C\sin 5t}
+
+
+9Ae3t−25Bcos⁡5t−25Csin⁡5t+6Ae3t+6Bcos⁡5t+6Csin⁡5t=2e3t−cos⁡5t{\displaystyle {\begin{aligned}9Ae^{3t}-25B\cos 5t&-25C\sin 5t+6Ae^{3t}\\&+6B\cos 5t+6C\sin 5t=2e^{3t}-\cos 5t\end{aligned}}}
+
+
+{9A+6A=2,A=215−25B+6B=−1,B=119−25C+6C=0,C=0{\displaystyle {\begin{cases}9A+6A=2,&A={\dfrac {2}{15}}\\-25B+6B=-1,&B={\dfrac {1}{19}}\\-25C+6C=0,&C=0\end{cases}}}
+
+
+y(t)=c1cos6t+c2sin6t+215e3t+119cos⁡5t{\displaystyle y(t)=c_{1}\cos {\sqrt {6}}t+c_{2}\sin {\sqrt {6}}t+{\frac {2}{15}}e^{3t}+{\frac {1}{19}}\cos 5t}
+
+
+
+
+Variation of parameters. Variation of parameters is a more general method of solving inhomogeneous differential equations, particularly when the source term does not contain a finitely many number of linearly independent derivatives. Source terms like tan⁡x{\displaystyle \tan x} and x−n{\displaystyle x^{-n}} warrant the use of variation of parameters to find the particular solution. Variation of parameters may even be used to solve differential equations with variable coefficients, though with the exception of the Euler-Cauchy equation, this is less common because the complementary solution is typically not written in terms of elementary functions.
+
+
+Assume a solution of the form below. Its derivative is written on the second line. 
+
+
+y(x)=v1(x)y1(x)+v2(x)y2(x){\displaystyle y(x)=v_{1}(x)y_{1}(x)+v_{2}(x)y_{2}(x)}
+
+
+y′=v1′y1+v1y1′+v2′y2+v2y2′{\displaystyle y'=v_{1}'y_{1}+v_{1}y_{1}'+v_{2}'y_{2}+v_{2}y_{2}'}
+
+
+
+Because the assumed solution is of a form in which there are two unknowns, yet there is only one equation, we must also impose an auxiliary condition. We choose the following auxiliary condition.
+
+
+v1′y1+v2′y2=0{\displaystyle v_{1}'y_{1}+v_{2}'y_{2}=0}
+
+
+y′=v1y1′+v2y2′{\displaystyle y'=v_{1}y_{1}'+v_{2}y_{2}'}
+
+
+y″=v1′y1′+v1y1″+v2′y2′+v2y2″{\displaystyle y''=v_{1}'y_{1}'+v_{1}y_{1}''+v_{2}'y_{2}'+v_{2}y_{2}''}
+
+
+
+Now we proceed to obtain the second equation. After substituting and rearranging terms, we can group terms containing v1{\displaystyle v_{1}} together and terms containing v2{\displaystyle v_{2}} together. These terms all cancel because y1{\displaystyle y_{1}} and y2{\displaystyle y_{2}} are solutions to the corresponding homogeneous equation. We are then left with the following system of equations.
+
+
+v1′y1+v2′y2=0v1′y1′+v2′y2′=f(x){\displaystyle {\begin{aligned}v_{1}'y_{1}+v_{2}'y_{2}&=0\\v_{1}'y_{1}'+v_{2}'y_{2}'&=f(x)\\\end{aligned}}}
+
+
+
+This system can be rearranged into a matrix equation of the form Ax=b,{\displaystyle A{\mathbf {x} }={\mathbf {b} },} whose solution is x=A−1b.{\displaystyle {\mathbf {x} }=A^{-1}{\mathbf {b} }.} The inverse of a 2×2{\displaystyle 2\times 2} matrix is found by dividing by the determinant, swapping the diagonal elements, and negating the off-diagonal elements. The determinant of this matrix is, in fact, the Wronskian.
+
+
+(v1′v2′)=1W(y2′−y2−y1′y1)(0f(x)){\displaystyle {\begin{pmatrix}v_{1}'\\v_{2}'\end{pmatrix}}={\frac {1}{W}}{\begin{pmatrix}y_{2}'&-y_{2}\\-y_{1}'&y_{1}\end{pmatrix}}{\begin{pmatrix}0\\f(x)\end{pmatrix}}}
+
+
+
+The formulas for v1{\displaystyle v_{1}} and v2{\displaystyle v_{2}} are given below. Just like in reduction of order, the integration here introduces an arbitrary constant that incorporates the complementary solution into the general solution of the differential equation.
+
+
+v1(x)=−∫1Wf(x)y2(x)dx{\displaystyle v_{1}(x)=-\int {\frac {1}{W}}f(x)y_{2}(x){\mathrm {d} }x}
+
+
+v2(x)=∫1Wf(x)y1(x)dx{\displaystyle v_{2}(x)=\int {\frac {1}{W}}f(x)y_{1}(x){\mathrm {d} }x}
+
+
+
+
+
+
+
+This is an MIT OpenCourseWare video on solving inhomogeneous linear second-order equations with constant coefficients.

@@ -1,0 +1,153 @@
+ Here, i{\displaystyle {\mathbf {i} }} and j{\displaystyle {\mathbf {j} }} are the unit vectors in a two-dimensional Cartesian coordinate system. 
+
+, This is the first step in converting to parameter space.
+
+
+dru=(∂x∂ui+∂y∂uj)du{\displaystyle {\mathrm {d} }{\mathbf {r} }_{u}=\left({\frac {\partial x}{\partial u}}{\mathbf {i} }+{\frac {\partial y}{\partial u}}{\mathbf {j} }\right){\mathrm {d} }u}
+
+
+drv=(∂x∂vi+∂y∂vj)dv{\displaystyle {\mathrm {d} }{\mathbf {r} }_{v}=\left({\frac {\partial x}{\partial v}}{\mathbf {i} }+{\frac {\partial y}{\partial v}}{\mathbf {j} }\right){\mathrm {d} }v}
+
+
+, Recall that the area can be written in terms of the magnitude of the cross product of the two vectors.
+
+
+dA=|dru×drv|=|ijk∂x∂u∂y∂u0∂x∂v∂y∂v0|dudv=|∂x∂u∂y∂u∂x∂v∂y∂v|dudv{\displaystyle {\begin{aligned}{\mathrm {d} }A&=|{\mathrm {d} }{\mathbf {r} }_{u}\times {\mathrm {d} }{\mathbf {r} }_{v}|\\&={\begin{vmatrix}{\mathbf {i} }&{\mathbf {j} }&{\mathbf {k} }\\{\dfrac {\partial x}{\partial u}}&{\dfrac {\partial y}{\partial u}}&0\\{\dfrac {\partial x}{\partial v}}&{\dfrac {\partial y}{\partial v}}&0\end{vmatrix}}{\mathrm {d} }u{\mathrm {d} }v\\&={\begin{vmatrix}{\dfrac {\partial x}{\partial u}}&{\dfrac {\partial y}{\partial u}}\\{\dfrac {\partial x}{\partial v}}&{\dfrac {\partial y}{\partial v}}\end{vmatrix}}{\mathrm {d} }u{\mathrm {d} }v\end{aligned}}}
+
+
+, The determinant above is the Jacobian determinant. A shorthand notation can be written as below, where we remember that we convert to parameter space as defined by the variables on the bottom. Should you end up with a negative determinant, neglect the negative sign - only the magnitude matters.
+
+
+|∂(x,y)∂(u,v)|{\displaystyle {\begin{vmatrix}{\dfrac {\partial (x,y)}{\partial (u,v)}}\end{vmatrix}}}
+
+
+, The reason why this is more applicable is because normally, we would define our parameters in terms of the physical variables, but then have to solve for the physical variables in order to take partial derivatives. Recognizing that the determinant of an inverse is the multiplicative inverse of the determinant detJ−1=1detJ,{\displaystyle \det J^{-1}={\frac {1}{\det J}},} we can skip a step by taking the inverse Jacobian determinant first, and then finding its reciprocal to recover the actual determinant that we want.
+
+
+|∂(u,v)∂(x,y)|{\displaystyle {\begin{vmatrix}{\dfrac {\partial (u,v)}{\partial (x,y)}}\end{vmatrix}}}
+
+
+,
+
+
+{2x+3y=02x+3y=5{\displaystyle {\begin{cases}2x+3y=0\\2x+3y=5\end{cases}}}
+
+
+{3x−y=03x−y=3{\displaystyle {\begin{cases}3x-y=0\\3x-y=3\end{cases}}}
+
+Plotting this on a graph, we see that the domain is a rotated rectangle. Integrating over this domain by normal means would be rather tedious, but using Jacobian change of variables, this problem is trivial. 
+
+
+, Notice that using our definition, we have changed the integrand to simply u.{\displaystyle u.}
+
+
+u=2x+3y{\displaystyle u=2x+3y}
+
+
+v=3x−y{\displaystyle v=3x-y}
+
+
+, Take partial derivatives with respect to each of the physical variables x{\displaystyle x} and y,{\displaystyle y,} plug them into the inverse Jacobian matrix, and take its determinant.
+
+
+∂u∂x=2;  ∂u∂y=3;  ∂v∂x=3;  ∂v∂y=−1{\displaystyle {\frac {\partial u}{\partial x}}=2;\ \ {\frac {\partial u}{\partial y}}=3;\ \ {\frac {\partial v}{\partial x}}=3;\ \ {\frac {\partial v}{\partial y}}=-1}
+
+
+detJ−1=|∂(u,v)∂(x,y)|=|233−1|=−11{\displaystyle {\begin{aligned}\det J^{-1}&={\begin{vmatrix}{\dfrac {\partial (u,v)}{\partial (x,y)}}\end{vmatrix}}\\&={\begin{vmatrix}2&3\\3&-1\end{vmatrix}}\\&=-11\end{aligned}}}
+
+
+, Take its magnitude (neglect any negative signs) and relate it to the infinitesimal area. 
+
+
+|∂(x,y)∂(u,v)|=111{\displaystyle {\begin{vmatrix}{\dfrac {\partial (x,y)}{\partial (u,v)}}\end{vmatrix}}={\frac {1}{11}}}
+
+
+dA=11dudv{\displaystyle {\mathrm {d} }A=11{\mathrm {d} }u{\mathrm {d} }v}
+
+
+,
+
+
+∫D(2x+3y)dA=111∫05udu∫03dv=111252(3)=7522{\displaystyle {\begin{aligned}\int _{D}(2x+3y){\mathrm {d} }A&={\frac {1}{11}}\int _{0}^{5}u{\mathrm {d} }u\int _{0}^{3}{\mathrm {d} }v\\&={\frac {1}{11}}{\frac {25}{2}}(3)\\&={\frac {75}{22}}\end{aligned}}}
+
+
+,
+
+
+{xy=1xy=3{\displaystyle {\begin{cases}xy=1\\xy=3\end{cases}}}
+
+
+{x2y=1x2y=2{\displaystyle {\begin{cases}x^{2}y=1\\x^{2}y=2\end{cases}}}
+
+Recall that the centroid is the mean of all the points of the region. The region is defined in such a way as to involve three separate integrals just to find the area. To find the centroid would mean to take several more integrals. This is obviously not the way to go, so we use Jacobians to convert this into an easier problem. 
+
+
+C=(∫DxdA∫DdA,∫DydA∫DdA){\displaystyle C=\left({\frac {\int _{D}x{\mathrm {d} }A}{\int _{D}{\mathrm {d} }A}},{\frac {\int _{D}y{\mathrm {d} }A}{\int _{D}{\mathrm {d} }A}}\right)}
+
+
+
+
+,
+
+
+u=xy{\displaystyle u=xy}
+
+
+v=x2y{\displaystyle v=x^{2}y}
+
+
+, Use them to find the determinant of the inverse Jacobian.
+
+
+∂u∂x=y;  ∂u∂y=x;  ∂v∂x=2xy;  ∂v∂y=x2{\displaystyle {\frac {\partial u}{\partial x}}=y;\ \ {\frac {\partial u}{\partial y}}=x;\ \ {\frac {\partial v}{\partial x}}=2xy;\ \ {\frac {\partial v}{\partial y}}=x^{2}}
+
+
+|y2xyxx2|=x2y−2x2y=−v{\displaystyle {\begin{vmatrix}y&2xy\\x&x^{2}\end{vmatrix}}=x^{2}y-2x^{2}y=-v}
+
+
+, Then plug it into the area integral.
+
+
+∫DdA=∬D1vdvdu{\displaystyle \int _{D}{\mathrm {d} }A=\iint _{D}{\frac {1}{v}}{\mathrm {d} }v{\mathrm {d} }u}
+
+
+,
+
+
+∫13du∫12dv1v=2ln⁡2{\displaystyle \int _{1}^{3}{\mathrm {d} }u\int _{1}^{2}{\mathrm {d} }v{\frac {1}{v}}=2\ln 2}
+
+
+,
+
+
+y=ux=vx2{\displaystyle y={\frac {u}{x}}={\frac {v}{x^{2}}}}
+
+
+x=vu{\displaystyle x={\frac {v}{u}}}
+
+
+
+
+x=uy=vy{\displaystyle x={\frac {u}{y}}={\sqrt {\frac {v}{y}}}}
+
+
+y=u2v{\displaystyle y={\frac {u^{2}}{v}}}
+
+
+
+
+,
+
+
+∫DxdA=∬Dvu1vdvdu=∫131udu∫12dv=ln⁡3{\displaystyle {\begin{aligned}\int _{D}x{\mathrm {d} }A&=\iint _{D}{\frac {v}{u}}{\frac {1}{v}}{\mathrm {d} }v{\mathrm {d} }u\\&=\int _{1}^{3}{\frac {1}{u}}{\mathrm {d} }u\int _{1}^{2}{\mathrm {d} }v\\&=\ln 3\end{aligned}}}
+
+
+∫DydA=∬Du2v2dvdu=∫13u2du∫121v2dv=(273−13)(−12+1)=133{\displaystyle {\begin{aligned}\int _{D}y{\mathrm {d} }A&=\iint _{D}{\frac {u^{2}}{v^{2}}}{\mathrm {d} }v{\mathrm {d} }u\\&=\int _{1}^{3}u^{2}{\mathrm {d} }u\int _{1}^{2}{\frac {1}{v^{2}}}{\mathrm {d} }v\\&=\left({\frac {27}{3}}-{\frac {1}{3}}\right)\left(-{\frac {1}{2}}+1\right)\\&={\frac {13}{3}}\end{aligned}}}
+
+
+, The centroid is the center of mass of the region. If one were to balance an object whose shape was defined by that region using a tip of a pin, the only way it would work is if it were balanced at the centroid.
+
+
+C=(ln⁡32ln⁡2,136ln⁡2){\displaystyle C=\left({\frac {\ln 3}{2\ln 2}},{\frac {13}{6\ln 2}}\right)}
+
+

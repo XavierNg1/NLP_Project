@@ -1,0 +1,17 @@
+ You can access Disk Utility from the Utilities folder in the Applications folder. Disk Utility comes installed on every Mac.
+
+
+Note: This method only works on OS X 10.5 (Leopard) and above. Users of older versions will need to use partition software to create a new partition from an existing one.
+ In the left frame, select the hard drive that you want to create a partition on. Click the "Partition" tab to view the partitions on the drive. You will see all of the current partitions on that drive laid out in the right side of the window. Used space is represented as light blue, while free space is represented as white.
+ Select the partition you want to shrink and then either enter in the new size you want into the field or click and drag the bottom-right corner of the partition block. Click Apply and then Partition to save the changes.
+
+
+You won't be able to shrink it into the blue area, as this represents files that exist on the original partition.
+ After resizing your original partition, click the "+" button at the bottom of the Partition Layout window. A new partition will be created out of the available space left after shrinking the original and added to the partition layout.
+ By default, the new partition will take up all the available space left over after resizing. You can adjust the size of the partitions by using the slider between the two in the Partition Layout window. You can also select a partition and enter the size you want it to be in the "Size" field.
+ The original partition will keep its old file system, but you will need to format the newly created partition in order to start storing files on it. Choose "Mac OS Extended (Journaled)" from the Format drop-down menu.
+
+
+If you're creating a partition to install Windows on, leave it unformatted for now. The Windows installer will format it to the correct file system.
+Give the new partition a name so that you can easily identify what's on it.
+ Click the Apply button, and then click Partition to accept your changes and create the new partition. You can now use your new partition just like you would any hard drive.

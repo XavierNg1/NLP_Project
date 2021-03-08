@@ -1,0 +1,17 @@
+ Dolphin runs best on a 3 GHz or higher dual core processor, and with a graphics card that supports the latest version of DirectX or OpenGL. Graphics cards manufactured by ATI or NVIDIA are recommended. Integrated graphics cards (like the Intel HD series) are not recommended. If you have a powerful CPU but an integrated graphics card, you still might be able to achieve decent speeds by tweaking the settings (see below). A 64 bit CPU with a 64 bit operating system is also recommended, because they can address more memory and perform faster calculations. If possible, use Windows, because Dolphin's DirectX is faster than OpenGL.;
+,, Wii discs are 4.7 GB, dual layer Wii discs (like Super Smash Bros. Brawl) are 7.9 GB, and Gamecube discs are 1.4 GB. Your device needs to be formatted with FAT32 or NTFS.
+ Extract the ZIP file and copy the apps folder to your SD card or USB drive.
+ Then launch the Homebrew Channel. You should see CleanRip come up as one of the options. Select it and choose Launch.
+ Choose whichever device you plan to use to rip your game disc to. Then select whether your device is formatted with FAT32 or NTFS. Press A to continue.
+ You can download them if you want, but they are not required and they will only work if you have an internet connection.
+ If it's not already inserted, put it in now. Once you put the disc in, press A to continue.
+ When you dump the game disc, it will divide the disc into a few smaller chunks. Choose either 1 GB, 2 GB, 3 GB, or full. Please note that you can only choose full if your SD card or USB drive is formatted with NTFS, because FAT32 has a file size limit of 4 GB. Also select whether your disc is single layer or dual layer, and if you want to get prompted for a new device every time a chunk finishes. The only known dual layer Wii disc is Super Smash Bros. Brawl.
+ Once it has, press B to exit CleanRip and go back to the Homebrew Channel. Take out your SD card or USB drive.
+ Now it's time to put all your chunks together to form a full game disc that can be read by Dolphin. If you dumped the full disc, you can skip this step. Copy all the chunks to your hard drive. Then start either the Command Prompt (if you're using Windows) or the Terminal (if you're using Mac or Linux). Use CD to get to whatever directory you copied the chunks to. Then follow this command to combine all of the chunks: Windows: copy /b <title_id>.part*.iso <game_title>.iso Mac or Linux: cat <title_id>.part*.iso > <game_title>.iso
+
+, It can be found at: https://dolphin-emu.org/download/
+
+, Go to Config->Paths and add the directory where your ISO is located. Click refresh and your ISO should appear. Now you're almost ready to play the game you ripped. All that's left is to set up the Wii Remote.
+ From here, you can set up your Wii Remote. If you want to control Wii games with your keyboard, choose Emulated Wiimote and click configure to choose which keys correspond to the buttons on the Wii Remote. If you want to use a Wii Remote to control Dolphin, choose Real Wiimote. Then connect your Wii Remote to your computer using Bluetooth. After it's connected, choose Pair Up. Once it's paired, click Refresh. The LED on your Wii Remote should show whichever player you are.
+ Now you can play it! Try it out. If your computer isn't as good, you can try adjusting the settings to disable some of the more CPU or GPU intense features. Follow http://wiki.dolphin-emu.org/index.php?title=Performance_Guide
+

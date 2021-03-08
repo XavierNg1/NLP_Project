@@ -1,0 +1,29 @@
+
+Learn from the above table the Excel VBA Variable Data Types.
+Learn that generally, it’s best to use the data type that uses the smallest number of bytes yet still can handle all the data that will be assigned to it.
+Learn various Assignment Statements.
+Learn that VBA has many reserved words, which are words that you can’t use for variable or procedure names.
+Learn that syntax error messages aren’t always descriptive.
+Learn that for worksheet calculation, Excel uses the Double data type, so that’s a good choice for processing numbers in VBA when you don’t want to lose any precision.
+If you don’t declare the data type for a variable that you use in a VBA routine, VBA uses the default data type, Variant.
+You can use the VBA TypeName function to determine the data type of a variable.
+Learn that VBA lets you create custom, or user-defined, data types.You define custom data types at the top of your module, before any procedures.
+After you create a user-defined data type, you use a Dim statement to declare a variable as that type.
+An array is a group of elements of the same type that have a common name.
+You declare an array with a Dim or Public statement, just as you declare a regular variable.
+When you declare an array, you need specify only the upper index, in which case VBA assumes that 0 is the lower index.
+By default, VBA assumes zero-based arrays.
+When you want to declare multidimensional arrays, do the following:
+
+The array examples in the preceding section are one-dimensional arrays.
+Following is a declaration for a 3-D array that contains 1,000 elements (visualize this array as a cube):
+
+Dim TheArray(1 To 10, 1 To 10, 1 To 10) As Integer
+
+Reference an item within the array by supplying three index numbers:
+TheArray(4, 8, 2) = 0
+
+
+
+,
+When you want to declare a dynamic array, use a blank set of parentheses.

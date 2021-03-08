@@ -1,0 +1,75 @@
+ Standard EXE projects give you a handful of commands and tools, useful to develop simple as well as semi-complex programs.
+
+
+You can also choose a VB Enterprise Edition Project which will give you a lot more tools to work with. For a beginner programmer, it is suggested to use a Standard EXE Project.;
+, In the center of the screen will be a box with a lot of dots. This is your form. A form is the place where you will add the various elements (command buttons, pictures, text boxes, etc) to your program.
+
+
+To the left of the screen is the toolbox. The Toolbox contains various pre-defined elements of any program. You can drag and drop these elements onto your form.
+To the lower right of the screen is the form layout. This determines where your program will be displayed on the screen once the project is complete and executed.
+On the mid-right is the properties box which determine the property of any element that is selected in a form. You can change various properties using this. If no element is selected, it displays the properties of the form.
+On the top-right is the project explorer. It shows the various designs, forms that are included in a project.
+If any of these boxes are missing, you can add them by clicking on the "View" button on the Menu bar.
+
+
+
+The caption of a label can be changed using the properties box.
+ Remove any text that appears inside the textbox by changing blanking the "Text" field in properties box.
+, Change the caption of these command buttons to "Add", "Subtract", "Multiply", "Divide" respectively.
+ This textbox will be used to display the result. With this, your design is complete.
+ It will take you to the coding screen.
+
+
+Click on the list box in the top-left of the coding screen. One by one, click on all the commands (Command1, Command2, etc) so that the outline coding of them will be visible to you on your coding screen.
+ To declare:
+
+
+Dim a, b, r as double
+
+a is the value entered in the first textbox, b is the value entered in the second textbox and r is the result. You can any other variables too.
+ The code will be as follows:
+
+
+Private Sub Command1_Click()
+a = Val(Text1.Text)
+b = Val(Text2.Text)
+r = a + b
+Text3.Text = r
+End Sub
+
+, The code will be as follows:
+
+
+Private Sub Command2_Click()
+a = Val(Text1.Text)
+b = Val(Text2.Text)
+r = a - b
+Text3.Text = r
+End Sub
+
+, The code will be as follows:
+
+
+Private Sub Command3_Click()
+a = Val(Text1.Text)
+b = Val(Text2.Text)
+r = a * b
+Text3.Text = r
+End Sub
+
+, The coding will be as follows:
+
+
+Private Sub Command4_Click()
+a = Val(Text1.Text)
+b = Val(Text2.Text)
+r = a / b
+Text3.Text = r
+End Sub
+
+,
+
+
+Test all the commands and see if your program is working.
+ Make your project and save it as a .exe file on your computer; run it whenever you want!
+

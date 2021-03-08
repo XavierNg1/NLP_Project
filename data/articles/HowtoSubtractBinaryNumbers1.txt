@@ -1,0 +1,51 @@
+ Write the larger number above the smaller number. If the smaller number has fewer digits, line them up on the right, as you would in a decimal (base ten) subtraction problem.;
+, Some binary subtraction problems are no different than base ten subtraction. Line up the columns and, starting from the right, find the result for each digit. Here are a few easy examples:
+
+
+1 - 0 = 1
+11 - 10 = 1
+1011 - 10 = 1001
+
+, You only need to know one special "rule" to complete any binary subtraction problem. This rule tells you how to "borrow" from the digit to the left so you can solve a "0 - 1" column. For the rest of this section, we'll set up a couple example problems and solve them using the borrow method. Here's the first:
+
+
+110 - 101 = ?
+
+, Starting from the right column (the ones place), we need to solve the problem "0 - 1." In order to do this, we need to "borrow" from the digit to the left (the twos place). This has two steps to it:
+
+
+First, cross out the 1 and replace it with a 0, to get this: 1010 - 101 = ?
+You've subtracted 10 from the first number, so you can add this "borrowed" number to the ones place: 101100 - 101 = ?
+
+
+, Now each column can be solved as usual. Here's how to solve the rightmost column (the ones place) in this problem:
+
+
+101100 - 101 = ?
+The rightmost column is now: 10 - 1 = 1. If you can't figure out how to reach this answer, here's how to convert the problem back to decimal:
+102 = (1 x 2) + (0 x 1) = 210. (The sub numbers indicate which base the number is written in.)
+12 = (1x1) = 110.
+Therefore, in decimal form this problem is 2 - 1 = ?, so the answer is 1.
+ The rest of the problem can now be solved easily. Solve it column by column, moving from right to left:
+
+
+101100 - 101 = __1 = _01 = 001 = 1.
+ Borrowing comes up a lot in binary multiplication, and sometimes you'll need to borrow multiple times just to solve one column. For example, here's how to solve 11000 - 111. We can't "borrow" from a 0, so we need to keep borrowing from the left until we turn it into something we can borrow from:
+
+
+10110000 - 111 =
+
+10111001000 - 111 = (remember, 10 - 1 = 1)
+10111001100100 - 111 =
+Here it is written more tidily: 1011100 - 111 =
+
+Solve column by column: _ _ _ _ 1 = _ _ _ 0 1 = _ _ 0 0 1 = _ 0 0 0 1 = 1 0 0 0 1
+
+
+, There are three ways to check your answer.One quick way is to find a binary calculator online and plug in the problem. The other two methods are still useful, since you may need to check by hand on a test, and they will make you more familiar and comfortable with binary numbers:
+
+
+
+Add in binary to check your work. Add the answer together with the smaller number, and you should get the larger number. Using our last example (11000 - 111 = 10001), we get 10001 + 111 = 11000, which is the larger number we started with.
+Alternatively, convert each number from binary to decimal and see whether it is true. Using the same example (11000 - 111 = 10001), we can convert each number into decimal and get 24 - 7 = 17. This is a true statement, so our solution is correct.
+

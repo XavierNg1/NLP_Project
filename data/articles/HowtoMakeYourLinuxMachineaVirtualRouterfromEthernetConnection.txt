@@ -1,0 +1,21 @@
+ You'll be using the terminal for this method, so open up your terminal and type in:
+
+
+sudo add-apt-repository ppa:nilarimogard/webupd8;
+, After having added the source above, you'll update your system. In terminal, type:
+
+
+sudo apt-get update
+
+,, Now that you've actually installed everything as instructed above, it's type to configure your "virtual router"/hotspot. In terminal, type:
+
+
+sudo ap-hotspot configure
+
+, If you're connected to an Ethernet cable, it should detect your network as something like etch0 -- just continue. Once it asks to name your network, name it something like awesomenetwork. Your WPA password should be of the following length: "fivefifty". No longer, no shorter.
+ Now that you've fully configured your network, you can type the following in terminal:
+
+
+sudo ap-hotspot start.
+This will start your hotspot.
+

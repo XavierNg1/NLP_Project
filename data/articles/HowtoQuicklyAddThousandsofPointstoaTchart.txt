@@ -1,0 +1,17 @@
+ There is no obvious function in TSeries that does this, but the FillSampleValues function serves the same purpose by filling the series with a known number of points.
+
+
+// load the data into a memory stream
+ms->LoadFromFile("data");
+// compute number of points
+numpts = ms->Seek (0, soFromEnd)/sizeof(cd);
+// pre-allocate space
+Series1->FillSampleValues(numpts);
+// load the data into the chart
+ms->Position = ms->Seek(0, soFromBeginning);
+for (unsigned i=0; i < numpts; i++)
+{
+ms->Read(&cd, numbytes);
+Series1->XValues->Value= cd.x;
+Series1->YValues->Value= cd.y;
+};

@@ -1,0 +1,41 @@
+, CD is used to view the directory.
+
+You can also set a directory by typing cd \d "PATH". You need to write the path within the quotation marks, where it says PATH.
+
+
+If you want to target a folder name A in local disk E: you can type cd \d "E:\A\"
+
+
+
+
+%userprofile% is a code in dos for the current userprofile. So you don't need to type the each users name.
+*"
+
+
+
+
+
+, Here the code will delete all the files that's on the desktop of that userprofile.
+
+"del" is the code used to delete a file but if we type just "del" the computer will ask the permission to the user. That's why we add the attribute \q - quick , \f - forced, so the computer won't ask permission.
+ The "*.*" is the code for all files. You can use the name of the file instead of "*.*" like:
+
+
+
+
+
+
+del \q \f "a.txt"
+
+
+
+
+
+Now the file a.txt only delete. By using "*.*", you can delete every file in that directory.
+*"
+
+
+
+
+
+, Now the virus will copy itself to Startup so the virus or program will work each times the computer starts up.

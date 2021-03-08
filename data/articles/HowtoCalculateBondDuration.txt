@@ -1,0 +1,78 @@
+ The first variable you will need is the bond's current market price. This should be available on a brokerage trading platform or on a market news website like the Wall Street Journal or Bloomberg. Bonds are priced at par, at a premium, or at a discount in relation to their face value (the final payment made on the bond), depending on the interest rate that they provide to investors.For example, a bond with a par value of $1,000 might be priced at par. This means that it costs $1,000 to purchase the bond. 
+
+Alternately, a bond with a par value of $1,000 might be purchased at a discount for $980 or at a premium for $1,050. 
+
+Discounted bonds are generally those that provide relatively low, or zero, interest payments. Bonds sold at a premium, however, might pay very high interest payments. 
+
+The discount or premium is based upon the bond's coupon rate versus the current interest paid for bonds of similar quality and term.
+;
+, Bonds make payments to investors known as coupon payments. These payments are periodic (quarterly, semiannual, or annual) and are calculated as a percentage of par value. Read the bond's prospectus or otherwise research the bond to find its coupon rate. 
+
+For example, the $1,000 bond mentioned above might pay an annual coupon payment at 3 percent. This would result in a payment of $1000*0.03, or $30. 
+
+Keep in mind that some bonds do not pay interest at all. These "zero-coupon" bonds are sold at a deep discount to par when issued, but can be sold at their full par value when they mature. 
+
+
+, To calculate bond duration, you will need to know the number of coupon payments made by the bond. This will depend on the maturity of the bond, which represents the "life" of the bond, between the purchase and maturity (when the face value is paid to the bondholder). The number of payments can be calculated as the maturity multiplied by the number of annual payments. 
+
+For example, a bond that makes annual payments for three years would have three total payments. 
+
+
+, The interest rate used in the bond duration calculation is the yield to maturity. The yield to maturity (YTM) represents the annual return realized on a bond that is held to maturity. Find a yield to maturity calculator by searching for one online. Then, input the bond's par value, market value, coupon rate, maturity, and payment frequency to get your YTM.YTM will be expressed as a percentage. For the purpose of later calculations, you will need to convert this percentage to a decimal. To do this, divide the percentage by 100. For example, 3 percent would be 3/100, or 0.03. 
+
+The example bond would have a YTM of 3 percent. 
+
+
+, Macaulay duration is the most common method for calculating bond duration. Essentially, it divides the present value of the payments provided by a bond (coupon payments and the par value) by the market price of the bond. The formula can be expressed as: duration=SUM(t∗c(1+i)t)+n∗m(1+i)nP{\displaystyle {\text{duration}}={\frac {{\text{SUM}}\left({\dfrac {t*c}{(1+i)^{t}}}\right)+{\dfrac {n*m}{(1+i)^{n}}}}{P}}} In the formula, the variables represent the following:
+
+
+t{\displaystyle t} is the time in years until maturity (from the payment being calculated).
+
+
+c{\displaystyle c} is the coupon payment amount in dollars.
+
+
+i{\displaystyle i} is the interest rate (the YTM).
+
+
+n{\displaystyle n} is the number of coupon payments made.
+
+
+m{\displaystyle m} is the par value (paid at maturity).
+
+
+P{\displaystyle P} is the bond's current market price., While the formula might seem complicated, it is quite simple to calculate once you have it filled in properly. To fill out the summed portion of the equation SUM(t∗c(1+i)t){\displaystyle {\text{SUM}}\left({\frac {t*c}{(1+i)^{t}}}\right)}, you'll need to express each payment separately. Once they have all been calculated, add them up. 
+
+The t{\displaystyle t} variable represents the number of years to maturity. For example, the first payment on the example bond from the "gathering your variables" part would be made three years before maturity. 
+
+This part of the equation would be represented as: (3∗$30(1+0.03)3){\displaystyle \left({\frac {3*\$30}{(1+0.03)^{3}}}\right)}
+
+The next payment would be: (2∗$30(1+0.03)2){\displaystyle \left({\frac {2*\$30}{(1+0.03)^{2}}}\right)}. 
+
+In total, this part of the equation would be: (3∗$30(1+0.03)3)+(2∗$30(1+0.03)2)+(1∗$30(1+0.03)1){\displaystyle \left({\frac {3*\$30}{(1+0.03)^{3}}}\right)+\left({\frac {2*\$30}{(1+0.03)^{2}}}\right)+\left({\frac {1*\$30}{(1+0.03)^{1}}}\right)}
+
+
+, Once you have created the first part of the equation, which shows the present value of the future interest payments, you will need to add it to the rest of the equation. Adding this to the rest, we get:duration=(3∗$30(1+0.03)3)+(2∗$30(1+0.03)2)+(1∗$30(1+0.03)1)+3∗$1,000(1+0.03)3$1,000{\displaystyle {\text{duration}}={\frac {\left({\dfrac {3*\$30}{(1+0.03)^{3}}}\right)+\left({\dfrac {2*\$30}{(1+0.03)^{2}}}\right)+\left({\dfrac {1*\$30}{(1+0.03)^{1}}}\right)+{\dfrac {3*\$1,000}{(1+0.03)^{3}}}}{\$1,000}}}
+, With the variables in the equation, you can now calculate duration. Start by simplifying the addition within the parentheses on the top of the equation. 
+
+This gives: duration=(3∗$30(1.03)3)+(2∗$30(1.03)2)+(1∗$30(1.03)1)+3∗$1,000(1.03)3$1,000{\displaystyle {\text{duration}}={\frac {\left({\dfrac {3*\$30}{(1.03)^{3}}}\right)+\left({\dfrac {2*\$30}{(1.03)^{2}}}\right)+\left({\dfrac {1*\$30}{(1.03)^{1}}}\right)+{\dfrac {3*\$1,000}{(1.03)^{3}}}}{\$1,000}}}
+
+
+, Next, solve the exponents by raising each figure to its respective power. This can be done by typing "^into Google. Solving these gives the following result: duration=(3∗$301.0927)+(2∗$301.0609)+(1∗$301.03)+3∗$1,0001.0927$1,000{\displaystyle {\text{duration}}={\frac {\left({\dfrac {3*\$30}{1.0927}}\right)+\left({\dfrac {2*\$30}{1.0609}}\right)+\left({\dfrac {1*\$30}{1.03}}\right)+{\dfrac {3*\$1,000}{1.0927}}}{\$1,000}}}
+
+Note that the result 1.0927 is rounded to three decimal places to make calculation easier. Leaving more decimal places in your calculations will make your answer more accurate. 
+
+
+, Next, solve the multiplication in the figures on top of the equation. This gives:duration=($901.0927)+($601.0609)+($301.03)+$3,0001.0927$1,000{\displaystyle {\text{duration}}={\frac {\left({\dfrac {\$90}{1.0927}}\right)+\left({\dfrac {\$60}{1.0609}}\right)+\left({\dfrac {\$30}{1.03}}\right)+{\dfrac {\$3,000}{1.0927}}}{\$1,000}}}
+, Solve the division for: duration=$82.37+$56.56+$29.13+$2745.49$1,000{\displaystyle {\text{duration}}={\frac {\$82.37+\$56.56+\$29.13+\$2745.49}{\$1,000}}}
+
+These results have been rounded to two decimal places, as they are dollar amounts. 
+
+
+, Add up the top numbers to get:duration=$2,913.55$1,000{\displaystyle {\text{duration}}={\frac {\$2,913.55}{\$1,000}}}. Then, divide by the price to get your duration, which is 2.914{\displaystyle 2.914}. Duration is measured in years, so your final answer is 2.914 years. 
+, Macaulay duration can be used to calculate the effect that a change in interest rates would have on your bond's market price. There is a direct relationship between bond price and interest rates, mediated by the bond's duration. For every 1 percent increase or decrease in interest rates there is a (1 percent*bond duration) change in the bond's price. 
+
+For example, a 1 percent decrease in interest rates would lead to an increase in the example bond's price of 1 percent*2.914, or 2.914 percent. An increase in interest rates would have the opposite effect., Modified duration is another measure of duration that is sometimes used by investors. Modified duration can be calculated on its own, but it is much easier to calculate it if you already have the Macaulay duration for the bond in question. So to calculate modified duration, start by using the other part of this article to calculate Macaulay duration., The modifier is used to convert Macaulay duration to modified duration. It is defined as 1+YTMf{\displaystyle 1+{\frac {\text{YTM}}{f}}}, where YTM is the yield to maturity for the bond and f{\displaystyle f} is the coupon payment frequency in number of times per year (1 for annual, 2 for semiannual, and so on). You should already have the YTM and payment frequency from calculating Macaulay duration.For the example bond described in the other parts of this article, the modifier would be 1+0.031{\displaystyle 1+{\frac {0.03}{1}}}, or 1.03. 
+
+
+, Divide your value for Macaulay duration by the modifier to get modified duration. Using the previous example, this would be 2.914/1.03, or 2.829 years., The modified duration reflects the bond's sensitivity to interest rate fluctuations. Specifically, this duration shows the new duration if interest rates were to increase by one percent. The modified duration is lower than the Macaulay duration because the rising interest rate causes the price to move down.

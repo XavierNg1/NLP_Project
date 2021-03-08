@@ -1,0 +1,13 @@
+
+
+
+ifconfig
+Press enter.
+ It will look something like the following: inet addr: 192.168.1.1 if you are logged into a home network. The address might vary depending on what router you have.
+ The xxxs in the text below represent your ip address.
+
+
+prboom -net xxx.xxx.xxx.xxx
+Press enter.
+
+The terminal running the prboom-game-server on computer 1 should be displaying something like this. "" over and over again. That means that both computers are communicating with each other. PrBoom should load up and run now and startup. Your friend should be right next to you in the game.

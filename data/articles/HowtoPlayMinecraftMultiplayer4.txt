@@ -1,0 +1,33 @@
+ Creating a Minecraft server will give you a persistent world that you and your friends can play on at any time. The server will be private so that only your friends can join, and you can even install mods. This requires that you have a computer that can be on and connected to the internet at all times.
+
+
+The Minecraft server files are free and can be downloaded from minecraft.net/download. Download minecraft_server.X.X.X.exe.
+This section will deal with creating a quick-setup Windows server. For instructions on creating a server in Linux or OS X, or for creating a server in Windows manually, click here.
+ The Minecraft server will install all of its files into whatever folder it is run from. Create a folder on your desktop or other easy-to-access location and name it "Minecraft Server" or something similar. Copy the minecraft_server.X.X.X.exe file into this folder.
+ You'll see a couple of files created in your folder, and then the program will close automatically. This is supposed to happen.
+ You can find this file in your Minecraft Server folder.
+ Save the changes to the file and close it. Doing this accepts the terms and conditions for the Minecraft server program.
+ If the Windows Firewall window appears, click the Allow access button. More files will be created in the Minecraft Server field. Close the server window for now as you make some more changes.
+ Browse for Notepad in your list of programs. This will open the server's configuration filer so that you can make changes.
+ Change this to white-list=true. This will enable the white-list which is the list of approved users. Anyone else will not be able to connect to your server, making it private for you and your friends.
+
+
+You can make other changes to the game's settings here, but for now save and close the file.
+ Gather your friends' Minecraft user names and add them one-by-one to the white-list with the following command: whitelist add playerName.
+ Your basic server is up-and-running, and your friends have been added to the white-list. You'll now need to configure your router to allow them to connect to the server and access the game. This requires forwarding a port.
+
+
+Log into your router's configuration tool. This can usually be accessed from your web browser by entering the address 192.168.1.1, 192.168.0.1, or 192.168.2.1. The address may be different for your router model.
+You'll need to enter the router administrator's username and password. Check your router's documentation for the default login info if you never changed it.
+Open the Port Forwarding section of the router configuration page. This may be in the Advanced or Admin section.
+Create a new rule using the server computer's local IP address. Forward port 25565 for both TCP and UDP.
+For more information on opening ports, click here.
+ Your computer's public IP address will be displayed above the search results. Copy this address or write it down. Give it to your friends to use to connect to the server.
+
+
+Note: If you have a dynamic IP address (most people do), your IP address will change occasionally. When it does, you'll need to give out the new IP address to your friends so that they can connect again. You can avoid having to do this in the future by setting up dynamic DNS. This usually requires setting up a paid account with a service that will automatically forward users who enter your domain name to your active IP address.
+ Your server is online, your white-list is ready, and your ports have been forwarded. Your friends can now connect to the server using the IP address that you gave them, but you'll need to use a different IP address.
+
+
+Open the Multiplayer menu in your Minecraft game. Your game should appear in the list of games, but if it doesn't click the "Add Server" button. If you're playing on the same computer as the server, enter 127.0.0.1. If you're on a different computer on the same network, enter the server's local IP address (the same one you used to forward the port). If you're on a computer on a different network, enter the server's public IP address.
+

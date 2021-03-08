@@ -1,0 +1,12 @@
+ Feel free to modify it. The important aspect here is the baud rate - make sure it matches the baud rate of your module - check the datasheet or use AT commands to do it.
+
+
+const int ledPin = 2;  0) {serialA = Serial.read();Serial.println(serialA);} switch (serialA) { case 1: digitalWrite(ledPin, HIGH); break; case 2: digitalWrite(ledPin, LOW); break; case 3:digitalWrite(ledPin, HIGH); delay(100); digitalWrite(ledPin, LOW); delay(100); default: break; } }
+
+
+
+
+
+;
+, Download at -> https://drive.google.com/folderview?id=0B_PfPoEotOF8N2JwT3RSX011SjQ&usp=sharing Your phone has to be set to allow apps from outside the android market/google play to be able to download them - so check the settings on your mobile.
+ Once you have it running, do at least one or two of their basic tutorials. Below is the source of the app used here. You can upload it to the app inventor and then upload to your phone or modify it. https://drive.google.com/folderview?id=0B_PfPoEotOF8N2JwT3RSX011SjQ&usp=sharing

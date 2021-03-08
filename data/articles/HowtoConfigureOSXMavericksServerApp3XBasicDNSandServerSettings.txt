@@ -1,0 +1,43 @@
+
+
+
+
+Local - This type of server is used when you do not need any type of external access to services that are provided and is indicated by a ".local" after the host name of the computer.
+
+Private - This type of server is used for local access and adds the ability for users to access the network with a Virtual Private Network (VPN) connection. The VPN capability is indicated by a ".private" after the host name.
+
+Registered Domain - This type of server is used to allow users to access your local network both internally and over the internet via a registered domain name. Note: When choosing this type, there are other settings that will need to be made.;
+, From Launch Pad Click on the Server App icon on your desktop.
+ In top, unlabeled server section in the left hand column click on the name of the server. Note: This will normally be the selection at the very top of the list.
+
+
+
+The server app will evaluate the network and provide a warning that devices may need to be reconfigured if the host name is changed. Note: Read the warning and click the Next button when finished.
+ Choose the one that best fits your need and click next. A registered domain is used for this example.
+
+
+
+Enter the name of the computer that you want and the name of your domain. Click Next when finished.
+The server app will ask if you want to set up the Domain Name System (DNS). It is best to set this up. Then computers within your local network will look to your local server to resolve websites.
+ Click on Settings and you will be presented with more options.
+
+
+
+If you would like to allow Secure Shell (SSH) administration, just check the box. You can then determine which class of users can log in using SSH.
+If you would like to be able to use either VNC or Apple Remote Desktop to access the server, check the second box from the top.
+If you would like to be able to remotely administer the server from another another computer using the server app, check the third box from the top.
+If you would like to enable push notifications from your server, check the fourth box from the top, then enter your Apple ID and password. When finished, click Get Certificate button and follow the instructions.
+If you would like to store the service data of the server on a different volume, click the Edit button and adjust the current volume name and click OK.
+
+
+
+To add additional servers that can look up host names click on the edit button. Click the plus button to add servers. It is good to add the Google DNS server to this list (IP address 8.8.8.8).
+When finished click OK
+
+
+, Click on the Edit button to the right.
+
+
+Add additional networks if so desired. Keep in mind, though, that the default settings are normally good enough. Click OK when finished.
+ You have finished changing the host name and adjusting the DNS settings to your needs.
+

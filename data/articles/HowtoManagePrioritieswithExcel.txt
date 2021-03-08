@@ -1,0 +1,36 @@
+ Open a new Excel spreadsheet. Right click on the "Sheet1" tab at the bottom and click on Rename. Type in "Home" or "Office".;
+,, On the Points tab, fill in columns A, B and C:
+
+, Select from Cell A2 to C7. Click on Insert Name Define
+
+
+Define the name as "Importance" and click OK.
+ Repeat steps 3, 4 and 5 to create the Effort table in columns E, F, and G. Select cells E2 to G6 and give them the name "Effort".
+ Repeat steps 3, 4 and 5 to create the Urgency table in columns I, J and K. Name them "Urgency".
+ Click on the Home tab and insert headings in row 1:
+
+
+A - Priority A formula, 1 for the most important task, but can be over 100
+B - Task Name of the task.
+C - Importance An A, B, C, D, E, or F from the table.
+D - Effort A 1-5, from the Effort table.
+E - Urgency A formula based on Due date.
+F - Due Date when the task should be finished. Due dates are not hard and fast. Ramp Up tells you how early you could start the task and Extension tells you how many days it could slide. Getting a haircut might have a Ramp Up of 5 and an Extension of 4 - it doesn’t make sense to get a haircut 2 weeks early and people might notice if it was more than 5 days late.
+G - Ramp Up Days prior to Due date you could start task.
+H - Extension Automatic extension of Due date
+I - Days Left Formula. Number of days before Due date; negative if Due date has passed.
+J - Finished Date task was actually completed.
+K - Comment Any details for the task.
+ Note Priority, Urgency and Days Left are left blank. They will be filled in with formulas. Here’s a sample of home tasks.
+ The formulas below are for row 2.
+
+
+I (Days Left) =F2-IF(ISBLANK(J2),TODAY(),J2)
+E (Urgency) =IF(I2>G2,5,IF(I2>0,4,IF(I2=0,3,IF(I2+H2>0,2,1))))
+A (Priority) =VLOOKUP(C2,Importance,2,FALSE) + VLOOKUP(D2,Effort,2,FALSE) +VLOOKUP(E2,Urgency,2,FALSE)
+
+,, Select cell E2 and type CTRL-C. Select cells E3 to E10 and click CTRL-V. Repeat to copy cell I2 to cells I3 to I10. Finally, repeat to copy cell A2 to cells A3 to A10. Ignore the odd values you get for undefined tasks.
+ Select from cells A1 to K, for as many rows as you have data. Then click on Data Sort.
+, As you complete tasks, mark the date in the Finished column. Remember CTRL-; (control key and semi-colon) immediately enters the current date.
+ Here are the priorities over several days. On July 13 all tasks are before the Ramp Up period, so have large numbers. On July 20th, higher priorities (smaller numbers) appear for four tasks, including Mow Lawn which has hit its Due date. On the 21st, the priority is higher because we're in the Extension period and on July 23rd it's even higher because it's beyond the Extension period. Pay bills also goes through an escalation on the 23rd and 25th.
+

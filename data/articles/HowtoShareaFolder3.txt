@@ -1,0 +1,27 @@
+ To access a Windows shared folder, you'll need to install the SMB protocols to allow it.To do this, open the Terminal (Ctrl+Alt+T) and type sudo apt-get install cifs-utils.
+ Create a folder somewhere that is easily accessible. You can do this from the GUI desktop or from the terminal using the mkdir command. For example, to create a folder called "sharedfolder" on your desktop, type mkdir ~/Desktop/sharedfolder.
+ Once you've created a folder to act as the mounting location for the shared folder, you can mount it to link it to the Linux computer. Open the Terminal again and enter the following command (Based on the previous example of creating the folder "sharedfolder"):
+
+
+sudo mount.cifs //WindowsComputerName/SharedFolder /home/username/Desktop/sharedfolder -o user=WindowsUsername
+You will be asked for the root password for your Linux installation as well as the password for the Windows user account.
+ Opening the mounted folder will allow you to access the files. You can add and remove files as you would any other folder. You can also use the terminal to access the file sin the shared folder.
+ Samba is open source software that allows you to share your folders with Windows users. You can install Samba from the Terminal by typing sudo apt-get install samba.Once Samba has installed, create a username by typing smbpasswd -a username. You will be asked to create a password as well.
+ You can also use any existing directory, but it can useful to be able to easily tell which of your folders are being shared with other computers. Use the mkdir command to create the folder.
+ Type sudo vi /etc/samba/smb.conf. You can use any file editor, "vi" is just an example. The Samba configuration file will open in the editor.
+
+
+Scroll to the bottom of the file and add the following lines:
+
+
+
+
+
+
+
+You can change the settings as you need, such as making the folder read only, or making it not public.
+You can add multiple entries to the file for multiple shared folders.
+ Save the configuration file and close the editor. Restart the SMB service by typing sudo service smbd restart. This will reload the configuration file and apply the settings to your shared folder.
+ In order to link the folder in Windows, you will need the IP address of the Linux computer. Type ifconfig in the Terminal and note the address.
+ Create a new shortcut anywhere on your Windows computer by right-clicking and selecting New → Shortcut. Type in the location of the folder you created in Linux, using the IP address: \\IP address\foldername. Click Next, name the shortcut, and then click Finish. Opening the new shortcut will allow you to see the contents of the shared folder.
+

@@ -1,0 +1,25 @@
+
+Set your templates to create version controlled libraries on your own.
+Open SCHEMA.XML in your editor.
+Add VersioningEnabled="TRUE" between the basetype data and the line close.
+
+Go to your sps server, open C:\Program Files\Common Files\Microsoft Shared\web server extensions\60\TEMPLATE\LAYOUTS\1033\new.aspx and find the code below:
+
+
+
+
+
+<TD class="ms-authoringcontrols" nowrap>
+<input tabindex=1 id=onetidVersioningEnabledYes type="radio" tabindex="1" value="TRUE" Name="VersioningEnabled" title="Create a version each time you edit a file in this document library: Yes">
+<LABEL FOR="onetidVersioningEnabledYes">Yes</LABEL>   
+</td>
+<TD class="ms-authoringcontrols" nowrap><input tabindex=1 id=onetidVersioningEnabledNo type="radio" tabindex="1" value="FALSE" <strong>checked </strong> Name="VersioningEnabled" title="Create a version each time you edit a file in this document library: No">
+<LABEL FOR="onetidVersioningEnabledNo">No</LABEL>
+</td>
+
+
+
+
+
+,
+Change this code to (note where the word "checked" appears).

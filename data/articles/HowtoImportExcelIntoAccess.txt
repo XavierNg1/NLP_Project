@@ -1,0 +1,42 @@
+ You will need to purchase and download a Microsoft Office package that includes both Exceland Access. You can do this online through the Microsoft site.
+
+
+Once the programs are downloaded, click "Start" in Windows and select "All Programs."Click on "Microsoft Office," and then select "Access" (or "Excel") from the drop-down menu. You may already have an Excel spreadsheet created that someone else sent you or that you downloaded from elsewhere. Having Office on your computer allows you to open it.;
+, It will make it easier if you do a few simple steps before you import the Excel spreadsheet into Access. The key is that your data must be consistent between imported spreadsheets.It's a good idea to make sure that the first row in the Excel spreadsheet contains your column headers (or field names), and that these are very clear and easy to understand.For example, for a column containing people's last names, you may want to call the column header/field name "last name." Be clear and precise because it will make it easier when you try to match column headers in one Excel sheet with another.
+Access allows you to link common fields between two or among many spreadsheets. Let's say you have an Excel sheet that contains payroll information. It includes people's first and last names, addresses, and salaries. Let's say for the sake of argument that you want to match that sheet within Access to a second Excel sheet that contains information about campaign finance contributions. This second sheet contains people's names, addresses, and donations. What Access allows you to do is to match different column headers with one another. You could link name headers to see which people of the same name appear in both databases, for example.
+Scan the Excel sheets to make sure that each type of data is handled the same way, and clean it up before importing it into Access.It must be what Access calls "relational." For example, if the hypothetical spreadsheet for payroll contained first name, last name and middle initial in one column, but the second spreadsheet contained only first name and last name in separate columns, Access will register this as no match. There needs to be matching column headers/fields.
+ To take care of this issue, you may want to split information in a column within Excel, so that it doesn't erroneously register as a "no match" in Access.
+
+
+As an example, you may want to split the first name into its own column, the middle initial into its own column, and the last name into its own column. If it's already done the same way in the second spreadsheet, when you link, say, last name with last name in Access, it should generate matches when the names are the same.
+To split a column in Excel, highlight the column that has information you want to split in it. Click on "data"in the toolbar within the Excel program. Click on "text to columns." Generally, you will choose the option "delimited." Click next.
+ Now you are ready to complete the process of splitting merged information in one column into multiple columns.
+
+
+Choose how the data within the column is "delimited." This means that each piece of information in the column is separated by something. Most common choices include a space, a comma, or a semi-colon. Often the information is just separated by a space. As in the following example: let's say the name "John A. Doe" appears in a single column. The first name John is separated from the middle initial A by a space. The last name Doe is separated from the middle initial A by a space. So choose space in the delimited wizard.
+Click next. Click finish. The program should split John, A., and Doe into three columns. You can then give the new columns new header names to indicate the kind of information housed in them (last name, first name, etc.). It's a good idea to create several blank columns to the right of the data you're splitting before you do it because it will push the data into the new blank columns (instead of columns that already contain information).
+ Go to the start menu, choose Microsoft Office, and click on Microsoft Access. You need to open a new blank Access database to import the Excel sheet into it.
+
+
+Choose "blank desktop database" to create a new database within the Access program.
+Give it a new name if you want. Click "create."
+
+, The next step is to pull the Excel spreadsheet (or more than one) into the Access database.
+
+
+Click on "External Data" in the toolbar once you are within the Access database manager. Choose "Excel."In some versions of Access, you will find this function by clicking on "file" in the toolbar and "Get External Data."Where it says "file name," click "browse." This will allow you to find your Excel sheet on your computer.
+Leave the box checked that says "import the source data into a new table in the current database." It will be checked by default.
+When you find the Excel spreadsheet you want to import on your computer, click on it. Click "OK." This will take you into the wizard for importing Excel into Access.
+ To complete the process of importing your spreadsheet, you need to complete the steps in the wizard.
+
+
+Choose the worksheet within the Excel spreadsheet that you want to import. Sometimes, this is simple because the Excel spreadsheet is just one sheet. However, sometimes people create multiple pages within a single Excel spreadsheet, which you can see by clicking on the tabs at the bottom of the spreadsheet. If this is the case, you need to tell the Access wizard which spreadsheet you are choosing. Click next.
+The next page has a box asking if the first row in the Excel sheet has column headings. This means the row in a spreadsheet that identifies the data in each column (such as last name, address, salary, etc.). It's a good idea if you cleaned up your Excel sheet first to make sure that the first row has clearly defined column headings. Then, just check yes that the first row contains column headings. This is the simplest approach. Click next.
+If your first row does not contain column headings, the next page asks you if you want to rename what are called "fields" in Access (these are column headings). If you did not already name each field something clear and easy to recognize before importing (recommended), then you can do it here.
+ There are only a few steps left in the importing process. The next page in the wizard will ask if you want to identify a primary key.
+
+
+You don't have to do this, but you can. A primary key means the computer program will assign each row of information a unique number. This can be helpful later on when sorting the data. Click next.The final screen in the wizard has a space providing a default name. You can change the name of the Excel sheet you are importing (it will become a "table" in Access on the left side of the page when you finish importing it).
+Click "import." Click "close." You will see your table on the left side of the screen. It is now imported within Access.
+If you want to link more than one data set, repeat this process with another or multiple Excel spreadsheets. Now, you are ready to match the data in the sheets within Access.
+

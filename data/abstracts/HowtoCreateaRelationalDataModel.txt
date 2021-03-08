@@ -1,0 +1,14 @@
+
+Don't worry about tables just yet.
+Worry about entity relationships.
+Be prepared to wage a solo war, with only you dedicated to quality normalization.
+Once it's time to write tables, concentrate on lookup and type tables (zip codes, statuses, product categories, etc).
+As a rule of thumb: don't store data that can be inferred from other fields.
+No nulls.
+Contradiction NULL values are in themselves useful to identify attributes that have not yet been populated by users.
+NULL/NOT NULL Check any database forums and this is a hot topic advocates on both sides advantages / disadvantages for each.
+Get comfortable with intersect (many to many) tables.
+Use a good naming convention.If you're going to have replication or log shipping, try to have that set up as you develop so you can see how it works.
+Inner joins are great, but there's probably a lot of LEFT OUTER JOIN statements that you'll be doing as well.
+If you have to deal with a legacy application, build your schema independent of its (don't even look at it).
+Migrating from your legacy systems into a tighter model with proper normalization is difficult, but can be made a little more manageable by using temporary tables for your imports.

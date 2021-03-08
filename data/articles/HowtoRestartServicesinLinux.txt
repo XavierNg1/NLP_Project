@@ -1,0 +1,5 @@
+ This will show you the names of your services, if you're not quite sure of the formal name of the service you're looking for. The name may not be what you'd expect; Apache is actually httpd, for instance.;
+, Do this using the command "su -" and then responding to the password prompt. If you use sudo, then you could use the command "sudo -s" to switch to root, or you could add "sudo" to the front of the following command.
+ This should restart the service, if the init.d script is complete. If this doesn't work, try "service <srvcname> stop", followed by "service <srvcname> start", which should work for all the services.
+ The service name can be such things as httpd or mysqld. Each of these represents a daemon or application which runs on the system and provides some function to you, your users, or the system itself.
+

@@ -1,0 +1,22 @@
+
+Download VMware Player or VMware Workstation.
+Go through the install process.
+In VMware Player, click Create a new Virtual Machine.
+Go to this directory.
+In the Create a Virtual Machine wizard, select the Installer Disc Image File (iso): option then browse to the downloaded iso and select it.
+
+,
+Select Microsoft Windows then Windows XP Professional.
+Name your VM.
+Select the amount of hard drive space you want to give to Windows Longhorn.
+Click Customize Hardware, and then put the memory higher.
+Go to Documents, (or My Documents if your on Windows XP) and then open the folder Virtual Machines.
+
+,
+Go into the folder that has the name of your Virtual Machine, for example Windows Longhorn.
+
+,
+Find the .vmx file.
+Right click on the .vmx file, and choose Open With, then Default Program.
+Look for the text that reads, virtualHW.version = "12", and change 12 to 7.
+Go back to VMware and install your Windows Longhorn virtual machine as normal.

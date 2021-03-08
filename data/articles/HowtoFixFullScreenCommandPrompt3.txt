@@ -1,0 +1,18 @@
+ DOSBox is a free MS-DOS emulator that can run your old DOS programs in Windows. If you run old DOS programs through the Command Prompt and want to display them full-screen, DOSBox is the easiest way to do that. This is especially useful for old games.
+
+
+Because DOSBox is focused on games, it has limited networking and printing support. In theory, however, it should be able to run any DOS program.
+ You can download the DOSBox installer for free from dosbox.com/wiki/Releases. Run the installer after downloading, and follow the prompts to install DOSBox.
+
+
+During installation, choose a location at the root of your hard drive. For example, if your hard drive is "C:\", install DOSBox at C:\DOSBox.
+ DOSBox will use this folder to act as its own "C:\" drive. Place this folder in the same location that your DOSBox folder is located. Name the folder something easy to access and remember, such as C:\DOSPrograms or C:\oldgames.
+ Each program should be contained within a separate folder in your programs folder.
+ You'll be taken to the DOSBox command line, and will need to configure a few things before you can start using it.
+ Type MOUNT C C:\DOSPrograms and press ↵ Enter. Replace C:\DOSPrograms with the folder you created for your DOS programs.
+
+
+If you're running a program from a CD, type MOUNT D D:\ -t cdrom to mount the CD drive instead.
+ Type cd folderName to open the program's folder. Replace folderName with the name of the folder for the program you want to run.
+ Type dir to see a list of files in the directory. Find the EXE file and type it into the command line. This will start the DOS program.
+ Once you've got the program running, you can switch to full-screen mode by pressing Alt+↵ Enter.

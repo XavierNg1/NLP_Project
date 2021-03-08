@@ -1,0 +1,23 @@
+
+
+
+
+Open a new Excel workbook.
+Set Preferences
+
+In Preferences General, set Use R1C1 checkbox to off.
+Create some Named Variables.
+Select cells A1:E2 and Insert Name Create in Top Row.
+In cell C2, input .125 or "=1/8" (w/o quotes).
+Create some more Named Variables.
+Put the entire sheet in font Lucida Fax size 9 by selecting the very top left cell between A and 1 for column and row and thus select the entire worksheet.
+Create the Column Headings.
+Input the t and c_ Formulas.
+(Adjusted) Cosine and Sine formulas.
+Input the Main X and Main Y Formulas.
+Do Edit Go To cell range F6:F2886 and input the formula "=((sin(A6/(B6*2))*GM*sin(A6)*GM*(cos(A6/(B6*2)))*GM)+D6)/ShrinkExpand".
+While the sheet will now produce the chart wanted, for small numbers of spheroids like 1 or 2 or 3, they cannot appear in a ring properly.
+It is also a good idea to do Insert Comment a copy of all the formulas so far into the cells so there are always the original formulas should they ever be overwritten.
+Have a blank worksheet ready to copy a new chart into and expand and format at will.
+Above is the chart for 32 spheroids.
+

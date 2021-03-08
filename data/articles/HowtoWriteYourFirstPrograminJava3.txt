@@ -1,0 +1,71 @@
+ In our Hello World program, we printed out a string for the user to see, but the interactive part of programs is when the user gets to enter input into the program. We will now extend our program to prompt the user for his or her name and then greet the user by his or her name.
+ In Java, we have some built in libraries that we have access to, but we have to import them. One of these libraries is java.util, which contains the Scanner object that we need to get user input. In order to import the Scanner class, we add the following line to the beginning of our code.
+
+
+
+import java.util.Scanner;
+
+
+
+This tells our program that we want to use the Scanner object which exists in the package java.util.
+If we wanted to have access to every object in the java.util package, we simply write import java.util.*; at the beginning of our code.
+ Java is an object-oriented programming language, so it represents concepts using objects. The Scanner object is an example of an object that has fields and methods. In order to use the Scanner class, we have to create a new Scanner object that we can populate the fields of and use the methods of. To do this, we write:
+
+
+
+Scanner userInputScanner = new Scanner(System.in);
+
+
+
+
+userInputScanner is the name of the Scanner object that we just instantiated. Note that the name is written in camel case; this is the convention for naming variables in Java.
+We use the new operator to create a new instance of an object. So, in this instance, we created a new instance of the Scanner object by writing new Scanner(System.in).
+The Scanner object takes in a parameter that tells the object what to scan. In this case, we put in System.in as a parameter. System.in tells the program to scan the input from the system, which is the input that the user will type into the program.
+ We have to prompt the user for an input so that the user knows when to type something into the console. This can be accomplished with a System.out.print or a System.out.println.
+
+
+
+System.out.print("What's your name? ");
+
+
+, The Scanner will always be taking in data on what the user is typing in. The following line will ask the Scanner to take what the user has typed in for his or her name and store it in a variable:
+
+
+
+String userInputName = userInputScanner.nextLine();
+
+
+
+In Java, the convention for using an object's method is objectName.methodName(parameters). In userInputScanner.nextLine(), we are calling our Scanner object by the name we just gave it and then we are calling its method nextLine() which does not take in any parameters.
+Note that we are storing the next line in another object: the String object. We have named our String object userInputName
+
+
+, Now that we have the user's name stored, we can print out a greeting to the user. Remember the System.out.println("Hello World."); that we wrote in the main class? All of the code that we just wrote should go above that line. Now we can modify that line to say:
+
+
+
+System.out.println("Hello " + userInputName + "!");
+
+
+
+The way we chained up "Hello ", the user's name, and "!" by writing "Hello " + userInputName + "!" is called String concatenation.
+What's happening here is that we have three strings: "Hello ", userInputName, and "!". Strings in Java are immutable, which means that they cannot be changed. So when we are concatenating these three strings, we are essentially created a new string that contains the greeting.
+Then we take this new string and feed it as a parameter to System.out.println.
+ Our code should now look like this:
+
+
+
+import java.util.Scanner;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        Scanner userInputScanner = new Scanner(System.in);
+        System.out.print("What's your name? ");
+        String userInputName = userInputScanner.nextLine();
+        System.out.println("Hello " + userInputName + "!");
+    }
+}
+
+
+, Go into command prompt or terminal and run the same commands as we ran for our first iteration of HelloWorld.java. We have to first compile the program: javac HelloWorld.java. Then we can run it: java HelloWorld.
+

@@ -1,0 +1,43 @@
+ Select the brush or pencil tool in the Tools panel on the left. Open the Brushes palette using the Window → Brushes command in the top menu, or by clicking the icon that looks like a piece of paper, in the top options bar. Adjust the size and shape of your brush tool to suit your current project.
+
+
+Sticking to the default brush is fine if you're new to Photoshop. You'll soon realize if your brush is too large or too small, and you can always return to this menu to make changes.
+Choose "hard edge" for precise control over what you affect, or "soft edge" for a brush with a more diffuse edge.;
+, When you have the brush or pencil tool selected, you can change the blend mode using a drop-down menu in the top options bar. Each of these modes uses a different formula to mix new color into the existing color on the canvas. The most common options are explained below.
+
+
+In some versions of Photoshop, you may be able to alter the blend mode from the brushes palette.
+Older versions of Photoshop may not have every blend mode available.
+ In Normal mode, Photoshop won't blend colors at all. When using the Brush tool, the blend color will completely cover the base color. When the Edit tool is used, the edit value overrides the existing color. You probably won't be using this for your blend, but it's good to understand how the default blend mode works.
+
+
+This is called Threshold when working with a bitmap or indexed-color image.In this case, the resulting color will be the closest possible match available in the color map.
+ This very popular blending mode makes light areas lighter and dark areas darker.The end result is a picture with more significant highlights and shadows, and fixes issues with over- and under-exposure.
+
+
+If you're interested in the technical details, this uses the Multiply and Screen formulas, described below.
+ There are several ways to darken colors, each of which works a bit differently:
+
+
+In Darken mode, each pixel's red, green, and blue value gets compared to the new color you're adding. For each of the three comparisons, the darkest value ends up in the final image.
+In Multiply mode, each brush stroke will "multiply" the new color and base color's brightness. You can keep adding brush strokes, making the result darker each time.
+Darker Color mode works similarly to Darken, except it compares the two pixels as a whole instead of looking at RGB values. Each pixel will either remain the old color, or be replaced by the new, whichever is darker.
+Linear Burn mode darkens all colors, but tends to produce more blacks and extra-dark color areas than other modes.Color Burn is similar to linear burn for dark colors, but has a less pronounced effect on light colors.It may result in greater contrast and saturation.
+ Each method of darkening a color has a corresponding opposite formula for lightening:
+
+
+In Lighten mode, the red, green, and blue values of the base color and blend colors are compared. Lighter values of the blend color are used to lighten the image.
+Use Screen mode to makes anything darker than white less visible.
+Use Lighter Color to replace darker areas completely with the blend color.
+Linear Dodge (Add) adds the values of the two colors together. If either color is white, the result will be completely white. If either color is black, there will be no change.Color Dodge has a lesser effect on darker colors, leading to greater contrast.
+ The Behind and Clear modes are available in layered images. If the Behind mode is chosen, a color will be applied behind the layer and show only in transparent areas. The Clear mode is essentially an eraser, making all pixels in front of the background transparent.
+ This will compare the brightness values of the base and blend colors, creating a result value by subtracting the smaller from larger values. This will bring the brightness closer to the blend color, whether it is darker or lighter than the base color.
+ Mathematically, these do exactly what you'd expect to the two color values. In practice, this means that similar colors move toward black when using Subtract, and move toward white when using Divide., This is mostly used for special effects, not for touching up a photo. The blended color will look scattered or jagged instead of transitioning smoothly. Try this for an old-fashioned effect., The remaining modes have a more narrow effect. Each of these replaces one value of the base color with the corresponding value of the blend color. All other characteristics remain the same.
+
+
+Hue (for example, a particular type of red)
+Saturation (low saturation looks more grey, while higher saturation looks more vivid)
+Luminance (how bright or dim the color looks)
+
+, The Color mode replaces both hue and saturation with the blend color's values, leaving the luminance of the base color the same. This is often used to add color to black and white images.
+

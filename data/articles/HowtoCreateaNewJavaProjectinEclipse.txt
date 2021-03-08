@@ -1,0 +1,16 @@
+ When you install Eclipse for the first time, you're given the option to choose your IDE (integrated development environment). Choose "Eclipse IDE for Java Developers". This will install the necessary files and tools to create Java projects.
+
+
+If you installed Eclipse for a different programming language, you can add Java support from within Eclipse. Click the "Help" menu and select "Install New Software". Select "All Available Sites" from the top drop-down menu, and then type "java" into the Filter field. Check the "Eclipse Java Development Tools" box and click "Next". Follow the prompts to download and install the Java tools. Eclipse will restart once the installation is complete.;
+, This will open the "New Java Project" window.If you don't see the "Java Project" option but have the Java Development Tools installed, select "Project..." from the "New" menu. Expand the "Java" folder and select "Java Project".
+ This doesn't have to be the final name for your program, but should help you and others identify the project.
+ The files are saved to the Eclipse directory by default. You can set a custom location if you prefer.
+ If you are creating a program for a specific JRE, select it from the drop-down menu. By default, the newest JRE will be selected.
+ You can choose to either use the project folder, or create separate folders for sources and class files. The default option is "Create separate folders...", though you may need to change depending on the needs of your project., This is where you'll define additional sources as well as add libraries to your project.
+ The build path is what the compiler uses to build the program. You can create additional source folders, link external sources, and add or remove folders from the build path. The compiler uses the build path to determine which sources to compile.
+ This tab will allow you to add JAR files to include in your project, as well as select built-in libraries to use. Importing JAR files allows you to use libraries from other projects.
+ You'll be taken to your Java workspace. If you were working in a different programming language before starting the project, you'll be prompted to switch to the Java perspective. This is recommended to get the most out of the IDE.
+
+
+Your project will be displayed in the "Package Explorer" frame on the left side of the window. If you just see the Eclipse Welcome tab, click the small Java button on the left side of the window.See How to Write Your First Program in Java for a detailed guide on creating your first Java program.
+

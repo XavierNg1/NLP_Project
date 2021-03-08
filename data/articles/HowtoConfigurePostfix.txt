@@ -1,0 +1,15 @@
+ How many users are you supporting? Will you have a lot of aliases? Many of these types of questions will affect how Postfix is configured.;
+, If you plan on supporting multiple domains, consider using virtual aliases.
+ There are three different modes: MTA, Forward, Relay. While they are similar, they operate differently.
+
+
+
+MTA, or Mail Transport Agent, operates as a normal server, receiving mail on behalf of all users on the computer.
+
+Forward is used when addresses to your server will just forward to another address. For example, if you want all mail to your server to forward to your Gmail account, you would setup Postfix to forward your mail.
+
+Relay is used as a relay, only accepting mail to be relayed elsewhere. Most ISPs set up their mail servers this way.
+ You can review all of Postfix's settings on its official web site.
+ This is usually needed by end-users who's ISPs block the standard SMTP port 25
+
+,

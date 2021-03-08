@@ -1,0 +1,57 @@
+ From your desktop, click on "Start" to launch your Programs menu. Click "Run" and type in “incommand” (for Windows 95, 98, and ME) or “INCMD” (for Windows NT, 2000, and XP), without the quotation marks.
+
+
+This will call the command prompt by launching a black window.;
+, If your Windows operating system is newer or doesn’t have the Run option from step 1, you can find the command prompt by navigating through the Programs menu.
+
+
+Click on "Start," then "All Programs." Look for the Accessories folder and open it. Click on "Command Prompt." This will call the command prompt by launching a black window.
+You can skip this step if you’ve already found the command prompt from step 1.
+ In the command prompt window, type the following syntax: ping .
+
+
+There’s a space in between each command. This is quite technical, but just follow the syntax.
+The next few steps will explain the parameters of the syntax.
+ In the syntax from step 3, after the command “ping,” type in a URL or website address you commonly use. This is the website the command will send a ping to.
+
+
+For example, use www.yahoo.com or www.google.com.
+ In the syntax from step 3, the last parameter states “MTU value.” This pertains to the test packet size in bytes that would be sent together in your ping. It’s a four-digit number.
+
+
+Try to start with 1500.
+ If you use Yahoo’s website, the syntax would be as follows:
+
+
+ping www.yahoo.com –f –l 1500
+Press "Enter" on your keyboard to send the ping.
+ After the ping, the results will be shown on the command prompt. If the results display “Packet needs to be fragmented but DF set,” this means the packet size isn’t optimal yet.
+
+
+Proceed to step 8.
+ Reduce the packet size by 10 or 12 bytes. You’re trying to figure out the correct packet size that won’t need fragmentation.
+ Repeat step 6 using the adjusted or reduced MTU value.
+
+
+Repeat steps 6 to 9 until you don’t see a message saying that the packet still needs to be fragmented.
+Once you don’t see the message anymore, proceed to step 10.
+ Once you have a packet size or MTU value that doesn’t fragment, increase this value in small increments.
+
+
+Try increments of 2 or 4 bytes.
+ Send another ping using the adjusted or increased MTU value.
+
+
+Repeat steps 10 to 11 until you determine the largest packet size that won’t be fragmented.
+ Take the maximum packet size you got from the ping tests and add 28 to it. These 28 bytes are reserved for the header data. The resulting value is your optimal MTU setting.
+ Go to your web browser and type in your router’s configuration IP address. Log in using your admin user name and password.
+ Navigate through your router’s configuration settings until you find the MTU field. This may vary depending on a router’s brand and type.
+ Once you find the appropriate field, key in the MTU value you’ve computed from step 12 of part 1.
+
+
+Remember to include the extra 28 bytes.
+ Click on "Save" to save your changes.
+
+
+Your network is now set to its optimum MTU.
+

@@ -1,0 +1,18 @@
+ However, if you manually installed it, run the commands from that folder.
+If you don't want to have password protection, do not use the -des3 option. This will, however make it vulnerable.;
+,
+
+
+Take note of this password as it will be used later on.
+ You will find it in the same folder.
+, It will ask for a series of question:
+
+
+Country Name is a two letter code (e.g., US, CN)
+State or Province Name must be spelled out entirely (e.g., California, Texas)
+Locality Name is the full city name (e.g., Denver, San Diego)
+Organization Name is the full name as registered with the Secretary of State or governing entity (e.g., MyCompany, Inc., Joe's Computer)
+Organizational Unit Name is used to specify a department (i.e., IT, Support)
+Common Name for SSL is the FQDN - Fully Qualified Domain Name, different level subdomains, or IP Address (e.g., mywebsite.com, www.mywebsite.com, login.mywebsite.com, 109.10.21.1). For client digital certificates the Common Name is either the individual's name or the full organization name (i.e., John Smith, MyCompany, Inc.)
+Do not enter the Email Address, challenge password, and optional company name.
+ Use the command: openssl req -noout -text -in www.mydomain.com.csr

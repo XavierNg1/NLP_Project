@@ -1,0 +1,56 @@
+ The formula for wind load is F = A x P x Cd x Kz x Gh, where A is the projected area, P is wind pressure, Cd is the drag coefficient, Kz is the exposure coefficient, and Gh is the gust response factor. This formula takes a few more parameters into account for wind load. This formula is generally used to calculate wind load on antennas.
+ In order to use an equation properly, you must first understand what each variable stands for and what its associated units are.
+
+ A, P, and Cd are the same variables used in the generic equation. 
+
+ Kz is the exposure coefficient and it is calculated by taking into account the height from the ground to the midpoint of the object. The units of Kz are feet.  
+
+ Gh is the gust response factor and it is calculated by taking into account the entire height of the object. The units of Gh are 1/feet or ft-1.
+ The projected area of your object is dependent upon its shape and size. If the wind is hitting a flat wall, the projected area is easier to calculate than if the object is rounded. Projected area will be an approximation of the area that the wind comes in contact with. There is no one formula for calculating projected area, but you can estimate it with some basic calculations. Units for area are ft2.
+
+ For a flat wall, use the formula Area = length x width, measuring the length and width of the wall where the wind is hitting it.
+
+ For a tube or column, you can also approximate the area using length and width. In this case, the width will be the diameter of the tube or column.
+ Wind pressure is given by the equation P = 0.00256 x V2, where V is the speed of the wind in miles per hour (mph). The unit for wind pressure is pounds per square foot (psf).
+
+ For example, if the wind speed is 70 mph, the wind pressure is 0.00256 x 702 = 12.5 psf.
+
+ An alternative to calculating wind pressure at a particular wind speed is to use the standard for various wind zones. For example, according to the Electronic Industries Association (EIA) most of the U.S. is in Zone A with 86.6 mph wind, but coastal areas might lie in Zone B (100 mph) or Zone C (111.8 mph).
+ Drag is the net force in the direction of flow due to pressure on the surface of an object.The drag coefficient represents the drag of an object through a fluid and is dependent upon the shape, size, and roughness of an object.
+
+ The standard drag coefficient for a long cylinder tube is 1.2 and for a short cylinder is .8 These apply to antenna tubes found on many buildings.
+
+ The standard coefficient for a flat plate such as the face of a building is 2.0 for a long flat plate or 1.4 for a shorter flat plate.
+
+ The difference between drag coefficients for flat and cylinder items is approximately 0.6.
+
+ The drag coefficient has no units.
+ Kz is calculated using the formula (2/7), where z is the height from the ground to the midpoint of the object.
+
+ For example, if you have an antenna that is 3 ft long and 48 ft off the ground, z would be equal to 46.5 ft. 
+
+ Kz = (2/7) = (2/7) = 1.1 ft.
+ Gust response factor is calculated with the equation Gh = .65+.60/where h is the height of the object.
+
+ For example, if you have an antenna that is 3 ft long and 48 ft off the ground, Gh = .65+.60/= .65+.60/(51/33)(1/7) = 1.22 ft-1
+
+
+, Using the values determined above, you can now calculate wind load with the equation F = A x P x Cd x Kz x Gh. Plug in all of your variables and do the math.
+
+ For example, let’s say you want to determine the wind load on an antenna that is 3 feet long with a diameter of 0.5 inches in a gust of 70mph winds. It is placed on top of a 48 ft high building.
+
+ Start by calculating the projected area. In this case, A = l x w = 3 ft x (0.5in x (1 ft/12 in)) = 0.125 ft2.
+
+ Calculate the wind pressure: P = 0.00256 x V2 = 0.00256 x 702 = 12.5 psf.
+
+ For a short cylinder the coefficient of drag is 0.8.
+
+ Calculate the exposure coefficient: Kz = (2/7) = (2/7) = 1.1 ft.
+
+ Calculate the gust response factor: Gh = .65+.60/= .65+.60/(51/33)(1/7) = 1.22 ft-1
+
+ Plugging into the equation: F = A x P x Cd x Kz x Gh = 0.125 x 12.5 x 0.8 x 1.1 x 1.22 = 1.68 lbs. 
+
+ 1.68 lbs is the amount of wind load on the antenna.
+
+

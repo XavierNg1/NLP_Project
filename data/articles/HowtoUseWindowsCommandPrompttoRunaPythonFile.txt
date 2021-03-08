@@ -1,0 +1,40 @@
+ Before starting the installation process, it is important to check whether your system is 32-bit or 64-bit to ensure the software functions correctly.
+
+
+This can be done by typing Settings in your Window's search bar and then accessing Settings > System > About. It is here you will find the system type.;
+, Click green Download Anaconda button and scroll down to download options for Windows OS. Double clicking on system type – 32 bit or 64 bit – will begin the installer download. Be sure to download the latest version of Python!
+
+
+Anaconda is a Python distribution, with installation and package management tools. It comes with Spyder IDE which is a software for debugging, visualization and code development. 
+
+, After the installer has downloaded (.exe file), open the location of the file and double click it to begin installing Anaconda. Follow the on-screen instructions to install Anaconda into a known folder ex. C:\Anaconda2\.
+
+
+Depending on your user settings your path may include a user's name as well. ex. C:\Users\Numra\Anaconda2\. In this case the proceeding path names should match this.
+ After installation, you can access Spyder by locating your Anaconda2 folder and accessing the Scripts folder (ex. C:\User\Numra\Anaconda2\Scripts). Locate and double click the Spyder application to open it.
+ To get used to Python, you should create a very short program that allows for user input and produces an output in order to test your code in Command Prompt.
+
+
+Begin by creating a new file by clicking the ctrl and n key simultaneously on your keyboard. You may also use do this by accessing the menu bar and going to the "File" tab and hitting "New File..."
+
+, To prompt the user to input a string while concurrently obtaining the inputted data, use the command: var = raw_input. For example, var = raw_input ("Please enter something: "). You may replace what is between the quotes with whatever you choose., To print the inputted data, use the command: print. For example, print "you entered ", var. Again, you may replace what is between the quotation marks with whatever you wish to be displayed.
+
+Note: “var” simply represents a variable and may be changed as long as you change it in every instance where it occurs in the code.
+ Click File > Save As and save the file into an easily accessible folder.
+
+Avoid using spaces when naming the file; instead you may use underscores or hyphens.
+, Type Control Panel in Windows' search bar. Then access: Control Panel > All Control Panel Items > System > Advanced System Settings > Environment Variables > System Variables > Path. Then click Edit.
+ This can be found on the top bar of your Spyder Editor.
+
+
+
+Exclude file name, in this case “Say_Something.py”.
+, Type command prompt in Windows' search bar. Then click on its icon to access it., Type cd, hit the spacebar, then enter name of the folder where your Python code is saved. Next click the ↵ Enter key. This allows you to access the folder housing your code.
+
+
+Note: If your code file is within multiple folders, start by typing the outermost folder; then repeat the process until you are in the main folder housing your file.
+ Now you will run the Python file by typing python then hitting the spacebar and then entering the name of your file with “.py” added to the end. Then click the ↵ Enter key. For example, your line may read C:\Users\Your_Name_Here\.spyder>python Say_Something.py.
+
+Note: If your file requires an input prior to producing any output to the user, add a space after your file name and the “.py” , then enter your input before clicking the ↵ Enter key.
+ Follow any on-screen prompts that may occur
+

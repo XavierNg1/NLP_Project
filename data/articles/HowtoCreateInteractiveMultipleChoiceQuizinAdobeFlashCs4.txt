@@ -1,0 +1,107 @@
+
+Choose File > New.
+
+
+
+ 
+
+
+In the New Document dialog box, select Flash File (ActionScript 2.0) and then Click OK.
+
+
+
+
+
+;
+, The Document Properties dialog box appears. The current Stage size setting is 550 * 400 pixels, and the Background color is set to white.
+
+
+
+Choose File > Import > Import to Stage, select the image you want.
+You can also click Ctrl+R to import an image.
+
+In the Property inspector (Window > Properties), select Static Text type to specify the type of text field, and then input the question "What was Michael's first song to air on MTV?".
+Set the font size, family and color of the text.
+
+
+
+
+
+
+
+Double-click ComboBox in the Components panel.
+
+
+
+
+
+
+Select the component on the Stage, and name the instance name as box in the properties panel.
+ On the Component Inspector, click Data, to make the Value dialog box appear.
+
+
+Replace the default Value with the answer options. Click + to add answer options, here the options are: Thriller, Billie Jean, Bad and The way you make me feel. Click OK.
+
+
+
+
+
+
+Choose a button and drag it to stage.
+
+
+
+
+
+
+Double-click the button, and then rename it as Submit.
+You may set the size of the button at the Properties panel.
+,
+Select the Text tool (T).
+
+
+
+
+
+
+In the Property inspector (Window > Properties), select Dynamic Text type.
+
+
+
+
+
+Draw a rectangular text box, this is the feedback area when quiz-takers choose the right or wrong answer.
+
+
+
+
+
+Select the rectangular text box, and input jg to the Variable box at the Properties panel.
+ Just follow the same steps you used for the Submit button. Rename the button as Back.
+ Click the Back button, input the following scripts:
+on (release) { gotoAndStop(1); jg = ""; }
+
+
+
+
+
+
+Add scripts to Submit button. Click the Submit button, input the following scripts:on (press) {
+if (box.getValue() == "billie jean") {
+jg = "Sorry, wrong answer! Please select again!";
+}
+if (box.getValue() == "bad") {
+jg = " Sorry, wrong answer! Please select again!";
+}
+if (box.getValue() == "the way you make me feel") {
+jg = " Sorry, wrong answer! Please select again!";
+}
+if (box.getValue() == "thriller") {
+jg = "Congratulations! Thriller is Michael's first song to air on MTV";
+}
+gotoAndStop(2);}
+
+Add scripts on frame 1. Click frame 1, input the following scripts:
+stop();
+
+,

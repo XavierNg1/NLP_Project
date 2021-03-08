@@ -1,0 +1,15 @@
+
+From your OpenSSL folder, run the command: openssl genrsa –des3 –out www.mywebsite.com.key 2048​
+
+
+OpenSSL is installed under "/usr/local/ssl/bin".
+Create a password for your private key.
+Your private key has been generated.
+Use the command: openssl req –new –key www.mywebsite.com.key –out www.mywebsite.com.csr
+
+
+It will ask for the password you created earlier for verification.
+
+,
+Enter your information.
+Verify the CSR to ensure that you have all entered correct information.

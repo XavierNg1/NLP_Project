@@ -1,0 +1,12 @@
+ The first thing you must do is introduce Interfaces for any classes that you want to pass via the Inversion of Control container. Without an interface, your code will be just as tightly coupled as it was before. IoC containers are also designed to use interfaces as a way of resolving necessary references. Interfaces can be introduced without changing the logic of any of your code, thus minimizing the QA required.
+
+
+First create the interface itself and attach it to the class (the method of doing this will vary from language to language). Once this is done, scan through the code and ensure that any references to the concrete class are changed to be references to the interface. The only exceptions are the locations where the class is created - these must remain references to the class.;
+, Once the interfaces are added to your project, you must add the IoC container. It should be initialized once at application startup to provide the proper services in response to requests made by the application. When this step is complete, the container will as yet be unused but available for use.
+ When coding new applications, Inversion of Control is best done using Dependency Injection. However, this pattern assumes that DI is used throughout the application and it is normally not practical to convert an entire application to DI in one step. The solution is to use the Service Locator pattern during the conversion.
+
+
+Using the Service Locator pattern allows you to convert objects to the IoC pattern slowly over time instead of requiring a massive conversion effort. Once an application is fully converted to Service Locator, it can be a trivial step to further convert it to Dependency Injection.
+ Once the service locator is installed, you will be able to sweep through the application and find all code that creates new objects. Replace those lines with calls to the Service Locator instead. You may now remove any references to the libraries that contain the concrete classes.
+ Service Location is an IoC pattern that works well, and it is possible for the conversion effort to stop here. However, if you prefer to use strictly Dependency Injection, it should be a trivial exercise to convert the code further. First add an appropriate constructor method to each class – one that expects all dependent classes to be passed in. Once all of the constructors are created, you may remove the Service Locator and allow all objects to be created via Dependency Injection.
+

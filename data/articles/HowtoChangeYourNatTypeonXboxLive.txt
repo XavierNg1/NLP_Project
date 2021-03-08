@@ -1,0 +1,68 @@
+ Resetting all equipment involved can help fix problems with the NAT.
+,,,, If you are still behind a Moderate or Strict NAT, read on., In order to make the changes necessary to open the NAT on your Xbox, you'll need to open the router's configuration page. To do this, you'll need to know your router's IP address. If you have a configuration program on your computer, such as Netgear Genie, you can run it and skip to the next section. If you have an AirPort router, click here.
+
+Windows - Press ⊞ Win+R and type cmd to launch the Command Prompt. Type ipconfig and press ↵ Enter. Look for your active network connection and note the Default Gateway address. This is the router's IP address.
+Mac - Click the Apple menu and select "System Preferences". Select the "Network" option and then click your active network connection in the left frame. Note the "Router" address.
+ Nearly all routers can be configured through the web browser of a connected computer.,, You will likely be prompted for administrator credentials in order to access the router. You can refer to your router's documentation to find the default login information, or use a website like PortForward.com to find the default information for your router.
+
+If the username and password were changed and you've since forgotten how to access the router, you can press and hold the Reset button on the back for 30 seconds to reset the router to factory settings. You can then use the default login information to access the router. Doing this will disable your wireless connection and it will have to be reconfigured.
+ The wording for the sections will vary significantly depending on the router. Generally you want to look for an Advanced section., UPnP (Universal Plug and Play) is a protocol that allows connected devices to automatically open the ports necessary to connect to the internet., You may do this by checking a box or clicking a button. Click the "Save" or "Apply" button after enabling it., For many users, NAT will no longer be Moderate or Strict. If you are still getting NAT errors, read on to the next section., Typically, when a device turns on and connects to your network, it will automatically be assigned an IP address. In order to manually forward ports for the Xbox, you will need to assign it a static IP.
+
+
+Click here if you have an Xbox One.
+,,,, The first three sets of digits need to match your router's address (typically 192.168.1 or 192.168.0). To avoid conflicts, set the last set of digits to something that doesn't fall in the usual range of your devices, like 70. It must be in the range of 1-254.,, This is usually 192.168.1.1 or 192.168.0.1., Once you've set your static IP, return to the Network Settings menu and test your connection to Xbox Live. This will ensure that you've entered your network settings correctly., Click here for instructions.,,,, For the Xbox One, you need to set a static IP through your router's configuration page., Like before, the wording will vary depending on your router.,, The first three sets of digits need to match your router's address (typically 192.168.1 or 192.168.0). To avoid conflicts, set the last set of digits to something that doesn't fall in the usual range of your devices, like 70. It must be in the range of 1-254., Apply the changes to your router and restart your Xbox., In order to manually forward ports, you'll need to log into the administration tool for your router. See the first section for details., The Port Forwarding page is located in the Advanced section of most routers. It may also be called Advanced Setup or a variety of other names., If you are still having difficulty finding the Port Forwarding section of your router's configuration tool, search for your router's model online for exact instructions., The process will vary depending on the router you are using. Generally, you will need to enter a starting port and ending port, protocol (TCP/UDP), as well as the IP address you are forwarding for. If you are only opening a single port, enter the same number for both the starting and ending port. If you are asked for internal and external ports, enter the same numbers for each., Open the following ports to help your Xbox 360 or Xbox One connect to Xbox Live. Set the IP address to the same IP address you created for your Xbox in the previous section:Port
+ Xbox 360 
+ Xbox One 
+
+
+53 (TCP/UDP)
+✓
+✓
+
+
+80 (TCP)
+✓
+✓
+
+
+88 (UDP)
+✓
+✓
+
+
+500 (UDP)
+
+✓
+
+
+1863 (TCP/UDP)
+
+✓
+
+
+3074 (TCP/UDP)
+✓
+✓
+
+
+3075 (TCP/UDP)
+
+✓
+
+
+3544 (UDP)
+
+✓
+
+
+4500 (UDP)
+
+✓
+
+
+ 16000 (TCP/UDP) 
+
+✓
+
+
+, Once you've created the port forwarding rules, restart your Xbox so that it connects with the new port forwarding rules. Test your connection to see if your NAT settings have changed., Settings on your internet service provider's end may be causing your NAT problems. If the above methods don't work, you can try calling your ISP's technical support line.

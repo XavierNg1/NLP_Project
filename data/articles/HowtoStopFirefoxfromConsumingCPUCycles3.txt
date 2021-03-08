@@ -1,0 +1,19 @@
+ Check your Firefox version to automatically update to the latest version. If you've already updated, download the Firefox Beta instead. The Beta includes in-progress bug fixes that have not yet made it to regular Firefox.
+
+
+Reverting to older versions of Firefox is not recommended. They may have security risks.
+ If you see popups and other ads on every web page, your computer is infected with malware. Even if there are no obvious signs, running an antivirus scan is recommended. Malicious software may have accessed your CPU.
+ If you are on Windows, right-click the Firefox icon on your desktop. Select Properties, then the Compatibility tab. If the checkbox underneath Compatibility Mode is checked, uncheck it and restart Firefox., Hardware acceleration assigns your graphical processing unit some of the hard work, theoretically freeing up your CPU. This generally works as intended on Firefox, but it can backfire on certain websites or on computers with an older OS or graphics card.Try a day with hardware acceleration and a day without, to compare the effect:
+
+
+Enter about:preferences#advanced in the Firefox address bar, or click the menu icon (three lines), then Preferences, then the Advanced tab.
+Check or uncheck "Use hardware acceleration when available."
+Restart Firefox., Your Flash player may use hardware acceleration even if Firefox has disabled it. Right-click on a Flash video and select Settings. Click the far left tab (Display) and check or uncheck "Enable hardware acceleration."Adjust this to match your Firefox setting.
+
+
+Some video hosts now use an HTML5 player instead of Flash. This should adjust correctly to your Firefox settings.
+ WebGL is a similar hardware acceleration technology, mostly used for graphic-intensive uses like 3D browser games. It has been known to consume CPU cycles in the past, but these problems are rare in modern Firefox. You could try disabling it just in case:Enter about:config in the address bar. As the warning says, you should not change any settings here without knowing what you're doing.
+Search for webgl.disabled. (Don't confuse this with other similar settings.)
+Double-click that row to change the value to True.
+Restart Firefox.
+

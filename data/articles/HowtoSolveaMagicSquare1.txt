@@ -1,0 +1,16 @@
+ So, for example, in a 3x3 magic square, n = 3. The magic constant = n. So, in the example of the 3x3 square:
+
+
+sum = 3 * sum = 3 * (10 / 2)
+sum = 3 * (5)
+sum = 15
+The magic constant for a 3x3 square is 15.
+All rows, columns, and diagonals must add up to this number.;
+, This is always where you begin when your magic square has odd-numbered sides, regardless of how large or small that number is. So, if you have a 3x3 square, place the number 1 in Box 2; in a 15x15 square, place the number 1 in Box 8.
+ You will always fill in the numbers sequentially (1, 2, 3, 4, etc.) by moving up one row, then one column to the right. You’ll notice immediately that in order to place the number 2, you’ll move above the top row, off the magic square. That’s okay — although you always work in this up-one, right-one manner, there are three exceptions that also have patterned, predictable rules:
+
+
+If the movement takes you to a “box” above the magic square’s top row, remain in that box’s column, but place the number in the bottom row of that column.
+If the movement takes you to a “box” to the right of the magic square’s right column, remain in that box’s row, but place the number in the furthest left column of that row.
+If the movement takes you to a box that is already occupied, go back to the last box that has been filled in, and place the next number directly below it.
+

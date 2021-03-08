@@ -1,0 +1,107 @@
+
+
+For SLES 9 simply install the following rpms:
+t1lib-1.3.1-569.1.i586.rpm
+php4-gd-4.3.4-43.8.i586.rpm;
+, The file you want to download is jpegsrc.v6b.tar.gz. Unzip, extract, configure, make and install by executing these steps:
+
+tar xvfz jpegsrc.v6b.tar.gz
+
+
+
+ 
+
+
+cd jpeg-6b
+
+
+
+
+
+
+./configure
+
+
+
+
+
+
+make
+
+
+
+
+
+
+make install
+
+
+
+
+
+
+
+, Unfortunately if you plan on compiling GD (GD is the graphics library that PHP uses) from scratch you will also have to copy over the header files manually by doing this:
+
+cp ./include/j*.h /usr/local/include
+
+
+
+
+
+
+
+,, Even though you might not configure PHP using PNG support, you can't for some reason configure GD without it. Go here, scroll down to where you see "Source Code" and download a version, this example will use the .tar.gz version.
+
+tar xvfz libpng-1.2.8-config.tar.gz
+
+
+
+
+
+
+cd libpng-1.2.8-config
+
+
+
+
+
+
+./configure
+
+
+
+
+
+
+make
+
+
+
+
+
+
+make install
+
+
+
+
+
+
+
+, If you already have PHP installed on your machine you may have to download the source all over again and recompile it. Go to PHP's home page and download the most recent version of the 4.x source code. Extract it and configure. The following configure options enable MySQL and Apache libraries as well as the image libraries, if you have any other libraries that you wish to use, make sure to include them.
+
+./configure --with-mysql --with-apxs2=/usr/sbin/apxs \
+
+
+
+
+
+
+--with-gd --with-jpeg --with-jpeg-dir=/usr/local \
+--with-png --with-png-dir=/usr/local --with-zlib-dir=/usr
+(the backslashes denote a new line)
+make
+make install
+
+,,,

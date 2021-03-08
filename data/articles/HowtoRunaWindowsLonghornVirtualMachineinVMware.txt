@@ -1,0 +1,35 @@
+ Before we can start installing Windows Longhorn, we will need a virtual machine program that can run it. For this, it's best to use VMware Player, as it has the best compatibility for Windows Longhorn. You can use VMware Workstation as well.
+
+
+To download VMware Player, visit: https://my.vmware.com/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/12_0
+
+To download VMware Workstation, visit: https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0
+;
+, Once installed, run VMware.
+
+
+These steps focus on VMware Player, so the steps may differ slightly for VMware Workstation.
+ You will need an .iso file to install it.
+ Select "Microsoft Windows Vista ("Longhorn" 6.0.4074.0) (beta) and then download.
+, There is no option for Windows Longhorn because it is not officially supported by VMware.
+ It can be called something like Windows Longhorn, or Windows Vista Beta, and so on.
+ Something like 30GB or more is good.
+ For instance, if you have 8GB of memory, you can give it 4GB. Note that there is no point giving it more than 4GB, because x86 operating systems do not support more than 4GB of RAM.
+
+
+Do not give all the RAM you have on your computer. This will really slow down your computer, and force it to switch to the page file. Give your VM about half of the memory you have, but no more than 4GB.
+Now, before installing, you need to edit the configuration file; otherwise it won't boot.
+,, You will see a whole bunch of files, we are looking for the .vmx file. If you can't see .vmx on the end of any of the files, you will need to do this.
+
+
+If you are on Windows XP, click Tools (in the folder we are currently in) then Folder Options. Click the View tab, then select the option called, "Hide extensions for known file types". Uncheck the box, then click Apply, then OK.
+If you're on Windows Vista/7, click Organize, then select Folder and Search Options, and do the same as above.
+If you're on Windows 8/8.1/10, click the View tab in the ribbon, then click Options and do the same as in step 4.
+
+
+
+If you're on Windows XP/Vista/7, select Notepad. Uncheck the box that reads something like Always open this sort of file with this program.
+In Windows 8/8.1/10, do the same as above, but click More Options, and then uncheck the box that says, "Use this application for all .vmx files" and then choose Notepad. In Windows 10, you'll need to click OK as well.
+ Now save and exit.
+ Everything should boot up!
+

@@ -1,0 +1,17 @@
+ Plug in the power supply then connect the device into your broadband router or gateway with an Ethernet cable and your phone into port 1. You should see the green lights.;
+, Once the device is powered and connected, pick up the phone handset and dial **** (four stars) for the configuration menu. You will be asked to enter option followed by the pound key, dial 110# for your IP address (note this down).
+ Open your favourite web browser, then go to the device admin page by typing in "http://IPaddress/admin/advanced" in the browser address window. Replace the IP address with your own, for example, "http://212.169.1.78/admin/advanced".
+ Change the following setting at the SIP Timer Values section to SIP T1: 1.5
+
+, Ensure that NAT Keep Alive Enable = No.
+
+
+
+Proxy = Enter your service provider's sip proxy address usually in the form sip.ProviderDomain.com
+
+Outbound Proxy = Register = yes
+Use Outbound Proxy = no
+Make Call without Reg = no
+Answer Call without Reg = yes.
+, Now you're done but you must save the settings, so scroll down and click on Save Settings.
+ Once you're assured that they work, the device is ready to make calls using your ATA.

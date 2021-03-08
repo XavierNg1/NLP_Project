@@ -1,0 +1,111 @@
+ System comes between these two. input goes into the system, then becomes altered and then goes out as the desired output. A system is built to create such a desired alteration for the output.;
+, Input goes into it as an arrow and output comes out of it as an arrow.
+
+
+Whatever system does to the input is called the system function.
+
+
+
+
+
+
+Before performing that function a system always does one of the three things to its input,
+
+This Root Locus is called 180° Root Locus.
+Simply reduces that input. In this case we say the coefficient of amplification is less than one (0 < K < 1).
+Simply keep it at the same value. In this case we say the coefficient of amplification is equal to one (K = 1).
+Simply increase it. In this case we say the coefficient of amplification is greater than one (K > 1).
+
+
+Before performing that function a system might make the input inverted, upside-down, and after that it always does one of the three things to its input,
+
+This Root Locus is called 0° Root Locus.
+Simply reduces that inverted input. In this case we say the coefficient of amplification is greater than minus one ( – 1 < K < 0).
+Simply keep it at the same value. In this case we say the coefficient of amplification is equal to minus one (K = – 1).
+Simply increases it. In this case we say the coefficient of amplification is less than minus one (K < – 1).
+
+
+K is called gain of the system.
+A system with the feedback has a path from output into the input and participate and share something from the output into the input.
+
+Relation of output to input is described as the multiplication of input X(s) by the system function G(s) to result the output Y(s). That is, Y(s) = G(s)X(s).
+, Please note that inside the cross (X) there is a plus (+) sign for the input and a minus (–) sign for the feedback.
+Output comes and through a feedback path goes to change the input. When output Y(s) comes out of the feedback it becomes Y(s) times H(s) (that is, Y(s)H(s)) and becomes subtracted from the input X(s).
+Therefore, actually X(s) –Y(s)H(s) goes into the system. X(s) –Y(s)H(s) goes into the system and becomes multiplied by the system function and comes out as (X(s) –Y(s)H(s))G(s). Hence, the output Y(s) is actually,Y(s) = (X(s) –Y(s)H(s))G(s)
+
+,,
+
+
+Transfer function as in Equation 2 is known as the Closed Loop Transfer Function.
+
+Product G(s)H(s) in Equation 2 is known as the Open Loop Transfer Function.
+ This equation is called the Characteristic Equation of the system.
+ All the functions discussed, even each of X(s) or Y(s) themselves, are complex rational functions of the complex variable s.
+ For example H(s) = n(s) / d(s).
+,, Frequently in the feedback loop, the feedback function is unit; that is, H(s) = 1.
+, It is correct that now this G(s) is not the same as previous G(s) as its gain K has been removed from it, but it is convenient still to use the same notation for it, as if we had a K block and a G(s) block from the beginning.
+, You like to know when this denominator becomes zero, or approaches zero when gain of the system, K, as a parameter changes. You are interested to inspect 1 + KG(s) = 0. Or G(s) = – 1 / K. Assume K > 0 and then figure out by symmetry what happens if K < 0. For a comprehensive understanding, even the trivial case K = 0 should also be discussed.
+ Consequently, note that |G(s)| = 1 / K and /G(s) = 180°q; where, q is an odd integer. This symbol /___ shows the angle of a complex function.
+, This is one hurdle in drawing the Root Locus. Anyway, for now, it is assumed that such a factorisation is known. Thus, for a polynomial of degree n we have n complex roots r i
+, The characteristic equation turns to be s + K = 0. Changing K from 0 upward changes s from 0 to – ∞ downward.
+ From high school you had questions such as to determine a parameter β such that a quadratic equation x2 + x + β = 0 has two equal roots; such or similar questions. That was a basic Root Locus problem parametrized with β. You knew you should calculate discriminant and put it equal to zero to meet the prescribed condition : Δ = 1 - 4β = 0 and hence β = 1 / 4.
+ Instead of discriminant, the characteristic function will be investigated; that is 1 + K (1 / s(s + 1) = 0. A manipulation of this equation concludes to the s2 + s + K = 0.
+, You have two real roots s = 0 and s = – 1, since characteristic equation is s2 + s = 0.
+, Discriminant will be negative. You have two imaginary roots as complex conjugate to each other. But the real value of both roots remain the same and equal to – 1 / 2. Increasing K has no effect whatever on this; only imaginary parts will become larger. The Root Locus is drawn in heavy lines.
+
+
+There are two roots for this quadratic polynomial and definitely they join in one point on the real line for certain value of parameter K that makes discriminant equal to zero and creates a repeated root.
+The portion of the real line between these two roots is part of the Root Locus
+This point is called σ-point or branching point of the asymptotes of the Root Locus.
+Up to this value of K system damps without overshoot-undershoot (does not quiver before stopping).
+At K = 1 / 4 system damps critically.
+After that, increasing K only increases the imaginary part of the created conjugate roots.
+That makes the branching of the root locus perpendicular to real line.
+Theoretically, all along this line system damps but with tremors. Practically, increasing gain can make the system unstable. Tremors might become so persistent that trigger unwanted frequencies in the system which in turn rapture the system beyond its material strength. For example, small cracks reach to catastrophic points or dynamic fatigue work it out. Always designers devise for prevention of unlimited increase of K.
+ Any arbitrary point in the complex plane can be shown by a vector, which has a length and an angle with respect to the real line.
+
+
+– r is the root of s + r = 0
+
+
+s is said to be the test point for evaluating – r.
+Any selection of s over the real line is called a real-line evaluation of – r.
+
+
+
+On the real line you are confined in the intervals. An integral has just two end points to be evaluated.
+On the complex plane you cannot roam everywhere. In contrast, you have to select a region to confine your evaluations. Even that is too much. You confine your evaluations only to be done on a certain curve or certain (usually simple) paths.
+ It is a vector from the tip of s1 to the tip of r.
+ Ask which part of the real line falls on the root locus when the gain k varies from zero to plus infinity.
+
+
+Select any point on the real line if the number of the real roots (zeros and poles) at the right hand side of that root is an odd number (1, 3, 5, ...) then that portion of the real line is also on the Root Locus.
+
+
+
+
+
+
+In the simple Integrator all points on the negative part of the real line have only one root at the right side. Hence, all the negative real line is on the Root Locus.
+In the Motor Control System only those points of the real line between s = 0 and s = – 1 have odd number of roots at the right side. Hence, only the portion between s = 0 and s = – 1 is on the Root Locus.
+ Remove gain K wherever it is, as a separate parameter and write the characteristic equation as 1 + K F(s) = 0, where F(s) is a rational function; that is, F(s) = N(s) / D(s). Both N(s) and D(s) are polynomials.
+
+
+Roots of N(s), that is, zeros of F(s) is polynomial of degree m.
+Roots of D(s), that is, poles of F(s) is polynomial of degree n.
+Characteristic function for the simple Integrator is 1 + K / s = 0.
+
+
+F(s) = 1 / s.
+
+
+Characteristic function for the Motor Control System is 1 + K / s (1 + s) = 0.
+
+
+F(s) = 1 / s (1 + s).
+ In a proper system m < n. number of zeros are strictly less than number of poles. That is, system does not kick back or tolerates infinite transitions.
+ Branches are paths that roots of the characteristic function create when the value of the gain K varies from zero to infinity. Each value of K gives a new characteristic function with different roots.
+
+
+If you want to put different values of K into the characteristic equation and solve the polynomials to get the roots either you have to use a computer or use graphical methods such as the Root Locus to sketch the solutions.
+

@@ -1,0 +1,14 @@
+ A DLL (dynamic link library) is a Windows file that is used by program to call upon existing functions. Essentially, they allow Windows and other programs to gain functionality without having to have that functionality built-in.
+
+
+DLL files are an essential part of Windows programming, and lead to sleeker, more efficient programs.;
+, For most users, DLL files will exist in the background. Programs will install and call upon them automatically, and moving them can cause serious problems with the system.
+
+
+Sometimes you may be asked during the installation of community-made programs to place DLL files in specific locations. Make sure that you trust the program before following these instructions, as DLL files can be malicious.
+If you're interested in learning how DLL files are constructed, see the next section.
+ If you have had to manually copy a DLL file into a folder for a program to use, you may need to register it in the Windows Registry before it can be used. Refer to the program's documentation to determine if you'll need to perform this step (it is extremely uncommon for most Windows programs).Open the Command Prompt. You can find this in the Start menu or by pressing the Windows key + R and typing cmd. Navigate to the location of the new DLL file.
+If you are using Windows 7 or newer, open the folder containing the new DLL file, hold the Shift key and right-click in the folder, and select "Open command window here". The Command Prompt will open directly to that folder.
+Type regsvr32 dllname.dll and press Enter. This will add the DLL file to Windows Registry.
+Type regsvr32 -u dllname.dll to remove the DLL file from the Windows Registry.
+

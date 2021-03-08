@@ -1,0 +1,56 @@
+ A square has four equal sides. Let's say each one has a length of "s".
+ A square's area is equal to its length times its width. Since each side is s, the formula is Area = s x s = s2. This will be useful later on.
+ Let the measure of this diagonal be d units. This diagonal divides the square into two right-triangles.
+ The Pythagorean theorem is a formula for finding the hypotenuse (longest side) of a right triangle: (side one)2 + (side two)2 = (hypotenuse)2, or a2+b2=c2{\displaystyle a^{2}+b^{2}=c^{2}}. Now that the square is divided in half, you can use this formula on one of the right triangles:
+
+The two shorter sides of the triangle are the sides of the square: each one has a length of s.
+
+The hypotenuse is the diagonal of the square, d.
+
+
+s2+s2=d2{\displaystyle s^{2}+s^{2}=d^{2}}
+
+
+, Remember that we already know the square's area is equal to s2. If you can get s2 alone on side, you'll have a new equation for area:
+
+
+s2+s2=d2{\displaystyle s^{2}+s^{2}=d^{2}}
+
+Simplify: 2s2=d2{\displaystyle 2s^{2}=d^{2}}
+
+Divide both sides by two: s2=d22{\displaystyle s^{2}={\frac {d^{2}}{2}}}
+
+Area = s2=d22{\displaystyle s^{2}={\frac {d^{2}}{2}}}
+
+Area = d22{\displaystyle {\frac {d^{2}}{2}}}
+
+
+, These steps have proven that the formula Area = d22{\displaystyle {\frac {d^{2}}{2}}} works for all squares. Just plug in the length of the diagonal for d and solve.
+
+For example, let's say a square has a diagonal that measures 10 cm.
+
+Area = 1022{\displaystyle {\frac {10^{2}}{2}}}= 1002{\displaystyle {\frac {100}{2}}}= 50 square centimeters.
+ The Pythagorean theorem for a square with side s and diagonal d gives you the formula 2s2=d2{\displaystyle 2s^{2}=d^{2}}. Solve for d if you know the side lengths and want to find the length of the diagonal:
+
+
+2s2=d2{\displaystyle 2s^{2}=d^{2}}2s2=d2{\displaystyle {\sqrt {2s^{2}}}={\sqrt {d^{2}}}}s2=d{\displaystyle s{\sqrt {2}}=d}
+
+For example, if a square has sides of 7 inches, its diagonal d = 7√2 inches, or about 9.9 inches.
+
+If you don't have a calculator, you can use 1.4 as an estimate for √2.
+ If you are given the diagonal and you know that the diagonal of a square is s2{\displaystyle s{\sqrt {2}}}, you can divide both sides by 2{\displaystyle {\sqrt {2}}} to get s=d2{\displaystyle s={\frac {d}{\sqrt {2}}}}.
+
+For example, a square with a diagonal of 10cm has sides with length 102=7.071{\displaystyle {\frac {10}{\sqrt {2}}}=7.071} cm.
+
+If you need to find both the side length and the area from the diagonal, you can use this formula first, then quickly square the answer to get the area: Area =s2=7.0712=50{\displaystyle =s^{2}=7.071^{2}=50} square centimeters. This is a bit less accurate, since 2{\displaystyle {\sqrt {2}}} is an irrational number that can lead to rounding errors.
+ The math checks out for the formula Area = d22{\displaystyle {\frac {d^{2}}{2}}}, but is there a way to test this directly? Well, d2{\displaystyle d^{2}} is the area of a second square with the diagonal as a side. Since the full formula is d22{\displaystyle {\frac {d^{2}}{2}}}, you can reason that this second square has exactly twice the area of the original square. You can test this yourself:
+
+Draw a square on a piece of paper. Make sure all the sides are equal.
+
+Measure the diagonal. Draw a second square using that measurement as the length of the square.
+
+Trace a copy of your first square so you have two of them. Cut all three squares out.
+
+Cut apart the two smaller squares into any shapes so you can arrange them to fit inside the large square. They should fill the space perfectly, showing that the area of the larger square is exactly twice the area of the smaller square.
+
+

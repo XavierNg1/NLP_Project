@@ -1,0 +1,19 @@
+
+
+
+Use a Function procedure when you need to return a value to the calling code.
+A function itself has a type, and the function will return a value to the calling subroutine based on the code that it contains.;
+,
+
+
+You can define a Function procedure only at module level. This means the declaration context for a function must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block.
+A function is declared the exact same way as a subroutine, except using the "Function" keyword instead of "Sub".
+Function procedures default to public access. You can adjust their access levels with the access modifiers.
+
+
+
+You call a Function procedure by using the procedure name, followed by the argument list in parentheses, in an expression.
+You can omit the parentheses only if you are not supplying any arguments. However, your code is more readable if you always include the parentheses.
+A function can also be called using the Call statement, in which case the return value is ignored.
+To return a value, assign a value of the proper type to the function's name, as if it were a variable.
+

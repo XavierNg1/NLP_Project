@@ -1,0 +1,31 @@
+ Press the Windows + S buttons to open Search.;
+,,, In the Disk Management window, in the Volume column, review your hard drives. The (C:) drive is usually set aside as the Windows boot drive, containing the Windows system files. The Capacity column lists the total space on each drive, and the Free Space column lists the available space on the drive.
+
+
+If more than 90% of a hard drive's space is being used, it's not a good candidate for partitioning, because it's effectively full at that point.
+ Before you can partition a drive, you need to shrink the drive. This sets aside the empty space on a drive for partitioning. Right-click the drive you want to partition, and then click Shrink Volume.
+
+
+The computer begins to review the amount of space available to shrink. While doing so, it displays a Querying Shrink Space message.
+When it's done, it will open the Shrink dialog box.
+ Shrink space is the amount of hard drive space, in megabytes, you'd like to use for the partition. In the Enter the amount of space to shrink in MB, type the number in megabytes of space you'd like to shrink.
+
+
+If you want to use all the available space in the hard drive for the new partition, copy the number in the Size of available shrink space in MB to the Enter the amount of space to shrink in MB field.
+The numbers in the Shrink dialog box are in megabytes. 1000 megabytes equals 1 gigabyte.
+Your hard drive partition should be larger than what you need it for, because of the way that hard drive sizes are calculated and because it's better to have more space than you need than too little.
+ The shrunk hard drive space becomes unallocated space in the Disk Management window.
+ Right-click the Unallocated area, and then click New Simple Volume.
+ In the New Simple Volume Wizard, in the Simple volume size in MB field, enter the size in megabytes of the new partition. Click Next.
+
+
+If you want to use the maximum size, use the number listed on the Maximum disk space in MB line.
+ Click the Assign the following drive letter radio button to select it. Click the dropdown menu, and then click the drive letter you'd like to use. Click Next.
+ Click the Format this volume with the following settings radio button. Click Next.
+
+
+You can safely choose the default options.
+File system is the structure of the hard drive. NTFS, or New Technology File System, is the file system used by Microsoft. Unless you have a reason not to, you should choose this option. The other options are FAT32 and FAT. The main reason to use these is if you're wanting to run Windows 95, 98, or ME.
+Allocation unit size (AUS) is how large blocks of memory on your hard drive are. A smaller AUS uses space more efficiently. Unless you have a reason not to, choose the Default allocation size. If you're using your partition to store large media files, you may want to choose the largest AUS.The Volume label is the name of the hard drive partition. You can put anything you want in that field to describe the partition.
+ The final screen displays the options you selected. When you click Finish, the formatting process begins., In the Disk Management window, make sure that the Unallocated space has been renamed with the new drive letter.
+

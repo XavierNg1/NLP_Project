@@ -1,0 +1,42 @@
+ Use RipIt4Me+DVD Decrypter for ripping DVD's, MeGUI as a GUI for x264 encoding, and AviSynth v2.5.7 for video frameserving.
+ MeGUI should prompt you with updates on first launch. If not, go to Options -> Update and update all the software packages.,
+
+NOTE: If your source is not DVD (scene Blu-Ray/HDDVD rips), then skip on down to step #7.
+ This step is required only for MPEG-2 files, so skip to step #7 if your source isn't a DVD. So from the "Tools" menu, select "D2V Creator". In the "Video Input" section, load the first VOB file of the movie title set (the rest of the files in the set will be loaded automatically). You might get an error message about not being able to find "DVD Decrypter Generated Info Files" -- this is fine. Press "OK" to skip this error., Alternatively, you can just select the demux all the tracks and then choose the correct audio track(s) later on.
+
+The default save directory is the same directory as your loaded DVD VOB files - change this if you want to. Select both the "On Completion Load Files", "And Close" checkboxes and press the "Queue" button. You are now returned to MeGUI - click on the "Queue" tab and press the "Start" button to start the D2V creation. When processing has finished, the status of the queued job will read "Done" and the created D2V file will be loaded into the AviSynth Script Creator ready for the next step. This can take a while, so please be patient - the status window's progress bar may not move, but don't worry, DGIndex is working.
+ If you followed the last step, the AviSynth Script Creator tool should already be started with the D2V file created loaded. Otherwise, you'll need to load the media file you want to convert into the "Video Input" section. The "Input DAR" is the aspect ratio of the input video. In most circumstances, it should be automatically set for you. Anamorphic DVDs will be set to "ITU 16:9", for example. Press the "Auto Crop" button to remove the black bars from the input video if it has any (most widescreen DVDs will).,
+
+If your source is DVD, you can get away with using the maximum standard definition resolution (720x***) if no horizontal bars have been cropped.
+If horizontal bars have been cropped, then you need to go to the next number that is divisible by 16, which is (704x***).
+Alternatively, you probably can still maintain really good quality with horizontal values of 720/704/688/672/656/640. If your source is an HD rip, then you can use larger horizontal values such as 832/816/800/784/768/752/736/720. Refer to the chart in step #13 for appropriate corresponding vertical values.
+
+
+For films on DVDs, you usually do not need to run a deinterlacing analysis.
+If the content you have is TV based, then you might need to click on the "Analysis" button to see if the video requires de-interlacing.
+ For the Resize Filter, try the default "Lanczos (Sharp)". If the source has lots of noise, you can choose to enable the Noise Filter and choose how much noise is present in your source. The other options can be left alone ("Colour Correction" should be automatically checked for D2V input sources)., After saving, the AviSynth file should be loaded automatically into MeGUI and MeGUI's preview window should pop up. Please make sure the video looks alright, especially for DVD sources with cropping/resize. If the video looks squashed or the aspect is screwed up, then you can click the "Show DAR" checkbox and play with aspect ratio in the drop down beside it., MP4 is not the container -- just the file format -- we will set our container later on to be "MKV" using the "AutoEncode" function.
+
+For the Video Profile, we will configure our own. This is the trick to getting H.264 to play nicely with XBMC. There are two profiles available... one has high quality (but bigger file size) and the other has good quality (at a slightly smaller file size). Technically, the only difference between the two are that one has CABAC on and Deblocking off and the other has CABAC off and Deblocking on. So configure your own video profile to match one of the following:
+High Quality, Larger File:
+
+program --pass 2 --bitrate XXXX --stats ".stats" --keyint 240 --min-keyint 24 --ref 8 --mixed-refs --no-fast-pskip --bframes 6 --b-adapt 2 --b-pyramid --weightb --no-cabac --subme 7 --partitions p8x8,b8x8,i4x4,i8x8 --8x8dct --ratetol 4.0 --qcomp 0.5 --me umh --merange 32 --threads auto --thread-input --progress --no-psnr --no-ssim --output "output" "input"
+
+
+Good Quality, Smaller File:
+
+program --pass 2 --bitrate XXXX --stats ".stats" --keyint 240 --min-keyint 24 --ref 8 --mixed-refs --no-fast-pskip --bframes 6 --b-adapt 2 --b-pyramid --weightb --nf --subme 7 --trellis 2 --partitions p8x8,b8x8,i4x4,i8x8 --8x8dct --ratetol 4.0 --qcomp 0.5 --me umh --merange 32 --threads auto --thread-input --progress --no-psnr --no-ssim --output "output" "input"
+
+Match those settings EXACTLY! The box in the video configuration dialog must match this exactly, so get it right! Also, a couple variables can be changed if you want...
+
+
+
+
+For Film (23.97 FPS) : --keyint 240 --min-keyint 24
+For PAL (25 FPS) : --keyint 250 --min-keyint 25
+For NTSC (29.97 FPS) : --keyint 300 --min-keyint 30
+
+, The bitrate you set in your Video Profile is dependent on your video resolution. This is the best way to get Xbox-compatible video at the highest resolution and bitrate possible. Suggested Bit Rate settings based on Output Resolutions are:
+
+These are MAXIMUM Bitrate values, which means you can set them lower, but that isn't recommended at higher resolutions! I recommend the values highlighted in green and yellow, as they look great and have little problems playing back.
+The codec may crap out on HIGHLY COMPLEX scenes (e.g. Scenes with rain, water, snow, smoke, etc... or complex action scenes with hundreds of cuts within a couple minutes) at lower bitrates, and the only way to combat this is to set a custom "Zone" from the start frame of to the end frame of the complex scene and set that Zone's Quantizer to a value of 20. This can be done in MeGUI's video configuration dialog. Play around with different settings and see which works the best for you.
+ If you've followed this guide for DVD conversion, then the demixed audio track we selected in the D2V Creator should already be loaded in the "Audio" section of MeGUI (if not, load in the .AC3 file that was created). If you are not converting from a DVD source, then you can either load in a separate audio file or a video file containing your audio track. Also, MeGUI allows you to import multiple audio tracks, but we do not want this, so make sure you only have one audio track loaded in. You will know you have more than one track if you have tabs that say "Track 1", "Track 2", and so on., Use either AC3, OGG, or MP3. I prefer AC3 audio, because it is virtually lossless, you can keep the original 6 channels, and it takes little CPU power to decode. And OGG and MP3 should be fine to use as long as you stick with 2 channels (and not 6). Note that OGG has better compression and uses roughly the same amount of CPU as MP3 to decode, so it is technically superior. For AC3, in the "Encoder Settings" box under the Audio section, select one of the "Aften AC-3" profiles. If you click the "Config" button next to it you can set a custom bitrate. 640 KBPS is the best quality, 448 is decent, and 192 is very low quality., This is pretty straight forward - just specify the Size And Bitrate to be "No Target Size (Use Profile Settings)" and make sure the Container is set correctly, to "MKV". The output location can be changed as well - this file will be the final output file that you want, so make sure you remember where you put it and don't accidentally delete it when cleaning up (I like to put this file in a different folder to all the other files, just in case). Press the "Queue" button and all the necessary jobs will be added to the encoding queue., When you are ready to start encoding, press the "Start" to start the encoding. You can view the status of your workers by selecting the "Workers Summary" option from the "Workers" menu., It will encode audio, then two pass encode video, and then mix them together for a nice and pretty XBMC-compatible H.264 MKV video file. You can delete all the other files, unless you plan on making more encodings from them.

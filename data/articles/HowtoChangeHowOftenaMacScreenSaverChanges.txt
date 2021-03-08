@@ -1,0 +1,42 @@
+ You can type "Terminal" into Spotlight search to access the program.
+ The default length of time is 3 seconds.
+
+Copy and paste the following into the Terminal window:
+
+
+
+
+
+sudo /usr/libexec/PlistBuddy -c "print ':JustASlide:mainDuration'" /System/Library/PrivateFrameworks/Slideshows.framework/Versions/A/Resources/Content/EffectDescriptions.plist
+
+
+
+
+
+
+Press ↵ Enter.
+If prompted for your password, type it in and press ↵ Enter. The keystrokes will not appear as you type it in.
+Unless you have changed this setting before, a number 3 will appear, confirming that the default setting is in place.
+,, Doing so will cause your Mac to boot in recovery., Once on the recovery screen, you can open Terminal and disable SIP.,,,, It's at the top left of the menu bar.,, You can type "Terminal" into Spotlight search to access the program.,,
+
+If prompted for your password, type it in and press ↵ Enter. The keystrokes will not appear as you type it in.
+
+
+Type in:
+
+
+
+
+
+sudo /usr/libexec/PlistBuddy -c "print ':JustASlide:mainDuration'" /System/Library/PrivateFrameworks/Slideshows.framework/Versions/A/Resources/Content/EffectDescriptions.plist
+
+
+
+
+
+
+
+,
+
+The number displayed should be the one you entered earlier.
+,, Doing so will cause your Mac to boot in recovery., Once on the recovery screen, you can open Terminal and disable SIP.,,,, It's at the top left of the menu bar., SIP will be re-enabled, and your screen saver adjustments will be made!

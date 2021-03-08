@@ -1,0 +1,26 @@
+
+Install mIRC http://www.mirc.com/, if you don't already have it.
+Connect to the server you wish to connect to.
+
+,
+Press 'Alt+R' or click the green box with /a in it to open the scripts menu.
+Before you start to make scripts in mIRC you should learn about aliases.
+
+,
+Play with your alias tab to begin with, making simple commands such as: /j /join $$1 - This command will allow you to just say "/j #test" and join the #test channel.
+
+,
+Learn about identifiers!,
+Click the 'Remotes' tab to edit the script.ini file containing every scripts your client can use.
+Press 'OK' and ask someone to type !pie and someone's name.
+Test: !Pie Krystle
+
+,
+PieBot: Test just gave Krystle a pie!
+
+,
+If it doesn't work, make sure your script reads as follows: on :TEXT:!pie*:#:msg # $nick just gave $$1 a a pie!
+
+,
+Keep trying it out and experimenting.
+

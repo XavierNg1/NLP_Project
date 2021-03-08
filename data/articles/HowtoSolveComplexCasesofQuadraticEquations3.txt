@@ -1,0 +1,40 @@
+ The Diagonal Sum Method proceeds basing on the (c/a) setup. The numerator of the setup contains all factor pairs of c. The denominator contains all factor pairs of a.
+
+
+Next, this new method transforms a multiple steps solving process into a simplified one by doing a few operations of elimination.
+Example 1. Solve: 45x² - 74x - 55 = 0.
+Solution. Roots have opposite signs. Write down the (c/a) setup.
+Numerator. All factors-sets of c: (-1, 55) (-5, 11).
+Denominator. All factors-sets of a: (1, 45) (3, 15) (5, 9).
+Smart students can use mental math to calculate all diagonal sums and find the one that fits.
+The best way is to proceed elimination of the factor pairs that do not fit.
+Eliminate the pairs: (-1, 55)/(1, 45)(3, 15) since they give larger diagonal sums (while b = -74).
+The unique remainder (c/a) is: (-5, 11)/(5, 9) that gives as 2 real roots: -5/9 and 11/5.
+Example 2. Solve: 12x² - 272x + 45 = 0.
+Solution. Both roots are positive. Write down the (c/a) setup.
+Numerator: (1, 45) (3, 15) (5, 9)
+Denominator: (1, 12) (2, 6) (3, 4)
+First eliminate the pairs with (1, 12),(3, 4) since they will give odd-number diagonal sums (while b is an even number).
+Next, look for a setup (c/a) that gives a large diagonal sum. It should be the setup:(1, 45)/(2, 6) that leads to 2 probable root pairs:
+(1/2 , 45/6) and (1/6, 45/2). The second diagonal sum is: 2 + 270 = 272 = -b. The 2 real roots are 1/6 and 45/2.
+Example 3. Solve: 40x² - 483x + 36 = 0.
+Solution. Both roots are positive. Write down the c/a setup.
+Numerator: (1, 36) (2, 18) (3, 12) (6, 6).
+Denominator: (1, 40) (2, 20) (4, 10)
+First eliminate the pairs (2, 18)(6, 6)/(2, 20)(4, 10) because they give even-number diagonal sums (while b is odd).
+The remainder c/a leads to 3 probable root pairs: (1/40, 36/1), (3/1, 12/46), (3/40, 12/1). The third diagonal sum is : 3 + 480 = 483 = -b. The 2 real roots are 3/40 and 12.
+Example 4. Solve: 12x² + 5x - 72 = 0.
+Solution. Roots have opposite signs. Write the (c/a) setup.
+Numerator: (-1, 72)(-2, 36)(-3, 24)(-4, 18)(-6, 12) (-8, 9)
+Denominator: (1, 12) (2, 6) (3, 4).
+First, eliminate the pairs (-2, 36),(-4, 18),(-6, 12)/(2, 6) since they give even-number diagonal-sums (while b is odd).
+Next, eliminate the pairs (-1, 72),(-3, 24)/(1, 12) since they give large diagonal sums ( while b is small).
+The remainder (c/a) is (-8, 9)/(3, 4) that gives as 2 real roots: -8/3 and 9/4.
+Example 5. Solve: 24x² - 59x + 36 = 0.
+Solution. Both roots are positive. Write the (c/a) setup.
+Numerator: (1, 36) (2, 18) (4, 9) (6, 6)
+Denominator: (1, 24) (2, 12) (4, 6) (8, 3)
+First, eliminate the pairs (2, 18),(6, 6)/(2, 12),(4, 6) that give even-number diagonal sums (while b is odd).
+Next, eliminate the pairs (1, 36)/(1, 24) that gives large diagonal sums (while b = -59).
+The remainder c/a is (4, 9)/(8, 3) that gives as 2 real roots: 4/3 and 9/8.
+

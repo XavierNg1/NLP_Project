@@ -1,0 +1,37 @@
+ An encoder is a program that converts your inputs (camera, capture card, microphone, etc.) into video that can be streamed online. While a lot of webcam websites have built-in encoding solutions, using your own encoder will provide much higher quality and give you more control over your broadcast. Encoders are also required for more intensive broadcasts, such as shows that require multiple cameras or need high-quality sound. There are a variety of encoding programs available, though many of them require a purchase in order to access most features.
+
+
+Open Broadcaster Software (OBS) is a free, open-source encoder that supports many advanced functions. This guide will assume you are using OBS, as it is the most powerful free option. OBS comes with configuration profiles for several of the most popular streaming services.
+Wirecast is another encoder that allows you to quickly interface with streaming services like YouTube Live Streaming. The free version only allows for a single camera input.
+Flash Media Live Encoder (FMLE) is an Adobe product that contains a large number of professional features, but can be quite costly. You can quickly interface it with many different streaming services by loading the FMLE profile that the service provides.
+ This will help you determine your encoder quality settings so that your viewers can properly load your video. You can test your connection speed at sites like speedtest.net. Make a note of your connection speeds, as you will need them later.
+
+
+See this guide for more details on checking your connection speed.
+ This is where you will be doing most of the configuring for OBS.
+ These settings will determine the quality of your streaming video, and are dependent on your connection speed.
+
+
+The "Max Bitrate" the the maximum speed your encoding will be. This needs to be about half of your maximum upload rate. For example, if your speed test showed that your maximum upload speed was 3 mb/s (3000 kb/s), your maximum bitrate should be set to 1500 kb/s.
+Set the "Buffer size" to the same value as the maximum bitrate.
+ This will let you set the resolution and framerate of your stream. These settings are also heavily dependent on your upload speed.
+, The following are some recommended settings based on your maximum bitrate:
+
+
+1920x1080 (1080P) - 4500 kb/s
+1280x720 (720P) - 2500 kb/s
+852x480 (480P) - 100 kb/s
+
+, Some streaming services only allow 30 FPS. YouTube and some other services have started rolling out support for 60 FPS video
+
+, This will allow you to configure your connection to the streaming service.
+ There are several preconfigured services available that reduce the amount of URLs you have to copy and paste. If your service is not listed, select Custom.
+ Once you start a new broadcast on the service of your choice, you will be provided a unique key that you will need to paste into the "Play PAth/Stream Key" box. This will allow the service to receive the stream from the encoder.
+, This will allow you to add input sources that will be broadcast.
+
+
+If you want to broadcast your desktop, select "Monitor Capture".
+If you want to broadcast your webcam, select "Video Capture Device".
+If you want to broadcast from your game capture card, select "Game Capture".
+ Before starting your broadcast from the service's interface, start your broadcast in your encoder. Once you're sure that everything is functioning properly, you can start sending it to the streaming service.
+

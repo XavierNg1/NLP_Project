@@ -1,0 +1,9 @@
+
+
+
+Locate your HOSTS file. The hosts file is located in different places depending on your Windows version.
+For XP/VISTA/7 it is located in the C:\WINDOWS\SYSTEM32\DRIVERS\ETC directory.
+For 2000 it is located in the C:\WINNT\SYSTEM32\DRIVERS\ETC or C:\WINDOWS\SYSTEM32\DRIVERS\ETC folder, depending on the nature of your Windows install
+To view the contents of this file, browse to the location of the file and double click on it. You will be asked whether you want to search the internet for a program to open the file or if you wish to choose from a list. Choose the list option and open the file with Notepad. You can now view all of the websites that are being blocked.
+To manually block a site, go to the bottom of the file and on a new line type “127.0.0.1 siteyouwanttoblock.com” without using quotes. This will block siteyouwanttoblock.com. Repeat the process for any other sites you wish to block, and then save the file by going to File>Save.
+

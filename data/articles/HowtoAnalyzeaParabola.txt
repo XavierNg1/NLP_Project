@@ -1,0 +1,36 @@
+ y = ax^2 + bx + c.;
+,
+Find the Axis of Symmetry, which = -b/2a.
+Find the parabola's Vertex, or "turning point", which is found by using the value obtained finding the axis of symmetry and plugging it into the equation to determine what y equals.
+Find the Roots, or X-Intercepts, by solving the equation and determining the values for x when f(x) = f(0) = y = 0.
+
+Find that -b/2a = -(-2)/(2*1) = 2/2 = 1, and the line x = 1 is the Axis of Symmetry about which the parabola is reflective.
+Use the fact that x=1 for the minimum point of the parabola to find y of the Vertex, or "turning point", by plugging 1 into the equation given:y = x^2 - 2x - 15 so y = 1^2 - 2(1) - 15 is y = -16. The coordinates of the minimum, i.e. the Vertex, are (1, -16).
+Solve the equation by factoring two numbers that when added = -2 and when multiplied = -15; those are -5 and 3, so the solution is (x-5)(x+3) = y = 0 (when you are finding the x intercepts, y = 0). So the Roots = 5 and -3 and the coordinates of the roots are (5,0), (-3,0).
+ Format font red, underlined and centered for Row 1.
+Input a into cell C1, input b into cell D1 and input c_ into cell E1. The reason for the extra underline for c_ is that otherwise Excel might confuse the c with its shorthand for column.
+Input 1 in cell C2, -2 in cell D2 and -15 in cell E2. Insert Name Create Names in Top Row, OK for cell range C1:E2.
+Make your objective in determining the x value series to create a width that will include both roots, extend a ways further than that, and allow for reasonable y height by so doing. Also, make your data vary by an amount that curve smoothing will achieve a nice even curve. The negative root is x=-3 and the right hand root is x = 8. Start the series in cell A2 with -5 and allow for 25 data points by entering 7 into cell A26. select A2:A26 and do Edit Fill Series Column Linear Step Value .5, OK.
+Enter the y formula in cell B2 as "=a*A2^2+b*A2+c_" and select B2:B26 and Edit Fill Down. Select A2:B26 and Format Cell Number Number 0 decimal places (for ease of legibility of the chart). Make the roots, where y=0, red and bold. Make the vertex, at (1,16) dark blue and bold.
+Enter to E4 Standard Form of the Parabola and make it red, bold, centered and 14 pt. Below that in cell E5, enter y = ax^2 + bx + c and copy the format from E4 and Paste Special Formats to cell range E5:E6:
+Enter to E6 Example: y = x^2 - 2x - 15 and Format Font dark blue.
+Select A1:B1 and copy them and paste then to H1, then H16, and H21.
+Select H2:H6, enter 1 and Edit Fill Down. Select I2 and enter -20 and select I2:I6 and do Edit Fill Series Column Linear Step Value 10, OK. These are the Axis of Symmetry coordinates
+Enter Elements: to cell D8 and format font size 16.
+Enter the phrase, 1) Is a positive, and the parabola has a minimum and opens up, to cell D9 and make the a bold and size 16.
+Enter the phrases, or is a negative, and it has a maximum and opens down? a is positive. to cell D10 and make the a bold and size 16.
+Enter the phrases, 2) Axis of Symmetry = -b/2a = -(-2)/2*1 = 1; x=1 is the axis of symmetry to cell D12 and make the Axis of Symmetry bold and size 16.
+Enter the phrases, 3) Vertex: Plug 1 into x for the equation: to cell D14 and make the Vertex: bold and size 16. Enter y = 1^2 - 2*1 - 15 to E15 and enter y = 1 - 2 - 15 to cell E16. Enter x = 1, to cell D17 and enter y = -16 to cell E17 and enter Vertex = (1, -16) to cell F17.
+Enter Vertex: to cell H15, 1 to cell H17 and -16 to cell I17.
+Enter the phrases, 4) Roots or X-Intercepts: are the values when y = 0. Find these by solving the equation: to cell D14 and make the Roots or X-Intercepts: bold and size 16.
+Make the font dark blue and size 16 for cell range E20:E22 and align center. Enter y = x^2 - 2x - 15 to cell E20, enter y = (x-5)(x+3) to cell E21 and enter y is 0 when x = 5 or x = -3 to cell E22.
+Enter Roots: to cell H20 and make it bold and size 12. Enter -3 to cell H22, 5 to H23, 0 to I22 and 0 to I23.
+ Move the chart, but it is in a convenient area if it was not. Select Chart Layout and do No for the horizontal (and vertical) grid lines.
+Make Current Selection Series 1 and insert into the series descriptor in the formula bar the formula in quotes as a title, but it reads as follows: =SERIES("y = x^2 - 2x - 15", Sheet1!$A$2:$A$26,Sheet1!$B$2:$B$26,1). Format Line Weights & Arrows so that the parabola line has beginning and ending pointy arrow heads.
+Click in the Plot Area and do menu item Chart Add Data and add the data from cell range H2:I6. This may not happen correctly and you may get extra lines as well, to be deleted. Edit the Series Formula in the Formula Bar until it reads, =SERIES("Axis of Symmetry is X=1",Sheet1!$H$2:$H$6,Sheet1!$I$2:$I$6,2). Format the axis line weight 2, color red.
+Click in the Plot Area and do menu item Chart Add Data and add the data from cell range H17:I17 -- the Vertex. This may not happen correctly and you may get extra lines as well, to be deleted. Edit the Series Formula in the Formula Bar until it reads, =SERIES("Vertex",Sheet1!$H$17,Sheet1!$I$17,3). Format the data marker round point, color blue, size 8. Do Chart Layout Data Labels X value and Y Value both checked under Labels, Label Position Right, Separator Commas.
+Click in the Plot Area and do menu item Chart Add Data and add the data from cell range H22:I23 -- the Roots. This may not happen correctly and you may get extra lines as well, to be deleted. Edit the Series Formula in the Formula Bar until it reads, =SERIES("Roots",Sheet1!$H$22:$H$23,Sheet1!$I$22:$I$23,4). Format the data marker round point, color red, size 8. Make Line None. Do Chart Layout Data Labels X value and Y Value both checked under Labels, Label Position Right, Separator Commas.
+Add the Title Parabola Analysis to the chart on top, centered over the y-axis and Axis of Symmetry.
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

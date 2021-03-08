@@ -1,0 +1,6 @@
+ Assuming that /dev/sdax is the partition that you want to format, run the following command to unmount it: sudo umount /dev/sdax
+
+Note: You cannot unmount the root partition while the system is running.Use a live cd or live usb to format the root partition. /dev/sdax must be replaced by the appropriate partition name. Use sudo fdisk -l to get the list of partitions on your system. For instance, to format /dev/sdb2, use sdb2 in place of sdax.
+ Please note that this will erase all data on the partition.
+Note: Linux supports several filesystems. You may use btrfs, xfs or even reiserfs.
+

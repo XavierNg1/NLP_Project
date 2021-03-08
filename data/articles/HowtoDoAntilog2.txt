@@ -1,0 +1,10 @@
+ For whatever number you are observing, the characteristic is the part that comes before the decimal point; the mantissa is the part that comes after the decimal point.
+
+
+As an example, say you need to find the antilog for 2.6452. The characteristic is 2, and the mantissa is 6452.
+ The mathematical log operator has a parameter known as the base. For numerical computations, the base is always 10. Know, therefore, that when you use this method for calculating an antilog, you will always use a base of 10.
+ By definition, the antilog of any given number x is the basex. Recall that the base for your antilog is always 10; x is the number with which you are working. If the mantissa of the number is 0 (in other words, if the number under observation is a whole number, with no decimal point), the computation is easy: simply multiply 10 times 10 that number of times. If the number is not an even whole, use a computer or calculate to compute 10x.
+
+
+In the example above, we do not have a whole number. The antilog is 10^2.6452, which, using a calculator, comes to 441.7.
+

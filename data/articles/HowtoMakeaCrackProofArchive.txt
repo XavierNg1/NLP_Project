@@ -1,0 +1,47 @@
+ In this article a folder will be compressed to store your information. The only difference between this "archive" and others is that this one will have to be protected with an encryption standard. This container will have a password that will link itself to an algorithm. That means that the only feasible way to get into the archive will be to enter the password. Knowing this a concerned user would ask the following questions and receive the following answers:
+
+Q: Is my data safe in this container?
+A:The safety of your archive will depend squarely on the algorithm used to secure it. For example; AES-256 is safe, Win-ZIP 8 is not.
+
+
+
+ 
+
+
+Q: In its encrypted state, is my data still stable?
+A: Normally yes, however some compression standards can and sometimes will make your compressed archive unstable. Such is the nature of some KGB compressed archives and also on rare occasions .rar files. However KGB archives have been confirmed to store 3.2 GB of information in a 64kb file.
+
+
+
+
+
+
+Q: Is there a chance that my data will become unrecoverable?
+A: This would depend on the compression standard. For the purpose of this article simple "storage" based compression is suggested. With very little compression there is very little chance of degradation.
+
+
+
+
+
+;
+, A good example comes forward in 7zip . This free program can protect your data with a 256 bit AES encryption and has the added ability to open a great diversity of archives. Other archivers have similar capabilities however, for a crack proof archive one would need the added security of a government level encryption. For our purposes AES through 7zip will do nicely.
+ Click your way through to a clean installation and simply go to your desktop. Use your mouse to right click your desktop. Go to new/folder. This will create a new folder on your desktop. Now right click that folder. You will notice a new option has been added to your right click menu. Go to 7-zip/add to archive. Now the new window will lead directly to step three, creating your crack proof archive.
+ Primarily there are three boxes that will need to be changed in order for the encryption to work.
+
+Archive Format: This will need to be changed to "7z".
+
+
+
+
+
+
+Compression Level: This will need to be changed to "store".
+
+
+
+
+
+
+The Encryption Box: This is where you will enter your desired information. See step 4.
+ AES-256 encryption can be an incredibly weak standard for those who use a weak password. A weak password can be broken in the hours to days margin. A strong one cannot be broken, or at the very least is unfeasible to try to crack. To understand what makes a password weak on must temporarily enter into the world of cracking. AES-256 is strong algorithm and can't be broken in and of itself. However A cracker will use a computer to try every word in one or several dictionaries to see if one of those words is a password to your archive. When that doesn't work he will then try every possible combination of letters to find out what your password is. This method will guarantee success given a certain amount of time and computer power. In fact if your password was 5 digits long it would only take this cracker a year to crack your archive with a single computer. The same process would only take the NSA several minutes. However, if you lengthened your password to 25 digits not even the government would be able to crack your archive in this manner. That is assuming that your new password is a combination of numbers, symbols and letters. That means that you may have to do some memorizing. The only other ways to get your password would be through you, your ram, or through a key logger. The Ram method is the only confirmed weakness in AES and is referred to as a cold boot attack. In short, after one opens their archive the password is saved in your computers ram. If that password were retrieved before five seconds of elapsed off time occurred it is then possible to retrieve the password. In short turn your computer off and data is still roaming around for 5 seconds, that means until that five seconds is over your password is still in there. In the end a strong password is the key to AES strength, to further improve the strength of your archive see the tips and warnings sections bellow.
+

@@ -1,0 +1,47 @@
+ You could use an external CSS (Cascading Style Sheet), but in this example we are going to use an internal style sheet. So you need to start off with your basic tags:<html>
+<head>
+<title>Welcome!</title>
+<style type="text/CSS">
+</style>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+</body>
+</html>;
+, You will obviously need to change the values to suit your needs:<html>
+<head>
+<title>Welcome!</title>
+<style type="text/CSS">
+body {background-color: #DCDCDC}
+</style>Omitted...Note: You may want to add a CSS property for the fonts.
+ This section is optional, and you can simply omit it if you do not want it to automatically move on.Omitted...
+<script type="text/javascript">
+window.onload=timeout;
+function timeout(){
+window.setTimeout("redirect()",5000)}function redirect(){
+window.location="Home.htm"
+return}
+</script>Omitted...
+<body onload="timeout()">Omitted...Notes: The number 5000 means 5 seconds. Change this for shorter or longer times. Change the name of the redirect file to the name of your home page.
+ This should probably be the name of your website, and you should enclose it in <h1></h1> tags to make it easy for search engines to find.
+ This should demonstrate what your site is about. Again you can use the <img> tag.Omitted...
+<body>
+<img src="splashimage.jpg">
+</body>
+</html>Notes: This step assumes that you have saved the title image in the same folder as the .htm file, and that it is named "splashimage.jpg". You can add CSS positioning if you prefer the image to be somewhere else on the screen, such as the center.
+ This button will be a way for visitors to get to the home page quicker. When they click it, they are immediately moved on to the home page. You could alternatively simply provide a link to the home page.Omitted...
+<img src="Sample.gif">
+<br>
+<form>
+<input type="button" value="Home Page" onClick="redirect()">
+</form>
+</body>
+</html>Note: You can change the "value" element to change the text displayed on the button.
+ This could be anything you like. Generally it is a "Thank You For Visiting" sort of greeting, or a "Created By..." one.Omitted...
+</form>
+<p>Thank You For Visiting!</p>
+</body>
+</html>Notes: This is where you could be using the CSS for the text. You could use a heading ( <h1> ) instead if you like.
+ Now it's just time to pretty it up using CSS and make it go live!
+

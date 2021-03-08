@@ -1,0 +1,15 @@
+
+Decide what kind of background you want.
+Open up your Photoshop program to a new screen.
+Now open up all of the different pictures and patterns that you plan on putting into your background.
+Spice it up!,
+Upload the image to Photobucket (www.photobucket.com).
+Now go to your image and find the "direct link".
+Go to your blog and set it to a plain default template- white works best.
+Find the place where the HTML reads: "body {#background:$bgcolor;#margin:0; color:$textcolor; font:x-small Georgia Serif; font-size/* */:/**/small; font-size: /**/small; text-align: center;".
+
+,
+Change the HTML to read: body {#background:$bgcolor;background-image:url('/INSERT YOUR DIRECT LINK HERE');background-position: center; background-repeat:no-repeat; background-attachment: fixed;#margin:0; color:$textcolor; font:x-small Georgia Serif; font-size/* */:/**/small; font-size: /**/small; text-align: center;
+
+,
+Place your direct link where it says "INSERT YOUR DIRECT LINK HERE."

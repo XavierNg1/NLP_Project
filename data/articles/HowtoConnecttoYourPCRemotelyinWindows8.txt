@@ -1,0 +1,86 @@
+ In order to access your PC from another network you will have to forward a port on your router.To do this you must access your router’s network page.
+ This will show a bunch of information for all your network devices.
+Look for the device you connect to the internet with in this case Wireless LAN adapter Wi-Fi.
+Under this heading find the Default Gateway address which will look something like: 192.168.2.1. This is the address of your router page.
+
+
+
+Open your Internet browser. Type your routers IP address (your Default Gateway) into the address bar. You will then be prompted for a username and password.
+If you had set up a username and password and you've lost them you will have to reset your router to factory default. To do this press and hold the reset button.
+Every router will come with a default username and password. If you do not know them or have the box or manual try: http://www.routerpasswords.com/ For a large list of Router brands and listings of default usernames and passwords.
+Or go to http://portforward.com/ and look under the routers section for Router passwords.
+ (All router pages will be different depending on the make and model.)
+
+
+1. Find the WAN (Wide Area Network) section.
+2. In the WAN section find Port forwarding.
+3. Select the option to enable port forwarding if there is one.
+4. There will be a list where you can forward certain ports for certain devices on your network.
+5. In the local IP drop down list find the IP address or name of the PC your will be connecting to.
+6. Set the local port to 3389
+7. For protocol select Both
+8. Add the new port and click Apply. It should take about a minute to apply these changes.
+9. If necessary you may also need to Reboot the router.
+10. Now your router is set up to allow remote connections.
+
+
+
+Go to Control Panel.
+Go to System and Security.
+Under System or System Properties go to the Remote section.
+Enable: Allow remote connections to this computer.
+Apply changes and exit.
+
+Go to Windows Firewall > click on Advance Settings > on the left click Inbound rules. In this window select New Rule on the right.
+In the Inbound Rule wizard:
+
+On the Rule Type page select Port
+On the Program page select UDP
+For the Specific local ports use 3389
+Go through the rest of the pages and select all options you want to include.
+
+
+Port 3389 will now be in your list of programs allowed through your firewall.
+
+In the options for put the computer to sleep select Never
+
+,
+Warning: it is recommended you have a secure password to access your pc.
+
+
+For info on what a secure password should contain visit: http://windows.microsoft.com/en-ca/windows-vista/tips-for-creating-a-strong-password
+
+To have one generated for you try using: ,
+For these instructions we will use the Remote Desktop App available in the Windows Store.
+Install the Remote Desktop App on the PC you are connecting from.
+Make sure to Allow Remote Desktop to communicate through your firewall
+
+,
+
+
+In your internet browser in the search bar or on a search engine type:
+
+"What’s my IP?"
+The results will show you several sites that will give you your public IP.
+
+
+
+In the Remote Desktop App enter the IP address for the PC you are connecting to then click Connect.
+Next you will be prompted for your user name and password.
+Enter your login information.
+Now you will be connected and in full control of the other PC!
+
+,
+You can find the name of your computer in Control Panel > System and Security > System.
+
+Go into the Windows Store and download the same app Remote Desktop.
+Open the app
+On the welcome screen click the Plus sign and add a new desktop.
+In the PC name text box Enter:
+
+The local IP address or Computer Name. If you are connecting on on the same network.
+OR the public IP address if you are connecting over the Internet.
+
+
+You will then be required to enter your credentials.
+

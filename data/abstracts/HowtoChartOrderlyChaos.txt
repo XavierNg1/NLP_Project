@@ -1,0 +1,20 @@
+
+Open a new Excel workbook, create 3 worksheets and name them Data, Chart and Saves.
+Open Preferences.
+Start DATA sheet entry by entering the variables of each column and defining the variable's name.
+Input the following Column Headings in Row 6: A6: t; B6: c; C6: Base X; D6: Base Y; E6: External Ring X; F6: External Ring Y; G6 GMLL x; H6: GMLL y; I6: GMSL x; J6 GMSL y.
+Input the column formulas
+
+Select cell A7 and input the formula w/o quotes, "=IF(EVEN(S_COUNT)=S_COUNT,ROUND((-A4*PI())+(Adj),0),0)".
+Create the Lookup Tables
+
+Select cell L1 and type "TURNS LOOKUP" w/o the quotes.
+Create the Chart
+
+Select cell range E7:F1446.Save the Defined Variables section and the upper formulas and their values for each chart you save as you experiment, Copy the data cell range all the way over to the right and down to about row 16 or 20 and paste it to the Saves worksheet; then, a few rows under that, paste it again and, directly atop that, do Paste Special Values (which saves both Formats and Values).
+Allow for a few rows, make a note if you wish, and holding down the shift key, do a COPY PICTURE of the Chart and release the shift key (or you'll select both worksheets) and activate the Saves worksheet, use the shift key again and do Paste Picture (of the chart).
+Insert "New Comment" for each variable and column formula's Original Value or Formula by copying what's in the formula bar and pasting it into the comment as "Original formula: ..." That will prove easier than coming back here to find the original formula, as this article may have been deleted by the powers that be.
+Save the workbook.
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

@@ -1,0 +1,68 @@
+ Your DSP plug-ins must be installed and working with your multi-tracking program prior to proceeding.
+ Parametric EQ is the standard Waves™ equalizer. Equalization is usually the first effect that you put on any track. It comes in 4 flavors: EQ2, EQ4, EQ6 and EQ8. EQ2 has two bands. EQ8 has 8 bands. The screenshot in figure 1.1 is EQ8. In the studio, equalization is used to raise or lower amplitude of certain frequencies to bring out the life of the instrument or remove unwanted audio artifacts.Controls:
+
+Bypass
+Save
+Load
+On/Off
+Type
+Gain
+Frequency
+Q (bandwidth)
+
+, Most of the time you can’t even hear this low end, but when you have 30 tracks playing simultaneously the effect can be cumulative. The solution is to strip every track of any unwanted low frequencies. You will not need to do this for bass guitar or certain drums such as kick or tom-tom. Just because you don’t want to remove the low end completely on some tracks doesn't mean that they won’t require low end adjustment. Low end can be stripped from any track using a bell filter or a high pass filter. I prefer a combination of the two, but every circumstance calls for unique settings.,, A low pass filter works similarly with respect to high frequencies instead of low., A common mistake is to add high frequencies to fix the problem of having too many low ones. You are better off removing frequencies instead. Keep in mind whenever you boost a frequency, you introduce noise. Always try to remove frequencies first before adding them. A bell filter is what is used for the majority of equalization. Notice the “Type” box already shows a bell filter by default.,,, Change the “Q” from 7(the default) to 5 and see what happens in the graphical representation. Play around with these settings until you don’t hear any unwanted low frequencies. Every microphone has a unique frequency response, and every singer is different. You will need to make adjustments until it sounds good to you., Take the Pacific Pro Audio LD1 for instance. It doesn't pick up high frequencies that great. What can be done to fix this is bring down the frequencies that don’t need boosting and boost the highs a few decibels(dB) as shown above in figure 1.1., A DeEsser falls into the family of compression/limiting. A compressor levels out the peaks and valleys in a waveform. It lowers the amplitude of any waveform above a certain amplitude. This allows the engineer to make quiet parts audible without making the loud parts louder. Without compression, pops and clicks in a funk bassline would be quite painful to listen to (literally) at nominal levels. A little compression can spare you hours of volume automation work on a vocal track. The letter “S” always sounds much louder than anyone wants it to when pronounced into a microphone. A DeEsser is a form of compression specifically designed to remove the unwanted artifacts introduced into the waveform as a result of pronouncing the letter "S" into a microphone. A DeEsser cuts the amplitude of the frequencies specific to the letter "S" when those frequencies rise above a certain amplitude. Removing these frequencies with a DeEsser enables you to leave those frequencies present in the track at every point in time the letter "S" is not being pronounced. Controls:
+
+Bypass
+Save
+Load
+Frequency
+Threshold
+
+, Your S' s should appear a bit too loud. This will be especially apparent at higher decibel levels., Threshold is the point of loudness at which the “S” frequencies begin to drop. The lower the threshold, the more “S” frequencies get removed. Notice the attenuation meter. Attenuation is what is removed. Every time an “S” goes through the DeEsser the attenuation meter will show how much of the “S” is removed., With your "S"'s still on looped playback, move the frequency somewhere between 7,000 and 12,000 Hz. Move the frequency around and watch the attenuation meter. Find the frequency value that shows the most attenuation. This is your “S” center frequency.,, There are over a dozen compressors in the Waves Mercury Bundle©. Many of them, such as Renaissance Vox, have had controls removed for easier functionality. The C1 compressor has no such functionality removed.
+
+Controls:
+
+Bypass
+Save
+Load
+Makeup
+Threshold
+Ratio
+Attack
+Release
+
+, If there’s just one instrument such as a piano or guitar involved and the singer is consistent enough, you may not need compression. It isn't until many voices play simultaneously before quiet parts of the vocals get drowned out., Ratio relates two values about the threshold: input level above the threshold, and output level above the threshold. A ratio of 4:1 means that if an input signal is 4dB above the threshold, the output signal will be 1 dB above the threshold, effectively reducing the peaks in a waveform., The lower your threshold, the flatter your waveform will get. If this were drums or bass you would want the value for “attack” to be considerably lower. For vocals the default value of 2.00 works., Implementing the compression settings so far has decreased the volume of your vocal track considerably. “Makeup” adds gain to compensate for the volume drop. Slide the “Makeup” fader up until your vocals sound natural in the mix and your output signal is healthy without clipping., Delays come in a few varieties:
+
+Tap delays allow you to click a button to set the delay time. This is handy if you don’t know how many milliseconds of a delay that you need numerically but you do know how long of a delay you want.
+Time Adjustment or straight delays are useful to correct for latency. Latency is an unavoidable delay that happens as a result of processors taking time to process data before it can send it to your speakers. The more processor demanding an insert is the more latency it will introduce. It is often necessary to add a time adjustment delay on other tracks to keep them in perfect time with ones containing processor demanding effects. Your multitracking program will display latency for each track.
+Ping pong delays are stereo delays that alternate the signal between the left and the right.
+Phase/Flange delays are very short delays which are used to purposefully create loss of audio attributed to two superimposing audio signals being slightly out of phase. Phase delays are the shortest and remove certain frequencies creating an odd effect. Flange delays are a little longer and also produce a phase like effect.
+ For most purposes, the medium delay is appropriate:
+
+The stereo Mod Delay II allows you to take a mono signal, split it into stereo, and assign a different amount of delay time to the left and to the right. Controls:
+
+Bypass
+Save
+Load
+Gain
+Mix
+Delay
+
+, This has the effect of bringing out the vocals slightly without turning them up. This mostly works best when there are many instruments being played at once.Note that adding this mono to stereo effect your track has switched from mono to stereo. You can now pan the left and the right separately., This will add a slight delay to just the right side.,,, It may be difficult to notice the difference between delay and no delay in this circumstance, because there is such a small amount being added. The key to appropriate use of effects is subtlety. You may not be able to tell there is any delay at all if this technique is done right, however, upon listening you can often hear a quality disappear when the effect gets bypassed., This vocal embellishment delay does not necessarily belong in all vocal tracks., There are two Waves™ reverbs that can be useful. These are the IR1, and Renaissance Verb(RVerb). This is RVerb:
+
+RVerb is a stereo plug in. If you insert it into a mono track it will change it into a stereo track. Make sure to pan appropriately. Reverb is the most overused and abused audio effect. Originally intended to simulate a sound being played inside a hall or room, reverb is now used in a variety of applications. Be very careful to avoid turning the reverb up very high. The key to good reverb usage is subtlety. A little goes a long way. Controls:
+
+Bypass
+Save
+Load
+Pre-delay
+Time
+Size
+Diffusion
+Decay
+Early ref.
+Reverb
+Wet/Dry
+Gain
+
+, You should keep it down to 1.00 most of the time.,, If done right, you won’t be able to tell there is any reverb on the vocals at all unless you solo the vocal track., Certain effects you do not want active all the time. There are some effects that can add incredible feeling to a project when strategically placed. Effect instances are used in 90% of popular music to accentuate or create a feeling during a key point in a musical recording., Preverb is backwards reverb. Instead of the reverberation happening after the parent waveform it happens before., Name one Preverb L, the other Preverb R., Make sure to line up the audio in Preverb L to Preverb R exactly., If there’s no “Reverse” in your plug-ins, you will most likely find it in the edit menu.,, Using RVerb, drop Wet/Dry down to 50% then process the audio.,,, You will have to slide the processed waveforms over until they line up with the original., Adjust the volume level to just barely audible for Preverb L and Preverb R. Use EQ8 to pull out the lows on Preverb L and Preverb R. Make any adjustments in equalization to the preverb tracks., This instance is much easier to create than preverb. First, decide on a single word you wish to accentuate or bring out. Create a track named Delay and copy that word into it.,, Lower the volume until it is barely audible so the effect is subtle. Apply equalization., Many artists make use of distorted vocals. Most of the time it ends up sounding like someone singing into a bullhorn. The effect can be quite pleasing when done correctly. Create a new track called Bullhorn Vox. Add an EQ8 to the inserts on Bullhorn Vox. Add a Sans Amp plug-in after the EQ8. There are many pleasing combinations of equalization and the Sans Amp plug-in when creating bullhorn vocals.

@@ -1,0 +1,3 @@
+
+Add each new domain name to sendmail's class w. This is typically done by adding a line to /etc/mail/local-host-names (known as /etc/sendmail.cw prior to version 8.10) with the value of each domain name.Restart or SIGHUP sendmail.
+You do not need to restart sendmail when changing the virtual user or generics tables, only when changing /etc/mail/sendmail.cf or class files such as /etc/mail/local-host-names.

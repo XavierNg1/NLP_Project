@@ -1,0 +1,29 @@
+ This is an easy-to-install version of GCC for Windows. You can download the installer from https://sourceforge.net/projects/mingw/.,
+
+If the file doesn’t open by itself, double-click it in your downloads folder, then click Install.
+
+
+MinGW recommends using the default installation folder (C:\MinGW). If you must change the folder, don’t use a folder with spaces in the name (e.g. “Program Files”).,
+
+At the minimum, choose Basic Setup on the left panel, then place check marks next to all of the listed compilers in the right main panel.
+More advanced users can choose All Packages and select additional compilers.
+ It’s at the top left corner of MinGW.,, The compilers will now download and install., Here’s how:
+
+Press ⊞ Win+S to launch search, then type environment.
+Click Edit the system environment variables in the search results.
+Click Environment Variables
+
+Click Edit beneath the top box (under “User Variables”)
+Scroll to the end of the “Variable Value” box.
+Type ;C:\MinGW\bin right after the last letter in the box. Note that if you installed MinGW to a different directory, enter ;C:\path-to-that-directory\bin.
+Click OK, and then OK again. Click the one remaining OK button to close the window.
+ To do this:
+
+Press ⊞ Win+S and type cmd.
+Right-click Command Prompt in the search results, then select Run As Administrator.
+Click Yes to allow changes.
+
+
+For example, if your source code file called helloworld.c is located in C:\Source\Programs, type cd C:\Source\Programs.
+ Replace “helloworld” with the name of your source code and application. Once the program is compiled, you’ll return to the command prompt without errors.Any coding errors that appear must be corrected before the program will compile.
+ If it’s called helloworld.exe, type that to start your program.

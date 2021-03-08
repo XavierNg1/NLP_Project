@@ -1,0 +1,25 @@
+ Per the wizard, you will be asked to enter the name of your domain for which you would like to create an SPF record (i.e. contoso.com) in the field box. It is important to know your domain name in order to begin this process. Obviously, if you don't know the name of your domain, how can you verify it?;
+, Next, the wizard would check DNS for information about the domain. If an SPF record does exist, you are able to verify its contents in this step. If there is no SPF record, the information that is displayed for the domain's MX(mail server) and A(host) records would enable you to create a new SPF record. As an example, since contoso.com is an imaginary domain, there would be no SPF record.The displayed information would look like this :
+
+
+No SPF Record Found. A and MX Records Available
+
+
+
+
+
+
+No SPF record has been found for the domain contoso.com. However, MX and/or A records currently exist for this domain.
+
+
+
+
+
+
+Addresses Listed in A records
+207.46.197.32
+207.46.232.182
+Mail Servers Listed in MX Records
+mail.global.frontbridge.com 216.32.180.22
+This information may be of assistance in creating your new SPF record.
+ In this step, you are able to create or modify your record. You may notice that some of the fields are already filled in with information from DNS for your domain. This is a rather lengthy page, so I won't bother to go into all the details. Some Options include : Domain Not Used for Sending E-Mail, Reverse DNS Lookup, Outsourced Domains, Scope., In this step, the record is generated. The information hasn't been replicated to DNS. The wizard would ask you to Click "Select All" to select and copy the SPF text record. Paste it in either Notepad, Microsoft Word, or some other word processing document and provide it to your network administrator to insert into the DNS record. You will be instructed to publish your new SPF record in DNS.

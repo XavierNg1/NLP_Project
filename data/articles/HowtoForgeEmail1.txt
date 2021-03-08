@@ -1,0 +1,8 @@
+ An SMTP (simple mail transfer protocol) server is a mail server that transfers mail between users. Mail often bounces through several SMTP servers on its way to its destination. You will need to find a SMTP server that allows for "open relaying". This is next to impossible these days, but you may be able to find one or two out there.;
+, There are several places online that you can find lists of popular SMTP servers. Finding an open relay one will be more difficult, and will require a lot of trial and error. Try small businesses and local companies, as they are less likely to have configured their SMTP server properly.
+
+
+Using an SMTP server without authorization is illegal.
+ You need to find out if the SMTP server is open before you can connect to it. Open the Command Prompt or Terminal. Type telnet smpt.server 25 and press Enter.Replace smpt.server with the address of the server you are trying to connect to. For example Google's SMTP server is smtp.gmail.com (it's not an open relay server, so don't bother trying).
+If the SMTP server is an open relay, you will be connected to the server. If the server is not an open relay, you will see the message Could not open connection to the host on port 25: Connect failed and will need to find another server.
+

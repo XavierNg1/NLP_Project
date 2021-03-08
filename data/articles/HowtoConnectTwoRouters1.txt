@@ -1,0 +1,28 @@
+ This will be the router that your modem is connected to. Generally, you'll want your newest and most fully-featured router as your base router. If you have two of the same router, it doesn't matter which one you pick.;
+, This will be the router that is extending your original network. This will usually be your older router. This router will control the secondary network if you are creating a LAN-to-WAN network (see below).
+ During the configuration process, you can keep the routers near your computer so that you can easily access them. You can set them up in their permanent locations later.
+ A LAN-to-LAN (Local Area Network) connection extends your network size, allowing more devices to connect. Devices can share files and resources to any other device on the network. A LAN-to-WAN (Wide Area Network) connection creates a secondary network (LAN) inside the main network (WAN). This allows you to place restrictions on a subset of devices that are connected to the smaller network. The downside is that they cannot share files or resources with the main network.
+
+
+Setting up a LAN-to-WAN network allows you to modify the DNS for just the secondary network, affecting what sites can be visited. The secondary network also makes it extra difficult for hackers to access any devices connected. This is great for parents that want to monitor and control their childrens' internet access.
+ Configure it as you normally would to set up the network. Since this router will be handling the connection to the internet, set it up as if you were only using a single router.
+
+
+Most routers can be accessed by entering the address 192.168.1.1, 192.168.2.1, or 192.168.0.1
+
+Note router's IP address and subnet mask. The IP address is the same one that you used to access the router's configuration page. The subnet mask is typically 255.255.255.0.
+If you are creating a LAN-to-WAN network, set the primary router's DHCP service to give out addresses between 192.168.1.2 and 192.168.1.50. If you are creating a LAN-to-LAN network, you can leave the DHCP settings at their default.
+Disconnect the computer from the router when you are finished configuring it.
+ Open the configuration page. If you are making a LAN-to-LAN network, change the IP address so that it matches the first router, except increase the last digit by one (e.g. 192.168.1.1 becomes 192.168.1.2). If you are making a LAN-to-WAN network, change the IP address so that it matches the first router, except increase the second-to-last digit by one (e.g. 192.168.1.1 becomes 192.168.2.1). Ensure that the subnet mask is the same as the primary router.
+
+
+If you are making a LAN-to-WAN network, change the secondary router's WAN IP address to 192.168.1.51.
+If your router have the option UPnP disable it on the second router.
+ If you are creating a LAN-to-LAN network, the DHCP service should be turned off on the secondary router. If you are creating a LAN-to-WAN network, the DHCP server on the secondary router should hand out addresses between 192.168.2.2 and 192.168.2.50., If both routers are wireless, you will want to manually set the channels so that signals do not interfere with each other. Set your primary router to channels 1-6, and set your secondary router to channel 11.
+ Now that everything is configured, you can place your routers wherever you need. Keep in mind that you will need to run Ethernet cable between the two routers. You can run Ethernet cable through the wall if you need to reach another room. For convenience, you'll probably want to place your primary router near your modem.
+ Plug one end of the Ethernet cable into any LAN port of the primary router.
+
+
+If you are creating a LAN-to-LAN network, plug the other end into a LAN port of the secondary router.
+If you are creating a LAN-to-WAN network, plug the other end into the WAN port of the secondary router.
+

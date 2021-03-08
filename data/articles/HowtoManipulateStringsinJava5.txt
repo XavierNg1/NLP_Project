@@ -1,0 +1,77 @@
+ Splitting a string in Java means to split a string by a certain delimiter into an array of substrings. For example, if I split the string "red,blue,green,yellow,pink" with a comma as the delimiter, I would get the array { "red", "blue", "green", "yellow", "pink" }. Here are three different ways to split a string.
+ Import java.util.StringTokenizer. Then create a new instance of a StringTokenizer with the string to tokenize and the delimiter as parameters. If you do not enter the delimiter as a parameter, the delimiter will automatically default to white space. After you have the StringTokenizer, you can use the nextToken() method to get each token.
+
+
+
+
+
+
+
+import java.util.Arrays;
+import java.util.StringTokenizer;
+ 
+public class StringManipulation {
+    public static void main(String[] args) {
+        String str = "red,green,blue,yellow,pink";
+        StringTokenizer tokenizer = new StringTokenizer(str, ",");
+        int numberOfTokens = tokenizer.countTokens();
+        String;
+        for (int i = 0; i < numberOfTokens; i++) {
+            splitArr= tokenizer.nextToken();
+        }
+        System.out.println("\nOriginal String: " + str);
+        System.out.println("Split Array: " + Arrays.toString(splitArr) + "\n");
+    }
+}
+
+
+
+
+
+Before Java 1.4, the StringTokenizer class was used to split strings in Java. But now, the use of StringTokenizer is discouraged and the use of the split() method in the String class or the use of the java.util.regex package is encouraged.
+ The split() method will take in the delimiter as a param and return an array of sub-strings that are the same as the tokens from the StringTokenizer.
+
+
+
+
+
+
+import java.util.Arrays;
+ 
+public class StringManipulation {
+    public static void main(String[] args) {
+        String str = "red,green,blue,yellow,pink";
+        String[] splitArr = str.split(",");
+        System.out.println("\nOriginal String: " + str);
+        System.out.println("Split Array: " + Arrays.toString(splitArr) + "\n");
+    }
+}
+
+
+
+
+
+, Import java.util.regex.Pattern. Use the compile() method of the Pattern class to set the delimiter and then give the split() method the string that you want to split. The Pattern will return an array of substrings.
+
+
+
+
+
+
+import java.util.Arrays;
+import java.util.regex.Pattern;
+ 
+public class StringManipulation {
+    public static void main(String[] args) {
+        String str = "red,green,blue,yellow,pink";
+        String[] splitArr = Pattern.compile(",").split(str);
+        System.out.println("\nOriginal String: " + str);
+        System.out.println("Split Array: " + Arrays.toString(splitArr) + "\n");
+    }
+}
+
+
+
+
+
+, Here is the output that results from any one of these methods for splitting strings.

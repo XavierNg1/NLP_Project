@@ -1,0 +1,29 @@
+ You're better off with the copy command for single files. The xcopy command does not allow you indicate whether you are setting a directory or a filename as the destination., Xcopy has been deprecated and will likely be phased out of use in the near future. Robocopy can do everything xcopy can. It is also more flexible and reliable. Creating scripts with robocopy will future-proof them.
+ xcopy's main function is to copy folders or the contents of a folder from one location to another. For example, to copy all of the contents of the C:\tools directory to the new folder D:\backup\tools, enter the following:
+
+
+
+
+
+xcopy C:\tools\* D:\backup\tools /e /i
+
+
+
+
+
+
+/e tells xcopy to copy all of the subdirectories in the source location as well. This includes any empty directories.
+
+/i tells xcopy to assume that the destination is a folder. This will force it to create the new folder during the copy process.
+It is most useful when copying files from a CD or DVD. It will remove the Read-Only attribute automatically during the copy process.
+ One of the big advantages of xcopy over the copy command is its ability to copy hidden and system files. Add the /h modifier to copy hidden files as well.
+
+
+
+
+
+xcopy C:\tools\* D:\backup\tools /e /i /h
+
+
+
+

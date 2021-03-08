@@ -1,0 +1,41 @@
+ There are three different types of Minecraft servers. VANILLA, BUKKIT, and TEKKIT. Each one of these types of servers are very different.
+
+
+Vanilla is the game type that you play when playing single player, or in a LAN world. In vanilla, little customization is available, yet Vanilla is good for building and hanging out with friends.
+Bukkit combines customization with Vanilla giving a more "fun" experience. Most servers run on Bukkit, or its faster version, Spigot.
+Tekkit allows the Tekkit  game type to be played, where customization is everywhere.;
+, Make sure that you have the latest version of Java by checking this link (If not just download it and no harm will come.
+
+
+Make sure to that you or if you are under 18, your parents are okay with players connecting to your router and then to your computer. Running a Minecraft server might cause vulnerability to hackers if and when your server runs.
+
+
+
+To download the Vanilla server software on Windows, go to this Minecraft site page and download the minecraft_server.1.8.exe folder. Place this folder on your desktop and rename it to a name you would like it to be such as "Minecraft Server."
+For a Bukkit server, go to dl.bukkit.org and you will see the bukkit logo (lava bucket) and a large green button on the left-hand corner. Click the green button and the download will be processed and the file downloaded. Place the folder on your desktop labeled with your own Minecraft server title for the folder.
+The Tekkit minecraft server files can be downloaded for Windows from this page.
+You might notice the file is .exe. Running on a Mac OSX will be shown later in the steps below! Do not panic!
+
+, The files will be downloaded in a non-compressed folder, and placed in, most commonly, your "Downloads" folder.
+ Now the folder downloaded from minecraft.net/download should have a file in it called minecraft_server_1.8.jar or something similar.
+
+
+If you are using Windows, feel free to double click that file/open it, thus running it and you will notice the world folder and other files will be created in your Minecraft server folder. To go onto your server, your current IP for the server is 0.0.0.0 or "localhost".
+If you are on Mac OSX, you have to perform an extra step. Open textedit and copy and paste this text into the file without the quotes:
+#!/bin/bash
+cd "$(dirname "$0")"
+exec java -Xms1G -Xmx1G -jar minecraft_server.jar nogui
+If you are on a Windows computer and want to run a Bukkit or Tekkit server, do the same process with for the Mac OSX users but replace the filename with your filename.
+ Find out want type of router it is. Linksys? Apple? Etc.? You then need to find out how to access your router's settings. Most routers have an app companion app yet a computer's version is preferable. For Linksys, go to this menu.
+ This is the default port for a Minecraft server, changeable in the "server.properties" file.
+
+
+You forward 25565 to your INTERNAL IP address which can be found, on a Windows computer by typing ipconfig in the command prompt and on Mac OSX by going into Settings>Network>Wi-fi. Then look at your IP. It should be something like 10.0.1.12.
+Once done, update your router's settings. Done!
+
+, What you want to do is go to ipchicken.com and in blue in the center of the page is your EXTERNAL IP address. This is the IP you can give to your friends. If you changed the port to something other than :25565, then the port must be attached to the IP like so 192.32.23.12:PORT#.
+ Every Minecraft server needs customization. Basic customization consists of editing the "server.properties" file.
+
+
+In your server.properties you can change the MOTD, the Message Of The Day displayed to users when they load your server, build-height, port number, whitelist on/off, op-power etc., which can all be found online about how to further configure those.
+

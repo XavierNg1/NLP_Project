@@ -1,0 +1,13 @@
+ Search for cmd.exe or the "Command Prompt" shortcut and open it. On Windows XP, instead navigate to Start → Run and type in cmd.exe, then hit enter. This will open the command-line interpreter. Here, depending on the permissions settings on your system, you may be able to enable Regedit from here.
+
+
+You may need to right click the shortcut and select "Run as administrator."
+
+, Type this in exactly as it appears, then hit Enter on your keyboard to run the command: REG add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /t Reg_dword /v DisableRegistryTools /f /d 0
+
+, If you still can't access regedit, try restarting your computer and testing it again.
+ If the Run command is disabled too, copy that line of code into a new Notepad file. Save it as EnableRegistry.bat and close Notepad. Right-click the file and select "Run as administrator." The command line should flash for a brief moment, as it runs the code.Test regedit again, or restart your computer.
+
+
+On Windows XP, you can open the file normally instead of running as administrator.
+

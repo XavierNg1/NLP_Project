@@ -1,0 +1,16 @@
+ This button will be on the upper left side of your screen.;
+, The name of your function should be the name of your file, so when you save this new script file it will be the name of your file. In this case, for example, you can name our function slope-equation.
+ An input is something you need the user to give to you. For example, if you want to determine the slope equation y = mx+b, you need the user to tell us what is the slope value(m), the x coordinate and the y-intercept(b).
+ Skip to line 2 in your program and type for example, “%m is the value of the slope of the line”. Repeat this for each 3 inputs. Commenting is useful in programming for you and others who modify your program to understand all the variables and things you have done and how they are defined.
+ What this means, in this case, is you want your equation to define a variable y as the product of our input m and x and then add the y intercept value (b) to it. In line 5, you define your equation. Do not forget the semicolon this semicolon suppresses the output! What does that mean? That means the software Matlab automatically assigns the y variable the value of mx+ b and it doesn't output the value to the screen.
+ An fprintf statement is used to output information to the user of the program. You will first define the fprintf statement and then go into more details. Type in at line 6 fprintf(‘blank message’);
+
+, Replace the words blank message with your own words your sentence should be descriptive of the output of your function. You can say, “The y coordinate of this line is:”
+
+, This means since you are dealing with integers you should use “%i” this will call an integer value from our fprintf statement. What are the different data types? Well the most common one is integer which in an fprintf statement is defined as %i but there is also a whole list of numeric data types at this website http://www.mathworks.com/help/matlab/numeric-types.html where you can look and decide at which data type you would like your answer to be formatted in!
+
+, In your case the output is the value y so after the single quotation you type “, y”. The fprintf statement automatically recognizes this variable and puts it in the first %(datatype) it sees in between the single quotation marks.
+ This line just simply is to make your program look neater. It makes your program enter after your initial fprintf statement. This is just the line “fprintf(‘\n’);’. The new line character in other programming languages is “/n”; in MATLAB it will only work with the backwards slash.
+ This end will close our function and is necessary in every function you create in MATLAB. If you do not save your program you will get the wrong output or no values when you execute.
+ This part is considered calling your function; you go to the command prompt and type “yourfunction(inputvalue1, inputvalue2, inputvalueN)”. This means you type your function's name and the values you want to assign to the inputs. Test your function with the input value of 4, 5 and 6. That means on the command prompt you would write slope Equation(4,5,6). As you can see from the picture mistakes are bound to happen in your code just refer back to these steps and the warnings and see what you missed or messed up on!
+

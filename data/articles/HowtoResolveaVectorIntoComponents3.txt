@@ -1,0 +1,78 @@
+ Addition is generally a fairly simple concept, but it takes on special meaning when working with vectors. A single vector represents a movement, a force, or some other physical element acting upon an object. If there are two or more forces acting at the same time, you can “add” these forces to find the resultant force acting on the object.
+
+For example, think of a golf ball that is hit into the air. One force acting on that object is the force of the initial hit. This force consists of an angle and magnitude. Another force acting on the object might be the wind, which has its own angle and magnitude. Adding these two forces can describe the resulting travel of the ball.
+ Before you can add the vectors, you need to determine the components of each one. Using either of the processes described in this article, find the horizontal and vertical components of each force.
+
+For example, suppose the golf ball is hit at a 30 degree angle upward with a speed of 130 mph (210 km/h). Using trigonometry, the two component vectors are, therefore:
+
+
+Vertical=130sin⁡(30)=65mph{\displaystyle {\text{Vertical}}=130\sin(30)=65{\text{mph}}}
+
+
+Horizontal=130cos⁡(30)=112.6mph{\displaystyle {\text{Horizontal}}=130\cos(30)=112.6{\text{mph}}}
+
+
+
+Then consider the vector that represents the force of the wind. Suppose the wind is blowing the ball downward at an angle of 10 degrees, at speed of 10 mph (16.1 km/h). (We are ignoring left and right forces for simplicity of calculation). The wind’s two components can be calculated similarly:
+
+
+Vertical=10sin⁡(−10)=−1.74mph{\displaystyle {\text{Vertical}}=10\sin(-10)=-1.74{\text{mph}}}
+
+
+Horizontal=10cos⁡(−10)=9.85mph{\displaystyle {\text{Horizontal}}=10\cos(-10)=9.85{\text{mph}}}
+
+Notice that we use an angle of -10 degrees because the wind is blowing down, acting against the force of the hit.
+ Because the component vectors are always measured at right angles, you can add them directly. Pay attention matching the horizontal component of one vector to the horizontal component of the other, and the same for the vertical components.
+
+For this sample, the resultant vertical vector is the sum of the two components:
+
+
+Vertical=65+(−1.74)=63.26{\displaystyle {\text{Vertical}}=65+(-1.74)=63.26}
+
+
+Horizontal=112.6+9.85=122.45{\displaystyle {\text{Horizontal}}=112.6+9.85=122.45}
+
+
+
+Interpret the meaning of these results. The net force acting on the golf ball, due to both the hit and the wind, is the equivalent of a single force with components of 63.26 mph (101.81 km/h) vertically and 122.45 miles per hour horizontally.
+ Ultimately, what you would like to know is the net effect of both the golf swing and the wind, acting together on the ball. If you know the two components, you can put them together with the Pythagorean theorem to find the magnitude of the resultant vector.
+
+Recall that the component vectors represent the legs of a right triangle. The resultant vector is the hypotenuse of that right triangle. Using the Pythagorean theorem, c2=a2+b2{\displaystyle c^{2}=a^{2}+b^{2}}, you can calculate this as follows:
+
+
+Resultant2=63.262+122.452{\displaystyle {\text{Resultant}}^{2}=63.26^{2}+122.45^{2}}
+
+
+Resultant2=18,995.83{\displaystyle {\text{Resultant}}^{2}=18,995.83}
+
+
+Resultant=18,995.83{\displaystyle {\text{Resultant}}={\sqrt {18,995.83}}}
+
+
+Resultant=137.83{\displaystyle {\text{Resultant}}=137.83}
+
+
+
+Thus, the resultant vector represents a single force on the ball with a magnitude of 137.83 mph (221.82 km/h). Notice that this is slightly higher than the force of the initial hit, because the wind is pushing the ball forward at the same time that it pushes it down.
+ Knowing the force of the resultant vector is half of the solution. The other half is to find the net angle of the resultant vector. In this example, because the golf swing applies an upward force and the wind applies a downward, though lesser, force, you need to find the resulting angle.
+
+Sketch a right triangle and label the component parts. The horizontal base of the triangle represents the forward vector component of 122.45. The vertical leg of the triangle represents the upward vector component of 63.26. The hypotenuse represents the resultant vector with a magnitude of 137.83.
+
+You can choose either the sine function, with the vertical component, or the cosine function, with the horizontal component, to find the angle. The result will be the same.
+
+
+sin⁡θ=63.26137.83{\displaystyle \sin \theta ={\frac {63.26}{137.83}}}
+
+
+sin⁡θ=0.459{\displaystyle \sin \theta =0.459}
+
+
+θ=arcsin⁡(0.459){\displaystyle \theta =\arcsin(0.459)}
+
+
+θ=27.32{\displaystyle \theta =27.32}
+
+
+
+Thus, the resultant vector represents a single force acting on the ball at an upward angle of 27.32 degrees. This makes sense, as it is slightly lower than the angle of the swing, at 30 degrees, due to the downward force of the wind. However, the golf swing is a much stronger force than the wind in this example, so the angle is still close to 30.
+ To report the resultant vector, give both its angle and magnitude. In the golf ball example, the resultant vector has a magnitude of 137.83 mph (221.82 km/h), at an angle of 27.32 degrees above the horizontal.

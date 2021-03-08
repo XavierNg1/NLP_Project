@@ -1,0 +1,43 @@
+,,, Alternatively, you can dummy another macro and overwrite it, leaving the top Sub line and comments to be edited, with the following code:
+
+
+
+
+
+
+Sub DependentSort()
+' MacroDependentSort Macro
+' Connected columns sort
+' Keyboard Shortcut: Option+Cmd+j
+    Sheets("Sheet1").Select
+    Rows("25:30").Select
+    Selection.Copy
+    Range("A17").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    ActiveWorkbook.Worksheets("Sheet1").Sort.SortFields.Clear
+    ActiveWorkbook.Worksheets("Sheet1").Sort.SortFields.Add Key:=Range("A17:A22") _
+        , SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:=xlSortNormal
+    ActiveWorkbook.Worksheets("Sheet1").Sort.SortFields.Add Key:=Range("B17:B22") _
+        , SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:=xlSortNormal
+    ActiveWorkbook.Worksheets("Sheet1").Sort.SortFields.Add Key:=Range("C17:C22") _
+        , SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:=xlSortNormal
+    With ActiveWorkbook.Worksheets("Sheet1").Sort
+        .SetRange Range("A17:D22")
+        .Header = xlNo
+        .MatchCase = False
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+    End With
+    Range("D18").Select
+    ActiveCell.FormulaR1C1 = "Sorted Data"
+End Sub
+
+
+
+
+
+,
+
+Verify that the DependentSort() macro performed a Dependent Sort of the three columns of data.

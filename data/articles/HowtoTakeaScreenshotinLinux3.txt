@@ -1,0 +1,8 @@
+ ImageMagick is a command-line utility that can capture screenshots for you. Many distributions come with ImageMagick already installed, but you can install it for free if you don't have it.
+
+
+To open the Terminal quickly in Ubuntu and many other distributions, press Ctrl+Alt+T.
+ Type sudo apt-get install imagemagick and press ↵ Enter. You will be prompted for your administrator password. If ImageMagick hasn't been installed, it will begin downloading and installing. If it is already installed, you will be informed.
+ Type import -window root Pictures/fileName.png and press ↵ Enter. Replace fileName with the name you want to give the screenshot.
+ Type import Pictures/fileName.png and press ↵ Enter. Replace fileName with the name you want to give the screenshot. The cursor will turn into a crosshair, and you can click the window that you want to capture.
+ Type import -window root -pause # Pictures/fileName.png and press ↵ Enter. Replace # with the amount of seconds that you want to wait before the screenshot is taken. After waiting the set amount of time, the screenshot will be taken and you will be returned to the terminal prompt.

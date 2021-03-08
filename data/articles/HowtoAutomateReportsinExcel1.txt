@@ -1,0 +1,32 @@
+ Your spreadsheet should be laid out so that others using it can find the fields they need quickly to enter data.
+
+
+You can lay out your spreadsheet horizontally or vertically. Most users will find a vertical layout easier to work with, particularly if you plan to have them print out the spreadsheet.;
+, You'll want a label at the top of each column, as well as a label in the cell to the left of each cell in the column where you plan to place the entry fields.
+ This opens the Microsoft Visual Basic editor.
+ This opens a coding window in the main section of the editor.
+ This displays the Add Procedure dialog box.
+ Give the procedure a meaningful name, such as "SumExpenses" if your interactive spreadsheet will be used for reporting travel expenses. Click OK to close the dialog.
+
+
+Your procedure name cannot include spaces, but you can use an underscore ( _ ) in place of a space.
+Once the Add Procedure dialog box closes, you will see a line labeled "Public Sub" followed by the name of your procedure. Beneath that line will be a space and the words "End Sub."
+
+, You'll write two lines of code for each input.
+
+
+The first line of code takes the form "Range("cellname").Select", where "cellname" represents the cell in which the input field will go. This should be the cell immediately to the right of a text label; if you have a text label in cell A2, you'd put an input field in cell B2 (Range("B2").Select). Include the quotes around the cell name, but not those around the complete code statement.
+The second line of code takes the form "ActiveCell.Value = InputBox("InputPrompt")", where "InputPrompt" represents text that will appear to tell the user what kind of data to enter in the input cell. For example, if the input cell is to enter meal expenses, you'd replace "InputPrompt" with "Enter total of all meals, including tips." (Include the quotes around the input prompt text, but not those enclosing the entire command.)
+
+, You again use the same two lines as described above, but this time your ActiveCell.Value is a calculation or numeric function, such as SUM, in place of the InputBox function used to display an input prompt.
+ The format is "ActiveWorkbook.SaveAs Filename:="Filename.xls"," where "Filename" represents the name of your interactive spreadsheet. (Include the quotes around "Filename.xls," but not those around the complete example.)
+
+
+If you have Excel 2007 or later, you can substitute the suffix ".xlsx" for ".xls," but if some of the people who will use your interactive spreadsheet have Excel 2003 or earlier, they won't be able to use the spreadsheet without a plug-in reader program.
+ This closes the Visual Basic editor.
+ This opens the Macro dialog box.
+ If yours is the only procedure in the list, it will be selected automatically.
+ You will be prompted to enter a keyboard character to use as a keyboard shortcut with the Ctrl key. Choose a meaningful letter not already used as a shortcut character, such as "e" for "entry."
+
+, You can now distribute your interactive spreadsheet to those who will use it. After opening it, they can use the shortcut key to enable entry and follow the prompts you created to fill in their data.
+

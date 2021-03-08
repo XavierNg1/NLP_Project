@@ -1,0 +1,27 @@
+ Use Bluetooth or another file transfer system to send the .bf file to a PC or Mac. The fastest way to transfer a file is via a USB cable, if your phone gives you access to a "mass storage" option when you connect.;
+, Right-click the .nbf file on your computer, or Control-click on a one-button Mac. Choose one of the following options from the drop down menu:
+
+
+Windows: Properties
+
+Mac: Get Info
+
+
+, In the Properties or Information window, look for the text field with the file name. Delete "nbf" and type "zip" instead. Confirm your choice if prompted by a popup window.
+
+
+You may need administrator access to change the file.
+If the .nbf extension is not visible, go to Control Panel → Appearance and Personalization → Folder Options → View tab → uncheck Hide extensions for known file types → OK., Double-click the file to open it. If this doesn't work, right click the file and select "Extract" or "Open With" followed by a zip extraction program. The file should open as a folder with other folders and files inside.
+
+
+If this doesn't work, try right-click → "Open With" → "Windows Explorer.", Your phone contacts are stored as .vcf files, typically in the following file path: predefhiddenfolder → backup → WIP → 32 → contacts., Many devices make you transfer your contact cards one by one. Merging the cards into one file speeds this up, but be warned: some devices and programs aren't built to handle more than one contact per card. Keep your old cards as backup in case this doesn't work.
+
+
+Windows: Open Run and enter cmd. Enter the location of the contacts file into the cmd window. Enter copy *.vcf all_contacts.vcf to make a new file.Mac: Open Terminal. Enter the location of the contacts file into the command prompt. Enter cat *.vcf > all_contacts.vcf to make the merged file.To find the location, right click the contacts folder and choose "Properties" or "Get Info." Copy the Location information and add \contacts after it if necessary.
+ You can now copy-paste the whole contacts folder or individual .vcf files into another folder. Here are a few ways to access the information stored inside:
+
+
+Send yourself an email with the .vcf files attached. Open the email on your smartphone and tap your .vcf files to download them.If you store contacts in iCloud or another cloud storage service, open it and look for an "Import vCard" option.On Android, transfer your .vcf files directly to the phone's SD card. Open your phone's Contacts app and go to Menu → Import → Import from external memory. Restart the app.If your phone only takes .csv files, import the .vcf files to your computer's Contacts folder, or to your Gmail contacts. From there, export them as .csv files., To transfer the contacts to your computer, open them with Microsoft Outlook, Contacts, Address Book, or another program that stores contacts. You may need to open the program first, then use File → Import.If prompted to select a file type, choose .vsf or vCard.
+
+
+To read the cards without adding anyone to your contact list, import them to Excel or another spreadsheet program.

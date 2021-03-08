@@ -1,0 +1,13 @@
+ For consistency, it helps to enter the number in consecutive cells in either a row or column, and for readability, a column is better.;
+, The MODE function's format is "=MODE(Cx:Dy)," where C and D represent the letter of the column of the first and last cell in the range, and x and y represent the number of the first and last row in the range. (Although different letters are used in this example, you will use the same column letter for both the first and last cell if you entered the data in a column of cells or the same row number for both the first and last cell if you entered the data in a row of cells.)
+
+
+You can also specify each cell individually, up to 255 cells, as in "=MODE(A1, A2, A3)," but this is not advisable unless you have only a very small dataset and do not plan to add to it. You can also use the function with constants, for example, "=MODE(4,4,6)," but this requires editing the function each time you wish to search for a different mode.
+You may want to format the cell in which the mode will display with bolding or italics to distinguish it from the numbers in the dataset.
+ This normally happens automatically in Excel, but if you have set up your spreadsheet for manual calculation, you'll need to press the F9 key to display the mode.
+
+
+For a dataset of 10, 7, 9, 8, 7, 0 and 4 entered in cells 1 through 8 of Column A, the function =MODE(A1:A8) will deliver a result of 7, because 7 appears more often in the data than any other number.
+If the data set contains more than one number that qualifies as the mode (such as 7 and 9 each appearing twice and every other number appearing only once), whichever mode number is listed first in the data set will be the result. If none of the numbers in the data set appear more often than any other, the MODE function will display the error result #N/A.
+The MODE function is available in all versions of Excel, including Excel 2010, which includes it for compatibility with spreadsheets created in earlier versions. Excel 2010 uses the MODE.SNGL function, which except for syntax (=MODE.SNGL(Cx:Dy)) works essentially the same as the MODE function in earlier versions of Excel.
+

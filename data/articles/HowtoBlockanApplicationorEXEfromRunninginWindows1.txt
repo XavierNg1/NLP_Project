@@ -1,0 +1,19 @@
+ If you are using a Professional version of Windows, use the Group Policy Editor to list applications that will be allowed. Similarly, you can apply the same procedure to block applications that are not allowed on the system network. This is a powerful tool with several features including the ability to control or block applications depending on your policies. It is advisable to back up all your data, in case something goes awry.;
+,, Hit the Enter button to search.
+ After this, expand Administrative Templates, then expand System. Under the Settings command, scroll down and double-click on one of two options:
+
+
+If you want to restrict certain applications, click on “Run only specified Windows applications.” Proceed to step 4 if you choose this.
+If you want to block some applications, click on “Don’t run specified Windows applications.” Proceed to step 5 if you choose this.
+ A Show Contents box will open where you can type the applications that you want to allow users to run.
+
+
+For example, you can type notepad.exe.
+When you have completed the list, click OK and exit Group Policy Editor.
+,
+
+
+For example, type iexplore.exe.
+Once you are done with your list, click "OK" and exit Group Policy Editor.
+If any user in the network now tries to access an application that is not in the specified list or has been blocked by you, they are likely to receive this message: “This operation has been cancelled due to restrictions in effect in this computer. Please contact your system administrator.”
+

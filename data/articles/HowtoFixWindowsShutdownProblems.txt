@@ -1,0 +1,50 @@
+ Any antivirus program other than Windows Defender is technically a third-party program. Having more than one third-party antivirus program running simultaneously can prevent your computer from shutting all the way down.
+
+If you do have more than one antivirus program, pick one to use and uninstall the others.;
+, Running programs can interfere with your computer's shutdown process. The easiest way to close open programs is by using Task Manager.
+
+If you're running a third-party antivirus program, disable it completely before continuing.
+ USB drives, mice, controllers, SD cards, and anything else you may have plugged into your PC may be preventing your computer from shutting down properly. Remove these items before continuing., Your computer's operating system version, outdated drivers, or a combination thereof can easily cause problems when you try to shut down. To update your computer's operating system and drivers:
+
+Open Start.
+Click the Settings gear.
+Click Update & security.
+Click Check for updates.
+Wait for your computer to update.
+ If a network issue is the reason your computer isn't shutting down, disconnecting your computer from all wireless networks (including Bluetooth) may fix the problem. Placing your computer in Airplane Mode is the easiest way to do this:
+
+Click the Notification box in the bottom-right corner of the taskbar.
+Click the Airplane Mode box.
+If you're on a wired (Ethernet) network, unplug the Ethernet cable from your computer as well.
+ Click the Windows logo in the bottom-left corner of the screen., It's a folder in the "W" section of the Start menu., It's near the middle of the Windows System folder., This icon resembles a blue computer monitor inside of a computer window.
+
+If you don't see this option, click the option next to "View by:" in the top-right corner of the window and select Large icons or Small icons.
+ This link is below the "System and Security" heading., It's in the bottom-right corner of the window., This option will appear at the top of the window., If there are any problems with your Windows update, follow the instructions provided to fix them.
+
+In most cases, you'll click Apply fix when prompted and wait for the fix to be applied.
+You may need to reboot your computer for the changes to take effect, which means you'll have to hold down your computer's power button to turn it off.
+ Click the Windows logo in the bottom-left corner of the screen., This icon is in the lower-left corner of the Start window., It's an icon of a circular arrow., This tab is on the left side of the window., It's toward the bottom of the page., This button will appear below and to the right of the Power option., You'll do this for each problem that Windows comes across.
+
+If you see something listed as a problem that you don't care to fix, click Skip this fix instead.
+ If the computer successfully shuts down, the problem was resolved. If not, proceed to the next part., Click the Windows logo in the bottom-left corner of the screen., This icon is in the lower-left corner of the Start window., This icon resembles a laptop., It's on the left side of the System page., This option is in the top-right side of the page., You'll find this link in the top-left corner of the window., Click the drop-down box right of "When I press the power button" and beneath "On battery", click Shut down, and repeat for the "Plugged in" column. This will ensure that pressing your computer's power button will shut down your computer., If the computer successfully shuts down, the problem was resolved. If not, proceed to the next part., Click the Windows logo in the bottom-left corner of the screen., It's in the "W" section of the Start menu., It's in the top-left corner of the window., It's in the upper-left section of the Windows Defender window., This link is below the Quick scan button in the middle of the page., If not, click the circle to the left of "Full scan" at the top of the page., It's in the middle of the page. Doing so will begin scanning your computer for disruptive programs., If anything malicious turns up during the scan, Windows Defender will alert you; naturally, you should allow Windows Defender to remove the dangerous items.
+
+If this scan doesn't find anything, repeat the scan with "Windows Defender Offline scan" checked instead of "Full scan" checked.
+ If the computer successfully shuts down after the scan is complete, the problem was resolved. If not, proceed to the next part., Click the Windows logo in the bottom-left corner of the screen., It's a folder in the "W" section of the Start menu., This option is toward the bottom of the Windows System folder., This tab is at the top of the Task Manager window., This will prevent the program from starting automatically when you turn on your computer. Too many programs attempting to start at once can cause your computer to crash, so doing this may fix related problems., Any third-party programs such as antivirus utilities, chat rooms, or other apps should be disabled when you're through.
+
+Don't disable Windows processes such as the graphics card or Windows Defender.
+ If the computer successfully shuts down, the problem was resolved. If not, proceed to the next part., Click the Windows logo in the bottom-left corner of the screen.
+
+You cannot perform this process on Windows 8 or 10.
+ This will bring up a list of search results., It's the blue group of cubes at the top of the Start window., Doing so opens the Registry Editor.
+
+Be extremely careful when using the Registry Editor. Don't edit or remove anything not explicitly covered in this method.
+ To do so:
+
+Double-click HKEY_LOCAL_MACHINE in the top-left corner of the window.
+Double-click SOFTWARE.
+Double-click Microsoft.
+Double-click Windows
+
+Double-click CurrentVersion.
+Click Winlogon.
+ This key should be on the right side of the Registry Editor window., It's a tab in the upper-left corner of the window., This option is at the top of the Edit drop-down menu., In the "Value" field, make sure "1" is displayed instead of "0"., This will make sure that your computer actually shuts down when you give it the command to do so.

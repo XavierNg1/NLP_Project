@@ -1,0 +1,21 @@
+ Be aware that there is one for each template. You can find these files at:
+
+
+Local_Drive:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\60\TEMPLATE\Locale ID\;
+, This approach removes the Server control responsible for rendering the Check box from the page.
+Search upload.aspx for the following string: <SPSWC:SubmitLinkOnSTSUploadDocPage runat=server />
+Delete it.
+Save and exit notepad.
+
+
+Option 2
+
+Set the default check box to unchecked/false. This approach involves adding some javascript that flips the value client side when the page loads.
+Find the following tags at the bottom of Upload.aspx:</BODY>
+</HTML>
+
+Insert this code snippet above them:<script language='javascript' for='window' event='onload'>
+document.all.submitlst.checked=false;
+</script>
+
+Save and exit notepad.

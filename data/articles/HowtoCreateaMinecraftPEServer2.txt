@@ -1,0 +1,46 @@
+ The PocketMine program is the only available option for creating a free MCPE server from your computer, but it has some serious limitations. For one, there are no enemies in the PocketMine world, as there is no AI to control them. Also, as of this writing in October 2016, PocketMine only supports MCPE 0.14.0, which means you'll need to downgrade your app if you keep it up to date., PocketMine is a Minecraft PE dedicated server that you can run from Windows or macOS. PocketMine is not affiliated with Mojang. It doesn't support all features of Minecraft PE; most notably there is no enemy AI. Follow these instructions to install PocketMine on your Windows computer (see the next step for macOS):Download PocketMine from pocketmine.net by clicking the green "Get PocketMine-MP" button and selecting "Windows."
+Run the installer after downloading it and follow the prompts. You can leave the installer settings at their defaults. Choose not to start your server when installation is finished.
+ PocketMine is a Minecraft PE dedicated server that you can run from Windows or macOS. PocketMine is not affiliated with Mojang. It doesn't support all features of Minecraft PE; most notably there is no enemy AI. Follow these instructions to install PocketMine on your Mac computer:Create a folder anywhere on your computer for the PocketMine files. Name the folder "PocketMine-MP"
+Click the Go menu from the desktop and select "Utilities." Open the Terminal from the Utilities folder.
+Type cd and then drag the folder you created into the Terminal window. This will add the path of the folder after cd. Make sure there is a space between cd and the folder path.
+Type curl -sL http://get.pocketmine.net/ | bash and press ⏎ Return. This will install PocketMine. Keep the Terminal open for now.
+ You'll need this file to support the most recent possible version of Minecraft PE. As of this writing in October 2016, PocketMine supports MCPE v.0.14.0.
+
+Visit bintray.com/pocketmine/PocketMine/PocketMine-MP-phar/view#files
+
+Download the last file in the list, which will be the newest one.
+Rename the downloaded file to PocketMine-MP.phar and place it in the server folder. Confirm that you want to override the original.
+ You'll need to update the PHP files in the PocketMine folder to PHP7 so that the server can run properly.Download the PHP7 Windows files from https://bintray.com/pocketmine/PocketMine/Windows-PHP-Binaries#files
+
+Download the PHP7 Mac files from https://bintray.com/pocketmine/PocketMine/Unix-PHP-Binaries#files
+
+Extract the files using 7-Zip, which you can install from 7-zip.org
+
+Replace the /PocketMine-MP/bin/php/ folder on your computer with the "php" folder from the extracted file.
+ Now that you have the latest PHAR and PHP files, you can start your server up for the first time.
+
+Windows - Double-click the start.cmd file in the PocketMine-MP directory.
+Mac - Type ./start.sh in the Terminal window.
+ Once the server starts for the first time, you'll be prompted to select the language you want to use for the server. Type the code for the language you want to use., You'll need to type y to accept the license for PocketMine., Type y to skip the set-up wizard. You can go back and change your server settings later on, but for now you can just get the server up and running., Windows may prompt you to allow PocketMine through the firewall. Click "Allow access" so that others can connect to it., You'll need this address to connect to the server from Android and iOS devices that are on the same network. You'll also need to know the IP if you decide to open ports and make the server accessible from the internet.
+
+Windows - Press ⊞ Win+r and type cmd to launch the Command Prompt. Type ipconfig and press ↵ Enter. Find your active network connection and note the IPv4 Address.
+Mac - Click the Apple menu and select "System Preferences." Click the "Network" option and then select your active connection. Find the "IP Address" line and note the address.
+ You'll need to be running the same version of Minecraft PE on the device as the server. As of this writing in October 2016, the server only supports 0.14.0, while the app is on version 0.15.10. Downgrading on Android is fairly straightforward, but is not possible on an iOS device unless it is jailbroken.
+
+Android - Uninstall the MCPE app on your device. Open the Settings app and select "Security" Tap "Unknown sources" and then enable it. Perform a web search for "mcpe 0.14.0 apk" and then find a trustworthy source to download the file. After downloading the APK file, run it from your Download folder to install the old version.
+Jailbroken iOS - Open Cydia on your jailbroken iOS device. Search for "App Admin" in Cydia and install it. Open the Minecraft PE page in the Apple App Store after installing App Admin. Tap the Update/Open/Download button and then select "0.14.0" from the list of available versions., The Android or iOS device running Minecraft PE will need to be connected to the same wireless network as the computer running the server., You'll see your new server appear automatically in the list. It will have a green dot next to it.
+
+If you don't see your server, you're either not on the same network or not running the same version of MCPE as the server is.
+ In order for players not on your network to connect to your server, you'll need to forward a port on your router to allow outside connections to the server.
+
+Open your router's configuration page and log in. The process for this will vary depending on your router. See Access a Router for details.
+Open the Port Forwarding section of your router's configuration. Again, the location and wording will vary by router. See Set Up Port Forwarding on a Router for details.
+Create a new rule forwarding TCP port 19132 for your server's local IP address. This will open the port that Minecraft PE uses to connect to the server.
+ This is the address for your network on the internet. You'll give this to players that you want to connect to your server. The quickest way to find the address is to perform a Google search for "my ip" on your server computer., Now that you know the public IP address and your port is open, other players can connect to the server. Remember, they'll need to be running the same version of MCPE as the server (0.14.0 at the time of this writing in October 2016).
+
+Start Minecraft PE and tap the "Play" button.
+Tap "New" in the upper-right corner.
+Tap the "+→" button in the upper-right corner.
+Enter the public IP address from the previous step into the "IP/Address" field and give it any name.
+Tap "Add Server" then select it from your list of worlds to start playing.
+

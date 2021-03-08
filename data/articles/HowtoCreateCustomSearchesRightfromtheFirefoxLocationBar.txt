@@ -1,0 +1,98 @@
+
+
+
+The URL to use for the search (any terms you type will be inserted into a special spot in this URL)
+The URL for the web site in general (we'll go to this in case we don't provide any search terms... a nice touch that adds flexibility)
+
+
+The hardest one to get is the search URL. We'll start by going to Google Maps and doing a search similar to the pattern we want to create.
+Open Google Maps (http://maps.google.com) and search on "restaurants near Camden,sc" for instance.
+
+Above the right edge of the map is the link "Link". Click it.
+
+A link for this particular map should appear. Right now it is in a box under the text "Paste link in email or IM". If it is not highlighted, select all the text in the box, then copy it to your clipboard. The URL I just got by doing that query is
+http://maps.google.com/?q=restaurants+near+camden,sc&ie=UTF8&hq=restaurants&hnear=Camden,+Kershaw,+South+Carolina&z=13
+
+
+
+We're going to edit this string to be more adaptable. Open Windows Notepad (how?) so that we can paste it there and work with it. Don't use MS Word, or WordPerfect, or any fancy word processing programs to edit the text. They might change the text so that it doesn't work any more. Use Windows Notepad, or a plain text editor like Notepad++ or Crimson Editor.
+
+Trim off what we don't need. We can delete everything after the first "camden,sc". This will trim the URL down to this:
+http://maps.google.com/?q=restaurants+near+camden,sc
+As a side note, you can learn more about URL query parameters, which can help you better understand URLs, like the complex one Google Maps gave us.
+Replace the location with your own location. Delete "camden,sc" and replace it with your city and state.
+
+If your city contains a space (e.g. New York), don't put in the space, but put in a plus sign (+) instead (e.g. New+York). URLs need these instead of spaces to work properly.
+Make sure there is not a space before and after the comma between your city and state.
+You can also use your zip code instead of city,state. This article will continue to use Camden, SC as the example.
+For the technically-minded, you can even get as precise as using latitude/longitude coordinates (use decimal format), if you know them. "34.224294,-80.651321" will make the start/home location a point outside of Camden, SC.
+
+
+Replace the word "restaurants" with "%s". The URL now looks like this:
+http://maps.google.com/?q=%s+near+camden,sc
+Whatever we type in as search text will overwrite the string "%s", making this URL very dynamic. Anything we type will be searched based on being near to our location. This is our search URL.
+
+
+
+
+Getting the general site URL is easier. We'll make it just center on the city. In our case, it is:
+http://maps.google.com/?q=camden,sc
+Remember that this is the URL we'll go to if we don't type in any search terms.;
+,
+
+
+
+Paste in the generic JavaScript template text. A few lines down from the stuff you've already typed into Notepad, copy and paste this text:
+javascript:if('%s'!='%'+'s')%20location.href='SEARCH_URL';else%20location.href='GENERAL_URL';
+We want to keep this as one long text, so make sure (once you get it into Notepad) to remove any hard return that copying and pasting from the browser might insert (since the browser will probably wrap it into two lines). However, you can wait till the very end to remove the returns, if you wish. Just don't forget.
+
+Paste in your search URL. For this example, it is
+http://maps.google.com/?q=%s+near+camden,sc
+Paste it over (replacing) the text "SEARCH_URL". Be careful not to delete either of the apostrophes (single tick marks) before or after the text "SEARCH_URL". JavaScript is very picky about this kind of thing.
+
+Paste in your general site URL. For this example, it is
+http://maps.google.com
+Paste it over (replacing) the text "GENERAL_URL". You are now done modifying this particular part of this mini-project. Be careful not to delete either of the apostrophes (single tick marks) before or after the text "GENERAL_URL"
+
+Verify that your JavaScript text is correct. Continuing to use our example location, the JavaScript text is:
+javascript:if('%s'!='%'+'s')%20location.href='http://maps.google.com/?q=%s+near+camden,sc';else%20location.href='http://maps.google.com';
+Pay close attention to getting everything right. JavaScript is picky! Again, we want to keep this as one long text, so make sure (once you get it into Notepad) to remove any hard return that copying and pasting from the browser might insert (since the browser will probably wrap it).
+ It doesn't really matter what page you're on, because we're going to overwrite everything anyway.
+In the "Name" text box, type something as a title for the search. For our example, I would type something like
+Google Maps Search - Local
+
+In the "Folder" box, select the folder in which you would like to keep this keyword search. A good idea is to create a folder in the main bookmarks area called "Keyword Searches", and to store them there (how?). Wherever you put it, remember the location. You'll be coming back to it in just a moment.
+Open the properties dialog box for the bookmark you just created. You can do this by...
+
+Finding that bookmark in the Bookmarks menu, then right-clicking it, or
+By using the "Organize Bookmarks" utility, provided with Firefox.
+
+
+In the Location text box, erase anything that is in there, then paste in the last big text we assembled. It's the one that starts with "javascript:if(..."
+In the Keyword text box, type in the short code that you'll use to access this search. A good idea is to call it "mapl" (stands for "map local").
+Note: You could make the keyword long if you want to, but this is supposed to be something that saves you time, right?
+Click the Save button to save the bookmark.
+
+
+
+Click in Firefox's location bar (or use the Ctrl-L keyboard shortcut)
+Type "mapl", then a space, then your search text, then the Enter key. Note that you can just type the keyword by itself to go to the site's general page. Note also that you don't have to type a plus sign instead of a space now. Firefox automatically converts spaces when using a keyword search. Examples:
+
+
+mapl post office
+
+
+mapl ace hardware
+(will take you to these stores near Camden,SC)
+
+
+mapl 123 Pine st
+(will take you to this address near Camden,SC)
+
+
+mapl
+(will take you to the general URL we put in.)
+
+
+
+

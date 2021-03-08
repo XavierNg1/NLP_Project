@@ -1,0 +1,41 @@
+ This curve is parameterized in the following manner, with t:.{\displaystyle t:.}
+
+
+x(t)=5cos⁡t−2sin⁡2t+3cos⁡3t{\displaystyle x(t)=5\cos t-2\sin 2t+3\cos 3t}
+
+
+y(t)=5sin⁡t+2cos⁡2t−3cos⁡3t{\displaystyle y(t)=5\sin t+2\cos 2t-3\cos 3t}
+
+The graph above shows the curve in question. Using the normal techniques of calculus, we would have to split the integral into several smaller integrals - a needlessly tedious task. Using Green's theorem, however, we recognize that the area enclosed by the curve is completely determined by the values on the curve. 
+;
+, This is a problem that is easier done using the loop integral instead of the area integral. Since Green's theorem equates these two, what we find is that by setting this quantity to 1, the loop integral equals the area enclosed by the curve.
+
+Let's choose F=xj.{\displaystyle {\mathbf {F} }=x{\mathbf {j} }.} Other choices work as well (see the tips), but we want our vector field to be as simple as possible. Then Green's theorem equates the two integrals below.
+
+
+∫DdA=∮Cxdy{\displaystyle \int _{D}{\mathrm {d} }A=\oint _{C}x{\mathrm {d} }y}
+
+
+
+
+, This differential is easy to find - we simply take the derivative of y(t){\displaystyle y(t)} as defined above. This step parameterizes the integral in terms of t{\displaystyle t} with bounds at 0{\displaystyle 0} and 2π.{\displaystyle 2\pi .}
+
+
+dy=(5cos⁡t−4sin⁡2t+9sin⁡3t)dt{\displaystyle {\mathrm {d} }y=(5\cos t-4\sin 2t+9\sin 3t){\mathrm {d} }t}
+
+
+∫02π(5cos⁡t−2sin⁡2t+3cos⁡3t)(5cos⁡t−4sin⁡2t+9sin⁡3t)dt{\displaystyle \int _{0}^{2\pi }(5\cos t-2\sin 2t+3\cos 3t)(5\cos t-4\sin 2t+9\sin 3t){\mathrm {d} }t}
+
+
+, Instead of multiplying everything out and evaluating manually, we use the identities listed in the Preliminaries section of this article to speed things up. These identities allow us to quickly judge which integrals go to 0 and which do not. Cosines want to match up with cosines, sines want to match up with sines, and the coefficient inside the argument must be the same too.
+
+For example, the term 5cos⁡t{\displaystyle 5\cos t} is present in both parentheses. This means that it will contribute to the integral. The contribution depends on the product of their coefficients. In this case, it is 25, so this contribution will be 25π.{\displaystyle 25\pi .} 
+
+The same type of evaluation can be seen with −2sin⁡2t{\displaystyle -2\sin 2t} and −4sin⁡2t.{\displaystyle -4\sin 2t.} We see that sin⁡2t{\displaystyle \sin 2t} is present in both of these expressions, so the contribution from this is 8π.{\displaystyle 8\pi .}
+
+The other terms do not match up with any other terms. Therefore, the integral will simply be the sum of these individual contributions.
+
+
+∫DdA=25π+8π=33π{\displaystyle \int _{D}{\mathrm {d} }A=25\pi +8\pi =33\pi }
+
+

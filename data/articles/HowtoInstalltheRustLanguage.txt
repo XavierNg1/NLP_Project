@@ -1,0 +1,11 @@
+ Most developers prefer to use rustup to install Rust as it is the easiest method of doing so. With it, people using Unix will be able to install Rust using just one command, while Windows users simply have to run an executable file.
+
+For people running Unix or Linux, run curl https://sh.rustup.rs -sSf | sh to download and run the installer. Once downloaded, the installation will begin immediately.
+For people running Windows or another platform, you can find the installer for your device on the official website.;
+, Once the installer has been run, you will be presented with three options: proceed with, customize or cancel the installation. The first option will go forward with the installation using all of the default options. If you choose to customize the installation, you will be presented with the following three questions.
+
+What is your default host triple?
+What default toolchain should be used? Here, you can choose between stable, beta and nightly.
+Should the PATH variable be modified? If you choose yes, Rust will be added to the PATH automatically, thus eliminating the need to do so yourself.
+By pressing enter, you can skip a question and leave it with its default value.
+ After the installation is finished, you will be presented with the message "Rust is installed now. Great!". This will tell you if the installation was successful., To test to see if your Rust installation was successful, open your terminal and type rustc -V. This command should print out the version of rustc you are using. If you get an error stating that the command was not found, you may need to add the Cargo bin directory to the PATH manually. This folder should be located at ~/.cargo/bin on Linux systems., As a final test, attempt to create a new Rust project using Rusts package manager, Cargo. To do this, run cargo new --bin in your terminal. If all goes well, you should have a new directory with the specified name containing a configuration file and a directory titled "src", proving everything is working as it should.

@@ -1,0 +1,17 @@
+ When you enter a website address in your browser, your computer contacts a domain name system (DNS) to determine what the actual IP address of the website is. This allows your browser to connect to the website. The "hosts" file allows you to override anything the DNS sends you. When you block a site using the "hosts" file, you're actually redirecting traffic to a blank page on your local computer.;
+, Many antivirus programs prevent anything from making changes to the "hosts" so that viruses can't reroute you to different sites. You'll need to disable your antivirus for a few minutes while you make the necessary changes to the "hosts" file.
+
+
+In Windows 8 and 10, you'll need to add the "hosts" file to the Windows Defender exclusions list. In these versions, Windows Defender will automatically revert your "hosts" files when it detects changes. Open the Windows Defender utility (search for it on the Start screen or menu), select "Settings", and find the "Exclusions" section. Add your "hosts" file to the exclusions (see the location in Step 5), but be aware that this leaves you a little more vulnerable to adware., You can find this in the "Accessories" category. If you're using Windows 8, you'll find it in the "Windows Accessories" category of the Apps screen.
+ If you aren't logged in as an administrator, you'll be prompted for the administrator password. You'll need administrator access to change this file.
+ Click "File" → "Open". Click the "Text Documents" drop-down box and select "All Files". Navigate to C:\Windows\System32\drivers\etc, changing C: to whatever drive letter you have Windows installed on. Select "hosts" to open it. If you don't see anything in the \etc folder, switch the view from text documents to all files.
+ Place your cursor at the end of the last line and press ↵ Enter to start a new one.
+ This tells the computer that the following website will instead load 127.0.0.1, which is a blank local page.
+ You don't need to include the http:// part of the address. For example, if you wanted to block Twitter, the entire line would look like the following:
+
+
+127.0.0.1 www.twitter.com
+
+, You can add as many lines as you'd like. Just make sure that each line starts with 127.0.0.1.
+ If you didn't close your antivirus, you may be prompted to confirm that you want to accept the changes. The websites that you listed will now be blocked for all users on that computer.
+ Anyone with the administrator account can make changes to the "hosts" file. If everyone using your computer uses the same account to log in, the person you're blocking the websites for can easily change the file back. To prevent this from happening, each person should log in with their own standard account, and the administrator password should be unknown to anyone but you.

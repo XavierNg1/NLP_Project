@@ -1,0 +1,8 @@
+ This is the simplest method. Utilizing the power of the apache module mod_rewrite, however, you can match specific patterns for entire folders and redirect them to their new URLs without having to go through every PHP script. Pages with static HTML will mean that it is not practical to use javascript or META tags for redirection.;
+, If your web server does not have mod_rewrite installed, read over the apache documentation for installing modules. It will usually require you to recompile apache with the option –enable-module=rewrite or --enable-module=most.
+ Most apache installations will have mod_rewrite installed by default. For example, if a server is running FreeBSD, a mod_rewrite is included by default when installing from the ports collection. Once it is installed, you can verify it is working by adding this line to your apache configuration file or your .htaccess file:
+
+
+RewriteEngine On
+
+,

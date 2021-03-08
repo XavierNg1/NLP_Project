@@ -1,0 +1,73 @@
+ It will give you instructions on creating a .mc file in the cf/cf directory. Your mailserver.mc file will typically look something like:
+
+divert(-1)dnl
+#
+# This file contains the global definitions for yourdomain.com
+#
+divert(0)dnl
+VERSIONID(`@(#)mailserver.mc 1.0 (yourdomain.com) 5/1/97')
+OSTYPE(solaris2)dnl
+DOMAIN(yourdomain.com)dnl
+FEATURE(`virtusertable', `dbm /etc/mail/virtusertable')dnl
+MAILER(local)dnl
+MAILER(smtp)dnl
+
+Your actual OS will be substituted for solaris2.
+, The virtual user table is the key to all of this.,, This is explained in detail in the Sendmail book: § 19.6.28 of the 2nd edition, or § 4.8.51 of the 3rd edition; an overview is given here. The table is a database that maps virtual addresses into real addresses. You create a text file where each line has a key/value pair, separated by a TAB. For example:
+
+Example 1:
+
+joe@yourdomain.com jschmoe
+jane@yourdomain.com jdoe@othercompany.com
+@yourdomain.com jschmoe
+
+In this first example, the address joe@yourdomain.com will be mapped to the local user jschmoe; jane@yourdomain.com will be mapped to the remote user jdoe@othercompany.com, and anything else coming in to yourdomain.com will also go to jschmoe.
+
+
+
+
+
+Example 2:
+
+joe@yourdomain.com    jschmoe%3
+bogus@yourdomain.com &npsp;  error:nouser No such user here
+list@yourdomain.com    yourdomain-list
+@yourdomain.com    %1@othercompany.com
+
+In this second example, the address joe@yourdomain.com will be mapped to the local user jschmoe%3 (see note 3 below for an explanation of what the %3 means), the address bogus@yourdomain.com will return the indicated error, the address list@yourdomain.com will be mapped to the local user yourdomain-list (which you would use the aliases file to ultimately resolve) and every other user at yourdomain.com will be mapped to a remote user of the same name at othercompany.com.
+ To prevent this, you must use either a catch-all key or an explicit key for sam@yourdomain.com; the error:nouser example above may be useful in this instance., Have the virtual address resolve to a local alias, then have the local alias resolve to the desired set of addresses. For example, in the virtual user table:
+
+joe@yourdomain.com localjoe
+then in the aliases file:
+
+
+localjoe: joe@othercompany.com, jane@othercompany.com
+In the above example:
+
+joe@yourdomain.com jschmoe%3
+
+
+
+
+, In general, +detail means that when Sendmail gets an address like user+detail@domain, then if domain is in class w (see step 7 below), sendmail checks to see if user+detail can be resolved, then falls back to just plain user if not. Thus all of:
+
+joe@yourdomain.com
+joe+foo@yourdomain.com
+joe+reallylongextrapart@yourdomain.com
+
+
+would all match the above entry, with %3 preserving the +detail part of nothing, +foo and +reallylongextrapart respectively.
+
+
+
+
+Multiple domains are allowed, and virtual addresses in each domain are independent. So for example, you could have:
+
+joe@yourdomain1.com localjoe
+joe@yourdomain2.com joe@othercompany.com
+joe@yourdomain3.com localjoe
+joe@yourdomain4.com error:nouser No such user here
+
+
+
+, But we're getting ahead of ourselves; that's the next step...

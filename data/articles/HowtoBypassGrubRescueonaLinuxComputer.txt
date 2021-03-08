@@ -1,0 +1,12 @@
+ Once the command prompt shows up, type "ls".  This command should show a list of partitions that look like this: (hd0), (hd0,msdos1), (hd0,msdos2), (hd0,msdos3), etc.  To find a partition's filesystem, type "ls (name partition you want to see)".  
+
+An example would be "ls (hd0, msdos5)".  The partition you want to find should have a file system of ext2 or something similar to that.  Most, if not all of the others should have an unknown file system.
+For the purposes of this article, "(hd0,msdos6)" will be used to represent the correct partition. ;
+, Once you find the partition with the ext2 file system, you will want to find the Grub/Grub2 folder.  This will require a little more work than the previous step.  First, type "ls (hd0,msdos6)/".  Do not forget that slash!
+
+With the slash right behind it, it should display all the folders contained within the partition.  You will want to search through them one by one until you find the Grub or Grub2 folder.  (Sometimes, you may end up being extremely lucky and have the grub/grub2 folder displayed immediately.  If you aren't, you will have to a bit more searching.)
+Search through the other folders. Type "ls (hd0,msdos6)/foldername/".  This will display all subfolders within the selected folder.  If you see a "boot" folder, search through that one first, it's the most likely one to contain the files. Continue to search through the folders until you find one that is called "grub" or "grub2". Once you find it, write the path down and continue on.
+ Now that you have located the grub/grub2 files, you are now ready to boot up.  Simply type "set prefix=(hd0,msdos6)/PathToGrubFiles", "insmod normal", then "normal".  Again, this will be different for every computer.  
+
+For example, you may have to type "set prefix=(hd0,msdos6)/grub2/  insmod normal  normal  ", or "set prefix=(hd1,msdos6)/boot/grub/".
+

@@ -1,0 +1,10 @@
+ BEWARE. For example, Fujitsu laptop CD's are only used to restore the HDD to its original factory state! Fuji will not give you a XP CD to 'recover' the hard disk, only to 'restore' it. Nice huh?;
+, Well, yes, it's expensive, but better than having to use the OEM's restore CD and lose all your data.
+
+
+IMPORTANT: if you've got Windows XP SP2 installed, you CANNOT use a Windows XP SP1 CD. The recovery console from the SP1 CD will not accept even the correct admin password when run on a Windows XP SP2 HDD. You must run the recovery console from a modern SP2 CD, then you'll be able to correctly login to your Windows XP install on the HDD.
+ On some PC's you'll have to hit DEL on reboot to enter the BIOS and select boot from CD ROM. Other PCs you hit F12 while booting up.
+ Eventually you will be prompted to select between Setup Windows and Repair Windows. Hit 'R' for Repair Windows. The RC (Recovery Console) will look for existing Windows XP installs to repair. Usually you have just the one, listed by the RC after it has scanned your disk, so type '1'. If the RC doesn't find any Windows Installs...you're in trouble. Note: Windows RC can find a Windows install when Windows Setup can NOT find one, so the RC seems more low level and reliable.
+, You won't be able to access any folder other than C:\Windows and C:\ top level. The next two steps are probably only safe if you have a single partition on the whole disk.
+ This re-writes the boot record.
+,,,,,,

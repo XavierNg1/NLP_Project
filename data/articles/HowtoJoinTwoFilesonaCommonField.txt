@@ -1,0 +1,29 @@
+ For example:
+
+
+File One
+
+Name: customer_info.csv
+
+Layout: customer_number,name,favorite_store,email_address
+
+
+
+
+File Two
+
+Name: customer_transactions.csv
+
+Layout: customer_number,total_purchase_number,total_purchase_amount
+
+
+;
+, In this case, choose the field corresponding to "customer_number" in each file.
+
+$ sort -t, -k1,1 customer_info.csv > customer_info_sorted.csv
+$ sort -t, -k3,3 customer_transactions.csv > customer_transactions_sorted.csv
+
+,
+
+$ join -t, -1 1 -2 3 customer_info_sorted.csv customer_transactions_sorted.csv > customer_join.csv
+

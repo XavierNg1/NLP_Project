@@ -1,0 +1,42 @@
+ You can use any image file to create an icon, but it should be at least 256 X 256 px large. This will allow it to scale well between all the different icon sizes. It doesn't matter if the image contains things you don't want to include in the final icon; you will be deleting everything you don't want to keep.
+
+
+Keep in mind that icons are square, so your image should fit well into a square. If it is too long, the icon will likely look squished.
+If you are creating Mac OS X icons, they can be 512 X 512 px in size.
+You can create your own images from scratch using your favorite drawing software or you can use any photo, drawing, or other image file.;
+, In order to create an icon file, you will need a slightly more powerful program than Paint. You can use Photoshop, but free image editors such as GIMP and Pixlr will work perfectly well.
+
+
+This guide uses GIMP, as it is a free program available on all operating systems. The process is very similar in Photoshop and Pixlr.
+ Open the downloaded or created image using GIMP. The image will appear in a window in the middle of your screen.
+ The alpha channel is a layer of transparency. This will allow the icon to have a transparent background when you erase the parts of the image you don't want. To add an alpha channel, right-click on the layer in the Layers window on the right side of the screen. Select "Add Alpha Channel".
+ The Quick Mask will allow you to easily get rid of the parts of the image you don't want to keep. To insert the Quick Mask, press ⇧ Shift+Q. A red layer will appear over the image.
+ Select the Eraser tool from the Toolbox window on the left side of the screen. Use the tool to erase the red layer over the part of the image you want to keep. For example, if you have an image of a phone lying on a table and want to use the phone as the icon, erase the red layer from the phone only.
+
+
+Use the Tool Options tab in the Toolbox window to adjust your eraser size. You can also zoom in to ensure that you erase exactly what you want.
+When you erase the mask, you will only be removing the mask, not the image beneath it.
+ Once you are finished clearing the mask off of the part you want to keep, press ⇧ Shift+Q again to remove the mask. The part of the image that you erased will be selected.
+ Press Ctrl+I or click Select → Invert. This will select everything in the image except the part you erased the mask off of. Press Del to delete the selection, leaving just the subject of your icon.
+ Click Image → Canvas Size. In the window that appears, click the chain icon to unlink the width and the height. Change the canvas size to a size that shows the subject well, and ensure that both width and height are set to the same number.
+
+
+Use the Offset values to center the image in your new canvas before clicking the Resize button.
+Once you've resized the image, right-click on the layer and select "Layer to Image Size". This will change the layer boundary to match the canvas size.
+ If you want, you can use GIMP's color tools to change the coloration of the image. The easiest way to do this is to click Color → Colorize and then play with the settings until you find the color you feel looks best.
+ The final step in creating an icon is ensuring that the image supports all the different icon sizes. This is essential if you want to be able to use the icon in different areas of the operating system and want them to scale when icon size is increased or decreased.
+
+
+Copy the layer. Click the Layer in the Layers window and press Ctrl+C.
+Scale the original layer. Open the Scale tool by pressing ⇧ Shift+T and change the image scale to 256 X 256 px. Click Image → Fit Canvas to Layers. (Note: if you are creating the icon set for OS X, start with a 512 X 512)
+Create the first copy. Press Ctrl+V to paste the layer. Click Layer → To New Layer. Open the Scale tool and change the size to 128 X 128.
+Create the second copy. Press Ctrl+V to paste the layer. Click Layer → To New Layer. Open the Scale tool and change the size to 48 X 48.
+Create the third copy. Press Ctrl+V to paste the layer. Click Layer → To New Layer. Open the Scale tool and change the size to 32 X 32.
+Create the fourth copy. Press Ctrl+V to paste the layer. Click Layer → To New Layer. Open the Scale tool and change the size to 16 X 16.
+ You should have 5 layers, each one with an image smaller than the last. If any of them look blurry, open the Sharpening Tool by clicking Filters → Enhance → Sharpen. Adjust the slider until the image is clearer.
+ Click File → Export. In the Export Image window, change the extension in the top field to ".ico" and choose a location to save the icon. A window will appear, asking if you want to compress any of the layers. Check the box to compress the two biggest layers, unless you are using Windows XP., Once you've exported the image into .ico format, you can use it to replace the icon for any file or folder you'd like.
+
+
+See this guide for changing the icons on your Windows computer.
+See this guide for changing the icons on your Mac OS X computer. You will need to use a free online converter to change the ICO file to an ICNS file (Mac's icon file format).
+

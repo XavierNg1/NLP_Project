@@ -1,0 +1,61 @@
+ The compound annual growth rate (CAGR) is the mean annual growth rate of an investment over a defined period of time. The defined period of time is typically more than one year. It can either be calculated with a mathematical formula or found using spreadsheet software, such as Microsoft Excel. You can also find CAGR calculators on the internet., The mean is the mathematical average of two or more numbers.The formula for CAGR calculates the average annual growth of an investment.
+
+ For example, suppose you invested $10,000 in stocks in 2012, and the value grew to 14,000 in 2013, to $15,000 in 2014, and to $19,500 in 2015.  
+
+ The formula for the CAGR would calculate the average amount by which the stock’s value grew each year.
+
+ The CAGR represents how much an investment would have grown each year as if it had grown at a steady rate. However, investments don’t grow at a steady rate. Rather, they experience peaks and valleys. The CAGR averages all of these changes in value., The growth rate is the amount by which an investment increased in value over a specific period of time. In this case, it refers to how much an investment has grown in a year. Calculations of historical growth rate are often used for estimating future growth.The CAGR does not measure what happened in one year. Rather, it refers to the average annual change in an investment over a period of several years.  
+
+
+, The term compound refers to the way that compounded interest investments grow exponentially. Investments generate earnings. These earnings are then reinvested and generate earnings of their own. As this process continues over time, investments can continue to grow, even if you don’t add any money to them.In other words, compound interest differs from simple interest in that interest is earned both on the original investment and interest earned, rather than simply on the original investment. 
+
+
+,  In order to calculate the CAGR, first you need to define the period of time for which you want to do the calculation.  Next, you need to know the beginning value of an investment.  Then, find out the ending value of the investment for the time period.,  Divide the ending value by the beginning value.  Then raise the result to the power of 1 divided by the number of years in the time period.  Finally, subtract 1 from the result.Raising a value to an exponent is done on a calculator by entering the first value, pressing the exponent button (usually represented as xy{\displaystyle x^{y}}), then entering the exponent value and pressing enter. Alternately, you can type the expression into Google using the "^" symbol between the base number and exponent. The search engine will solve it for you. 
+
+
+, In the example above, the period was three years, from 2012 to 2015.  The beginning value was $10,000.  The ending value was $19,500.
+
+ Use the following formula: CAGR=((endingvalue/beginningvalue)1numberofyears)−1{\displaystyle CAGR=((endingvalue/beginningvalue)^{\frac {1}{numberofyears}})-1}
+
+ Using the above formula, CAGR=(($19,500/$10,000)13)−1{\displaystyle CAGR=((\$19,500/\$10,000)^{\frac {1}{3}})-1} 
+
+This equals (1.950.333)−1{\displaystyle (1.95^{0.333})-1} 
+
+This then equals 1.2493−1{\displaystyle 1.2493-1} 
+
+Which solves to 0.2493, or 24.93 percent.
+ Create rows and columns in the spreadsheet to display the year and the investment's value that year. Once you have the data entered, create a row where you will enter the formula for the CAGR. Once you enter the formula, Excel will perform the calculations for you.Using the above example, in cell A1, you would enter the word “YEAR.” Then, in cell B1, you would enter the year 2012. Then you would enter the years 2013, 2014 and 2015 in cells C1, D1 and E1.
+
+ In cell A2, you would enter the word “VALUE.” Then in cells B2, C2, D2 and E2, you would enter $10,000, $14,000, $15,000 and $19,500.
+
+ In cell A3, you would enter the letter “n,” where n equals the year count.  In cell C3, under the information for 2013, you would enter the number 1. Then enter the number 2 in cell D3 and the number 3 in cell E3.
+ In cell E4, enter the formula ((E2/B2)^(1/E3))-1. Cell E2 is the ending value, $19,500.  Cell B2 is the beginning value, $10,000. Cell E3 is the number of years in the time period, 3. The calculated CAGR for the time period is 24.93 percent., Instead of entering the formula used above, you can use the POWER function to calculate the CAGR. It will result in the same answer, but some Excel users prefer to use functions instead of entering manual formulas.In cell E4, enter the formula POWER(E2/B2,1/E3)-1. The POWER function returns the result of the ending value divided by the beginning value, raised to the power of 1 divided by the number of years. The answer is the same, 24.93 percent.
+ The RATE function returns the interest rate over the time period in question. This function looks a bit complicated. But once you understand the elements, then you can quickly create this function on the spreadsheet. Some people like this method because it expresses the result as a percentage instead of as a decimal.The first element in the function is nper, which is the number of years, which is in cell E3.
+
+ The next element of the function is pmt. This would be the payment made each period on a loan or annuity, but we don’t need that to calculate the CAGR. Just leave that space blank.
+
+ The next element is the pv, which stands for present value. But it refers to the beginning value of the investment, which is in cell B2.
+
+ The last element is fv, which is the future value. This refers to the ending value of the investment, which is in cell E2. 
+
+ In cell E4, enter the formula RATE(E3, ,-B2,E2). You need to enter the beginning value, cell B2, as a negative number.  Otherwise you will get a #NUM! error.
+
+ Using this formula, you will get the same answer, 24.93 percent.   
+
+
+, Suppose you have money in a savings account with a fixed annual interest rate and you also stock in a portfolio with a varying return. Use the CAGR to compare the growth rate of the portfolio investment over time with the growth rate of the savings account.  This can help you to decide which investment is has the higher rate of return over time.For example, suppose you put $5,000 in the savings account for three years, and it had a 1 percent fixed annual interest rate.  At the end of the third year, you would have $5,151.50.
+
+ Suppose the market was very volatile over the same time period, and you had a $3,000 portfolio investment. The value varied widely over the three years, but at the end of that time period, the investment would be worth $3,200.
+
+ If you calculate the CAGR on the portfolio with the formula -1, you get a CAGR of 2.17 percent.  
+
+ Compare the CAGR of the portfolio to the savings account. Even though the market was so volatile, a CAGR of 2.17 percent is a better return than the 1 percent growth offered by the savings account.
+ Looking at the CAGR of different metrics over time might provide a clearer picture of a company’s strengths and weaknesses. For example, suppose the CAGR of a company’s market share was 1.82 percent over a five-year period.  But suppose in the same time period, their customer satisfaction CAGR was -0.58 percent. This discrepancy highlights areas in which the company could improve., The CAGR artificially smooths the rate of growth of an investment. Don’t assume that the rate of growth was really that steady. Remember that the market can be volatile. Check the values that go into the CAGR each year to understand how the market fluctuated during the time period in question., No matter how steady the CAGR appears, even if you have checked the annual values, never assume that steady historical growth implies steady future growth. Market volatility and other factors may affect the future growth of the investment. Use other metrics along with the CAGR to evaluate the expected rate of growth of your investments.,  Depending on the time period you analyze, you can get very different results for the CAGR.  Once you calculate the CAGR for a specific time period, look further back in time to see if changing the time period significantly alters your result. You may find a much more modest CAGR over a longer period of time.For example, suppose over the course of five years, a $100,000 investment lost money in the first two years, but then grew significantly in the last three years.  The CAGR for the last three years would be high, because the investment grew.  But if you look at it over a five-year period, you include the reductions in value, and the CAGR would be more modest.
+
+ For example, suppose the $100,000 decreased to $67,000 in year one and to $43,000 in year two.  Then in year three it started to recover and grew to $75,000, then to $92,000 in year for and to $125,000 in year 5.
+
+ If you calculate the CAGR for the last three years, you would use the formula -1 = 42.72 percent.
+
+ However, if you calculate the CAGR for the entire five years, you would use the formula – 1 = 4.27 percent.  This is far more modest.
+
+

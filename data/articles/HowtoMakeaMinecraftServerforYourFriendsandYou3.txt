@@ -1,0 +1,9 @@
+ Open the folder containing the minecraft_server.jar file. Create a new text file with TextEdit. Set the format to “Make Plain Text”. Copy the following lines into the file:#!/bin/bash
+cd "$(dirname "$0")"
+exec java -Xmx1G -Xms1G -jar minecraft_server.jar
+
+
+If you wish to assign more RAM to the server, change 1G to 2G or higher, depending on your system.
+ Save the file as “start.command”. Open the Terminal in the Utilities folder. You will need to grant execute permissions to the start.command file that you just created. Type “chmod A+x” into the Terminal, then drag and drop the start.command file into the Terminal window. This will provide the correct path to the file. Press Enter to save the changes to the file.
+ Opening start.command will now start the Minecraft server.
+

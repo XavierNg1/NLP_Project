@@ -1,0 +1,3 @@
+ You must ping a non-valid IP address, otherwise a computer might actually reply, and the delay won't be long enough. You cannot ping a non-valid hostname, such as madeup.example.com otherwise error messages will be shown instead of a delay.
+ The -n 1 parameter adds a second ping to the original command. The wait between the two pings, designated by -w 30000, is the delay. The delay has to be entered as milliseconds.Putting >nul at the end will send the command's output to the "Null Device".
+

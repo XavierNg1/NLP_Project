@@ -1,0 +1,11 @@
+ Once you've opened your Network Topology on Cisco Packet Tracer, access your network and identify the components of your network, for example; Servers, Routers, End Devices, etc.;
+, Access the cables section and connect completely and correctly the cables between the network in order to ensure connectivity between the devices in the network using the connections table given.
+ Using the address table still, correctly and completely configure the IP addresses on all end devices. This can be done by accessing the desktop platform on each device and locating the IP configuration section. The reason for doing this is to enable the devices be on the right network.
+ After configuring the right IP addresses on the end devices, you will have to do the same on the routers and switches also, using the address table. But this time in a different way because there's no desktop platform on the routers and switches. You will have to access the configuration panel on both devices and this can be done in two ways:
+
+
+Click on the device and open the Command Line Interface (CLI) and then type in the right commands to configure the right addresses for the router using the addressing table.
+Use a console cable from an end device and connect it to the device you wish to configure and access the terminal platform on the end device and it will take you to the device's Command Line Interface and then you type in the commands in other to configure the right addresses.
+ After configuring the IP addresses, you will need to configure the default gateway also. The reason for this is so the end devices would know what network they are operating on. You can find the default gateway either in the addressing table (if given) or in the network topology.
+ After configuring the addresses, you will have to test connectivity by opening a command prompt window on the end devices and try pinging the address which the network operates on. If it gives you a reply, it means your network was configured correctly.
+

@@ -1,0 +1,16 @@
+ Website that overuse Flash or Java Applet can take much longer to load. Try not to rely on these for your basic web page, and don't make Flash videos play automatically.
+
+
+Video popups are a big culprit in slow web pages as well, and may irritate your users.
+ Large, high quality images can slow down your website considerably, and may burn through your server hosting space as well. Use Photoshop, or a free image editing program such as GIMP, to optimize your photos for the web. In Photoshop, you can simply click File → Save for Web. If editing images manually, you can reduce image resolution to 72 dpi, and set the color space to sRGB., GZIP compresses text files by locating similar strings of text and temporarily replacing them with smaller strings, to make files smaller while sending between the server and the user's computer. Follow these instructions to enable GZIP.
+ If you are using Javascript, frequent repetition of the same request can slow down a browser's performance considerably. Add a debounce function to prevent another function from firing more frequently than you specify. Limiting a function to firing once every 250 milliseconds is a good starting point., Minification removes all unnecessary characters from code, typically white space, new lines, and comments. Use Closure Compiler to minify Javascript for free, or find an optimizer for the type of code you are working with.
+
+
+You will still be able to edit your code with the human-readable organization. The code is minified only when it is uploaded to the server.
+ Make sure you are using the latest version of PHP, so you can benefit from the latest improvements. While the PHP developers try to keep the language backwards-compatible, you will probably need to spend some time updating your code in accordance with the latest changes.
+ If your web page caches files locally, your server won't receive a new request every time that user visits your site again. If you have a high traffic website, caching can be a significant improvement. Search online for a web page cache test to find out whether your site is caching images and files, and research ways to improve your caching method.
+ Third-party programs such as Google PageSpeed or Yahoo YSlow analyze your web page and attempt to find areas that could be improved. Some may automatically optimize parts of your website for you.
+
+
+If you have a high-traffic website, consider hiring a service that both optimizes and protects you from DDOS attacks.
+

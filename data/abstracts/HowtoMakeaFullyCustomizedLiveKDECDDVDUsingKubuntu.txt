@@ -1,0 +1,84 @@
+
+Install KDE Kubuntu.
+Install Ubuntu Server;
+
+Normally when you install Kubuntu you download one of the Kubuntu ISO images and make the CD and then install it on the system.
+Update the Installation
+
+sudo apt-get update
+sudo apt-get upgrade -y
+
+,
+Install X-Server, KDM, KDE-Core Pmount and Synaptic;
+
+Obviously we need to install the X-Server and KDE.
+Use Synaptic To Install Core Software
+
+Add the following to your sources.list file
+
+# Remastersys
+deb http://www.remastersys.klikit.com/repository/ remastersys/
+
+
+We need some software installed to handle key factors like sound automount and many other things.
+Remove the Server Kernel
+
+There is one thing we have to clean up when using this install method, and that is the kernel.
+Install Additional Packages
+
+NOTE: You may want to use Remastersys to create a core system ISO image before installing more packages.
+Create A Test Account To See Your Default Setting Changes
+
+Use your current account as the working account where we do all the changes, editing and configuration changes.
+Set Default Kicker Options
+
+NOTE: If you plan on using kicker_kickoff_1, or any other menu system outside of the standard KDE Menu, in your distribution install it now before continuing with the rest of this step.
+Select Your Default Cursor Theme;
+
+Setting of the default cursor is much easier now.
+Setup the Desired Default Desktop Icons
+
+To setup default Desktop Icons (The icons every new user will see when they first login) simply setup icons on your working desktop, use the Kiosk Admin Tool and click on 'Setup Profile' Select 'Desktop Icons' and click 'Setup Desktop Icons' then click 'Save'.
+Set the Default Icon Theme
+
+To set default Icons in KDE so that all new (first time users) start with your selected Icon Theme right click on the desktop and select run command.
+Set Default Background Image
+
+Setting the default background image hand edit the following:
+
+/etc/kde-profile/default/share/config/kdesktoprc
+Here we are concerned with two entries:
+
+Wallpaper=
+WallpaperMode=
+
+
+In my case the entries look like this:
+Wallpaper=/usr/share/wallpapers/Jewell.png
+WallpaperMode=Scaled
+
+
+Kiosk Admin Tool will also do this but it's a bit more time consuming.
+
+,
+Set the Default Theme and Color Scheme
+
+The absolute best way to setup and install a color scheme is to use the Kiosk Admin Tool.
+Set the Default K splash Theme
+
+You will have to create the file that sets the default K-Splash theme.
+Set the KDM Theme
+
+Unfortunately the kdmrc file on this setup is bad.
+Login Manager Settings
+
+Like KDM this is a global setting so it's a quick and simple one.
+Set Default Sounds
+
+You will have to create the file that sets the default sounds.
+Clean Up For ISO Creation
+
+Once you have tested and are satisfied with everything then remove and delete the test user account.
+Create the ISO Image
+
+Using Remastersys is pretty straightfoward.

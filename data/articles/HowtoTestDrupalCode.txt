@@ -1,0 +1,69 @@
+ Make sure you're logged into your Drupal website as an administrator. Using the administrative menu, go to the 'Modules' page, find 'Simpletest', and click to enable it. It should already be installed with the Drupal core.
+ In any Drupal website, all core modules and many contrib modules that are installed will already have many tests written for Simpletest. You can see all of them by going to 'Configuration' > 'Development' > 'Testing'. Looking through them should give you a better idea of what you can test and how you can label your tests.,, In your module folder, add a file named 'modulename.test'. This is a PHP file that you should add all your tests to. Then in your .info file, tell Drupal about the file using files[] = modulename.test.,
+
+
+
+
+<?php
+/**
+ * @file
+ * Description of file.
+ */
+ 
+class ModuleNameUnitTestsTestCase extends DrupalUnitTestCase {
+ 
+  public static function getInfo() {
+    // Note: getInfo() strings should not be translated.
+    return array(
+      'name' =>         'Functions tests',
+      'description' =>  'Test that various functions work properly.',
+      'group' =>        'Module Name',
+    );
+  }
+ 
+}
+
+
+
+
+, Imagine that you've written this function, and you'd like to test that it works properly:
+
+
+
+
+function negate($int) {
+  return $int * -1;
+}
+
+
+
+
+You could write a test (in your modulename.test file, after the getInfo() method) like this:
+
+
+
+
+public function testNegates() {
+  $result = negate(5);
+}
+
+
+
+
+, At the moment, the method in the previous step doesn't actually check the result of the test in any way. To make sure that the value is what we expect, we write an assertion. In this case, we'll add assertEqual() to our method to check that the result equals -5. Also, we'll add a message and group to our assertion, which will be helpful when we're running the test later.
+
+
+
+
+public function testNegates() {
+  $message = "negate() should return a negative integer.";
+  $group = "Calculation";
+  $result = negate(5);
+ 
+  $this->assertEqual($result, -5, $message, $group);
+}
+
+
+
+
+, In Drupal, go back to the Testing page. Among the list of tests, you should see the name of your module (if 'group' in your getInfo() method equals your module name). If you don't see it, you might need to flush the Drupal cache (specifically, the 'class' cache). Now enable your test using the checkbox, and select 'Run tests'. After a few seconds, you should see your test, and the result! It should be red if the test failed, and green if it succeeded., You can learn more about the available assertions on the DrupalTestCase page in the Drupal API.

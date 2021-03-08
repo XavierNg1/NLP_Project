@@ -1,0 +1,48 @@
+
+
+
+
+ 
+
+
+Answer the question: a mashup of what? Hint: Plotting markers on maps is probably the easiest place to start. It might just be the best delis in your neighborhood. While you could go for something more complex with multiple data sources: maps + photos + bookmarks + more, you may want to keep it simple to start.
+This helps define what APIs and tools you'll be looking at: maps, news, auctions, products, etc. Browse this site's API Database and sort by Category to get a sense of API types. You can also browse the Mashup Listing to see which interesting applications have been built using which APIs.;
+,
+
+
+What is the source of your data? This can drive the APIs you'll use. For example, if you want to do something with your photos on Flickr or sale items on eBay, then those vendors APIs are the likely candidates. Or, you may be inputting the data yourself such as with simple map markers. In which case your options are more open.
+(For the purposes of this Guide, I won't spend time distinguishing between a true 'mashup', thus two or more data sources, and just using an API, which may mean only one external source. The exact definition of mashup is vague so no need to fight semantics at the moment.)
+
+,
+
+
+Mashups, as of today, are mostly a programmer's affair although there are some tools such as Map Builder and Wayfaring that can help you create basic maps without coding.
+
+How much of a coder are you?
+
+Maps APIs are simplest but more sophisticated APIs, such as those for conducting financially-sensitive operations like auctions, are more complex.
+
+
+
+How much time do you have?
+
+Again, development speed is inversely proportional to complexity.
+
+
+
+Do you have a server to run this on?
+
+Simpler APIs can be used from JavaScript in a web page or take specially formatted XML file as input (as shown here at Engadget). While this is indeed simple, security issues limit JavaScript's suitability for true client-only mashups. Odds are that you will need to run your application from a web server which you manage or have access to.
+
+
+
+What language will you use?
+
+This is primarily driven by what programming languages you know. While your decision may also be influenced by vendor-provided toolkits, most web APIs aim to be language-agnostic so this is less of a vendor-dictated issue than your own choice. You can use the API reference to see if an API has a language-specific toolkit (such as Flickr which has many).
+,
+
+
+Most, but not all, API providers require you to have a developer/application ID, a user account with their service, or both. Some services give you one ID for as many applications as you write while others require you to get an ID for each application that you create. While this signup may sound complicated, and for a few services it is, most of the time this takes only a minute or two to complete. As an example, take a look at the Google Sign-up Page.
+ You can also check the profile for any of the APIs and refer to resources from the reference section as needed.
+Note that this list is dynamic and will change over time so check back later for updates.
+

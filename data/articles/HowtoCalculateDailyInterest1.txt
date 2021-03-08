@@ -1,0 +1,10 @@
+ This includes the amount of money you will be investing or saving, the length of the term and the proposed interest rates. You may have several sets of variables if your intention is to compare alternatives.You will need to prepare a calculation for each alternative in order to complete your comparison.;
+, You will be entering the data from Step 1 into specific cells on the spreadsheet and then setting up formulas. Once the formulas are calculated you can easily evaluate many different alternatives.Popular spreadsheet programs include Microsoft Excel and iWork Numbers.
+You can also find free spreadsheet applications online such as Google Docs or Zoho Sheet.
+ You can expand the cell by clicking on the right line of the column number, A, B, or C, etc. (Arrows will then show that you can manipulate.) These labels are for your reference only., Convert the percent interest to a decimal by dividing it by 100. Leave cell B4 (Daily Interest) blank for now.The interest rate is usually shown as an annual figure; it will need to be divided by 365 in order to reach the daily interest rate.
+For example, if your principal to invest is $10,000, and your savings account is offering .5 percent interest, you will enter "10000" in cell B1 and "=.005/365" in cell B2.
+The number of periods determines how long your investment will remain in the account untouched, except for the compounding interest that is added. You can use a sample term of one year, which will be entered in cell B3 as "365."
+
+, Functions are special formulas offered by the spreadsheet designers to make your calculations easier. Do this by clicking first on cell B4 to select it and then by clicking inside the formula bar.Type "=IPMT(B2,1,1,-B1)" in the formula bar. Press the Enter key.
+The daily interest earned on this account, for the first month, is $.1370 per day.
+

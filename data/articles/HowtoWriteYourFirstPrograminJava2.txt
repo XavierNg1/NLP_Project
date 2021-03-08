@@ -1,0 +1,61 @@
+ In your text editor, create a new file and save it as "HelloWorld.java". HelloWorld is your class name and you will need your class name to be the same name as your file.
+ The main method public static void main(String[] args) is the method that will be executed when the programming is running. This main method will have the same method declaration in every Java program.
+
+
+
+
+
+public class HelloWorld {
+    public static void main(String[] args) {
+    }
+}
+
+
+
+
+,
+
+
+
+
+
+System.out.println("Hello World.");
+
+
+
+
+
+Let's look at the components of this line:
+
+
+System tells the system to do something.
+
+out tells the system that we are going to do some output stuff.
+
+println stands for "print line," so we are telling the system to print a line in the output.
+The parentheses around ("Hello World.") means that the method System.out.println() takes in a parameter, which, in this case, is the String "Hello World."
+
+
+
+Note that there are some rules in Java that we have to adhere to:
+
+You must always add a semicolon at the end of every line.
+Java is case sensitive, so you must write method names, variable names, and class names in the correct case or you will get an error.
+Blocks of code specific to a certain method or loop are encased between curly brackets.
+ Your final Hello World program should look like the following:
+
+
+
+
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World.");
+    }
+}
+
+
+
+
+, Navigate to the folder where you saved HelloWorld.java and type in javac HelloWorld.java. This tells the Java compiler that you want to compile HelloWorld.java. If there are errors, the compiler will tell you what you did wrong. Otherwise, you shouldn't see any messages from the compiler. If you look at the directory where you have HelloWorld.java now, you should see HelloWorld.class. This the the file that Java will use to run your program.
+ Finally, we get to run our program! In command prompt or terminal, type in java HelloWorld. This tells Java that you want to run the class HelloWorld. You should see "Hello World." show up in your console.

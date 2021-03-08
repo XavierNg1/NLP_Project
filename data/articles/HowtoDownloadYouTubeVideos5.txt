@@ -1,0 +1,12 @@
+ This free, open source Python program can download any YouTube video with a few simple typed commands. When using this method, you won't have to worry about any ads or pop-ups. youtube-dl is available for Windows, Mac, and Linux. If the command line intimidates you, try one of the other methods in this article., Open your browser and visit rg3.github.io/youtube-dl/. This is the GitHub (open source project) page for youtube-dl, where you'll be able to get all of the necessary files., The process will vary depending on your operating system:
+
+Windows - Download the Windows binary EXE file (youtube-dl.exe). You can find this on the Downloads page. Place this file in your personal folder in the Users directory (usually C:\Users\Username).
+Mac - Open the Terminal and paste the following command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)". This will install HomeBrew, which will allow you to install unofficial software. After HomeBrew has installed, type brew install youtube-dl to install youtube-dl.
+ Find the video that you want to download and open it in your browser. Leave it open for now so that you can copy the URL., If you don't have this open yet, open it now. The Command Prompt should start you in your User folder by default. If it doesn't you'll need to navigate to it (this is the same folder that you copied youtube-dl.exe to). Mac users can run the command from any location in the Terminal., Enter the following command to download the video. If you're using OS X or Windows 10, you can copy and paste the URL directly into the Terminal or Command Prompt. If you're using an older version of Windows, you'll have to type the URL out manually:
+
+youtube-dl videoURL
+For example: youtube-dl https://www.youtube.com/watch?v=KFvQ8RrInJU.
+ When you run the command, the video will begin downloading to your computer at the highest possible quality.
+
+If the command doesn't work in Windows, make sure you're in the same directory as the youtube-dl.exe file. If you followed the instructions above, this should be the location that Command Prompt starts in (usually C:\Users\Username).
+ Once the video has finished downloading, you'll be able to find it in your User or Home directory. In Windows, this will be the same location that youtube-dl.exe is located in., By default, the video should be in MP4 format, which should be playable in most video players. If you are having difficulty playing the file, try an open-source player like VLC or MPC-HC.

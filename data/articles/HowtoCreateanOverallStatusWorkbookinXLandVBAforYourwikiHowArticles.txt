@@ -1,0 +1,701 @@
+, The .xlsm means it contains macros.,,, For example, this author has two ID's because one ID only allows up to 100 articles and views to be shown using the standard in-built layout. Since more were desirable using this layout, a second ID was started. Join wikiHow if you haven't already, possibly as an Anonymous ID, just so long as you can access other's User Pages. Access in your browser https://www.wikihow.com/User:Chris-Garthwaite and go to Articles Started - View More and click on it.
+
+With your mouse, carefully select the following group of articles and views without activating them by clicking just to the left of THIS ARTICLE, then dragging down fairly slowly under control until you can complete the selection with the bottom rightmost number of views for the last article. Do command v Copy.
+ It may take a few seconds to update., It may take a few seconds to update.
+
+You can see from the data it's approaching 150 articles and 500,000 article views, skewed by a single article. In analyzing the data, attention should be paid to eliminate such skewing, while still being very conscious of it. But for the purposes of this article, it will be kept simple.
+ You will notice that those are conveniently and ever-so-nicely all live links now. Clicking on one takes you right to the article.
+
+You may want to take a second to test that feature. You'll notice a used one turns a different color, perhaps brown or wine-red. That's going to prove useful. What is not as useful is that it does not open a new tab in your browser but uses the last one used, so you may want to hit your Back button to get back to where you were, page-wise, or use History.
+ This author uses "☞", which appears as a hand with a pointing finger on my computer. You choose. Select cell A1 and Insert Name Define it as _TopLeft You can copy the finger and hand from this page for use on your own page if you like. It's just a memo to save the workbook by running one of the 2 macros. There are two in case something happens to the other.
+
+People who have suffered losing a lot of work become a bit of a fanatic when it comes to using AutoSave and frequently save their work.
+ Do the same for cell B2. For cell B1, use a lavender or hot pink. In cell B1, input Macro 09 u, and input to cell B2 Macro 10 g. Those macros will save the workbook to various folders, on this author's iMac, so you must change the pathnames and so forth to suit yourself. The macros will be done all together at the end., Format Cells Fill cells C1:C3 yellow. You can get those links from your own User Page by copying them from the browser window directly while in FireFox or Explorer or whatever and pasting them into the OVERALL STATUS workbook in Excel., Input by hand the total number of article views per each ID to the right (these hand-input totals will not agree to the worksheet totals by the amount of article views attributable to any new articles written since THIS ARTICLE, however, the total lines and lower references in this article should still be correct because new articles will not have been inserted effectively above THIS ARTICLE.
+
+You can copy all the articles for Chris Garthwaite to a separate new workbook and figure out a reconciliation if you so desire. Or, you can input the views of any articles since THIS ARTICLE as one sum to be subtracted at the left in cell A3 from Chris Garthwaite - Input and xhohx - INPUT, to arrive at a total in A6 equal to The_Total below, once the other INPUT subtotals are also brought over to A4 and A5. Enter label New Articles to cell B3 in that case and Format Alignment left.
+ Format Cells B4:C9 bold. Input to cell C6, TOTAL_per_wikiHow and in cell B6 enter the formula, =B5+B4 and format both B6 and C6 Font Red., Format it font bold red size 14 and do Insert Names Create in Right Column, OK. Even though this total does not agree with the worksheet's total by the amount of new article views after THIS ARTICLE for the Chris Garthwaite ID, you'll use the correct total wikiHow figure to do the monthly projections at right. The rest of the worksheet grand totals of Views should agree internally.,, This author realizes there are no numbers in column A yet and so you will have zeroes returned temporarily.,, then edit it so that all the B's are F's, and the sum approaches 500,000 or more.,,, Select cell C20 and Insert Name Define it as FILE_SAVE____S (that's 4 underlines at the end; 5 total).,,,,,, Format Cells for A12 Font Red, Fill Yellow, Border Red boldest outline.,, From there it will be possible to rebuild _Clear_Total_Views_to_Date if need be. These daily Article View Totals can be copied and transposed, then sorted from greatest to least value, and that should correspond to their values in _Clear_Total_Views_to_Date.,, It is quite noticeable how very often article views trend similarly on the same days of the week, also months of the year, etc. because of school and exam scheduling and other factors., Surround the cell with a red boldest border, fill it yellow and make the font bright red.,, You will start each day by transferring the data that was in Today to Yesterday via Macro 01, using command+option+j.,,,, Currently, that's A18:A158 when this article is completed, but if this is not the topmost article, then A158 will not be the bottommost cell, since a new row will have been inserted for each new article at the top, via macro.,, In the cell under the last article, enter Other. Under usual circumstances, the wikiHow numbers will not sum to the hand-input total by the amount of views of any new article views written after THIS ARTICLE. Other bugs can occur, rarely. Try refreshing the page(s) first however, several times, and give it some time -- the numbers come out around 5:15AM Pacific Time, and the squirrels at the wikiHaus are still rubbing the sleep out of their eyes I imagine!?! It does not happen very often. More typically, the page does not update from the previous day at all because of some server maintenance being done -- a day might get skipped -- please update your sheets anyway, even with zeroes for the day, because the macro has to be on the right day.,, Select the cell range H17:158 and do Edit Fill Series -1 for the step value, OK. You'll re-number for your own quantity of articles when you get all done with this and modify it for your own usage., It would take too long to have you enter each star correctly, so just enter a 1 in column I to the right of the article Prepare a Broad Working Capital or Cash Flows Budget, and Edit Fill Down 59 cells, which is currently accurate as to count if not as to article. It gives you an idea anyway and you're just going to edit in your very own, hooray!,, Notice that cells J1:J14 are blank and useful for collecting these Ready-To-Be-Relateds when you are trying to figure out which ones to gather in support of a new (or old) article.,,,, It applies as a memo to cell F5 -- about the macro's goal seeking usage within the spreadsheet's formulation.
+
+Enter to cell F1, 01. Tfr Today to Yesterday
+Enter to cell F2, AB. Paste in wH data
+Enter to cell F3, 02. Update TODAY
+Enter to cell F4, 03. Paste Views Val
+Enter to cell F5, 04. Daily Tfr All
+Enter to cell F6, 05. Insert New Article
+Enter to cell F7, 06. Weekly Update
+Enter to cell F8, 07., 08. Update Relateds
+Enter to cell F9, 09. Save Overall Status
+Enter to cell F10, 10. Save Overall Status
+Enter to cell F11, V. Find Article String
+Hide column G (set to column width 0)
+Enter to cell H1, Macro j and enter to cell I1 Mod 1
+Enter to cell H2, Macro e and enter to cell I1 Mod 6
+Enter to cell H3, Macro t and enter to cell I1 Mod 1
+Enter to cell H4, Macro b and enter to cell I1 Mod 1
+Enter to cell H5, Macro p and enter to cell I1 Mod 1
+Enter to cell H6, Macro y and enter to cell I1 Mod 2
+Enter to cell H7, Macro s and enter to cell I1 Mod 2
+Enter to cell H8, Macro n and enter to cell I1 Mod 2
+Enter to cell H9, Macro u and enter to cell I1 Mod 3
+Enter to cell H10, Macro g and enter to cell I1 Mod 3
+Enter to cell H11, Macro v and enter to cell I1 Mod 8
+Select cell range H1:I11 and Format Cells Border (individually, using the center bar) boldest red outline, Font size 16, Dark Blue, Bold.
+Select cell range H3:H11 and Format Cells Fill Yellow. Copy cell H3 and do Edit Paste Special Format to cell H1. This leaves Macro e in cell H2 separated which is because it's not currently used. It is slower than just doing the wikiHow data update manually. Select cell H2 and do Format Cells Font strikethrough. The code will be included however, in case one of you finds a way to improve upon it and edit this article.
+,,,, For now, just go to this author's bottommost article and input 3/5/13 and then select from 3/31/15 at next to top down to the bottom and do Edit Fill Series and accept whatever increment is proposed, instead of having to input the actual dates of authorship.,,,,,,, Outline in boldest red border., and under the N column average, enter in the two cells beneath it, AVERAGE Days to Write Next. One author wrote over 200 articles per year., For example, this author starts each week on the slow day of Saturday, in cell M10 because on Saturday what's actually being reported are pretty likely to be Friday night's returns when a lot of people are out on dates. If, on the other hand, your subject matter is all about dating (whereas mine is about math), Saturday might just be your heaviest traffic day! This author just likes to know what the probable low point for the week is likely to be, because that can indicate an overall strong or weak week right away. So, for example the closest Saturday to 3/31 was 3/28, so I entered 3/27/15 to cell M11. Format Cell M11 and N11 Fill canary yellow.,, This will assign the Defined Name Variable _Today_ to cell M11.,,,, Format these cells Number Date mm/dd/yy.,,,, Select cell range O1:O2 and Insert Name Create in TopRow, OK, which will create the name Pastoid for the wikiHow Total.,,,,,,,
+
+Warning: The macro is not date-dependent but instead, next-blank-cell dependent. This author is fastidious about running the macros every day, so it's not a problem, but it's possible it could be. The problem is, that =NOW() does not correspond to any of the dates at left, because =NOW() includes the time down to the fraction of a second. There's a way around that, if the author can make time for it.
+,, Format Cells Font for cell range O15:Q15 Purple and Fill light blue. Then Format Cell P15 Fill White., Select cell range O15:P16 and Insert Name Create in Left Column, OK., Those are the decimal days left until 500,000 is attained, per the goal seeking method, which employs Future Value.,,, Paste Views Val. Format Cells Fill Light Brown. Also Format Cells F1:F11 Fill light brown.
+
+Enter to cell Q28, FV of an Annuity formula ... (FV = Future Value)
+Enter to cell Q29 Number left to hit 500,000
+Enter to P28 the formula, =P32*(((1+P30)^(P16/7)-1)/P30)
+Enter to P29 the formula, =500000-MAX(O4:O11)
+Enter to P30 the formula, =AVERAGE(_AvgReturnRate)
+Enter to P31 the formula, =_Days_to_GOAL/7
+Enter to O30 the label, I rate = return rate average
+Enter to O31 the label, Weeks to go
+Enter to O32 the label, Avg Wkly "Cash Flow" Article Vws
+Enter to O33 the label, TARGET DATE FOR 500,000
+Enter to O34 the label, NOW
+Enter to P32 the formula, =AVERAGE(_AvgWklyCashFlow)
+Enter to P33 the formula, =P34+P16 and Format Cells Number Custom mm/dd/yy hh:mm AM/PM
+Enter to P34 the formula, =Now() and Format Cells Number Custom mm/dd/yy hh:mm AM/PM
+Surround cell range O28:R34 with Format Cells Border boldest red outline.
+Enter to cell Q30 and Q32 the label, CHANGE WEEKLY
+Enter to cell Q33 the label, SEEK DAILY
+Copy cell O28 to cell R30 and edit it to read, Macro s
+Enter to cell R31, (ONLY RUN ONCE)
+Enter to cell R32, Module 2
+Format Cell N4 Fill yellow.
+ Each week's end, you are to run Macro s, which copies cell range M4:04 and Edit Paste Values above the topmost last entry near Q47:S47. For example, last Friday was the 27th and the end of that week, so in Q47 is 03/27/15, in R47 is the value 27 and in S47 is the value 433726. Also, the macro shifts all this data it adds on top to, one row down. Macro s also shifts ranges _AvgReturnRate and _AvgWklyCashFlow up by one cell.,,, Enter to Q48 the formula, =Q47-7, and copy it and paste it to cell range Q49:Q147, Copy R47 to cell range R48:R147.,,, Format Cells S46:T147 Number Custom "#,##0" (w/o quotes) or Number 0 decimal place and use comma., Enter to T146 the formula, =S146-S147, and copy it and paste it to cell range T145:T47., Do Format Cells Number Percentage (2 decimal places)., Select range T47:T73 and Insert Name Define _AvgWklyCashFlow, Add (as the FV Annuity formula understands these "payments"). Select range U47:U73 and Insert Name Define _AvgReturnRate, OK. Format Cells T47:U73 Fill yellow.,, Preferably 27 weeks of data can be created. If not, start with your actuals now and this author will help you to modify Macro s to better fit your situation, given that you'll email me, please. The situation is to create averages for actual weekly Views and their actual % of total, up to 6 month's worth, steadily adding to the top of the cell range, until 6 months are reached, and then moving the 6-month range up one cell (1 week each week). Or, you can refer to the article How to Select Cells and Ranges in Excel Visual Basic and modify Macro s accordingly yourself.,
+Select cell range S1:S11 and Format Cells Fill yellow. Select cell range S1:S3 and Format Cells Border outline boldest red. The reason for the special yellow formatting is that the formula below the header needs adjustment when a new month begins.
+Enter to T2, True Avg/Day. and enter to T3, Month to Date
+Enter to U3, Projected
+Enter to V2, Over (Under), and enter to U3 Projected GOAL
+Enter to W2, 500,000 and enter to W3, Target Date
+Enter to X1 the formula, =NOW(), and Format Cells Number Date, mmmm
+Enter to X2, Projected, and enter to X3, Month
+Enter to Y1, To Date, then enter to Y2, Projected, and enter to Y3 the formula, =P34, and Format Cells for P34, mm/dd/yy
+
+,
+Enter to Q4 the formula, =IF(AND(O4<>"",P4>-360000),P4,"")
+Enter to R4 the formula, =IF(ISERR(AVERAGE($Q4:Q$10)),0,AVERAGE($Q4:Q$10))
+Select cell range P4:R4 and Edit Copy it nd Edit Paste it to cell range P5:R10
+Enter to Q11 the formula, =SUM(Q4:Q10) and edit copy and paste it to R11.
+Enter to Q12 the formula, =Q11*7/COUNT(Q4:Q10) and enter to R12 the label, Projected Week. Format Cells Q12:R12 Font red.
+Enter to Q13 the formula, =O12/Q14 and enter to R13 the formula, =7*R11/(COUNT(Q4:Q10))
+Enter to Q14 the formula, =P16/(365/12), and enter to R14 the label, months to go, and format it alignment left.
+Enter to S12 the value, 0, and Format Cells Number Custom, "Leave at Zero"
+Enter to cell T12 the label, Avg/Day This Wk and enter to cell T13 the formula, =IF(ISERR(AVERAGE($Q$4:$Q$10)),0,AVERAGE($Q$4:$Q$10))
+Enter to cell S14 the formula, =IF(T14<0,"Short ","Over "), and format it alignment right
+Enter to cell T14 the formula, =IF(U14=0,0,U14-O12)
+Enter to cell U14 the formula, =T13*Q14*(365/12)
+Select with the command key cell ranges: S12, T12:T13, T14, S14, U14 and Format Cells Fill light blue Border Purple boldest outline
+Enter to cell V14 the formula, =U14-GOAL, and select cell O12 and Insert Name Define GOAL, OK.
+Enter to cell W14 the formula, =IF(U14=0,"",(GOAL/U14*$P$16)+$P$35), and Format Cells Number Date mm/dd/yy hh:mm AM/PM
+Enter to cell X14 the formula, =T13*_LastDay, which Name has yet to be defined.
+Enter to cell Y14 the formula, =AVERAGE(AE4:AE11), which entries have yet to be made. Format Cell Y14 Fill light blue Border outline black boldest. This number and its date are fairly strong candidates.
+Enter to cell Z14 the formula, =INT(AVERAGE(Z4:Z11))
+Enter to cell AA14 the formula, =VLOOKUP(Z14,_eom,2)
+Format Cells Z4:AA14 Font size 14, dark blue
+Enter to cell AB1 the vlookup table label, _eom, and Insert Name Define _eom to cell range $AB$2:$AD$13, then Format Cells Border outline in boldest black AB1:AD13
+Enter to cell AE11 the formula, =IF(Y11=0,"",Y11) and copy it and paste it to cell range AE10:AE4
+Enter to cell range AB2:AB13 the numbers 1 through 12 (for the months of the year).
+Enter to cell range AC2:AC13 the last day of each month, eg. month 1 is January, so put 31, month 2 is February which is special so put =28+AD3, then 31, 30, 31, 30, 31, 31, 30, 31, 30 and 31.
+Enter to cell Z1 the formula, =YEAR(X1), and Format Cells Number Date yyyy
+Enter to cell AD3 the leap year formula (for awhile anyway), =IF(OR(Z1=2016,Z1=2020,Z1=2024,Z1=2028,Z1=2032),1,0)
+Enter to cell Z3 the label, Month
+Enter to cell Z4 the formula, =MONTH(M4) and Format Cells Number Number, decimal places 0. Copy cell Z4 and Edit Paste it to cell range Z5:Z11.
+Select column AA and Insert Name Define _LastDay, OK.
+Enter to cell AA3 the header, _LastDay
+Enter to cell AA4 the formula, =VLOOKUP(Z4,_eom,2), and Edit Copy it and Edit Paste it to cell range AA5:AA11
+Enter to cell T4 the formula, =IF(S4<>S5,S4/N4,0), and make it bold
+Enter to cell U4 the formula, =T4*$Q$14*(365/12)
+Enter to cell V4 the formula, =IF(U4=0,0,U4-GOAL)
+Enter to cell W4 the formula, =IF(U4=0,"",(GOAL/U4*$P$16)+$P$35) and Format Cells Number Date mm/dd/yy hh:mm AM/PM
+Enter to cell X1 the formula, =NOW(), and format it Number Date mmmmm
+Enter to cell X4 the formula, =T4*_LastDay
+Enter to cell Y4 the formula, =U4+O4
+Select cell range T4:Y4, Edit Copy it and Edit Paste it to cell range T5:Y11
+
+, Now, here, we're getting into the next worksheet, 'Daily Sort', you'll notice. $NQ$150 holds the summary information for April, 2015. In $NZ$150 on 'Daily Sort' are Total Article Views to date, over all periods. Therefore, if for ANY reason Total Article Views as held by O4 today, less (Total Article Views to date less April's) should be less than 0, return the value directly below in cell S5, Otherwise return the Total to date in O4, less the Total to date in $NZ$150, less less (=plus) the April Views to date, $NQ$150. The wikiHow system gives us Total Views to date all the time -- it's up to us to gather each week's views and each month's views. Until O4 gets Total Views of the current day input into it by Macro b, it is empty! So when it subtracts (Total Views to date, less April's, even if April's are 0), it gets a big negative, so it takes the number in S5 below it until the cell in column O to the left is updated. That's fine if it happens to be April, but what if it's March?, On the 'Daily Sort' worksheet in the next cell to the left, $NP$150, are March's Total Views. On 'Article Views Views and Other' n M7 is 03/31/15 and in M6 is 04/01/15. So you see why this has been saved this for last: you have to manually update this formula at month's end with the correct next cell to the right from the next sheet, 'Daily Sort'.,, (That's 2 underlines and a 1 so it sorts to the top of the variable names list.),,,,, If not already done, do so now., down to "#** End Sub" in Advanced Editing in wikiHow and pasted into a Text Editor or Word Processor like Word that has a REPLACE ALL function. You want to replace all "#** " (without the quotes) with nothing. You then want to RECORD a dummy macro in Excel in the OVERALL STATUS.xlsm workbook and paste the Replace(d) All text over the dummy macro. There are other ways to go about it, but that's quick and dirty and gets the job done. Save the workbook. Run the macro either from the macros tool icon or by pressing command+option(alt)+p.
+
+
+
+Sub Macro04_Tfr_Views_Thruout_p()
+' Macro04_Tfr_Views_Thruout_p Macro
+' Transfer Views Daily thruout workbook
+' Keyboard Shortcut: Option+Cmd+p
+Application.Goto Reference:="__1"
+Selection.Copy
+Application.Goto Reference:="__2"
+ActiveSheet.Paste
+Application.Goto Reference:="__3"
+ActiveSheet.Paste
+Application.Goto Reference:="__4"
+ActiveSheet.Paste
+Application.Goto Reference:="__5"
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=True
+‘ Macro04a_Cat_Analysis_Fix
+‘ Application.Goto Reference:="_TopLeft"
+‘ Macro09_PinkSave_u
+ActiveWorkbook.Save
+‘ Application.Goto Reference:="FILE_SAVE____S"
+End Sub
+
+
+
+, Also, on the transposed section in Relateds, the formatting will not get copied over and that will need to get fixed at some point by copying over the formatting and then manually resetting it. No time for that now. It should read with your head turned 90 degrees left, justified vertically down, with word wrap., If there is ever a lingering New Article name in A4, just delete it or fix the macro code to do so.,,,,,,,,, ='Article Views and Other'!$A$12:$A$163, and transfer it exactly to Nexter and beneath it. It will then name the next top cell to the right Nexter so that it can proceed to do the same thing the next day and each day. That is, the DAY'S views, not the Total Views as of that Date will be transferred. However, you have just transferred with Macro03 to Defined Cell Range Name __02 the Total Views as of today's date. If you had YESTERDAY'S Total Views, plus Today's DAY'S views, you would then have Today's Total Views separated. So what you need is a starting point of Total Views. You will then add each day's views across to become the Month to Date's views. They will become that Month's Views. Then you will add your Starting Point to all the Months and agree it to wikiHow's Total Views as of Today. Thus, you will have gained insight into how you are doing per article per day and by month, whereas on Article Views and Other you were watching it for the current week, average and Projected Month., So in J1, enter 01/01/15 (if 2015 is the current year), and Format Cells Number Date mm/dd. Select the cell range for all 365 days of the year (or 366 days in 2016), i.e. over right from J1:NJ1 and do Edit Fill Series Step Value 1, OK., For cell CV1, do Insert Name Define Nexter, OK. Just whichever row 1 date you start the process on, make sure to Insert Name Define as Nexter.
+
+When Nexter has updated column CV, remember to do the following: enter to CV3 the label, Don't dbl-count, and enter to CV4 the label, this column. Format Cells Font red bold.
+ The next thing to do is to put in the bottom formulas. Enter to cell CV154 the formula, =DAY(CV151), and enter to CV155 the formula, =SUM($CV$150:CV150), and enter to cell CV156 the formula, =CV155*30/CV154. Put a boldest red border at the top of cell CV154, a left boldest border down cells CV154::CV156, and a bottom red boldest border for cell CV156., Then put a boldest red border around each month because you will need to change the middle formula for each month. You can split and freeze the screen at J5 so you can see the upper dates to make this job easier, or copy them temporarily nearby below., We want that to continue on through all of April and then stop and start afresh for May.
+
+Enter to DZ155 the formula, =SUM($DZ$150:DZ150) and Edit Paste Special Formulas that across for all of May. Surround April and May and each new month with Format Cells Border red boldest outline
+Enter to FE155 the formula, =SUM($FE$150:FE150) and Edit Paste Special Formulas that across for all of June. Do the red boldest border for June.
+Enter to GI155 the formula, =SUM($GI$150:GI150) and Edit Paste Special Formulas that across for all of July. Do the red boldest border for July.
+Enter to HN155 the formula, =SUM($HN$150:HN150) and Edit Paste Special Formulas that across for all of August. Do the red boldest border for August.
+Enter to IS155 the formula, =SUM($IS$150:IS150) and Edit Paste Special Formulas that across for all of September. Do the red boldest border for September.
+Enter to JW155 the formula, =SUM($JW$150:JW150) and Edit Paste Special Formulas that across for all of October. Do the red boldest border for October.
+Enter to LB155 the formula, =SUM($LB$150:LB150) and Edit Paste Special Formulas that across for all of November. Do the red boldest border for November.
+Enter to MF155 the formula, =SUM($MF$150:MF150) and Edit Paste Special Formulas that across for all of December. Do the red boldest border for December.
+Go back and do January, February and March as well please, even though you'll get errors -- this sheet will prove useful in future years. Remember to do the red boldest border for each month. You can hide columns you're finished studying or which contain no data. It might be best to leave 01/01 showing so you remember it's all there but hidden. Bear in mind that Macro t does NOT look for a date but instead for whichever cell is named Nexter -- that is what will next be updated.
+ The Article Views as of 01/17/15, the Starting Point, are included below in cells NL37:NL147., This column adds across all the activity from 1/18/15 to 1/31/15. Starting in cell NM33 is the formula, =SUM(AA33:AN33) and it has been copied and pasted down to NM147., In cell NN6 is the formula, =NL6+NM6, and that has been copied and pasted down to cell NN147., In cell NO6 is the formula, =SUM(AO6:BR6), and that has been copied and pasted down to NO147.,, Edit copy NL150 and Edit Paste it to cell range NM150:NZ150,,,, That should equal 0 and proves that the spread equals the number from wikiHow!, Counting all the 1's of that meant counting all the article-days per article on which there were 0 article views. These were summed and the total column was sorted from greatest to least to find out which articles were having the most Zero Views days. The formulas were Edit Paste Special Values back atop themselves to conserve memory and the sort was undone by sorting on Article number from Highest to Least. Many various sorts are possible in this worksheet, some dependent upon the categories yet to be input. It's a pretty big job and it's left up to you as to whether you really want to do it or not., Almost every article has two categories it uses, which is the current maximum available. As an example of how it works in the spreadsheet, Rank would list something like 1.02, which would mean SEEN = Mathematics and TWO = Calculating Volume and Area. Since many articles are categorized in the same Rank(s), sorting them by Rank order is meaningful.
+,,, The formula is, =H6&"-"&I6, copied and pasted down, then copied again entirely and Paste Special Values atop itself, to preserve memory., If you usually only use one category, you might still want to leave columnar space for two, as you might someday change your mind. If wikiHow changes and permits 3 categories, then a system of Rank looking like 01.12.02 will still sort just fine as a string, so long as there is actually a leading zero. You may have to use a formula to add one on, like this: ="0"&_Rank for just the single digit leads, where the Rank column has been defined as Defined Variable Name, _Rank. Or, ="0"&text(Rank,"0.00"), else 10's might appear right after 1's., There is just really no simple way for this author to convey the spreadout of Relateds/Article across the entire worksheet to you. 142*142=20164. Each cell in cell range J10:EV152 either has is blank or has a 1 in it, the 1 indicating that the intersection of the horizontal row article holds the vertical article as a Related wikiHow. Vertically, that means that the vertical article is held by n many horizontal articles currently. If you think about it from a user's perspective, it might be nice to have a way back to the article you just came from ... but that's not essential when allocation space is short at ten articles only, max. It's far more important that the article be actually related, firstly, and secondly, it's preferable for recent articles to support current articles, generally speaking, on the assumption that one's readership is already acquainted with older articles. It has been observed that readership of popular articles remains consistently high but that all readership of older articles declines with age; it is important not only to be writing high quality new articles that earn Rising Star or Featured Article status, it is also important from time to time to "freshen up" the older articles where possible. One way of doing this is to change their Relateds. Although the most recent 42 articles account for just 3% of total views to date, they often account for around 25% of today's views!! That is a very important fact to know and use. It means that a good portion of one's following is keeping very current with one's authorship. This article already has 24 views and it is tagged with an InUse template as well as being Not Yet Reviewed for Quality, so the readership is pretty hungry for the latest thing, it is thought. The article has modifications being made in the middle of it! -- so it has to be re-read to make complete sense! -- and still they persist!! This author admires their tenacity and feels extremely devoted to them per their own devotion. This author does his level best best to get it right on the first draft. This author does not track other author's Related wikiHows. The reason is because it's difficult to keep track of what the rest of the world is doing, let alone just oneself. However, the possibility of tracking other author's Relateds posted to one's articles is feasible within this system and not all that unwieldy.,, Another objective might be to delete Relateds subtracted as a group that were in excess of the 10 Relateds per article limit -- in that case you would be deleting 1's instead of adding them., The final list in B166 on should have formulas which deliver out the article name without brackets; 9) Use Macro 07.08. ... n and then command v to FIND the article in row 1 Searcher and when the Input Box comes up do command v paste; click OK for the Input Box afterwards; 10) Use the down arrow and row-heights = 0 to post a 1 quickly to the article the Relateds, one macro run by the next (or manually is faster if they are all in a row)l; 11) Click on the next article name row in this worksheet and color it by group of about 6-15 articles and repeat until done., Update changes., Calibri (Body) font is used mostly, size 12 or 14. Your favorite font is a matter of personal preference, as is its size, which is why it has been left until now mostly to state a preference. Input cells, or cells which are important or may be modified, other than those pasted in from wikiHow, may be color-filled canary yellow, even if the macros do the changing. You may want to work out your own style system as is preferable to you. The more important a cell is, the more likely it is to receive a boldest border, often in red. It's been left up to you to adjust your row heights and column widths to automatically fit the data all along. However, for column A, where the ready-tobe-Relateds formulas and pasted values run quite long, this author has a column width of only 5.36" -- more than enough, and a frozen window at cell J7. Cell H7 contains xxxxxxxxxxxxxxxxxx and column I is hidden, as is column F. Columns C:D are minimal, in order to see if any Rising Star objects somehow made it through the deletion subprocedure of Macro p., There is room for improvement. One needs to give it serious consideration. Currently, because no Relateds have been done for this article yet, there are 1416 Relateds assigned out of 1420 (142 articles * 10 Relateds/article) Allowed = 4 (Under). However, there are 271 under 10 (19.41%), 520 at 10 (36.72%), for a subtotal of 55.86% at 10 or under, and 625 over 10 (44.14% -- the balance)(sometimes there are 11 or 12 Related wikiHows, sometimes up to 15). All in all, it is below the total allowed overall. That may be a bit of fudgery and other's Relateds are not counted in the system, but it's felt to be fair, all things considered, with heavier-usage articles receiving more attention and lesser-used articles receiving less attention, so it's proportional to what the users want, actually. It's meant to please the users, after all. Sometimes, it has been as much as 6% over Allowed but has always been trimmed back to be within the limit. The system also does not count links within an article that are not down in the Relateds section, e.g. in the article How to Teach or Learn Math, Trig and XL with Enthusiasm -- but that is a rare treatment, not the standard. Someone counting actual links will thus arrive at a somewhat greater number. This article, also, falls into that category, but only temporarily as a model for the user to build their own article list as retrieved from their own User Page.
+
+Enter to cell H153, Chris G., and to cell H154, Xhohx. Copy cells H153:H154 and paste them to cell range H155:H156. Enter in cell H157, Both. Enter in cell B157, Total Article Views on Relateds, and align it right. Enter the formula, =E154, to cell B158.
+Select cells B157:B158 and do Insert Name Create in Top Row, OK.
+Enter to cell H158, % Article Views to date . Enter to cell H159, Chris G. & Xhohx %age of H_Sum .
+Enter to cell J153 the formula, =SUM(J10:J51)
+Enter to cell J154 the formula, =SUM(J52:J152)
+Enter to cell J155 the formula, =J153/H_SUM and format it percentage, 2 decimal places.
+Enter to cell J156 the formula, =J154/H_SUM and format it percentage, 2 decimal places.
+Enter to cell J157 the formula, =J153+J154
+Enter to cell J158 the formula, =J4/Total_Article_Views_on_Relateds, and format it percentage. 2 decimal places.
+Enter to cell J159 the formula, =J155+J156, and format it percentage. 2 decimal places.
+Copy cell range J153:J159 and Edit Paste it to cell range K153:EV159
+Enter to cell EW153 the formula, =SUM(EW10:EW51)
+Enter to cell EW154 the formula, =SUM(EW52:EW152)
+Enter to cell EW157 the formula, =EW153+EW154
+Enter to cell EW158 the formula, =SUM(J157:EV157)
+Enter to cell EX157 the label, V_SUM
+Enter to cell EX158 the label, H_SUM
+Select cell range EW157:EX158 and do Insert Name Create in Right Column, OK.
+Enter to cell EY157 the formula, =EW157
+Enter to cell EY158 the formula, =MAX(G10:G151)*10
+Enter to cell EZ158 the label, Allowed @10
+Enter to cell EY159 the formula, =EY157-EY158 and Format Cells Fill Yellow, Border Red outline boldest red
+Enter to cell EZ159 the formula, =IF(EY159>0,"OVER","UNDER")
+Enter to cell EW10 the formula, =SUM(H10:EV10) and Format Cells Fill light green
+Copy cell EW10 and Edit Paste it to cell range EW11:EW152
+
+,,,,,,,,, Articles with high view counts are more likely to have high Relateds counts, and low view counts have low Relateds counts, typically, though some low view articles are promoted via higher Relateds spreads. All in all though, a balance is achieved. Promoting the visibility of an article for awhile may be just the boost it needs, and a unique coloring fill can alert the eye to which articles have been so adjusted, and their history can be checked on the Daily Sort worksheet to see if progress has been made or not. There is a macro, n, for inputting Relateds to an article ON THIS WORKSHEET -- the actual updating of the article with Relateds in wikiHow has to be done in the usual way, though the pre-formatting and pre-grouping that can be achieved either in column A on Relateds or (usually) column J of Article Views and Other helps quite a bit.,,,,,,, Do the same for cells EY153:EZ153 except Fill white and do not make the font red, but do make it black bold.,, Edit the formula in cell FE153 to be, =FD153+FC153+FB153. The total Relateds in cell FE153 should now agree to V_Sum and H_Sum.
+
+Enter to cell FF153 the label, RW_Total (for Related WikiHow Total)
+Select FE153:FF153 and Insert Name Create in Right Column, OK
+Enter to cell FD156 the formula, =FB154+FD154
+Enter to cell FB154 the formula, =FB153/RW_Total and format Percentage, 2 decimal places.
+Copy cell FB154 to cell range FC154:FD154
+Copy cell range EX8:FD8 and Paste it to cell range EX155:FD155
+Enter to cell EX156 the label, AVAILABLE, and Format Cells font red bold, Fill Yellow, and copy cell EX15=6 and Paste Special Formats to EY156:EZ156
+
+,,,, Easiest just to copy it from here.
+,,,,
+You will also use them to update other actual wikiHow articles in their Related wikiHow sections, by editing those sections, typically because you want to "freshen up" their image for the user in one way, i.e. you have written new articles since you wrote the old ones, and the new articles are Related! In such a case, where the old article is down the list a ways, you will probably want to hide the rows in between the old article and row 9, so that you can reach it faster once the macro and you find the right vertical article in Row 1 to update.
+ The Macro n does not do this for you but because it's all in a convenient column, and the links are live, it's a simple matter to click on a link, edit in the ready-to-be a-Related new article's column A format copied from cell A10, and then put a 1 in column J to the right of the old article whose row you're updating below and whose link is now conveniently a new distinct color., Also, be warned that about the first thing that Macro n does is to delete the first entry, so be sure to place your entries in to A167 and not A166. If the macro does not work right on the first try, look at the cell range A166:E166 and see what's in it -- if it's an article, it's about to get deleted! If it's empty, it needs the x's and formulas -- then try the macro again and it should work fine. Sometimes, perhaps you forgot you have to press command+v to paste into the macro's InputBox the article name the macro just copied at cell B166. You might think you're supposed to type in the name of the article, but that would have been way too time consuming!,,,,,,,,,,,,,,,,,,,, That way, you needn't insert a new category type within the bounds of the variable definition to have it be included.,,, But, at the same time, it's nice to have the section copyable between the CAT ANALYSIS ws and the Daily Sort ws.,,,,,,,, You can sort the columns (left to right) if and when you put in the type 2 category decimal numbers in Row 2 above the concatenations. How you choose to sort your data is entirely up to you.,, There is nothing in column B. "Seen" is in cell D292. The second part starts on row 307. Thus, 0.01 is in cell C307 and Mathematics is in cell E307. Some of type TWO categories are copyable from the SEEN categories.
+,,,,,,, So, for example, enter =Totals into cell O302 for Microsoft Excel and into cell O307 for Mathematics, and enter =Totals into cell P294 for MSXL Imagery and into P307 for Mathematics. Continue this way across to the right until complete!, Edit the formula in K309 to be, =SUM(K307:K328) and surround it in Format Cells Border black outline boldest., Create a dummy macro, assuming you have enabled Developer in Excel Preferences on the Ribbon or otherwise, by recording a tiny macro and then copying this macro code over it. You may find it useful to split it up into 3 modules, or perhaps not; that is what is indicated in the top section of 'Article Views and Other' by Mod n, etc. You create a new module using the Visual Basic Editor. Each Sub to End Sub procedure must be separated by a blank line and not have any crapola between subprocedures. Comments, effected with preceding apostrophes, may go in at the beginning, middle or end of cod, or after lines, after a space. To continue a line of code, use space underline, then probably indent the next line -- watch for where this has already been done for you, however, please., It transfers F16:F161 to B16:B161 because the new data from wikiHow will presumably have larger Views to report per article and we want to subtract Yesterday's from Today's that we're about to bring in, so first we have to transfer what was Today to Yesterday. The result of the subtraction in column A, since the totals are Views to date, will be just Today's results.
+Next, use the links in C3 and C2 to DAILY access the wikiHow data. You transfer in the wikiHow data as explained above, by selecting in the Chris Garthwaite data from THIS ARTICLE downwards the article title and views, and copy it and paste it into C17, then do the same for Xhohx's 100 articles, but below the data you just pasted in for Chris (the later ID).
+Next, DAILY post from the wikiHow pages the summary of the total Article Views to cells A4 and A5, and possibly subsequently written line item article views as a negative sum to A3. Reconcile the totals.
+Next, DAILY run Macro02_TransferTodayToDailySort_t by pressing command+option(alt)+t only AFTER the wikiHow data has been transferred in. Running the macro repeatedly will cause duplication in the columns of 'Daily Sort', which can be cleared and the dates pasted back in and edited to be correct, and the Nexter defined variable name reset to be the correct following day in row 1 to the right of today's correct update should such an error occur.
+Next, DAILY run Macro03_TotalViewsAndGoalSeekingPastoid_b. It's probably better to run b before p, because p saves all the work done so far. Otherwise, run g or u after b. Macro03_TotalViewsAndGoalSeekingPastoid_b updates the Monthly Projections section and has to do with the goal seeking done in that region of 'Article Views and Other' as well. It is run using command+option(alt)+b.
+DAILY run Macro04_Tfr_Views_Thruout_p transfers the new wikiHow article names and views and article numbers to all 4 worksheets, then saves all the work done so far. It is run by pressing command+option(alt)+p.
+Sub Macro05_InsertNewArticle_y is used to populate a new article WHENEVER WRITTEN throughout the entire workbook. The new article name is copied in link form from the top of the wikiHow article just written and published and pasted to cell C16. Then the macro is run by pressing command+option(alt)+y.
+Macro06_WeeklyUpdate_s is run WEEKLY when cell range O4:O10 on 'Article Views and Other' becomes full. The macro moves _AvgWklyReturns, _AvgWklyCashFlow and _AvgReturnRate up a cell and also handles_MNO_Update and _QRS_Update, all to the region Q46:U73, except that it also pushes it all down a row first.
+Macro07_UpdateRelated_n updates 'Relateds' worksheet with your latest Related wikiHows info. See above VERTICAL UPDATING in The Macro n Section of Relateds for vertical updating however, which is done manually. Macro n is run by pressing command+option(alt)+n. Postings can be manually undone, or, if you still have the group of ready-to-be-Relateds over on 'Article Views and Other', you can use those to clear instead of add, if you like.
+Macro08_FindRelated acts as part of Macro07 and is called by it.
+Sub Macro09_PinkSave_u colors a cell pink and updates THIS AUTHOR'S pathnames/folders and files and saves OVERALL STATUS.xlsm four times before landing on a File Save cell. You will need to RECORD a new macro to save your own workbook adequately; the color-changing subprocedure tells you that things are happening. Run via command+option(alt)+u
+Macro10_YellowSave_g colors the pink cell yellow again and updates THIS AUTHOR'S pathnames/folders and files and saves OVERALL STATUS.xlsm four times before landing on a File Save cell. You will need to RECORD a new macro to save your own workbook adequately; the color-changing subprocedure tells you that things are happening. Run via command+option(alt)+g
+MacroAB_Get_wH_data_e needs work -- see the Macro comments.
+MacroV_FindArticle_v finds an article by name or partial name in 'Article Views and Other' and is run by command+option(alt)_v. It's useful sometimes when an article seems to have somehow just disappeared from this author's memory as to location.
+CommandButton1_Click is a problem in search of a solution -- see the macro comments regarding this experiment.
+ This author has written thousands of lines of code but does not really hold himself out to be a programmer per se. Feel free to fix or just complain of whatever bugs you find and report them back in, if you would be so kind, please.
+
+
+
+Sub Macro01_TransferTodayToYesterday_j()
+' Macro01 Macro
+' Move today to yesterday
+' Keyboard Shortcut: Option+Cmd+j
+Application.Goto Reference:="_Today"
+Selection.Copy
+Application.Goto Reference:="_Yesterday"
+ActiveSheet.Paste
+Application.CutCopyMode = False
+Range("Today").Select
+End Sub
+Sub Macro02_TransferTodayToDailySort_t()
+' Macro02 Macro
+' Transfer TODAY to Daily Sort Sheet
+' Keyboard Shortcut: Option+Cmd+t
+Sheets("Article Views and Other").Select
+On Error GoTo 10
+ActiveSheet.DrawingObjects.Select
+Selection.Delete
+10 Application.Goto Reference:="TODAY"
+Application.Goto Reference:="NOWLY"
+Selection.Copy
+Application.Goto Reference:="PASTELY"
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+Application.Goto Reference:="TODAY"
+Application.CutCopyMode = False
+ActiveCell.FormulaR1C1 = "=PASTELY"
+Range("A12").Select
+Selection.Copy
+Application.Goto Reference:="Nexter"
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+Application.Goto Reference:="WHOLE"
+Selection.Copy
+Application.Goto Reference:="Nexter"
+ActiveSheet.Paste
+Application.Goto Reference:="WHOLE"
+Application.CutCopyMode = False
+Selection.Copy
+Sheets("Daily Sort").Select
+Application.Goto Reference:="Nexter"
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+Application.Goto Reference:="WHOLE"
+Selection.Copy
+Application.Goto Reference:="Nexter"
+Selection.PasteSpecial Paste:=xlFormats, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+Range("Nexter").Select
+ActiveWorkbook.Names.Add Name:="Nexter", RefersToR1C1:=ActiveCell.Offset(0, 1)
+End Sub
+Sub Macro03_TotalViewsAndGoalSeekingPastoid_b()
+' Paste Views Val
+' Macro03_TotalViewsAndGoalSeekingPastoid_b Macro
+' Pastoid - Paste value of pastoid into empty day of column O
+' Keyboard Shortcut: Option+Cmd+b
+Dim Pasting As String
+Pasting = Range("Pastoid").Value
+Application.Goto Reference:="Pastoid"
+Range("O4").Select
+For X = 1 To 7
+If ActiveCell() = 0 Then GoTo 50 Else GoTo 60
+50 ActiveCell.Offset(1, 0).Select
+If ActiveCell() <> 0 Then GoTo 90
+60 If ActiveCell() = Pasting Then GoTo 100 Else GoTo 80
+80 Next X
+90 If ActiveCell() = Pasting Then GoTo 100 Else GoTo 92
+92 ActiveCell.Offset(-1, 0).Select
+95 Selection.Value = Pasting
+100 Application.Goto Reference:="Goalseeking_to_Zero_per_Red__below"
+110 Range("P15").GoalSeek Goal:=0, ChangingCell:=Range("P16")
+End Sub
+Sub Macro04_Tfr_Views_Thruout_p()
+' Macro04_Tfr_Views_Thruout_p Macro
+' Transfer Views Daily thruout workbook
+' Keyboard Shortcut: Option+Cmd+p
+Application.Goto Reference:="__1"
+Selection.Copy
+Application.Goto Reference:="__2"
+ActiveSheet.Paste
+Application.Goto Reference:="__3"
+ActiveSheet.Paste
+' Application.Goto Reference:="___Area4PasterCell"
+Application.Goto Reference:="__4"
+ActiveSheet.Paste
+Application.Goto Reference:="__5"
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=True
+Macro04a_Cat_Analysis_Fix
+Application.Goto Reference:="_TopLeft"
+Macro09_PinkSave_u
+ActiveWorkbook.Save
+Application.Goto Reference:="FILE_SAVE____S"
+End Sub
+Sub Macro04a_Cat_Analysis_Fix()
+' Macro04a_Cat_Analysis_Fix Macro
+Sheets("CAT ANALYSIS").Select
+Range("B12").Select
+Selection.Copy
+Range("B6:B11").Select
+ActiveSheet.Paste
+Application.CutCopyMode = False
+Application.Goto Reference:="__4"
+End Sub
+Sub Macro05_InsertNewArticle_y()
+' Macro05_InsertNewArticle_y Macro
+' Insert a new article into all worksheets of the workbook OVERALL STATUS.
+' Keyboard Shortcut: Option+Cmd+y
+Sheets("Article Views and Other").Select
+Rows("18:18").Select
+Selection.Insert Shift:=xlDown
+Rows("17:17").Select
+Selection.Copy
+Rows("18:18").Select
+ActiveSheet.Paste
+Range("C16").Select
+Application.CutCopyMode = False
+Selection.Copy
+Range("C17").Select
+ActiveSheet.Paste
+Range("B17").Select
+Application.CutCopyMode = False
+ActiveCell.FormulaR1C1 = "0"
+Range("F17").Select
+ActiveCell.FormulaR1C1 = "0"
+Range("H17").Select
+ActiveCell.FormulaR1C1 = "=RC+1"
+Range("H17").Select
+Selection.Copy
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+Range("J15").Select
+Application.CutCopyMode = False
+Selection.Copy
+Range("J17").Select
+ActiveSheet.Paste
+Application.CutCopyMode = False
+Selection.Copy
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+Range("K17").Select
+ActiveCell.FormulaR1C1 = "=NOW()"
+Range("K17").Select
+Selection.Copy
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+ActiveWindow.ScrollColumn = 1
+Range("C16").Select
+Application.CutCopyMode = False
+Selection.Cut
+Sheets("Daily Sort").Select
+Range("A4").Select
+ActiveSheet.Paste
+Rows("7:7").Select
+Selection.Insert Shift:=xlDown
+Range("A4").Select
+Selection.Copy
+Rows("6:6").Select
+Application.CutCopyMode = False
+Selection.Copy
+Rows("7:7").Select
+ActiveSheet.Paste
+Range("A4").Select
+Application.CutCopyMode = False
+Selection.Copy
+Range("A6").Select
+ActiveSheet.Paste
+Range("D6").Select
+Application.CutCopyMode = False
+ActiveCell.FormulaR1C1 = "0"
+Range("F6").Select
+ActiveCell.FormulaR1C1 = "=RC+1"
+Range("F6").Select
+Selection.Copy
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+Range("BK6:CQ6").Select
+Application.CutCopyMode = False
+Selection.Clear
+Range("BQ6").Select
+ActiveCell.FormulaR1C1 = "0"
+Range("A4").Select
+Selection.Cut
+Sheets("Daily Sort").Select
+Application.CutCopyMode = False
+Range("A6:F6").Select
+Selection.Copy
+Sheets("Relateds").Select
+Range("B8").Select
+ActiveSheet.Paste
+Rows("11:11").Select
+Application.CutCopyMode = False
+Selection.Insert Shift:=xlDown
+Rows("10:10").Select
+Selection.Copy
+Rows("11:11").Select
+ActiveSheet.Paste
+Range("B8:G8").Select
+Application.CutCopyMode = False
+Selection.Copy
+Range("B10").Select
+ActiveSheet.Paste
+Range("A9").Select
+Application.CutCopyMode = False
+Selection.Copy
+Range("A10").Select
+ActiveSheet.Paste
+Application.CutCopyMode = False
+Selection.Copy
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+Range("I10").Select
+Range("I10:EN10").Select
+Application.CutCopyMode = False
+Selection.ClearContents
+ActiveWindow.ScrollColumn = 9
+Columns("K:K").Select
+Selection.Insert Shift:=xlToRight
+Columns("J:J").Select
+Selection.Copy
+Columns("K:K").Select
+ActiveSheet.Paste
+Range("B8:G8").Select
+Application.CutCopyMode = False
+Selection.Copy
+Range("J1").Select
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=True
+Range("J9").Select
+ActiveWindow.ScrollRow = 136
+Range("J9:J145").Select
+Application.CutCopyMode = False
+Selection.ClearContents
+ActiveWindow.ScrollRow = 7
+Range("B8:G8").Select
+Selection.Cut
+Sheets("CAT ANALYSIS").Select
+Range("___Area4PasterCell").Select
+ActiveSheet.Paste
+Rows("7:7").Select
+Selection.Insert Shift:=xlDown
+Rows("6:6").Select
+Selection.Copy
+Rows("7:7").Select
+ActiveSheet.Paste
+Range("H5:M5").Select
+Application.CutCopyMode = False
+Selection.Copy
+Range("H6").Select
+ActiveSheet.Paste
+Application.CutCopyMode = False
+Range("H5:M5").Select
+Selection.ClearContents
+ActiveWorkbook.Names.Add Name:="___Area4PasterCell", RefersToR1C1:= _
+"='CAT ANALYSIS'!R5C8"
+End Sub
+Sub Macro06_WeeklyUpdate_s()
+'Macro06_WeeklyUpdate_sMacro
+' Keyboard Shortcut: Option+Cmd+s
+Range("O41:AA41").Select
+Selection.Insert Shift:=xlDown, CopyOrigin:=xlFormatFromLeftOrAbove
+Application.Goto Reference:="_MNO_Update"
+Selection.Copy
+Application.Goto Reference:="_QRS_Update"
+ActiveSheet.Paste
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+ActiveCell.Offset(-1, 0).Select
+ActiveWorkbook.Names.Add Name:="_QRS_Update", RefersToR1C1:=Selection
+Application.Goto Reference:="_AvgWklyReturns"
+Range("_AvgWklyReturns").Select
+Selection.Copy
+Selection.Offset(-1, 0).Activate
+ActiveSheet.PasteSpecial Format:=1, Link:=1, DisplayAsIcon:=False, _
+IconFileName:=False
+Application.CutCopyMode = False
+ActiveWorkbook.Names.Add Name:="_AvgWklyReturns", RefersToR1C1:=Selection
+Application.Goto Reference:="_AvgReturnRate"
+Range("_AvgReturnRate").Select
+Selection.Copy
+Selection.Offset(-1, 0).Activate
+ActiveSheet.PasteSpecial Format:=1, Link:=1, DisplayAsIcon:=False, _
+IconFileName:=False
+Application.CutCopyMode = False
+ActiveWorkbook.Names.Add Name:="_AvgReturnRate", RefersToR1C1:=Selection
+Application.Goto Reference:="_AvgWklyCashFlow"
+Range("_AvgWklyCashFlow").Select
+Selection.Copy
+Selection.Offset(-1, 0).Activate
+ActiveSheet.PasteSpecial Format:=1, Link:=1, DisplayAsIcon:=False, _
+IconFileName:=False
+ActiveWorkbook.Names.Add Name:="_AvgWklyCashFlow", RefersToR1C1:=Selection
+Application.CutCopyMode = False
+ActiveSheet.Range("_AvgWklyCashFlow").End(xlDown).Offset(1, 0).Select
+Selection = ActiveCell: ActiveCell.Offset(0, 1).Select
+Selection.Interior.Color = RGB(255, 250, 250)
+Application.Goto Reference:="_Clear_Total_Views_to_Date"
+Application.CutCopyMode = False
+Selection.ClearContents
+Application.Goto Reference:="_Today_"
+ActiveCell.FormulaR1C1 = "=NOW()"
+Selection.Copy
+Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+False, Transpose:=False
+Range("N11").Select
+Application.CutCopyMode = False
+ActiveCell.FormulaR1C1 = "=DAY(RC)"
+End Sub
+Sub Macro07_UpdateRelated_n()
+' Macro07_UpdateRelated_n Macro
+' Keyboard Shortcut: Option+Cmd+n
+Windows("OVERALL STATUS.xlsm").Activate
+Sheets("Relateds").Select
+Application.Goto Reference:="TopRow"
+Application.CutCopyMode = False
+Selection.Delete Shift:=xlUp
+ActiveWorkbook.Names.Add Name:="TopRow", RefersToR1C1:="=Relateds!R166"
+Range("B166").Select
+Selection.Copy
+Application.Goto Reference:="Searcher"
+' Searcher is a Defined Name Variable comprised of the Article Names
+' and Views pasted AS TRANSPOSED from rows TO COLUMNS in row 1.
+Macro08_FindRelated
+End Sub
+Sub Macro08_FindRelated()
+' Finds a Related wikiHow String and goes to Article cell,
+' where User then Arrow keys down and inputs a 1,
+' indicating that that Columnar Article is a Related for the Row Article.
+' There are both row totals and columnar totals to keep track of Total Relateds/Article
+' and how many Articles the Columnar Article is a Related for.
+' Uses the Named Variable Range, "Searcher", on the worksheet "Relateds" as a Range Object
+Dim oSht As Worksheet
+Dim StrFinder As String
+Dim aCell As Range
+Dim rng As Range
+Set oSht = Sheets("Relateds")
+Windows("OVERALL STATUS.xlsm").Activate
+Sheets("Relateds").Select
+Set rng = Worksheets("Relateds").Range("Searcher")
+Application.ScreenUpdating = True
+Do Until StrFinder <> ""
+StrFinder = Application.InputBox _
+(Prompt:="Article Name or string to search for: ", _
+Title:="Article Search", _
+Type:=2)
+Set aCell = rng.Find(What:=StrFinder, LookIn:=xlValues, _
+LookAt:=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, _
+MatchCase:=False)
+aCell.Select
+Application.ScreenUpdating = False
+Exit Sub
+Loop
+End Sub
+Sub Macro09_PinkSave_u()
+' Macro09_PinkSave Macro
+' Color 2 cells hot pink
+' Keyboard Shortcut: Option+Cmd+u
+Application.ScreenUpdating = True
+Dim Contents As String
+Contents = Range("A1").Value
+Application.Goto Reference:="_TopLeft"
+Range("A2").Interior.Color = RGB(255, 20, 147)
+ActiveCell.Offset(1, 2).Select
+Selection.Interior.Color = RGB(255, 20, 147)
+Range("B3").Select
+Range("B3").Value = Contents
+Application.Goto Reference:="FILE_SAVE____S"
+ActiveWorkbook.Save
+ActiveWorkbook.SaveAs Filename:= _
+"Macintosh HD:Users:chrisgarthwaite:Documents:Excel ƒ: Hubs and SITES:wikiHow's:OVERALL STATUS.xlsm" _
+, FileFormat:=xlOpenXMLWorkbookMacroEnabled, CreateBackup:=False
+Range("C10").Select
+ActiveWorkbook.SaveAs Filename:= _
+"Macintosh HD:Users:chrisgarthwaite:Documents:Excel ƒ: Hubs and SITES:OVERALL STATUS.xlsm" _
+, FileFormat:=xlOpenXMLWorkbookMacroEnabled, CreateBackup:=False
+Range("C10").Select
+ActiveWorkbook.SaveAs Filename:= _
+"Macintosh HD:Users:chrisgarthwaite:Documents:Excel ƒ:Macros:OVERALL STATUS.xlsm" _
+, FileFormat:=xlOpenXMLWorkbookMacroEnabled, CreateBackup:=False
+Range("C10").Select
+ActiveWorkbook.SaveAs Filename:= _
+"Macintosh HD:Users:chrisgarthwaite:Desktop:OVERALL STATUS.xlsm", FileFormat _
+ :=xlOpenXMLWorkbookMacroEnabled, CreateBackup:=False
+End Sub
+Sub Macro10_YellowSave_g()
+' Macro10_YellowSave_gMacro
+' Color 2 cells yellow
+' Keyboard Shortcut: Option+Cmd+g
+Dim Contents2 As String
+Contents2 = Range("A3").Value
+Application.Goto Reference:="_TopLeft"
+Range("A2").Interior.Color = RGB(255, 255, 0)
+Range("B3").Select
+Range("B3").Value = Contents2
+ActiveCell.Offset(-1, 1).Select
+Selection.Interior.Color = RGB(255, 255, 0)
+Application.Goto Reference:="FILE_SAVE____S"
+ActiveWorkbook.Save
+ActiveWorkbook.SaveAs Filename:= _
+"Macintosh HD:Users:chrisgarthwaite:Documents:Excel ƒ: Hubs and SITES:wikiHow's:OVERALL STATUS.xlsm" _
+, FileFormat:=xlOpenXMLWorkbookMacroEnabled, CreateBackup:=False
+Range("C10").Select
+ActiveWorkbook.SaveAs Filename:= _
+"Macintosh HD:Users:chrisgarthwaite:Documents:Excel ƒ: Hubs and SITES:OVERALL STATUS.xlsm" _
+, FileFormat:=xlOpenXMLWorkbookMacroEnabled, CreateBackup:=False
+Range("C10").Select
+ActiveWorkbook.SaveAs Filename:= _
+"Macintosh HD:Users:chrisgarthwaite:Documents:Excel ƒ:Macros:OVERALL STATUS.xlsm" _
+, FileFormat:=xlOpenXMLWorkbookMacroEnabled, CreateBackup:=False
+Range("C10").Select
+ActiveWorkbook.SaveAs Filename:= _
+"Macintosh HD:Users:chrisgarthwaite:Desktop:OVERALL STATUS.xlsm", FileFormat _
+ :=xlOpenXMLWorkbookMacroEnabled, CreateBackup:=False
+End Sub
+Sub MacroAB_Get_wH_data_e()
+' MacroAB_Get_wH_data_e Macro
+' Get wikiHow data -- assumes wH data saved to WORD HTML file 2015.htm first
+'but this needs to be trashed daily first and so takes too long w/o Apple script to do so.
+' Keyboard Shortcut: Option+Cmd+e
+Workbooks.Open Filename:= _
+"Macintosh HD:Users:chrisgarthwaite:Documents:Excel ƒ: Hubs and SITES:wikiHow's: DailyData:2015.htm"
+ActiveWorkbook.Names.Add Name:="TopLeft", RefersToR1C1:=ActiveCell
+Selection.SpecialCells(xlCellTypeLastCell).Select
+ActiveCell.Offset(-1, 0).Select
+ActiveWorkbook.Names.Add Name:="BtmRight", RefersToR1C1:=ActiveCell
+Application.Goto Reference:="TopLeft:BtmRight"
+Selection.Copy
+Windows("OVERALL STATUS.xlsm").Activate
+Range("C17").Select
+ActiveSheet.Paste
+Application.CutCopyMode = False
+Application.Goto Reference:="_TopLeft"
+End Sub
+Sub MacroV_FindArticle_v()
+' Finds an Article String, returns cell address and goes to Article cell
+' MacroV_FindArticle
+Macro v
+Dim oSht As Worksheet
+Dim StrFinder As String
+Dim lastRow As Range
+Dim aCell As Range
+Set oSht = Sheets("Article Views and Other")
+Set lastRow = ActiveWorkbook.Sheets("Article Views and Other").Range("C17:C217")
+Application.ScreenUpdating = True
+Do Until StrFinder <> ""
+StrFinder = Application.InputBox _
+(Prompt:="Article Name or string to search for: ", _
+Title:="Article Search", _
+Type:=2)
+Set aCell = lastRow.Find(What:=StrFinder, LookIn:=xlValues, _
+LookAt:=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, _
+MatchCase:=False)
+If Not aCell Is Nothing Then
+MsgBox "Value Found in Cell " & aCell.Address
+End If
+aCell.Select
+Application.ScreenUpdating = False
+Exit Sub
+Loop
+End Sub
+Private Sub CommandButton1_Click()
+'This is an experiment in creating a button but it's a PROBLEM
+'because it is an object that gets deleted by Macro t but prevents
+'Macro t from deleting the Rising Star objects as well!
+'Furthermore, you can only really tell it's worked the first time.
+'In general, DO NOT put buttons on Article Names and Other therefore
+'and button numbers are hard to handle when moving between sheets.
+Application.Goto Reference:="_Today"
+Selection.Copy
+Application.Goto Reference:="_Yesterday"
+ActiveSheet.Paste
+Application.CutCopyMode = False
+Range("Today").Select
+End Sub.
+
+
+

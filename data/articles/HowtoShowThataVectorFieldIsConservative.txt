@@ -1,0 +1,97 @@
+ This theorem states that mixed partial derivatives commute, given that they are continuous. 
+
+In other words, ∂∂y∂∂x=∂∂x∂∂y.{\displaystyle {\frac {\partial }{\partial y}}{\frac {\partial }{\partial x}}={\frac {\partial }{\partial x}}{\frac {\partial }{\partial y}}.} Note that these are second derivatives.
+;
+,  For our convenience, let's label P=2xy2−y2+2x{\displaystyle P=2xy^{2}-y^{2}+2{x}} and Q=2x2y−5−2xy.{\displaystyle Q=2x^{2}y-5-2xy.}
+
+
+F=(2xy2−y2+2x)i+(2x2y−5−2xy)j{\displaystyle {\mathbf {F} }=(2xy^{2}-y^{2}+2{x}){\mathbf {i} }+(2x^{2}y-5-2xy){\mathbf {j} }}
+
+If this function satisfies Clairaut's theorem, then we should expect that ∂P∂y=∂Q∂x.{\displaystyle {\frac {\partial P}{\partial y}}={\frac {\partial Q}{\partial x}}.} These are second derivatives, because we are going off the assumption that F{\displaystyle {\mathbf {F} }} is conservative, and therefore F=∇f{\displaystyle {\mathbf {F} }=\nabla f} - in other words, F{\displaystyle {\mathbf {F} }} is itself a gradient of a scalar potential function.
+
+
+
+∂P∂y=4xy−2y{\displaystyle {\frac {\partial P}{\partial y}}=4xy-2y} 
+
+
+∂Q∂x=4xy−2y{\displaystyle {\frac {\partial Q}{\partial x}}=4xy-2y}
+
+
+, Our example obviously does. Our vector function is continuous (well-behaved), so this field is conservative. Most fields that you will deal with, especially in physics, will only need to satisfy Clariaut's theorem to be conservative. However, in pure math, this is not always quite the case.
+ Conservative vector fields are irrotational, which means that the field has zero curl everywhere: ∇×F=0.{\displaystyle \nabla \times {\mathbf {F} }=0.} Because the curl of a gradient is 0, we can therefore express a conservative field as such provided that the domain of said function is simply-connected.
+
+
+∇×∇f=0{\displaystyle \nabla \times \nabla f=0}
+
+The last condition highlights an important limitation for functions that are not well-behaved. Although all conservative fields are irrotational, the converse is not true. Even if the function satisfies Clairaut's theorem, it may still not be conservative if there exists discontinuities or other singular points. 
+
+
+, Above is a visualization of the vortex.
+
+
+v=−yi+xj+0kx2+y2{\displaystyle {\mathbf {v} }={\frac {-y{\mathbf {i} }+x{\mathbf {j} }+0{\mathbf {k} }}{x^{2}+y^{2}}}}
+
+For our convenience, let P=−yx2+y2{\displaystyle P={\frac {-y}{x^{2}+y^{2}}}} and Q=xx2+y2.{\displaystyle Q={\frac {x}{x^{2}+y^{2}}}.}
+
+
+, It is worth noting that the calculations in this step are equivalent to checking if the function is irrotational. Both methods involve the evaluation of the quantity ∂P∂y−∂Q∂x,{\displaystyle {\frac {\partial P}{\partial y}}-{\frac {\partial Q}{\partial x}},} or the k{\displaystyle {\mathbf {k} }} component of the curl.
+
+
+∂P∂y=(x2+y2)(−1)+y(2y)(x2+y2)2=y2−x2(x2+y2)2{\displaystyle {\begin{aligned}{\frac {\partial P}{\partial y}}&={\frac {(x^{2}+y^{2})(-1)+y(2y)}{(x^{2}+y^{2})^{2}}}\\&={\frac {y^{2}-x^{2}}{(x^{2}+y^{2})^{2}}}\end{aligned}}}
+
+
+∂Q∂x=(x2+y2)(1)−x(2x)(x2+y2)2=y2−x2(x2+y2)2{\displaystyle {\begin{aligned}{\frac {\partial Q}{\partial x}}&={\frac {(x^{2}+y^{2})(1)-x(2x)}{(x^{2}+y^{2})^{2}}}\\&={\frac {y^{2}-x^{2}}{(x^{2}+y^{2})^{2}}}\end{aligned}}}
+
+This calculation should've shown that our vortex is a conservative vector field. However, our intuition should've thought that this vortex has a non-zero curl, because of how the field seems to be circulating around the origin. Something is wrong with this function.
+ If this field is indeed conservative, then we can say that a loop integral enclosing any part of the domain is 0. Consider the path of the unit circle in this field.
+
+Set up the integral.
+
+
+∮Cv⋅dr{\displaystyle \oint _{C}{\mathbf {v} }\cdot {\mathrm {d} }{\mathbf {r} }}
+
+
+
+Reparameterize the variables in terms of t.{\displaystyle t.}
+
+
+x=cos⁡t{\displaystyle x=\cos t}
+
+
+y=sin⁡t{\displaystyle y=\sin t}
+
+
+
+Reparameterize the differential element in terms of t.{\displaystyle t.}
+
+
+dr=dxi+dyj=−sin⁡tdti+cos⁡tdtj{\displaystyle {\begin{aligned}{\mathrm {d} }{\mathbf {r} }&={\mathrm {d} }x{\mathbf {i} }+{\mathrm {d} }y{\mathbf {j} }\\&=-\sin t{\mathrm {d} }t{\mathbf {i} }+\cos t{\mathrm {d} }t{\mathbf {j} }\end{aligned}}}
+
+
+
+Set up the integral in terms of t.{\displaystyle t.} Substitute and set the boundaries from 0{\displaystyle 0} to 2π,{\displaystyle 2\pi ,} since we are going around the circle.
+
+
+∫02π(−sin⁡ti+cos⁡tj)⋅(−sin⁡tdti+cos⁡tdtj){\displaystyle \int _{0}^{2\pi }(-\sin t{\mathbf {i} }+\cos t{\mathbf {j} })\cdot (-\sin t{\mathrm {d} }t{\mathbf {i} }+\cos t{\mathrm {d} }t{\mathbf {j} })}
+
+
+
+Evaluate the integral.  We used the identity sin2⁡t+cos2⁡t=1{\displaystyle \sin ^{2}t+\cos ^{2}t=1} to simplify the dot product.
+
+
+∫02πdt=2π{\displaystyle \int _{0}^{2\pi }{\mathrm {d} }t=2\pi }
+
+
+
+Because this loop integral does not evaluate to 0, this vector field is not conservative. The reason why this is the case is because our domain is not simply-connected.
+ 
+
+In order for a domain to just be connected, any two points must be able to be connected by a continuous line. The vortex satisfies this, so its domain is connected. 
+
+To be simply-connected, every closed loop in the domain must also have its interior in the domain as well. The vortex fails this. Since the function is not defined at the origin, the unit circle we made as the closed loop does not have all of its interior within the function's domain. 
+
+Another way of saying this is that any closed loop of an arbitrary shape in the domain can be topologically deformed to a point in the domain. In other words, we can squeeze the loop down to a point. Because the origin is not in the domain of the vortex function, the domain is not simply-connected. 
+
+We have given an example of a function that satisfies Clairaut's theorem, but ended up failing path-independence anyway. So for a function to be conservative, its domain must also be simply-connected as well. 
+
+

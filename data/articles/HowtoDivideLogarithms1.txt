@@ -1,0 +1,27 @@
+ This method covers problems in the form logb⁡(x)logb⁡(a){\displaystyle {\frac {\log _{b}(x)}{\log _{b}(a)}}}. However, it does not work for a few special cases:The log of a negative number is undefined for all bases (such as log⁡(−3){\displaystyle \log(-3)} or log4⁡(−5){\displaystyle \log _{4}(-5)}). Write "no solution."
+
+The log of zero is also undefined for all bases. If you see a term such as ln⁡(0){\displaystyle \ln(0)}, write "no solution."
+
+The log of one in any base (log⁡(1){\displaystyle \log(1)}) always equals zero, since x0=1{\displaystyle x^{0}=1} for all values of x. Replace that logarithm with 1 instead of using the method below.
+
+If the two logarithms have different bases, such as log3(x)log4(a){\displaystyle {\frac {log_{3}(x)}{log_{4}(a)}}}, and you cannot simplify either one into an integer, the problem is not feasible to solve by hand.
+;
+, Assuming you did not find any of the exceptions above, you can now simplify the problem into one logarithm. To do this, use the formula logb⁡(x)logb⁡(a)=loga⁡(x){\displaystyle {\frac {\log _{b}(x)}{\log _{b}(a)}}=\log _{a}(x)}.
+
+Example 1: Solve the problem log16log2{\displaystyle {\frac {\log {16}}{\log {2}}}}.Start by converting this into one logarithm using the formula above: log16log2=log2⁡(16){\displaystyle {\frac {\log {16}}{\log {2}}}=\log _{2}(16)}.
+
+This formula is the "change of base" formula, derived from basic logarithmic properties.
+ Remember, to solve loga⁡(x){\displaystyle \log _{a}(x)}, think "a?=x{\displaystyle a^{?}=x}" or "What exponent can I raise a by to get x?" It's not always feasible to solve this without a calculator, but if you're lucky, you'll end up with an easily simplified logarithm.
+
+Example 1 (cont.): Rewrite log2⁡(16){\displaystyle \log _{2}(16)} as 2?=16{\displaystyle 2^{?}=16}. The value of "?" is the answer to the problem. You may need to find it by trial and error:22=2∗2=4{\displaystyle 2^{2}=2*2=4}23=4∗2=8{\displaystyle 2^{3}=4*2=8}24=8∗2=16{\displaystyle 2^{4}=8*2=16}16 is what you were looking for, so log2⁡(16){\displaystyle \log _{2}(16)} = 4.
+ Some logarithms are very difficult to solve by hand. You'll need a calculator if you need the answer for a practical purpose. If you're solving problems in math class, your teacher most likely expects you to leave the answer as a logarithm. Here's another example using this method on a more difficult problem:
+
+Example 2: What is log3⁡(58)log3⁡(7){\displaystyle {\frac {\log _{3}(58)}{\log _{3}(7)}}}?
+
+Convert this into one logarithm: log3⁡(58)log3⁡(7)=log7⁡(58){\displaystyle {\frac {\log _{3}(58)}{\log _{3}(7)}}=\log _{7}(58)}. (Notice that the 3 in each initial log disappears; this is true for any base.)
+
+Rewrite as 7?=58{\displaystyle 7^{?}=58} and test possible values of ?:72=7∗7=49{\displaystyle 7^{2}=7*7=49}73=49∗7=343{\displaystyle 7^{3}=49*7=343}Since 58 falls between these two numbers, log7⁡(58){\displaystyle \log _{7}(58)} has no integer answer.
+
+Leave your answer as log7⁡(58){\displaystyle \log _{7}(58)}.
+
+

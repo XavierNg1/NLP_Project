@@ -1,0 +1,17 @@
+ Manually backing up your profile will allow you to store all of your Firefox profile settings and preserve them in case your profile becomes corrupted or you are planning to reinstall Firefox or use Firefox a different computer with your settings. This method allows you to backup content such as add-ons that Firefox does not provide backups for. You will need to open the Troubleshooting Information tab in Firefox to access your profile’s folder. You can open this tab in one of two ways.
+
+
+Click on the ☰ icon located in the top right of the browser window then click on the �>Troubleshooting Information.
+Activate the menu bar by right clicking an empty space in the window tabs at the top of the browser. Click on “Menu Bar” to reveal Firefox’s menu bar. Go to Help>Troubleshooting Information.
+ Your active profile configuration and settings are located in this folder. Under Application Basics, click on “Show Folder” to go to the profile of the currently active profile on Firefox. This will open up your profile’s folder in the file explorer. Go up one level of the folder structure to see the different folders for each profile used in Firefox. Double click on the profile folder you want to create a backup for.
+ In the file explorer, open your profile folder. Copy all the content within your profile folder by selecting all the files in the folder by holding Ctrl+A or click and drag your mouse over the desired content to back up then release the mouse button. Copy the files then paste it into a different folder. Label the folder as a backup of your Firefox profile. Once the content has been copied over, you can remove the content located in your profile to refresh its settings when Firefox is launched. Do not delete the parent profile folder otherwise you will need to create a new profile to store the content in.
+
+
+You can store your backup folder anywhere on your computer or on removable storage such as a USB drive.
+ If you are restoring to the same profile and Firefox has not been reinstalled, you can copy files over that you would like to preserve including bookmarks, extensions and themes. Navigate to the backup folder of your profile and move files from your backup folder over to your Firefox profile the content belongs to., If you want to move your profile to a different computer or if you reinstalled Firefox, transferring your old profile will require you to create a new profile. Make sure Firefox is not currently running. Then execute the “Run” or the command prompt of your operating system to run the Profile Manager. Create a new profile by following the prompts given by Firefox.This will create a new profile with a new profile window. Place the contents of the profile with the content from your backup folder. Restart Firefox for your changes to take effect.
+
+
+For Mac users, run the terminal and enter in “firefox --ProfileManager” to open the Profile Manager.
+For Windows hold the ⊞ Win+R to open the Run window, then in the run prompt enter in “firefox.exe -ProfileManager” to open the Profile Manager.
+For Linux, open the terminal execute cd (Change program directory) then type in .”/firefox -profilemanager” to open the Profile Manager.
+

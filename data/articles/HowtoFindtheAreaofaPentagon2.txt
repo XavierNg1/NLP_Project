@@ -1,0 +1,28 @@
+ This method only works for regular pentagons, which have five sides of equal length.
+
+
+In this example, we'll use a pentagon with side length 7 units.
+ Draw a line from the center of the pentagon to any vertex. Repeat this for every vertex. You now have five triangles, each the same size.
+ Draw a line from the center of the pentagon to the base of one triangle. This line should hit the base at a 90º right angle, dividing the triangle into two equal, smaller triangles.
+ We can already label one sides and one angle of the smaller triangle:
+
+
+The base of the triangle is ½ the side of the pentagon. In our example, this is ½ x 7 = 3.5 units.
+The angle at the pentagon's center is always 36º.(Starting with a full 360º center, you could divide it into 10 of these smaller triangles. 360 ÷ 10 = 36, so the angle at one triangle is 36º.)
+
+, The height of this triangle is the side at right angles to the pentagon's edge, leading to the center. We can use beginning trigonometry to find the length of this side:In a right-angle triangle, the tangent of an angle equals the length of the opposite side, divided by the length of the adjacent side.
+The side opposite the 36º angle is the base of the triangle (half the pentagon's side). The side adjacent to the 36º angle is the height of the triangle.
+tan(36º) = opposite / adjacent
+In our example, tan(36º) = 3.5 / height
+height x tan(36º) = 3.5
+height = 3.5 / tan(36º)
+height = (about) 4.8 units.
+ A triangle's area equals ½ the base x the height. (A = ½bh.) Now that you know the height, plug in these values to find the height of your small triangle.
+
+
+In our example, Area of small triangle = ½bh = ½(3.5)(4.8) = 8.4 square units.
+ One of these smaller triangles covers 1/10 of the pentagon's area. To find the total area, multiply the area of the smaller triangle by 10.
+
+
+In our example, the area of the whole pentagon = 8.4 x 10 = 84 square units.
+

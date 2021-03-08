@@ -1,0 +1,30 @@
+;
+, The icon in the notification area should turn green.
+ The icon should turn red.
+ In this folder create two subfolders called www and mysql.
+ Left-click the WAMP icon. Select MySQL, my.ini. This opens a file in notepad. Edit the line below using your location of the mysql folder you created in the previous step. Save the file.
+
+
+datadir=C:/Users/Your Name/SkyDrive/Wamp/mysql
+
+, Select Apache, httpd.conf . Edit these lines in this file. Use the location of the www folder you created previously.Save the file.
+
+
+DocumentRoot "C:/Users/Your Name/SkyDrive/Wamp/www"
+<Directory "C:/Users/Your Name/SkyDrive/Wamp/www">
+
+, Test WAMP server by opening a browser and entering localhost in the address bar.
+, graphics, fonts, etc.) This could be a subfolder of a main folder if you have many web sites. Name it for your site. Create a subfolder in your site folder and name it images.
+, From top menu, select Site and click Manage Sites. Select new site.
+
+
+Name your site. Enter the location of the folder you just created for your local site files (not your WAMP server files!).
+ Click the plus sign to add a server.
+
+
+Under Server Name, put Testing server.
+For Connect using, select local/network.
+For the Server Folder, enter the location of your site in the www folder on SkyDrive you created earlier.
+For Web URL put http://localhost/yoursitehere/ Click save.
+ Open it in Dreamweaver. Press F12 to preview in your browser.
+

@@ -1,0 +1,40 @@
+;
+,, Directly below the search box, you will see the word, "Theme". Look in those boxes and you will see the theme and the basic coloring of the theme.
+ If a theme doesn't quite look right, it may not have been updated for your version. The theme page has a list of themes that have been updated...or they just may not work right for you.
+ In this instance, the FiveAlive theme is what you are clicking on. When you do, you will see a list of potential themes.
+ The one selected here is Candii Clouds. A definite girly theme. Also, note how the screen actually looks (aside from the atrocious pink).
+
+
+When choosing a theme, consider how it can affect your eyes and perception after long periods of staring at the screen.
+ They will vary according to the theme. This particular one is Jqui and Trontastic. Eye-catching to be sure.
+ You will want to save it to your computer. The final selection is FluidIndex.
+,
+
+
+Local System: wherever you put the unpacked files
+Remote system: In a Windows TikiWiki, the path is
+
+public_html >> Wiki (or Tiki_root).
+ If the theme is constructed correctly, it should be an easy process. If that doesn't work, do the following.
+ It will tell you what goes where. Using the FluidIndex example of before:
+
+
+Find the 'fluidindex' folder that contains the credits.tpl and index.php. Transfer that folder into the styles folder.
+
+public_html/wiki/templates/styles/fluidindex/credits.tpl
+public_html/wiki/templates/styles/fluidindex/index.php
+
+
+Put the *.css file in the Styles folder.
+
+public_html/wiki/styles/fluidindex.css
+
+
+Copy over the Options folder. Where you find the 'fluidindex.css' file, there is a folder. Copy it into the Styles folder.
+
+public_html/wiki/styles/fluidindex/*.*
+
+
+
+,, Under the Themes tab, there is a Theme option. Click on that. Your new theme should be in there.
+

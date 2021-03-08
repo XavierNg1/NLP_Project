@@ -1,0 +1,8 @@
+ Ubuntu (and several other distributions) locks the root account so that the average user can't access it. This is done because root access is rarely necessary when using the sudo command (see the previous section). Unlocking the root account will allow you to log in as root.
+ If you're in the desktop environment, you can press Ctrl+Alt+T to start the terminal.
+ When prompted for a password, enter your user password.
+ You'll be prompted to create a new password and enter it twice. Once a password has been set, the root account will be active., If you want to lock the root account, enter the following command to remove the password and lock root:
+
+
+sudo passwd -dl root
+

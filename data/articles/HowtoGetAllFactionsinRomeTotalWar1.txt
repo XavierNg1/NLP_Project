@@ -1,0 +1,21 @@
+ These are the default locations for this file, depending on your version of Rome: Total War:
+
+
+Purchased through Steam: C:\Programs\Steam\Steam Apps\Common\Rome - Total War\data\world\maps\campaign\imperial_campaign\descr_strat.txt
+Basic edition: C:\Program Files\Activision\Rome - Total War\data\world\maps\campaign\imperial_campaign\descr_strat.txt
+Gold edition: C:\Program Files\The Creative Assembly\Rome - Total War\data\world\maps\campaign\imperial_campaign\descr_strat.txt
+If you are trying to unlock factions for the Barbarian Invasion expansion instead, look for barbarian_invasion/descr_strat.txt in the same "campaign" folder.;
+, Just in case, make a copy of this file with the same name and save it in a different folder. Now if these changes cause problems in your game, you can drag the copy back into this folder. That will replace the altered file and undo any bugs that the changes introduced.
+ Make sure to copy only the lines that include the faction names. If you introduce any extra spaces or other characters, this will not work. Each line must begin with a single Tab ↹, followed by the single word that described that faction.
+ This hack lets you play as factions you can not unlock during normal gameplay. However, there are several issues you should be aware of before moving them all to the playable section:
+
+
+The SPQR ("roman_senate") and Rebel ("slave") factions are buggy. Your SPQR game will crash if you click the Missions tab, and the Rebel game will crash on loading for some players. In rare cases, players have reported more serious bugs that required uninstalling the game. Try these factions at your own risk.
+The Barbarian Invasion does not allow you to play as the Romano-British, Ostrogoths, Slavs, East Empire Rebels, or West Empire Rebels. Choosing one of these factions will crash your game unless you download a third-party mod.The faction selection screen can only display 20 factions. Keep some factions you are not currently playing in another section.
+ Launch Rome, restarting it if it's already open. The factions you made playable should now appear as options when you start a new campaign.
+ If the factions still don't appear, you likely have an unpatched version of Rome: Total War (earlier than 1.5). You will need to change an additional file to unlock all factions:Navigate back to the data folder and open /data/text/campaign_descriptions.txt
+Copy-paste this into the file:
+{IMPERIAL_CAMPAIGN_ARMENIA_TITLE}Armenians
+{IMPERIAL_CAMPAIGN_ARMENIA_DESCR}Armenians
+Type in the same text for each faction, separated by blank lines. Replace "ARMENIA" with the exact name found in the descr_strat file. Replace "Armenians" with any title and description that helps you identify them.
+

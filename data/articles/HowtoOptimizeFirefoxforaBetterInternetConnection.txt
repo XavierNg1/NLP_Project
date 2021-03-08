@@ -1,0 +1,14 @@
+ If your bandwidth is 10 Mbps for example, it is impossible to browse faster than that, unless you upgrade your plan. Know your bandwidth limits.
+ B (byte) is 8 b (bit). Typically, the connection speed is measured in bits per second (bps): Kbps( kilo-byte per second), Mbps (megabit per second) and so on. If you are uploading with say 5 MB/s (or Mbps), it means you actually upload with 40 Mb/s ( or Mbps).
+ It can be downloaded at: http://www.mozilla.org/en-US/firefox/new/. Most people will say to get Chrome, but, with a few tweaks explained in the following section, Firefox can overtake Chrome in terms of speed. (Firefox has unique security features, better webpage rendering, and by moving toolbar items here and there, it can become wonderfully compact.
+, Make sure you disable the following: "Use Http/1.1Pipelining" and "Use Http/1.1 Pipe-lining when a proxy server is configured". You will manually tweak them later. Input your internet access speed (click Set Bandwidth), then click "Optimize Firefox".
+ (As administrator in Windows vista/7). Again, set your bandwidth, check the "Optimal" Setting in the bottom right area, Apply Changes, Exit, then Reboot.
+, Type about:config in the address bar and hit enter. Promise you will be careful and proceed to the next step.;
+, Change the Value of "network.http.pipelining" from false to true. This is done by double-clicking it. Do the same thing for "network.http.proxy.pipelining", change it from false to true.
+ Name it "nglayout.initialpaint.delay" and set the value to 0.
+ Name it "content.notify.interval" and set the value to 500000.
+ Name it "content.switch.threshold" and set the value to 250000.
+ Name it "content.notify.ontimer" and set the value to true.
+ Name it "content.interrupt.parsing" and set the value to false. This is the last tweak. Close Firefox.
+ The best and most popular is AdBlockPlus. Make sure you also Install The Element hiding helper for AdBlockPlus add on. After installing, Close and open Firefox. Now the websites should be 90% free of ads.
+ Go to Options, then click the Privacy tab. Check "Tell websites I do not want to be tracked".

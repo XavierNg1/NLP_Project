@@ -1,0 +1,24 @@
+ Through the Terminal, you'll be able to run a diagnostic that can detect the presence of spyware on your computer. Go to “Applications > Utilities” and double-click Terminal to launch. This program allows you to interact with the operating system using text commands.
+
+
+Alternately you can search for “Terminal” in the Launchpad.
+ This will instruct the computer to output a list of processes and their network information.sudo gives root access to the command, allowing it to view system files.
+”lsof” is short for “list of open files”. This allows you to see running processes.
+”-i” specifies that the list of open files must be utilizing the network interface. Spyware will try to use to the network to communicate with outside sources.
+”grep LISTEN” is a command to the operating system to filter for those using listening ports -- a necessity for spyware.
+ Your password will not be displayed in the terminal, but it will be entered. This is necessary for the ‘sudo’ command.
+ Look for unfamiliar process names or port usage. If you are unsure about a process or its port, research its name online. You'll find others who have encountered the process and they can help identify it as malicious (or harmless). When you have confirmed a process as malicious, it is time to remove the file running it.
+
+
+If you are unsure whether the process is malicious or not after researching then it is best to leave it alone. Tampering with the wrong files may cause other software to not work properly.
+ This will list the folder locations of the processes on your computer. Find the bad process in the list and copy the location.
+
+
+”cwd” stands for current working directory.
+To make the lists easier to read through, you can run this command in a new Terminal window by pressing ⌘ Cmd + N while in the Terminal.
+ Paste the location into the bracketed space (do not type the brackets). This command will delete the file at that path.
+
+
+”rm” is short for “remove”.
+Make absolutely sure you want to remove the entered item. This process is irreversible! You may want to perform a Time Machine backup beforehand. Go to “Apple >System Preferences > Time Machine” and select “Backup”.
+

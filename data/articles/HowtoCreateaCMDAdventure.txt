@@ -1,0 +1,47 @@
+ This will be easy; it will only take 5-10 minutes to learn. Most of the programming needed for this is explained in other articles like "How to Create a Small Game in Batch". Again, don't be worried about this step, for Batch is so easy a 10-year-old can learn it.;
+, This part is crucial, but pretty easy. Just come up with things like the name of it, genre, etc.
+ Create a new folder (preferably on your desktop) with the name of your game. Don't use any special characters or spaces, only letters, dashes, and underscores. An example is: "mazes_and_monsters". This way, Command Prompt will be able to open it.
+ Open up Notepad, and write something similar to this:
+
+
+@echo off
+ :start
+echo Mazes and Monsters
+echo The MS-DOS Adventure
+echo
+echo Underground Cavern
+echo You awaken in an underground cavern.
+echo
+
+, and put it in the game file.
+ To do this, make a batch file for each command and place them in the game file. Like EXAMINE.bat. It would look something like this:
+
+
+@echo off
+if "%1" == "torch" goto torch
+if "%1" == "tree" goto tree
+ :torch
+echo The torch is lit, and spreads light across the room.
+echo.
+ :tree
+echo It is a tree.
+echo.
+ This does not have to be here. If it is a command that is not used on certain objects, it could look like this:
+
+
+@echo off
+ :start
+echo You are in a dim cavern. You see a hallway going to the right and one to the left.
+echo.
+ :left door
+echo The wooden door is barged shut and locked.
+
+echo.
+
+So, if you were to enter that command while you were accessing the :start label, it would show "You are in a dim cavern. You see a hallway going to the right and one to the left," yet if you were to enter "examine" while accessing the :left door label, it would show "The wooden door is barged shut and locked."
+
+
+
+, Once you're finished with most or the entire game, you'll want to test it. Open Command Prompt, make your way to your game file and open it. Remember when we created the "START.bat" file? We're almost to that. Now, type @echo off, cls, and "start". That will take you to that file, and voila. Try to enter the different commands, test some other things, etc.
+ Then you're ready to go ahead and upload the game file to the World Wide Web.
+

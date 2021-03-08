@@ -1,0 +1,131 @@
+ In Services, in IIS Manager, click on Default Web Site. In the action pane, click on Start.;
+, Choose ServletExec-(your instance), Restart.
+
+
+You can read your log to see that Servletexec restarted:in C:\Program Files\New Atlanta\ServletExec AS\(your servername)open the ServletExec.log.
+ Click on your server name (at the top) of your Sites, above Application Pools, in the Actions pane, click on Restart.
+ In ie on the server http://localhost/(your app).
+
+You probably have servletexec admin also working on that default page:either choose Start -> All Programs -> New Atlanta -> ServletExec 6.0 AS -> ServletExec Administrator directly in ie http://localhost/servletexec/admin you should get:
+
+
+
+
+
+
+
+
+
+
+
+If it is not working, maybe you forgot to set the ISAPI filters.
+In IIS manager on the server Home page, click on ISAPI Filters.
+
+
+
+
+
+
+You should see Name: "ServletExec" Executable: "c:\InetPub\Scripts\ServletExec_Adapter.dll"
+
+,
+
+
+
+
+
+
+
+
+The path is: C:\InetPub\Scripts\ServletExec_Adapter.dll
+Description is: ServletExec
+Allow extension path to execute is checked
+
+,
+Your virtual directory MUST be named 'Scripts'
+
+
+
+
+
+
+
+,
+
+With the Virtual Directory 'Scripts' highlighted, click on 'Handler Mappings' in the main screen.
+
+
+
+
+
+
+Look for the path *.dll, if it is not there, add it using the 'Add Script Map' in the Actions panel.
+
+
+Close IIS, reopen IIS, reread step 2 and verify that in the virtual Scripts directory of {MySite} has ISAPI-dll local enabled.
+
+
+
+
+
+
+Click on that line, hit Edit, then Request Restrictions, Verbs, and Access tab as described in step 2. 
+
+
+
+
+
+
+
+
+
+
+
+Click on Edit Feature Permission
+
+
+
+
+
+
+Verify that it has 'Script/Execute' as described in step 2 above.
+ This is fixed in the next part., In IIS, go to the Application Pools, Select DefaultAppPool (do not double click).
+
+
+Make a note of the number of applications in the DefaultAppPool.
+In the Actions panel, click on View Applications.
+
+
+
+
+
+
+You will see two entries for the /Scripts folder.
+
+
+
+
+
+ 
+Double click on one line. 
+
+
+
+
+
+
+In the drop-down list of the Select Application Pool, you will have a {MySite} selection.
+
+
+
+
+
+Choose that. Click OK.
+If you look now you will see one entry for the /Scripts folder.
+Stop the Default Web Site if you now longer need it. You have moved your app to work on {MySite}). (see Part 1 on how to stop a website)
+Restart Servletexec. (see Part 1 on how to re/start Servletexec)
+Restart IIS. (see Part 1 on how to restart IIS)
+Test your app from a non-server location. {url ending in /{yourapp}}
+For example: https://something.something.mycompany.com/myapp/myinstance.
+You should now have successfully moved your app to work on your {MySite}.
+

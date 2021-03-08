@@ -1,0 +1,41 @@
+ Trimming a string in Java means to remove the leading and trailing white space in the string. For example, if you have the string "
+
+     
+
+Hello, world!
+
+          
+
+" and you want to have it say "Hello, world!" without the white space in the beginning and in the end, you can trim the string. The String class provides a method to trim() which returns a copy of the string with leading and trailing white space removed or the original string if it has no leading or trailing white space.
+ Note that the trim() method will throw an exception if the string is null. The trim() method will not change the contents of the original string because strings in Java are immutable, which means that a string's state cannot be modified after it is created. Rather, the trim() method will return a new string that has its whitespace trimmed off.
+
+
+
+
+
+
+String trimmedStr = str.trim();
+
+
+
+
+
+, Here is a sample program that trims the white space of a string:
+
+
+
+
+
+public class StringManipulation {
+    public static void main(String[] args) {
+        String str = "         Hello!   ";
+        String trimmedStr = str.trim();
+        System.out.println("Original String is \"" + str + "\".");
+        System.out.println("Trimmed String is \"" + trimmedStr + "\".");
+    }
+}
+
+
+
+
+

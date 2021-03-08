@@ -1,0 +1,15 @@
+ The flasher circuit is really easy to make. The circuit takes 12v, converts it down to 3v using the 1k resistor and flashes it using the transistor and capacitor.;
+, Firstly, warm up your soldering iron. Place your 1k resistor onto your breadboard (brown ring at input and gold at output) and solder it in place.
+ Before adding the transistor, cut off the middle leg since we won't need this. Place your transistor onto the board with the rounded end pointing upward (to your resistor) and then place the left leg of the transistor onto the output of the resistor. The right leg will be your positive output for your led.
+ Place your capacitor onto your breadboard. The side with the white strip will go onto your negative input and the other side onto the transistor and resistor input legs.
+ Place your last resistor (100ohm) onto your breadboard (Gold on the white side of the capacitor and brown on an empty track). The output of this resistor will be your negative output for the led.
+ Repeat the building process to make a second one. Now use the schematic as a reference of where to put your input and output wires.
+ Depending on your skills, your controllers can be small enough to fit into a match box. Use electrical tape to cover up your box and keep everything inside. This will also protect the circuit in a way.
+ If you use flat LEDs like in the picture, solder wires onto the contacts of the LEDs to make it easier to connect them. If you didn't use these kind of LEDs, skip ahead.
+ First, determine the direction in which your fan rotates. This is normally clock wise. You will place your LEDs so that they shine in the direction the fan rotates. This will give them a bit of a tail.
+ Using your glue gun or super glue, glue the LEDs onto the top bars of the fan, close to middle. Glue the wires so they lead to the center of the fan. You will connect them here later.
+ Use an old USB cable to connect your LEDs since they have four wires inside. Use no more than 2 LEDs per flasher and do not connect them in series. They will not flash in series. For best results, connect your LEDs in a cross manner. Close up the wires with shrink wrap or electrical tape. Tape the usb cable onto your CPU fan's input wires to keep them in place.
+ Reinsert your fan back into your computer and wire it up. Make sure the fan is tightened tightly so that it works efficiently.
+ Connect the input wires of the two flashers to a 12v output on your computer's power supply. Connect the output wires to the usb cable leading to the fan's LEDs. Close all the connections up with electrical tape or shrink wrap.
+ If your circuit was done correctly, you should see something like in the image above. Well, there you go: something cool to show off to your friends!
+

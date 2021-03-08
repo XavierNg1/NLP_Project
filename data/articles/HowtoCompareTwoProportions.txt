@@ -1,0 +1,45 @@
+ The null hypothesis (H0{\displaystyle H_{0}}) always contains an equality, and is the one you are trying to refute. The alternative (research) hypothesis never contains an equality, and is the one you are trying to confirm. These two hypotheses are stated so that they are mutually exclusive and collectively exhaustive. Mutually exclusive means that if one is true, the other must be false, and vice versa. Collectively exhaustive means that at least one of the outcomes must occur. Your hypotheses are formulated depending on whether it is 1- or 2-tailed:
+
+One-tailed: Research question: Is one proportion greater than the other? Your hypotheses would be stated as follows: {H0:p^1≤p^2Ha:p^1>p^2{\displaystyle {\begin{cases}H_{0}:{\hat {p}}_{1}\leq {\hat {p}}_{2}\\H_{a}:{\hat {p}}_{1}>{\hat {p}}_{2}\end{cases}}}. Use one-tailed if you are interested in difference in one direction only. For example, for this example, we are interested only if the treatment works, that is, the proportion being greater in the treatment group. If we designate the treatment group as 1 and the control group as 2, the hypotheses are {H0:p^1≤p^2Ha:p^1>p^2{\displaystyle {\begin{cases}H_{0}:{\hat {p}}_{1}\leq {\hat {p}}_{2}\\H_{a}:{\hat {p}}_{1}>{\hat {p}}_{2}\end{cases}}}.
+
+Two-tailed: Research question: Is the sample proportion different from the hypothesized population proportion? Your hypotheses would be stated as follows: {H0:p^=p0Ha:p^≠p0{\displaystyle {\begin{cases}H_{0}:{\hat {p}}=p_{0}\\H_{a}:{\hat {p}}\neq p_{0}\end{cases}}}.
+
+If there is no a priori reason to believe that any difference is unidirectional, the two-tailed test is preferred as it is a more stringent test.
+
+
+;
+, "alpha"). By definition, the alpha level is the probability of rejecting the null hypothesis when the null hypothesis is true.Most commonly, alpha is set at 0.05, although any other values (between 0 and 1, exclusive) can be used instead. Other commonly used alpha values include 0.01 and 0.10.
+ A proportion is the number of "successes" divided by the total sample in the group. In this example, {p^1=1820=0.9p^2=1520=0.75{\displaystyle {\begin{cases}{\hat {p}}_{1}={\frac {18}{20}}=0.9\\{\hat {p}}_{2}={\frac {15}{20}}=0.75\end{cases}}}.
+ Overall sample proportion, p^{\displaystyle {\hat {p}}}, is the total number of "successes" divided by the total sample among all groups. Formula is p^=n1p^1+n2p^2n1+n2{\displaystyle {\hat {p}}={\frac {n_{1}{\hat {p}}_{1}+n_{2}{\hat {p}}_{2}}{n_{1}+n_{2}}}}, where n1{\displaystyle n_{1}} and n2{\displaystyle n_{2}} are the sample sizes for groups 1 and 2, respectively. In this example, p^=18+1520+20=0.825{\displaystyle {\hat {p}}={\frac {18+15}{20+20}}=0.825}.
+ The standard error, SE, is calculated as p^(1−p^)(1n1+1n2){\displaystyle {\sqrt {{\hat {p}}(1-{\hat {p}})\left({\frac {1}{n_{1}}}+{\frac {1}{n_{2}}}\right)}}}. In this example, SE=0.825(1−0.825)(120+120)=0.120156{\displaystyle SE={\sqrt {0.825(1-0.825)\left({\frac {1}{20}}+{\frac {1}{20}}\right)}}=0.120156}.
+ The formula is z=p^1−p^2SE{\displaystyle z={\frac {{\hat {p}}_{1}-{\hat {p}}_{2}}{SE}}}. In this example, z=0.9−0.750.120156=1.248{\displaystyle z={\frac {0.9-0.75}{0.120156}}=1.248}.
+ p-value is the probability that a randomly selected sample of n would have a sample statistic at least as different as the one obtained. p-value is the tail area under the normal curve in the direction of the alternative hypothesis. For example, if a right-tailed test is used, p value is the right-tailed area, or area to the right of the z value. If a two-tailed test is used, p-value is the area in both tails. p-value can be found using one of several methods:
+
+Normal distribution probability z-table. Examples can be found on the web, such as this. It is important to read the table description to note what probability is listed by the table. Some tables list cumulative (left side) area, others list right tail area, still others list only area from mean up to a positive z value.
+
+Excel. The excel function =norm.s.dist(z,cumulative). Substitute the numeric value for z and "true" for cumulative. This excel formula gives cumulative area to the left of a given z value. If you need the right tail area, subtract from 1.
+
+In this example, we need the right tail area, so the p-value = 1-NORM.S.DIST(1.248,TRUE) = 0.106.
+
+
+
+Texas Instrument calculator, such as TI-83 or TI-84.
+
+Online normal distribution calculators, such as this.
+ If pvalue<α{\displaystyle p_{value}<\alpha }, reject H0{\displaystyle H_{0}}. Otherwise, fail to reject H0{\displaystyle H_{0}}. In this example, since pvalue=0.106{\displaystyle p_{value}=0.106} is greater than α=0.05{\displaystyle \alpha =0.05}, the experimenter fails to reject H0{\displaystyle H_{0}}.
+ In this example, the experimenter fails to reject the null hypothesis and does not have sufficient evidence to support the claim that the treatment is efficacious. The proportion of people who got better on the treatment, 90%, is not significantly different from the proportion of people who got better on the placebo, 75%.
+ The formula is Difference±Z∗SE{\displaystyle {\text{Difference}}\pm Z*SE}.
+
+Choose a level of confidence. 95% is most commonly used, which corresponds to α=0.05{\displaystyle \alpha =0.05}.
+
+Determine the z-score corresponding to the alpha level. Excel formula is =norm.s.inv(1 - alpha / 2). For α=0.05{\displaystyle \alpha =0.05}, we have z  = norm.s.inv(1-0.05/2) = 1.96.
+
+Calculate the lower limit of the confidence interval as Difference−Z∗SE{\displaystyle {\text{Difference}}-Z*SE}. In this example, the lower limit is 0.15−1.96∗0.120156=−0.086{\displaystyle 0.15-1.96*0.120156=-0.086}.
+
+Calculate the upper limit of the confidence interval as Difference−Z∗SE{\displaystyle {\text{Difference}}-Z*SE}. In this example, the lower limit is 0.15+1.96∗0.120156=0.386{\displaystyle 0.15+1.96*0.120156=0.386}.
+
+Write the 95% confidence interval for the difference in proportion as 0.150±0.236{\displaystyle 0.150\pm 0.236}, or -0.086 to 0.386.
+
+Interpret the result. In this case, we are 95% confident that the true proportion difference is -0.086 to 0.386. Since this range includes 0, there is insufficient evidence that the two proportions are different.
+
+

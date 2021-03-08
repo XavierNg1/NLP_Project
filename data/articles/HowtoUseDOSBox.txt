@@ -1,0 +1,77 @@
+ You can download it for free from DOSBox.com in the Downloads section.;
+, When installing DOSBox, you may find it easier to change the installation location to C:\DOSBox instead of using the default location.
+
+
+Change C: to whatever drive letter you want DOSBox installed on.
+ Games that you download will be placed here. This folder will be mounted as a virtual drive in DOSBox.
+
+
+For example, if you installed DOSBox at C:\DOSBox\, create a folder in the same location like C:\DOSGAMES
+
+
+, There are tons of sites that host old DOS games that can be downloaded free and legally. Search for "abandonware" sites. "Abandonware" are programs made by companies that no longer exist and that have no retail means to purchase. Place the downloaded files in their own folder inside the games folder you created in the previous step.
+
+
+You can also copy the files from old installation disks you may have lying around (if you still have a floppy drive).
+ You will be taken to the virtual command prompt Z:\>., It is not safe to mount your entire hard drive in DOSBox, so instead you'll be mounting your games folder as a virtual drive. The games folder will act as a hard drive.
+
+
+Type mount C C:\DOSGAMES and press ↵ Enter. Type C: and press ↵ Enter. Your input will change to C:\>.
+For Macs, change the locations as appropriate (e.g mount C ~/DOSGAMES)
+
+, Insert the CD into your computer's disc drive. Type in the following mounting command:
+
+
+Type mount D D:\ -t cdrom and press ↵ Enter. Replace D:\ to the drive letter of your disc drive. Type D: and press ↵ Enter. Your input will change to D:\> and you can navigate through the CD's files.
+
+cdrom needs to be lowercase.
+ If you have an ISO file for the game CD you want to play, you can mount it as if it was an actual disc.
+
+
+Type imgmount D C:\ImagePath\image.iso -t iso and press ↵ Enter. Replace C:\ImagePath\image.iso with the actual location and filename of the ISO file.
+ If you have a BIN/CUE file for the game CD you want to play, you can mount it as if it was an actual disc.
+
+
+Type imgmount D C:\ImagePath\image.cue -t iso and press ↵ Enter. Replace C:\ImagePath\image.cue with the actual location and filename of the CUE file. The BIN file needs to have the same name and be in the same location.
+ If you have a floppy disk drive installed in your computer, you can mount it so that DOSBox can access it.
+
+
+Type mount A A:\ -t floppy and press ↵ Enter.
+ To save yourself some time when you start DOSBox, you can set it to automatically mount the drive of your choice. To do this, you'll need to open the dosbox.conf file in a text editor like Notepad.Windows - C:\Users\username\AppData\Local\DOSBox\dosbox-version.conf
+Mac - /Macintosh HD/Users/username/Library/Preferences/DOSBox version Preferences
+Add the following lines to the very bottom of the configuration file and then save it:
+
+
+
+ MOUNT C C:\DOSGAMES
+ C:
+
+
+
+, If you've mounted your DOSGAMES folder, each of your games will usually be contained in their own folders. Type dir to list all of your game directories. If you mounted a disc or disc image, a list of all the files and folders on the disc will be displayed.
+,, Most games start by running an EXE file, though you may need to run a COM or BAT file. This is mainly for older games.
+
+
+The EXE file will often have a name similar to the game. For example, Prince of Persia may be called POP.EXE.
+ Type the name of the EXE, COM, or BAT file, including the extension, and press ↵ Enter.
+ There are several keyboard shortcuts that can be used to adjust the performance of your game. These commands can be useful since a lot of old games will not perform properly on modern systems.
+
+
+
+Ctrl+F8 - This increases the amount of frameskip. Frameskip prevents DOSBox from rendering certain frames, which can improve performance but leads to some visual problems.
+
+Ctrl+F7 - This decreases the amount of frameskip. 0 frameskip means that DOSBox is rendering every frame possible.
+
+Ctrl+F12 - This will speed up the game by allocating more processor power to DOSBox. You can monitor your processor by pressing Ctrl+⇧ Shift+Esc and selecting the "Performance" tab. If you still need performance increases after maxing out your processor, increase the frameskip.
+
+Ctrl+F11 - This will slow the game down by reducing the amount of processing power.
+Not all games will run smoothly on DOSBox, even after tweaking performance settings.
+ If you want the game to take up your entire screen, press Alt+↵ Enter. You can exit full screen mode by pressing the same keys again.
+ If using the command prompt seems a little too complex, you can download a frontend program. These programs use a Windows interface, allowing you to load, start, and adjust games without ever using a command prompt.
+
+
+One of the most popular front ends is D-Fend Reloaded, available for free from dfendreloaded.sourceforge.net.
+D-Fend Reloaded includes the DOSBox files.
+ Once it has been installed, you can start D-Fend reloaded to manage your games. Your installed games will be sorted in the left frame.
+ You can easily add DOS games by dragging and dropping an archive file containing the game into the open D-Fend Reloaded window. The game archive will be automatically extracted and the files will be placed in the right place.
+ Double-click a game from the list to begin playing it. Your Windows color scheme may change temporarily while the game is running to support old DOS colors.

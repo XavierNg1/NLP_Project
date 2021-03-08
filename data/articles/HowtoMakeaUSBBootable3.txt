@@ -1,0 +1,44 @@
+ You will need USB_Prep8 and bootsect.exe. These are developer tools both freely available online. You will also need a flash drive at least 1GB in size, and a Windows XP installation CD or DVD.
+
+Insert the USB drive and the Windows XP disc. Close any Autoplay windows that open.
+ Once you extract the USB_Prep8 .zip file, open the folder it creates and run usb_prep8.cmd. This will open a command prompt. Press any key to format the USB drive with PeToUSB. Note: In Windows 7, you will need to open a cmd as administrator and run usb_prop8.cmd from prompt. Otherwise, nothing works.
+ Do not change any of the settings in the PeToUSB window. Once the format is complete, leave both windows open and start a new command prompt by pressing Windows key + R and typing “cmd” into the field.
+ Once it is extracted, navigate to the boots folder using the new command window. Once you are in the boots directory on your computer, type “bootsect.exe /nt52 Z:”. Change the “Z” to the drive letter of your USB drive.
+
+
+You cannot have any windows open showing the contents of the USB drive at this point, or the operation will fail, and you will need to restart
+Bootsect copies the files necessary to allow your computer to boot from the flash drive. When it is complete, you will see the message “Bootcode was successfully updated on all targeted volumes.” You can close this window and PeToUSB now, but keep the usb_prep8 command window open.
+ Once the boots are done copying, the usb_prep8 command window will display a numbered menu allowing you to change some settings. You will need to change the first 3 settings:
+
+Press 1 and then Enter. A Browse for Folder window will open. Select the drive that contains your Windows XP disc and press OK.
+
+
+
+
+
+
+Press 2 and then Enter. If you have a drive on your computer that is already assigned to the letter T:, then change this option to a free letter. Otherwise, you can leave this as is.
+
+
+
+
+
+
+Press 3 and then Enter. Enter the drive letter for your USB flash drive.
+ To do this, press 4 and then Enter. You will be notified that proceeding will format the virtual disk from the earlier menu. Press Y to continue. Once the format is complete, press any key to continue.
+
+
+Files will scroll up the screen as the copy process progresses. You will be prompted to press any key to continue again. After a few moments, a window will open confirming that you want to copy TempDrive Files. Press Yes, and wait around 15 minutes, then press Yes for the next two windows that open.
+ At this point, the USB drive is complete. Insert it into the computer that you want to install Windows XP on. You will need to set the BIOS to boot from a USB drive. Check out our guide on setting your BIOS correctly.
+
+
+When the startup menu opens, select Option 1 for a text mode installation. The Windows XP installation will now begin as normal.
+After the computer reboots after the text mode portion, select Option 2 to start the GUI (Graphical User Interface) portion of the installation.
+Keep your USB drive plugged in during the entire installation process.
+
+
+
+
+
+
+

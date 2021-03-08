@@ -1,0 +1,38 @@
+ from the Joomla! download page to your computer. It is suggested to save this file to your Desktop so it can be easily found.;
+,,, If you saved the file to your Desktop, the default destination will be a new folder on your Desktop which is ideal. Click the Extract button.
+
+
+It may take a few minutes to extract all the files.
+You should see that a new Joomla folder exists now that you have uncompressed the ZIP file. It is best to rename the folder similar to the website that will be using Wordpress.
+
+
+
+In this example, rename the folder to 1and1help.
+
+
+
+Now that the folder has been uploaded, you will have to ensure that the domain points to this folder. You must log into the 1&1 Control Panel and change the destination folder for the domain to the folder you just uploaded. To edit destination, please reference How do I set up or change a destination for the domain?
+
+,, In this example, the domain is http://1and1help.com/
+
+, installation page. If you receive a message that you need PHP5 to run Joomla!:
+
+
+Click the Start Menu and click Run.
+Type notepad and press ENTER
+Write !AddType x-mapp-php5 .php in the text file and save it as htaccess.txt
+Upload the file to the folder that holds your Joomla! files
+Using your FTP program, rename the file to .htaccess. You must include the period before the file-name.
+Reload the web-page.
+, will perform a Pre-Installation Check to make sure that requirements are met and display whether the recommended settings are already in place. Display Errors may be Enabled which is not the recommended setting but it is best to keep this enabled for now. This will display any PHP errors, which may help you resolve any complications during the install and initial setup of your Joomla! site.
+
+
+
+You will need to accept the GNU General Public License for Joomla! in order to install it. Click the Next button if you agree with the terms.
+ knows which database to store the site data in. Please reference How do I create a new MySQL database? to create a new database or to find out where the database info is kept in the 1&1 Control Panel.
+ The Table Prefix is used to differentiate one Joomla! install from another in cases where you are using one database for multiple Joomla! sites (which is not recommended). You can leave the auto-generated Table Prefix or write in your own. Click the Next button when you have finished entering the database details.
+,, you may want to click the Install Sample Data button so that after Joomla! installs you can view a sample site.
+, installs, click the Remove installation folder
+
+,, site or log in to the Admin section.
+

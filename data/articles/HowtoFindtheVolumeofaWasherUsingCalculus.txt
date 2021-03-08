@@ -1,0 +1,38 @@
+ For example, the blue curve is defined by y=x2,{\displaystyle y=x^{2},} while the red curve is y=x.{\displaystyle y={\sqrt {x}}.} They lie on the same plane and form an area between them.
+
+It is not necessary for a region to be formed solely by two curves and their intersections. More complex problems may ask for a region between curves and imposed boundaries such as y=0{\displaystyle y=0} and y=4.{\displaystyle y=4.}
+;
+, By rotating the area around an axis such as the x-axis or y-axis, you will create a 3D shape with a volume that you can calculate. If your region is not lying completely against the axis, the solid formed will be somewhat hollow which allows you to use the washer method.
+ Do this by setting the two equations equal to each other and solving for x. For x2=x{\displaystyle x^{2}={\sqrt {x}}} it is simple to find that they intersect at x=0{\displaystyle x=0} and x=1.{\displaystyle x=1.}
+
+If your region was rotated around a vertical axis, you will need to find the y values of the intersection points.
+
+More complicated curves may require more work to find where they intersect.
+
+The curves may intersect in two places, one place, or not at all. This is not a problem since the curves do not need to intersect. You can set the boundaries anywhere the problem asks for and find the intersection with those.
+ Pay special attention to what curve makes up the outer radius of the shape, and what curve makes up the inner radius.
+
+If rotating the region around a horizontal axis, the cross section will be a vertical circle.
+
+If rotating the region around a vertical axis, the cross section will be horizontal and you will be required to change your equations to be in terms of y.
+ Because you rotate a region around an axis, the shape will always be circular in nature. You want to find the area of the larger circle with the hole formed by the inner circle subtracted from it, so you want to use the equation A=πR2−πr2,{\displaystyle A=\pi R^{2}-\pi r^{2},} where R{\displaystyle R} is the distance from the outer curve to the axis, and r{\displaystyle r} is the distance from the inner curve to the axis.
+
+You do not need to solve the area of the cross section, simply find the equation.
+
+If your axis of rotation is simply the y or x-axis, you may just use the equation of the curve for R{\displaystyle R} or r.{\displaystyle r.}
+
+If your rotational axis is not the x or y axis, the distance of your radius will be found differently. Depending on the problem, it could require using "axis - equation" or "equation - axis".
+ The 3-dimensional shape is made of infinite sequences of the cross section each with a length dx,{\displaystyle {\mathrm {d} }x,} so by multiplying the area by dx{\displaystyle {\mathrm {d} }x} you get volume.
+
+
+dV=(πR2−πr2)dx=(π(x)2−π(x2)2)dx{\displaystyle {\begin{aligned}{\mathrm {d} }V&=(\pi R^{2}-\pi r^{2}){\mathrm {d} }x\\&=(\pi ({\sqrt {x}})^{2}-\pi (x^{2})^{2}){\mathrm {d} }x\end{aligned}}}
+
+If rotating around a vertical axis and using equations in terms of y, use dy{\displaystyle {\mathrm {d} }y} instead.
+ This will get you the total volume of the object.
+
+
+V=∫01(π(x)2−π(x2)2)dx=π∫01(x−x4)dx=π(12−15)=3π10{\displaystyle {\begin{aligned}V&=\int _{0}^{1}(\pi ({\sqrt {x}})^{2}-\pi (x^{2})^{2}){\mathrm {d} }x\\&=\pi \int _{0}^{1}(x-x^{4}){\mathrm {d} }x\\&=\pi \left({\frac {1}{2}}-{\frac {1}{5}}\right)\\&={\frac {3\pi }{10}}\end{aligned}}}
+
+If your region was rotated around a vertical axis and your cross sections are now horizontal, remember that since your equations are in terms of y now, the boundaries will be the values of y instead of x for the integral.
+
+

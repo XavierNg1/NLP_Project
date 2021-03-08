@@ -1,0 +1,42 @@
+ This is available for all common operating systems and many languages. Select a download from the Tor Project website. Over most internet connections, it will only take a few minutes at most to download.
+ Extract the downloaded file by opening it or dragging it to your Applications folder. Open the Tor Browser application, and leave it open for the rest of this method.
+
+
+While the Tor Browser is the most secure way to browse the internet, it can also be used just as a connection to the Tor network. You'll need to have the Tor Browser open if you want to use Tor through any other browser, such as Firefox.
+ The Tor network encrypts your requests for web pages and sends them through a network of private computers. To connect to this network through Firefox, you'll need to alter your Firefox proxy settings. This can vary depending on your Firefox version and operating system, but these instructions should work for most users:
+
+
+In Firefox for Windows, go to Menu→Options→Advance→Network→Settings, or skip this process and use BlackBelt as described above.
+In Firefox for Mac OS X, go to Firefox→Preferences→Advanced→Network→Settings.
+In Firefox for Linux, go to Edit→Preferences→Advanced→Proxies.
+ The default setting is "No proxy." Check the button next to "Manual proxy configuration" instead. Enter the following information exactly in the list of other options:
+
+In the SOCKS Host box, enter: 127.0.0.1
+
+In the Port box adjacent to the numbers you entered, type 9150.
+Select SOCKS v5 if you see this option.
+Place a checkmark in the "Remote DNS" box, if it isn't there already.
+After No Proxy for:, enter 127.0.0.1
+
+
+, Most likely, if the setup didn't work, you will not be able to load any web pages. If this happens, double check the information you added, and that the Tor Browser is open. If you are able to load web pages, visit check.torproject.org to confirm that you are using Tor.
+
+
+If you cannot get Tor to work, switch back to "No Proxy" to continue using Firefox as normal while you troubleshoot the problem.
+ If you cannot get Tor to work following these instructions, find your issue on the Tor FAQ. If your question is not answered there, contact the Tor Project developers through email, phone, or paper mail.
+
+
+The developers can provide help in English, Arabic, Spanish, Farsi, French, or Mandarin.
+ Anytime you want to use Tor, you must open the Tor Browser, wait for it to connect, then set Firefox to the "manual proxy configuration" you've set up. You will only be partially protected, but can increase your security by following the instructions below on becoming more secure.
+ In 2013, the US National Security Agency exploited a flaw in Firefox version 17 to collect data sent through the Tor network.Check the changelog on a Firefox update to find out if it fixes an urgent security update. If it does not, consider waiting a week or two before updating, and check online to find out if the update introduced a new security flaw.
+ Browser plugins such as Flash, RealPlayer, and Quicktime can be exploited to reveal your IP address, identifying your computer.To get around this, you can try YouTube's experimental HTML5 video player, but most other sites will not have this option.
+
+
+Many websites run these plugins automatically to show embedded content. You'll need to disable these plugins entirely in your Firefox plugin options for maximum privacy.
+ Be aware that Torrent file-sharing applications often override your privacy settings, making it easy to track the download back to your computer. You may download other files normally, but turn off your internet connection before opening them to avoid the application transmitting data..doc and .pdf files are especially likely to contain internet resources.
+ The http you see at the beginning of web addresses marks the protocol used to exchange requests for information between you and the web server. You may manually enter https instead to add an additional encrypted protocol, but installing the https everywhere add-on for Firefox is a much easier way to accomplish this, automatically forcing https on any website that supports the function.
+ While the above steps can make your Firefox reasonably private, it is easy to slip up and reveal your information. Firefox also has a much more rapid development time than Tor does, so there is a significant chance that security flaws related to Firefox and Tor interactions will go undiscovered and unpatched. The Tor Browser, which you may have already downloaded while setting up Firefox Tor, automatically uses maximum privacy settings, and should be used when there are significant stakes involved, such as punishment from a repressive government.
+
+
+The Tor Browser is a modified version of Firefox, so the layout and functionality may be fairly easy to learn.
+

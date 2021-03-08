@@ -1,0 +1,6 @@
+ The setup for this data table is much like for SUMIF, but it can support multiple criteria differing ranges. Make a column with numeric values, a second column with a conditional value (e.g. yes/no), and a third column with another conditional value (e.g. date).
+ Select a cell and enter “=SUMIFS()”. Within the parentheses enter the summation range, criteria ranges, and target criteria. Important to note, with SUMIFS the sum rage is the first value. For example, =SUMIFS(B1:B4, C1:C4, yes, D1:D4, “>1/1/2011”). This will calculate the sum of column B, as long as column C has the condition “yes” and column D reads a date later than 1/1/2011 (“>” and “<” are symbols used to denote greater than and less than).
+
+
+Note that the ranges can be variable, which can be useful for large data tables.
+

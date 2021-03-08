@@ -1,0 +1,30 @@
+ You may not have access to all the features described here if you have an old version of Firefox. Checking your Firefox version will automatically download the latest update.
+
+
+Firefox 9 and earlier does not have the Inspect Element tool at all.;
+, You can right-click on images, text, backgrounds, or any other element. If you don't have a two-button mouse, left-click while holding Control.
+ A toolbar should appear at the bottom of your window. A pane will also appear below the toolbar, displaying the page's HTML code.
+ When you click Inspect Element, several panes will open at the bottom of your window. Here's a breakdown of their uses and names:The top row is the Toolbox Toolbar. This has several developer tools, but we're interested in Inspector on the left. Keep this selected (highlighted in blue) for this entire guide.
+Below the toolbar, there's a single Breadcrumbs row of HTML elements, showing the full path relating to the selected element.
+The pane below this row shows the HTML tree or "Markup View" of the page. The HTML for the element you selected is highlighted and centered in this pane.
+The pane to the right displays the CSS stylesheet for this page.
+ Once the toolbar is open, selecting another element is easy. Here are three ways to do it:
+
+
+Hover over a line of HTML to highlight the corresponding element (requires Firefox 34+).Click the HTML to select that element.
+Click the Select Element tool on the far left of the toolbar: the icon is a cursor over a square. Move your cursor over the page to highlight elements, then click to select an element.
+ Click anywhere in the HTML pane. Use the left and right arrows on your keyboard to move through the code (requires Firefox 39+).This is useful for elements too small to select by hand.
+
+
+Grey HTML relates to elements not displayed on the page. This includes comments, certain nodes such as <head>, and elements that have been hidden with the CSS display property.Click the arrow to the left of containers to expand or hide its contents. To expand all contents, hold Alt or option while clicking., Look for the search bar (magnifying glass icon) on the far right of the Breadcrumbs row. Click this to expand it, then type in the HTML code you're looking for. As you type, a popup will appear listing matching elements. Click on one to select that element and scroll the HTML pane to its code.
+ If you're new to web developer tools, understand that they do not make any permanent changes. Your edits will only be visible on your screen, and only until your close the page or refresh it. Don't hesitate to experiment even if you're not sure what will happen.
+ Double click a line of HTML. Type in the new text and press enter to save your changes.
+ Remember, the Breadcrumb toolbar is sandwiched between the full HTML tree and the upper toolbar. Click and hold on any of the elements in this row to open an extensive menu. Here's an incomplete guide to these options:"Edit as HTML" makes the node and all its contents editable in the HTML tree, instead of having to edit each line individually.
+"Copy Inner HTML" copies all the contents of the node, while "Copy Outer HTML" copies the node as well (such as <div> or <body>
+"Paste →" leads to several options for where to paste, such as before this node or after the first child of the node.
+ :hover, :active, and :focus change the appearance of the element when the user interacts with it. The exact effect is determined by the CSS stylesheet (editable from the right hand pane).
+ To rearrange elements in the code, click and hold the HTML until a dashed line appears. Move it up or down the tree and let go when the dashed line is in the desired place.
+
+
+This requires Firefox 39 or later., To close all of these fancy windows, just press the X in the far right corner of the toolbar, above the CSS pane.
+

@@ -1,0 +1,15 @@
+ The Group Policy Editor is the easiest way to disable deleting browser history, but not all versions of Windows have access to that tool. If you're using the Home version of any Windows, you likely do not have the Group Policy Editor installed, and should use these instructions.
+
+
+Press the Windows key + R, type gpedit.msc, and press Enter. If the Group Policy Editor opens, click here to see instructions for it. If it can't be found, continue reading this section.;
+, This will open the Registry Editor.
+ Expand it to HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\.
+
+
+If you want to disable history deleting for just a specific user instead of all users, log into that user's account and select the HKEY_CURRENT_USER key instead of HKEY_LOCAL_MACHINE.
+ Select "New" → "Key" and type Internet Explorer.
+ Right-click in the right frame, select "New" → "Key" and type Control Panel.
+ Right-click in the right frame and select "New" → "DWORD". Name it DisableDeleteBrowsingHistory and press Enter.
+ Change the "Value data" field to 1 and close it.
+ You'll notice that the Delete... button and the "Delete browsing history on exit" box have been grayed out, and there is a message on the bottom informing the user that "Some settings are managed by your system administrator".All users on the computer will be affected. You can return to normal by deleting the DisableDeleteBrowsingHistory DWORD.
+

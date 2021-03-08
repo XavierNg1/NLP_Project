@@ -1,0 +1,11 @@
+ A batch file is like a simple set of instructions you can prepare in advance and run at a later time (or again and again, whenever you need to). Go to "Notepad" and type in the commands you would have typed into the command prompt, for instance:.shutdown –m \\computername1 –r.shutdown –m \\computername2 –r.shutdown –m \\computername3 –r
+is a batch file intended to shutdown three separate computers upon execution.
+
+
+Batch files are typically used for simplifying a series of repetitive tasks (e.g. shutting down a series of computers you control remotely, opening a series of software programs simultaneously).Batch files' strength are that they can execute a pre-determined series of commands in sequence with only one click.
+For more detailed information on how to create a batch file, have a look at How to Write a Batch File.
+ You will have to add this extension to the file directly by adding ".bat" to the end of the filename. When saving the batch file, choose "All Files for Save" as the type., The batch file is complete and can be run either by double clicking or by calling it by name the command prompt.
+
+
+You can also schedule the batch file for later using built-in Windows utility "Task Scheduler.
+

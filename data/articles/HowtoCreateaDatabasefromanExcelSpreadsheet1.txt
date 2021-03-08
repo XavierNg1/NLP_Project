@@ -1,0 +1,48 @@
+
+
+
+Save the spreadsheet to a location on your hard drive. You can also use an existing excel spreadsheet.;
+, Open an existing Microsoft Access database or create a new, blank database.
+
+
+Microsoft Access is designed for use with Microsoft Excel and comes bundled with Excel in Microsoft Office Professional.
+You can also purchase Access alone to discover how to create a database from an Excel spreadsheet
+
+,,
+
+
+Alternatively, you can type the file path into the field, for example: c:/users/<username>/documents/addresses.xls (or addresses.xlsx).
+ By creating a new table you can edit the information in Access.
+Append a copy of the records to the table: Use this option if you are using an existing database and want to add the data to one of the tables in the database. By appending an existing table, you can edit the information in Access.
+Link to the data source by creating a linked table: Use this option to create a hyperlink in the database, which will open the excel database in excel. With this method, you cannot edit the information in Access.
+Click OK after you have selected your transfer method.
+
+
+
+By default, Excel creates workbooks with three spreadsheets labeled "Sheet 1," "Sheet 2," and "Sheet 3." You can delete, add and edit the names of these sheets in Excel, and whatever changes you make will show up in Access.
+You can only transfer one sheet at a time. If you have information on all three sheets, you must complete the transfer with one sheet then go back to the "External Data" tab and repeat all the steps for each remaining sheet.
+Click "Next" after you have selected the spreadsheet.
+ If not, remove the checkmark and Access will create its own column headings.
+
+
+Click "Next."
+
+,
+
+
+If you are importing all the fields from the spreadsheet, as-is, do not make any changes at this screen and click "Next."
+If you wish to change the nature of one of the fields, click on the column header you wish to change and edit the name of the field, the data type, or whether or not it is indexed. Then click "Next."
+If you want to skip that field, put a check mark next to "Do Not Import Field (Skip)," then click "Next."
+
+,
+
+
+For the best results, let Access set the key. You can also set your own by typing text into the field next to that option, or you can select "No primary key" which is not recommended.
+Click "Next."
+
+,
+
+
+Click "Finish" and put a checkmark in "Save These Import Steps" to use the same steps on future imports.
+Click "Close" to create your database.
+

@@ -1,0 +1,30 @@
+ If you are looking for a file that contains a certain phrase or string of characters, you can use the grep command. A basic grep command is formatted as follows:
+
+
+
+
+
+grep -r -i "search query" /path/to/directory/
+
+
+
+
+
+The -r sets the search to "recursive", so it will search the current directory and all subdirectories for any file that contains the query string.
+The -i indicates that the query is not case-sensitive. If you want to force the search to pay attention to case, omit the -i operator.
+ When you perform a grep search as above, you'll see the file name along with the text with the matching query highlighted. You can hide the matching text and just display the file names and paths by including the following:
+
+
+
+
+
+grep -r -i "search query" /path/to/directory/ | cut -d: -f1
+
+
+
+
+, The grep command will return an error when it tries to access folders without the correct permissions or runs into empty folders. You can send the error messages to /dev/null, which will hide them from the output.grep -r -i "search query" /path/to/directory/ 2>/dev/null
+
+
+
+

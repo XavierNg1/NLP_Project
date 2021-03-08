@@ -1,0 +1,41 @@
+ HTML (Hyper Text Markup Language) is the coding language that makes web-pages, it is the skeleton of every web-page that exists. To see what it looks like, go into Internet Explorer, navigate to any website and right-click on the web-page selecting "View Source". You will see a page of code, and that is HTML. That code is what your browser sees and interprets into a human friendly web-page.
+
+
+In Google Chrome press F12.
+In Mozilla Firefox, press Ctrl + U to view the page's source code.
+In Safari, select View→View Source (or Option + Command + U).
+In Internet Explorer, the VIEW menu option is "source".
+ If you don't, you'll likely get overwhelmed by the syntax and the script languages.
+
+
+It's important to remember that you'll be writing your information between an opening HTML tag and a closing HTML tag. An opening tag looks like this: <___> . A closing tag looks like this: </___> . Eventually, the ___ is replaced with a code.
+ and click "Notepad." It is a lot easier if you use Notepad++ once you choose the HTML language, everything you write will be automatically connected with different colors - that way it will be a lot easier to correct possible mistakes.
+ On the first line, type <!DOCTYPE>, this should always be the first tag in your code. On the second line add <html>. It is the second tag you write that tells the computer you're starting a web-page. It will also be closed last, so at the end of the document, close it off by typing this: </html>. This ends the web page.
+, A title is important because it gives your users an idea on what the page is all about. Also, when users bookmark your site, that title is all they will see in their bookmark list. The title for HTML code is <title>. Close it off at the end of your title by writing </title> The title is going to show on the tab, don't expect it to be the title of the actual website.
+ Type <body> to open the body tag. Then close the body tag by typing </body>. The bulk of the information for your web-page goes between <body> and </body>.
+
+
+To give your web-page a background color, you can add a style to the body. To add a background color, add this tag <body style="background-color:silver">. You can try a different color or even a hex code. The words in the quotation marks are known as "attributes." They must be surrounded by quotation marks!
+
+,
+
+
+To make the text go to the next line (like pressing "Enter" on your keyboard), write
+
+Want to add a marquee, otherwise known as a word that moves across a screen? Simply type <marquee>TEXT GOES HERE</marquee>.
+ If you want to put a picture from the Internet onto your web page, the HTML code for pictures is <img src="URL"> . The closing tag is: . However, the closing tag is optional.
+ Your webpage should look something like this:
+
+
+
+<title>My Web-page</title>
+<body bgcolor="yellow">
+I love wikiHow because
+<marquee>It's the best website in the world!</marquee>
+<img src="http:</body>
+
+
+
+
+, Go to "save as", put a filename with an .html extension (such as "testfile.html") and choose "all files" or "text" under file type. It won't work if both are not done. Go find the page wherever you saved it, double click it, and your default web browser should open up your very own web-page.
+

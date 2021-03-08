@@ -1,0 +1,12 @@
+
+Open Windows if you're locked out.
+Open the Command Prompt as an administrator.
+Type .slmgr -rearm and press ↵ Enter.
+Reboot your computer.
+Run the command again after 30 days.
+Open the Registry Editor.
+Use the tree on the left to navigate to the correct folder.
+Right-click the "SkipRearm" key and select "Modify".
+Change the "Value data" field to .1.
+Run the slmgr -rearm command each month.
+Reinstall Vista after a year.

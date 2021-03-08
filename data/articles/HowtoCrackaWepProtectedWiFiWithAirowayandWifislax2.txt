@@ -1,0 +1,19 @@
+ Click the Start menu, and navigate to WiFiSlax > Asistencia chipset > Asistencia Intel pro wireless > Cargar ipw3945 inyección - ipwray-ng. This will put your network card into wifi0 mode, which is the monitor mode.
+ This will display all of the WiFi data that your card collected while in monitor mode.
+
+
+You will need to make note of the BSSID with the most beacons. The BSSID is the name of the network, and the number of beacons indicates signal strength. The more beacons you have, the easier it will be to crack. Make note of the channel (CH) that the network occupies.
+ Click Start, and then navigate to WiFiSlax > Herramientas Wireless > Airoway. This will open multiple windows with command lines.
+ In the Airoway Command window, select the channel of the BSSID that you want to crack. Press Enter to begin the cracking process. Select the access point that you want to crack by pressing the associated number.
+
+
+Once you’ve selected the access point, a new menu will open. Select option 2 to associate a MAC address and then option 3 to replay live ARPs (this will speed the crack process up).
+ Once the process has begun, you will need to wait a few moments as the program collects packets. The more packets you have, the greater chance you have at cracking the WEP.
+
+
+When the Data category in the Scan window reaches between 20,000-30,000 press 8 on the keyboard to crack the key.
+ If the attack was successful, the key will be displayed in the bottom-right window. It will be listed next to the words KEY FOUND. Make sure that the Decrypted Correctly value is at 100%, or else the key will not work.
+
+
+The key will be displayed both in hexadecimal and ASCII format. The ASCII key is the one typically entered in when connecting to the network.
+

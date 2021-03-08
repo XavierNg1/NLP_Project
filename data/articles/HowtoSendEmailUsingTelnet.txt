@@ -1,0 +1,40 @@
+ If you’re using MacOS or Windows XP, your version of telnet is ready to use. If you have Windows Vista, 2008 server, 7, 8.1 or 10, you’ll need to enable telnet before you can use it.
+
+
+Windows Vista, 2008 server, 7 and 8.1: Click on the Start Menu and then select Control Panel. Click Programs, and select “Turn Windows features on or off.” This will bring up a list of Windows Features. Scroll down until you see “Telnet Client,” and put a check in that box. Click “OK.” Windows 10: Right-click the Start menu and select Programs and Features. Click “Turn Windows features on or off” in the left menu. In the list that pops up, put a check in the box next to “Telnet client” and click “OK.”;
+, This is a little different between Windows and Mac.
+
+
+Any version of Windows: Press ⊞ Win+R , type cmd, then press ↵ Enter.
+Mac: In Finder, select “Applications,” then “Utilities.” Double-click the “Terminal” icon. You can also access Terminal by typing it into Launchpad and clicking it.
+ Type telnet mail.server.com 25 where "mail.server.com" is the name of the Simple Mail Transfer Protocol (SMTP) server of your email provider (such as smtp-server.austin.rr.com) and 25 is the port number used by the SMTP service.
+
+
+You should receive a reply like "220 mail.server.com.”
+Port 25 is the port for most mail servers, but some network administrators move SMTP to a different port, like 465 (a secure port) or 587 (for Microsoft Outlook users) . Ask your administrator (or check your account information) for the correct port.
+If you receive an error message, such as "Cannot connect to host on port 25," and you are sure that port 25 is the correct port, the mail server is likely experiencing an issue.
+ The reset of the steps are the same no matter which operating system you're using. Type HELO yourdomain.com where yourdomain.com is the domain name from which you send e-mail. Note that there is only one L in HELO. Press ↵ Enter.
+
+
+You should receive a reply like "250 mail.server.com Hello yourdomain.com pleased to meet you."
+If you receive no response or an error message, try EHLO instead of HELO. Some servers prefer one to the other.
+ Type mail from: you@server.com, using your own e-mail address. Make sure there is a space after the mail from:. Press ↵ Enter.
+
+
+You should receive message that says something similar to "250 Sender OK.”
+If you see an error, double-check that you’re using an e-mail address with the same domain as the server. Your server may not allow you to send a message with your yahoo.com address, for example.
+ Type rcpt to: friend@friendsdomain.com, where the e-mail address is that of your actual recipient. Press ↵ Enter.
+
+
+You should see a message that says something along the lines of "250 OK – MAIL FROM you@yourdomain.com ".
+If you receive an error, the e-mail address you are trying to send a message to may be blocked.
+ You’ll need to enter a few commands to format and send the message.
+
+
+Type data and press ↵ Enter.
+On the next line, type subject: test and press ↵ Enter twice. Replace “test” with your desired subject.
+Type your message. When you’re done, press ↵ Enter.
+Type a single . to end the message, then press ↵ Enter. You should see a message that confirms your message was accepted or queued. This message varies across servers.
+If you see any sort of error message, write it down and contact your e-mail provider.
+ Press ↵ Enter.
+

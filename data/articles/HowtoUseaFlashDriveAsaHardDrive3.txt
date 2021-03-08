@@ -1,0 +1,11 @@
+ Turn on (or restart) your computer and watch for a message that says something like “Press F2 to enter setup” or “Setup=F1.” The exact message and key to press are different across different sorts of computers. Press the key as instructed to enter the BIOS.
+ BIOS menus vary, but look for the option that mentions “Boot” and select it with keyboard commands.
+ This will allow you to boot to install your operating system from a CD, and load it onto the flash drive.
+ Disconnecting the hard drive leaves the operating system unaffected and prevents boot errors from grub (Ubuntu's operating system loader) if the USB drive is not present.
+ Make sure the flash drive is plugged in, then reboot the computer.
+ Select the USB flash drive as the location where you want to install the new OS.
+ Depending on the computer, it may reboot automatically. Re-enter the BIOS and set the boot order to this order: 1) Removable Device, 2) CD, and 3) Hard Drive (HDD). If you see an option to enable “boot from USB,” as will be present on most Intel-enabled PCs, change it to “on” or “yes.”
+
+, Remove the power cord and reattach hard-drive cable(s).
+ To boot into Ubuntu, make sure the USB drive is plugged in. If you want to use the OS on your hard drive (in other words, not the version of Ubuntu you just installed on the USB drive), remove the USB drive before rebooting. When the USB drive is disconnected, it will first try to boot from CD. If there is no bootable CD in the CD-ROM drive, it will then boot from the hard drive as normal.
+

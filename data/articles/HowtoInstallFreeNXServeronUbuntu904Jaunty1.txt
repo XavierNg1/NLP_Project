@@ -1,0 +1,71 @@
+ It should be run with a root set to "sudo"
+
+
+
+
+!/bin/bash
+if ; then
+        echo "Sorry, you are not root."
+        exit 1
+fi
+
+
+
+}}
+
+,
+
+
+
+
+
+echo -e 'deb http://ppa.launchpad.net/freenx-team/ppa/ubuntu jaunty main\ndeb-src http://ppa.launchpad.net/freenx-team/ppa/ubuntu jaunty main' >> /etc/apt/sources.list.d/freenxppa.sources.list
+
+
+
+
+,
+
+
+
+
+
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 2a8e3034d018a4ce
+
+
+
+
+,
+
+
+
+
+
+
+apt-get update
+
+
+
+
+,
+
+
+
+
+
+aptitude install freenx
+
+
+
+
+,
+
+
+
+
+
+/usr/lib/nx/nxsetup --install
+
+
+
+

@@ -1,0 +1,44 @@
+ When the files on your USB drive have been changed to shortcuts, your files are actually still there in a hidden location. This process will restore the files so that you can see them again.
+
+
+Do not run any of the shortcuts on the USB drive, or you risk spreading the infection.;
+, You'll need to know the drive letter for the USB drive or memory card that has been affected by the virus. The quickest way to find this is to open the "Computer"/"This PC" window. The drive letter for the USB drive will be listed next to the drive label.
+
+
+Press ⊞ Win+E to open the window on any version of Windows.
+Click the Folder button in your taskbar to open the window.
+Click "Computer" in the Start menu if you're using Windows 7 or Vista.
+ You'll be performing the fix using a few quick Command Prompt commands. The process for opening the Command Prompt varies depending on the version of Windows you are using:
+
+
+Any version - Press ⊞ Win+R and type "cmd" to launch the Command Prompt.
+Windows 8 and newer - Right-click the Windows button and select "Command Prompt."
+Windows 7 and older - Open the Start menu and select "Command Prompt."
+
+,* and press ↵ Enter. Replace X with your USB drive's letter. For example, if your USB drive's letter is E, type attrib -h -r -s /s /d E:\*.* and press ↵ Enter.This will unhide the files, remove any read-only attributes, and remove the shortcuts.
+The process may take a while to complete, depending on how much data is on the USB drive.
+ This folder will contain all of the data that was previously hidden by the infection.
+ This is a temporary location while you finish cleaning the drive. You can create a folder on your desktop to hold the files for now. Just drag the files from your USB drive to whichever folder you choose.
+
+
+It may take a while to copy large amounts of data.
+ This will open the Format window.
+
+
+The formatting process will completely erase the drive, so make sure that you've copied your data off of it first.
+ Unchecking "Quick Format" will scan for and remove the infection on the USB drive. The format process will likely take a while to complete., This is a free program that will scan for and remove most common USB infections. You can download it for free from fosshub.com/UsbFix.html.Click the "Research" button after running UsbFix. This will begin scanning your USB drive.
+Click the "Clean" button after finishing the scan. This will fix any infections that UsbFix will find.
+ If the drive got infected while it was connected to your computer, then your computer is most likely infected as well. The first step to combating an infection is ensuring that your an up-to-date antivirus program. You can usually check for updates by right-clicking your antivirus icon and selecting "Check for Updates."
+
+
+If you don't have an antivirus installed, you should install one immediately. Popular free antivirus programs include Avast!, Bit Defender, and Windows Defender.
+If the USB drive got infected after plugging it into a different computer, you may want to inform that computer's owner that your drive was infected.
+ After updating or installing your antivirus program, run a scan on your computer. This is especially important if you don't regularly run scans.
+ The free version of this program can find and remove many common infections. You can download it for free from malwarebytes.org.
+
+
+Select the free license during the installation process.
+ You'll be prompted to check for updates when Anti-Malware starts for the first time. Download and install any available updates before starting your scan.
+ The scan will likely take about 20-30 minutes to complete.
+ This will remove any infected files that were found during the scan.
+

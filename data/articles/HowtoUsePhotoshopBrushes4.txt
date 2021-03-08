@@ -1,0 +1,65 @@
+ It's a percentage that sets the rate of color applied. Each time you press the mouse button the amount of color applied is controlled by the Flow percentage. However, please remember that it cannot exceed the Opacity percentage unless you click again in the same place
+
+, It is the right place to create, edit, save and load a particular brush behavior or Brush Preset. You can customize several things here like the brush tip shape, scattering, opacity jitter, flow jitter, Background/Foreground jitter, configure controls for each variation and more.
+
+
+
+Select the Brush Tool on the Tools Panel to enable the Brush Preset options.
+Click over the Brush Presets option on the left and then in the main area a list of all the active brushes.
+Try them before moving forward in this guide, paint some random strokes using different presets and see what happens. Next we’ll create a Custom Brush, and apply several variations to it.
+ One of the most powerful features of Photoshop is the ability to create custom brushes from scratch using any image as a source. This time we’ll make a brush using this image of a nice leaf.
+
+
+Open your image in Photoshop, and double-click on the "Background" Layer in the layers palette to make it editable.
+
+Go to the Channels panel (go to Window > Channel) and duplicate any of them (you can duplicate a channel by dragging the layer over the Create New Channel button at the bottom). Choose the Green for now, then hide the other channels for awhile.
+With the "Green copy" channel selected hit Command + I to invert the colors,
+Adjust the levels a little bit to make the leaf whiter.
+Hit command (Ctrl) + A to select the entire image,
+Hit command (Ctrl) + C to copy the "Green copy" channel to the clipboard and then delete it.
+Remember to turn on the visibility of the RGB channel before moving forward.
+
+
+Go back to the Layers Panel,
+
+Select the only layer and go to Layer > Layer Mask > Reveal All.
+Switch to the Channels panel again and select the Layer Mask channel added at the bottom.
+Hit command (Ctrl) + V to paste the clipboard, and that’s it.
+Go back to the Layers panel to see how it looks.
+
+
+Add some adjustments to the leaf, go to Window > Adjustments to show the Adjustments panel.
+
+First add a Black and White > High Contrast Red Filter, and then a Levels adjustment using the values shown in the image below.
+Select the three layers, and merge them by pressing Command (Ctrl) + E.
+Using the Transform Controls, resize and rotate the leaf as you wish, the only restriction is that the image cannot exceed the 2500 by 2500 pixels in size.
+Hit command (Ctrl) + Click on the merged Layer miniature to select the leaf contour, and go to Edit > Define Brush Preset,
+Type some name and voilá - a brand new brush tip ready to customize.
+
+
+Once you’ve created the tip shape, you will see it in the Brushes Panel.
+
+Select the brand new brush and paint some spots to see how it actually looks.
+
+
+Create a Brush Preset.
+
+Review all the possible variations of a brush preset, from the brush tip to color jitters and pressure controls.
+Select a brush tip from the library or, as in this case, start working with a custom brush tip.
+
+The Lock icon next to a brush attribute retains the setting even when you change your tip or preset.
+
+
+
+
+Customize the brush tip.
+
+The Diameter value is a pixel measured size of the Brush Tip, cannot be bigger than the tip image.
+The Flip Axis checkboxes flip the tip on its respective axis, X or Y (Horizontally or Vertically) or even both.
+The Angle value rotates the brush by the desired degrees.
+Roundness defines the elliptical roundness of the brush tip where 100% is a perfect circle.
+The Spacing is the percentage of space between images when you draw a stroke on the canvas, using a mouse or a pen tablet. The larger the percentage, the bigger space between color spots.
+Edit the Hardness value of the tip. Anyway custom Brushes created from an image cannot modify its Hardness value, but it will work with the default round tip for instance.
+
+
+

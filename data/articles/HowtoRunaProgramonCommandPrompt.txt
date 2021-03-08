@@ -1,0 +1,36 @@
+
+
+
+In Windows 8, right-click the Start menu, and then click Run. You can also access this menu by pressing the WIN + X keys.;
+,,
+
+
+The Command Prompt is a program lets you control your computer with text commands.
+ The Notepad text editor opens.
+
+
+Notepad is a text editor included in every version of Windows.
+The start command tells the computer to open a software program.
+In order for this to work, you need to know the exact name of the software program's file name that you want to open.
+ This opens the Windows File Explorer.
+
+
+
+You can use any other software program folder, too.
+ This is the filename for Internet Explorer.
+, Try opening the files using the start command.
+
+
+These steps only work when programs are in the Windows Program Files folder. If you want to run a program outside of the Program Files folder, click here for instructions on how to do that.
+ Command Prompt prints a series of file paths separated by semi-colons. This is the PATH. When you use the start command, Command Prompt looks in all of these directories for the filename you typed.
+ The Command Prompt will be able to find the executable program file there.
+
+
+If you'd rather not move the program files, you can edit the PATH to add new file paths.
+ Find the program file ending in .exe that you'd like open with Command Prompt. Right-click the program file, and then click Properties.
+
+
+
+Copy and paste don't work in Command Prompt.
+ The setx command will let you add a file path to the PATH.Type setx path "%path%;, type the file path you wrote down, and then type ". Press Return.
+ The file path is added to PATH.

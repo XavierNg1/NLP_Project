@@ -1,0 +1,14 @@
+
+Start off with a web page that you have added a Google javascript api map to.
+Create a text box input for the user to enter the street address.
+Create a button input for the user to click to geocode the address.
+Declare a variable outside of the initialize function so that it is available in any javascript code, this will store the geocode class object.
+Set the geocoder variable equal to an instance of the Google Maps geocoder class as new Google Maps Geocoder() inside the initialize() function.
+Add a second function to your javascript code, call it codeAddress.
+Make sure that the first line of the function uses getElementById to get the address from the text box and place it into a variable we'll call sAddress.
+Call the geocode method of the geocoder object, this will take two passed-in parameters.
+The callback function should first check the status value of the callback function.
+If the status equals OK, call the setCenter method of the map object variable.
+Next, use the same result geometry location to add a map marker to the map object variable.
+Finally we're going to add an alert message to the ELSE to let the user know that the Geocode didn't work like it should have.
+You can now give it a go!

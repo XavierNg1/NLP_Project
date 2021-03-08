@@ -1,0 +1,45 @@
+ Open the Network and Sharing center. You can access this by searching for “network and sharing” and selecting it from the results list.
+
+
+Click the “Set up a new connection or network” link. In Vista, this will be located in the sidebar.
+Scroll down and select “Connect to a workplace”.
+If you have a wireless connection already select No,create a new connection.
+Select “Use my Internet connection (VPN)”.
+Enter the VPN information. In the “Internet address” field, enter in the server domain name or IP address. Enter any description you would like in the “Destination name” field. Click Next when ready.
+If you’re setting the connection up for later, select the “Don’t connect now” box.
+Enter your login information if you want. When creating the connection, you are given the option to enter your username and password for the VPN. If you’d rather be prompted for this when you start the connection, leave the fields blank and click Create.
+If you didn’t check the “Don’t connect now” box, you will need to enter the login information now, as Windows will attempt to connect to the VPN when you click the Create button.
+Connect to the VPN. When you want to connect to the VPN, click on the Network icon in your system tray. Your VPN will be listed in the available networks list. Select it and enter your login information to connect.;
+, Open the Network section.
+
+
+Click the (+) button at the bottom of the list on the left. Select VPN from the Interface menu.
+Select the type of VPN that you are connecting to. You can ask your VPN operator what type of VPN you are connecting to.
+Label the VPN however you see fit in the “Service Name” field. Click the Create button once you are finished.
+Enter the VPN and log in information. Enter the domain or IP address of the VPN server into the “Server Address” field. Enter your username and password provided by the administrator of the VPN.
+
+Check the “Show VPN status in menu bar” box to have the VPN appear in your status bar near the normal connection icon.
+
+
+Click Connect to connect to your newly configured VPN., In order to connect to a VPN, you will need to install the Network Manager applet. Most Linux distributions come with this preinstalled, but you will still need to install a plugin specific to the type of VPN you are connecting to. Your VPN administrator can tell you the type of VPN you are using.
+
+
+Download the Network Manager applet and plugin. You can install both the applet and the plugin at the same time with the following command. Note, this is for PPTP VPN connections, the most common type for home users and small businesses:sudo apt-get install network-manager-gnome network-manager-pptp
+
+If you already have the Network Manager applet and just need the plugin, remove network-manager-gnome from the above command.
+Once the installation is complete, restart the applet with the command:sudo Network Manager restart
+
+
+
+Click on the Network Manager icon. Select the VPN tab. Click the Add button to create a new VPN connection.
+Enter your VPN information. In the “Gateway” field, enter the IP address or domain of the VPN that you are connecting to. Enter the username and password that you received into the appropriate boxes.
+Click the advanced button. You will need to make a few settings adjustments before you can connect.
+
+Uncheck PAP and EAP in the Authentication field.
+Check CHAP, MSCHAP, and MSCAPv2 in the Authentication field.
+Check the “Use Point-to-Point encryption (MPPE)” box.
+Select 128-bit encryption in the Security pulldown menu.
+Check “Allow stateful encryption” and “Send PPP echo packets”. Uncheck everything else.
+
+
+Connect to the VPN. Once you are finished making changes, right-click on the Network Manager icon and select your VPN. You may need to restart your computer before this appears.

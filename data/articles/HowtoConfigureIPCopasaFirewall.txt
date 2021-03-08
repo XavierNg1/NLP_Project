@@ -1,0 +1,15 @@
+ Anything in the last 6 years should suffice, although you can use older, it's not recommended.;
+, this is really most cards by linksys and D-link.
+, these are relatively inexpensive at your local computer vendor, but can cost a lot of money ($30) at retail chains.
+ it is roughly 45 megabytes.
+, place the cd in the reader, and boot the machine, ensuring that you boot off of the cd.
+ make sure you pick the correct time zone and choose passwords carefully.
+ You should choose to auto-detect network cards (you have to do this twice, for two cards) it should do this without any errors - you did buy the realtek/ne2000 cards, right? after you have auto-detected the cards, you want to tell it that you want a RED-GREEN network. This means, essentially, that one network card is connected to the outside world, and one is connected to your computer(s) at your location. you can assign either of the cards to either color, which you choose is irrelevant, just make sure you assign both.
+ don't worry about PPPoE passwords and such just yet.
+ don't forget to remove the CD from the drive.
+ (if you used two different types of cards, you'll know which is green and which is red from the setup)
+
+, usually you should have set it to 192.168.1.1 therefore you would surf to this address: http://192.168.1.1:81 do not leave off the :81 because this is the port of the router's web server.
+ if not... switch the cables and reboot your computer (not the router). if you're more tech savvy, release and renew the IP of your machine after switching the cables, it accomplishes the same thing.
+ the main one you want to set up for instant internet access is the one that reads Dial-up settings in the second tab. In here you set it up for PPPoE or whatever other ISP settings you may have.
+,

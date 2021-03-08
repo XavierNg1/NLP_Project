@@ -1,0 +1,39 @@
+;
+,, Take the time to write down what goals the end product needs to achieve, and who your user base will be. Clarity of thought at this stage will save a lot of time down the line.
+
+
+
+For something small and self-contained, this might be just a basic flowchart or a simple equation.
+For larger projects, it helps to break the job into modules, and to consider the following:
+
+What task each module must perform
+How data gets passed between modules
+How the data will be used within each module
+
+
+Although gathering and planning requirements can be tedious and much less fun than diving straight into coding, it is even more tedious to spend hours debugging. Take the time to design the flow and structure of your program correctly up front, and you may even spot more efficient ways of accomplishing your goals before you write the first line of code!
+
+, If you think that your code might need explanation, comment it. Each function should be preceded by 1-2 lines describing the arguments and what it returns. Comments should tell you why more often than what. Remember to update the comments when you update your code!
+
+, It will help you keep track of each type of variable, and also what that variable's purpose is. This means more typing than simply x = a + b * c, but it will make your code much easier to debug and maintain. One popular convention is Hungarian notation, where the variable name is prefixed with its type. For example, for integer variables you might use intRowCounter; strings might use strUserName. It doesn't matter what your naming convention is, but be sure that it is consistent and that your variable names are descriptive. (See Warnings below).
+ Use visual structures to indicate code structure. For example, indent a code block that sits within a conditional (if,else,...) or a loop (for,while,...) Also try putting spaces between a variable name and an operator such as addition, subtraction, multiplication, division, and even the equal sign (myVariable = 2 + 2). As well as making the code more visually elegant, it makes it much easier to see the program flow at a glance. (See tips on Indentation below).
+ Start by testing each module on it's own, using inputs and values that you would typically expect. Then try inputs that are possible but less common. This will flush out any hidden bugs. There is an art to testing, and you will gradually build up your skills with practice. Write your tests to include the following cases:
+
+
+Extremes: Zero and beyond the expected maximum for positive numeric values, empty string for text values, and null for every parameter.
+Meaningless values. Even if you don't believe your end user would input gibberish, test your software against it anyway.
+Incorrect values. Use zero for a value that will be used in division, or a negative number when positive is expected or when a square root will be calculated. Something that is not a number when the input type is a string, and it will be parsed for numeric value.
+ Programming is not a stagnant discipline. There's always something new to learn, and - perhaps more importantly - always something old to relearn.
+ In a realistic working environment, requirements change. However, the clearer you are at the start about the requirements, and the clearer your implementation plan is at the outset, the less likely it is that changes will be the result of poor planning or misunderstandings.
+
+
+You can take an active role in improving the clarity of the process by presenting your requirements documentation or your implementation plan well before beginning to code. This will help to ensure that what you are planning to create is actually what's been asked for.
+Structure the project as a series of milestones with a demo for each block, and manage the process one milestone at a time. The fewer things you need to think about at any given moment, the more likely it is that you will think clearly.
+ When programming something complex, it helps to get the simpler building blocks in place and working properly first. For example, let's say you want to create an evolving shape on screen that follows the mouse direction, and changes shape depending on mouse speed.
+
+
+Start by displaying a square and getting it to follow the mouse; i.e., solve movement tracking alone, first.
+Next, make the size of the square relate to mouse speed; i.e., solve speed-to-shape tracking on its own.
+Finally, create the actual shapes you want to work with and put the three components together.
+This approach naturally lends itself to modular code writing, where each component is in its own self-contained block. This is very useful for code reuse (e.g. you want to just use the mouse tracking in a new project), and makes for much easier debugging and maintenance.
+

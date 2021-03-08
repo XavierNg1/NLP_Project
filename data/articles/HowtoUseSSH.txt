@@ -1,0 +1,113 @@
+ For Windows, you will need to download and install an SSH client program. The most popular one is Cygwin, which is available for free from the developer’s website. Download and install it like you would any other program. Another popular free program is PuTTY.During the Cygwin installation, you must choose to install OpenSSH from the Net section.
+Linux and Mac OS X come with SSH already installed on the system. This is because SSH is a UNIX system, and Linux and OS X are derived from UNIX.
+If you have Windows 10 with the Anniversary Update, you can install the Windows Subsystem for Linux which comes with SSH preinstalled.;
+, Open the terminal program that is installed by Cygwin, or Bash on Ubuntu on Windows for Windows 10, or open the Terminal in OS X or Linux. SSH uses the terminal interface to interact with other computers. There is no graphical interface for SSH, so you will need to get comfortable typing in commands.
+ Before you dive into creating secure keys and moving files, you’ll want to test that SSH is properly configured on your computer as well as the system you are connecting to. Enter the following command, replacing <username> with your username on the remote computer, and <remote> with the address for the remote computer or server:
+
+
+$ ssh <username>@<remote>
+You will be asked for your password once the connection is established. You will not see the cursor move or any characters input when you type your password.
+If this step fails, then either SSH is configured incorrectly on your computer or the remote computer is not accepting SSH connections.
+ When you first connect to the remote computer, you should be located in your HOME directory. To move around the directory structure, use the cd command:cd .. will move you up one directory.
+
+cd <directoryname> will move you into the specified subdirectory.
+
+cd /home/directory/path/ will move you into the specified directory from the root (home).
+
+cd ~ will return you to your HOME directory.
+ To see what files and folders in your current location, you can use the ls command:ls will list all of the files and folders in your current directory.
+
+ls –l will list the contents of the directory along with additional information such as size, permissions, and date.
+
+ls-a will list all the contents including hidden files and folders.
+ If you need to copy files from your local computer to the computer you are accessing remotely, you can use the scp command:
+
+
+
+scp /localdirectory/example1.txt <username>@<remote>:<path> will copy example1.txt to the specified <path> on the remote computer. You can leave <path> blank to copy to the root folder of the remote computer.
+
+scp <username>@<remote>:/home/example1.txt ./ will move example1.txt from the home directory on the remote computer to the current directory on the local computer.
+ You can use the cp command to make copies of files either in the same directory or into a directory of your choosing:
+
+
+
+cp example1.txt example2.txt will create a copy of example1.txt called example2.txt in the same location.
+
+cp example1.txt <directory>/ will create a copy of example1.txt in the location specified by <directory>.
+ If you want to change a file’s name or move it without copying, you can use the mv command:
+
+
+
+mv example1.txt example2.txt will rename example1.txt to example2.txt. The file will stay in the same location.
+
+mv directory1 directory2 will rename directory1 to directory2. The directory’s contents will remain unchanged.
+
+mv example1.txt directory1/ will move example1.txt into directory1.
+
+mv example1.txt directory1/example2.txt will move example1.txt into directory1 and rename it to example2.txt
+
+, If you need to remove anything from the computer you are connected to, you can use the rm command:
+
+
+
+rm example1.txt will delete the file example1.txt.
+
+rm –I example1.txt will delete the file example1.txt after prompting you to confirm.
+
+rm directory1/ will delete directory1 and all of its contents.
+ You can change the read and write privileges of your files using the chmod command:
+
+
+
+chmod u+w example1.txt will add the write (modify) permission to the file for the user (u). You can also use the g modifier for group permissions or the o for world permissions.
+
+chmod g+r example1.txt will add the read (access) permission to the file for the group.
+There are a large list of permissions that you can use to secure or open various aspects of your system., There are a few more important commands that you will be using quite a bit in the shell interface. They include:
+
+
+
+mkdir newdirectory will create a new subdirectory called newdirectory.
+
+pwd will display your current directory location.
+
+who shows who is logged into the system.
+
+pico newfile.txt or vi newfile.txt will create a new file and open the file editor. Different system will have different file editors installed. The most common are pico and vi. You may need to use different commands if you have a different file editor installed.
+ If you are unsure as to what a command will do, you can use the man command to learn about all of the possible uses and parameters:
+
+
+
+man <command> will display information about that command.
+
+man –k <keyword> will search all of the man pages for the keyword you specify., These keys will allow you to connect to the remote location without having to enter your password each time. This is a much more secure way to connect to the remote computer, as the password will not have to transmitted over the network.
+
+
+Create the key folder on your computer by entering the command $ mkdir .ssh
+
+Create the public and private keys by using the command $ ssh-keygen –t rsa
+
+You will be asked if you would like to create a passphrase for the keys; this is optional. If you don’t want to create a passphrase, press Enter. This will create two keys in the .ssh directory: id_rsa and id_rsa.pub
+Change your private key’s permissions. In order to ensure that the private key is only readable by you, enter the command $ chmod 600 .ssh/id_rsa
+
+
+, Once your keys are created, you’re ready to place the public key on the remote computer so that you can connect without a password. Enter the following command, replacing the appropriate parts as explained earlier:
+
+
+$ scp .ssh/id_rsa.pub <username>@<remote>:
+Make sure to include the colon (:) at the end of the command.
+You will be asked to input your password before the file transfer starts.
+ Once you’ve placed the key on the remote computer, you will need to install it so that it works correctly. First, log in to the remote computer the same way that you did in Step 3.
+
+
+Create an SSH folder on the remote computer, if it does not already exist: $ mkdir .ssh
+
+Append your key to the authorized keys file. If the file does not exist yet, it will be created: $ cat id_rsa.pub >> .ssh/authorized_keys
+
+Change the permissions for the SSH folder to allow access: $ chmod 700 .ssh
+
+
+, Once the key has been installed on the remote computer, you should be able to initiate a connection without being asked to enter your password. Enter the following command to test the connection: $ ssh <username>@<remote>
+
+
+If you connect without being prompted for the password, then the keys are configured correctly.
+

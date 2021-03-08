@@ -1,0 +1,29 @@
+ A '.mxp' file is a Flash extension.;
+, If you have Flash 9 player (or Flex2) installed, use the 'Web based Flex debugger', else use the Windows or Mac OSX debugger. It doesn't (at the time of this writing) really matter which.
+
+
+
+Go to Help->Manage Extensions...
+In the Macromedia Extension Manager, Go to File->Install Extension.
+
+It should look something like this when you're done.
+Exit Flash and start it back up.
+,
+
+
+Go to Window->Components (Ctrl+F7)
+Attach it to another tabbed window group, if you like.
+Open up the Xray item (near or at the bottom)
+Click the mouse button down, hold it and drag the 'Xray Connector' item from the tree menu onto the stage (the big, empty box in the middle of the Flash interface). Release the mouse button.
+ You can put it anywhere on the stage, even out of bounds. It won't be visible when you run the clip.
+
+
+If you do this with an existing project, make sure you have the bottom-most layer selected, and then 'Send to back' to make sure it's the bottom-most (first-loaded) thing.
+,
+
+
+Under Windows XP, a 'security alert' may pop up about the Flash player attempting to make its connection. Allow it for this case. The connection between your 'connector' and the debugger is client-server, so this looks to Windows like a server is attempting to provide a service, which some not-so-nice applications also do.
+For the 'Web based Flex debugger', make sure .swf files are associated with something (browser or Flash player) to run the debugger when launched from the shell, or from a command prompt or script/batch (start.exe xray.swf).
+There should not be a pop-up or other kind of warning visible about 'No SWF to connect to'.
+If you have problems, go back to the Extension Manager and make sure the extension is ENABLED (the little check box should be checked).
+,

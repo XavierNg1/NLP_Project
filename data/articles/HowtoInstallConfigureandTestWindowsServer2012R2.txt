@@ -1,0 +1,136 @@
+
+
+
+Create the operating system media, if you do not already have a DVD with Windows Server 2012 R2; however, if you download it, be sure to copy the product key, because you will need it for the installation.
+Download Windows Server 2012 R2 from Microsoft and save it onto your hard drive.
+Make a backup copy of the .iso file by copying it onto a DVD from the hard disk.;
+,
+
+
+Place the Windows Server 2012 R2 DVD in the CD/DVD drive.
+Power on the machine to boot the operating system from the DVD.
+Watch the screen as the system boots from the Windows Server 2012 R2 DVD. After booting begins, you will see the display Loading files… followed by the Windows Server 2012 R2 Setup screen.
+Expand the drop down and review optional preferences; they include the language you can select for the installation.
+Click Next to display the options, Install now or Repair your computer.
+
+
+
+Observe that with these Windows Setup options, you choose either first time install or repair an existing operating system.
+Click Install now to display the product key request.
+
+
+
+Take note that if you are using a DVD from a textbook, you may not need a key.
+Type the installation key.
+Click Next so you can choose the operating system version to install.
+
+
+
+Notice that depending on the DVD you are using, you may see a slightly different set of options. However, regardless of which DVD, Windows Server 2012 R2 Server Cores is the default.
+Select Windows Server 2012 R2 Standard (GUI installation), with the arrow key or mouse.
+Click Next to display the license agreement.
+
+
+
+Review the Microsoft license agreement.
+Click the checkbox next to I accept the license terms.
+Click Next to display options, upgrade or custom install.
+
+
+
+Review the notes for these options because they are very different; upgrade lets you upgrade a qualified Windows OS. Whereas with custom, you can install the OS on a newly created space.
+Click Custom to manage disk space and display the disk configuration.
+Highlight where you would like to install the operating system; you can use the arrow key, or mouse.
+Click Next to display Installing Windows screen followed by password Settings.
+
+
+
+Create Administrator password at Windows Setup Settings prompt..
+Type the password, such as Passworda10.
+Click Finish to display the Sign in screen.
+
+
+
+Note that this action, display the password prompt, will depend on the installed environment, real or virtual.
+Click Ctrl+Alt+Delete to display the password prompt.
+Observe that this is the password you created earlier.
+Type the password for Administrator.
+Click the arrow to display Networks so you can tell setup how to configure network parameters.
+
+
+
+Configure network visibility is needed even if you plan to isolate the server; your intentions must be know to network settings.
+Click Yes so your computer is visible to other network devices.
+
+
+
+Verify the display of Server Manager indicating the installation is complete.
+Continue to learn more.
+
+
+
+Click Minimize to minimize Server Manager, which is displayed when the OS completes booting.
+
+
+
+Notice that when Server Manager is minimized, you will see the Recycle Bin and Taskbar; there are also menu items, such as Start, that are visible when the mouse is located at the bottom right.
+Move your mouse along the taskbar to the right and hover it to the right of the time and date; this action displays a number of icons, and to see their names, such as Search, Start, and Settings move the mouse straight up. If the icons are not shown, slightly move the mouse in any direction to display them.
+Click Start to display its contents.
+
+
+
+Notice that Start shows a number of icons, such as Control Panel.
+Click Control Panel to display its contents.
+
+
+
+Notice that items are shown in categories, but you can change how they are displayed.
+Click Network and Internet to display the screen containing their links.
+
+
+
+Notice there are two options, but only the first lets you configure the network adapter.
+Click Network and Sharing Center to display its options.
+
+
+
+Notice there are several options in the left pane, but your main interest is on the adapter settings.
+Click Change adapter settings to display Network Connections.
+Notice that this computer has one NIC.
+Right click Ethernet and click Properties to display its properties.
+
+
+
+Notice there are a number of protocol options for configuring network settings.
+Highlight Internet Protocol Version 4 (TCP/IPv4).
+Click Properties to display TCP/IP Properties.
+Notice that the default TCP/IPv4 configuration for network interface is DHCP client.
+Click Use the following IP address.
+Notice that the boxes are no longer grayed.
+
+
+
+Notice there are a number of textboxes, but to test connectivity, only the IP address and subnet mask are needed.
+Type 172.16.150.10 in IP address field.
+Change the entry in Subnet mask to 255.255.255.0.
+Click OK.
+Click Close.
+Click close (X) to close both Network Connections and Network and Sharing Center.
+
+
+
+Display Start.
+Click the down arrow to display several Apps.
+Scroll right.
+Click the Command Prompt.
+Ping the second machine.
+From the second machine, ping the server.
+
+
+
+Display Start.
+Click Settings to display its contents.
+Click Power.
+Click Shutdown.
+Follow the displayed instructions to complete the shutdown.
+

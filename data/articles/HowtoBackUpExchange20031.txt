@@ -1,0 +1,6 @@
+ To do this, copy the ESEBLCI2 dll files from the Exchange 2003 install CD to the EXCHSRVR\BIN folder on the backup server. Add the key "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\BackupRestore\DLLPaths  REG_EXPAND_SZ - esebcli2 - c:\exchsrvr\bin\esebcli2.dll" to the registry. From NTBACKUP, select "remote store" under "tools.";
+,,
+
+, Select a folder to save the backup to and give the backup a name. Decide whether to verify the data after the backup. This will take longer, but ensures a successful backup.
+ It will show what percentage is complete as it runs. Check the event log to see if it was there were any errors during the process.
+

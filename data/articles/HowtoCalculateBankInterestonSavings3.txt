@@ -1,0 +1,21 @@
+ Excel and other similar spreadsheet programs (e.g. Google Sheets) allow you to save time on the math behind these calculations and even offer shortcuts in the form of built-in financial functions to help you calculate compounding interest.
+ When using a spreadsheet, it's always helpful to be as organized and clear as possible. Start by labeling a column of cells with the key information you'll be using in your calculation (e.g. interest rate, principal, time, n, payment). 
+, Now fill out the data you have about your specific account in the next column over. This not only makes the the spreadsheet easier to read and interpret later, it also leaves room for you to change one or more of your variables later on in order to look at different possible savings scenarios. 
+, The next step is to type in your own version of the accumulated interest equation ( A=P(1+(rn))n∗t{\displaystyle A=P(1+({\frac {r}{n}}))^{n*t}} ) or the extended version which takes into account your regular monthly contributions to the account ( A=P(1+(rn))nt+PMT∗(1+rn)nt−1rn{\displaystyle A=P(1+({\frac {r}{n}}))^{nt}+PMT*{\frac {(1+{\frac {r}{n}})^{nt}-1}{\frac {r}{n}}}} ). Use any blank cell, begin with an "=", and use normal math conventions (parentheses as necessary) to type the appropriate equation. Instead of entering variables like (P) and (n), type in the corresponding cell names where you have stored those data values or else simply click the appropriate cell while editing your equation.
+ Excel also offers certain financial functions that may help your calculation. Specifically, "future value" (FV) may be of use because it calculates the value of an account at some point in the future given the same set of variables you've now become accustomed to. To access this function go to any blank cell and type "=FV(". Excel should then bring up a guidance window as soon as you open the function parenthesis in order to help you insert the appropriate parameters into your function.The future value function is designed with paying an account balance down as it continues to accumulate interest instead of with accumulating savings account interest. Because of this it automatically yields a negative number. Counteract this issue by typing =−1∗FV({\displaystyle =-1*FV(}
+
+The FV function takes similar data parameters separated by commas but not exactly the same ones. For instance, "rate" refers to r/n{\displaystyle r/n} (the annual interest rate divided by "n"). This will calculate automatically from within the FV function's parenthesis.
+
+The parameter "nper" refers to the variable n∗t{\displaystyle n*t} - the total number of periods over which interest is accumulating and the total number of payments. In other words, if your PMT is not 0, the FV function will assume you are contributing the PMT amount across each and every period as defined by "nper".
+
+Note that this function is most often used for (things like) calculating how a mortgage principal is paid down over time by regular payments. For instance if you plan to contribute every month for 5 years, "nper" would be 60 (5 years * 12 months). 
+
+PMT is your regular contribution amount over the entire period (one contribution per "n")
+
+"" (aka Present Value) is the principal amount - your account's starting balance. 
+
+The final variable, "" can be left blank for this calculation (when it is the function sets it automatically to 0).
+
+The FV function allows for you to do basic calculations within the function parameters, for instance the completed FV function could look like −1∗FV(.05/12,12,100,5000){\displaystyle -1*FV(.05/12,12,100,5000)}. This would signify a 5% annual interest rate which compounded monthly for 12 months, over which time you contribute $100/month and your starting (principal) balance is $5000. The answer to this function will tell you the account balance after 1 year ($6483.70).
+
+

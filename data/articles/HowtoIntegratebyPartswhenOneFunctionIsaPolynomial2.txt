@@ -1,0 +1,48 @@
+ This is a similar integral as before, with the only modification being the x3{\displaystyle x^{3}} instead of x2.{\displaystyle x^{2}.} If we wanted to integrate by parts manually, we would have to do it three times, and it only increases with the degree of the polynomial. Obviously, there is a more efficient method to integrating something like this. 
+
+
+∫x3sin⁡xdx{\displaystyle \int x^{3}\sin x{\mathrm {d} }x}
+
+
+, The first column denotes u{\displaystyle u} and its derivatives. The second column denotes dv{\displaystyle {\mathrm {d} }v} and its antiderivatives. Write them out until you reach 0.
+
+
+x3sin⁡x3x2−cos⁡x6x−sin⁡x6cos⁡x0sin⁡x{\displaystyle {\begin{array}{c|c}x^{3}&\sin x\\3x^{2}&-\cos x\\6x&-\sin x\\6&\cos x\\0&\sin x\end{array}}}
+
+
+, The way to do it is by multiplying the 1st entry (in the u{\displaystyle u} column) with the 2nd entry (in the dv{\displaystyle {\mathrm {d} }v} column),  the 2nd entry with the 3rd entry, etc. with alternating signs. So the first pairing is positive, the second pairing is negative, the third pairing is positive, etc.
+
+
+(+)(x3)(−cos⁡x)−(3x2)(−sin⁡x)+(6x)(cos⁡x)−(6)(sin⁡x)+C{\displaystyle (+)(x^{3})(-\cos x)-(3x^{2})(-\sin x)+(6x)(\cos x)-(6)(\sin x)+C}
+
+
+, Make sure to keep track of your negative signs, and don't forget to add C{\displaystyle C} if you are evaluating an indefinite integral.
+
+
+∫x3sin⁡xdx=−x3cos⁡x+3x2sin⁡x+6xcos⁡x−6sin⁡x+C{\displaystyle \int x^{3}\sin x{\mathrm {d} }x=-x^{3}\cos x+3x^{2}\sin x+6x\cos x-6\sin x+C}
+
+
+, We show another example where the tabular method is a good method to avoid directly integrating by parts.
+
+
+∫x2e−2xdx{\displaystyle \int x^{2}e^{-2x}{\mathrm {d} }x}
+
+
+, u=x2{\displaystyle u=x^{2}} and dv=e−2xdx.{\displaystyle {\mathrm {d} }v=e^{-2x}{\mathrm {d} }x.} So take derivatives of u{\displaystyle u} until you reach 0 and take integrals of e−2x{\displaystyle e^{-2x}} until you reach the same row as 0.
+
+
+x2e−2x2x−12e−2x214e−2x0−18e−2x{\displaystyle {\begin{array}{c|c}x^{2}&e^{-2x}\\2x&-{\frac {1}{2}}e^{-2x}\\2&{\frac {1}{4}}e^{-2x}\\0&-{\frac {1}{8}}e^{-2x}\end{array}}}
+
+
+, Just like before, multiply entry 1 in column 1 with entry 2 in column 2, entry 2 with entry 3, etc. all while alternating signs.
+
+
+(+)(x2)(−12e−x2)−(2x)(14e−2x)+(2)(−18e−2x)+C{\displaystyle (+)(x^{2})\left(-{\frac {1}{2}}e^{-x^{2}}\right)-(2x)\left({\frac {1}{4}}e^{-2x}\right)+(2)\left(-{\frac {1}{8}}e^{-2x}\right)+C}
+
+
+, We can pull out an e−2x{\displaystyle e^{-2x}} and a −14.{\displaystyle -{\frac {1}{4}}.}
+
+
+∫x2e−2xdx=−14e−2x(2x2+2x+1)+C{\displaystyle \int x^{2}e^{-2x}{\mathrm {d} }x=-{\frac {1}{4}}e^{-2x}(2x^{2}+2x+1)+C}
+
+

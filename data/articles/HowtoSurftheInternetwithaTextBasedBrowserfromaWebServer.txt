@@ -1,0 +1,26 @@
+ Although, a wide variety of text based browsers exist. Some of the other popular ones include Links, and w3m. You'll need to choose one of these.;
+, If a package for a specific web based browser exists for your operating system, it would benefit you to use that one because it will streamline the installation process.
+ One way to do this is to type:
+
+
+ssh user@1.2.3.4
+
+, Depending on your operating system, the text based browser you chose may exist as a package. On CentOS for example, Lynx is available in yum. On Debian and Ubuntu, Lynx is available in apt.
+ To install the text based browser Lynx using your package manager, you can use one of the following commands:
+
+
+On CentOS: yum install lynx
+On Ubuntu & Debian: sudo apt-get install lynx
+
+, If you do not have the option of using a package manager to install your text based browser, you can build it yourself using your favourite text browser's source.
+ For lynx, you can type lynx in your shell to start it.
+ Use your text based browser's hotkey for going to a page. In Lynx, it's g by default.
+ Hit enter.
+
+
+Web pages will look different than they normally do in a regular browser. Although, your text based browser will preserve the positioning of the web page, so you can expect things to be in the same place they'd be in a normal browser.
+Some text based browser may prompt you about accepting cookies or executing scripts on web pages, respond to these accordingly.
+ To navigate the page, use the arrow keys. You'll see different elements of the page start to become highlighted. This means that they're selected. This is equivalent to hovering your mouse over an element on a web page. An example of selection can be seen in the image above, where EXPLORE is selected.
+ The equivalent of clicking on an element in Lynx is by pressing enter on the element.
+ You now know the basics of using a text based browser.
+

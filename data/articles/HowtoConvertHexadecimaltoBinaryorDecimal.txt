@@ -1,0 +1,270 @@
+ Our ordinary decimal counting system is base ten, using ten different symbols to display numbers. Hexadecimal is a base sixteen number system, meaning it uses sixteen characters to display numbers.
+
+
+Counting from zero upward:
+
+
+Hexadecimal
+Decimal
+
+
+0
+0
+
+
+1
+1
+
+
+2
+2
+
+
+3
+3
+
+
+4
+4
+
+
+5
+5
+
+
+6
+6
+
+
+7
+7
+
+
+8
+8
+
+
+9
+9
+
+
+A
+10
+
+
+B
+11
+
+
+C
+12
+
+
+D
+13
+
+
+E
+14
+
+
+F
+15
+
+
+10
+16
+
+
+11
+17
+
+
+12
+18
+
+
+13
+19
+
+
+14
+20
+
+
+15
+21
+
+
+16
+22
+
+
+17
+23
+
+
+18
+24
+
+
+19
+25
+
+
+1A
+26
+
+
+1B
+27
+
+
+1C
+28
+
+
+1D
+29
+
+
+;
+, Whenever it might be unclear which system you're using, use a decimal subscript number to denote the base. For example, 1710 means "17 in base ten" (an ordinary decimal number). 1710 = 1116, or "11 in base sixteen" (hexadecimal). You can skip this if your number has an alphabetic character in it, such as B or E. No one will mistake that for a decimal number.
+ Hexadecimal was adopted in the first place because it's so easy to convert between the two. Essentially, hexadecimal is used as a way to display binary information in a shorter string. This chart is all you need to convert from one to the other:
+
+
+
+
+Hexadecimal
+Binary
+
+
+0
+0000
+
+
+1
+0001
+
+
+2
+0010
+
+
+3
+0011
+
+
+4
+0100
+
+
+5
+0101
+
+
+6
+0110
+
+
+7
+0111
+
+
+8
+1000
+
+
+9
+1001
+
+
+A
+1010
+
+
+B
+1011
+
+
+C
+1100
+
+
+D
+1101
+
+
+E
+1110
+
+
+F
+1111
+
+
+, It really is as simple as changing the digit into the four equivalent binary digits. Here are a few hex numbers for you to convert. Highlight the invisible text to the right of the equal sign to check your work:
+
+
+A23 = 1010 0010 0011
+
+BEE = 1011 1110 1110
+
+70C558 = 0111 0000 1100 0101 0101 1000
+
+
+, In the "base two" binary system, n binary digits can be used to represent 2n different numbers. For example, with four binary digits, you can represent 24 = 16 different numbers. Since hexadecimal is a base sixteen system, a one digit number can be used to represent 161 = 16 different numbers. This makes conversion between the two systems extremely easy.
+
+
+You can also think of this as the counting systems "flipping over" to another digit at the same time. Hexadecimal counts "...D, E, F, 10" at the same time binary counts "1101, 1110, 1111, 10000".
+ You use decimal notation every day without having to stop and think about the meaning, but when you first learned it, your parent or teacher might have explained it to you in more detail. A quick review of how ordinary numbers are written will help you convert the number:
+
+
+Each digit in a decimal number is in a certain "place." Moving from right to left, there's the "ones place," "tens place," "hundreds place," and so on. The digit 3 just means 3 if it's in the ones place, but it represents 30 when located in the tens place, and 300 in the hundreds place.
+To put it mathematically, the "places" represent 100, 101, 102, and so on. This is why this system is called "base ten," or "decimal" after the Latin word for "tenth."
+
+, This will probably seem obvious, but it's the same process we'll use to convert a hexadecimal number, so it's a good starting point. Let's rewrite the number 480,13710. (Remember, the subscript 10 tells us the number is written in base ten.):
+
+
+Starting with the rightmost digit, 7 = 7 x 100, or 7 x 1
+Moving left, 3 = 3 x 101, or 3 x 10
+Repeating for all digits, we get 480,137 = 4x100,000 + 8x10,000 + 0x1,000 + 1x100 + 3x10 + 7x1.
+ Since hexadecimal is base sixteen, the "place values" correspond to the powers of sixteen. To convert to decimal, multiply each place value by the corresponding power of sixteen. Start this process by writing the powers of sixteen next to the digits of a hexadecimal number. We'll do this for the hexadecimal number C92116. Start on the right with 160, and increase the exponent each time you move left to the next digit:
+
+
+116 = 1 x 160 = 1 x 1 (All numbers are in decimal except where noted.)
+216 = 2 x 161 = 2 x 16
+916 = 9 x 162 = 9 x 256
+C = C x 163 = C x 4096
+
+, Numerical digits are the same in decimal or hexadecimal, so you don't need to change them (for instance, 716 = 710). For alphabetic characters, refer to this list to change them to the decimal equivalent:
+
+
+A = 10
+B = 11
+C = 12 (We'll use this on our example from above.)
+D = 13
+E = 14
+F = 15
+
+, Now that everything is written in decimal, perform each multiplication problem and add the results together. A calculator will be handy for most hexadecimal numbers. Continuing our example from earlier, here's C921 rewritten as a decimal formula and solved:
+
+
+
+C92116 = (in decimal) (1 x 1) + (2 x 16) + (9 x 256) + (12 x 4096)
+= 1 + 32 + 2,304 + 49,152.
+= 51,48910. The decimal version will usually have more digits than the hexadecimal version, since hexadecimal can store more information per digit.
+ Here are a few numbers to convert from hexadecimal into decimal. Once you've worked out the answer, highlight the invisible text to the right of the equal sign to check your work:
+
+
+3AB16 = 93910
+
+A1A116 = 4137710
+
+500016 = 2048010
+
+500D16 = 2049310
+
+18A2F16 = 10091110
+
+

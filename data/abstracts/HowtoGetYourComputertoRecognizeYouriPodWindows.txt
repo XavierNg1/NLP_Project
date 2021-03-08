@@ -1,0 +1,30 @@
+
+Connect the device to your PC with a different USB cable.
+Connect the device to a different USB port.
+Make sure the iPod is charged.
+Update iTunes.
+Update Windows.
+Connect the iPod to the computer.
+Open the Device Manager.
+Expand the “Universal Serial Bus Controllers” section.
+Examine any icons displayed on “Apple Mobile Device Driver”.
+Right-click “Apple Mobile Device Driver” and select “Update Driver Software”.
+Select "Browse my computer for driver software".
+Click "Let me pick from a list of device drivers on my computer”.
+Click “Have Disk”.
+Click “Browse”.
+Navigate to your iTunes “Drivers” folder..
+Select the file named "usbaapl" (“usbaapl64” if running 64-bit version of Windows).
+Install the driver software.
+Open iTunes.
+Close iTunes.
+Disconnect your device from the computer.
+Hit ⊞ Win+R.
+Enter “services.msc” and click “OK”.
+Right-click “Apple Mobile Device Services” and select “Properties”.
+Select the dropdown menu next to “Startup Type” and choose “Automatic”.
+Click “Stop”.
+Click “Start”.
+Click “OK”.
+Restart your computer.
+Connect your device to the computer.

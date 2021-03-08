@@ -1,0 +1,86 @@
+ If you're looking for something a little more stylized than a solid color, yet not as busy as a multi-colored animation, try a gradient background. Gradients are colors that fade into other colors. You can use CSS to create and customize your gradient. Before you try making a gradient, make sure you understand the basics of styling a page with CSS.
+ When making a gradient, there are two pieces of information you'll need: the starting point/angle, and the colors that the gradient will transition between. You can select multiple colors to have the gradient move between all of them, and you can set a direction or angle for the gradient.background: linear-gradient(direction/angle, color1, color2, color3, etc.);
+
+
+
+
+, If you don't specify the direction, the gradient will go from top to bottom. Different browsers have different implementations of the gradient function, so you'll have to include several versions of the code.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html {
+    min-height: 100%; /* This is required to ensure that the gradient stretches across the whole page */
+}
+ 
+body {
+    background: -webkit-linear-gradient(#93B874, #C9DCB9); /* Chrome 10+, Safari 5.1+ */
+    background: -o-linear-gradient(#93B874, #C9DCB9); /* Opera 11.1+ */
+    background: -moz-linear-gradient(#93B874, #C9DCB9); /* Firefox 3.6+ */
+    background: linear-gradient(#93B874, #C9DCB9); /* Standard syntax (must be last) */
+    background-color: #93B874; /* It's a good idea to set a background color in case the gradient doesn't load */
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+, Adding a direction to the gradient will allow you to change the way the color shift appears. Note that different browsers have different ways of interpreting directions. All will result in the same gradient.<!DOCTYPE html>
+<html>
+<head>
+<style>
+html {
+    min-height: 100%;
+}
+ 
+body {
+    background: -webkit-linear-gradient(left, #93B874, #C9DCB9); /* from left to right */
+    background: -o-linear-gradient(right, #93B874, #C9DCB9); /* ending on the right */
+    background: -moz-linear-gradient(right, #93B874, #C9DCB9); /* ending on the right */
+    background: linear-gradient(to right, #93B874, #C9DCB9); /* moving to the right */
+    background-color: #93B874; /* It's a good idea to set a background color in case the gradient doesn't load */
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+, There's a lot more that you can do with gradients.
+
+
+For example, not only can you add more than two colors, you can also put a percentage after each one. This will allow you to set how much spacing you want each color segment to have.
+
+
+
+
+background: linear-gradient(#93B874 10%, #C9DCB9 70%, #000000 90%);
+
+
+
+
+
+Add transparency to your colors. This will make the color fade. Use the same color to fade from the color to nothing. You'll need to use the rgba() function to define the color. The ending value determines the transparency: 0 for solid and 1 for transparent.
+
+
+
+
+background: linear-gradient(to right, rgba(147,184,116,0), rgba(147,184,116,1));
+
+
+
+
+
+

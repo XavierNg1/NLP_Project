@@ -1,0 +1,35 @@
+ Most likely, your normal user account on your Mac is an admin account, but if not, log out and log into an admin account.
+ Genieo may not be running, and not all variants of Genieo even include the Genieo app.
+ This will require entry of the admin user password.
+
+
+This file can be found at "/private/etc/launchd.conf" If you fail to find this file, you must not remove any .dylib files found in subsequent steps. Doing so could cause your computer to crash and be unable to restart.
+
+Do not empty the trash yet!
+In some cases, you will not have a launchd.conf file or any of the .dylib files. This is not cause for concern.
+ Not all these items may be present. Moving most of these will require entry of the admin user password. Do not empty the trash yet.
+
+
+/Applications/Genieo
+/Applications/Uninstall Genieo
+/Library/LaunchAgents/com.genieoinnovation.macextension.plist
+/Library/LaunchAgents/com.genieoinnovation.macextension.client.plist
+/Library/LaunchAgents/com.genieo.engine.plist
+/Library/PrivilegedHelperTools/com.genieoinnovation.macextension.client
+/usr/lib/libgenkit.dylib
+/usr/lib/libgenkitsa.dylib
+/usr/lib/libimckit.dylib
+/usr/lib/libimckitsa.dylib
+
+, Choose Restart from the Apple menu. Wait for the computer to restart, then log back in to the same admin user account before proceeding.
+ This will require entry of the admin user password.
+
+
+/Library/Frameworks/GenieoExtra.framework
+
+,,
+
+
+In Safari, click the Extensions icon in Safari's preferences window. Remove Omnibar.
+In Chrome, click the Extensions link in Chrome's preferences page. Remove Omnibar.
+In Firefox, choose Add-ons from the Tools menu, then click the Extensions item. Remove Omnibar.

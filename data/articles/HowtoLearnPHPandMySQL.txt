@@ -1,0 +1,259 @@
+ PHP is a scripting language that you can use to build interactive scripts. These scripts are executed on the web server and then the results are returned to the viewer via HTML. PHP allows for very interactive and user-focused websites. MySQL is an open-source database language. It allows you to create, edit, and access multiple databases on your server. The combination of these two is essential for online stores, forums, games, and more.
+
+
+PHP can collect form information from the user, create and edit files on the server, send and receive cookies, restrict access, encrypt data, and much more.;
+, In order to use PHP and MySQL, you will need access to a web server. If you don’t have access to a web server, you will need to install one on your own computer.
+
+
+This guide will show you how to find a cheap, reliable web host.
+This article will show you how to create your own web server.
+ There are a variety of ways that you can learn the ins and outs of PHP and MySQL coding. There are online resources, online courses, books, and classroom courses. All of these can help you learn PHP and MySQL.
+
+
+The most popular online resource is w3schools.com. This is the premiere web development instruction website, and quickly covers the basics along with interactive tutorials.
+There are a variety of books available as well. Some of the most popular books include “Learning PHP, MySQL, JavaScript, & CSS” by Robert Nixon and “PHP and MySQL Web Development” by Luke Welling.
+Check the course listings for your local community college. There may also be programming schools in your area, or classes led in community centers. Hands-on classes led by professionals can be great for getting questions answered and seeing the code in action.
+ To begin creating PHP scripts and MySQL databases, you will need to download a few basic tools. While PHP can be edited in any text editor, you will find that using a dedicated coding editor will make your life a lot easier.
+
+
+Popular free editors include Notepad++, Komodo Edit, NetBeans, and Eclipse.
+Popular paid programs include PhpStorm, Adobe Dreamweaver, and PHP Designer.
+In order to use MySQL, you will need to have it installed on your web server.
+ PHP is created in any text editor, though a dedicated coding editor will highlight your syntax and make it much easier to read.
+ PHP exists within a standard HTML file. In order to see the results of your PHP script, you will need to have a basic website to display it:
+
+
+
+
+<html>
+<body>
+<h1>PHP Test</h1>
+</body>
+</html>
+
+
+
+
+, The “ECHO” function will print back the text to the website. This is a basic function of PHP, and will help you learn how to format PHP syntax. All PHP scripts start with <?php and end with ?>. Statements are ended with a semicolon (;).
+
+
+
+
+<html>
+<body>
+<h1>PHP Test</h1>
+<?php
+echo "This is my first PHP script!";
+?>
+</body>
+</html>
+
+
+
+
+, This is a good practice to get into. Comments aren’t displayed to the user, but they allow other developers to see what you are doing. They can also help you remember what you were attempting if you revisit the code later.
+
+<html>
+<body>
+<h1>PHP Test</h1>
+<?php
+// This is a comment that takes one line.
+echo "This is my first PHP script!";
+/*
+This is a comment that
+spans multiple lines
+*/
+?>
+</body>
+</html>
+
+
+
+
+, Variables are objects that have values assigned to them in the script. You can then manipulate these variables to display results to the user. Variables are a powerful part of PHP scripting, and are denoted by a “$” before the variable.<html>
+<body>
+<h1>PHP Test</h1>
+<?php
+/*
+This command will add the two variables 
+and display the output (16).
+*/
+$x=4;
+$y=12;
+$z=$x+$y;
+echo $z;
+/*
+Variables are case-sensitive. If you declare $x=4, 
+but then type $X later, it will not be returned.
+*/
+?>
+</body>
+</html>
+
+
+
+
+, A lot of the functionality of PHP comes from the If/Else statements. These allow you to create conditions for specific commands to occur. This is especially useful for creating customized messages, as well as checking connections.<html>
+<body>
+<h1>PHP Test</h1>
+<?php
+$t=date("H");
+/*
+This defines the “$t” variable as the time of day (date)
+in a 24 hour format (H). It is based on the server’s clock.
+*/
+if ($t<"20")
+   {
+   echo "Have a great day!";
+   }
+else
+   {
+   echo "Get to sleep!";
+   }
+/*
+If the time is less than 20 (8 PM), then it will display 
+“Have a great day!” If it is after 20, it will display 
+“Get to sleep!”
+*/
+?>
+</body>
+</html>
+
+
+
+
+, You will need to connect to the MySQL server before you can create your database. You can do this through the MySQL command line interface, or by using PHP, which is what will be covered here. Creating a connection uses the mysqli_connect(host, username, password) function.<?php
+$connection=mysqli_connect("example.com","admin","password1");
+/*
+This creates a connection to the MySQL server on example.com
+with the username “admin” and the password “password1”.
+*/
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+//This returns a message if the connection does not work.
+?>
+
+
+
+
+
+The connection to the database is assigned to the variable “$connection”. This will allow you to easily refer to the connection later in the script.
+To see how to create a database using the MySQL command line, check out this article.
+ Once you’ve opened the connection, you can add in code to create the database. The database will not contain any data yet; the first table in the database will be added in the next step. You will be using the CREATE DATABASE statement to create the database.
+
+
+
+
+<?php
+$connection=mysqli_connect("example.com","admin","password1");
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+$sql="CREATE DATABASE database1";
+if (mysqli_query($connection,$sql))
+  {
+  echo "Database database1 created successfully";
+  }
+else
+  {
+  echo "Error creating database: " . mysqli_error($connection);
+  }
+?>
+
+
+
+
+, Once the database has been created, you can create a table to store data that you retrieve from forms. The table can be configured in any way you’d like to fit your data. The table created in this step will have three columns: FirstName, LastName, and Age. The table will be called “Users”
+
+
+
+
+<?php
+$connection=mysqli_connect("example.com","admin","password1", “database1”);
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+$sql = "CREATE TABLE Users 
+(
+PID INT NOT NULL AUTO_INCREMENT, 
+PRIMARY KEY(PID),
+FirstName CHAR(30),
+LastName CHAR(30),
+Age INT
+)";
+/*
+Each column needs to have the data type specified (CHAR, INT, etc.).
+For the CHAR values, you need to set how long the string can be (30 in this case).
+The AUTO_INCREMENT function increases the PID field by 1 for each entry.
+This essentially creates an ID number for each entry added.
+*/
+if (mysqli_query($connection,$sql))
+  {
+  echo "Table Users created successfully";
+  }
+else
+  {
+  echo "Error creating table: " . mysqli_error($connection);
+  }
+?>
+
+
+
+
+, This form will allow users to enter their information into a form on the website. This data will then be stored into a file and inserted into the database you created earlier. When the user clicks the Submit button after filling out the form, the data will be sent to the “insert.php” file.<html>
+<body>
+ 
+<form action="insert.php" method="post">
+First Name: <input type="text" name="firstname">
+Last Name: <input type="text" name="lastname">
+Age: <input type="text" name="age">
+<input type="submit">
+</form>
+ 
+</body>
+</html>
+
+
+
+
+, Once you have the form created, you will need to create the insert.php file to handle transferring the data to your database. You will be using the INSERT INTO statement to add the record to your Users table.
+
+
+
+
+<?php
+$connection=mysqli_connect("example.com","admin","password1", “database1”);
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+$sql="INSERT INTO Persons (FirstName, LastName, Age)
+VALUES
+('$_POST','$_POST','$_POST')";
+//The POST statement retrieves the data from the form.
+if (!mysqli_query($connection,$sql))
+  {
+  die('Error: ' . mysqli_error($connection));
+  }
+echo "1 record added";
+ 
+mysqli_close($connection);
+//This command closes the connection to the database when finished.
+?>
+
+
+
+
+, Beyond database management, there is a lot that can be accomplished with PHP. You can open files, send emails, create cookies, start private sessions, and much more. The potential is nearly limitless, which is why so much web development is done with PHP.
+ One of the quickest ways to learn PHP is to examine the code that other developers create and adapt it to your won. While there is no way to examine the PHP code of a website without direct access to the server that it is hosted on, there are a variety of communities that share code and can help explain what is going on in it.
+
+
+GitHub is one of the more popular repositories for open source code and collaboration, Security on the web is a serious concern, and making sure that your code is secure is essential. This is especially important if you are dealing with passwords and payment information. Make sure that your forms and databases are secure from any intrusions.
+
+
+See this article for a detailed look at creating a secure login with PHP and MySQL.
+

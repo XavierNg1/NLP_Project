@@ -1,0 +1,30 @@
+ While it's usually fairly easy to factor small integers, larger numbers can be daunting. Most of us would be hard-pressed to break a 4 or 5-digit number into its prime factors using nothing but mental math. Luckily, using a table, the process becomes much easier. Write your number above a t-shaped table with two columns - you'll use this table to keep track of your growing list of factors.
+
+
+For the purpose of our example, let's choose a 4-digit number to factor - 6,552.
+ Divide your number by the smallest prime factor (besides 1) that divides into it evenly with no remainder. Write the prime factor in the left column and write your answer across from it in the right column. As noted above, even numbers are especially easy to start factoring because their smallest prime factor will always be 2. Odd numbers, on the other hand, will have smallest prime factors that differ.
+
+
+In our example, since 6,552 is even, we know that 2 is its smallest prime factor. 6,552 ÷ 2 = 3,276. In the left column, we'll write 2, and in the right column, write 3,276.
+ Next, factor the number in the right column by its smallest prime factor, rather than the number at the top of the table. Write the prime factor in the left column and the new number in the right column. Continue to repeat this process - with each repetition, the number in the right column should decrease.
+
+
+Let's continue with our process. 3,276 ÷ 2 = 1,638, so att the bottom of the left column, we'll write another 2, and at the bottom of the right column, we'll write 1,638. 1,638 ÷ 2 = 819, so we'll write 2 and 819 at the bottom of the two columns as before.
+ Odd numbers are more difficult to find the smallest prime factor of than even numbers because they don't automatically have 2 as their smallest prime factor. When you reach an odd number, try dividing by small prime numbers other than 2 - 3, 5, 7, 11, and so on - until you find one that divides evenly with no remainder. This is the number's smallest prime factor.
+
+
+In our example, we've reached 819. 819 is odd, so 2 is not a factor of 819. Instead of writing down another 2, we'll try the next prime number: 3. 819 ÷ 3 = 273 with no remainder, so we'll write down 3 and 273.
+When guessing factors, you should try all prime numbers up to the square root of the largest factor found so far. If none of the factors you try up to this point divide evenly, you're probably trying to factor a prime number and thus are finished with the factoring process.
+ Continue dividing the numbers in the right column by their smallest prime factor until you obtain a prime number in the right column. Divide this number by itself - this will put the number in the left column and "1" in the right column.
+
+
+Let's finish factoring our number. See below for a detailed breakdown:
+
+Divide by 3 again: 273 ÷ 3 = 91, no remainder, so we'll write down 3 and 91.
+Let's try 3 again: 91 doesn't have 3 as a factor, nor does it have the next lowest prime (5) as a factor, but 91 ÷ 7 = 13, with no remainder, so we'll write down 7 and 13.
+Let's try 7 again: 13 doesn't have 7 as a factor, or 11 (the next prime), but it does have itself as a factor: 13 ÷ 13 = 1. So, to finish our table, we'll write down 13 and 1. We can finally stop factoring.
+ Once you reach 1 in the right-hand column, you're done. The numbers listed on the left side of the table are your factors. In other words, the product when you multiply all of these numbers together will be the number at the top of the table. If the same factor appears multiple times, you can use exponent notation to save space. For instance, if your list of factors has four 2's, you can write 24 rather than 2 × 2 × 2 × 2.
+
+
+In our example 6,552 = 23 × 32 × 7 × 13. This is the complete factorization of 6,552 into prime numbers. No matter what order these numbers are multiplied in, the product will be 6,552.
+

@@ -1,0 +1,32 @@
+ Beginning at Step 2 then, this is a direct copy of How to Create a Tornado Screw Pattern in Microsoft Excel, except where NEW changes or MODIFICATIONS have occurred, except for the last step or so concerning creating the chart of course. Since #03 depended on #01 and #02, it is expected that those have been completed.;
+, Save the workbook into a logical file folder.
+ Enter "=ROUND(1440/S_COUNT,1)" into cell A1. Format Cell Number Number Custom "Rrs" 0. Insert Name Define name Rrs to cell $A$1.
+
+
+Enter the formula "=ROUND(1440/Rrs,0)" into cell A2.
+Enter On=0,Off=1 into cell A3.
+Enter 1 into cell A4.
+Edit Go To cell range A7:A1447 and with A7 active, enter the formula without quotes    "=IF(OR( AND((ROW()-7)>Rrs,(ROW()-7)<=Rrs*2),                                    AND((ROW()-7)>Rrs*4,(ROW()-7 <=Rrs*5),                                                  AND((ROW()-7)>Rrs*7,(ROW()-7)<=Rrs*8),                                                 AND((ROW()-7)>Rrs*10,(ROW()-7)<=Rrs*11),                                           AND((ROW()-7)>Rrs*13,(ROW()-7)<=Rrs*14),                                           AND((ROW()-7)>Rrs*16,(ROW()-7)<=Rrs*17),                                           AND((ROW()-7)>Rrs*19,(ROW()-7)<=Rrs*20),                                           AND((ROW()-7)>Rrs*22,(ROW()-7)<=Rrs*23),                                              AND((ROW()-7)>Rrs*25,(ROW()-7)
+
+, Format Cell Fill Yellow Font bold and Number Number Custom "Divisor" 0.00 with quotes.
+ Format Cell Fill Yellow Font bold and Number Number Custom "AAA" +.00000000;"AAA" -.00000000 with quotes.
+ Enter 38.5 into S's Count cell C1 for Spheroids (the example chart uses38.5  but the pairs come out better with 24 perhaps). Enter 968277 into cell D3, top. Enter .61 into cell H1 and .78 into cell J1. The variable Sync1 in H2 is "=H1/GMLL" and the variable Sync2 in J2 is "=J1/GMSL"
+
+, Adj in B5 has the formula "=IF(TURNS>0,VLOOKUP(TURNS,TURNS_LOOKUP,2),VLOOKUP(TURNS, TURNS_LOOKUP_NEG,2))" and = 352. TOP = "=ROUND((-B4*PI())+(Adj),0)" where B4 = -308.100 in cell B4. So TOP = 968,277.
+MODIFIED: B8:B1447: "=((B7+(-TOP*2)/(AdjRows)))*$B$1" AdjRows=1439 and B1 = 1.
+MODIFIED: C7: "=ROUND(-EXP((PI()^2)+(Cc*-(db))),0)+Designer" Cc "=-0.25*PI()/C3" where C3=12, db = 4.5 and Designer = 9810.
+C8:C1447:  "=C7"
+NEW/MODIFIED: D7:D1447: "=IF(A7=0,D6,COS((ROW()-7)*Factor*PI()/(180))*((ROW()-7)/Divisor))" Factor = .385 and Divisor = -1000.
+NEW/MODIFIED: E7:E1447: "=IF(A7=0,E6,DEGREES((ROW()-7))/41500)" This uses the DEGREES() function for the first time. See Tips for #03 and Excel Help under Home > Function References > Math and Trigonometry Functions.
+NEW: F7:F1447: "=IF(A7=0,F6,((PI())*((SIN(B7/(C7*2))*GMLL*COS(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+D7)))". For F6, the new header reads Dbl Helix x.
+NEW: G7:G1447: "=IF(A7=0,G6,((PI())*((SIN(B7/(C7*2))*GMLL*SIN(B7)*GMLL*(COS(B7/(C7*2)))*GMLL)+E7)))". For G6, the new header reads Dbl Helix y.
+NEW: H7:H1447: "=2+(F7*-1)" and the new header for H6 is 2nd Helix x.
+NEW: I7:I1447: ""=G7" and the new header for I6 is 2nd Helix y.
+J7:J1447: "=F7*GMSL*Sync2" (this is no longer charted however)
+K7:K1447: "=G7*GMSL*Sync2" (this is no longer charted however)
+
+, Here below are images of the header rows and data to check against. There should be no errors. Make sure there is a formula in cell A7.
+ Copy or cut the chart that appears atop the data and paste to the Charts worksheet; 2) Tap in the Plot Area and above select Chart Layout and get rid of Axes, Legend and Gridlines; 3) At left, select under Current Selection Series 1 and under that choose Format Selection and do Line Color Blue, Smoothed Line, Line Weight 1; 4) Tap again in the Plot Area and select menuitem Chart, Add Data and respond to the query by selecting on the Data worksheet cell range H7:I1446, which may come out wrong and you may have to edit the data series in the Chart worksheet;s formula bar to read "=SERIES(,Data!$H$7:$H$1446,Data!$I$7:$I$1446,2)"; 5) Do Format Selection under Chart Layout again by tapping in the Plot Area and select Data Series 2 and do Line Color Red, Smoothed Line, Line Weight 1; 6) Format Selection Plot Area and from the Color Wheel select Sky Blue or bright Turquoise Blue for the Fill.
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

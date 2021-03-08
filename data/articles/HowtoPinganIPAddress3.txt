@@ -1,0 +1,14 @@
+ The first line tells you what the command is doing. It will repeat the address you put in and tell you how much data is being sent. For example:Pinging www.wikihow.com with 32 bites of data:
+
+, A successful Ping command will return lines that display how long it took the address to respond. TTL represents the number of hops that occurred during the packet transfer process. The lower the number, the more routers the packet passed through.Time is how long in milliseconds the connection took:Reply from 173.203.142.5: bytes=32 time=102ms TTL=48
+Reply from 173.203.142.5: bytes=32 time=105ms TTL=48
+Reply from 173.203.142.5: bytes=32 time=105ms TTL=48
+Reply from 173.203.142.5: bytes=32 time=108ms TTL=48
+
+
+You may need to press Ctrl + C to stop pinging.
+ After the operation is completed a summary of the results will be displayed. Lost packets mean your connection to the address is unreliable, and data is being lost in the transfer. The summary will also display the average time the connection took:Ping statistics for 173.203.142.5:
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+Minimum = 102ms, Maximum = 108ms, Average = 105ms
+

@@ -1,0 +1,17 @@
+ If you are able to connect to the server, start off with the HELO (Hello) command, followed by the email address you want to use (this can be anything you want). For example, upon successful connection, you could type HELO fakemail@hotmail.com. fakemail@hotmail.com will be the address that the recipient sees.
+
+
+You should see a "Hello" response from the server.
+ Type MAIL FROM:fakemail@hotmail.com. This will start the message creation process using the email address that you provide.
+ Type RCPT TO:recipientaddress@server.com. Make sure that your recipient's address is entered correctly.
+ Type DATA and press Enter to start entering the actual data of the email. This will let the SMTP server know that you are entering the data of the email.
+ The first thing you will need to do when you start entering data is to create your fake header. This will appear at the top of the email that your recipient receives. Enter the following information, replacing the data with your desired content:
+
+
+Type Date: DD Mon YY XX:XX:XX and press Enter. Replace DD Mon YY XX:XX:XX with the date you want to use. For example Date: 17 Jun 07 12:24:13
+
+Type From: fakemail@hotmail.com and press Enter. Make sure you enter the same address you entered when you opened the connection.
+Type To: recipientaddress@server.com and press Enter. Ensure that you enter the same address that you entered above.
+Type Subject: Your subject and press Enter. Try to keep your subject short.
+ After typing the subject and pressing Enter, everything you type will be the body of the email. Type in whatever you'd like. You can press Enter to move to a new line and start a new paragraph. After finishing your email, press Enter to move to a new line.
+ Type . on a new line and press Enter. This will send the email to the address. You will receive a Mail accepted message when the email is sent.

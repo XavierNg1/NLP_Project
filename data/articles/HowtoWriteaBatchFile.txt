@@ -1,0 +1,92 @@
+ Notepad allows you to create code as a text file and then save it when you're done as a batch file. You can open Notepad by clicking Start → Programs → Accessories → Notepad. You can also enter notepad into the Run box.
+ Batch files run a series of DOS commands, so the commands that you can use are similar to DOS commands. Some of the more important ones include:
+
+
+ECHO - Displays text on the screen
+@ECHO OFF - Hides the text that is normally output
+START - Run a file with it's default application
+REM - Inserts a comment line in the program
+MKDIR/RMDIR - Create and remove directories
+DEL - Deletes a file or files
+COPY - Copy a file or files
+XCOPY - Allows you to copy files with extra options
+FOR/IN/DO - This command lets you specify files.
+TITLE - Edit the title of the window. , One of the easiest ways to learn how to create batch files is to focus on doing basic tasks first. For example, you can use a batch file to quickly create multiple directories:MKDIR c:\example1
+MKDIR c:\example2
+
+
+
+
+, Once you have entered your code, you can save the file using the Batch filetype. Click File → Save As.
+
+
+Click the "Save as type" dropdown menu.
+
+
+
+
+
+
+Select "All files".
+
+
+
+
+
+
+Enter a name for the program followed by .bat or .cmd.
+
+
+
+
+
+
+Make sure the encoding is ANSI and save the file
+
+, Batch files are great for running multiple commands, especially if you configure it to be able to run multiple times. With the XCOPY command, you can make a batch file that copies files from select folders to a backup folder, only overwriting files that have been updated since the last copy:
+
+
+
+
+
+@ECHO OFF 
+XCOPY c:\original c:\backupfolder /m /e /y
+
+
+
+
+
+This copies over files from the folder "original" to the folder "backupfolder". You can replace these with the paths to the folders you want. /m specifies that only updated files will be copied, /e specifies that all subdirectories in the listed directory will be copied, and /y keeps the confirmation message appearing every time a file is overwritten.
+ Once you have entered your code, you can save the file using the Batch filetype. Click File → Save As.
+
+
+Click the "Save as type" dropdown menu.
+Select "All files".
+Enter a name for the program followed by .bat or .cmd.
+ While simply copying the files from one folder to another is nice, what if you want to do a little sorting at the same time? That's where the FOR/IN/DO command comes in. You can use that command to tell a file where to go depending on the extension:
+
+
+
+
+
+@ECHO OFF 
+cd c:\source
+REM This is the location of the files that you want to sort
+FOR %%f IN (*.doc *.txt) DO XCOPY c:\source\"%%f" c:\text /m /y
+REM This moves any files with a .doc or 
+REM .txt extension from c:\source to c:\text
+REM %%f is a variable
+FOR %%f IN (*.jpg *.png *.bmp) DO XCOPY C:\source\"%%f" c:\images /m /y
+REM This moves any files with a .jpg, .png, 
+REM or .bmp extension from c:\source to c:\images
+
+
+
+
+, Once you have entered your code, you can save the file using the Batch filetype. Click File → Save As.
+
+
+Click the "Save as type" dropdown menu.
+Select "All files".
+Enter a name for the program followed by .bat or .cmd.
+

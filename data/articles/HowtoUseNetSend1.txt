@@ -1,0 +1,18 @@
+ You can use the net send command to send messages to other computers on your network. The command is used through the Command Prompt. You can open the Command Prompt from the Start menu or by pressing ⊞ Win+R and typing "cmd".
+
+
+If you are using Windows Vista, 7, 8, 8.1, or 10, see the next section. The net send command was discontinued starting with Windows Vista, and replaced with a similar msg command.;
+, Type net send and press space. You'll be adding information to the end of the command to specify where the message goes and what it says.
+ There are several different ways you can address the message to someone specific or to an entire group:net send name - You can enter a username or computer name on your network to send the message to someone specific. If there is a space in the name, surround the name in quotes (e.g. net send "John Doe").
+
+net send * - This will send the message to all of the users on your current domain or workgroup.
+
+net send /domain:name - This will send the message to everyone in the specified domain or workgroup.
+
+net send /users - This will send the message to all of the users currently connected to the server.
+ Type out the message that you want to send after you've specified the recipient(s). Your message can be up to 128 characters.
+
+
+For example - net send "John Doe" Let's meet up in 10 minutes.
+ Once you're finished typing the message, press ↵ Enter to send it. The recipient will receive the message in a Windows dialog box, as long as they are logged in and connected to the network.
+

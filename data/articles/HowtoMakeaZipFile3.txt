@@ -1,0 +1,33 @@
+ Newer versions of Windows cannot create password-protected ZIP files without installing additional software. Compression software is available both for free and for purchase, though you don’t need anything fancy to create a protected ZIP. The most popular programs include:
+
+
+7-Zip
+IZArc
+PeaZip
+
+, Use your compression software to create a new ZIP file. Add the files that you want to compress. When you create the ZIP file, you will be given the option to enter a password. You will need to use this password to access this ZIP file in the future.
+ To create a password-protected Zip file in OS X, you can use the Terminal and you don’t need to download any other programs. First, place all of the files that you want to compress into a single folder, and then rename that folder to the name that you want your ZIP file to have.
+
+
+Open the Terminal. This can be found in the Utilities folder in your Applications folder.
+
+
+
+
+
+
+Navigate to where the folder that you want to compress is located.
+
+
+
+
+
+
+Enter the command:zip –er <foldername>.zip <foldername>/*
+
+
+
+
+
+
+Create a password. You will be asked to enter your password twice to verify it. Once you have entered the password, the ZIP file will be created.

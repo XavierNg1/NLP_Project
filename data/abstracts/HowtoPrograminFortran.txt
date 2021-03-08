@@ -1,0 +1,38 @@
+
+Have a good idea of what your program will do.
+If you already know another programming language just start learning the syntax and looking up equivalents to various commands.
+Learn how to compile and run a basic program, this will be your first program, typically it will just print "Hello World" to the screen and exit.Learn about variable types (INTEGER, REAL, CHARACTER, LOGICAL)
+
+,
+Learn about the concept of variables, arrays, functions, and subroutines.
+Learn conditional statements, such as the "IF" and "SELECT CASE" statements.
+Learn loops and the "EXIT" and "CYCLE" statements.
+
+,
+Learn about SUBROUTINES and FUNCTIONS.
+
+,Learn Recursion (F90 and later) and other advanced topics
+
+,
+Read or look up some books on Scientific Programming.
+
+A simple "Hello World" Code:
+
+
+
+
+
+Note: you have to space each line over 7 spaces
+C HELLO.F -- HELLO WORLD PROGRAM
+C PUBLIC DOMAIN
+PROGRAM HELLO
+WRITE(*,*) 'Hello World'
+END PROGRAM
+
+Write(*,*) means "write some unformatted text to standard output"
+Why the spaces?,
+Remember that Fortran 90 introduced the "Free Form" source code, allowing code to be written without the spaces and without the 72 character limit.
+Compile the two fortran files:
+
+.
+Speed up your code by writing efficient code.

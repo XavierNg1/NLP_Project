@@ -1,0 +1,20 @@
+
+SQL database-driven websites are at risk.
+,
+Any web page which passes parameters to a database can be vulnerable to attacks.
+Get a basic overview of hacking.
+Understand how hackers do it.
+Understand how to hack your own website.Type your URL like the following example and press enter: http://www.mywebsite.com/bookreports.asp?reportID=21,Now simply add a single quote to the end the query string and press enter: http://www.mywebsite.com/bookreports.asp?reportID=21',Generate an error.As predicted, you may have successfully broken your website and received an error as follows.Error Type:,Microsoft OLE DB Provider for ODBC Drivers (0x80040E14),Unclosed quotation mark before the character string ' AND users.userID=reports.reportsID'./bookreports.asp, line 20,
+The single quote causes an unclosed quotation mark error and now the once-secret table names and column names of your database are publicly visible.Hide website errors.
+The top most effective solution for keeping the private details of your database from getting into the hands of a hacker is to setup a custom error page for your website.Setup custom error pages.
+Some hosting services automatically use custom error pages to help protect your security.Manipulate the URL querystring.
+Besides fishing for errors, a hacker can enter even more dangerous code than a simple single quote into the URL querystring.http://www.mywebsite.com/bookreports.asp?reportID=21'; drop table myTablename--,Your table is permanently deleted.Manipulate the form input.
+The other most common point of entry besides the URL querystring is the form input.Fred'; drop table myTablename--,Your table is permanently deleted.Block input containing malicious code.
+By now, you probably have a good idea of how much damage a hacker can do and you are ready and willing to do whatever it takes to stop them.Input validation.
+To check if the input entered into the URL querystring or textbox is safe, we can use input validation rules.The wash and rinse cycle.
+Input validation should be a two-part process, like a wash and rinse cycle.Filter characters.Another method that can be used in conjunction with the above two functions, but is considered to be very weak when used alone, is to sanitize the input by filtering or escaping.
+A well-known threat is the single quote or apostrophe because it breaks the SQL statement.'double up single quotes,new Safe String = replace(searchInput, "'", "")
+,
+Other variations for the replace function include stripping out the script tag and replacing it with a space.Remember to use a solution that best fits your website or consult a professional.
+Finally, there are a few other security measures that you can research and explore on your own.
+If you would like to pursue more advanced security techniques, please see the resources at the end of this article.

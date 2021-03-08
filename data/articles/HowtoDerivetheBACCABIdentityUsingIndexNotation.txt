@@ -1,0 +1,66 @@
+
+
+
+a×(b×c){\displaystyle {\mathbf {a} }\times ({\mathbf {b} }\times {\mathbf {c} })}  
+;
+, Recall that a cross product is represented in index notation using the Levi-Civita symbol. Because there are two cross products, there will be two Levi-Civita symbols, and since the indices i,j,k,l,m{\displaystyle i,j,k,l,m} only represent numbers, they will commute with the vector components.
+
+
+(a×(b×c))i=ϵijkaj(b×c)k=ϵijkajϵklmblcm=ϵijkϵklmajblcm{\displaystyle {\begin{aligned}({\mathbf {a} }\times ({\mathbf {b} }\times {\mathbf {c} }))^{i}&=\epsilon _{ijk}a^{j}({\mathbf {b} }\times {\mathbf {c} })^{k}\\&=\epsilon _{ijk}a^{j}\epsilon _{klm}b^{l}c^{m}\\&=\epsilon _{ijk}\epsilon _{klm}a^{j}b^{l}c^{m}\end{aligned}}}
+
+In the second line, we recognize that k{\displaystyle k} is the “output” of b×c,{\displaystyle {\mathbf {b} }\times {\mathbf {c} },} so to write the second cross product, we introduce two new indices for the two vectors, not three.
+ Because k{\displaystyle k} is summed over, we can contract the Levi-Civita symbols by making use of an argument. 
+
+First, let’s make use of cyclic permutation to write the Levi-Civita symbols in a manner that will allow us to comprehend the argument more easily.
+
+
+ϵijkϵlmk{\displaystyle \epsilon _{ijk}\epsilon _{lmk}}
+
+
+
+Let’s assume that k=1.{\displaystyle k=1.} This means that for ϵ{\displaystyle \epsilon } to be non-zero, i,j,l,m{\displaystyle i,j,l,m} all have to be either 2 or 3, and of course, i≠j{\displaystyle i\neq j} and l≠m.{\displaystyle l\neq m.}
+
+So in order for ϵijkϵlmk=1,{\displaystyle \epsilon _{ijk}\epsilon _{lmk}=1,} both symbols must output the same number. That is, they must both either be 1 or -1. The only way that this could happen is if i=l{\displaystyle i=l} and j=m.{\displaystyle j=m.} If k=1,{\displaystyle k=1,} that means that i,l{\displaystyle i,l} must both take on the same value, and j,m{\displaystyle j,m} must both take on the other value. For example, i=l=2,j=m=3.{\displaystyle i=l=2,\,j=m=3.} We can therefore make use of the Kronecker delta to write this mathematically.
+
+
+δilδjm{\displaystyle \delta _{il}\delta _{jm}}
+
+
+
+Of course, if the Levi-Civita symbols are different, then the opposite is true: i≠l,j≠m,{\displaystyle i\neq l,\,j\neq m,} and the output will be -1. Since these four indices can only be one of two numbers, it nicely turns out that i=m,j=l.{\displaystyle i=m,\,j=l.} We can again write this in terms of a Kronecker delta.
+
+
+−δimδlj{\displaystyle -\delta _{im}\delta _{lj}}
+
+
+
+Now we add these two deltas together, because we have laid out the two possible scenarios after going through the summations.
+
+
+ϵijkϵlmk=δilδjm−δimδlj{\displaystyle \epsilon _{ijk}\epsilon _{lmk}=\delta _{il}\delta _{jm}-\delta _{im}\delta _{lj}}
+
+
+
+The above identity is highly useful for simplifying expressions in index notation.
+ Now that we have the vector triple product in terms of Kronecker deltas, contracting indices is much easier now. Here, we can contract l{\displaystyle l} and m.{\displaystyle m.} For example, δilbl=bi.{\displaystyle \delta _{il}b^{l}=b^{i}.}
+
+
+(δilδjm−δimδlj)ajblcm=ajbicj−ajbjci=bi(ajcj)−ci(ajbj){\displaystyle {\begin{aligned}(\delta _{il}\delta _{jm}-\delta _{im}\delta _{lj})a^{j}b^{l}c^{m}&=a^{j}b^{i}c^{j}-a^{j}b^{j}c^{i}\\&=b^{i}(a^{j}c^{j})-c^{i}(a^{j}b^{j})\end{aligned}}}
+
+
+, We can clearly see that j{\displaystyle j} is being summed over, just like a dot product.
+
+
+bi(ajcj)−ci(ajbj)=bi(a⋅c)−ci(a⋅b){\displaystyle b^{i}(a^{j}c^{j})-c^{i}(a^{j}b^{j})=b^{i}({\mathbf {a} }\cdot {\mathbf {c} })-c^{i}({\mathbf {a} }\cdot {\mathbf {b} })}
+
+Since this is exactly what we were looking for - the i{\displaystyle i}th component of the vector triple product - we have proven the BAC-CAB identity.
+
+
+(a×(b×c))i=bi(a⋅c)−ci(a⋅b){\displaystyle ({\mathbf {a} }\times ({\mathbf {b} }\times {\mathbf {c} }))^{i}=b^{i}({\mathbf {a} }\cdot {\mathbf {c} })-c^{i}({\mathbf {a} }\cdot {\mathbf {b} })}
+
+
+a×(b×c)=b(a⋅c)−c(a⋅b){\displaystyle {\mathbf {a} }\times ({\mathbf {b} }\times {\mathbf {c} })={\mathbf {b} }({\mathbf {a} }\cdot {\mathbf {c} })-{\mathbf {c} }({\mathbf {a} }\cdot {\mathbf {b} })}
+
+
+
+

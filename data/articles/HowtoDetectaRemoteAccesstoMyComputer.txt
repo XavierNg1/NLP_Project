@@ -1,0 +1,59 @@
+ Many modern computers are set to install system updates automatically, usually at night when the computer is not being used. If your computer appears to turn on without your input when you're not using it, it is likely waking from Sleep mode to install updates.
+
+
+The chances of your specific computer being remotely accessed, while not impossible, are very low. You can take steps to help prevent intrusions.;
+, If your mouse is moving without your control, programs are being opened in front of your eyes, or files are actively being deleted, you may have an intruder. If you have an active intrusion, your first step should be to power down your computer immediately and remove any Ethernet cables.
+
+
+Slow internet or unfamiliar programs are not necessarily the result of someone gaining remote access to your computer.
+Many programs that update automatically will appear or generate pop-ups during the update process.
+ If you suspect an intrusion, you'll need to disconnect from the internet immediately. You'll want to completely disconnect from the internet and your network, to prevent any further access and to prevent any other machines on your network from getting infected.
+
+
+Unplug any Ethernet cables connected to your computer, and disable any wireless connections.
+ These utilities can help you determine what is currently running on your computer.
+
+
+Windows - Press Ctrl+⇧ Shift+Esc.
+Mac - You can find the Activity Monitor in the Utilities folder in your Applications directory.
+ Look for the following programs in your list of currently-running programs, as well as any programs that look unfamiliar or suspicious. These programs are popular remote access programs that may have been installed without your permission:
+
+
+VNC, RealVNC, TightVNC, UltraVNC, LogMeIn, GoToMyPC, and TeamViewer
+Look for any programs that seem suspicious or that you don't recognize either. You can perform a web search for the process name if you aren't sure what a program is.
+ You'll see this in the Task Manager or the Activity Monitor. While high CPU usage is common, and is not indicative of an attack, high CPU usage while you're not using your computer could indicate that processes are running in the background, which you may have not authorized. Be aware that high CPU usage could just be a program updating or a torrent downloading in the background that you forgot about.
+ You should have an active antivirus program already installed, even if it's just Windows Defender. Open your antivirus and run a scan of your entire system. This scan may take an hour or so to complete.
+
+
+If you don't have an antivirus, download an installer on another computer and transfer it to your computer via USB. Install the antivirus and then run a scan with it.
+ If your antivirus finds malicious software on your computer, make sure that you quarantine it using the methods provided by the anti-virus. This will prevent these malicious programs from continuing to affect your computer.
+ This is a secondary scanner that will find things that your antivirus may have missed. You can download it for free from malwarebytes.org.
+
+
+Since your computer is currently disconnected from the internet, you'll need to download the installer on another computer and transfer it to your computer via USB drive.
+ The scan will likely take about half an hour to complete. Anti-Malware will look for intrusive programs that may be controlling your computer.
+ If Anti-Malware detects any items during the scan, quarantining them will prevent them from affecting your system anymore.
+ You can get this program for free from malwarebytes.org/antirootkit/. This will detect and remove "rootkits," which are malicious programs that exist deep in your system files. The program will scan your computer, which may take a while to complete., If your antivirus and/or Anti-Malware found malicious programs, you may have successfully removed the infection, but you'll need to keep a close eye on your computer to ensure that the infection hasn't remained hidden.
+ If your computer was compromised, then there’s a possibility that all of your passwords have been recorded with a keylogger. If you’re sure the infection is gone, change the passwords for all of your various accounts. You should avoid using the same password for multiple services.
+ After changing your passwords, go through each account and log off completely. Make sure that you log out of any device that is currently using the account. This will ensure that your new passwords will take effect and others will not be able to use the old ones.
+ If you're still experiencing intrusions, or are concerned that you may still be infected, the only way to be sure is to completely wipe your system and reinstall your operating system. You'll need to back up any important data first, as everything will be deleted and reset.
+
+
+When backing up any data from an infected machine, make sure to scan each file before backing it up. There's always a chance that reintroducing an old file can lead to a re-infection.
+See Wipe Clean a Computer and Start Over for instructions on formatting your Windows or Mac computer and reinstalling the operating system.
+ An up-to-date antivirus program will detect most attacks before they can happen. Windows comes with a program called Windows Defender that is a competent antivirus that updates automatically and works in the background. There are also several free programs available, such as BitDefender, avast!, and AVG. You only need one antivirus program installed.
+
+
+See Turn on Windows Defender for instructions on enabling Windows Defender on your Windows computer.
+See Install an Antivirus for instructions on installing an antivirus program if you don't want to use Defender. Windows Defender will automatically deactivate if you install another antivirus program.
+ If you're not running a web server or running some other program that requires remote access to your computer, there is no reason to have any ports open. Most programs that require ports will use UPnP, which will open ports as necessary and then close them again when the program isn't in use. Keeping ports open indefinitely will leave your network open to intrusions.
+
+
+See Set Up Port Forwarding on a Router and ensure that none of your ports are open unless necessary for a server you are running.
+ Email attachments are one of the most common ways for viruses and malware to get onto your system. Only open attachments from trusted senders, and even then, make sure that the person intended to send you the attachment. If one of your contacts has been infected with a virus, they may send out attachments with the virus without knowing it.
+ Each and every service or program you use that is password-protected should have a unique and difficult password. This will ensure that a hacker cannot use the password from one hacked service to access another. See Manage Your Passwords for instructions on using a password manager to make things easier for you.
+ Public Wi-Fi spots are risky because you have zero control over the network. You can't know if someone else using the spot is monitoring traffic to and from your computer. By doing this, they could gain access to your open browser session or worse. You can mitigate this risk by using a VPN whenever you are connected to a public Wi-Fi spot, which will encrypt your transfers.
+
+
+See Configure a VPN for instructions on setting up a connection to a VPN service.
+ Many "free" programs that you find online come with extra software that you likely did not want. Pay close attention during the installation process to ensure that you decline any additional "offers." Avoid downloading pirated software, as this is a common way for viruses to infect your system.

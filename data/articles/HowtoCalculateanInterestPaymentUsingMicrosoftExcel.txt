@@ -1,0 +1,27 @@
+
+
+
+Create labels in the cells from A1 down to A4 as follows: Principal, Interest Rate, Number of Periods and Interest Payment.;
+,
+
+
+Type in the principal owed on your loan or the amount of your investment in the cell for "Principal," B1.
+Divide your annual interest rate by 12 if you want to calculate interest on a monthly basis; divide by 4 if quarterly interest is to be calculated. Place this in cell B2.
+The number of periods involved in your loan or investment goes in the cell in B3. If calculating an interest payment for an investment with an indefinite length, use the number of interest payments in a year. This will be the same number you divided the interest rate by in the Interest Rate cell.
+For example, assume you will be calculating the monthly interest payment on an investment of $5,000 at 2.5 percent annual interest. Enter "5000" in cell B1, "=.025/12" in cell B2 and "1" in cell B3.
+,
+
+
+Click the function shortcut button on the toolbar, labeled "fx."
+Type "interest payment" in the text entry box and then click "Go."
+Choose the "IPMT" function from the list below and then click "OK." The "Function Argument" window will launch.
+
+
+
+In the "Rate" field, enter "B2," "B3" is entered into the "NPER" field and "B1" is entered in the "PV" field.
+The value in the "Per" field should be "1."
+Leave the "FV" field blank.
+
+
+
+Note that this value is a negative, because it pertains to money that is paid out.

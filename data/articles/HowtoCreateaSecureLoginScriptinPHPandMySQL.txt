@@ -1,0 +1,856 @@
+
+Most web hosting services will have PHP and MySQL already installed. You will just have to check they have the most recent versions of PHP and MySQL for this guide to work. If they don't have at least PHP5.3 and MySQL5 you might like to ask a few questions about their commitment to security. Keeping your software up-to-date is a part of the security process.
+If you have your own server or computer, you should install the required software in the normal way for your system. Generally speaking, if you are not going to use the setup for production purposes and you are developing under Windows or OS/X, installing an XAMPP stack is the way to go. Get the appropriate version for your operating system at:https://www.apachefriends.org/index.html
+But please note that you should under no circumstances use XAMPP to create a production server environment for you.
+Under Linux, use your package manager to download and install the necessary packages. Some distributions, like Ubuntu, package all the necessary applications into one bundle. Just do the following from a terminal window in Ubuntu:
+sudo apt-get install lamp-server^ phpmyadmin
+
+
+However you install the necessary elements, please ensure you configure MySQL with a secure root password.
+
+Log into your database as an administrative user (usually root)
+In this guide we will create a database called "secure_login".
+See how to Create-a-Database-in-Phpmyadmin.
+You can either use the code below or do the same thing in phpMyAdmin/your favourite GUI MySQL client, if you prefer:
+
+
+
+CREATE DATABASE `secure_login`;
+
+
+
+
+Note: Some hosting services don't allow you to create a database through phpMyAdmin, Learn how to do it in cPanel.,
+Creating a user with restricted privileges means that if there was ever a breach of security in our script the hacker couldn't delete or drop anything from our database. Using these privileges, you can get by doing pretty much anything you would want to in your application. If you are really paranoid, create a user for each function.
+Of course you will need to be logged into MySQL as a user with sufficient privileges in order to create a user. This user will usually be root.
+These are the details of the user we created:
+
+
+User: "sec_user"
+
+Password: "eKcGZr59zAa2BEWU"
+
+Note: it is a good idea to change the password from the one given above when running on your own server. Make sure, if you do this, that you also change the code below, and your PHP database connection code in the application we are creating.
+Remember it doesn't need to be a password that you can remember so make it as complicated as possible. Here's a random password generator
+Given below is the SQL code for creating the database user and granting it the necessary permissions. Or you can do this in a GUI database client like phpmyadmin if you prefer:
+
+
+
+
+CREATE USER 'sec_user'@'localhost' IDENTIFIED BY 'eKcGZr59zAa2BEWU';
+GRANT SELECT, INSERT, UPDATE ON `secure_login`.* TO 'sec_user'@'localhost';
+
+
+
+
+
+If you see yourself deleting records from either of the tables in this module, you may want to add DELETE to the list of privileges, or you may prefer to create a different user with just the DELETE privilege, and only on the table from which you want to delete records if you don't want to delete from both. You do not need to grant DELETE privileges at all for anything in this example script., We use the BINARY datatype to store the password because it will be encrypted using BCrypt, which has an output length of 60 characters. To store it more efficiently, we store it in the BINARY format:IMPORTANT: If you have attempted to use this script with SHA512 hashing and had problems with logging in, you need to change the PASSWORD field to CHAR(128) as the original BINARY(60) cropped out 68 crucial characters at the end of the hashed password, this causes the password to mismatch when attempting to login.
+
+
+
+
+CREATE TABLE `secure_login`.`members` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `username` VARCHAR(30) NOT NULL,
+    `email` VARCHAR(50) NOT NULL,
+    `password` CHAR(128) NOT NULL
+) ENGINE = InnoDB;
+
+
+
+
+
+As we've said before, you can do this in whatever type of client you prefer.,
+We will use this table to store login attempts for a user. This is one way in which we will make brute force attacks more difficult:
+
+
+
+CREATE TABLE `secure_login`.`login_attempts` (
+    `user_id` INT(11) NOT NULL,
+    `time` VARCHAR(30) NOT NULL
+) ENGINE=InnoDB
+
+
+
+
+
+,
+It will be important to be able to test your login script, so below is the script to create a user with known details:
+
+
+Username: test_user
+
+Email: test@example.com
+
+Password: 6ZaxN2Vzm9NUJT2y
+
+
+The code you need in order to be able to log in as this user is:
+
+
+
+INSERT INTO `secure_login`.`members` VALUES(1, 'test_user', 'test@example.com',
+'$2y$10$IrzYJi10j3Jy/K6jzSLQtOLif1wEZqTRQoK3DcS3jdnFEhL4fWM4G');
+
+
+
+
+, Call it psl-config.php. In a production environment you'll probably want to locate this file and all your other include files, outside of the web server's document root. If you do that, and we strongly suggest that you do, you will need to alter your include or require statements as necessary, so that the application can find the include files.
+Locating your include files outside of the web server's document root means that your file cannot be located using a URL. So, if someone mistakenly dropped the 'php' extension, say, or messed up the file permissions the file still could not be displayed as text in a browser window.
+The file contains global configuration variables. Things like whether anyone can register, whether or not it's a secure (HTTPS) connection, and other stuff as well as the database details could also go here...
+
+
+
+<?php
+/**
+ * These are the database login details
+ */  
+define("HOST", "localhost");     // The host you want to connect to.
+define("USER", "sec_user");    // The database username. 
+define("PASSWORD", "eKcGZr59zAa2BEWU");    // The database password. 
+define("DATABASE", "secure_login");    // The database name.
+ 
+define("CAN_REGISTER", "any");
+define("DEFAULT_ROLE", "member");
+ 
+define("SECURE", FALSE);    // FOR DEVELOPMENT ONLY!!!!
+?>
+
+
+
+
+, Create a new PHP file called db_connect.php in the application's includes directory and add the code below. You can then include the file onto any page you wish to connect to the database.
+
+
+
+<?php
+include_once 'psl-config.php';   // As functions.php is not included
+$mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
+
+
+
+
+,
+PHP sessions are known not to be secure, therefore it is important not just to put "session_start();" at the top of every page on which you want to use PHP sessions. We are going to create a function called "sec_session_start()", this will start a PHP session in a secure way. You should call this function at the top of any page in which you wish to access a PHP session variable. If you are really concerned about security and the privacy of your cookies, have a look at this article: Create-a-Secure-Session-Managment-System-in-Php-and-Mysql.
+This function makes your login script a whole lot more secure. It stops crackers accessing the session id cookie through JavaScript (for example in an XSS attack). Also the "session_regenerate_id()" function, which regenerates the session id on every page reload, helps prevent session hijacking. Note: If you are using HTTPS in your login application set the "$secure" variable to true. In a production environment it is essential that you use HTTPS.
+Create a new file called functions.php in your application's includes directory and add the following code to it:
+
+
+
+
+<?php
+include_once 'psl-config.php';
+ 
+function sec_session_start() {
+    $session_name = 'sec_session_id';   // Set a custom session name 
+    $secure = SECURE;
+    // This stops JavaScript being able to access the session id.
+    $httponly = true;
+    // Forces sessions to only use cookies.
+    if (ini_set('session.use_only_cookies', 1) === FALSE) {
+        header("Location: ../error.php?err=Could not initiate a safe session (ini_set)");
+        exit();
+    }
+    // Gets current cookies params.
+    $cookieParams = session_get_cookie_params();
+    session_set_cookie_params($cookieParams, $cookieParams, $cookieParams, $secure, $httponly);
+    // Sets the session name to the one set above.
+    session_name($session_name);
+    session_start();            // Start the PHP session 
+    session_regenerate_id();    // regenerated the session, delete the old one. 
+}
+
+
+
+
+,
+This function will check the email and password against the database. Using the password_verify function rather than comparing the strings helps to prevent timing attacks. It will return true if there is a match. Add this function to your functions.php file:
+
+
+
+function login($email, $password, $mysqli) {
+    // Using prepared statements means that SQL injection is not possible. 
+    if ($stmt = $mysqli->prepare("SELECT id, username, password 
+        FROM members
+       WHERE email = ?
+        LIMIT 1")) {
+        $stmt->bind_param('s', $email);  // Bind "$email" to parameter.
+        $stmt->execute();    // Execute the prepared query.
+        $stmt->store_result();
+ 
+        // get variables from result.
+        $stmt->bind_result($user_id, $username, $db_password);
+        $stmt->fetch();
+ 
+        if ($stmt->num_rows == 1) {
+            // If the user exists we check if the account is locked
+            // from too many login attempts 
+ 
+            if (checkbrute($user_id, $mysqli) == true) {
+                // Account is locked 
+                // Send an email to user saying their account is locked
+                return false;
+            } else {
+                // Check if the password in the database matches
+                // the password the user submitted. We are using
+                // the password_verify function to avoid timing attacks.
+                if (password_verify($password, $db_password)) {
+                    // Password is correct!
+                    // Get the user-agent string of the user.
+                    $user_browser = $_SERVER;
+                    // XSS protection as we might print this value
+                    $user_id = preg_replace("/+/", "", $user_id);
+                    $_SESSION= $user_id;
+                    // XSS protection as we might print this value
+                    $username = preg_replace("/+/", 
+                                                                "", 
+                                                                $username);
+                    $_SESSION= $username;
+                    $_SESSION= hash('sha512', 
+                              $db_password . $user_browser);
+                    // Login successful.
+                    return true;
+                } else {
+                    // Password is not correct
+                    // We record this attempt in the database
+                    $now = time();
+                    $mysqli->query("INSERT INTO login_attempts(user_id, time)
+                                    VALUES ('$user_id', '$now')");
+                    return false;
+                }
+            }
+        } else {
+            // No user exists.
+            return false;
+        }
+    }
+}
+
+
+
+
+
+,
+Brute force attacks are when a hacker tries thousands of different passwords on an account, either randomly generated passwords or from a dictionary. In our script if a user account has more than five failed logins their account is locked.
+Brute force attacks are hard to prevent. A few ways we can prevent them are using a CAPTCHA test, locking user accounts and adding a delay on failed logins, so the user cannot login for another thirty seconds.
+We strongly recommend using a CAPTCHA. As yet we have not implemented this functionality in the example code, but hope to do so in the near future, using SecureImage, since it does not require registration. You may prefer something better known such as reCAPTCHA from Google.
+Whichever system you decide on, we suggest you only display the CAPTCHA image after two failed login attempts so as to avoid inconveniencing the user unnecessarily.
+When faced with the problem of brute force attacks, most developers simply block the IP address after a certain amount of failed logins. But there are many tools to automate the process of making attacks like these; and these tools can go through a series of proxies and even change the IP on each request. Blocking all these IP addresses could mean you're blocking legitimate users as well. In our code we'll log failed attempts and lock the user's account after five failed login attempts. This should trigger the sending of an email to the user with a reset link, but we have not implemented this in our code. Here is the code for the checkbrute() function at the time of writing. Add it to your functions.php code:
+
+
+
+function checkbrute($user_id, $mysqli) {
+    // Get timestamp of current time 
+    $now = time();
+ 
+    // All login attempts are counted from the past 2 hours. 
+    $valid_attempts = $now - (2 * 60 * 60);
+ 
+    if ($stmt = $mysqli->prepare("SELECT time 
+                             FROM login_attempts 
+                             WHERE user_id = ? 
+                            AND time > '$valid_attempts'")) {
+        $stmt->bind_param('i', $user_id);
+ 
+        // Execute the prepared query. 
+        $stmt->execute();
+        $stmt->store_result();
+ 
+        // If there have been more than 5 failed logins 
+        if ($stmt->num_rows > 5) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+
+
+
+,
+We do this by checking the "user_id" and the "login_string" SESSION variables. The "login_string" SESSION variable has the user's browser information hashed together with the password. To check if they are equal, we use the hash_equals function to prevent timing attacks. We use the browser information because it is very unlikely that the user will change their browser mid-session. Doing this helps prevent session hijacking. Add this function to your functions.php file in the includes folder of your application:
+
+
+
+function login_check($mysqli) {
+    // Check if all session variables are set 
+    if (isset($_SESSION, 
+                        $_SESSION, 
+                        $_SESSION)) {
+ 
+        $user_id = $_SESSION;
+        $login_string = $_SESSION;
+        $username = $_SESSION;
+ 
+        // Get the user-agent string of the user.
+        $user_browser = $_SERVER;
+ 
+        if ($stmt = $mysqli->prepare("SELECT password 
+                                      FROM members 
+                                      WHERE id = ? LIMIT 1")) {
+            // Bind "$user_id" to parameter. 
+            $stmt->bind_param('i', $user_id);
+            $stmt->execute();   // Execute the prepared query.
+            $stmt->store_result();
+ 
+            if ($stmt->num_rows == 1) {
+                // If the user exists get variables from result.
+                $stmt->bind_result($password);
+                $stmt->fetch();
+                $login_check = hash('sha512', $password . $user_browser);
+ 
+                if (hash_equals($login_check, $login_string) ){
+                    // Logged In!!!! 
+                    return true;
+                } else {
+                    // Not logged in 
+                    return false;
+                }
+            } else {
+                // Not logged in 
+                return false;
+            }
+        } else {
+            // Not logged in 
+            return false;
+        }
+    } else {
+        // Not logged in 
+        return false;
+    }
+}
+
+
+
+
+, It is a modificaton of a function of the same name used by the WordPress Content Management System:
+
+
+
+function esc_url($url) {
+ 
+    if ('' == $url) {
+        return $url;
+    }
+ 
+    $url = preg_replace('||i', '', $url);
+ 
+    $strip = array('%0d', '%0a', '%0D', '%0A');
+    $url = (string) $url;
+ 
+    $count = 1;
+    while ($count) {
+        $url = str_replace($strip, '', $url, $count);
+    }
+ 
+    $url = str_replace(';//', '://', $url);
+ 
+    $url = htmlentities($url);
+ 
+    $url = str_replace('&amp;', '&#038;', $url);
+    $url = str_replace("'", '&#039;', $url);
+ 
+    if ($url!== '/') {
+        // We're only interested in relative links from $_SERVERreturn '';
+    } else {
+        return $url;
+    }
+}
+
+
+
+
+
+The trouble with using the server variable unfiltered is that it can be used in a cross site scripting attack. Most references will simply tell you to filter it using htmlentities(), however even this appears not to be sufficient hence the belt and braces approach in this function.
+Others suggest leaving the action attribute of the form blank, or set to a null string. Doing this, though, leaves the form open to an iframe clickjacking attack., It goes in this directory because it contains no HTML markup.
+We will use the mysqli_* set of PHP functions as this is one of the most up-to-date mySQL extensions.
+
+
+
+<?php
+include_once 'db_connect.php';
+include_once 'functions.php';
+ 
+sec_session_start(); // Our custom secure way of starting a PHP session.
+ 
+if (isset($_POST, $_POST)) {
+    $email = $_POST;
+    $password = $_POST; // The hashed password.
+ 
+    if (login($email, $password, $mysqli) == true) {
+        // Login success 
+        header('Location: ../protected_page.php');
+    } else {
+        // Login failed 
+        header('Location: ../index.php?error=1');
+    }
+} else {
+    // The correct POST variables were not sent to this page. 
+    echo 'Invalid Request';
+}
+
+
+
+
+,
+Your logout script must start the session, destroy it and then redirect to somewhere else. Note: it might be a good idea to add CSRF protection here in case someone sends a link hidden in this page somehow. For more information about CSRF you could visit Coding Horror.
+The current code for logging out the user, which you should add to a file called logout.php in the application's includes directory, is:
+
+
+
+<?php
+include_once 'functions.php';
+sec_session_start();
+ 
+// Unset all session values 
+$_SESSION = array();
+ 
+// get session parameters 
+$params = session_get_cookie_params();
+ 
+// Delete the actual cookie. 
+setcookie(session_name(),
+        '', time() - 42000, 
+        $params, 
+        $params, 
+        $params, 
+        $params);
+ 
+// Destroy session 
+session_destroy();
+header('Location: ../index.php');
+
+
+
+
+,
+The registration code is included in two new files, called register.php in the application's root directory and register.inc.php in the includes directory. It does the following things:
+Obtains and validates the username the user wishes to adopt
+Obtains and validates the user's email address
+Obtains and validates the password the user wants to use
+Hashes the password and passes it back to the register.php page (i.e. it posts to itself)
+
+
+Most of the validation is done in JavaScript, client side. This is because the user has no motivation to circumvent these checks. Why would a user want to create an account that would be less secure than otherwise? We will discuss the JavaScript in the next section.TIP: $error_msg can be changed into an array instead of simply making it one long string of errors. This is as simple as setting $error_msg = array(); at the top of the file. Then replacing every $error_msg .= to $error_msg= serialize($error_msg);, the serialize turns the array into a single string so the post is able to use it. To use this post on the page after registering, simply do: $error_variable = unserialize($_POST);, of course you should always use an if(isset($_POST)) {$error_variable = unserialize($_POST);} as this checks if the variable is actually set.
+For now, just create the register.php file and include the following code in it:
+
+
+
+<?php
+include_once 'includes/register.inc.php';
+include_once 'includes/functions.php';
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Secure Login: Registration Form</title>
+        <script type="text/JavaScript" src="js/sha512.js"></script> 
+        <script type="text/JavaScript" src="js/forms.js"></script>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <!-- Registration form to be output if the POST variables are not
+        set or if the registration script caused an error. -->
+        <h1>Register with us</h1>
+        <?php
+        if (!empty($error_msg)) {
+            echo $error_msg;
+        }
+        ?>
+        <ul>
+            <li>Usernames may contain only digits, upper and lowercase letters and underscores</li>
+            <li>Emails must have a valid email format</li>
+            <li>Passwords must be at least 6 characters long</li>
+            <li>Passwords must contain
+                <ul>
+                    <li>At least one uppercase letter (A..Z)</li>
+                    <li>At least one lowercase letter (a..z)</li>
+                    <li>At least one number (0..9)</li>
+                </ul>
+            </li>
+            <li>Your password and confirmation must match exactly</li>
+        </ul>
+        <form action="<?php echo esc_url($_SERVER); ?>" 
+                method="post" 
+                name="registration_form">
+            Username: <input type='text' 
+                name='username' 
+                id='username' /><br>
+            Email: <input type="text" name="email" id="email" /><br>
+            Password: <input type="password"
+                             name="password" 
+                             id="password"/><br>
+            Confirm password: <input type="password" 
+                                     name="confirmpwd" 
+                                     id="confirmpwd" /><br>
+            <input type="button" 
+                   value="Register" 
+                   onclick="return regformhash(this.form,
+                                   this.form.username,
+                                   this.form.email,
+                                   this.form.password,
+                                   this.form.confirmpwd);" /> 
+        </form>
+        <p>Return to the <a href="index.php">login page</a>.</p>
+    </body>
+</html>
+
+
+
+
+
+The register.inc.php file in the includes directory should contain the following code:
+
+
+
+<?php
+include_once 'db_connect.php';
+include_once 'psl-config.php';
+ 
+$error_msg = "";
+ 
+if (isset($_POST, $_POST, $_POST)) {
+    // Sanitize and validate the data passed in
+    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Not a valid email
+        $error_msg .= '<p class="error">The email address you entered is not valid</p>';
+    }
+ 
+    $password = filter_input(INPUT_POST, 'p', FILTER_SANITIZE_STRING);
+    if (strlen($password) != 128) {
+        // The hashed pwd should be 128 characters long.
+        // If it's not, something really odd has happened
+        $error_msg .= '<p class="error">Invalid password configuration.</p>';
+    }
+ 
+    // Username validity and password validity have been checked client side.
+    // This should should be adequate as nobody gains any advantage from
+    // breaking these rules.
+    //
+ 
+    $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
+    $stmt = $mysqli->prepare($prep_stmt);
+ 
+   // check existing email  
+    if ($stmt) {
+        $stmt->bind_param('s', $email);
+        $stmt->execute();
+        $stmt->store_result();
+ 
+        if ($stmt->num_rows == 1) {
+            // A user with this email address already exists
+            $error_msg .= '<p class="error">A user with this email address already exists.</p>';
+                        $stmt->close();
+        }
+    } else {
+        $error_msg .= '<p class="error">Database error Line 39</p>';
+                $stmt->close();
+    }
+ 
+    // check existing username
+    $prep_stmt = "SELECT id FROM members WHERE username = ? LIMIT 1";
+    $stmt = $mysqli->prepare($prep_stmt);
+ 
+    if ($stmt) {
+        $stmt->bind_param('s', $username);
+        $stmt->execute();
+        $stmt->store_result();
+ 
+                if ($stmt->num_rows == 1) {
+                        // A user with this username already exists
+                        $error_msg .= '<p class="error">A user with this username already exists</p>';
+                        $stmt->close();
+                }
+        } else {
+                $error_msg .= '<p class="error">Database error line 55</p>';
+                $stmt->close();
+        }
+ 
+    // TODO: 
+    // We'll also have to account for the situation where the user doesn't have
+    // rights to do registration, by checking what type of user is attempting to
+    // perform the operation.
+ 
+    if (empty($error_msg)) {
+ 
+        // Create hashed password using the password_hash function.
+        // This function salts it with a random salt and can be verified with
+        // the password_verify function.
+        $password = password_hash($password, PASSWORD_BCRYPT);
+ 
+        // Insert the new user into the database 
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, password) VALUES (?, ?, ?)")) {
+            $insert_stmt->bind_param('sss', $username, $email, $password);
+            // Execute the prepared query.
+            if (! $insert_stmt->execute()) {
+                header('Location: ../error.php?err=Registration failure: INSERT');
+            }
+        }
+        header('Location: ./register_success.php');
+    }
+}
+?>
+
+
+
+
+If there is no POST data passed into the form, the registration form is displayed. The form's submit button calls the JavaScript function regformhash(). This function does the necessary validation checks and submits the form when all is well. The JavaScript functions are discussed in the next section.
+If the POST data exists, some server side checks are done to sanitise and validate it. NOTE that these checks are not complete at the time of writing. Some of the issues are mentioned in the comments in the file. At present, we just check that the email address is in the correct format, that the hashed password is the correct length and that the user is not trying to register an email that has already been registered.
+If everything checks out, the new user is registered by writing a new record into the members table.
+ We will use the hashing function so our passwords don't get sent in plain text.
+The file can be downloaded from pajhome.org.uk
+(It is also saved in the github repository)
+Store your copy of this file in a directory called "js", off the root directory of the application.
+ 
+    var p = document.createElement("input");
+ 
+    // Add the new element to our form. 
+    form.appendChild(p);
+    p.name = "p";
+    p.type = "hidden";
+    p.value = hex_sha512(password.value);
+ 
+    // Make sure the plaintext password doesn't get sent. 
+    password.value = "";
+ 
+    // Finally submit the form. 
+    form.submit();
+}
+ 
+function regformhash(form, uid, email, password, conf) {
+     // Check each field has a value
+    if (uid.value == ''         || 
+          email.value == ''     || 
+          password.value == ''  || 
+          conf.value == '') {
+ 
+        alert('You must provide all the requested details. Please try again');
+        return false;
+    }
+ 
+    // Check the username
+ 
+    re = /^\w+$/; 
+    if(!re.test(form.username.value)) { 
+        alert("Username must contain only letters, numbers and underscores. Please try again"); 
+        form.username.focus();
+        return false; 
+    }
+ 
+    // Check that the password is sufficiently long (min 6 chars)
+    // The check is duplicated below, but this is included to give more
+    // specific guidance to the user
+    if (password.value.length < 6) {
+        alert('Passwords must be at least 6 characters long.  Please try again');
+        form.password.focus();
+        return false;
+    }
+ 
+    // At least one number, one lowercase and one uppercase letter 
+    // At least six characters 
+ 
+    var re = /(?=.*\d)(?=.*)(?=.*).{6,}/; 
+    if (!re.test(password.value)) {
+        alert('Passwords must contain at least one number, one lowercase and one uppercase letter.  Please try again');
+        return false;
+    }
+ 
+    // Check password and confirmation are the same
+    if (password.value != conf.value) {
+        alert('Your password and confirmation do not match. Please try again');
+        form.password.focus();
+        return false;
+    }
+ 
+    // Create a new element input, this will be our hashed password field. 
+    var p = document.createElement("input");
+ 
+    // Add the new element to our form. 
+    form.appendChild(p);
+    p.name = "p";
+    p.type = "hidden";
+    p.value = hex_sha512(password.value);
+ 
+    // Make sure the plaintext password doesn't get sent. 
+    password.value = "";
+    conf.value = "";
+ 
+    // Finally submit the form. 
+    form.submit();
+    return true;
+}
+
+
+
+
+In both cases, the JavaScript hashes the password and passes it in the POST data by creating and populating a hidden field.
+
+This is an HTML form with two text fields, named "email" and "password". The form's submit button calls the JavaScript function formhash(), which will generate a hash of the password, and send "email" and "p" (the hashed password) to the server. You should create this file in the application's root directory.
+When logging in, it is best to use something that is not public, for this guide we are using the email as the login id, the username can then be used to identify the user. If the email is not displayed on any pages within the wider application, it adds another unknown for anyone trying to crack the account.
+Note: even though we have encrypted the password so it is not sent in plain text, it is essential that you use the HTTPS protocol (TLS/SSL) when sending passwords in a production system. It cannot be stressed enough that simply hashing the password is not enough. A man-in-the-middle attack could be mounted to read the hash being sent and use it to log in.
+
+
+
+<?php
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+ 
+sec_session_start();
+ 
+if (login_check($mysqli) == true) {
+    $logged = 'in';
+} else {
+    $logged = 'out';
+}
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Secure Login: Log In</title>
+        <link rel="stylesheet" href="styles/main.css" />
+        <script type="text/JavaScript" src="js/sha512.js"></script> 
+        <script type="text/JavaScript" src="js/forms.js"></script> 
+    </head>
+    <body>
+        <?php
+        if (isset($_GET)) {
+            echo '<p class="error">Error Logging In!</p>';
+        }
+        ?> 
+        <form action="includes/process_login.php" method="post" name="login_form">                      
+            Email: <input type="text" name="email" />
+            Password: <input type="password" 
+                             name="password" 
+                             id="password"/>
+            <input type="button" 
+                   value="Login" 
+                   onclick="formhash(this.form, this.form.password);" /> 
+        </form>
+ 
+<?php
+        if (login_check($mysqli) == true) {
+                        echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION) . '.</p>';
+ 
+            echo '<p>Do you want to change user? <a href="includes/logout.php">Log out</a>.</p>';
+        } else {
+                        echo '<p>Currently logged ' . $logged . '.</p>';
+                        echo "<p>If you don't have a login, please <a href='register.php'>register</a></p>";
+                }
+?>      
+    </body>
+</html>
+
+
+
+
+
+, This is the page to which the user is redirected after successfully registering. Of course you can make this page anything you like or redirect to another page entirely (or even not at all). It's up to you. The page should be located in the root directory of the application. The current register_success.php page that we have written looks like this:
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Secure Login: Registration Success</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <h1>Registration successful!</h1>
+        <p>You can now go back to the <a href="index.php">login page</a> and log in</p>
+    </body>
+</html>
+
+
+
+
+
+, Call it error.php This is the page to which users will be directed if an error occurs during the login or registration process, or when trying to establish a secure session. The code given below simply provides a bare bones error page. You will probably need something a bit more sophisticated. However, please note that the input into the page must be properly filtered to guard against XSS attacks. The example page code is:
+
+
+
+<?php
+$error = filter_input(INPUT_GET, 'err', $filter = FILTER_SANITIZE_STRING);
+ 
+if (! $error) {
+    $error = 'Oops! An unknown error happened.';
+}
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Secure Login: Error</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <h1>There was a problem</h1>
+        <p class="error"><?php echo $error; ?></p>  
+    </body>
+</html>
+
+
+
+
+
+,
+One of the most common problems with authentication systems is the developer forgetting to check if the user is logged in. It is very important you use the code below on every protected page to check that the user is logged in. Make sure you use this function to check if the user is logged in.
+
+
+
+// Include database connection and functions here.  See 3.1. 
+sec_session_start(); 
+if(login_check($mysqli) == true) {
+        // Add your protected page content here!
+} else { 
+        echo 'You are not authorized to access this page, please login.';
+}
+
+
+
+
+As an example of what you should do, we have included a sample protected page. Create a file called protected_page.php in the root directory of the application. The file should contain something like the following:
+
+
+
+
+<?php
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+ 
+sec_session_start();
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Secure Login: Protected Page</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <?php if (login_check($mysqli) == true) : ?>
+            <p>Welcome <?php echo htmlentities($_SESSION); ?>!</p>
+            <p>
+                This is an example protected page.  To access this page, users
+                must be logged in.  At some stage, we'll also check the role of
+                the user, so pages will be able to determine the type of user
+                authorised to access the page.
+            </p>
+            <p>Return to <a href="index.php">login page</a></p>
+        <?php else : ?>
+            <p>
+                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+            </p>
+        <?php endif; ?>
+    </body>
+</html>
+
+
+
+
+Our application redirects to this page after a successful login. Your own implementation does not have to do this, of course.

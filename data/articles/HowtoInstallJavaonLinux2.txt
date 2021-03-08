@@ -1,0 +1,17 @@
+
+Accept the license and continue.
+ Under the "Product/File Description" you should pick your corresponding Linux option. For example, if you're running Linux x86 (32-bit), you need to choose the corresponding “*.rpm” version, for example “jdk-7u9-linux-i586.rpm”.
+ Save it to your GNU/Linux machine.
+ Or, become root by running su and entering the super-user password.
+ Type rpm -ivh filename.rpm, where filename is the name of your .rpm file. (Such as jdk-7u9-linux-i586.rpm).
+
+
+You may receive a message telling that program “rpm” is not installed.
+If that is the case the program “rpm” is not installed. You need to install it by typing sudo apt-get install rpm. Enter your password, and you're finished.
+ If you want to be able to execute this version of Java interpreter or compiler from any directory on your GNU/Linux system, you will have to create a few symbolic links:
+
+
+sudo ln -s -v jdk1.7.0_09/bin/java /usr/bin/java
+sudo ln -s -v jdk1.7.0_09/bin/javac /usr/bin/javac
+Note that by installing using this method there could be dependencies that fail. It is better to use the package installer that handles all dependencies for you, since you will not be able to use Java correctly until the dependencies are resolved.
+

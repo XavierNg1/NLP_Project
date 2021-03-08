@@ -1,0 +1,50 @@
+ Fixing the fine details of a low-quality, compressed JPEG takes quite a bit of time and dedication.
+
+
+If you’re pressed for time or don’t have Photoshop, see the Topaz DeJPEG method.
+
+If you want to improve images for use in apps like Facebook or Instagram, this method won’t be as helpful as using an app with filters. Pixlr contains free filters that can disguise imperfect JPEGs. If you want to make your photos pop and don’t care about compression loss, give Pixlr a try.
+ Open your JPEG in Photoshop, then zoom in by clicking the magnifying glass (+) at the top left of the toolbar. Continue clicking this button until the percentage at the bottom left corner of the screen says “300%.” Notice the blocks and compression discolorations that appear at this close level.
+ Open the “Filter” menu, select “Noise,” then “Reduce Noise.”
+
+,
+
+
+
+Strength: This number will reflect the desired degree of noise removal; it should be higher for JPEGs of lesser quality. Drag the slider to the right to see the effect of raising the strength setting.
+
+Preserve Details: A lower percentage will make the picture blurrier and softer, but will also reduce more noise.
+
+Sharpen Details: You may want to compensate for a low Preserve Details setting with a higher Sharpen Details setting, as that will make the edges of your image clearer. Make sure "Remove JPEG artifact" is checked.
+Once you’re satisfied with the preview image, click “OK” to save the new image.
+ (E.g., human skin, cheeks, hair.) Your goal is to make the different color transitions in the image to be as smooth as possible. Leave important details in specific objects (e.g., eyes, ears) for the rubber stamp/clone tool, which will be covered shortly.
+
+
+
+Zoom into the image until you can clearly see the colorblocks (tiny colored squares) in the area you're working with.
+
+Use the eyedropper tool to select a color near the colorblocks that you'd like to remove.
+
+Select the brush tool. You will essentially be lightly painting over the colorblocks. Set the brush hardness to 10%, opacity to 40%, and flow to 100%.
+
+Using one-clicks, "dab" the paint brush over the colorblocks. Don't hold the cursor down and paint--it will appear unnatural. Feel free to switch colors liberally to accurately match the colors, shadows, and highlights of the original picture.
+
+Lower the brush opacity to 10% for smoothing over transition areas, such as where the eyebrow meets the skin. You'll want to pick colors from both the skin and the eyebrow to dab over this transitional space. Because of the low opacity, any changes that you make will be incremental and thus appear natural, so don't be afraid of dabbing skin color on the eyebrow edge and vice versa.
+(E.g., eyes, teeth, insect wings.) Because it's hard to pick one color that would be appropriate for dabbing with a brush in these areas, we can compensate for that by using the rubber stamp to get an exact match of colors. The rubber stamp allows you to select an area of the image that you can literally stamp and replicate elsewhere on the image.
+
+
+
+Click the rubber/clone stamp while pressing the Alt key until the cursor turns into a crosshair. Select an area immediately next to a color block or other compression artifact, but avoid the colorblock. You wouldn't want to stamp any compression artifacts.
+
+Set the brush size to what's appropriate for dealing with the compression artifact -- you probably want to stay between 1 and 10 px. Set the "hardness" to a value between 10 and 30% and "opacity" to 30%. Use the same one-click "dabs" to fix blocks that are the wrong color. Frequently re-select the area you would like to be stamped (by holding down the alt key) as you move across the image.
+
+Reduce the opacity for transitional areas. Incorrect blocks of color sometimes interfere with the shape of the image (note where parts of the iris are not a smooth round shape but rather interrupted by protruding lines). You may have to use dabs to essentially re-draw edges damaged by incorrect colorblocks.
+ Periodically zoom out to 100% to view results across your entire image.
+ You don't want your efforts to be wasted with another round of compression.
+
+
+In Photoshop, go to File >> Save for Web & Devices.
+
+In the drop-down menu, select "JPEG" and set the quality to a value between 80 and 100. Note that higher quality entails a larger file size.
+Alternatively, select "PNG-24" to save your file as a PNG. PNGs typically are larger than JPEGs, but they do not heavily compress images.
+

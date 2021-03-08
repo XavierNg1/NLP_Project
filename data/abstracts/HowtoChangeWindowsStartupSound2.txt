@@ -1,0 +1,24 @@
+
+Understand what has changed in Windows 8.
+Open the Windows Registry Editor.
+Use the directory tree on the left to navigate to .HKEY_CURRENT_USER → AppEvents → EventLabels.
+
+,
+Find and open the .WindowsLogon folder.
+
+,
+Double click the .ExcludeFromCPL key.
+
+,
+Change the value from .1 to 0.
+Repeat this for any other disabled sounds you want to re-enable.
+Open the Control Panel.
+Select the "Sounds" option and click the .Sounds tab.
+
+,
+Scroll down and select the "Windows Logon" entry.
+
+,
+Click .Browse... to search your computer for a replacement sound.
+Perform a full shutdown.
+Boot your computer up.

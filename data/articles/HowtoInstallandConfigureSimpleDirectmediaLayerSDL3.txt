@@ -1,0 +1,15 @@
+, Press "Go."
+
+, Press "Next."
+
+, Let's tell it where it is.
+
+
+You should see something like "${#sdl}" written as location. It means it searches for SDL inside the MINGW compiler. But to keep things tidy, we just copied the "SDL-{version}" folder, next to mingw. (See picture above.)
+
+, Select the copied folder from step 4.
+
+
+In case you get the alternate screen, with "BASE", "include", "lib", etc..., just go to "BASE", select the path where you copied SDL, and click "Close", that's it! Nothing more is needed.
+ You only have to configure and install once. So if you want to create another SDL project, you don't have to re-do all of this.
+

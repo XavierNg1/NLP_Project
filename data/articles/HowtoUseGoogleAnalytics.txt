@@ -1,0 +1,110 @@
+ Open google.com/analytics/ in your browser. Click the “Access Analytics” button at the top-right corner of the site. This will take you to a new page that shows a brief rundown of how Analytics works. Click the “Sign up” button to create your Analytics account.
+
+
+You will need to sign in with your Google account if you are not already.
+You can create a new Google account specifically for tracking your Analytics data if you want to keep it separate from your personal Google account.;
+, Use the buttons at the top of the page to switch between website tracking or mobile app tracking., In order to create your Analytics account, you will need to provide some basic information to Google. This will help determine how the Analytics data is interpreted and returned to you.
+
+
+Enter an account name. This will be the account that manages various properties that you track. You can track up to 25 properties per account, and can have 100 accounts per Google account.
+Enter your website name and URL or app name in the “Setting up your property” section.
+Select the Industry that best fits your website, and select the timezone that you want your reporting to take place in.
+ There are four data sharing options you can choose to enable or disable. These allow your Analytics data to be shared with other Google programs such as AdSense, anonymously with Google for statistical reasons, and with account specialists for troubleshooting and optimization of your Analytics account., You'll be taken to the Admin page where you can find the Tracking ID for your website or mobile app., This is a new tool from Google that makes implementing and changing analytics tags much easier across all of your sites and apps. Tag Manager is free, and you can sign up with your Google account at google.com/tagmanager/., The container will hold all of the tags you want on the site, including Analytics, AdWords, and any third-party tags. The container name should be your website URL or app name.
+
+Select the type of container you need (Web, iOS, Android). Click the "Create" button.
+
+Click here if you're inserting the tag in a website.
+
+Click here if you're inserting the tag in a mobile app.
+ This tag will need to be inserted on every web page that you intend to track., If you don’t have access to your site’s code, get in touch with your web developer. You will need to be able to edit the code in order to insert the tag., Re-upload the updated file and repeat for every page on your site. This will enable the Tag Manager to insert the tags you want onto each of your web pages., You can find this page after you close the window displaying the Google Tags code snippet., Select "Universal Analytics" and click "Continue"., Select the type of tracking you want to monitor from the drop-down menu.
+
+Page View is the most common, and simply tracks when someone has visited the page. You can also choose from a variety of other types, including events, transactions, social media clicks, and more.
+ For the Page View tag, select "All Pages". You can select "Some Pages" if there are certain pages you don't want tracked. You can also choose from other, more-specific triggers., Review your tag settings and click the "Save Tag" button. You'll see your new tag in the list., Click the "Publish" button and then review the information displayed. Click "Publish Now" to send the tag to the website and activate it., After about 24 hours, you should start receiving analytic reports. Click here for details on reading your reports., In order to enable Google Tag Manager in your Android app, you'll need to add it to your app's source code. Discuss this with your app developer if you don't have access to your app's code. You'll need the following tools to add the code to your app:
+
+Android SDK
+Google Play Services SDK
+If you want to implement the tag in an iOS app, click here for detailed instructions.
+ Open the file and add the following code into the permissions area:
+
+
+
+
+<!-- For TagManager SDK -->
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+
+
+, Click the "Add a new tag" link in your container's admin page., Select "Universal Analytics" and click "Continue"., Select the type of tracking you want to monitor from the drop-down menu.
+
+App View is the most basic option which will tell you every time someone opens the app.
+ This will enable you to download the container binary to add to your app., You'll see a list of your tag versions., This will download a small file to your computer., The path should be <project-root>/res/raw. Rename your downloaded file to remove any upper-case characters and then copy it to the /raw/ folder., This is where you will implement the Google Tab Manager code., Enter the following code to implement your tag. Replace containerId with the ID of your container, and container_file with the filename of your container binary file:
+
+
+
+
+TagManager tagManager = TagManager.getInstance(this);
+PendingResult<ContainerHolder> pending =
+        tagManager.loadContainerPreferNonDefault(containerId,
+        R.raw.container_file);
+ 
+pending.setResultCallback(new ResultCallback<ContainerHolder>() {
+    @Override
+    public void onResult(ContainerHolder containerHolder) {
+        ContainerHolderSingleton.setContainerHolder(containerHolder);
+        Container container = containerHolder.getContainer();
+        if (!containerHolder.getStatus().isSuccess()) {
+            Log.e("AppName", "failure loading container");
+            displayErrorToUser(R.string.load_error);
+            return;
+        }
+        ContainerHolderSingleton.setContainerHolder(containerHolder);
+        ContainerLoadedCallback.registerCallbacksForContainer(container);
+        containerHolder.setContainerAvailableListener(new ContainerLoadedCallback());
+        startMainActivity();
+    }
+}, 2, TimeUnit.SECONDS);
+
+
+
+
+, The above changes will report any time someone performs an event in your app. Since your tag is set to fire on any event, you won't need to include any more code to activate the tag. If you wanted tags to only fire on specific events, you'll need to add additional code Click here for details on reading your reports.
+
+Click here for more detailed instructions on implementing Google Tags.
+ After about 24 hours, you should start receiving analytic reports. You can find your analytic information from the Google Analytics website. See the next section for information on reading your reports., This will load the "Overview" page of the Behavior section, which will show you some basic information about the number of views you're getting. You can see how long visitors are staying on the page, the percentage that are bouncing off, and the percentage that are exiting., You can view the Dashboard for each of your tracked sites by using the Dashboards menu on the left side of the site. Dashboards allow you to see in-depth information about the traffic for your site.
+ Each Dashboard comes pre-configured with basic widgets. You can customize them to better suit the needs of your site and business. Click the “+Add Widget” button in the Dashboards menu to add new widgets to the Dashboard. You can also remove any widgets that are already active.
+ You can create new Dashboards to monitor specific aspects of a site. You can create up to 20 Dashboards. To create a new Dashboard, click the Dashboard menu and then click “+New Dashboard”
+
+
+Starter Dashboard contains all of the basic widgets.
+Blank Canvas contains no widgets.
+ If you have a lot of traffic coming from employees, you can use Filters to hide the traffic they generate. You can also use filters to only show traffic to a specific subdirectory, or hide traffic from that subdirectory.
+ Select the account under which you would like to set up goals. This is under the "Views" tab. As you add more websites to your account, you will see a list of account names in this area.
+ Select “Create a Goal” to start defining a new goal for your view, and then give your goal a name.
+
+
+Make sure to check the “Active” box to have the goal start tracking immediately.
+ There are templates available depending on the Industry you selected for your website when you created your Tracking Code.
+
+
+Choose "Destination" as the goal if you want to get a certain amount of visits to a specific URL.
+Choose "Pages per Visit" or "Screens per Visit" to specify a certain number of pages that your users visit while they are there. Specify a "Condition" and a number of pages visited. These are sometimes called "Readers."
+Choose "Duration" to work toward a certain visit length. Fill in the time in minutes or seconds. Then, enter the goal value. You may refer to these visitors as "Engaged Users."
+Choose an "Event" goal for a "Call to Action," such as buying a ticket or submitting an RSVP. You will need to return and fill out this goal once you have activated the Analytics Goal Tracking feature.
+Choose “Sales” or other e-commerce goals to track the number of people that buy and what they choose to buy.
+ Select "Save" when you have specified all the details for your goal. You can create up to 20 goals per view.
+ This report will give you information on how visitors are reaching your goal. It is located under Standard Reporting > Conversions/Outcomes > Goals.
+
+
+You can see where visitors are entering your funnel to your goal, where they are exiting if they are leaving too soon, where the traffic loops back, and more., Build a custom URL that tracks traffic for each new campaign.
+
+
+Go to the Campaigns URL Builder to build your URL with the website, source, medium, term, name and content. Use this custom URL on any online links. Google will track the user's information.
+Go to the "Campaigns" tab. Select "Traffic Sources" and proceed to "Sources" to analyze your specific campaigns for their success.
+ If you have a Pay Per Click (PPC) account, link this to Analytics so that you can track conversion rates and run reports on each PPC ad.
+ Similar to a custom URL for campaigns, customize your event links to track the source and conversion for ticket purchases.
+
+
+Add specific details about your event in the latter half of the URL, including them in the following order: event, category, action and label. Search for the "Event Tracking Guide" to find specifics on how to set up this slightly technical URL. Go to the "Reports" section to track your event movements.
+

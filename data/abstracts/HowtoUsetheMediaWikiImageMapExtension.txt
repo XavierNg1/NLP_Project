@@ -1,0 +1,23 @@
+
+Upload your image to wikiHow if you have not done so already.
+Go to the page displaying the image and description (e.g. https://www.wikihow.com/Image:Framing_hammer_956.jpg), and then click on the link to the file just below image to bring you to the page showing the full URL to link to the image.
+Open a new window or tab in your browser and navigate to the ImageMap Editor.
+Enter your URL into the field labeled URL under "Load from URL" and enter the image name in the field labeled "Name" (note: the image name is the text following the final / in the URL you copied).
+Click "Load" to display your image in the Image Map Editor.
+Define the region to be used as your link.
+Scroll down the page in the ImageMap Editor until you see the box labeled "Global Settings.",
+Scroll down and copy the ImageMap extension code from the box directly below the "Global Settings" box.
+Open a new window or tab in your browser and edit the page you wish to place the ImageMap link in.
+
+,
+Paste your code in the appropriate location in the page.
+Add the link to your page between the ].
+Inspect your code to make sure that you have closed the ImageMap tag properly using </imagemap>.Your code should now look like:
+<imagemap>
+Image:Framing_hammer_956.jpg|
+rect 1 1 299 218 ]
+desc none
+</imagemap>
+
+,
+Save your page and test your link.

@@ -1,0 +1,15 @@
+
+Have a basic understanding of Excel.
+Insert the following function into a blank cell where you would like your end result to appear:
+
+=INDEX(Range,MATCH(MAX(COUNTIF(Range,Range)),COUNTIF(Range,Range),0))
+
+
+
+
+
+
+
+,
+To make this formula work, press Ctrl+Shift+Enter once you have entered in the above formula with your values in for the "Range".
+The way the formula works is the INDEX function picks out how many different words are used.

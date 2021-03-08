@@ -1,0 +1,25 @@
+ CSS is a more powerful and consistent way to style your web page. This makes it the ideal way to determine how your page looks, while HTML is designed to determine what your page means. It's completely fine to use HTML tags when you want to emphasize important text, but CSS will give you more close control over the visual appearance of your bold text.
+
+
+Try opening a basic HTML page with different browsers, and you might notice differences in the display. CSS tells the browser exactly how to display text altered by a given tag, to minimize the amount of variation.
+ If you don't know CSS yet, using "inline CSS" is a good way to get started. While you can use this to alter tags such as <p> or <h1>, sometimes you'll want to change text that's not already between tags.In this case, place the text between <span></span> tags. This has no effect on its own, but gives us something to work with. Here's the example we'll be using:
+
+
+<span>I learned how to make this text bold with inline CSS.</span>
+
+, HTML attributes are written directly in the tag, inside the < >brackets. The style attribute is necessary to insert CSS into the HTML tag, so we'll insert style= into the span tag:
+
+
+<span style=>I learned how to make this text bold with inline CSS.</span>
+There's no reason to add the style attribute without specifying any styles. We're just taking this one step at a time to make it easy to follow.
+ CSS properties are added as part of the style attribute. In our case, we'll use the font-weight property, which determines how thick to draw the font. This single property can be used to display bold (extra-thick) text, thin text, or even specify that the text should be displayed with normal thickness. Add "font-weight: " after the = sign, like this:
+
+
+<span style="font-weight: ">I learned how to make this text bold with inline CSS.</span>
+Again, this is unfinished and won't do anything by itself.
+Don't forget the quotation marks before and after font-weight:.
+ The only thing we need to do now is add a value for font-weight, between the font-weight: and the final quotation mark. There are quite a few options for different amounts of "boldness," but the value bold is the easiest to use :<span style="font-weight:bold">I learned how to make this text bold with inline CSS.</span>
+
+, CSS gives you many more options than HTML, so you don't need to feel constricted. Here are several alternatives to the "bold" value:<span style="font-weight:bolder">"Bolder" text will always be thicker than the parent element.</span> For example, if you make an entire paragraph "bold," then use "bolder" on an individual sentence inside that paragraph, it will be even thicker.
+<span style="font-weight:normal">"Normal" text will be displayed as normal even if the span is inside a bold tag.</span>
+<span style="font-weight:900">You can instead use a number from 100 to 900 to specify thickness. 400 is normal text, while bold text uses a thickness of 700 by default.</span>

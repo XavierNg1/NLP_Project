@@ -1,0 +1,31 @@
+ Open your browser of choice and navigate to Twitch.
+ If you haven't signed up for an account already, sign up. Otherwise, log in to your account. In the upper right corner, there are Log in and Sign up links., Download Open Broadcaster Software for your operating system and install it.
+
+Ubuntu (or other Debian-based distribution) users can install OBS in terminal:
+
+
+
+
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt-get update
+sudo apt-get install obs-studio
+
+
+
+
+
+
+,, Press Settings button located in the bottom right corner., General setting will be shown by default. You can set the language, theme and other useful settings., Press Output item on the list on the left side and configure video bitrate. The following list shows recommended bitrate ranges for various video qualities:
+
+For 240p, use a number in the range 300 - 700.
+For 360p, use a number in the range 400 - 1000.
+For 480p, use a number in the range 500 - 2000.
+For 720p, use a number in the range 1500 - 4000.
+For 1080p, use a number in the range 3000 - 6000.
+For 1440p, use a number in the range 9000 - 18000.
+For 4K / 2160p, use a number in the range 20 000 - 51 000.
+ Default service is usually Twitch. In case it's not, left-click the Service drop down menu and select "Twitch" from the list., Left-click the Server drop down menu and select the server closest to your location., Open your browser of choice and navigate to Twitch. Your username is located in the upper right corner. Left-click the username to reveal a drop down menu. Select "Dashboard" from the list of options., Left-click Stream Key tab and press Show key button. When dialog opens, press I understand button and your stream key will be shown. Once shown, copy the stream key.
+
+
+Remember NOT to share the stream key with anyone! Stream key is like a password for your streaming channel. Anyone who obtains your stream key can stream to your channel.
+ Return to OBS and paste your stream key into the Stream key text field., Press Apply button located in the bottom right corner and close the Settings window., In the bottom part of the user interface is "Sources" list with a row of buttons. Press + button under it and select "Screen Capture" option. Two more dialogs will be displayed, press OK button on both of them., In the bottom part of the user interface is "Sources" list with a row of buttons. Press + button under it and select "Audio Output Capture" option. Two more dialogs will be displayed, press OK button on both of them., Screen and audio capture are the most basic sources for your live stream to have a video and audio. Explore other sources, such as Image, Media and Text. Additionally, explore Window Capture source if you wish to only capture a specific window., Press Start Streaming button in the bottom right part of the user interface to start streaming.

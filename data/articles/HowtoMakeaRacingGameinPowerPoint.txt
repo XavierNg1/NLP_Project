@@ -1,0 +1,92 @@
+,
+
+
+Decorate the starting page with some pictures and give the player instructions on how to play.
+Add a starting zone using either clip art or word art, hyperlink it to the next slide:
+
+Select starting zone -> Insert -> Action -> Hyperlink to -> Next Slide
+
+
+
+,
+
+
+Start a blank new slide; this will be the first racetrack.
+Insert a rectangle to cover the whole slide. This will prevent players from taking shortcuts off the tracks.
+
+Select rectangle -> Insert -> Action -> Mouseover -> Hyperlink to -> Next Slide -> Check "Highlight when mouse over"
+
+
+Whenever the player's cursor goes off the tracks, they will be sent to the next slide, which will be a "game over" page that we will create later.
+
+
+
+Insert another start button from the previous slide to the same place in this slide. The player's cursor will start in this area. (If you copy and paste the image from the previous slide, they will be at the same position, but you will need to undo the hyperlink on this new one.)
+Start building a racetrack by inserting arrows of different shapes
+
+Insert -> Shapes -> Block Arrows
+
+
+Connect them end to end to form a path.
+You can rotate them by holding down the green circle.
+You can also flip them to create a turn in the opposite direction.
+Insert a checker flag icon to indicate a finishing area, and your track is complete.
+
+
+
+Insert a flag icon at the start of the racetrack to represent the AI driver. Scale it down so that it is less than the width of the racetrack.
+Now add its custom motion path:
+
+Animation -> click down arrow to go to the bottom -> Custom Path
+
+
+Plot a path within the track from start to finish. When you're done with the last path point, press Esc to finish. Try to stay along the center of the track.
+
+Adjust the difficulty by modifying how fast the AI driver finishes the race.
+
+Change the duration of its animation; the shorter the duration, the faster the AI drives, the harder the game becomes.
+You can test it by pressing the Preview button at the top left.
+
+
+Undo the "Smooth end" feature or else it will appear as if the AI driver slows down near the finishing line.
+
+Call up the custom path configuration window by clicking the little expansion button -> Set "Smooth end" to 0 sec.
+,
+
+
+Recall the AI driver's finish time that you set in step 6; set the timer to transition to the next slide to be the exact same duration.
+Disable advance slide on mouse click again to prevent cheating
+
+Transitions -> Advance Slide ->After hh:mm:ss -> enter the same duration as the AI driver animation -> uncheck "On Mouse Click"
+
+
+
+,
+
+
+Use Word Art to print out "GAME OVER" and "Exit"
+Hyperlink "Exit" to End Show on mouse click.
+Uncheck "Advance Slide On Mouse Click" for this slide as well to prevent cheating.
+
+
+
+Repeat steps 3 ~ step 10 to add more racetrack slides alternated with GAME OVER slides.
+Make sure that the starting zone is the same position as the finishing zone of the previous track.
+You can copy and paste to reuse the same GAME OVER slide:
+
+Right click existing GAME OVER slide -> Copy -> right click after the next racetrack slide -> Paste Options -> Using Destination Theme
+
+
+
+,
+
+
+Once you have enough tracks that you want, add a finishing slide with messages such as "You won!"
+Now you can set winning conditions to connect the tracks.
+
+Mouseover hyperlink the finishing zone of each track slide to the next track slide; hyperlink the last track slide to the YOU WON slide. For example:
+Select finishing zone -> Insert -> Action -> Mouseover -> Check "Highlight when mouse over" -> Hyperlink to -> "Slide ..." -> Select next track slide, or winning slide if this is the last track
+
+
+Do this for each finishing zone on every racetrack slide.
+

@@ -1,0 +1,43 @@
+ Even if your file is corrupt, having a duplicate means you still have a chance to recover the information in it if you should accidentally destroy the file in trying to repair it. Put this backup on a flash drive or other removable media.
+
+
+If you have a previously saved version of the document, you may want to back it up and then open it on the same computer or another computer. If you've made few changes from the previous version to the current one, you may find it easiest to recreate the changes.;
+, Your document may not be corrupt. If you have trouble opening other Word documents on the same computer, your version of Word may be at fault, not the document.
+ If you have a copy of your document on another computer or sent it via email, you may still have a good copy of the document to work with.
+
+
+Look at the date/time stamp for the file if you have it on another computer. If it's the same as the "corrupt" file, but it still opens, you may have a problem with the operating system on the computer with the corrupt file or with the hard drive itself.
+If you emailed the document recently, check the Sent Items folder of your email program for the email that you attached the document to. You can then download it to a different folder on the computer where you found the corrupt file, or to another computer, to see if Word will open it.
+ Running CHKDSK lets you check for corruption at the file system level. If there is none, the problem is indeed with your document. If there is, CHKDSK's file system repair may fix your document.
+ If you can open the document with your version of Word, saving it in a format such as .rtf (rich-text format) or .txt (ASCII text format) may strip out whatever codes corrupted the file in .doc or .docx format. After opening the converted document, you can then re-save a new version of the document in .doc or .docx format to see if the problem returns.
+
+
+Be aware that .txt format does not support text-formatting features such as bold, italics, and underline. If your document featured extensive formatting, save it in .rtf format to preserve the formatting before re-saving it in .doc or .docx format.
+Note also that some Word documents may be corrupted in such a way that a file saved in a different file format in Word may not be able to be opened again.
+ If you can't open the document in Word, you may still be able to open it with a different word processing program or with a text editor program that reads the .doc or .docx format. Either of these may let you recover the text from your document.
+ If your Word document was saved in the older .doc format, you may be able to recover it with Word's "Recover Text from Any File" converter. How you access this utility depends on your version of Word.
+
+
+In Word 2003, select Open from the File menu.
+In Word 2007, click the Microsoft Office button in the upper left and then select Open from the File menu.
+In Word 2010, click the File tab and then select Open from the File menu.
+From the Open dialog in your version of Word, select "Recover Text from Any File" from the Files of type dropdown list and then select the file you wish to convert. Your text will be recovered, but any formatting or graphics will be lost. (Header and footer text will be saved but will appear in the body of the recovered text; the headers and footers themselves will be lost.)
+After using this utility, reset the Files of type dropdown list to one of the Word document formats to prevent Word from using the recover text utility unnecessarily.
+ This feature repairs (or attempts to repair) Word documents on opening as a matter of course. To use this feature, follow these steps:
+
+
+Choose the Open option for your version of Word as described in the previous step.
+Select the file you wish to open and repair in the Open dialog.
+Click the down arrow beside the Open button and select Open and Repair from the menu.
+ Windows Vista and Windows 7 have the capability to create shadow copies of some documents. You can check to see whether a shadow copy of your Word document exists by right-clicking it and selecting Properties from the popup menu. On the Properties dialog, select the Previous Versions tab and select one of the available versions listed.
+
+
+The Previous Versions tab appears only if your hard drive is NTFS formatted.
+Before you can use the shadow copy feature, you must first configure it.
+Be aware that a shadow copy will not be as complete as a backup you created.
+ You'll have to open several uncorrupted Word documents with a file editor program to identify the header components. By comparing them with the file header of your corrupt file, you may be able to identify corruption in its file header. You can then replace the corrupt header components with good components from another Word document to fix the file.
+ If neither of Word's recovery features works, you may need to use a third-party recovery application such OfficeRecovery or Ontrack Easy Recovery to repair your Word document. However, if your file is severely corrupted, a third-party utility may not work either.
+
+
+Be aware that some third-party recovery utility programs may come with hefty price tags, depending on how many features they contain. Also, be cautious when downloading programs like these off the internet, as they may contain malware.
+

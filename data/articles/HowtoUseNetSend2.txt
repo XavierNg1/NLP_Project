@@ -1,0 +1,42 @@
+ The msg command replaces a lot of the functionality of the discontinued net send command. Unfortunately, the msg command is limited to the Professional and Enterprise editions of Windows. If you are using a Home edition, you'll need to upgrade to Professional or Enterprise in order to use the msg command.You can see what version of Windows you're running by pressing ⊞ Win+Pause, or by right-clicking "Computer" and selecting "Properties". Your version of Windows will be listed under the "Windows edition" section.
+ Like net send, the msg command is run from the Command Prompt. There are several ways you can open it, depending on the version of Windows you are using, or you can press ⊞ Win and type "cmd".
+
+
+Windows Vista and 7 - Open the Command Prompt from the Start menu.
+Windows 8.1, and 10 - Right-click the Start button and select "Command Prompt".
+Windows 8 - Press ⊞ Win+X and select "Command Prompt".
+ Type msg and press Space. You'll be adding routing information as well as the message itself to the end of the command.
+ The msg command has some different routing options than the old net send command:msg username - Enter a username on your network to send a message to that user.
+
+msg session - Enter the name of a specific session that you want to send the message to.
+
+msg sessionID - Enter the number of the specific session that you want to send the message to.
+
+msg @filename - Enter the name of the file that contains a list of usernames, sessions, and/or session IDs that you want to send the message to. Useful for department lists.
+
+msg * - This will send the message to everyone on the server.
+ If you want to send the message to someone on a different server, enter the server information after the recipient information. If you don't specify a server, the message will be sent on the current server.
+
+
+msg * /server:servername
+
+, You can add a time limit to your message if it is time sensitive. The time is indicated in seconds. The time limit modifier comes after the server information (if present).
+
+
+
+msg * /time:seconds (e.g. 300 seconds for a five minute time limit)
+
+, Once you've set all of your options, you can add your message to the end of the command. You can also press ↵ Enter without entering a message, and you'll be prompted to type it on a separate line.
+
+
+For example msg @salesteam /server:EASTBRANCH /time:600 Congrats everyone on exceeding your sales goal this quarter!
+
+
+, Press ↵ Enter to send the message. The other users should receive it immediately.
+
+
+The msg command is designed to send messages to terminal users, not necessarily to different Windows computers on the same network.
+ There are a couple of different errors you may encounter when using the msg command:'msg' is not recognized as an internal or external command, operable program or batch file. - If you receive this message, you are not running a version of Windows that supports msg. You'll need to upgrade to the Professional edition to access the command.
+
+Error 5 getting session names or Error 1825 getting session names - There was a problem communicating with the recipient. Some users have fixed this problem by opening the Registry Editor on the recipient's computer (Run "regedit" to open it), navigating to "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server", and changing "AllowRemoteRPC" from "0" to "1".
+

@@ -1,0 +1,26 @@
+
+
+
+To do this, pick a cell where you want the maximum to display (for example, maybe two cells above where you'll put the range).
+Type {{{1}}} and specify the cells you're trying to find the range for. For example, you might write {{{1}}} or {{{1}}}.
+Press ↵ Enter
+;
+,
+
+
+To do this, pick a cell where you want the minimum to display (for example, maybe one cell above where you'll put the range, below the maximum).
+Type Min and specify the cells again. For example, you might write MIN(J7:T1) or MIN(A1:A500).
+Press ↵ Enter
+
+
+,
+
+
+Type = in the call for the range (possibly below the other two).
+Type in the cell number that you used for typing the maximum number first - for example, B1.
+Then type a -.
+Type in the minimum cell number. For example, B2. Your formula should read something like: =B1-B2
+
+Press ↵ Enter
+
+

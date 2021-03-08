@@ -1,0 +1,27 @@
+ An embedded game looks like part of your web page, but is still hosted on the original website, not using your bandwidth. If the original website takes down the game, it will disappear from your website as well.
+
+
+Embedding is fairly safe, but malicious content may alter your website appearance, open pop-up windows, or run plugins.Embed content from trustworthy sites only, or learn how to alter the HTML to limit its access.;
+, Some game websites display the HTML used to embed the game. This makes it as easy as copy-paste. Here are a few places that let you do this:
+
+
+Bored.com
+Fog.com
+Kongregate.com/games_for_your_site (sponsored games only)
+If the game you want to embed is not on any of these sites, contact the creators of the game and ask for permission to embed the game.
+ On the web page hosting the game, look for a snippet of HTML code labeled "embed" or "share." Here are specific instructions for the examples above:
+
+
+
+Bored.com: Click on a game. Click the "Share" tab underneath the game, then copy the second code snippet, labeled "Embed."
+
+Fog.com: Click on a game. Copy the snippet labeled "Embed this game," underneath the game description.
+
+Kongregate sponsored games: Visit the "games for your site" page. Copy the "Embed" code next to the game you want to host.
+
+Warning — this should be HTML code inside an <iframe>, <embed>, or <object> tag. If the code uses a different tag, it's probably just a link to the website and not the full game.
+ Adding the game to your site is as simple as pasting that embed code. Place it in between the <body> tags of your HTML document, wherever you would like the game to be displayed.
+ Most game websites have a terms of service for other websites embedding their games. If you do not follow the terms of service, the website may remove the game from your site. Here are a few typical requirements:No changing the appearance or content inside the embedded game's boundaries.
+No claiming ownership of the game or charging a fee to play it.
+No hosting the game on a site with illegal or obscene content.
+

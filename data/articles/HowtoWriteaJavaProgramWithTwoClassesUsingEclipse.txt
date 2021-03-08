@@ -1,0 +1,18 @@
+ Click the drop down arrow beside the first icon at the top left of the screen called “new.” Select “Java Project."
+
+
+Give your new project a name and click finish. I will call my project "Tip Calculator." You can see that a new folder with your project name appears in the left hand column.;
+, Now click the “new” drop down menu once again. This time, pick "Class."
+
+
+Give your new class a name. For this class, we can simply use the default settings. Click finish and Eclipse will open a new Java class in the program window. I called my class "Calculator.”
+
+, My class uses a method called calculate tip to calculate the tip on a restaurant check. For those who are interested, I have included the code in the image to the right. Each line is explained using line comments. Line comments start with “//” and are ignored by the java compiler.
+ Go back to the drop down menu called “new” and, once again, pick “Class.” This time, check the box that says “public static void main(String[]args).” This indicates to Eclipse that you want to create a main method. Give your main class a name and click finish. I will call mine CalculatorTest. Eclipse now opens a new tab with your main class.
+ This main class will take input from the user for the amount of the bill and the % that they would like to tip. It then passes this information to the Calculator class and gets the calculation. Then the program displays the total. Once again, click on the image to the right to see the code I used.
+ This action will automatically save and compile your code. Your program will run in the console window just below the program window. Check to see if your program works correctly.
+ I have changed my code so it now has a few mistakes. First, we will add a break point by double clicking the left margin of the line where we expect to encounter problems. You can see the break point at line 9.
+ It looks like a bug. Debugging mode will open some new windows that show you exactly what is happening when your program runs.
+ From there, you can navigate using the “step over” arrow, just above your main display or by hitting F6. The “step over” command takes you line by line through your program.
+ Alternatively, you can open the variable window located at the top right of Eclipse. With this window open, you can see what a list of your variables, and what numbers they are holding.
+

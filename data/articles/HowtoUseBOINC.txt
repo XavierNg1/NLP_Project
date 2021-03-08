@@ -1,0 +1,56 @@
+ Visit boinc.berkeley.edu/download.php. Click the Download BOINC button. Once the download is complete, open the folder, then BOINC Installer to begin installation. Click through the Continue and Agree buttons to install BOINC manager.
+
+
+If you're using an older computer, check the System Requirements link at the bottom of the downloads page and compare them to your own.
+On an Android device, download BOINC or HTC Power to Give from the Google Play Store. The mobile interface may not match the instructions below.;
+, It should automatically prompt you to add a project, or add an account manager. Here's a little guidance for your first BOINC decision:
+
+
+Select "Add project" and click Next to get started right away. The instructions below assume this is the option you choose.
+"Use an account manager" leads you to sign up with a third-party website. On this site, you can manage your BOINC settings for multiple computers at once.This article does not cover account manager interfaces, but the process should be similar.
+ BOINC does take some security precautions, but a malicious project could potentially access your private data or harm your computer. Make sure to find one you trust.Vet the project with the following resources:
+
+
+Projects listed here are considered trustworthy by BOINC.
+Projects listed here have already published scientific papers from BOINC research.
+Each entry in your BOINC manager should have a link to a website. Follow this link for a detailed description of the project. Look for a clear description of the project, preferably with the goal of making BOINC-assisted research results freely available., Once you've chosen a project, click Next to see the sign up page. Some projects allow you to create an account with them using BOINC manager. If you see a "new user" option, fill out your username and password and click Next to finish your BOINC setup. If you only see a login screen, continue to the next step of these instructions instead.
+
+
+You may be taken to the project website to finish registration.
+ Click Back to return to the list of project. Find the project you want to join, then follow the link in its description. Look for a Join, Sign up, or Create account button on the website. Sign up using a real e-mail and a secure password. Remember your username and password.
+
+
+If the project asks you to download software, you may skip that step. That's just a project-specific version of the BOINC manager.
+ Return to your BOINC manager. Select the project your just signed up for, and click Next. Enter your email address and password, then click Next again. Your computer will now use its spare processing power for the research you selected.
+
+
+Remain connected to the internet until your computer is done downloading its first task. Once the download is finished, you'll see a progress bar in the BOINC manager.
+ In BOINC manager, select Tools in the top menu, then Computing preferences. A menu should pop up allowing you to limit the amount BOINC can use your computer. Here are a few useful options:
+
+
+If you've noticed your computer becoming hot or running its fan during light use, reduce the "Use X% of the processor" setting.
+If you're on a laptop, checking "Do work while on battery?" will run BOINC when your computer is not plugged in. This will drain the battery more quickly.
+If you have a slow internet connection, limit the hours BOINC can go online. Note that your computer must be on and internet-connected during these hours to download the next task.
+ The Add Project button is located in your main BOINC manager window. You can use this button to add any number of projects to your BOINC account.
+
+
+Your computer can only run one simultaneous task per processing unit (e.g. four tasks with a quad-core CPU).BOINC will attempt to give each project roughly equal processing time, but on a given day your computer may only work on one project.
+ Select View in the top menu, then Advanced View. This turns BOINC manager into a series of tabs with many additional options and statistics:Use the Projects tab to temporarily suspend a project, remove it permanently, or tell it to stop after this task ("No new tasks"). Click Properties to visit that project's website for additional, project-specific options.
+Use the Tasks tab to suspend a task or abort it permanently. Check the time in the Deadline column periodically – if you haven't completed the task by then, another user will start it. You will still get credit after the deadline if you finish the task before the other user.
+Use the Statistics and Disk tab for graphical representations of your contributions and the amount of disk space BOINC uses.
+ Some projects support additional processing by harnessing your computer's GPU, which can massively increase your contributions to the project.Check your computer's hardware information to find your model.
+ Visit this BOINC web page. Scroll down to the specific project requirements. If you see one that mentions your GPU model, you can join that project and potentially increase your BOINC contributions many times over.
+
+
+Join the project from BOINC manager, using the same process described above.
+ Open the Event Log in BOINC Manager, using Ctrl+Shift+E (⌘ Command+Shift+E on a Mac). If you see a reference to "GPU," your mission was successful.
+
+
+By default, BOINC won't use your GPU while you are using the computer. Leave the event log open for a couple minutes without touching the mouse or keyboard.
+ If you see no evidence of GP use, you may need to update your drivers:
+
+
+Windows users can update using their Device Manager program, or by downloading the update directly from the manufacturer website (such as NVIDIA).
+Most Mac users can update using the Software Update program available from the top Apple menu, or directly from the manufacturer website.
+Mac users with an NVIDIA GPU should look up their GPU's Compute Capability on this product list. If it is 1.4 or greater, download the CUDA 7 driver. If 1.3 or less, or if the GPU is not on the list, GPU processing will not work with BOINC.
+

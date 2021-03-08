@@ -1,0 +1,9 @@
+ One option is Asterisk, a free, open source software. Another is Switchvox.A PBX converts your computer into a telecommunications device and will allow you to manipulate incoming call data to identify blocked callers.
+
+
+Before embarking on this method ensure that you thoroughly understand the technical challenge it presents and the potential financial burden it incurs.;
+, A SIP (Session Initiation Protocol) trunk provider is a way to get a phone line via the internet instead of through traditional phone lines. In order to access all the information you'll need you must subscribe to an enterprise-level SIP provider, for instance Flowroute or Cisco's CallManager, Your SIP Trunk provider will offer phone numbers for you to control and monitor. Call data monitoring requires one such phone number.All the call data coming in to this number will include the "masked" identity information from blocked numbers.
+Once set up properly you will be able to forward your normal phone number to the SIP trunk provider phone number (to get the identity information you want) then forward it back to your normal phone line.
+Any VoIP (Voice over IP) phone number can work with a PBX like Asterisk to "unmask" the blocked number but enterprise level SIP trunk solutions offer the most flexible ability to access and manipulate your incoming data., Work within your SIP trunk provider account to generate lines of configuration code and implement through your PBX software., The configuration from your SIP trunk provider needs to be altered in order to display blocked caller identities. This is achieved by removing a few lines of privacy "masking".If you're still confused, check the references for more specific information.
+ Adjust the configuration code by inserting your normal phone number. Calls will now forward to the DID number, get "unmasked" by the software hack, and then forward back to your normal line, automatically identifying blocked callers as they come in.
+

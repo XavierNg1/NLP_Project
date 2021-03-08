@@ -1,0 +1,28 @@
+;
+,,
+
+
+This may, or may not, be the same sheet where your pivot table is located.
+,
+
+
+For instance, assume you want your pivot table to include a field showing the difference between column G and column H and both columns contain numerical fields.
+Right-click on column I and choose "Insert Column" from the pop-up menu. A column will be inserted to the right of column H and all columns of data beyond that column will be shifted one place to the right.
+
+
+,
+
+
+Using the above example, your formula would look like "=H1-G1" if you are subtracting column G from column H; "=G1-H1" if you are doing the reverse.
+Make sure you choose the correct syntax for your formula to return a positive or negative number as desired.
+,,
+
+
+In Excel 2003, relaunch the pivot table wizard utility by clicking inside the pivot table and choosing "Wizard" from the pop-up menu.
+In Excel 2007 or 2010, click the "Change Source Data" button on the Pivot Tools Options tab.
+Either click and drag to highlight a new range or simply edit the range formula already in the "Range" field to include the following column.
+,
+
+
+You may need to reorder the column names in the "Values" section to make the columns appear in your pivot table in the correct order. You can click and drag from the "Values" section or directly within the pivot table to rearrange the order of your columns.
+

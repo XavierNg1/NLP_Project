@@ -1,0 +1,16 @@
+ Then follow the guide for installing the Google Analytics in WordPress. Stop when you reach the tracking code section.;
+, Click this link and sign up with the same Google account you used for signing up with the Analytics. After you are successfully logged in, you will see the ‘Add New Account’ page. Enter the name for your account and click Continue.
+ It can either be an app or a website. In this tutorial, we will be using the website details. Use the domain of your site as the container name. You also have the option for adding various containers for every account. After you have entered all the details, click Create to move to the next step.
+
+
+The account will now be created.
+ You can do this by clicking the new tag option. There are 20+ templates available for you by default. In this tutorial, we will use Google Analytics, but you can always add more products and tags according to your requirements. In addition, you can also add your custom scripts or HTML files.
+ On selecting the universal analytics, enter the analytic's tracking ID. Tracking ID is something that the Google uses for identifying your site. Just log into your Google Analytics account and go to the Admin tab to obtain the ID.
+ On clicking the tracking info, you will be provided with the tracking code link, which will further take you to the tracking code page.
+ Copy it to your clipboard.
+ Choose Page View as the track type and click Continue to move on to the next step.
+ Select all the pages, then click on the Create Tag button. You will be provided a tracking code by Google Tag Manager to add to your WordPress site. Copy it now.
+ It is called Insert Headers and Footers. After activating it, go to Settings → Insert Headers and Footers and paste the code in the header section and store your settings by clicking the Save button. If you want to add the Tag Manager code without this plug-in, you need to make changes to the actual header.php file. Just to paste the code immediately below the <body> tag.
+ The tags in your Google Tag Manager will not be available till the content is published, so go to the Google Tag Manager dashboard and click the Publish button.
+ You can also preview the site and the tags fired on every page view.
+

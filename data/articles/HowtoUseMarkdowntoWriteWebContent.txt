@@ -1,0 +1,39 @@
+ Markdown is preprocessor language of HTML. It is designed to be humanly readable, but also easy to convert to HTML for use in a webpage.
+ You can use any plain text editor. This includes Notepad, Notepad++, gedit, Atom, VIM, Emacs, and plenty more. There are also other programs specifically made for Markdown, downloadable to the operating system of your choosing, including MarkdownPad for Windows, and MacDown for Apple computers, and many more. And finally, there are online editors galore. Choose any editor you please., Headings are denoted by the # tag, with the first word of the heading coming immediately after, with no space. # denotes Heading 1, ## denotes Heading 2, and so forth all the way up to Heading 6. Headings are typically used as section titles.
+ ** denotes that your want the text following to be bold. Note that to end the bolding text, you must repeat this tag like this **
+
+, * denotes the following text should be italicized. This too must be closed to end this tag.
+ Though not in the official Markdown specs, a strike-through is commonly denoted as ~~. Most Markdown compilers will recognize this, but it is not always consistent. It must be closed by an end tag too.
+ Blockquotes are denoted by a > at the beginning of a line. A blockquote must start on its own brand new line. Each additional new line to be included in the blockquote must start with >. Blockquotes can have further Markdown inside of them, and blockquotes can be layered like this >>. Blockquotes don't have an end tag, you simply stop putting > on each new line, and give an additional line between the end of the blockquote and the normal text.
+ +, -, or * followed by a space, on a new line with each item, is used to denote unordered lists. It does not matter which one you use, but for clarity sake, don't switch in the middle of a list.
+ Start your first item with the number one, followed by a period and a space. The following numbers each take up their own line. Also the numbers you use consecutively after don't matter, but must exist.
+ Links follow the format (link here "optional title here"). The quotes and optional text can be left out. Automatic links can be done <www.wikihow.com>, along with emails the same way. Make sure your link URL is correct, nobody likes dead URLs!
+
+, Syntax for images is very similar to links. !(image path "optional title here") is used to link an image. The quotes and optional title can be left out., To add code, each new line should at least 4 spaces or a single tab in. To end the code block, return to writing normally. Small parts of code can be denoted with ` as both the beginning and end tag. Note that this is not the single parenthesis symbol, but instead is a backtick.
+ Writing horizontal rules and other miscellaneous format features requires some special tags, too:
+
+Horizontal rules are written on their own line with ***, ---, or +++.
+Line breaks are done with two spaces at where the line should end, followed by moving to the next line.
+emails are added with <address@example.com>
+
+
+, Certain characters need escaping when they are used outside of Markdown code. They are escaped by putting a \ directly before each character, with no space between. These characters include:
+
+\ backslash
+` backtick or grave accent (used to denote code)
+* asterisk (used to denote italics, bolding, and unordered lists)
+_ underscore
+{ } curly braces
+square brackets
+( ) parentheses
+# hash mark or hashtag or number sign or pound sign
++ plus sign
+- minus sign or hyphen
+. dot
+ ! exclamation mark
+
+, Most tools for specifically writing Markdown include a converter to HTML. There are also other online tools and downloadable programs to convert plain text documents to HTML.
+
+An online tool from creator of Markdown is Dingus. https://daringfireball.net/projects/Markdown/dingus
+
+Another open source tool is 

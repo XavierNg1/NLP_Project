@@ -1,0 +1,15 @@
+ Sometimes when you're re-installing Windows with non-standard hardware, you may not be able to access Windows in order to activate. You'll get a message that you must activate in order to proceed, but you can't connect to the internet and the "installation ID" is not generated. If this happens to you, you'll need to use Safe Mode to fix your drivers and activate Windows., You'll need to fix the problems with your device drivers. This will allow you to either get an internet connection or generate an installation ID so that you can activate over the phone.
+
+
+Reboot your computer and rapidly strike F8 as it boots up. This will open the Advanced Boot Options menu. Select "Safe Mode" from the list of options.
+ You'll likely need to download the drivers on another computer. Windows XP Safe Mode disables program installation, so you'll need the actual driver files, not an installer.
+
+
+Determine the piece of hardware that isn't working. Press ⊞ Win+R and type devmgmt.msc. This will load the Device Manager. Look for items that have a "!" or "?" icon. These are the pieces of hardware that require drivers.
+Visit the manufacturer's support site on another computer. If you are using a laptop or pre-built desktop, you should be able to find all of the drivers you need in one spot. If you're using a custom-built computer, you'll need to find the manufacturer of the specific piece of hardware that's not working.
+Download the INF files for the piece of hardware. Since you can't use an installer, you'll need the actual driver files. These come in INF format. Transfer these files from the working computer to the non-working one via USB or disk.
+ Right-click on the non-working piece of hardware in the Device Manager and select "Update Driver". Browse your computer for the INF file that you downloaded and load it up. You'll be prompted to reboot your computer.
+
+
+For more detailed instructions on tracking down and installing drivers, click here.
+ You should now be able to either boot into Windows and activate over the internet, or get an installation ID and activate over the phone. See the above two methods for instructions on activating online or over the phone.

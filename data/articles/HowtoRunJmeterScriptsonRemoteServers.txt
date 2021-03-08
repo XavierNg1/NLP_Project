@@ -1,0 +1,6 @@
+ (Example: If your .csv file contains 500 entries and you're using 5 remote servers, divide your .csv file into 5 files containing 100 entries each). Place the .csv files in the jmeter/bin/ directory of each remote server.;
+, Edit Heap values to higher values based on available ram. (ex: if you have 15GB ram on a server, try heap values of 12,288 and 13,312, this leaves a little free for other processes.) Do this on client and remote servers.
+ On servers, remove the # in front of hold. This mode requires more memory but helps prevent your test data from being corrupted by the constant streaming of data to the client (hold mode waits until the test is finished before sending data back to client). On client, find the line 'remote_hosts=127.0.0.1'. Replace 127.0.0.1 with the internal IP addresses of your remote servers. (ex: remote_hosts=10.1.1.144,10.1.1.35,10.1.1.56,10.1.1.34,10.1.1.140 )
+
+, Launch your jmeter script from the client using 'remote start all'.
+

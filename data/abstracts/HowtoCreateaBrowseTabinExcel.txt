@@ -1,0 +1,28 @@
+
+Open the spreadsheet containing your data.
+Change a tab name to Browse.
+Create a Temp tab.
+Enter the Row number on the Browse tab.
+View the Control Toolbox.
+Create a scrollbar.
+Draw the scrollbar.
+Set scrollbar properties.
+Start generating formulas on the Temp tab.
+Set parameters for the formulas.
+With a good dose of trust, enter the following formulas in row 2, columns E and F:
+
+
+E2: =INDIRECT(CONCATENATE(A2,"!R",B2,"C",D2),FALSE)
+F2: =CONCATENATE("=INDIRECT(CONCATENATE(""",A2,"!R"",",C2,",""C",D2,"""), FALSE)")
+Copy the formulas to fill out the table.
+
+,
+Column headings should now appear in column E and a strange formula in column F. Select all the values in columns E and F and type CTRL-C to get ready to copy them onto the Browse tab.
+
+,
+Copy the formulas to the Browse tab.
+Install the formulas.
+Admire your work.
+Try the scroll bar to check navigation.
+Rearrange and reformat the headings and values for aesthetics.
+Drop the Temp tab.

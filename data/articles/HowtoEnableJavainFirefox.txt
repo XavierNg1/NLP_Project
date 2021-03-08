@@ -1,0 +1,46 @@
+ The 64-bit version of Firefox, released in December 2015, does not support the Java plugin. Note that this doesn't apply to Mac users, as there is only one version of Java for Mac.
+
+
+Click the Menu (☰) button in the upper-right corner and select "?" at the bottom of the menu.
+Click the "Troubleshooting Information" option.
+Look at the "User Agent" line. If it says "WOW64," you're using the 32-bit version and can use Java. If you see "Win64" or "x64," you're using the 64-bit version and can't use Java.;
+, If you found in the previous step that you're using the 64-bit version of Firefox, you'll need to install the 32-bit version to use Java.
+
+
+You can download the 32-bit version by visiting mozilla.org/en-US/firefox/all/, scrolling down to "English," and then clicking the first Windows download link.
+ You'll need to install the Java plugin separately before you can access Java content.
+
+
+Visit http://java.com/download/ in Firefox and click the "Free Java Download" button.
+Click the "Agree and Start Free Download" button. This will begin downloading the installer.
+ Click the Downloads button in the Firefox toolbar, then click the Java setup file. Follow the prompts to install the Java software.
+
+
+During installation, uncheck the boxes to decline the installation of additional software. This will prevent your browser homepage from getting changed during installation.
+ You'll need to restart Firefox in order for the Java plugin to start working. Make sure you close all open Firefox windows.
+ Visit http://www.java.com/en/download/installed.jsp?detect=jre to test Java in Firefox.
+
+
+Click "Activate Java" in the gray box.
+Click "Allow and Remember" in the box that appears. This will allow java.com to always run Java. Java will need to be allowed on each site you use it on, as enabling it universally is a major security threat.
+Click "Run" in the window that appears. You can check the box to prevent this window from appearing in the future on this site.
+ When you load a page with Java content, you'll get prompted to run it just like you did on the Java test page.
+
+
+Click the "Allow and Remember" button in the dialog box that appears in the upper-left corner of the window. This will allow the site you're on to run Java content in your browser. You should only allow Java content from sites that you trust.
+If the Java window appears, you'll need to click the "Run" button start the content.
+ If you are trying to load Java content but aren't getting prompted to allow it, your Java plugin may be disabled.
+
+
+Type about:addons in the address bar, then click the "Plugins" menu.
+Find the "Java(TM) Platform SE" entry.
+Use the drop-down menu to select "Ask to Activate." It is not recommended to select "Always Activate," as this can leave your computer vulnerable to attack.
+ If you still can't get Java content to play, there are a few things you can try:Uninstall all Java software on your computer and then reinstall it. Oftentimes conflicting versions of Java will cause problems. Removing all traces of Java from your computer and then reinstalling the latest version it can help fix a lot of issues. See Uninstall a Program for details.
+Ensure that the 32-bit version of Java is installed. If you downloaded Java using the Download button, you likely don't need to worry about this since the 32-bit version is the one downloaded automatically. If you downloaded the installer from the list of all Java downloads, you may have downloaded the 64-bit version.
+Reset your plugin registry file. Your plugin registry file may have become corrupted, preventing Java from loading. Open the Firefox menu, click "?", and then click "Troubleshooting Information." Click "Show Folder" in the "Application Basics" section. Close all Firefox windows and then delete the pluginreg.dat file. Restart Firefox and see if Java is enabled.
+ Press ↵ Enter/⏎ Return to load it. JavaScript is enabled by default, and shouldn't need to be enabled manually., Changing the settings in this section can break Firefox, so you're warned before you can proceed.
+ This will will find the JavaScript entry in the list of settings.
+ If the value is "true," then JavaScript is already enabled. If the value is "false," then JavaScript needs to be enabled.
+ If JavaScript was disabled, double-clicking it will enable it.
+ This will ensure that your settings are applied. You should now be able to load JavaScript content.
+

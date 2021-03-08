@@ -1,0 +1,34 @@
+ However, do not connect it to the Power/Ground columns on the breadboard as it will not work. (Skip to step 8 if you just want the circuit drawing)
+
+
+If you hold the Arduino board with the USB connector on the top, the digital pins will be on the right. Note that the digital connectors start with 0 at the bottom. Pin 3 would be the 4th one from the bottom.
+Place/Hold the breadboard in a way such that the two Power/Ground columns are on the leftmost and rightmost sides. Each row on the breadboard is connected horizontally and each power/ground pins are connected to one another vertically.
+The breadboard also has a divider down the middle. The pins on the two sides of the divider are not connected horizontally.;
+, Connect the other end (End 2) of the resistor to another pin of your choice on the breadboard.
+ (This end is the one that is not on the same row as the wire coming in from Digital Pin 3)
+
+
+Hold the PN2222 transistor with the flat side facing towards you. The pin on the left is the Collector pin, and the one on the right is the Emitter pin. The Middle pin is the Base pin
+
+,, Connect the Negative (-) end on a pin on another row.
+
+
+The end with the sliver line is the Negative (-) end on the 1N4001 Diode. The side without the line is the Positive (+) end.
+, Connect the Positive leg to a pin on the same row as where you connected the Negative (-) end of the 1N4001 Diode.  Connect the Negative leg of the DC motor to a pin on the same row as where you connected the Positive (+) end of the 1N4001 Diode and the Emitter pin of the PN2222 Transistor.
+ Check with the circuit diagram to see if your circuit is correct. Proceed to Part 2.
+ By default, it should have some of the sketch written to make everything easier:  (You can erase the comments if you wish. Step 5 has the full code)
+
+,, Just between the curly braces, write the following to set the motor pin as an output pin: pinMode(MOTORPIN,OUTPUT);
+
+
+void setup() - This function runs once at the start. It will set up which pins will be used on the Arduino.
+pinMode (MOTORPIN, OUTPUT) - specifies that the pin outlined by MOTORPIN is an output pin and will not take in any data.
+ Just between the two curly braces, write following:
+
+
+Declare the speed variable (how fast the DC motor will spin):     int speed = 255; The value for speed has to be a number from 0 to 255, with 0 meaning the motor is stopped.
+In the next line, send output to the pin we will use for the DC motor by using analogWrite(): analogWrite(MOTORPIN,speed); This will send the value of speed to MOTORPIN as an output.
+, Go to the toolbar at the top of the Arduino IDE, and click on the check mark. This will compile your sketch so that it can be run on the Arduino.
+ If any errors were found, it should tell you there. If you get errors, check the lines that the compiler says the error is on. Continue if no errors are found.
+, Click on Tools, then on Port: and then click on COM<number>. The <number> will be the number of your USB "Serial Communications" port, and it will be different depending on the computer and/or the USB port. If no COM ports appear in the menu, try a different USB port, or a reboot of your computer.
+ The IDE will compile your code and if no errors are found, it will send the sketch to the Arduino. If you get errors, check your code.

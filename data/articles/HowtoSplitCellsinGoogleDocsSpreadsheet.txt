@@ -1,0 +1,12 @@
+ In your first column, enter your data. You can quickly split entire lists of data as long as the split point is the same. A split point is a character that can be identified in each entry. This can be a space " ", a period ".", a comma ",", or any other shared character.;
+, You will need a blank column for each part of the cell that you want to split. You can quickly insert columns by right clicking on a column heading and selecting "Insert 1 right" or "Insert 1 left". This will put a blank column to either the left or right of the column you selected.
+ The "=split(" formula will allow you to designate what you want to to be split, and the results will be placed in the blank columns following the formula. Enter the cell name that you want to split after the "=" sign. After the cell name, designate the character that you want to split by. The cell will be split each time that character is encountered.
+ Highlight the cell with the formula. Click the tiny square in the bottom-right corner of the cell. The cursor will change to a crosshair. Drag it down to the bottom of the list. This will apply the formula to the entire list, without having to cut and paste or rewrite it.
+ Once you drag the formula into all of the cells, you will see your table automatically populate with the results., Once the table has been filled in, it may look like the results have been placed in the right place. In actuality, each of the cells only contains a formula that happens to display the results you want. This can cause problems as you manipulate the data later.
+
+
+Highlight all of the results. In the previous examples, this would be columns B, C, and D.
+Copy the highlighted cells to the clipboard. Press Ctrl+ C or click Edit and then Copy.
+Right-click on the first of the results cells. In both previous examples, this would be cell B1
+Choose Paste Special, and then click "Paste values only". The cells will be overwritten with the actual values instead of the formulas.
+

@@ -1,0 +1,35 @@
+ Impedance is represented with the symbol Z and measured in Ohms (Ω). You can measure the impedance of any electrical circuit or component. The result will tell you how much the circuit resists the flow of electrons (the current). There are two different effects that slow the current, both of which contribute to the impedance:Resistance (R) is the slowing of current due to effects of the material and shape of the component. This effect is largest in resistors, but all components have at least a little resistance.
+Reactance (X) is the slowing of current due to electric and magnetic fields opposing changes in the current or voltage. This is most significant for capacitors and inductors.;
+, Resistance is a fundamental concept in the study of electricity. You'll see it most often in Ohm's law: ΔV = I * R.This equation lets you calculate any of these values if you know the other two. For instance, to calculate resistance, write the formula as R = ΔV / I. You can also measure resistance easily, using a multimeter.
+
+
+ΔV is the voltage, measured in Volts (V). It is also called the potential difference.
+I is the current, measured in Amperes (A).
+R is the resistance, measured in Ohms (Ω).
+ Reactance only occurs in AC circuits (alternating current). Like resistance, it is measured in Ohms (Ω). There are two types of reactance, which occur in different electrical components:
+
+
+Inductive reactance XL is produced by inductors, also called coils or reactors. These components create a magnetic field that opposes the directional changes in an AC circuit.The faster the direction changes, the greater the inductive reactance.
+Capacative reactance XC is produced by capacitors, which store an electrical charge. As current flow in an AC circuit changes direction, the capacitor charge and discharges repeatedly. The more time the capacitor has to charge, the more it opposes the current.Because of this, the faster the direction changes, the lower the capacitive reactance.
+ As described above, inductive reactance increases with the rate of change in the current direction, or the frequency of the circuit. This frequency is represented by the symbol ƒ, and is measured in Hertz (Hz). The full formula for calculating inductive reactance is XL = 2πƒL, where L is the inductance measured in Henries (H).The inductance L depends on the characteristics of the inductor, such as the number of its coils.It is possible to measure the inductance directly as well.
+If you're familiar with the unit circle, picture an AC current represented with this circle, with one full rotation of 2π radians representing one cycle. If you multiply this by ƒ measured in Hertz (units per second), you get a result in radians per second. This is the circuit's angular velocity, and can be written as a lower-case omega ω. You might see the formula for inductive reactance written as XL=ωL, This formula is similar to the formula for inductive reactance, except capacitive reactance is inversely proportional to the frequency. Capacative reactance XC = 1 / 2πƒC.C is the capacitance of the capacitor, measured in Farads (F).
+
+
+You can measure capacitance using a multimeter and some basic calculations.
+As explained above, this can be written as 1 / ωC.
+ Total impedance is simple if the circuit has several resistors, but no inductors or capacitors. First, measure the resistance across each resistor (or any component with resistance), or refer to the circuit diagram for the labeled resistance in ohms (Ω). Combine these according to how the components are connected:Resistors in series (connected end to end along one wire) can be added together. The total resistance R = R1 + R2 + R3...
+Resistors in parallel (each on a different wire that connects to the same circuit) are added as their reciprocals. To find the total resistance R, solve the equation 1/R = 1 / R1 + 1 / R2 + 1 / R3 .
+ If there are only inductors in the circuit, or only capacitors, the total impedance is the same as the total reactance. Calculate it as follows:Inductors in series: Xtotal = XL1 + XL2 + ...
+Capacitors in series: Ctotal = XC1 + XC2 + ...
+Inductors in parallel: Xtotal = 1 / (1/XL1 + 1/XL2 ...)
+Capacitors in parallel: Ctotal = 1 / (1/XC1 + 1/XC2 ...)
+
+, Because one of these effects increases as the other decreases, these tend to cancel each other out. To find the total effect, subtract the smaller one from the larger.You will get the same result from the formula Xtotal = |XC - XL|
+
+, You can't just add the two together, because the two values are "out of phase." This means that both values change over time as part of the AC cycle, but reach their peaks at different times.Fortunately, if all of the components are in series (i.e. there is only one wire), we can use the simple formula Z = √(R2 + X2).The mathematics behind this formula involves "phasors," but it might seem familiar from geometry as well. It turns out we can represent the two components R and X as the legs of a right triangle, with the impedance Z as the hypotenuse., This is actually a general way to express impedance, but it requires an understanding of complex numbers. This is the only way to calculate the total impedance of a circuit in parallel that includes both resistance and reactance.
+
+
+Z = R + jX, where j is the imaginary component: √(-1). Use j instead of i to avoid confusion with I for current.
+You cannot combine the two numbers. For example, an impedance might be expressed as 60Ω + j120Ω.
+If you have two circuits like this one in series, you can add the real and imaginary components together separately. For example, if Z1 = 60Ω + j120Ω and is in series with a resistor with Z2 = 20Ω, then Ztotal = 80Ω + j120Ω.
+

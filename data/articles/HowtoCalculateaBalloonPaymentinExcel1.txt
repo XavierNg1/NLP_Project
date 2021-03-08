@@ -1,0 +1,41 @@
+ You'll need to know your annual interest rate, loan amount (the principal), the duration of your loan (in years), and your monthly payment. These can be found on your loan agreement.
+
+
+Alternately, you can enter your own values for a loan agreement you think you could get. Be sure to research the prevailing interest rate on your loan type for your creditworthiness.
+You can get the monthly payment amount from there by reading and following the directions at how to calculate loan payments.;
+, Open Excel on your computer and choose to open a new, blank workbook. The program should then display a blank worksheet. This will be your workspace for calculating your balloon payment.
+ Enter your variables' names in the cells from A1 down to A4 as follows: annual interest rate, duration of your loan (years), monthly payment, and your loan amount (principal). This will ensure that you don't mix up any values if you change your variables later., Fill in your variables in the adjacent cells to your labels. These will be cells B1 to B4. Check again to make sure you've put the right variables into each cell, because your calculations will depend on this.For example, consider the following variables:
+
+
+An annual rate of 4% would be entered into B1 as 0.04
+A 15-year loan would be entered into B2 as 15.
+A monthly payment of $1000 would be entered into B3 as -1000. Be sure this is entered as a negative number. This is how Excel recognizes payments.
+A loan amount of $150,000 should be entered into B4 as 150,000.
+ The equation used to calculate your payment payment is the future value function. This is denoted in Excel with the symbol "FV." It can be either typed in manually to a nearby cell by typing "=FV(" or found in the functions tab under financial functions. Either way, when you type it into a cell, the function will prompt you for variables as follows: =FV(rate, nper, pmt, , )., Each variable will be linked from your variables you've already entered on your worksheet. However, some changes must be made to some of the variables when they are entered. Additionally, they must be entered in the right order. Enter your variables as follows:
+
+
+The prompt "rate" is asking for your periodic interest rate. That is, your monthly interest rate. When prompted, after typing "=FV(", click on cell B1, where your rate should be. Then, type "/12" to divide your annual rate by 12 and find your monthly interest rate. The program will now calculate this for you in your equation. Enter a comma to move on to the next variable.
+
+If your payments are quarterly, divide by 4 instead of by 12. For semi-annual payments, divide by 2.
+Assuming monthly payments, your equation should now look like this: =FV(B1/12,
+
+
+The prompt "nper" is asking for the total number of payments. Here, you'll want to multiply the duration of your loan by 12 to find the total number of monthly payments made on the loan. When prompted, click on B2 and then type *12 to multiply it within the equation. Enter a comma to move on to the next variable.
+
+Multiply by 4 for quarterly payments or 2 for semi-annual payments.
+Assuming monthly payments, your equation should now look like this: =FV(B1/12,B2*12,
+
+
+The prompt "pmt" is simply asking for your monthly payments as entered in B3. Simply click on B3 when prompted or type it into the equation. Enter a comma to move on to the next variable.
+
+Your equation should now look like this: =FV(B1/12,B2*12, B3,
+
+
+The fourth prompt, "," is just asking for the principal, or loan amount. Simply click on B4 when prompted. You can then close off the equation with a closing parenthesis. The last variable, "," is unnecessary here.
+
+Your final equation should be as follows: =FV(B1/12,B2*12,B3,B4), Check that you've entered everything correctly and that your equation doesn't contain any errors or unnecessary numbers. The program will return your answer in the same cell where you entered the formula., The answer will be returned as a negative number if you've entered everything correctly. This simply means that it is a payment and not a return. The number displayed will be the balloon payment due at the end of your loan. If the number is positive, this means either that you've entered your data incorrectly or that you don't have a balloon payment loan.
+
+
+Using the variables in this example, a balloon payment of $26,954.76 will be due at the end of the loan's term.
+ This will allow you to calculate the effect of a better rate, making a higher monthly payment, or extending the length of your loan.
+

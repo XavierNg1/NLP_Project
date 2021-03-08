@@ -1,0 +1,23 @@
+ It is not recommended you delete the parental controls on the computer completely, as you’ll lose all the settings for the account. Only turning them off temporarily will also give you the option of turning the controls back on, if necessary.Log into the administrator account.
+Scroll down to the My Extras section and click Manage in the Parental Controls section.
+Slide the button to OFF to turn the Parental Controls off. To turn them back on, slide the button to ON.
+It may take up to 10 minutes for the new settings to be applied.
+ WARNING: This will change the administrator password.Restart your computer. As soon as it begins restarting (you see Starting Windows), abruptly shut it off by pulling the plug.
+Restart your computer again. You should now be given the option to Launch Startup Repair. Select it.
+When it asks if you want to restore your system, click Cancel. NOTE: the startup repair program will now run for five to ten minutes.
+When the repair program is finished, it will give you two options – Send Information About this Problem or Don’t Send. Ignore them, and instead click the arrow next to View problem details.
+Scroll down to the last link: X:\windows\system32\en-US\erofflps.txt. Click it to open a text file.
+Now go to File > Open within the text file. Click on Computer and select the Local Disk.
+Click on Windows. Under “Files of Type” change to All Files.
+Open the System32 folder and look for the file labeled sethc.
+Right click and select rename. Add a 0 to the end of the name, and then click away to save.
+Find the file labeled cmd. Right click and copy it. Scroll all the way down and paste it to create a copy (cmd – Copy).
+Right click on the new file and rename it to sethc. Click away to save.
+Close the open file box and the text file.
+Click Don’t Send at the startup repair prompt. Then click Finish. Your computer will now restart.
+At the login screen, press the shift key five times. The command prompt will appear.
+Type: net user (your parent’s username) *
+Don’t forget to leave the space before the asterisk. Press enter. NOTE: If there is a space in the user name, replace the space with an underscore. I.e. User Name would become User_Name.
+You can now change the password, or press enter twice to leave no password.
+Now login and follow the instructions in step one to turn off parental controls.
+

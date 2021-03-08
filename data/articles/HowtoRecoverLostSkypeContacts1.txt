@@ -1,0 +1,27 @@
+ Even if you’re unable to get into the Skype account with all of your old contacts, you may still have the data for that account on your computer. If you do, you can actually get a program to read the database tables and help you find the account names of your old friends.;
+, This works for Skype for Windows Desktop or Skype on Mac OSX. Search Windows for: %appdata%. If you’re on OSX, the default path will be: ~/Library/Preferences/Skype/
+
+, In the Skype folder, you should see folders named after all the accounts that have ever logged into Skype on your computer.
+ There will be a folder for each account that has signed into Skype. Find your account folder and open it.
+ Once you’ve opened the account folder, find the file “main.db” (Main Database file) in the selected account folder. If you have this file, then this method will work for you. Keep note of where this file is OR copy and paste it where you can locate it easily. A good place would be your desktop.
+
+
+If you don’t have the Main.DB file because it has been deleted after formatting your hard drive for example, then this method won’t work unfortunately.
+Check every computer that you’ve used to log into Skype if you don’t have it on your computer. Find it and email it to yourself, so that you can access the file on your computer.
+ SQLite is free software that will read the database for you and allow you to see all of your old accounts information including contacts.
+
+
+Download the program from sqlitebrowser.org. You will have several options going down the right side of different versions of the application, be sure to choose the right one (Windows 32-bit/64-bit or Mac Standard).
+When you click the “Download” button, your download will begin immediately. After it is done, run the file and follow the wizard until the installation is complete.
+ Once SQLite has been installed, double-click its icon on the desktop or in your Programs menu list to open it.
+ You’re going to open the “main.db” file using SQLite. Once you’ve opened the software, you will see the “Open Database” button. Click it and find the “main.db” file.
+
+
+Once you’ve opened it, you can see all the information contained within the database file clearly.
+ There should be about 20 tables or so. Find the table called “Contacts” and right-click it, then select “Browse Table.” The next window you will see contains all your contact information. Under “skypename,” you will find all of the user accounts from your friends list.
+ By now you’ve probably set up a new Skype account. Log into Skype using this new account.
+ You can now begin using the “skypenames” contained in the database table to refill your contact list. Right under your name at the top left of your Skype window is a search field (it’s represented by a magnifying glass). Simply type in the usernames here and add all of your contacts back.
+
+
+One important tip: Make sure that when you add people back, you use the comment window to say who you are and explain the situation. Tell them that you’ve changed accounts and ask them to kindly accept you to their contact list.
+

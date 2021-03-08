@@ -1,0 +1,18 @@
+
+Make sure you have a working VPN Connection.
+Find a Socks V5 Proxy Server that is up and running.
+Have the Vuze torrent client installed: http://www.vuze.com.
+Once Vuze has opened, go to the menubar.
+Look for a new screen that now becomes visible.
+Unfold the category "Connection".
+In the same category "Connection", click on "proxy".
+In the same "proxy" window, the next step is to:
+
+
+Copy the proxy IP address in the "Host" field
+Copy the port number (like 1080, 443, 60088, etc) into its corresponding field
+Click on the "test SOCKS" button and see if it works.
+Close the options menu.
+When binding Vuze to the TAP adapter, it changes your IP for everything within Vuze.
+Unfold the category "Plugins", and click on "Media Server".
+If you do not untick this option, your IP address will be 10.X.X.X when trying to stream from Vuze to VLC (while downloading, etc.).

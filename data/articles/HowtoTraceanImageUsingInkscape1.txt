@@ -1,0 +1,22 @@
+ Click “File” on the menu bar, and then select “Import.”;
+, To open Inkscape’s tracing engine, click “Path” on the menu bar, then select “Trace Bitmap.” , Select “single” if you’d like to create a single path from the image, or “multiple” if you’d prefer many overlapping paths. Choosing single scan options:
+
+
+Brightness cutoff uses the shade of a pixel to decide whether it should become black or white. The higher the threshold setting, the darker the image will become. Edge detection will create a path based on differences in the brightness of pixels. The threshold settings adjust the darkness of the output. > Again, a higher threshold will produce darker output.
+
+Color quantization produces a path based on differences in color. The “number of colors” setting gives you the opportunity to specify how many colors you’d want in your output were it possible to output in color. An algorithm is then used to turn those theoretical colors black or white.
+
+
+Choosing multiple scan options:
+
+
+Brightness steps allows you to specify the total number of scans. Colours uses the number in the “Scans” box to determine how many colors to output.
+
+Grays is like colors, but with shades on the grayscale.
+Extra options: The "Smooth" option will apply a Gaussian blur before tracing, and “Stack scans” gets rid of holes in path coverage. Check “Remove background” to get rid of background, which usually has the lightest color.
+
+
+More options:
+
+Suppress speckles will eliminate any spots, dust, distortion, and other unwanted bits. Optimize paths merges Bezier curves.
+ If your lines appear too thick or not prominent enough, you likely selected a trace mode that’s better suited for a different type of image. Inkscape recommends running the tracer tool three times in order to determine which of the three options best suits your personal needs. , The bitmap image will be preserved in the SVG file.

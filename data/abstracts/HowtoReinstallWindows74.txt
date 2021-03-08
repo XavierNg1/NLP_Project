@@ -1,0 +1,22 @@
+
+Try the built in repairing tools with your operating system if you do not want to do a clean install of Windows 7.
+Boot up into the Recovery Console by pressing F8 during the boot up process.Press Enter on Repair Your Computer.
+Click on the Command Prompt text highlighted in blue.
+
+,
+Type in:
+
+bootrec /rebuildbcd
+Press Enter.
+
+,
+Type in:
+
+bootrec /fixmbr
+Press Enter.
+
+,
+Type In:
+
+bootrec /fixboot
+Press Enter.

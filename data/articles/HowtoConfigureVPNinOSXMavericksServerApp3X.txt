@@ -1,0 +1,39 @@
+ Click on Server App icon from Launchpad.;
+,
+
+
+Note that before turning the service on, we will need to configure the settings.
+
+
+
+
+Layer 2 Tunneling Protocol (L2TP) - Use if you are mainly using Mac OS X Clients
+
+Point-to-Point Tunneling Protocol (PPTP) - Use this in conjunction with L2TP if you have a mixed network of Windows and OS X
+
+,
+
+
+
+Host Name - Enter if it is not already entered or if you are using an external VPN server. If the host name is correct the dot in the text field will turn green.
+
+Shared Secret - By default you are provided a random shared secret. If you would like to produce your own, you may do so by typing it in.
+
+Client Addresses - Enter how many addresses you would like the server to use and the IP address that they will start at. NOTE: You may want to set your DHCP IP range to end one IP before these begin.
+
+
+DNS Settings - Enter any known DNS server IP addresses and search domains by clicking the + buttons. By default your server information is entered.
+
+Routes - Enter any specific routes that your network may have. This is mostly needed when you are using subnets and multiple routers.
+When finished move on to next step.
+ When service is activated there will be a green dot next to Status in the window.
+
+
+
+
+UDP Ports - 500, 1701, and 4500
+
+TCP Port - 1723
+
+, Host Name and Shared Secret).
+

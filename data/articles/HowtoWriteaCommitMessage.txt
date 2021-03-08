@@ -1,0 +1,28 @@
+ This shouldn't be anything specific, but it should still be helpful. If you introduced a new feature, give it's name and purpose. If you fixed a bug, state which one (by ID, if applicable). Don't say how exactly you changed something (in terms of code), but do describe why you did it that way.
+
+
+Good example: Added a script to find missing LocalRepo files
+Bad example: loop through all the files in the table and if they're in the repo output them to the screen;
+, The body should contain more details about your change, such as any new components or classes added, and changes that may affect what other developers are working on (if you don't know what other developers are doing, that's a good reason to read the revision log, and another reason why commit messages are important). You should also describe why it was important to make this change (if it's a bug fix, it should be self-explanatory, but if you're refactoring something, you should state why)
+
+
+Good example: Created a new VideoProcessor class to handle processing for uploaded videos and separate the background processes from the user interface component (formerly Video class, now EmbeddedVideo).
+Bad example: Made some new classes and renamed the video class
+
+, Testing your code thoroughly is important before deploying it. It will help you and other developers to test once it's live as well if you include a testing plan with the relevant commit.
+
+
+Good example: Verify that links from the search results are now rewriting properly and no redirect loop exists on SSL.
+Bad example: Make sure links work now
+
+, If it creates a new bug you're aware of then you should work on it before pushing it into any shared repository. If there are limitations of the feature or fix, though, state them. Anything else you can leave to well-placed comments in your source code.
+
+
+Good example: Following r5923, use of the getError() method is deprecated, all code following should handle errors using the Status object returned by getStatus() instead.
+Bad example: Use getStatus() instead of getError()
+
+, This is really useful for things like whitespace changes and typo fixes. Things like this are really minor and shouldn't affect functionality at all. In that case, squash them together so that you and other developers don't have to scroll through all of them in the log to find a more important commit.
+
+
+Don't squash things that aren't related to each other
+

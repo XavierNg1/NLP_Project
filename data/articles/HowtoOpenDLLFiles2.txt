@@ -1,0 +1,23 @@
+ A "decompiler" is a program that allows you to see the source code that was used to construct a file or program, in this case a DLL file. In order to see the code that makes a DLL file work, you will need to use a decompiler to revert it back into readable code. Opening a DLL file without a decompiler (such as opening it with Notepad) will result in a jumbled mess of unreadable characters.
+
+
+dotPeek is one of the more popular free decompilers. It is available from jetbrains.com/decompiler/.
+ If you're using dotPeek, simply click "File" → "Open" and then browse for the DLL file you want to decompile. You can explore the contents of the DLL file without affecting your system., DLL files are made of "nodes", or modules of code that work together to form the entire DLL file. You can expand each node to see any subnodes that it may contain.
+ The code for the node you select will appear in the right frame of dotPeek. You can scroll through the code to review it. dotPeek will display the code in C#, or it can download additional libraries in order for you to view the original source code.
+
+
+If the node requires additional libraries to view, dotPeek will attempt to download them automatically.
+ If you've found a piece of code you don't understand, you can use the Quick Documentation feature to see what the command is doing.
+
+
+Place your cursor in the piece of code that you need documentation for in the Code Viewer frame.
+Press Ctrl + Q to load the Quick Documentation window.
+Follow the hyperlinks to learn more about each aspect of the code you are examining.
+ If you want to manipulate, edit, and build the file on your own, you can export it into Visual Studio. The exported code will be in C#, even if it was originally written in a different language originally.
+
+
+Right-click on the DLL file in the Assembly Explorer.
+Select "Export to Project"
+Choose your export options. You can have the project opened immediately in Visual Studio if you'd like to get started on it immediately.
+ Once you have the project loaded in Visual Studio, you will have complete control over editing and building the DLL into your own creation. Click here for detailed instructions on using Visual Studio.
+

@@ -1,0 +1,112 @@
+;
+,,, do Insert Names Create in Left Column.
+Enter into cell A3 the formula, w/o quotes, "=X_Offset2+COS((ROW()-3)*PI()/180)*ShrinkExpand2";
+Enter into cell B3 the formula, w/o quotes, "=Y_Offset2+SIN((ROW()-3)*PI()/180)*ShrinkExpand2";
+Edit Go To cell range A3:B363 and do Edit Fill Down;
+Start with row 5, and for every 3rd row thereafter (8, 11, 14 ... perhaps as far down as 92) do Format Cells for columns A and B Font Red, Bold.
+, do Insert Names Create in Left Column.
+Enter to cell C3 the formula, w/o quotes, "=X_Offset+COS((ROW()-3)*PI()/180)*ShrinkExpand"
+Enter to cell D3 the formula, w/o quotes, "=Y_Offset+SIN((ROW()-3)*PI()/180)*ShrinkExpand"
+Edit Go To cell range C3:D363 and do Edit Fill Down;
+Start with row 5, and for every 3rd row thereafter (8, 11, 14 ... perhaps as far down as 92) do Format Cells for columns C and D Font Bold;
+Enter 13 to cell E15 and Edit Go To cell range E15:E363 and do Edit Fill Series (accept default step value = 1), OK. Go down and check the values in row 363; they should be: A363: +6.5000; B363: +5.0000; C363: +10.0000; D363: +5.0000; E363: 361. These should duplicate the values in row 3, with the exception of column E.
+ Choose a pattern for your Chart Area Fill -- water droplets texture may go nicely with an eye.
+Double-click on the series plot of the circle and Format Data Series Line Weight 25, Gradient 79% Black and 100% White.
+Double-click in the Plot Area and Format LINE Line Weight .75, Gradient Radial Upper Left Corner: 0% Black, 100% Purple.
+Do Gradient Radial Centered for the FILL, 5% Black, 16% Med. Purple, 20% Black, 76% White, 83% White (establishes tight cutoff - less blur), 86% Dark or maroon Red, 97% Dark Orange to Red. The medium purple is to represent the behind-the-scenes second layer of iris fibers. It would be better to have an entire data section devoted to this second layer.
+, In this example, it is not very detailed, just a band of light purple-grey-rosish color bordering the center of the pupil.,,
+
+Type :SERIES: into cell F1. It refers to the Row 1 numbers which correspond to the Series numbers Excel assigns to each data series it charts. Note that Series 01 has already been assigned to the Black Circle. Do Format Cells Font Red Bold, Fill yellow, Border heavy red outline bold to cell range E1:F1.
+Enter to cell E2 St Radius x (for StartRadius X-axis point);
+Enter to cell F2 St Radius y;
+Enter End Radius x to cell E3;
+Enter End Radius y to cell F3;
+Do Format Cells Border Bold Red Outline Box around cell range E2:F3;
+Enter Degrees to cell F4;
+See the data chit diagram "Worksheet Setup" to follow along herewith:
+
+
+
+
+
+Shrink the image "Blue eye Streams Lrg" by grabbing the corner handles when the mouse hovers over the corners and turns into a double-headed arrow (or whatever image you are using as a reference) until it fits in approximately G23:H34;
+
+
+
+
+
+Build the following image, or one of your own iris, or another of your choosing, and fit it to I16:P46 (approximately);
+
+
+
+
+
+or use this one, "Iris by CG w Inner 2nd Fiber Layer" as a reference guide;
+
+
+
+
+
+Enter to cell E5, STARTPT;
+Enter to cell F5, 0; Do Insert Name Define STARTPT for Row 5;
+Enter to cell E6, =PI()/2; (=1.5708; this makes for a bit of a bump in the curve, because
+Enter to cell E7, 1.38308755426849; (... this value is a bit less, while ...
+Enter to cell E8, 1.91293118277239; (... this value and the succeeding ones are greater).
+Enter to cell E9, 2.64575131106459;
+Enter to cell E10, 3.65930571002297;
+Enter to cell E11, =2*PI(); (=6.2832)
+Enter to cell E12, 7 --- some of the above values were obtained via a Growth Trend Series from 1 to 7, that was later adjusted;
+Enter to cell E13 ENDPT;
+Enter to cell E14 DIFF;
+Do Insert Define Name Pieces to ='Circle Data and Chart'!$E$6:$E$12
+Do Format Cells Number Number Custom for cell range E6:E12 "Piece "0.0000
+Do Insert Name Define DIFF to Row 14, or ='Circle Data and Chart'!$14:$14
+Enter to cell F13 60 and Insert Define Name ENDPT to cell $F$13. Many different numbers of total degrees were tried, including 720, 360, 540, 180, 270, 90, 45, 80 -- and 60 was arrived at as looking most acceptable when there were but few iris fibers to try on;
+Enter to cell F14 the formula, =(ENDPT-STARTPT)/7; (using this difference, the increment is built) ...
+Enter to cell F6 the formula, =DIFF*Pieces, copy it, and paste it to F7: F12; the results you should have in cells F6:F12 are +13.4640;+11.8550;+16.3966;+22.6779; +31.3655;+53.8559;+60.0000 For cell range F5:F14 Format Cells Font Red and for cell range E4:F14 Format Cells Border Red Bold Outline and Fill yellow.
+
+Enter 2 to cell G1; (this stands for plot series #2 and is the first iris fiber)
+Enter =$A5 to cell G2, =$B5 to cell H2, =$C5 to cell G3 and =$D5 to cell H3 --- notice that these are the cells we made red and black bold before in column A. Do Format Cells Font Red, Bold for cell range G2:H2 and Font Black, Bold for cell range G3:H3;
+Enter Cos+DIFF to cell G4 and (DIF*pc)*sin(deg*adj) to cell H4;
+Enter =G2 to cell G5 and =H2 to cell H5;
+Enter =G5+DIFF to cell G6 and =STARTPT+(DIFF*Pieces)*SIN((Degrees)*PI()/180) to H6;
+Copy G6:H6 and paste them to cell range G7:H12;
+Enter =G3 to cell G13 and =H3 to cell H13; for cell range G13:H13 do Font Bold.
+Enter =(G13-G5)/7 to cell G14 and =(H13-H5)/7 to cell H14;
+Do Format Cells Fill yellow for cell range G14:H14 (so you will NOT chart it because the DIFF is NOT the Endpoint!);
+Enter 3 to cell G15;
+Tap within the circle on the chart to select the plot area and do menu item Chart Add Data. Select cell range G5:H13 in response to the Query Box that arises. Do not be alarmed if the results are wrong. There may be two lines, one of which is extra. Find, by tapping on each series plot, between the two the one which ends with ...$H$5:$H$13,2) because that's the one you want and the other one is to be deleted. Correct in the formula bar the beginning of the series to $G$5:$G$13 from the C's or whatever it was in error. The line should plot now at about the 3 PM position in approximately a straight line with a bend at the end. Do Format Series and select the Line width to be 1 or .75 (at most 2), the Glow to be 2 and 50% and choose the color gradients of blues or browns or whites at the tips -- whatever your model picture shows in that position, OK;
+
+, This will cue you as to the row number to use in the top section, e.g. in I2:J3 -- (the 3 was used to keep track of numbers of lines plus glow lines already added previously)(in truth, however, often a line thickness of .75 or 1.75 was used simply because 3.75 was the default, and 1 + 2 glow lines had not been figured out yet until it was seen that the center pupil was not coming out as a near-perfect circle at all, due to such variations as line thickness and glow variances -- much re-tracing of steps was done; an error which you hopefully needn't repeat);
+
+, Keep doubling in this way until you reach 128 and stop and trim off until the total number of data series, including 2, is 240 columns (120 series of x's and y's).
+Do Edit Replace routine per row 15, without any errors, for rows 2 and 3 -- for example, if in Row 15 column G, there is a 5, then replace the common row number in cell range G2:H3 with 5, Replace All, OK; do that for every single series, all the way across!
+Construct the chart carefully by selecting the cell range to chart of G5:H13, or I5:J13 for the next series, etc, all the way across, and patiently as per the above step(s); it was found that 30 data points took about 2 hours to do, so the whole chart took 8 hours over 2 days to complete, prior to error cleanup; here is an example of a gradient as you must set the line width and gradient by clicking on the series plot each time you chart a series, all the way across! Remember line width should be .75 to 2 and the gradient and glow size and transparency percentage are set individually per iris fiber in accordance with your individual pupil photo you're copying, but generally should remain constant or the pupil will not come out a nearly perfect circle. The Modifier formula also bears on the situation, so keep that difference pretty tiny, like 1.007 vs. .993, for a total difference of .014, or less. Generally speaking, this author thinks a change of .005 is visible, but is not sure exactly. Visual acuity varies between individuals. On the other hand, Excel has set the minimum line weight at .25, which is definitely thicker than their glow or transparent objects. The situation pictured below, of an imperfect circle, was corrected by keeping glow size to 2 and transparency to 50%, constantly. Otherwise, it is a Gradient Example.
+
+
+
+
+
+Here is an example of a data chit reconciliation for columns A:D -- just making sure everything was on track;
+
+
+ A281 to D281 example
+
+
+
+, Make it semi-transparent, and change the color to White (and it's best to start with a white object in this author's opinion); place it on the main chart;
+
+
+
+
+
+Hold down the Shift Key and do Copy Picture to your Saves worksheet where you will again hold down the Shift Key and do Paste picture. Your picture should resemble the one below but if the reflection doesn't show, even though you've grouped it with the chart, then try Grabbing the Image and exporting a jpg from Preview:
+
+
+
+
+
+
+,
+For more art charts and graphs, you might also want to click on Category:Microsoft Excel Imagery, Category:Mathematics, Category:Spreadsheets or Category:Graphics to view many Excel worksheets and charts where Trigonometry, Geometry and Calculus have been turned into Art, or simply click on the category as appears in the upper right white portion of this page, or at the bottom left of the page.
+

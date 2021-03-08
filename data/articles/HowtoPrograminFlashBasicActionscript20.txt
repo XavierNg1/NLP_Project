@@ -1,0 +1,15 @@
+ Anything at or above Flash 7 (Not CS7, just 7; all CS Flash versions should work) should be able to handle what we will cover here.;
+, A programming language is an intermediate language between humans ("Hey, what's up") and computers (10111010001000x101110001110). Let's say you met someone who didn't speak English, and spoke Spanish. If you both knew French, you can communicate, just not the way you naturally would.
+ ActionScript is the programming language for Flash. ActionScript 1 is outdated and ActionScript 3 is too complex for a short wikiHow article.
+ Open a new project in Flash, making sure it's ActionScript 2. Using the drawing tools, draw a simple button on the screen. Highlight it with the mouse (the selection tool), right click, and click "Convert to Symbol". You can also press F8 with the button selected.
+ Just set the type as button and click OK for now. Note that it pops up in the Library.
+ In the timeline, use Insert Keyframe to put in a little box in the rows labeled Up, Over, Down, and Hit. You can mess with these on your own time, just make sure there is a button in up and hit, at minimum. On the top of the stage, click Scene 1 to return.
+ on the middle. This isn't really important and is only for reference. You can put anything on the second frame.
+ With the first frame selected, press F9 or right-click, and click Actions. In the window that appears, type "stop();" without the quotation marks. When this runs, the movie will stop on the first frame (to avoid bugs in the future you may want to do this to Frame 2 as well).
+ Type in:
+on (release) {
+    gotoAndStop(2);
+}
+This tells Flash when your mouse button releases over the button, you want the timeline to go to Frame 2 ("YAY!") and stop there, if you didn't type that in for Frame 2. You can also use gotoAndPlay to trigger an animation, but that's more advanced.
+ Click the button.
+

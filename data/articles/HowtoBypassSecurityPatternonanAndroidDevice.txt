@@ -1,0 +1,21 @@
+;
+, On your PC, open a command prompt by typing "cmd" in the Search bar in Start Menu.
+ Type the following commands on command prompt. Make sure that you press "Enter" after every command line:
+-adb shell
+*The prompt ought to show a # instead of a $. If it does show $, enter "su" to switch to the root -client.
+-cd /data/data/com.android.providers.settings/databases
+-sqlite3 settings.db
+-update system set value=0 where name='lock_pattern_autolock';
+-update system set value=0 where name='lockscreen.lockedoutpermanently';
+-.quit
+-exit
+-adb reboot
+
+, After your device has rebooted, enter the following commands into the command prompt:
+-adb shell
+-rm /data/system/gesture.key
+-exit
+-adb reboot
+
+, Your device will reboot again. Once it has rebooted and asks for a security pattern, you can use any pattern and it will unlock your cell phone.
+

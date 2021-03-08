@@ -1,0 +1,129 @@
+ Typically, you would choose <nav> for the sitewide navigation bar, <header> for smaller, page-specific link sections, or <div> if no other option seems to fit.Put this inside a <div> element, so you can style the container as well as the menu itself.
+
+
+<div>
+   <nav>
+   </nav>
+</div>;
+, We'll use the class attribute later, to style these elements using CSS. Give a separate class attribute for the container and for the menu.
+
+
+<div class="nav-wrapper">
+   <nav class="nav-menu">
+   </nav>
+</div>
+
+, The unordered list (<ul>) contains the top menu items (list items <li>), which the user will hover over to see the drop down menus. Add the "clearfix" class to your list element; we'll return to this later in the CSS spreadsheet.<div class="nav-wrapper">
+   <nav class="nav-menu">
+      <ul class="clearfix">
+
+         <li>Home</li>
+
+         <li>Contributors
+
+         </li>
+
+         <li>Contact Us
+
+         </li>
+
+      </ul>
+
+   </nav>
+</div>
+
+, If these top-level menu items also link to their own pages, insert the links now. Even if they do not link anywhere, link to a nonexistent anchor (such as "#!"), so the user's cursor changes appearance. In this example, Contact Us does not lead anywhere, but the other two menu items do:
+
+
+<div class="nav-wrapper">
+   <nav class="nav-menu">
+      <ul class="clearfix">
+         <li><a href="/">Home</a></li>
+         <li><a href="/Contributors">Contributors</a>
+
+         </li>
+         <li><a href="#!">Contact Us</a>
+
+         </li>
+      </ul>
+   </nav>
+</div>
+
+, After styling is complete, these lists will become the drop down menu. Nest the list inside the list item the user will hover over. Include a class attribute and link, as before.
+
+
+<div class="nav-wrapper">
+   <nav class="nav-menu">
+      <ul class="clearfix">
+         <li><a href="/">Home</a></li>
+         <li><a href="/Contributors">Contributors</a>
+         <ul class="sub-menu">
+
+            <li><a href="/jordan">Michael Jordan</a></li>
+
+            <li><a href="/hawking">Stephen Hawking</a></li>
+
+         </ul>
+
+         </li>
+         <li><a href="#!">Contact Us</a>
+         <ul class="sub-menu">
+
+            <li><a href="mailto:bugsupport@company.com">Report a Bug</a></li>
+
+            <li><a href="/support">Customer Support</a></li>
+
+         </ul>
+
+         </li>
+      </ul>
+   </nav>
+</div>
+
+, Link the CSS stylesheet in the head section of your HTML document, if you haven't already. This article does not cover CSS basics, such as setting a font and background color.
+ Remember the "clearfix" class you added to the menu list? Normally, the elements on the dropdown menu will have a clear background, and might shove other elements around. A quick CSS adjustment fixes this problem. Here's a short and sweet solution, although it will not support Internet Explorer 7 and earlier:.clearfix:after {
+content: "";
+display: table;
+}
+
+, This code will arrange your menu across the top of the page, and hide the dropdown elements. This is intentionally bare-bones to focus on the relevant code. You can spruce it up later with additional CSS properties, such as padding and margin.
+
+
+.nav-wrapper {
+   width:100%;
+   background: #999;
+}
+ 
+.nav-menu {
+   position:relative;
+   display:inline-block;
+}
+ 
+.nav-menu li {
+   display: inline;
+   list-style-type: none;
+}
+ 
+.sub-menu {
+   position:absolute;
+   display:none;
+   background: #ccc;
+}
+
+, The elements in the dropdown list are currently set not to display. Here's how to make an entire sub-list appears when you hover over its parent:
+
+
+.nav-menu ul li:hover > ul {
+   display:inline-block;
+}
+
+Note — If your dropdown menu items lead to additional (flyout) menus, any properties you add here will affect them all. If you'd like to style the first level of dropdown menus only, use ".nav-menu > ul" instead, Web designers typically show that an element opens a dropdown menu with a downward-pointing arrow. This code will add that arrow to each element in your menu:.nav-menu > ul > li:after {
+   content: "\25BC"; /*escaped unicode for the down arrow*/
+   font-size: .5em;
+   display: inline;
+   position: relative;
+   }
+Note — Make adjustments to the arrow's position using the top, bottom, right, or left properties.
+Note — If not all of your menu items contain dropdowns, don't style the entire nav-menu class. Instead, add another class (such as dropdown) to each HTML li element where you'd like an arrow. Refer to that class instead in the code above.
+ Your menu should now be functional, but it could use a beauty treatment. If you are not familiar with basic CSS properties learn more here. Use these properties to further change the appearance and positioning of each class of element.
+

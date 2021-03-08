@@ -1,0 +1,58 @@
+
+srsp1.zip "http://users.atw.hu/livexptuning/Plugins.html" (2 files inside)
+
+
+
+
+
+
+Windows 98SE Bootable Floppy Disk
+
+
+
+
+
+
+pe2usb-f32.cmd "http://usb.smithtech.us/pe/plugins/pe2usb-f32.zip" (A replacement for BartPE's default "pe2usb.cmd file)
+
+
+
+
+
+
+GRUB4DOS 0.4.4 "http://sourceforge.net/projects/grub4dos/files/GRUB4DOS/"
+
+
+
+
+
+;
+,
+[Note: if your PC does not have a floppy drive then you may use virtual Floppy Disk along with a win98 floppy image
+
+,,
+2- Download "http://jdfoxmicro.com/resource-center/articles/logging-off-windows/WindowsXP_Start_button.bmp".
+Save it as "nu2go.bmp" in "\plugin\nu2menu" subdirectory in PE Builder installation directory.
+ Note: If you want to add applications to your BartPE, then you have to do it at this point. It is not very easy step for a beginner, specially creation of the menu tree.
+
+If you don't have your windows XP setup/installation files on your system you must insert the original Microsoft Windows XP installation/setup CD at this point.
+Select "Source" path to XP(SP2) setup CD or setup files location.
+Leave "Custom:" location empty.
+"Output:" field must be filled as "BartPE" (without quotes)
+Click "Build" button.
+PE Builder will now start building BartPE. This will take a few minutes.
+
+Open command prompt in PE Builder installation directory.
+run command "pe2usb-f32 J:" ("J:" is just example, it should be your USB Key drive letter)
+It will take a while, and create an iso file in your USB key.
+
+(Because grub will search all drives for this file name and will boot from the first drive where it finds the bootloader, so we change the name to avoid conflict with one on hard disk)
+
+,
+Open config.sys and edit the second line to read:
+device=grub.exe --config-file="color black/cyan yellow/cyan;timeout 0;default 0;title find and load NTLDR of Windows NT/2K/XP;find --set-root /usbntldr;chainloader /usbntldr"
+delete himem.sys and emm386.exe lines
+"Wow, DONE!"
+Boot from your USB key!!!
+(Note: You would have to either specify USB as first boot device in CMOS/BIOS, or manually select USB device while bypassing the default boot sequence/order by pressing appropriate key e.g. F12/F10/F2/F1 or Del etc. at beginning of boot.)
+

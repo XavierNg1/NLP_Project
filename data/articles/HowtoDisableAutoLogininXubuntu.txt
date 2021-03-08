@@ -1,0 +1,12 @@
+ This can be done by pressing Ctrl+Alt+T. Then copy-paste the following command into the terminal: gksu gedit /etc/lightdm/lightdm.conf. You will need to provided an administrator password for this step.
+
+
+If you run this terminal and nothing happens, then you probably need to install the free software gedit. This can be done by typing in the following command into the terminal: sudo apt-get install gedit. After you do so, redo the step above.;
+, It should be located after the line autologin-user. In the picture above, we used your_username as an example.
+ Delete your username and replace it with false as shown in the picture.
+ After the splash screen, you will see the default login window asking for your user password.
+
+
+
+
+

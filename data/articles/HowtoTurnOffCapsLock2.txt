@@ -1,0 +1,25 @@
+ Disabling Caps Lock requires you to edit the Windows registry. A mistake in the registry could cause major problems, so create a backup before you begin. Type "restore point" in the search bar, click "create a restore point," then follow the onscreen prompts.If your attempt to disable caps lock leads to issues, you can use the System Restore feature to return your computer to this restore point.
+
+
+For more details, see these specific guides for Windows 7 and Windows 8.
+ You will need an administrator account to make this change.
+ Unfortunately, Microsoft's official tools will not allow you to change the Caps Lock key.However, there are third-party tools that can save you time and effort. A couple popular options are this AskVG tool and SharpKeys. Both of these are getting old, and may not work on newer operating systems.
+
+
+A malicious tool could seriously harm your computer. Download from trustworthy sties only.
+ The tool you downloaded might come with instructions in a text file, or on the website where you found it. Here's the process for the two examples mentioned above:
+
+
+AskVG: Open "Disable Caps Lock.reg" and confirm that you want to run it.
+SharpKeys: Open SharpKeys and click Add. Select "Caps Lock" in the left (Map this key), and "Turn Key Off" from the right column (To this key). Select OK, then Write to Registry, and confirm the change.
+ You will need to restart your computer before the change takes effect.
+ If you cannot find a trustworthy tool that works on your computer, you can make the change yourself. This is not recommended unless you have edited the registry before. The process is difficult and can cause problems for some users. Make sure you have a backup, then follow these instructions:Note — these instructions were written for Windows 7, but the process is similar for other modern versions of Windows.
+Open "regedit.exe"
+Navigate to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout using the folders in the left pane.
+Right click "Keyboard Layout" and select "New" → "Binary Value" from the drop-down menu. A new object should appear with the type "REG_BINARY."
+Rename this new object "Scancode Map"
+Right-click your new Scancode Map and select "Modify."
+Change the Value Data field to exactly this series of numbers: 00000000 00000000 02000000 00003A00 00000000
+Hit OK and close the registry editor.
+Restart your computer.
+

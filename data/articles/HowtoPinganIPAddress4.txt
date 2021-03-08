@@ -1,0 +1,14 @@
+ One of the common error reports looks similar to:Ping request could not find host www.wikihow.com. Please check the name and try again.
+This usually means that the you have misspelled the hostname.
+
+
+Try retyping it to correct any spelling errors. If that doesn’t fix the problem, then try another well-known hostname, such as a search engine or news site. If that reports “Unknown host,” then the problem is most likely the address of the domain name server.
+Ping using the host’s IP address instead of its name (ex. 173.203.142.5). If this is successful then either the address you are using for the domain name server is incorrect or it is unreachable or down.
+ Another error message is:sendto: No route to host
+This may mean the address of the gateway is incorrect or that the connection from your PC is not up and running.
+
+
+Ping 127.0.0.1: that's your own PC. If this fails, your TCP/IP is not functioning correctly, and your network adapter needs to be reconfigured.Check your wireless connection or the connection from your PC to your router, especially if it was working previously.
+Most PC network ports have an indicator light that indicates a good connection and one that blinks as data is transferred. As the ping command transmits packets at about 1 per second, you should be able to see the data light blink.
+Check that the router has the proper indicators light (and no faults), including the one that indicates a good connection to your PC. If a fault indicator is on, follow the cable from your PC to the router to make sure it is properly connected, then call your cable or broadband provider if necessary.
+

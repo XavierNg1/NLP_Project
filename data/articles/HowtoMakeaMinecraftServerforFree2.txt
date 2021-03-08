@@ -1,0 +1,60 @@
+ You have two options for setting up a Minecraft server manually: vanilla and bukkit. Vanilla servers are created with the server tools provided by Mojang, the developers of Minecraft. Bukkit servers, on the other hand, use modified tools created by third-party developers.As a general rule, most players will want to use vanilla servers for small private games with friends and bukkit servers for large public games.
+
+
+The vanilla server files are available at minecraft.net.The bukkit server files are available at dl.bukkit.org., Once you have the server .exe file pf your choice downloaded, create a new folder named "Minecraft Server" or something similar and put the .exe file in this folder. The installation process will cause new files to be generated in the .exe's directory, so it's usually easiest to keep track of them if they're in their own folder.
+ Follow any prompts you are given to proceed. The setup client will create the game world and load any additional files it needs. It should notify you when the installation process is complete.You may need to install the latest version of Java for the server .exe to be able to run.
+ In Minecraft, ops ("operators") have administrative powers over the servers they run. To give yourself this designation, open the ops.txt file and enter in your Minecraft username (spelled exactly correct).
+
+
+You may also add the usernames of any friends you want to be ops.
+ To change the rules of the game you'll be hosting, open the server.properties file in the server directory with WordPad or a similar text editor. Each line in the file specifies a different game parameter — editing the lines allows you to change how the game will play. Some of the most important options are listed below; a complete list is available here.gamemode: 0 for survival, 1 for creative.
+spawn-monsters/animals: "true" will cause these entities to spawn in the map; "false" will cause them not to spawn.
+allow-nether: if "true," players can access the Nether, a hell-like dimension within the map.
+difficulty: 0 for peaceful, 1 for easy, 2 for normal, 3 for hard.
+ This is the difficult part of setting up a Minecraft server manually. Unfortunately, if you don't do this, other players won't be able to connect to your game, so it's essential. Port forwarding is a somewhat complex process that can vary depending on the hardware you are using for your router. Luckily, there are numerous guides available online to help you do this. One great place to start is at portforward.com, which has a comprehensive list of port forwarding guides for hundreds of router models (available here.)See also our article on the subject.
+Another great guide is available on the official Minecraft forums here.
+ Launch the Minecraft server, then log in to Minecraft and start the game. From the multiplayer menu, select "Add Server." Enter your router's IP address into the "Server Address" field and give your server a name. Connect to the server from the list of options on the "Join Server" page. Congratulations! Your game should be up and running.
+
+
+Other players can join your server with your IP address in the same way.
+One easy way to find your IP address is to visit portforward.com and look in the top right corner., Bukkit servers don't have the convenient interface that vanilla servers do, so it's actually necessary to create a program to open them manually. Start by renaming the main bukkit file so that it is in the .jar file format — this will allow us to run it with a separate .bat file.
+ Open notepad or a similar text-editing program (not a word processor like Word, etc.) Paste the text below into the window, making sure that the line breaks are the same. Save the file with a name like "startserver.bat" (the .bat file extension is the important part.)@ECHO OFF
+SET BINDIR=%~dp0
+CD /D "%BINDIR%"
+java -Xmx1G -Xms1G -jar craftbukkit.jar
+PAUSE
+
+, When you open your new .bat file, it will run craftbukkit.jar, which will start the server setup process for creating the world and loading the game components. Follow the prompts as directed to launch the server.
+ Setting up port forwarding on your computer for bukkit servers is done the same way as with vanilla servers. Once again, port forwarding guides for various router models are available here. You may also want to visit our port forwarding article or the official Minecraft forums guide.
+
+
+Once you've set up port forwarding, you and the other players can connect to the server with your IP address as directed above.
+ On Mac computers, the process for creating both vanilla and bukkit servers is mostly the same. However, there are several differences, which will be highlighted in this section. To start, you'll want to download either the vanilla or bukkit file specifically labeled as being for Mac computers.
+
+
+The vanilla file for non-Windows computers will come in the .jar format. The bukkit file for Macs will need to be renamed with a .jar extension.
+ To run the .jar server files for macs, you'll need to use a separate .command file. To make this file, open Textedit, click Format > Make Plain Text, and paste the strings below into the window, keeping the spacing exactly the same. Save the file as "startserver.command" or something similar (the .command extension is the important part.)For vanilla:
+
+
+
+#!/bin/bash
+cd "$(dirname "$0")"
+exec java -Xmx1G -Xms1G -jar minecraft_server.jar
+
+
+
+
+
+For bukkit:
+
+
+
+#!/bin/bash
+cd "$( dirname "$0" )"
+java -Xmx1G -Xms1G -jar craftbukkit.jar
+
+
+
+
+
+, Now, use the .command files you've created to launch the server files themselves. To do this, open Terminal (you can do this by typing "terminal" in the spotlight search) and pasting "chmod a+x " into the window. Don't forget the space at the end of the string. Then, just drag your .command file into the window and it should run immediately.

@@ -1,0 +1,35 @@
+ An OpenVPN connection is advised. A free OpenVPN Client can be downloaded here: http://openvpn.net/index.php/open-source/downloads.html . There are free and paid VPN Servers, pick one to your liking and make sure you can connect to it.;
+, You can use http://www.sockslist.net/ to find proxies and test them. Alternatively, you can visit http://www.xroxy.com/ to find more proxies.
+ Without it, you can't follow this tutorial. Be careful with installing Vuze, as it might ask you to install additional softwares that you don't need. You can safely decline or skip these options.
+ Click on Tools ==> Option.
+ On the left you should be able to see a list of categories, and depending on which category you choose, there are corresponding options on the right.
+ Click on "Advanced Network Settings". There should be a list of network adapters available. Look for the "TAP-Windows Adapter V9" and note what value it has. For the sake of an example, this article uses "eth3" (without quotes).
+
+
+Type "eth3" (without quotes) in the bar that says "Bind to local IP or interface".
+Scroll down and tick "Enforce IP bindings even when interfaces are not available". This ensures that Vuze will stop downloading if the VPN disconnects.
+Click on the SAVE button found in the left bottom.
+ Enable/tick the following options:
+
+
+Enable proxying of tracker communications
+Prevent local DNS lookups
+Enable proxying of peer communications
+Disable plugin proxies (e.g. Tor/I2P Helper plugins) when a SOCKS server is configured
+Check proxy status on startup
+"Show SOCKS icon in status area" + "show non-local, non-SOCKS incoming connections as a error state".
+
+Choose the corresponding SOCKS version in the checkbox below. It is recommended that you use a SOCKS V5 server, as it's more secure.
+Click on the SAVE button found in the left bottom.
+ Restart Vuze and start downloading.
+
+
+If the SOCKS Proxy shows error on startup, all you have to do is find a new proxy and repeat steps 4 + 5.
+ If you want to retain local host access for streaming then you have to go to the menu bar ==> Tools ==> Options.
+
+
+
+Deselect / untick "Apply interface bindings from Vuze connection configuration"
+
+, When you do follow through with the previous step, the IP will revert back to 127.0.0.1 which is exactly what you want if you seek for a secure way to download movies and still be able to stream it locally.
+

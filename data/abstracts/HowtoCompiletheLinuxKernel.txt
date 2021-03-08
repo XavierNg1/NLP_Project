@@ -1,0 +1,29 @@
+
+Download the latest version of the Linux kernel from http://www.kernel.org.
+Be sure to download the full source by clicking on the "F" where it says "The latest stable version is..." otherwise you'll just download the patch, which is used when your current kernel is a patch number lower.
+Make sure you have downloaded the complete source code, and not a patch or change log.
+
+,
+Once downloaded, open a terminal.
+
+,
+Now we need to extract the kernel.
+Once extracted, move into the directory (in the terminal) that was created.
+
+,
+Configure the kernel.
+Once the configuration window is opened, you will see that a specific type of configuration is already selected like support for essential drivers like Broadcom wireless support/EXT4 filesystem etc.
+NOTE: While configuring the kernel, you will see a section known as kernel hacking(by hacking we mean exploring into it), where different types of options are given for hacking into kernel and learning it.
+Once configured, it is time to compile and install the kernel.
+So the kernel is installed, but you need to make it bootable.
+
+,
+Go to boot.
+
+,
+Run this command "mkinitrd -o initrd.img-<kernelversion> <kernelversion>" (For Redhat based distros, you need not create initrd, as it is created by default) remembering to replace <kernelverison> with the version number of the kernel you build.
+
+,
+Point the boot loader at the new kernel so it can be started.
+Reboot and enjoy your customized kernel!
+

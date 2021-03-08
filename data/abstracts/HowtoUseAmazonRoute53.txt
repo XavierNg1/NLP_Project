@@ -1,0 +1,26 @@
+
+Understand how Route 53 helps clients resolve DNS requests for your domain or subdomain.
+Understand that Route 53 uses information about latency and availability from different parts of the world.
+Appreciate that traffic does not flow through Route 53, so it does not track the actual traffic.
+Note that Route 53 has a number of competitors and can be used with non-AWS-hosted architecture.
+Understand that Route 53 can prima facie be used to do something like load balancing.
+Understand that since Route 53 does not include any central point of traffic flow, there are things it can do that load balancers cannot do.
+Understand that since Route 53 does not include any central point of traffic flow, it cannot do some of the things that load balancers can do.
+With all these caveats, it is important to note that Route 53 and load balancing are complements, not competitors.
+Understand that Route 53 and Content Delivery Networks (CDN) share the feature that they are massively distributed, with edge locations around the world.
+Understand that Route 53 serves IP addresses, whereas a CDN serves content.
+Understand that there is an interesting way of using CDNs as central points of traffic flow, namely, to accelerate the three-way handshake used to establish the initial connection.
+Understand the concept of a public hosted zone.
+Understand the concept of record sets.
+Understand the health notions in Route 53.
+Understand the "simple" routing policy.
+Understand the "weighted" routing policy.
+Understand the "latency" routing policy.
+Understand the "geolocation" routing policy.
+Understand failover routing policies.
+Design keeping in mind the difficulty of switching.
+Understand that Route 53 is a key part of a multi-region configuration.
+Design to avoid being hit with latency-based routing failures.
+Consider creative fallback approaches powered by Route 53.
+Familiarize yourself with shell commands for better debugging.
+Identify some online places to resolve DNS addresses from multiple locations and report the IP addresses.

@@ -1,0 +1,41 @@
+ The equal sign tells Excel that the string of characters you're entering into a cell is a mathematical formula. If you forget the equal sign, Excel will treat the entry as a character string.;
+, While you can include numeric constants in your formulas, in most cases you'll use values entered in other cells (or the results of other formulas displayed in those cells) in your formulas. You refer to those cells with a coordinate reference of the row and column the cell is in. There are several formats:
+
+
+The most common coordinate reference is to use the letter or letters representing the column followed by the number of the row the cell is in: A1 refers to the cell in Column A, Row 1. If you add rows above the referenced cell or columns above the referenced cell, the cell's reference will change to reflect its new position; adding a row above Cell A1 and a column to its left will change its reference to B2 in any formula the cell is referenced in.
+A variation of this reference is to make row or column references absolute by preceding them with a dollar sign ($). While the reference name for Cell A1 will change if a row is added above or a column is added in front of it, Cell $A$1 will always refer to the cell in the upper left corner of the spreadsheet; thus, in a formula, Cell $A$1, could have a different, or even invalid, value in the formula if rows or columns are inserted in the spreadsheet. (You can make only the row or column cell reference absolute, if you wish.)
+Another way to reference cells is numerically, in the format RxCy, where "R" indicates "row," "C" indicates "column," and "x" and "y" are the row and column numbers. Cell R5C4 in this format would be the same as Cell $D$5 in absolute column, row reference format. Putting either number after the "R" or the "C" makes that reference relative to the upper left corner of the spreadsheet page.
+If you use only an equal sign and a single cell reference in your formula, you copy the value from the other cell into your new cell. Entering the formula "=A2" in Cell B3 will copy the value entered into Cell A2 into Cell B3. To copy the value from a cell in one spreadsheet page to a cell on a different page, include the page name, followed by an exclamation point (!). Entering "=Sheet1!B6" in Cell F7 on Sheet2 of the spreadsheet displays the value of Cell B6 on Sheet1 in Cell F7 on Sheet2.
+ Microsoft Excel can perform all of the basic arithmetic operations �- addition, subtraction, multiplication, and division -� as well as exponentiation. Some operations use different symbols than are used when writing equations by hand. A list of operators is given below, in the order in which Excel processes arithmetic operations:
+
+
+Negation: A minus sign (-). This operation returns the additive inverse of the number represented by the numeric constant or cell reference following the minus sign. (The additive inverse is the value added to a number to produce a value of zero; it's the same as multiplying the number by -1.)
+Percentage: The percent sign (%). This operation returns the decimal equivalent of the percentage of the numeric constant in front of the number.
+Exponentiation: A caret (^). This operation raises the number represented by the cell reference or constant in front of the caret to the power of the number after the caret.
+Multiplication: An asterisk (*). An asterisk is used for multiplication to avoid confusion with the letter "x."
+Division: A forward slash (/). Multiplication and division have equal precedence and are performed from left to right.
+Addition: A plus sign (+).
+Subtraction: A minus sign (-). Addition and subtraction have equal precedence and are performed from left to right.
+ You'll use comparison operators most often in formulas with the IF function. You place a cell reference, numeric constant, or function that returns a numeric value on either side of the comparison operator. The comparison operators are listed below:
+
+
+Equals: An equal sign (=).
+Is not equal to (<>).
+Less than (<).
+Less than or equal to (<=).
+Greater than (>).
+Greater than or equal to (>=).
+ The joining of text strings into a single string is called concatenation, and the ampersand is known as a text operator when used to join strings together in Excel formulas. You can use it with text strings or cell references or both; entering "=A1&B2" in Cell C3 will yield "BATMAN" when "BAT" is entered in Cell A1 and "MAN" is entered in Cell B2.
+ You'll use ranges of cells most often with Excel functions such as SUM, which finds the sum of a range of cells. Excel uses 3 reference operators:
+
+
+Range operator: a colon (:). The range operator refers to all cells in a range beginning with the referenced cell in front of the colon and ending with the referenced cell after the colon. All the cells are usually in the same row or column; "=SUM(B6:B12)" displays the result of adding the column of cells from B6 through B12, while "=AVERAGE(B6:F6)" displays the average of the numbers in the row of cells from B6 through F6.
+Union operator: a comma (,). The union operator includes both the cells or ranges of cells named before the comma and those after it; "=SUM(B6:B12, C6:C12)" adds together the cells from B6 through B12 and C6 through C12.
+Intersection operator: a space ( ). The intersection operator identifies cells common to 2 or more ranges; listing the cell ranges "=B5:D5 C4:C6" yields the value in the cell C5, which is common to both ranges.
+ Parentheses serve 2 functions in Excel, to identify the arguments of functions and to specify a different order of operations than the normal order.
+
+
+Functions are pre-defined formulas. Some, such as SIN, COS, or TAN, take a single argument, while other functions, such as IF, SUM, or AVERAGE, may take multiple arguments. Multiple arguments within a function are separated by commas, as in "=IF (A4 >=0, "POSITIVE," "NEGATIVE")" for the IF function. Functions may be nested within other functions, up to 64 levels deep.
+In mathematical operation formulas, operations within parentheses are performed before those outside it; in "=A4+B4*C4," B4 is multiplied by C4 before A4 is added to the result, but in "=(A4+B4)*C4," A4 and B4 are added together first, then the result is multiplied by C4. Parentheses in operations may be nested inside each other; the operation in the innermost set of parentheses will be performed first.
+Whether nesting parentheses in mathematical operations or in nested functions, always be sure to have as many close parentheses in your formula as you do open parentheses, or you'll receive an error message.
+

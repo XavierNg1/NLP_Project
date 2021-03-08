@@ -1,0 +1,39 @@
+
+
+You can download Firefox ESR or 51 from Mozilla's official repository of all Firefox releases https://ftp.mozilla.org/pub/firefox/releases/
+
+Firefox ESR is also available at https://support.mozilla.org/en-US/kb/npapi-plugins along with more information about the timeline for NPAPI plugin support phaseout
+Mozilla's official advice regarding downgrading is available at https://support.mozilla.org/en-US/kb/install-older-version-of-firefox As of May 30, 2017, that page also contained a link to Firefox 51
+Firefox ESR receives security updates. Firefox 51 will become increasingly less secure, so should only be used at safe sites requiring plugins.
+Mozilla also indicates that the Windows 64-bit version of Firefox 52 ESR supports only Flash and Silverlight, so if you need Java or other plugins, you need to download the 32-bit version
+You might be able to get Java to work in your current version of Firefox (without downgrading). Follow Mozilla's directions at https://support.mozilla.org/en-US/kb/how-allow-java-trusted-sites. Try closing and relaunching Firefox if simply whitelisting a site in the Java Control Panel's Security section doesn't allow the applet to run.;
+, This is easy if you don't have Firefox on your computer now and have no plans to use Firefox other than at sites requiring plugins.
+
+You can simply install Firefox 51 and set its preferences to Preferences > Advanced > Update > Never check for updates.
+Alternatively, you can install Firefox ESR, set its updating preferences to "Check for updates, but let you choose whether to install them" and stop installing updates in 2018.
+ It is possible to keep multiple versions of Firefox on your computer, but you will need to take steps to prevent overwriting one version with another.
+
+You can temporarily rename your current version of Firefox to "FirefoxCurrent" or some such, install Firefox 51, rename that to "Firefox51," and then reset the name of FirefoxCurrent to Firefox.
+Or you can simply install Firefox 51 in a different folder/directory than the one containing the current version of Firefox.
+ Preventing Firefox 51 or in 2018, Firefox ESR from updating to the current version is more complicated if you have a current version of Firefox on the same computer. Updating behavior is controlled by settings in your Firefox user profile. If you have multiple versions of Firefox on your computer but only one user profile, all versions of Firefox on your computer will use the same profile. If you normally set Firefox to automatically install updates, Firefox 51 will update itself to the current version on launch. To prevent that from happening.
+
+You can create another profile to be used exclusively when using Firefox 51 or ESR and set its preferences to "Never check for updates." Or you can:
+
+Launch your current version of Firefox. Set your update preferences to Preferences > Advanced > Update > then either "Check for updates, but let you choose whether to install them" or "Never check for updates".
+Quit the current version of Firefox.
+Launch Firefox 51 and navigate to the plugin-requiring website.
+When you are done with Firefox 51, you can choose to:
+
+Launch the current version of Firefox and reset the preferences to "Automatically install updates." You will have reset the preferences to "Never update" before relaunching Firefox 51 if you choose this option.
+Or you can leave your update preferences as "Check for updates, but let you choose whether to install them." If you pick this option, you need to be careful that you don't accidentally install updates when launching Firefox 51.
+ If you have Firefox extensions, Firefox ESR and 51 may warn you that one or more extensions won't work and have been disabled. This happens if you update an extension in your current version of Firefox and it doesn't work in the older browsers. It's likely you can ignore the error messages, because there's a good chance you don't need those extensions for limited work at a handful of websites and the extensions will be re-enabled when you launch the current version of Firefox., This can be helpful if you have multiple Firefox versions on your computer.
+
+Firefox stores an individual user's information in a profile. Information in the profile includes things like preferences, extensions, history and bookmarks. You can use Mozilla's Profile Manager to create multiple profiles so that different users can each have his/her own profile. Profile Manager can also create a separate profile with preferences set to "Never check for updates" and free of any extensions that don't work in the older browser; if you use this profile whenever you launch the older browser, the older browser will not update itself and you will not be bothered by extension-related error messages.
+If you launch the Profile Manager by following Mozilla's official directions , the Firefox Choose User Profile dialog box will appear whenever you launch Firefox unless you check the box "Don't ask at startup." If you think you will be navigating to plugin-requiring sites frequently and don't mind having the "Choose User Profile" box show up every time you launch Firefox, you may want to leave the "Don't ask at startup" unchecked. If you think that you will be using the older Firefox versions infrequently and don't mind launching Profile Manager according to Mozilla's directions in the references, you may want to check the "Don't ask at startup" box. Checking "Don't ask at startup" will cause Firefox to start with the last profile used.
+
+
+
+ 
+
+
+

@@ -1,0 +1,16 @@
+ Put all the files you want to include in the JAR file inside a single folder.
+
+
+Open a Terminal command prompt, and set it to the target directory where your JAR files are located.
+ For example, compile HelloWorld.java with:
+
+
+javac HelloWorld.java
+This will produce a .class file needed for the JAR file.
+ Save it using the extension .txt using the text editor and input the following:
+
+
+Main-Class: HelloWorld (or whatever your file's name is )
+Note: this manifest file must end with a newline character
+
+,,

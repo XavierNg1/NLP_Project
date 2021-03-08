@@ -1,0 +1,150 @@
+ The code remains same for every IDE. You'll have to work differently for the inheritance thing on different IDE. Apart from that, you're all good to go.
+
+
+User inputs no. of rows (size) for the display and the alphabet to display.
+The main class determines the corresponding sub-program.
+The sub-program executes and displays the output.
+The program terminates.
+ Look at an example to help:
+
+
+
+
+
+import java.util.Scanner;
+public class Display
+{
+    static Scanner scr = new Scanner(System.in);
+    static Scanner scrInt = new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.print("\fEnter no. of rows to display : ");
+        int rows = scrInt.nextInt();
+        System.out.print("Enter the alphabet to display : ");
+        char ch = scr.next().charAt(0);
+        ch = Character.toUpperCase(ch);
+        System.out.print("\n\n");
+        switch(ch)
+        {
+            case 'A':
+                A obj = new A(rows);
+            case 'B':
+                B obj1 = new B(rows);
+            case 'C':
+                C obj2 = new C(rows);
+            case 'D':
+                D obj3 = new D(rows);
+            case 'E':
+                E obj4 = new E(rows);
+            case 'F':
+                F obj5 = new F(rows);
+            case 'G':
+                G obj6 = new G(rows);
+            case 'H':
+                H obj7 = new H(rows);
+            case 'I':
+                I obj8 = new I(rows);
+            case 'J':
+                J obj9 = new J(rows);
+            case 'K':
+                K obj10 = new K(rows);
+            case 'L':
+                L obj11 = new L(rows);
+            case 'M':
+                M obj12 = new M(rows);
+            case 'N':
+                N obj13 = new N(rows);
+            case 'O':
+                O obj14 = new O(rows);
+            case 'P':
+                P obj15 = new P(rows);
+            case 'Q':
+                Q obj16 = new Q(rows);
+            case 'R':
+                R obj17 = new R(rows);
+            case 'S':
+                S obj18 = new S(rows);
+            case 'T':
+                T obj19 = new T(rows);
+            case 'U':
+                U obj20 = new U(rows);
+            case 'V':
+                V obj21 = new V(rows);
+            case 'W':
+                W obj22 = new W(rows);
+            case 'X':
+                X obj23 = new X(rows);
+            case 'Y':
+                Y obj24 = new Y(rows);
+            case 'Z':
+                Z obj25 = new Z(rows);
+        }
+    }
+}
+
+
+
+
+
+, Here's the program for the alphabet A:
+
+
+
+
+
+public class A
+{
+    A(int row)
+    {
+        if(row<5)
+        row=5;
+        if(row%2==0)
+        row++;
+        for(int i=0;i<row;i++)
+        {
+            char ch = ' ';
+            for(int j=0;j<row-i;j++)
+            {
+                if(j==row-(i+1))
+                System.out.print("*");
+                else
+                System.out.print(" ");
+            }
+            if(i==(row/2))
+            ch='*';
+            for(int k=0;k<(i*2)-1;k++)
+            System.out.print(ch);
+            ch=' ';
+            for(int l=0;l<row-i;l++)
+            {
+                if(i==0)
+                continue;
+                if(l==0)
+                System.out.print("*");
+                else
+                System.out.print(" ");
+            }
+            System.out.print("\n");
+        }
+    }
+}
+
+
+
+
+
+, Here's the final look of the project in the IDE and the output.
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+

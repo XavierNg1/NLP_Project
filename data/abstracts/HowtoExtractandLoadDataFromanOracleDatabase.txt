@@ -1,0 +1,16 @@
+
+Export the schemas using the exp utility on the ROWS=N parameter.
+Export the data from the small code tables either using FastReader or native exp utility.
+Set up the destination database with all the same global roles, users, user privileges, system triggers (on_logon) and tablespaces (i.e.
+Import the schemas using imp (schemas and small tables).
+Create global object privileges and object synonyms as they were on the original instance.
+Load the data from tables which were extracted using FastReader into the target (destination) database.
+Recreate indexes (if removed) on the large loaded tables, this is a major, computationally intensive step, comparable to the unload/load phase, Care should be invested in improving the performance of this step by increasing the sort area or PGA memory sizes, performing several builds simultaneously under the available constraints (for instance you cannot effectively build two indexes on the same table at the same time), possible creating partitioned indexes in an unusable state and the rebuilding several partitions simultaneously, etc.
+
+,
+Enable constraints and triggers on the large tables with the INVALIDATE clause for a performance improvement.
+
+,
+Recreate and/or rebuild materialized views using “Complete Refresh”.
+Recreate (if not already present) indexes on the materialized views.
+

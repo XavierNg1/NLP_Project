@@ -1,0 +1,17 @@
+ Logging in as root is not recommended for regular use, as it is very easy to perform commands that will render your system inoperable. Only log in as root when performing emergency repairs, such as dealing with disk failures or restoring locked accounts.
+
+
+Using sudo or su instead of logging in as root will help prevent unintended damage while logged in as root. Using these commands gives the user a chance to think about the command before severe damage is done.
+Some distributions, such as Ubuntu, leave the root account locked until you manually unlock it. Not only does this prevent users from unknowingly doing too much damage using the root account, it also secures the system from potential hackers, as the root account is typically targeted first. With a locked root account, hackers aren't able to gain access with it. See the previous section for instructions on unlocking root in Ubuntu.
+ If the root account is unlocked and you know the password, you can log in as root when you're prompted to log in with a user account. Enter root as the user when prompted to log in.
+
+
+If you need root access to perform a command, use the method in the previous section.
+ After entering root as the username, enter the root password when prompted.
+
+
+In many cases, the root password may be "password."
+If you don't know the root password, or have forgotten it, see the next section for instructions on resetting it.
+In Ubuntu, the root account is locked and cannot be used until it has been unlocked.
+ There's a chance that the program you intend to run will have a negative effect on your system when it has root access. It's highly recommended that you use sudo or su to run programs instead of logging in as root.
+

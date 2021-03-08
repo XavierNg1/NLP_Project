@@ -1,0 +1,18 @@
+ Field codes can be finicky, and have been known to crash Word. Save your file before proceeding so that you have a version to go back to if things don't go right. You can also create a copy as an extra layer of protection.;
+, Press Ctrl + F9 in Windows or Command + F9 on a Mac to create the field code brackets {}. The brackets will be highlighted with a gray color. In order to over line the text you want, you'll need to create a specialized field code. You will not be able to select text and apply the effect; instead, you will be typing the test you want over lined into the field code function itself.
+
+
+Field codes will work on all versions of Word, for both Windows and Mac.
+ Type the following in between the brackets: EQ \x \to(). There is a space between "EQ" and "\x", as well as a space between "\x" and "to()". Make sure not to include any extra spaces, or the function will not work.
+
+
+If you copy the formula from this article and paste it into your document, Word will most likely add spaces at each end, which will cause the field code to not work. Type it out yourself for best results.
+ Place your cursor between the parentheses in the field code. Type the text you want, including any spaces. Your function should look like this: {EQ \x \to(your text goes here)}. Keep your cursor in the field code when you are finished.
+ Once you are finished entering in your code and text, you can convert the field code into the finished product. With your cursor inside the field code, press Shift + F9. This will convert the code, displaying the text you entered in the parentheses with a line over it.
+
+
+Using the overline effect will most likely skew your line spacing, so be sure to review your whole document to see if anything was affected.
+ Field codes are powerful scripting tools, and can cause problems if not used correctly. If the formula was entered incorrectly in any way, the code may disappear, or your program may even crash. Make sure that you aren't inserting extra spaces or characters, and that the formula is typed exactly as seen above.
+
+
+If your code disappears, press Shift + F9 to toggle it back to the code view. You can then review your code and make any necessary changes.

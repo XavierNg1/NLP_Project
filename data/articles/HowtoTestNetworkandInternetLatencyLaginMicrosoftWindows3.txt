@@ -1,0 +1,28 @@
+ The software tools you need to test for network and internet latency can be found within the Network Utility application on your Mac OSX machine.
+
+
+Open Finder and navigate to Applications.
+Navigate to the Utilities folder.
+Locate Network Utility and click on the application icon to open the application.
+ The network utility will allow you to test connectivity across your ethernet (wired) connection, Airport (wireless) connection, Firewall or Bluetooth connection.
+
+
+On the Info Tab, select your connection from the network interface drop down menu.
+Verify that you have selected the active connection. If the connection is active you will see information in the hardware address, IP address, and Link Speed fields, additionally the Link Status field will say “Active”. (An inactive connection will only have information in the hardware address field, and the Link Status field will say “Inactive”.)
+
+, The Network Utility Ping test will allow you to enter the address of a site you wish to Ping and the number of times you wish to Ping it. Normal latency varies by the type of connection from 5 - 40ms for cable modem, 10 - 70ms for DSL, 100 to 220ms for dial-up and 200 - 600 for cellular. The distance to the remote server also adds to latency, you can estimate an additional 1ms in latency for every 60 miles (100km) the data travels.
+
+
+Select the Ping tab within the Network Utility menu.
+Enter the IP address or URL of the site you wish to Ping. You may want to start with the URL of your internet service provider and proceed to other sites you commonly access.
+Enter the number of times to Ping the site (default is 10).
+Click the Ping Button.
+View the results. As the test pings the remote address, it will report back the results, the final number after the “time = “ is the time it took, in milliseconds, for the packet to travel to the remote site and back to your computer.
+ The traceroute test will show the path that data travels from your computer to the remote server and any delay in that path. This can be helpful in determining the source of network or internet delays.
+
+
+Select the Traceroute tab within the Network Utility menu.
+Enter the IP address or URL of the site you wish to route.
+Click the Tracerout Button.
+View the results. As the test pings traces the path it will display each address along the way and the time it took for a data packet to travel and acknowledge receipt for each “hop” along the path. The more “hops” or other devices the data packet needs to route through, the more delay you will experience.
+

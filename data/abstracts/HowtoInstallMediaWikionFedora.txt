@@ -1,0 +1,29 @@
+
+Install MediaWiki .
+Install mailcap.
+Also install mysql-server .
+Start the servers.
+To make sure that the servers automatically start at boot-up, type the following commands:
+
+
+chkconfig mysqld on
+chkconfig httpd on
+
+,
+MediaWiki is installed in /usr/share/mediawiki with files specific to a site installed in /var/www/wiki which contains the following directories and files:
+
+config/
+config/index.php
+images/
+index.php
+,
+Files in /var/www/wiki are used as a template and Apache can only access /var/www/html if not modified.
+You might have successfully installed the wiki but the skin (the design and the css and js and images of the wiki) are still in /usr/share/mediawiki/skins which is not accessible by web server.
+Navigate to http://localhost/wiki with your favourite browser.
+Fill in everything and click install button.
+After clicking Install MediaWiki, if everything goes right, MediaWiki installation successful page is displayed.
+
+,
+LocalSettings.php, which is one of the most important configuration file for mediawiki, has to be moved from config/ directory to the parent directory.
+Also delete the config directory for security reasons.
+Go to your wiki (http://localhost/wiki) and the main page should be displayed.

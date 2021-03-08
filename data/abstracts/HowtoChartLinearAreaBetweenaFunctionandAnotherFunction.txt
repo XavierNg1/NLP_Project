@@ -1,0 +1,34 @@
+
+While this workbook directly descends from the previous article, "Chart a Power Function Less Its Derivative", it's been decided not to go through the MODIFY/NEW approach by altering that file under a SAVE AS; however, you are free to do so and might save some time by so doing.
+Set the Preferences under the Excel menu:
+
+
+In General, set R1C1 to Off and select Show the 10 Most Recent Documents .
+Go to cell A8 and do Freeze Panes under the Window menu.
+Create the Defined Variables Upper Section (here's a picture):
+
+
+We will be entering the function f(x) 1*(x-1)^3 + 10 and the function g(x) 1*3x^2 + 10.
+Enter the Column Formulas:
+
+
+Into cell A2, input "=H2" w/o quotes.
+Calculate Arc Length
+
+
+Select O1 and enter Arc Length.
+Create the Chart:
+
+
+Because the column B y values vary between the f(x) Function and the g(x) Function, the chart draws lines connecting successive {x,y} pairs and so fills in the difference.
+Find the Area Between the 2 Functions (please see attached picture):
+
+
+Go to C366 and enter 1 and Format Cell Number Number Custom 0) , where there is a space after the right parenthesis.
+Save the upper data section that is sufficient to re-create the form, cell range A1:O7, by copying and pasting it to the Saves worksheet.
+Final Image:
+
+,
+Make use of helper articles when proceeding through this tutorial:
+
+See the article How to Create a Spirallic Spin Particle Path or Necklace Form or Spherical Border for a list of articles related to Excel, Geometric and/or Trigonometric Art, Charting/Diagramming and Algebraic Formulation.

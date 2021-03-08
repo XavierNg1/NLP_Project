@@ -1,0 +1,94 @@
+ The day-count convention (DCC) determines how the day-count fraction (DCF) is found when calculating accrued interest. The day-count convention on your bond is defined in the accompanying indenture (contract). For example, 30 days in a month and 360 days in a year would mean a DCC of 30/360. Other bonds, especially U.S. government (Treasury) bonds,  calculate interest using the exact number of days in a month and year. Such a DCC is  sometimes referred to as "actual/actual" or "ACT/ACT." 
+
+In practice, bonds can also use a combination of these two DCCs, with such possible DCCs as 30/ACT and ACT/360. In practical terms, the convention used will make very little difference in terms of interest earned. Double-check your bond indenture to be sure. ;
+, Your interest rate, also called the the coupon rate, specifies the amount of interest you earn on the bond annually as a percentage of your par (or "face") value. The payment frequency signifies whether your bond pays interest once a year or more often. Bonds typically pay interest either annually or semi-annually (once or twice per year). This information can be found within your bond indenture.
+
+For example, your bond might pay a 6% coupon rate twice per year. In this case, the annual interest rate would be 6% divided by the number of payments within the year. Thus, a 6% bond that pays interest twice per year would effectively pay 3% of the par value for each of the two payments during the year, or 6% total.
+ Search your records to see when your bond made its latest coupon payment. This information is available from the financial institution that sold you the bond. 
+, This will depend on your DCC, as the passage of days is calculated differently in each type of bond. Generally, if your bond is actual/actual, you will actually count the days. If your bond is 30/360, you would use those numbers for each month or year that has passed.  Let's say you have a 30/360 bond, and exactly two months have passed since your latest payment. You would simply multiply 2 x 30 and use 60 days in your calculations, regardless of how many days there actually were in the elapsed months. 
+
+
+, This is the amount paid to the holder of the bond at maturity (when the interest payments stop). This will be stated clearly on your bond indenture.
+
+Note that the par value may be more or less than what you actually paid for the bond originally. Market price is affected by the existing rate environment and the bond issuer's creditworthiness. Bonds are often valued at $1000. That would be the par value even if you paid slightly more or less for it. 
+
+
+, It's simpler than it looks: A=P∗CF∗DT{\displaystyle A=P*{\frac {C}{F}}*{\frac {D}{T}}}"A" is the accrued interest earned. This is the figure you are solving for.
+
+"P" is the par value of the bond.
+
+"C" is the annual coupon rate or interest rate. For our purposes it should be expressed as a decimal. Simply take the interest rate shown in the bond indenture and divide by 100 to produce the decimal equivalent. 
+
+For example, a 6% rate would be expressed as 0.06 (6/100). 
+
+
+
+"F" is the payment frequency (or number of payments per year). This would be 2 for semi-annual payments or 1 for annual ones.
+
+"D" is the number of days since your latest coupon payment.
+
+"T" is the total number of days in a payment period. This would be 360 for annual payments and 180 for semi-annual ones. 
+
+
+, Simply put all of the above information into the appropriate places in the equation. Double-check everything to make sure it's expressed correctly.
+
+In the above example, we will use a bond with a par value of $1000 paying a 6% coupon rate semi-annually with a 30/360 DCC. Two months (60 days) have passed since the last payment, so "D" is 60. The total days in the payment period is 180, because payments are made twice per year (360/2=180).
+
+The sample equation with all variables included would look like this: A=$1000∗0.062∗60180{\displaystyle A=\$1000*{\frac {0.06}{2}}*{\frac {60}{180}}}
+
+
+, This simply means dividing the coupon rate by the payment frequency. This reflects the interest rate earned in each payment period. In the equation, this is C divided by F. 
+
+In our example, this calculation would give a rate of 0.03. The equation will look as follows after this calculation: A=$1000∗(0.03)∗60180{\displaystyle A=\$1000*(0.03)*{\frac {60}{180}}}
+
+
+, Divide the number of days that have passed since the latest payment by the number of days in your current payment period. This is the final part of the equation.
+
+In the example, this calculation would be 60/180, or 0.333. The equation should now look like this: A=$1000∗(0.03)∗(0.333){\displaystyle A=\$1000*(0.03)*(0.333)}
+
+
+, Multiply the DCF by the face value of your bond to get the value of your accrued interest or coupon payment. You are multiplying the face value by the coupon rate by the day-count fraction. 
+
+In the example, this would be A=$1000∗(0.03)∗(0.333){\displaystyle A=\$1000*(0.03)*(0.333)}
+
+Which simplifies to A=$1000∗(0.01){\displaystyle A=\$1000*(0.01)}
+
+The answer is then $10. Your bond has earned $10 in accrued interest over the selected time frame. 
+
+
+, Start Excel on your computer and start with a blank sheet so that there is no other information to distract you.
+ For this calculation we would enter the current date, most recent payment date, DCC, par value, and coupon rate. Put these variables on separate lines down the first column of the spreadsheet. "Current date" goes in A1. "Coupon rate" lands in A5. 
+, Next to each variable name input the actual values. Make sure that these values are entered correctly. In other words, the dates are entered as dates, percentages as percentages, and monetary values as such. Otherwise, the program will not calculate the result properly. In our example, we use the following variables:
+
+3/31/2016 as the current date in cell B1. 
+
+1/31/2016 as the last payment date in cell B2. 
+
+0 as the DCC in cell B3. This indicates that we are using the 30/360 DCC. Inputting 1 indicates the actual/actual DCC.$1000 as the par value in cell B4.
+
+6% as the coupon rate in cell B5. 
+
+
+, The function needed to calculate bond accrued interest is known as the YEARFRAC function. Click on a nearby empty cell and type "=YEARFRAC(" to get started. The system will prompt you to input variables.
+
+Click on cell B2. 
+
+Type in a comma to move to the next variable.
+
+Click on cell B1. 
+
+Type in a comma to move to the next variable.
+
+Click on cell B3. 
+
+Close the function with a parenthesis.
+ In the same cell as the function, after you've closed the function, you must multiply it by your other two variables. Simply type in "*B4*B5" directly after the function, with no spaces anywhere.
+
+Your completed entry into this cell should look like this: =YEARFRAC(B2,B1,B3)*B4*B5
+
+
+, The program will solve your equation when you press enter on the cell that contains your function. Be sure to adjust the type of number in the cell to "currency" by selecting it at the top of the page under "number." This will ensure that your answer is displayed correctly.
+
+In the example, this function yields $10, which is exactly the same as it was in our manual calculation. 
+
+

@@ -1,0 +1,32 @@
+ After using a text editor, such as NotePad, to create your Java program, save the program with a .java extension. Of course, the file name can be anything. For the purposes of this tutorial, "filename" will be used as a placeholder for your file name.
+
+
+To ensure that your file is saved as a .java file, be sure to write .java after the file name, and select All Files from the dropdown extension menu.
+Make note of where you saved the file on your system.
+If you are unsure of how to write a program in Java, check out our tutorial on how to program in Java. For the purposes of learning how to compile and run a program, though, you can use any sort of Java program.;
+, Accessing the command line differs slightly for Mac and Windows.
+
+
+
+Windows: Press ⇱ Home, then type cmd. Press ↵ Enter to open the Command Prompt.
+
+Mac: In Finder, press the Go tab, select Applications, select Utilities, then select Terminal.
+ Type java -version into your command line. If java is installed, you will see a message stating what version of Java is currently installed.
+
+
+If not, you may need to install the Java Development Kit from their website. It is free and can be found at this link: http://www.oracle.com/technetwork/java/javase/downloads/index.html.
+ Use the command cd followed by the directory name to change your working directory.
+
+
+For example, if you were operating in C:\Users\Bob\Project and wanted to get to C:\Users\Bob\Project\TitanProject , enter in cd TitanProject and press ↵ Enter.
+You can see a list of what is in your current directory by typing dir and pressing ↵ Enter.
+ Once you are in the correct directory, you can compile the program by typing javac filename.java into the command line and pressing enter.
+
+
+If you have any errors in your program, or if there is difficultly compiling, the command prompt will notify you.
+Check out our article about how to fix compiler errors in Java for more help.
+ Enter in java filename and press ↵ Enter. Of course, replace "filename" with whatever the name of your file actually is.
+
+
+After pressing ↵ Enter, your program should run. If you receive an error, or if your program fails to run in any way, refer to the troubleshooting method.
+

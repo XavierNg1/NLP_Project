@@ -1,0 +1,12 @@
+ Before you can purchase and install an SSL certificate, you will need to generate a CSR on your server. This file contains your server and public key information, and is required to generate the private key.
+
+Login to cPanel. Open the control panel and look for the SSL/TLS Manager.
+Click the “Generate, view, upload, or delete your private keys” links.
+Scroll down to the “Generate a New Key” section. Enter in your domain name, or select it from the drop-down menu. Select 2048 for “Key Size”. Click the Generate button.
+Click “Return to SSL Manager”. From the main menu, select the “Generate, view, or delete SSL certificate signing requests” link.
+Enter in your organization’s information. You will need to enter your two-digit country code, the state or province, city or town name, full company name, section name (i.e. IT or Marketing), and the common name (typically the domain name).
+Click the Generate button. Your CSR will be displayed. You can copy this and enter it into your certification order form. If the service requires the CSR as a file, copy the text into a text editor and save it as a .CSR file.
+ There are several services online that offer SSL certificates. Make sure to only order from a reputable service, since you and your customer’s security is at stake. Popular services include DigiCert, Symantec, GlobalSign, and more. The best service for you will vary depending on your needs (multiple certificates, enterprise solutions, etc.).
+
+You will need to upload your CSR file to the certificate service when you order it. This will be used to generate the certificate for your server. Some providers will have you copy the contents of the CSR file, while others will have you upload the file itself.
+ You will need to download the Intermediate Certificates from the service that you purchased your certificates from. You will receive your Primary Certificate via email or through the customer area of the website., Click the “Generate, view, upload, or delete SSL certificates” link. Click the Upload button to browse for the certificate that you received from the certificate provider. If the certificate came as text, paste it into the box in the browser., This will finalize the installation of the SSL certificate. Your server will restart, and your certificate will begin being distributed., Use various web browsers to test that your certificate is working properly. Connect to your website using “https://” to force the SSL connection. You should see the padlock icon in your address bar, usually with a green background.

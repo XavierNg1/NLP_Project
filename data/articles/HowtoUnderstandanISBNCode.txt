@@ -1,0 +1,20 @@
+ The title’s ISBN code should be found on the back of the book. Usually it will be over the barcode. It will always be identified with the prefix ISBN and will be either 10 or 13 digits long.
+
+
+The ISBN should also be available on the copyright page.It is separated into four parts, each separated by a hyphen. For example, the ISBN for the classic cookbook The Joy of Cooking is 0-7432-4626-8.Books published before 2007 were given 10 digit ISBNs. From 2007 on, they have been given 13 digit identifiers.;
+, One of the most interesting things you can learn about a book with the ISBN is the publisher’s scale of operations. 10 and 13 digit ISBNs have their own ways of identifying the publisher and the title. If the publisher identifier is long, but the title number is only one or two digits, the publisher only plans on releasing a handful of books and the book might even be self-published.
+
+
+Conversely, if the title string is long and the publisher string is short, the book was released by a major publisher., If you plan to sell your manuscript in bookstores, it needs an ISBN, even if you are publishing it yourself. You can purchase an ISBN number at ISBN.org. You will need to purchase an ISBN number for each title you plan to publish and for different editions of the title, including hardback and paperback versions. The more ISBN numbers you purchase at time, the cheaper it will be.
+
+
+Each nation has its own ISBN granting corporation.A single ISBN number costs $125, 10 cost $250, 100 cost $575, and 1,000 cost $1,000., This first string indicates the language and region that the book was published in. “0” indicates that the book was published in the United States. “1” Indicates that the book was published in another English speaking country.For English books, this string will typically only be a single digit, but it can be longer for other languages.
+ The “0” will be followed by a dash. The string of numbers between the first and the second dash is the “publisher” identifier. Each publisher has its own unique ISBN string that will be in the code for every book that it publishes., Between the second and third dash in the ISBN number you will find the title identifier. Each edition of a book produced by a particular publisher will have its own distinctive title identifier., The last number is the check number. It should be predetermined by a mathematical calculation of the preceding digits. This is used to verify that the preceding digits are not being misread.Sometimes the last digit is an “X.” This is the Roman Numeral 10.
+The check number is computed using a modulus 10 algorithm.
+ The first three numbers are a prefix that changes overtime. Since the implementation of the 13 digit ISBN, this series has only ever been “978” or “979.”, Between the first and second dash in the ISBN you will find the country and language information. This ranges from 1 to 5 numbers and represents the language, country, and region of the title.For books published in United States, this number should be “0.” For books published in other English speaking countries it should be “1.”
+
+, Between the second and third dash in the ISBN you will find the publisher information. This can be up to seven digits long. Each publisher has its own distinctive ISBN number.
+ Between the third and fourth dash in the ISBN you will find the title information. This can range from one to six digits. Each title and edition will have its own distinctive number.
+ The last number is the check number. It should be predetermined by a mathematical calculation of the preceding digits. This is used to verify that the preceding digits are not being misread.Sometimes the last digit is an “X.” This is the Roman Numeral 10.
+The check number is computed using a modulus 10 algorithm.
+

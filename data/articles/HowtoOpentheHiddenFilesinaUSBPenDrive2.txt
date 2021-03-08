@@ -1,0 +1,11 @@
+ Hidden files in OS X have a "." at the beginning of the filename, which OS X automatically hides. To toggle the visibility of these files, you will need to use the Terminal.
+
+
+You can access the Terminal from the Utilities folder, which you can open from the Go menu or from your Applications folder.
+ Type defaults write com.apple.Finder AppleShowAllFiles YES and press Return. You will be asked for the administrator password if you don't have administrator privileges.
+ In order for the changes to take effect, you will need to restart Finder. Hold the Alt key and right-click on the Finder icon in your Dock. Click "Relaunch".
+
+
+You can also type killall Finder in the Terminal to end the Finder process. You will need to open a new Finder window to start it up again.
+ Any hidden files or folders should now be displayed. The icons will be slightly grayed out to indicate that they are hidden files.
+ Once you are finished manipulating your hidden files, you can use the Terminal to re-hide the files. Type defaults write com.apple.Finder AppleShowAllFiles NO, press Return and then relaunch the Finder again.

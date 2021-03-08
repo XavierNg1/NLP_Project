@@ -1,0 +1,40 @@
+ When you create a new website or add a new page to your site, visit Google's Submit URL page. It's as simple as typing in the URL, checking the captcha box, and hitting Submit Request.
+
+
+Easy though this is, we recommend also using both the HTML site map and the XML Sitemap methods below. These are a little more advanced to dig into for a new webmaster, but well worth the effort.;
+, The sooner you can get links to new content, the sooner Google will index it. Google's search bots tend to crawl blog content more often than regular websites. Use this to your advantage by creating a simple blog to announce new content on the site., Social networking icons encourage your users to link back to your site. This is an easy way to create backlinks and engage visitors, a win-win situation.
+ Log in to Google Search Console (formerly called Webmaster Tools) with your Google account. (Or sign up for one if you don't have one.) Verify your site here to prove that you are its owner:
+
+
+Click Add a Property and type in the domain name of your site.
+Follow the onscreen instructions to verify your site. (Download the HTML file, upload it to your website, then follow the link to confirm the upload.)
+Click Verify.
+ Google treats http://www.(yoursite) and http://(yoursite) as separate pages. Merge this into single results as follows:Repeat the verification process with the other version of your URL (with or without the "www.")
+Click the gear icon, then "Site Settings."
+Under "Preferred Domain," select the option you prefer.
+Optionally, redirect the non-preferred URL to your preferred version. This is not necessary for Google, but will help other search engines.
+ Google recommends logging in about once a month to see if there are any surprising errors or dips in traffic.This site also provides a variety of indexing-related tools. For example, you can confirm that Google can access your pages ("Fetch as Google"), notify Google of a domain change ("Change of Address"), and issue urgent blocks on content you need to take off your site ("Remove URLs").
+
+
+Right now, creating a site map is more important than playing with these tools. You will be using Search Console later in this guide, however, so stay logged in.
+ This is simply a list of links to every page you'd like indexed. Since search bots usually index by following links, this allows them to index your entire site at once.Create this list just as you would any page on your website, using HTML or blog tools.
+
+
+Some blog software already lists all your blog posts in a column visible on every page. This is an automatic site map. You can skip down to the XML sitemap instructions later in this section.
+ If your site map lists more than 100 links, Google may mistake it for spam. It's best to list just the main categories instead, divided by topic, chronology, or some other method that helps your users.For example, wikiHow's site map only lists general categories. Clicking "Aviation" takes you to a smaller "map" of Aviation-related pages.
+
+
+For very large websites, use an automatic HTML site map generator, available online or through web developer tool extensions. Make sure not to confuse this with a tool that creates XML sitemaps, described later in this section.
+ Upload the HTML site map to your website. Insert a link to the site map on your website footer, or somewhere else where it will appear on every page. Now a search bot can index your entire site even if it starts out on an obscure corner of your site.
+
+
+Site maps are useful for visitors as well as search bots. There's no need to hide this link.
+ This is another form of site map that is only visible to search bots, not to users. This is not a replacement for an HTML site map; it's generally a good idea to have both.The XML Sitemap provides meta information to search engines, notably how often pages are updated. This can increase the speed that Google indexes new or updated content on your site.This format also allows you to submit extra information about video and other files that search bots can't read. For example, this may allow Google to present a thumbnail image of the video on the search results, along with the title and duration.
+ Most webmasters choose to use an automatic Sitemap tool, such as the Google XML Sitemaps Wordpress plugin, the general-purpose XML-Sitemaps.com, or a variety of other free options you can find online.Typically, all you need to do is enter your site's domain name and download the completed Sitemap file. You could also try these alternatives:Some website hosts, including Google Sites, create the sitemap for you and do not allow you to alter it. Refer to the host's help center if you have trouble locating your sitemap file.
+If your blog has an RSS 2.0 or Atom 1.0 feed, you can submit that in place of an XML Sitemap. All you need is the URL of the feed.
+If nothing else works, make your own bare-bones Sitemap by creating a .txt document that lists all your site's page URLS on a separate line. The URLs must be UTF-8 encoded to handle special characters, but many text programs will do this for you if you check a box on the Save screen.
+If you are interested in customizing your Sitemap's metadata, you can find more information on writing Sitemaps from Google Search Console API and other online resources.
+ Upload it to the root directory, as the site map cannot list higher-level pages.Unlike the HTML site map, this one should not be accessible by users.
+ Log on to https://www.google.com/webmasters/tools/ Google Search Console]. Visit your Sitemap list by clicking "Sitemaps" on the right hand side. Click Add/Test Sitemap on the top right corner.Enter the URL of the Sitemap file you uploaded (or your blog's RSS feed), then click Test. Click Open Test Results and correct all listed errors.Check the list at the bottom of this page for more explanations on error messages.
+ Click the same Add/Test Sitemap button. This time, hit Submit Sitemap. Google's search bots now officially have access to all the juicy metadata that puts your content in the search results.
+

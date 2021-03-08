@@ -1,0 +1,21 @@
+ When it asks, choose "Try Ubuntu";
+, After you have successfully launched Ubuntu, you have to open the terminal. There are two ways to do this. One way is to press (Ctrl + Alt + T) and the other is to click on the Dash Home button (or hit the Windows logo key on your keyboard) and search for "Terminal".
+ To do this type :
+
+
+
+sudo add-apt-repository ppa:yannubuntu/boot-repair
+
+
+
+and press enter. After this type :
+
+
+
+sudo apt-get update; sudo apt-get install -y os-uninstaller && os-uninstaller
+
+
+
+and press enter.
+ Click on the dash home button and search for "OS-Uninstaller".
+ In this case it is Ubuntu.

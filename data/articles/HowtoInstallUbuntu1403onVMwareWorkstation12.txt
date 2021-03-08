@@ -1,0 +1,81 @@
+;
+,
+
+
+You can choose custom for more advanced setup options or typical if you want to setup with the defaults.
+Choose "Custom" to follow along with these instructions, then click the "Next" button.
+
+
+
+This will show the limitations of the Virtual Machine.
+You can read this then select "Next".
+
+
+
+"Installed Disk" will let you install the operating system from a CD.
+"I will install the operating system later" lets you manually install the operating system after the initial setup.
+"Installer disk image file" will let you install from an ISO type file. Ubuntu is easily downloaded in an ISO format.
+Select your option and click "Next".
+
+
+
+Insert your name, username, and password.
+The username must be in lowercase letters.
+Select "Next" when finished
+
+,
+
+
+Fill out the computer name and select the location on your host in which to save the VM.
+
+
+
+Leave this at default unless you plan on doing processor demanding tasks.
+Select "Next."
+
+,
+
+
+The default is 1 GB, this default is based on the requirements of the operating system being installed.
+If you plan on running many applications at once, consider increasing the amount of RAM
+Remember that the resources are being used from your host. If you only have 4 GB of ram available to you can't select 4 GB of RAM for the VM
+Select "Next" when finished
+
+,
+
+
+Bridged gives your VM an IP address and direct access to an external ethernet network. (requires separate NIC from the Host)
+Network Address Resolution (NAT) uses the host's IP address and gives access to the hosts internet connection
+Host-Only only connects you to a private network between the VM and the Host computer.
+For simplicity select "NAT" and select "Next".
+
+
+
+Leave this default and select "Next"
+
+,
+
+
+Also leave default and click "Next".
+
+
+
+Use the "New virtual disk" option.
+The "Use a physical disk" option will use an entire physical hard drive in your host for the disk. Caution using this option because the physical drive used will be erased.
+
+
+
+Choose the size of the virtual disk. this will be your "C:" drive on your VM
+Select "allocate all disk space now" if you want the original file stored on the host to be the entire specified size, otherwise the file will get larger as more space is needed.
+You can select "Store virtual disk as a single file" or "Split Virtual Disk into Multiple Files". The later will make it easier to move the VM to a different host.
+Click "Next" when finished.
+
+
+
+Leave as default unless you need to store it somewhere specific.
+Select "Next" when finished.
+
+
+
+Check the " Power on the virtual machine after creation" to start the VM when you press the Finish button.
+

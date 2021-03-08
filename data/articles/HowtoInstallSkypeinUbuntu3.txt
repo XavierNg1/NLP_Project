@@ -1,0 +1,23 @@
+ For most newer versions of Ubuntu, you can handle all of microphone settings from the Speaker button in your toolbar. Ensure that your microphone is properly connected, enabled, and that the levels are set correctly.Skype will sometimes override your system mixer settings and cause the microphone to not work. You can prevent Skype from taking control of your system mixer by clicking "Tools" → "Options" → "Audio settings" and unchecking the "Allow Skype to automatically adjust my mixer levels" box.
+ For many webcams that don't work, installing the "v4lcompat" driver will fix the problem. If this doesn't solve your issue, you'll need to check for instructions for your specific webcam. Not all webcam models work with Skype on Linux.
+
+
+Make sure that there are no other programs running that may be using your webcam. The webcam video feed can only be used by one program at a time.
+Open the Terminal, type sudo bash apt-get install libv4l-0:i386, and press ↵ Enter.
+Right-click on Applications and select "Properties". Click "Edit menu" and then select "Internet". Right-click on Skype and select "Properties".
+Change the command to env PULSE_LATENCY_MSEC=30 LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so skype.
+Check this Ubuntu support page if the above steps don't work. The page contains a list of webcams that should "just work", webcams that need specific tweaks to get working, and webcams that don't work at all or require a significant amount of effort to get running.
+ Skype for Linux does not officially support 640 x 480 video, which can make the image look blurry. There is a hack you can use to force 640 x 480, but it isn't guaranteed to work for everyone:
+
+
+Make sure Skype is functioning properly and then close it completely before proceeding.
+Navigate to User/.Skype/SkypeName/.
+Open config.xml in a text editor.
+Add the following lines between the <VIDEO></VIDEO> tags:
+
+<CaptureHeight>480</CaptureHeight>
+<CaptureWidth>640</CaptureWidth>
+
+
+Save and close the file. Skype should now transmit in 640 x 480 resolution. It may take a minute or two for it to "warm up" to this resolution.
+

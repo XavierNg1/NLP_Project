@@ -1,0 +1,18 @@
+ This will open the Run window.
+
+
+This method should only be attempted if all other methods have failed, as it involved manually editing Windows Registry entries.
+ If you get a "Windows cannot find secpol.msc" message, you are not running a compatible version of Windows. This feature is only available in Pro and Enterprise versions of Windows.
+ You'll see this in the left frame, and several folders will appear underneath it.
+ You'll see a list of policies appear in the right frame.
+ You may have to scroll to find it.
+,,, This will open the Run window again.
+, Expand the directory tree in the left frame to open the following location:
+
+
+HKEY_LOCAL_MACHINE → SOFTWARE → Microsoft → Windows → CurrentVersion → Policies → System → UIPI
+
+, You'll see this in the right frame after selecting the UIPI folder.
+, This will save the changes.
+ This will apply your new security policy and registry settings.
+ If your computer's security policy settings were to blame for the app not working, it should work now.

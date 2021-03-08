@@ -1,0 +1,19 @@
+ Let's use the ternary number 202212 (commonly written as 2022123, to indicate the base in which the number is written) to follow along.;
+, Start on the right with 30, then 31, then 32, until you have as many powers of three as there are digits in your ternary number. For our number, 2022123, you would go up to 35, since it has 6 digits, so you would have 243, 81, 27, 9, 3, 1.
+
+
+If you have a ternary number with n digits, you have to go up to 3n-1, and not 3n, since you start with 30, and not 31.
+ The right-most digit belongs with the right-most power of three (30), the second digit on the right belongs to the second power of three of the right (31), and so on.
+ In our example (2022123), this goes as follows;
+
+
+110 (or 30) corresponds with 2, so 2*1=1
+310 (or 31) corresponds with 1, so 1*3=3
+910 (or 32) corresponds with 2, so 2*9=18
+2710 (or 33) corresponds with 2, so 2*27=54
+8110 (or 34) corresponds with 0, so 0*81=0
+24310 (or 35) corresponds with 2, so 2*243=486
+
+, In our case that would be 1+3+18+54+0+486=563. So 563 is the decimal form of 2022123.
+ This is to prevent confusion as to what number is written in which base. In our example, it would look like this: 2022123=56310.
+ You can use this method even when you want to covert a ternary number such as 1.1 to decimal. The "1" to the left of the decimal point is equal to 30, or 1. The 1 to the right of the decimal is equal to 3-1, or .333... (1/3). Add up 1 and .333 (1/3) and you get 1.333.. (4/3).

@@ -1,0 +1,15 @@
+ The SDK starter package, which you've already downloaded, includes only a single component: the latest version of the SDK Tools. To develop an Android application, you also need to download at least one Android platform and the associated platform tools. You can add other components and platforms as well, which is highly recommended.
+ Simply click Install to accept the recommended set of components and install them
+
+,
+
+
+
+Type/Copy/Paste: sudo -s
+
+Type/Copy/Paste: cd /opt/android-sdk-linux/tools
+this will change you into the android sdk tools directory
+
+Type/Copy/Paste: ./android
+this command will run the Android graphical user interface, in most cases you will have to be root user in order for the Android SDK to download updated components to the opt/android-sdk-linux directory.To download components, use the graphical UI of the Android SDK and AVD Manager to browse the SDK repository and select new or updated components. The Android SDK and AVD Manager installs the selected components in your SDK environment.
+

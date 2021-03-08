@@ -1,0 +1,8 @@
+
+Open RegEdit:
+Go to Start Menu->Run, type regedit.
+Browse to HKEY_LOCAL_MACHINE -> SOFTWARE -> Microsoft -> Internet Explorer -> Main.
+
+,
+Add a DWORD value called TabProcGrowth with a value of 0 by right click, select New->DWORD value.
+In addition to this, IE's installer will re-disable script debugging.

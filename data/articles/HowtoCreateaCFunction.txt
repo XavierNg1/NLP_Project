@@ -1,0 +1,65 @@
+ Before call a function, first declare it using void. After declaring a function starfunction, define arguments on it using function body. When defining of a function is completed. call it anywhere using its name and a semicolon. like: starfunction();.;
+, Write these line of codes in your C++ IDE. This isn't totally necessary, but to help you learn, start with a program without a user defined function and run it.
+
+
+
+
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main ()
+{
+        std::cout<<"Data Type   Range"<<endl;
+        std::cout<<"Char                -128 to 127"<<endl;
+        std::cout<<"Short               -32,768 to 32,767"<<endl;
+        std::cout<<"Int         System dependent"<<endl;
+        std::cout<<"Long                -2,147,483,648 to 2,147,483,647"<<endl;
+        getch();
+}
+
+
+
+
+
+, It will give you ranges of different data types. Now you can add a user defined function starfunction in it.
+ Write these line of codes in you C++ IDE, compile the code, and run it.
+
+
+
+
+
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+void starfunction (); //Function Declaration
+int main ()
+{
+        starfunction(); //Function Call
+        std::cout<<"Data Type   Range"<<endl;
+        starfunction(); //Function Call
+        std::cout<<"Char                -128 to 127"<<endl;
+        std::cout<<"Short               -32,768 to 32,767"<<endl;
+        std::cout<<"Int         System dependent"<<endl;
+        std::cout<<"Long                -2,147,483,648 to 2,147,483,647"<<endl;
+        starfunction(); //Function Call
+        getch();
+}
+void starfunction() // Function Declator
+{
+        for (int a=1; a<=27; a++)
+        std::cout<<'*';
+        std::cout<<endl;
+}
+
+
+
+
+
+At the bottom of the code, in starfunction we define a for loop and print 27 (*) stars.
+When we call starfunction function anywhere else, without typing for loop it prints 27 (*) stars.
+ It will give a new look to your program.
+

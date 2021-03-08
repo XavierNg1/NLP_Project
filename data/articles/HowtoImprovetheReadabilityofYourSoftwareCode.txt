@@ -1,0 +1,11 @@
+ They may have poorer programming skills and will know less about the project. This is the person that you are writing the program for. You want the code to be easy for this person.;
+, The goal is to communicate what the code does to the next reader, not to impress him with how few lines you can take to write code.
+ But often it is published somewhere. Place the URI of the documentation for the algorithm in the comment section for the code. If the URI points to a location that is ephemeral, then copy the information somewhere where the code maintainer can find it.
+ Provide a file if possible that tools can open to incorporate the correct settings. As an example Eclipse defaults to using tabs, but tabs are rendered differently on different text editors. Using white space instead of tabs may be preferable but having a file that provides the proper settings for a project.
+ Skip lines between code that does different things, and use spaces after semicolons and commas. This will make your code look cleaner and easier to read.
+ This makes it so that it's obvious that a chunk of code is separate from another. This can help when writing a long method. Indenting inside if statements and loops will make it easy to read. This technique is called nesting, that is it shows a chunk of code is "nested" within another chunk of code, and allows the reader to easily follow the nesting pattern.
+ Assume the person reading your code knows nothing about what it's supposed to do. Your comments should explain every step of the way. All of your advanced, confusing, or complicated algorithms should be well commented. Also, try to describe what purpose the code has. For example, instead of writing "add one to variable," say why this is important in the code, as anyone can see it is incrementing the variable, e.g "increment the number of page hits by 1".
+ Objects should either reference the domain of the problem or standard software artifacts. A List is a List. You may have to create a Customer List which subclasses or implements a List. Variables and function parameters should have descriptive names.
+ This tells people who to go to to service the code.
+ Write comments to indicate your intent. Over commenting your code will lead to someone deleting your comments.
+

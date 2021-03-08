@@ -1,0 +1,7 @@
+
+Open the Command Prompt.
+Type .wmic and press Enter.
+Type .product get name and press Enter.
+Note the name of the program you want to uninstall.
+Type .product where name="Program Name" call uninstall and press Enter.
+Look for the .Method execution successful message.

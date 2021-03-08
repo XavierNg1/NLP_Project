@@ -1,0 +1,32 @@
+
+Understand that EC2 is not the cheapest.
+Understand some of the key advantages of EC2 and of Infrastructure-as-a-Service (IaaS) solutions in general.A flexible, scalable infrastructure that you can adapt to your changing needs.
+Keep in mind that you don't have to use EC2 just because you're using some other Amazon services.
+Understand the different aspects of an Amazon instance type's description.A typical name has three parts: a letter describing the instance class (R, M, C, T, G, D, I, P, X), a number describing the generation (1, 2, 3, 4, 5), and a string describing the size within that instance class and generation (small, medium, large, xlarge, 2xlarge, 4xlarge, 8xlarge, 10xlarge, 16xlarge, 32xlarge).
+Understand the ratios of the three main instance classes.
+Understand the maximum available capacities of the instances, so as to identify the limits of vertical scaling.
+Understand additional constraints you may face based on the operating system and AMI you intend to use.
+Run your application on some instances to see how it uses various resources (computing, memory, local storage, network) and what the bottlenecks are.
+Identify the key variables affecting the resource usage of your applications.
+Identify interactions and trade-offs between resource usage in your code.
+If you are considering running identical applications on multiple instances (typical for front-ends serving high loads), explore the trade-offs between horizontal scaling (using more instances) and vertical scaling (using larger instances).
+Understand the concept of an AWS region.
+Understand the concept of an AWS availability zone (AZ).The AZs are subdivisions within AWS regions.
+Understand the two different kinds of disk storage Amazon offers for its EC2 instances.Elastic Block Storage (EBS) is a high-throughput storage volume replicated across the availability zone.
+Understand the cost implications of using EBS-backed instances.The cost of an EBS instance depends on its size as specified when creating the volume.
+Understand how EBS snapshots work.
+On-demand instances are the most expensive but the easiest to get started with.On-demand instances can be spun up at any time, and are charged based on the instance type and the amount of time the instance is running.
+Spot instances are substantially cheaper than on-demand instances.
+Reservations can be made for either 1 or 3 years, with three types of payment plans: no upfront, partial upfront, and all upfront.Some aspects of a reservation cannot be changed after the reservation is made.
+Avoid the snowflake server mentality.Invest extra time and effort into writing scripts (using tools such as Ansible or Chef) that allow you to, with a single command, deploy new instances for your applications.If your application is handling variable loads from real-time web traffic, put the instances behind an elastic load balancer (ELB).
+Investigate autoscaling and use it if possible.
+Maintain all critical long-lived data outside of individual EC2 instances (with the potential exception of special instances dedicated for data stores, which you periodically back up).
+Your scripts should be able to handle updates to your application smoothly.Set alarms for the load balancers to be able to detect too few healthy hosts, unusual traffic patterns, or a large number of errors.
+Spread instances across multiple availability zones within a region for more robustness against damage to a particular availability zone.Use Route 53 health checks and failovers for cross-region redundancy in live serving.
+Understand that instances are charged by the hour.
+In the Amazon EC2 console ("Reports" section), you can get reports on the Amazon EC2 costs (this does not include some data transfer costs) and the reserved instance utilization.
+Your AWS account has access to the billing data that provides the full breakdown of costs.
+At any time, you can download detailed breakdown by hour and service type from your AWS account.
+Put all the factors together and start deciding.
+Ideally, aim to have all your instances either reserved or spot instances.
+Keep monitoring costs over and above all the other things you are monitoring.

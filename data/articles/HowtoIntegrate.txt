@@ -1,0 +1,262 @@
+ An integral ∫abf(x)dx{\displaystyle \int _{a}^{b}f(x){\mathrm {d} }x} consists of four parts.
+
+The ∫{\displaystyle \int } is the symbol for integration. It is actually an elongated S.
+
+The function f(x){\displaystyle f(x)} is called the integrand when it is inside the integral.
+
+The differential dx{\displaystyle {\mathrm {d} }x} intuitively is saying what variable you are integrating with respect to. Because (Riemann) integration is just a sum of infinitesimally thin rectangles with a height of f(x),{\displaystyle f(x),} we see that dx{\displaystyle {\mathrm {d} }x} refers to the width of those rectangles.
+
+The letters a{\displaystyle a} and b{\displaystyle b} are the boundaries. An integral does not need to have boundaries. When this is the case, we say that we are dealing with an indefinite integral. If it does, then we are dealing with a definite integral.
+
+Throughout this article, we will go over the process of finding antiderivatives of a function. An antiderivative is a function whose derivative is the original function we started with. 
+;
+, When we talk about integrals, we usually refer to Riemann integrals; in other words, summing up rectangles. Given a function f(x),{\displaystyle f(x),} a rectangle width of Δx,{\displaystyle \Delta x,} and an interval ,{\displaystyle ,} the area of the first rectangle is given by f(x1)Δx1,{\displaystyle f(x_{1})\Delta x_{1},} because it is just the base times the height (the value of the function). Similarly, the area of the second rectangle is f(x2)Δx2.{\displaystyle f(x_{2})\Delta x_{2}.} Generalizing, we say the area of the ith rectangle is f(xi)Δxi.{\displaystyle f(x_{i})\Delta x_{i}.} In summation notation, this can be represented in the following manner.
+
+
+∑i=1nf(xi)Δxi{\displaystyle \sum _{i=1}^{n}f(x_{i})\Delta x_{i}}
+
+If this is the first time you have seen a summation symbol, it may look scary...but it's not complicated at all. All this is saying is that we are summing up the area of n{\displaystyle n} rectangles. (The variable i{\displaystyle i} is known as a dummy index.) However, as you can guess, the area of all the rectangles is bound to be slightly different from the true area. We solve this by sending the number of rectangles to infinity. As we increase the number of rectangles, the area of all the rectangles better approximates the area under the curve. That's what the diagram above shows (see the tips for what the graph in the middle shows). The limit as n→∞{\displaystyle n\to \infty } is what we define as the integral of the function f(x){\displaystyle f(x)} from a{\displaystyle a} to b.{\displaystyle b.}
+
+
+∫abf(x)dx=limn→∞∑i=1nf(xi)Δxi{\displaystyle \int _{a}^{b}f(x){\mathrm {d} }x=\lim _{n\to \infty }\sum _{i=1}^{n}f(x_{i})\Delta x_{i}}
+
+
+
+Of course, this limit has to exist in order for the integral to have any meaning. If such a limit does not exist on the interval, then we say that f(x){\displaystyle f(x)} does not have an integral over the interval .{\displaystyle .} In this article (and in almost every physical application), we only deal with functions where these integrals exist. 
+
+
+, One of the most common mistakes people can make is forgetting to add the constant of integration. The reason why this is needed is because antiderivatives are not unique. In fact, a function can have an infinite number of antiderivatives. They are allowed because the derivative of a constant is 0. 
+,, This is the same power rule for derivatives, but in reverse. We increase the power by 1, and divide by the new power. Don't forget to add the constant of integration C.{\displaystyle C.}
+
+
+∫xndx=xn+1n+1+C{\displaystyle \int x^{n}{\mathrm {d} }x={\frac {x^{n+1}}{n+1}}+C}
+
+To verify that this power rule holds, differentiate the antiderivative to recover the original function.
+
+The power rule holds for all functions of this form with degree n{\displaystyle n} except when n=−1.{\displaystyle n=-1.} We will see why later.
+ Integration is a linear operator, which means that the integral of a sum is the sum of the integrals, and the coefficient of each term can be factored out, like so:
+
+
+∫(axn+bxm)dx=a∫xndx+b∫xmdx{\displaystyle \int (ax^{n}+bx^{m}){\mathrm {d} }x=a\int x^{n}{\mathrm {d} }x+b\int x^{m}{\mathrm {d} }x}
+
+This should be familiar because the derivative is also a linear operator; the derivative of a sum is the sum of the derivatives.
+
+Linearity does not apply just for integrals of polynomials. It applies to any integral where the integrand is a sum of two or more terms.
+ This is a polynomial, so using the property of linearity and the power rule, the antiderivative can easily be computed. To find the antiderivative of a constant, remember that x0=1,{\displaystyle x^{0}=1,} so the constant is really just the coefficient of x0.{\displaystyle x^{0}.}
+
+
+∫(x4+2x3−5x2−1)dx=15x5+24x4−53x3−x+C{\displaystyle \int (x^{4}+2x^{3}-5x^{2}-1){\mathrm {d} }x={\frac {1}{5}}x^{5}+{\frac {2}{4}}x^{4}-{\frac {5}{3}}x^{3}-x+C}
+
+
+, This may seem like a function that defies our rules, but a moment's glance reveals that we can separate the fraction into three fractions and apply linearity and the power rule to find the antiderivative.
+
+
+∫f(x)dx=∫2x2+3x−1x1/3dx=∫(2x2x1/3+3xx1/3−1x1/3)dx=∫(2x5/3+3x2/3−x−1/3)dx=2⋅38x8/3+3⋅35x5/3−32x2/3+C=34x8/3+95x5/3−32x2/3+C{\displaystyle {\begin{aligned}\int f(x){\mathrm {d} }x&=\int {\frac {2x^{2}+3x-1}{x^{1/3}}}{\mathrm {d} }x\\&=\int \left({\frac {2x^{2}}{x^{1/3}}}+{\frac {3x}{x^{1/3}}}-{\frac {1}{x^{1/3}}}\right){\mathrm {d} }x\\&=\int (2x^{5/3}+3x^{2/3}-x^{-1/3}){\mathrm {d} }x\\&=2\cdot {\frac {3}{8}}x^{8/3}+3\cdot {\frac {3}{5}}x^{5/3}-{\frac {3}{2}}x^{2/3}+C\\&={\frac {3}{4}}x^{8/3}+{\frac {9}{5}}x^{5/3}-{\frac {3}{2}}x^{2/3}+C\end{aligned}}}
+
+The common theme is that you must perform whatever manipulations in order to get the integral into a polynomial. From there, integration is easy. Judging whether the integral is easy enough to brute-force, or requires some algebraic manipulation first, is where the skill lies. 
+
+
+, Unlike the integration process in part 2, we also have bounds to evaluate at. 
+
+
+∫23x2dx{\displaystyle \int _{2}^{3}x^{2}{\mathrm {d} }x}
+
+
+, This theorem is in two parts. The first part was stated in the first sentence of this article: integration is the inverse operation of differentiation, so integrating and then differentiating a function recovers the original function. The second part is stated below. 
+
+Let F(x){\displaystyle F(x)} be an antiderivative of f(x).{\displaystyle f(x).} Then ∫abf(x)dx=F(b)−F(a).{\displaystyle \int _{a}^{b}f(x){\mathrm {d} }x=F(b)-F(a).}
+
+This theorem is incredibly useful because it simplifies the integral and means that the definite integral is completely determined by just the values on its boundaries. There is no need to sum up rectangles anymore to compute integrals. All we need to do now is to find antiderivatives, and evaluate at the bounds!
+
+
+, Now that we have the fundamental theorem as a tool for solving integrals, we can easily calculate the value of the integral as defined above.
+
+
+∫23x2dx=13x3|23=13(3)3−13(2)3=193{\displaystyle {\begin{aligned}\int _{2}^{3}x^{2}{\mathrm {d} }x&={\frac {1}{3}}x^{3}{\Bigg |}_{2}^{3}\\&={\frac {1}{3}}(3)^{3}-{\frac {1}{3}}(2)^{3}\\&={\frac {19}{3}}\end{aligned}}}
+
+Again, the fundamental theorem of calculus does not just apply to functions like f(x)=x2.{\displaystyle f(x)=x^{2}.} The fundamental theorem can be used to integrate any function, as long as you can find an antiderivative.
+ Let's see what happens here.
+
+
+∫32x2dx=13x3|32=13(2)3−13(3)3=−193{\displaystyle {\begin{aligned}\int _{3}^{2}x^{2}{\mathrm {d} }x&={\frac {1}{3}}x^{3}{\Bigg |}_{3}^{2}\\&={\frac {1}{3}}(2)^{3}-{\frac {1}{3}}(3)^{3}\\&=-{\frac {19}{3}}\end{aligned}}}
+
+We just obtained the negative of the answer we got before. This illustrates an important property of definite integrals. Swapping the boundaries negates the integral.
+
+
+∫baf(x)dx=−∫abf(x)dx{\displaystyle \int _{b}^{a}f(x){\mathrm {d} }x=-\int _{a}^{b}f(x){\mathrm {d} }x}
+
+
+
+
+, In the following steps, we list commonly encountered functions like the exponential and trigonometric functions. All are widely encountered, so knowing what their antiderivatives are is crucial to building up integrating skills. Remember that indefinite integrals have an extra C,{\displaystyle C,} because the derivative of a constant is 0.
+
+
+∫exdx=ex+C{\displaystyle \int e^{x}{\mathrm {d} }x=e^{x}+C}
+
+
+∫axdx=axln⁡a+C{\displaystyle \int a^{x}{\mathrm {d} }x={\frac {a^{x}}{\ln a}}+C}
+
+
+, These are just the derivatives applied backwards and should be familiar. The sines and cosines are encountered far more often and should definitely be memorized. Hyperbolic analogues are similarly found, though they are encountered less often.
+
+
+∫sin⁡xdx=−cos⁡x+C{\displaystyle \int \sin x{\mathrm {d} }x=-\cos x+C}
+
+
+∫cos⁡xdx=sin⁡x+C{\displaystyle \int \cos x{\mathrm {d} }x=\sin x+C}
+
+
+∫sec2⁡xdx=tan⁡x+C{\displaystyle \int \sec ^{2}x{\mathrm {d} }x=\tan x+C}
+
+
+∫csc2⁡xdx=−cot⁡x+C{\displaystyle \int \csc ^{2}x{\mathrm {d} }x=-\cot x+C}
+
+
+∫sec⁡xtan⁡xdx=sec⁡x+C{\displaystyle \int \sec x\tan x{\mathrm {d} }x=\sec x+C}
+
+
+∫csc⁡xcot⁡xdx=−csc⁡x+C{\displaystyle \int \csc x\cot x{\mathrm {d} }x=-\csc x+C}
+
+
+, These should not really be considered an exercise in "memorization." As long as you are familiar with the derivatives, then most of these antiderivatives should be familiar as well.
+
+
+∫11−x2dx=sin−1⁡x+C{\displaystyle \int {\frac {1}{\sqrt {1-x^{2}}}}{\mathrm {d} }x=\sin ^{-1}x+C}
+
+
+∫−11−x2dx=cos−1⁡x+C{\displaystyle \int {\frac {-1}{\sqrt {1-x^{2}}}}{\mathrm {d} }x=\cos ^{-1}x+C}
+
+
+∫11+x2dx=tan−1⁡x+C{\displaystyle \int {\frac {1}{1+x^{2}}}{\mathrm {d} }x=\tan ^{-1}x+C}
+
+
+, Previously, we said that the function f(x)=x−1,{\displaystyle f(x)=x^{-1},} or f(x)=1x,{\displaystyle f(x)={\frac {1}{x}},} was an exception to the power rule. The reason is because the antiderivative of this function is the logarithmic function.
+
+
+∫1xdx=ln⁡|x|+C{\displaystyle \int {\frac {1}{x}}{\mathrm {d} }x=\ln |x|+C}
+
+(Sometimes, authors like to put the dx{\displaystyle {\mathrm {d} }x} in the numerator of the fraction, so it reads like ∫dxx.{\displaystyle \int {\frac {{\mathrm {d} }x}{x}}.} Be aware of this notation.)
+
+The reason for the absolute value in the logarithm function is subtle, and requires a more thorough understanding of real analysis in order to fully answer. For now, we will just live with the fact that the domains become the same when the absolute value bars are added.
+ Our function is given as f(x)=2cos⁡x+tan2⁡x−6.{\displaystyle f(x)=2\cos x+\tan ^{2}x-6.} Here, we don't know the antiderivative of tan2⁡x,{\displaystyle \tan ^{2}x,} but we can use a trigonometric identity to rewrite the integrand in terms of a function which we know the antiderivative of - namely, 1+tan2⁡x=sec2⁡x.{\displaystyle 1+\tan ^{2}x=\sec ^{2}x.}
+
+
+∫π/4π/3f(x)dx=∫π/4π/3(2cos⁡x+tan2⁡x−6)dx=∫π/4π/3(2cos⁡x+sec2⁡x−7)dx=(2sin⁡x+tan⁡x−7x)|π/4π/3=(2sinπ3+tanπ3−7π3)−(2sinπ4+tanπ4−7π4)=23−2−1−7π12{\displaystyle {\begin{aligned}\int _{\pi /4}^{\pi /3}f(x){\mathrm {d} }x&=\int _{\pi /4}^{\pi /3}(2\cos x+\tan ^{2}x-6){\mathrm {d} }x\\&=\int _{\pi /4}^{\pi /3}(2\cos x+\sec ^{2}x-7){\mathrm {d} }x\\&=(2\sin x+\tan x-7x){\Big |}_{\pi /4}^{\pi /3}\\&=\left(2\sin {\frac {\pi }{3}}+\tan {\frac {\pi }{3}}-{\frac {7\pi }{3}}\right)-\left(2\sin {\frac {\pi }{4}}+\tan {\frac {\pi }{4}}-{\frac {7\pi }{4}}\right)\\&=2{\sqrt {3}}-{\sqrt {2}}-1-{\frac {7\pi }{12}}\end{aligned}}}
+
+If you need a decimal approximation, you can use a calculator. Here, 23−2−1−7π12≈−0.7827.{\displaystyle 2{\sqrt {3}}-{\sqrt {2}}-1-{\frac {7\pi }{12}}\approx -0.7827.}
+
+
+, Even functions are functions with the property that f(−x)=f(x).{\displaystyle f(-x)=f(x).} In other words, you should be able to replace every x{\displaystyle x} with a −x{\displaystyle -x} and get the same function. An example of an even function is x2.{\displaystyle x^{2}.} Another example is the cosine function. All even functions are symmetric about the y-axis. 
+
+
+∫−11(cos⁡x+x4)dx{\displaystyle \int _{-1}^{1}(\cos x+x^{4}){\mathrm {d} }x}
+
+Our integrand is even. We can immediately integrate by using the fundamental theorem of calculus, but if we look more carefully, we see that the bounds are symmetric about x=0.{\displaystyle x=0.} That means that the integral from -1 to 0 is going to give us the same value as the integral from 0 to 1. So what we can do is we can change the bounds to 0 and 1 and factor out a 2.
+
+
+∫−11(cos⁡x+x4)dx=2∫01(cos⁡x+x4)dx{\displaystyle \int _{-1}^{1}(\cos x+x^{4}){\mathrm {d} }x=2\int _{0}^{1}(\cos x+x^{4}){\mathrm {d} }x}
+
+
+
+It might not seem like much to do this, but we will immediately see that our work is simplified. After finding the antiderivative, notice that we only need to evaluate it at x=1.{\displaystyle x=1.} The antiderivative at x=0{\displaystyle x=0} will not contribute to the integral. 
+
+
+2∫01(cos⁡x+x4)dx=2sin⁡1+25{\displaystyle 2\int _{0}^{1}(\cos x+x^{4}){\mathrm {d} }x=2\sin 1+{\frac {2}{5}}}
+
+
+
+In general, whenever you see an even function with symmetric boundaries, you should perform this simplification in order to make less arithmetic mistakes.
+
+
+∫−aaf(x)dx=2∫0af(x)dx,  f(x) even{\displaystyle \int _{-a}^{a}f(x){\mathrm {d} }x=2\int _{0}^{a}f(x){\mathrm {d} }x,\ \ f(x)\ {\mathrm {even} }}
+
+
+
+
+, Odd functions are functions with the property that f(−x)=−f(x).{\displaystyle f(-x)=-f(x).} In other words, you should be able to replace every x{\displaystyle x} with a −x{\displaystyle -x} and then get the negative of the original function. An example of an odd function is x3.{\displaystyle x^{3}.} The sine and tangent functions are also odd. All odd functions are symmetric about the origin (imagine rotating the negative part of the function by 180° - it will then stack on top of the positive part of the function). If the bounds are symmetric, then the integral will be 0.
+
+
+∫−π/2π/2(2x3+2sin⁡x)dx{\displaystyle \int _{-\pi /2}^{\pi /2}(2x^{3}+2\sin x){\mathrm {d} }x}
+
+We could evaluate this integral directly...or we can recognize that our integrand is odd. Furthermore, the boundaries are symmetric about the origin. Therefore, our integral is 0. Why is this the case? It is because the antiderivative is even. Even functions have the property that f(−x)=f(x),{\displaystyle f(-x)=f(x),} so when we evaluate at the bounds −a{\displaystyle -a} and a,{\displaystyle a,} then F(−a)=F(a){\displaystyle F(-a)=F(a)} immediately implies that F(a)−F(−a)=0.{\displaystyle F(a)-F(-a)=0.}
+
+
+∫−π/2π/2(2x3+2sin⁡x)dx=0{\displaystyle \int _{-\pi /2}^{\pi /2}(2x^{3}+2\sin x){\mathrm {d} }x=0}
+
+
+
+The properties of these functions are very potent in simplifying the integrals, but the boundaries must be symmetric. Otherwise, we will need to evaluate the old way.
+
+
+∫−aaf(x)dx=0,  f(x) odd{\displaystyle \int _{-a}^{a}f(x){\mathrm {d} }x=0,\ \ f(x)\ {\mathrm {odd} }}
+
+
+
+
+, U-substitution is a technique that changes variables with the hope of obtaining an easier integral. As we will see, it is the analogue of the chain rule for derivatives. 
+, What do we do when the exponent has a coefficient in it? We use u-substitution to change variables. It turns out that these kinds of u-subs are the easiest to perform, and they are done so often, the u-sub is often skipped. Nevertheless, we will show the entire process.
+
+
+∫eaxdx{\displaystyle \int e^{ax}{\mathrm {d} }x}
+
+
+, We choose u=ax{\displaystyle u=ax} so that we get a eu{\displaystyle e^{u}} in the integrand, a function whose antiderivative we are familiar with - itself. Then we must replace dx{\displaystyle {\mathrm {d} }x} with du,{\displaystyle {\mathrm {d} }u,} but we need to make sure that we are keeping track of our terms. In this example, du=adx,{\displaystyle {\mathrm {d} }u=a{\mathrm {d} }x,} so we need to divide the whole integral by a{\displaystyle a} to compensate.
+
+
+∫eaxdx=1a∫eudu{\displaystyle \int e^{ax}{\mathrm {d} }x={\frac {1}{a}}\int e^{u}{\mathrm {d} }u}
+
+
+, For indefinite integrals, you must rewrite in terms of the original variable.
+
+
+∫eaxdx=1aeax+C{\displaystyle \int e^{ax}{\mathrm {d} }x={\frac {1}{a}}e^{ax}+C}
+
+
+, This is a definite integral, so we need to evaluate the antiderivative at the boundaries. We will also see that this u-sub is a case where you need to "back-substitute." 
+
+
+∫01x2x+3dx{\displaystyle \int _{0}^{1}x{\sqrt {2x+3}}{\mathrm {d} }x}
+
+
+, Make sure to change your boundaries as well according to your substitution. We choose u=2x+3{\displaystyle u=2x+3} so that we simplify the square root. Then du=2dx,{\displaystyle {\mathrm {d} }u=2{\mathrm {d} }x,} and the bounds then go from 3 to 5. However, after replacing the dx{\displaystyle {\mathrm {d} }x} with a du,{\displaystyle {\mathrm {d} }u,} we still have an x{\displaystyle x} in the integrand.
+
+
+∫01x2x+3dx=12∫35xudu{\displaystyle \int _{0}^{1}x{\sqrt {2x+3}}{\mathrm {d} }x={\frac {1}{2}}\int _{3}^{5}x{\sqrt {u}}{\mathrm {d} }u}
+
+
+, This is the back-substitution that we were talking about earlier. Our u-sub did not get rid of all the x{\displaystyle x} terms in the integrand, so we need to back-sub to get rid of it. We find that x=u−32.{\displaystyle x={\frac {u-3}{2}}.} After simplifying, we get the following.
+
+
+12∫35xudu=14∫35(u−3)udu{\displaystyle {\frac {1}{2}}\int _{3}^{5}x{\sqrt {u}}{\mathrm {d} }u={\frac {1}{4}}\int _{3}^{5}(u-3){\sqrt {u}}{\mathrm {d} }u}
+
+
+, An advantage when dealing with definite integrals is that you do not need to rewrite the antiderivative in terms of the original variable before evaluating. Doing so would introduce needless complications. 
+
+
+14∫35(u−3)udu=14∫35(u3/2−3u1/2)du=14(25u5/2−3⋅23u3/2)|35=14(25(5)5/2−2⋅(5)3/2−25(3)5/2+2⋅(3)3/2)=14(−65⋅33/2+2⋅33/2)=144533/2=335{\displaystyle {\begin{aligned}{\frac {1}{4}}\int _{3}^{5}(u-3){\sqrt {u}}{\mathrm {d} }u&={\frac {1}{4}}\int _{3}^{5}(u^{3/2}-3u^{1/2}){\mathrm {d} }u\\&={\frac {1}{4}}\left({\frac {2}{5}}u^{5/2}-3\cdot {\frac {2}{3}}u^{3/2}\right){\Bigg |}_{3}^{5}\\&={\frac {1}{4}}\left({\frac {2}{5}}(5)^{5/2}-2\cdot (5)^{3/2}-{\frac {2}{5}}(3)^{5/2}+2\cdot (3)^{3/2}\right)\\&={\frac {1}{4}}\left(-{\frac {6}{5}}\cdot 3^{3/2}+2\cdot 3^{3/2}\right)\\&={\frac {1}{4}}{\frac {4}{5}}3^{3/2}\\&={\frac {3{\sqrt {3}}}{5}}\end{aligned}}}
+
+
+, The integration by parts formula is given below. The main goal of integration by parts is to integrate the product of two functions - hence, it is the analogue of the product rule for derivatives. This technique simplifies the integral into one that is hopefully easier to evaluate.
+
+
+∫udv=uv−∫vdu{\displaystyle \int u{\mathrm {d} }v=uv-\int v{\mathrm {d} }u}
+
+
+, We know that the derivative of ln⁡x{\displaystyle \ln x} is 1x,{\displaystyle {\frac {1}{x}},} but not the antiderivative. It turns out that this integral is a simple application of integration by parts. 
+
+
+∫ln⁡xdx{\displaystyle \int \ln x{\mathrm {d} }x}
+
+
+, We choose u=ln⁡x{\displaystyle u=\ln x} because the derivative is algebraic and therefore easier to manipulate. Then dv=dx.{\displaystyle {\mathrm {d} }v={\mathrm {d} }x.} Therefore, du=1xdx{\displaystyle {\mathrm {d} }u={\frac {1}{x}}{\mathrm {d} }x} and v=x.{\displaystyle v=x.} Substituting all of these into the formula, we obtain the following.
+
+
+∫ln⁡xdx=xln⁡x−∫dx{\displaystyle \int \ln x{\mathrm {d} }x=x\ln x-\int {\mathrm {d} }x}
+
+We converted the integral of a logarithm into the integral of 1, which is trivial to evaluate.
+
+
+
+∫ln⁡xdx=xln⁡x−x+C{\displaystyle \int \ln x{\mathrm {d} }x=x\ln x-x+C}
+
+

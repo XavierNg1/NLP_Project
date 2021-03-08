@@ -1,0 +1,26 @@
+ The task should be something you are confident that you can complete in an hour or two. For example, "Add 'maintenance history' to the moving-van database code." You may find it helpful to outline what you plan to do before you begin to code.;
+, Stating the problem in words to another person helps focus your mind and helps engage your partner's mind. It also ensures that you both know what you are working on right now.
+
+
+
+When you're the driver, complete the current tiny goal as quickly as you can, ignoring larger issues. Trust the observer to be your safety net.
+When you're the observer, read the code that the driver is writing as he or she writes it. Your job is code review. You should pay total attention, aiming to let nothing get by you. Think about possible bugs, larger issues, and ways to simplify or improve the design. Bring up errors and code that you find unreadable right away. Wait until the current tiny goal is done to bring up larger issues and ideas for design improvement. Jot these later tasks down so the driver can stay focused on the present tiny task. For example, if you see that the current code fails to account for a null input, write down on a piece of paper, "Add unit test for null input."
+When you're the observer, don't dictate the code. The driver should be actively thinking about how to achieve the current task, not just typing passively. And as the observer, you should exploit the fact that you don't need to invent the small details; you can and should think at a higher level. Saying "That looks right. How about handling the case where we're passed a null pointer now?" is better than "OK, now type 'if (s == NULL) { return ...'"
+
+, Say what you are about to do, ask for an implementation idea, ask for a better way to solve the problem at hand, bring up alternative ideas, point out possible inputs that the code doesn't cover, suggest clearer names for variables and subroutines, suggest ways to implement the code in smaller steps, tell the driver that little bit of API knowledge that they need right at the moment they need it, etc. Listen a lot, too, of course. When people are pairing well, they are talking back and forth almost non-stop. Here are some common things to say while pairing:
+
+
+"Do you think this is a valid test?"
+"Does that look correct to you?"
+"What's next?"
+"Trust me" (when it's easier to write a little code to make your point than to say it out loud)
+
+, As you are working together, you will find yourself getting out of sync: becoming unsure what your partner is doing, or becoming unclear about the current task. This is normal. When it happens, sync up again. The key to good pairing is to sync up very frequently—within seconds or a minute of noticing that you're out of sync. If you are spending five minutes (or more) out of sync, you might as well be coding solo, because it's the frequent re-syncing that creates the synergy of pairing.
+
+
+When you can, say what you are about to do before you do it. Better yet, ask your partner; for example, "Shall we write the test for the null case now?" Sometimes, though, you have to write code in order to understand your thought, and that's okay. Then you can say you are doing that: "I need to type this to see if it's a good idea." Best to keep that kind of exploration to less than a minute, though.
+When your partner asks if you agree with something, like "Shall we write the test for the null case now?" or "I think this method can be deleted now. Do you agree?", say "Yes" or "No" clearly and immediately.
+It's okay to pass the keyboard back and forth very frequently. For example, sometimes it's much easier to "say" something by typing it in code than by trying to explain it out loud. So let the observer grab the keyboard and type. Then you can switch back, or let the observer keep driving, whichever makes more sense right then.
+ For example, each time you get a test to pass, give each other a high five. If you also high-five each time you get a new test to fail, you'll really get into the groove of collaborative programming and test-driven design.
+ This keeps you both fully engaged, both of you in tune with the low-level details and the big picture. Also, driving full-blast can tire you out, and it's hard to maintain the vigilance required of the observer role for longer than half an hour. Switching roles recharges you.
+

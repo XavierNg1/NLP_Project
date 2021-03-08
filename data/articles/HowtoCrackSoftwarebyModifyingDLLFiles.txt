@@ -1,0 +1,10 @@
+ In order to crack most software, you will need to have a good grasp on assembly, which is a low-level programming language. Assembly is derived from machine language, and each assembly language is specific to the type of computer you are using. Most assembly language is expressed through binary and hexadecimal.;
+, In order to examine and modify DLLs, you will need several different tools. W32DASM is a software disassembler that allows you to pick apart programs. SoftIce is a Windows debugging tool. You'll also want a good coding text editor, such as UltraEdit or Notepad++.
+ This will show you what DLL files are being loaded by the program. Use W32DASM to examine which functions are being called from the DLL.
+ Many programs use a timer for copy protection, and when the timer runs out, the user is no longer able to access the program. The goal is to find this counter code, and then bypass it.
+
+
+If the program you are cracking uses a different form of protection, you will need to look for that instead.
+ Once you've isolated the counter function, set SoftIce to break when it is encountered. This will allow you to look at the exact code that is occurring when the counter function is called.
+ Now that you've found the code for the counter function, you can change the code so that the counter never reaches the point where it shuts you out of the program. For example, you could make it so that the counter cannot count up to the break limit or you can bypass the counter by jumping over it.
+

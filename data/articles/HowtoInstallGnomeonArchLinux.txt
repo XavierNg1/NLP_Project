@@ -1,0 +1,6 @@
+ This should bring up a very basic GUI as pictured. If you experience an error visit the Arch Linux wiki for troubleshooting. Type exit to exit the GUI environment.;
+, These are font packages and are recommended in order to achieve a visually pleasing experience. These can be installed with the pacman -S ttf-dejavu ttf-ms-fonts command.
+ Optionally you can also install gnome-extra and gnome-system-tools. Run pacman -S gnome gnome-extra gnome-system-tools to achieve this.
+ This is only necessary if you did not install gnome-extra. Use pacman -S gdm to install it.
+ Refer to the Arch Beginners Guide for troubleshooting.
+, This command ensures that the GNOME Display Manager (GDM) is starting automatically on every boot providing the graphical login manager for your session., When your computer boots back into Arch you should be greeted with the GDM login screen.

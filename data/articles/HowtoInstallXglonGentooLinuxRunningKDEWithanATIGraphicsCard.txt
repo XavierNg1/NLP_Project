@@ -1,0 +1,14 @@
+ There's a superb and up-to-date list maintained by the Gentoo Wiki.;
+, This branch is a subset of all of the available packages which are seen by Gentoo dev's as... well... unstable. They're fully functional, but they haven't been tested enough to make sure that they're free of bugs. If you enable this branch, a whole wealth of easily mergeable software will be available. But it could wreck your system!
+
+In order to use this entire branch, simply edit /etc/make.conf and change the line starting ACCEPT_KEYWORDS= in order that there is a ~ (a tilde) in front of the variable (which should be your architecture). For example, you could have ACCEPT_KEYWORDS="~amd64", but you will most likely have ~x86.
+Doing an emerge -Uv world after this point will take a very long time, and could irrevocably destroy your system. In other words - don't.
+
+
+Or, add to /etc/portage/package.keywords every package henceforth in this tutorial which you attempt to emerge and get denied because it's "masked by ~". This would take the form of a line such as app-office/gnumeric ~x86, where x86 is replaced by your architecture and app-office/gnumeric is replaced by the package in question.
+
+
+
+This will take a while, so doze off briefly and watch a bit of TV. On your return, or its completion, check to see if the last few lines tell you that portage needs updating. If so, then you may need to emerge portage. It's possible that this will be a large change (i.e. a profile changing change).
+ If you do not have it, you will need to install it.
+

@@ -1,0 +1,15 @@
+ All colors on a computer screen are determined by three values: red, green, and blue. All colors of light can be created by combining these three types of light in different proportions.On a computer screen, red, green, and blue can each be assigned any value from 0 to 255 (for a total of 256 possible values).
+
+
+This doesn't match the "primary" colors you learned in school, because that color system is based on physical pigment (like paint), not light. The paint system is sometimes called "subtractive color system" and the light system (the rgb system described here) "additive.", HTML uses hexadecimal to describe colors. This is convenient, since a two-digit hexadecimal number can communicate exactly 25610 possible values. This isn't a coincidence; the number 25610 is due to limitations of old hardware, which could only handle 1000000002 colors, or 25610. Because 24 = 1610, any binary system can be easily converted to a hexadecimal system with ¼ as many digits.
+
+
+The subscript numbers tell you which base the numbers is written in. Base2 is binary, base10 is ordinary decimal, and base16 is hexadecimal.
+ The hexadecimal color system is easy to understand, once you know how it works. The first two digits are the red value, the next two are the green value, and the last two are the blue value. Here are some examples:
+
+
+#000000 is black, while #FFFFFF is white.
+Any color with equal r, g, and b values (besides black and white) is a shade of grey, such as #121212, #5A5A5A, or #C0C0C0
+#003000 is a very dark green. #003F00 is barely any lighter (you've only added F, or 1610 green), but #00FF00 is the brightest possible green (adding an additional C0, or 19210).
+More complex colors are created by using all three types of light. Try to guess #7FFFD4, #8A2BE2, or #A0522D.
+

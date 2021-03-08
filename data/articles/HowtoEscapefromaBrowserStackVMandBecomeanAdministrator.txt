@@ -1,0 +1,12 @@
+ You may either patch it yourself (beyond the scope of this article), or you can download a prepatched one within the virtual machine such as this one. This patched cmd.exe does not follow policies to disable cmd, so it can be used in this case.;
+, You might have to click "Run" on the security dialogue box.
+ But now, you want to obtain Administrator. How can you do that? A flaw in BrowserStack lets you do just that. Type the following simple command into the command prompt "explorer C:\Windows"
+
+, You'll want to find the file descriptively named "Untitled" or "Untitled.txt". Double click on the file to open it in Notepad.
+ Open the System32 folder, and find cmd.exe inside it. You can start typing "cmd" on your keyboard while inside the window and it should help you locate it.
+ Then select "Run as...".
+, Select and copy the long and complicated "machine_key" value (The stuff in between the quotes, not including the quotes). This is the randomised administrator password, which you now have.
+ The command prompt that appears will be the new admin shell. You may now do whatever you please with admin privileges!
+
+, Type "taskmgr" (without quotes) in the admin command prompt and hit enter. Inside it, one by one select "explorer.exe", and anything else you might want to end. Go up to File > New Task, type "explorer", and you'll be greeted with a full windows XP / 2003R2 operating system.
+

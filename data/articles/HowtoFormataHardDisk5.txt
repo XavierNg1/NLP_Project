@@ -1,0 +1,20 @@
+ When securely wiping your hard drive, there is absolutely no way that you can recover it. A properly wiped hard drive would take a government supercomputer days to potential recover a fragment of a file. Because of this, ensure that you have everything saved that you need.
+
+
+See this guide for details on backing up your data.
+ DBAN is a hard drive formatting program that is designed to securely wipe the data from the drive by overwriting it multiple times. This will prevent the data from being restored using a data recovery program.
+
+
+DBAN does not work for solid state drives (SSD). You will need to use a different program, such as Blancco.
+ DBAN is downloaded as an ISO file, which is a disc image. Burning the ISO to a disc will allow you to boot directly into the DBAN interface.
+
+
+See this guide for details on burning ISOs to DVD.
+ Insert the DBAN disc into your computer and reboot. Select the disc drive as your primary boot device.
+
+
+Windows - You will need to set your optical drive as the boot drive from the BIOS menu. See this guide for details on setting your boot order.
+OS X - Press and hold C while your computer is rebooting. After a little while DBAN will boot.
+ Press ↵ Enter on the DBAN main screen, and then select your drive with the arrow keys. Be sure to pick the correct drive if you have multiple available.
+ "DoD" will securely erase your data, and is a good enough wiping method for the majority of users. If you have extremely sensitive information, select the "8-Pass PRNG Stream". This will wipe your hard drive eight times with random numbers, completely eradicating your data.
+ Once you've selected your wiping method, the formatting process will begin. Wiping with DBAN can take several hours to several days, depending on the wiping method and size of the hard drive.

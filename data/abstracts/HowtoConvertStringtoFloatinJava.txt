@@ -1,0 +1,32 @@
+
+Open the IDE.
+Copy and paste the following code:
+
+
+
+
+
+class Convert 
+{
+public static void main(String[] args)
+{
+try
+{
+String str = "124863.02";
+float num = (Float.parseFloat(str))+36.97;
+System.out.println(num);
+}
+catch(NumberFormatException e)
+{
+System.out.println("Invalid String for conversion to Float");
+}
+}
+}
+
+
+
+
+
+,
+Run the program.
+Understand what the program does.

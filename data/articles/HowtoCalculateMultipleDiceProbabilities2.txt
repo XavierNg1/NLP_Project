@@ -1,0 +1,4 @@
+, This can be tedious for large numbers of dice, but is fairly straightforward. This is equivalent to the finding all partitions of k into exactly n parts with no part larger than r. An example for n=5, r=6, and k=12 is shown as an example. In order to ensure that the count is both exhaustive and that no partition is counted twice, the partitions are presented in lexicographic order and the dice in each partition in non-decreasing order.
+ This is why they must be listed, not simply counted. In a smaller 3 die example, the partition 123 covers 6 possibilities (123, 132, 213, 231, 312, 321) while the partition 114 covers only 3 (114, 141, 411) and 222 only includes itself. Use the multinomial formula to compute the number of ways to permute the digits in each partition. This information has been added to the table from the previous section.
+, Since each die has r equally probable faces, this is simply rn.
+

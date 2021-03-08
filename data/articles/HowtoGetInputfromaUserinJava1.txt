@@ -1,0 +1,77 @@
+ You can either choose to import the java.util.Scanner class or the entire java.util package. To import a class or a package, add one of the following lines to the very beginning of your code:
+
+
+
+
+import java.util.Scanner; // This will import just the Scanner class.
+import java.util.*; // This will import the entire java.util package.
+
+
+
+;
+, System.in is the standard input stream that is already open and ready to supply input data. Typically this stream corresponds to keyboard input.
+
+
+
+
+Scanner userInputScanner = new Scanner(System.in);
+
+
+
+
+
+, The Scanner class supports getting primitives such as int, byte, short, long in addition to getting strings. Here are some methods that are available through the Scanner class:
+
+Read a byte - nextByte()
+
+Read a short - nextShort()
+
+Read an int - nextInt()
+
+Read a long - nextLong()
+
+Read a float - nextFloat()
+
+Read a double - nextDouble()
+
+Read a boolean - nextBoolean()
+
+Read a complete line - nextLine()
+
+Read a word - next()
+
+
+Here is an example of a program that uses different methods of the Scanner class to get different types of input:
+
+
+
+
+import java.util.Scanner;
+ 
+public class ScannerExample {
+    public static void main(String[] args) {
+        // Initiate a new Scanner
+        Scanner userInputScanner = new Scanner(System.in);
+ 
+        // Testing nextLine();
+        System.out.printIn("\nWhat is your name? ");
+        String name = userInputScanner.nextLine();
+ 
+        // Testing nextInt();
+        System.out.print("How many cats do you have? ");
+        int numberOfCats = userInputScanner.nextInt();
+ 
+        // Testing nextDouble();
+        System.out.print("How much money is in your wallet? $");
+        double moneyInWallet = userInputScanner.nextDouble();
+ 
+        System.out.println("\nHello " + name + "! You have " + numberOfCats
+                + (numberOfCats > 1 ? " cats" : " cat")
+                + " and $" + moneyInWallet + " in your wallet.\n");
+    }
+}
+
+
+
+
+

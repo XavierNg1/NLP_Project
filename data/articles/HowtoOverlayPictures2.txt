@@ -1,0 +1,65 @@
+ This method will instruct you to use the "magic wand" tool, which quickly removes sections of your picture in a particular color so you can isolate the portion you want to transfer. However, this will work much better on images with a simple one color background with little shading, or when transferring portions of an image with a strong outline to set it apart from the background.
+
+
+If the portion you want to remove is on a complex background, you may need to skip straight to "Choose a selection tool" in this method and outline the piece you want to transfer by hand.
+For a quick and easy method without making a convincing photo merge, see Overlaying Photos Quickly.
+ The best way to overlay pictures is to use photo manipulation software. If you don't own a professional program such as Photoshop or PaintShop Pro, you can download a free alternative like Pixlr, GIMP, or Paint.NET.
+
+
+If you use a Mac, search your computer for GIMP before downloading one of these programs. You may find your computer came with it already installed.
+Of the free alternatives, GIMP is the most similar to professional programs.If you're only interested in overlaying photos, the other free programs may be simpler to use.
+Before you try to use software not listed here, make sure it supports layering. Do this by searching for "Layers" in that program's Help menu, or reading the features description on the program's website.
+This method will not work for MSPaint, Windows Paint, or Inkscape.
+ This is the picture that will serve as the background for the smaller picture you add on top of it.
+
+
+If double clicking the image file doesn't take you to the photo editing program, you may need to open the photo editing program first and use the File → Open command from the top menu to select the image file.
+ This is the one that contains elements that will be superimposed onto your background. If you go to File → Open from within your photo-editor, it should open the second image in a new image pane automatically, leaving your first one intact. From here on out, you can toggle between the two, clicking and dragging one off to the side slightly if it makes each pane easier to see. You can also resize each pane by dragging the bottom right corner.
+
+
+The easiest image to work with is one in which the object you are selecting contrasts sharply with the background.
+ Go to File → Save As and change the name of this image to anything you like. Now you can edit this image without destroying the original.
+
+
+You need to select Save As and change the name in order to create a duplicate file. If you only click Save, or click Save As but fail to change the name of the file, you will still be working on the original.
+Once you have the new file, remember to save changes to it frequently with File → Save to avoid losing your work.
+ Click the image of the magic wand on the grid of tool images on the left hand side. This is a tool that allows you to select large swaths of color within a certain color range simply by clicking on any part of the image; the pixel you select will establish a baseline for the color range being selected.
+
+
+The magic wand image looks like a glowing light at the end of a stick. If you aren't sure whether you've chosen the right tool, keep your cursor over the image for a couple seconds until the tool name appears.
+In GIMP, this is called the "fuzzy select" tool, but has a similar image.
+ The settings should appear above the image when you select the tool. Make sure that the “Contiguous” box is checked so you only remove groups of nearby pixels, instead of pixels in that color range from anywhere in the image. Adjust the tolerance in accordance with how uniform the background is and how much it contrasts with the image you wish to select: low tolerance will limit the amount of color selected and is good the fore- and background are similar colors, whereas high tolerance will result in a broader color selection and is good for images with sharp contrast.
+ First, click a color in the undesired portion of the image to select an area in that color. You should see a flashing line outlining the area you've selected. Hold down Shift or Ctrl as you click additional areas until you've selected most of the unwanted area immediately surrounding the image to be transferred.
+
+
+You will most likely need to adjust the tolerance a few times as you go, using the settings on the magic wand tool. Adjust it to a lower tolerance if it selects pieces of the image you want to transfer, and higher tolerance if it selects tiny areas.
+Click Edit → Undo whenever an undesirable selection is made. This should undo the result of your last click, not return to the original image. Alternatively, you can use the keyboard: press Ctrl + Z on a Windows computer, or command + Z on a Mac.
+If you cannot successfully select sizeable portions of the undesired section without including pieces of the image you want to transfer, you probably need to skip straight to "Choose a selection tool" and manually trace your image with the lasso tool.
+ The resulting image may have harsh or strange-looking edges, which can make the final result seem unnatural or obviously manipulated. You can adjust this by using a "feather tool" or "feather setting" to soften the edge, but be aware that different programs require you to access the feather ability in different ways:
+
+
+In Photoshop, right click the selection and click Feather.In Gimp, use the top menu: Select → Feather.In Paint.NET, you will need to download the Feather Plugin and open that plugin's menu to use this tool.
+In Pixlr or Paint Shop Pro, click the selection tool and alter its feather setting before making a selection.In any program, you should see an option to enter a numeric amount determining how extreme the feathering effect will be, measured in pixels. Start with 1 or 2 pixels for this method to avoid losing fine details.
+ You can also use the Edit → Cut command on the top menu. It's a good idea to do this periodically as you select pieces of the picture, instead of trying to select the entire area at once and deleting it in one go. This makes it easier to avoid mistakes and do a thorough job.
+
+
+Once you've only got a small amount of unwanted picture left around the part of the image you want to transfer, you may want to zoom in for greater detail before trying to delete it. The Zoom In button looks like a magnifying glass with a "+" inside it. You may also find this command in the top menu: View → Zoom.
+When you delete a selection, that portion of the image may appear as a "checkerboard" pattern or as a solid color. Either way, the overlay should work fine.
+ Usually near the top of the tool list, these look like a square, circle, and rope lasso. The square and circle tools select a portion of the image in that shape, while the lasso tool can be traced in any shape. The lasso tool makes it easier to avoid undeleted portions of the background if there are still some near the image you're trying to transfer.
+ If you've deleted the background around the image, make sure not to include any undeleted portions. You can safely include portions of the solid color or checker colored background that replaced it; they will not be selected.
+
+
+If you were unable to remove a complex background with the magic wand tool, zoom in with the top menu command View → Zoom and slowly trace the image you want to transfer with the lasso tool. This may take several minutes to achieve accurate results. After copy-pasting your first selection onto the new background, you will probably need to use the lasso tool again to cut away excess areas you included by accident.
+ This can be done with keyboard commands (Ctrl + C to copy, Ctrl + V to paste), or the Edit Menu. If the image still looks too "sharp" or unnatural, undo the paste and increase the amount of feathering by a few pixels.
+
+
+See instructions directly above, labeled "Soften the edges", in order to learn how to feather the selection.
+If you're sure you pasted your image but you don't see it, open the Layers Palette by going to Window → Layer or View → Layer. You should see a layer with a thumbnail image that looks like the image you pasted, on top of a checkerboard pattern. Drag this layer up to the top of the layer list to ensure it is placed on top of, rather than beneath, the background image.
+ Select the move tool, which looks like a cursor arrow or a four-point compass, then click and drag the superimposed image to the desired location. If you need to change the size of the overlaid image, follow these steps:
+
+
+Go to File → Free Transform (or hit Ctrl + T) to transform the image.
+A box should appear around the superimposed image; click and drag the sides and corners to change the size and shape. To maintain the proportions, hold Shift while clicking and dragging a corner.
+If the wrong thing moves, make sure you’re on the right layer by going to View → Layer or Window → Layer, then clicking the layer that contains the superimposed image.
+ Make sure you are saving the final superimposed image. Don't accidentally select the pane that contains nothing but a chopped-up image missing the piece you transferred.
+

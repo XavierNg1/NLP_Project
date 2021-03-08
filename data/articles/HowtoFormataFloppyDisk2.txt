@@ -1,0 +1,20 @@
+ You can access this from the Start menu, or by pressing ⊞ Win+R and typing cmd.
+ Make sure that the disk is inserted before you go looking for it on your computer. Ensure that the disk is inserted rightside-up.
+
+
+Make sure that the disk lock is not engaged before inserting the disk.
+When formatting a disk, all the information contained on it will be erased, so make sure you've backed up anything you need to save.
+ To quickly format the disk, type format x:. Replace X with the floppy drive letter. Press Y to confirm that you want to format the disk.
+ There are several switches that you can add to the end of the format command to modify what happens. For example, to perform a Quick Format on the A: drive, you would type format /q a:.
+
+
+
+/fs:filesystem - Replace filesystem with FAT, FAT32, exFAT, NTFS, or UDF depending on your needs.
+
+/v:label - Replace label fi with the label you want to give the disk. Keep it under 16 characters for compatibility.
+
+/q - Performs a quick format.
+
+/c - Files added will be automatically compressed (NTFS only)
+
+/p:# - Overwrites the space on the disk with 0s and then random numbers for each count. Replace # with the number of counts you want to occur. This is best used for sensitive data you want to completely erase (Vista and later only).

@@ -1,0 +1,33 @@
+ Once Clonezilla Live loads, it will automatically boot using the default mode options.If you want other modes, use the up or down arrow keys to navigate to different menu options, and then press Enter.
+ On the Choose language screen, use the up or down arrow keys to select your language, and then press the Enter key.
+ On the Configuring console-data screen, select the Don’t touch keymap menu option, and then press the Enter key.
+
+
+Clonezilla’s default keyboard layout is the US keyboard. If you’re using another keyboard layout, choose the Select keymap from arch list or Select keymap from full list options.
+ On the Start Clonezilla screen, choose the Start Clonezilla option, and then press the Enter key.
+ Move the cursor to the device-image option, and then press the spacebar to select it. An asterisk is added to show it’s selected. Press the Enter key.
+
+
+This option will clone the hard disk as an image on another drive instead of on a partition.
+ Move the cursor to the local_dev option, and then press the spacebar to select it. An asterisk is added to show it’s selected. Press the Enter key.
+
+
+This option will let your clone the hard disk to an internal or external hard disk.
+ Move the cursor to the sdb1 8G_ext4 option, and then press the space to select it. An asterisk is added to show it’s selected. Press the Enter key.
+
+
+This option will clone the disk to the first partition on the second internal or external disk.
+ Move the cursor to the / Top_directory_in_the_local_device option, and then press the spacebar to select it. Press the Enter key. Review the disk usage report, and then press the Enter key to continue.
+ Move the cursor to the Beginner option, and then press the spacebar to select it. An asterisk is added to show it’s selected. Press the Enter key.
+
+
+In order to restore a drive, you’ll need the source and destination drives both connected to your computer and turned on.
+ Choose the restore disk option, press the spacebar, and then press the Enter key.
+ Choose the cloned disk image you want to restore, press the spacebar, and then press the Enter key.
+ Choose the target disk for restoring, press the spacebar, and then press the Enter key. On the next screen, choose the target disk for restoring again, press the spacebar, and then press the Enter key.
+
+
+When you restore a cloned drive to a target disk, it will overwrite any content that’s on the target disk with the cloned drive.
+ Clonezilla will ask you twice if you want to restore the cloned disk. When it prompts you to, type Y, and then press the Enter key. When it prompts you again, type Y, and then press the Enter key.
+ When the hard disk cloning is completed, type 2, and then press the Enter key to start exiting Clonezilla. On the Choose mode screen, choose the Poweroff option, press the spacebar, and then press the Enter key. Before the computer finishes powering down, Clonezilla will prompt you to remove the CD/DVD or USB drive. Do so, and then press the Enter key. Your computer will power off.
+

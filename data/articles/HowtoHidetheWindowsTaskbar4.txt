@@ -1,0 +1,9 @@
+ If you're using Windows 10 and the taskbar won't stay hidden, you can try using the PowerShell utility to fix it.
+ Confirm that you want to proceed. This will open a new "Administrator" PowerShell window.
+ Make sure you paste it into the "Administrator" window:
+
+
+Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+
+, You may see a few errors as the command runs, which can safely be ignored.
+ You should notice that the taskbar hides as it should and stays hidden.

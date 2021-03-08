@@ -1,0 +1,27 @@
+ You can open this from the Dash, or by pressing Ctrl+Alt+T.
+ This will display a list of storage devices attached to the computer.
+ Use the SIZE column to find your USB drive in the list.
+ You'll need to unmount the drive before formatting. Type the following command, and press sdb1 with your USB drive's partition label.
+
+
+sudo umount /dev/sdb1
+
+, You can delete everything on the drive by entering the following command. Replace sdb with your USB drive's label.
+
+
+sudo dd if=/dev/zero of=/dev/sdb bs=4k && sync
+This will take a while to process and may appear frozen.
+ The partition table controls the volumes on the drive. Type the following command, replacing sdb with your USB drive's label.
+
+
+Type sudo fdisk /dev/sdb and press ↵ Enter. Press O to create an empty partition table.
+ Enter the size of the partition that you want to create. Enter the full size of the drive if you are just creating a single partition.
+ This may take a moment.
+ It will be listed below your USB drive's label.
+ Now that you've created the new volume, you can format it with the file system of your choosing. Enter the following command to format the drive as FAT32, the most compatible file system. Replace sdb1 with your partition's label:
+
+
+sudo mkfs.vfat /dev/sdb1
+
+, Once the format is complete, you can safely eject your device:sudo eject /dev/sdb
+

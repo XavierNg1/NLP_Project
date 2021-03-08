@@ -1,0 +1,60 @@
+ Grouping the polynomial into two sections will let you attack each section individually.
+
+
+Say, "We're working with the polynomial." x3 + 3x2 - 6x - 18 = 0. Let's group it into (x3 + 3x2) and (- 6x - 18);
+,
+
+
+Looking at (x3 + 3x2), we can see that x2 is common.
+Looking at (- 6x - 18), we can see that -6 is common.
+
+
+
+Factoring out x2 from the first section, we get x2(x + 3).
+Factoring out -6 from the second section, you'll get -6(x + 3).
+
+
+
+This gives you (x + 3)(x2 - 6).
+ If you have an x2 in your roots, remember that both negative and positive numbers fulfill that equation.
+
+
+The solutions are -3, √6 and -√6.
+
+
+
+Let's say you're working with the equation: x3 - 4x2 - 7x + 10 = 0.
+ The constant "d" is going to be the number that doesn't have any variables, such as "x," next to it.
+
+
+Factors are the numbers you can multiply together to get another number. In your case, the factors of 10, or "d," are: 1, 2, 5, and 10.
+ We want to determine which factor makes the polynomial equal zero when we substitute the factor for each "x" in the equation.
+
+
+Start by using your first factor, 1. Substitute "1" for each "x" in the equation:
+(1)3 - 4(1)2 - 7(1) + 10 = 0
+This gives you: 1 - 4 - 7 + 10 = 0.
+Because 0 = 0 is a true statement, you know that x = 1 is a solution.
+ If x = 1, you can rearrange the statement to look a bit different without changing what it means.
+
+
+"x = 1" is the same thing as "x - 1 = 0" or "(x - 1)". You've just subtracted a "1" from each side of the equation.
+ "(x - 1)" is our root. See if you can factor it out of the rest of the equation. Take it one polynomial at a time.
+
+
+Can you factor (x - 1) out of the x3? No you can't. But you can borrow a -x2 from the second variable; then factor it: x2(x - 1) = x3 - x2.
+Can you factor (x - 1) out of what remains from your second variable? No, again you can't. You need to borrow another little bit from the third variable. You need to borrow a 3x from -7x. This gives you -3x(x - 1) = -3x2 + 3x.
+Since you took a 3x from -7x, our third variable is now -10x and our constant is 10. Can you factor this? You can! -10(x - 1) = -10x + 10.
+What you did was rearrange the variables so that you could factor out a (x - 1) out of the entire equation. Your rearranged equation looks like this: x3 - x2 - 3x2 + 3x - 10x + 10 = 0, but it's still the same thing as x3 - 4x2 - 7x + 10 = 0.
+ Look at the numbers that you factored out using the (x - 1) in Step 5:
+
+
+x2(x - 1) - 3x(x - 1) - 10(x - 1) = 0. You can rearrange this to be a lot easier to factor one more time: (x - 1)(x2 - 3x - 10) = 0.
+You're only trying to factor (x2 - 3x - 10) here. This factors down into (x + 2)(x - 5).
+ You can check whether your solutions actually work by plugging each one, individually, back into the original equation.
+
+
+(x - 1)(x + 2)(x - 5) = 0 This gives you solutions of 1, -2, and 5.
+Plug -2 back into the equation: (-2)3 - 4(-2)2 - 7(-2) + 10 = -8 - 16 + 14 + 10 = 0.
+Plug 5 back into the equation: (5)3 - 4(5)2 - 7(5) + 10 = 125 - 100 - 35 + 10 = 0.
+

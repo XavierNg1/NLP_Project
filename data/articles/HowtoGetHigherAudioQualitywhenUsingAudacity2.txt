@@ -1,0 +1,11 @@
+ The newest version may have the ability to work in a higher quality than the latest stable release, but it may also have unforeseen bugs.
+ Do so by clicking Edit at the top of the window, or by pressing Ctrl + P. From here, you can make a number of changes that will increase the quality.
+ Make sure that Audacity has your correct audio device information, and that Channels: is set to 2 (Stereo), or higher if applicable.
+
+
+
+Raise the Default Sample Rate: to at least 44100 Hz (CD quality). converting between different sample rates can cause distortion from calculation errors, so keep conversions limited to doubling or halving. use 44100Hz or 88200Hz for general audio, but if the sound intends to be used with video, use 48000Hz or 92000Hz
+Set the Default Sample Format: to 32-bit float. This gives you extra 'headroom' for your sounds.
+Optionally make both Sample Rate Converter settings High-quality Sync Interpolation.
+ Decreasing the Minimum of dB mode display range setting can give you a better idea of the audio you are editing and can help you avoid clipping.
+

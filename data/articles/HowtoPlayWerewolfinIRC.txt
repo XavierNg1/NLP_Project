@@ -1,0 +1,40 @@
+ There is a night and day cycle. At night, the wolves pick whom to kill, while everyone else "sleeps". Then, when they wake up, the villagers discover that one of them has gone missing or died, so they will discuss who might be the wolf. The villagers lynch their guess, hoping it's a wolf. The villagers win if they kill all the wolves; the wolves win if there are the same number of them as villagers.;
+, In the daytime, you lynch (or vote on who to kill). You try to narrow down who the wolf(s) is/are. To vote for a lynch, enter the following into the chat: !lynch namehere. The bot will also accept part of the nickname.
+Village Drunk - Only role is to serve as an identifiable villager. The village drunk does not have any special commands.
+Harlot - The Harlot has the ability to visit people each night, to verify that someone is not a wolf. If you visit a wolf, or if you visit someone who gets killed by a wolf, you will die. You will not die if the wolf tries to kill you and you're not home. Watch for a query from pywolf detailing instructions to follow. Type !visit <name> in a private query to pywolf (not the IRC channel where the other players can see what you say).
+Seer - The Seer is one of the most valuable roles in the game, either to kill or keep alive. When you're Seer, you can have a vision every night, to see the role of any other player. To see someone, type !see <namehere>. However, the seer will see a cursed villager as a wolf and a traitor as a normal villager.
+Gunner - The Gunner has two bullets. You can chose to shoot during the day, and see if you shot a wolf. To shoot, just type !shoot namehere. You may do this in the IRC channel, so other people can see that you're not the wolf because you have bullets!
+Traitor - When all of the wolves are dead, the traitor becomes a wolf.
+Guardian Angel - (GA) The Guardian Angel can save someone each night, but if he or she saves a wolf, he or she could die.
+Detective - (det) The Detective is similar to a Seer. This player can see roles of other players in the day. The Detective can see who is the traitor and cursed villager, but there's a chance he or she will reveal to a wolf when using his or her powers. Do !id <namehere> to check role of player.
+ Here's a list of roles/players to get the roles:
+
+
+6 = Village Drunk and cursed villager
+8 = Harlot and second wolf
+10 = Gunner and traitor
+11 = GA
+15 = Third wolf/Detective
+22 = Fourth wolf
+29 = Fifth wolf
+
+, The commands are:
+
+
+!lynch namehere (Anyone - Day time)
+!kill namehere (Wolf)
+!see namehere (Seer)
+!visit namehere (Harlot)
+!guard namehere (Guardian Angel)
+!shoot namehere (Shooter/gunner)
+!join (Joins you to the game)
+!ping (Notified other members of the channel that a game may start)
+!start (Starts the game)
+!stats (Shows who is playing and how many parts there are)
+!votes (Shows how many votes there are, and who got voted).
+ To play, connect your IRC client to chat.freenode.net and join ##werewolf. If you don't have an IRC client, you can use an online webchat: http://webchat.freenode.net . When the game starts, see if you get a message from the bot running the game. If you do, you have a special role - in general, you don't want to reveal your role (especially if you're a wolf); the village drunk usually does reveal their role though. If you don't get a message from the game bot, you're a normal villager.
+
+
+Act quickly if you have a special role (in PM with the bot), as the night only lasts two minutes.
+ If you have been killed by a wolf, don't worry - wait and see how the game plays out and wait for the next game. The villagers (and wolves disguising themselves as villagers) will vote on who to lynch.
+

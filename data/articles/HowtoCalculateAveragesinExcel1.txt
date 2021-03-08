@@ -1,0 +1,18 @@
+ To illustrate how each of the central tendency functions works, we’ll use a series of ten small numbers. (You won’t likely use actual numbers this small when you use the functions outside these examples.)
+
+
+Most of the time, you’ll enter numbers in columns, so for these examples, enter the numbers in cells A1 through A10 of the worksheet.
+The numbers to enter are 2, 3, 5, 5, 7, 7, 7, 9, 16, and 19.
+Although it isn’t necessary to do this, you can find the sum of the numbers by entering the formula “=SUM(A1:A10)” in cell A11. (Don’t include the quotation marks; they’re there to set off the formula from the rest of the text.);
+, You do this by using the AVERAGE function. You can place the function in one of three ways:
+
+
+Click on an empty cell, such as A12, then type “=AVERAGE(A1:10)” (again, without the quotation marks) directly in the cell.
+Click on an empty cell, then click on the “fx” symbol in the function bar above the worksheet. Select “AVERAGE” from the “Select a function:” list in the Insert Function dialog and click OK. Enter the range “A1:A10” in the Number 1 field of the Function Arguments dialog and click OK.
+Enter an equals sign (=) in the function bar to the right of the function symbol. Select the AVERAGE function from the Name box dropdown list to the left of the function symbol. Enter the range “A1:A10” in the Number 1 field of the Function Arguments dialog and click OK.
+ The average, or arithmetic mean, is determined by finding the sum of the numbers in the cell range (80) and then dividing the sum by how many numbers make up the range (10), or 80 / 10 = 8.
+
+
+If you calculated the sum as suggested, you can verify this by entering “=A11/10” in any empty cell.
+The mean value is considered a good indicator of central tendency when the individual values in the sample range are fairly close together. It is not considered as good of an indicator in samples where there are a few values that differ widely from most of the other values.
+

@@ -1,0 +1,101 @@
+ (IIS 5.1 on XP)
+, Click on "Add/Remove Windows Components". Place a check for "Internet Information Services". On Windows7 go to Start -> Control Panel -> Programs and Features -> Turn Windows Features On or Off. Make sure that all the options showed on the below image are checked.
+ Now you must get the correct files for php5. Head over to http://www.php.net/downloads.php and download the zip package under "Windows Binaries" Do not get the installer! In addition, while you are here you will need to get the "Collection of PECL modules" also under Windows Binaries.
+ Extract the PECL modules to "C:\php\ext".
+,, If your mail server is somewhere else you may specify it here. Also set this line just below the above: sendmail_from = someone@yourhost.com
+
+,,,
+extension=php_mssql.dll
+extension=php_msql.dll
+extension=php_mysql.dll
+extension=php_mysqli.dll
+extension=php_java.dll
+extension=php_ldap.dll
+extension=php_iisfunc.dll
+extension=php_imap.dll
+extension=php_filepro.dll
+extension=php_gd2.dll
+extension=php_gettext.dll
+extension=php_dba.dll
+extension=php_dbase.dll
+extension=php_dbx.dll
+extension=php_mbstring.dll
+extension=php_pdf.dll
+extension=php_pgsql.dll
+extension=php_sockets.dll
+extension=php_xmlrpc.dll
+extension=php_xsl.dll
+extension=php_zip.dllThe rest require more attention and is out of the scope of this tutorial.
+Some of the items might not be there. In that case, simply copy the line to your ini file.
+ To add php to your Windows path:
+
+Right Click on My Computer and choose properties > Advanced Tab > Click "Environment Variables".
+
+
+
+
+
+
+Now add "C:\PHP;" to the very beginning.
+
+
+
+
+
+
+Now go to start > run > type: regedit and click OK.
+
+
+
+
+
+
+Add HKEY_LOCAL_MACHINE\SOFTWARE\PHP\IniFilePath = C:\php to the registry. If you change your windows path instead of copying the dll files then you will need to restart your computer before php will work. Updating php is easier when you add it to your Windows path. So bookmark this page and go restart. Now is the best time since we are done with file placement.
+
+
+
+
+
+
+From the IIS Manager, click on the hostname of your server in the Connections panel on the left.
+
+
+
+
+
+
+Double-click on the Handler Mappings icon.
+
+
+
+
+
+
+From the Handler Mappings Actions panel, click on Add Module Mapping.
+
+
+
+
+
+
+
+In the left panel, click on your server’s hostname, and then double-click on the Default Document icon.
+
+
+
+
+
+
+From the Actions panel on the right, click Add.
+
+
+
+
+
+
+Enter index.php as the new default document name, and then click OK.
+In the left panel, click on your server’s hostname.
+In the Actions panel on the right, click Restart.
+Create a new text document, and save it as c:\inetpub\wwwroot\phpinfo.php with the following content:<?php phpinfo(); ?>
+You should now see the PHP information page at http://localhost/phpinfo.php.
+

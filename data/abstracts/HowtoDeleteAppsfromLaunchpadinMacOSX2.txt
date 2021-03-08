@@ -1,0 +1,4 @@
+
+Open the Terminal.
+Enter the following command: sqlite3 ~/Library/Application\ Support/Dock/*.db "DELETE from apps WHERE title='APPNAME';" && killall Dock.
+Check to see if the app has been successfully deleted.

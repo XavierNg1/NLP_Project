@@ -1,0 +1,40 @@
+ This is Ubuntu's app store, and is the easiest way to install the most stable version of Wine and other software for Ubuntu. You'll need an active internet connection to install it.It is possible to install the latest, unstable version from Wine's developers, but this is not recommended for most users as you may encounter serious issues with it.;
+, The Wine program should be the first on the list of results.
+ This may take a few minutes.
+ You will need to configure Wine before you can use it, which needs to be done through the Terminal.
+
+
+You can open the Terminal from Applications → Accessories → Terminal, or by pressing Ctrl+Alt+T.
+ This will create a folder on your computer that will act as the Windows "C:" drive, which will allow you to run programs.
+
+
+This folder is labeled .wine and is hidden in your Home directory.
+ After the "C:" drive is created, the configuration window will open, allowing you to adjust the settings for the emulated version of Windows. The different tabs allow you to adjust different settings.
+
+
+"Applications" - This allows you to set the Windows version for each of your installed applications. The "Default Settings" is the version of Windows that will be loaded for any application that does not have a specific operating system set.
+"Libraries" - This lets you adjust DLLs for the emulated version of Windows. Most users can leave this alone. You may need to make adjustments here to make some programs run correctly.
+"Graphics" - This allows you to adjust options like screen size, mouse capture, and resolution. This is linked to the "Applications" tab, so these changes can be application-specific.
+"Drives" - This allows you to map virtual drives for Wine using your own drives and folders. To find the Path for your disc drive, right-click the icon on your desktop. You can also click "Autodetect" to attempt to have Wine automatically detect your installed drives.
+"Desktop Integration" - This allows you to set the theme and appearance of your emulated applications.
+"Audio" - This adjusts the audio settings for Wine. Most users can leave them at default, and Wine will use your Linux settings.
+ You can install any Windows application as if you were using Windows. If you're downloading an installer, place it somewhere on your computer that's easily accessible.
+ If you are installing from a disc, see the next step.
+ For example, if you downloaded a file named "itunes_installer.exe", you would type wine itunes_installer.exe and press ↵ Enter. This will run the program as if you were using Windows.
+
+
+If you want to install a program from a disc, make sure that the disc drive has a drive letter assigned in Wine and then type the following command: wine start 'D:\setup.exe'. Change the filename to whatever the actual filename is.
+ The installation will proceed just as if you were installing it in Windows. If you are asked for an installation location, select C:\Program Files.
+ Many Windows applications will create a shortcut much like they would in Windows, allowing you to easily start them by double-clicking.
+ If installing the program didn't create a shortcut, you can use the Terminal to start it up.Navigate to the location of the program's executable file. For example: /home/user/.wine/drive_c/Program Files/Apple.
+Type {{kbd|wine progamname.extension and press ↵ Enter to start the program. For example: wine itunes.exe
+
+
+, If you'd rather not type in the Wine command into the Terminal each time you want to start it, you can create a shortcut on your desktop.
+
+
+Right-click on your desktop and select "Create launcher".
+Select an icon from the list or add your own.
+In the "Command" field, type wine progam-location/program.extension. The location is where the program's executable file is located. For example: wine /home/user/.wine/drive_c/Program Files/itunes.exe.
+Uncheck the "Run in terminal" box.
+

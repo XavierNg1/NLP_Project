@@ -1,0 +1,15 @@
+ Find out if it uses limited user accounts,all files permissions and is regularly updated. Make sure you update your operating system with security updates and update your other software too.;
+, Disable scripts too (NoScript, Privoxy and Proxomitron can do this). Look at what independent computer security analysts (such as US-CERT) and crackers (similar to hackers) say. Google Chromeis more secure and has a sandbox featureso it would be more difficult to compromise the system and spread the infection.
+ Hackers may use dictionary attacks and brute force attacks.
+ When downloading software (including antivirus software), get it from a trusted source (softpedia, download, snapfiles, tucows, fileplanet, betanews, sourceforge) or your repository if you are using Linux.
+ Antivirus software is designed to deal with modern malware including viruses, trojans, keyloggers, rootkits, and worms. Find out if your antivirus offers real-time scanning, on-access or on-demand. Also find out if it is heuristic. Avastand AVGare very good free editions. Choose one, download and install it and scan regularly. Keep your virus definitions up to date by updating regularly.
+ I can't state this enough - you need to run a good anti spyware and anti malware program like Spybot if you search the web at all. Many websites out there exploit weaknesses and holes in the security of Microsoft Explorer and will place malicious code on your computer without you knowing about it until its too late!
+
+, Either ZoneAlarmor Comodo Firewall(Kerio, WinRoute or Linux comes with iptables). If you use a router, this gives an added layer of security by acting as a hardware firewall.
+ Hackers use port scanning (Ubuntu Linux has all ports closed by default).
+ Start with ping, then run a simple nmap scan. Backtrack Linux will also be useful.
+, Consider something like a Kensington lock (in case of theft/unauthorised access). Also setting a BIOS password and preventing access to your machine or its removable devices (USB, CD drive etc.). Don't use an external hard drive or USB device for important data, these represent another vulnerability, as they are easier to steal/lose.
+
+
+Encryption can be effective against theft. Encrypt at least your entire user account rather than just a few files. It can affect performance but can prove worth it. Truecrypt works on Windows, OS X, Linux, FreeOTFE works on Windows and Linux. In OS X (10.3 or later) System Preferences Security, click FileVault (this can take minutes to hours). In Linux Ubuntu (9.04 or later) installation Step 5 of 6 choose "Require my password to login and decrypt my home folder". This uses "ecryptfs".
+

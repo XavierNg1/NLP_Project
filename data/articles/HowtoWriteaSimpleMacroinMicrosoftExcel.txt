@@ -1,0 +1,55 @@
+ The process for enabling macros is the same for Excel 2010, 2013, and 2016. There is a slight difference for Excel for Mac, which will be detailed below.;
+,
+
+
+In Excel for Mac, click the "Excel" menu.
+
+
+
+In Excel for Mac, click the "Preferences" menu option.
+
+
+
+In Excel for Mac, click "Ribbon & Toolbar" in the "Authoring" section.
+
+
+
+In Excel for Mac, you'll see "Developer" in the "Tab or Group Title" list.
+, When you record a macro, anything you click or do will be recorded, so a single slip-up can ruin the whole thing. Run through the commands you'll be recording a couple times so that you can do them without hesitation and without misclicks.
+, You'll find this in the Code section of the ribbon. You can also press Alt+T+M+R to start a new macro (Windows only).
+ Make sure that you'll be able to easily identify it, especially if you're going to be creating multiple macros.
+
+
+You can also add a description to explain what the macro will accomplish.
+ You can assign a keyboard shortcut to the macro to easily run it. This is optional.
+ This will create a Ctrl+⇧ Shift+letter keyboard combination to start the macro.
+
+
+On Mac, this will be a ⌥ Opt+⌘ Command+letter combination.
+, If you're only using the macro for your current spreadsheet, just leave it on "This Workbook." If you want the macro available for any spreadsheet you work on, select "Personal Macro Workbook."
+
+, Your macro will begin recording.
+ Pretty much anything you do will now be recorded and added to the macro. For example, if you run a sum formula of A2 and B2 in cell C7, running the macro in the future will always sum A2 and B2 and display the results in C7.
+
+
+Macros can get very complex, and you can even use them to open other Office programs. When the macro is recording, virtually everything you do in Excel is added to the macro.
+ This will end the macro recording and save it.
+ In order to preserve your macros, you'll need to save your workbook as a special macro-enabled Excel format:
+
+
+Click the File menu and select Save.
+Click the File Type menu underneath the file name field.
+Click Excel Macro-Enabled Workbook.
+ If you have closed your file before running your macro, you'll be prompted to enable the content.
+ This appears at the top of the Excel spreadsheet in a Security Warning bar whenever a macro-enabled workbook is opened. Since it's your own file, you can trust it, but be very careful opening macro-enabled files from any other source.
+ When you want to use your macro, you can quickly run it by pressing the shortcut you created for it.
+ This will display all of the macros that are available in your current spreadsheet.
+, The macro will be run in your current cell or selection.
+ If you want to learn more about how macro coding works, you can open the code of any macro you've created and tinker with it:
+
+
+Click the Macros button in the Developer tab.
+Click the macro you want to view.
+Click the Edit button.
+View your macro code in the Visual Basic code editing window.
+

@@ -1,0 +1,28 @@
+ Planning your program is essential. Think about where your program will be used. Is the program going to deal with very big numbers? If yes, you may want to consider using data types like long instead of int.
+
+
+Try to calculate the mean of a few numbers manually. This will help you understand your program.;
+, To calculate the mean, you'll need the following parameters:
+
+
+The sum of all the inputs provided by the user; and,
+The total number of inputs provided by the user.
+
+For example, if the sum of the inputs = 100, and the total number of inputs = 10, the mean = 100 / 10 = 10
+
+
+
+Therefore, the formula to calculate the mean, or the average, is:Mean = Sum of all inputs / Total Number of inputs
+
+To get these parameters (inputs) from the user, try using the Scanner function in Java.
+
+You'll need to get multiple inputs from the user for each of the terms you want to find the mean of. Try using a loop for this. In the sample code below, a for loop is used. You can try using a while loop too.
+ Using the formula given in the previous step, write the code to calculate the mean. Make sure that the variable used for storing the value of mean is of type float. If not, the answer may not be correct.
+
+
+This is because, the float data-type is 32 bit single precision that even considers decimals in mathematical calculations. Thus, using a float variable, the answer for a mathematical calculation like 5 / 2 (5 divided by 2) will be 2.5
+
+If the same calculation (5 / 2) if done using an int variable, the answer will be 2.
+However, the variables in which you stored the sum and number of inputs can be int. Using a float variable for the mean will automatically convert the int to float; and the total calculation will be done in float instead of int.
+ Once the program has calculated the mean, display it to the user. Use the System.out.print or System.out.println (to print on a new line) function, in Java, for this.
+

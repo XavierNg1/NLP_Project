@@ -1,0 +1,205 @@
+ In the most general case, the potential depends on all three variables. However, in many physical scenarios, there exists an azimuthal symmetry to the problem. For a physical example, an insulating sphere could have a charge density that is only dependent on θ,{\displaystyle \theta ,} so the potential must not depend on ϕ.{\displaystyle \phi .} This assumption greatly simplifies the problem so that we do not have to deal with spherical harmonics. 
+
+First, we simply substitute.
+
+
+Θr2∂∂r(r2∂R∂r)+Rr2sin⁡θ∂∂θ(sin⁡θ∂Θ∂θ)=0{\displaystyle {\frac {\Theta }{r^{2}}}{\frac {\partial }{\partial r}}\left(r^{2}{\frac {\partial R}{\partial r}}\right)+{\frac {R}{r^{2}\sin \theta }}{\frac {\partial }{\partial \theta }}\left(\sin \theta {\frac {\partial \Theta }{\partial \theta }}\right)=0}
+
+
+
+Divide the equation by V.{\displaystyle V.} What remains is a term that only depends on r{\displaystyle r} and a term that only depends on θ.{\displaystyle \theta .} The derivatives then become ordinary derivatives.
+
+
+1Rddr(r2dRdr)+1Θsin⁡θddθ(sin⁡θdΘdθ)=0{\displaystyle {\frac {1}{R}}{\frac {\mathrm {d} }{{\mathrm {d} }r}}\left(r^{2}{\frac {{\mathrm {d} }R}{{\mathrm {d} }r}}\right)+{\frac {1}{\Theta \sin \theta }}{\frac {\mathrm {d} }{{\mathrm {d} }\theta }}\left(\sin \theta {\frac {{\mathrm {d} }\Theta }{{\mathrm {d} }\theta }}\right)=0}
+
+
+;
+, An argument must be made here. We have a term that only depends on r{\displaystyle r} and a term that only depends on θ.{\displaystyle \theta .} Their sum, however, must always equal 0. Since these derivatives are varying quantities in general, the only way that this can be true for all values of r{\displaystyle r} and θ{\displaystyle \theta } is if the terms are both constant. We will see very shortly that it is convenient for us to denote the constant by l(l+1).{\displaystyle l(l+1).}
+
+
+1Rddr(r2dRdr)=l(l+1){\displaystyle {\frac {1}{R}}{\frac {\mathrm {d} }{{\mathrm {d} }r}}\left(r^{2}{\frac {{\mathrm {d} }R}{{\mathrm {d} }r}}\right)=l(l+1)}
+
+
+1Θsin⁡θddθ(sin⁡θdΘdθ)=−l(l+1){\displaystyle {\frac {1}{\Theta \sin \theta }}{\frac {\mathrm {d} }{{\mathrm {d} }\theta }}\left(\sin \theta {\frac {{\mathrm {d} }\Theta }{{\mathrm {d} }\theta }}\right)=-l(l+1)}
+
+We have now converted Laplace's equation, assuming azimuthal symmetry, into two noncoupled ordinary differential equations. 
+
+
+, After multiplying and using the product rule, we find that this is simply the Euler-Cauchy equation.
+
+
+r2d2Rdr2+2rdRdr−l(l+1)R=0{\displaystyle r^{2}{\frac {{\mathrm {d} }^{2}R}{{\mathrm {d} }r^{2}}}+2r{\frac {{\mathrm {d} }R}{{\mathrm {d} }r}}-l(l+1)R=0}
+
+The standard method of solving this equation is to assume the solution of the form R=rn{\displaystyle R=r^{n}} and solve the resulting characteristic equation. In particular, we expand the quantity in the square root and factor. 
+
+
+n2+n−l(l+1)=0{\displaystyle n^{2}+n-l(l+1)=0}
+
+
+n=−12±1+4l(l+1)2=l, −l−1{\displaystyle n=-{\frac {1}{2}}\pm {\frac {\sqrt {1+4l(l+1)}}{2}}=l,\ -l-1}
+
+
+
+The roots of the characteristic equation suggest our choice of constant. 
+
+Since the Euler-Cauchy equation is a linear equation, the solution to the radial part is as follows.
+
+
+R(r)=Arl+Brl+1{\displaystyle R(r)=Ar^{l}+{\frac {B}{r^{l+1}}}}
+
+
+
+
+, This equation is the Legendre differential equation in the variable cos⁡θ.{\displaystyle \cos \theta .}
+
+
+1sin⁡θddθ(sin⁡θdΘdθ)+l(l+1)Θ=0{\displaystyle {\frac {1}{\sin \theta }}{\frac {\mathrm {d} }{{\mathrm {d} }\theta }}\left(\sin \theta {\frac {{\mathrm {d} }\Theta }{{\mathrm {d} }\theta }}\right)+l(l+1)\Theta =0}
+
+To see this, we begin with the Legendre equation in the variable x{\displaystyle x} and make the substitution x=cos⁡θ,{\displaystyle x=\cos \theta ,} implying that dx=−sin⁡θdθ.{\displaystyle {\mathrm {d} }x=-\sin \theta {\mathrm {d} }\theta .}
+
+
+ddx((1−x2)dΘdx)+l(l+1)Θ=0d−sin⁡θdθ(sin2⁡θdΘ−sin⁡θdθ)+l(l+1)Θ=01sin⁡θddθ(sin⁡θdΘdθ)+l(l+1)Θ=0{\displaystyle {\begin{aligned}{\frac {\mathrm {d} }{{\mathrm {d} }x}}\left((1-x^{2}){\frac {{\mathrm {d} }\Theta }{{\mathrm {d} }x}}\right)+l(l+1)\Theta &=0\\{\frac {\mathrm {d} }{-\sin \theta {\mathrm {d} }\theta }}\left(\sin ^{2}\theta {\frac {{\mathrm {d} }\Theta }{-\sin \theta {\mathrm {d} }\theta }}\right)+l(l+1)\Theta &=0\\{\frac {1}{\sin \theta }}{\frac {\mathrm {d} }{{\mathrm {d} }\theta }}\left(\sin \theta {\frac {{\mathrm {d} }\Theta }{{\mathrm {d} }\theta }}\right)+l(l+1)\Theta &=0\end{aligned}}}
+
+
+
+This equation can be solved using the method of Frobenius. In particular, the solutions are Legendre polynomials in cos⁡θ,{\displaystyle \cos \theta ,} which we write as Pl(cos⁡θ).{\displaystyle P_{l}(\cos \theta ).} These are orthogonal polynomials with respect to an inner product, which we elaborate on shortly. This orthogonality means that we can write any polynomial as a linear combination of Legendre polynomials. 
+
+
+Θ(θ)=Pl(cos⁡θ){\displaystyle \Theta (\theta )=P_{l}(\cos \theta )}
+
+
+
+The first few Legendre polynomials are given as follows. Notice that the polynomials alternate between even and odd. These polynomials will be very important in the next sections.
+
+
+P0(x)=1{\displaystyle P_{0}(x)=1} 
+
+
+P1(x)=x{\displaystyle P_{1}(x)=x}
+
+
+P2(x)=12(3x2−1){\displaystyle P_{2}(x)={\frac {1}{2}}(3x^{2}-1)}
+
+
+P3(x)=12(5x3−3x){\displaystyle P_{3}(x)={\frac {1}{2}}(5x^{3}-3x)}
+
+
+P4(x)=18(35x4−30x2+3){\displaystyle P_{4}(x)={\frac {1}{8}}(35x^{4}-30x^{2}+3)}
+
+
+
+It turns out that there is another solution to the Legendre differential equation. However, this solution cannot be part of the general solution because it blows up at θ=0{\displaystyle \theta =0} and θ=π,{\displaystyle \theta =\pi ,} so it is omitted.
+
+
+Θ(θ)=lntanθ2{\displaystyle \Theta (\theta )=\ln \tan {\frac {\theta }{2}}}
+
+
+
+
+, We now have our solutions to both the radial and angular equations. We can then write out the general solution as a series, since by linearity, any linear combination of these solutions is also a solution.
+
+
+V(r,θ)=∑l=0∞(Alrl+Blrl+1)Pl(cos⁡θ){\displaystyle V(r,\theta )=\sum _{l=0}^{\infty }\left(A_{l}r^{l}+{\frac {B_{l}}{r^{l+1}}}\right)P_{l}(\cos \theta )}
+
+
+, This is an example of a Dirichlet boundary condition, where the value everywhere on the boundary is specified. We then proceed to solve for the coefficients Al{\displaystyle A_{l}} and Bl.{\displaystyle B_{l}.}
+
+
+V(R,θ)=V0(θ){\displaystyle V(R,\theta )=V_{0}(\theta )}
+
+
+V0(θ)=∑l=0∞(AlRl+BlRl+1)Pl(cos⁡θ){\displaystyle V_{0}(\theta )=\sum _{l=0}^{\infty }\left(A_{l}R^{l}+{\frac {B_{l}}{R^{l+1}}}\right)P_{l}(\cos \theta )}
+
+
+, Physically, the potential cannot blow up at the origin, so Bl=0{\displaystyle B_{l}=0} for all l.{\displaystyle l.}
+
+Multiply both sides by Pl′(cos⁡θ)sin⁡θ{\displaystyle P_{l'}(\cos \theta )\sin \theta } and integrate from 0{\displaystyle 0} to π{\displaystyle \pi }. The Legendre polynomials are orthogonal with respect to this inner product.
+
+
+∫0πV0(θ)Pl′(cos⁡θ)sin⁡θdθ=∑l=0∞AlRl∫0πPl(cos⁡θ)Pl′(cos⁡θ)sin⁡θdθ{\displaystyle \int _{0}^{\pi }V_{0}(\theta )P_{l'}(\cos \theta )\sin \theta {\mathrm {d} }\theta =\sum _{l=0}^{\infty }A_{l}R^{l}\int _{0}^{\pi }P_{l}(\cos \theta )P_{l'}(\cos \theta )\sin \theta {\mathrm {d} }\theta }
+
+We take advantage of the very important relation, written below. δll′{\displaystyle \delta _{ll'}} is the Kronecker delta, meaning that the integral is nonzero only when l=l′.{\displaystyle l=l'.}
+
+
+∫0πPl(cos⁡θ)Pl′(cos⁡θ)sin⁡θdθ=22l+1δll′{\displaystyle \int _{0}^{\pi }P_{l}(\cos \theta )P_{l'}(\cos \theta )\sin \theta {\mathrm {d} }\theta ={\frac {2}{2l+1}}\delta _{ll'}}
+
+
+
+
+∫0πV0(θ)Pl(cos⁡θ)sin⁡θdθ=∑l=0∞AlRl22l+1{\displaystyle \int _{0}^{\pi }V_{0}(\theta )P_{l}(\cos \theta )\sin \theta {\mathrm {d} }\theta =\sum _{l=0}^{\infty }A_{l}R^{l}{\frac {2}{2l+1}}}
+
+
+, Knowing the coefficients, we have our potential inside the sphere in terms of a series, with the coefficients written in terms of integrals that, in principle, can be calculated. Note that this method only works because the Legendre polynomials constitute a complete set on the interval 0≤θ≤π.{\displaystyle 0\leq \theta \leq \pi .}
+
+
+Al=2l+12Rl∫0πV0(θ)Pl(cos⁡θ)sin⁡θdθ{\displaystyle A_{l}={\frac {2l+1}{2R^{l}}}\int _{0}^{\pi }V_{0}(\theta )P_{l}(\cos \theta )\sin \theta {\mathrm {d} }\theta }
+
+
+, We typically set the potential to 0 at infinity. This means that Al=0.{\displaystyle A_{l}=0.} Using the same method, we can find the coefficients of Bl.{\displaystyle B_{l}.}
+
+
+Bl=2l+12Rl+1∫0πV0(θ)Pl(cos⁡θ)sin⁡θdθ{\displaystyle B_{l}={\frac {2l+1}{2}}R^{l+1}\int _{0}^{\pi }V_{0}(\theta )P_{l}(\cos \theta )\sin \theta {\mathrm {d} }\theta }
+
+
+, The surface has a potential V0(θ)=kcos⁡4θ,{\displaystyle V_{0}(\theta )=k\cos 4\theta ,} where k{\displaystyle k} is a constant. The goal of problems like these is to solve for the coefficients Al{\displaystyle A_{l}} and Bl.{\displaystyle B_{l}.} From the previous section, we could in principle just do the integrals...but we opt to save some labor by comparing coefficients.
+
+
+V(R,θ)=V0(θ)=∑l=0∞(AlRl+BlRl+1)Pl(cos⁡θ){\displaystyle V(R,\theta )=V_{0}(\theta )=\sum _{l=0}^{\infty }\left(A_{l}R^{l}+{\frac {B_{l}}{R^{l+1}}}\right)P_{l}(\cos \theta )}
+
+
+, This step is crucial in comparing coefficients, and we can use trigonometric identities to do this. We then refer to the zeroth, second, and fourth polynomials to write V0{\displaystyle V_{0}} in terms of them.
+
+
+kcos⁡4θ=k(8cos4⁡θ−8cos2⁡θ+1)=k(6435P4(cos⁡θ)−1621P2(cos⁡θ)−115P0(cos⁡θ)){\displaystyle {\begin{aligned}k\cos 4\theta &=k(8\cos ^{4}\theta -8\cos ^{2}\theta +1)\\&=k\left({\frac {64}{35}}P_{4}(\cos \theta )-{\frac {16}{21}}P_{2}(\cos \theta )-{\frac {1}{15}}P_{0}(\cos \theta )\right)\end{aligned}}}
+
+
+, Physically, the potential should go to 0 as r→∞.{\displaystyle r\to \infty .} This means that outside the sphere, Al=0.{\displaystyle A_{l}=0.}
+
+
+V(r≥R,θ)=∑l=0∞Blrl+1Pl(cos⁡θ){\displaystyle V(r\geq R,\theta )=\sum _{l=0}^{\infty }{\frac {B_{l}}{r^{l+1}}}P_{l}(\cos \theta )}
+
+We then compare coefficients (there are three of them) to match boundary conditions.
+
+
+B0R=−k15, B0=−k15R{\displaystyle {\frac {B_{0}}{R}}=-{\frac {k}{15}},\ B_{0}=-{\frac {k}{15}}R}
+
+
+B2R3=−16k21, B2=−16k21R3{\displaystyle {\frac {B_{2}}{R^{3}}}=-{\frac {16k}{21}},\ B_{2}=-{\frac {16k}{21}}R^{3}}
+
+
+B4R5=64k35, B4=64k35R5{\displaystyle {\frac {B_{4}}{R^{5}}}={\frac {64k}{35}},\ B_{4}={\frac {64k}{35}}R^{5}}
+
+
+
+Plugging back into the solution, we have the potential outside the sphere.
+
+
+V(r≥R,θ)=k(−R15r−16R321r3P2(cos⁡θ)+64R535r5P4(cos⁡θ)){\displaystyle V(r\geq R,\theta )=k\left(-{\frac {R}{15r}}-{\frac {16R^{3}}{21r^{3}}}P_{2}(\cos \theta )+{\frac {64R^{5}}{35r^{5}}}P_{4}(\cos \theta )\right)}
+
+
+, Since there is no charge density inside the sphere, the potential cannot blow up, so Bl=0.{\displaystyle B_{l}=0.} Furthermore, the boundary conditions and this technique ensure that the potential is continuous - in other words, the potential infinitesimally near the surface is the same when approached from both outside and inside the sphere.
+
+
+V(r≤R,θ)=∑l=0∞AlrlPl(cos⁡θ){\displaystyle V(r\leq R,\theta )=\sum _{l=0}^{\infty }A_{l}r^{l}P_{l}(\cos \theta )}
+
+Again, we compare coefficients to match boundary conditions.
+
+
+A0=−k15{\displaystyle A_{0}=-{\frac {k}{15}}}
+
+
+A2=−16k21R2{\displaystyle A_{2}=-{\frac {16k}{21R^{2}}}}
+
+
+A4=64k35R4{\displaystyle A_{4}={\frac {64k}{35R^{4}}}}
+
+
+
+We now have the potential inside the sphere.
+
+
+V(r≤R,θ)=k(−115−16r221R2P2(cos⁡θ)+64r435R4P4(cos⁡θ)){\displaystyle V(r\leq R,\theta )=k\left(-{\frac {1}{15}}-{\frac {16r^{2}}{21R^{2}}}P_{2}(\cos \theta )+{\frac {64r^{4}}{35R^{4}}}P_{4}(\cos \theta )\right)}
+
+We can substitute r=R{\displaystyle r=R} in both equations to check for equality. As mentioned before, the potential must be continuous.
+
+

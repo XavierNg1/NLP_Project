@@ -1,0 +1,17 @@
+ The lead time is the time from when you decide to produce or order an item until the time at which the item is on hand and ready for sale to the end customer.There are several factors that can cause lead time to vary:
+
+
+Production delays — If your own production process is variable, this may impact the lead time. In addition, the production process of the products you are ordering may vary.
+Material defects — If you order 10 units and 2 are defective, you will have to wait for the additional 2 units.
+Delivery delays — Shipping times can be expected to vary slightly at the best of times, and unexpected events like natural disasters or strikes can further delay delivery.
+ To do so, you will need to adjust your standard deviation of demand to match the lead time period. Multiply your standard deviation of demand (calculated in Part I, step 4) by the square root of the lead time.This means if you calculated standard deviation on a monthly basis, and lead time was 2 months, you would multiply the standard deviation by the square root of two.
+Using our previous example, this means: 11 x √2 = 15.56.
+Make sure to convert lead time to the same unit of time measure that you used to determine standard deviation of demand. For example, if you calculated standard deviation on a monthly basis and lead time was 10 days, you would want to convert lead time to .329 months — i.e. 10 divided by 30.42 (the average days in a month).
+ We can combine formulas to determine safety stock based on demand with lead time factored in as follows:Safety stock = Z-score x √lead time x standard deviation of demand
+In our example, to avoid stockouts 95% of the time, you would thus need 1.65 (the Z-score) x √2 (lead time) x 11 (standard deviation of demand) = 25.67 units of safety stock.
+ If demand is constant but lead time variable, then you will need to calculate safety stock using the standard deviation of lead time. In this case, the formula will be:Safety stock = Z-score x standard deviation of lead time x average demand
+For example, if aiming for a Z-score of 1.65, with average demand constant at 20 units per month, and lead times over a six month period being 2, 1.5, 2.3, 1.9, 2.1, and 2.8 months, then Safety Stock = 1.65 x .43 x 20 = 14.3 units.
+ If lead time and demand vary independently of one another (i.e. the factors leading to variance are different for each), then safety stock is the Z-score multiplied by the square root of the sum of the squares of demand and supply variability, or:Safety stock = Z-score x √In our example: safety stock = 1.65 x √= 29.3 units.
+ That is, if the same factors impact lead time and demand variability, you will need to sum the individual safety stock calculations in order to assure yourself of adequate safety stock. In this case:Safety stock = (Z-score x √lead time x standard deviation of demand) + (Z-score x standard deviation of lead time x average demand)
+In our example: safety stock = 25.67 + 14.3 = 39.97 units.
+

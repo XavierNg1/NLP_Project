@@ -1,0 +1,35 @@
+ Mortgage payments can be easily found using your chosen spreadsheet program. This function, in all major spreadsheet programs (Microsoft Excel, Google Spreadsheet, and Apple Numbers), is known as PMT, or the payment function.It combines information like your interest rate, number of periods, and principal to arrive at an amount for each monthly payment.
+
+For simplicity, we will be focusing on Microsoft Excel's PMT function here. The process and inputs will likely be identical or very similar for any other program you are using. Consult the help tab or customer service if you have any problems using these functions. 
+;
+, Start using the PMT function by typing =PMT( into your spreadsheet. The program will then prompt you for the proper entries into each part of the function by showing the following: PMT(rate, nper, pv, , ). The first three represent required inputs, while the last two are optional.rate stands for the monthly interest rate. Note that this will be your annual interest rate (the quoted rate on your loan agreement, like 4 or 5 percent) divided by 12. It should also be expressed as a decimal.
+
+For example, if your annual interest rate is 6%, you would divide this number by twelve to get your monthly interest rate. This would be 6%/12, or 0.5%. However, this number must be input in the equation as decimal, so we divide again by 100. So we have 0.5%/100, which equals 0.005. This will be your monthly interest you will use to calculate mortgage payments. 
+
+These calculations can also be done in a different order (6%/100 = 0.06, 0.03/12 = 0.005). 
+
+
+
+
+nper is short for "number of periods" and simply represents how many payments you will make on your loan. For a monthly payment, this would be 12 times the number of years on your loan. 
+
+Imagine for this example that you have a 15-year mortgage. So, your "nper" value, or your number of payments, would be 12*15, or 180. 
+
+
+
+
+pv stands for "present value" but here it simply means the principal of your loan. 
+
+For this example, imagine you have a $100,000 loan. This will be your "pv". 
+
+
+
+Don't worry about the other two values; leaving them blank will make the program assume their correct value of 0. 
+
+
+, The program will display your monthly payment amount in the same cell you entered the formula into. Note that this number will be negative, this is simply the program expressing it as a payment (or expense).In the example above, this information would be entered as =PMT(0.005, 180, 100000). 
+
+
+, The PMT function will return an amount that represents the total amount you will pay on the loan each month. Know that this number will be expressed as a negative number. This doesn't mean you entered your information incorrectly, but simply that the program represents payments as an expense and therefore, a negative number. Multiply by -1 if this helps you understand and use the figure.The spreadsheet should return -$843.86 when you enter your function as described above. Multiply this number by -1 to get your monthly payment of $843.86. 
+
+

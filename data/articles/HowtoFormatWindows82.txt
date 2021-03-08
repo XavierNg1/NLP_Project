@@ -1,0 +1,33 @@
+ DBAN (Darik's Boot and Nuke) is a free hard driver eraser that will completely wipe the entire hard drive containing Windows 8. The hard drive will be empty and need to be either initialized by another operating system for storage or have an operating system installed on it.
+
+
+This will delete everything on the drive, so make sure anything you need to save has been properly backed up. You will not be able to use data recovery software on the drive afterwards to retrieve anything you forgot.
+If Windows 8 is your only operating system, you won't be able to use the computer until you install a new operating system or reinstall Windows 8.
+Do not use this method if you have a solid state drive (SSD). If you are formatting an SSD, the best way is to simply reinstall your operating system on it. Do not use traditional data-wiping methods when trying to completely format an SSD. These can drastically reduce the lifespan and may not actually remove any data.
+ DBAN is downloaded in ISO format, which is a disc image file. This allows you to burn it to a disc so that you can boot your computer from it. You can use a free burning tool like ImgBurn to burn the ISO to a disc. Click here for detailed instructions.
+ You will need to open your BIO settings to change the boot order.
+ This is typically F2, F10, F11, or Del. Your computer will display the proper key before Windows loads.
+
+
+If your computer is booting too fast to enter the BIOS, click here for instructions on forcing the Advanced Startup menu to appear.
+ This will allow you to change the order of devices that your computer tries to boot from.
+ This will make your computer try to boot from the DVD first, loading DBAN.
+ Your computer will reboot and DBAN will start.
+ DBAN will take a few moments to load.
+ If you have multiple drives, be absolutely sure that you have the right drive selected. You can use the drive sizes to help determine which drive is which.
+ There are several settings you can change, but most users can simply leave everything at default.
+
+
+Press P to open the "PRNG" menu. This stands for Pseudo Random Number Generator, which is the algorithm used to wipe the drive. There are two different algorithms to choose from.
+Press M to open the "METHODS" menu. These are the number of passes that DBAN will make over the drive. More passes means a more secure erase, but also significantly increases the time it will take. If you're just wiping the drive to reinstall, you can choose one of the lighter-security methods. If you're wiping to erase sensitive data before recycling the drive, select one of the more secure methods.
+Press R to set the number of "ROUNDS". This is the number of times the wipe process will be run. More rounds means a more secure wipe.
+ DBAN will use the methods you picked to begin overwriting all of the sectors on your drive. You will be able to see the time remaining in the upper-right corner., Now that your hard drive is wiped, you can move on to doing whatever it is you want to do with it.
+
+
+If you want to reinstall Windows 8 or install another operating system on it, click here. This will format the drive and install the operating system. If you wiped your only hard drive with an operating system installed, you'll need to install an operating system before you can use it again.
+If you want to use the drive as storage for another operating system, click here for instructions on formatting it for use as storage.
+
+If you want to recycle your computer, click here.
+
+If you want to sell your computer, click here.
+

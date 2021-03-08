@@ -1,0 +1,41 @@
+  To calculate the approximate yield to maturity, you need to know the coupon payment, the face value of the bond, the price paid for the bond and the number of years to maturity.  These figures are plugged into the formula ApproxYTM=(C+((F−P)/n))/(F+P)/2{\displaystyle ApproxYTM=(C+((F-P)/n))/(F+P)/2}.C = the coupon payment, or the amount paid in interest to the bond holder each year.
+
+ F = the face value, or the full value of the bond.
+
+ P = the price the investor paid for the bond.
+
+ n = the number of years to maturity.  
+
+
+,  Suppose you purchased a $1,000 for $920.  The interest is 10 percent, and it will mature in 10 years.  The coupon payment is $100 ($1,000x.10=$100{\displaystyle \$1,000x.10=\$100}).  The face value is $1,000, and the price is $920.  The number of years to maturity is 10.Use the formula: ($100+(($1,000−$920)/10))/($1,000+$920)/2{\displaystyle (\$100+((\$1,000-\$920)/10))/(\$1,000+\$920)/2}
+
+ Using this calculation, you arrive at an approximate yield to maturity of 11.25 percent.
+  Plug the yield to maturity back into the formula to solve for P, the price.  Chances are, you will not arrive at the same value.  This is because this yield to maturity calculation is an estimate.  Decide whether you are satisfied with the estimate or if you need more precise information.Use the formula P= C*((1-(1/(1 + i)^n))/i)+M/((1+i)^n)</math>, where, P = the bond price, C = the coupon payment, i = the yield to maturity rate, M = the face value and n = the total number of coupon payments. 
+
+ If you plug the 11.25 percent YTM into the formula to solve for P, the price, you get a price of $927.15.  
+
+ A lower yield to maturity will result in a higher bond price.  The bond price you get when you plug the 11.25 percent interest figure back into the formula is too high, indicating that this YTM estimate may be somewhat low.
+  You need to know the face value of the bond and the present value, or purchase price.  Also, you need to know the amount of each coupon payment you will receive and the number of coupon payments until maturity.  Once you have that information, plug it into the formula P=C∗((1−(1/(1+i)n))/i)+M/((1+i)n){\displaystyle P=C*((1-(1/(1+i)^{n}))/i)+M/((1+i)^{n})}, where, P = the bond price, C = the coupon payment, i = the yield to maturity rate, M = the face value and n = the total number of coupon payments.For example, suppose your purchased a $100 bond for $95.92 that pays a 5 percent interest rate every six months for 30 months.  
+
+ Every six months you will receive a coupon payment of $2.50 ($100∗.05∗.5=$2.50{\displaystyle \$100*.05*.5=\$2.50}).
+
+ If there are 30 months until maturity, and you receive a payment every six months, that means you will receive 5 coupon payments. 
+
+ Plug the information into the formula 95.92=2.5∗((1−(1/(1+i)5))/i)+100/((1+i)5){\displaystyle 95.92=2.5*((1-(1/(1+i)^{5}))/i)+100/((1+i)^{5})}.
+
+ Now, you have to solve for i using trial and error, plugging in different values for i until you get the correct price.
+  You don’t have to make random guesses about what the interest rate might be.  Since this bond is priced at a discount, we know that the yield to maturity will be higher than the coupon rate.  Since we know that the coupon rate is 5 percent, we can start by plugging numbers that are higher than that into the formula above to solve for P.Remember, though, you're plugging in an estimated i for semi-annual payments. That means you'll effectively want to divide the annual interest rate by 2.
+
+ In the above example, begin by taking the annual interest rate up by one point to 6 percent.  Plug half of that (3 percent, because payments are semi-annual) it into the formula, and you get a P of $95.  
+
+ This is too high, since the purchase price is $95.92.
+
+ Talk the annual interest rate up by one more point to 7 percent (or 3.5 percent on a semi-annual basis).  Plug it into the formula, and you get a P of $95.
+
+ This is too low, but you now know that the precise yield to maturity is somewhere between 6 and 7 percent or between 3 and 3.5 percent on a semi-annual basis.
+  Plug values between 6 and 7 percent into the formula.  Start with 6.9 percent, and decrease the annual interest rate amount by a tenth of a percent each time.  This will give you a precise calculation of the yield to maturity.For example, when you plug in 6.9 percent (3.45 percent semi-annual), you get a P of 95.70.  You’re getting close, but it’s not exactly correct yet.
+
+ Decrease it by one tenth of a point to 6.8 percent (3.4 percent annual), plug that into the formula and you get $95.92.
+
+ Now you have arrived at the exact price you paid for the bond, so you know that your precise yield to maturity is 6.8 percent.
+  Investors often determine a required yield, or the minimum return they want to get on a bond, before purchasing.  Calculating the yield to maturity can inform you about whether a specific bond purchase will meet an investors expectations.  These expectations may vary from investor to investor.  However, the calculation gives investors concrete data with which to compare the value of different bonds.,  Bond issuers may not choose to allow a bond to grow until maturity.  These actions decrease the yield on a bond.  They may call a bond, which means redeeming it before it matures.  Or, they may put it, which means that the issuer repurchases the bond before its maturity date.Yield to call (YTC) calculates the yield rate between the present and the call date of a bond.Yield to put (YTP) calculates the yield rate until the issuer puts the bond.,  The YTM does not account for taxes or for purchasing or selling costs.  These effectively lower the yield on a bond.  Also, investors must remember that these calculations are estimates only.  Fluctuations in the market can have significant effects on the bond yield.

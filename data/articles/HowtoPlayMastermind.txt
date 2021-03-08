@@ -1,0 +1,110 @@
+ Mastermind board games have a row of holes set apart at one end of the board, hidden from view under a hinged shield. The person who plays the code maker secretly takes a few colored pegs and places them in that row of holes, in any order. This is the code that the code breaker will try to guess.
+
+
+If you're playing a video game version, the computer will usually do this instead of a player.
+The code maker must put a peg in every hole. He has the option to use more than one peg of the same color. For example, he could put down Green Yellow Yellow Blue.;
+, The other player, or the only player in video game versions, tries to guess what the hidden code is. Sitting on the opposite end of the board, she picks up the large colored pegs and places them in the nearest row of large holes.
+
+
+For example, she could put down Blue Orange Green Purple. (Your Mastermind game might have more holes or different colored pegs.)
+
+, Next to each "guess row" is a small square with enough holes for four tiny pegs. These pegs only come in two colors: white and red (or white and black in some versions). The code maker uses this to give clues about how good the guess was. The code maker must be honest, and always puts down pegs using these instructions:
+
+
+Each white peg means that one of the guessed pegs is correct, but is in the wrong hole.
+Each red (or black) peg means that one of the guessed pegs is correct, and is in the right hole.
+The order of the white and black pegs does not matter.
+ In our example above, the code maker secretly chose Yellow Yellow Green Blue. The code breaker guessed Blue Orange Green Purple. The code maker looks at this guess to find out which hint pegs to place:
+
+
+Peg #1 is Blue. There is a blue in the code, but it is not in position #1. This earns a white hint peg.
+Peg #2 is Orange. There is no orange in the code, so no hint peg gets put down.
+Peg #3 is Green. There is a green in the code, and it is in position #3. This earns a red (or black) hint peg.
+Peg #4 is Purple. There is no purple in the code, so no hint peg gets put down.
+ The code breaker now has a little information. In our example, she got one white hint, one red hint, and two empty holes. That means of the four pegs she put down, one of them belongs but needs to be moved to a different hole, one of them is already in the right place, and two of them don't belong in the code. She thinks for a while and makes a second guess in the next highest row:
+
+
+The code breaker guesses Blue Yellow Orange Pink this time.
+The code maker checks this guess: Blue belongs but is in the wrong place; Yellow belongs and is in the right place; Orange doesn't belong; Pink doesn't belong.
+The code maker puts down one white hint peg and one red hint peg.
+ The code breaker continues to make guesses, using information from all the previous hints she earned. If she manages to guess the complete code in exactly the right order, she wins the game. If she fails to guess and fills every row with pegs, the code maker wins instead.
+ If you're playing a two-person game, turn the board around so a different person invents the code, and the other person guesses. This way, everyone gets a chance to play the main part of the game: guessing the code.
+ A new Mastermind player quickly learns that even a guess that earns multiple hints doesn't always lead to a quick victory, since there are so many possible ways to interpret the hints. Starting with four of a kind (such as Blue Blue Blue Blue) gives you solid information to work with right off the bat.This isn't the only strategy to use in Mastermind, but it's an easy one to pick up. It will not work very well if your version has more than six colors to choose from.
+ Your next few moves are going to be two pairs of colors, always starting with two examples of the color you guessed previously. For example, following Blue Blue Blue Blue, make guesses that start with Blue Blue and finish with one other color, until you know all the colors available. Here's an example:
+
+
+
+Blue Blue Blue Blue — no hint pegs. That's fine, we'll keep using Blue anyway.
+
+Blue Blue Green Green – one white peg. We'll keep in mind that the code has one green, and it must be in the left half.
+
+Blue Blue Pink Pink — one black peg. We now know that one pink is in the code, in the right.
+
+Blue Blue Yellow Yellow – one white peg and one black peg. There must be at least two yellows in the code, one on the left and one on the right.
+ Once you have earned four hint pegs in total, you know exactly which colors are involved, but not in what order. In our example, the code must contain green, pink, yellow, and yellow. The system of dividing the board into two pairs has also given us some information on which order to put them in, so we should be able to get this in one to three guesses:
+
+
+We know that Green Yellow Pink Yellow have a left half and right half that contain the correct pegs, but it turns out we get two white pegs and two black pegs in our results. This means one of the halves (either #1 and #2 need to switch places, or else #3 and #4 do).
+We try Yellow Green Pink Yellow and get four black pegs — the code is solved.
+ For example red and blue:
+
+
+Red Red Blue Blue
+
+Result 1: no pegs: red and blue are not in the code
+
+Result 2: one white or black peg (lets suppose a white peg). Either red or blue is in the code once. Blue Blue Blue Blue will give you a peg if it's blue, or no pegs if it's red (let's suppose no pegs). In the example we now know there's a red pin, and that it's in the 3rd or 4th spot (as we got a white pin at Red Red Blue Blue). Finding it will be discussed in the next strategy (in one step: Red Green Green Green ).
+
+Result 3: more pegs (lets suppose 2 white pegs). Just as Result 2, we can try Blue Blue Blue Blue to know how many pins were blue (lets again assume zero). Now it's only a matter finding the pins. In the example, we already know the 3rd and 4th are red pins, as there are 2 red pin , and they are not in the first or second spot (as we gotten 2 white pegs)
+
+, You can find a pin by trying each of the locations. As alternate color, we use colors we haven't tested yet. This way, we not only find the red pin, but also additional information about other colors. The following is an example, if you know there's a red pin, but don't know in which one of the four holes it is. It will also give you the amount of green, yellow and pink.
+
+
+Red Green Green Green
+Yellow Red Yellow Yellow
+Pink Pink Red Pink
+
+Note: If you know the exact amount of reds, you don't need to try the last location: if there's one red pin, and it's not in the first, second or third location, it has to be in the fourth).
+
+Result 1: If there are no white pegs, you'll have at least one black peg. That peg indicates the red pin is on the correct location
+
+Result 2: If there's one white peg, you know the red pin is on an incorrect place, and that the alternate color isn't in the code
+
+Result 3: If there's a second white peg, you know the second color should be on the location where the red pin is.
+
+Result 4: If there's one or more black pegs, that indicates that the second color is present. It also gives you the amount of pins of that color, and you know it's not on the location where red is (as that would give a white peg), or, obviously, on the location where red ends up being
+
+, Put one color in the place you know, and the other color in the places you don't know. For example green and yellow, and we know the first pin is red:
+
+
+Green Yellow Yellow Yellow
+
+Result 1: no pegs; green and yellow are not in the code
+
+Result 2a: a white peg indicates green is in the code, but we don't know the amount (it might be one, but also two or even three)
+
+Result 2b: the amount of black pegs indicates the amount of yellow in the code (as noted in Strategy 2: knowing the exact amount can save you a step in finding the color)
+
+, This strategy looks a lot like the previous strategy, but now the amount of white pegs also gives us the amount of that color, the For example green and yellow, and we know the first two pins are red:
+
+
+Green Green Yellow Yellow
+
+Result 1: no pegs: green and yellow are not in the code
+
+Result 2a: a white peg indicates one green is in the code, while 2 pegs indicate there are green are in the code (since there are only 2 unknowns, it's impossibly for there to be three greens)
+
+Result 2b: as with the previous strategy, the amount of black pegs indicates the amount of yellow in the code. (as noted in Strategy 2: knowing the exact amount can save you a step in finding the color)
+
+, In this example, as always, we start with strategy 1 ...
+
+
+(strategy 1) Blue Blue Red Red gives 2 white pegs. So we know there's red and/or blue present. We want to know which is blue and which is red, so we check:
+(strategy 1 bis) Blue Blue Blue Blue gives one black peg. This means, we know in the previous answer, there was one blue (and on the wrong spot - so will be 3rd or 4th), and thus also one red (and also on the wrong spot, so will be 1st or 2nd)
+(strategy 2 (find blue)) Green Green Blue Green gives a white and a black pegs. We tested one of the locations of blue, and as there's a white peg, we know it's not the 3rd peg. As we know it was either the 3rd or 4th peg, we know the 4th peg is blue. The black peg also indicates there's a green peg, but it's not the 3rd spot (as it's a black peg, not a white peg).
+(strategy 2 (find red)) Red Yellow Yellow Yellow gives a single white peg, so while we know, red is in the first or second spot, we now know it's not in the first spot. So it's in the second location. We also know there's no yellow color
+The next color we had information over was green - but as we know it's not the third spot, and the second and forth spot are filled with blue & red, we know it's on the first spot.
+(strategy 4) Orange Orange Pink Orange Gives a white peg. So, we know the only unknown spot - the 3rd spot - has an orange color
+(answer) Green Red Orange Blue
+
+

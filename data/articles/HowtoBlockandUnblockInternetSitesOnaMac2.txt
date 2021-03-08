@@ -1,0 +1,42 @@
+ Open Applications, then Utilities, then Terminal. This application allows you to modify your hosts file, which provides IP addresses for certain URLs. By associating a false IP address with a certain URL, you can prevent your browsers from reaching it.
+
+
+This method does not have a 100% success rate, and is not too difficult to bypass. It's a quick way to block a website on your personal computer, for productivity reasons. While not recommended as the only way to block other users' access, you can try it alongside another method for greater effect.
+ If you make a mistake while editing the hosts file, you could block all access to the internet. Creating a backup copy allows you to return to the original version if this happens. This is as simple as a single command:In Terminal, type sudo /bin/cp /etc/hosts /etc/hosts-original exactly as it appears.
+Press Enter on your keyboard to execute the command.
+ Terminal should prompt you for your password. Type it in and press Enter. The cursor will not move from its position as you type your password.
+ Enter the following command, then press Enter: sudo /Applications/TextEdit.app/Contents/MacOS/TextEdit /etc/hosts. This command will open your Mac's hosts file in TextEdit mode within Terminal.Alternatively, you can edit the hosts file in the main Terminal window using the command sudo nano -e /etc/hosts.
+ Your hosts file should already have several IP addresses linked to "localhosts." Never edit or delete this text, or your web browsers may stop working. Place your cursor on a new line at the bottom of the document.
+
+
+If you are using the main Terminal window, use the arrow keys to reach the bottom of the page.
+A few users have reported a bug where adding new text to the hosts file only works if you add them above the existing text., This is the local IP address. If a web browser is directed to this address, it will fail to reach the web page.
+ Do not include "http://." For example, if you want to block access to Facebook, the line should read "127.0.0.1 www.facebook.com."
+
+
+The hosts file only checks for the exact URL you enter. For example, "google.com" will only block the Google home page. You will still be able to access google.com/maps, google.com/mail, and so on.
+Do not copy-paste from another document. This can introduce invisible characters that prevent the text from working.
+ Press Enter and begin a new line with 127.0.0.1. Follow it with another URL you want to block. You may block any number of websites, but you must start each new line with 127.0.0.1.
+
+
+In theory you can include multiple URLs on one line (entering the IP address only once), up to a maximum of 255 characters.However, this may not work on all versions of Mac OS X., Close or quit the TextEdit dialog box when you are done, then confirm that you want to save the TextEdit file when prompted. (In some cases the file may save automatically.)
+
+
+If editing in the main Terminal window, press ctrl+O to save, then ctrl+X to close the file.
+ Type the command dscacheutil -flushcache into Terminal and press Enter. This will clear the cache so your browser is sure to check the updated hosts file immediately. The websites you listed should now be blocked on all browsers.
+
+
+You may restart your computer instead to get the same effect. In many cases, the sites will be blocked even without this step.
+ If you can still access one of the websites, your browser may be accessing a different subdomain, accessing the site via IPv6, or bypassing your hosts file for that site. You can solve the first two problems by adding more lines to your hosts file:
+
+
+127.0.0.1 (URL) without the "www"
+127.0.0.1 m.(URL) will usually block the mobile version of the site
+127.0.0.1 login.(URL) or apps.(URL) are a couple common variations of home pages. Visit the website and check your address bar for the exact variation.
+fe80::1%lo0 (URL) blocks IPv6 access to the site. Most sites do not automatically connect you via IPv6, but Facebook is a notable exception.
+If none of these variations work, there is probably no hosts file workaround. Try one of the other block methods on this page.
+ Open your hosts file again and delete the entry for the URL you would like to unblock. Save, quit, and flush the cache as described above to push through the change.
+
+
+To undo all changes and restore from your backup, enter sudo nano /etc/hosts-original in Terminal. Press ctrl+O, delete the "-original" in the name, and confirm the save.
+

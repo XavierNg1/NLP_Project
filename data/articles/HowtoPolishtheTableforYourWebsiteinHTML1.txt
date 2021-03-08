@@ -1,0 +1,26 @@
+ Just open Notepad and copy the following code:
+
+,,, Keep Notepad file with html code open, we will edit one thing a time by editing the code.
+, Simply add the width attribute to your code:
+
+
+You can do it in either percentage or pixel width. In this example it is a set width of 600 pixel, and it will not change depending on the screen size. If you set it in percentage width, it would adjust to the screen size automatically.
+ If you don't want your columns to be the same width, you cane set the width values separately for each column.
+
+This is what you achieve by changing both widths:
+
+
+
+, Just add the height command to the table tag. The height of rows will adjust evenly. The effect is shown below.
+ Notice, that only Table Title has already been centered by the align attribute. The content in the rest of cell is left aligned by default. Add the align attribute to all cells by updating the code as shown below:
+
+, By default all the content in cells is vertically centered. Sometimes, however you might prefer to have it aligned from the top. In our example, we have done for our 2 center and right column. Just add the align attribute in appropriate cells as follows:
+
+
+Your horizontally and vertically aligned table will look like that:
+
+, First, let's change the background colour, by including bgcolor command in Table Title cell:
+
+, In our example first column has a different colour then the other two:
+
+,

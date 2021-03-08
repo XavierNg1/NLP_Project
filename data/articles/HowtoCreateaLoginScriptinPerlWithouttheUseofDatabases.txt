@@ -1,0 +1,110 @@
+
+
+
+sub change {
+my($a) = @_;
+chdir "$a" or die "ERROR: $!";
+
+}
+
+
+sub is a subroutine/function declaration. This code can function by typing either change("test") or &change("test").
+
+my is the word of a special variable designed for only the block of code (a block is {}). Similar in math class, a variable is a placeholder that holds bytes.
+
+chdir is another word for "change directory". A substitute is system "cd $a", in this case.
+
+or are logical operators with true and false as the "answers".
+
+die is a command that prints the message to STDERR (another name for "Standard Error"). $! and $@ represent why the command failed, and can be added to die, as well as others.
+
+;
+,,
+
+
+print "Do you want to register or log-in? "; chomp($a=<STDIN>);
+
+print is a word meaning to print data.
+
+chomp is a function to chop of the newline that the nasty <STDIN> leaves after input. You could also use the chop command.
+
+
+
+if($a =~ /register/i) {
+# Stuff goes here...
+}
+
+if is a boolean condition block with true or false.
+
+
+=~ means to compare to a regular expression operator. If you use UNIX/LINUX or something similar, the grep command should be similar.
+
+/register/i is the text that the regular expression should compare to. The / means to start, the word register is the code the operator will compare to, and the second / means to end. The letter i means to use case-insensitivity, as case-sensitivity is commonly used.
+
+# is to signify a comment. The rest of the line is commented, the text will be ignored by the compiler.
+
+{ to } represents a block. These will be executed when called.
+
+
+
+print "What is your name: "; chomp($name=<STDIN>);
+print "What is your password: "; chomp($password=<STDIN>);
+
+,, Remember to add this between the two curly braces!
+
+
+#* change "name";
+open NAME, ">$name.nme";
+print NAME "$name";
+close NAME;
+change "..";
+change "password";
+open PASSWORD ">$name.pswrd";
+print PASSWORD "$password";
+close PASSWORD;
+change "..";
+
+print "Complete.\n";
+
+
+change is the function we wrote when we first wrote the program. The function would change directory to the name we specified.
+
+open NAME, ">$name.nme" or open PASSWORD, ">$name.pswrd" will "open the file" on the second parameter (>$name.nme or something close), and give a "name" to it, known as file handle. The name is the first parameter (like NAME or PASSWORD). The > sign in the files name represents "types". < and nothing are reading, > is writing (overwrites anything) and >> is appending (writes additional stuff).
+
+print NAME or print PASSWORD is a command. In this case, we use the print function to print data to a filehandle, which then will be processed and (with the > and >>) added.
+
+change ".." is using the change we added to go back a directory. The command for going back is "..".
+
+\n represents a newline.
+
+
+
+else {
+print "Name: "; chomp($a=<STDIN>);
+print "Password: "; chomp($b=<STDIN>);
+change "name";
+open NAME "$a.nme";
+$c=<NAME>;
+close NAME;
+change "..";
+change "password";
+open PASSWORD "$a.pswrd";
+$d=<PASSWORD>;
+close PASSWORD;
+change "..";
+if($a =~ /$c/ and $b =~ /$d/) {
+print "Log-in successful!\n";
+sleep(2);
+print "Hello, $a!\n";
+
+}
+
+
+else is if the if test failed. The compiler will run the block.
+
+$c=<NAME> or $d=<PASSWORD> means that the variable's data will be assigned to the filehandle specified.
+
+sleep(2) means that the compiler should wait for the number specified. 2 means to wait for two "blinks" on the prompt.
+
+
+

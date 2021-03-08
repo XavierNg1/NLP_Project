@@ -1,0 +1,125 @@
+ As of HTML5, the <bgcolor> HTML attribute is no longer supported. Background color, along with all other style aspects of your page, should be handled using CSS., All of the style information for your page (including the background color) should be coded between these tags. If you already have <style> tags set, just scroll to that part of the file.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<style>
+ 
+</style>
+ 
+</head>
+</html>
+
+
+
+
+, Anything you do to the "body" element in CSS will affect the entire page.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<style>
+body { 
+ 
+}
+ 
+</style>
+</head>
+<body>
+</body>
+ 
+</html>
+
+
+
+
+, In this context, only one spelling of "color" will work.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: 
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+, You can type a color by name (green, blue, red, etc.), use hexadecimal (hex) codes for the color you want, (e.g. #000000 for black, #ff0000 for red, etc) or by typing out the RGB value for the color (such as rgb(255,255,0) for yellow). Below is an example of using a hex code, which will make the background the same color as the wikiHow banner:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: #93B874;
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+White: #FFFFFF
+
+Light Pink: #FFCCE6
+
+Burnt Sienna: #993300
+
+Indigo - #4B0082
+
+Violet - #EE82EE
+
+See the w3schools.com HTML Color Picker to find hex codes for any color.
+ Just as you set it in the body element, you can use background-color to define the backgrounds of other elements. Just add those elements inside the <style></style> with the background-color property.<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: #93B874;
+}
+h1 {
+    background-color: orange;
+}
+p {
+    background-color: rgb(255,0,0);
+}
+</style>
+</head>
+<body>
+<h1>This header will have an orange background</h1>
+<p>This paragraph will have a red background</p>
+</body>
+</html>
+
+
+
+

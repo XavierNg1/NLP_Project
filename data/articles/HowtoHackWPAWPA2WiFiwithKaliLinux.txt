@@ -1,0 +1,39 @@
+;
+,, This will list all of the wireless cards that support monitor (not injection) mode.
+
+
+If no cards are listed, try disconnecting and reconnecting the card and check that it supports monitor mode. You can check if the card supports monitor mode by typing ifconfig in another terminal, if the card is listed in ifconfig, but doesn’t show up in airmon-ng, then the card doesn’t support it.
+ For example, if yours is wlan0, your command would be: airmon-ng start wlan0.
+
+
+The “(monitor mode enabled)” message means that the card has successfully been put into monitor mode. Note the name of the new monitor interface, mon0.
+, It will now list all of the wireless networks in your area, and lots of useful information about them. Locate your network or the network that you have permission to penetration test. Once you’ve spotted your network on the ever-populating list, hit Ctrl+C on your keyboard to stop the process. Note the channel of your target network.
+ Now type this command: airodump-ng -c --bssid -w /root/Desktop/ Replace with the channel of your target network. Paste the network BSSID where is, and replace with the name of your monitor-enabled interface, (mon0).
+A complete command should look like this: airodump-ng -c 10 --bssid 00:14:BF:E0:E8:D5 -w /root/Desktop/ mon0.
+ Airodump with now monitor only the target network, allowing us to capture more specific information about it. What we’re really doing now is waiting for a device to connect or reconnect to the network, forcing the router to send out the four-way handshake that we need to capture in order to crack the password. 
+
+
+Also, four files should show up on your desktop; this is where the handshake will be saved when captured, so don’t delete them! But we’re not really going to wait for a device to connect, no, that’s not what impatient hackers do.
+We’re actually going to use another cool-tool that belongs to the aircrack suite called aireplay-ng, to speed up the process. Instead of waiting for a device to connect, hackers use this tool to force a device to reconnect by sending deauthentication (deauth) packets to the device, making it think that it has to reconnect with the router. Of course, in order for this tool to work, there has to be someone else connected to the network first, so watch the airodump-ng and wait for a client to show up. It might take a long time, or it might only take a second before the first one shows. If none show up after a lengthy wait, then the network might be empty right now, or you’re to far away from the network.
+ In this terminal, type this command: aireplay-ng –0 2 –a –c mon0.
+
+
+The –0 is a short cut for the death mode and the 2 is the number of deauth packets to send.
+-a indicates the access point (router)’s bssid; replace with the BSSID of the target network, for example 00:14:BF:E0:E8:D5.
+-c indicates the clients BSSID. Replace the with the BSSID of the connected client; this will be listed under “STATION.”
+And of course, mon0 merely means the monitor interface; change it if yours is different.
+A complete command looks like this: aireplay-ng –0 2 –a 00:14:BF:E0:E8:D5 –c 4C:EB:42:59:DE:31 mon0.
+ You’ll see aireplay-ng send the packets, and within moments, you should see this message appear on the airodump-ng screen! This means that the handshake has been captured, the password is in the hacker’s hands, in some form or another.
+
+
+You can close the aireplay-ng terminal and hit Ctrl+C on the airodump-ng terminal to stop monitoring the network, but don’t close it yet just incase you need some of the information later.
+From now on, the process is entirely between your computer, and those four files on your Desktop. Actually, the .cap one, that is important.
+ Type in this command: aircrack-ng -a2 -b -w /root/Desktop/*.cap
+
+
+-a is the method aircrack will use to crack the handshake, 2=WPA method.
+-b stands for bssid; replace with the BSSID of the target router, like 00:14:BF:E0:E8:D5.
+-w stands for wordlist; replace with the path to a wordlist that you have downloaded. For example, you might have “wpa.txt” in the root folder./root/Desktop/*
+.cap is the path to the .cap file containing the password; the * means wild card in Linux, and assuming there are no other .cap files on your Desktop, this should work fine the way it is.
+A complete command looks like this: aircrack-ng –a2 –b 00:14:BF:E0:E8:D5 –w /root/wpa.txt  /root/Desktop/*.cap.
+ However, it will only crack it if the password happens to be in the wordlist that you’ve selected. Sometimes, it’s not. If this is the case, then you can congratulate the owner on being “impenetrable,” of course, only after you’ve tried every wordlist that a hacker might use or make!
